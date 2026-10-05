@@ -8,12 +8,25 @@ Personales (29733) y a pautas de accesibilidad y seguridad. Ver [NORMATIVA.md](N
 
 ## Cómo ejecutar en local
 
-Requiere Node.js 22.5 o superior (usa el SQLite incluido en Node; no hay que instalar base de datos).
+Solo necesitas **Node.js 22.13 o superior** (versión LTS desde https://nodejs.org). Usa el SQLite
+incluido en Node, así que no hay que instalar ninguna base de datos.
+
+**Opción 1 · doble clic**
+
+- Windows: `iniciar.bat`
+- macOS: `iniciar.command` (la primera vez: clic derecho → Abrir)
+- Linux: `./iniciar.sh`
+
+El script instala las dependencias la primera vez, compila la interfaz si hace falta, arranca el servidor
+y abre http://localhost:3000/login en el navegador. También muestra la dirección para entrar desde el
+celular en la misma red Wi-Fi.
+
+**Opción 2 · terminal**
 
 ```bash
 npm install
 npm run build
-npm start
+npm start        # o: npm run local (hace todo lo anterior y abre el navegador)
 ```
 
 Abre http://localhost:3000. La primera vez se crea la base de datos con datos de ejemplo.

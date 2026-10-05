@@ -10,7 +10,8 @@
     "build": "vite build --config client/vite.config.js",
     "start": "node server/index.js",
     "seed": "node server/seed.js --reset",
-    "check": "node --check server/index.js && node --check server/academic.js"
+    "check": "node --check server/index.js && node --check server/academic.js",
+    "local": "node scripts/local.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
@@ -31,6 +32,6 @@
     "vite": "^8.3.2"
   },
   "engines": {
-    "node": ">=22.5"
+    "node": ">=22.13"
   }
 }
