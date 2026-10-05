@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Save, KeyRound, Moon, Sun, Mail, IdCard, GraduationCap, ShieldCheck, Fingerprint } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { fmtDate } from '../../lib/format.js';
-import { api } from '../../lib/api.js';
+import { api, setToken } from '../../lib/api.js';
 import { useAuth, useTheme, useUi } from '../../lib/context.jsx';
 import { Avatar, Badge, Button, Card, Field, Input, PageHeader, Textarea, cx } from '../../components/ui.jsx';
 import { ROLE_LABEL, fullName } from '../../lib/format.js';
@@ -36,7 +36,8 @@ export default function Profile() {
     if (pwd.next !== pwd.confirm) return toast('Las contraseñas nuevas no coinciden', 'error');
     setSavingPwd(true);
     try {
-      await api.put('/auth/password', pwd);
+      const r = await api.put('/auth/password', pwd);
+      if (r?.token) setToken(r.token); // las sesiones anteriores quedan cerradas; esta continúa con el token nuevo
       setPwd({ current: '', next: '', confirm: '' });
       toast('Contraseña actualizada');
     } catch (err) { toast(err.message, 'error'); } finally { setSavingPwd(false); }

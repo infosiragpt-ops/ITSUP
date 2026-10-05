@@ -1,7 +1,7 @@
 import express from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, UPLOADS_DIR, get } from './db.js';
+import { ROOT, UPLOADS_DIR, get, db } from './db.js';
 import { auth } from './auth.js';
 import { seed, seedMinimal } from './seed.js';
 import authRoutes from './routes/auth.js';
@@ -12,12 +12,17 @@ import communityRoutes from './routes/community.js';
 import academicRoutes from './routes/academic.js';
 import adminRoutes from './routes/admin.js';
 
+const PROD = process.env.NODE_ENV === 'production';
+
 if (!get('SELECT COUNT(*) n FROM users').n) {
-  // ISUP_SEED=minimal (producción): solo la cuenta de administración y el periodo actual, sin datos ficticios.
-  if (process.env.ISUP_SEED === 'minimal') {
+  // ISUP_SEED=minimal: solo la cuenta de administración y el periodo actual. Es el modo por defecto en producción:
+  // los datos de demostración (contraseña pública) solo se cargan en producción si se pide ISUP_SEED=demo.
+  const mode = process.env.ISUP_SEED || (PROD ? 'minimal' : 'demo');
+  if (mode === 'minimal') {
     console.log('Base de datos vacía: creando la cuenta de administración inicial…');
     seedMinimal();
   } else {
+    if (PROD) console.warn('ATENCIÓN: cargando datos de demostración con contraseña pública en producción (ISUP_SEED=demo).');
     console.log('Base de datos vacía: cargando datos de demostración…');
     seed();
   }
@@ -25,11 +30,11 @@ if (!get('SELECT COUNT(*) n FROM users').n) {
 
 const app = express();
 app.disable('x-powered-by');
-app.set('trust proxy', process.env.TRUST_PROXY === '1');
+// TRUST_PROXY=1: solo se confía en el proxy local (Caddy en 127.0.0.1) para la IP real del cliente (req.ip)
+app.set('trust proxy', process.env.TRUST_PROXY === '1' ? 'loopback' : false);
 app.use(express.json({ limit: '2mb' }));
 
-/* Cabeceras de seguridad (OWASP). CSP permite estilos y el script inline del tema; el resto solo del propio origen. */
-const PROD = process.env.NODE_ENV === 'production';
+/* Cabeceras de seguridad (OWASP). CSP: scripts solo del propio origen (el tema se carga desde /theme.js); estilos inline por Tailwind. */
 app.use((req, res, next) => {
   res.set({
     'X-Content-Type-Options': 'nosniff',
@@ -38,7 +43,7 @@ app.use((req, res, next) => {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Cross-Origin-Opener-Policy': 'same-origin',
     'Content-Security-Policy': [
-      "default-src 'self'", "script-src 'self' 'unsafe-inline'", "style-src 'self' 'unsafe-inline'", "img-src 'self' data: https:",
+      "default-src 'self'", "script-src 'self'", "style-src 'self' 'unsafe-inline'", "img-src 'self' data: https:",
       "font-src 'self' data:", "connect-src 'self'", "frame-ancestors 'none'", "base-uri 'self'", "form-action 'self'", "object-src 'none'",
     ].join('; '),
     ...(PROD ? { 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains' } : {}),
@@ -94,3 +99,17 @@ function onListenError(err) {
   else console.error('No se pudo iniciar el servidor:', err.message);
   process.exit(1);
 }
+
+// Apagado ordenado (systemctl stop / Ctrl+C): se cierran las conexiones y la base de datos (sin -wal/-shm pendientes)
+let stopping = false;
+function shutdown(signal) {
+  if (stopping) return;
+  stopping = true;
+  console.log(`Señal ${signal}: cerrando el aula virtual…`);
+  const done = () => { try { db.close(); } catch {} process.exit(0); };
+  server.close(done);
+  server.closeIdleConnections?.();
+  setTimeout(done, 5000).unref();
+}
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT', () => shutdown('SIGINT'));

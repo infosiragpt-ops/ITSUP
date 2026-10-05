@@ -1,6 +1,8 @@
 import { Router } from 'express';
+import fs from 'node:fs';
+import path from 'node:path';
 import bcrypt from 'bcryptjs';
-import { get, run, now, httpError, audit, settings } from '../db.js';
+import { get, run, now, httpError, audit, settings, DATA_DIR } from '../db.js';
 import { auth, signToken, publicUser } from '../auth.js';
 import { checkPassword } from '../lib.js';
 
@@ -10,7 +12,11 @@ const MAX_ATTEMPTS = 5;
 const LOCK_MINUTES = 15;
 /** Intentos por IP para correos inexistentes (evita enumeración y fuerza bruta distribuida). */
 const ipAttempts = new Map();
-const clientIp = (req) => req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket.remoteAddress || 'local';
+const clientIp = (req) => req.ip || req.socket?.remoteAddress || 'local';
+function pruneAttempts() {
+  if (ipAttempts.size < 5000) return;
+  for (const [k, v] of ipAttempts) if (Date.now() - v.at > LOCK_MINUTES * 60e3) ipAttempts.delete(k);
+}
 
 r.post('/login', (req, res) => {
   const email = String(req.body.email || '').trim().toLowerCase();
@@ -18,6 +24,7 @@ r.post('/login', (req, res) => {
   if (!email || !password) throw httpError(400, 'Ingresa tu correo y contraseña');
 
   const ip = clientIp(req);
+  pruneAttempts();
   const ipRec = ipAttempts.get(ip);
   if (ipRec && ipRec.count >= MAX_ATTEMPTS * 4 && Date.now() - ipRec.at < LOCK_MINUTES * 60e3) {
     throw httpError(429, 'Demasiados intentos. Espera unos minutos e inténtalo de nuevo.');
@@ -34,7 +41,7 @@ r.post('/login', (req, res) => {
       const fails = (user.failed_logins || 0) + 1;
       const lock = fails >= MAX_ATTEMPTS ? new Date(Date.now() + LOCK_MINUTES * 60e3).toISOString() : null;
       run('UPDATE users SET failed_logins = ?, locked_until = ? WHERE id = ?', lock ? 0 : fails, lock, user.id);
-      audit({ ...req, user }, lock ? 'auth.locked' : 'auth.failed', { entity: 'user', entityId: user.id });
+      audit({ user, ip }, lock ? 'auth.locked' : 'auth.failed', { entity: 'user', entityId: user.id });
       if (lock) throw httpError(423, `Cuenta bloqueada ${LOCK_MINUTES} minutos por ${MAX_ATTEMPTS} intentos fallidos.`);
     }
     throw httpError(401, 'Correo/código o contraseña incorrectos');
@@ -42,7 +49,7 @@ r.post('/login', (req, res) => {
   if (!user.active) throw httpError(403, 'Tu cuenta está desactivada. Contacta a soporte.');
   ipAttempts.delete(ip);
   run('UPDATE users SET last_login = ?, failed_logins = 0, locked_until = NULL WHERE id = ?', now(), user.id);
-  audit({ ...req, user }, 'auth.login', { entity: 'user', entityId: user.id });
+  audit({ user, ip }, 'auth.login', { entity: 'user', entityId: user.id });
   res.json({ token: signToken(user), user: withProgram(get('SELECT * FROM users WHERE id = ?', user.id)) });
 });
 
@@ -71,9 +78,12 @@ r.put('/password', auth, (req, res) => {
   if (!bcrypt.compareSync(String(current || ''), req.user.password_hash)) throw httpError(400, 'La contraseña actual no es correcta');
   const problem = checkPassword(next);
   if (problem) throw httpError(400, problem);
-  run('UPDATE users SET password_hash = ? WHERE id = ?', bcrypt.hashSync(String(next), 10), req.user.id);
+  run('UPDATE users SET password_hash = ?, password_changed_at = ? WHERE id = ?', bcrypt.hashSync(String(next), 10), now(), req.user.id);
   audit(req, 'password.change', { entity: 'user', entityId: req.user.id });
-  res.json({ ok: true });
+  // La contraseña inicial de la instalación deja de ser válida: se elimina el archivo que la guardaba
+  if (req.user.role === 'admin') { try { fs.unlinkSync(path.join(DATA_DIR, 'ADMIN_INICIAL.txt')); } catch {} }
+  // Las sesiones anteriores quedan invalidadas; se entrega un token nuevo para la sesión actual
+  res.json({ ok: true, token: signToken(req.user) });
 });
 
 /** Aceptación de la política de privacidad y tratamiento de datos personales (Ley N.° 29733). */

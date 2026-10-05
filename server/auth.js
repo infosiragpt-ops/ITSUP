@@ -1,6 +1,10 @@
 import jwt from 'jsonwebtoken';
 import { get, httpError } from './db.js';
 
+if (process.env.NODE_ENV === 'production' && !process.env.JWT_SECRET) {
+  console.error('JWT_SECRET no está definido en producción (ver /etc/isup/isup.env). Abortando para no usar un secreto conocido.');
+  process.exit(1);
+}
 export const JWT_SECRET = process.env.JWT_SECRET || 'isup-dev-secret-cambiar-en-produccion';
 const SESSION_HOURS = Number(process.env.SESSION_HOURS) || 24 * 7;
 
@@ -29,6 +33,8 @@ export function auth(req, res, next) {
     const payload = jwt.verify(token, JWT_SECRET);
     const user = get('SELECT * FROM users WHERE id = ? AND active = 1', payload.id);
     if (!user) throw new Error('no user');
+    // Al cambiar o restablecer la contraseña, los tokens anteriores dejan de valer (iat en segundos; 1 s de tolerancia)
+    if (user.password_changed_at && payload.iat * 1000 < Date.parse(user.password_changed_at) - 1000) throw new Error('stale');
     req.user = user;
     next();
   } catch {

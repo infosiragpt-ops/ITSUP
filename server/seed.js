@@ -436,10 +436,9 @@ export function seed() {
 /** Contraseña aleatoria legible (sin caracteres ambiguos) que cumple la política: letras y números. */
 export function randomPassword(length = 14) {
   const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
-  const bytes = crypto.randomBytes(length);
-  let out = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
-  if (!/\d/.test(out)) out = out.slice(0, -1) + '7';
-  if (!/[A-Za-z]/.test(out)) out = 'K' + out.slice(1);
+  let out;
+  do { out = Array.from({ length }, () => alphabet[crypto.randomInt(alphabet.length)]).join(''); }
+  while (!/\d/.test(out) || !/[A-Za-z]/.test(out));
   return out;
 }
 

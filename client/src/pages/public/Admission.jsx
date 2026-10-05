@@ -9,7 +9,7 @@ import { FaqList } from './Home.jsx';
 export default function Admission() {
   const [params] = useSearchParams();
   const { data: programs } = useApi('/public/programs');
-  const [form, setForm] = useState({ full_name: '', dni: '', email: '', phone: '', program_id: params.get('carrera') || '', message: '', accept: false });
+  const [form, setForm] = useState({ full_name: '', dni: '', email: '', phone: '', program_id: params.get('carrera') || '', message: '', accept: false, website: '' });
   const [errors, setErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
@@ -29,7 +29,8 @@ export default function Admission() {
     setSending(true);
     setServerError('');
     try {
-      await api.post('/public/applicants', form);
+      const { accept, ...rest } = form;
+      await api.post('/public/applicants', { ...rest, consent: accept });
       setDone(true);
     } catch (err) {
       setServerError(err.message);
@@ -63,6 +64,10 @@ export default function Admission() {
             </div>
           ) : (
             <form onSubmit={submit} noValidate className="space-y-5">
+              {/* Campo trampa para bots: oculto para personas, no se autocompleta */}
+              <div className="hidden" aria-hidden="true">
+                <label>Sitio web<input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set('website')} /></label>
+              </div>
               <div>
                 <h2 className="font-display text-2xl font-semibold text-ink">Formulario de postulación</h2>
                 <p className="mt-1 text-sm text-muted">Los campos con * son obligatorios.</p>

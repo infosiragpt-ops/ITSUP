@@ -383,7 +383,7 @@ const MIGRATIONS = [
   ['programs', 'level', "TEXT DEFAULT 'Profesional Técnico'"], ['programs', 'degree', 'TEXT'],
   ['programs', 'total_credits', 'INTEGER DEFAULT 120'], ['programs', 'total_hours', 'INTEGER DEFAULT 2550'], ['programs', 'resolution', 'TEXT'],
   ['users', 'dni', 'TEXT'], ['users', 'consent_at', 'TEXT'], ['users', 'consent_version', 'TEXT'],
-  ['users', 'failed_logins', 'INTEGER DEFAULT 0'], ['users', 'locked_until', 'TEXT'],
+  ['users', 'failed_logins', 'INTEGER DEFAULT 0'], ['users', 'locked_until', 'TEXT'], ['users', 'password_changed_at', 'TEXT'],
   ['terms', 'weeks', 'INTEGER DEFAULT 16'], ['terms', 'closed_at', 'TEXT'],
   ['courses', 'module_name', 'TEXT'], ['courses', 'course_type', "TEXT DEFAULT 'especifica'"],
   ['courses', 'hours_theory', 'INTEGER DEFAULT 32'], ['courses', 'hours_practice', 'INTEGER DEFAULT 32'],
@@ -449,7 +449,8 @@ export function notify(userIds, { type, title, body = null, link = null }) {
 
 /** Registra una acción relevante (trazabilidad exigida para registros académicos y datos personales). */
 export function audit(req, action, { entity = null, entityId = null, details = null } = {}) {
-  const ip = req?.headers?.['x-forwarded-for']?.split(',')[0].trim() || req?.socket?.remoteAddress || null;
+  // req.ip ya aplica la política 'trust proxy' de Express (no se confía en X-Forwarded-For de clientes cualesquiera)
+  const ip = req?.ip ?? req?.socket?.remoteAddress ?? null;
   run('INSERT INTO audit_log (user_id, action, entity, entity_id, details, ip) VALUES (?,?,?,?,?,?)',
     req?.user?.id ?? null, action, entity, entityId, details == null ? null : JSON.stringify(details), ip);
 }

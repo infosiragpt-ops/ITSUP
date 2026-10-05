@@ -95,7 +95,7 @@ r.put('/users/:id', (req, res) => {
   if (password) {
     const problem = checkPassword(password);
     if (problem) throw httpError(400, problem);
-    run('UPDATE users SET password_hash = ?, failed_logins = 0, locked_until = NULL WHERE id = ?', bcrypt.hashSync(String(password), 10), u.id);
+    run('UPDATE users SET password_hash = ?, failed_logins = 0, locked_until = NULL, password_changed_at = ? WHERE id = ?', bcrypt.hashSync(String(password), 10), now(), u.id);
   }
   if (unlock) run('UPDATE users SET failed_logins = 0, locked_until = NULL WHERE id = ?', u.id);
   const changed = Object.keys(req.body).filter((k) => k !== 'password');

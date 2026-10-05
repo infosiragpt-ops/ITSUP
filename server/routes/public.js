@@ -42,15 +42,31 @@ r.get('/verify/:code', (req, res) => {
   res.json(d);
 });
 
+/** Postulaciones anónimas: límite por IP (5 por hora), campo trampa para bots, topes de longitud y consentimiento explícito. */
+const applicantHits = new Map();
+const APPLICANT_LIMIT = 5;
+const APPLICANT_WINDOW = 60 * 60e3;
 r.post('/applicants', (req, res) => {
-  const { full_name, dni, email, phone, program_id, message, consent } = req.body;
-  if (!full_name?.trim() || !email?.trim()) throw httpError(400, 'Nombre y correo son obligatorios');
-  if (!/^\S+@\S+\.\S+$/.test(email)) throw httpError(400, 'Ingresa un correo válido');
+  const ip = req.ip || req.socket?.remoteAddress || 'local';
+  const nowMs = Date.now();
+  if (applicantHits.size > 5000) for (const [k, v] of applicantHits) if (nowMs - v.at > APPLICANT_WINDOW) applicantHits.delete(k);
+  const hit = applicantHits.get(ip);
+  if (hit && hit.count >= APPLICANT_LIMIT && nowMs - hit.at < APPLICANT_WINDOW) {
+    throw httpError(429, 'Has enviado varias postulaciones seguidas. Inténtalo de nuevo en una hora o escríbenos por WhatsApp.');
+  }
+  const { full_name, dni, email, phone, program_id, message, consent, website } = req.body;
+  if (website) return res.status(201).json({ ok: true }); // campo oculto: solo lo rellenan los bots
+  const name = String(full_name || '').trim();
+  const mail = String(email || '').trim().toLowerCase();
+  if (!name || !mail) throw httpError(400, 'Nombre y correo son obligatorios');
+  if (!/^\S+@\S+\.\S+$/.test(mail) || mail.length > 120) throw httpError(400, 'Ingresa un correo válido');
   if (dni && !/^\d{8}$/.test(String(dni))) throw httpError(400, 'El DNI debe tener 8 dígitos');
-  if (consent === false) throw httpError(400, 'Debes autorizar el tratamiento de tus datos personales para postular');
+  if (name.length > 120 || (message && String(message).length > 2000) || (phone && String(phone).length > 20)) throw httpError(400, 'Alguno de los datos es demasiado largo');
+  if (consent !== true) throw httpError(400, 'Debes autorizar el tratamiento de tus datos personales para postular');
+  applicantHits.set(ip, { count: (hit && nowMs - hit.at < APPLICANT_WINDOW ? hit.count : 0) + 1, at: nowMs });
   const id = insert(
     'INSERT INTO applicants (full_name, dni, email, phone, program_id, message) VALUES (?,?,?,?,?,?)',
-    full_name.trim(), dni || null, email.trim(), phone || null, program_id ? Number(program_id) : null, message || null
+    name, dni || null, mail, phone ? String(phone).trim() : null, program_id ? Number(program_id) : null, message ? String(message).trim() : null
   );
   res.status(201).json({ id, ok: true });
 });
