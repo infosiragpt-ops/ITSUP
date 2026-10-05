@@ -60,6 +60,13 @@ as_isup() { runuser -u "$SVC_USER" -- env HOME="$APP_DIR" npm_config_cache="$NPM
 # Valor entre comillas válido para systemd (EnvironmentFile=) y para bash (source)
 q() { printf '"%s"' "$(printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/\$/\\$/g' -e 's/`/\\`/g')"; }
 APT="apt-get -o DPkg::Lock::Timeout=600"
+# Descarga una clave de firma de repositorio y la convierte a binario (error claro si no hay salida a internet)
+fetch_key() {
+  local tmp; tmp="$(mktemp)"
+  curl -fsSL --max-time 60 "$1" -o "$tmp" && gpg --dearmor --yes -o "$2" "$tmp" 2>/dev/null \
+    || { rm -f "$tmp"; die "No se pudo descargar la clave del repositorio de $3 ($1). Revisa la salida a internet del VPS y vuelve a intentarlo."; }
+  rm -f "$tmp"
+}
 wait_apt() {
   local t=0
   while command -v fuser >/dev/null 2>&1 && fuser /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/lib/apt/lists/lock >/dev/null 2>&1; do
@@ -86,7 +93,7 @@ bold "2/8 · Node.js 22 LTS"
 node_ok() { command -v node >/dev/null 2>&1 && node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=13)?0:1)'; }
 if ! node_ok; then
   install -d -m 0755 /usr/share/keyrings
-  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor --yes -o /usr/share/keyrings/nodesource.gpg
+  fetch_key https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key /usr/share/keyrings/nodesource.gpg "NodeSource"
   echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" > /etc/apt/sources.list.d/nodesource.list
   wait_apt; $APT update -qq
   $APT install -y -qq nodejs >/dev/null
@@ -97,8 +104,9 @@ echo "   Node $(node -v) · npm $(npm -v)"
 bold "3/8 · Caddy (servidor web con HTTPS automático)"
 if ! command -v caddy >/dev/null 2>&1; then
   install -d -m 0755 /usr/share/keyrings
-  curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor --yes -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-  curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' > /etc/apt/sources.list.d/caddy-stable.list
+  fetch_key https://dl.cloudsmith.io/public/caddy/stable/gpg.key /usr/share/keyrings/caddy-stable-archive-keyring.gpg "Caddy"
+  curl -fsSL --max-time 60 https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt -o /etc/apt/sources.list.d/caddy-stable.list \
+    || die "No se pudo descargar la lista de paquetes de Caddy (dl.cloudsmith.io). Revisa la salida a internet del VPS y vuelve a intentarlo."
   wait_apt; $APT update -qq
   $APT install -y -qq caddy >/dev/null
 fi
