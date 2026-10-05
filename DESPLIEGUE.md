@@ -1,59 +1,103 @@
 # Puesta en producción · VPS Hostinger (Ubuntu 24.04) + dominio en GoDaddy
 
-Guía paso a paso para dejar el Aula Virtual funcionando en **https://tepsup.com** con certificado
-HTTPS, arranque automático, firewall, autocomprobación y copias de seguridad diarias verificadas.
-Tiempo estimado: 20 minutos, más la propagación del DNS.
+Guía paso a paso para dejar el Aula Virtual funcionando en **https://tepsup.com** (o en
+**https://aula.tepsup.com**) con certificado HTTPS, arranque automático, firewall, autocomprobación y
+copias de seguridad diarias verificadas. Tiempo estimado: 20 minutos, más la propagación del DNS.
 
 ## Antes de empezar
 
 - VPS en Hostinger con **Ubuntu 24.04 LTS** (plan KVM 2 recomendado) y su contraseña de root.
 - Acceso al panel de GoDaddy del dominio **tepsup.com**.
-- Un correo para la cuenta de administración (por ejemplo `admin@tepsup.com`; no necesita existir
-  como buzón para ingresar al aula, pero sí para los avisos de certificados).
+- Un correo para la cuenta de administración (por ejemplo `admin@tepsup.com`). Se usa como **usuario de
+  ingreso** y como contacto de la cuenta de certificados; **no necesita existir como buzón** (hoy
+  tepsup.com no tiene correo configurado). Si prefieres un contacto real para los certificados, añade
+  `ACME_EMAIL=tu@gmail.com` delante del comando del Paso 3.
+- **El día anterior (opcional, recomendable):** en GoDaddy → DNS → Registros DNS, edita el registro
+  `A @` cambiando SOLO el TTL a **Personalizado → 600** (deja el dato como está) y guarda. Así, cuando
+  cambies la IP, el mundo verá el nuevo valor en unos 10 minutos en vez de hasta 1 hora. Si GoDaddy no
+  te deja editar ese registro, sáltate este paso: el cambio tardará hasta 1 hora, nada más.
+
+## ¿Raíz o subdominio? Elige antes de empezar
+
+Hoy tepsup.com muestra un sitio hecho con el creador de webs de GoDaddy (el registro `A @` dice
+"WebsiteBuilder Site"). Tienes dos opciones:
+
+| | **Opción A · https://tepsup.com** | **Opción B · https://aula.tepsup.com** |
+|---|---|---|
+| Web actual de GoDaddy | Deja de verse (la sustituye el aula) | Sigue funcionando en tepsup.com y www.tepsup.com |
+| Registros en GoDaddy | Editar `A @` (puede estar bloqueado por el creador de webs) | Añadir un registro nuevo; no se toca nada existente |
+| Interrupción | Minutos, mientras propaga el DNS | Ninguna |
+| Comando del instalador | `bash -s -- tepsup.com admin@tepsup.com` | `WWW=0 bash -s -- aula.tepsup.com admin@tepsup.com` |
+
+Si quieres conservar la web institucional actual, elige la **Opción B** y enlaza el aula desde el menú
+de esa web. Si la web de GoDaddy ya no se usa, la **Opción A** da la dirección más corta.
 
 ## Paso 1 · Obtener la IP del VPS (Hostinger)
 
-1. Entra a **hPanel → VPS → tu servidor**.
-2. Copia la **dirección IPv4** (algo como `187.xx.xx.xx`).
-3. Si el VPS tiene también **IPv6**, anótala: o la añades como registro AAAA en GoDaddy o no creas
-   ningún AAAA (un AAAA que apunte a otro sitio impide emitir el certificado).
-4. **hPanel → VPS → Firewall**: si activas un grupo de reglas, permite TCP 22, 80 y 443. Por defecto
-   está desactivado y no hace falta tocarlo (el VPS trae su propio firewall `ufw`).
+1. Entra en **hpanel.hostinger.com → VPS → Administrar** (tu servidor con Ubuntu 24.04).
+2. En **Información general** está la **dirección IPv4** (formato `187.xx.xx.xx`): cópiala. Ignora la
+   IPv6 (la línea larga con `:`); el aula no la necesita.
+3. Para abrir una consola sin instalar nada: botón **Terminal** (Terminal del navegador) en esa misma
+   pantalla. Si pide usuario, escribe `root` y la contraseña del VPS.
+4. **Firewall de hPanel (VPS → Seguridad → Firewall)**: déjalo como está (desactivado). Si algún día
+   activas uno, añade antes reglas **Aceptar / TCP** para los puertos **22**, **80** y **443**; un
+   firewall de hPanel activo sin esas reglas bloquea el aula y la emisión de certificados.
 
 ## Paso 2 · Apuntar el dominio al VPS (GoDaddy)
 
-En **GoDaddy → Dominios → tepsup.com → DNS → Registros DNS**:
+Entra en **GoDaddy → Dominios → tepsup.com → pestaña DNS → Registros DNS**.
+
+**Opción A (tepsup.com):**
 
 | Acción | Tipo | Nombre | Datos | TTL |
 |---|---|---|---|---|
 | **Editar** el registro existente | A | `@` | la IP del VPS (sustituye "WebsiteBuilder Site") | 600 segundos |
 | **Mantener** | CNAME | `www` | `tepsup.com.` | 1 hora |
 
-No toques los registros NS, SOA, `_domainconnect` ni el TXT `_dmarc`. No crees registros AAAA salvo
-que sean la IPv6 del propio VPS.
+Si el lápiz de **Editar** del registro `A @` está deshabilitado o GoDaddy avisa de que el registro lo
+gestiona tu sitio web, primero desconecta el dominio del creador de webs: en la misma página de
+Registros DNS, si aparece el nombre de tu sitio con un botón **Quitar conexión / Eliminar**, púlsalo; o
+ve a **Mis productos → Websites + Marketing → tu sitio → Configuración → Dominio** y desconecta
+tepsup.com. Después el registro `A @` se puede editar normalmente.
 
-> Al cambiar el registro A, el sitio del "Website Builder" de GoDaddy dejará de mostrarse en
-> tepsup.com y en su lugar aparecerá el aula virtual. Si en ese sitio hay contenido que quieras
-> conservar, cópialo antes.
+**Opción B (aula.tepsup.com):** pulsa **Añadir un registro nuevo** y no toques nada más.
 
-La propagación suele tardar entre 5 y 30 minutos. Puedes comprobarla en https://dnschecker.org
-buscando `tepsup.com` (tipo A): debe mostrar la IP del VPS. El instalador también espera hasta
-5 minutos a que el dominio apunte al servidor antes de pedir el certificado.
+| Tipo | Nombre | Datos | TTL |
+|---|---|---|---|
+| A | `aula` | la IP del VPS | 600 segundos |
+
+En ningún caso toques los registros NS, SOA, `_domainconnect` ni el TXT `_dmarc`. No crees registros
+AAAA salvo que sean la IPv6 del propio VPS.
+
+> Opción A: al cambiar el registro A, el sitio del creador de webs dejará de mostrarse en tepsup.com
+> y en su lugar aparecerá el aula virtual. Si en ese sitio hay contenido que quieras conservar,
+> cópialo antes.
+
+La propagación suele tardar entre 5 y 30 minutos (hasta 1 hora si el TTL anterior era de 1 hora).
+Compruébala en https://dnschecker.org buscando el nombre elegido (tipo A): la mayoría de ubicaciones
+deben mostrar la IP del VPS. **Espera a que esto ocurra antes del Paso 3**: si instalas antes, Caddy
+pedirá certificados a un servidor que aún no es el tuyo y Let's Encrypt lo penaliza durante una hora
+(el instalador espera por su cuenta hasta 5 minutos, pero no más).
 
 ## Paso 3 · Instalar el aula (un solo comando)
 
-Abre una terminal en el servidor: en hPanel, **VPS → Terminal del navegador** (o desde tu
-computadora `ssh root@IP-DEL-VPS`). Pega este comando y pulsa Enter:
+Abre la Terminal del navegador (Paso 1) o `ssh root@IP-DEL-VPS`. Pega el comando de tu opción y pulsa Enter:
 
 ```bash
+# Opción A · https://tepsup.com
 curl -fsSL https://raw.githubusercontent.com/infosiragpt-ops/ITSUP/claude/eager-cannon-kh8czm/deploy/install-ubuntu.sh | BRANCH=claude/eager-cannon-kh8czm bash -s -- tepsup.com admin@tepsup.com
+```
+
+```bash
+# Opción B · https://aula.tepsup.com
+curl -fsSL https://raw.githubusercontent.com/infosiragpt-ops/ITSUP/claude/eager-cannon-kh8czm/deploy/install-ubuntu.sh | BRANCH=claude/eager-cannon-kh8czm WWW=0 bash -s -- aula.tepsup.com admin@tepsup.com
 ```
 
 Cuando el PR esté fusionado a `main`, el mismo comando funciona con `main` en los dos sitios. El
 instalador se niega a desplegar una rama que no incluya el modo producción (carpeta `deploy/`), así
 que nunca publicará la versión de demostración por error.
 
-Para que el nombre de la institución aparezca ya configurado, añade variables delante de `bash`:
+Para que el nombre de la institución aparezca ya configurado, añade variables delante de `BRANCH=`:
 
 ```bash
 … | INSTITUTION="Instituto de Educación Superior Tecnológico Privado TEPSUP" SHORT="TEPSUP" BRANCH=claude/eager-cannon-kh8czm bash -s -- tepsup.com admin@tepsup.com
@@ -69,6 +113,35 @@ El instalador tarda unos minutos y al final muestra:
 Volver a ejecutar el instalador es seguro: actualiza el código de la rama ya desplegada y conserva
 datos, configuración y secretos. Si un paso falla, corrige la causa y vuelve a lanzarlo.
 
+## Paso 3b · Comprobar que todo quedó bien
+
+**Desde tu computadora** (Windows: PowerShell; Mac/Linux: Terminal), con el nombre que elegiste:
+
+```
+nslookup tepsup.com 8.8.8.8          # debe devolver la IP del VPS
+curl -I http://tepsup.com            # esperado: HTTP/1.1 308 Permanent Redirect  Location: https://tepsup.com/
+curl -I https://tepsup.com           # esperado: HTTP/2 200 … strict-transport-security
+curl https://tepsup.com/api/health   # esperado: {"ok":true,"name":"ISUP Aula Virtual",...}
+```
+
+**En el servidor**:
+
+```
+systemctl status isup caddy fail2ban --no-pager      # todo "active"
+systemctl list-timers 'isup-*' --no-pager             # copias diarias y autocomprobación programadas
+journalctl -u caddy -n 50 --no-pager | grep -E 'certificate obtained|error'
+```
+
+Debe aparecer `certificate obtained successfully` para cada nombre. Significado de los errores de Caddy:
+
+| Mensaje en `journalctl -u caddy` | Causa | Qué hacer |
+|---|---|---|
+| `Invalid response … 404` | El DNS aún apunta a GoDaddy | Espera la propagación y `sudo systemctl reload caddy` |
+| `NXDOMAIN` | El nombre no existe en el DNS | Revisa el registro A (o CNAME `www`) en GoDaddy |
+| `Timeout during connect (likely firewall problem)` | Puerto 80/443 cerrado (firewall de hPanel) | Permite 80 y 443 en hPanel |
+| `too many failed authorizations recently` | Límite de Let's Encrypt por intentos fallidos | Espera 60 minutos y `sudo systemctl restart caddy` |
+| `certificate obtained successfully` | Todo bien | — |
+
 ## Paso 4 · Primer ingreso y configuración
 
 1. Entra en `https://tepsup.com/login` con la cuenta de administración.
@@ -78,6 +151,7 @@ datos, configuración y secretos. Si un paso falla, corrige la causa y vuelve a 
 4. **Gestión académica → Periodos**: revisa las fechas del periodo activo.
 5. **Programas de estudio**, **Cursos y matrícula** y **Usuarios**: carga la oferta real. Al crear un
    usuario sin contraseña, el sistema genera una temporal que se muestra una sola vez.
+6. Sube y descarga un archivo en un curso de prueba para confirmar que la carpeta de datos funciona.
 
 En producción no se cargan datos de demostración ni se muestran los botones de acceso rápido.
 
@@ -125,7 +199,8 @@ sobre `https://tepsup.com/api/health` cada 5 minutos para enterarte si el VPS en
 
 ## Seguridad incluida
 
-- HTTPS automático (Let's Encrypt) y redirección de HTTP a HTTPS y de `www` al dominio principal mediante Caddy.
+- HTTPS automático (Let's Encrypt, con ZeroSSL de respaldo) y redirección de HTTP a HTTPS y de `www`
+  al dominio principal mediante Caddy.
 - El aula solo escucha en `127.0.0.1`; Caddy es la única puerta de entrada (puertos 80 y 443) y la IP real
   del visitante solo se acepta desde ese proxy local.
 - Firewall `ufw` con SSH (el puerto configurado), 80 y 443; `fail2ban` bloquea la fuerza bruta por SSH
@@ -141,20 +216,30 @@ sobre `https://tepsup.com/api/health` cada 5 minutos para enterarte si el VPS en
   sin autenticación; no compartas enlaces de entregas fuera del aula.
 - Recomendado: en hPanel añade una **clave SSH** y desactiva el acceso por contraseña a root.
 
+## Correo electrónico (informativo)
+
+El aula **no envía correos** (las contraseñas temporales se muestran en pantalla), así que no hay que
+configurar nada de correo para ponerla en producción. El registro TXT `_dmarc` que ya existe en GoDaddy
+no afecta al aula; solo importa si algún día se envía correo "desde" @tepsup.com, y entonces habrá que
+añadir SPF y DKIM del proveedor de correo que se contrate.
+
 ## Problemas frecuentes
 
 - **"Este sitio no es seguro" o no carga tras instalar**: el DNS aún no propagó. Comprueba en
-  https://dnschecker.org que `tepsup.com` muestra la IP del VPS; cuando lo haga ejecuta
-  `sudo systemctl reload caddy` y revisa `journalctl -u caddy -n 50`. Caddy reintenta la emisión del
-  certificado automáticamente.
+  https://dnschecker.org que el nombre muestra la IP del VPS; cuando lo haga ejecuta
+  `sudo systemctl reload caddy` y revisa `journalctl -u caddy -n 50` (tabla del Paso 3b).
+- **Ejecuté el instalador antes de cambiar el DNS (o el DNS tardó mucho)**: cuando dnschecker.org ya
+  muestre la IP del VPS, `sudo systemctl restart caddy` y espera 1–2 minutos. Si el registro muestra
+  `too many failed authorizations recently`, Let's Encrypt bloquea el dominio una hora por los
+  intentos fallidos: espera 60 minutos y repite. No hace falta reinstalar.
 - **Página en blanco o error 502**: `systemctl status isup` y `journalctl -u isup -n 50`. Suele
   resolverse con `sudo systemctl restart isup` (la autocomprobación lo hace sola cada 2 minutos).
 - **Olvidé la contraseña de administración (o una cuenta quedó bloqueada)**:
   `sudo isup-reset-password admin@tepsup.com` (luego cámbiala desde Mi perfil).
 - **El instalador se detuvo en "Paquetes base"**: el VPS recién creado estaba instalando
   actualizaciones automáticas; espera unos minutos y vuelve a ejecutar el comando.
-- **Quiero usar otro dominio o añadir `aula.tepsup.com`**: crea el registro A y vuelve a ejecutar el
-  instalador con el nuevo dominio (sin `BRANCH=` conserva la rama desplegada); configuración y datos
-  se mantienen.
+- **Quiero cambiar de dominio (p. ej. de aula.tepsup.com a tepsup.com)**: crea el registro A del nuevo
+  nombre y vuelve a ejecutar el instalador con él (sin `BRANCH=` conserva la rama desplegada); el
+  Caddyfile se regenera solo con el nuevo nombre y configuración y datos se mantienen.
 - **Una actualización salió mal**: `sudo isup-update --ref <commit anterior>`; si cambió la base de
   datos, `sudo isup-restore` con la copia previa que hizo la actualización.

@@ -104,12 +104,13 @@ La foto y el área de cada carrera se cambian en **Administración → Programas
 | `PORT` | Puerto del servidor | `3000` |
 | `HOST` | Interfaz de escucha (`127.0.0.1` solo esta computadora; el lanzador local usa `0.0.0.0` únicamente con `red`) | `0.0.0.0` |
 | `DATA_DIR` | Carpeta de datos (base de datos y archivos subidos) | `data/` |
-| `ISUP_SEED` | `minimal` crea solo la cuenta de administración (producción) en vez de la demo | — |
-| `JWT_SECRET` | Firma de sesiones y huella de documentos (obligatorio cambiar en producción) | valor de desarrollo |
+| `ISUP_SEED` | `minimal` crea solo la cuenta de administración; `demo` carga los datos de demostración | `demo` (en producción `minimal`) |
+| `JWT_SECRET` | Firma de sesiones y huella de documentos (en producción el servidor no arranca sin él) | valor de desarrollo |
 | `SESSION_HOURS` | Duración de la sesión | `168` (7 días) |
 | `DB_PATH` | Ruta del archivo de base de datos | `DATA_DIR/isup.db` |
 | `VITE_DEMO_MODE` | `false` al compilar (`npm run build`) oculta los accesos rápidos de demostración | `true` |
-| `NODE_ENV` | `production` activa HSTS | — |
+| `NODE_ENV` | `production` activa HSTS, exige `JWT_SECRET` y usa la semilla mínima por defecto | — |
+| `TRUST_PROXY` | `1` acepta la IP real del cliente enviada por el proxy local (Caddy en 127.0.0.1) | — |
 | `TRUST_PROXY` | `1` si se sirve detrás de un proxy (IP real en la auditoría) | — |
 
 Los datos institucionales (nombre, código, resolución, director, secretaría académica) y las reglas

@@ -14,6 +14,7 @@
 #     REF           commit o etiqueta exacta a desplegar (fija la versión)
 #     REPO          repositorio git (por defecto el oficial)
 #     INSTITUTION   nombre completo de la institución · SHORT  siglas (p. ej. TEPSUP)
+#     ACME_EMAIL    contacto para la cuenta de certificados (por defecto el correo de administración)
 #     WWW=0         no servir también www.<dominio>
 #     WAIT_DNS=300  segundos máximos de espera a que el dominio apunte a este servidor antes de pedir el certificado
 #     ACME_STAGING=1  usar el entorno de pruebas de Let's Encrypt (certificado no válido; solo para ensayos)
@@ -32,6 +33,7 @@ export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a
 main() {
 DOMAIN="${1:-${DOMAIN:-}}"
 ADMIN_EMAIL="${2:-${ADMIN_EMAIL:-}}"
+ACME_EMAIL="${ACME_EMAIL:-}"
 REPO="${REPO:-https://github.com/infosiragpt-ops/ITSUP.git}"
 BRANCH="${BRANCH:-}"
 REF="${REF:-}"
@@ -82,6 +84,8 @@ grep -qi ubuntu /etc/os-release || die "Este instalador está pensado para Ubunt
 DOMAIN="${DOMAIN,,}"; ADMIN_EMAIL="${ADMIN_EMAIL,,}"
 [[ "$DOMAIN" =~ ^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$ ]] || die "Dominio inválido: $DOMAIN (usa solo el nombre, sin https://)"
 [[ "$ADMIN_EMAIL" =~ ^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$ ]] || die "Correo inválido: $ADMIN_EMAIL"
+ACME_EMAIL="${ACME_EMAIL:-$ADMIN_EMAIL}"; ACME_EMAIL="${ACME_EMAIL,,}"
+[[ "$ACME_EMAIL" =~ ^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$ ]] || die "ACME_EMAIL inválido: $ACME_EMAIL"
 [ -z "$REF" ] || [[ "$REF" =~ ^[A-Za-z0-9._/-]+$ ]] || die "REF inválido: $REF"
 
 bold "1/8 · Paquetes base"
@@ -266,7 +270,7 @@ fi
 cat > "$CF" <<EOF
 # ISUP Aula Virtual · generado por deploy/install-ubuntu.sh (se regenera al reinstalar)
 {
-	email $ADMIN_EMAIL
+	email $ACME_EMAIL
 $STAGING_LINE
 }
 
@@ -277,7 +281,7 @@ $DOMAIN {
 	}
 	header {
 		-Server
-		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		Strict-Transport-Security "max-age=31536000"
 	}
 	reverse_proxy 127.0.0.1:$PORT
 	log {
@@ -416,6 +420,8 @@ if [ "$SKIP_SERVICES" != "1" ] && [ -n "$IP" ] && [ "$RESOLVED" != "$IP" ] && [ 
   echo
 fi
 RESOLVED6="$(getent ahostsv6 "$DOMAIN" 2>/dev/null | awk 'NR==1 && $1 !~ /^::ffff:/ {print $1}' || true)"
+RESOLVED_WWW=""
+if [ "$WWW" = "1" ] && [[ "$DOMAIN" != www.* ]]; then RESOLVED_WWW="$(resolve4 "www.$DOMAIN" || true)"; fi
 
 if [ "$SKIP_SERVICES" != "1" ]; then
   systemctl enable caddy >/dev/null 2>&1 || true
@@ -439,9 +445,12 @@ if [ -n "$RESOLVED6" ]; then
   warn "$DOMAIN tiene un registro AAAA ($RESOLVED6): debe ser la IPv6 de este VPS o eliminarse; si no, Let's Encrypt fallará."
 fi
 if [ -n "$RESOLVED" ] && [ -n "$IP" ] && [ "$RESOLVED" != "$IP" ]; then
-  printf '\n\033[33m⚠ El dominio %s resuelve a %s pero este servidor es %s.\n   Actualiza el registro A en tu proveedor de DNS (GoDaddy) y, cuando propague, ejecuta: sudo systemctl reload caddy\n   Caddy emitirá el certificado HTTPS automáticamente (comprueba con: journalctl -u caddy -n 20).\033[0m\n' "$DOMAIN" "$RESOLVED" "$IP"
+  printf '\n\033[33m⚠ El dominio %s resuelve a %s pero este servidor es %s (comprobado con el DNS del propio servidor; confirma en https://dnschecker.org).\n   Actualiza el registro A en tu proveedor de DNS (GoDaddy) y, cuando propague, ejecuta: sudo systemctl reload caddy\n   Caddy emitirá el certificado HTTPS automáticamente (comprueba con: journalctl -u caddy -n 20).\033[0m\n' "$DOMAIN" "$RESOLVED" "$IP"
 elif [ -z "$RESOLVED" ]; then
   printf '\n\033[33m⚠ El dominio %s todavía no resuelve. Crea el registro A → %s en GoDaddy; cuando propague ejecuta: sudo systemctl reload caddy\033[0m\n' "$DOMAIN" "$IP"
+fi
+if [ "$WWW" = "1" ] && [[ "$DOMAIN" != www.* ]] && [ -n "$IP" ] && [ "$RESOLVED_WWW" != "$IP" ]; then
+  warn "www.$DOMAIN no apunta a este servidor (resuelve a \"${RESOLVED_WWW:-nada}\"). En GoDaddy debe existir CNAME www → $DOMAIN. (o instala con WWW=0)."
 fi
 echo
 }
