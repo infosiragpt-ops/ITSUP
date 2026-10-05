@@ -14,6 +14,8 @@ DB="$DATA_DIR/isup.db"
 [ "$(id -u)" -eq 0 ] || { echo "Ejecuta como root (sudo isup-backup)."; exit 1; }
 install -d -m 0750 -o root -g "$SVC_USER" "$BACKUP_DIR"
 [ -f "$DB" ] || { echo "No existe la base de datos $DB; nada que respaldar."; exit 0; }
+# Dos copias en el mismo segundo (p. ej. isup-restore justo después de isup-backup) no deben pisarse
+[ ! -e "$BACKUP_DIR/isup-$STAMP.db.gz" ] || STAMP="$STAMP-$$"
 
 # La copia la hace el usuario del servicio: así los archivos auxiliares -wal/-shm nunca quedan de root
 # (.backup usa la API de SQLite: segura aunque el servidor esté escribiendo, modo WAL)

@@ -24,6 +24,8 @@ if ! /usr/local/bin/isup-backup; then
 fi
 
 BEFORE="$(as_isup git -C "$APP_DIR" rev-parse --short HEAD)"
+# Cambios locales (p. ej. package-lock.json reescrito por npm) se descartan antes de cambiar de versión
+as_isup git -C "$APP_DIR" reset --quiet --hard
 if [ -n "$REF" ]; then
   echo "▸ Cambiando a la versión $REF"
   as_isup git -C "$APP_DIR" fetch --quiet origin

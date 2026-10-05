@@ -103,7 +103,8 @@ if ! node_ok; then
   $APT install -y -qq nodejs >/dev/null
   node_ok || die "No se pudo instalar Node.js 22.13 o superior."
 fi
-echo "   Node $(node -v) · npm $(npm -v)"
+NODE_BIN="$(command -v node)"
+echo "   Node $(node -v) · npm $(npm -v) ($NODE_BIN)"
 
 bold "3/8 · Caddy (servidor web con HTTPS automático)"
 if ! command -v caddy >/dev/null 2>&1; then
@@ -139,6 +140,8 @@ fi
 as_isup git -C "$APP_DIR" cat-file -e "origin/$BRANCH:deploy/install-ubuntu.sh" 2>/dev/null \
   && as_isup git -C "$APP_DIR" grep -q 'export function seedMinimal' "origin/$BRANCH" -- server/seed.js \
   || die "La rama '$BRANCH' no incluye el modo producción (carpeta deploy/). Usa BRANCH=claude/eager-cannon-kh8czm o fusiona primero el PR a main."
+# Cambios locales (p. ej. package-lock.json reescrito por npm) se descartan antes de cambiar de versión
+as_isup git -C "$APP_DIR" reset --quiet --hard
 if [ -n "$REF" ]; then
   as_isup git -C "$APP_DIR" fetch --quiet origin
   as_isup git -C "$APP_DIR" checkout --quiet --detach "$REF"
@@ -195,7 +198,7 @@ WorkingDirectory=$APP_DIR
 EnvironmentFile=$ENV_FILE
 Environment=TZ=America/Lima
 Environment=NODE_OPTIONS=--disable-warning=ExperimentalWarning
-ExecStart=/usr/bin/node $APP_DIR/server/index.js
+ExecStart=$NODE_BIN $APP_DIR/server/index.js
 Restart=always
 RestartSec=3
 TimeoutStopSec=10
@@ -258,8 +261,13 @@ if [ -f "$CF" ] && ! grep -q 'generado por deploy/install-ubuntu.sh' "$CF" && gr
   cp -a "$CF" "$CF.bak-$(date +%Y%m%d%H%M%S)"
   warn "Había un Caddyfile personalizado; se guardó una copia en $CF.bak-*"
 fi
-STAGING_LINE=""
-[ "$ACME_STAGING" = "1" ] && STAGING_LINE=$'\tacme_ca https://acme-staging-v02.api.letsencrypt.org/directory'
+GLOBAL_BLOCK="{
+	email $ACME_EMAIL
+}"
+[ "$ACME_STAGING" = "1" ] && GLOBAL_BLOCK="{
+	email $ACME_EMAIL
+	acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}"
 WWW_BLOCK=""
 if [ "$WWW" = "1" ] && [[ "$DOMAIN" != www.* ]]; then
   WWW_BLOCK="www.$DOMAIN {
@@ -269,10 +277,7 @@ if [ "$WWW" = "1" ] && [[ "$DOMAIN" != www.* ]]; then
 fi
 cat > "$CF" <<EOF
 # ISUP Aula Virtual · generado por deploy/install-ubuntu.sh (se regenera al reinstalar)
-{
-	email $ACME_EMAIL
-$STAGING_LINE
-}
+$GLOBAL_BLOCK
 
 $DOMAIN {
 	encode zstd gzip
