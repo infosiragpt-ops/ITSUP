@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import {
   Video, GraduationCap, Gauge, ClipboardList, BookOpen, ArrowRight, PlayCircle, Megaphone, CalendarDays, Users, ClipboardCheck,
-  MessagesSquare, CheckCircle2, Circle, Wifi, Globe, Headphones, UserRound, FileText, X, Sparkles, PartyPopper,
+  MessagesSquare, CheckCircle2, Circle, Wifi, Globe, Headphones, UserRound, FileText, X, Sparkles, PartyPopper, UserCheck, AlertTriangle, ShieldAlert,
 } from 'lucide-react';
 import { useApi, api } from '../../lib/api.js';
 import { useAuth, useUi } from '../../lib/context.jsx';
 import { Avatar, Badge, Button, Card, EmptyState, ErrorState, SectionTitle, Stat, Skeleton, ProgressBar, cx } from '../../components/ui.jsx';
-import { CourseCard, SessionRow, ActivityRow } from '../../components/lms.jsx';
+import { CourseCard, SessionRow, ActivityRow, joinSession } from '../../components/lms.jsx';
 import { ITEM_META } from '../../components/brand.jsx';
 import Markdown from '../../components/Markdown.jsx';
-import { fmtLong, greeting, relative, fullName, sessionState, fmtTime, fmtGrade } from '../../lib/format.js';
+import { fmtLong, greeting, relative, fullName, sessionState, fmtTime, fmtGrade, fmtPct, fmtShort } from '../../lib/format.js';
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -43,20 +43,22 @@ export default function Dashboard() {
           <Stat icon={GraduationCap} label="Promedio general" value={fmtGrade(data.stats.average)} hint="Escala vigesimal (0–20)" tone="success" />
           <Stat icon={Gauge} label="Avance del ciclo" value={`${data.stats.progress}%`} hint="Contenido completado" />
           <Stat icon={ClipboardList} label="Pendientes" value={data.stats.pending} hint="Tareas y evaluaciones" tone="warn" />
-          <Stat icon={BookOpen} label="Cursos" value={data.stats.courses} hint="Matriculados este ciclo" tone="info" />
+          <Stat icon={UserCheck} label="Asistencia" value={fmtPct(data.stats.attendance)} hint="Límite: 30% de inasistencias" tone="info" />
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <Stat icon={BookOpen} label="Cursos a cargo" value={data.stats.courses} tone="info" />
-          <Stat icon={Users} label="Estudiantes" value={data.stats.students} />
+          <Stat icon={BookOpen} label="Cursos a cargo" value={data.stats.courses} hint={`${data.stats.students} estudiantes`} tone="info" />
           <Stat icon={ClipboardCheck} label="Por calificar" value={data.stats.to_grade} tone="warn" />
-          <Stat icon={Video} label="Sesiones esta semana" value={data.stats.sessions_week} tone="success" />
+          <Stat icon={UserCheck} label="Asistencia por registrar" value={data.stats.attendance_pending} hint="Sesiones finalizadas" tone={data.stats.attendance_pending ? 'warn' : 'success'} />
+          <Stat icon={ShieldAlert} label="Estudiantes en riesgo" value={data.stats.at_risk} hint="Alerta temprana" tone={data.stats.at_risk ? 'warn' : 'success'} />
         </div>
       )}
+      {isStudent && data?.alerts?.length > 0 && <StudentAlerts alerts={data.alerts} />}
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
         <div className="min-w-0 space-y-6">
           {isStudent && data?.continue && <ContinueCard item={data.continue} />}
+          {!isStudent && data && <AtRisk list={data.at_risk} pending={data.attendance_pending} />}
           {!isStudent && data && <ToGrade list={data.to_grade} />}
           <div>
             <SectionTitle title={isStudent ? 'Mis cursos' : 'Mis cursos a cargo'} icon={BookOpen} action={<Link to="/app/cursos" className="text-sm font-medium text-primary-ink hover:underline">Ver todos</Link>} />
@@ -142,7 +144,7 @@ function LiveBanner({ s, teacher }) {
           <div className="truncate text-sm text-white/65">{s.title} · {s.duration_min} min</div>
         </div>
         <div className="flex gap-2">
-          <Button variant="white" icon={Video} href={s.meeting_url} target="_blank" rel="noreferrer" size="lg">{teacher ? 'Iniciar sesión' : 'Unirme ahora'}</Button>
+          <Button variant="white" icon={Video} onClick={() => joinSession(s)} size="lg">{teacher ? 'Iniciar sesión' : 'Unirme ahora'}</Button>
         </div>
       </div>
     </div>
@@ -163,6 +165,55 @@ function ContinueCard({ item }) {
       </div>
       <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-white transition group-hover:scale-105 sm:flex"><PlayCircle size={22} /></span>
     </Link>
+  );
+}
+
+function StudentAlerts({ alerts }) {
+  return (
+    <Card className="border-warn/30 bg-warn-soft/30 p-5">
+      <SectionTitle title="Alertas académicas" icon={AlertTriangle} action={<span className="text-xs text-muted">Habla con tu docente o tutor</span>} />
+      <ul className="space-y-2">
+        {alerts.map((a, i) => (
+          <li key={i}>
+            <Link to={`/app/cursos/${a.course.id}/${a.key === 'grade' ? 'calificaciones' : a.key === 'missing' ? 'tareas' : 'asistencia'}`} className="flex items-center gap-3 rounded-xl bg-surface px-3 py-2.5 text-sm transition hover:shadow-soft">
+              <span className="h-2.5 w-2.5 shrink-0 rounded-[3px]" style={{ background: a.course.color }} />
+              <span className="min-w-0 flex-1"><span className="font-semibold text-ink">{a.course.name}</span> <span className="text-muted">· {a.label}</span></span>
+              <ArrowRight size={14} className="shrink-0 text-faint" />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+function AtRisk({ list, pending }) {
+  if (!list?.length && !pending?.length) return null;
+  return (
+    <Card className="p-5">
+      <SectionTitle title="Alerta temprana y asistencia" icon={ShieldAlert} />
+      {pending?.length > 0 && (
+        <div className="mb-4 rounded-xl border border-warn/30 bg-warn-soft/40 p-3 text-sm">
+          <div className="mb-1.5 font-semibold text-ink">Sesiones sin asistencia registrada</div>
+          <ul className="space-y-1">
+            {pending.map((s) => <li key={s.id}><Link to={`/app/cursos/${s.course_id}/sesiones`} className="flex items-center justify-between gap-2 text-ink-2 hover:text-primary-ink"><span className="truncate">{s.course?.name} · {s.title}</span><span className="shrink-0 text-xs text-muted">{fmtShort(s.starts_at)}</span></Link></li>)}
+          </ul>
+        </div>
+      )}
+      {list?.length > 0 && (
+        <div className="-mx-2 divide-y divide-line">
+          {list.map((r) => (
+            <Link key={`${r.course.id}${r.student.id}`} to={`/app/cursos/${r.course.id}/participantes`} className="flex items-center gap-3 rounded-xl px-2 py-2.5 hover:bg-sunken">
+              <Avatar user={r.student} size={34} />
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-medium text-ink">{fullName(r.student)} <span className="font-normal text-muted">· {r.course?.name}</span></div>
+                <div className="mt-0.5 flex flex-wrap gap-1">{r.flags.map((f) => <span key={f.key} className={cx('rounded px-1.5 py-px text-[11px] font-medium', f.tone === 'danger' ? 'bg-danger-soft text-danger' : 'bg-warn-soft text-warn')}>{f.label}</span>)}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </Card>
   );
 }
 

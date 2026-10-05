@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { CheckCircle2, Send, ShieldCheck, Clock, MessageCircle, Award } from 'lucide-react';
 import { api, useApi } from '../../lib/api.js';
 import { Button, Field, Input, Select, Textarea } from '../../components/ui.jsx';
@@ -92,7 +92,7 @@ export default function Admission() {
               </div>
               <label className="flex items-start gap-3 text-sm text-ink-2">
                 <input type="checkbox" checked={form.accept} onChange={set('accept')} className="mt-0.5 h-4 w-4 accent-[var(--c-primary)]" />
-                <span>Autorizo a ISUP a contactarme para brindarme información sobre el proceso de admisión, de acuerdo con su política de privacidad.
+                <span>Autorizo a ISUP el tratamiento de mis datos personales para contactarme e informarme sobre el proceso de admisión, conforme a la Ley N.° 29733 y su <Link to="/privacidad" target="_blank" className="font-medium text-primary-ink underline">política de privacidad</Link>.
                   {errors.accept && <span className="mt-1 block text-xs text-danger">{errors.accept}</span>}
                 </span>
               </label>

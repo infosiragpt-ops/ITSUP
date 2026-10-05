@@ -1,16 +1,19 @@
 import { Router } from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
-import { all, get, run, insert, now, httpError, notify, UPLOADS_DIR } from '../db.js';
-import { courseAccess, requireEdit } from '../auth.js';
-import { upload, fileName, courseCard, coursesFor, courseProgress, studentGrades, studentIds, userBrief } from '../lib.js';
+import { all, get, run, insert, now, httpError, notify, UPLOADS_DIR, audit } from '../db.js';
+import { courseAccess, requireEdit, requireOpen } from '../auth.js';
+import { upload, fileName, courseCard, coursesFor, courseProgress, studentIds, userBrief, activeTerm } from '../lib.js';
+import { studentStanding, buildActa, courseCategories, courseRules, riskFlags, COURSE_TYPE_LABEL } from '../academic.js';
 
 const r = Router();
 
 /* ---------------- Courses ---------------- */
 
 r.get('/courses', (req, res) => {
-  res.json(coursesFor(req.user).map((c) => courseCard(c, req.user)));
+  const allTerms = req.query.term === 'all';
+  const cards = coursesFor(req.user, { allTerms }).map((c) => courseCard(c, req.user));
+  res.json(cards);
 });
 
 r.get('/courses/:id', (req, res) => {
@@ -20,6 +23,9 @@ r.get('/courses/:id', (req, res) => {
   }
   const card = courseCard(course, req.user);
   card.can_edit = canEdit;
+  card.course_type_label = COURSE_TYPE_LABEL[course.course_type] || course.course_type;
+  card.rules = courseRules(course);
+  card.categories = courseCategories(course.id);
   card.counts = {
     modules: get('SELECT COUNT(*) n FROM modules WHERE course_id = ?', course.id).n,
     items: get('SELECT COUNT(*) n FROM items WHERE course_id = ?', course.id).n,
@@ -35,6 +41,7 @@ r.put('/courses/:id', (req, res) => {
   const { description, syllabus, schedule } = req.body;
   run('UPDATE courses SET description = ?, syllabus = ?, schedule = ? WHERE id = ?',
     description ?? course.description, syllabus ?? course.syllabus, schedule ?? course.schedule, course.id);
+  audit(req, 'course.update', { entity: 'course', entityId: course.id });
   res.json(get('SELECT * FROM courses WHERE id = ?', course.id));
 });
 
@@ -67,6 +74,7 @@ r.get('/courses/:id/modules', (req, res) => {
 
 r.post('/courses/:id/modules', (req, res) => {
   const { course } = requireEdit(req.params.id, req.user);
+  requireOpen(course);
   const { title, description, start_date } = req.body;
   if (!title?.trim()) throw httpError(400, 'El título es obligatorio');
   const pos = get('SELECT COALESCE(MAX(position), 0) + 1 AS p FROM modules WHERE course_id = ?', course.id).p;
@@ -183,49 +191,78 @@ r.get('/courses/:id/people', (req, res) => {
   const { course, canEdit } = courseAccess(req.params.id, req.user);
   const teacher = course.teacher_id ? userBrief(course.teacher_id) : null;
   const students = all(
-    `SELECT u.id, u.first_name, u.last_name, u.avatar_color, u.code, ${canEdit ? 'u.email, e.last_access,' : ''} u.role
-     FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student' ORDER BY u.last_name`,
+    `SELECT u.id, u.first_name, u.last_name, u.avatar_color, u.code, ${canEdit ? 'u.email, e.last_access,' : ''} u.role, e.status AS enrollment_status
+     FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student' ${canEdit ? '' : "AND e.status = 'matriculado'"} ORDER BY u.last_name`,
     course.id
   );
-  if (canEdit) for (const s of students) s.progress = courseProgress(course.id, s.id);
-  res.json({ teacher, students });
+  if (canEdit) {
+    for (const s of students) {
+      s.progress = courseProgress(course.id, s.id);
+      const st = studentStanding(course, s.id);
+      s.weighted = st.grades.weighted;
+      s.condition = st.final.condition;
+      s.attendance_pct = st.attendance.attendance_pct;
+      s.absence_pct = st.attendance.absence_pct;
+      s.flags = s.enrollment_status === 'retirado' ? [] : riskFlags(st, s.progress.pct);
+    }
+  }
+  res.json({ teacher, students, rules: courseRules(course) });
 });
 
 /* ---------------- Grades ---------------- */
 
+const stripDetail = ({ detail, ...a }) => a;
+
 r.get('/courses/:id/grades', (req, res) => {
   const { course, canEdit } = courseAccess(req.params.id, req.user);
-  if (!canEdit) return res.json({ mine: studentGrades(course.id, req.user.id) });
-  const students = all(
-    `SELECT u.id, u.first_name, u.last_name, u.code, u.avatar_color FROM enrollments e JOIN users u ON u.id = e.user_id
-     WHERE e.course_id = ? AND u.role = 'student' ORDER BY u.last_name`, course.id
-  );
-  const rows = students.map((s) => ({ student: s, ...studentGrades(course.id, s.id) }));
-  const columns = rows[0]?.items.map(({ kind, id, title, due_at, points }) => ({ kind, id, title, due_at, points })) ||
-    studentGrades(course.id, 0).items.map(({ kind, id, title, due_at, points }) => ({ kind, id, title, due_at, points }));
-  res.json({ columns, rows });
+  const rules = courseRules(course);
+  const categories = courseCategories(course.id);
+  if (!canEdit) {
+    const st = studentStanding(course, req.user.id);
+    return res.json({ mine: st.grades, attendance: stripDetail(st.attendance), final: st.final, closed: st.closed, rules, categories, course_status: course.status });
+  }
+  const acta = buildActa(course);
+  const rows = acta.rows.map((r) => ({
+    student: { id: r.student.id, first_name: r.student.first_name, last_name: r.student.last_name, code: r.student.code, avatar_color: r.student.avatar_color, enrollment_status: r.student.enrollment_status },
+    ...r.grades, attendance: stripDetail(r.attendance), final: r.final, closed: r.closed,
+  }));
+  const sample = rows[0]?.items || studentStanding(course, 0).grades.items;
+  const columns = sample.map(({ kind, id, title, due_at, points, category_id }) => ({ kind, id, title, due_at, points, category_id }));
+  res.json({ columns, rows, categories, rules, stats: acta.stats, course_status: course.status, closed_at: course.closed_at, closed: acta.closed });
 });
 
 r.get('/grades', (req, res) => {
-  const courses = coursesFor(req.user).map((c) => ({
-    id: c.id, code: c.code, name: c.name, color: c.color, credits: c.credits,
-    teacher: userBrief(c.teacher_id), ...studentGrades(c.id, req.user.id),
-  }));
+  const term = activeTerm();
+  const courses = coursesFor(req.user).map((c) => {
+    const st = studentStanding(c, req.user.id);
+    return {
+      id: c.id, code: c.code, name: c.name, color: c.color, credits: c.credits, status: c.status,
+      teacher: userBrief(c.teacher_id), ...st.grades, attendance: stripDetail(st.attendance), final: st.final, closed: st.closed,
+    };
+  });
   const withAvg = courses.filter((c) => c.average != null);
   const credits = withAvg.reduce((s, c) => s + c.credits, 0);
   const weighted = credits ? Math.round((withAvg.reduce((s, c) => s + c.average * c.credits, 0) / credits) * 10) / 10 : null;
-  res.json({ courses, weighted_average: weighted });
+  res.json({ term, courses, weighted_average: weighted });
 });
 
 /* ---------------- Live sessions ---------------- */
 
 r.get('/courses/:id/sessions', (req, res) => {
-  const { course } = courseAccess(req.params.id, req.user);
-  res.json(all('SELECT * FROM live_sessions WHERE course_id = ? ORDER BY starts_at', course.id));
+  const { course, canEdit } = courseAccess(req.params.id, req.user);
+  const list = all(
+    `SELECT s.*, (SELECT COUNT(*) FROM attendance a WHERE a.session_id = s.id) AS attendance_taken FROM live_sessions s WHERE s.course_id = ? ORDER BY s.starts_at`, course.id
+  );
+  if (!canEdit) {
+    const mine = Object.fromEntries(all('SELECT a.session_id, a.status FROM attendance a JOIN live_sessions s ON s.id = a.session_id WHERE s.course_id = ? AND a.user_id = ?', course.id, req.user.id).map((x) => [x.session_id, x.status]));
+    return res.json(list.map((x) => ({ ...x, my_attendance: mine[x.id] || (x.attendance_taken ? 'falta' : null) })));
+  }
+  res.json(list);
 });
 
 r.post('/courses/:id/sessions', (req, res) => {
   const { course } = requireEdit(req.params.id, req.user);
+  requireOpen(course);
   const { title, description, starts_at, duration_min, meeting_url } = req.body;
   if (!title?.trim() || !starts_at) throw httpError(400, 'Título y fecha son obligatorios');
   const url = meeting_url?.trim() || `https://meet.jit.si/ISUP-${course.code}-${Date.now().toString(36)}`;

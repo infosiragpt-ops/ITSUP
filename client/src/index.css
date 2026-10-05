@@ -161,3 +161,19 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Documentos académicos e impresión (sílabo, actas, constancias, boletas) */
+.doc { color-scheme: light; }
+@media print {
+  @page { size: A4; margin: 14mm 12mm; }
+  html, body { background: #fff !important; color: #141413 !important; }
+  [data-theme='dark'] { --c-bg: #fff; --c-surface: #fff; --c-sunken: #f4f2ea; --c-line: #d8d4c6; --c-ink: #141413; --c-ink-2: #3d3d3a; --c-muted: #6f6e68; --c-faint: #9a988f; }
+  aside, header.sticky, nav, .no-print, [role='dialog'], .fixed { display: none !important; }
+  main { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+  .lg\:pl-\[272px\] { padding-left: 0 !important; }
+  .card, .doc { box-shadow: none !important; border-color: #d8d4c6 !important; break-inside: auto; }
+  .doc table { font-size: 11px; }
+  .doc tr, .doc li { break-inside: avoid; }
+  a { text-decoration: none !important; color: inherit !important; }
+  .animate-fade-up, .animate-fade-in, .animate-scale-in { animation: none !important; }
+}

@@ -2,18 +2,24 @@ import jwt from 'jsonwebtoken';
 import { get, httpError } from './db.js';
 
 export const JWT_SECRET = process.env.JWT_SECRET || 'isup-dev-secret-cambiar-en-produccion';
+const SESSION_HOURS = Number(process.env.SESSION_HOURS) || 24 * 7;
 
 export function signToken(user) {
-  return jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
+  return jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: `${SESSION_HOURS}h` });
 }
 
-export function publicUser(u) {
+/** Representación segura del usuario: sin hash ni contadores internos; el DNI se entrega enmascarado. */
+export function publicUser(u, { full = false } = {}) {
   if (!u) return null;
-  const { password_hash, onboarding, ...rest } = u;
+  const { password_hash, onboarding, failed_logins, locked_until, ...rest } = u;
   let ob = {};
   try { ob = JSON.parse(onboarding || '{}'); } catch {}
-  return { ...rest, onboarding: ob };
+  const out = { ...rest, dni: full ? rest.dni : maskDni(rest.dni), onboarding: ob };
+  if (full) out.locked = !!(locked_until && new Date(locked_until) > new Date());
+  return out;
 }
+
+export const maskDni = (dni) => (dni ? `${'•'.repeat(Math.max(0, dni.length - 3))}${dni.slice(-3)}` : null);
 
 export function auth(req, res, next) {
   const h = req.headers.authorization || '';
@@ -48,4 +54,10 @@ export function requireEdit(courseId, user) {
   const a = courseAccess(courseId, user);
   if (!a.canEdit) throw httpError(403, 'Solo el docente del curso puede hacer esto');
   return a;
+}
+
+/** Con el acta cerrada no se modifican calificaciones ni actividades (la reabre Administración). */
+export function requireOpen(course) {
+  if (course.status === 'closed') throw httpError(409, 'El acta de este curso está cerrada. Solicita a Administración reabrirla para hacer cambios.');
+  return course;
 }

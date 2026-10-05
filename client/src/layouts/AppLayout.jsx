@@ -1,12 +1,12 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import {
-  Home, BookOpen, CalendarDays, GraduationCap, Bell, LifeBuoy, Search, Menu, X, Moon, Sun, LogOut, User, ChevronDown,
-  LayoutDashboard, Users, Library, Layers, UserPlus, Headset, Megaphone, ClipboardList, ListChecks, MessagesSquare, FileText, CornerDownLeft,
+  Home, BookOpen, CalendarDays, GraduationCap, Bell, LifeBuoy, Search, Menu, X, Moon, Sun, LogOut, User, ChevronDown, ShieldCheck,
+  LayoutDashboard, Users, Library, Layers, UserPlus, Headset, Megaphone, ClipboardList, ListChecks, MessagesSquare, FileText, CornerDownLeft, UserCheck, FileCheck2, ScrollText,
 } from 'lucide-react';
 import { useAuth, useTheme } from '../lib/context.jsx';
 import { api } from '../lib/api.js';
-import { Avatar, Dropdown, MenuItem, IconButton, cx, Spinner, useClickOutside } from '../components/ui.jsx';
+import { Avatar, Dropdown, MenuItem, IconButton, cx, Spinner, useClickOutside, Modal, Button } from '../components/ui.jsx';
 import { Logo, ITEM_META } from '../components/brand.jsx';
 import { fullName, relative, ROLE_LABEL } from '../lib/format.js';
 
@@ -19,7 +19,7 @@ const NAV = {
     { to: '/app', label: 'Inicio', icon: Home, end: true },
     { to: '/app/cursos', label: 'Mis cursos', icon: BookOpen },
     { to: '/app/calendario', label: 'Calendario', icon: CalendarDays },
-    { to: '/app/calificaciones', label: 'Calificaciones', icon: GraduationCap },
+    { to: '/app/calificaciones', label: 'Calificaciones y récord', icon: GraduationCap },
     { to: '/app/notificaciones', label: 'Notificaciones', icon: Bell, badge: 'notif' },
     { to: '/app/ayuda', label: 'Ayuda y soporte', icon: LifeBuoy },
   ],
@@ -32,12 +32,14 @@ const NAV = {
   ],
   admin: [
     { to: '/app/admin', label: 'Panel general', icon: LayoutDashboard, end: true },
+    { to: '/app/admin/academico', label: 'Gestión académica', icon: FileCheck2 },
     { to: '/app/admin/usuarios', label: 'Usuarios', icon: Users },
     { to: '/app/admin/cursos', label: 'Cursos y matrícula', icon: Library },
-    { to: '/app/admin/carreras', label: 'Carreras', icon: Layers },
+    { to: '/app/admin/carreras', label: 'Programas de estudio', icon: Layers },
     { to: '/app/admin/postulantes', label: 'Postulantes', icon: UserPlus },
     { to: '/app/admin/soporte', label: 'Soporte', icon: Headset },
     { to: '/app/admin/comunicados', label: 'Comunicados', icon: Megaphone },
+    { to: '/app/admin/auditoria', label: 'Auditoría', icon: ScrollText },
     { to: '/app/calendario', label: 'Calendario', icon: CalendarDays },
     { to: '/app/notificaciones', label: 'Notificaciones', icon: Bell, badge: 'notif' },
   ],
@@ -67,20 +69,23 @@ export default function AppLayout() {
   }, []);
 
   const shell = { courses, reloadCourses: loadCourses, notif, reloadNotif: loadNotif, setNotif };
+  const termName = courses?.find((c) => c.term?.is_active)?.term?.name;
+  const needsConsent = user.consent_required && user.consent_version !== user.consent_required;
 
   return (
     <ShellCtx.Provider value={shell}>
       <div className="min-h-dvh bg-bg">
+        <a href="#contenido-app" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2">Saltar al contenido</a>
         {/* Sidebar */}
         <aside className={cx(
-          'fixed inset-y-0 left-0 z-50 flex w-[272px] flex-col border-r border-line bg-sunken/70 backdrop-blur-xl transition-transform duration-300 lg:translate-x-0 lg:bg-sunken/60',
+          'fixed inset-y-0 left-0 z-50 flex w-[272px] flex-col border-r border-line bg-sunken/70 backdrop-blur-xl transition-transform duration-300 lg:translate-x-0 lg:bg-sunken/60 print:hidden',
           drawer ? 'translate-x-0 bg-sunken shadow-lift' : '-translate-x-full'
         )}>
           <div className="flex h-16 items-center justify-between px-5">
             <Logo to="/app" compact />
             <IconButton icon={X} label="Cerrar menú" className="lg:hidden" onClick={() => setDrawer(false)} />
           </div>
-          <nav className="scrollbar-thin flex-1 overflow-y-auto px-3 pb-4">
+          <nav className="scrollbar-thin flex-1 overflow-y-auto px-3 pb-4" aria-label="Menú principal">
             <ul className="space-y-0.5">
               {NAV[user.role].map((n) => (
                 <li key={n.to}>
@@ -103,7 +108,7 @@ export default function AppLayout() {
             </ul>
             {user.role !== 'admin' && (
               <div className="mt-6">
-                <div className="mb-2 px-3 text-[11px] font-semibold tracking-[0.1em] text-faint uppercase">Cursos del ciclo</div>
+                <div className="mb-2 px-3 text-[11px] font-semibold tracking-[0.1em] text-faint uppercase">{termName ? `Periodo ${termName}` : 'Cursos del periodo'}</div>
                 <ul className="space-y-0.5">
                   {courses == null && [1, 2, 3].map((i) => <li key={i} className="skeleton mx-3 my-2 h-5" />)}
                   {courses?.map((c) => (
@@ -134,8 +139,8 @@ export default function AppLayout() {
         {drawer && <div className="animate-fade-in fixed inset-0 z-40 bg-[#141413]/40 lg:hidden" onClick={() => setDrawer(false)} />}
 
         {/* Main */}
-        <div className="lg:pl-[272px]">
-          <header className="sticky top-0 z-30 border-b border-line/70 bg-bg/80 backdrop-blur-xl">
+        <div className="lg:pl-[272px] print:pl-0">
+          <header className="sticky top-0 z-30 border-b border-line/70 bg-bg/80 backdrop-blur-xl print:hidden">
             <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-2 px-4 sm:px-6 lg:px-8">
               <IconButton icon={Menu} label="Abrir menú" className="-ml-2 lg:hidden" onClick={() => setDrawer(true)} />
               <button onClick={() => setPalette(true)}
@@ -160,20 +165,54 @@ export default function AppLayout() {
                   <div className="my-1 h-px bg-line" />
                   <MenuItem icon={User} to="/app/perfil">Mi perfil</MenuItem>
                   <MenuItem icon={LifeBuoy} to="/app/ayuda">Ayuda y soporte</MenuItem>
+                  <MenuItem icon={ShieldCheck} to="/privacidad">Privacidad y condiciones</MenuItem>
                   <MenuItem icon={Home} to="/">Ir a la web de ISUP</MenuItem>
                   <div className="my-1 h-px bg-line" />
-                  <MenuItem icon={LogOut} onClick={logout} danger>Cerrar sesión</MenuItem>
+                  <MenuItem icon={LogOut} onClick={() => { api.post('/auth/logout').catch(() => {}); logout(); }} danger>Cerrar sesión</MenuItem>
                 </Dropdown>
               </div>
             </div>
           </header>
-          <main className="mx-auto max-w-[1320px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+          <main id="contenido-app" className="mx-auto max-w-[1320px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8 print:max-w-none print:p-0">
             <Outlet />
           </main>
         </div>
         {palette && <CommandPalette onClose={() => setPalette(false)} />}
+        {needsConsent && <ConsentModal />}
       </div>
     </ShellCtx.Provider>
+  );
+}
+
+/** Aceptación de la política de privacidad (Ley N.° 29733) en el primer ingreso o al cambiar la versión. */
+function ConsentModal() {
+  const { user, setUser } = useAuth();
+  const [checked, setChecked] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState('');
+  const accept = async () => {
+    setSaving(true); setError('');
+    try { const r = await api.put('/auth/consent', { accept: true }); setUser(r.user); } catch (e) { setError(e.message); setSaving(false); }
+  };
+  return (
+    <Modal open onClose={() => {}} size="md" title="Tratamiento de datos personales"
+      description={`Antes de continuar, ${user.first_name}, necesitamos tu autorización.`}
+      footer={<Button onClick={accept} loading={saving} disabled={!checked} icon={ShieldCheck}>Acepto y continúo</Button>}>
+      <div className="space-y-4 text-sm leading-relaxed text-ink-2">
+        <p>El Aula Virtual ISUP registra tus datos de identificación, tu actividad académica (asistencia, entregas, calificaciones) y tus accesos para gestionar tu formación, emitir constancias y cumplir con las obligaciones de información ante el Ministerio de Educación.</p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li>Tus datos se tratan conforme a la <strong className="text-ink">Ley N.° 29733, Ley de Protección de Datos Personales</strong>, y su reglamento.</li>
+          <li>No se comparten con terceros con fines comerciales. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición desde “Ayuda y soporte”.</li>
+          <li>Las sesiones en vivo pueden grabarse con fines académicos.</li>
+        </ul>
+        <p>Lee la <Link to="/privacidad" target="_blank" className="font-medium text-primary-ink underline">política de privacidad y condiciones de uso</Link> completa (versión {user.consent_required}).</p>
+        <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-line bg-sunken p-3">
+          <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[var(--c-primary)]" />
+          <span>He leído la política y <strong className="text-ink">autorizo el tratamiento de mis datos personales</strong> para las finalidades descritas.</span>
+        </label>
+        {error && <div className="rounded-xl bg-danger-soft px-3 py-2 text-danger">{error}</div>}
+      </div>
+    </Modal>
   );
 }
 
@@ -182,7 +221,7 @@ function ThemeToggle() {
   return <IconButton icon={theme === 'dark' ? Sun : Moon} label={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'} onClick={toggle} />;
 }
 
-const NOTIF_ICON = { grade: GraduationCap, announcement: Megaphone, assignment: ClipboardList, quiz: ListChecks, forum: MessagesSquare, session: CalendarDays, content: FileText, submission: ClipboardList, ticket: Headset };
+const NOTIF_ICON = { grade: GraduationCap, announcement: Megaphone, assignment: ClipboardList, quiz: ListChecks, forum: MessagesSquare, session: CalendarDays, content: FileText, submission: ClipboardList, ticket: Headset, attendance: UserCheck };
 
 export function NotifIcon({ type }) {
   const Icon = NOTIF_ICON[type] || Bell;

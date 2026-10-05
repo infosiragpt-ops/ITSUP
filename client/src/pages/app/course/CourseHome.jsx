@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Megaphone, Pin, Trash2, Send, Info, CalendarDays, ClipboardList, Mail, ArrowRight, Layers } from 'lucide-react';
+import { Megaphone, Pin, Trash2, Send, Info, CalendarDays, ClipboardList, Mail, ArrowRight, Layers, FileText, Scale } from 'lucide-react';
 import { api, useApi } from '../../../lib/api.js';
 import { useUi } from '../../../lib/context.jsx';
 import { Avatar, Button, Card, EmptyState, Field, IconButton, Input, SectionTitle, Skeleton, Switch, Textarea } from '../../../components/ui.jsx';
-import { SessionRow, ActivityRow } from '../../../components/lms.jsx';
+import { SessionRow, ActivityRow, ClosedNotice } from '../../../components/lms.jsx';
 import Markdown from '../../../components/Markdown.jsx';
 import { fullName, relative, sessionState } from '../../../lib/format.js';
 import { useCourse } from './CourseLayout.jsx';
 
 export default function CourseHome() {
-  const { course, canEdit, isStudent } = useCourse();
+  const { course, canEdit, isStudent, closed } = useCourse();
   const ann = useApi(`/courses/${course.id}/announcements`);
   const sessions = useApi(`/courses/${course.id}/sessions`);
   const assignments = useApi(`/courses/${course.id}/assignments`);
@@ -33,7 +33,8 @@ export default function CourseHome() {
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
       <div className="min-w-0 space-y-6">
-        {canEdit && <Composer courseId={course.id} onCreated={(a) => ann.setData((l) => [a, ...(l || [])])} />}
+        {closed && <ClosedNotice course={course} />}
+        {canEdit && !closed && <Composer courseId={course.id} onCreated={(a) => ann.setData((l) => [a, ...(l || [])])} />}
         <div>
           <SectionTitle title="Anuncios del curso" icon={Megaphone} />
           {ann.loading ? <Skeleton className="h-40 rounded-2xl" /> : ann.data.length === 0 ? (
@@ -62,8 +63,23 @@ export default function CourseHome() {
         <Card className="p-5 sm:p-6">
           <SectionTitle title="Acerca del curso" icon={Info} />
           <p className="text-[15px] leading-relaxed text-ink-2">{course.description}</p>
-          {course.syllabus && <p className="mt-3 text-sm text-muted">{course.syllabus}</p>}
-          <Button to={`/app/cursos/${course.id}/contenido`} variant="soft" size="sm" iconRight={ArrowRight} className="mt-4">Ir al contenido</Button>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            {[['Módulo formativo', course.module_name || '—'], ['Tipo de unidad didáctica', course.course_type_label], ['Carga', `${course.credits} créditos · ${course.hours} horas`]].map(([k, v]) => (
+              <div key={k} className="rounded-xl bg-sunken px-3.5 py-3"><div className="text-[11px] font-semibold text-muted uppercase">{k}</div><div className="mt-0.5 text-sm font-medium text-ink">{v}</div></div>
+            ))}
+          </div>
+          {course.categories?.length > 0 && (
+            <div className="mt-4">
+              <div className="mb-2 flex items-center gap-1.5 text-xs font-semibold text-muted uppercase"><Scale size={13} /> Sistema de evaluación</div>
+              <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-sunken">{course.categories.map((c, i) => <div key={c.id} className="h-full" style={{ width: `${c.weight}%`, background: `color-mix(in srgb, ${course.color} ${100 - i * 25}%, white)` }} title={`${c.name} ${c.weight}%`} />)}</div>
+              <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-2">{course.categories.map((c) => <span key={c.id}><strong className="text-ink">{c.weight}%</strong> {c.name}</span>)}</div>
+              <p className="mt-2 text-xs text-muted">Nota mínima aprobatoria {course.rules?.min_grade ?? 13} · máximo {course.rules?.max_absence_pct ?? 30}% de inasistencias.</p>
+            </div>
+          )}
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button to={`/app/cursos/${course.id}/silabo`} variant="soft" size="sm" icon={FileText}>Ver sílabo</Button>
+            <Button to={`/app/cursos/${course.id}/contenido`} variant="secondary" size="sm" iconRight={ArrowRight}>Ir al contenido</Button>
+          </div>
         </Card>
       </div>
 

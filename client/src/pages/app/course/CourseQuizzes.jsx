@@ -4,12 +4,12 @@ import { ListChecks, Plus, Timer, RotateCcw, ChevronRight, Trash2, CheckCircle2,
 import { api, useApi } from '../../../lib/api.js';
 import { useUi } from '../../../lib/context.jsx';
 import { Badge, Button, Card, EmptyState, ErrorState, Field, IconButton, Input, Modal, Select, Skeleton, Textarea, cx } from '../../../components/ui.jsx';
-import { DueChip } from '../../../components/lms.jsx';
+import { DueChip, ClosedNotice } from '../../../components/lms.jsx';
 import { fmtDateTime, fmtGrade, gradeTone, fromLocalInput, toLocalInput } from '../../../lib/format.js';
 import { useCourse } from './CourseLayout.jsx';
 
 export default function CourseQuizzes() {
-  const { course, canEdit } = useCourse();
+  const { course, canEdit, closed } = useCourse();
   const { data, loading, error, reload } = useApi(`/courses/${course.id}/quizzes`);
   const [creating, setCreating] = useState(false);
   if (error) return <ErrorState message={error} onRetry={reload} />;
@@ -17,8 +17,9 @@ export default function CourseQuizzes() {
     <div>
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">Cuestionarios con tiempo límite y calificación automática. Se considera tu mejor intento.</p>
-        {canEdit && <Button icon={Plus} onClick={() => setCreating(true)}>Nueva evaluación</Button>}
+        {canEdit && !closed && <Button icon={Plus} onClick={() => setCreating(true)}>Nueva evaluación</Button>}
       </div>
+      {closed && <div className="mb-4"><ClosedNotice course={course} compact /></div>}
       {loading ? <Skeleton className="h-56 rounded-2xl" /> : data.length === 0 ? (
         <Card><EmptyState icon={ListChecks} title="Sin evaluaciones" description={canEdit ? 'Crea un cuestionario con calificación automática.' : 'Tu docente aún no publicó evaluaciones en este curso.'} /></Card>
       ) : (
@@ -39,6 +40,7 @@ export default function CourseQuizzes() {
                   <Badge icon={HelpCircle}>{q.questions} preguntas</Badge>
                   <Badge icon={Timer}>{q.time_limit_min} min</Badge>
                   <Badge icon={RotateCcw}>{q.max_attempts} {q.max_attempts === 1 ? 'intento' : 'intentos'}</Badge>
+                  {q.category && <Badge tone="primary">{q.category}</Badge>}
                 </div>
                 <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
                   {canEdit ? (
@@ -63,9 +65,11 @@ const blankQ = () => ({ type: 'single', prompt: '', options: ['', '', '', ''], c
 
 function QuizBuilder({ courseId, onClose, onSaved }) {
   const { toast } = useUi();
+  const { course } = useCourse();
+  const categories = course?.categories || [];
   const modules = useApi(`/courses/${courseId}/modules`);
   const due = new Date(Date.now() + 7 * 864e5); due.setUTCHours(4, 59, 0, 0);
-  const [meta, setMeta] = useState({ title: '', description: '', due_at: toLocalInput(due), time_limit_min: 20, max_attempts: 2, module_id: '' });
+  const [meta, setMeta] = useState({ title: '', description: '', due_at: toLocalInput(due), time_limit_min: 20, max_attempts: 2, module_id: '', category_id: categories[0]?.id || '' });
   const [questions, setQuestions] = useState([blankQ()]);
   const [saving, setSaving] = useState(false);
 
@@ -96,6 +100,12 @@ function QuizBuilder({ courseId, onClose, onSaved }) {
           <Field label="Unidad"><Select value={meta.module_id} onChange={(e) => setMeta({ ...meta, module_id: e.target.value })}><option value="">Sin unidad</option>{modules.data?.modules.map((m) => <option key={m.id} value={m.id}>{m.title}</option>)}</Select></Field>
           <Field label="Tiempo límite (min)"><Input type="number" min="1" value={meta.time_limit_min} onChange={(e) => setMeta({ ...meta, time_limit_min: e.target.value })} /></Field>
           <Field label="Intentos permitidos"><Input type="number" min="1" max="5" value={meta.max_attempts} onChange={(e) => setMeta({ ...meta, max_attempts: e.target.value })} /></Field>
+          <Field label="Criterio de evaluación" className="sm:col-span-2" hint={categories.length ? 'Define el peso de esta evaluación en el promedio.' : 'Este curso usa promedio simple.'}>
+            <Select value={meta.category_id} onChange={(e) => setMeta({ ...meta, category_id: e.target.value })} disabled={!categories.length}>
+              <option value="">Sin criterio (no pondera)</option>
+              {categories.map((c) => <option key={c.id} value={c.id}>{c.name} · {c.weight}%</option>)}
+            </Select>
+          </Field>
         </div>
         <div className="space-y-4">
           {questions.map((q, i) => (

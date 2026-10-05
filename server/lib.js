@@ -2,6 +2,9 @@ import multer from 'multer';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { all, get, UPLOADS_DIR } from './db.js';
+import { studentGrades, attendanceSummary, computeFinal } from './academic.js';
+
+export { studentGrades } from './academic.js';
 
 export const upload = multer({
   storage: multer.diskStorage({
@@ -17,6 +20,8 @@ export const fileName = (f) => (f ? Buffer.from(f.originalname, 'latin1').toStri
 export const userBrief = (id) =>
   get('SELECT id, first_name, last_name, role, avatar_color, title, email FROM users WHERE id = ?', id);
 
+export const activeTerm = () => get('SELECT * FROM terms WHERE is_active = 1') || null;
+
 export function courseProgress(courseId, userId) {
   const total = get('SELECT COUNT(*) AS n FROM items WHERE course_id = ?', courseId).n;
   const done = get(
@@ -26,49 +31,26 @@ export function courseProgress(courseId, userId) {
   return { total, done, pct: total ? Math.round((done / total) * 100) : 0 };
 }
 
-const round1 = (n) => Math.round(n * 10) / 10;
-
-/** Grade activities (assignments + quizzes) for one student in one course. Scale 0–20. */
-export function studentGrades(courseId, userId) {
-  const assignments = all(
-    `SELECT a.id, a.title, a.due_at, a.points, s.id AS submission_id, s.grade, s.submitted_at, s.feedback
-     FROM assignments a LEFT JOIN submissions s ON s.assignment_id = a.id AND s.user_id = ?
-     WHERE a.course_id = ? ORDER BY a.due_at`,
-    userId, courseId
-  ).map((a) => ({
-    kind: 'assignment', id: a.id, title: a.title, due_at: a.due_at, points: a.points,
-    score: a.grade, submitted: !!a.submission_id, submitted_at: a.submitted_at, feedback: a.feedback,
-  }));
-  const quizzes = all(
-    `SELECT q.id, q.title, q.due_at, q.points,
-       (SELECT MAX(score) FROM quiz_attempts t WHERE t.quiz_id = q.id AND t.user_id = ? AND t.submitted_at IS NOT NULL) AS best,
-       (SELECT COUNT(*) FROM quiz_attempts t WHERE t.quiz_id = q.id AND t.user_id = ? AND t.submitted_at IS NOT NULL) AS attempts
-     FROM quizzes q WHERE q.course_id = ? ORDER BY q.due_at`,
-    userId, userId, courseId
-  ).map((q) => ({
-    kind: 'quiz', id: q.id, title: q.title, due_at: q.due_at, points: q.points,
-    score: q.best, submitted: q.attempts > 0, attempts: q.attempts,
-  }));
-  const items = [...assignments, ...quizzes].sort((a, b) => String(a.due_at).localeCompare(String(b.due_at)));
-  const graded = items.filter((i) => i.score != null);
-  const average = graded.length
-    ? round1(graded.reduce((s, i) => s + (i.score / i.points) * 20, 0) / graded.length)
-    : null;
-  return { items, average, graded: graded.length, total: items.length };
-}
-
 export function courseCard(c, user) {
   const teacher = c.teacher_id ? userBrief(c.teacher_id) : null;
   const card = {
     ...c,
     teacher,
-    students: get('SELECT COUNT(*) AS n FROM enrollments WHERE course_id = ?', c.id).n,
+    students: get("SELECT COUNT(*) AS n FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student' AND e.status = 'matriculado'", c.id).n,
     program: c.program_id ? get('SELECT id, name, short FROM programs WHERE id = ?', c.program_id) : null,
-    term: c.term_id ? get('SELECT id, name FROM terms WHERE id = ?', c.term_id) : null,
+    term: c.term_id ? get('SELECT id, name, is_active FROM terms WHERE id = ?', c.term_id) : null,
+    hours: (c.hours_theory || 0) + (c.hours_practice || 0),
+    closed: c.status === 'closed',
   };
+  delete card.syllabus_json;
   if (user.role === 'student') {
     card.progress = courseProgress(c.id, user.id);
     card.grades = studentGrades(c.id, user.id);
+    card.attendance = attendanceSummary(c.id, user.id, c);
+    const stored = get('SELECT * FROM final_grades WHERE course_id = ? AND user_id = ?', c.id, user.id);
+    card.final = c.status === 'closed' && stored?.closed_at
+      ? { final: stored.final, condition: stored.condition }
+      : computeFinal(c, card.grades, card.attendance, stored);
     const nextSession = get(
       `SELECT * FROM live_sessions WHERE course_id = ? AND datetime(starts_at, '+' || duration_min || ' minutes') > datetime('now') ORDER BY starts_at LIMIT 1`,
       c.id
@@ -79,15 +61,25 @@ export function courseCard(c, user) {
       `SELECT COUNT(*) AS n FROM submissions s JOIN assignments a ON a.id = s.assignment_id WHERE a.course_id = ? AND s.grade IS NULL`,
       c.id
     ).n;
+    card.attendance_pending = get(
+      `SELECT COUNT(*) AS n FROM live_sessions s WHERE s.course_id = ? AND datetime(s.starts_at, '+' || s.duration_min || ' minutes') < datetime('now')
+       AND NOT EXISTS (SELECT 1 FROM attendance a WHERE a.session_id = s.id)`, c.id
+    ).n;
   }
   return card;
 }
 
-export function coursesFor(user) {
-  if (user.role === 'admin') return all('SELECT * FROM courses ORDER BY code');
-  if (user.role === 'teacher') return all('SELECT * FROM courses WHERE teacher_id = ? ORDER BY code', user.id);
+/**
+ * Cursos visibles para el usuario. Por defecto solo los del periodo académico activo (o sin periodo);
+ * con { allTerms: true } se incluyen los periodos anteriores (récord académico, administración).
+ */
+export function coursesFor(user, { allTerms = false } = {}) {
+  const term = activeTerm();
+  const termFilter = allTerms || !term ? '' : ` AND (c.term_id IS NULL OR c.term_id = ${Number(term.id)})`;
+  if (user.role === 'admin') return all('SELECT c.* FROM courses c ORDER BY c.code');
+  if (user.role === 'teacher') return all(`SELECT c.* FROM courses c WHERE c.teacher_id = ?${termFilter} ORDER BY c.code`, user.id);
   return all(
-    'SELECT c.* FROM courses c JOIN enrollments e ON e.course_id = c.id WHERE e.user_id = ? ORDER BY e.last_access DESC, c.code',
+    `SELECT c.* FROM courses c JOIN enrollments e ON e.course_id = c.id WHERE e.user_id = ? AND e.status = 'matriculado'${termFilter} ORDER BY e.last_access DESC, c.code`,
     user.id
   );
 }
@@ -95,8 +87,16 @@ export function coursesFor(user) {
 export const courseIdsFor = (user) => coursesFor(user).map((c) => c.id);
 export const studentIds = (courseId) =>
   all(
-    "SELECT e.user_id AS id FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student'",
+    "SELECT e.user_id AS id FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student' AND e.status = 'matriculado'",
     courseId
   ).map((x) => x.id);
 
 export const inList = (ids) => (ids.length ? ids.map(Number).join(',') : 'NULL');
+
+/** Política de contraseñas: mínimo 8 caracteres con letras y números. */
+export function checkPassword(pwd) {
+  const p = String(pwd || '');
+  if (p.length < 8) return 'La contraseña debe tener al menos 8 caracteres';
+  if (!/[A-Za-z]/.test(p) || !/\d/.test(p)) return 'La contraseña debe combinar letras y números';
+  return null;
+}

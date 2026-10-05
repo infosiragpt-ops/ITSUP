@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import {
-  Users, GraduationCap, Library, Layers, UserPlus, Headset, FileCheck2, LogIn, Megaphone, BookOpen, ArrowRight, CalendarDays, Inbox,
+  Users, GraduationCap, Library, Layers, UserPlus, Headset, FileCheck2, LogIn, Megaphone, BookOpen, ArrowRight, CalendarDays, Inbox, UserCheck, ShieldCheck, ScrollText,
 } from 'lucide-react';
 import { useApi } from '../../lib/api.js';
 import { useAuth } from '../../lib/context.jsx';
-import { greeting, fmtDate, relative, pluralize } from '../../lib/format.js';
+import { greeting, fmtDate, relative, pluralize, fullName } from '../../lib/format.js';
 import { Button, Card, Badge, PageHeader, SectionTitle, PageLoader, ErrorState, EmptyState, Avatar, ProgressBar, Stat } from '../../components/ui.jsx';
 
 const APPLICANT_STATUS = {
@@ -54,8 +54,8 @@ export default function AdminDashboard() {
     { icon: Layers, label: 'Carreras activas', value: s.programs, tone: 'warn' },
     { icon: UserPlus, label: 'Postulantes nuevos', value: s.applicants_new, hint: 'Pendientes de contacto', tone: 'primary' },
     { icon: Headset, label: 'Soporte abierto', value: s.tickets_open, hint: 'Solicitudes sin resolver', tone: s.tickets_open > 0 ? 'warn' : 'success' },
-    { icon: FileCheck2, label: 'Entregas esta semana', value: s.submissions_week, hint: 'Últimos 7 días', tone: 'success' },
-    { icon: LogIn, label: 'Ingresos esta semana', value: s.logins_week, hint: 'Usuarios que iniciaron sesión', tone: 'info' },
+    { icon: FileCheck2, label: 'Actas cerradas', value: `${s.actas_closed}/${s.actas_total}`, hint: 'Unidades didácticas del periodo', tone: s.actas_closed === s.actas_total && s.actas_total ? 'success' : 'info' },
+    { icon: UserCheck, label: 'Asistencia sin registrar', value: s.attendance_pending, hint: 'Sesiones finalizadas', tone: s.attendance_pending > 0 ? 'warn' : 'success' },
   ];
 
   return (
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
       />
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {stats.map((st) => <Stat key={st.label} {...st} value={nf.format(st.value ?? 0)} />)}
+        {stats.map((st) => <Stat key={st.label} {...st} value={typeof st.value === 'number' ? nf.format(st.value ?? 0) : st.value} />)}
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -149,8 +149,9 @@ export default function AdminDashboard() {
             <SectionTitle title="Acciones rápidas" />
             <div className="flex flex-col gap-2">
               {[
+                { to: '/app/admin/academico', icon: FileCheck2, title: 'Actas e indicadores', desc: 'Cierre de periodo, tasa de aprobación y asistencia.' },
                 { to: '/app/admin/usuarios', icon: UserPlus, title: 'Crear usuario', desc: 'Registra estudiantes, docentes o administradores.' },
-                { to: '/app/admin/cursos', icon: BookOpen, title: 'Nuevo curso', desc: 'Crea un curso y matricula a sus estudiantes.' },
+                { to: '/app/admin/cursos', icon: BookOpen, title: 'Nuevo curso', desc: 'Crea una unidad didáctica y matricula estudiantes.' },
                 { to: '/app/admin/comunicados', icon: Megaphone, title: 'Enviar comunicado', desc: 'Notifica a toda la comunidad ISUP.' },
               ].map((a) => (
                 <Link key={a.to} to={a.to} className="group flex items-center gap-3 rounded-xl border border-line px-3.5 py-3 transition hover:border-line-strong hover:bg-sunken">
@@ -179,6 +180,25 @@ export default function AdminDashboard() {
                   <ProgressBar value={tp.pct} />
                 </div>
               )}
+            </Card>
+          )}
+
+          <Card className="p-5 sm:p-6">
+            <SectionTitle title="Actividad reciente" icon={ScrollText} action={<Link to="/app/admin/auditoria" className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">Auditoría <ArrowRight size={14} /></Link>} />
+            <ul className="space-y-2.5 text-sm">
+              {(s.recent_audit || []).map((a) => (
+                <li key={a.id} className="flex items-start gap-2.5">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                  <span className="min-w-0 flex-1"><span className="font-medium text-ink">{a.first_name ? `${a.first_name} ${a.last_name}` : 'Sistema'}</span> <span className="text-muted">· {a.action}</span><span className="block text-[11px] text-faint">{relative(a.created_at)}</span></span>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
+          {s.consent_pending > 0 && (
+            <Card className="flex items-start gap-3 border-info/30 bg-info-soft p-4">
+              <ShieldCheck size={18} className="mt-0.5 shrink-0 text-info" />
+              <div className="min-w-0 flex-1 text-sm"><div className="font-medium text-ink">{pluralize(s.consent_pending, 'usuario sin aceptar', 'usuarios sin aceptar')} la política de datos vigente</div><div className="mt-0.5 text-xs text-muted">Se les solicitará al ingresar al aula virtual.</div></div>
             </Card>
           )}
 

@@ -128,6 +128,7 @@ export const COURSES = [
   {
     code: 'DSI-301', name: 'Desarrollo Web Full Stack', program: 'desarrollo-de-sistemas', teacher: 'carla', cycle: 3, credits: 4,
     color: '#C96442', schedule: 'Lun y Mié · 19:00 – 20:30', days: [1, 3], hour: 19,
+    module: 'Módulo II · Desarrollo de software', type: 'especifica', categories: [['proceso', 'Evaluación de proceso (tareas y foros)', 40], ['producto', 'Evaluación de producto (proyecto)', 30], ['final', 'Evaluación final', 30]],
     description: 'Construye aplicaciones web completas: interfaces con HTML, CSS y React; APIs con Node.js y Express; y persistencia con bases de datos.',
     units: [
       {
@@ -173,14 +174,14 @@ export const COURSES = [
       },
     ],
     assignments: [
-      { unit: 0, title: 'Tarea 1 · Diagrama de una petición web', due: -31, instructions: 'Elabora un diagrama que explique, paso a paso, qué ocurre desde que escribes una URL hasta que ves la página. Incluye DNS, TLS, petición HTTP y renderizado.\n\n**Formato:** PDF o imagen. **Extensión:** 1 página.' },
-      { unit: 1, title: 'Tarea 2 · Landing page responsive', due: -10, instructions: 'Maqueta una landing page para un negocio local usando HTML semántico y CSS Grid/Flexbox. Debe verse bien en móvil y escritorio.\n\n**Entrega:** enlace a tu repositorio o archivo .zip.\n\n**Rúbrica:** semántica (5), responsive (6), estética (5), accesibilidad (4).' },
-      { unit: 2, title: 'Tarea 3 · API REST de tareas', due: 3, instructions: 'Construye una API REST con Express que permita crear, listar, editar y eliminar tareas. Usa validaciones y responde con los códigos HTTP correctos.\n\n**Entrega:** enlace al repositorio + capturas de las pruebas en Postman o Thunder Client.' },
-      { unit: 3, title: 'Proyecto final · Aplicación full stack', due: 24, instructions: 'Desarrolla una aplicación completa (frontend + API + base de datos) que resuelva un problema real. Trabajo en equipos de 3.\n\n**Entregables:** repositorio, URL desplegada, video demo de 5 minutos.' },
+      { unit: 0, cat: 'proceso', title: 'Tarea 1 · Diagrama de una petición web', due: -31, instructions: 'Elabora un diagrama que explique, paso a paso, qué ocurre desde que escribes una URL hasta que ves la página. Incluye DNS, TLS, petición HTTP y renderizado.\n\n**Formato:** PDF o imagen. **Extensión:** 1 página.' },
+      { unit: 1, cat: 'proceso', rubric: [{ name: 'HTML semántico', points: 5 }, { name: 'Diseño responsive', points: 6 }, { name: 'Estética y consistencia', points: 5 }, { name: 'Accesibilidad', points: 4 }], title: 'Tarea 2 · Landing page responsive', due: -10, instructions: 'Maqueta una landing page para un negocio local usando HTML semántico y CSS Grid/Flexbox. Debe verse bien en móvil y escritorio.\n\n**Entrega:** enlace a tu repositorio o archivo .zip.\n\n**Rúbrica:** semántica (5), responsive (6), estética (5), accesibilidad (4).' },
+      { unit: 2, cat: 'proceso', rubric: [{ name: 'Rutas y métodos HTTP correctos', points: 6 }, { name: 'Validaciones y códigos de estado', points: 6 }, { name: 'Pruebas documentadas', points: 4 }, { name: 'Organización del código', points: 4 }], title: 'Tarea 3 · API REST de tareas', due: 3, instructions: 'Construye una API REST con Express que permita crear, listar, editar y eliminar tareas. Usa validaciones y responde con los códigos HTTP correctos.\n\n**Entrega:** enlace al repositorio + capturas de las pruebas en Postman o Thunder Client.' },
+      { unit: 3, cat: 'producto', title: 'Proyecto final · Aplicación full stack', due: 24, instructions: 'Desarrolla una aplicación completa (frontend + API + base de datos) que resuelva un problema real. Trabajo en equipos de 3.\n\n**Entregables:** repositorio, URL desplegada, video demo de 5 minutos.' },
     ],
     quizzes: [
       {
-        unit: 0, title: 'Cuestionario 1 · Fundamentos de la Web', due: -17, time: 15, attempts: 2,
+        unit: 0, cat: 'proceso', title: 'Cuestionario 1 · Fundamentos de la Web', due: -17, time: 15, attempts: 2,
         questions: [
           ['single', '¿Qué protocolo traduce un nombre de dominio a una dirección IP?', ['HTTP', 'DNS', 'FTP', 'SMTP'], [1], 'El DNS (Domain Name System) resuelve nombres de dominio a direcciones IP.'],
           ['single', '¿Qué código de estado HTTP indica que el recurso no fue encontrado?', ['200', '301', '404', '500'], [2], '404 Not Found.'],
@@ -190,7 +191,7 @@ export const COURSES = [
         ],
       },
       {
-        unit: 2, title: 'Cuestionario 2 · APIs y Express', due: 5, time: 20, attempts: 2,
+        unit: 2, cat: 'final', title: 'Cuestionario 2 · APIs y Express', due: 5, time: 20, attempts: 2,
         questions: [
           ['single', '¿Qué hace app.use(express.json()) en Express?', ['Envía JSON al cliente', 'Interpreta el cuerpo JSON de las peticiones', 'Conecta con la base de datos', 'Inicia el servidor'], [1], 'Es un middleware que parsea el body en formato JSON.'],
           ['single', '¿Qué método HTTP es el más adecuado para crear un recurso nuevo?', ['GET', 'POST', 'PATCH', 'OPTIONS'], [1], null],
@@ -226,6 +227,7 @@ export const COURSES = [
   {
     code: 'DSI-302', name: 'Base de Datos Relacionales', program: 'desarrollo-de-sistemas', teacher: 'jorge', cycle: 3, credits: 4,
     color: '#2F6F8F', schedule: 'Mar · 19:00 – 20:30', days: [2], hour: 19,
+    module: 'Módulo II · Desarrollo de software', type: 'especifica', categories: [['proceso', 'Evaluación de proceso', 40], ['producto', 'Evaluación de producto', 30], ['final', 'Evaluación final', 30]],
     description: 'Modela, consulta y optimiza bases de datos relacionales con SQL, normalización y buenas prácticas de diseño.',
     units: [
       { title: 'Unidad 1 · Modelo entidad–relación', desc: 'Entidades, atributos, relaciones y cardinalidad.', items: [
@@ -250,18 +252,18 @@ export const COURSES = [
       ] },
     ],
     assignments: [
-      { unit: 0, title: 'Tarea 1 · Modelo E-R de una clínica', due: -28, instructions: 'Diseña el modelo entidad–relación de una clínica con pacientes, médicos, citas y especialidades. Indica claves primarias y cardinalidades.' },
-      { unit: 1, title: 'Tarea 2 · 15 consultas SQL', due: -7, instructions: 'Resuelve las 15 consultas del archivo de práctica usando la base de datos de ejemplo. Entrega un archivo .sql comentado.' },
-      { unit: 2, title: 'Tarea 3 · Normaliza una base de datos', due: 6, instructions: 'A partir de la hoja de cálculo de ventas proporcionada, normaliza hasta 3FN y presenta el script de creación de tablas con sus llaves foráneas.' },
+      { unit: 0, cat: 'proceso', title: 'Tarea 1 · Modelo E-R de una clínica', due: -28, instructions: 'Diseña el modelo entidad–relación de una clínica con pacientes, médicos, citas y especialidades. Indica claves primarias y cardinalidades.' },
+      { unit: 1, cat: 'proceso', title: 'Tarea 2 · 15 consultas SQL', due: -7, instructions: 'Resuelve las 15 consultas del archivo de práctica usando la base de datos de ejemplo. Entrega un archivo .sql comentado.' },
+      { unit: 2, cat: 'producto', title: 'Tarea 3 · Normaliza una base de datos', due: 6, instructions: 'A partir de la hoja de cálculo de ventas proporcionada, normaliza hasta 3FN y presenta el script de creación de tablas con sus llaves foráneas.' },
     ],
     quizzes: [
-      { unit: 0, title: 'Cuestionario 1 · Modelo E-R', due: -20, time: 15, attempts: 2, questions: [
+      { unit: 0, cat: 'proceso', title: 'Cuestionario 1 · Modelo E-R', due: -20, time: 15, attempts: 2, questions: [
         ['single', '¿Qué identifica de forma única a cada fila de una tabla?', ['Clave foránea', 'Clave primaria', 'Índice secundario', 'Vista'], [1], null],
         ['single', 'Un alumno puede matricularse en muchos cursos y un curso tiene muchos alumnos. ¿Qué cardinalidad es?', ['1:1', '1:N', 'N:M', 'Ninguna'], [2], 'Se resuelve con una tabla intermedia.'],
         ['truefalse', 'Una clave foránea referencia la clave primaria de otra tabla.', null, [0], null],
         ['multiple', '¿Cuáles son atributos válidos de la entidad "Paciente"?', ['DNI', 'Fecha de nacimiento', 'Lista de médicos del hospital', 'Teléfono'], [0, 1, 3], null],
       ] },
-      { unit: 2, title: 'Cuestionario 2 · SQL y normalización', due: 9, time: 20, attempts: 1, questions: [
+      { unit: 2, cat: 'final', title: 'Cuestionario 2 · SQL y normalización', due: 9, time: 20, attempts: 1, questions: [
         ['single', '¿Qué cláusula filtra grupos después de un GROUP BY?', ['WHERE', 'HAVING', 'ORDER BY', 'LIMIT'], [1], null],
         ['single', '¿Qué JOIN devuelve todas las filas de la tabla izquierda aunque no tengan coincidencia?', ['INNER JOIN', 'LEFT JOIN', 'CROSS JOIN', 'SELF JOIN'], [1], null],
         ['truefalse', 'La 1FN exige que cada celda contenga un solo valor atómico.', null, [0], null],
@@ -281,6 +283,7 @@ export const COURSES = [
   {
     code: 'DSI-303', name: 'Diseño de Experiencia de Usuario (UX/UI)', program: 'desarrollo-de-sistemas', teacher: 'mariana', cycle: 3, credits: 3,
     color: '#8B4C6B', schedule: 'Jue · 19:00 – 20:30', days: [4], hour: 19,
+    module: 'Módulo II · Desarrollo de software', type: 'especifica', categories: [['proceso', 'Evaluación de proceso', 50], ['producto', 'Portafolio de diseño', 50]],
     description: 'Investiga a tus usuarios, diseña flujos y prototipos de alta fidelidad y valida tus ideas con pruebas de usabilidad.',
     units: [
       { title: 'Unidad 1 · Pensar en las personas', desc: 'Investigación de usuarios, entrevistas y mapas de empatía.', items: [
@@ -303,12 +306,12 @@ export const COURSES = [
       ] },
     ],
     assignments: [
-      { unit: 0, title: 'Tarea 1 · Mapa de empatía', due: -27, instructions: 'Entrevista a dos estudiantes sobre su experiencia con plataformas virtuales y construye un mapa de empatía.' },
-      { unit: 1, title: 'Tarea 2 · Evaluación heurística', due: -6, instructions: 'Evalúa una app peruana de uso masivo con las 10 heurísticas de Nielsen. Presenta al menos 8 hallazgos con severidad y propuesta de mejora.' },
-      { unit: 2, title: 'Tarea 3 · Rediseño de una pantalla', due: 8, instructions: 'Rediseña la pantalla principal de un aula virtual aplicando los principios vistos. Entrega el enlace al prototipo y una justificación de 1 página.' },
+      { unit: 0, cat: 'proceso', title: 'Tarea 1 · Mapa de empatía', due: -27, instructions: 'Entrevista a dos estudiantes sobre su experiencia con plataformas virtuales y construye un mapa de empatía.' },
+      { unit: 1, cat: 'proceso', title: 'Tarea 2 · Evaluación heurística', due: -6, instructions: 'Evalúa una app peruana de uso masivo con las 10 heurísticas de Nielsen. Presenta al menos 8 hallazgos con severidad y propuesta de mejora.' },
+      { unit: 2, cat: 'producto', title: 'Tarea 3 · Rediseño de una pantalla', due: 8, instructions: 'Rediseña la pantalla principal de un aula virtual aplicando los principios vistos. Entrega el enlace al prototipo y una justificación de 1 página.' },
     ],
     quizzes: [
-      { unit: 1, title: 'Cuestionario 1 · Heurísticas de usabilidad', due: -12, time: 12, attempts: 2, questions: [
+      { unit: 1, cat: 'proceso', title: 'Cuestionario 1 · Heurísticas de usabilidad', due: -12, time: 12, attempts: 2, questions: [
         ['single', 'Mostrar una barra de progreso al subir un archivo aplica la heurística de…', ['Visibilidad del estado del sistema', 'Estética minimalista', 'Flexibilidad', 'Ayuda y documentación'], [0], null],
         ['truefalse', 'UX y UI significan exactamente lo mismo.', null, [1], 'UI es la capa visual; UX es toda la experiencia.'],
         ['single', '¿Cuál es el contraste mínimo WCAG AA para texto normal?', ['2:1', '3:1', '4.5:1', '7:1'], [2], null],
@@ -328,6 +331,7 @@ export const COURSES = [
   {
     code: 'DSI-304', name: 'Inteligencia Artificial Aplicada', program: 'desarrollo-de-sistemas', teacher: 'carla', cycle: 3, credits: 3,
     color: '#6A5ACD', schedule: 'Vie · 19:00 – 20:30', days: [5], hour: 19,
+    module: 'Módulo II · Desarrollo de software', type: 'especifica', categories: [['proceso', 'Evaluación de proceso', 40], ['producto', 'Proyecto de IA', 30], ['final', 'Evaluación final', 30]],
     description: 'Comprende los fundamentos del aprendizaje automático y aplica modelos de lenguaje e IA generativa de forma responsable.',
     units: [
       { title: 'Unidad 1 · ¿Qué es la inteligencia artificial?', desc: 'Historia, tipos de IA y casos de uso reales.', items: [
@@ -349,12 +353,12 @@ export const COURSES = [
       ] },
     ],
     assignments: [
-      { unit: 0, title: 'Tarea 1 · Ensayo: la IA en mi carrera', due: -26, instructions: 'Escribe un ensayo de 600 palabras sobre cómo la IA transformará tu futura profesión. Cita al menos 3 fuentes.' },
-      { unit: 1, title: 'Tarea 2 · Clasificador con datos reales', due: -5, instructions: 'Entrena un clasificador simple con el dataset proporcionado y reporta la precisión obtenida y las variables más importantes.' },
-      { unit: 2, title: 'Tarea 3 · Biblioteca de prompts', due: 10, instructions: 'Crea 10 prompts útiles para tu carrera, cada uno con su objetivo, el prompt y un ejemplo de respuesta evaluada.' },
+      { unit: 0, cat: 'proceso', title: 'Tarea 1 · Ensayo: la IA en mi carrera', due: -26, instructions: 'Escribe un ensayo de 600 palabras sobre cómo la IA transformará tu futura profesión. Cita al menos 3 fuentes.' },
+      { unit: 1, cat: 'proceso', title: 'Tarea 2 · Clasificador con datos reales', due: -5, instructions: 'Entrena un clasificador simple con el dataset proporcionado y reporta la precisión obtenida y las variables más importantes.' },
+      { unit: 2, cat: 'producto', title: 'Tarea 3 · Biblioteca de prompts', due: 10, instructions: 'Crea 10 prompts útiles para tu carrera, cada uno con su objetivo, el prompt y un ejemplo de respuesta evaluada.' },
     ],
     quizzes: [
-      { unit: 0, title: 'Cuestionario 1 · Conceptos de IA', due: -15, time: 10, attempts: 2, questions: [
+      { unit: 0, cat: 'final', title: 'Cuestionario 1 · Conceptos de IA', due: -15, time: 10, attempts: 2, questions: [
         ['single', 'El deep learning es un subconjunto de…', ['La robótica', 'El machine learning', 'Las bases de datos', 'La ciberseguridad'], [1], null],
         ['truefalse', 'Un modelo de IA siempre da respuestas correctas si fue entrenado con muchos datos.', null, [1], 'Los modelos pueden equivocarse y reproducir sesgos.'],
         ['single', 'Predecir el precio de una casa es un problema de…', ['Clasificación', 'Regresión', 'Agrupamiento', 'Compresión'], [1], null],
@@ -372,6 +376,7 @@ export const COURSES = [
   {
     code: 'TRV-305', name: 'Inglés Técnico II', program: 'desarrollo-de-sistemas', teacher: 'daniel', cycle: 3, credits: 2,
     color: '#5B7B6F', schedule: 'Sáb · 09:00 – 10:30', days: [6], hour: 9,
+    module: 'Competencias para la empleabilidad', type: 'empleabilidad', categories: [['proceso', 'Evaluación de proceso', 60], ['final', 'Evaluación final', 40]],
     description: 'Lee documentación técnica, escribe correos profesionales y participa en reuniones en inglés.',
     units: [
       { title: 'Unit 1 · Reading technical documentation', desc: 'Vocabulary and strategies to read docs.', items: [
@@ -391,12 +396,12 @@ export const COURSES = [
       ] },
     ],
     assignments: [
-      { unit: 0, title: 'Task 1 · Glossary of 30 IT terms', due: -29, instructions: 'Create a glossary with 30 technical terms, their definitions in English and an example sentence for each.' },
-      { unit: 1, title: 'Task 2 · Bug report email', due: -8, instructions: 'Write an email to a client explaining a bug, its impact and the next steps. 150–200 words.' },
-      { unit: 2, title: 'Task 3 · Stand-up video', due: 4, instructions: 'Record a 2-minute video giving a stand-up update about a project (yesterday, today, blockers).' },
+      { unit: 0, cat: 'proceso', title: 'Task 1 · Glossary of 30 IT terms', due: -29, instructions: 'Create a glossary with 30 technical terms, their definitions in English and an example sentence for each.' },
+      { unit: 1, cat: 'proceso', title: 'Task 2 · Bug report email', due: -8, instructions: 'Write an email to a client explaining a bug, its impact and the next steps. 150–200 words.' },
+      { unit: 2, cat: 'final', title: 'Task 3 · Stand-up video', due: 4, instructions: 'Record a 2-minute video giving a stand-up update about a project (yesterday, today, blockers).' },
     ],
     quizzes: [
-      { unit: 0, title: 'Quiz 1 · IT Vocabulary', due: -16, time: 10, attempts: 2, questions: [
+      { unit: 0, cat: 'proceso', title: 'Quiz 1 · IT Vocabulary', due: -16, time: 10, attempts: 2, questions: [
         ['single', 'What does "deploy" mean?', ['Delete the code', 'Release software to an environment', 'Write documentation', 'Test manually'], [1], null],
         ['single', 'Choose the correct sentence.', ['I have fix the bug', 'I have fixed the bug', 'I fixed the bug yesterday ago', 'I fixing the bug'], [1], null],
         ['truefalse', '"Bug" refers to an error in the software.', null, [0], null],
@@ -414,6 +419,7 @@ export const COURSES = [
   {
     code: 'ADM-301', name: 'Gestión de Proyectos Ágiles', program: 'administracion-de-empresas', teacher: 'rosa', cycle: 3, credits: 3,
     color: '#B8860B', schedule: 'Mar · 20:30 – 22:00', days: [2], hour: 20,
+    module: 'Módulo II · Gestión de operaciones', type: 'especifica', categories: [['proceso', 'Evaluación de proceso', 50], ['producto', 'Evaluación de producto', 50]],
     description: 'Planifica y ejecuta proyectos con Scrum y Kanban, gestionando riesgos, equipos y entregables de valor.',
     units: [
       { title: 'Unidad 1 · Fundamentos de la agilidad', desc: 'Manifiesto ágil, Scrum y Kanban.', items: [
@@ -426,8 +432,8 @@ export const COURSES = [
       ] },
     ],
     assignments: [
-      { unit: 0, title: 'Tarea 1 · Caso: proyecto tradicional vs ágil', due: -20, instructions: 'Analiza el caso propuesto y justifica qué enfoque usarías.' },
-      { unit: 1, title: 'Tarea 2 · Product backlog de un emprendimiento', due: 7, instructions: 'Construye un backlog priorizado de 15 historias de usuario.' },
+      { unit: 0, cat: 'proceso', title: 'Tarea 1 · Caso: proyecto tradicional vs ágil', due: -20, instructions: 'Analiza el caso propuesto y justifica qué enfoque usarías.' },
+      { unit: 1, cat: 'producto', title: 'Tarea 2 · Product backlog de un emprendimiento', due: 7, instructions: 'Construye un backlog priorizado de 15 historias de usuario.' },
     ],
     quizzes: [],
     forums: [{ title: 'Foro de consultas', description: 'Dudas del curso.', threads: [] }],
@@ -443,3 +449,57 @@ export const APPLICANTS = [
   ['Rocío Del Pilar Vega', '73698521', 'rocio.vega@example.com', '966 321 987', 'diseno-grafico-digital', 'Quisiera saber el costo de la pensión.', 'nuevo', 0],
   ['Piero Gonzales', '76321458', 'piero.g@example.com', '933 654 852', 'administracion-de-empresas', '', 'descartado', -14],
 ];
+
+/* Cursos del periodo anterior (ciclo 2), ya cerrados con acta. demoGrade: nota base de la estudiante de demostración. */
+export const PREVIOUS_TERM = [
+  { code: 'DSI-201', name: 'Programación Orientada a Objetos', teacher: 'carla', credits: 4, color: '#C96442', schedule: 'Lun y Mié · 19:00 – 20:30', module: 'Módulo I · Fundamentos de programación', description: 'Clases, objetos, herencia, polimorfismo y patrones básicos con Java.', demoGrade: 16 },
+  { code: 'DSI-202', name: 'Algoritmos y Estructuras de Datos', teacher: 'jorge', credits: 4, color: '#2F6F8F', schedule: 'Mar · 19:00 – 20:30', module: 'Módulo I · Fundamentos de programación', description: 'Listas, pilas, colas, árboles, grafos y análisis de complejidad.', demoGrade: 14 },
+  { code: 'DSI-203', name: 'Redes y Comunicaciones', teacher: 'mariana', credits: 3, color: '#4F6D3A', schedule: 'Jue · 19:00 – 20:30', module: 'Módulo I · Fundamentos de programación', description: 'Modelo OSI, TCP/IP, direccionamiento y configuración básica de redes.', demoGrade: 15 },
+  { code: 'TRV-204', name: 'Inglés Técnico I', teacher: 'daniel', credits: 2, color: '#5B7B6F', schedule: 'Sáb · 09:00 – 10:30', module: 'Competencias para la empleabilidad', type: 'empleabilidad', description: 'Vocabulario técnico básico y comprensión de lectura.', demoGrade: 17 },
+];
+
+/* Sílabos estructurados (Lineamientos Académicos Generales): competencia, capacidades, indicadores de logro, bibliografía. */
+export const SYLLABUS_BY_CODE = {
+  'DSI-301': {
+    competency: 'Desarrolla aplicaciones web completas (interfaz, servicios y persistencia) aplicando estándares de la industria, buenas prácticas de seguridad y metodologías ágiles, de acuerdo con los requerimientos del cliente.',
+    capacities: ['Construye interfaces web semánticas, accesibles y adaptables a distintos dispositivos.', 'Implementa servicios REST con Node.js y Express aplicando validaciones y autenticación.', 'Integra el frontend con la API y una base de datos para resolver un problema real.'],
+    indicators: ['Maqueta una página que supera la validación HTML y el contraste WCAG AA.', 'Expone una API con operaciones CRUD que responde con los códigos HTTP correctos en el 100 % de los casos de prueba.', 'Despliega una aplicación funcional y la sustenta ante el jurado con una demo de 5 minutos.'],
+    bibliography: ['Duckett, J. (2014). HTML & CSS: Design and Build Websites. Wiley.', 'Flanagan, D. (2020). JavaScript: The Definitive Guide (7.ª ed.). O\'Reilly.', 'MDN Web Docs. https://developer.mozilla.org/es/', 'Documentación oficial de Express. https://expressjs.com/es/'],
+    approved_by: 'Coordinación Académica · Programa de Desarrollo de Sistemas de Información',
+  },
+  'DSI-302': {
+    competency: 'Diseña e implementa bases de datos relacionales normalizadas y seguras que soporten los procesos de información de una organización.',
+    capacities: ['Modela entidades, relaciones y restricciones a partir de requerimientos del negocio.', 'Formula consultas SQL de complejidad media para extraer información.', 'Aplica normalización, índices y transacciones para garantizar integridad y rendimiento.'],
+    indicators: ['Elabora un modelo E-R completo con claves y cardinalidades correctas.', 'Resuelve consultas con JOIN, agrupamiento y subconsultas sin errores de sintaxis ni de lógica.', 'Entrega un script de creación de tablas en 3FN con integridad referencial.'],
+    bibliography: ['Elmasri, R. y Navathe, S. (2016). Fundamentos de sistemas de bases de datos (7.ª ed.). Pearson.', 'Silberschatz, A. (2019). Database System Concepts. McGraw-Hill.', 'Documentación de PostgreSQL. https://www.postgresql.org/docs/'],
+    approved_by: 'Coordinación Académica · Programa de Desarrollo de Sistemas de Información',
+  },
+  'DSI-303': {
+    competency: 'Diseña experiencias e interfaces digitales centradas en las personas, validadas con usuarios reales y conformes con criterios de accesibilidad.',
+    capacities: ['Investiga necesidades de usuarios mediante entrevistas y mapas de empatía.', 'Evalúa interfaces con heurísticas de usabilidad y propone mejoras priorizadas.', 'Prototipa interfaces de alta fidelidad y las valida con pruebas de usabilidad.'],
+    indicators: ['Presenta un mapa de empatía con al menos 5 insights accionables.', 'Identifica 8 hallazgos de usabilidad con severidad y propuesta de mejora.', 'Entrega un prototipo navegable y el informe de una prueba con 3 usuarios.'],
+    bibliography: ['Norman, D. (2013). The Design of Everyday Things. Basic Books.', 'Krug, S. (2014). Don\'t Make Me Think, Revisited. New Riders.', 'W3C WAI. Pautas de accesibilidad WCAG 2.1. https://www.w3.org/WAI/'],
+    approved_by: 'Coordinación Académica · Programa de Desarrollo de Sistemas de Información',
+  },
+  'DSI-304': {
+    competency: 'Aplica técnicas de inteligencia artificial y modelos de lenguaje de manera ética y responsable para resolver problemas de su entorno.',
+    capacities: ['Distingue los enfoques de IA, aprendizaje automático y aprendizaje profundo y sus límites.', 'Entrena y evalúa modelos de clasificación simples con datos reales.', 'Diseña soluciones con IA generativa aplicando principios éticos y de protección de datos.'],
+    indicators: ['Explica con ejemplos la diferencia entre IA, ML y deep learning.', 'Reporta la precisión de un clasificador y las variables más importantes.', 'Presenta un prototipo de solución con IA para un problema local, con análisis de sesgos y privacidad.'],
+    bibliography: ['Russell, S. y Norvig, P. (2021). Artificial Intelligence: A Modern Approach (4.ª ed.). Pearson.', 'Google. Machine Learning Crash Course. https://developers.google.com/machine-learning/crash-course', 'UNESCO (2021). Recomendación sobre la ética de la inteligencia artificial.'],
+    approved_by: 'Coordinación Académica · Programa de Desarrollo de Sistemas de Información',
+  },
+  'TRV-305': {
+    competency: 'Se comunica en inglés técnico en contextos laborales de tecnología: lee documentación, redacta correos profesionales y participa en reuniones.',
+    capacities: ['Comprende documentación técnica aplicando estrategias de lectura.', 'Redacta correos y reportes técnicos con estructura y tono profesional.', 'Participa en reuniones y entrevistas en inglés con fluidez básica.'],
+    indicators: ['Elabora un glosario de 30 términos con definición y ejemplo.', 'Redacta un reporte de incidencia de 150 a 200 palabras sin errores que afecten la comprensión.', 'Presenta un stand-up de 2 minutos con las tres partes del formato.'],
+    bibliography: ['Esteras, S. R. (2008). Infotech: English for Computer Users (4.ª ed.). Cambridge University Press.', 'Cambridge Dictionary. https://dictionary.cambridge.org/'],
+    approved_by: 'Coordinación Académica · Área de Competencias para la Empleabilidad',
+  },
+  'ADM-301': {
+    competency: 'Gestiona proyectos con enfoques ágiles, coordinando equipos, riesgos y entregables de valor para la organización.',
+    capacities: ['Compara enfoques tradicionales y ágiles y selecciona el adecuado para cada proyecto.', 'Aplica Scrum y Kanban para planificar y ejecutar un proyecto.'],
+    indicators: ['Sustenta la elección de un enfoque de gestión en un caso real.', 'Construye un backlog priorizado de 15 historias de usuario con criterios de aceptación.'],
+    bibliography: ['Schwaber, K. y Sutherland, J. (2020). La Guía de Scrum.', 'Project Management Institute (2021). PMBOK Guide (7.ª ed.).'],
+    approved_by: 'Coordinación Académica · Programa de Administración de Empresas',
+  },
+};

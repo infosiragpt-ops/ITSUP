@@ -1,12 +1,12 @@
 import { NavLink, Outlet, useOutletContext, useParams, Link } from 'react-router-dom';
 import {
-  Home, Layers, ClipboardList, ListChecks, MessagesSquare, Video, GraduationCap, Users, Clock, ChevronLeft, Pencil,
+  Home, Layers, ClipboardList, ListChecks, MessagesSquare, Video, GraduationCap, Users, Clock, ChevronLeft, Pencil, FileText, UserCheck, Lock, BookMarked,
 } from 'lucide-react';
 import { useApi } from '../../../lib/api.js';
 import { useAuth } from '../../../lib/context.jsx';
 import { Avatar, ErrorState, ProgressRing, Skeleton, cx } from '../../../components/ui.jsx';
 import { CourseCover } from '../../../components/brand.jsx';
-import { fullName } from '../../../lib/format.js';
+import { fullName, ROMAN } from '../../../lib/format.js';
 
 export const useCourse = () => useOutletContext();
 
@@ -23,29 +23,35 @@ export default function CourseLayout() {
   const base = `/app/cursos/${course.id}`;
   const tabs = [
     { to: base, label: 'Inicio', icon: Home, end: true },
+    { to: `${base}/silabo`, label: 'Sílabo', icon: FileText },
     { to: `${base}/contenido`, label: 'Contenido', icon: Layers },
     { to: `${base}/tareas`, label: 'Tareas', icon: ClipboardList },
     { to: `${base}/evaluaciones`, label: 'Evaluaciones', icon: ListChecks },
     { to: `${base}/foros`, label: 'Foros', icon: MessagesSquare },
     { to: `${base}/sesiones`, label: 'Sesiones en vivo', icon: Video },
-    { to: `${base}/calificaciones`, label: 'Calificaciones', icon: GraduationCap },
-    { to: `${base}/participantes`, label: 'Participantes', icon: Users },
+    { to: `${base}/asistencia`, label: 'Asistencia', icon: UserCheck },
+    { to: `${base}/calificaciones`, label: user.role === 'student' ? 'Calificaciones' : 'Registro de evaluación', icon: GraduationCap },
+    { to: `${base}/participantes`, label: user.role === 'student' ? 'Participantes' : 'Seguimiento', icon: Users },
   ];
   const isStudent = user.role === 'student';
+  const closed = course.status === 'closed';
 
   return (
     <div className="animate-fade-up">
-      <Link to="/app/cursos" className="mb-3 inline-flex items-center gap-1 text-sm text-muted hover:text-ink"><ChevronLeft size={16} /> Mis cursos</Link>
-      <CourseCover course={course} className="rounded-2xl">
+      <Link to="/app/cursos" className="mb-3 inline-flex items-center gap-1 text-sm text-muted hover:text-ink print:hidden"><ChevronLeft size={16} /> Mis cursos</Link>
+      <CourseCover course={course} className="rounded-2xl print:hidden">
         <div className="relative flex flex-col gap-5 p-5 text-white sm:flex-row sm:items-end sm:p-7">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-2 text-[12px] font-semibold">
               <span className="rounded-md bg-black/20 px-2 py-0.5 tracking-wide backdrop-blur">{course.code}</span>
-              <span className="rounded-md bg-black/20 px-2 py-0.5 backdrop-blur">{course.credits} créditos</span>
-              {course.term && <span className="rounded-md bg-black/20 px-2 py-0.5 backdrop-blur">Ciclo {course.term.name}</span>}
-              {course.can_edit && !isStudent && <span className="flex items-center gap-1 rounded-md bg-white px-2 py-0.5 text-primary-ink"><Pencil size={11} /> Modo docente</span>}
+              <span className="rounded-md bg-black/20 px-2 py-0.5 backdrop-blur">{course.credits} créditos · {course.hours} h</span>
+              {course.term && <span className="rounded-md bg-black/20 px-2 py-0.5 backdrop-blur">Periodo {course.term.name}</span>}
+              {course.cycle && <span className="rounded-md bg-black/20 px-2 py-0.5 backdrop-blur">Ciclo {ROMAN[course.cycle] || course.cycle}</span>}
+              {closed && <span className="flex items-center gap-1 rounded-md bg-white px-2 py-0.5 text-ink"><Lock size={11} /> Acta cerrada</span>}
+              {course.can_edit && !isStudent && !closed && <span className="flex items-center gap-1 rounded-md bg-white px-2 py-0.5 text-primary-ink"><Pencil size={11} /> Modo docente</span>}
             </div>
             <h1 className="font-display mt-3 text-[1.75rem] leading-tight font-semibold sm:text-[2.2rem]">{course.name}</h1>
+            {course.module_name && <div className="mt-1 flex items-center gap-1.5 text-sm text-white/80"><BookMarked size={14} /> {course.module_name} · {course.course_type_label}</div>}
             <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/85">
               {course.teacher && <span className="flex items-center gap-2"><Avatar user={course.teacher} size={24} className="ring-2 ring-white/40" /> {fullName(course.teacher)}</span>}
               <span className="flex items-center gap-1.5"><Clock size={15} /> {course.schedule}</span>
@@ -63,7 +69,7 @@ export default function CourseLayout() {
         </div>
       </CourseCover>
 
-      <nav className="no-scrollbar sticky top-16 z-20 -mx-4 mt-4 mb-6 overflow-x-auto border-b border-line bg-bg/90 px-4 backdrop-blur-xl sm:mx-0 sm:px-0" aria-label="Secciones del curso">
+      <nav className="no-scrollbar sticky top-16 z-20 -mx-4 mt-4 mb-6 overflow-x-auto border-b border-line bg-bg/90 px-4 backdrop-blur-xl sm:mx-0 sm:px-0 print:hidden" aria-label="Secciones del curso">
         <ul className="flex min-w-max gap-1">
           {tabs.map((t) => (
             <li key={t.to}>
@@ -77,7 +83,7 @@ export default function CourseLayout() {
           ))}
         </ul>
       </nav>
-      <Outlet context={{ course, reloadCourse: reload, setCourse: setData, canEdit: course.can_edit, isStudent }} />
+      <Outlet context={{ course, reloadCourse: reload, setCourse: setData, canEdit: course.can_edit, isStudent, closed }} />
     </div>
   );
 }

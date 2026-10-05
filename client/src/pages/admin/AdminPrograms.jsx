@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Layers, Plus, Pencil, ChevronDown, Users, Library, Clock, MonitorSmartphone, Briefcase, Award, GraduationCap } from 'lucide-react';
+import { Layers, Plus, Pencil, ChevronDown, Users, Library, Clock, MonitorSmartphone, Briefcase, Award, GraduationCap, ScrollText } from 'lucide-react';
 import { api, useApi } from '../../lib/api.js';
 import { useUi } from '../../lib/context.jsx';
 import { pluralize } from '../../lib/format.js';
@@ -9,7 +9,9 @@ import { PROGRAM_ICONS, AREAS } from '../../components/brand.jsx';
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 const SWATCHES = ['#C96442', '#5B7B6F', '#6A5ACD', '#B8860B', '#2F6F8F', '#8B4C6B', '#4F6D3A', '#A0522D'];
 const ICON_LABELS = { code: 'Tecnología', briefcase: 'Negocios', calculator: 'Contabilidad', megaphone: 'Marketing', palette: 'Diseño', shield: 'Seguridad', graduation: 'General' };
-const EMPTY_FORM = { name: '', short: '', description: '', duration: '3 años (6 ciclos)', modality: '100% virtual', field: '', profile: '', color: '#C96442', icon: 'graduation', area: '', image: '' };
+const EMPTY_FORM = { name: '', short: '', description: '', duration: '3 años (6 ciclos)', modality: '100% virtual', field: '', profile: '', color: '#C96442', icon: 'graduation', area: '', image: '', level: 'Profesional Técnico', degree: '', total_credits: '120', total_hours: '2550', resolution: '' };
+/** Mínimos de la Ley 30512 / LAG por nivel formativo. */
+const LEVELS = { 'Auxiliar Técnico': [40, 850], 'Técnico': [80, 1700], 'Profesional Técnico': [120, 2550] };
 
 const tint = (color, pct = 14) => `color-mix(in srgb, ${color} ${pct}%, transparent)`;
 
@@ -113,6 +115,12 @@ function ProgramCard({ program: p, busy, onEdit, onToggle }) {
           <Metric icon={Clock} label="Duración" value={p.duration || '—'} small />
           <Metric icon={MonitorSmartphone} label="Modalidad" value={p.modality || '—'} small />
         </div>
+        <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+          <span className="inline-flex items-center gap-1"><ScrollText size={12} /> {p.level || 'Profesional Técnico'}</span>
+          <span>{p.total_credits || 120} créditos · {p.total_hours || 2550} h</span>
+          {p.resolution && <span className="truncate" title={p.resolution}>{p.resolution}</span>}
+        </div>
+        {p.degree && <div className="mt-1 text-xs text-ink-2">Título: <strong className="text-ink">{p.degree}</strong></div>}
 
         <div className="mt-4 border-t border-line pt-3">
           <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open}
@@ -191,13 +199,17 @@ function ProgramFormModal({ open, program, onClose, onSaved }) {
       ? {
         name: program.name || '', short: program.short || '', description: program.description || '', duration: program.duration || '',
         modality: program.modality || '', field: program.field || '', profile: program.profile || '', color: program.color || '#C96442', icon: program.icon || 'graduation',
-        area: program.area || '', image: program.image || '',
+        area: program.area || '', image: program.image || '', level: program.level || 'Profesional Técnico', degree: program.degree || '', total_credits: String(program.total_credits ?? 120),
+        total_hours: String(program.total_hours ?? 2550), resolution: program.resolution || '',
       }
       : EMPTY_FORM);
   }, [open, program]);
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const setLevel = (e) => { const [cr, h] = LEVELS[e.target.value] || [120, 2550]; setForm((f) => ({ ...f, level: e.target.value, total_credits: String(cr), total_hours: String(h), degree: f.degree || `${e.target.value} en ${f.name}` })); };
   const PreviewIcon = PROGRAM_ICONS[form.icon] || GraduationCap;
+  const [minCr, minH] = LEVELS[form.level] || [0, 0];
+  const belowMin = Number(form.total_credits) < minCr || Number(form.total_hours) < minH;
 
   const submit = async (ev) => {
     ev?.preventDefault();
@@ -210,7 +222,8 @@ function ProgramFormModal({ open, program, onClose, onSaved }) {
     const payload = {
       name: form.name.trim(), short: form.short.trim() || form.name.trim(), description: form.description.trim(),
       duration: form.duration.trim(), modality: form.modality.trim(), field: form.field.trim(), profile: form.profile.trim(), color: form.color,
-      area: form.area, image: form.image.trim(),
+      area: form.area, image: form.image.trim(), level: form.level, degree: form.degree.trim() || `${form.level} en ${form.name.trim()}`,
+      total_credits: Number(form.total_credits) || 120, total_hours: Number(form.total_hours) || 2550, resolution: form.resolution.trim(),
     };
     if (isNew) payload.icon = form.icon;
     try {
@@ -268,6 +281,14 @@ function ProgramFormModal({ open, program, onClose, onSaved }) {
         <Field label="Foto de la carrera" hint="Ruta o enlace de una imagen horizontal. Vacío: se usa el color y el ícono." className="sm:col-span-3">
           <Input value={form.image} onChange={set('image')} placeholder="/img/carreras/mi-carrera.jpg o https://…" />
         </Field>
+        <Field label="Nivel formativo" className="sm:col-span-2" hint="Ley 30512: Auxiliar Técnico, Técnico o Profesional Técnico.">
+          <Select value={form.level} onChange={setLevel}>{Object.keys(LEVELS).map((l) => <option key={l}>{l}</option>)}</Select>
+        </Field>
+        <Field label="Créditos del plan" className="sm:col-span-2" hint={`Mínimo ${minCr}`} error={Number(form.total_credits) < minCr ? `Mínimo ${minCr} créditos` : undefined}><Input type="number" min={0} value={form.total_credits} onChange={set('total_credits')} /></Field>
+        <Field label="Horas del plan" className="sm:col-span-2" hint={`Mínimo ${minH}`} error={Number(form.total_hours) < minH ? `Mínimo ${minH} horas` : undefined}><Input type="number" min={0} value={form.total_hours} onChange={set('total_hours')} /></Field>
+        <Field label="Título que otorga" className="sm:col-span-3" hint="A nombre de la Nación al concluir el plan de estudios."><Input value={form.degree} onChange={set('degree')} placeholder={`${form.level} en ${form.name || '…'}`} /></Field>
+        <Field label="Resolución de autorización / licenciamiento" className="sm:col-span-3"><Input value={form.resolution} onChange={set('resolution')} placeholder="R.M. N.° 000-2026-MINEDU" /></Field>
+        {belowMin && <div className="rounded-xl bg-warn-soft px-3 py-2 text-xs text-warn sm:col-span-6">El plan está por debajo de los mínimos del nivel formativo seleccionado. Verifica los créditos y horas antes de publicar.</div>}
         <Field label="Campo laboral" className="sm:col-span-3">
           <Textarea rows={4} value={form.field} onChange={set('field')} placeholder="¿Dónde podrán trabajar los egresados?" />
         </Field>

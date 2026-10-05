@@ -9,6 +9,7 @@ import publicRoutes from './routes/public.js';
 import courseRoutes from './routes/courses.js';
 import activityRoutes from './routes/activities.js';
 import communityRoutes from './routes/community.js';
+import academicRoutes from './routes/academic.js';
 import adminRoutes from './routes/admin.js';
 
 if (!get('SELECT COUNT(*) n FROM users').n) {
@@ -18,13 +19,33 @@ if (!get('SELECT COUNT(*) n FROM users').n) {
 
 const app = express();
 app.disable('x-powered-by');
+app.set('trust proxy', process.env.TRUST_PROXY === '1');
 app.use(express.json({ limit: '2mb' }));
 
-app.get('/api/health', (req, res) => res.json({ ok: true, name: 'ISUP Aula Virtual' }));
+/* Cabeceras de seguridad (OWASP). CSP permite estilos y el script inline del tema; el resto solo del propio origen. */
+const PROD = process.env.NODE_ENV === 'production';
+app.use((req, res, next) => {
+  res.set({
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    'Cross-Origin-Opener-Policy': 'same-origin',
+    'Content-Security-Policy': [
+      "default-src 'self'", "script-src 'self' 'unsafe-inline'", "style-src 'self' 'unsafe-inline'", "img-src 'self' data: https:",
+      "font-src 'self' data:", "connect-src 'self'", "frame-ancestors 'none'", "base-uri 'self'", "form-action 'self'", "object-src 'none'",
+    ].join('; '),
+    ...(PROD ? { 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains' } : {}),
+  });
+  if (req.path.startsWith('/api')) res.set('Cache-Control', 'no-store');
+  next();
+});
+
+app.get('/api/health', (req, res) => res.json({ ok: true, name: 'ISUP Aula Virtual', version: '2.0.0' }));
 app.use('/api/auth', authRoutes);
 app.use('/api/public', publicRoutes);
 app.use('/api/admin', auth, adminRoutes);
-app.use('/api', auth, courseRoutes, activityRoutes, communityRoutes);
+app.use('/api', auth, courseRoutes, activityRoutes, communityRoutes, academicRoutes);
 app.use('/api', (req, res) => res.status(404).json({ error: 'Ruta no encontrada' }));
 
 // Uploaded files (served with a download-friendly name when ?name= is present)
@@ -47,6 +68,7 @@ if (fs.existsSync(dist)) {
 
 app.use((err, req, res, next) => {
   if (err.code === 'LIMIT_FILE_SIZE') return res.status(400).json({ error: 'El archivo supera los 25 MB' });
+  if (err.type === 'entity.parse.failed') return res.status(400).json({ error: 'Solicitud inválida' });
   if (!err.expose) console.error(err);
   res.status(err.status || 500).json({ error: err.expose ? err.message : 'Ocurrió un error inesperado' });
 });

@@ -137,6 +137,8 @@ function SiteFooter() {
             <li><Link to="/aula-virtual" className="hover:text-white">Guía del aula virtual</Link></li>
             <li><Link to="/aula-virtual#fechas" className="hover:text-white">Fechas importantes</Link></li>
             <li><Link to="/aula-virtual#requisitos" className="hover:text-white">Requisitos técnicos</Link></li>
+            <li><Link to="/aula-virtual#normativa" className="hover:text-white">Normativa académica</Link></li>
+            <li><Link to="/verificar" className="hover:text-white">Verificar un documento</Link></li>
             <li><Link to="/admision" className="hover:text-white">Admisión</Link></li>
           </ul>
         </div>
@@ -153,7 +155,7 @@ function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-white/45 sm:flex-row sm:justify-between sm:px-6">
           <span>© {new Date().getFullYear()} ISUP · Instituto Superior Universitario Privado. Todos los derechos reservados.</span>
-          <span>Libro de reclamaciones · Políticas de privacidad</span>
+          <span className="flex flex-wrap gap-x-3"><Link to="/privacidad" className="hover:text-white">Política de privacidad (Ley 29733)</Link><span>·</span><Link to="/privacidad" className="hover:text-white">Condiciones de uso</Link><span>·</span><span>Libro de reclamaciones</span></span>
         </div>
       </div>
     </footer>

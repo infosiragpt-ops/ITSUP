@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import { all, get, run, insert, now, httpError, notify } from '../db.js';
 import { courseAccess, requireEdit } from '../auth.js';
-import { userBrief, studentIds, courseIdsFor, inList, coursesFor, courseCard } from '../lib.js';
+import { userBrief, studentIds, courseIdsFor, inList, coursesFor, courseCard, activeTerm } from '../lib.js';
+import { studentStanding, riskFlags, enrolledStudents } from '../academic.js';
 
 const r = Router();
 
@@ -114,7 +115,7 @@ r.get('/dashboard', (req, res) => {
   ).map((a) => ({ ...a, author: userBrief(a.author_id), course: courseName[a.course_id] || null }));
 
   const courses = coursesFor(u).map((c) => courseCard(c, u));
-  const out = { courses, sessions, announcements };
+  const out = { courses, sessions, announcements, term: activeTerm() };
 
   if (u.role === 'student') {
     const horizon = new Date(Date.now() + 21 * 864e5).toISOString();
@@ -140,12 +141,19 @@ r.get('/dashboard', (req, res) => {
     out.continue = next ? { ...next, course: courseName[next.course_id] } : null;
 
     const avgs = courses.map((c) => c.grades.average).filter((x) => x != null);
+    const atts = courses.map((c) => c.attendance?.attendance_pct).filter((x) => x != null);
     out.stats = {
       average: avgs.length ? Math.round((avgs.reduce((a, b) => a + b, 0) / avgs.length) * 10) / 10 : null,
       pending: out.upcoming.length,
       progress: courses.length ? Math.round(courses.reduce((s, c) => s + c.progress.pct, 0) / courses.length) : 0,
       courses: courses.length,
+      attendance: atts.length ? Math.round(atts.reduce((a, b) => a + b, 0) / atts.length) : null,
     };
+    // Alertas académicas (asistencia y promedio) para el acompañamiento del estudiante
+    out.alerts = courses.flatMap((c) => {
+      const st = { grades: c.grades, attendance: c.attendance, final: c.final.condition ? c.final : { ...c.final, min_grade: c.rules?.min_grade || 13 } };
+      return riskFlags(st, c.progress.pct).filter((f) => f.key !== 'progress').map((f) => ({ ...f, course: { id: c.id, name: c.name, color: c.color } }));
+    });
   } else {
     out.to_grade = all(
       `SELECT s.id, s.submitted_at, a.id AS assignment_id, a.title, a.course_id, u.first_name, u.last_name, u.avatar_color
@@ -157,11 +165,30 @@ r.get('/dashboard', (req, res) => {
        FROM posts p JOIN threads t ON t.id = p.thread_id JOIN forums f ON f.id = t.forum_id
        WHERE f.course_id IN (${list}) ORDER BY p.created_at DESC LIMIT 5`
     ).map((p) => ({ ...p, author: userBrief(p.author_id), course: courseName[p.course_id] }));
+    // Estudiantes en riesgo (alerta temprana) en los cursos a cargo
+    const atRisk = [];
+    for (const c of coursesFor(u)) {
+      if (c.status === 'closed') continue;
+      for (const s of enrolledStudents(c.id)) {
+        if (s.enrollment_status === 'retirado') continue;
+        const st = studentStanding(c, s.id);
+        const flags = riskFlags(st);
+        if (flags.some((f) => f.tone === 'danger') || flags.length >= 2) atRisk.push({ student: { id: s.id, first_name: s.first_name, last_name: s.last_name, avatar_color: s.avatar_color, code: s.code }, course: courseName[c.id], flags });
+      }
+    }
+    out.at_risk = atRisk.slice(0, 8);
+    out.attendance_pending = all(
+      `SELECT s.id, s.title, s.starts_at, s.course_id FROM live_sessions s WHERE s.course_id IN (${list})
+       AND datetime(s.starts_at, '+' || s.duration_min || ' minutes') < datetime('now') AND NOT EXISTS (SELECT 1 FROM attendance a WHERE a.session_id = s.id)
+       ORDER BY s.starts_at DESC LIMIT 5`
+    ).map((s) => ({ ...s, course: courseName[s.course_id] }));
     out.stats = {
       courses: courses.length,
       students: get(`SELECT COUNT(DISTINCT user_id) n FROM enrollments e JOIN users u ON u.id = e.user_id WHERE u.role = 'student' AND course_id IN (${list})`).n,
       to_grade: get(`SELECT COUNT(*) n FROM submissions s JOIN assignments a ON a.id = s.assignment_id WHERE a.course_id IN (${list}) AND s.grade IS NULL`).n,
       sessions_week: sessions.length,
+      at_risk: atRisk.length,
+      attendance_pending: get(`SELECT COUNT(*) n FROM live_sessions s WHERE s.course_id IN (${list}) AND datetime(s.starts_at, '+' || s.duration_min || ' minutes') < datetime('now') AND NOT EXISTS (SELECT 1 FROM attendance a WHERE a.session_id = s.id)`).n,
     };
   }
   res.json(out);
