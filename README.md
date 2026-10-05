@@ -8,18 +8,22 @@ Personales (29733) y a pautas de accesibilidad y seguridad. Ver [NORMATIVA.md](N
 
 ## Cómo ejecutar en local
 
-Solo necesitas **Node.js 22.13 o superior** (versión LTS desde https://nodejs.org). Usa el SQLite
-incluido en Node, así que no hay que instalar ninguna base de datos.
+Solo necesitas **Node.js 22.13 o superior** (botón "LTS" de https://nodejs.org; hoy ofrece 24.x y sirve). Usa el SQLite
+incluido en Node, así que no hay que instalar ninguna base de datos. Guía paso a paso para personas no técnicas:
+[INICIO_RAPIDO.md](INICIO_RAPIDO.md). Paquete ZIP listo para usar (interfaz compilada y dependencias incluidas):
+`bash scripts/empaquetar.sh` (ejecutar en Linux/macOS para conservar los permisos de los lanzadores).
 
 **Opción 1 · doble clic**
 
-- Windows: `iniciar.bat`
-- macOS: `iniciar.command` (la primera vez: clic derecho → Abrir)
-- Linux: `./iniciar.sh`
+- Windows: `iniciar.bat` (desbloquea y extrae el ZIP antes; si sale "Windows protegió su PC": Más información → Ejecutar de todas formas)
+- macOS: `iniciar.command` (la primera vez macOS lo bloquea: Ajustes del Sistema → Privacidad y seguridad → Abrir de todos modos;
+  en macOS 13/14 basta Control+clic → Abrir; alternativa: en Terminal `bash iniciar.sh`)
+- Linux: `bash iniciar.sh`
 
-El script instala las dependencias la primera vez, compila la interfaz si hace falta, arranca el servidor
-y abre http://localhost:3000/login en el navegador. También muestra la dirección para entrar desde el
-celular en la misma red Wi-Fi.
+El script instala las dependencias la primera vez (no hace falta con el ZIP), compila la interfaz si hace falta,
+arranca el servidor y abre http://localhost:3000/login en el navegador. Por defecto solo escucha en esta computadora;
+para entrar desde el celular en la misma red Wi-Fi usa `iniciar.bat red` (o `iniciar-red.bat`) / `./iniciar.sh --red`.
+Para volver a la demo con fechas de hoy: `iniciar.bat reiniciar` / `./iniciar.sh --reiniciar` (con el aula cerrada).
 
 **Opción 2 · terminal**
 
@@ -98,9 +102,13 @@ La foto y el área de cada carrera se cambian en **Administración → Programas
 | Variable | Uso | Valor por defecto |
 |---|---|---|
 | `PORT` | Puerto del servidor | `3000` |
+| `HOST` | Interfaz de escucha (`127.0.0.1` solo esta computadora; el lanzador local usa `0.0.0.0` únicamente con `red`) | `0.0.0.0` |
+| `DATA_DIR` | Carpeta de datos (base de datos y archivos subidos) | `data/` |
+| `ISUP_SEED` | `minimal` crea solo la cuenta de administración (producción) en vez de la demo | — |
 | `JWT_SECRET` | Firma de sesiones y huella de documentos (obligatorio cambiar en producción) | valor de desarrollo |
 | `SESSION_HOURS` | Duración de la sesión | `168` (7 días) |
-| `DB_PATH` | Ruta del archivo de base de datos | `data/isup.db` |
+| `DB_PATH` | Ruta del archivo de base de datos | `DATA_DIR/isup.db` |
+| `VITE_DEMO_MODE` | `false` al compilar (`npm run build`) oculta los accesos rápidos de demostración | `true` |
 | `NODE_ENV` | `production` activa HSTS | — |
 | `TRUST_PROXY` | `1` si se sirve detrás de un proxy (IP real en la auditoría) | — |
 

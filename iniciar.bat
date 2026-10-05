@@ -1,5 +1,7 @@
 @echo off
-rem  ISUP Aula Virtual - arranque local en Windows (doble clic). Opcion: iniciar.bat red  (acceso desde el celular)
+rem  ISUP Aula Virtual - arranque local en Windows (doble clic).
+rem  Opciones: iniciar.bat red        (acceso desde el celular en la misma red Wi-Fi)
+rem            iniciar.bat reiniciar  (borra la carpeta data y vuelve a cargar la demo; con el aula cerrada)
 title ISUP Aula Virtual
 cd /d "%~dp0"
 
@@ -40,6 +42,7 @@ if %NODE_MAJOR% LSS 22 (
 
 set "ISUP_LAUNCHER=1"
 if /i "%~1"=="red" set "ISUP_LAN=1"
+if /i "%~1"=="reiniciar" set "ISUP_RESET=1"
 node "%~dp0scripts\local.mjs"
 set "CODE=%errorlevel%"
 if not "%CODE%"=="0" (

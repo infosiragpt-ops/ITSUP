@@ -49,6 +49,9 @@ Otras cuentas útiles (misma contraseña):
 
 ## Reiniciar la demo
 
+Con el aula cerrada: Windows `iniciar.bat reiniciar` · Mac/Linux `bash iniciar.sh --reiniciar` (equivale a borrar la carpeta `data`
+y volver a abrir el aula). Desde una terminal también:
+
 ```bash
 npm run seed
 ```
@@ -58,5 +61,5 @@ Borra la base de datos y los archivos subidos, y vuelve a cargar los datos de ej
 "en vivo", tareas por vencer, asistencia por registrar y un periodo anterior cerrado).
 
 > Antes de publicar en internet: cambia las contraseñas, define `JWT_SECRET`,
-> completa los datos institucionales en Gestión académica → Configuración y pon
-> `DEMO_MODE = false` en `client/src/pages/public/Login.jsx`. Ver [NORMATIVA.md](NORMATIVA.md).
+> completa los datos institucionales en Gestión académica → Configuración y compila la interfaz con
+> `VITE_DEMO_MODE=false npm run build` para ocultar los accesos rápidos (los scripts de `deploy/` ya lo hacen). Ver [NORMATIVA.md](NORMATIVA.md) y [DESPLIEGUE.md](DESPLIEGUE.md).
