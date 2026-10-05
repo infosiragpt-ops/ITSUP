@@ -4,6 +4,7 @@ import { all, get, run, insert, httpError, notify, tx, audit, settings, setSetti
 import { role, publicUser } from '../auth.js';
 import { courseCard, checkPassword } from '../lib.js';
 import { buildActa, closeActa, reopenActa, creditsFor } from '../academic.js';
+import { randomPassword } from '../seed.js';
 
 const r = Router();
 r.use(role('admin'));
@@ -64,7 +65,9 @@ r.post('/users', (req, res) => {
   if (get('SELECT 1 x FROM users WHERE lower(email) = lower(?)', email.trim())) throw httpError(400, 'Ya existe un usuario con ese correo');
   if (!validDni(dni)) throw httpError(400, 'El DNI debe tener 8 dígitos');
   if (dni && get('SELECT 1 x FROM users WHERE dni = ?', String(dni))) throw httpError(400, 'Ya existe un usuario con ese DNI');
-  const pwd = password?.trim() || 'Isup2026!';
+  // Sin contraseña indicada se genera una temporal aleatoria que se muestra una sola vez al administrador.
+  const generated = !password?.trim();
+  const pwd = generated ? randomPassword() : password.trim();
   const problem = checkPassword(pwd);
   if (problem) throw httpError(400, problem);
   const id = insert(
@@ -73,8 +76,8 @@ r.post('/users', (req, res) => {
     program_id ? Number(program_id) : null, cycle ? Number(cycle) : null, title || null, COLORS[Math.floor(Math.random() * COLORS.length)], dni ? String(dni) : null
   );
   notify([id], { type: 'welcome', title: '¡Bienvenido(a) a ISUP!', body: 'Completa tu checklist de inicio para empezar tus clases.', link: '/app' });
-  audit(req, 'user.create', { entity: 'user', entityId: id, details: { role: rl, email: email.trim().toLowerCase() } });
-  res.status(201).json(publicUser(get('SELECT * FROM users WHERE id = ?', id), { full: true }));
+  audit(req, 'user.create', { entity: 'user', entityId: id, details: { role: rl, email: email.trim().toLowerCase(), generated_password: generated } });
+  res.status(201).json({ ...publicUser(get('SELECT * FROM users WHERE id = ?', id), { full: true }), temp_password: generated ? pwd : undefined });
 });
 
 r.put('/users/:id', (req, res) => {

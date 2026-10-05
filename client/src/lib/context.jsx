@@ -112,7 +112,7 @@ export function UiProvider({ children }) {
           </>
         }
       >
-        <p className="text-sm text-muted">{confirmState?.message}</p>
+        <p className="text-sm whitespace-pre-line text-muted">{confirmState?.message}</p>
       </Modal>
     </UiCtx.Provider>
   );

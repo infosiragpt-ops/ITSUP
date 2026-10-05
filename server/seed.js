@@ -1,4 +1,5 @@
 import bcrypt from 'bcryptjs';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -430,6 +431,46 @@ export function seed() {
     A(teacherId.carla, 'grade.set', 'submission', t2, { assignment_id: t2, to: 17 }, limaAt(-3, 10, 0));
     A(demoStudent, 'auth.login', 'user', demoStudent, null, limaAt(-1, 19, 30));
   });
+}
+
+/** Contraseña aleatoria legible (sin caracteres ambiguos) que cumple la política: letras y números. */
+export function randomPassword(length = 14) {
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+  const bytes = crypto.randomBytes(length);
+  let out = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
+  if (!/\d/.test(out)) out = out.slice(0, -1) + '7';
+  if (!/[A-Za-z]/.test(out)) out = 'K' + out.slice(1);
+  return out;
+}
+
+/**
+ * Semilla mínima para producción: configuración institucional, el periodo académico en curso y una
+ * cuenta de administración con contraseña aleatoria, que se guarda una sola vez en data/ADMIN_INICIAL.txt.
+ */
+export function seedMinimal() {
+  const email = (process.env.ISUP_ADMIN_EMAIL || 'admin@isup.edu.pe').trim().toLowerCase();
+  const password = process.env.ISUP_ADMIN_PASSWORD || randomPassword();
+  const institution = process.env.ISUP_INSTITUTION || DEFAULT_SETTINGS.institution_name;
+  const short = process.env.ISUP_SHORT || DEFAULT_SETTINGS.institution_short;
+  const now = new Date();
+  const year = now.getFullYear();
+  const first = now.getMonth() < 6;
+  const start = first ? `${year}-03-01` : `${year}-08-01`;
+  const end = first ? `${year}-07-15` : `${year}-12-15`;
+  tx(() => {
+    for (const [k, v] of Object.entries(DEFAULT_SETTINGS)) setSetting(k, v);
+    setSetting('institution_name', institution);
+    setSetting('institution_short', short);
+    insert('INSERT INTO terms (name, start_date, end_date, weeks, is_active) VALUES (?,?,?,16,1)', `${year}-${first ? 'I' : 'II'}`, start, end);
+    insert(
+      "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, onboarding) VALUES (?,?,?,?,?,'admin',?,?,?)",
+      `A00${String(year).slice(2)}0001`, email, bcrypt.hashSync(password, 10), 'Administración', short, 'Secretaría Académica', '#3D3929', '{"done":true}'
+    );
+  });
+  const file = path.join(path.dirname(UPLOADS_DIR), 'ADMIN_INICIAL.txt');
+  fs.writeFileSync(file, `ISUP Aula Virtual - cuenta de administración inicial\n\nCorreo:      ${email}\nContraseña:  ${password}\n\nCambia esta contraseña en Mi perfil después del primer ingreso y elimina este archivo.\n`, { mode: 0o600 });
+  console.log(`Cuenta de administración creada: ${email} (contraseña guardada en ${file})`);
+  return { email, password, file };
 }
 
 export function resetDatabase() {

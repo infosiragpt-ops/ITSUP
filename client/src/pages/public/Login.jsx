@@ -6,10 +6,10 @@ import { Button, Field, Input, cx } from '../../components/ui.jsx';
 import { Logo, CONTACT } from '../../components/brand.jsx';
 
 /**
- * Accesos de demostración (modo local). Desactivar DEMO_MODE en producción.
- * La contraseña coincide con DEMO_PASSWORD en server/seed.js.
+ * Accesos de demostración (modo local). En producción se compila con VITE_DEMO_MODE=false
+ * (el instalador de deploy/ lo hace automáticamente). La contraseña coincide con DEMO_PASSWORD en server/seed.js.
  */
-const DEMO_MODE = true;
+const DEMO_MODE = import.meta.env.VITE_DEMO_MODE !== 'false';
 const DEMO_PASSWORD = 'Isup2026!';
 const DEMO = [
   { role: 'Estudiante', email: 'estudiante@isup.edu.pe', icon: GraduationCap, name: 'Valeria Mendoza' },

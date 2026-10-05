@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, UPLOADS_DIR, get } from './db.js';
 import { auth } from './auth.js';
-import { seed } from './seed.js';
+import { seed, seedMinimal } from './seed.js';
 import authRoutes from './routes/auth.js';
 import publicRoutes from './routes/public.js';
 import courseRoutes from './routes/courses.js';
@@ -13,8 +13,14 @@ import academicRoutes from './routes/academic.js';
 import adminRoutes from './routes/admin.js';
 
 if (!get('SELECT COUNT(*) n FROM users').n) {
-  console.log('Base de datos vacía: cargando datos de demostración…');
-  seed();
+  // ISUP_SEED=minimal (producción): solo la cuenta de administración y el periodo actual, sin datos ficticios.
+  if (process.env.ISUP_SEED === 'minimal') {
+    console.log('Base de datos vacía: creando la cuenta de administración inicial…');
+    seedMinimal();
+  } else {
+    console.log('Base de datos vacía: cargando datos de demostración…');
+    seed();
+  }
 }
 
 const app = express();
@@ -74,4 +80,17 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = Number(process.env.PORT) || 3000;
-app.listen(PORT, () => console.log(`ISUP Aula Virtual lista en http://localhost:${PORT}`));
+// HOST=127.0.0.1 en producción (detrás de Caddy/Nginx); por defecto escucha en todas las interfaces para el uso local en red.
+const HOST = process.env.HOST || '0.0.0.0';
+// Express 5 entrega el error de escucha (p. ej. EADDRINUSE) al callback: hay que comprobarlo y salir con código distinto de 0.
+const server = app.listen(PORT, HOST, (err) => {
+  if (err) return onListenError(err);
+  console.log(`ISUP Aula Virtual lista en http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
+});
+server.on('error', onListenError);
+function onListenError(err) {
+  if (err.code === 'EADDRINUSE') console.error(`El puerto ${PORT} ya está en uso por otro programa (EADDRINUSE). Cierra ese programa o inicia con otro puerto, por ejemplo PORT=3001.`);
+  else if (err.code === 'EACCES') console.error(`No se puede usar el puerto ${PORT} (EACCES): está reservado por el sistema. Inicia con otro puerto, por ejemplo PORT=3001.`);
+  else console.error('No se pudo iniciar el servidor:', err.message);
+  process.exit(1);
+}

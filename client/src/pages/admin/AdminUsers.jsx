@@ -99,11 +99,18 @@ export default function AdminUsers() {
   };
 
   const closeEditor = useCallback(() => setEditing(null), []);
-  const onSaved = useCallback((saved, isNew) => {
+  const onSaved = useCallback(async (saved, isNew) => {
     setEditing(null);
     toast(isNew ? `Usuario creado · código ${saved.code}` : 'Cambios guardados');
     load();
-  }, [toast, load]);
+    if (isNew && saved.temp_password) {
+      await confirm({
+        title: 'Contraseña inicial generada',
+        message: `Entrégala a ${saved.first_name} ${saved.last_name} por un canal seguro; no volverá a mostrarse.\n\nCorreo: ${saved.email}\nContraseña: ${saved.temp_password}`,
+        confirmText: 'Entendido',
+      });
+    }
+  }, [toast, load, confirm]);
 
   const actions = (u) => {
     const self = u.id === me?.id;
@@ -382,7 +389,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
           label={isNew ? 'Contraseña inicial' : 'Nueva contraseña'}
           error={errors.password}
           hint={isNew
-            ? 'Opcional. Mínimo 8 caracteres con letras y números; si la dejas en blanco se asigna la contraseña inicial configurada en el servidor.'
+            ? 'Opcional. Mínimo 8 caracteres con letras y números; si la dejas en blanco se genera una contraseña temporal que verás una sola vez.'
             : 'Dejar en blanco para no cambiar. Restablecerla también desbloquea la cuenta.'}
           className={form.role === 'student' ? '' : 'sm:col-span-2'}
         >
