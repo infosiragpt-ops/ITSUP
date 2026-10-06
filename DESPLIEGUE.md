@@ -155,6 +155,19 @@ Debe aparecer `certificate obtained successfully` para cada nombre. Significado 
 
 En producción no se cargan datos de demostración ni se muestran los botones de acceso rápido.
 
+## Carreras (programas de estudio)
+
+El catálogo de carreras de TEPSUP está en `deploy/programas-tepsup.json` (nombre, título, área, créditos, horas,
+perfil, campo laboral y plan de estudios por ciclo). Se carga o actualiza en el servidor con:
+
+```bash
+sudo isup-carreras
+```
+
+Cada carrera se identifica por su `slug`: repetir el comando actualiza los datos sin duplicar. Para editar una
+carrera en caliente (foto, resolución, plan de estudios) usa Administración → Programas de estudio; para cambios
+masivos edita el JSON en la rama y vuelve a ejecutar `sudo isup-update && sudo isup-carreras`.
+
 ## Operación diaria
 
 | Tarea | Cómo |
@@ -166,6 +179,7 @@ En producción no se cargan datos de demostración ni se muestran los botones de
 | Copia de seguridad manual | `sudo isup-backup` |
 | Restaurar una copia | `sudo isup-restore` (lista las copias) → `sudo isup-restore AAAAMMDD-HHMMSS` |
 | Contraseña olvidada o cuenta bloqueada | `sudo isup-reset-password correo@dominio` (muestra una contraseña nueva una sola vez) |
+| Cargar o actualizar el catálogo de carreras | `sudo isup-carreras` (importa `deploy/programas-tepsup.json`; con otro archivo: `sudo isup-carreras /ruta/archivo.json`) |
 | Cerrar todas las sesiones abiertas (incidente) | cambia `JWT_SECRET` en `/etc/isup/isup.env` y `sudo systemctl restart isup` |
 | Dónde están los datos | `/var/lib/isup` (base de datos `isup.db` y carpeta `uploads/`) |
 | Copias automáticas | `/var/backups/isup`, cada día a las 03:30 hora de Lima, 14 días; incluyen la base verificada, los archivos subidos y `isup.env` |

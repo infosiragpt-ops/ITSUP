@@ -315,6 +315,7 @@ install -m 0755 "$APP_DIR/deploy/backup.sh" /usr/local/bin/isup-backup
 install -m 0755 "$APP_DIR/deploy/restore.sh" /usr/local/bin/isup-restore
 install -m 0755 "$APP_DIR/deploy/update.sh" /usr/local/bin/isup-update
 install -m 0755 "$APP_DIR/deploy/reset-password.sh" /usr/local/bin/isup-reset-password
+install -m 0755 "$APP_DIR/deploy/import-programs.sh" /usr/local/bin/isup-carreras
 cat > /etc/systemd/system/isup-backup.service <<EOF
 [Unit]
 Description=Copia de seguridad de ISUP Aula Virtual
@@ -374,7 +375,7 @@ bold "7/8 · Firewall y protección de acceso"
 if [ "$SKIP_SERVICES" = "1" ]; then
   echo "   (omitido sin systemd: ufw y fail2ban)"
 else
-  SSH_PORTS="$(sshd -T 2>/dev/null | awk '$1=="port"{print $2}' | sort -u | tr '\n' ' ')"
+  SSH_PORTS="$(sshd -T 2>/dev/null | awk '$1=="port"{print $2}' | sort -u | xargs)"
   for p in ${SSH_PORTS:-22}; do ufw allow "$p/tcp" >/dev/null; done
   ufw allow 80/tcp >/dev/null
   ufw allow 443/tcp >/dev/null
@@ -444,7 +445,7 @@ if [ -f "$DATA_DIR/ADMIN_INICIAL.txt" ]; then
   echo "                     (queda en $DATA_DIR/ADMIN_INICIAL.txt hasta que la cambies; después se borra sola)"
 fi
 echo "   Datos:            $DATA_DIR  ·  copias diarias verificadas en $BACKUP_DIR (03:30 hora de Lima)"
-echo "   Utilidades:       isup-update · isup-backup · isup-restore · isup-reset-password correo"
+echo "   Utilidades:       isup-update · isup-backup · isup-restore · isup-reset-password correo · isup-carreras"
 echo "   Estado:           systemctl status isup caddy  ·  journalctl -u isup -f"
 if [ -n "$RESOLVED6" ]; then
   warn "$DOMAIN tiene un registro AAAA ($RESOLVED6): debe ser la IPv6 de este VPS o eliminarse; si no, Let's Encrypt fallará."
