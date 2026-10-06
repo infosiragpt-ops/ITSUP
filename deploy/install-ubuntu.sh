@@ -15,7 +15,7 @@
 #     REPO          repositorio git (por defecto el oficial)
 #     INSTITUTION   nombre completo de la institución · SHORT  siglas (p. ej. TEPSUP)
 #     ACME_EMAIL    contacto para la cuenta de certificados (por defecto el correo de administración)
-#     WWW=0         no servir también www.<dominio>
+#     WWW=0         no servir también www.<dominio> (se recuerda en isup.env para las reinstalaciones)
 #     WAIT_DNS=300  segundos máximos de espera a que el dominio apunte a este servidor antes de pedir el certificado
 #     ACME_STAGING=1  usar el entorno de pruebas de Let's Encrypt (certificado no válido; solo para ensayos)
 #     SKIP_SERVICES=1 solo instalar, sin systemd/ufw/Caddy (pruebas en contenedores)
@@ -25,7 +25,8 @@
 #  automático y autocomprobación, firewall (SSH/80/443), fail2ban (SSH y formulario de ingreso),
 #  copia de seguridad diaria verificada en /var/backups/isup (14 días) y utilidades isup-update,
 #  isup-backup, isup-restore e isup-reset-password.
-#  Es idempotente: volver a ejecutarlo actualiza el código y conserva datos y configuración.
+#  Es idempotente: volver a ejecutarlo actualiza el código y conserva datos y configuración. Instala además el
+#  despliegue automático (isup-autoupdate.timer): cada 5 minutos aplica los commits nuevos de la rama desplegada.
 # =============================================================================
 set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a
@@ -39,7 +40,7 @@ BRANCH="${BRANCH:-}"
 REF="${REF:-}"
 INSTITUTION="${INSTITUTION:-Instituto Superior Universitario Privado}"
 SHORT="${SHORT:-ISUP}"
-WWW="${WWW:-1}"
+WWW="${WWW:-}"
 WAIT_DNS="${WAIT_DNS:-300}"
 ACME_STAGING="${ACME_STAGING:-0}"
 SKIP_SERVICES="${SKIP_SERVICES:-0}"
@@ -79,6 +80,12 @@ wait_apt() {
 
 [ "$(id -u)" -eq 0 ] || die "Ejecuta este instalador como root (en Hostinger: usuario root del VPS)."
 grep -qi ubuntu /etc/os-release || die "Este instalador está pensado para Ubuntu 24.04 LTS."
+# Un solo despliegue a la vez (comparte el cerrojo con isup-update / isup-autoupdate)
+mkdir -p /run/lock; exec 9>/run/lock/isup-update.lock
+flock -n 9 || die "Ya hay una instalación o actualización en curso; inténtalo en unos minutos."
+# WWW: si no se indica, se usa lo guardado en una instalación anterior; por defecto se sirve también www.
+if [ -z "$WWW" ] && [ -f "$ENV_FILE" ]; then WWW="$(grep -E '^ISUP_WWW=' "$ENV_FILE" | cut -d= -f2- | tr -d '"' || true)"; fi
+WWW="${WWW:-1}"
 [ -n "$DOMAIN" ] || die "Indica el dominio. Ejemplo: bash install-ubuntu.sh tepsup.com admin@tepsup.com"
 [ -n "$ADMIN_EMAIL" ] || die "Indica el correo de la cuenta de administración. Ejemplo: bash install-ubuntu.sh tepsup.com admin@tepsup.com"
 DOMAIN="${DOMAIN,,}"; ADMIN_EMAIL="${ADMIN_EMAIL,,}"
@@ -174,11 +181,13 @@ ISUP_SEED=minimal
 ISUP_ADMIN_EMAIL=$(q "$ADMIN_EMAIL")
 ISUP_INSTITUTION=$(q "$INSTITUTION")
 ISUP_SHORT=$(q "$SHORT")
+ISUP_WWW=$WWW
 PUBLIC_URL=https://$DOMAIN
 EOF
   chmod 0640 "$ENV_FILE"; chown root:"$SVC_USER" "$ENV_FILE"
   echo "   Secretos generados en $ENV_FILE"
 else
+  grep -q '^ISUP_WWW=' "$ENV_FILE" || echo "ISUP_WWW=$WWW" >> "$ENV_FILE"
   echo "   Se conserva la configuración existente ($ENV_FILE)"
 fi
 
@@ -316,6 +325,31 @@ install -m 0755 "$APP_DIR/deploy/restore.sh" /usr/local/bin/isup-restore
 install -m 0755 "$APP_DIR/deploy/update.sh" /usr/local/bin/isup-update
 install -m 0755 "$APP_DIR/deploy/reset-password.sh" /usr/local/bin/isup-reset-password
 install -m 0755 "$APP_DIR/deploy/import-programs.sh" /usr/local/bin/isup-carreras
+install -m 0755 "$APP_DIR/deploy/autoupdate.sh" /usr/local/bin/isup-autoupdate
+# Despliegue automático: cada 5 minutos aplica los commits nuevos de la rama desplegada (con vuelta atrás si falla)
+cat > /etc/systemd/system/isup-autoupdate.service <<'EOF'
+[Unit]
+Description=Despliegue automático de ISUP Aula Virtual
+After=network-online.target isup.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/isup-autoupdate
+EOF
+cat > /etc/systemd/system/isup-autoupdate.timer <<'EOF'
+[Unit]
+Description=Despliegue automático periódico de ISUP Aula Virtual
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+RandomizedDelaySec=30s
+AccuracySec=30s
+
+[Install]
+WantedBy=timers.target
+EOF
 cat > /etc/systemd/system/isup-backup.service <<EOF
 [Unit]
 Description=Copia de seguridad de ISUP Aula Virtual
@@ -395,9 +429,9 @@ if [ "$SKIP_SERVICES" = "1" ]; then
   as_isup bash -c "cd '$APP_DIR'; set -a; . '$ENV_FILE'; set +a; nohup node server/index.js > /tmp/isup-test.log 2>&1 & echo \$! > /tmp/isup-test.pid"
 else
   systemctl daemon-reload
-  systemctl enable isup.service isup-backup.timer isup-health.timer >/dev/null
+  systemctl enable isup.service isup-backup.timer isup-health.timer isup-autoupdate.timer >/dev/null
   systemctl restart isup.service
-  systemctl start isup-backup.timer isup-health.timer
+  systemctl start isup-backup.timer isup-health.timer isup-autoupdate.timer
 fi
 
 for _ in $(seq 1 40); do
@@ -407,6 +441,10 @@ done
 if ! curl -fsS "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1; then
   if [ "$SKIP_SERVICES" = "1" ]; then cat /tmp/isup-test.log; else journalctl -u isup -n 30 --no-pager; fi
   die "El servicio no respondió. Revisa el registro anterior (journalctl -u isup)."
+fi
+# Tareas posteriores al despliegue (catálogo de carreras, etc.), idempotentes
+if [ -f "$APP_DIR/deploy/post-update.sh" ]; then
+  bash "$APP_DIR/deploy/post-update.sh" || die "Las tareas posteriores al despliegue fallaron (ver arriba)."
 fi
 if [ "$SKIP_SERVICES" = "1" ]; then kill "$(cat /tmp/isup-test.pid)" 2>/dev/null || true; fi
 
@@ -446,6 +484,7 @@ if [ -f "$DATA_DIR/ADMIN_INICIAL.txt" ]; then
 fi
 echo "   Datos:            $DATA_DIR  ·  copias diarias verificadas en $BACKUP_DIR (03:30 hora de Lima)"
 echo "   Utilidades:       isup-update · isup-backup · isup-restore · isup-reset-password correo · isup-carreras"
+echo "   Despliegue auto.: cada 5 min se aplican los commits nuevos de la rama $BRANCH (estado: isup-autoupdate --estado)"
 echo "   Estado:           systemctl status isup caddy  ·  journalctl -u isup -f"
 if [ -n "$RESOLVED6" ]; then
   warn "$DOMAIN tiene un registro AAAA ($RESOLVED6): debe ser la IPv6 de este VPS o eliminarse; si no, Let's Encrypt fallará."

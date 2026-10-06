@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Actualiza ISUP Aula Virtual y reinicia el servicio (copia de seguridad previa incluida).
-#   sudo isup-update                 → última versión de la rama desplegada
-#   sudo isup-update otra-rama       → cambia a otra rama
-#   sudo isup-update --ref <commit>  → versión exacta (también sirve para volver atrás)
+#   sudo isup-update                     → última versión de la rama desplegada
+#   sudo isup-update otra-rama           → cambia a otra rama
+#   sudo isup-update --ref <commit>      → versión exacta (fija el código; pausa el despliegue automático)
+#   sudo isup-update --rollback <commit> → vuelve a ese commit sin abandonar la rama (lo usa isup-autoupdate)
 set -euo pipefail
 APP_DIR="${APP_DIR:-/opt/isup}"
 SVC_USER="${SVC_USER:-isup}"
@@ -11,10 +12,16 @@ PORT="$(grep -E '^PORT=' /etc/isup/isup.env 2>/dev/null | cut -d= -f2 | tr -d '"
 PORT="${PORT:-3000}"
 
 [ "$(id -u)" -eq 0 ] || { echo "Ejecuta con sudo."; exit 1; }
+# Un solo despliegue a la vez (manual o automático)
+mkdir -p /run/lock; exec 9>/run/lock/isup-update.lock
+flock -n 9 || { echo "Ya hay una actualización en curso; inténtalo en unos minutos."; exit 1; }
 as_isup() { runuser -u "$SVC_USER" -- env HOME="$APP_DIR" npm_config_cache="$NPM_CACHE" "$@"; }
-REF=""
+REF=""; ROLLBACK=""
 if [ "${1:-}" = "--ref" ]; then
   REF="${2:-}"; [ -n "$REF" ] || { echo "Indica el commit: sudo isup-update --ref abc1234"; exit 1; }
+  shift 2
+elif [ "${1:-}" = "--rollback" ]; then
+  ROLLBACK="${2:-}"; [ -n "$ROLLBACK" ] || { echo "Indica el commit: sudo isup-update --rollback abc1234"; exit 1; }
   shift 2
 fi
 
@@ -30,6 +37,11 @@ if [ -n "$REF" ]; then
   echo "▸ Cambiando a la versión $REF"
   as_isup git -C "$APP_DIR" fetch --quiet origin
   as_isup git -C "$APP_DIR" checkout --quiet --detach "$REF"
+elif [ -n "$ROLLBACK" ]; then
+  BRANCH="$(as_isup git -C "$APP_DIR" rev-parse --abbrev-ref HEAD)"
+  [ "$BRANCH" != HEAD ] || BRANCH="$(as_isup git -C "$APP_DIR" branch -r --contains "$ROLLBACK" --format='%(refname:short)' | head -1 | sed 's#^origin/##')"
+  echo "▸ Volviendo al commit $ROLLBACK en la rama $BRANCH"
+  as_isup git -C "$APP_DIR" checkout --quiet -B "$BRANCH" "$ROLLBACK"
 else
   BRANCH="${1:-$(as_isup git -C "$APP_DIR" rev-parse --abbrev-ref HEAD)}"
   if [ "$BRANCH" = HEAD ]; then
@@ -57,11 +69,17 @@ install -m 0755 "$APP_DIR/deploy/restore.sh" /usr/local/bin/isup-restore
 install -m 0755 "$APP_DIR/deploy/update.sh" /usr/local/bin/isup-update
 install -m 0755 "$APP_DIR/deploy/reset-password.sh" /usr/local/bin/isup-reset-password
 install -m 0755 "$APP_DIR/deploy/import-programs.sh" /usr/local/bin/isup-carreras
+install -m 0755 "$APP_DIR/deploy/autoupdate.sh" /usr/local/bin/isup-autoupdate
 systemctl restart isup.service
 for _ in $(seq 1 40); do curl -fsS "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1 && break; sleep 1; done
 if curl -fsS "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1; then
   echo "✔ Actualizado y en ejecución ($AFTER)."
-  echo "  Si cambió el instalador (unidades systemd, Caddy), vuelve a ejecutar deploy/install-ubuntu.sh para aplicarlo."
+  if [ -f "$APP_DIR/deploy/post-update.sh" ]; then
+    bash "$APP_DIR/deploy/post-update.sh" || { echo "✖ Las tareas posteriores al despliegue fallaron (ver arriba)."; exit 1; }
+  fi
+  if [ -z "$ROLLBACK" ] && ! as_isup git -C "$APP_DIR" diff --quiet "$BEFORE" "$AFTER" -- deploy/install-ubuntu.sh 2>/dev/null; then
+    echo "  Cambió el instalador (unidades systemd, Caddy o firewall): el despliegue automático lo aplicará solo; a mano: vuelve a ejecutar deploy/install-ubuntu.sh."
+  fi
 else
   journalctl -u isup -n 30 --no-pager
   echo "✖ El servicio no respondió tras la actualización."

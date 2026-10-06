@@ -155,6 +155,24 @@ Debe aparecer `certificate obtained successfully` para cada nombre. Significado 
 
 En producción no se cargan datos de demostración ni se muestran los botones de acceso rápido.
 
+## Despliegue automático
+
+El servidor sigue la rama desplegada por sí solo: cada 5 minutos `isup-autoupdate.timer` consulta GitHub y, si hay
+commits nuevos, hace copia de seguridad, actualiza, compila, reinicia, comprueba que el aula responde y ejecuta las
+tareas posteriores (`deploy/post-update.sh`, por ejemplo el catálogo de carreras). Si el instalador cambió, lo vuelve a
+ejecutar con los datos guardados en `/etc/isup/isup.env`. Si un despliegue falla, restaura la versión anterior y no
+vuelve a intentar ese commit hasta que aparezca otro.
+
+| Qué | Cómo |
+|---|---|
+| Ver estado | `sudo isup-autoupdate --estado` |
+| Forzar ahora | `sudo isup-autoupdate` |
+| Registro | `journalctl -t isup-autoupdate` o `/var/log/isup-autoupdate.log` |
+| Pausar | `sudo systemctl stop isup-autoupdate.timer` (reanudar: `start`) o fijar una versión con `sudo isup-update --ref <commit>` |
+
+Para que los despliegues sean seguros, a la rama desplegada solo deben llegar commits probados: el servidor aplica
+todo lo que se publique en ella.
+
 ## Carreras (programas de estudio)
 
 El catálogo de carreras de TEPSUP está en `deploy/programas-tepsup.json` (nombre, título, área, créditos, horas,
@@ -174,7 +192,7 @@ masivos edita el JSON en la rama y vuelve a ejecutar `sudo isup-update && sudo i
 |---|---|
 | Ver estado | `systemctl status isup caddy` |
 | Ver registro del aula | `journalctl -u isup -f` |
-| Actualizar a la última versión | `sudo isup-update` (hace copia previa, descarga, compila y reinicia) |
+| Actualizar a la última versión | automático cada 5 min; a mano: `sudo isup-update` (hace copia previa, descarga, compila y reinicia) |
 | Volver a una versión anterior | `sudo isup-update --ref <commit>` (el commit anterior lo imprime isup-update) |
 | Copia de seguridad manual | `sudo isup-backup` |
 | Restaurar una copia | `sudo isup-restore` (lista las copias) → `sudo isup-restore AAAAMMDD-HHMMSS` |
