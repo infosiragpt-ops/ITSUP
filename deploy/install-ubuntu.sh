@@ -48,6 +48,7 @@ SKIP_SERVICES="${SKIP_SERVICES:-0}"
 APP_DIR=/opt/isup
 ENV_DIR=/etc/isup
 ENV_FILE="$ENV_DIR/isup.env"
+FIRST_RUN=1; [ ! -f "$ENV_FILE" ] || FIRST_RUN=0
 DATA_DIR=/var/lib/isup
 BACKUP_DIR=/var/backups/isup
 NPM_CACHE=/var/cache/isup-npm
@@ -453,7 +454,7 @@ if [ "$SKIP_SERVICES" = "1" ]; then kill "$(cat /tmp/isup-test.pid)" 2>/dev/null
 IP="$(curl -fsS -4 --max-time 10 https://api.ipify.org 2>/dev/null || hostname -I | awk '{print $1}')"
 resolve4() { resolvectl flush-caches >/dev/null 2>&1 || true; getent ahostsv4 "$1" 2>/dev/null | awk 'NR==1{print $1}'; }
 RESOLVED="$(resolve4 "$DOMAIN" || true)"
-if [ "$SKIP_SERVICES" != "1" ] && [ -n "$IP" ] && [ "$RESOLVED" != "$IP" ] && [ "$WAIT_DNS" -gt 0 ] 2>/dev/null; then
+if [ "$FIRST_RUN" = 1 ] && [ "$SKIP_SERVICES" != "1" ] && [ -n "$IP" ] && [ "$RESOLVED" != "$IP" ] && [ "$WAIT_DNS" -gt 0 ] 2>/dev/null; then
   printf '   El dominio %s aún no apunta a este servidor (%s). Esperando la propagación del DNS hasta %s s' "$DOMAIN" "$IP" "$WAIT_DNS"
   t=0
   while [ "$t" -lt "$WAIT_DNS" ]; do
@@ -479,8 +480,12 @@ echo "   Sitio:            https://$DOMAIN$([ "$WWW" = "1" ] && [[ "$DOMAIN" != 
 echo "   Ingreso:          https://$DOMAIN/login"
 if [ -f "$DATA_DIR/ADMIN_INICIAL.txt" ]; then
   echo "   Administración:   $(grep -i '^Correo' "$DATA_DIR/ADMIN_INICIAL.txt" | awk '{print $2}')"
-  echo "   Contraseña:       $(grep -i '^Contraseña' "$DATA_DIR/ADMIN_INICIAL.txt" | awk '{print $2}')  ← cámbiala en Mi perfil en el primer ingreso"
-  echo "                     (queda en $DATA_DIR/ADMIN_INICIAL.txt hasta que la cambies; después se borra sola)"
+  if [ "${ISUP_HIDE_PASSWORD:-0}" = 1 ]; then
+    echo "   Contraseña:       (inicial, sin cambiar: ver $DATA_DIR/ADMIN_INICIAL.txt)"
+  else
+    echo "   Contraseña:       $(grep -i '^Contraseña' "$DATA_DIR/ADMIN_INICIAL.txt" | awk '{print $2}')  ← cámbiala en Mi perfil en el primer ingreso"
+    echo "                     (queda en $DATA_DIR/ADMIN_INICIAL.txt hasta que la cambies; después se borra sola)"
+  fi
 fi
 echo "   Datos:            $DATA_DIR  ·  copias diarias verificadas en $BACKUP_DIR (03:30 hora de Lima)"
 echo "   Utilidades:       isup-update · isup-backup · isup-restore · isup-reset-password correo · isup-carreras"

@@ -15,6 +15,8 @@ LAST_FILE="$STATE_DIR/.autoupdate-last"
 LOG="${LOG:-/var/log/isup-autoupdate.log}"
 
 [ "$(id -u)" -eq 0 ] || { echo "Ejecuta con sudo."; exit 1; }
+[ -e "$LOG" ] || install -m 0600 /dev/null "$LOG"
+chmod 0600 "$LOG" 2>/dev/null || true
 as_isup() { runuser -u "$SVC_USER" -- env HOME="$APP_DIR" "$@"; }
 log() { logger -t isup-autoupdate -- "$*" 2>/dev/null || true; printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" | tee -a "$LOG"; }
 envval() { grep -E "^$1=" "$ENV_FILE" 2>/dev/null | cut -d= -f2- | sed -e 's/^"//' -e 's/"$//' -e 's/\\"/"/g' -e 's/\\\\/\\/g' || true; }
@@ -61,7 +63,7 @@ if ! as_isup git -C "$APP_DIR" diff --quiet "$LOCAL" "$REMOTE" -- deploy/install
     log "El instalador cambió: se vuelve a ejecutar para $DOMAIN"
     TMP="$(mktemp /tmp/isup-install.XXXXXX)"
     as_isup git -C "$APP_DIR" show "$REMOTE:deploy/install-ubuntu.sh" > "$TMP"
-    INSTITUTION="$(envval ISUP_INSTITUTION)" SHORT="$(envval ISUP_SHORT)" WWW="$(envval ISUP_WWW)" BRANCH="$BRANCH" WAIT_DNS=0 \
+    INSTITUTION="$(envval ISUP_INSTITUTION)" SHORT="$(envval ISUP_SHORT)" WWW="$(envval ISUP_WWW)" BRANCH="$BRANCH" WAIT_DNS=0 ISUP_HIDE_PASSWORD=1 \
       bash "$TMP" "$DOMAIN" "$ADMIN_EMAIL" >>"$LOG" 2>&1 && ok=1
     rm -f "$TMP"
   fi
