@@ -180,7 +180,7 @@ export default function AdminUsers() {
             <div className={cx('transition-opacity', fetching && 'opacity-60')}>
               {/* Desktop table */}
               <Card className="hidden overflow-hidden md:block">
-                <div className="overflow-x-auto">
+                <div className="relative overflow-x-auto">
                   <table className="w-full min-w-[860px] text-sm">
                     <thead>
                       <tr className="border-b border-line bg-sunken/60 text-left text-xs font-medium tracking-wide text-muted uppercase">

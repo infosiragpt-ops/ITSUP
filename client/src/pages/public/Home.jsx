@@ -236,7 +236,7 @@ export function FaqList({ items }) {
 function AulaPreview() {
   return (
     <div className="relative">
-      <div className="absolute -inset-6 -z-0 rounded-[2rem] bg-gradient-to-br from-primary/15 to-transparent blur-2xl" />
+      <div className="absolute -inset-2 -z-0 sm:-inset-6 rounded-[2rem] bg-gradient-to-br from-primary/15 to-transparent blur-2xl" />
       <div className="card relative overflow-hidden">
         <div className="flex items-center gap-2 border-b border-line bg-sunken/70 px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-[#E8B4A0]" /><span className="h-2.5 w-2.5 rounded-full bg-[#E9D7A7]" /><span className="h-2.5 w-2.5 rounded-full bg-[#BFD3BE]" />

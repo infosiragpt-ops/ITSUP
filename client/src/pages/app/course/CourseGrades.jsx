@@ -189,7 +189,7 @@ function Gradebook({ course, data, reload }) {
         <Card className="flex flex-col gap-3 border-primary/20 bg-primary-soft/40 p-4 sm:flex-row sm:items-center">
           <FileCheck2 size={18} className="shrink-0 text-primary" />
           <div className="flex-1 text-sm text-ink-2"><strong className="text-ink">Registro de evaluación abierto.</strong> Al terminar el periodo, revisa las notas y cierra el acta para oficializar la nota final y la condición de cada estudiante.</div>
-          <div className="flex gap-2"><Button variant="secondary" icon={Printer} to={`/app/cursos/${course.id}/acta`}>Vista previa del acta</Button><Button icon={LockOpen} loading={closing} onClick={closeActa}>Cerrar acta</Button></div>
+          <div className="grid grid-cols-2 gap-2 sm:flex"><Button variant="secondary" icon={Printer} to={`/app/cursos/${course.id}/acta`}>Vista previa</Button><Button icon={LockOpen} loading={closing} onClick={closeActa}>Cerrar acta</Button></div>
         </Card>
       )}
 

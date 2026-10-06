@@ -76,14 +76,17 @@ function SiteHeader() {
           <Link to="/#contacto" className={link}>Contacto</Link>
         </nav>
         <div className="ml-auto flex items-center gap-2 lg:ml-3">
-          {user ? (
-            <Button to="/app" size="md" iconRight={ArrowRight} className="hidden sm:inline-flex">Ir a mi aula</Button>
-          ) : (
-            <>
-              <Button to="/login" variant="secondary" icon={LogIn} className="hidden sm:inline-flex">Ingresar</Button>
-              <Button to="/admision" className="hidden sm:inline-flex">Postula a ISUP</Button>
-            </>
-          )}
+          {/* En el celular estas acciones están en el menú: el contenedor se oculta porque Button siempre es inline-flex */}
+          <div className="hidden items-center gap-2 sm:flex">
+            {user ? (
+              <Button to="/app" size="md" iconRight={ArrowRight}>Ir a mi aula</Button>
+            ) : (
+              <>
+                <Button to="/login" variant="secondary" icon={LogIn}>Ingresar</Button>
+                <Button to="/admision">Postula a ISUP</Button>
+              </>
+            )}
+          </div>
           <button className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-ink hover:bg-sunken lg:hidden" onClick={() => setMobile(true)} aria-label="Abrir menú">
             <Menu size={22} />
           </button>
