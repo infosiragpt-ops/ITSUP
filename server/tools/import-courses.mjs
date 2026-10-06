@@ -52,10 +52,35 @@ let stamps = {};
 try { stamps = JSON.parse(fs.readFileSync(stampsFile, 'utf8')); } catch {}
 const saveStamps = () => fs.writeFileSync(stampsFile, JSON.stringify(stamps, null, 1));
 
+const TRANSVERSAL = /^(Comunicación Efectiva|Herramientas Digitales para el Trabajo|Inglés para el Trabajo|Investigación e Innovación Tecnológica|Emprendimiento e Innovación|Comportamiento Ético|Ética Profesional$)/;
+let shells = 0;
+/** Curso base del plan de estudios mientras su paquete académico completo está en elaboración. */
+function createShell(entry) {
+  for (const off of entry.offerings) {
+    const program = get('SELECT id, name, color FROM programs WHERE slug = ?', off.program_slug);
+    if (!program) { problems.push(`${off.code}: la carrera ${off.program_slug} no existe (ejecuta isup-carreras)`); continue; }
+    if (get('SELECT 1 x FROM courses WHERE code = ? AND term_id = ?', off.code, term.id)) continue;
+    const type = /^Experiencias Formativas/.test(entry.name) ? 'efsrt' : TRANSVERSAL.test(entry.name) ? 'empleabilidad' : 'especifica';
+    const day = hashInt(off.code, 5);
+    const [hh, mm] = hashInt(`${off.code}:h`, 2) === 0 ? [19, 0] : [20, 45];
+    const schedule = `${DAY_SHORT[day]} ${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}–${hh === 19 ? '20:30' : '22:15'}`;
+    const summary = `Unidad didáctica del ciclo ${off.cycle} de la carrera de ${program.name} (modalidad 100 % virtual). El sílabo completo, las diapositivas, lecturas, casos, tareas y cuestionarios se publican en el aula conforme se completa el diseño instruccional del curso.`;
+    tx(() => {
+      const cid = insert(`INSERT INTO courses (code, term_id, teacher_id, min_grade, max_absence_pct, name, description, program_id, cycle, credits, color, schedule, course_type, hours_theory, hours_practice, syllabus_json)
+        VALUES (?, ?, NULL, 13, 30, ?, ?, ?, ?, 3, ?, ?, ?, 32, 32, ?)`,
+        off.code, term.id, entry.name, summary, program.id, off.cycle, program.color || '#C96442', schedule, type, JSON.stringify({ summary, catalog_shell: true }));
+      [['Evaluación de proceso', 40], ['Evaluación de producto', 30], ['Evaluación final', 30]].forEach(([n, w], i) =>
+        insert('INSERT INTO grade_categories (course_id, name, weight, position) VALUES (?,?,?,?)', cid, n, w, i));
+      insert('INSERT INTO forums (course_id, title, description) VALUES (?,?,?)', cid, 'Foro de consultas', 'Publica aquí tus dudas sobre el curso; el docente y tus compañeros responden.');
+    });
+    shells++;
+  }
+}
+
 for (const entry of index.courses) {
   if (only.length && !only.includes(entry.slug)) continue;
   const file = path.join(dir, 'cursos', `${entry.slug}.json`);
-  if (!fs.existsSync(file)) { problems.push(`${entry.slug}: falta el archivo del paquete`); continue; }
+  if (!fs.existsSync(file)) { createShell(entry); continue; }
   let pkg;
   try { pkg = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { problems.push(`${entry.slug}: JSON inválido (${e.message})`); continue; }
   const errors = validate(pkg, file);
@@ -105,10 +130,13 @@ for (const entry of index.courses) {
         courseId = existing.id;
         const hasData = get('SELECT (SELECT COUNT(*) FROM enrollments WHERE course_id = ?) + (SELECT COUNT(*) FROM submissions s JOIN assignments a ON a.id = s.assignment_id WHERE a.course_id = ?) + (SELECT COUNT(*) FROM quiz_attempts q JOIN quizzes z ON z.id = q.quiz_id WHERE z.course_id = ?) n', courseId, courseId, courseId).n;
         const hasContent = get('SELECT COUNT(*) n FROM modules WHERE course_id = ?', courseId).n > 0;
-        if (flags.has('--rehacer') && !hasData) {
+        let wasShell = false;
+        try { wasShell = !!JSON.parse(existing.syllabus_json || '{}').catalog_shell; } catch {}
+        if ((flags.has('--rehacer') || wasShell) && !hasData) {
           for (const t of ['live_sessions', 'quizzes', 'assignments', 'items', 'modules', 'forums', 'grade_categories']) run(`DELETE FROM ${t} WHERE course_id = ?`, courseId);
           rebuild = true;
         } else if (!hasContent) {
+          for (const t of ['forums', 'grade_categories']) run(`DELETE FROM ${t} WHERE course_id = ?`, courseId);
           rebuild = true;
         } else {
           // Conserva el contenido; refresca solo los archivos de diapositivas ya enlazados
@@ -155,5 +183,5 @@ for (const entry of index.courses) {
     });
   }
 }
-console.log(`Cursos: ${created} creado(s), ${updated} actualizado(s), ${skipped} omitido(s) · diapositivas generadas: ${decks} archivo(s) · periodo ${term.name}`);
-if (problems.length) { console.error(`Problemas (${problems.length}):`); problems.forEach((p) => console.error(`  - ${p}`)); process.exit(problems.length === index.courses.length ? 1 : 0); }
+console.log(`Cursos: ${created} creado(s) con contenido completo, ${updated} actualizado(s), ${shells} curso(s) base creados (contenido en elaboración) · diapositivas generadas: ${decks} archivo(s) · periodo ${term.name}`);
+if (problems.length) { console.error(`Problemas (${problems.length}):`); problems.forEach((p) => console.error(`  - ${p}`)); }
