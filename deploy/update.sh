@@ -70,7 +70,7 @@ install -m 0755 "$APP_DIR/deploy/update.sh" /usr/local/bin/isup-update
 install -m 0755 "$APP_DIR/deploy/reset-password.sh" /usr/local/bin/isup-reset-password
 install -m 0755 "$APP_DIR/deploy/import-programs.sh" /usr/local/bin/isup-carreras
 install -m 0755 "$APP_DIR/deploy/autoupdate.sh" /usr/local/bin/isup-autoupdate
-systemctl restart isup.service
+systemctl restart isup.service 9>&-
 for _ in $(seq 1 40); do curl -fsS "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1 && break; sleep 1; done
 if curl -fsS "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1; then
   echo "✔ Actualizado y en ejecución ($AFTER)."

@@ -426,12 +426,12 @@ fi
 bold "8/8 · Arranque"
 if [ "$SKIP_SERVICES" = "1" ]; then
   # Arranque manual para comprobar que la aplicación levanta con la configuración generada
-  as_isup bash -c "cd '$APP_DIR'; set -a; . '$ENV_FILE'; set +a; nohup node server/index.js > /tmp/isup-test.log 2>&1 & echo \$! > /tmp/isup-test.pid"
+  as_isup bash -c "cd '$APP_DIR'; set -a; . '$ENV_FILE'; set +a; nohup node server/index.js > /tmp/isup-test.log 2>&1 & echo \$! > /tmp/isup-test.pid" 9>&-
 else
   systemctl daemon-reload
   systemctl enable isup.service isup-backup.timer isup-health.timer isup-autoupdate.timer >/dev/null
-  systemctl restart isup.service
-  systemctl start isup-backup.timer isup-health.timer isup-autoupdate.timer
+  systemctl restart isup.service 9>&-
+  systemctl start isup-backup.timer isup-health.timer isup-autoupdate.timer 9>&-
 fi
 
 for _ in $(seq 1 40); do
@@ -469,8 +469,8 @@ if [ "$WWW" = "1" ] && [[ "$DOMAIN" != www.* ]]; then RESOLVED_WWW="$(resolve4 "
 
 if [ "$SKIP_SERVICES" != "1" ]; then
   systemctl enable caddy >/dev/null 2>&1 || true
-  if ! systemctl reload caddy 2>/dev/null; then
-    systemctl restart caddy || { journalctl -u caddy -n 30 --no-pager; die "Caddy no pudo cargar la configuración (ver registro anterior)."; }
+  if ! systemctl reload caddy 2>/dev/null 9>&-; then
+    systemctl restart caddy 9>&- || { journalctl -u caddy -n 30 --no-pager; die "Caddy no pudo cargar la configuración (ver registro anterior)."; }
   fi
 fi
 
