@@ -1,0 +1,1247 @@
+{
+  "name": "Teoría del Color",
+  "slug": "teoria-del-color",
+  "course_type": "especifica",
+  "module_name": "Comunicación visual y composición gráfica",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Curso de formación específica, de naturaleza teórico-práctica, del primer ciclo de la carrera de Diseño Gráfico. Su propósito es que el estudiante comprenda el color como fenómeno físico, perceptivo, técnico y cultural, y lo use con intención comunicativa y precisión profesional. Aborda la luz y la visión humana, la interacción del color según Albers, los modelos y sistemas cromáticos (RGB, CMYK, HSB, Munsell, CIELAB, Pantone), la gestión básica del color entre pantalla e impresión, los contrastes de Itten, las armonías cromáticas, la psicología y la semántica cultural del color en el Perú y Latinoamérica, y la accesibilidad según las WCAG. Se articula con Fundamentos del Diseño y Dibujo y Bocetaje, y sienta las bases de Tipografía, Fotografía Digital, Identidad Visual y Branding, Diseño UX/UI y Producción Gráfica y Preprensa. Aporta al perfil la capacidad de construir, justificar y documentar sistemas cromáticos coherentes, reproducibles y accesibles.",
+  "competency": "Diseña y documenta sistemas cromáticos para piezas impresas y digitales, seleccionando modelos de color, armonías y contrastes con fundamento perceptivo, técnico y cultural, de modo que el color comunique la intención del encargo, se reproduzca con fidelidad entre medios y cumpla criterios de accesibilidad.",
+  "capacities": [
+    "Explica el color como fenómeno físico y perceptivo, relacionando luz, iluminante, superficie y sistema visual para anticipar efectos de interacción, metamerismo y deficiencias de visión cromática.",
+    "Opera los modelos y sistemas de color RGB, CMYK, HSB, Munsell, CIELAB y Pantone, convirtiendo y verificando valores con perfiles y tolerancias Delta E adecuados al medio de salida.",
+    "Construye armonías y contrastes cromáticos con base en Itten, Albers y la teoría de la percepción, justificando sus efectos psicológicos y su significado cultural en el contexto peruano.",
+    "Documenta paletas y sistemas cromáticos accesibles, con roles, proporciones, valores técnicos y pruebas de contraste, para su uso consistente en marcas, interfaces y piezas editoriales."
+  ],
+  "indicators": [
+    "Describe con precisión la cadena luz-objeto-observador y explica al menos tres fenómenos perceptivos (contraste simultáneo, constancia, metamerismo) con ejemplos propios.",
+    "Reproduce en ejercicios tipo Albers efectos de interacción cromática, documentando los valores HSB o hexadecimales usados en cada estudio.",
+    "Convierte un color de marca entre RGB, CMYK, CIELAB y Pantone, indica el perfil de salida y calcula su diferencia Delta E respecto de una muestra de referencia.",
+    "Selecciona y justifica una armonía cromática y los contrastes de Itten adecuados a un brief, explicando el efecto perceptivo buscado.",
+    "Analiza críticamente el significado cultural de una paleta en piezas peruanas o latinoamericanas, evitando generalizaciones psicológicas sin sustento.",
+    "Verifica el contraste de texto y elementos gráficos con la fórmula de luminancia relativa de las WCAG 2.1 y corrige los pares que no alcanzan 4,5:1 o 3:1.",
+    "Entrega una guía cromática profesional con roles, proporciones, códigos por medio de salida y reglas de uso para un proyecto real."
+  ],
+  "methodology": "El curso aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y realiza un microejercicio en el aula virtual. Las sesiones combinan exposición dialogada breve, estudios cromáticos guiados al estilo del taller de Albers (con papel de color o con software de edición), análisis de casos peruanos y latinoamericanos y crítica de diseño entre pares. Cada unidad culmina con un caso discutido en foro, una tarea aplicada evaluada con rúbrica y un cuestionario de comprensión con retroalimentación inmediata. El aprendizaje basado en proyectos articula las cuatro unidades: el estudiante construye progresivamente la guía cromática de un encargo real. La evaluación formativa se sostiene en retroalimentación del docente, coevaluación y un portafolio digital de estudios de color.",
+  "bibliography": [
+    "Albers, J. (2013). Interaction of color (50th anniversary ed.). Yale University Press.",
+    "Itten, J. (1970). The elements of color. Van Nostrand Reinhold.",
+    "Heller, E. (2004). Psicología del color: cómo actúan los colores sobre los sentimientos y la razón. Gustavo Gili.",
+    "Wong, W. (1999). Principios del diseño en color (2.ª ed.). Gustavo Gili.",
+    "Ball, P. (2001). Bright earth: Art and the invention of color. Farrar, Straus and Giroux.",
+    "Livingstone, M. (2002). Vision and art: The biology of seeing. Harry N. Abrams.",
+    "Berns, R. S. (2019). Billmeyer and Saltzman's principles of color technology (4th ed.). Wiley.",
+    "Fairchild, M. D. (2013). Color appearance models (3rd ed.). Wiley.",
+    "World Wide Web Consortium. (2018). Web Content Accessibility Guidelines (WCAG) 2.1. W3C."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Promedio de las tareas aplicadas de las unidades 1 a 3, los cuestionarios y la participación argumentada en los foros de casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Portafolio digital de estudios cromáticos y guía cromática del proyecto integrador, evaluados con rúbrica analítica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación oral del sistema cromático del proyecto y prueba de aplicación sobre un brief nuevo resuelto en tiempo limitado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · El color como fenómeno físico y perceptivo",
+      "description": "Al finalizar la unidad, el estudiante explica el color como resultado de la interacción entre luz, superficie y sistema visual, y reproduce fenómenos de interacción cromática (contraste simultáneo, constancia, metamerismo) para anticipar su efecto en piezas gráficas.",
+      "topics": [
+        "Luz, espectro visible y temperatura de color de los iluminantes",
+        "Fisiología de la visión: conos, bastones, tricromacia y procesos oponentes",
+        "Dimensiones perceptivas del color: tono, luminosidad y saturación",
+        "Interacción del color según Albers: contraste simultáneo y relatividad",
+        "Metamerismo, constancia del color y deficiencias de visión cromática"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es el color? Una definición operativa para diseñadores",
+          "bullets": [
+            "El color no es una propiedad del objeto: es una percepción construida por el cerebro.",
+            "Requiere tres elementos: una fuente de luz, una superficie que la modifica y un observador.",
+            "Si cambia cualquiera de los tres, cambia el color percibido aunque el objeto sea el mismo.",
+            "El diseñador gestiona percepciones, no pigmentos aislados: por eso necesita teoría y método."
+          ],
+          "notes": "Inicie la clase con una pregunta provocadora: ¿de qué color es una manzana en una habitación totalmente oscura? Deje que los estudiantes discutan y conduzca hacia la idea central de que el color es una experiencia, no una sustancia. Explique la tríada luz, objeto y observador, que estructurará toda la unidad. Muestre una prenda fotografiada bajo luz de día y bajo una lámpara cálida de restaurante para evidenciar que el mismo objeto produce percepciones diferentes. Conecte con el oficio: un diseñador que entrega un logotipo para una bodega, una pantalla y un paquete impreso debe prever esos cambios. Cierre preguntando qué consecuencias comerciales tiene que un cliente perciba distinto el color de un producto en la web y en la tienda física."
+        },
+        {
+          "title": "Newton y el espectro visible",
+          "bullets": [
+            "En 1666 Newton descompuso la luz blanca con un prisma y la recompuso con un segundo prisma.",
+            "El espectro visible abarca aproximadamente de 380 a 780 nanómetros de longitud de onda.",
+            "Ondas cortas se perciben violáceas y azules; medias, verdes; largas, anaranjadas y rojas.",
+            "En Opticks (1704) Newton cerró el espectro en un círculo: origen del círculo cromático."
+          ],
+          "notes": "Narre el experimento crucial de Newton como un relato de método científico: no bastaba con descomponer la luz, había que demostrar que los colores ya estaban en ella al recomponerla. Explique la noción de longitud de onda con una analogía sencilla, como las olas del mar con distinta separación entre crestas. Aclare que el espectro es continuo y que las siete bandas de Newton responden a una elección cultural, influida por la analogía musical de las siete notas. Pregunte a la clase qué color no aparece en el arcoíris y, sin embargo, existe en el círculo cromático: el magenta, que es una construcción del sistema visual al cerrar los extremos del espectro. Esta idea prepara el terreno para entender que los modelos de color son convenciones útiles."
+        },
+        {
+          "title": "Fuentes de luz y temperatura de color",
+          "bullets": [
+            "La temperatura de color se mide en kelvin: luz de vela 1900 K, foco cálido 2700 K, cielo nublado 6500 K.",
+            "D50 es el iluminante normalizado para evaluar impresos (ISO 3664); D65 es la referencia de sRGB.",
+            "El índice de reproducción cromática (IRC) indica qué tan fielmente una fuente muestra los colores.",
+            "LED económicos con IRC menor de 80 distorsionan rojos y tonos de piel en tiendas y estudios."
+          ],
+          "notes": "Explique que las fuentes de luz no son neutras: cada una tiene una distribución espectral que favorece ciertos colores. Use el ejemplo cotidiano de las tiendas de Gamarra o de un mercado limeño iluminado con fluorescentes fríos frente a una boutique de Miraflores con focos cálidos dirigidos. Introduzca los iluminantes normalizados D50 y D65 como acuerdos internacionales que permiten que dos profesionales en ciudades distintas evalúen un color en las mismas condiciones. Mencione que en imprentas serias existen cabinas de luz normalizada para aprobar pruebas de color. Pregunte a los estudiantes bajo qué luz revisan sus trabajos y si conocen la temperatura de color de su monitor. Pídales que, para la próxima sesión, fotografíen un mismo objeto bajo tres fuentes de luz de su casa."
+        },
+        {
+          "title": "Cómo interactúa la luz con las superficies",
+          "bullets": [
+            "Las superficies absorben, reflejan, transmiten o dispersan la luz según su composición.",
+            "Un pigmento rojo absorbe sobre todo ondas cortas y medias y refleja las largas.",
+            "El acabado brillante produce reflexión especular; el mate dispersa y suaviza el color.",
+            "La curva de reflectancia espectral es la huella objetiva del color de una superficie."
+          ],
+          "notes": "Muestre curvas de reflectancia espectral de tres muestras: un rojo, un verde y un blanco. Explique que el espectrofotómetro, instrumento que estudiarán en la unidad 2, mide precisamente esa curva. Relacione el acabado con la experiencia del diseñador: el mismo color Pantone impreso en papel estucado brillante y en papel bond no cubierto se percibe distinto, porque el papel absorbente dispersa la tinta y reduce saturación. Recuerde que en el Perú muchas piezas promocionales se imprimen en papel periódico o bond, lo que exige anticipar esa pérdida. Proponga una pregunta: ¿por qué un polo negro se calienta más al sol que uno blanco? La respuesta, absorción de energía, ayuda a fijar el concepto de que el color de superficie es energía no absorbida."
+        },
+        {
+          "title": "El ojo humano: conos y bastones",
+          "bullets": [
+            "La retina tiene unos 6 millones de conos y unos 120 millones de bastones.",
+            "Tres tipos de conos (S, M, L) tienen sensibilidad máxima cerca de 420, 534 y 564 nm.",
+            "Los bastones operan con poca luz y no distinguen color: por eso de noche todo se ve gris.",
+            "Efecto Purkinje: con poca luz los rojos se oscurecen antes que los azules y verdes."
+          ],
+          "notes": "Presente un esquema del ojo y concéntrese en la retina. Explique que los conos se concentran en la fóvea, la zona de visión nítida, y que los bastones dominan la periferia. Use el efecto Purkinje con un ejemplo local: al atardecer en la Costa Verde, las flores rojas parecen apagarse antes que el follaje verde. Señale la consecuencia profesional: la señalética de emergencia, los paneles de transporte y las piezas que se ven de noche deben diseñarse pensando en visión de baja luminancia, donde importa más el contraste de luminosidad que el tono. Pregunte por qué las salidas de emergencia en muchos países usan verde y no rojo. Remita a Livingstone, que explica cómo los artistas han explotado sin saberlo la separación entre sistemas de luminancia y de color."
+        },
+        {
+          "title": "Tricromacia y procesos oponentes: dos teorías complementarias",
+          "bullets": [
+            "Young y Helmholtz: la visión combina tres señales de conos; base de los sistemas RGB.",
+            "Hering (1878): el color se organiza en pares opuestos rojo-verde, azul-amarillo y claro-oscuro.",
+            "Hurvich y Jameson integraron ambas: tricromacia en la retina, oposición en las vías neuronales.",
+            "Consecuencia: no existe un rojo verdoso ni un azul amarillento como experiencia perceptiva."
+          ],
+          "notes": "Explique que durante un siglo ambas teorías parecieron rivales y que hoy se entienden como etapas de un mismo proceso. Pida a los estudiantes que miren fijamente durante treinta segundos un cuadrado rojo y luego una pared blanca: verán una posimagen verdosa, prueba directa de los procesos oponentes. Relacione ambas teorías con herramientas del oficio: RGB responde a la lógica tricromática y CIELAB, que verán después, organiza sus ejes a* y b* según la lógica oponente. Plantee una pregunta de reflexión: si la percepción se organiza en oposiciones, ¿qué implica eso para elegir colores de contraste en un afiche? Esta pregunta anticipa los contrastes de Itten que se trabajarán en la unidad 3."
+        },
+        {
+          "title": "Tres dimensiones perceptivas: tono, luminosidad y saturación",
+          "bullets": [
+            "Tono (hue): la cualidad que nombramos rojo, amarillo o azul.",
+            "Luminosidad o valor: qué tan claro u oscuro se percibe un color respecto del blanco.",
+            "Saturación o croma: la pureza o intensidad, su distancia respecto de un gris equivalente.",
+            "El valor es la dimensión más importante para legibilidad, jerarquía y lectura a distancia."
+          ],
+          "notes": "Use una paleta de muestras para demostrar que se puede modificar cada dimensión por separado. Haga el ejercicio de convertir una pieza publicitaria a escala de grises: si la jerarquía desaparece, el diseño dependía solo del tono y fallará para personas con daltonismo, en impresión en blanco y negro o bajo luz pobre. Insista en que los pintores académicos decían que el valor hace el trabajo y el color se lleva el crédito. Relacione esto con el dibujo tonal visto en Dibujo y Bocetaje. Pida a cada estudiante que tome una pieza gráfica de su barrio, como un letrero de bodega o un afiche de concierto, la fotografíe, la pase a grises y evalúe si su mensaje principal sigue legible."
+        },
+        {
+          "title": "Contraste simultáneo: Chevreul y la relatividad del color",
+          "bullets": [
+            "Chevreul, químico de los Gobelinos, publicó su ley del contraste simultáneo en 1839.",
+            "Un color tiende a teñir su entorno con su complementario y viceversa.",
+            "Un gris sobre fondo naranja se percibe azulado; sobre fondo azul, se percibe anaranjado.",
+            "Las quejas sobre tintes defectuosos eran, en realidad, efectos de contraste entre hilos vecinos."
+          ],
+          "notes": "Cuente la historia de Michel-Eugène Chevreul: los tejedores reclamaban que los tintes negros parecían apagados y él descubrió que el problema no era químico, sino perceptivo, debido a los colores vecinos. Es un ejemplo excelente de diagnóstico profesional. Muestre en pantalla el mismo gris sobre fondos complementarios y pida a los estudiantes que estimen su valor hexadecimal antes de revelar que es idéntico. Relacione con los textiles andinos: las tejedoras de Chinchero y Taquile combinan colores vecinos con un conocimiento empírico de estos efectos. Pregunte en qué situaciones de diseño este fenómeno puede jugar en contra, por ejemplo, un color de marca que cambia de apariencia según la foto de fondo en redes sociales."
+        },
+        {
+          "title": "Josef Albers: el color es el más relativo de los medios",
+          "bullets": [
+            "Interaction of Color (1963) propone aprender color por experimentación, no por reglas.",
+            "Ejercicio clave: hacer que un color parezca dos y que dos colores parezcan uno.",
+            "Albers trabajaba con papel de color recortado para controlar tonos sin mezclar pigmentos.",
+            "Conclusión pedagógica: entrenar el ojo antes que memorizar armonías."
+          ],
+          "notes": "Presente a Albers como profesor de la Bauhaus y luego de Black Mountain College y Yale. Explique que su método consiste en provocar ilusiones controladas para que el estudiante descubra que el color depende del contexto. Muestre los ejercicios clásicos de un color que parece dos y de dos colores que parecen uno, y anuncie que la tarea de la unidad los reproducirá con software de edición. Destaque que Albers desconfiaba de la teoría memorizada sin observación: por eso este curso empieza por la percepción. Pregunte a la clase cuántas veces han elegido un color en una ventana aislada del programa y luego, al colocarlo en el diseño, les pareció distinto. Esa experiencia cotidiana es exactamente lo que Albers quería hacer consciente."
+        },
+        {
+          "title": "Constancia del color y adaptación cromática",
+          "bullets": [
+            "El cerebro descuenta el iluminante: un papel blanco parece blanco bajo luz cálida o fría.",
+            "La adaptación cromática ajusta la sensibilidad de los conos en pocos segundos o minutos.",
+            "Las cámaras no tienen constancia: requieren balance de blancos manual o automático.",
+            "Caso viral de 2015, el vestido azul y negro: distintas suposiciones sobre el iluminante."
+          ],
+          "notes": "Explique que la constancia del color es una ventaja evolutiva: permite reconocer frutos maduros a distintas horas del día. Use el caso del vestido que se viralizó en 2015, percibido por unos como azul y negro y por otros como blanco y dorado. La explicación más aceptada es que cada observador supuso un iluminante distinto, sombra azulada o luz amarilla, y lo descontó. Vincule con Fotografía Digital, curso del segundo ciclo: el balance de blancos es la forma técnica de imitar la constancia. Pregunte qué ocurre cuando una tienda en línea publica fotos sin balance de blancos correcto: el cliente recibe un producto que no coincide con lo que vio, con devoluciones y reclamos. Este punto conecta con el caso de la unidad."
+        },
+        {
+          "title": "Metamerismo: cuando dos colores iguales dejan de serlo",
+          "bullets": [
+            "Dos muestras son metámeras si coinciden bajo una luz y difieren bajo otra.",
+            "Ocurre porque tienen curvas de reflectancia distintas que producen la misma respuesta de conos.",
+            "Problema típico: tela y botón, o empaque y etiqueta, fabricados con materiales distintos.",
+            "Prevención: aprobar colores bajo varios iluminantes normalizados en cabina de luz."
+          ],
+          "notes": "Defina el metamerismo con un ejemplo de la industria textil peruana: una blusa confeccionada en Gamarra con tela de un proveedor y botones teñidos por otro; en el taller con fluorescentes combinan, pero en la vitrina con luz LED cálida se ven distintos. Explique que el fenómeno es inevitable cuando se usan materiales diferentes, porque sus curvas espectrales difieren, y que lo que se gestiona es su magnitud. Mencione que las marcas exportadoras de prendas de algodón pima suelen exigir aprobación de color bajo luz D65, luz de tienda y luz incandescente. Pregunte qué debería pedir un diseñador al aprobar un empaque cuya caja es de cartón impreso y cuya etiqueta es de vinilo: la respuesta es una prueba bajo varias fuentes de luz."
+        },
+        {
+          "title": "Deficiencias de visión cromática",
+          "bullets": [
+            "Afectan a cerca del 8 % de hombres y 0,5 % de mujeres en poblaciones de ascendencia europea.",
+            "Protanopía y deuteranopía dificultan distinguir rojos y verdes; tritanopía, azules y amarillos.",
+            "La deficiencia es hereditaria ligada al cromosoma X en sus formas más frecuentes.",
+            "Regla de diseño: nunca comunicar información solo mediante el tono; añadir forma, texto o valor."
+          ],
+          "notes": "Aborde este tema desde la responsabilidad profesional. Explique que la prevalencia varía entre poblaciones y que no hay que memorizar cifras exactas, sino entender que en cualquier audiencia masiva habrá personas que no distinguen ciertos pares. Muestre un gráfico de barras rojo y verde y su simulación para deuteranopía, que se vuelve ilegible. Mencione que los programas de diseño incluyen simuladores de daltonismo en las opciones de prueba en pantalla. Conecte con la normativa: las pautas WCAG, que se verán en la unidad 4, exigen no usar el color como único medio de transmitir información. Pregunte cuántos semáforos, mapas de transporte o tableros de indicadores de su ciudad cumplen esta regla y qué cambiarían."
+        },
+        {
+          "title": "Mezcla aditiva y mezcla sustractiva",
+          "bullets": [
+            "Aditiva: se suman luces; rojo, verde y azul producen blanco. Rige pantallas y proyectores.",
+            "Sustractiva: pigmentos o tintas restan luz; cian, magenta y amarillo tienden al negro.",
+            "Mezcla partitiva u óptica: puntos pequeños que el ojo integra, como en tramas y puntillismo.",
+            "El modelo RYB escolar es una aproximación histórica; la industria imprime con CMY más negro."
+          ],
+          "notes": "Este tema funciona como puente hacia la unidad 2. Explique con una demostración sencilla: tres linternas con filtros superpuestas producen blanco, mientras que tres capas de acetato de colores producen casi negro. Aclare la confusión frecuente del rojo, amarillo y azul como primarios: es una tradición pictórica útil para mezclar óleos, pero no describe la impresión industrial. Presente la mezcla óptica con el puntillismo de Seurat y con las tramas de semitono de cualquier revista; pida a los estudiantes que observen un afiche impreso con una lupa del celular. Señale que una pantalla de celular también es mezcla partitiva de subpíxeles. Pregunte por qué el negro impreso suele llevar tinta K adicional en lugar de mezclar las tres tintas de color."
+        },
+        {
+          "title": "Síntesis: del fenómeno a la decisión de diseño",
+          "bullets": [
+            "El color percibido depende del iluminante, la superficie, el contexto y el observador.",
+            "Controlar el valor garantiza legibilidad; el tono y la saturación aportan carácter.",
+            "Todo color debe probarse en contexto, bajo la luz real y con usuarios diversos.",
+            "Pregunta guía del curso: ¿cómo hago que este color comunique lo mismo en todos los medios?"
+          ],
+          "notes": "Cierre la unidad recapitulando la tríada luz, superficie y observador, y relacione cada fenómeno estudiado con un riesgo profesional: metamerismo con empaques, contraste simultáneo con fondos de redes sociales, constancia con fotografía de producto, daltonismo con infografías. Pida a tres estudiantes que formulen, cada uno, una regla de diseño derivada de la unidad. Anuncie el caso de la unidad sobre una marca de moda de Gamarra con devoluciones por diferencias de color y la tarea de estudios de interacción tipo Albers. Recuerde que el cuestionario mide comprensión y aplicación, no definiciones memorizadas. Finalmente, introduzca la pregunta que guiará la unidad 2: si el color es tan inestable, ¿cómo se especifica con números para que una imprenta o un programador lo reproduzcan?"
+        }
+      ],
+      "reading": {
+        "title": "Luz, ojo y contexto: por qué el color nunca es absoluto",
+        "minutes": 30,
+        "content": "## Introducción\n\nPara un diseñador gráfico, el color es a la vez una herramienta expresiva y un problema técnico. Expresiva, porque un tono puede volver apetitosa una carta de restaurante o confiable la aplicación de un banco. Técnica, porque ese mismo tono puede cambiar al pasar de la pantalla al papel, de la luz del día a un foco LED o de un observador a otro. Esta lectura presenta los fundamentos físicos y perceptivos que explican esa inestabilidad y propone hábitos profesionales para controlarla.\n\n## La tríada luz, superficie y observador\n\nEl color no reside en los objetos. Una superficie solo modifica la luz que recibe: absorbe algunas longitudes de onda y refleja otras. La luz reflejada entra al ojo, estimula los fotorreceptores de la retina y el cerebro interpreta esas señales. Si falta cualquiera de los tres elementos, no hay color. Si cambia cualquiera de ellos, el color percibido cambia. Esta idea, aparentemente simple, tiene consecuencias comerciales: una tienda en línea de prendas de alpaca que fotografía sus chompas bajo luz cálida de tungsteno mostrará tonos más amarillos de los reales, y sus clientes en Lima o en el extranjero recibirán un producto distinto del que compraron.\n\n## El espectro y los iluminantes\n\nIsaac Newton demostró en 1666 que la luz blanca contiene todos los colores del espectro. La franja visible para el ser humano va aproximadamente de 380 a 780 nanómetros. Ninguna fuente de luz emite todas esas longitudes de onda por igual. Por eso se describen con su **temperatura de color**, medida en kelvin, y con su **índice de reproducción cromática** (IRC). Un foco cálido doméstico ronda los 2700 K; la luz de un día nublado, los 6500 K. Para evaluar impresos, la norma ISO 3664 establece el iluminante D50; para pantallas, el estándar sRGB asume D65. Un diseñador que aprueba pruebas de color en su sala, bajo un foco amarillo, está tomando decisiones con datos sesgados.\n\n## La fisiología de la visión\n\nLa retina contiene bastones, sensibles a poca luz pero ciegos al color, y tres tipos de conos con sensibilidad máxima aproximada en 420 nm (S, cortas), 534 nm (M, medias) y 564 nm (L, largas). Thomas Young y Hermann von Helmholtz explicaron la visión a partir de esas tres señales: es la **teoría tricromática**, base de todos los dispositivos RGB. Ewald Hering observó, sin embargo, que no existen experiencias como un rojo verdoso o un azul amarillento, y propuso la **teoría de los procesos oponentes**: rojo frente a verde, azul frente a amarillo y claro frente a oscuro. Leo Hurvich y Dorothea Jameson mostraron a mediados del siglo XX que ambas son correctas en etapas distintas del procesamiento visual. Esta doble lógica reaparecerá en los modelos de color: RGB es tricromático; CIELAB es oponente.\n\nMargaret Livingstone añade un dato decisivo para el diseño: el sistema visual procesa la luminosidad por una vía más rápida y precisa que la del color. Por eso la legibilidad, la profundidad y la jerarquía dependen sobre todo del **valor** (contraste claro-oscuro) y no del tono. Un afiche cuyo titular amarillo está sobre un fondo verde claro de luminosidad similar resultará difícil de leer, aunque los tonos sean distintos.\n\n## El color es relativo\n\nMichel-Eugène Chevreul, químico de la manufactura de tapices de los Gobelinos, formuló en 1839 la **ley del contraste simultáneo**: cada color induce en su vecino su complementario. Un gris rodeado de naranja parece azulado; rodeado de azul, parece cálido. Josef Albers convirtió esa observación en pedagogía. En *Interaction of Color* (1963) propone ejercicios para que un color parezca dos y para que dos colores distintos parezcan uno. Su conclusión es que el color es \"el más relativo de los medios\" del arte: no se puede elegir un color en abstracto, solo en relación con los demás.\n\nLa **constancia del color** es el fenómeno complementario: el cerebro descuenta el iluminante y sigue viendo blanco un papel blanco bajo luz cálida o fría. Las cámaras no tienen esa capacidad y por eso necesitan balance de blancos. La polémica viral del vestido azul y negro en 2015 mostró que, cuando el iluminante es ambiguo, distintos observadores lo descuentan de manera diferente.\n\n## Metamerismo y diversidad de observadores\n\nDos muestras son **metámeras** cuando coinciden bajo una luz y difieren bajo otra, porque sus curvas de reflectancia son distintas aunque produzcan la misma respuesta de conos en una condición dada. Es un problema cotidiano en la confección textil y en los empaques que combinan materiales.\n\nAdemás, no todos los observadores son iguales. Alrededor del 8 % de los hombres de ascendencia europea presenta alguna deficiencia de visión cromática, sobre todo en el eje rojo-verde; la prevalencia varía entre poblaciones, pero en cualquier audiencia masiva habrá personas afectadas. La regla profesional es clara: nunca transmitir información únicamente mediante el tono.\n\n## Hábitos profesionales derivados\n\n1. Revisar cada diseño en escala de grises para comprobar la jerarquía de valores.\n2. Evaluar los colores en su contexto final, nunca en la muestra aislada del programa.\n3. Aprobar impresos bajo luz normalizada D50 y, si el producto se exhibe en tienda, también bajo la luz real del punto de venta.\n4. Simular deficiencias de visión cromática antes de entregar infografías, mapas o interfaces.\n5. Documentar el iluminante y las condiciones de cada aprobación de color.\n\n## Pregunta para el foro\n\nElija una pieza gráfica de su entorno, como un letrero comercial, un empaque o una pantalla de una aplicación, y explique qué fenómeno de esta lectura podría hacer que dos personas la perciban de manera distinta."
+      },
+      "case": {
+        "title": "Caso: Devoluciones por color en una marca de moda de Gamarra",
+        "content": "**Andina Urbana** es una marca de ropa casual fundada en 2019 por los hermanos Rosa y Kevin Quispe, con taller propio en el emporio de Gamarra, en La Victoria. Comenzó vendiendo a mayoristas, pero desde 2021 el 60 % de sus ingresos proviene de su tienda en línea y de Instagram, con despachos a todo el país mediante agencias de transporte.\n\nEn el último trimestre la marca lanzó la colección *Tierra*, inspirada en los tintes naturales andinos: un terracota, un mostaza, un verde oliva y un granate. Las ventas fueron buenas, pero la tasa de devoluciones subió del 4 % habitual al 13 %, y el 70 % de los reclamos dice lo mismo: \"el color no es el de la foto\". El costo logístico de cada devolución, sumando envío de ida y vuelta, ronda los S/ 22, y varias clientas dejaron reseñas negativas.\n\nRosa revisó el proceso de producción de contenido. Las fotos se toman en el mismo taller, bajo tubos fluorescentes de luz fría, con un celular de gama media en modo automático. Luego un practicante las edita en su laptop, cuyo brillo y temperatura nunca se han ajustado, y les sube la saturación \"para que se vean más vivas en Instagram\". Las prendas, además, combinan tela de algodón teñida por un proveedor de Ate con botones y cordones comprados a otro proveedor; en el taller combinan bien, pero dos clientas enviaron fotos tomadas en sus casas, bajo focos cálidos, donde los cordones se ven claramente de otro tono.\n\nKevin plantea una solución rápida: añadir en cada publicación la frase \"los colores pueden variar según su pantalla\". Rosa cree que eso no basta y que el problema afectará la próxima colección, que incluirá un azul índigo y un rosado intenso, colores que según ella \"siempre salen mal en fotos\". El presupuesto disponible para mejoras es de S/ 3500 y la siguiente sesión de fotos es en tres semanas.\n\nUsted ha sido contratado como diseñador gráfico freelance para recomendar cambios en la producción de fotos y en la aprobación de color de insumos, de modo que la experiencia de compra sea coherente.",
+        "questions": [
+          "¿Qué fenómenos perceptivos y físicos estudiados en la unidad explican las devoluciones? Distinga los que dependen de la fotografía de los que dependen de los materiales.",
+          "Evalúe la propuesta de Kevin de añadir un aviso sobre la variación de colores. ¿Resuelve el problema de fondo o solo traslada el riesgo al cliente?",
+          "Con S/ 3500, ¿qué tres inversiones priorizaría (iluminación, calibración, cabina de luz, capacitación u otras) y por qué en ese orden?",
+          "¿Qué protocolo de aprobación de color propondría con los proveedores de tela y botones para reducir el metamerismo en la próxima colección?"
+        ]
+      },
+      "assignment": {
+        "title": "Estudios de interacción cromática al estilo de Albers",
+        "instructions": "**Objetivo:** demostrar experimentalmente la relatividad del color y documentar con precisión técnica los efectos obtenidos.\n\n**Qué entregar:** un PDF de 6 a 8 páginas con cuatro estudios cromáticos realizados en un programa de edición vectorial o con papeles de color fotografiados con balance de blancos correcto:\n\n1. **Un color parece dos:** el mismo color central sobre dos fondos que lo hagan parecer distinto.\n2. **Dos colores parecen uno:** dos colores centrales distintos que, sobre fondos elegidos, parezcan iguales.\n3. **Contraste simultáneo de un gris:** un gris neutro sobre fondos complementarios, con comentario del tinte inducido.\n4. **Prueba de valor:** una composición propia de cinco colores y su versión en escala de grises, con análisis de jerarquía.\n\n**Formato:** cada estudio debe incluir los valores hexadecimales y HSB de todos los colores usados, una breve explicación (60 a 120 palabras) del fenómeno perceptivo que lo produce citando a Albers, Chevreul o Hering, y una fotografía o captura del resultado. Cierre con una reflexión de 150 palabras sobre cómo aplicaría estos efectos en una pieza comercial real del Perú.\n\n**Criterios:** precisión del efecto logrado, documentación técnica, fundamentación teórica y calidad de presentación, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Logro perceptivo de los efectos de interacción en los cuatro estudios",
+            "points": 7
+          },
+          {
+            "name": "Documentación técnica de valores hexadecimales y HSB",
+            "points": 4
+          },
+          {
+            "name": "Fundamentación teórica con autores y conceptos de la unidad",
+            "points": 5
+          },
+          {
+            "name": "Reflexión aplicada y calidad de presentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: luz, visión e interacción del color",
+        "questions": [
+          {
+            "prompt": "Un cliente aprueba un catálogo impreso en su oficina bajo focos cálidos de 2700 K. ¿Cuál es el principal riesgo de esa aprobación?",
+            "options": [
+              "Que evalúe los colores con un iluminante sesgado y no normalizado como D50",
+              "Que la tinta se seque más lento por el calor del foco",
+              "Que el papel pierda opacidad durante la revisión",
+              "Ninguno, porque la constancia del color corrige totalmente la diferencia"
+            ],
+            "correct": 0,
+            "explanation": "La constancia del color compensa solo en parte; para aprobar impresos se usa el iluminante normalizado D50 según ISO 3664, de lo contrario la decisión se toma con información sesgada."
+          },
+          {
+            "prompt": "Un diseñador coloca un titular amarillo claro sobre un fondo verde claro de luminosidad parecida. Los usuarios dicen que no se lee bien. ¿Qué explica mejor el problema?",
+            "options": [
+              "Falta contraste de valor, que es la dimensión clave para la legibilidad",
+              "Amarillo y verde son colores complementarios y vibran",
+              "El amarillo es un color frío y se aleja visualmente",
+              "La saturación del verde es demasiado baja para un fondo"
+            ],
+            "correct": 0,
+            "explanation": "La vía de luminancia del sistema visual determina la legibilidad; si dos colores tienen valor similar, el texto se pierde aunque los tonos sean diferentes."
+          },
+          {
+            "prompt": "Una blusa y sus botones combinan en el taller bajo fluorescentes, pero en la vitrina con LED cálido se ven distintos. ¿Qué fenómeno ocurre?",
+            "options": [
+              "Metamerismo",
+              "Contraste simultáneo",
+              "Efecto Purkinje",
+              "Mezcla partitiva"
+            ],
+            "correct": 0,
+            "explanation": "Son muestras con curvas de reflectancia distintas que coinciden bajo un iluminante y difieren bajo otro: esa es la definición de metamerismo."
+          },
+          {
+            "prompt": "Tras mirar fijamente un círculo rojo intenso y luego una pared blanca, se percibe una mancha verdosa. ¿Qué teoría explica directamente este efecto?",
+            "options": [
+              "Teoría de los procesos oponentes de Hering",
+              "Teoría corpuscular de la luz de Newton",
+              "Ley de la mezcla sustractiva",
+              "Teoría de la temperatura de color"
+            ],
+            "correct": 0,
+            "explanation": "La posimagen complementaria se explica por la organización oponente rojo-verde de las vías visuales, propuesta por Hering e integrada luego por Hurvich y Jameson."
+          },
+          {
+            "prompt": "En un tablero de indicadores, los valores positivos aparecen en verde y los negativos en rojo, sin otra señal. ¿Cuál es la mejor corrección?",
+            "options": [
+              "Añadir íconos o signos y diferenciar también por valor de luminosidad",
+              "Cambiar el verde por un verde más saturado",
+              "Usar rojo y verde con la misma luminosidad",
+              "Agregar una leyenda explicando que rojo es negativo"
+            ],
+            "correct": 0,
+            "explanation": "Las personas con deuteranopía o protanopía confunden rojo y verde; la información debe redundarse con forma, texto o valor, no solo con tono."
+          },
+          {
+            "prompt": "¿Por qué la impresión industrial a cuatro colores utiliza cian, magenta y amarillo en lugar del rojo, amarillo y azul escolar?",
+            "options": [
+              "Porque CMY sustrae cada uno un tercio del espectro y logra una gama más amplia",
+              "Porque las tintas CMY son más baratas que las RYB",
+              "Porque RYB solo funciona en mezcla aditiva",
+              "Porque el azul y el rojo no pueden imprimirse en semitonos"
+            ],
+            "correct": 0,
+            "explanation": "Cada tinta CMY absorbe aproximadamente una banda del espectro (rojo, verde o azul), lo que permite reproducir una gama mayor que con el modelo pictórico RYB."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Modelos, sistemas y gestión del color",
+      "description": "Al finalizar la unidad, el estudiante especifica colores con modelos y sistemas normalizados (RGB, HSB, CMYK, Munsell, CIELAB, Pantone), comprende el flujo básico de gestión del color con perfiles ICC y verifica la fidelidad de un color entre medios mediante tolerancias Delta E.",
+      "topics": [
+        "Modelos dependientes del dispositivo: RGB, valores hexadecimales, HSB y CMYK",
+        "Sistemas de orden de color: círculo cromático, Munsell y Pantone",
+        "Colorimetría CIE: XYZ, diagrama de cromaticidad y CIELAB",
+        "Diferencia de color Delta E y tolerancias profesionales",
+        "Gestión del color: espacios de trabajo, perfiles ICC e intentos de reproducción"
+      ],
+      "slides": [
+        {
+          "title": "Por qué especificar el color con números",
+          "bullets": [
+            "Nombrar un color como 'rojo pasión' es ambiguo: cada proveedor lo interpretará distinto.",
+            "Un modelo de color describe cómo se combinan componentes para formar colores.",
+            "Un espacio de color fija ese modelo a condiciones concretas: primarios, punto blanco y gamma.",
+            "El diseñador entrega especificaciones técnicas, no adjetivos: hex, CMYK, Lab y Pantone."
+          ],
+          "notes": "Retome la pregunta con la que cerró la unidad 1: si el color percibido es tan inestable, ¿cómo se comunica a una imprenta o a un programador? Presente una anécdota frecuente: un cliente pide 'el rojo de nuestra marca' y recibe tres rojos distintos de la imprenta, del proveedor de uniformes y del desarrollador web. Diferencie con cuidado modelo y espacio de color, porque la confusión entre ambos es la causa de muchos errores: RGB es un modelo, pero sRGB y Adobe RGB son espacios distintos, y el mismo trío de números produce colores diferentes en cada uno. Anuncie que la unidad culminará con una ficha técnica de color, documento que los estudios profesionales entregan como parte de un manual de marca. Pregunte qué especificaciones de color han visto en manuales de marca reales."
+        },
+        {
+          "title": "RGB y notación hexadecimal",
+          "bullets": [
+            "RGB es aditivo: cada canal va de 0 a 255 en 8 bits, unos 16,7 millones de combinaciones.",
+            "Hexadecimal: #RRGGBB; por ejemplo, #D91023 equivale a R 217, G 16, B 35.",
+            "Conversión: cada par hexadecimal es 16 por la primera cifra más la segunda (D9 = 13×16+9).",
+            "Los valores RGB solo tienen sentido completo si se indica el espacio, normalmente sRGB."
+          ],
+          "notes": "Haga la conversión en vivo de un color hexadecimal a RGB, paso a paso, para que pierdan el miedo a la notación. Explique que en 8 bits cada canal tiene 256 niveles y que la combinación de tres canales produce más de dieciséis millones de valores posibles, aunque el ojo no distinga todos y muchos queden fuera de la gama de otros medios. Pida a los estudiantes que identifiquen el valor hexadecimal de tres colores de marcas peruanas que usen a diario, inspeccionando sus sitios web con las herramientas del navegador. Advierta que el hexadecimal por sí solo no es una especificación completa: se asume sRGB en la web, pero en un archivo de Photoshop configurado en otro espacio el mismo número producirá otro color."
+        },
+        {
+          "title": "HSB y HSL: modelos pensados para el diseñador",
+          "bullets": [
+            "HSB descompone el color en tono (0-360°), saturación (0-100 %) y brillo (0-100 %).",
+            "Permite crear variaciones controladas: mismo tono, distinta saturación o brillo.",
+            "Limitación: el brillo HSB no equivale a luminosidad percibida; amarillo y azul al 100 % difieren mucho.",
+            "Para escalas perceptualmente parejas conviene trabajar en CIELAB, LCh u OKLCH."
+          ],
+          "notes": "Muestre el selector de color de cualquier programa y explique que HSB es una transformación geométrica del cubo RGB en un cilindro, diseñada para que la elección sea intuitiva. Haga una demostración crucial: coloque un amarillo puro y un azul puro, ambos con brillo y saturación al cien por ciento, y conviértalos a escala de grises; el amarillo será muy claro y el azul muy oscuro. Esto demuestra que HSB no es perceptualmente uniforme y explica por qué una paleta generada solo moviendo el tono en HSB produce colores de pesos visuales muy dispares. Introduzca la idea de que los espacios perceptuales como CIELAB o el más reciente OKLCH, usado ya en hojas de estilo web, resuelven este problema. Pregunte qué implicancias tiene esto para diseñar botones de una interfaz."
+        },
+        {
+          "title": "CMYK y la cuatricromía",
+          "bullets": [
+            "Cian, magenta, amarillo y negro (K, key) se imprimen como tramas de puntos de distinto tamaño.",
+            "La gama CMYK es menor que la RGB: verdes intensos, naranjas y azules eléctricos se apagan.",
+            "El límite de tinta total (TAC) en estucado suele rondar 300-330 % para evitar repintado.",
+            "Los valores CMYK dependen del papel, la máquina y la norma: no son universales."
+          ],
+          "notes": "Explique el proceso de semitono mostrando una ampliación de una revista: los puntos de cada tinta varían en tamaño y el ojo los integra en mezcla partitiva. Destaque que los mismos porcentajes CMYK impresos en papel estucado, en papel bond o en periódico producen colores distintos por la ganancia de punto y la absorción del soporte. Explique el límite de tinta total con un ejemplo: si se suman 100 por ciento de cada tinta se obtiene 400 por ciento, demasiada tinta que no seca y mancha el pliego siguiente. Señale que este curso da las bases y que Producción Gráfica y Preprensa, en el tercer ciclo, profundizará en el flujo de imprenta. Pregunte qué sucede con un verde fosforescente de una pantalla cuando se envía a impresión en cuatricromía."
+        },
+        {
+          "title": "Negros, grises y sobreimpresión: decisiones frecuentes",
+          "bullets": [
+            "Negro puro (K 100): ideal para textos pequeños, evita problemas de registro.",
+            "Negro enriquecido (por ejemplo C 60 M 40 Y 40 K 100): fondos amplios más profundos.",
+            "Nunca usar negro de registro (CMYK al 100 %) como color de diseño.",
+            "Grises neutros: solo con K o con equilibrio de grises calibrado para evitar dominantes."
+          ],
+          "notes": "Este tema es muy práctico y evita errores costosos en imprenta. Explique que un texto de 8 puntos con negro enriquecido puede verse borroso si las cuatro planchas no coinciden perfectamente, lo que se conoce como fuera de registro. En cambio, un fondo negro amplio impreso solo con K se ve gris oscuro y lavado, por eso se enriquece con otras tintas. Muestre ejemplos de piezas impresas en imprentas de Lima donde los grises compuestos con CMY tienen dominantes verdosas o rojizas. Indique que muchas imprentas tienen recetas propias de negro enriquecido y que conviene preguntar antes de cerrar archivos. Proponga un mini reto: ¿qué negro usaría para el texto corrido de un libro y cuál para la portada negra de un disco de vinilo?"
+        },
+        {
+          "title": "Munsell: el primer sistema perceptual",
+          "bullets": [
+            "Albert Munsell (1905) ordenó el color en tono, valor (0-10) y croma (sin máximo fijo).",
+            "Notación: 5R 4/14 significa tono rojo 5, valor 4, croma 14.",
+            "Sus intervalos se ajustaron con observadores para que los pasos se vean equidistantes.",
+            "Aún se usa en edafología, odontología, arqueología e industria; inspiró a CIELAB."
+          ],
+          "notes": "Presente a Munsell como un pintor y docente que buscaba enseñar color con rigor. Muestre la imagen del árbol de Munsell, irregular porque cada tono alcanza una croma máxima distinta: los amarillos llegan a su máxima intensidad en valores claros y los azules en valores oscuros. Esa irregularidad es una verdad perceptiva que los modelos geométricos como HSB ocultan. Mencione que en el Perú los arqueólogos usan las cartas Munsell para describir cerámicas y suelos en excavaciones de sitios como Caral o Chan Chan, lo que muestra el valor de un lenguaje común del color. Pida a los estudiantes que traduzcan verbalmente la notación de tres muestras y discutan por qué la croma no tiene un máximo universal."
+        },
+        {
+          "title": "CIE 1931: medir el color del observador promedio",
+          "bullets": [
+            "La Comisión Internacional de la Iluminación definió en 1931 el observador estándar.",
+            "XYZ describe cualquier color visible con tres valores triestímulo; Y equivale a luminancia.",
+            "El diagrama de cromaticidad xy muestra el locus espectral y permite comparar gamas.",
+            "Toda conversión profesional entre espacios pasa por un espacio de conexión como XYZ o Lab."
+          ],
+          "notes": "Explique que la CIE resolvió un problema de fondo: describir cualquier color visible de manera independiente de los dispositivos. Para ello realizó experimentos de igualación de color con observadores y definió funciones de igualación promedio. No es necesario profundizar en el cálculo matemático, pero sí en el diagrama con forma de herradura: el borde curvo contiene los colores espectrales, la línea inferior las púrpuras y, dentro, los triángulos que representan la gama de sRGB, Adobe RGB o una impresora. Muestre que ningún triángulo cubre toda la herradura, lo que significa que ningún dispositivo reproduce todos los colores visibles. Pregunte por qué una pantalla de celular moderna en Display P3 muestra rojos y verdes más intensos que un monitor sRGB antiguo."
+        },
+        {
+          "title": "CIELAB: un espacio aproximadamente uniforme",
+          "bullets": [
+            "L* expresa luminosidad de 0 (negro) a 100 (blanco).",
+            "a* va de verde (negativo) a rojo (positivo); b* va de azul (negativo) a amarillo (positivo).",
+            "Su estructura reproduce la teoría de los procesos oponentes de Hering.",
+            "Forma cilíndrica LCh: luminosidad, croma y ángulo de tono, útil para crear escalas."
+          ],
+          "notes": "Vincule CIELAB con lo aprendido en la unidad 1: sus ejes son los pares oponentes. Explique que se diseñó en 1976 para que distancias iguales en el espacio correspondan aproximadamente a diferencias percibidas iguales, cosa que RGB no logra. Muestre la lectura de un valor real, por ejemplo L 45 a 62 b 38, y pida a los estudiantes que deduzcan antes de verlo que se trata de un rojo anaranjado de luminosidad media. Introduzca la versión cilíndrica LCh, más intuitiva para el diseñador, y comente que los sistemas de diseño de interfaces modernos generan paletas tonales en espacios perceptuales derivados. Recalque que los espectrofotómetros de imprenta reportan en Lab y que un diseñador debe saber leer esos reportes para dialogar con producción."
+        },
+        {
+          "title": "Delta E: cuantificar cuánto difieren dos colores",
+          "bullets": [
+            "Fórmula clásica CIE76: ΔE*ab = raíz de (ΔL² + Δa² + Δb²).",
+            "CIEDE2000 (ΔE00) corrige no uniformidades y es la referencia actual en la industria.",
+            "Orientación práctica: ΔE00 menor de 1 es casi imperceptible; entre 2 y 3, visible al comparar.",
+            "Los contratos de impresión fijan tolerancias, por ejemplo ΔE00 máximo 2 o 3 para colores de marca."
+          ],
+          "notes": "Resuelva en clase un cálculo con la fórmula CIE76 usando dos lecturas Lab: referencia L 50 a 60 b 40 y muestra L 52 a 57 b 44. Las diferencias son 2, menos 3 y 4; la suma de cuadrados es 29 y la raíz, aproximadamente 5,4, una diferencia claramente visible. Explique que la fórmula CIEDE2000 es más compleja y la calculan los programas, pero el principio es el mismo. Insista en que las tolerancias no son universales: dependen del producto, del cliente y de la norma pactada. Un banco puede exigir tolerancias estrictas para su color institucional, mientras que un volante promocional admite más variación. Pregunte cómo cambiaría la negociación con una imprenta si el diseñador entrega una tolerancia medible en lugar de pedir que el color salga igual."
+        },
+        {
+          "title": "Espacios RGB de trabajo y gama",
+          "bullets": [
+            "sRGB (1996): estándar de la web y de la mayoría de pantallas; gama más reducida.",
+            "Adobe RGB (1998): amplía verdes y cianes; útil en fotografía destinada a impresión.",
+            "Display P3: gama amplia de celulares y laptops recientes; requiere gestión en la web.",
+            "Regla: trabajar en el espacio del medio final o en uno mayor y convertir con control."
+          ],
+          "notes": "Compare los tres espacios sobre el diagrama de cromaticidad. Explique que elegir un espacio de trabajo amplio tiene ventajas, porque conserva información, pero también riesgos si el archivo se exporta a la web sin convertir, ya que los colores se verán apagados o desplazados en navegadores y redes sociales. Cuente un error frecuente: fotografías exportadas en Adobe RGB que, al subirse a una tienda en línea, se ven desaturadas en pantallas comunes. Diferencie entre lo que el monitor del diseñador puede mostrar y lo que verá el público, que en el Perú accede mayoritariamente desde celulares de gamas muy diversas. Pregunte qué espacio recomendarían para una campaña que solo circulará en redes sociales y cuál para un libro de fotografía."
+        },
+        {
+          "title": "Gestión del color: calibrar, caracterizar y convertir",
+          "bullets": [
+            "Calibrar: llevar el dispositivo a un estado conocido (por ejemplo, monitor a D65, 120 cd/m²).",
+            "Caracterizar: medir su comportamiento y guardarlo en un perfil ICC.",
+            "Convertir: traducir valores de un perfil a otro pasando por el espacio de conexión Lab o XYZ.",
+            "Perfiles de impresión de referencia: FOGRA39 o FOGRA51 en estucado, según la imprenta."
+          ],
+          "notes": "Explique el flujo de gestión del color con la metáfora de un traductor: cada dispositivo habla su propio idioma numérico y el perfil ICC funciona como diccionario hacia un idioma común. Detalle los tres pasos y aclare que calibrar sin caracterizar no basta. Señale que un colorímetro para monitor tiene un costo accesible para un estudio pequeño y es una de las mejores inversiones profesionales. Mencione que muchas imprentas en Lima trabajan con perfiles basados en normas europeas FOGRA y que siempre debe preguntarse qué perfil usan antes de convertir archivos. Muestre la ventana de configuración de color de un programa de diseño y explique dónde se definen los espacios de trabajo RGB y CMYK. Pregunte qué ocurre si cada diseñador de un equipo tiene configuraciones distintas."
+        },
+        {
+          "title": "Intentos de reproducción: cómo se resuelven los colores fuera de gama",
+          "bullets": [
+            "Perceptual: comprime toda la gama para conservar relaciones; útil en fotografías.",
+            "Colorimétrico relativo: conserva colores en gama y recorta los demás; útil en colores de marca.",
+            "Saturación: prioriza viveza sobre exactitud; útil en gráficos de negocios.",
+            "Colorimétrico absoluto: simula también el blanco del papel; usado en pruebas de contrato."
+          ],
+          "notes": "Explique que cuando un color de origen no cabe en la gama de destino, el sistema debe decidir qué sacrificar, y esa decisión es el intento de reproducción. Muestre una fotografía de un paisaje de la selva con verdes muy saturados convertida con intento perceptual y con colorimétrico relativo: en el primero todo se ve algo más apagado pero con gradaciones suaves; en el segundo los colores en gama se mantienen exactos y los verdes extremos se aplanan. Relacione con decisiones profesionales: para un logotipo importa la exactitud, para una fotografía la naturalidad del conjunto. Recuerde que las pruebas de contrato simulan el blanco del papel para anticipar cómo se verá el impreso. Plantee el dilema de una foto de producto con un color de marca dentro."
+        },
+        {
+          "title": "Colores directos y sistemas de muestras: Pantone",
+          "bullets": [
+            "Un color directo es una tinta mezclada previamente, no una combinación de tramas CMYK.",
+            "Pantone Matching System (1963): referencias como PMS 485 C, con guías estucado (C) y no estucado (U).",
+            "Ventajas: exactitud, colores fuera de gama CMYK, metálicos y fluorescentes.",
+            "Las guías se decoloran: se recomienda renovarlas periódicamente y evaluarlas bajo D50."
+          ],
+          "notes": "Explique el valor de los colores directos con un caso concreto: una marca peruana cuyo logotipo usa un rojo muy intenso no puede reproducirlo con exactitud en cuatricromía y por eso especifica una tinta Pantone para empaques e impresos institucionales. Muestre la diferencia entre la versión C y U de un mismo Pantone: el mismo número sobre papel no estucado se ve más apagado. Advierta sobre un error común: elegir el Pantone mirando la pantalla, cuando la referencia debe tomarse de la guía física bajo luz normalizada. Mencione que existen otros sistemas de muestras, como RAL en arquitectura e industria, y que en serigrafía textil se trabaja con mezclas propias del taller. Pregunte cuándo no conviene usar un color directo, por ejemplo, en tirajes pequeños de impresión digital."
+        },
+        {
+          "title": "Flujo práctico: un color de marca en todos los medios",
+          "bullets": [
+            "Definir la referencia maestra: muestra física o Pantone y su medición Lab bajo D50.",
+            "Derivar valores por medio: CMYK por perfil, sRGB y hexadecimal para pantallas, RAL para señalética.",
+            "Fijar tolerancias por medio, por ejemplo ΔE00 de 2 en offset y de 3 en impresión digital.",
+            "Registrar todo en una ficha técnica de color dentro del manual de identidad."
+          ],
+          "notes": "Integre la unidad con un ejemplo completo: la marca ficticia Cacao Vilcanota define un naranja como color maestro, lo mide en Lab y deriva sus valores para cada medio usando perfiles, no conversiones automáticas sin control. Muestre una ficha técnica de color profesional con columnas para Pantone, CMYK con su perfil, RGB, hexadecimal, Lab de referencia y tolerancia. Explique que los valores derivados no son idénticos entre sí, sino la mejor aproximación posible en cada medio, y que la ficha protege a la marca ante proveedores. Anuncie el caso de la unidad sobre una exportadora de chocolate cusqueña y la tarea de elaborar una ficha técnica. Cierre preguntando qué información faltaría en los manuales de marca que hayan visto, a la luz de lo aprendido."
+        }
+      ],
+      "reading": {
+        "title": "Del número al color: modelos, espacios y tolerancias",
+        "minutes": 35,
+        "content": "## Del adjetivo a la especificación\n\nEn la práctica profesional, describir un color con palabras (\"un azul elegante\", \"el rojo de siempre\") es una fuente segura de conflictos. Un diseñador debe entregar especificaciones que una imprenta, un taller de serigrafía o un programador puedan reproducir y verificar. Para ello se usan **modelos de color**, que describen cómo se combinan componentes, y **espacios de color**, que fijan ese modelo a condiciones concretas: primarios, punto blanco y curva de respuesta (gamma).\n\n## Modelos dependientes del dispositivo\n\n**RGB** describe la luz emitida por pantallas. En 8 bits, cada canal va de 0 a 255. La notación hexadecimal agrupa los tres canales en pares de base 16:\n\n```\n#D91023  ->  R = D9 = 13*16 + 9 = 217\n             G = 10 =  1*16 + 0 =  16\n             B = 23 =  2*16 + 3 =  35\n```\n\n**HSB** (tono, saturación, brillo) reorganiza el cubo RGB en un cilindro intuitivo. Es útil para explorar, pero no es perceptualmente uniforme: un amarillo y un azul con brillo 100 % tienen luminosidades percibidas muy distintas.\n\n**CMYK** describe tintas de proceso impresas en tramas. Una conversión ingenua sin perfil sería:\n\n```\nK = 1 - max(R', G', B')          (R', G', B' normalizados de 0 a 1)\nC = (1 - R' - K) / (1 - K)\nM = (1 - G' - K) / (1 - K)\nY = (1 - B' - K) / (1 - K)\n```\n\nEsta fórmula sirve para comprender la relación inversa entre luces y tintas, pero **no debe usarse en producción**: ignora el papel, la ganancia de punto, el límite de tinta total y el comportamiento real de las tintas. En producción se convierte con perfiles ICC.\n\n## Sistemas de orden y de muestras\n\nAlbert Munsell publicó en 1905 un sistema basado en tono, valor y croma, con pasos ajustados mediante observadores para que se perciban equidistantes. La notación 5R 4/14 describe un rojo de valor medio y croma alta. En el Perú, arqueólogos y edafólogos usan cartas Munsell para describir cerámicas y suelos, lo que demuestra la utilidad de un lenguaje común.\n\nPantone, por su parte, es un **sistema de muestras** comerciales: cada referencia corresponde a una tinta mezclada (color directo) con su guía física impresa en papel estucado (C) y no estucado (U). Su ventaja es la exactitud y la posibilidad de reproducir colores fuera de la gama CMYK, como naranjas intensos, metálicos o fluorescentes.\n\n## Colorimetría: medir independientemente del dispositivo\n\nEn 1931 la CIE definió el **observador estándar** y el espacio **XYZ**, que describe cualquier color visible. En 1976 publicó **CIELAB**, diseñado para ser aproximadamente uniforme: L* es la luminosidad (0 a 100), a* el eje verde-rojo y b* el eje azul-amarillo, en coherencia con la teoría oponente de Hering. La forma cilíndrica **LCh** expresa el mismo color como luminosidad, croma y ángulo de tono.\n\nLa diferencia entre dos colores se cuantifica con **Delta E**. La fórmula original CIE76 es la distancia euclidiana:\n\n```\nΔE*ab = √( (L2 - L1)² + (a2 - a1)² + (b2 - b1)² )\n\nEjemplo: referencia L 50, a 60, b 40 ; muestra L 52, a 57, b 44\nΔE*ab = √( 2² + (-3)² + 4² ) = √29 ≈ 5,4   -> diferencia visible\n```\n\nLa fórmula **CIEDE2000** corrige no uniformidades de CIELAB y es hoy la referencia industrial. Como orientación, un ΔE00 menor de 1 es casi imperceptible y entre 2 y 3 es visible en comparación directa. Las tolerancias se pactan por contrato y por medio.\n\n## Espacios de trabajo y gama\n\nUn mismo trío RGB produce colores distintos en **sRGB** (estándar web desde 1996), **Adobe RGB** (1998, gama más amplia en verdes y cianes) o **Display P3** (pantallas recientes). La **gama** es el conjunto de colores que un espacio o dispositivo puede reproducir; en el diagrama de cromaticidad se ve como un polígono dentro de la herradura del espectro visible. Ningún dispositivo cubre todos los colores visibles y la gama CMYK de una imprenta es, en general, menor que la de una pantalla.\n\n## El flujo de gestión del color\n\nLa gestión del color sigue tres pasos: **calibrar** el dispositivo a un estado conocido, **caracterizarlo** midiendo su respuesta en un perfil ICC y **convertir** los colores entre perfiles a través de un espacio de conexión (Lab o XYZ). Cuando un color de origen está fuera de la gama de destino, el **intento de reproducción** decide cómo resolverlo: el perceptual comprime toda la gama y conviene en fotografías; el colorimétrico relativo mantiene exactos los colores en gama y recorta los demás, y conviene para colores de marca.\n\n## Implicancias para el diseñador\n\n1. Especificar siempre el espacio junto con los valores numéricos.\n2. Preguntar a la imprenta qué perfil y qué límite de tinta usa antes de convertir a CMYK.\n3. Elegir colores directos desde guías físicas, no desde la pantalla.\n4. Definir un color maestro medido en Lab y derivar desde él los valores de cada medio.\n5. Expresar las exigencias de fidelidad como tolerancias Delta E verificables."
+      },
+      "case": {
+        "title": "Caso: El naranja que nunca sale igual en Cacao Vilcanota",
+        "content": "**Cacao Vilcanota** es una empresa cusqueña que produce chocolate de origen con cacao de La Convención. Vende en tiendas de Cusco y Lima, en aeropuertos y exporta a Alemania y Japón. En 2023 renovó su identidad con un naranja intenso inspirado en la mazorca madura, definido por la agencia como Pantone 1585 C, y un marrón profundo como color secundario.\n\nDos años después, la gerente comercial, Lucía Huamán, presenta un problema en el comité: \"Nuestro naranja tiene cinco versiones distintas\". Las cajas de exportación se imprimen en offset en Lima con tinta directa; las fajas de las tabletas se imprimen en impresión digital en Cusco, en cuatricromía; las bolsas de papel kraft se imprimen en flexografía; la tienda en línea usa el valor hexadecimal que un programador tomó \"con el gotero\" de un PDF; y el letrero de la tienda del aeropuerto se hizo en acrílico pintado.\n\nEl equipo de calidad midió con un espectrofotómetro prestado por un proveedor y obtuvo, frente a la guía Pantone bajo D50, los siguientes valores de diferencia ΔE00: cajas offset, 1,6; fajas digitales, 6,8; bolsas kraft, 9,5; letrero acrílico, 4,1. En pantalla, el color web se ve notoriamente más rojizo que en las cajas.\n\nEl manual de marca original solo contiene el número Pantone, un valor CMYK sin perfil (C 0 M 60 Y 100 K 0) y un valor RGB. No indica tolerancias, versiones para papel no estucado ni para kraft. La imprenta digital cusqueña afirma que \"con CMYK ese naranja no sale\" y propone cambiar a un naranja más apagado. El distribuidor japonés, en cambio, ha enviado un reclamo formal porque las fajas no coinciden con las cajas en sus anaqueles.\n\nLucía tiene un presupuesto acotado y debe decidir entre tres caminos: actualizar el manual con una ficha técnica completa por medio y tolerancias; cambiar el color de marca por uno reproducible en CMYK; o pasar todas las fajas a impresión offset con tinta directa, lo que eleva el costo unitario en 18 % y exige tirajes mínimos que no se ajustan a la producción artesanal de la empresa.",
+        "questions": [
+          "Interprete los valores ΔE00 medidos: ¿qué medios están dentro de una tolerancia razonable y cuáles no, y qué causas técnicas explican cada desviación?",
+          "¿Qué errores de especificación contiene el manual de marca original y cómo contribuyeron al problema?",
+          "Compare las tres alternativas de Lucía considerando fidelidad, costo, producción artesanal y percepción del cliente japonés. ¿Cuál recomendaría y con qué condiciones?",
+          "¿Cómo debería definirse el valor hexadecimal de la tienda en línea para que se acerque al color maestro?"
+        ]
+      },
+      "assignment": {
+        "title": "Ficha técnica de color multimedio para una marca peruana",
+        "instructions": "**Objetivo:** especificar un color de marca de forma reproducible en varios medios, con valores, perfiles y tolerancias justificados.\n\n**Qué entregar:** elija una marca peruana real o un emprendimiento de su entorno con al menos dos colores institucionales. Elabore una ficha técnica de 3 a 5 páginas en PDF que incluya:\n\n1. **Color maestro** de cada color institucional: referencia Pantone C y U elegida desde una guía o biblioteca, con su valor CIELAB de referencia.\n2. **Valores derivados** por medio: CMYK con el perfil indicado (por ejemplo FOGRA39 o el que use una imprenta consultada), sRGB y hexadecimal, y una propuesta para un soporte especial (kraft, textil o señalética).\n3. **Cálculo de Delta E CIE76** entre el Lab de referencia y el Lab que resulta de la conversión a CMYK, mostrando la fórmula y los pasos.\n4. **Tabla de tolerancias** por medio con justificación.\n5. **Advertencias de uso**: intentos de reproducción, negros, sobreimpresión y colores fuera de gama.\n\n**Formato:** tabla clara, capturas de la configuración de color usada y una conclusión de 150 a 200 palabras con recomendaciones para la marca.\n\n**Criterios:** exactitud técnica, coherencia entre valores y perfiles, cálculo correcto y utilidad profesional del documento.",
+        "rubric": [
+          {
+            "name": "Exactitud técnica de valores, perfiles y referencias",
+            "points": 6
+          },
+          {
+            "name": "Cálculo correcto y explicado de Delta E",
+            "points": 4
+          },
+          {
+            "name": "Tolerancias y advertencias justificadas por medio",
+            "points": 5
+          },
+          {
+            "name": "Utilidad profesional, claridad y presentación de la ficha",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: modelos, espacios y gestión del color",
+        "questions": [
+          {
+            "prompt": "Un programador recibe el valor RGB 217, 16, 35 sin otra indicación. ¿Qué información falta para que la especificación sea completa?",
+            "options": [
+              "El espacio de color en que se expresan los valores, como sRGB",
+              "El valor de saturación en porcentaje",
+              "El número de bits de la tarjeta gráfica",
+              "La tinta directa equivalente en la guía Pantone"
+            ],
+            "correct": 0,
+            "explanation": "RGB es un modelo; el mismo trío produce colores distintos en sRGB, Adobe RGB o Display P3. La especificación debe indicar el espacio."
+          },
+          {
+            "prompt": "Una referencia mide L 50, a 60, b 40 y una muestra impresa L 50, a 63, b 36. ¿Cuál es el ΔE*ab según CIE76?",
+            "options": [
+              "5",
+              "7",
+              "25",
+              "1"
+            ],
+            "correct": 0,
+            "explanation": "Las diferencias son 0, 3 y menos 4; la raíz de 0 más 9 más 16 es la raíz de 25, es decir, 5."
+          },
+          {
+            "prompt": "Debe convertir a CMYK el logotipo de una marca cuyo color está ligeramente fuera de gama. ¿Qué intento de reproducción es más adecuado?",
+            "options": [
+              "Colorimétrico relativo, porque conserva exactos los colores en gama",
+              "Perceptual, porque comprime toda la gama de la imagen",
+              "Saturación, porque siempre produce colores más exactos",
+              "Ninguno, porque los logotipos no se convierten"
+            ],
+            "correct": 0,
+            "explanation": "Para colores de marca interesa la exactitud de los colores reproducibles; el colorimétrico relativo los conserva y lleva el color fuera de gama al más cercano posible."
+          },
+          {
+            "prompt": "Un estudiante crea seis colores de interfaz con igual saturación y brillo en HSB, cambiando solo el tono. ¿Qué problema es más probable?",
+            "options": [
+              "Los colores tendrán luminosidades percibidas muy dispares",
+              "Los colores serán todos idénticos en escala de grises",
+              "Los colores quedarán fuera de la gama sRGB",
+              "Los colores no podrán convertirse a hexadecimal"
+            ],
+            "correct": 0,
+            "explanation": "HSB no es perceptualmente uniforme: un amarillo y un azul con brillo 100 % difieren mucho en luminosidad, lo que genera pesos visuales desiguales."
+          },
+          {
+            "prompt": "Un diseñador elige un Pantone mirándolo en su monitor y luego el impreso no coincide. ¿Cuál fue el error de procedimiento?",
+            "options": [
+              "No elegir el color desde la guía física bajo luz normalizada",
+              "No convertir el Pantone a Adobe RGB antes de imprimir",
+              "No aumentar el límite de tinta total al 400 %",
+              "No usar negro de registro en el fondo"
+            ],
+            "correct": 0,
+            "explanation": "La referencia de un color directo es la muestra física; la pantalla depende de calibración y gama, por eso los Pantone se eligen desde guías bajo D50."
+          },
+          {
+            "prompt": "¿Qué describe mejor la función de un perfil ICC en un flujo de gestión del color?",
+            "options": [
+              "Caracteriza cómo un dispositivo reproduce el color para traducirlo a un espacio de conexión",
+              "Ajusta el brillo del monitor a su nivel máximo",
+              "Sustituye la necesidad de pruebas de color impresas",
+              "Convierte automáticamente cualquier color a tinta directa"
+            ],
+            "correct": 0,
+            "explanation": "El perfil ICC registra el comportamiento medido del dispositivo y permite convertir valores a través de Lab o XYZ hacia otro perfil."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Armonía, contraste y significado del color",
+      "description": "Al finalizar la unidad, el estudiante construye paletas con armonías y contrastes justificados en Itten y Albers, controla su proporción y jerarquía, y analiza críticamente el significado psicológico y cultural del color en marcas y piezas del Perú y Latinoamérica.",
+      "topics": [
+        "Los siete contrastes de color de Johannes Itten",
+        "Armonías cromáticas: monocromática, análoga, complementaria, dividida, tríada y tétrada",
+        "Proporción, extensión y jerarquía cromática en la composición",
+        "Psicología del color: evidencia, acordes cromáticos y límites",
+        "Color, cultura y marca: patrimonio cromático peruano y protección de colores distintivos"
+      ],
+      "slides": [
+        {
+          "title": "Armonía cromática: de la regla a la intención",
+          "bullets": [
+            "Armonía no significa belleza universal, sino relación ordenada y adecuada al propósito.",
+            "Las fórmulas geométricas del círculo son puntos de partida, no garantías de éxito.",
+            "Una paleta se evalúa por su función: legibilidad, jerarquía, emoción y coherencia de marca.",
+            "Albers: primero se observa en contexto; luego se nombra la armonía obtenida."
+          ],
+          "notes": "Abra la unidad desmontando un mito: no existen combinaciones de color correctas en abstracto. Muestre dos piezas con la misma armonía complementaria, una exitosa y otra estridente, y pida a la clase que identifique qué cambia: proporciones, valores y saturaciones. Explique que la tradición ofrece esquemas útiles, desde Goethe hasta Itten, pero que un diseñador profesional los usa como hipótesis que luego verifica en contexto, tal como enseñaba Albers. Relacione con Fundamentos del Diseño, donde se estudiaron contraste y jerarquía como principios compositivos: ahora se aplican al color. Pregunte qué pieza peruana recuerdan por su color y por qué funciona. Anote las respuestas para retomarlas al final de la unidad, cuando se discuta significado cultural."
+        },
+        {
+          "title": "El círculo cromático de Itten y sus límites",
+          "bullets": [
+            "Itten, maestro de la Bauhaus, organizó un círculo de 12 colores basado en amarillo, rojo y azul.",
+            "Distinguió primarios, secundarios y terciarios para enseñar mezcla pictórica.",
+            "Sus complementarios no coinciden exactamente con los ópticos ni con los de CIELAB.",
+            "Valor actual: lenguaje compartido y base de los siete contrastes, no modelo técnico."
+          ],
+          "notes": "Presente a Johannes Itten y su libro sobre el arte del color, del cual El elemento del color es la versión abreviada usada en la bibliografía. Explique que su círculo pertenece a la tradición pictórica RYB, coherente con la mezcla de pigmentos de su época. Compare en pantalla el complementario del rojo según Itten, que es el verde, con el complementario óptico obtenido por posimagen, que tiende al cian verdoso. Esta discrepancia no invalida a Itten, pero exige saber en qué sistema se está trabajando. Recalque que su mayor aporte es la clasificación de contrastes, que sigue siendo una herramienta de análisis potente. Pregunte por qué los programas de diseño ofrecen ruedas de color basadas en RGB y no en RYB, y qué consecuencias tiene."
+        },
+        {
+          "title": "Contrastes de tono y de claro-oscuro",
+          "bullets": [
+            "Contraste de tono: colores puros muy distintos; máximo con amarillo, rojo y azul saturados.",
+            "Produce efecto festivo, enérgico y directo: arte popular, señalética, publicidad infantil.",
+            "Contraste claro-oscuro: diferencia de valor; es el que más organiza la lectura y la profundidad.",
+            "Prueba: si la pieza funciona en grises, el claro-oscuro está bien resuelto."
+          ],
+          "notes": "Muestre ejemplos del arte popular peruano, como los retablos ayacuchanos o las mantas de feria, donde el contraste de tono genera alegría y vitalidad. Luego compárelos con una portada editorial sobria en la que domina el claro-oscuro. Explique que el contraste de tono se debilita cuando los colores pierden saturación o se acercan en valor, y que el claro-oscuro es el más robusto ante cambios de medio, iluminación y visión deficiente. Pida un ejercicio rápido: identificar cuál contraste domina en tres afiches de conciertos limeños. Recuerde la regla de la unidad 1: la legibilidad depende del valor. Plantee la pregunta de cómo podría una marca usar contraste de tono sin perder legibilidad en sus textos."
+        },
+        {
+          "title": "Contraste frío-cálido",
+          "bullets": [
+            "Cálidos (rojos, naranjas, amarillos) tienden a avanzar; fríos (azules, verdes azulados) a retroceder.",
+            "La temperatura es relativa: un verde puede ser cálido junto a un azul y frío junto a un amarillo.",
+            "Crea profundidad atmosférica: los fondos lejanos se ven más fríos y desaturados.",
+            "Uso estratégico: cálidos para llamadas a la acción, fríos para fondos y datos estables."
+          ],
+          "notes": "Explique que la temperatura de color perceptiva no es la misma que la temperatura en kelvin vista en la unidad 1, y que incluso se invierte: la luz de más kelvin se percibe más fría. Use paisajes andinos para mostrar la perspectiva atmosférica: los cerros lejanos del valle del Colca se ven azulados y desaturados. Señale el uso en interfaces: muchos bancos combinan un azul institucional frío con acentos naranjas o amarillos para los botones de acción. Advierta que estas asociaciones tienen base perceptiva y cultural, y que no son leyes. Proponga a los estudiantes que reorganicen una composición sencilla invirtiendo la temperatura de fondo y figura, y que describan el cambio de profundidad percibida."
+        },
+        {
+          "title": "Complementarios y contraste simultáneo en la composición",
+          "bullets": [
+            "Complementarios en contacto se intensifican mutuamente y pueden producir vibración.",
+            "Mezclados entre sí se neutralizan: base para obtener grises cromáticos ricos.",
+            "Contraste simultáneo: el ojo exige el complementario y lo genera si no está presente.",
+            "Para evitar vibración: separar con neutros, variar valor o reducir la saturación de uno."
+          ],
+          "notes": "Retome a Chevreul y explique cómo el contraste simultáneo se convierte en recurso compositivo. Muestre texto rojo saturado sobre fondo verde saturado del mismo valor: la vibración en los bordes es incómoda y reduce legibilidad. Luego muestre la misma pareja con el rojo oscurecido y una línea blanca de separación: la tensión se mantiene pero se vuelve controlada. Comente que muchos pintores, como Van Gogh, usaron complementarios para intensificar sombras y luces, y que el diseño publicitario los usa para destacar productos sobre fondos. Explique también la mezcla de complementarios para obtener grises cromáticos, más vivos que los grises neutros, útiles para fondos elegantes. Pregunte en qué piezas peruanas recuerdan el uso de rojo y verde o de azul y naranja."
+        },
+        {
+          "title": "Contrastes de saturación y de extensión",
+          "bullets": [
+            "Contraste cualitativo: un color saturado brilla junto a versiones apagadas de sí mismo o grises.",
+            "Contraste cuantitativo: equilibra áreas según la fuerza luminosa de cada color.",
+            "Proporciones de Goethe por luminosidad: amarillo 9, naranja 8, rojo y verde 6, azul 4, violeta 3.",
+            "Para equilibrar, el amarillo ocupa menos área que el violeta (aproximadamente 1 a 3)."
+          ],
+          "notes": "Complete los siete contrastes de Itten con estos dos, que son los más útiles para el diseño de marcas e interfaces. Explique el contraste cualitativo con un ejemplo de packaging: un único elemento saturado en un empaque de tonos apagados se convierte en el foco inmediato. Desarrolle el contraste cuantitativo con los valores de luminosidad atribuidos a Goethe: para equilibrar amarillo y violeta, el violeta necesita aproximadamente el triple de área. Aclare que son proporciones orientativas, útiles para entrenar el ojo, no fórmulas exactas. Pida a los estudiantes que calculen qué proporción de área darían a un naranja y un azul para equilibrarlos. La respuesta, aproximadamente un tercio de naranja y dos tercios de azul, puede contrastarse con logotipos conocidos."
+        },
+        {
+          "title": "Armonías de baja tensión: monocromática y análoga",
+          "bullets": [
+            "Monocromática: un solo tono con variaciones de valor y saturación; sobria y unificada.",
+            "Análoga: tres a cinco tonos vecinos en el círculo; natural y coherente.",
+            "Riesgo: monotonía y falta de jerarquía si no se introduce contraste de valor.",
+            "Usos: identidad corporativa sobria, fotografía de producto, señalización de espacios."
+          ],
+          "notes": "Explique que las armonías de baja tensión transmiten calma y unidad, y que su desafío es mantener jerarquía. Muestre una armonía análoga inspirada en la gama de tierras de un paisaje costeño peruano, de ocres a terracotas, y explique cómo un acento de valor muy oscuro resuelve la jerarquía. Para la monocromática, use el ejemplo de interfaces que construyen toda la escala de un color institucional en diez pasos de luminosidad. Recuerde la lección de la unidad 2: estos pasos deben ser perceptualmente uniformes, lo que se logra mejor en LCh que en HSB. Proponga a la clase identificar marcas que usen armonía análoga y discutir qué tipo de producto o servicio favorecen. Pregunte cuándo una armonía de baja tensión sería un error estratégico."
+        },
+        {
+          "title": "Armonías de alta tensión: complementaria, dividida, tríada y tétrada",
+          "bullets": [
+            "Complementaria: dos opuestos; máximo contraste de tono, requiere controlar proporciones.",
+            "Complementaria dividida: un color y los dos vecinos de su opuesto; contraste con menos tensión.",
+            "Tríada: tres tonos equidistantes; dinámica, exige un color dominante claro.",
+            "Tétrada: dos pares complementarios; muy rica y difícil, necesita jerarquía rigurosa."
+          ],
+          "notes": "Muestre cada armonía con un ejemplo aplicado y luego con una versión fallida que use proporciones iguales. El objetivo es que comprendan que la geometría del círculo solo define tonos, mientras que el éxito depende de proporción, valor y saturación. Presente la complementaria dividida como la opción más versátil para principiantes porque conserva contraste sin la vibración del par complementario puro. Comente que muchas marcas de consumo masivo en Latinoamérica usan tríadas saturadas para ser reconocibles en anaqueles saturados de productos, como los de bodegas y mercados. Asigne un mini reto en clase: construir una tríada para una feria gastronómica regional y someterla a la prueba de escala de grises. Discuta qué ajustes fueron necesarios para que funcionara."
+        },
+        {
+          "title": "Proporción y jerarquía: color dominante, secundario y acento",
+          "bullets": [
+            "Regla práctica 60-30-10: dominante, secundario y acento; útil como punto de partida.",
+            "El acento debe reservarse para lo que el usuario debe ver o hacer primero.",
+            "Neutros (blancos, grises, negros, cremas) son parte activa de la paleta.",
+            "Cada color de la paleta debe tener un rol nombrado: fondo, texto, acción, alerta, destaque."
+          ],
+          "notes": "Explique que la regla 60-30-10 proviene de la decoración de interiores y que funciona como heurística, no como ley. Lo esencial es que la paleta tenga jerarquía de roles. Muestre la pantalla de inicio de una aplicación bancaria o de delivery: el acento se reserva para el botón principal y pierde fuerza si se usa en elementos decorativos. Insista en que los neutros son decisivos: un blanco cálido o un gris azulado cambian por completo el carácter de una paleta. Relacione con el concepto de tokens de diseño que se verá en la unidad 4, donde cada color se nombra por su función y no por su apariencia. Pida a los estudiantes que analicen la distribución de roles de color en una pieza que traigan y estimen sus porcentajes."
+        },
+        {
+          "title": "Psicología del color: qué dice la evidencia",
+          "bullets": [
+            "Eva Heller encuestó a unas 2000 personas en Alemania y describió acordes cromáticos.",
+            "Las asociaciones dependen del contexto, la combinación y la cultura, no de un color aislado.",
+            "La investigación muestra efectos de adecuación: importa que el color encaje con la categoría.",
+            "Evitar recetas como 'el azul genera confianza' sin evidencia ni análisis del público."
+          ],
+          "notes": "Esta diapositiva busca desarrollar pensamiento crítico. Presente el aporte de Heller: su concepto de acorde cromático sostiene que el efecto de un color depende de los colores que lo acompañan, idea muy cercana a Albers. Aclare que su estudio se realizó en Alemania y que no puede trasladarse sin más al Perú. Contraste con las infografías populares que atribuyen emociones fijas a cada color, sin fuentes. Explique que la investigación en marketing sugiere que lo relevante es la adecuación percibida entre color, producto y personalidad de marca. Proponga un debate: ¿por qué tantas marcas de comida rápida usan rojo y amarillo, y por qué una marca de alimentos orgánicos que los usara podría fracasar? Pida que argumenten con conceptos, no con opiniones."
+        },
+        {
+          "title": "El color es cultural: significados que cambian",
+          "bullets": [
+            "El blanco se asocia al luto en varias culturas de Asia oriental y a la pureza en Occidente.",
+            "En Lima, octubre es el mes morado por la procesión del Señor de los Milagros.",
+            "Rojo y blanco evocan la peruanidad: Fiestas Patrias, la selección, la Marca Perú.",
+            "Antes de exportar una paleta, investigar sus connotaciones en el mercado de destino."
+          ],
+          "notes": "Muestre que los significados del color se aprenden socialmente. Use el ejemplo del morado en Lima: durante octubre, el morado del hábito del Señor de los Milagros satura calles, comercios y publicidad, lo que lo vuelve un color con fuerte carga religiosa y popular en ese periodo. Compare con el uso del blanco en contextos funerarios de Asia oriental, relevante para empresas peruanas que exportan a Japón o China. Comente cómo el rojo y blanco funcionan como código nacional y cómo PromPerú lo aprovechó en la Marca Perú. Pida a los estudiantes que identifiquen un color cuyo significado cambie entre la costa, los Andes y la Amazonía, o entre generaciones. Esto prepara el caso de la unidad sobre una cooperativa cafetalera que exporta."
+        },
+        {
+          "title": "Patrimonio cromático peruano",
+          "bullets": [
+            "En Huaca Prieta se halló tela de algodón teñida con índigo de unos 6000 años de antigüedad.",
+            "La cochinilla (Dactylopius coccus) produce carmín; el Perú es su principal productor mundial.",
+            "Los textiles Paracas y los tejidos de Chinchero y Taquile muestran sistemas cromáticos complejos.",
+            "El arte chicha de Elliot Túpac usa fosforescentes sobre negro: máximo contraste para la calle."
+          ],
+          "notes": "Presente el Perú como una de las tradiciones cromáticas más ricas del mundo. Comente que el hallazgo de Huaca Prieta, publicado en 2016, situó en la costa norte peruana el uso más antiguo conocido de índigo. Explique que la cochinilla, insecto que vive en la tuna, fue un producto de exportación clave desde la Colonia y que su colorante sigue usándose en alimentos y cosméticos. Muestre detalles de mantos Paracas y de textiles contemporáneos de Cusco. Luego salte al presente con el arte chicha, nacido en carteles de conciertos, que usa colores fosforescentes sobre fondo negro para destacar en muros urbanos de noche, una solución que aplica el contraste claro-oscuro y de saturación. Pregunte cómo podría un diseñador inspirarse en este patrimonio sin caer en apropiación superficial."
+        },
+        {
+          "title": "Color, marca y propiedad",
+          "bullets": [
+            "El color acelera el reconocimiento de marca y puede volverse un activo distintivo.",
+            "La Decisión 486 de la CAN admite como marca un color delimitado por una forma o una combinación.",
+            "En el Perú el registro se tramita ante INDECOPI; un color aislado rara vez es registrable sin distintividad adquirida.",
+            "Ejemplos de códigos sectoriales: amarillo en gaseosas peruanas, rojo y blanco en lo patrio."
+          ],
+          "notes": "Explique que una paleta bien construida se convierte con el tiempo en un activo comercial. Describa el marco legal andino: la Decisión 486, aplicable en el Perú, permite registrar como marca un color delimitado por una forma o una combinación de colores, y el trámite se realiza ante la Dirección de Signos Distintivos del INDECOPI. Aclare que un color único sin forma suele considerarse carente de distintividad, salvo que se demuestre que el público lo asocia a una empresa. Mencione que este tema se ampliará en Ética Profesional y Propiedad Intelectual, en el sexto ciclo. Pregunte qué ocurre en un sector donde todos los competidores usan el mismo color y cuándo conviene diferenciarse rompiendo el código cromático de la categoría."
+        },
+        {
+          "title": "Método para construir una paleta con intención",
+          "bullets": [
+            "1. Analizar el brief: público, categoría, competencia, medios y atributos de marca.",
+            "2. Definir el color dominante por estrategia y verificar su significado cultural.",
+            "3. Elegir la armonía y los contrastes de Itten que expresen el tono deseado.",
+            "4. Asignar roles y proporciones; probar en grises, en contexto y con simulación de daltonismo.",
+            "5. Documentar valores técnicos y justificación conceptual."
+          ],
+          "notes": "Cierre la unidad presentando un método de cinco pasos que integra lo visto en las tres unidades. Haga un ejemplo rápido con un brief ficticio: una marca de bebidas de quinua dirigida a jóvenes urbanos de Arequipa. Muestre el análisis de la categoría, la elección de un dominante que se diferencie de la competencia, la armonía elegida, la asignación de roles y las pruebas. Subraye el paso de verificación cultural y perceptiva, que suele omitirse. Anuncie la tarea, en la que aplicarán este método a un brief real, y el caso de la cooperativa cafetalera. Recuerde que el cuestionario incluirá situaciones de aplicación con contrastes y proporciones. Finalmente, conecte con la unidad 4, donde la paleta se convertirá en un sistema documentado y accesible."
+        }
+      ],
+      "reading": {
+        "title": "Contraste, armonía y sentido: de Itten a la calle peruana",
+        "minutes": 35,
+        "content": "## La armonía como relación funcional\n\nDurante siglos se buscó una regla definitiva para combinar colores. Goethe, en su *Teoría de los colores* (1810), atribuyó valores de luminosidad a los colores y sugirió proporciones de equilibrio. Johannes Itten, maestro de la Bauhaus, sistematizó un círculo de doce colores y, sobre todo, una clasificación de **siete contrastes** que sigue siendo la herramienta de análisis más útil para el diseñador. Josef Albers, su sucesor en la enseñanza del color, advirtió que ninguna regla reemplaza la observación en contexto. Hoy entendemos la armonía como una relación ordenada y adecuada a un propósito comunicativo, no como una belleza universal.\n\n## Los siete contrastes de Itten\n\n1. **Contraste de tono (del color en sí):** colores saturados y distintos. Expresa vitalidad; es frecuente en el arte popular andino y en la señalética.\n2. **Contraste claro-oscuro:** diferencias de valor. Organiza la lectura, la profundidad y la jerarquía; es el más robusto ante cambios de medio.\n3. **Contraste frío-cálido:** los cálidos tienden a avanzar y los fríos a retroceder; la temperatura es relativa al contexto.\n4. **Contraste de complementarios:** opuestos que se intensifican en contacto y se neutralizan al mezclarse.\n5. **Contraste simultáneo:** el ojo genera el complementario del color dominante sobre los colores vecinos, como describió Chevreul.\n6. **Contraste cualitativo (de saturación):** un color puro junto a versiones apagadas o grises se vuelve protagonista.\n7. **Contraste cuantitativo (de extensión):** equilibrio por áreas según la fuerza luminosa de cada color.\n\nPara el contraste cuantitativo se usan como referencia los valores de luminosidad atribuidos a Goethe: amarillo 9, naranja 8, rojo 6, verde 6, azul 4 y violeta 3. Las áreas armónicas son inversamente proporcionales a esos valores:\n\n```\nÁrea relativa = 1 / luminosidad\nAmarillo : Violeta  = 1/9 : 1/3  = 1 : 3\nNaranja  : Azul     = 1/8 : 1/4  = 1 : 2\nRojo     : Verde    = 1/6 : 1/6  = 1 : 1\n```\n\nEstas proporciones son orientativas: entrenan el ojo, pero deben verificarse en cada composición.\n\n## Esquemas de armonía\n\nLos esquemas basados en el círculo cromático definen **qué tonos** combinar: monocromático, análogo, complementario, complementario dividido, tríada y tétrada. No definen **cuánto** de cada uno ni **con qué valor y saturación**. Por eso, dos piezas con el mismo esquema pueden resultar una elegante y otra estridente. La heurística 60-30-10 (dominante, secundario, acento) ayuda a establecer jerarquía, y los neutros funcionan como silencio visual que da espacio a los colores activos.\n\n## Psicología del color: entre la evidencia y el mito\n\nEva Heller encuestó a unas dos mil personas en Alemania y documentó asociaciones entre colores y conceptos. Su principal aporte es la noción de **acorde cromático**: el efecto de un color depende de los colores que lo acompañan. Sin embargo, sus resultados reflejan una cultura concreta. La investigación en marketing sugiere que más que efectos fijos (\"el azul da confianza\") importa la **adecuación**: que el color encaje con la categoría del producto y con la personalidad de la marca. El diseñador debe desconfiar de tablas de emociones sin fuente y contrastar con estudios del público real.\n\n## El color es cultural\n\nEn Lima, octubre es el mes morado por la procesión del Señor de los Milagros; el morado adquiere entonces una carga religiosa y popular evidente. El rojo y el blanco funcionan como código patrio. En varias culturas de Asia oriental el blanco se asocia al luto, dato relevante para empresas peruanas que exportan a ese mercado. Antes de fijar una paleta para otro país, es obligatorio investigar sus connotaciones.\n\n## Un patrimonio cromático excepcional\n\nEl Perú posee una de las tradiciones cromáticas más antiguas del mundo. En Huaca Prieta, en la costa norte, se identificó tela de algodón teñida con índigo de unos seis mil años de antigüedad, el uso más antiguo conocido de ese tinte. La **cochinilla** (*Dactylopius coccus*), que produce el carmín, fue un producto de exportación clave desde la Colonia y el país sigue siendo su principal productor mundial. Los mantos Paracas y los textiles de comunidades como Chinchero o Taquile muestran sistemas cromáticos de gran complejidad. En el siglo XXI, el **arte chicha** de los carteles de conciertos, que Elliot Túpac llevó a galerías, usa colores fosforescentes sobre fondo negro: una aplicación intuitiva de los contrastes claro-oscuro y de saturación para destacar en la calle.\n\n## Color y propiedad\n\nUna paleta consolidada se convierte en un activo. La Decisión 486 de la Comunidad Andina admite como marca un color delimitado por una forma o una combinación de colores; en el Perú el registro se tramita ante INDECOPI. Un color aislado, en cambio, rara vez es registrable si no ha adquirido distintividad por el uso.\n\n## Conclusión\n\nConstruir una paleta con intención exige analizar el encargo, elegir contrastes y armonías que expresen el tono buscado, asignar roles y proporciones, verificar su lectura perceptiva y cultural, y documentar la decisión."
+      },
+      "case": {
+        "title": "Caso: La nueva paleta de la Cooperativa Cafetalera Selva Central",
+        "content": "La **Cooperativa Cafetalera Selva Central** agrupa a 420 familias productoras de Villa Rica y Chanchamayo, en Pasco y Junín. Produce café arábica de altura con certificaciones orgánica y de comercio justo. Durante quince años vendió café verde a importadores, pero en 2024 decidió lanzar su propia marca de café tostado para tres mercados: cafeterías de especialidad en Lima, supermercados en Alemania y tiendas de regalo en Japón.\n\nUna agencia de Lima presentó dos propuestas de paleta para los empaques.\n\n**Propuesta A, \"Selva viva\":** verde esmeralda saturado como dominante (60 %), rojo carmín como secundario (30 %) en alusión a la cereza madura del café, y amarillo intenso como acento (10 %). La agencia argumenta que el contraste de complementarios \"transmite la energía de la selva\" y destaca en anaquel.\n\n**Propuesta B, \"Tierra y niebla\":** crema cálido como dominante, marrón tostado y verde oliva desaturado como secundarios, y un acento terracota. La agencia sostiene que la armonía análoga comunica artesanía y calidad premium, alineada con el café de especialidad.\n\nEn una prueba con 60 consumidores de cafeterías de especialidad en Lima, la propuesta B fue preferida por el 68 %, que la asoció con \"café de calidad\" y \"origen\". En un grupo focal con representantes de supermercados alemanes, la propuesta A se consideró \"llamativa pero poco premium\" y algunos la asociaron con productos navideños por el rojo y verde. El socio japonés, en cambio, advirtió que el crema muy pálido de la propuesta B, en combinación con textos en gris claro, podía leerse con dificultad y recordar a empaques de productos de higiene.\n\nLa junta directiva, integrada en su mayoría por productores, prefiere la propuesta A porque \"el verde y el rojo son los colores de nuestra chacra y de nuestro café\". El gerente, Mario Ccahuana, teme que una decisión puramente afectiva comprometa las ventas en mercados exigentes, pero también reconoce que la identidad de los productores es un valor central de la cooperativa. La impresión de los empaques debe aprobarse en seis semanas y el presupuesto permite una sola línea de empaques para los tres mercados.",
+        "questions": [
+          "Analice ambas propuestas con los contrastes de Itten y los esquemas de armonía: ¿qué efecto perceptivo produce cada una y por qué?",
+          "¿Cómo interpreta las reacciones diferentes de los públicos de Lima, Alemania y Japón a la luz del carácter cultural del color?",
+          "¿Es posible conciliar el valor identitario que defiende la junta con las exigencias de los mercados? Proponga una tercera paleta y justifíquela.",
+          "¿Qué pruebas adicionales haría antes de aprobar la impresión en seis semanas, y qué criterios de decisión usaría?"
+        ]
+      },
+      "assignment": {
+        "title": "Paleta con intención para un brief real",
+        "instructions": "**Objetivo:** construir y justificar una paleta cromática aplicando los contrastes de Itten, una armonía y un análisis cultural pertinente.\n\n**Brief:** elija una de estas opciones: (a) marca de una feria gastronómica regional del Perú; (b) campaña de un museo de sitio arqueológico; (c) aplicación de un emprendimiento de delivery de productos amazónicos. Defina en media página el público, la categoría y tres atributos de marca.\n\n**Qué entregar (PDF de 5 a 7 páginas):**\n\n1. **Análisis de la competencia:** paleta de tres referentes de la categoría y código cromático dominante.\n2. **Propuesta de paleta:** cinco a siete colores con roles (dominante, secundario, acento, neutros, alerta) y proporciones.\n3. **Fundamentación:** armonía elegida, contrastes de Itten utilizados y efecto buscado, con citas de Itten, Albers o Heller.\n4. **Verificación cultural:** connotaciones de los colores en el público objetivo, con al menos una fuente o testimonio.\n5. **Pruebas:** aplicación en dos piezas (por ejemplo, afiche y pantalla), versión en escala de grises y simulación de deuteranopía, con los ajustes realizados.\n\n**Criterios:** coherencia estratégica, dominio de contrastes y armonías, análisis cultural crítico, calidad de las pruebas y presentación.",
+        "rubric": [
+          {
+            "name": "Coherencia estratégica con el brief y la competencia",
+            "points": 5
+          },
+          {
+            "name": "Dominio y fundamentación de contrastes y armonías",
+            "points": 5
+          },
+          {
+            "name": "Análisis cultural crítico y sustentado",
+            "points": 4
+          },
+          {
+            "name": "Pruebas en contexto, grises y daltonismo con ajustes documentados",
+            "points": 4
+          },
+          {
+            "name": "Calidad de presentación y redacción",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: contraste, armonía y significado",
+        "questions": [
+          {
+            "prompt": "Según las proporciones de luminosidad de Goethe usadas por Itten, ¿qué relación de áreas equilibra naranja y azul?",
+            "options": [
+              "Una parte de naranja por dos de azul",
+              "Dos partes de naranja por una de azul",
+              "Partes iguales de ambos colores",
+              "Una parte de naranja por cuatro de azul"
+            ],
+            "correct": 0,
+            "explanation": "Naranja tiene luminosidad 8 y azul 4; las áreas son inversas a la luminosidad, 1/8 frente a 1/4, es decir, 1 a 2."
+          },
+          {
+            "prompt": "En un empaque de tonos crema y tierra apagados, se imprime solo el sello de origen en un naranja muy saturado. ¿Qué contraste explica que el sello domine la atención?",
+            "options": [
+              "Contraste cualitativo o de saturación",
+              "Contraste de complementarios",
+              "Contraste simultáneo",
+              "Contraste frío-cálido"
+            ],
+            "correct": 0,
+            "explanation": "Un color puro rodeado de colores desaturados de la misma familia destaca por su pureza: es el contraste cualitativo descrito por Itten."
+          },
+          {
+            "prompt": "Un texto rojo saturado sobre fondo verde saturado del mismo valor produce vibración. ¿Qué ajuste reduce mejor el problema sin perder la armonía?",
+            "options": [
+              "Diferenciar claramente el valor de ambos colores y separar con un neutro",
+              "Usar rojo y verde todavía más saturados",
+              "Cambiar a una armonía tétrada con cuatro colores",
+              "Aumentar el tamaño del texto en un punto"
+            ],
+            "correct": 0,
+            "explanation": "La vibración surge de complementarios saturados de valor similar; aumentar la diferencia de valor y aislar con un neutro conserva la armonía y mejora la legibilidad."
+          },
+          {
+            "prompt": "Un consultor afirma que 'el azul siempre genera confianza' y recomienda usarlo en cualquier marca financiera. ¿Cuál es la crítica más sólida?",
+            "options": [
+              "Los efectos dependen del contexto, la combinación, la cultura y la adecuación a la categoría",
+              "El azul solo transmite tristeza según todos los estudios",
+              "Las marcas financieras deben usar exclusivamente colores cálidos",
+              "La psicología del color no tiene ninguna base empírica"
+            ],
+            "correct": 0,
+            "explanation": "La evidencia apunta a efectos de adecuación y a acordes cromáticos; no existen significados fijos y universales de un color aislado."
+          },
+          {
+            "prompt": "Una empresa peruana de regalos corporativos exportará una línea a Japón con empaque blanco dominante y detalles negros. ¿Qué debería verificar primero?",
+            "options": [
+              "Las connotaciones funerarias o ceremoniales de esa combinación en el mercado de destino",
+              "El valor hexadecimal exacto del blanco del papel",
+              "Si la combinación cumple el contraste cuantitativo de Goethe",
+              "Si el blanco puede registrarse como marca ante INDECOPI"
+            ],
+            "correct": 0,
+            "explanation": "El significado del color es cultural; antes de exportar una paleta se investigan sus connotaciones en el mercado objetivo."
+          },
+          {
+            "prompt": "¿Qué protege la Decisión 486 de la Comunidad Andina en relación con el color como marca?",
+            "options": [
+              "Un color delimitado por una forma o una combinación de colores",
+              "Cualquier color aislado usado por primera vez",
+              "Todos los colores primarios de una empresa",
+              "Solo los colores registrados en la guía Pantone"
+            ],
+            "correct": 0,
+            "explanation": "La norma andina admite como signo un color delimitado por una forma o una combinación; un color aislado requiere normalmente distintividad adquirida."
+          },
+          {
+            "prompt": "Un diseñador elige una tríada perfecta en el círculo, pero la pieza resulta caótica. ¿Cuál es la causa más probable?",
+            "options": [
+              "Usó los tres colores en áreas, valores y saturaciones similares, sin jerarquía",
+              "Las tríadas nunca funcionan en diseño gráfico",
+              "No convirtió la tríada al modelo RYB",
+              "Debió usar colores con el mismo nombre comercial"
+            ],
+            "correct": 0,
+            "explanation": "El esquema define tonos, no jerarquía; sin un dominante claro y diferencias de valor y proporción, la tríada compite consigo misma."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Sistemas cromáticos accesibles y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante convierte una paleta en un sistema cromático documentado, con escalas tonales, tokens por función y pruebas de contraste según las WCAG 2.1, y sustenta una guía cromática profesional aplicada a piezas impresas, digitales y de visualización de datos.",
+      "topics": [
+        "De la paleta al sistema: escalas tonales perceptuales y tokens de color",
+        "Accesibilidad cromática: luminancia relativa, razón de contraste y criterios WCAG 2.1",
+        "Color en visualización de datos y en modo oscuro",
+        "Guía cromática profesional: estructura, aplicaciones y reglas de uso",
+        "Proyecto integrador: desarrollo, pruebas y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "De la paleta al sistema cromático",
+          "bullets": [
+            "Una paleta es un conjunto de colores; un sistema define roles, escalas, reglas y valores por medio.",
+            "Los sistemas permiten que equipos distintos produzcan piezas coherentes sin consultar al autor.",
+            "Componentes: colores base, escalas tonales, neutros, colores de estado y reglas de combinación.",
+            "Todo sistema se valida con pruebas: contraste, gama, medios y usuarios."
+          ],
+          "notes": "Abra la unidad mostrando la diferencia entre una paleta de cinco muestras en un tablero de inspiración y el sistema cromático de una aplicación bancaria o de un manual de marca robusto. El primero inspira; el segundo resuelve cientos de decisiones diarias de diseñadores, programadores, imprentas y agencias. Pregunte qué ocurre cuando una marca crece y solo tiene una paleta: cada proveedor inventa sus propios tonos para fondos, alertas o botones desactivados, y la identidad se fragmenta. Explique que esta unidad integra todo lo aprendido: percepción para las pruebas, modelos y gestión para los valores por medio, armonía y cultura para la estrategia, y ahora accesibilidad y documentación. Presente el proyecto integrador que se desarrollará durante las cuatro semanas."
+        },
+        {
+          "title": "Escalas tonales perceptualmente uniformes",
+          "bullets": [
+            "Cada color base se despliega en 9 a 11 pasos de luminosidad, por ejemplo del 50 al 900.",
+            "Generarlas en LCh u OKLCH: se fija el tono y se varía L* en intervalos regulares.",
+            "Ajustar la croma en los extremos: colores muy claros u oscuros no admiten croma alta.",
+            "Verificar que pasos con el mismo número tengan luminosidad similar entre distintos tonos."
+          ],
+          "notes": "Muestre cómo se construye una escala tonal para un color institucional. Explique que si se genera aclarando y oscureciendo en HSB, los pasos parecerán irregulares y los tonos distintos tendrán pesos visuales desiguales, como se vio en la unidad 2. En cambio, en LCh u OKLCH se fija el ángulo de tono, se definen valores de luminosidad regulares y se ajusta la croma para no salirse de la gama sRGB. Mencione que sistemas de diseño reconocidos trabajan con escalas numeradas en las que el mismo número indica luminosidad equivalente, lo que facilita cumplir contraste: por ejemplo, cualquier texto de paso 700 sobre fondo de paso 50 cumple el mínimo. Haga una demostración con una herramienta en línea o en el programa de diseño, documentando cada valor."
+        },
+        {
+          "title": "Tokens de color: nombrar por función",
+          "bullets": [
+            "Tokens primitivos describen el valor: azul-600 = #005A8C.",
+            "Tokens semánticos describen el uso: color-accion-primaria, color-texto-principal, color-error.",
+            "Cambiar un tema o un modo oscuro solo requiere reasignar tokens semánticos.",
+            "Los tokens conectan el diseño con el código y evitan valores sueltos en cada archivo."
+          ],
+          "notes": "Introduzca los tokens de diseño como el puente entre el diseñador y el programador. Escriba en pantalla un ejemplo de dos niveles: primero los valores primitivos de la escala y luego los nombres semánticos que apuntan a ellos. Explique que si mañana la marca decide un azul más luminoso, basta con modificar el primitivo y todas las pantallas se actualizan. Señale que esta lógica también sirve fuera de lo digital: un manual de marca puede definir el color para fondos institucionales y el color para destacar precios, en vez de listar colores sin rol. Relacione con Diseño UX/UI del tercer ciclo, donde se profundizará en sistemas de componentes. Pida a los estudiantes que redacten cinco tokens semánticos para la paleta que construyeron en la unidad 3."
+        },
+        {
+          "title": "Accesibilidad cromática: por qué es obligación profesional",
+          "bullets": [
+            "La Ley 29973 reconoce en el Perú el derecho de las personas con discapacidad a la accesibilidad.",
+            "Las WCAG 2.1 del W3C son la referencia internacional para contenido digital accesible.",
+            "Baja visión, deficiencias cromáticas, edad y pantallas al sol afectan la percepción del contraste.",
+            "Diseño accesible beneficia a todos: mejora legibilidad, conversión y reputación."
+          ],
+          "notes": "Aborde la accesibilidad como un asunto de derechos y de calidad profesional, no como un requisito opcional. Mencione que la Ley General de la Persona con Discapacidad, Ley 29973, establece el principio de accesibilidad, y que las pautas WCAG 2.1 son la referencia técnica usada por entidades públicas y empresas en todo el mundo. Explique que los problemas de contraste no afectan solo a personas con discapacidad: un adulto mayor, alguien que usa el celular en la calle bajo el sol de mediodía o una pantalla de gama baja con brillo reducido sufren las mismas dificultades. Pregunte cuántas veces han tenido que entrecerrar los ojos para leer un texto gris claro en una página web. Esa experiencia común es la puerta de entrada al cálculo de contraste."
+        },
+        {
+          "title": "Luminancia relativa y razón de contraste",
+          "bullets": [
+            "Linealizar cada canal sRGB: c/12,92 si c ≤ 0,04045; si no, ((c+0,055)/1,055)^2,4.",
+            "Luminancia relativa: L = 0,2126 R + 0,7152 G + 0,0722 B, con canales linealizados.",
+            "Razón de contraste = (L más clara + 0,05) / (L más oscura + 0,05); va de 1:1 a 21:1.",
+            "Ejemplo: #767676 sobre blanco da 4,54:1; #F28C28 sobre blanco, apenas 2,45:1."
+          ],
+          "notes": "Desarrolle la fórmula paso a paso con un ejemplo en pantalla. Explique que la linealización deshace la curva gamma de sRGB para trabajar con luz real, y que los coeficientes reflejan la sensibilidad del ojo: el verde aporta mucho más a la luminosidad que el azul, lo que conecta con la fisiología de la unidad 1. Calcule el caso del rojo #D91023 sobre blanco, que da aproximadamente 5,19:1 y cumple para texto normal, y el del naranja #F28C28, que solo alcanza 2,45:1 y falla. Muestre que ese mismo naranja sobre un fondo casi negro #1A1A1A logra 7,09:1. Esta comparación demuestra que un color no es accesible o inaccesible en sí mismo, sino en relación con su fondo, una versión técnica de la lección de Albers."
+        },
+        {
+          "title": "Criterios WCAG 2.1 relacionados con el color",
+          "bullets": [
+            "1.4.1 Uso del color: el color no debe ser el único medio para transmitir información.",
+            "1.4.3 Contraste mínimo (AA): 4,5:1 para texto normal y 3:1 para texto grande.",
+            "Texto grande: desde 18 puntos o 14 puntos en negrita. Nivel AAA (1.4.6): 7:1 y 4,5:1.",
+            "1.4.11 Contraste no textual: 3:1 para íconos, bordes de campos y componentes de interfaz."
+          ],
+          "notes": "Presente los criterios más relevantes para un diseñador gráfico. Explique la diferencia entre los niveles A, AA y AAA, y que la mayoría de normativas y políticas corporativas exigen el nivel AA. Muestre ejemplos de incumplimiento frecuentes en sitios peruanos: textos grises claros sobre blanco, botones con borde casi invisible, formularios que marcan errores solo en rojo. Destaque el criterio de contraste no textual, a menudo olvidado, que exige que los íconos y bordes de controles se distingan de su entorno. Aclare que los logotipos y el texto decorativo están exceptuados del criterio de contraste. Pida a los estudiantes que, durante la semana, auditen con un verificador de contraste tres pantallas de servicios que usan y registren los pares que fallan."
+        },
+        {
+          "title": "Cómo corregir combinaciones que no cumplen",
+          "bullets": [
+            "Ajustar la luminosidad (L*) manteniendo el tono, en lugar de cambiar de color.",
+            "Crear un color de marca accesible para texto: por ejemplo, naranja oscuro para enlaces.",
+            "Invertir figura y fondo: texto oscuro sobre color claro de marca en lugar de blanco sobre él.",
+            "Añadir redundancia: íconos, subrayados, patrones o etiquetas junto al color."
+          ],
+          "notes": "Muestre que la accesibilidad no obliga a renunciar a la identidad. Use el ejemplo del naranja #F28C28: como fondo de un botón con texto blanco falla, pero si el texto del botón pasa a negro, el contraste supera holgadamente el mínimo, y si se necesita un naranja para textos sobre blanco se define una variante más oscura de la escala tonal. Explique que muchas marcas tienen un color de marca y un color de marca para texto. Haga un ejercicio con un formulario que marca errores solo en rojo: añadir un ícono y un mensaje textual resuelve el criterio de uso del color. Recalque que estas correcciones deben quedar documentadas en la guía cromática para que nadie vuelva a usar la combinación prohibida."
+        },
+        {
+          "title": "Color en visualización de datos",
+          "bullets": [
+            "Paletas secuenciales para magnitudes ordenadas; divergentes para desviaciones respecto de un centro.",
+            "Paletas cualitativas para categorías: máximo de 6 a 8 tonos distinguibles.",
+            "Evitar la escala arcoíris: no es perceptualmente ordenada y distorsiona los datos.",
+            "Referencias: paletas ColorBrewer de Cynthia Brewer y viridis, diseñada para uniformidad y daltonismo."
+          ],
+          "notes": "Explique que en gráficos y mapas el color codifica datos y, por tanto, un error de color es un error de información. Muestre un mapa de pobreza por departamentos del Perú elaborado con datos del INEI en dos versiones: una con escala arcoíris, donde el ojo percibe saltos que no existen en los datos, y otra con una escala secuencial de un solo tono. Explique las paletas divergentes con un ejemplo de variación de precios respecto de la inflación meta del BCRP, cuyo centro neutro es la meta y los extremos indican desviaciones. Mencione que ColorBrewer nació en la cartografía y que viridis se adoptó como escala predeterminada en una biblioteca científica muy usada. Pida a los estudiantes que identifiquen un gráfico de un medio peruano con problemas de color."
+        },
+        {
+          "title": "Color en modo oscuro",
+          "bullets": [
+            "No basta invertir colores: se redefinen tokens semánticos para fondos oscuros.",
+            "Evitar negro puro de fondo y blanco puro de texto: usar grises oscuros y blancos atenuados.",
+            "Reducir la saturación de los acentos para evitar vibración y halos sobre fondos oscuros.",
+            "Volver a verificar el contraste de todos los pares en el nuevo modo."
+          ],
+          "notes": "Explique que el modo oscuro es ya una expectativa en aplicaciones y sitios, y que los usuarios lo usan por comodidad visual o ahorro de batería en pantallas OLED. Muestre el error de invertir automáticamente los colores: los acentos saturados vibran sobre el fondo oscuro, las sombras pierden sentido y las fotografías se ven mal. Explique la estrategia correcta: usar fondos gris muy oscuro, expresar la elevación con grises progresivamente más claros, desaturar los colores de acento y elegir pasos más claros de la escala tonal para mantener el contraste. Relacione con los tokens: el token color-fondo apunta a un primitivo en modo claro y a otro en modo oscuro. Pida a los estudiantes que conviertan una pantalla de su proyecto a modo oscuro y midan el contraste resultante."
+        },
+        {
+          "title": "Aplicaciones impresas y versiones de la marca",
+          "bullets": [
+            "Definir versiones: color completo, una tinta, monocroma, negativa y sobre fotografía.",
+            "Indicar el comportamiento sobre papeles no estucados, kraft y materiales textiles.",
+            "Especificar colores directos y alternativas CMYK con su perfil y tolerancia.",
+            "Incluir prohibiciones: combinaciones de bajo contraste, fondos que alteran el color, filtros."
+          ],
+          "notes": "Recuerde que el sistema cromático no vive solo en pantallas. Retome la ficha técnica de la unidad 2 y muestre cómo se integra en la guía: cada color tiene su especificación por medio y cada versión del logotipo su comportamiento sobre distintos fondos. Muestre ejemplos de páginas de usos incorrectos de manuales de marca, con el logotipo sobre fondos de bajo contraste o con colores alterados. Explique la importancia de la versión monocroma para sellos, facturas, grabados láser y faxes, y la versión negativa para fondos oscuros. Comente que en el Perú muchas marcas pequeñas se imprimen en serigrafía sobre bolsas de tela o en sellos de jebe, por lo que la versión a una tinta es indispensable. Pregunte qué versiones necesitará la marca de su proyecto."
+        },
+        {
+          "title": "Estructura de una guía cromática profesional",
+          "bullets": [
+            "1. Concepto y justificación estratégica de la paleta.",
+            "2. Colores base con valores Pantone, CMYK con perfil, sRGB, hexadecimal y Lab.",
+            "3. Escalas tonales, neutros, colores de estado y tokens semánticos.",
+            "4. Tabla de combinaciones permitidas con razón de contraste y nivel WCAG.",
+            "5. Proporciones, aplicaciones de ejemplo, usos incorrectos y control de cambios."
+          ],
+          "notes": "Presente la estructura que deberán seguir en el entregable final. Explique que una guía cromática bien hecha es breve en texto y rica en tablas y ejemplos, porque será consultada por personas con poco tiempo. Muestre una matriz de combinaciones: filas con colores de texto, columnas con colores de fondo y, en cada celda, la razón de contraste con un indicador de aprobado o no aprobado. Explique que el control de cambios, con versión y fecha, es esencial para que todos trabajen con la versión vigente. Indique que la guía será evaluada con rúbrica en su exactitud técnica, en su fundamentación y en su utilidad práctica. Pida que cada estudiante esboce hoy el índice de su guía y lo comparta en el foro para recibir retroalimentación de pares."
+        },
+        {
+          "title": "Proyecto integrador: fases y entregables",
+          "bullets": [
+            "Semana 13: brief, investigación de categoría y paleta base revisada de la unidad 3.",
+            "Semana 14: escalas tonales, tokens, ficha técnica por medio y matriz de contraste.",
+            "Semana 15: aplicación en tres piezas (impresa, digital y gráfico de datos) y pruebas.",
+            "Semana 16: guía cromática final y sustentación oral de diez minutos."
+          ],
+          "notes": "Explique el calendario del proyecto integrador y su relación con la evaluación de producto y la evaluación final. Insista en que el proyecto reutiliza y mejora lo producido en las unidades anteriores: los estudios de Albers informan las decisiones de contexto, la ficha técnica de la unidad 2 se amplía y la paleta de la unidad 3 se convierte en sistema. Aclare que cada semana habrá una revisión de avance en sesión síncrona con retroalimentación del docente y de pares. Recomiende elegir un cliente real, como un emprendimiento familiar, una asociación o una institución de su localidad, porque eso enriquece el portafolio. Pregunte qué riesgos ven en el calendario y cómo los mitigarían, y anote compromisos de entrega en el foro del curso."
+        },
+        {
+          "title": "Sustentar decisiones de color ante un cliente",
+          "bullets": [
+            "Partir del problema y del público, no del gusto personal.",
+            "Mostrar evidencia: análisis de competencia, pruebas de contraste, simulaciones y mediciones.",
+            "Anticipar objeciones: costos de impresión, reproducción en medios y preferencias del cliente.",
+            "Ofrecer alternativas controladas en lugar de defender una única opción a toda costa."
+          ],
+          "notes": "Prepare a los estudiantes para la sustentación final, que simula una reunión con un cliente. Explique que la mayoría de discusiones sobre color se estancan en opiniones del tipo me gusta o no me gusta, y que el diseñador profesional las desplaza hacia criterios: el público, la competencia, la legibilidad, la reproducción y el costo. Muestre una estructura de presentación en cinco momentos: problema, estrategia, sistema, pruebas y aplicaciones. Practique con un juego de roles: un estudiante hace de gerente que quiere cambiar el color principal por su favorito y otro debe responder con argumentos del curso sin perder la relación con el cliente. Recuerde el caso de la cooperativa cafetalera, donde la identidad y la estrategia debían conciliarse."
+        },
+        {
+          "title": "Cierre: el diseñador como gestor del color",
+          "bullets": [
+            "El color se diseña en tres planos: percepción, técnica y significado.",
+            "Las decisiones cromáticas deben ser intencionales, medibles, accesibles y documentadas.",
+            "Este curso continúa en Tipografía, Fotografía Digital, Branding, UX/UI y Preprensa.",
+            "Hábito final: probar siempre en contexto, en grises, en el medio real y con usuarios diversos."
+          ],
+          "notes": "Cierre el curso recapitulando el recorrido: comenzaron entendiendo que el color es una percepción relativa, aprendieron a especificarlo con números y a gestionarlo entre medios, lo organizaron en armonías con sentido cultural y, finalmente, lo convirtieron en un sistema accesible y documentado. Señale explícitamente cómo cada curso posterior de la carrera retomará estas bases: la tipografía y su contraste con el fondo, la fotografía y el balance de blancos, el branding y la propiedad del color, el diseño de interfaces y los tokens, la preprensa y los perfiles de impresión. Invite a cada estudiante a nombrar el aprendizaje que más cambió su manera de trabajar. Termine recordando la frase de Albers sobre la relatividad del color como guía permanente de su práctica profesional."
+        }
+      ],
+      "reading": {
+        "title": "Sistemas cromáticos accesibles: del cálculo a la guía",
+        "minutes": 35,
+        "content": "## Del conjunto de colores al sistema\n\nUna paleta es un punto de partida; un **sistema cromático** es un conjunto de decisiones documentadas que permite a diseñadores, programadores, imprentas y agencias usar el color de manera coherente sin consultar al autor. Un sistema contiene colores base, escalas tonales, neutros, colores de estado (éxito, alerta, error, información), reglas de combinación y especificaciones por medio de salida.\n\n## Escalas tonales perceptuales\n\nPara cada color base se genera una escala de nueve a once pasos de luminosidad, numerados por ejemplo del 50 (muy claro) al 900 (muy oscuro). Generarla en HSB produce saltos irregulares porque ese modelo no es perceptualmente uniforme. Es preferible trabajar en **LCh** u **OKLCH**: se fija el ángulo de tono, se reparten valores de luminosidad a intervalos regulares y se reduce la croma en los extremos para no salir de la gama sRGB. Así, el paso 700 de un azul y el paso 700 de un verde tendrán un peso visual comparable, lo que simplifica las reglas de contraste.\n\n## Tokens: nombrar por función\n\nLos **tokens primitivos** guardan valores (`azul-600 = #005A8C`) y los **tokens semánticos** describen usos (`color-accion-primaria`, `color-texto-principal`, `color-error`). Un modo oscuro o un rediseño solo requieren reasignar los semánticos:\n\n```css\n:root {\n  --azul-600: #005A8C;\n  --naranja-500: #F28C28;\n  --gris-900: #1A1A1A;\n  --color-accion-primaria: var(--azul-600);\n  --color-acento: var(--naranja-500);\n  --color-texto-principal: var(--gris-900);\n}\n```\n\n## Accesibilidad: luminancia y contraste\n\nEn el Perú, la Ley 29973 reconoce el derecho de las personas con discapacidad a la accesibilidad, y las **WCAG 2.1** del W3C son la referencia técnica internacional para contenidos digitales. El contraste se calcula a partir de la **luminancia relativa**:\n\n```javascript\n// Razón de contraste WCAG 2.1 entre dos colores hexadecimales\nfunction luminancia(hex) {\n  const canales = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16) / 255);\n  const lin = canales.map(c => c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4));\n  return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]; // el verde pesa más\n}\nfunction contraste(a, b) {\n  const [l1, l2] = [luminancia(a), luminancia(b)].sort((x, y) => y - x);\n  return (l1 + 0.05) / (l2 + 0.05);\n}\ncontraste('767676', 'FFFFFF'); // ≈ 4,54 -> cumple AA para texto normal\ncontraste('F28C28', 'FFFFFF'); // ≈ 2,45 -> no cumple ni para texto grande\ncontraste('F28C28', '1A1A1A'); // ≈ 7,09 -> cumple incluso AAA\n```\n\nLos coeficientes reflejan la fisiología estudiada en la unidad 1: el ojo es mucho más sensible a las longitudes de onda medias. Los criterios clave son:\n\n| Criterio | Exigencia |\n|---|---|\n| 1.4.1 Uso del color | El color no es el único medio para transmitir información |\n| 1.4.3 Contraste mínimo (AA) | 4,5:1 texto normal; 3:1 texto grande (18 pt o 14 pt en negrita) |\n| 1.4.6 Contraste mejorado (AAA) | 7:1 texto normal; 4,5:1 texto grande |\n| 1.4.11 Contraste no textual (AA) | 3:1 para íconos, bordes de campos y estados de componentes |\n\nLos logotipos y textos puramente decorativos están exceptuados. Cuando un par falla, la estrategia preferida es ajustar la luminosidad dentro del mismo tono, invertir figura y fondo o añadir redundancia con íconos y texto, en lugar de abandonar el color de marca.\n\n## Color en datos y en modo oscuro\n\nEn visualización de datos, el color codifica información. Las paletas **secuenciales** representan magnitudes ordenadas (por ejemplo, tasas de pobreza por departamento según el INEI); las **divergentes**, desviaciones respecto de un centro significativo (como la meta de inflación del BCRP); las **cualitativas**, categorías sin orden, con un máximo práctico de seis a ocho tonos. La escala arcoíris debe evitarse porque crea fronteras perceptivas que no existen en los datos; las paletas de Cynthia Brewer y la escala viridis son alternativas probadas.\n\nEl **modo oscuro** no es una inversión automática: se usan grises muy oscuros en lugar de negro puro, blancos atenuados para el texto, acentos menos saturados y pasos más claros de la escala tonal, y se vuelve a verificar cada par.\n\n## La guía cromática\n\nUna guía profesional incluye: concepto y justificación; colores base con Pantone, CMYK con perfil, sRGB, hexadecimal y Lab; escalas, neutros, estados y tokens; matriz de combinaciones con razón de contraste y nivel WCAG; versiones para impresión a una tinta, monocroma y negativa; proporciones, aplicaciones, usos incorrectos y control de versiones. Su calidad se mide por una pregunta simple: ¿puede un proveedor que nunca habló con el diseñador reproducir la marca correctamente usando solo este documento?"
+      },
+      "case": {
+        "title": "Caso: Colores que no se ven en la aplicación MoviRuta",
+        "content": "**MoviRuta** es una aplicación desarrollada por una empresa tecnológica limeña que integra información de rutas de buses, corredores complementarios y servicios de taxi en Lima y Callao. Tiene unos 350 000 usuarios activos mensuales, la mayoría con celulares Android de gama media y baja, y la usan con frecuencia en exteriores, esperando en paraderos a pleno sol.\n\nLa aplicación identifica cada ruta con un color distinto en el mapa: 14 colores elegidos por el equipo de desarrollo \"para que se vean alegres\". Los indicadores de estado del servicio usan un círculo verde (normal), amarillo (demoras) y rojo (suspendido), sin texto. El botón principal \"Planificar viaje\" es naranja claro #F28C28 con texto blanco, y los horarios se muestran en gris #9E9E9E sobre fondo blanco.\n\nEn los últimos seis meses el área de atención al cliente recibió 1200 reclamos relacionados con la interfaz. Una asociación de personas con discapacidad visual envió una carta formal citando la Ley 29973 y solicitando mejoras de accesibilidad. Un análisis interno encontró que el 22 % de los reclamos provenía de usuarios mayores de 60 años y que varios usuarios con daltonismo no lograban distinguir cinco de las rutas entre sí ni el estado \"normal\" del \"suspendido\".\n\nAdemás, la empresa está por firmar un convenio con una municipalidad distrital para mostrar la aplicación en pantallas informativas de paraderos y en afiches impresos con código QR, y el municipio exige cumplir el nivel AA de las WCAG 2.1. La directora de producto, Daniela Rojas, debe presentar en un mes un plan de rediseño cromático. El equipo comercial teme que \"volver todo oscuro y serio\" afecte la imagen juvenil de la marca, cuyo naranja es su principal elemento de reconocimiento. Los desarrolladores piden, además, que cualquier cambio se entregue como tokens para no reescribir cientos de pantallas y que se contemple un modo oscuro, solicitado por muchos usuarios nocturnos.\n\nUsted forma parte del equipo de diseño y debe proponer el nuevo sistema cromático.",
+        "questions": [
+          "Identifique todos los problemas cromáticos de MoviRuta y relaciónelos con los criterios WCAG 2.1 y con los fenómenos perceptivos estudiados en el curso.",
+          "¿Cómo conservaría el naranja como activo de marca y cumpliría a la vez el nivel AA? Proponga combinaciones concretas con su razón de contraste estimada.",
+          "¿Qué estrategia propone para diferenciar 14 rutas en el mapa sin depender solo del tono?",
+          "Diseñe la estructura de tokens que pediría el equipo de desarrollo, incluyendo el modo oscuro, y explique cómo se adaptaría a pantallas de paraderos y afiches impresos."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: guía cromática profesional",
+        "instructions": "**Objetivo:** diseñar, probar y documentar el sistema cromático completo de una marca real o de un emprendimiento de su comunidad, integrando percepción, técnica, significado y accesibilidad.\n\n**Qué entregar:**\n\n1. **Guía cromática en PDF (12 a 18 páginas)** con la estructura vista en clase: concepto y justificación; colores base con Pantone C y U, CMYK con perfil, sRGB, hexadecimal y Lab; escalas tonales de al menos dos colores; neutros y colores de estado; tokens primitivos y semánticos; matriz de contraste con razones calculadas y nivel WCAG; versiones para impresión; proporciones y usos incorrectos.\n2. **Tres aplicaciones**: una pieza impresa (afiche, empaque o folleto), una pantalla digital en modo claro y oscuro, y un gráfico de datos con paleta secuencial, divergente o cualitativa justificada.\n3. **Anexo de pruebas**: escala de grises, simulación de deuteranopía y protanopía, y al menos un cálculo de contraste desarrollado paso a paso.\n4. **Sustentación oral** de diez minutos en la semana 16, con respuesta a preguntas.\n\n**Formato:** archivos nombrados con apellido y curso, imágenes en resolución adecuada y fuentes citadas en APA.\n\n**Criterios:** rigor técnico, accesibilidad verificada, coherencia estratégica y cultural, calidad de aplicaciones y sustentación.",
+        "rubric": [
+          {
+            "name": "Rigor técnico de especificaciones, escalas y tokens",
+            "points": 5
+          },
+          {
+            "name": "Accesibilidad verificada con cálculos y simulaciones",
+            "points": 5
+          },
+          {
+            "name": "Coherencia estratégica y cultural del sistema",
+            "points": 4
+          },
+          {
+            "name": "Calidad de las tres aplicaciones",
+            "points": 3
+          },
+          {
+            "name": "Sustentación oral y respuesta a preguntas",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: sistemas cromáticos y accesibilidad",
+        "questions": [
+          {
+            "prompt": "El gris #767676 sobre fondo blanco tiene una razón de contraste de 4,54:1. ¿Para qué usos cumple el nivel AA de las WCAG 2.1?",
+            "options": [
+              "Para texto normal y texto grande",
+              "Solo para texto grande",
+              "Solo para íconos y bordes",
+              "Para ningún uso, porque no llega a 7:1"
+            ],
+            "correct": 0,
+            "explanation": "El nivel AA exige 4,5:1 para texto normal y 3:1 para texto grande; 4,54:1 supera ambos umbrales, aunque no alcanza el nivel AAA de 7:1."
+          },
+          {
+            "prompt": "Un botón naranja #F28C28 con texto blanco obtiene 2,45:1. La marca no quiere renunciar al naranja. ¿Cuál es la mejor solución?",
+            "options": [
+              "Mantener el fondo naranja y usar texto oscuro, documentando la regla en la guía",
+              "Aumentar la saturación del naranja",
+              "Agregar una sombra suave al texto blanco",
+              "Reemplazar el naranja por un verde de igual luminosidad"
+            ],
+            "correct": 0,
+            "explanation": "El naranja sobre un gris casi negro supera 7:1; invertir la relación figura-fondo conserva la identidad y cumple el contraste."
+          },
+          {
+            "prompt": "En la fórmula de luminancia relativa, ¿por qué el canal verde tiene un coeficiente mucho mayor que el azul?",
+            "options": [
+              "Porque el sistema visual es más sensible a longitudes de onda medias",
+              "Porque las pantallas emiten más luz verde por convención comercial",
+              "Porque el verde es el color complementario del rojo",
+              "Porque el azul no influye en la percepción del brillo"
+            ],
+            "correct": 0,
+            "explanation": "Los coeficientes 0,2126, 0,7152 y 0,0722 reflejan la sensibilidad espectral del ojo humano, máxima en la región de longitudes de onda medias."
+          },
+          {
+            "prompt": "Debe representar en un mapa la tasa de pobreza por departamento del Perú. ¿Qué tipo de paleta es la más adecuada?",
+            "options": [
+              "Secuencial de un tono con luminosidad progresiva",
+              "Arcoíris de siete tonos saturados",
+              "Cualitativa con un color distinto por departamento",
+              "Complementaria de dos colores opuestos"
+            ],
+            "correct": 0,
+            "explanation": "Una magnitud ordenada se representa con una paleta secuencial perceptualmente ordenada; el arcoíris crea fronteras falsas y la cualitativa no expresa orden."
+          },
+          {
+            "prompt": "Un equipo quiere lanzar modo oscuro sin reescribir cientos de pantallas. ¿Qué decisión del sistema cromático lo facilita más?",
+            "options": [
+              "Usar tokens semánticos que se reasignan a otros primitivos en cada modo",
+              "Invertir automáticamente todos los colores de la interfaz",
+              "Duplicar cada pantalla con colores escritos directamente en el código",
+              "Usar el mismo color de acento saturado en ambos modos"
+            ],
+            "correct": 0,
+            "explanation": "Los tokens semánticos separan el uso del valor; basta reasignarlos para el modo oscuro y verificar de nuevo los contrastes."
+          },
+          {
+            "prompt": "Un formulario marca los campos con error solo cambiando su borde a rojo. ¿Qué criterio de las WCAG 2.1 incumple principalmente?",
+            "options": [
+              "1.4.1 Uso del color",
+              "1.4.6 Contraste mejorado",
+              "1.4.3 Contraste mínimo del texto",
+              "Ninguno, porque el rojo es un color de alerta universal"
+            ],
+            "correct": 0,
+            "explanation": "Transmitir el error solo mediante el color excluye a personas con deficiencias cromáticas; deben añadirse ícono y mensaje textual."
+          },
+          {
+            "prompt": "Al generar la escala tonal de un color de marca, ¿por qué conviene trabajar en LCh u OKLCH y no en HSB?",
+            "options": [
+              "Porque sus pasos de luminosidad corresponden mejor a diferencias percibidas",
+              "Porque producen siempre colores más saturados",
+              "Porque son los únicos modelos aceptados por las imprentas",
+              "Porque eliminan la necesidad de verificar el contraste"
+            ],
+            "correct": 0,
+            "explanation": "LCh y OKLCH son aproximadamente uniformes: variar L produce pasos parejos y pesos visuales comparables entre tonos, a diferencia de HSB."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "El color como percepción: luz, superficie y observador; espectro y temperatura de color",
+      "activity": "Diagnóstico inicial; registro fotográfico de un objeto bajo tres fuentes de luz domésticas y discusión en sesión síncrona",
+      "evidence": "Registro fotográfico comentado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Fisiología de la visión: conos, bastones, tricromacia y procesos oponentes",
+      "activity": "Lectura previa de la unidad; experimentos de posimagen y prueba de valor en escala de grises de piezas del entorno",
+      "evidence": "Ficha de observación de fenómenos"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Interacción del color según Chevreul y Albers; constancia del color",
+      "activity": "Taller de estudios tipo Albers con software de edición; inicio de la tarea de estudios de interacción cromática",
+      "evidence": "Avance de estudios de interacción"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Metamerismo, deficiencias de visión cromática y mezcla aditiva y sustractiva",
+      "activity": "Discusión del caso Andina Urbana en foro; entrega de la tarea de estudios Albers; cuestionario 1",
+      "evidence": "Tarea 1, foro del caso y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Modelos dependientes del dispositivo: RGB, hexadecimal, HSB y CMYK",
+      "activity": "Ejercicios de conversión hexadecimal y comparación de HSB con escala de grises; análisis de negros y límites de tinta",
+      "evidence": "Hoja de conversiones resuelta"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Sistemas de orden y de muestras: Munsell y Pantone; colores directos",
+      "activity": "Práctica de lectura de notación Munsell y selección de colores directos desde guías; comparación de versiones C y U",
+      "evidence": "Tabla de equivalencias de color"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Colorimetría CIE, CIELAB y cálculo de Delta E con tolerancias",
+      "activity": "Cálculo guiado de Delta E con lecturas reales; discusión del caso Cacao Vilcanota en foro; inicio de la ficha técnica",
+      "evidence": "Ejercicios de Delta E y foro del caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Gestión del color: espacios de trabajo, perfiles ICC e intentos de reproducción",
+      "activity": "Configuración de color en el programa de diseño y conversiones con distintos intentos; entrega de la ficha técnica; cuestionario 2",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Círculo cromático de Itten y contrastes de tono, claro-oscuro y frío-cálido",
+      "activity": "Análisis de piezas del arte popular peruano y de publicidad local con los contrastes de Itten",
+      "evidence": "Análisis de piezas con contrastes"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Contrastes de complementarios, simultáneo, saturación y extensión; proporciones de Goethe",
+      "activity": "Ejercicios de equilibrio por áreas y control de vibración; inicio de la tarea de paleta con intención",
+      "evidence": "Estudios de proporción cromática"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Esquemas de armonía, jerarquía de roles y regla 60-30-10",
+      "activity": "Construcción de tríadas y armonías divididas con prueba de grises; discusión del caso Cooperativa Selva Central en foro",
+      "evidence": "Avance de paleta y foro del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Psicología y cultura del color, patrimonio cromático peruano y color como marca",
+      "activity": "Debate crítico sobre evidencia en psicología del color; entrega de la tarea de paleta con intención; cuestionario 3",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Del sistema a los tokens: escalas tonales perceptuales y brief del proyecto integrador",
+      "activity": "Generación de escalas en LCh u OKLCH y definición de tokens; presentación del brief y la paleta base del proyecto",
+      "evidence": "Brief y paleta base del proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Accesibilidad cromática: luminancia relativa, razón de contraste y criterios WCAG 2.1",
+      "activity": "Auditoría de contraste de pantallas reales y corrección de pares; discusión del caso MoviRuta en foro",
+      "evidence": "Matriz de contraste y foro del caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Color en visualización de datos, modo oscuro y aplicaciones impresas",
+      "activity": "Desarrollo de las tres aplicaciones del proyecto con pruebas de grises y daltonismo; revisión entre pares",
+      "evidence": "Aplicaciones y anexo de pruebas"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Guía cromática profesional y sustentación de decisiones de color",
+      "activity": "Entrega de la guía cromática del proyecto integrador, sustentación oral, cuestionario 4 y evaluación final",
+      "evidence": "Guía final, sustentación y cuestionario 4"
+    }
+  ]
+}

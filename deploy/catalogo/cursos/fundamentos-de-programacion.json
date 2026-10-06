@@ -1,0 +1,1291 @@
+{
+  "name": "Fundamentos de Programación",
+  "slug": "fundamentos-de-programacion",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Curso de formación específica del primer ciclo de la carrera de Computación e Informática, de naturaleza teórico-práctica. Tiene como propósito desarrollar el pensamiento computacional y la capacidad de resolver problemas del entorno laboral mediante algoritmos implementados en Python. Comprende cuatro unidades: pensamiento computacional, algoritmos, tipos de datos y operadores; estructuras de control selectivas y repetitivas; modularidad con funciones y colecciones como cadenas, listas y diccionarios; y programas robustos con archivos CSV y JSON, excepciones, pruebas automatizadas, control de versiones y protección de datos personales. Mediante el método de casos y el aprendizaje basado en proyectos aplicados a organizaciones peruanas, el estudiante construye un proyecto integrador. El curso sienta las bases de Programación Orientada a Objetos, Algoritmos y Estructuras de Datos, Base de Datos y Desarrollo Web, y aporta al perfil del profesional técnico que analiza requerimientos y desarrolla software con calidad y seguridad.",
+  "competency": "Desarrolla programas estructurados y modulares en Python que resuelven problemas de procesamiento de información de organizaciones, aplicando pensamiento computacional, estructuras de control, funciones, colecciones de datos, persistencia en archivos, manejo de excepciones y pruebas, con buenas prácticas de codificación y respeto por la normativa de protección de datos personales.",
+  "capacities": [
+    "Analiza problemas del entorno laboral aplicando pensamiento computacional y los representa mediante algoritmos en pseudocódigo y diagramas de flujo.",
+    "Implementa programas en Python con tipos de datos, operadores, estructuras selectivas y repetitivas, validando las entradas del usuario.",
+    "Diseña soluciones modulares con funciones documentadas y estructuras de datos como cadenas, listas, tuplas y diccionarios.",
+    "Construye programas robustos que persisten datos en archivos, manejan excepciones, se verifican con pruebas automatizadas y se versionan con Git, cumpliendo la Ley 29733."
+  ],
+  "indicators": [
+    "Elabora la tabla de entradas, proceso y salidas, el pseudocódigo y el diagrama de flujo de un problema antes de codificarlo.",
+    "Selecciona el tipo de dato adecuado para cada variable y aplica conversiones y operadores sin errores lógicos.",
+    "Implementa reglas de negocio con estructuras selectivas y repetitivas, verificándolas mediante prueba de escritorio y valores límite.",
+    "Descompone un programa en funciones con una sola responsabilidad, parámetros, retorno, docstring y anotaciones de tipo.",
+    "Utiliza listas, tuplas y diccionarios de forma pertinente para registrar, buscar, filtrar y resumir datos.",
+    "Lee y escribe archivos CSV y JSON con codificación UTF-8 y maneja excepciones específicas con mensajes comprensibles.",
+    "Diseña y ejecuta al menos quince pruebas automatizadas con pytest aplicando partición de equivalencia y valores límite.",
+    "Sustenta un proyecto integrador versionado con Git que utiliza exclusivamente datos ficticios y respeta la protección de datos personales."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa. Se aplica el aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y un video breve, y la sesión se dedica a programación en vivo, resolución guiada y trabajo en salas por equipos. Cada unidad se articula en torno a un caso de una organización peruana analizado con el método de casos, y culmina en una tarea aplicada basada en problemas. Las prácticas de laboratorio se realizan en Visual Studio Code con retroalimentación inmediata. La evaluación formativa se sostiene en cuestionarios con explicación, revisión de código entre pares y foros. El curso cierra con un proyecto integrador evaluado mediante rúbrica y sustentación.",
+  "bibliography": [
+    "Downey, A. B. (2015). Think Python: How to think like a computer scientist (2.ª ed.). O'Reilly Media.",
+    "Guttag, J. V. (2021). Introduction to computation and programming using Python: With application to computational modeling and understanding data (3.ª ed.). MIT Press.",
+    "Joyanes Aguilar, L. (2008). Fundamentos de programación: Algoritmos, estructura de datos y objetos (4.ª ed.). McGraw-Hill.",
+    "Matthes, E. (2023). Python crash course: A hands-on, project-based introduction to programming (3.ª ed.). No Starch Press.",
+    "Sweigart, A. (2019). Automate the boring stuff with Python: Practical programming for total beginners (2.ª ed.). No Starch Press.",
+    "Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33-35.",
+    "Polya, G. (1945). How to solve it: A new aspect of mathematical method. Princeton University Press.",
+    "Myers, G. J., Sandler, C. y Badgett, T. (2011). The art of software testing (3.ª ed.). John Wiley & Sons.",
+    "Martin, R. C. (2008). Clean code: A handbook of agile software craftsmanship. Prentice Hall.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuestionarios de las cuatro unidades, participación en foros de análisis de casos y prácticas de laboratorio semanales."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1, 2 y 3, evaluadas con rúbrica: boletas con IGV, comisiones y gestión de proveedores."
+    },
+    {
+      "name": "Proyecto integrador",
+      "weight": 25,
+      "description": "Sistema de consola con persistencia, excepciones, pruebas con pytest y repositorio Git, más informe técnico."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 15,
+      "description": "Sustentación individual en vivo del proyecto integrador con modificación del código solicitada por el jurado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Pensamiento computacional, algoritmos y primeros programas en Python",
+      "description": "Al finalizar la unidad, el estudiante analiza problemas sencillos del entorno laboral peruano aplicando pensamiento computacional, los representa mediante pseudocódigo y diagramas de flujo, y los implementa en Python usando variables, tipos de datos, operadores y entrada y salida con formato.",
+      "topics": [
+        "Pensamiento computacional y resolución de problemas (Wing, Polya)",
+        "Algoritmos: propiedades, pseudocódigo y diagramas de flujo",
+        "Entorno de desarrollo Python y ciclo editar-ejecutar-depurar",
+        "Variables, tipos de datos primitivos y operadores",
+        "Entrada, salida con formato y errores frecuentes"
+      ],
+      "slides": [
+        {
+          "title": "Qué significa programar: del problema a la solución computacional",
+          "bullets": [
+            "Programar es especificar, sin ambigüedad, una secuencia de pasos que una máquina ejecuta para transformar datos de entrada en resultados útiles.",
+            "El código es solo la última etapa: antes vienen comprender el problema, modelar los datos y diseñar el algoritmo.",
+            "Un programador técnico resuelve problemas de negocio: calcular planillas, validar comprobantes, controlar inventarios o automatizar reportes.",
+            "Regla práctica de la industria: el 60 % del esfuerzo de un buen programa está en el análisis y las pruebas, no en teclear."
+          ],
+          "notes": "Abra la sesión preguntando: ¿cuántas veces al día interactúan con un programa sin notarlo? Yape, el aplicativo del banco, la boleta electrónica de la bodega, la consulta RUC de SUNAT. Cada uno es un algoritmo que alguien diseñó. Insista en que programar no es memorizar comandos, sino pensar con precisión. Una computadora no interpreta intenciones: si la instrucción es ambigua, el resultado será incorrecto o el programa fallará. Use el ejemplo de una receta: 'agregar sal al gusto' es aceptable para una persona, pero imposible para una máquina. Pida a los estudiantes que escriban en el chat un proceso de su trabajo o casa que podría automatizarse y anote tres ejemplos para retomarlos al final de la unidad como problemas a modelar."
+        },
+        {
+          "title": "Pensamiento computacional según Jeannette Wing",
+          "bullets": [
+            "Wing (2006) lo define como formular problemas y soluciones de modo que puedan ser ejecutados por un agente de procesamiento de información.",
+            "Descomposición: dividir un problema complejo en subproblemas manejables, por ejemplo, calcular sueldo bruto, descuentos y neto por separado.",
+            "Reconocimiento de patrones: identificar procesos que se repiten, como aplicar el mismo descuento a cada trabajador.",
+            "Abstracción: conservar solo los datos relevantes; para la planilla importan sueldo y régimen pensionario, no el color de ojos.",
+            "Diseño algorítmico: ordenar los pasos de forma precisa, finita y verificable."
+          ],
+          "notes": "Presente el artículo de Jeannette Wing publicado en Communications of the ACM en 2006, que popularizó la idea de que el pensamiento computacional es una habilidad fundamental, como leer o calcular. Trabaje los cuatro pilares con un mismo ejemplo: la planilla de una mype de Gamarra con doce trabajadores. Descomposición: ¿qué subcálculos existen? Patrones: ¿qué se repite por cada trabajador? Abstracción: ¿qué datos realmente necesita el programa? Algoritmo: ¿en qué orden se calculan? Pregunte a la clase qué pasaría si se omite la abstracción y se intenta registrar todos los datos posibles: el programa se vuelve lento, costoso y difícil de mantener. Cierre indicando que estos cuatro pilares guiarán todas las tareas del curso y que los evaluaremos explícitamente en la rúbrica."
+        },
+        {
+          "title": "El método de Polya aplicado a la programación",
+          "bullets": [
+            "Paso 1, comprender: identificar entradas, salidas, restricciones y casos especiales antes de escribir código.",
+            "Paso 2, planificar: diseñar el algoritmo en pseudocódigo o diagrama de flujo, reutilizando problemas similares ya resueltos.",
+            "Paso 3, ejecutar: traducir el plan a Python de forma incremental, probando cada parte por separado.",
+            "Paso 4, revisar: verificar con casos de prueba, incluidos valores límite, y preguntarse si existe una solución más simple."
+          ],
+          "notes": "George Polya, matemático húngaro, publicó en 1945 'How to Solve It', un clásico sobre heurísticas de resolución de problemas. Su método de cuatro pasos se adapta perfectamente al desarrollo de software y sigue siendo citado en cursos introductorios del MIT y Stanford. Haga notar que la mayoría de errores de principiantes ocurren por saltarse el paso 1: empiezan a programar sin saber exactamente qué se pide. Proponga un ejercicio rápido: 'Calcule el precio final de un producto con IGV'. Pregunte: ¿el precio ingresado ya incluye IGV o no? ¿Se redondea a dos decimales? ¿Qué pasa si el precio es negativo? Estas preguntas son el paso de comprensión. Muestre cómo una tabla simple de entradas, proceso y salidas (tabla EPS) materializa el primer paso y será obligatoria en las tareas."
+        },
+        {
+          "title": "Algoritmo: definición y propiedades según Knuth",
+          "bullets": [
+            "Donald Knuth exige cinco propiedades: finitud, definición precisa, entradas, salidas y efectividad de cada paso.",
+            "Finitud: el algoritmo debe terminar tras un número finito de pasos para cualquier entrada válida.",
+            "Definición: cada instrucción tiene un único significado; 'repetir varias veces' no es aceptable, 'repetir 12 veces' sí.",
+            "Efectividad: cada paso es lo bastante básico para realizarse con lápiz y papel en tiempo finito.",
+            "Un mismo problema admite varios algoritmos; se comparan por corrección, claridad y eficiencia."
+          ],
+          "notes": "Donald Knuth, en el primer volumen de 'The Art of Computer Programming', formalizó las propiedades de un algoritmo. Explique cada una con contraejemplos: un procedimiento que dice 'divida hasta que el resultado sea perfecto' no es finito ni definido. Lleve a la clase el algoritmo de Euclides para el máximo común divisor, uno de los algoritmos más antiguos conocidos, y ejecútelo a mano con 48 y 18. Luego muestre una variante ineficiente que prueba todos los divisores desde 1 hasta el menor número: ambos son correctos, pero no igualmente eficientes. Esto introduce la idea de que la eficiencia importa, tema que profundizarán en Algoritmos y Estructuras de Datos del tercer ciclo. Pregunte: ¿una receta de cocina cumple las cinco propiedades? Discutan brevemente."
+        },
+        {
+          "title": "Representación de algoritmos: pseudocódigo y diagramas de flujo",
+          "bullets": [
+            "El pseudocódigo describe la lógica en lenguaje cercano al natural, con palabras clave como LEER, SI, MIENTRAS y ESCRIBIR.",
+            "El diagrama de flujo usa símbolos normalizados (ISO 5807): óvalo inicio/fin, paralelogramo entrada/salida, rectángulo proceso, rombo decisión.",
+            "Ambas notaciones son independientes del lenguaje y facilitan la revisión entre pares antes de programar.",
+            "Herramientas útiles: PSeInt para pseudocódigo en español y draw.io para diagramas.",
+            "Buena práctica: un diagrama legible cabe en una página; si no cabe, hay que descomponerlo."
+          ],
+          "notes": "Muestre en pantalla el mismo algoritmo (cálculo del precio con IGV) en las dos notaciones. PSeInt es una herramienta muy usada en institutos y universidades de habla hispana; es gratuita y permite ejecutar el pseudocódigo para comprobarlo. Explique que en la industria los diagramas de flujo detallados se usan menos que antes, pero siguen siendo valiosos para comunicar procesos a usuarios no técnicos, por ejemplo, a la jefa de contabilidad que pide automatizar un reporte. Pida a los estudiantes que, en grupos en salas de videoconferencia, dibujen en diez minutos el diagrama de flujo para decidir si un estudiante aprueba un curso con la escala vigesimal (nota mínima 13). Al regresar, compare dos diagramas distintos y pregunte cuál es más claro y por qué. Esta actividad anticipa las estructuras selectivas de la unidad 2."
+        },
+        {
+          "title": "Cómo ejecuta la computadora un programa en Python",
+          "bullets": [
+            "Los lenguajes compilados (C, Go) traducen todo el código a lenguaje de máquina antes de ejecutarlo.",
+            "Python, en su implementación CPython, compila el código a bytecode y luego lo interpreta en una máquina virtual.",
+            "Ventaja de Python: sintaxis legible, gran biblioteca estándar y ecosistema para web, datos, automatización e inteligencia artificial.",
+            "Desventaja: menor velocidad bruta que C; se compensa con bibliotecas optimizadas escritas en lenguajes compilados.",
+            "Python ocupa los primeros lugares de índices como TIOBE y la encuesta anual de Stack Overflow."
+          ],
+          "notes": "Conecte esta diapositiva con el curso paralelo de Arquitectura de Computadoras: allí verán CPU, memoria y lenguaje de máquina; aquí vemos cómo el código de alto nivel llega a ejecutarse. Use una analogía: compilar es traducir un libro completo antes de publicarlo; interpretar es tener un intérprete simultáneo que traduce frase por frase. Explique por qué TEPSUP eligió Python para este curso: su sintaxis reduce la carga cognitiva del principiante y permite concentrarse en la lógica, y además es el lenguaje dominante en análisis de datos e inteligencia artificial, áreas con creciente demanda en empresas peruanas como bancos, retail y fintech. Mencione que en el segundo ciclo, en Programación Orientada a Objetos, verán otro paradigma. Pregunte: ¿qué lenguajes conocen o han escuchado mencionar en ofertas laborales?"
+        },
+        {
+          "title": "Configuración del entorno de desarrollo profesional",
+          "bullets": [
+            "Instalar Python 3.12 o superior desde el sitio oficial y marcar la opción de añadir Python al PATH en Windows.",
+            "Instalar Visual Studio Code y su extensión oficial de Python para resaltado, ejecución y depuración.",
+            "Usar el REPL (intérprete interactivo) para probar expresiones y scripts .py para programas completos.",
+            "Organizar una carpeta por unidad con nombres sin espacios ni tildes, por ejemplo fp_unidad1/igv.py.",
+            "Verificar la instalación ejecutando python --version en la terminal."
+          ],
+          "notes": "Haga la instalación en vivo compartiendo pantalla; muchos estudiantes de primer ciclo nunca han usado una terminal. Anticipe los problemas comunes: en Windows, si no se marca 'Add Python to PATH', el comando python no se reconoce; en algunas laptops aparece la versión de la Microsoft Store, que puede generar confusión. Muestre la diferencia entre escribir en el REPL, donde cada línea se ejecuta al instante, y en un archivo .py que se ejecuta completo. Recomiende el uso de una cuenta institucional en GitHub desde ahora, aunque Git se verá en la unidad 4. Como alternativa para estudiantes con equipos limitados, mencione entornos en línea, cuidando que no se suban datos personales de terceros. Cierre pidiendo que cada estudiante publique en el foro una captura de su primer programa ejecutado: esa es la evidencia de la semana 1."
+        },
+        {
+          "title": "Variables y asignación: nombres que apuntan a objetos",
+          "bullets": [
+            "En Python una variable es un nombre que referencia un objeto en memoria; la asignación usa el operador =.",
+            "Ejemplo: sueldo = 1130 asocia el nombre sueldo con el entero 1130, la remuneración mínima vital vigente desde 2025.",
+            "Reglas: empiezan con letra o guion bajo, distinguen mayúsculas, no pueden ser palabras reservadas como if o for.",
+            "Convención PEP 8: snake_case para variables (precio_unitario) y MAYÚSCULAS para constantes (TASA_IGV = 0.18).",
+            "Nombres descriptivos reducen errores: tasa_igv comunica más que x o t1."
+          ],
+          "notes": "Explique la diferencia entre el modelo de 'caja' que muchos libros usan y el modelo real de Python, en el que las variables son etiquetas pegadas a objetos. Por ahora basta con la intuición, pero este detalle será crucial en la unidad 3 cuando trabajen con listas, que son mutables. Ejecute en el REPL: a = 5, b = a, a = 7, y pregunte cuánto vale b. Muchos responderán 7. Expliquen juntos por qué vale 5. Insista en PEP 8, la guía oficial de estilo de Python escrita por Guido van Rossum y colaboradores: el código se lee muchas más veces de las que se escribe, y en una empresa otros programadores mantendrán su código. Proponga un mini reto: renombrar las variables de un programa con nombres crípticos y discutir cuánto mejora la legibilidad."
+        },
+        {
+          "title": "Tipos de datos primitivos y conversión entre tipos",
+          "bullets": [
+            "int para enteros (cantidad de productos), float para reales (precio 15.90), str para texto (razón social), bool para verdadero o falso.",
+            "La función type() revela el tipo de cualquier valor; Python es de tipado dinámico pero fuerte.",
+            "Conversión explícita: int('25'), float('3.5'), str(100); input() siempre devuelve una cadena.",
+            "Error típico: sumar '10' + 5 produce TypeError porque Python no mezcla texto y números automáticamente.",
+            "El DNI se guarda como cadena, no como entero: tiene ceros a la izquierda y no se opera aritméticamente."
+          ],
+          "notes": "Este es un concepto donde los principiantes tropiezan constantemente. Explique tipado dinámico (el tipo se asocia al valor, no a la variable) y tipado fuerte (no hay conversiones implícitas peligrosas entre texto y número). Muestre en vivo: edad = input('Edad: ') y luego edad + 1; el error TypeError es una gran oportunidad pedagógica. Discuta el caso del DNI o del RUC: aunque están formados por dígitos, son identificadores, no cantidades. Un DNI como 04512345 perdería su cero inicial si se guardara como int. Lo mismo ocurre con códigos de ubigeo del INEI o números de teléfono. Pregunte a la clase: ¿qué tipo usarían para el número de celular de un cliente, el saldo de una cuenta y si el cliente está afiliado a una AFP? Debata las respuestas y justifique cada elección."
+        },
+        {
+          "title": "Operadores aritméticos, precedencia y un cálculo real de IGV",
+          "bullets": [
+            "Operadores: + - * / (división real), // (división entera), % (residuo) y ** (potencia).",
+            "Precedencia: paréntesis, potencia, multiplicación y división, luego suma y resta; en caso de duda, use paréntesis.",
+            "Valor de venta = precio_con_igv / 1.18; IGV = precio_con_igv - valor_de_venta, con tasa general de 18 %.",
+            "El operador % sirve para verificar paridad, extraer dígitos o convertir minutos en horas y minutos.",
+            "round(valor, 2) redondea para mostrar montos; el manejo exacto de dinero se profundiza con el módulo decimal."
+          ],
+          "notes": "Trabaje un ejemplo contable real: una boleta de S/ 59.00 con IGV incluido. El valor de venta es 59 / 1.18 = 50.00 y el IGV es 9.00. Recuerde que la tasa de 18 % se compone del 16 % de IGV más 2 % de Impuesto de Promoción Municipal, y que existen regímenes especiales como el de restaurantes y hoteles de micro y pequeñas empresas con tasa reducida temporal, lo que muestra que las constantes deben ser parametrizables. Ejercite la precedencia con 2 + 3 * 4 ** 2 y pida a los estudiantes que lo resuelvan antes de ejecutarlo. Use % para un problema clásico: convertir 135 minutos de una llamada de soporte en 2 horas y 15 minutos. Pregunte en qué otros contextos laborales usarían división entera y residuo, por ejemplo, para repartir productos en cajas."
+        },
+        {
+          "title": "Entrada y salida: input(), print() y cadenas con formato",
+          "bullets": [
+            "input('mensaje') muestra un texto, espera al usuario y devuelve siempre una cadena que debe convertirse.",
+            "print() admite varios argumentos y los parámetros sep y end para controlar separadores y saltos de línea.",
+            "Las f-strings (f'Total: S/ {total:,.2f}') insertan expresiones y controlan decimales y separador de miles.",
+            "Formatos útiles: :.2f para montos, :>10 para alinear a la derecha y :% para porcentajes.",
+            "Una salida bien formateada es parte de la calidad: el usuario final juzga el programa por lo que ve."
+          ],
+          "notes": "Las f-strings existen desde Python 3.6 y hoy son la forma recomendada de formatear texto. Muestre un mini comprobante impreso en consola con encabezado, detalle de productos alineado en columnas y total con dos decimales. Comente que en Perú los montos se expresan con el símbolo S/ y que en documentos formales se usan dos decimales. Contraste print('Total:', total) con una f-string bien formateada y pida a la clase que evalúe cuál transmite más profesionalismo. Señale que input() se usa en este curso por su valor didáctico, pero que en aplicaciones reales los datos llegarán desde formularios web, archivos o bases de datos, temas de Desarrollo Web y Base de Datos en el tercer ciclo. Proponga un ejercicio: pedir nombre y sueldo, y mostrar un saludo con el sueldo anual estimado incluyendo gratificaciones."
+        },
+        {
+          "title": "Errores frecuentes y primera depuración",
+          "bullets": [
+            "SyntaxError: el código viola la gramática del lenguaje, por ejemplo, olvidar cerrar un paréntesis o comillas.",
+            "NameError: se usa una variable no definida o mal escrita, como Precio en lugar de precio.",
+            "TypeError y ValueError: operación con tipos incompatibles o conversión imposible, como int('doce').",
+            "Leer la traza de abajo hacia arriba: la última línea dice qué falló y las anteriores dónde.",
+            "Errores lógicos: el programa corre pero da resultados incorrectos; solo se detectan con pruebas planificadas."
+          ],
+          "notes": "Normalice el error: los programadores profesionales se equivocan todo el tiempo; la diferencia es que saben leer los mensajes. Muestre en vivo cada tipo de error y cómo Python señala la línea. Enseñe la técnica de leer la traza de abajo hacia arriba. Luego presente el error más peligroso: el lógico. Ejemplo: calcular el IGV como precio * 0.18 cuando el precio ya incluye IGV produce S/ 10.62 en lugar de S/ 9.00 para una boleta de S/ 59. El programa no falla, pero el contribuyente declararía mal ante SUNAT. Introduzca la prueba de escritorio: ejecutar el algoritmo a mano con datos conocidos y comparar con el resultado del programa. Pida que cada estudiante documente en su tarea al menos tres casos de prueba con resultado esperado y obtenido."
+        }
+      ],
+      "reading": {
+        "title": "Del problema al programa: pensamiento computacional y fundamentos de Python",
+        "minutes": 35,
+        "content": "## 1. Programar es resolver problemas\n\nEn 2006, Jeannette Wing, entonces directora del Departamento de Ciencias de la Computación de Carnegie Mellon, sostuvo en *Communications of the ACM* que el pensamiento computacional es una habilidad universal, tan básica como leer, escribir o calcular. Su tesis es que un técnico en informática no se distingue por conocer muchos comandos, sino por su capacidad para **formular problemas de forma que una máquina pueda resolverlos**. Esta lectura presenta ese modo de pensar y las primeras herramientas de Python para ponerlo en práctica.\n\n## 2. Los cuatro pilares\n\n1. **Descomposición.** Un problema grande se divide en partes. Calcular la planilla de una mype implica obtener el sueldo bruto, los descuentos pensionarios (ONP 13 % o el aporte a una AFP) y el sueldo neto.\n2. **Reconocimiento de patrones.** Si el cálculo es igual para cada trabajador, basta diseñarlo una vez y repetirlo.\n3. **Abstracción.** Se conservan solo los datos relevantes. Para la planilla importan sueldo y régimen pensionario; el distrito de residencia no.\n4. **Algoritmos.** Se ordenan los pasos con precisión. Knuth exige que un algoritmo sea finito, definido, efectivo y que tenga entradas y salidas.\n\nGeorge Polya complementa este marco con su método de cuatro pasos —comprender, planificar, ejecutar y revisar—, publicado en *How to Solve It* (1945). En programación, el error más común del principiante es saltar directamente al tercer paso.\n\n## 3. La tabla de entradas, proceso y salidas\n\nAntes de programar, conviene llenar una tabla sencilla. Para el problema \"desglosar el IGV de una boleta\":\n\n| Entradas | Proceso | Salidas |\n|---|---|---|\n| precio con IGV (float) | valor_venta = precio / 1.18; igv = precio - valor_venta | valor de venta, IGV |\n\nEn Perú la tasa general es 18 % (16 % de IGV más 2 % de Impuesto de Promoción Municipal). Note el detalle crítico: si el precio **ya incluye** el impuesto, no se multiplica por 0.18, sino que se divide entre 1.18. Comprender el problema evita un error lógico que el intérprete jamás detectaría.\n\n## 4. Del pseudocódigo a Python\n\nEl pseudocódigo expresa la lógica sin preocuparse por la sintaxis:\n\n```\nINICIO\n  LEER precio\n  valor_venta <- precio / 1.18\n  igv <- precio - valor_venta\n  ESCRIBIR valor_venta, igv\nFIN\n```\n\nSu traducción a Python es casi directa:\n\n```python\nTASA_IGV = 0.18  # constante en MAYÚSCULAS, según PEP 8\n\nprecio = float(input(\"Precio con IGV (S/): \"))  # input() devuelve str\nvalor_venta = precio / (1 + TASA_IGV)\nigv = precio - valor_venta\n\nprint(f\"Valor de venta: S/ {valor_venta:,.2f}\")\nprint(f\"IGV (18 %):     S/ {igv:,.2f}\")\n```\n\nCon una entrada de 59, el programa muestra 50.00 y 9.00. Observe tres decisiones de diseño: la tasa es una constante con nombre (si cambia la ley, se modifica una sola línea); la entrada se convierte con `float()`, porque `input()` siempre devuelve texto; y la salida usa f-strings con dos decimales.\n\n## 5. Tipos de datos: una decisión de modelado\n\nPython ofrece cuatro tipos primitivos: `int`, `float`, `str` y `bool`. Elegir el tipo es una decisión de abstracción, no un trámite. Un DNI o un RUC se componen de dígitos, pero son **identificadores**: no se suman ni se promedian, y un DNI como `04512345` perdería su cero inicial si se almacenara como entero. Por eso se guardan como `str`. Un monto es `float` en este curso, aunque conviene saber que los números de punto flotante siguen la norma IEEE 754 y no representan exactamente valores como 0.1:\n\n```python\n>>> 0.1 + 0.2\n0.30000000000000004\n>>> round(0.1 + 0.2, 2)\n0.3\n```\n\nEn sistemas contables reales se usa el módulo `decimal` para evitar estas diferencias de redondeo, que en miles de transacciones pueden descuadrar un registro de ventas.\n\n## 6. Operadores con sentido práctico\n\nAdemás de `+ - * /`, Python ofrece `//` (división entera), `%` (residuo) y `**` (potencia). Un caso de soporte técnico: convertir 135 minutos de atención en horas y minutos.\n\n```python\nminutos = 135\nhoras, resto = minutos // 60, minutos % 60   # 2 h y 15 min\n```\n\nLa precedencia sigue las reglas algebraicas, pero un programador profesional usa paréntesis cuando ayudan a la lectura.\n\n## 7. Errores: sintaxis, ejecución y lógica\n\nLos errores de **sintaxis** (`SyntaxError`) impiden ejecutar el programa; los de **ejecución** (`NameError`, `TypeError`, `ValueError`) lo detienen a mitad de camino; los **lógicos** producen resultados equivocados sin aviso. Estos últimos son los más costosos y solo se detectan con casos de prueba diseñados de antemano: un valor típico (59), un valor límite (0) y un valor inválido (texto o negativo).\n\n## 8. Ideas clave\n\n- Programar es pensar con precisión antes de escribir.\n- La tabla de entradas, proceso y salidas y el pseudocódigo reducen errores lógicos.\n- Los tipos de datos modelan la realidad: identificadores como texto, cantidades como números.\n- Todo programa se entrega con evidencia de prueba.\n"
+      },
+      "case": {
+        "title": "Caso: La bodega Doña Rosa y la boleta mal calculada",
+        "content": "**Bodega Doña Rosa** es un negocio familiar ubicado en San Juan de Lurigancho, Lima. Factura alrededor de S/ 18 000 mensuales, está acogida al Régimen MYPE Tributario y desde 2024 emite boletas electrónicas a través del sistema gratuito de SUNAT. Rosa Quispe, la propietaria, tiene dos hijos: Kevin, estudiante de primer ciclo de Computación, y Milagros, que lleva la contabilidad básica del negocio.\n\nEn enero, Kevin escribió un pequeño programa en Python para ayudar a su madre a desglosar el IGV de las ventas diarias y preparar un resumen que Milagros entrega al contador externo. El núcleo del programa era:\n\n```python\ntotal = float(input(\"Venta del día: \"))\nigv = total * 0.18\nbase = total - igv\nprint(\"IGV:\", igv, \"Base:\", base)\n```\n\nDurante tres meses el resumen se usó sin cuestionamientos. En abril, el contador, el CPC Luis Huamán, detectó que el IGV reportado en los resúmenes era sistemáticamente mayor que el que figuraba en los comprobantes electrónicos emitidos. Para una venta diaria de S/ 590, el programa calculaba un IGV de S/ 106.20, cuando el correcto era S/ 90.00. La diferencia acumulada en el trimestre superaba los S/ 1 400 y había generado confusión en la conciliación con el registro de ventas.\n\nAdemás, Milagros reportó otros problemas: cuando escribía la venta con coma decimal, como 590,50, el programa se cerraba con un mensaje en inglés que nadie entendía; los montos aparecían con muchos decimales, como 90.00000000000001; y no había forma de saber qué versión del programa se había usado en cada mes.\n\nKevin argumenta que el programa \"funciona\", porque nunca dio un error al ingresar números enteros. Milagros sostiene que un programa que da resultados incorrectos es peor que no tener programa. Rosa debe decidir si siguen usando la herramienta de su hijo, si vuelven a la calculadora o si pagan S/ 80 mensuales por un software comercial de punto de venta.\n\nEl contador ofrece revisar una versión corregida si Kevin le presenta, en una semana, evidencia de que los cálculos son correctos.",
+        "questions": [
+          "¿Qué tipo de error cometió Kevin (sintaxis, ejecución o lógico) y en qué paso del método de Polya se originó? Justifique con el ejemplo de S/ 590.",
+          "Reescriba el algoritmo en pseudocódigo y en Python corrigiendo el cálculo, el formato de salida y el uso de una constante para la tasa de IGV.",
+          "¿Qué casos de prueba presentaría al contador para demostrar que la nueva versión es confiable? Incluya valores típicos, límite e inválidos con su resultado esperado.",
+          "Evalúe las tres alternativas de Rosa considerando costo, riesgo tributario y aprendizaje de Kevin. ¿Qué recomendaría y bajo qué condiciones?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Calculadora de boletas con desglose de IGV",
+        "instructions": "**Objetivo:** aplicar el método de Polya y los fundamentos de Python para construir un programa correcto, legible y probado.\n\n**Situación:** una mype que usted conozca (bodega, librería, taller) necesita desglosar el IGV de sus ventas y calcular el vuelto al cliente.\n\n**Qué entregar:**\n\n1. **Análisis (PDF, máximo 2 páginas):** tabla de entradas, proceso y salidas; supuestos (por ejemplo, si el precio incluye IGV); pseudocódigo y diagrama de flujo elaborados en PSeInt o draw.io.\n2. **Programa `boleta.py`:** solicita cantidad y precio unitario de tres productos y el monto pagado; calcula subtotal, valor de venta, IGV y vuelto; muestra un comprobante en consola con f-strings, montos en S/ con dos decimales y columnas alineadas. Use constantes con nombre y variables en snake_case.\n3. **Tabla de pruebas:** mínimo cinco casos (típicos, límite y uno que provoque error), con resultado esperado calculado a mano, resultado obtenido y conclusión.\n4. **Video de 3 minutos** explicando el código y ejecutándolo.\n\n**Formato:** comprima todo en `Apellido_Tarea1.zip` y súbalo al aula virtual al cierre de la semana 4.\n\n**Criterios:** corrección del análisis, funcionamiento del programa, calidad del código según PEP 8 y rigor de las pruebas.",
+        "rubric": [
+          {
+            "name": "Análisis del problema, pseudocódigo y diagrama de flujo",
+            "points": 5
+          },
+          {
+            "name": "Corrección de cálculos y funcionamiento del programa",
+            "points": 6
+          },
+          {
+            "name": "Legibilidad, constantes, nombres y formato de salida (PEP 8)",
+            "points": 4
+          },
+          {
+            "name": "Diseño y ejecución de casos de prueba",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Pensamiento computacional y fundamentos de Python",
+        "questions": [
+          {
+            "prompt": "Un precio de S/ 118.00 ya incluye IGV del 18 %. ¿Qué expresión de Python calcula correctamente el valor de venta?",
+            "options": [
+              "118 / 1.18",
+              "118 * 1.18",
+              "118 * 0.82",
+              "118 - 118 * 0.18"
+            ],
+            "correct": 0,
+            "explanation": "Si el precio incluye IGV, el valor de venta se obtiene dividiendo entre 1.18, lo que da 100. Restar el 18 % del total da 96.76, un error lógico frecuente."
+          },
+          {
+            "prompt": "Al ejecutar edad = input('Edad: ') y luego edad + 1, el programa se detiene. ¿Cuál es la causa?",
+            "options": [
+              "La función input() solo acepta números decimales",
+              "input() devuelve una cadena y no puede sumarse con un entero",
+              "La variable edad es una palabra reservada de Python",
+              "Falta declarar el tipo de la variable antes de usarla"
+            ],
+            "correct": 1,
+            "explanation": "input() siempre devuelve str; sumar str con int genera TypeError. La solución es convertir con int(input(...)) y validar la entrada."
+          },
+          {
+            "prompt": "¿Qué tipo de dato es el más adecuado para almacenar el DNI de un cliente en un programa de registro?",
+            "options": [
+              "float, para admitir cualquier longitud numérica",
+              "bool, porque indica si el cliente existe",
+              "str, porque es un identificador que puede tener ceros iniciales",
+              "int, porque está formado solo por dígitos"
+            ],
+            "correct": 2,
+            "explanation": "El DNI no se opera aritméticamente y puede comenzar con cero; almacenarlo como entero perdería ese cero y alteraría el dato."
+          },
+          {
+            "prompt": "En el pensamiento computacional de Wing, decidir que para la planilla solo importan sueldo y régimen pensionario, ignorando el distrito del trabajador, es un ejemplo de:",
+            "options": [
+              "Depuración",
+              "Descomposición",
+              "Reconocimiento de patrones",
+              "Abstracción"
+            ],
+            "correct": 3,
+            "explanation": "La abstracción consiste en conservar solo los datos relevantes para el problema y descartar los detalles que no influyen en la solución."
+          },
+          {
+            "prompt": "¿Cuál es el resultado de evaluar la expresión 2 + 3 * 4 ** 2 en Python?",
+            "options": [
+              "50",
+              "77",
+              "400",
+              "200"
+            ],
+            "correct": 0,
+            "explanation": "La potencia se evalúa primero (16), luego la multiplicación (48) y finalmente la suma (50)."
+          },
+          {
+            "prompt": "Un programa calcula sin errores, pero entrega un IGV mayor al de los comprobantes emitidos. ¿Qué tipo de error es y cómo se detecta mejor?",
+            "options": [
+              "NameError; se detecta leyendo la traza",
+              "Error lógico; se detecta con casos de prueba de resultado conocido",
+              "Error de hardware; se detecta reinstalando Python",
+              "Error de sintaxis; se detecta al ejecutar el programa"
+            ],
+            "correct": 1,
+            "explanation": "Los errores lógicos no producen mensajes; solo se descubren comparando resultados del programa con resultados esperados calculados independientemente."
+          },
+          {
+            "prompt": "Para convertir 135 minutos en horas y minutos, ¿qué par de expresiones es correcto?",
+            "options": [
+              "135 / 60 y 135 % 60",
+              "135 ** 60 y 135 // 60",
+              "135 // 60 y 135 % 60",
+              "135 % 60 y 135 // 60"
+            ],
+            "correct": 2,
+            "explanation": "La división entera da las horas completas (2) y el residuo da los minutos restantes (15). La división real daría 2.25, no horas enteras."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Estructuras de control: decisiones y repeticiones",
+      "description": "Al finalizar la unidad, el estudiante diseña e implementa programas en Python que toman decisiones y repiten procesos mediante estructuras selectivas y repetitivas, aplicando patrones de contador, acumulador y validación, y verificando su lógica con pruebas de escritorio.",
+      "topics": [
+        "Expresiones booleanas y operadores lógicos",
+        "Estructuras selectivas: if, elif, else y match",
+        "Estructuras repetitivas: while y for con range",
+        "Patrones algorítmicos: contador, acumulador, máximo, bandera y centinela",
+        "Prueba de escritorio y errores típicos en bucles"
+      ],
+      "slides": [
+        {
+          "title": "El teorema de la programación estructurada",
+          "bullets": [
+            "Böhm y Jacopini (1966) demostraron que todo algoritmo puede construirse con tres estructuras: secuencia, selección e iteración.",
+            "Dijkstra (1968) criticó el uso de saltos arbitrarios (goto) por producir código difícil de razonar y mantener.",
+            "La programación estructurada exige que cada bloque tenga una sola entrada y una sola salida.",
+            "Python impone la estructura mediante la indentación obligatoria de cuatro espacios por nivel."
+          ],
+          "notes": "Sitúe históricamente la unidad. En los años sesenta, los programas se llenaban de saltos goto que hacían imposible seguir la lógica, el famoso código espagueti. Corrado Böhm y Giuseppe Jacopini probaron matemáticamente que bastaban tres estructuras de control, y Edsger Dijkstra, en su célebre carta 'Go To Statement Considered Harmful', impulsó el cambio de paradigma. Este fundamento explica por qué hoy todos los lenguajes modernos ofrecen if, while y for. Destaque una particularidad de Python: la indentación no es decorativa, es parte de la sintaxis. Un espacio de más o de menos cambia el significado del programa o produce IndentationError. Pregunte a los estudiantes por qué creen que el diseñador de Python tomó esa decisión y relacione la respuesta con la legibilidad, valor central del lenguaje según el Zen de Python."
+        },
+        {
+          "title": "Expresiones booleanas: relacionales y lógicas",
+          "bullets": [
+            "Operadores relacionales: ==, !=, <, >, <=, >=; producen True o False.",
+            "Operadores lógicos: and (ambas verdaderas), or (al menos una) y not (negación).",
+            "Python evalúa en cortocircuito: en a and b, si a es falsa, b no se evalúa.",
+            "Python permite comparaciones encadenadas: 0 <= nota <= 20 equivale a nota >= 0 and nota <= 20.",
+            "Error clásico: confundir = (asignación) con == (comparación)."
+          ],
+          "notes": "Construya tablas de verdad con los estudiantes, pero rápidamente pase a condiciones de negocio. Ejemplo: un cliente accede a crédito si tiene ingresos de al menos S/ 1 500 y no figura con deuda morosa en las centrales de riesgo. Escriba: ingreso >= 1500 and not moroso. Luego plantee: un estudiante puede rendir examen sustitutorio si su promedio está entre 10 y 12 o si justificó su inasistencia. Explique el cortocircuito con un ejemplo útil: divisor != 0 and total / divisor > 5 nunca provoca división entre cero, porque si la primera condición es falsa la segunda no se evalúa. Muestre las comparaciones encadenadas, una característica elegante de Python que pocos lenguajes tienen. Pida a la clase traducir tres reglas del reglamento académico de TEPSUP a expresiones booleanas."
+        },
+        {
+          "title": "Selección simple y doble: if y else",
+          "bullets": [
+            "if condición: ejecuta un bloque solo si la condición es verdadera.",
+            "else: define el camino alternativo cuando la condición es falsa; ambos caminos son mutuamente excluyentes.",
+            "Ejemplo vigesimal: if promedio >= 13: estado = 'Aprobado' else: estado = 'Desaprobado'.",
+            "Toda condición necesita pruebas de ambos caminos y del valor límite exacto (12.5 y 13).",
+            "Evite comparar booleanos con True: escriba if aprobado: en lugar de if aprobado == True:."
+          ],
+          "notes": "Use el reglamento de evaluación de un instituto peruano: escala vigesimal con nota mínima aprobatoria de 13 según los lineamientos del MINEDU. Muchos reglamentos indican que el medio punto favorece al estudiante, de modo que 12.5 se redondea a 13. Pregunte: ¿cómo cambia el programa si se aplica ese redondeo? Esta pregunta revela la importancia de leer la norma antes de programar. Muestre la indentación con cuidado: el bloque del if termina cuando el código vuelve al nivel de sangría anterior. Haga notar que un error de indentación puede hacer que una instrucción se ejecute siempre, aunque debería depender de la condición. Ejercicio rápido: determinar si un trabajador debe aportar a la ONP o a una AFP según una variable de texto, mostrando el porcentaje de descuento correspondiente."
+        },
+        {
+          "title": "Selección múltiple con if-elif-else",
+          "bullets": [
+            "elif permite evaluar varias condiciones en cascada; se ejecuta solo el primer bloque cuya condición sea verdadera.",
+            "Ordenar los tramos de mayor a menor (o viceversa) simplifica las condiciones y evita solapamientos.",
+            "Ejemplo: calificar desempeño 18-20 Excelente, 15-17 Bueno, 13-14 Aprobado, 0-12 Desaprobado.",
+            "El else final captura los casos no previstos y es útil para detectar datos fuera de rango.",
+            "Cada tramo requiere al menos un caso de prueba en su límite inferior y superior."
+          ],
+          "notes": "Este patrón es omnipresente en sistemas reales: escalas de comisiones, categorías de clientes, tramos de impuesto. Un ejemplo peruano importante es el impuesto a la renta de quinta categoría, que aplica tasas progresivas de 8 %, 14 %, 17 %, 20 % y 30 % según tramos expresados en UIT. Muestre cómo el orden de las condiciones simplifica la lógica: si se pregunta primero por la nota más alta, el siguiente elif ya sabe implícitamente que la nota es menor. Muestre también el error de escribir varios if independientes en lugar de elif, lo que puede asignar más de una categoría. Pida a los estudiantes que identifiquen los valores límite de cada tramo y escriban una tabla de pruebas antes de programar. Esta disciplina, llamada análisis de valores límite, se formalizará en la unidad 4."
+        },
+        {
+          "title": "Decisiones anidadas y tablas de decisión",
+          "bullets": [
+            "Una estructura anidada es un if dentro de otro; útil cuando una decisión depende de la anterior.",
+            "Más de tres niveles de anidamiento dificulta la lectura; conviene combinar condiciones con and u or.",
+            "La tabla de decisión enumera combinaciones de condiciones y la acción para cada una antes de codificar.",
+            "Ejemplo: descuento según tipo de cliente (nuevo o frecuente) y forma de pago (efectivo o tarjeta).",
+            "La tabla asegura que ningún caso quede sin tratar ni tenga dos acciones contradictorias."
+          ],
+          "notes": "Presente un caso de una tienda de accesorios de cómputo en el Centro de Lima. Reglas: clientes frecuentes reciben 10 % de descuento, 5 % adicional si pagan en efectivo; clientes nuevos reciben 5 % solo si la compra supera S/ 300. Pida que construyan primero la tabla de decisión con todas las combinaciones. Luego muestren dos implementaciones: una con ifs profundamente anidados y otra aplanada con condiciones compuestas. Discutan cuál es más fácil de modificar si el gerente añade una nueva regla. La tabla de decisión es una técnica clásica del análisis de sistemas, que retomarán en Análisis y Diseño de Sistemas del cuarto ciclo. Enfatice que la mayoría de defectos en reglas de negocio provienen de combinaciones no previstas, no de errores de sintaxis."
+        },
+        {
+          "title": "Selección por patrones con match-case",
+          "bullets": [
+            "Desde Python 3.10, match compara un valor contra varios casos: case 1:, case 2:, case _: para el caso por defecto.",
+            "Es ideal para menús de opciones y para despachar comandos de texto.",
+            "Permite agrupar alternativas con el operador |, por ejemplo case 'S' | 's':.",
+            "Para rangos numéricos sigue siendo más claro usar if-elif-else.",
+            "Verifique la versión de Python del servidor antes de usar match en producción."
+          ],
+          "notes": "La sentencia match es relativamente nueva en Python; fue incorporada por la PEP 634 en la versión 3.10. Muestre un menú de consola para un pequeño sistema de inventario: 1 registrar producto, 2 consultar stock, 3 salir. Compare la versión con if-elif y la versión con match: la segunda resulta más declarativa cuando se comparan valores exactos. Advierta que match en Python es más poderoso que el switch de C o Java, porque permite desestructurar datos, aunque en este curso usaremos solo su forma básica. Mencione el riesgo práctico: muchos servidores corporativos aún ejecutan versiones antiguas de Python, por lo que un código con match fallaría allí con SyntaxError. Esto ilustra que programar profesionalmente implica conocer el entorno de despliegue, tema que verán en Administración de Servidores y Nube."
+        },
+        {
+          "title": "Repetición con while: condición, cuerpo y avance",
+          "bullets": [
+            "while condición: repite el bloque mientras la condición sea verdadera; si es falsa al inicio, no se ejecuta nunca.",
+            "Todo while correcto tiene tres elementos: inicialización, condición de continuación y actualización de la variable de control.",
+            "Si la variable de control no cambia, se produce un bucle infinito; se detiene con Ctrl+C.",
+            "Uso típico: repetir cuando no se sabe de antemano cuántas iteraciones habrá.",
+            "Ejemplo: calcular en cuántos meses un ahorro alcanza una meta con interés mensual."
+          ],
+          "notes": "Trabaje un ejemplo financiero realista: una persona ahorra S/ 300 mensuales en una caja municipal que paga una tasa efectiva anual de 6 %. ¿En cuántos meses alcanza S/ 5 000 para la cuota inicial de una moto? Primero convierta la tasa anual a mensual con la fórmula (1 + TEA) elevado a 1/12 menos 1, conectando con Matemática Discreta y con la cultura financiera que promueve la SBS. Luego escriba el while con sus tres elementos y ejecute una traza en una tabla con columnas mes, saldo y condición. Provoque intencionalmente un bucle infinito olvidando actualizar el saldo y muestre cómo interrumpirlo. Pregunte: ¿qué pasaría si el ahorro mensual fuera cero? Esto introduce la idea de que los bucles también requieren validar sus entradas para garantizar la finitud de Knuth."
+        },
+        {
+          "title": "Validación de entradas y el patrón centinela",
+          "bullets": [
+            "Validar es repetir la solicitud de un dato mientras sea inválido, antes de procesarlo.",
+            "Patrón: pedir dato; mientras sea inválido, mostrar mensaje y volver a pedir.",
+            "El centinela es un valor especial que indica fin de datos, por ejemplo, ingresar 0 para terminar de registrar ventas.",
+            "El centinela no debe procesarse como dato válido: verificarlo antes de acumular.",
+            "El método str.isdigit() ayuda a validar que un texto contenga solo dígitos antes de convertirlo."
+          ],
+          "notes": "La validación es la primera defensa de la calidad del software. Recuerde el caso de la bodega Doña Rosa: el programa se caía cuando Milagros escribía coma decimal. Muestre cómo validar que una nota esté entre 0 y 20 con un while que repite la pregunta. Luego introduzca el patrón centinela con un registro de ventas del día: el cajero ingresa montos y escribe 0 para terminar; el programa muestra el total y la cantidad de ventas. Señale el error típico de sumar el centinela al total o contarlo como venta. Use isdigit() para validar un DNI de ocho dígitos combinándolo con len(). Indique que en la unidad 4 verán una forma más robusta de validar con excepciones, try y except. Pregunte qué valor centinela sería inadecuado si se registran devoluciones con montos negativos."
+        },
+        {
+          "title": "Repetición con for y la función range",
+          "bullets": [
+            "for recorre los elementos de una secuencia; con range genera secuencias de enteros.",
+            "range(n) produce 0 a n-1; range(a, b) produce a a b-1; range(a, b, paso) admite incrementos o decrementos.",
+            "Use for cuando el número de repeticiones es conocido o se recorre una colección.",
+            "Ejemplo: generar el cronograma de 12 cuotas de un préstamo con for cuota in range(1, 13).",
+            "for también recorre cadenas carácter por carácter, base para validar códigos como el RUC."
+          ],
+          "notes": "El for de Python es un recorrido de colecciones, no un contador como en C. Esto lo hace más seguro, porque reduce errores de índice. Explique con calma el comportamiento semiabierto de range: el límite superior no se incluye, convención que también usan muchos otros lenguajes y que simplifica los cálculos de longitud. Trabaje un cronograma de pagos simple, con cuota fija y saldo decreciente, sin entrar todavía en el método francés completo, que verán en cursos de finanzas. Muestre for letra in 'TEPSUP' para recorrer una cadena y anticipe la unidad 3, donde recorrerán listas y diccionarios. Pida que comparen dos soluciones al mismo problema, una con while y otra con for, y discutan cuál comunica mejor la intención. La regla práctica: for cuando se conoce el número de iteraciones, while cuando depende de una condición."
+        },
+        {
+          "title": "Patrones algorítmicos: contador, acumulador, máximo y bandera",
+          "bullets": [
+            "Contador: variable que se incrementa en uno ante cada ocurrencia, por ejemplo, número de aprobados.",
+            "Acumulador: variable que suma valores sucesivos, por ejemplo, total de ventas del día.",
+            "Máximo y mínimo: se inicializan con el primer dato y se actualizan al encontrar uno mayor o menor.",
+            "Bandera: variable booleana que registra si ocurrió un evento, como encontrar un producto agotado.",
+            "Promedio = acumulador / contador, verificando antes que el contador no sea cero."
+          ],
+          "notes": "Estos patrones son las piezas de construcción de casi todos los programas de procesamiento de datos y conviene que los estudiantes los reconozcan de inmediato. Trabaje un único problema que los integre: procesar las notas de una sección de 25 estudiantes para obtener promedio, cantidad de aprobados, nota más alta y si hubo alguna nota de cero, posible señal de abandono. Insista en la inicialización correcta: un acumulador empieza en cero, un contador en cero, el máximo con el primer valor leído y no con cero, porque si todos los datos fueran negativos el resultado sería incorrecto. Muestre la división entre cero como caso límite cuando no hay datos. Pida que cada estudiante identifique, en el código de un compañero, qué patrón usa cada variable. Esta lectura de código ajeno es una habilidad profesional clave."
+        },
+        {
+          "title": "Control fino de bucles: break, continue y else",
+          "bullets": [
+            "break termina el bucle inmediatamente; útil al encontrar lo que se buscaba.",
+            "continue salta al siguiente ciclo sin ejecutar el resto del cuerpo; útil para ignorar datos inválidos.",
+            "La cláusula else de un bucle se ejecuta solo si este terminó sin break; útil en búsquedas.",
+            "Abusar de break y continue dificulta la lectura; prefiera condiciones claras cuando sea posible.",
+            "Ejemplo: bloquear una cuenta tras tres intentos fallidos de contraseña."
+          ],
+          "notes": "Presente el ejemplo de autenticación: el usuario tiene tres intentos para ingresar su clave; si acierta, se usa break; si agota los intentos, la cláusula else del for informa que la cuenta fue bloqueada. Este es exactamente el comportamiento de los aplicativos bancarios y de la Clave SOL de SUNAT, que bloquean el acceso tras varios intentos por seguridad. Aproveche para comentar que en un sistema real las contraseñas nunca se comparan en texto plano, sino mediante funciones hash, tema de Seguridad Informática del quinto ciclo. Muestre continue con un ejemplo de procesamiento de ventas que ignora montos negativos. Discuta con la clase la controversia sobre break: algunos autores lo consideran una violación del principio de una sola salida, mientras que otros lo aceptan si mejora la claridad."
+        },
+        {
+          "title": "Bucles anidados y prueba de escritorio",
+          "bullets": [
+            "Un bucle anidado ejecuta el bucle interno completo por cada iteración del externo.",
+            "Si el externo itera n veces y el interno m veces, el cuerpo interno se ejecuta n × m veces.",
+            "Ejemplo: tabla de multiplicar o reporte de ventas por tienda y por mes.",
+            "La prueba de escritorio registra en una tabla el valor de cada variable en cada paso.",
+            "El depurador de VS Code y la herramienta Python Tutor permiten visualizar la traza paso a paso."
+          ],
+          "notes": "Muestre primero la tabla de multiplicar del 1 al 9 para que visualicen la mecánica. Luego pase a un caso de negocio: una cadena de farmacias con 3 locales en Arequipa registra ventas de 4 semanas; el bucle externo recorre locales y el interno semanas, acumulando totales por local y un total general. Haga la prueba de escritorio en la pizarra virtual con una tabla de columnas local, semana, venta, total_local y total_general. Este ejercicio desarrolla el razonamiento sobre el estado del programa, una habilidad que distingue al programador competente. Introduzca la idea intuitiva de costo: si hay 1 000 locales y 52 semanas, el cuerpo interno se ejecuta 52 000 veces. Esta intuición se formalizará como complejidad algorítmica en Algoritmos y Estructuras de Datos. Pida la traza manual como evidencia de la semana 7."
+        },
+        {
+          "title": "Errores típicos en estructuras de control",
+          "bullets": [
+            "Error por uno (off-by-one): usar range(1, 12) cuando se necesitan 12 cuotas.",
+            "Bucle infinito por no actualizar la variable de control o por condición siempre verdadera.",
+            "Comparar números reales con == falla: 0.1 * 3 == 0.3 es False; use round() o math.isclose().",
+            "Indentación incorrecta que deja fuera del bucle una instrucción que debía repetirse.",
+            "Inicializar acumuladores dentro del bucle, lo que los reinicia en cada iteración."
+          ],
+          "notes": "Cierre la unidad con una clínica de errores. Prepare cinco fragmentos de código con defectos reales y pida a los grupos que los encuentren en diez minutos. El error por uno es tan frecuente que tiene nombre propio en la literatura de ingeniería de software. El problema del punto flotante merece atención especial en sistemas financieros: muestre que 0.1 * 3 no es exactamente 0.3 por la representación binaria definida en el estándar IEEE 754, y explique math.isclose() o el uso del módulo decimal. El error de inicializar el acumulador dentro del bucle es muy común en principiantes y produce resultados que parecen razonables, por lo que es difícil de detectar sin pruebas. Concluya que la mejor defensa es la combinación de prueba de escritorio, casos límite y lectura cuidadosa del código propio."
+        }
+      ],
+      "reading": {
+        "title": "Decidir y repetir: la lógica de control en programas de negocio",
+        "minutes": 35,
+        "content": "## 1. Las tres estructuras que bastan\n\nEn 1966, Corrado Böhm y Giuseppe Jacopini demostraron que cualquier algoritmo computable puede expresarse combinando solo tres estructuras: **secuencia**, **selección** e **iteración**. Dos años después, Edsger Dijkstra publicó su carta contra la instrucción `goto`, iniciando la era de la programación estructurada. Python lleva esa disciplina al extremo: la indentación forma parte de la sintaxis, de modo que la estructura visual del código coincide con su estructura lógica.\n\n## 2. Selección: traducir reglas de negocio\n\nLas organizaciones funcionan con reglas: tramos de comisión, categorías de cliente, condiciones de aprobación. Programarlas exige traducir el lenguaje natural a expresiones booleanas sin ambigüedad. Considere la escala vigesimal con nota mínima aprobatoria de 13:\n\n```python\npromedio = float(input(\"Promedio final: \"))\n\nif not 0 <= promedio <= 20:\n    print(\"Nota fuera de rango\")\nelif promedio >= 18:\n    print(\"Excelente\")\nelif promedio >= 15:\n    print(\"Bueno\")\nelif promedio >= 13:\n    print(\"Aprobado\")\nelse:\n    print(\"Desaprobado\")\n```\n\nTres decisiones de diseño merecen atención. Primero, el dato inválido se descarta al inicio (cláusula de guarda). Segundo, los tramos se ordenan de mayor a menor, por lo que cada `elif` asume implícitamente que las condiciones anteriores fueron falsas. Tercero, cada límite (13, 15, 18) exige un caso de prueba exacto.\n\n### Tablas de decisión\n\nCuando una regla combina varias condiciones, conviene enumerarlas antes de programar. Una tienda que ofrece 10 % a clientes frecuentes y 5 % adicional por pago en efectivo tiene cuatro combinaciones posibles; la tabla garantiza que ninguna quede sin tratar.\n\n| Frecuente | Efectivo | Descuento |\n|---|---|---|\n| Sí | Sí | 15 % |\n| Sí | No | 10 % |\n| No | Sí | 5 % |\n| No | No | 0 % |\n\n## 3. Iteración: while y for\n\nEl bucle `while` se usa cuando el número de repeticiones depende de una condición. Un ejemplo financiero: ¿en cuántos meses alcanza S/ 5 000 una persona que deposita S/ 300 mensuales en una cuenta con tasa efectiva anual (TEA) de 6 %? La tasa mensual equivalente es:\n\n$$ i_m = (1 + TEA)^{1/12} - 1 $$\n\n```python\nTEA = 0.06\nMETA = 5000\ntasa_mensual = (1 + TEA) ** (1 / 12) - 1   # aprox. 0.4868 %\n\nsaldo, meses = 0.0, 0           # inicialización\nwhile saldo < META:             # condición\n    saldo = saldo * (1 + tasa_mensual) + 300\n    meses += 1                  # actualización\nprint(f\"Meta alcanzada en {meses} meses: S/ {saldo:,.2f}\")\n```\n\nTodo `while` tiene tres componentes: **inicialización**, **condición** y **actualización**. Si falta la actualización, el bucle no termina y viola la propiedad de finitud de Knuth.\n\nEl bucle `for`, en cambio, recorre una secuencia conocida. Con `range(1, 13)` se generan las doce cuotas de un cronograma anual; el límite superior no se incluye, convención que evita muchos errores de conteo.\n\n## 4. Patrones que todo programador reconoce\n\n| Patrón | Inicialización | Actualización |\n|---|---|---|\n| Contador | `aprobados = 0` | `aprobados += 1` |\n| Acumulador | `total = 0` | `total += venta` |\n| Máximo | `mayor = primer_dato` | `if x > mayor: mayor = x` |\n| Bandera | `hay_cero = False` | `if x == 0: hay_cero = True` |\n\nEl siguiente fragmento integra el patrón **centinela** —un valor especial que indica fin de datos— con validación:\n\n```python\ntotal, cantidad = 0.0, 0\nventa = float(input(\"Venta (0 para terminar): \"))\nwhile venta != 0:\n    if venta < 0:\n        print(\"Monto inválido, se ignora\")\n    else:\n        total += venta\n        cantidad += 1\n    venta = float(input(\"Venta (0 para terminar): \"))\n\nif cantidad > 0:\n    print(f\"{cantidad} ventas, total S/ {total:,.2f}, promedio S/ {total / cantidad:,.2f}\")\n```\n\nObserve que el promedio solo se calcula si hubo ventas: dividir entre cero es un caso límite clásico.\n\n## 5. La prueba de escritorio\n\nAntes de confiar en un bucle, ejecútelo a mano registrando en una tabla el valor de cada variable en cada iteración. Esta técnica, llamada traza o prueba de escritorio, revela errores por uno, acumuladores mal inicializados y condiciones que nunca se cumplen. Herramientas como el depurador de Visual Studio Code automatizan la traza, pero no sustituyen el razonamiento.\n\n## 6. Ideas clave\n\n- Toda lógica de control se construye con secuencia, selección e iteración.\n- Las reglas de negocio se modelan primero en tablas de decisión.\n- Cada `while` necesita inicialización, condición y actualización.\n- Los patrones contador, acumulador, máximo, bandera y centinela resuelven la mayoría de problemas de procesamiento.\n"
+      },
+      "case": {
+        "title": "Caso: Las comisiones de la distribuidora Andina Snacks",
+        "content": "**Andina Snacks SAC** es una distribuidora de golosinas y bebidas con sede en Trujillo que abastece a unas 900 bodegas de La Libertad mediante 14 vendedores de ruta. Hasta 2025, las comisiones se calculaban en una hoja de cálculo que la asistente administrativa, Carla Rodríguez, actualizaba manualmente cada fin de mes.\n\nLa política de comisiones aprobada por la gerencia comercial es la siguiente:\n\n- Ventas mensuales menores a S/ 20 000: 2 % de comisión.\n- De S/ 20 000 a S/ 39 999.99: 3 %.\n- Desde S/ 40 000: 4 %.\n- Bono adicional de S/ 250 si el vendedor incorporó al menos cinco clientes nuevos en el mes.\n- Si la tasa de devoluciones supera el 8 % de lo vendido, la comisión se reduce a la mitad, pero el bono se mantiene.\n\nEn marzo, tres vendedores reclamaron. Jorge, con ventas de exactamente S/ 40 000, recibió 3 % en lugar de 4 %. Lucía, con S/ 25 000 en ventas, seis clientes nuevos y 9 % de devoluciones, recibió comisión completa sin reducción. Y Pedro, con ventas de S/ 15 000, no recibió el bono pese a tener cinco clientes nuevos. Revisando la hoja, Carla descubrió fórmulas con condiciones mal ordenadas y referencias rotas.\n\nEl gerente comercial, Ricardo Vega, encargó a Diego, practicante de Computación del primer ciclo, escribir un programa en Python que reciba los datos de los 14 vendedores, calcule la comisión de cada uno y muestre el total a pagar, el vendedor con mayor comisión y cuántos vendedores fueron penalizados por devoluciones.\n\nDiego entregó un primer prototipo con ifs anidados en cinco niveles. Funciona para los casos que probó, pero nadie más en la empresa logra entender el código. Ricardo además anunció que el próximo trimestre la política podría cambiar, añadiendo un tramo de 5 % para ventas superiores a S/ 60 000.\n\nDiego debe decidir si mantiene su diseño o lo reestructura antes de que la empresa lo adopte, sabiendo que un error en comisiones afecta directamente la remuneración de los trabajadores y la confianza en el área comercial.",
+        "questions": [
+          "Construya la tabla de decisión completa de la política de comisiones e identifique los valores límite que deben probarse obligatoriamente.",
+          "¿Qué error lógico explica cada uno de los tres reclamos de marzo? Proponga la condición correcta en Python para cada caso.",
+          "¿Qué patrones algorítmicos (contador, acumulador, máximo, bandera) requiere el reporte que pidió el gerente y cómo los inicializaría?",
+          "¿Debería Diego reestructurar su código? Argumente considerando mantenibilidad, el cambio de política anunciado y el impacto sobre los trabajadores."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Sistema de cálculo de comisiones con validación",
+        "instructions": "**Objetivo:** implementar reglas de negocio con estructuras selectivas y repetitivas, validando entradas y aplicando patrones algorítmicos.\n\n**Contexto:** use la política de comisiones del caso Andina Snacks, incluyendo el nuevo tramo de 5 % para ventas desde S/ 60 000.\n\n**Qué entregar:**\n\n1. **Tabla de decisión** y lista de valores límite (PDF).\n2. **Programa `comisiones.py`** que:\n   - Pida cuántos vendedores se procesarán y, para cada uno, nombre, ventas, devoluciones y clientes nuevos.\n   - Valide con `while` que los montos no sean negativos y que las devoluciones no superen las ventas.\n   - Calcule y muestre la comisión, el bono y el total de cada vendedor.\n   - Al final, muestre el total a pagar, el vendedor con mayor comisión, el número de penalizados y el promedio de comisiones.\n   - Incluya un menú con `match` o `if-elif` para procesar otro mes o salir.\n3. **Prueba de escritorio** de al menos dos vendedores y **tabla de pruebas** con ocho casos, incluidos todos los límites.\n4. **Reflexión** (media página): qué cambió en su diseño respecto del prototipo de Diego.\n\n**Formato:** archivo `Apellido_Tarea2.zip` en el aula virtual al cierre de la semana 8. El código debe seguir PEP 8 y no exceder tres niveles de anidamiento.",
+        "rubric": [
+          {
+            "name": "Tabla de decisión y valores límite correctos",
+            "points": 4
+          },
+          {
+            "name": "Implementación correcta de reglas y validaciones",
+            "points": 7
+          },
+          {
+            "name": "Uso adecuado de patrones y estructura del código",
+            "points": 5
+          },
+          {
+            "name": "Prueba de escritorio, casos de prueba y reflexión",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Estructuras de control",
+        "questions": [
+          {
+            "prompt": "Con la política de 2 %, 3 % y 4 %, un programa usa if ventas > 40000 para el tramo superior. ¿Qué ocurre con ventas de exactamente S/ 40 000?",
+            "options": [
+              "El programa produce un error de ejecución",
+              "Reciben 2 %, porque el else captura el caso",
+              "Reciben 4 %, porque Python redondea",
+              "Reciben 3 %, porque la condición debió ser >="
+            ],
+            "correct": 3,
+            "explanation": "La política dice desde S/ 40 000, lo que exige >=. Con > el valor límite cae al tramo anterior: es un error lógico típico de valores límite."
+          },
+          {
+            "prompt": "¿Cuántas veces se ejecuta el cuerpo del bucle for i in range(2, 11, 3)?",
+            "options": [
+              "3 veces",
+              "11 veces",
+              "9 veces",
+              "4 veces"
+            ],
+            "correct": 0,
+            "explanation": "range(2, 11, 3) genera 2, 5 y 8; el siguiente valor, 11, no se incluye porque el límite superior es exclusivo."
+          },
+          {
+            "prompt": "En un programa que calcula el promedio de ventas con un centinela 0, ¿cuál es el error si el acumulador total = 0 se escribe dentro del bucle?",
+            "options": [
+              "Python lanza un NameError al terminar",
+              "El total se reinicia en cada iteración y solo conserva la última venta",
+              "El centinela se suma al total",
+              "El programa entra en un bucle infinito"
+            ],
+            "correct": 1,
+            "explanation": "Inicializar dentro del bucle reinicia el acumulador en cada vuelta; el resultado parece razonable pero es incorrecto, por eso es difícil de detectar."
+          },
+          {
+            "prompt": "¿Por qué la expresión divisor != 0 and total / divisor > 5 nunca produce ZeroDivisionError?",
+            "options": [
+              "Porque and evalúa primero la expresión de la derecha",
+              "Porque la comparación > atrapa el error automáticamente",
+              "Por la evaluación en cortocircuito del operador and",
+              "Porque Python convierte la división entre cero en infinito"
+            ],
+            "correct": 2,
+            "explanation": "Si divisor != 0 es falso, and ya sabe que el resultado es falso y no evalúa la división, evitando el error."
+          },
+          {
+            "prompt": "Para obtener la nota más alta de una lista de calificaciones que pueden ser cero, ¿cómo debe inicializarse la variable mayor?",
+            "options": [
+              "Siempre con 0",
+              "Con 20, el máximo de la escala",
+              "Con None y nunca actualizarla",
+              "Con el primer dato leído"
+            ],
+            "correct": 3,
+            "explanation": "Inicializar con el primer dato garantiza que el máximo sea un valor real del conjunto; 20 nunca sería superado y 0 falla con valores negativos en otros contextos."
+          },
+          {
+            "prompt": "Un bucle for intenta tres contraseñas y usa break si una es correcta. ¿Cuándo se ejecuta su cláusula else?",
+            "options": [
+              "Solo si el bucle terminó sin ejecutar break",
+              "Solo cuando se ejecuta break",
+              "Nunca, porque for no admite else",
+              "Siempre, al terminar el bucle"
+            ],
+            "correct": 0,
+            "explanation": "La cláusula else de un bucle se ejecuta si este finaliza normalmente; si se interrumpe con break, se omite. Sirve para informar el bloqueo de cuenta."
+          },
+          {
+            "prompt": "Un bucle externo recorre 3 locales y uno interno 4 semanas por local. ¿Cuántas veces se ejecuta la instrucción del bucle interno?",
+            "options": [
+              "4",
+              "12",
+              "3",
+              "7"
+            ],
+            "correct": 1,
+            "explanation": "En bucles anidados, el interno se ejecuta completo por cada iteración del externo: 3 × 4 = 12 ejecuciones."
+          },
+          {
+            "prompt": "¿Por qué 0.1 * 3 == 0.3 devuelve False en Python y qué alternativa es adecuada?",
+            "options": [
+              "Porque Python redondea hacia abajo; usar int()",
+              "Porque falta paréntesis; escribir (0.1 * 3) == 0.3",
+              "Por la representación binaria IEEE 754; usar math.isclose() o decimal",
+              "Porque == no compara números reales; usar is"
+            ],
+            "correct": 2,
+            "explanation": "Los float no representan exactamente 0.1; el resultado es 0.30000000000000004. Para comparar se usa tolerancia con math.isclose() o aritmética decimal exacta."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Modularidad y colecciones: funciones, cadenas, listas y diccionarios",
+      "description": "Al finalizar la unidad, el estudiante descompone programas en funciones reutilizables con parámetros, valores de retorno y documentación, y organiza datos de negocio en cadenas, listas, tuplas y diccionarios para resolver problemas de registro, búsqueda y reporte.",
+      "topics": [
+        "Descomposición funcional y definición de funciones",
+        "Parámetros, retorno, ámbito y documentación",
+        "Cadenas: índices, segmentos y métodos",
+        "Listas, tuplas y comprensiones de listas",
+        "Diccionarios y registros de datos",
+        "Módulos de la biblioteca estándar"
+      ],
+      "slides": [
+        {
+          "title": "Por qué modularizar: descomposición funcional",
+          "bullets": [
+            "Un programa largo y monolítico es difícil de leer, probar y modificar; las funciones dividen el problema en piezas con un propósito.",
+            "Principio DRY (Hunt y Thomas): no repetir conocimiento; si un cálculo aparece dos veces, merece una función.",
+            "Cada función debe hacer una sola cosa y hacerla bien, con un nombre que lo indique, como calcular_igv.",
+            "Ventajas: reutilización, pruebas independientes, trabajo en equipo y ocultamiento de detalles."
+          ],
+          "notes": "Retome el programa de comisiones de la unidad 2 y muéstrelo como un bloque de 120 líneas. Pregunte: si el gerente cambia la regla de devoluciones, ¿dónde hay que modificar? Si está repetida en tres lugares, el riesgo de olvidar uno es alto. Presente el principio DRY de Andrew Hunt y David Thomas, del libro 'The Pragmatic Programmer', y la idea de David Parnas sobre ocultamiento de información, que en 1972 sentó las bases del diseño modular. Muestre luego la misma solución reorganizada en funciones: leer_vendedor, calcular_comision, calcular_bono e imprimir_reporte. El programa principal se lee casi como un pseudocódigo. Pida a los estudiantes que, en parejas, identifiquen tres funciones que podrían extraer de su Tarea 2. Esta descomposición prepara directamente el paradigma orientado a objetos del segundo ciclo."
+        },
+        {
+          "title": "Anatomía de una función en Python",
+          "bullets": [
+            "Se define con def nombre(parámetros): seguido de un bloque indentado.",
+            "return devuelve un valor al código que llamó; sin return, la función devuelve None.",
+            "Parámetros son los nombres en la definición; argumentos son los valores en la llamada.",
+            "Una función se define una vez y se invoca muchas: calcular_igv(59) y calcular_igv(118).",
+            "Diferencia clave: imprimir un resultado no es lo mismo que devolverlo para seguir usándolo."
+          ],
+          "notes": "Escriba en vivo la función calcular_igv que recibe un precio con IGV y devuelve el impuesto. Muestre la diferencia entre una versión que imprime el resultado y otra que lo devuelve. Pregunte: si quiero sumar el IGV de diez productos, ¿cuál me sirve? Solo la que devuelve, porque la que imprime no entrega el valor al programa. Esta confusión entre print y return es uno de los errores conceptuales más persistentes en principiantes, documentado en investigaciones de educación en computación. Explique el flujo de ejecución: al llamar a una función, el programa salta a su definición, ejecuta el bloque y regresa con el valor. Use Python Tutor o el depurador de VS Code para visualizar ese salto y el marco de la función en la pila. Proponga un ejercicio: escribir una función que convierta soles a dólares usando un tipo de cambio recibido como parámetro."
+        },
+        {
+          "title": "Parámetros por defecto, argumentos por nombre y docstrings",
+          "bullets": [
+            "Parámetros por defecto: def precio_final(base, tasa=0.18): permite omitir la tasa en la mayoría de llamadas.",
+            "Argumentos por nombre mejoran la claridad: precio_final(base=100, tasa=0.10).",
+            "Las anotaciones de tipo (precio: float) -> float documentan la intención sin cambiar la ejecución.",
+            "El docstring (PEP 257) describe qué hace la función, sus parámetros, su retorno y sus excepciones.",
+            "Nunca use listas u objetos mutables como valor por defecto; use None y créelos dentro."
+          ],
+          "notes": "Los parámetros por defecto permiten diseñar funciones flexibles. En el contexto peruano, la tasa general de IGV es 18 %, pero existen regímenes especiales; un parámetro por defecto refleja ese hecho. Muestre cómo los argumentos por nombre hacen autoexplicativas las llamadas. Presente las anotaciones de tipo, cada vez más usadas en la industria porque herramientas como mypy y el propio editor detectan errores antes de ejecutar. Escriba un docstring completo y muestre cómo aparece al usar help(precio_final) o al pasar el mouse en VS Code. Explique la trampa del valor por defecto mutable con un ejemplo breve; es un error clásico que aparece en entrevistas técnicas. Pida que a partir de ahora todas las funciones de las tareas tengan docstring y anotaciones de tipo, criterio que se evaluará en la rúbrica."
+        },
+        {
+          "title": "Ámbito de las variables: la regla LEGB",
+          "bullets": [
+            "Las variables creadas dentro de una función son locales: existen solo mientras la función se ejecuta.",
+            "Python busca nombres en orden LEGB: Local, Enclosing (envolvente), Global y Built-in (predefinidos).",
+            "Leer una variable global desde una función es posible, pero modificarla exige la palabra global.",
+            "El uso de variables globales acopla funciones y dificulta las pruebas; prefiera parámetros y retorno.",
+            "Una función bien diseñada depende solo de sus parámetros y comunica resultados mediante return."
+          ],
+          "notes": "Muestre un ejemplo donde una variable total definida dentro de una función no es visible fuera, y otro donde una función intenta incrementar un contador global y produce UnboundLocalError. Este error confunde mucho a los principiantes: explique que al asignar una variable dentro de la función, Python la considera local en toda la función. Presente la regla LEGB con un diagrama de círculos concéntricos. Luego haga la reflexión de diseño: aunque global resuelve el error, acopla la función con el resto del programa, de modo que no puede probarse de forma aislada ni reutilizarse en otro proyecto. Relacione este punto con la pregunta de mantenibilidad del caso Andina Snacks. Pida a los estudiantes revisar su Tarea 2 y eliminar cualquier variable global modificada desde funciones."
+        },
+        {
+          "title": "Funciones puras, efectos secundarios y precondiciones",
+          "bullets": [
+            "Función pura: con los mismos argumentos devuelve siempre el mismo resultado y no modifica nada externo.",
+            "Efectos secundarios: imprimir, leer del teclado, escribir archivos o modificar datos recibidos.",
+            "Buena arquitectura: separar cálculo (funciones puras) de entrada y salida (funciones de interfaz).",
+            "Precondición: lo que debe cumplirse antes de llamar a la función, como precio mayor o igual a cero.",
+            "Las funciones puras son fáciles de probar con assert, base de las pruebas automatizadas de la unidad 4."
+          ],
+          "notes": "Introduzca la idea de diseño por contrato de Bertrand Meyer en su versión más simple: cada función declara qué espera recibir (precondiciones) y qué garantiza entregar (postcondiciones). Muestre cómo separar responsabilidades en el programa de boletas: una función pura calcula montos, otra se encarga de pedir datos y otra de imprimir el comprobante. Pregunte: si mañana el programa debe funcionar en una página web en lugar de la consola, ¿qué funciones se reutilizan sin cambios? Solo las puras. Esta separación es el germen de arquitecturas por capas que verán en Desarrollo de Software Empresarial. Escriba en vivo dos líneas con assert para probar una función pura, por ejemplo, assert calcular_igv(118) == 18.0, y anticipe que en la unidad 4 automatizarán estas pruebas."
+        },
+        {
+          "title": "Cadenas de texto: índices, segmentos e inmutabilidad",
+          "bullets": [
+            "Una cadena es una secuencia de caracteres; texto[0] es el primero y texto[-1] el último.",
+            "El segmento texto[a:b] extrae desde a hasta b-1; ruc[:2] obtiene el prefijo del RUC.",
+            "Las cadenas son inmutables: los métodos devuelven una nueva cadena y no modifican la original.",
+            "len() devuelve la longitud; el operador in verifica si una subcadena está contenida.",
+            "En el RUC, los prefijos 10 y 20 identifican persona natural y persona jurídica, respectivamente."
+          ],
+          "notes": "El RUC peruano es un excelente objeto de estudio: tiene 11 dígitos, los dos primeros indican el tipo de contribuyente (10 para personas naturales, 20 para personas jurídicas, entre otros) y el último es un dígito verificador. Muestre cómo extraer cada parte con segmentos. Explique la inmutabilidad con un intento de modificar ruc[0] = '2', que produce TypeError, y muestre la forma correcta de construir una nueva cadena. Practique índices negativos, que son muy útiles para obtener el último carácter. Plantee un mini reto: dado un RUC de persona natural, extraer el DNI, que corresponde a los dígitos de la posición 2 a la 9. Recuerde que este tipo de dato debe tratarse con responsabilidad, porque se vincula con datos personales protegidos por la Ley 29733, tema que retomaremos en la unidad 4."
+        },
+        {
+          "title": "Métodos de cadenas para limpiar y validar datos",
+          "bullets": [
+            "strip() elimina espacios al inicio y al final; upper() y lower() normalizan mayúsculas.",
+            "replace(',', '.') permite aceptar montos escritos con coma decimal antes de convertirlos.",
+            "split(';') divide una línea en partes; join() las vuelve a unir con un separador.",
+            "isdigit(), isalpha() y startswith() validan formatos como DNI, códigos o prefijos.",
+            "Limpiar datos antes de procesarlos evita la mayoría de errores con entradas de usuarios reales."
+          ],
+          "notes": "En el mundo real los datos llegan sucios: espacios de más, mayúsculas mezcladas, comas en lugar de puntos. Recuerde el caso de la bodega Doña Rosa, donde el programa se caía cuando se escribía 590,50. Muestre cómo una cadena de métodos, como texto.strip().replace(',', '.'), resuelve el problema antes de llamar a float. Trabaje split con una línea de un reporte exportado: 'Ana Torres;Ventas;2450.50'. Explique que los analistas de datos dedican gran parte de su tiempo a limpieza, y que esta habilidad se valora en el mercado laboral. Proponga un ejercicio práctico: normalizar una lista de nombres de distritos de Lima escritos de formas distintas, como ' miraflores', 'MIRAFLORES' y 'Miraflores ', para que el programa los reconozca como el mismo. Pregunte qué problemas causaría no hacerlo en un reporte de ventas por distrito."
+        },
+        {
+          "title": "Listas: colecciones ordenadas y mutables",
+          "bullets": [
+            "Una lista agrupa valores: ventas = [1200.5, 980.0, 1530.75]; se accede por índice desde cero.",
+            "Métodos esenciales: append() añade, insert() inserta, remove() elimina por valor, pop() elimina por posición.",
+            "Funciones útiles: len(), sum(), max(), min() y sorted() resuelven en una línea patrones de la unidad 2.",
+            "Las listas son mutables: dos nombres pueden referirse a la misma lista; copiar exige lista.copy().",
+            "Acceder a un índice inexistente produce IndexError."
+          ],
+          "notes": "Las listas transforman la forma de programar: en lugar de pedir y procesar un dato a la vez, el programa puede almacenar todos los datos y procesarlos varias veces. Muestre cómo sum(ventas) / len(ventas) reemplaza el acumulador y el contador de la unidad 2, y cómo max(ventas) reemplaza el patrón de máximo. Insista en que comprender los patrones manuales sigue siendo importante, porque no siempre existe una función lista. Retome la idea de variables como etiquetas de la unidad 1: si b = a y a es una lista, modificar b modifica a. Ejecute este ejemplo en Python Tutor para que vean las dos flechas apuntando al mismo objeto. Aclare que en este curso usaremos listas como herramienta; su implementación interna, su costo y otras estructuras como pilas y colas se estudiarán en Algoritmos y Estructuras de Datos."
+        },
+        {
+          "title": "Recorridos y comprensiones de listas",
+          "bullets": [
+            "Recorrido directo: for venta in ventas: procesa cada elemento sin usar índices.",
+            "enumerate(lista) entrega índice y valor; zip(a, b) recorre dos listas en paralelo.",
+            "Comprensión de lista: [v * 1.18 for v in valores] crea una lista nueva transformando cada elemento.",
+            "Con filtro: [n for n in notas if n >= 13] obtiene solo las notas aprobatorias.",
+            "Use comprensiones para transformaciones simples; si la lógica es compleja, un for explícito es más legible."
+          ],
+          "notes": "Muestre tres formas de obtener las notas aprobatorias de una sección: con while e índice, con for y append, y con una comprensión de lista. Pregunte cuál es más legible. Las comprensiones son una característica idiomática de Python, inspirada en la notación matemática de conjuntos, y aparecen constantemente en el código profesional. Trabaje zip con dos listas paralelas, nombres y ventas, para imprimir un reporte, y enumerate para numerar las filas. Advierta contra el exceso: una comprensión con varias condiciones y bucles anidados resulta críptica. Cite el principio del Zen de Python: lo legible cuenta. Proponga un ejercicio con datos de temperatura de ciudades peruanas: convertir de Celsius a Fahrenheit con una comprensión y filtrar las ciudades con más de 25 grados, conectando con datos abiertos que publica el SENAMHI."
+        },
+        {
+          "title": "Tuplas y desempaquetado",
+          "bullets": [
+            "Una tupla es una secuencia inmutable: coordenada = (-12.0464, -77.0428) para Lima.",
+            "Se usan para datos que no deben cambiar o que forman una unidad, como (nombre, dni).",
+            "Desempaquetado: lat, lon = coordenada asigna cada elemento a una variable.",
+            "Una función puede devolver varios valores como tupla: return subtotal, igv, total.",
+            "Las tuplas pueden ser claves de diccionario porque son inmutables; las listas no."
+          ],
+          "notes": "Presente la tupla como una lista protegida contra modificaciones. Use el ejemplo de coordenadas geográficas de Lima y de Cusco y pregunte por qué no tendría sentido modificar solo la latitud de una ciudad. Muestre el desempaquetado, que ya usaron sin saberlo en la unidad 1 con horas, resto = minutos // 60, minutos % 60. Luego conecte con funciones: una función desglosar_boleta puede devolver subtotal, IGV y total en una sola llamada, y quien la llama los recibe con desempaquetado. Esta técnica hace el código muy expresivo. Explique que la inmutabilidad de las tuplas tiene una ventaja técnica: pueden usarse como claves de diccionario, tema de la siguiente diapositiva. Pida que reescriban una función de su tarea anterior para que devuelva varios valores en una tupla."
+        },
+        {
+          "title": "Diccionarios: datos organizados por clave",
+          "bullets": [
+            "Un diccionario asocia claves con valores: precios = {'arroz': 4.20, 'azúcar': 3.80}.",
+            "Acceso: precios['arroz']; si la clave no existe, se produce KeyError; get(clave, defecto) evita el error.",
+            "Recorrido: for producto, precio in precios.items(): accede a clave y valor a la vez.",
+            "Uso típico: contar frecuencias, como ventas por distrito, con conteo[d] = conteo.get(d, 0) + 1.",
+            "La búsqueda por clave es muy rápida, independientemente del tamaño del diccionario."
+          ],
+          "notes": "El diccionario es probablemente la estructura más útil en Python profesional, y también la base del formato JSON que usarán en la unidad 4 y en Desarrollo Web. Muestre un catálogo de precios de una bodega y cómo consultarlo. Explique la diferencia entre acceder con corchetes y con get: el primero falla si la clave no existe, el segundo devuelve un valor por defecto. Trabaje el patrón de conteo de frecuencias con un ejemplo de pedidos por distrito de una empresa de delivery en Lima. Mencione, sin profundizar, que la rapidez de la búsqueda se debe a una técnica llamada tabla hash, que estudiarán en el tercer ciclo. Pregunte: ¿qué estructura usarían para guardar el stock de 500 productos identificados por su código? Discuta por qué un diccionario es mejor que dos listas paralelas."
+        },
+        {
+          "title": "Registros de negocio: listas de diccionarios",
+          "bullets": [
+            "Una lista de diccionarios modela una tabla: cada diccionario es una fila con campos nombrados.",
+            "Ejemplo: empleados = [{'nombre': 'Ana', 'sueldo': 2500, 'afp': True}, ...].",
+            "Filtrar: [e for e in empleados if e['sueldo'] > 3000]; ordenar: sorted(empleados, key=lambda e: e['sueldo']).",
+            "Esta estructura anticipa las tablas de bases de datos y el formato JSON de las aplicaciones web.",
+            "Diseñe las claves con nombres consistentes y sin tildes ni espacios para evitar errores."
+          ],
+          "notes": "Esta diapositiva integra todo lo visto: listas, diccionarios, comprensiones y funciones. Construya en vivo una pequeña planilla de seis trabajadores con campos nombre, cargo, sueldo y sistema pensionario. Escriba funciones para calcular el descuento pensionario de cada uno, filtrar a quienes ganan más de la remuneración mínima vital y ordenar por sueldo de mayor a menor. Introduzca lambda solo como una forma breve de indicar el criterio de ordenamiento, sin profundizar. Señale que esta estructura es exactamente la forma que tienen los datos cuando se leen de un archivo CSV o se reciben de una API en formato JSON, de modo que lo que aprenden aquí se aplicará directamente en la unidad 4. Pregunte a la clase qué campos añadirían para cumplir con las obligaciones laborales peruanas, como fecha de ingreso para calcular la CTS."
+        },
+        {
+          "title": "Módulos y biblioteca estándar",
+          "bullets": [
+            "Un módulo es un archivo .py con funciones reutilizables; se usa con import modulo o from modulo import funcion.",
+            "math ofrece sqrt, ceil, floor e isclose; random genera datos de prueba; datetime maneja fechas.",
+            "Se pueden crear módulos propios, como validaciones.py, e importarlos desde otros programas.",
+            "La condición if __name__ == '__main__': permite que un archivo funcione como programa y como módulo.",
+            "Python incluye una biblioteca estándar extensa: antes de programar algo, conviene verificar si ya existe."
+          ],
+          "notes": "Muestre la filosofía de 'baterías incluidas' de Python: la biblioteca estándar resuelve gran cantidad de tareas sin instalar nada. Trabaje datetime para calcular cuántos días faltan para el vencimiento de una declaración mensual según el cronograma de SUNAT, que depende del último dígito del RUC. Use random para generar datos de prueba de ventas sin exponer información real de clientes. Luego cree un módulo propio llamado validaciones.py con funciones como validar_dni y validar_ruc, e impórtelo desde el programa principal. Explique el propósito de if __name__ == '__main__' con un ejemplo concreto: permite incluir pruebas en el módulo que no se ejecutan al importarlo. Recalque que la modularidad no solo es dividir en funciones, sino también en archivos, base de la organización de proyectos que verán en la unidad 4."
+        },
+        {
+          "title": "Caso aplicado: validación del dígito verificador del RUC",
+          "bullets": [
+            "El RUC tiene 11 dígitos; el último es un dígito verificador calculado con módulo 11.",
+            "Se multiplican los 10 primeros dígitos por los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 y se suman los productos.",
+            "Se calcula 11 menos el residuo de la suma entre 11; si resulta 10 se usa 0 y si resulta 11 se usa 1.",
+            "La función combina cadenas, listas, zip, sum y selección múltiple en menos de quince líneas.",
+            "Validar el dígito evita registrar comprobantes con RUC mal digitados antes de consultar a SUNAT."
+          ],
+          "notes": "Este ejemplo integra toda la unidad con un problema real. El algoritmo de módulo 11 es una técnica estándar de detección de errores de digitación, usada también en códigos de barras e ISBN, aunque con pesos distintos. Desarrolle la función paso a paso: primero validar que la cadena tenga 11 dígitos con len e isdigit, luego convertir cada carácter a entero con una comprensión, multiplicar por los pesos usando zip y sum, y aplicar la regla final. Pruebe con un RUC válido y con el mismo RUC alterando un dígito para demostrar que la validación lo detecta. Aclare que un dígito verificador correcto no garantiza que el contribuyente exista o esté activo; para eso se consulta el padrón de SUNAT. Pida a los estudiantes escribir las pruebas con assert antes de ver la solución completa, practicando así el pensamiento orientado a pruebas."
+        }
+      ],
+      "reading": {
+        "title": "Diseñar con funciones y organizar datos: de los scripts a los programas modulares",
+        "minutes": 40,
+        "content": "## 1. El problema de los programas monolíticos\n\nA medida que un programa crece, escribirlo como una sola secuencia de instrucciones se vuelve inviable. David Parnas, en un artículo clásico de 1972, propuso dividir los sistemas en módulos que **oculten decisiones de diseño** propensas a cambiar. Andrew Hunt y David Thomas resumieron una idea complementaria en el principio **DRY** (*Don't Repeat Yourself*): cada pieza de conocimiento debe tener una única representación en el sistema. En Python, la primera herramienta para lograrlo es la función.\n\n## 2. Funciones bien diseñadas\n\nUna función recibe datos mediante parámetros, realiza una tarea y devuelve un resultado con `return`:\n\n```python\ndef desglosar_boleta(total: float, tasa: float = 0.18) -> tuple[float, float]:\n    \"\"\"Devuelve (valor_venta, igv) de un monto que incluye IGV.\n\n    Precondición: total >= 0.\n    \"\"\"\n    valor_venta = round(total / (1 + tasa), 2)\n    return valor_venta, round(total - valor_venta, 2)\n\nbase, igv = desglosar_boleta(59)      # (50.0, 9.0)\n```\n\nCuatro buenas prácticas aparecen en este fragmento: un nombre que describe la acción, un parámetro por defecto para la tasa general, anotaciones de tipo y un *docstring* que declara la precondición. Además, la función es **pura**: no lee del teclado ni imprime, por lo que puede reutilizarse en una aplicación de consola, en una página web o en una prueba automatizada.\n\n### Ámbito\n\nLas variables creadas dentro de una función son locales. Python resuelve los nombres según la regla **LEGB** (local, envolvente, global, predefinido). Modificar variables globales desde funciones acopla el código y dificulta las pruebas; la alternativa correcta es recibir datos por parámetros y devolver resultados.\n\n## 3. Cadenas: el dato más común\n\nCasi todos los datos llegan como texto. Las cadenas en Python son secuencias **inmutables** con índices desde cero y segmentos `texto[a:b]`. Los métodos `strip`, `upper`, `replace`, `split` e `isdigit` permiten limpiar y validar entradas antes de procesarlas.\n\n## 4. Caso integrador: el dígito verificador del RUC\n\nEl RUC peruano tiene 11 dígitos; el último se calcula con el algoritmo de **módulo 11**. Se multiplican los diez primeros dígitos por los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3, 2; se suma; y el dígito verificador es:\n\n$$ dv = 11 - (S \\bmod 11), \\quad \\text{con } 10 \\to 0 \\text{ y } 11 \\to 1 $$\n\n```python\nPESOS = (5, 4, 3, 2, 7, 6, 5, 4, 3, 2)\n\ndef ruc_valido(ruc: str) -> bool:\n    \"\"\"Verifica formato y dígito verificador de un RUC peruano.\"\"\"\n    ruc = ruc.strip()\n    if len(ruc) != 11 or not ruc.isdigit():\n        return False\n    if ruc[:2] not in (\"10\", \"15\", \"17\", \"20\"):\n        return False\n    digitos = [int(c) for c in ruc[:10]]            # comprensión de lista\n    suma = sum(d * p for d, p in zip(digitos, PESOS))\n    dv = 11 - suma % 11\n    if dv == 10:\n        dv = 0\n    elif dv == 11:\n        dv = 1\n    return dv == int(ruc[10])\n```\n\nLa función combina cadenas (`strip`, segmentos, `isdigit`), una tupla constante, una comprensión de lista, `zip`, `sum` y selección múltiple. Note el límite de su alcance: un dígito correcto solo prueba que el número está **bien formado**; la existencia y el estado del contribuyente se verifican en el padrón de SUNAT.\n\n## 5. Listas, tuplas y diccionarios\n\n| Estructura | Mutable | Acceso | Uso típico |\n|---|---|---|---|\n| `list` | Sí | por posición | ventas del día, notas de una sección |\n| `tuple` | No | por posición | coordenadas, retorno múltiple, constantes |\n| `dict` | Sí | por clave | catálogo de precios, conteo de frecuencias |\n\nLas listas reemplazan muchos patrones manuales: `sum(ventas) / len(ventas)` calcula un promedio y `max(ventas)` el mayor valor. Las comprensiones expresan transformaciones y filtros con concisión:\n\n```python\naprobados = [n for n in notas if n >= 13]\n```\n\nLos diccionarios asocian claves con valores y permiten búsquedas muy rápidas. Un patrón fundamental es el conteo de frecuencias:\n\n```python\npedidos_por_distrito = {}\nfor d in [\"Surco\", \"Ate\", \"Surco\", \"Comas\"]:\n    pedidos_por_distrito[d] = pedidos_por_distrito.get(d, 0) + 1\n# {'Surco': 2, 'Ate': 1, 'Comas': 1}\n```\n\nFinalmente, una **lista de diccionarios** modela una tabla de registros, como una planilla. Es la misma forma que adoptan los datos leídos de un CSV o recibidos en formato JSON, puente directo hacia la unidad 4 y hacia el curso de Base de Datos.\n\n## 6. Ideas clave\n\n- Una función hace una sola cosa, se nombra con un verbo y se documenta.\n- Separar cálculo puro de entrada y salida facilita la reutilización y las pruebas.\n- Elegir la estructura de datos adecuada simplifica el algoritmo.\n- La biblioteca estándar y los módulos propios organizan proyectos más grandes.\n"
+      },
+      "case": {
+        "title": "Caso: El registro de proveedores de Textiles Gamarra Express",
+        "content": "**Textiles Gamarra Express EIRL** es una pequeña empresa de confección ubicada en La Victoria, Lima, con 22 trabajadores y ventas anuales cercanas a S/ 1.8 millones. Compra telas, hilos y avíos a unos 60 proveedores, muchos de ellos personas naturales con negocio. Cada compra debe sustentarse con una factura electrónica válida para que el IGV pagado pueda usarse como crédito fiscal.\n\nEl área de compras, a cargo de Sandra Flores, mantiene el registro de proveedores en un archivo de texto donde cada línea tiene el formato `RUC;razón social;rubro;teléfono`. En el último año se detectaron varios problemas: RUC con 10 dígitos por errores de digitación, el mismo proveedor registrado dos veces con nombres escritos de forma distinta, espacios sobrantes que impedían las búsquedas y teléfonos con formatos variados. En una revisión interna, el contador estimó que S/ 6 300 de crédito fiscal estuvieron en riesgo por comprobantes asociados a RUC mal registrados.\n\nJhon, técnico de soporte de la empresa y estudiante de Computación, recibió el encargo de escribir un programa de mantenimiento del registro. Su primer prototipo es un único archivo de 250 líneas sin funciones: lee los datos, valida, busca e imprime todo en el mismo bloque. Las validaciones del RUC están copiadas en tres lugares distintos, y en uno de ellos Jhon olvidó actualizar una corrección.\n\nLa gerente, Patricia Mendoza, quiere que el programa permita: validar el RUC de cada proveedor, incluido el dígito verificador; normalizar razones sociales; detectar duplicados; buscar un proveedor por RUC en forma instantánea; y obtener un reporte de cuántos proveedores hay por rubro. Además, desea reutilizar las validaciones en una futura aplicación web que el área de ventas planea contratar.\n\nJhon tiene dos semanas. Debe decidir cómo reestructurar el programa: qué funciones crear, qué estructuras de datos usar para cada necesidad y cómo demostrar a Patricia que las validaciones son confiables.",
+        "questions": [
+          "Proponga la descomposición funcional del programa: nombre, parámetros, retorno y responsabilidad de al menos seis funciones.",
+          "¿Qué estructura de datos (lista, tupla o diccionario) usaría para buscar por RUC, detectar duplicados y contar por rubro? Justifique cada elección.",
+          "¿Cómo se explica, desde el principio DRY, el error que Jhon cometió al copiar la validación del RUC en tres lugares?",
+          "¿Qué decisiones de diseño permitirían reutilizar las validaciones en la futura aplicación web sin reescribirlas?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Módulo de validación y gestión de proveedores",
+        "instructions": "**Objetivo:** diseñar un programa modular que combine funciones y estructuras de datos para resolver un problema real de gestión.\n\n**Contexto:** el caso Textiles Gamarra Express.\n\n**Qué entregar:**\n\n1. **Módulo `validaciones.py`** con funciones puras documentadas (docstring y anotaciones de tipo): `ruc_valido`, `normalizar_razon_social`, `normalizar_telefono` y al menos una más de su propuesta. Incluya en el bloque `if __name__ == \"__main__\":` como mínimo diez pruebas con `assert`.\n2. **Programa `proveedores.py`** que importe el módulo y, a partir de una lista de al menos 15 proveedores ficticios (definida en el código como lista de diccionarios), permita mediante un menú:\n   - Registrar un proveedor validando sus datos.\n   - Buscar por RUC usando un diccionario indexado.\n   - Detectar duplicados por RUC.\n   - Mostrar un reporte de proveedores por rubro, ordenado de mayor a menor.\n3. **Diagrama de descomposición funcional** (una página) que muestre qué función llama a cuál.\n\n**Restricciones:** no usar variables globales modificables; cada función con una sola responsabilidad; nombres según PEP 8. Use RUC ficticios generados por usted, nunca datos reales de personas.\n\n**Formato:** `Apellido_Tarea3.zip` en el aula virtual al cierre de la semana 12.",
+        "rubric": [
+          {
+            "name": "Descomposición funcional y diagrama",
+            "points": 5
+          },
+          {
+            "name": "Corrección de validaciones y pruebas con assert",
+            "points": 6
+          },
+          {
+            "name": "Elección y uso de estructuras de datos",
+            "points": 5
+          },
+          {
+            "name": "Documentación, estilo y ausencia de globales",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Funciones y colecciones",
+        "questions": [
+          {
+            "prompt": "Una función calcula el IGV e imprime el resultado con print, pero no tiene return. ¿Qué devuelve al asignarla a una variable?",
+            "options": [
+              "Una cadena con el texto impreso",
+              "Un error de sintaxis",
+              "El IGV calculado",
+              "None"
+            ],
+            "correct": 3,
+            "explanation": "Sin return, toda función devuelve None. Imprimir no es devolver: el valor no queda disponible para seguir operando con él."
+          },
+          {
+            "prompt": "Si ruc = '20512345678', ¿qué devuelve la expresión ruc[2:10]?",
+            "options": [
+              "'51234567'",
+              "'512345678'",
+              "'20512345'",
+              "'5123456'"
+            ],
+            "correct": 0,
+            "explanation": "El segmento incluye desde el índice 2 hasta el 9; son ocho caracteres: 51234567. El límite superior no se incluye."
+          },
+          {
+            "prompt": "Necesita encontrar instantáneamente el precio de un producto a partir de su código entre 5 000 productos. ¿Qué estructura es más adecuada?",
+            "options": [
+              "Una tupla de códigos ordenados",
+              "Un diccionario con el código como clave",
+              "Una lista de precios recorrida con for",
+              "Dos listas paralelas de códigos y precios"
+            ],
+            "correct": 1,
+            "explanation": "El diccionario permite búsquedas por clave muy rápidas sin recorrer todos los elementos, a diferencia de las listas."
+          },
+          {
+            "prompt": "¿Qué produce la comprensión [n * 2 for n in [8, 13, 15] if n >= 13]?",
+            "options": [
+              "[13, 15]",
+              "[26]",
+              "[26, 30]",
+              "[16, 26, 30]"
+            ],
+            "correct": 2,
+            "explanation": "El filtro conserva 13 y 15 y la transformación los duplica, resultando 26 y 30. El 8 se descarta antes de transformarse."
+          },
+          {
+            "prompt": "Una función modifica una variable global contador sin declararla global y se produce UnboundLocalError. ¿Cuál es la mejor solución de diseño?",
+            "options": [
+              "Convertir el contador en cadena",
+              "Declarar global contador dentro de la función",
+              "Renombrar la variable para evitar conflicto",
+              "Recibir el contador como parámetro y devolver el nuevo valor"
+            ],
+            "correct": 3,
+            "explanation": "Aunque global elimina el error, acopla la función al resto del programa. Pasar parámetros y devolver resultados mantiene la función independiente y fácil de probar."
+          },
+          {
+            "prompt": "Tras ejecutar a = [1, 2]; b = a; b.append(3), ¿cuál es el valor de a?",
+            "options": [
+              "[1, 2, 3]",
+              "[3]",
+              "[1, 2]",
+              "Se produce un error"
+            ],
+            "correct": 0,
+            "explanation": "a y b referencian la misma lista mutable; modificarla por un nombre la modifica para ambos. Para independizarlas se usa a.copy()."
+          },
+          {
+            "prompt": "En el algoritmo de módulo 11 del RUC, si 11 menos el residuo resulta 10, ¿cuál es el dígito verificador?",
+            "options": [
+              "10",
+              "0",
+              "1",
+              "El RUC es inválido"
+            ],
+            "correct": 1,
+            "explanation": "Según la regla, un resultado de 10 se reemplaza por 0 y uno de 11 por 1, para que el dígito verificador sea siempre un solo dígito."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Programas robustos: archivos, excepciones, pruebas y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante desarrolla un programa integrador que persiste datos en archivos CSV y JSON, maneja excepciones, se verifica con pruebas automatizadas y se versiona con Git, aplicando buenas prácticas de estilo y criterios éticos en el tratamiento de datos personales.",
+      "topics": [
+        "Archivos de texto, CSV y JSON",
+        "Manejo de excepciones y programación defensiva",
+        "Pruebas automatizadas: assert, valores límite y pytest",
+        "Depuración, estilo PEP 8 y control de versiones con Git",
+        "Ética y protección de datos personales (Ley 29733)",
+        "Proyecto integrador: diseño, desarrollo y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Persistencia: por qué los programas necesitan archivos",
+          "bullets": [
+            "Las variables viven en memoria RAM y se pierden al cerrar el programa; los archivos conservan los datos.",
+            "Archivos de texto: legibles por personas (TXT, CSV, JSON); archivos binarios: imágenes, ejecutables, bases de datos.",
+            "La codificación UTF-8 representa tildes y la ñ; omitirla en Windows provoca caracteres extraños.",
+            "Rutas relativas y absolutas: el módulo pathlib construye rutas portables entre sistemas operativos.",
+            "Los archivos son el paso previo a las bases de datos relacionales del tercer ciclo."
+          ],
+          "notes": "Inicie con una pregunta provocadora: ¿qué pasó con los proveedores que registraron en la Tarea 3 cuando cerraron el programa? Desaparecieron. Esa es la motivación de la persistencia. Conecte con Arquitectura de Computadoras: la memoria principal es volátil y el almacenamiento secundario es persistente. Explique la importancia de la codificación: en Windows, la codificación por defecto ha sido históricamente distinta de UTF-8, por lo que un archivo con 'Año' o 'Ñaña' puede leerse mal si no se especifica encoding='utf-8'. Este detalle provoca errores reales en empresas peruanas que intercambian archivos entre sistemas. Presente pathlib como la forma moderna de manejar rutas. Aclare que los archivos planos tienen límites, como la concurrencia y la integridad, que motivan el uso de bases de datos, tema del curso de Base de Datos del tercer ciclo."
+        },
+        {
+          "title": "Lectura y escritura de archivos con with open",
+          "bullets": [
+            "with open('ventas.txt', 'r', encoding='utf-8') as f: abre el archivo y lo cierra automáticamente.",
+            "Modos: 'r' lectura, 'w' escritura que sobrescribe, 'a' añade al final, 'x' crea solo si no existe.",
+            "Recorrer for linea in f: lee línea por línea sin cargar todo el archivo en memoria.",
+            "f.write(texto) no agrega salto de línea; debe incluirse explícitamente con el carácter de nueva línea.",
+            "Error frecuente: abrir con 'w' un archivo existente borra su contenido sin aviso."
+          ],
+          "notes": "Muestre en vivo la escritura de un pequeño log de ventas y su lectura posterior. Explique el gestor de contexto with: garantiza que el archivo se cierre incluso si ocurre un error, lo que evita archivos corruptos o bloqueados. Haga una demostración del peligro del modo 'w': abra un archivo con datos importantes y vea cómo queda vacío. Pregunte cómo evitarían esa pérdida en un sistema real; respuestas válidas son usar el modo 'x', verificar existencia con pathlib o hacer copias de respaldo. Muestre la lectura línea por línea y explique por qué es preferible para archivos grandes, como un registro de ventas de un año con cientos de miles de líneas. Proponga un ejercicio: un programa que registre en un archivo la fecha, hora y monto de cada venta, añadiendo sin sobrescribir."
+        },
+        {
+          "title": "Archivos CSV: el formato de intercambio del mundo empresarial",
+          "bullets": [
+            "CSV almacena tablas como texto: una fila por línea y columnas separadas por coma o punto y coma.",
+            "En configuraciones regionales de Perú, Excel suele exportar CSV con punto y coma como separador.",
+            "csv.DictReader convierte cada fila en un diccionario usando la primera línea como encabezados.",
+            "csv.DictWriter escribe listas de diccionarios; newline='' evita líneas en blanco adicionales en Windows.",
+            "Todo valor leído de un CSV es texto: convierta y valide antes de operar."
+          ],
+          "notes": "El formato CSV es la lengua franca del intercambio de datos: lo exportan Excel, los sistemas contables, las plataformas de comercio electrónico y muchos portales de datos abiertos del Estado peruano, como la Plataforma Nacional de Datos Abiertos. Muestre un archivo de ventas exportado desde Excel con separador de punto y coma, situación típica en computadoras con configuración regional en español. Lea el archivo con DictReader indicando delimiter=';' y observe que cada fila es un diccionario, exactamente la estructura que trabajaron en la unidad 3. Calcule el total de ventas por vendedor con el patrón de conteo en diccionario. Insista en que los valores llegan como texto, y que montos con coma decimal deben normalizarse. Pregunte a la clase qué problemas podría causar un nombre de cliente que contenga el separador, y explique cómo el módulo csv maneja las comillas."
+        },
+        {
+          "title": "JSON: datos estructurados para aplicaciones",
+          "bullets": [
+            "JSON representa objetos y listas con una sintaxis casi idéntica a los diccionarios y listas de Python.",
+            "json.dump(datos, f, ensure_ascii=False, indent=2) guarda con tildes legibles y formato ordenado.",
+            "json.load(f) reconstruye la estructura de Python a partir del archivo.",
+            "JSON admite objetos anidados, por ejemplo, un cliente con una lista de pedidos.",
+            "Es el formato estándar de las API web, como las de servicios de facturación electrónica."
+          ],
+          "notes": "Presente JSON como el formato que conecta su programa con el mundo de las aplicaciones web y móviles. Muestre que un diccionario de Python y un objeto JSON se ven casi iguales, con pequeñas diferencias como true y false en minúscula y la ausencia de tuplas. Guarde el registro de proveedores de la Tarea 3 en un archivo JSON y vuelva a cargarlo, demostrando la persistencia completa del programa. Explique el parámetro ensure_ascii=False, sin el cual las tildes aparecen como secuencias de escape. Mencione que los operadores de servicios electrónicos y muchas plataformas de pago peruanas exponen API que intercambian datos en JSON, tema que trabajarán en Desarrollo Web y Desarrollo de Aplicaciones Móviles. Pregunte: ¿cuándo convendría CSV y cuándo JSON? Concluyan que CSV sirve para tablas planas y JSON para estructuras anidadas."
+        },
+        {
+          "title": "Excepciones: manejar lo inesperado",
+          "bullets": [
+            "Una excepción es un evento que interrumpe el flujo normal: ValueError, FileNotFoundError, ZeroDivisionError, KeyError.",
+            "try: contiene el código que puede fallar; except TipoError: define cómo responder.",
+            "else: se ejecuta si no hubo error; finally: se ejecuta siempre, útil para liberar recursos.",
+            "Capture excepciones específicas; un except genérico oculta errores de programación.",
+            "Principio EAFP de Python: es más fácil pedir perdón que permiso; intentar y manejar el fallo."
+          ],
+          "notes": "Retome el caso de la bodega Doña Rosa: el programa se cerraba con un mensaje en inglés cuando se escribía 590,50. Ahora tienen la herramienta definitiva: try y except ValueError, mostrando un mensaje claro y volviendo a pedir el dato. Muestre la jerarquía básica de excepciones y la importancia de capturar la específica. Haga la demostración del antipatrón: un except sin tipo que captura todo, incluso un NameError por variable mal escrita, ocultando un error de programación que debería corregirse. Explique la filosofía EAFP frente a LBYL (mirar antes de saltar), ambas válidas según el contexto. Proponga un ejercicio: abrir un archivo de ventas que puede no existir, manejando FileNotFoundError con un mensaje útil para el usuario. Pregunte a la clase qué mensaje de error sería apropiado para una cajera sin conocimientos técnicos."
+        },
+        {
+          "title": "Programación defensiva: validar y lanzar excepciones",
+          "bullets": [
+            "raise ValueError('mensaje') señala que una función recibió datos que violan su precondición.",
+            "Las funciones de cálculo lanzan excepciones; las funciones de interfaz las capturan y comunican al usuario.",
+            "Mensajes de error útiles indican qué falló y cómo corregirlo: 'El RUC debe tener 11 dígitos'.",
+            "Validar en el borde: los datos se verifican al ingresar al sistema, no en cada cálculo interno.",
+            "Registrar errores con el módulo logging facilita el diagnóstico en producción."
+          ],
+          "notes": "Esta diapositiva conecta el diseño por contrato de la unidad 3 con las excepciones. Una función pura como calcular_comision no debe imprimir mensajes ni pedir datos de nuevo; si recibe ventas negativas, lanza ValueError. La función de interfaz que pidió el dato captura la excepción y decide qué hacer. Esta separación de responsabilidades permite reutilizar la función en otra interfaz. Muestre el módulo logging como alternativa profesional a llenar el código de print: registra eventos con niveles como INFO, WARNING y ERROR, y puede escribir en archivos. Comente que en sistemas reales los registros de errores son la principal fuente de información para el soporte técnico. Pida a los estudiantes revisar los mensajes de error de su proyecto y reescribirlos pensando en un usuario no técnico, por ejemplo, la asistente administrativa de una mype."
+        },
+        {
+          "title": "Diseño de casos de prueba: partición y valores límite",
+          "bullets": [
+            "Partición de equivalencia: dividir las entradas en clases que el programa trata igual y probar un representante de cada una.",
+            "Análisis de valores límite: probar justo en, debajo y encima de cada frontera, como 12, 13 y 14.",
+            "Cada caso de prueba especifica entrada, resultado esperado y resultado obtenido.",
+            "Incluir casos inválidos: texto en lugar de número, campos vacíos, archivos inexistentes.",
+            "Myers: probar es ejecutar un programa con la intención de encontrar errores, no de demostrar que funciona."
+          ],
+          "notes": "Glenford Myers, en 'The Art of Software Testing', definió la prueba como el proceso de ejecutar un programa con la intención de encontrar errores. Esta definición cambia la actitud del programador: una buena prueba es la que descubre un defecto. Trabaje la partición de equivalencia con la escala vigesimal: clases inválidas (menor que 0 y mayor que 20), desaprobado (0 a 12) y aprobado (13 a 20), con subclases para cada categoría de desempeño. Luego aplique valores límite: -1, 0, 12, 13, 20 y 21. Muestre cómo esta técnica sistemática habría detectado el error de Jorge en el caso Andina Snacks con ventas de exactamente S/ 40 000. Pida que construyan la tabla de pruebas de su proyecto integrador con estas técnicas. Esta disciplina se profundizará en Auditoría y Calidad de Sistemas del sexto ciclo."
+        },
+        {
+          "title": "Pruebas automatizadas con assert y pytest",
+          "bullets": [
+            "assert condicion, 'mensaje' detiene el programa si la condición es falsa; es la prueba más simple.",
+            "pytest descubre funciones cuyo nombre empieza con test_ en archivos test_*.py y las ejecuta.",
+            "Una prueba sigue el patrón preparar, actuar y verificar (Arrange, Act, Assert).",
+            "pytest.raises(ValueError) verifica que una función lance la excepción esperada ante datos inválidos.",
+            "Ejecutar las pruebas tras cada cambio detecta regresiones: errores que reaparecen al modificar código."
+          ],
+          "notes": "Muestre la evolución: de pruebas manuales en consola a assert y de assert a pytest, la herramienta de pruebas más usada en el ecosistema Python. Escriba un archivo test_validaciones.py con cinco pruebas para ruc_valido y calcular_comision, ejecútelas y provoque un fallo modificando intencionalmente una función. Observe cómo pytest señala exactamente qué prueba falló y con qué valores. Introduzca el concepto de regresión con una situación concreta: el gerente pide añadir el tramo de 5 % y, al modificar el código, se rompe el tramo de 4 %; las pruebas automatizadas lo detectan en segundos. Mencione el desarrollo guiado por pruebas, propuesto por Kent Beck, en el que se escribe la prueba antes que el código, y anime a probarlo en el proyecto. pytest se instala con pip, por lo que es buena ocasión para mostrar los entornos virtuales."
+        },
+        {
+          "title": "Depuración sistemática",
+          "bullets": [
+            "Reproducir el error con datos concretos antes de intentar corregirlo.",
+            "Formular una hipótesis sobre la causa y verificarla; evitar cambios al azar.",
+            "Usar puntos de interrupción en VS Code para pausar la ejecución e inspeccionar variables.",
+            "Ejecución paso a paso: step over avanza una línea, step into entra en la función llamada.",
+            "Después de corregir, agregar una prueba que habría detectado el error para que no reaparezca."
+          ],
+          "notes": "La depuración es un proceso científico: observar, formular hipótesis, experimentar y concluir. Muchos principiantes depuran cambiando cosas al azar hasta que algo funciona, lo que suele introducir nuevos errores. Haga una demostración completa con el depurador de VS Code sobre un programa con un error lógico sembrado, por ejemplo, un promedio de ventas incorrecto porque el contador se incrementa antes de validar. Coloque un punto de interrupción, inspeccione variables y avance paso a paso hasta encontrar la causa. Mencione la técnica del patito de goma, popularizada por Hunt y Thomas: explicar el código en voz alta línea por línea suele revelar el error. Insista en el último paso: toda corrección debe acompañarse de una prueba automatizada. Proponga un desafío por equipos con tres programas defectuosos y un tiempo límite."
+        },
+        {
+          "title": "Código limpio: estilo PEP 8 y refactorización",
+          "bullets": [
+            "PEP 8: indentación de 4 espacios, líneas de hasta 79 caracteres, dos líneas en blanco entre funciones.",
+            "Nombres que revelan intención: calcular_descuento_afp mejor que calc o f1.",
+            "Comentarios que explican el porqué, no el qué; el código debe explicar el qué por sí mismo.",
+            "Refactorizar es mejorar la estructura sin cambiar el comportamiento, con las pruebas como red de seguridad.",
+            "Herramientas como ruff o black verifican y formatean el estilo automáticamente."
+          ],
+          "notes": "Robert C. Martin, en 'Clean Code', sostiene que la proporción de tiempo dedicado a leer código frente a escribirlo supera ampliamente diez a uno. Por eso la legibilidad es una inversión. Muestre un fragmento real de un estudiante anónimo, con nombres crípticos, comentarios redundantes y funciones de cincuenta líneas, y refactorícelo en vivo en pequeños pasos, ejecutando las pruebas después de cada cambio. Martin Fowler definió la refactorización precisamente así: cambios pequeños que preservan el comportamiento verificable. Muestre un formateador automático y explique que en equipos profesionales el estilo no se discute, se automatiza. Pida que cada estudiante intercambie su proyecto con un compañero para una revisión de código de quince minutos, usando una lista de verificación basada en PEP 8 y en los principios vistos en el curso."
+        },
+        {
+          "title": "Control de versiones con Git: lo esencial",
+          "bullets": [
+            "Git registra la historia de un proyecto como una secuencia de confirmaciones (commits) con autor, fecha y mensaje.",
+            "Flujo básico: git init, git add, git commit -m 'mensaje', git log para revisar la historia.",
+            "Permite volver a una versión anterior que funcionaba y comparar cambios con git diff.",
+            "Plataformas como GitHub o GitLab alojan repositorios remotos y facilitan el trabajo en equipo.",
+            "Un archivo .gitignore evita subir datos sensibles, contraseñas o archivos temporales."
+          ],
+          "notes": "Retome el problema del caso Doña Rosa: nadie sabía qué versión del programa se usó cada mes. Git resuelve exactamente ese problema. Creado por Linus Torvalds en 2005 para el desarrollo del núcleo Linux, hoy es el estándar de la industria. Haga una demostración: inicializar un repositorio para el proyecto integrador, hacer tres commits con mensajes descriptivos, introducir un error y volver a la versión anterior. Enseñe a redactar buenos mensajes de commit en modo imperativo, como 'Agrega validación de RUC'. Explique .gitignore y su relevancia ética: subir por error un archivo con datos personales de clientes a un repositorio público es un incidente de seguridad. Aclare que ramas, fusiones y flujos colaborativos se profundizarán en cursos posteriores. El repositorio con historial de commits será parte de la evidencia del proyecto integrador."
+        },
+        {
+          "title": "Ética profesional y protección de datos personales",
+          "bullets": [
+            "La Ley 29733 y su reglamento regulan el tratamiento de datos personales en el Perú.",
+            "Datos como DNI, dirección, teléfono, salud o ingresos requieren consentimiento y finalidad legítima.",
+            "Principios: legalidad, consentimiento, finalidad, proporcionalidad, calidad y seguridad.",
+            "En el desarrollo: usar datos ficticios en pruebas, minimizar datos recolectados y proteger archivos.",
+            "La Autoridad Nacional de Protección de Datos Personales del MINJUSDH puede sancionar incumplimientos."
+          ],
+          "notes": "Todo programador manipula datos de personas, y en el Perú esa actividad está regulada por la Ley 29733, Ley de Protección de Datos Personales, y su reglamento. La autoridad competente forma parte del Ministerio de Justicia y Derechos Humanos y ha impuesto sanciones a empresas por tratamientos indebidos. Explique los principios de la ley en términos prácticos para un programador: no recolectar más datos de los necesarios (proporcionalidad), no usarlos para fines distintos (finalidad) y protegerlos (seguridad). Conecte con decisiones concretas del curso: por qué las tareas exigen datos ficticios, por qué no se suben archivos con DNI reales a repositorios públicos y por qué los archivos de clientes no deben enviarse por correo sin protección. Plantee un dilema: un jefe pide copiar la base de clientes a una memoria USB personal para trabajar desde casa. ¿Qué haría? Discutan en grupos."
+        },
+        {
+          "title": "Proyecto integrador: del requerimiento a la sustentación",
+          "bullets": [
+            "Fase 1, análisis: requerimientos funcionales, tabla de entradas y salidas, casos de uso principales.",
+            "Fase 2, diseño: descomposición funcional, estructuras de datos y formato de archivos.",
+            "Fase 3, construcción: desarrollo incremental con commits frecuentes y pruebas automatizadas.",
+            "Fase 4, verificación: tabla de pruebas con particiones y valores límite, y revisión por pares.",
+            "Fase 5, sustentación: demostración en vivo de 10 minutos y respuesta a preguntas técnicas."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso y como una muestra de portafolio profesional. Cada estudiante, o pareja, resuelve un problema real de una organización peruana: una mype, un área administrativa o una institución educativa. El sistema debe ejecutarse en consola, persistir datos en CSV o JSON, organizarse en módulos con funciones documentadas, manejar excepciones, incluir pruebas con pytest y estar versionado con Git. Muestre ejemplos de temas aprobados en ciclos anteriores: control de inventario de una ferretería, registro de asistencia de un taller, gestión de citas de un consultorio veterinario y control de caja chica. Explique el cronograma de las semanas 13 a 16 y los hitos de entrega. Recalque que la sustentación evalúa la comprensión del propio código: cada estudiante debe poder explicar cualquier línea y modificarla en vivo si el jurado lo solicita."
+        }
+      ],
+      "reading": {
+        "title": "Programas que perduran: persistencia, excepciones y pruebas",
+        "minutes": 40,
+        "content": "## 1. De scripts frágiles a programas robustos\n\nUn programa que funciona solo con datos perfectos y pierde la información al cerrarse no sirve en una organización. Esta lectura presenta cuatro prácticas que separan un ejercicio académico de una herramienta confiable: **persistir datos**, **manejar errores**, **probar sistemáticamente** y **versionar** el código.\n\n## 2. Persistencia con CSV y JSON\n\nEl formato CSV es el estándar de intercambio de tablas. En computadoras con configuración regional en español, Excel suele exportarlo con punto y coma. El módulo `csv` convierte cada fila en un diccionario:\n\n```python\nimport csv\nfrom pathlib import Path\n\ndef leer_ventas(ruta: Path) -> list[dict]:\n    \"\"\"Lee un CSV con columnas fecha;vendedor;monto.\"\"\"\n    with ruta.open(encoding=\"utf-8\", newline=\"\") as f:\n        return list(csv.DictReader(f, delimiter=\";\"))\n```\n\nEl bloque `with` cierra el archivo aun si ocurre un error, y `encoding=\"utf-8\"` preserva tildes y eñes. Para estructuras anidadas —un cliente con su lista de pedidos— el formato adecuado es JSON:\n\n```python\nimport json\n\ndef guardar(datos: list[dict], ruta: Path) -> None:\n    with ruta.open(\"w\", encoding=\"utf-8\") as f:\n        json.dump(datos, f, ensure_ascii=False, indent=2)\n```\n\n## 3. Excepciones: fallar con elegancia\n\nPython señala los problemas en tiempo de ejecución mediante **excepciones**. La estructura completa es:\n\n```python\ndef leer_monto(texto: str) -> float:\n    monto = float(texto.strip().replace(\",\", \".\"))   # puede lanzar ValueError\n    if monto < 0:\n        raise ValueError(\"El monto no puede ser negativo\")\n    return monto\n\ntry:\n    ventas = leer_ventas(Path(\"ventas_marzo.csv\"))\nexcept FileNotFoundError:\n    print(\"No se encontró el archivo de ventas de marzo. Verifique la carpeta.\")\nelse:\n    total = 0.0\n    for fila in ventas:\n        try:\n            total += leer_monto(fila[\"monto\"])\n        except ValueError as e:\n            print(f\"Fila omitida ({fila['vendedor']}): {e}\")\n    print(f\"Total válido: S/ {total:,.2f}\")\n```\n\nTres principios guían su uso. Primero, **capturar excepciones específicas**: un `except` genérico oculta errores de programación. Segundo, **separar responsabilidades**: las funciones de cálculo lanzan excepciones y las de interfaz las traducen en mensajes comprensibles. Tercero, el estilo idiomático de Python es EAFP (*es más fácil pedir perdón que permiso*): intentar la operación y manejar el fallo.\n\n## 4. Pruebas: buscar errores a propósito\n\nGlenford Myers definió la prueba como el proceso de ejecutar un programa **con la intención de encontrar errores**. Dos técnicas de diseño de casos son esenciales:\n\n- **Partición de equivalencia**: agrupar entradas que el programa trata igual. Para una nota vigesimal: inválidas (< 0 o > 20), desaprobatorias (0–12) y aprobatorias (13–20).\n- **Valores límite**: probar en las fronteras: −1, 0, 12, 13, 20 y 21.\n\nCon `pytest`, estas pruebas se automatizan y se ejecutan tras cada cambio:\n\n```python\n# test_notas.py\nimport pytest\nfrom notas import estado\n\n@pytest.mark.parametrize(\"nota, esperado\", [\n    (0, \"Desaprobado\"), (12, \"Desaprobado\"),\n    (13, \"Aprobado\"), (20, \"Aprobado\"),\n])\ndef test_estado_limites(nota, esperado):\n    assert estado(nota) == esperado\n\ndef test_nota_invalida():\n    with pytest.raises(ValueError):\n        estado(21)\n```\n\nSi una modificación futura rompe un comportamiento que antes funcionaba —una **regresión**—, la prueba lo detecta en segundos. Kent Beck llevó esta idea más lejos con el desarrollo guiado por pruebas: escribir la prueba antes que el código.\n\n## 5. Versionar y cuidar los datos\n\nGit registra cada cambio con autor, fecha y mensaje, de modo que siempre es posible saber qué versión se usó y volver a una anterior. Un archivo `.gitignore` evita publicar datos sensibles. Este último punto tiene dimensión legal: la **Ley 29733**, Ley de Protección de Datos Personales, exige consentimiento, finalidad, proporcionalidad y medidas de seguridad en el tratamiento de datos como DNI, domicilio o ingresos. Para un programador, esto se traduce en prácticas concretas: usar datos ficticios en pruebas, recolectar solo lo necesario y proteger los archivos.\n\n## 6. Ideas clave\n\n- Los datos deben sobrevivir al programa: CSV para tablas, JSON para estructuras anidadas.\n- Las excepciones específicas convierten fallos en mensajes útiles.\n- Las pruebas se diseñan con particiones y valores límite, y se automatizan.\n- Git y la ética de datos son parte de la calidad, no un añadido.\n"
+      },
+      "case": {
+        "title": "Caso: El sistema de caja chica de la Municipalidad Distrital",
+        "content": "La **Municipalidad Distrital de Santa Rosa de Lima** (nombre ficticio), en la región Junín, administra una caja chica de S/ 3 000 mensuales para gastos menores: útiles de oficina, movilidad local y reparaciones urgentes. La normativa interna, alineada con las directivas de tesorería del sector público, establece que ningún gasto individual puede superar el 20 % del fondo, que cada gasto debe sustentarse con un comprobante válido y que la caja se rinde y repone cuando se ha usado al menos el 70 % del monto.\n\nHasta el año pasado, el control se llevaba en un cuaderno. Rubén Pariona, técnico de soporte con un año en la municipalidad, desarrolló en Python un programa que registra gastos en un archivo CSV. El programa se usó durante seis meses con resultados irregulares:\n\n- En agosto, alguien registró un monto como `1.200,50` y el programa se cerró; la responsable de caja, Elena Ccori, volvió a ingresar todo el mes y algunos gastos quedaron duplicados.\n- En octubre, el archivo de gastos de setiembre desapareció: Rubén había abierto el archivo en modo escritura para «limpiarlo» y lo sobrescribió sin respaldo.\n- Una auditoría del órgano de control interno observó que no se podía saber qué versión del programa se usó para cada rendición.\n- El archivo CSV, que contiene nombres y DNI de los trabajadores que recibieron dinero, se compartía por correo personal y en una memoria USB sin protección.\n\nLa gerencia municipal decidió darle a Rubén un mes para entregar una versión 2.0 antes de decidir si adquieren un módulo comercial, cuyo costo anual supera los S/ 12 000. Rubén debe presentar al gerente, al jefe de tesorería y a la auditora interna una propuesta que resuelva los problemas técnicos, demuestre la confiabilidad del sistema y garantice el tratamiento adecuado de los datos personales de los trabajadores.\n\nRubén cuenta con cuatro semanas, una laptop y el apoyo de un practicante de primer año. No tiene presupuesto para servidores ni licencias.",
+        "questions": [
+          "Identifique cada problema del sistema y relaciónelo con una práctica de la unidad: archivos, excepciones, pruebas, control de versiones o protección de datos.",
+          "Diseñe la tabla de casos de prueba para la regla del 20 % del fondo, aplicando partición de equivalencia y valores límite.",
+          "¿Qué obligaciones de la Ley 29733 se incumplen en el manejo actual del archivo y qué medidas técnicas y organizativas propondría?",
+          "¿Debe la municipalidad continuar con la versión 2.0 o adquirir el módulo comercial? Argumente con criterios de costo, riesgo, control y sostenibilidad."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: sistema de gestión para una organización real",
+        "instructions": "**Objetivo:** integrar todas las competencias del curso en un sistema de consola funcional, robusto, probado y versionado que resuelva un problema de una organización peruana.\n\n**Temas sugeridos:** control de caja chica, inventario de una ferretería, registro de asistencia, gestión de citas, control de préstamos de equipos. Otros temas requieren aprobación del docente en la semana 13.\n\n**Requisitos técnicos mínimos:**\n\n- Menú con al menos cinco operaciones (registrar, consultar, modificar, eliminar y reportar).\n- Persistencia en CSV o JSON con codificación UTF-8.\n- Código organizado en al menos tres módulos, con funciones documentadas y anotaciones de tipo.\n- Manejo de excepciones específicas y mensajes comprensibles para un usuario no técnico.\n- Mínimo 15 pruebas con `pytest`, diseñadas con partición de equivalencia y valores límite.\n- Repositorio Git con al menos diez commits descriptivos y `.gitignore`.\n- Uso exclusivo de datos ficticios y una nota breve sobre cómo el sistema respeta la Ley 29733.\n\n**Entregables:** repositorio comprimido, informe técnico de cinco a ocho páginas (problema, análisis, diseño, pruebas, conclusiones) y sustentación en vivo de 10 minutos en la semana 16.",
+        "rubric": [
+          {
+            "name": "Análisis, diseño modular y pertinencia del problema",
+            "points": 4
+          },
+          {
+            "name": "Funcionalidad, persistencia y manejo de excepciones",
+            "points": 6
+          },
+          {
+            "name": "Pruebas automatizadas y calidad del código",
+            "points": 4
+          },
+          {
+            "name": "Control de versiones y tratamiento ético de datos",
+            "points": 2
+          },
+          {
+            "name": "Informe técnico y sustentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Archivos, excepciones y pruebas",
+        "questions": [
+          {
+            "prompt": "Un programa abre con open('caja.csv', 'w') un archivo que ya contiene los gastos del mes. ¿Qué ocurre con los datos existentes?",
+            "options": [
+              "Python lanza FileExistsError",
+              "Se conservan y lo nuevo se añade al final",
+              "Se borran, porque el modo 'w' sobrescribe el archivo",
+              "Se crea una copia de respaldo automática"
+            ],
+            "correct": 2,
+            "explanation": "El modo 'w' trunca el archivo al abrirlo. Para añadir se usa 'a' y para crear solo si no existe se usa 'x'."
+          },
+          {
+            "prompt": "¿Por qué es preferible except ValueError a un except sin tipo al convertir montos ingresados por el usuario?",
+            "options": [
+              "Porque except sin tipo no es válido en Python 3",
+              "Porque except genérico solo captura errores de archivos",
+              "Porque ValueError es más rápido de ejecutar",
+              "Porque un except genérico ocultaría errores de programación, como un NameError"
+            ],
+            "correct": 3,
+            "explanation": "Capturar todo oculta defectos que deben corregirse. La excepción específica responde solo al problema previsto: un texto que no puede convertirse."
+          },
+          {
+            "prompt": "Para una función que acepta notas de 0 a 20, ¿qué conjunto de valores aplica correctamente el análisis de valores límite alrededor de la nota mínima aprobatoria?",
+            "options": [
+              "12, 13 y 14",
+              "5, 10 y 15",
+              "0, 10 y 20",
+              "13, 17 y 20"
+            ],
+            "correct": 0,
+            "explanation": "El análisis de valores límite prueba justo debajo, en y encima de la frontera; la frontera de aprobación es 13."
+          },
+          {
+            "prompt": "Un estudiante agrega un nuevo tramo de comisión y, sin notarlo, rompe el cálculo del tramo anterior. ¿Qué práctica lo detectaría de inmediato?",
+            "options": [
+              "Agregar más comentarios al código",
+              "Ejecutar el conjunto de pruebas automatizadas tras cada cambio",
+              "Usar un except genérico en la función",
+              "Guardar los resultados en JSON en lugar de CSV"
+            ],
+            "correct": 1,
+            "explanation": "Las pruebas automatizadas detectan regresiones: comportamientos que funcionaban y dejan de hacerlo al modificar el código."
+          },
+          {
+            "prompt": "¿Qué parámetro de json.dump permite que palabras como 'Año' o 'Huánuco' se guarden legibles en el archivo?",
+            "options": [
+              "indent=2",
+              "encoding='ascii'",
+              "ensure_ascii=False",
+              "sort_keys=True"
+            ],
+            "correct": 2,
+            "explanation": "Por defecto json.dump escapa los caracteres no ASCII; ensure_ascii=False los conserva tal cual, combinado con abrir el archivo en UTF-8."
+          },
+          {
+            "prompt": "En el bloque try-except-else-finally, ¿cuándo se ejecuta la cláusula else?",
+            "options": [
+              "Solo cuando ocurre una excepción no capturada",
+              "Antes de ejecutar el bloque try",
+              "Siempre, al final del bloque",
+              "Solo si el bloque try terminó sin lanzar excepciones"
+            ],
+            "correct": 3,
+            "explanation": "else se ejecuta si no hubo excepción en try; finally se ejecuta siempre. Separar else permite que solo el código riesgoso quede dentro de try."
+          },
+          {
+            "prompt": "Un desarrollador usa en pruebas una copia del archivo real con DNI y sueldos de los trabajadores y la sube a un repositorio público. ¿Qué principio de la Ley 29733 vulnera principalmente?",
+            "options": [
+              "El principio de seguridad del tratamiento de datos",
+              "El principio de legalidad tributaria",
+              "El principio de libre competencia",
+              "El principio de neutralidad tecnológica"
+            ],
+            "correct": 0,
+            "explanation": "Exponer datos personales sin medidas de protección vulnera el principio de seguridad; además, usarlos para pruebas excede la finalidad para la que fueron recolectados."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Qué es programar; pensamiento computacional de Wing y método de Polya",
+      "activity": "Sesión de bienvenida, análisis de procesos automatizables del entorno e instalación de Python y Visual Studio Code.",
+      "evidence": "Captura del primer programa ejecutado en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Algoritmos: propiedades de Knuth, pseudocódigo y diagramas de flujo",
+      "activity": "Taller en salas: diagramas de flujo en PSeInt y draw.io para la regla de aprobación vigesimal.",
+      "evidence": "Diagrama de flujo y pseudocódigo validados"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Variables, tipos de datos, conversiones y operadores con cálculo de IGV",
+      "activity": "Programación en vivo del desglose de IGV; análisis del caso La bodega Doña Rosa en foro.",
+      "evidence": "Participación en el foro del caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Entrada y salida con f-strings, errores frecuentes y prueba de escritorio",
+      "activity": "Clínica de errores; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Expresiones booleanas, selección simple, doble y múltiple",
+      "activity": "Traducción de reglas del reglamento académico a condiciones; ejercicios de tramos con if-elif-else.",
+      "evidence": "Práctica de laboratorio de selección"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Tablas de decisión, decisiones anidadas y match-case",
+      "activity": "Análisis del caso Andina Snacks: tabla de decisión de comisiones y valores límite en equipos.",
+      "evidence": "Tabla de decisión del caso"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Bucles while y for, validación de entradas, centinela y patrones algorítmicos",
+      "activity": "Laboratorio de ahorro con TEA y registro de ventas con centinela; prueba de escritorio de bucles anidados.",
+      "evidence": "Traza manual de bucles anidados"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "break, continue, else en bucles y errores típicos de control",
+      "activity": "Clínica de errores en bucles; entrega de la Tarea 2 de comisiones y Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Descomposición funcional, definición de funciones, parámetros y retorno",
+      "activity": "Refactorización guiada del programa de comisiones en funciones con docstring y anotaciones de tipo.",
+      "evidence": "Programa de comisiones refactorizado"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Ámbito LEGB, funciones puras y cadenas de texto",
+      "activity": "Laboratorio de limpieza y validación de datos con métodos de cadenas; extracción de partes del RUC.",
+      "evidence": "Funciones de limpieza con pruebas assert"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Listas, comprensiones, tuplas y diccionarios; registros como listas de diccionarios",
+      "activity": "Análisis del caso Textiles Gamarra Express y construcción de una planilla con listas de diccionarios.",
+      "evidence": "Participación en el caso y planilla funcional"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Módulos, biblioteca estándar y validación del RUC con módulo 11",
+      "activity": "Creación del módulo validaciones.py; entrega de la Tarea 3 y Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Archivos de texto, CSV y JSON; aprobación del tema del proyecto integrador",
+      "activity": "Laboratorio de lectura de un CSV exportado de Excel y persistencia del registro en JSON; propuesta del proyecto.",
+      "evidence": "Propuesta aprobada del proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Excepciones, programación defensiva, Ley 29733 y ética de datos",
+      "activity": "Análisis del caso de caja chica municipal; incorporación de excepciones al proyecto y primeros commits en Git.",
+      "evidence": "Avance del proyecto con repositorio Git"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Pruebas con pytest, depuración sistemática, PEP 8 y refactorización",
+      "activity": "Diseño de pruebas con particiones y valores límite; revisión de código entre pares del proyecto.",
+      "evidence": "Suite de pruebas y revisión entre pares"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y cierre del curso",
+      "activity": "Sustentación en vivo de 10 minutos, entrega del informe técnico y resolución del Cuestionario 4.",
+      "evidence": "Proyecto integrador, sustentación y Cuestionario 4"
+    }
+  ]
+}

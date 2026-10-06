@@ -1,0 +1,1205 @@
+{
+ "name": "Lógica y Pensamiento Computacional",
+ "slug": "logica-y-pensamiento-computacional",
+ "course_type": "especifica",
+ "module_name": "Programación y preparación de datos para inteligencia artificial",
+ "credits": 3,
+ "hours_theory": 32,
+ "hours_practice": 32,
+ "summary": "Curso de formación específica, de naturaleza teórico-práctica, del primer ciclo de la carrera de Inteligencia Artificial (código IAR-103). Su propósito es que el estudiante razone con rigor y formule soluciones algorítmicas antes de escribir código. Desarrolla la lógica proposicional y de predicados, la inferencia válida y las falacias frecuentes, los cuatro pilares del pensamiento computacional (descomposición, reconocimiento de patrones, abstracción y diseño de algoritmos), la representación de algoritmos en pseudocódigo y diagramas de flujo, las estructuras secuenciales, selectivas y repetitivas, la verificación mediante trazas e invariantes, la estimación intuitiva del costo de un algoritmo y la lógica aplicada a la inteligencia artificial: reglas, tablas y árboles de decisión y búsqueda en espacios de estados. Trabaja con problemas del contexto peruano, como la validación de RUC y DNI, el cálculo de detracciones o la priorización de atenciones en salud. Complementa a Fundamentos de Programación en Python y Matemática para Ciencia de Datos, y prepara para Estructuras de Datos y Algoritmos y Aprendizaje Automático I.",
+ "competency": "Resuelve problemas del entorno laboral y social formulándolos de manera lógica y computacional: los descompone, abstrae lo relevante, diseña algoritmos correctos en pseudocódigo y diagramas de flujo, verifica su funcionamiento con trazas, casos de prueba y razonamiento formal, y argumenta decisiones basadas en reglas, con rigor, claridad y responsabilidad ética.",
+ "capacities": [
+  "Formaliza enunciados del lenguaje natural en lógica proposicional y de predicados, construye tablas de verdad y evalúa la validez de argumentos usando equivalencias y reglas de inferencia.",
+  "Aplica los pilares del pensamiento computacional para descomponer problemas reales, reconocer patrones y abstraer modelos que sirvan de base a una solución algorítmica.",
+  "Diseña algoritmos con estructuras secuenciales, selectivas y repetitivas, representándolos en pseudocódigo y diagramas de flujo normalizados, y los traduce a Python básico.",
+  "Verifica la corrección y estima la eficiencia de algoritmos mediante pruebas de escritorio, casos límite, invariantes de bucle y conteo de operaciones.",
+  "Modela procesos de decisión con reglas lógicas, tablas y árboles de decisión y búsqueda en espacios de estados, como fundamento de sistemas de inteligencia artificial."
+ ],
+ "indicators": [
+  "Traduce al menos diez enunciados de normas o reglamentos peruanos a fórmulas lógicas correctas, identificando conectivos, cuantificadores y alcance de la negación.",
+  "Determina con tablas de verdad o equivalencias si un argumento es válido y nombra la regla de inferencia o la falacia presente.",
+  "Presenta la descomposición de un problema real en subproblemas, con entradas, salidas, restricciones y patrones reutilizables claramente documentados.",
+  "Elabora pseudocódigo y diagramas de flujo sin errores de lógica, que cubren casos normales, casos límite y datos inválidos.",
+  "Realiza pruebas de escritorio completas con tabla de traza y enuncia el invariante que justifica la corrección de un bucle.",
+  "Compara dos algoritmos para el mismo problema contando operaciones y argumenta cuál escala mejor con el tamaño de la entrada.",
+  "Construye un sistema basado en reglas o un árbol de decisión consistente, completo y sin reglas contradictorias para un caso del entorno peruano.",
+  "Sustenta el proyecto integrador explicando sus decisiones de diseño, pruebas realizadas y limitaciones éticas de la automatización propuesta."
+ ],
+ "methodology": "El curso aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y un video breve en el aula virtual, y resuelve un control de entrada. Las sesiones síncronas se organizan con aprendizaje basado en problemas y método de casos: equipos de cuatro estudiantes analizan situaciones reales de organizaciones peruanas, formalizan el problema y diseñan algoritmos que luego se contrastan en plenaria. Se usan herramientas de bajo umbral como PSeInt, diagramas en draw.io y cuadernos de Google Colab para traducir los algoritmos a Python. La evaluación es formativa y continua: pruebas de escritorio entre pares, retroalimentación con rúbricas en cada tarea, cuestionarios autocorregibles con explicación y un proyecto integrador incremental sustentado al final del ciclo.",
+ "bibliography": [
+  "Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3), 33-35.",
+  "Rosen, K. H. (2019). Discrete mathematics and its applications (8th ed.). McGraw-Hill Education.",
+  "Copi, I. M., Cohen, C. y McMahon, K. (2014). Introduction to logic (14th ed.). Pearson.",
+  "Joyanes Aguilar, L. (2008). Fundamentos de programación: algoritmos, estructura de datos y objetos (4.ª ed.). McGraw-Hill.",
+  "Polya, G. (1945). How to solve it: A new aspect of mathematical method. Princeton University Press.",
+  "Russell, S. y Norvig, P. (2021). Artificial intelligence: A modern approach (4th ed.). Pearson.",
+  "Cormen, T. H., Leiserson, C. E., Rivest, R. L. y Stein, C. (2022). Introduction to algorithms (4th ed.). MIT Press.",
+  "Guttag, J. V. (2021). Introduction to computation and programming using Python (3rd ed.). MIT Press.",
+  "Riley, D. D. y Hunt, K. A. (2014). Computational thinking for the modern problem solver. CRC Press."
+ ],
+ "evaluation": [
+  {
+   "name": "Evaluación de proceso",
+   "weight": 40,
+   "description": "Cuestionarios de cada unidad, controles de entrada del aula invertida, participación en el análisis de casos y pruebas de escritorio entre pares."
+  },
+  {
+   "name": "Evaluación de producto",
+   "weight": 30,
+   "description": "Tareas aplicadas de las unidades 1, 2 y 3, evaluadas con rúbricas: formalización lógica, diseño algorítmico documentado y verificación con trazas e invariantes."
+  },
+  {
+   "name": "Evaluación final",
+   "weight": 30,
+   "description": "Proyecto integrador: sistema basado en reglas o árbol de decisión para un problema real, con pseudocódigo, implementación en Python, pruebas y sustentación oral."
+  }
+ ],
+ "units": [
+  {
+   "title": "Unidad 1 · Lógica proposicional y razonamiento válido",
+   "description": "Al finalizar la unidad, el estudiante formaliza enunciados del lenguaje natural en lógica proposicional, construye tablas de verdad, aplica equivalencias y reglas de inferencia y distingue argumentos válidos de falacias frecuentes en contextos laborales y normativos.",
+   "topics": [
+    "Proposiciones, conectivos y formalización del lenguaje natural",
+    "Tablas de verdad, tautologías, contradicciones y contingencias",
+    "Equivalencias lógicas y leyes de De Morgan",
+    "Reglas de inferencia y validez de argumentos",
+    "Falacias formales e informales en la toma de decisiones",
+    "Expresiones booleanas en Python y cortocircuito"
+   ],
+   "slides": [
+    {
+     "title": "Por qué la lógica es la base de la inteligencia artificial",
+     "bullets": [
+      "Todo programa es una cadena de decisiones lógicas: si una condición está mal formulada, el sistema falla aunque el código compile.",
+      "Boole (1854) algebrizó el razonamiento; Shannon (1937) mostró que los circuitos de relés implementan ese álgebra.",
+      "Los sistemas expertos, los motores de reglas antifraude y los verificadores de software se basan en lógica formal.",
+      "Objetivo de la unidad: pasar del lenguaje ambiguo a fórmulas precisas que una máquina pueda evaluar."
+     ],
+     "notes": "Abra la sesión preguntando: ¿cuántas veces al día una regla lógica decide algo sobre ustedes? Ejemplos: el aplicativo bancario que bloquea una transferencia, la validación del RUC al emitir una factura electrónica o el filtro que decide si un correo es spam. Explique que George Boole, en 1854, propuso tratar el razonamiento como un álgebra con dos valores, y que Claude Shannon, en su tesis de maestría en el MIT de 1937, demostró que esa álgebra describe circuitos eléctricos. Esa conexión es la razón por la que hoy los computadores razonan con verdadero y falso. Subraye que en IA, aunque los modelos de aprendizaje automático sean estadísticos, siempre están rodeados de reglas lógicas: validaciones de datos, políticas de negocio y restricciones regulatorias. Cierre con la idea clave: un error lógico no lo detecta el compilador; lo detecta el razonamiento."
+    },
+    {
+     "title": "Proposiciones: el átomo del razonamiento",
+     "bullets": [
+      "Proposición: enunciado declarativo que es verdadero o falso, nunca ambos; se representa con p, q, r.",
+      "No son proposiciones las preguntas, órdenes, exclamaciones ni enunciados con variables libres como 'x es mayor que 5'.",
+      "Ejemplo: 'El IGV en el Perú es 18 %' es proposición verdadera; '¿Pagaste tu recibo?' no lo es.",
+      "Proposiciones simples se combinan con conectivos para formar proposiciones compuestas."
+     ],
+     "notes": "Proyecte una lista de diez enunciados y pida que los estudiantes voten si son proposiciones. Incluya casos difíciles: 'Esta oración es falsa' (paradoja del mentiroso, que no admite valor de verdad estable), 'x + 2 = 5' (es una función proposicional, no una proposición, hasta que se asigne valor a x) y 'Lima es la capital del Perú' (proposición verdadera). Explique que la condición clave es la bivalencia: debe poder asignarse exactamente un valor de verdad. Comente que en programación ocurre lo mismo: una expresión booleana como saldo >= monto solo tiene valor cuando las variables tienen valores concretos. Esto prepara el terreno para la lógica de predicados de la unidad 3. Pregunte: ¿'Mañana lloverá en Arequipa' es proposición? Sí: tiene un valor de verdad, aunque hoy no lo conozcamos; la epistemología no cambia la naturaleza lógica del enunciado."
+    },
+    {
+     "title": "Conectivos lógicos y su significado preciso",
+     "bullets": [
+      "Negación ¬p, conjunción p ∧ q, disyunción inclusiva p ∨ q, disyunción exclusiva p ⊕ q.",
+      "Condicional p → q: solo es falso cuando p es verdadero y q es falso.",
+      "Bicondicional p ↔ q: verdadero cuando ambos tienen el mismo valor.",
+      "En Python: not, and, or; el condicional se escribe como (not p) or q.",
+      "El 'o' del castellano suele ser ambiguo: aclare siempre si es inclusivo o exclusivo."
+     ],
+     "notes": "Recorra cada conectivo con un ejemplo laboral. Conjunción: 'el postulante tiene título y tiene experiencia'. Disyunción inclusiva: 'puede pagar con tarjeta o con Yape' (puede usar ambos). Disyunción exclusiva: 'elija menú vegetariano o menú con carne' (solo uno). Dedique tiempo al condicional, que es el conectivo más malinterpretado. Use el ejemplo: 'si el contribuyente supera las 150 UIT de ingresos, entonces debe llevar contabilidad completa'. La regla solo se incumple cuando alguien supera el umbral y no lleva contabilidad completa; si no supera el umbral, la regla no se viola, lleve o no contabilidad completa. Esa es la intuición del condicional material. Muestre que en Python no existe operador 'implica' y que se expresa como not p or q. Pregunte: ¿cuál sería la traducción de 'solo si'?"
+    },
+    {
+     "title": "Formalizar el lenguaje natural paso a paso",
+     "bullets": [
+      "Paso 1: identificar proposiciones simples y asignarles letras con un diccionario explícito.",
+      "Paso 2: detectar conectivos ocultos: 'pero' es conjunción; 'a menos que' equivale a disyunción.",
+      "Paso 3: 'p solo si q' se formaliza p → q; 'p si q' se formaliza q → p.",
+      "Paso 4: usar paréntesis para fijar el alcance; precedencia: ¬, ∧, ∨, →, ↔.",
+      "Paso 5: releer la fórmula en castellano y comparar con el enunciado original."
+     ],
+     "notes": "Este es el procedimiento central de la unidad. Trabaje en vivo con el enunciado: 'Un trabajador accede a la gratificación de julio solo si tiene vínculo laboral vigente al 30 de junio, pero si trabajó menos de un mes no le corresponde'. Defina v: tiene vínculo vigente; g: accede a gratificación; m: trabajó al menos un mes. Formalización: (g → v) ∧ (¬m → ¬g). Haga notar que 'pero' agrega información, no contraste lógico. Explique la trampa de 'solo si': indica condición necesaria, por eso va en el consecuente. 'A menos que' es otra fuente frecuente de errores: 'no aprobarás a menos que estudies' equivale a 'aprobarás → estudiaste', o bien ¬estudias → ¬apruebas. Pida a los equipos formalizar tres enunciados del reglamento de TEPSUP y comparar resultados: las diferencias revelan ambigüedades del texto original."
+    },
+    {
+     "title": "Tablas de verdad: método sistemático",
+     "bullets": [
+      "Con n variables hay 2^n filas: 3 variables generan 8 combinaciones.",
+      "Ordene las filas como un conteo binario para no omitir casos.",
+      "Calcule por columnas de subfórmulas, de dentro hacia fuera.",
+      "Tautología: siempre verdadera; contradicción: siempre falsa; contingencia: depende de los valores.",
+      "La tabla es un algoritmo exhaustivo: correcto pero costoso cuando n crece."
+     ],
+     "notes": "Construya en pizarra la tabla de (p → q) ∧ (q → r) → (p → r), con ocho filas, y muestre que es una tautología: el silogismo hipotético. Enfatice el orden binario de las filas (000, 001, … 111) porque reduce errores y conecta con la representación binaria de Matemática para Ciencia de Datos. Luego plantee la pregunta de costo: con 20 variables, la tabla tiene más de un millón de filas; con 60, más filas que segundos han pasado desde el Big Bang. Esto introduce la idea de que un método correcto puede ser impracticable, tema que retomaremos en la unidad 3. Mencione que el problema SAT, decidir si una fórmula puede hacerse verdadera, fue el primer problema demostrado NP-completo por Stephen Cook en 1971, y que hoy los solucionadores SAT se usan para verificar chips y planificar horarios."
+    },
+    {
+     "title": "Tablas de verdad en Python con itertools",
+     "bullets": [
+      "itertools.product([False, True], repeat=n) genera las 2^n combinaciones.",
+      "Cada fórmula se escribe como función: def f(p, q): return (not p) or q.",
+      "Una tautología cumple all(f(*fila) for fila in combinaciones).",
+      "Una fórmula satisfacible cumple any(f(*fila) for fila in combinaciones)."
+     ],
+     "notes": "Demuestre en Google Colab un programa de cinco líneas que imprime la tabla de verdad de cualquier fórmula. El propósito no es enseñar Python, que se trabaja en el curso paralelo, sino mostrar que la tabla de verdad es literalmente un algoritmo: recorrer todas las combinaciones y evaluar. Muestre all() como el cuantificador 'para todo' y any() como 'existe', anticipando la lógica de predicados. Proponga que cada equipo verifique con el programa las tablas que construyó a mano y discuta las discrepancias. Advierta un error frecuente: escribir p => q o p -> q, que no existen en Python; otra confusión es usar & y | sobre booleanos, que funcionan pero no hacen cortocircuito. Pregunte: ¿cómo modificarían el programa para listar solo las filas donde la fórmula es falsa? Esa lista es justamente el conjunto de contraejemplos."
+    },
+    {
+     "title": "Equivalencias lógicas fundamentales",
+     "bullets": [
+      "Dos fórmulas son equivalentes (≡) si tienen la misma tabla de verdad.",
+      "De Morgan: ¬(p ∧ q) ≡ ¬p ∨ ¬q; ¬(p ∨ q) ≡ ¬p ∧ ¬q.",
+      "Condicional: p → q ≡ ¬p ∨ q ≡ ¬q → ¬p (contrarrecíproco).",
+      "Distributiva: p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r); doble negación: ¬¬p ≡ p.",
+      "Uso práctico: simplificar condiciones en código y en reglas de negocio."
+     ],
+     "notes": "Presente las equivalencias como herramientas de refactorización. Ejemplo real: un desarrollador escribe if not (edad >= 18 and tiene_dni): rechazar. Por De Morgan equivale a if edad < 18 or not tiene_dni, que se lee mejor y permite mensajes de error específicos. Muestre que el contrarrecíproco es equivalente, pero el recíproco (q → p) y el inverso (¬p → ¬q) no lo son: 'si llueve, la pista está mojada' no implica 'si la pista está mojada, llovió' (pudo pasar la cisterna municipal). Pida a los estudiantes demostrar una equivalencia con tabla de verdad y otra mediante álgebra, citando la ley usada en cada paso. Insista en que el álgebra de equivalencias es más escalable que la tabla porque no crece exponencialmente con el número de variables."
+    },
+    {
+     "title": "Argumentos y validez",
+     "bullets": [
+      "Un argumento tiene premisas y conclusión; es válido si es imposible que las premisas sean verdaderas y la conclusión falsa.",
+      "Validez es forma; verdad es contenido: un argumento válido puede tener premisas falsas.",
+      "Prueba: (P1 ∧ P2 ∧ … ∧ Pn) → C debe ser tautología.",
+      "Argumento sólido: válido y con todas sus premisas verdaderas."
+     ],
+     "notes": "Distinga con cuidado validez y verdad, porque es la confusión conceptual más común. Ejemplo válido con premisa falsa: 'Todos los peruanos viven en Lima; Ana es peruana; luego Ana vive en Lima'. La forma es impecable, la primera premisa es falsa. En IA esto tiene consecuencias: un sistema de reglas puede inferir de forma perfectamente válida conclusiones erróneas si sus datos o reglas de entrada son incorrectos, el clásico 'basura entra, basura sale'. Muestre el método de verificación: convertir el argumento en un condicional y comprobar que es tautología, o buscar una fila contraejemplo con premisas verdaderas y conclusión falsa. Basta un contraejemplo para invalidar. Pregunte: si un modelo predictivo tiene 95 % de acierto, ¿sus conclusiones son válidas en sentido lógico? No: la inferencia estadística es inductiva, no deductiva."
+    },
+    {
+     "title": "Reglas de inferencia esenciales",
+     "bullets": [
+      "Modus ponens: p → q, p ⊢ q. Modus tollens: p → q, ¬q ⊢ ¬p.",
+      "Silogismo hipotético: p → q, q → r ⊢ p → r.",
+      "Silogismo disyuntivo: p ∨ q, ¬p ⊢ q.",
+      "Simplificación y adjunción: de p ∧ q se obtiene p; de p y q se obtiene p ∧ q.",
+      "Una demostración es una secuencia numerada de pasos justificados por estas reglas."
+     ],
+     "notes": "Explique que las reglas de inferencia son atajos ya demostrados que evitan construir tablas enormes. Trabaje un ejemplo de diagnóstico de red: 'Si el router está apagado, no hay internet en la oficina. Si no hay internet, el sistema de facturación electrónica no envía comprobantes a SUNAT. El sistema sí envió comprobantes. Por tanto, el router no está apagado'. Pida a los estudiantes formalizar y demostrar con silogismo hipotético y modus tollens. Muestre que el modus tollens es la lógica del descarte en la depuración de software: si la hipótesis implica un síntoma que no observamos, la hipótesis cae. Comente que los motores de inferencia de los sistemas expertos, como MYCIN en Stanford en los años setenta, encadenaban precisamente modus ponens hacia adelante o hacia atrás, tema de la unidad 4."
+    },
+    {
+     "title": "Falacias formales que imitan argumentos válidos",
+     "bullets": [
+      "Afirmación del consecuente: p → q, q ⊢ p (inválido).",
+      "Negación del antecedente: p → q, ¬p ⊢ ¬q (inválido).",
+      "Confundir condición necesaria con suficiente es la raíz de ambas.",
+      "Detección: buscar una fila con premisas verdaderas y conclusión falsa."
+     ],
+     "notes": "Presente casos cotidianos. Afirmación del consecuente: 'si un cliente es fraudulento, hace compras de madrugada; este cliente compra de madrugada; luego es fraudulento'. Un modelo antifraude que razona así generaría muchos falsos positivos y perjudicaría a trabajadores de turno nocturno. Negación del antecedente: 'si tienes título universitario, consigues empleo; no tienes título; luego no conseguirás empleo', que ignora otras vías como la formación técnica. Pida que los estudiantes construyan el contraejemplo en la tabla de verdad. Conecte con la ética: en IA, confundir correlación con condición suficiente produce discriminación algorítmica. Pregunte qué falacia comete quien dice 'todos los que aprobaron estudiaron con este método; tú usaste este método, luego aprobarás'. Discuta también la dirección de la flecha en los textos normativos."
+    },
+    {
+     "title": "Falacias informales en decisiones con datos",
+     "bullets": [
+      "Generalización apresurada: concluir sobre una población con una muestra pequeña o sesgada.",
+      "Falsa causa (post hoc): suponer causalidad por secuencia temporal o correlación.",
+      "Falso dilema: presentar dos opciones cuando existen más.",
+      "Apelación a la autoridad irrelevante y ataque personal (ad hominem).",
+      "Sesgo de supervivencia: analizar solo los casos que pasaron un filtro."
+     ],
+     "notes": "Las falacias informales no dependen de la forma sino del contenido y del contexto, y son las que más aparecen en reuniones de negocio y en el análisis de datos. Ejemplo de sesgo de supervivencia: estudiar solo a las mypes que siguen operando para concluir qué hace exitosa a una empresa, sin mirar a las muchas que cerraron. Ejemplo de falsa causa: 'desde que instalamos el chatbot subieron las ventas', sin controlar la campaña de fiestas patrias. Proponga un ejercicio: cada equipo trae un titular de prensa o una publicación en redes con un argumento y nombra la falacia. Enfatice que el profesional de IA debe ser el escéptico del equipo: preguntar por el tamaño de muestra, el grupo de control y las alternativas no consideradas. Esto se retomará en Estadística y Probabilidad del segundo ciclo."
+    },
+    {
+     "title": "Del razonamiento al código: condiciones robustas",
+     "bullets": [
+      "Escriba condiciones con nombres que expresen la proposición: es_mayor_de_edad, tiene_ruc_activo.",
+      "Aproveche el cortocircuito: en p and q, q no se evalúa si p es falso.",
+      "Ordene condiciones para evitar errores: lista and lista[0] > 0.",
+      "Simplifique con De Morgan y verifique la equivalencia con pruebas de todas las combinaciones.",
+      "Documente la regla de negocio original junto a la condición en el código."
+     ],
+     "notes": "Cierre la unidad uniendo lógica y programación. Muestre el cortocircuito con un ejemplo de división: denominador != 0 and numerador / denominador > 1 nunca lanza error porque la segunda parte no se evalúa si la primera es falsa. Explique que el orden de los operandos en and y or no es indiferente en programación, aunque en lógica pura la conjunción sea conmutativa: esta es una diferencia importante entre el modelo matemático y la ejecución real. Recomiende nombrar variables booleanas como proposiciones y escribir la regla de negocio en un comentario, para que un auditor pueda contrastar código y norma. Presente la tarea de la unidad: formalizar las reglas de un procedimiento real y verificarlas con tablas de verdad generadas en Python. Pregunte qué ocurre si dos reglas formalizadas resultan contradictorias."
+    }
+   ],
+   "reading": {
+    "title": "Lógica proposicional: del enunciado normativo a la fórmula verificable",
+    "minutes": 35,
+    "content": "## Introducción\n\nLa lógica proposicional estudia cómo se combina la verdad de enunciados simples para determinar la verdad de enunciados compuestos. Su formalización moderna se debe a George Boole (1854) y Gottlob Frege (1879), y su conexión con la computación a Claude Shannon (1937), quien mostró que los circuitos de conmutación implementan el álgebra de Boole. Para un profesional de inteligencia artificial, la lógica no es un tema de filosofía: es el lenguaje con el que se especifican validaciones de datos, reglas de negocio y restricciones regulatorias que rodean a cualquier modelo.\n\n## Proposiciones y conectivos\n\nUna **proposición** es un enunciado que es verdadero (V) o falso (F). Los conectivos permiten construir fórmulas:\n\n| Conectivo | Símbolo | Python | Falso solo cuando |\n|---|---|---|---|\n| Negación | ¬p | `not p` | p es V |\n| Conjunción | p ∧ q | `p and q` | alguno es F |\n| Disyunción | p ∨ q | `p or q` | ambos son F |\n| Condicional | p → q | `(not p) or q` | p es V y q es F |\n| Bicondicional | p ↔ q | `p == q` | difieren |\n\nEl condicional merece atención especial. La norma tributaria peruana establece que los contribuyentes cuyos ingresos superan cierto umbral deben llevar contabilidad completa. La regla se incumple únicamente cuando alguien supera el umbral y no la lleva; quien no supera el umbral cumple la regla haga lo que haga. Esa es la semántica del condicional material.\n\n## Formalizar sin perder significado\n\nConsidere el enunciado: *\"Se aprueba el crédito solo si el solicitante no está en la central de riesgos con calificación de pérdida y, además, sus ingresos permiten cubrir la cuota, a menos que presente un aval\"*. Definimos a: se aprueba; r: está calificado como pérdida; i: ingresos suficientes; v: presenta aval. Una formalización razonable es:\n\na → (¬r ∧ (i ∨ v))\n\nObserve tres decisiones: \"solo si\" coloca la condición necesaria en el consecuente; \"a menos que\" se interpretó como disyunción; y la negación afecta solo a r. Si el analista de riesgos entendiera que el aval también exime de la central de riesgos, la fórmula sería distinta: a → ((¬r ∧ i) ∨ v). La lógica no resuelve la ambigüedad del texto, pero la **hace visible**, y eso es valioso para el negocio.\n\n## Tablas de verdad como algoritmo\n\nUna fórmula con n variables tiene 2^n interpretaciones. El siguiente programa genera la tabla y clasifica la fórmula:\n\n```python\nfrom itertools import product\n\ndef regla(a, r, i, v):\n    # a -> (not r and (i or v))\n    return (not a) or ((not r) and (i or v))\n\nfilas = list(product([False, True], repeat=4))\nfor fila in filas:\n    print(fila, regla(*fila))\n\nes_tautologia = all(regla(*f) for f in filas)\nes_satisfacible = any(regla(*f) for f in filas)\nprint(\"Tautología:\", es_tautologia, \"| Satisfacible:\", es_satisfacible)\n```\n\nCon 4 variables hay 16 filas; con 30 habría más de mil millones. La tabla es correcta, pero su costo crece exponencialmente, de ahí la importancia de las equivalencias y de las reglas de inferencia.\n\n## Equivalencias y simplificación\n\nLas leyes de De Morgan, ¬(p ∧ q) ≡ ¬p ∨ ¬q y ¬(p ∨ q) ≡ ¬p ∧ ¬q, son las más usadas al programar. La condición `not (tiene_dni and es_mayor)` se reescribe como `not tiene_dni or not es_mayor`, lo que permite emitir mensajes de error específicos. La ley del contrarrecíproco, p → q ≡ ¬q → ¬p, fundamenta el diagnóstico: si una falla implica un síntoma y el síntoma no aparece, descartamos la falla.\n\n## Validez y falacias\n\nUn argumento es **válido** si no existe interpretación que haga verdaderas las premisas y falsa la conclusión. Las reglas de inferencia básicas, modus ponens y modus tollens, son válidas; sus imitaciones, la afirmación del consecuente y la negación del antecedente, no lo son. En el contexto de la IA, la afirmación del consecuente es especialmente peligrosa: \"los defraudadores operan de madrugada; este cliente opera de madrugada; luego es defraudador\" convierte una correlación en una acusación. Copi, Cohen y McMahon (2014) recuerdan además que la validez es una propiedad de la forma: premisas falsas en un argumento válido pueden producir conclusiones falsas.\n\n## Ideas clave\n\n1. Formalizar obliga a decidir el significado exacto de cada regla.\n2. La tabla de verdad es un algoritmo exhaustivo de costo 2^n.\n3. Las equivalencias permiten simplificar y refactorizar condiciones.\n4. Validez no es verdad: un sistema de reglas solo es tan confiable como sus premisas."
+   },
+   "case": {
+    "title": "Caso: Reglas de elegibilidad de un bono en una municipalidad distrital",
+    "content": "La Municipalidad Distrital de Cerro Colorado, en Arequipa, decidió automatizar la preselección de beneficiarios de un bono local de apoyo a emprendedoras afectadas por la caída de ventas. La ordenanza, redactada por el área legal, establece textualmente:\n\n> *\"Podrán acceder al bono las personas naturales con domicilio en el distrito que conduzcan un negocio con RUC activo o con licencia municipal vigente, siempre que no sean servidores públicos, salvo que se encuentren bajo el régimen CAS con remuneración menor a dos remuneraciones mínimas vitales. No accederán quienes hayan recibido otro bono municipal en el mismo año, a menos que hayan acreditado pérdida total del negocio.\"*\n\nLa jefa de la Oficina de Tecnologías de la Información, la ingeniera Rosa Quispe, encargó a un equipo de dos practicantes técnicos programar el filtro en el sistema de padrones. En la primera semana, el sistema preseleccionó a 3 412 personas de 5 870 inscritas. Sin embargo, la Gerencia de Desarrollo Económico detectó dos problemas: 46 servidoras CAS con remuneración baja fueron excluidas, y 19 personas que ya habían recibido el bono de reactivación de marzo fueron incluidas aunque no habían acreditado pérdida total.\n\nAl revisar el código, Rosa encontró esta condición:\n\n```python\nif domicilio and (ruc_activo or licencia) and not servidor_publico or cas_bajo \\\n   and not otro_bono or perdida_total:\n    preseleccionar()\n```\n\nLos practicantes argumentaron que \"el texto de la ordenanza es confuso\" y que \"Python evalúa de izquierda a derecha\". El área legal respondió que la ordenanza es clara y que el error es técnico. La alcaldía exige una lista corregida en 72 horas, porque el padrón debe publicarse en el portal de transparencia y cualquier exclusión indebida puede generar reclamos ante la Defensoría del Pueblo.\n\nRosa debe decidir si corrige la condición directamente, si solicita al área legal una aclaración formal de la ordenanza antes de corregir, o si hace ambas cosas en paralelo publicando una lista provisional. También evalúa establecer un procedimiento permanente para que toda regla normativa se formalice y valide con el área usuaria antes de programarla.",
+    "questions": [
+     "Formalice la ordenanza en lógica proposicional definiendo un diccionario de proposiciones y explique cada decisión de interpretación.",
+     "Explique, usando la precedencia de operadores de Python, por qué la condición escrita produjo exactamente los dos tipos de error detectados.",
+     "¿Qué ambigüedades reales tiene el texto de la ordenanza y cómo las haría explícitas ante el área legal?",
+     "¿Qué decisión recomendaría a Rosa sobre la lista provisional, considerando plazos, riesgos legales y la confianza ciudadana?",
+     "Diseñe un procedimiento de validación entre áreas que evite este tipo de errores en futuras automatizaciones normativas."
+    ]
+   },
+   "assignment": {
+    "title": "Formalización y verificación de un procedimiento normativo",
+    "instructions": "## Objetivo\nFormalizar en lógica proposicional las reglas de un procedimiento real y verificar su consistencia con tablas de verdad generadas en Python.\n\n## Qué entregar\n1. **Selección del procedimiento**: elija un procedimiento con al menos cinco condiciones, por ejemplo requisitos para un crédito Mivivienda, acceso a la gratificación, inscripción en el Nuevo RUS o matrícula en TEPSUP. Cite la norma o reglamento de origen.\n2. **Diccionario de proposiciones**: cada letra con su significado exacto.\n3. **Formalización**: fórmula completa, con paréntesis, y justificación de cada interpretación de 'solo si', 'salvo', 'a menos que' y 'o'.\n4. **Verificación**: cuaderno de Colab que genere la tabla de verdad, indique si la fórmula es satisfacible y liste tres casos de prueba representativos (aprobado, rechazado y caso límite).\n5. **Simplificación**: una versión equivalente más legible obtenida con leyes lógicas, demostrando la equivalencia paso a paso y con el programa.\n6. **Reflexión**: media página sobre una ambigüedad del texto original y cómo la resolvería con el área usuaria.\n\n## Formato\nInforme en PDF de máximo cinco páginas y enlace compartido al cuaderno. Trabajo individual.\n\n## Criterios\nSe evalúa la corrección de la formalización, la rigurosidad de la verificación, la calidad de la simplificación y la claridad de la argumentación.",
+    "rubric": [
+     {
+      "name": "Formalización correcta y justificada",
+      "points": 6
+     },
+     {
+      "name": "Verificación con tabla de verdad y casos de prueba",
+      "points": 5
+     },
+     {
+      "name": "Simplificación mediante equivalencias demostradas",
+      "points": 5
+     },
+     {
+      "name": "Análisis de ambigüedades y comunicación escrita",
+      "points": 4
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 1: Lógica proposicional e inferencia",
+    "questions": [
+     {
+      "prompt": "La regla 'Se emite la constancia solo si el pago está registrado' se formaliza, con c: se emite la constancia y r: pago registrado, como:",
+      "options": [
+       "c → r",
+       "r → c",
+       "c ↔ r",
+       "c ∧ r"
+      ],
+      "correct": 0,
+      "explanation": "'Solo si' introduce la condición necesaria, que va en el consecuente: emitir la constancia exige el pago registrado, pero el pago no garantiza la emisión."
+     },
+     {
+      "prompt": "¿Cuál de las siguientes fórmulas es equivalente a ¬(a ∧ ¬b)?",
+      "options": [
+       "¬a ∨ ¬b",
+       "¬a ∨ b",
+       "¬a ∧ b",
+       "a ∨ ¬b"
+      ],
+      "correct": 1,
+      "explanation": "Por De Morgan ¬(a ∧ ¬b) ≡ ¬a ∨ ¬¬b, y por doble negación se obtiene ¬a ∨ b, que además equivale a a → b."
+     },
+     {
+      "prompt": "Un analista razona: 'Si un servidor tiene malware, consume mucho CPU. Este servidor consume mucho CPU. Luego tiene malware'. ¿Qué ocurre con este argumento?",
+      "options": [
+       "Es válido por modus tollens",
+       "Es inválido: niega el antecedente",
+       "Es inválido: afirma el consecuente",
+       "Es válido por modus ponens"
+      ],
+      "correct": 2,
+      "explanation": "La forma p → q, q ⊢ p es la falacia de afirmación del consecuente: el alto consumo puede tener otras causas, como un proceso de respaldo programado."
+     },
+     {
+      "prompt": "Una fórmula con 5 variables proposicionales, ¿cuántas filas tiene en su tabla de verdad?",
+      "options": [
+       "10",
+       "25",
+       "64",
+       "32"
+      ],
+      "correct": 3,
+      "explanation": "Cada variable tiene dos valores posibles, así que el número de combinaciones es 2 elevado a 5, es decir, 32 filas."
+     },
+     {
+      "prompt": "En Python, ¿por qué es segura la condición len(lista) > 0 and lista[0] > 10 aun cuando la lista esté vacía?",
+      "options": [
+       "Porque and evalúa en cortocircuito y no accede a lista[0]",
+       "Porque Python convierte el error en False",
+       "Porque and evalúa primero la expresión de la derecha",
+       "Porque las listas vacías tienen un elemento cero"
+      ],
+      "correct": 0,
+      "explanation": "Si el primer operando de and es falso, Python no evalúa el segundo; así se evita el IndexError. El orden de las condiciones importa en la ejecución."
+     },
+     {
+      "prompt": "¿Qué afirmación sobre la validez de un argumento es correcta?",
+      "options": [
+       "La validez depende del tema tratado en el argumento",
+       "Un argumento válido puede tener conclusión falsa si alguna premisa es falsa",
+       "Todo argumento con conclusión verdadera es válido",
+       "Un argumento válido siempre tiene premisas verdaderas"
+      ],
+      "correct": 1,
+      "explanation": "La validez es una propiedad de la forma: garantiza que no hay premisas verdaderas con conclusión falsa, pero no garantiza que las premisas sean verdaderas."
+     },
+     {
+      "prompt": "De 'p → q' y '¬q', ¿qué se concluye válidamente y con qué regla?",
+      "options": [
+       "¬p, por silogismo disyuntivo",
+       "Nada; el argumento es una falacia",
+       "¬p, por modus tollens",
+       "q, por modus ponens"
+      ],
+      "correct": 2,
+      "explanation": "El modus tollens establece que si el antecedente implica el consecuente y este es falso, el antecedente también debe ser falso."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 2 · Pensamiento computacional y diseño de algoritmos",
+   "description": "Al finalizar la unidad, el estudiante aplica descomposición, reconocimiento de patrones, abstracción y diseño algorítmico para resolver problemas reales, y representa sus soluciones en pseudocódigo y diagramas de flujo con estructuras secuenciales y selectivas correctamente anidadas.",
+   "topics": [
+    "Pilares del pensamiento computacional según Wing",
+    "Método de resolución de problemas de Polya aplicado a la computación",
+    "Algoritmos: propiedades, entradas, salidas y precondiciones",
+    "Pseudocódigo y diagramas de flujo normalizados",
+    "Estructuras secuenciales y selectivas simples, dobles y múltiples",
+    "Tablas de decisión para condiciones compuestas"
+   ],
+   "slides": [
+    {
+     "title": "Qué es el pensamiento computacional",
+     "bullets": [
+      "Jeannette Wing (2006) lo define como formular problemas y soluciones de modo que un agente de procesamiento pueda ejecutarlas.",
+      "No es programar: es una forma de razonar que precede y trasciende al lenguaje de programación.",
+      "Cuatro pilares: descomposición, reconocimiento de patrones, abstracción y diseño de algoritmos.",
+      "Lo aplican analistas, médicos, logísticos y auditores, no solo programadores."
+     ],
+     "notes": "Inicie con la cita de Wing en Communications of the ACM: el pensamiento computacional es una habilidad fundamental para todos, no solo para informáticos, comparable con leer, escribir y calcular. Explique que el error del principiante es abrir el editor de código antes de entender el problema; el resultado es código que resuelve algo distinto de lo que se necesitaba. Use un ejemplo cercano: planificar la distribución de canastas en un comedor popular de San Juan de Lurigancho implica descomponer (zonas, familias, insumos), reconocer patrones (familias con perfiles similares), abstraer (lo que importa es el número de integrantes y la dirección, no el nombre del perro) y diseñar un procedimiento repetible. Pregunte a los estudiantes cuál de los cuatro pilares les resulta más natural y cuál más difícil; suele ser la abstracción."
+    },
+    {
+     "title": "Descomposición: dividir para conquistar",
+     "bullets": [
+      "Dividir un problema complejo en subproblemas independientes, cada uno con entrada y salida definidas.",
+      "Herramienta práctica: árbol de descomposición hasta llegar a tareas de una sola responsabilidad.",
+      "Criterio de parada: cada hoja se puede describir en una oración y resolver en pocos pasos.",
+      "Beneficio: permite trabajo en paralelo, pruebas por partes y reutilización."
+     ],
+     "notes": "Trabaje con el ejemplo de un sistema que emite boletas de venta electrónicas en una bodega. Descomposición de primer nivel: registrar productos vendidos, calcular importes, aplicar impuestos, generar comprobante y enviarlo al operador de servicios electrónicos. Cada uno se vuelve a descomponer: calcular importes incluye multiplicar cantidad por precio, sumar subtotales y redondear a dos decimales. Haga notar que una buena descomposición tiene bajo acoplamiento: el cálculo del IGV no debería depender de cómo se imprime la boleta. Pida a los equipos dibujar en una pizarra colaborativa el árbol de descomposición de 'inscribirse en un curso virtual de TEPSUP' y comparar profundidades. Advierta el exceso contrario: descomponer en pasos tan pequeños que se pierde la visión de conjunto. La regla práctica es que cada hoja pueda describirse en una oración con un verbo."
+    },
+    {
+     "title": "Reconocimiento de patrones y generalización",
+     "bullets": [
+      "Patrón: estructura que se repite entre problemas o dentro de un mismo problema.",
+      "Ejemplos: recorrer y acumular, buscar el máximo, contar los que cumplen una condición, clasificar por rangos.",
+      "Reconocer el patrón permite reutilizar una solución probada en lugar de inventar otra.",
+      "La generalización reemplaza valores concretos por parámetros."
+     ],
+     "notes": "Muestre tres problemas aparentemente distintos: calcular el total de ventas del día, calcular el puntaje promedio de una encuesta de satisfacción y calcular las horas trabajadas en el mes. Pregunte qué tienen en común: los tres recorren una colección y acumulan. Ese es el patrón acumulador, que se formaliza en la unidad 3. Explique que el reconocimiento de patrones es también la esencia del aprendizaje automático: un modelo de clasificación busca regularidades en los datos. Introduzca la generalización: en lugar de un algoritmo para 'calcular el IGV de 18 %', escribir uno que reciba la tasa como parámetro, lo cual facilita adaptarlo a cambios normativos, como la tasa diferenciada para restaurantes y hoteles de la Ley 31556. Pida a los estudiantes identificar un patrón común en tres trámites de su vida diaria."
+    },
+    {
+     "title": "Abstracción: quedarse con lo esencial",
+     "bullets": [
+      "Abstraer es ignorar detalles irrelevantes para el objetivo y modelar solo lo necesario.",
+      "Ejemplo clásico: el mapa del Metro de Lima ignora distancias reales y conserva el orden de estaciones.",
+      "En datos: un cliente se modela con los atributos útiles para la decisión, no con todos los posibles.",
+      "Niveles de abstracción: qué hace un módulo frente a cómo lo hace internamente."
+     ],
+     "notes": "La abstracción es el pilar más potente y el más difícil. Use el mapa de la Línea 1 del Metro de Lima: no respeta escala ni curvas, pero es perfecto para decidir dónde bajar. Si el objetivo cambia, por ejemplo calcular tiempos de viaje, la abstracción adecuada también cambia. En IA, elegir las variables de un modelo es un acto de abstracción con consecuencias éticas: si para evaluar créditos se incluye el distrito de residencia, el modelo puede discriminar de forma indirecta. Explique también la abstracción funcional: cuando usamos una función 'calcular_detraccion', no necesitamos saber cómo está programada, solo qué recibe y qué devuelve. Ejercicio: modelar a un paciente para un sistema de citas y para un sistema de triaje de emergencias; los atributos relevantes difieren y eso es justamente la lección."
+    },
+    {
+     "title": "Método de Polya aplicado a problemas computacionales",
+     "bullets": [
+      "Comprender el problema: ¿cuáles son los datos, la incógnita y las condiciones?",
+      "Concebir un plan: buscar un problema relacionado, descomponer, trabajar hacia atrás.",
+      "Ejecutar el plan verificando cada paso.",
+      "Examinar la solución: probar casos límite, generalizar y buscar otro camino."
+     ],
+     "notes": "George Polya publicó How to Solve It en 1945 para la enseñanza de la matemática, pero sus cuatro fases son la base de cualquier metodología de desarrollo de software. Aplique el método en vivo con el problema: 'determinar si un comprobante está sujeto a detracción por servicios'. Comprender: ¿qué datos tenemos? El tipo de servicio, el importe total y la tasa aplicable. ¿Cuál es la condición? Que el importe supere S/ 700. Plan: verificar si el servicio está en el anexo y luego comparar el importe. Ejecutar: escribir el pseudocódigo. Examinar: ¿qué pasa con importes exactamente iguales a 700? ¿Y con operaciones en dólares? Enfatice que la mayoría de los errores de software aparecen en la primera fase: se resolvió con precisión un problema mal comprendido."
+    },
+    {
+     "title": "Algoritmos: definición y propiedades",
+     "bullets": [
+      "Secuencia finita de instrucciones precisas que transforma entradas en salidas para resolver un problema.",
+      "Propiedades según Knuth: finitud, definición precisa, entrada, salida y efectividad.",
+      "Precondición: lo que debe cumplirse antes; poscondición: lo que garantiza al terminar.",
+      "Un mismo problema admite varios algoritmos con distinta eficiencia y claridad."
+     ],
+     "notes": "Presente la definición de Donald Knuth en The Art of Computer Programming, con sus cinco propiedades, y contraste con una receta de cocina: 'sal al gusto' no es una instrucción definida, por eso una receta no es estrictamente un algoritmo. Introduzca precondiciones y poscondiciones como un contrato: el algoritmo de cálculo de cuota de un préstamo exige que la tasa sea no negativa y el plazo positivo; a cambio, garantiza una cuota que amortiza la deuda. Si la precondición no se cumple, el algoritmo no promete nada. Esta idea reaparece en la unidad 3 con invariantes y en el curso de Python con las pruebas assert. Pida a los estudiantes escribir precondición y poscondición para 'ordenar una lista de notas de mayor a menor' y discutir qué ocurre con notas repetidas o vacías."
+    },
+    {
+     "title": "Pseudocódigo: convenciones del curso",
+     "bullets": [
+      "Estructura: Algoritmo nombre, Definir variables, instrucciones, FinAlgoritmo; compatible con PSeInt.",
+      "Asignación con ← para distinguirla de la comparación =.",
+      "Palabras clave en mayúsculas: Leer, Escribir, Si, Entonces, SiNo, Segun, Mientras, Para.",
+      "Indentación obligatoria para mostrar la estructura de bloques.",
+      "Comentarios con // para justificar decisiones no evidentes."
+     ],
+     "notes": "El pseudocódigo es un lenguaje intermedio entre el castellano y el código: suficientemente preciso para no admitir ambigüedad y suficientemente libre para no distraerse con la sintaxis. Adoptaremos las convenciones de PSeInt, herramienta libre desarrollada en Argentina y muy usada en institutos de Latinoamérica, porque permite ejecutar y depurar el pseudocódigo. Muestre un ejemplo completo: leer el importe de un servicio, calcular la detracción de 12 % si supera 700 soles y mostrar el neto a pagar al proveedor. Insista en la flecha de asignación: escribir total = total + x en la pizarra confunde a quien viene de la matemática, porque como ecuación es falsa. Comente que en la industria el pseudocódigo se usa en documentos de diseño, entrevistas técnicas y artículos científicos de IA para describir algoritmos de entrenamiento."
+    },
+    {
+     "title": "Diagramas de flujo normalizados",
+     "bullets": [
+      "Símbolos de la norma ISO 5807: terminal, proceso, decisión, entrada y salida, conector.",
+      "Flujo de arriba hacia abajo y de izquierda a derecha; sin líneas cruzadas.",
+      "Cada decisión tiene exactamente dos salidas rotuladas Sí y No.",
+      "Útiles para validar el algoritmo con usuarios no técnicos del área de negocio."
+     ],
+     "notes": "Muestre los símbolos estándar y explique que provienen de la norma ISO 5807 de 1985, todavía referencia en documentación técnica. Dibuje en draw.io el diagrama del cálculo de detracción. Señale los errores frecuentes: rombos con tres salidas, flechas sin dirección, procesos sin salida y bucles mal cerrados. Explique cuándo conviene el diagrama y cuándo el pseudocódigo: el diagrama es superior para conversar con el área usuaria, por ejemplo con la contadora que conoce la norma pero no programa; el pseudocódigo es mejor cuando el algoritmo es largo. Como actividad, entregue un diagrama con tres errores deliberados para que los equipos los detecten en cinco minutos. Mencione que en los procesos de negocio también se usa BPMN, que se verá en cursos posteriores de automatización."
+    },
+    {
+     "title": "Estructuras secuenciales: el orden importa",
+     "bullets": [
+      "Instrucciones ejecutadas una tras otra, de arriba hacia abajo, sin saltos.",
+      "Patrón típico: leer datos, procesar, mostrar resultados.",
+      "El orden de las asignaciones cambia el resultado: intercambiar variables requiere una auxiliar.",
+      "Verificación: tabla de seguimiento con el valor de cada variable tras cada línea."
+     ],
+     "notes": "Aunque parezca trivial, la estructura secuencial concentra errores sutiles. Muestre el intercambio de dos variables: a ← b; b ← a no intercambia, pues ambas terminan con el valor de b. La solución usa una variable auxiliar. Trabaje un problema completo: dado el precio de venta con IGV incluido, obtener el valor de venta y el impuesto. Valor de venta ← precio / 1.18; IGV ← precio − valor de venta. Pregunte qué ocurre si se calcula IGV ← valor de venta × 0.18 y se redondea por separado: pueden aparecer diferencias de un céntimo, un problema real en la facturación electrónica. Introduzca la tabla de seguimiento con una columna por variable y una fila por instrucción; será la base de la prueba de escritorio en la unidad 3. Pida que cada estudiante haga la tabla para un precio de 59 soles."
+    },
+    {
+     "title": "Estructuras selectivas simples y dobles",
+     "bullets": [
+      "Si condición Entonces bloque FinSi: ejecuta el bloque solo cuando la condición es verdadera.",
+      "Si condición Entonces bloque A SiNo bloque B FinSi: elige uno de dos caminos.",
+      "La condición es una fórmula lógica de la unidad 1: aplique De Morgan para simplificarla.",
+      "Pruebe ambas ramas y el valor frontera de cada comparación."
+     ],
+     "notes": "Conecte explícitamente con la unidad 1: la condición de un Si es una proposición compuesta, y todo lo aprendido sobre conectivos, equivalencias y precedencia se aplica directamente. Trabaje el ejemplo del bono escolar: si el estudiante tiene matrícula vigente y asistencia mayor o igual al 80 %, recibe el bono; si no, se registra el motivo del rechazo. Muestre el análisis de valores frontera: la asistencia de 79,9 %, 80 % y 80,1 % deben probarse siempre, porque los errores de mayor que frente a mayor o igual son los más frecuentes en sistemas reales. Comente un caso de prensa: errores de redondeo y comparaciones mal planteadas han dejado fuera de programas sociales a personas que cumplían requisitos. Pida que los estudiantes reescriban un Si con condición negada compleja en una forma positiva más legible."
+    },
+    {
+     "title": "Selección múltiple y anidamiento",
+     "bullets": [
+      "Segun variable Hacer: elige entre varias opciones de un valor discreto, como tipo de comprobante.",
+      "Si anidados o en cascada para rangos: tramos de impuesto, categorías de riesgo, niveles de triaje.",
+      "En cascada, ordene los rangos para que cada condición asuma las anteriores falsas.",
+      "Evite más de tres niveles de anidamiento: extraiga subalgoritmos o use tablas."
+     ],
+     "notes": "Distinga dos casos. Cuando la decisión depende de un valor discreto, como el código de tipo de comprobante de SUNAT (01 factura, 03 boleta, 07 nota de crédito), conviene Segun. Cuando depende de rangos, se usan Si en cascada. Ejemplo: tramos del impuesto a la renta de quinta categoría expresados en UIT: hasta 5 UIT, 8 %; más de 5 hasta 20, 14 %; y así sucesivamente. Muestre que en una cascada bien ordenada no hace falta repetir el límite inferior, porque la rama solo se alcanza si las anteriores fueron falsas. Advierta el anti-patrón de la 'escalera de la muerte': seis niveles de Si anidados, imposibles de probar. La solución es reorganizar con condiciones de guarda que rechazan temprano los datos inválidos, o usar una tabla de decisión, que es el tema de la siguiente diapositiva."
+    },
+    {
+     "title": "Tablas de decisión: completitud y consistencia",
+     "bullets": [
+      "Filas de condiciones y de acciones; cada columna es una regla con una combinación de condiciones.",
+      "Con n condiciones binarias hay 2^n reglas posibles: la tabla obliga a considerarlas todas.",
+      "Completitud: toda combinación tiene acción; consistencia: ninguna combinación tiene dos acciones contradictorias.",
+      "Las reglas con igual acción pueden fusionarse usando el símbolo 'indiferente'."
+     ],
+     "notes": "Las tablas de decisión son la herramienta ideal para reglas de negocio complejas y un puente con la unidad 4. Construya con la clase una tabla para la atención en un centro de salud: condiciones ¿tiene SIS?, ¿es emergencia?, ¿tiene cita? Con tres condiciones hay ocho reglas. Para cada una, la clase decide la acción: atender de inmediato, derivar a admisión o programar cita. Muestre cómo aparecen combinaciones que nadie había pensado, por ejemplo una emergencia sin SIS y sin cita, cuya respuesta legal es atender de todas maneras según la Ley General de Salud. Explique la simplificación con el guion de indiferencia: si es emergencia, la acción es atender sin importar las demás condiciones. Finalmente, traduzca la tabla a pseudocódigo. Presente la tarea de la unidad, que pide precisamente tabla, pseudocódigo y diagrama de flujo."
+    }
+   ],
+   "reading": {
+    "title": "Pensar antes de programar: los pilares del pensamiento computacional",
+    "minutes": 35,
+    "content": "## El origen de la idea\n\nEn 2006, Jeannette Wing, entonces directora del Departamento de Ciencias de la Computación de Carnegie Mellon University, publicó un ensayo de tres páginas en *Communications of the ACM* que cambió la educación en computación. Su tesis era que el **pensamiento computacional** es una habilidad para todos: formular problemas y sus soluciones de forma que puedan ser ejecutadas por un agente de procesamiento de información, humano o máquina. La idea tenía antecedentes en Seymour Papert y en Polya, pero Wing la convirtió en un programa educativo que hoy aparece en currículos escolares de Reino Unido, Chile y Uruguay.\n\n## Los cuatro pilares\n\n**Descomposición.** Dividir un problema en subproblemas manejables. Un sistema de citas para un hospital de EsSalud se descompone en registro de pacientes, disponibilidad de especialistas, asignación de turnos y notificaciones. Cada parte puede diseñarse, probarse y mejorarse por separado.\n\n**Reconocimiento de patrones.** Identificar similitudes. Calcular el total de ventas, el promedio de notas y las horas trabajadas comparten el patrón *recorrer y acumular*. Reconocerlo permite reutilizar una solución probada.\n\n**Abstracción.** Seleccionar los detalles relevantes para el objetivo e ignorar el resto. Para asignar turnos, un paciente se modela con DNI, especialidad requerida y prioridad; su color favorito es irrelevante. La abstracción no es neutral: elegir variables en un modelo de IA puede introducir sesgos.\n\n**Algoritmos.** Diseñar una secuencia finita de pasos precisos que resuelva el problema. Donald Knuth exige cinco propiedades: finitud, definición precisa, entradas, salidas y efectividad.\n\n## Del problema al algoritmo: un ejemplo completo\n\nEl Sistema de Pago de Obligaciones Tributarias (SPOT), conocido como sistema de detracciones, obliga al cliente a depositar un porcentaje del importe de ciertos servicios en una cuenta del proveedor en el Banco de la Nación cuando la operación supera S/ 700. Para muchos servicios empresariales la tasa es 12 %. Apliquemos el método de Polya.\n\n*Comprender.* Datos: tipo de servicio, importe total con IGV y moneda. Incógnitas: monto de detracción y neto a pagar. Condiciones: el servicio debe estar comprendido en el sistema y el importe debe superar el umbral.\n\n*Planificar y ejecutar.* El pseudocódigo, compatible con PSeInt, es:\n\n```text\nAlgoritmo CalcularDetraccion\n    Definir importe, tasa, detraccion, neto Como Real\n    Definir afecto Como Logico\n    Leer importe, afecto\n    tasa <- 0.12\n    Si afecto Y importe > 700 Entonces\n        detraccion <- redondear(importe * tasa)   // SPOT se deposita en soles sin decimales\n        neto <- importe - detraccion\n    SiNo\n        detraccion <- 0\n        neto <- importe\n    FinSi\n    Escribir \"Detracción: \", detraccion, \" | Neto al proveedor: \", neto\nFinAlgoritmo\n```\n\n*Examinar.* ¿Qué pasa con un importe de exactamente 700? La norma dice \"superior a\", así que no se detrae: la condición `> 700` es correcta, y `>= 700` sería un error. ¿Qué pasa si la factura está en dólares? Habría que convertir con el tipo de cambio publicado, lo que agrega una entrada y un paso. El examen de la solución siempre revela casos que el primer diseño no contempló.\n\n## Representaciones complementarias\n\nEl mismo algoritmo puede expresarse como **diagrama de flujo** con los símbolos de la norma ISO 5807: óvalos para inicio y fin, rectángulos para procesos, rombos para decisiones y paralelogramos para entradas y salidas. El diagrama facilita la validación con usuarios no técnicos; el pseudocódigo, la traducción a código.\n\nPara reglas con muchas condiciones conviene la **tabla de decisión**: con n condiciones binarias existen 2^n combinaciones, y la tabla obliga a decidir qué ocurre en cada una. Una tabla es *completa* si toda combinación tiene acción y *consistente* si ninguna combinación recibe acciones contradictorias.\n\n## Errores frecuentes del principiante\n\n1. Programar antes de comprender el problema.\n2. Confundir `>` con `>=` en los valores frontera.\n3. Anidar condiciones en más de tres niveles.\n4. Omitir los datos inválidos: importes negativos, campos vacíos.\n5. No probar cada rama del algoritmo al menos una vez.\n\n## Conclusión\n\nEl pensamiento computacional es el puente entre comprender un problema y automatizar su solución. En los ciclos siguientes, cuando entrene modelos de aprendizaje automático, aplicará los mismos pilares: descomponer el flujo de datos, reconocer patrones, abstraer variables y diseñar algoritmos de entrenamiento y evaluación."
+   },
+   "case": {
+    "title": "Caso: Triaje digital en un centro de salud de Ventanilla",
+    "content": "El Centro de Salud Materno Infantil Ventanilla, en el Callao, atiende en promedio 420 pacientes diarios, de los cuales cerca de 70 llegan al servicio de emergencia. Los fines de semana la demanda sube 35 % y los tiempos de espera en admisión llegan a dos horas, según los reportes internos del establecimiento. La médica jefa, la doctora Carmen Villanueva, propuso implementar un **triaje digital** en una tableta ubicada en admisión, donde el técnico de enfermería registre signos y síntomas y el sistema sugiera una prioridad.\n\nEl protocolo de triaje vigente distingue cuatro prioridades: I (emergencia, atención inmediata), II (urgencia mayor, atención en menos de 10 minutos), III (urgencia menor, hasta 2 horas) y IV (patología aguda común, derivable a consultorio externo). Los criterios que usan hoy los técnicos, recogidos en entrevistas, son:\n\n- Inconsciencia, paro respiratorio o hemorragia profusa: prioridad I.\n- Dolor torácico en mayores de 40 años o dificultad respiratoria moderada: prioridad II.\n- Fiebre mayor de 39 °C en menores de 5 años: prioridad II; en adultos, prioridad III.\n- Gestantes con sangrado: prioridad II, salvo que el sangrado sea profuso, que es prioridad I.\n- Dolor leve sin otros signos: prioridad IV.\n\nLa empresa local contratada para desarrollar la aplicación, Andes Digital SAC, presentó un prototipo con un diagrama de flujo de 31 rombos. En la prueba piloto con 200 fichas históricas, el sistema coincidió con la decisión del médico en 81 % de los casos. Los desacuerdos se concentraron en tres situaciones: pacientes con varios síntomas simultáneos, a los que el sistema asignaba la prioridad del primer síntoma evaluado y no la más grave; niños de exactamente 5 años; y fichas con datos incompletos, que el sistema enviaba por defecto a prioridad IV.\n\nEl jefe de Andes Digital, Luis Huamán, sostiene que con un modelo de aprendizaje automático entrenado sobre fichas históricas se superaría el 90 % de coincidencia. La doctora Villanueva desconfía: considera que un modelo opaco es difícil de auditar y que un error en prioridad I puede costar una vida. Además, las fichas históricas tienen 12 % de campos vacíos.\n\nLa dirección de la Red de Salud debe decidir en dos semanas si se rediseña el algoritmo de reglas, si se reemplaza por un modelo de aprendizaje automático o si se combinan ambos enfoques, por ejemplo usando reglas para las prioridades I y II y un modelo para separar III y IV.",
+    "questions": [
+     "Aplique los cuatro pilares del pensamiento computacional al problema del triaje y muestre la descomposición resultante.",
+     "Explique qué principio de diseño algorítmico se violó en el tratamiento de pacientes con varios síntomas y proponga una corrección en pseudocódigo.",
+     "¿Por qué enviar los datos incompletos a prioridad IV es una decisión de diseño peligrosa? ¿Qué alternativa propondría?",
+     "Construya una tabla de decisión parcial para fiebre y edad que resuelva el problema de los niños de exactamente 5 años.",
+     "Evalúe las tres alternativas de la Red de Salud considerando seguridad del paciente, auditabilidad y calidad de los datos disponibles."
+    ]
+   },
+   "assignment": {
+    "title": "Diseño algorítmico de un procedimiento con tabla de decisión",
+    "instructions": "## Objetivo\nAplicar los pilares del pensamiento computacional para diseñar, representar y verificar un algoritmo con estructuras selectivas.\n\n## Situación\nElija uno de estos procedimientos: (a) cálculo de la detracción y del neto a pagar para facturas de servicios en soles y en dólares; (b) clasificación de la prioridad de reclamos de clientes en una empresa de telecomunicaciones según tipo, antigüedad y si el cliente es vulnerable; (c) cálculo de la tarifa de un servicio de mototaxi según distancia, horario nocturno y carga.\n\n## Qué entregar\n1. **Comprensión del problema** según Polya: datos, incógnitas, condiciones, precondiciones y poscondiciones.\n2. **Árbol de descomposición** con al menos dos niveles.\n3. **Abstracción**: lista de variables con tipo y justificación de por qué otras variables se descartaron.\n4. **Tabla de decisión** completa y consistente, simplificada con condiciones indiferentes.\n5. **Pseudocódigo** ejecutable en PSeInt y **diagrama de flujo** según ISO 5807.\n6. **Casos de prueba**: al menos seis, incluyendo valores frontera y datos inválidos, con el resultado esperado y el obtenido.\n\n## Formato\nInforme PDF de hasta seis páginas y archivo .psc de PSeInt. Trabajo en parejas.\n\n## Criterios\nSe valoran la coherencia entre tabla, pseudocódigo y diagrama, la cobertura de casos y la claridad de la documentación.",
+    "rubric": [
+     {
+      "name": "Comprensión, descomposición y abstracción del problema",
+      "points": 5
+     },
+     {
+      "name": "Tabla de decisión completa y consistente",
+      "points": 5
+     },
+     {
+      "name": "Pseudocódigo y diagrama de flujo correctos y coherentes",
+      "points": 6
+     },
+     {
+      "name": "Casos de prueba con fronteras y datos inválidos",
+      "points": 4
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 2: Pensamiento computacional y estructuras selectivas",
+    "questions": [
+     {
+      "prompt": "Un analista diseña un modelo de clientes para predecir mora y decide no incluir la talla ni el color de ojos. ¿Qué pilar del pensamiento computacional aplica?",
+      "options": [
+       "Descomposición",
+       "Reconocimiento de patrones",
+       "Diseño de algoritmos",
+       "Abstracción"
+      ],
+      "correct": 3,
+      "explanation": "Abstraer consiste en seleccionar los atributos relevantes para el objetivo e ignorar los irrelevantes; aquí se descartan atributos sin relación con la mora."
+     },
+     {
+      "prompt": "Una tabla de decisión tiene 4 condiciones binarias. ¿Cuántas reglas debe contemplar antes de simplificar?",
+      "options": [
+       "16",
+       "8",
+       "4",
+       "12"
+      ],
+      "correct": 0,
+      "explanation": "Cada condición binaria duplica las combinaciones: 2 elevado a 4 da 16 reglas, que la tabla obliga a revisar antes de fusionar las equivalentes."
+     },
+     {
+      "prompt": "La norma indica que hay detracción cuando el importe es superior a S/ 700. ¿Qué caso de prueba es más importante para detectar un error en la comparación?",
+      "options": [
+       "Un importe negativo",
+       "Un importe de exactamente S/ 700",
+       "Un importe de S/ 5 000",
+       "Un importe de S/ 100"
+      ],
+      "correct": 1,
+      "explanation": "El valor frontera 700 distingue la comparación correcta > de la incorrecta >=; los importes alejados del umbral no revelan ese error."
+     },
+     {
+      "prompt": "¿Qué ocurre tras ejecutar a ← 3; b ← 5; a ← b; b ← a?",
+      "options": [
+       "a vale 3 y b vale 5",
+       "a vale 3 y b vale 3",
+       "a vale 5 y b vale 5",
+       "a vale 5 y b vale 3"
+      ],
+      "correct": 2,
+      "explanation": "Tras a ← b, a vale 5 y el 3 original se pierde; luego b ← a asigna 5. Para intercambiar se necesita una variable auxiliar."
+     },
+     {
+      "prompt": "En una cascada Si nota >= 17 … SiNo Si nota >= 13 … SiNo …, ¿por qué no hace falta escribir nota < 17 en la segunda condición?",
+      "options": [
+       "Porque PSeInt agrega la condición automáticamente",
+       "Porque las notas mayores de 17 son imposibles",
+       "Porque Y tiene mayor precedencia que SiNo",
+       "Porque solo se llega a ella si la primera condición fue falsa"
+      ],
+      "correct": 3,
+      "explanation": "En una estructura SiNo en cascada cada rama asume falsas todas las anteriores, de modo que nota < 17 ya está garantizada al evaluar la segunda condición."
+     },
+     {
+      "prompt": "¿Cuál de estas instrucciones NO cumple la propiedad de definición precisa de un algoritmo?",
+      "options": [
+       "Agregar sal al gusto",
+       "Multiplicar el importe por 0,12",
+       "Si el saldo es negativo, mostrar alerta",
+       "Repetir hasta que el contador sea 10"
+      ],
+      "correct": 0,
+      "explanation": "'Al gusto' no especifica una acción inequívoca y ejecutable; las demás instrucciones tienen un significado único para cualquier agente."
+     },
+     {
+      "prompt": "Un sistema de triaje evalúa los síntomas en orden y asigna la prioridad del primero que encuentra. ¿Qué rediseño corrige el error con varios síntomas?",
+      "options": [
+       "Promediar las prioridades de todos los síntomas",
+       "Evaluar todos los síntomas y asignar la prioridad más urgente",
+       "Ordenar los síntomas alfabéticamente antes de evaluar",
+       "Asignar la prioridad del último síntoma registrado"
+      ],
+      "correct": 1,
+      "explanation": "La poscondición correcta es que el paciente reciba la prioridad más grave entre sus síntomas; eso exige evaluar todos y quedarse con la más urgente."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 3 · Iteración, predicados y verificación de algoritmos",
+   "description": "Al finalizar la unidad, el estudiante diseña algoritmos iterativos con patrones de repetición, expresa sus especificaciones con predicados y cuantificadores, demuestra su corrección mediante pruebas de escritorio e invariantes y compara su eficiencia contando operaciones.",
+   "topics": [
+    "Estructuras repetitivas Mientras, Repetir y Para",
+    "Patrones iterativos: contador, acumulador, bandera, centinela y máximo",
+    "Lógica de predicados y cuantificadores aplicados a colecciones",
+    "Prueba de escritorio e invariantes de bucle",
+    "Conteo de operaciones y crecimiento: búsqueda lineal y binaria",
+    "Recursión como descomposición autosimilar"
+   ],
+   "slides": [
+    {
+     "title": "Por qué repetir: del caso único a la colección",
+     "bullets": [
+      "Los problemas reales procesan colecciones: miles de comprobantes, lecturas de sensores, registros de pacientes.",
+      "Una estructura repetitiva ejecuta un bloque mientras se cumple una condición lógica.",
+      "Todo bucle tiene inicialización, condición, cuerpo y actualización.",
+      "El error más grave es el bucle infinito; el más frecuente, la iteración de más o de menos."
+     ],
+     "notes": "Plantee el problema: en la unidad 2 calculamos la detracción de una factura; ahora la empresa necesita procesar las 3 800 facturas del mes y reportar el total detraído. Copiar 3 800 veces el algoritmo no es una opción: necesitamos repetición. Describa las cuatro partes de todo bucle con una analogía: contar los votos de una mesa en la ONPE. Inicialización: contadores en cero. Condición: quedan cédulas en el ánfora. Cuerpo: leer la cédula y sumar al candidato. Actualización: retirar la cédula. Si la actualización falta, el bucle no termina; si la condición está mal formulada, se cuenta una cédula de más o de menos, el famoso error por uno, que según la experiencia de la industria es de los defectos más comunes. Pregunte qué parte del bucle garantiza que termine."
+    },
+    {
+     "title": "Tres estructuras repetitivas y cuándo usar cada una",
+     "bullets": [
+      "Mientras condición Hacer: evalúa antes; puede ejecutarse cero veces. Ideal cuando no se conoce el número de repeticiones.",
+      "Repetir … Hasta Que condición: evalúa después; se ejecuta al menos una vez. Ideal para validar entradas.",
+      "Para i ← 1 Hasta n Con Paso 1: número de repeticiones conocido de antemano.",
+      "Cualquiera puede reescribirse con Mientras; elija la que exprese mejor la intención."
+     ],
+     "notes": "Muestre el mismo problema resuelto con las tres estructuras y discuta cuál es más legible. Para pedir un DNI hasta que tenga ocho dígitos, Repetir es natural porque al menos una vez hay que pedirlo. Para recorrer los doce meses del año, Para es la elección evidente. Para leer transacciones hasta encontrar un centinela, como un código cero que marca el final del archivo, Mientras es la adecuada. Señale que Python no tiene Repetir Hasta Que y lo simula con while True y break, algo que verán en el curso paralelo de programación. Advierta la diferencia de semántica: Mientras repite si la condición es verdadera, Repetir Hasta Que repite si la condición es falsa. Confundirlas invierte la lógica. Pida que los equipos traduzcan un Repetir a Mientras y verifiquen que se comportan igual con una tabla."
+    },
+    {
+     "title": "Patrones iterativos fundamentales",
+     "bullets": [
+      "Contador: c ← c + 1 cuando se cumple una condición; responde '¿cuántos?'.",
+      "Acumulador: s ← s + x; responde '¿cuánto en total?'.",
+      "Máximo o mínimo: comparar cada elemento con el mejor encontrado hasta el momento.",
+      "Bandera: variable lógica que registra si algo ocurrió al menos una vez.",
+      "Centinela: valor especial que indica el fin de los datos."
+     ],
+     "notes": "Estos cinco patrones resuelven la mayor parte de los problemas de procesamiento de datos y conviene reconocerlos de inmediato. Trabaje un ejemplo integrado: procesar las ventas diarias de una bodega en Huancayo durante un mes; contar los días con pérdidas, acumular el total vendido, encontrar el mejor día y detectar con una bandera si hubo algún día sin ventas. Insista en la inicialización correcta: el acumulador de sumas inicia en cero, el de productos en uno, y el máximo debe iniciar con el primer elemento, no con cero, porque si todos los valores son negativos el resultado sería incorrecto. Esa es una pregunta clásica de entrevistas técnicas. Conecte con la unidad 2: estos son los patrones que se mencionaron al hablar del pilar de reconocimiento de patrones. Pida a cada estudiante identificar qué patrones combina el cálculo del promedio de notas aprobadas."
+    },
+    {
+     "title": "Predicados: proposiciones con variables",
+     "bullets": [
+      "Un predicado P(x) se vuelve proposición al asignar un valor a x: P(x): 'x es mayor de edad'.",
+      "Dominio o universo: conjunto de valores posibles de x, como los clientes registrados.",
+      "Predicados de varias variables: Atiende(m, p): 'el médico m atiende al paciente p'.",
+      "Los predicados permiten expresar especificaciones sobre colecciones completas."
+     ],
+     "notes": "Recupere la idea de la unidad 1: 'x + 2 = 5' no era proposición. Ahora le damos nombre: es un predicado, una función que devuelve verdadero o falso según el valor de x. Muestre que en programación un predicado es simplemente una función booleana: def es_mayor(edad): return edad >= 18. Enfatice el dominio: el predicado 'x es par' tiene sentido en los enteros, pero no sobre nombres de clientes. Introduzca predicados de dos variables con el ejemplo de matrículas: Matriculado(e, c), el estudiante e está matriculado en el curso c. Explique que las bases de datos relacionales, que verán en el segundo ciclo, se fundamentan precisamente en la lógica de predicados, según la propuesta de Edgar Codd en 1970: cada tabla es un predicado y cada fila es una tupla que lo hace verdadero."
+    },
+    {
+     "title": "Cuantificadores universal y existencial",
+     "bullets": [
+      "Universal ∀x P(x): todos los elementos del dominio cumplen P; un contraejemplo lo refuta.",
+      "Existencial ∃x P(x): al menos un elemento cumple P; un ejemplo lo confirma.",
+      "Negación: ¬∀x P(x) ≡ ∃x ¬P(x); ¬∃x P(x) ≡ ∀x ¬P(x).",
+      "Algorítmicamente, ∀ es un bucle con bandera que se apaga y ∃ uno con bandera que se enciende.",
+      "En Python: all() y any() implementan los cuantificadores sobre colecciones finitas."
+     ],
+     "notes": "Este es el puente entre lógica y algoritmos. Escriba la especificación 'todas las facturas del lote tienen RUC válido' como ∀f Valido(f). Su negación, por las leyes de De Morgan generalizadas, es 'existe al menos una factura con RUC inválido'. Muestre el algoritmo: bandera ← Verdadero; para cada factura, si no es válida, bandera ← Falso. Luego explique la optimización por cortocircuito: en cuanto aparece un contraejemplo, se puede terminar el bucle, exactamente como hace all() en Python. Trabaje traducciones con varios cuantificadores: 'todo paciente tiene un médico asignado' es ∀p ∃m Atiende(m, p), que no es lo mismo que ∃m ∀p Atiende(m, p), 'hay un médico que atiende a todos los pacientes'. El orden de los cuantificadores cambia el significado y genera errores frecuentes en requisitos de software."
+    },
+    {
+     "title": "Prueba de escritorio con tabla de traza",
+     "bullets": [
+      "Ejecutar el algoritmo a mano con datos concretos, registrando cada variable tras cada paso.",
+      "Una columna por variable y por condición evaluada; una fila por iteración.",
+      "Elegir datos que recorran todos los caminos: lista vacía, un elemento, valores repetidos, frontera.",
+      "Compara el resultado obtenido con el esperado calculado de forma independiente."
+     ],
+     "notes": "La prueba de escritorio es la técnica de verificación más barata y la que más errores detecta en algoritmos pequeños. Haga una demostración con un algoritmo que calcula el promedio de las notas aprobatorias de una lista: 15, 11, 13, 20, 8. Construya la tabla con columnas i, nota, condición nota >= 13, suma y cantidad. Al final, suma 48 y cantidad 3, promedio 16. Luego pruebe con una lista sin aprobados: aparece una división entre cero, un defecto que el caso normal no revelaba. Esa es la lección principal: los datos de prueba deben elegirse para romper el algoritmo, no para confirmarlo. Organice una actividad entre pares: cada equipo entrega a otro un algoritmo con un error deliberado y una traza; gana quien encuentre el error con menos casos de prueba. Esto entrena la mentalidad del tester."
+    },
+    {
+     "title": "Invariantes de bucle: demostrar que el algoritmo es correcto",
+     "bullets": [
+      "Invariante: propiedad verdadera antes de la primera iteración y que cada iteración preserva.",
+      "Tres pruebas: inicialización, mantenimiento y terminación.",
+      "Al terminar, invariante más condición de salida implican la poscondición.",
+      "Ejemplo: en un acumulador, 'suma contiene el total de los primeros i elementos'."
+     ],
+     "notes": "Las pruebas muestran la presencia de errores, nunca su ausencia, decía Edsger Dijkstra. Para estar seguros de que un algoritmo funciona con cualquier entrada necesitamos un argumento lógico: el invariante de bucle, formalizado por Tony Hoare en 1969 y usado en el libro de Cormen y colaboradores para justificar todos sus algoritmos. Trabaje el ejemplo del máximo: invariante, 'mayor es el máximo entre los elementos 1 a i'. Inicialización: con i igual a 1, mayor es el primer elemento, trivialmente el máximo. Mantenimiento: si el elemento i+1 supera a mayor, se actualiza; si no, mayor sigue siendo el máximo. Terminación: cuando i llega a n, mayor es el máximo de toda la lista. Explique la analogía con la inducción matemática, que verán formalmente en Matemática para Ciencia de Datos. No se busca formalismo excesivo, sino el hábito de preguntarse qué se mantiene verdadero en cada vuelta."
+    },
+    {
+     "title": "Terminación: garantizar que el bucle se detiene",
+     "bullets": [
+      "Función de cota: expresión entera no negativa que disminuye estrictamente en cada iteración.",
+      "Ejemplo: en un recorrido, n − i decrece de n a 0.",
+      "Si no se encuentra una función de cota, sospeche un posible bucle infinito.",
+      "En producción, añada límites de iteraciones y tiempos máximos como defensa adicional."
+     ],
+     "notes": "La corrección tiene dos partes: que el resultado sea el correcto si el algoritmo termina, y que efectivamente termine. Para la segunda usamos una función de cota o variante: un número natural que baja en cada vuelta y no puede bajar indefinidamente. Muestre un bucle defectuoso: Mientras saldo > 0, saldo ← saldo − cuota, donde la cuota se lee del usuario y podría ser cero; entonces la cota no disminuye y el bucle no termina. La precondición cuota > 0 resuelve el problema. Comente casos reales: procesos batch que nunca terminaban y bloquearon el cierre contable de una empresa, o reintentos infinitos que saturaron un servicio. Mencione el problema de la parada de Turing (1936): no existe algoritmo general que decida si cualquier programa termina, por eso la responsabilidad de garantizarlo recae en el diseñador."
+    },
+    {
+     "title": "Contar operaciones: el costo de un algoritmo",
+     "bullets": [
+      "El tiempo de ejecución se estima contando operaciones básicas en función del tamaño n de la entrada.",
+      "Un recorrido simple realiza del orden de n operaciones; dos bucles anidados, del orden de n².",
+      "Interesa el crecimiento: con n = 1 millón, n² es un billón de operaciones.",
+      "La notación O grande formaliza este crecimiento; se estudia a fondo en Estructuras de Datos y Algoritmos."
+     ],
+     "notes": "Introduzca el análisis de eficiencia de forma intuitiva, sin adelantar el formalismo del segundo ciclo. Proponga el problema: detectar si en un padrón de beneficiarios hay DNI duplicados. Algoritmo ingenuo: comparar cada DNI con todos los demás, unas n² / 2 comparaciones. Con el padrón de un distrito de 10 000 personas son 50 millones de comparaciones, aceptable; con el padrón nacional de un programa social, con varios millones de registros, son billones, inviable en una computadora personal. Alternativa: ordenar primero y comparar vecinos, o usar un conjunto, que el curso de Python presenta como estructura de búsqueda eficiente. Construya con la clase una tabla con n = 10, 1 000 y 1 000 000 y las columnas n, n log n y n². Esta tabla convence más que cualquier definición."
+    },
+    {
+     "title": "Búsqueda lineal frente a búsqueda binaria",
+     "bullets": [
+      "Lineal: revisa elemento por elemento; en el peor caso, n comparaciones.",
+      "Binaria: requiere datos ordenados; descarta la mitad en cada paso; cerca de log₂ n comparaciones.",
+      "Para un millón de registros: hasta 1 000 000 frente a unas 20 comparaciones.",
+      "Invariante de la binaria: si el valor existe, está entre los índices inferior y superior."
+     ],
+     "notes": "Haga el juego clásico: piense un número entre 1 y 1 000; los estudiantes adivinan y usted responde mayor o menor. Con una buena estrategia, nunca se necesitan más de 10 preguntas, porque 2 elevado a 10 es 1 024. Esa estrategia es la búsqueda binaria. Escriba el pseudocódigo con inferior, superior y medio, y enuncie el invariante. Muestre el error clásico: actualizar inferior ← medio en lugar de medio + 1, que en ciertos casos produce un bucle infinito; vincúlelo con la función de cota de la diapositiva anterior. Comente que Jon Bentley relató que la mayoría de programadores profesionales a los que pidió escribir una búsqueda binaria cometieron errores. La lección es doble: un algoritmo puede ser enormemente más eficiente, pero exige una precondición, datos ordenados, y un razonamiento cuidadoso para ser correcto."
+    },
+    {
+     "title": "Recursión: definir un problema en términos de sí mismo",
+     "bullets": [
+      "Una solución recursiva tiene caso base, que se resuelve directamente, y caso recursivo, que reduce el problema.",
+      "Ejemplo: factorial(n) = n × factorial(n − 1), con factorial(0) = 1.",
+      "Es descomposición autosimilar: el subproblema tiene la misma forma que el problema.",
+      "Sin caso base o sin reducción, la recursión no termina."
+     ],
+     "notes": "Presente la recursión como una aplicación directa del pilar de descomposición: cuando el subproblema es una versión más pequeña del mismo problema. Use un ejemplo visual: contar cuántas personas hay en una fila preguntando al de adelante cuántas tiene delante; el primero responde cero, que es el caso base. Trabaje la suma de una lista: suma(lista) es el primer elemento más la suma del resto, y la suma de una lista vacía es cero. Haga una traza con la pila de llamadas en la pizarra. Conecte con la terminación: el tamaño del problema es la función de cota. Advierta que la recursión no siempre es eficiente; la definición ingenua de Fibonacci repite cálculos de forma exponencial. Mencione que estructuras como árboles de decisión y búsqueda en grafos, que veremos en la unidad 4, son naturalmente recursivas."
+    },
+    {
+     "title": "Del pseudocódigo verificado al código Python",
+     "bullets": [
+      "Traduzca estructuras: Mientras a while, Para a for con range, Segun a match o cascada if-elif.",
+      "Convierta las precondiciones en validaciones o en assert.",
+      "Convierta los casos de la prueba de escritorio en pruebas automáticas.",
+      "Compare resultados del pseudocódigo y del programa con los mismos datos."
+     ],
+     "notes": "Cierre la unidad mostrando que todo el trabajo de diseño se traduce casi mecánicamente a Python. Tome el algoritmo del máximo verificado con invariante y escríbalo en Colab; agregue assert para la precondición de lista no vacía y conviértalo en una función con docstring que incluya precondición, poscondición e invariante como comentario. Luego tome los casos de la prueba de escritorio y conviértalos en llamadas con resultados esperados. Enfatice la división del trabajo entre cursos: Fundamentos de Programación en Python enseña el lenguaje y sus herramientas, este curso enseña a pensar el algoritmo y a demostrar que es correcto. Presente la tarea de la unidad: diseñar, verificar con invariantes y comparar en eficiencia dos algoritmos para un mismo problema de datos. Recuerde que el cuestionario de la unidad se rinde en la semana 12."
+    }
+   ],
+   "reading": {
+    "title": "Corrección y eficiencia: cómo saber que un algoritmo funciona y cuánto cuesta",
+    "minutes": 40,
+    "content": "## Dos preguntas que todo diseñador debe responder\n\nAnte cualquier algoritmo, un profesional riguroso se pregunta: ¿es **correcto**, es decir, produce la salida especificada para toda entrada válida y termina? ¿Es **eficiente**, es decir, sus recursos crecen de forma aceptable con el tamaño de los datos? Esta lectura presenta las herramientas para responder ambas, siguiendo la tradición de Hoare (1969), Dijkstra y el enfoque de Cormen, Leiserson, Rivest y Stein (2022).\n\n## Especificar con predicados\n\nUna especificación precisa usa lógica de predicados. Suponga un lote de comprobantes C = {c1, …, cn} y el predicado Valido(c). La especificación del validador de lote es:\n\n- Precondición: n ≥ 0 y cada comprobante tiene un RUC de 11 caracteres.\n- Poscondición: resultado = Verdadero si y solo si ∀c ∈ C: Valido(c).\n\nPor la negación de cuantificadores, ¬∀c Valido(c) ≡ ∃c ¬Valido(c): basta un comprobante inválido para rechazar el lote. Esto sugiere el algoritmo con salida temprana:\n\n```text\nAlgoritmo ValidarLote\n    todo_valido <- Verdadero\n    i <- 1\n    Mientras i <= n Y todo_valido Hacer\n        // Invariante: todo_valido = Verdadero si y solo si c1..c(i-1) son válidos\n        Si NO Valido(C[i]) Entonces\n            todo_valido <- Falso\n        FinSi\n        i <- i + 1\n    FinMientras\nFinAlgoritmo\n```\n\n## Invariantes de bucle\n\nUn **invariante** es un predicado que se cumple antes de cada evaluación de la condición del bucle. Se demuestra en tres pasos:\n\n1. **Inicialización**: con i = 1 no se ha revisado ningún comprobante y todo_valido es Verdadero; el invariante se cumple de forma vacía, pues todo enunciado universal sobre un conjunto vacío es verdadero.\n2. **Mantenimiento**: si el invariante vale para i y se revisa C[i], la bandera se apaga exactamente cuando C[i] es inválido, así que tras i ← i + 1 el invariante vale de nuevo.\n3. **Terminación**: el bucle termina cuando i = n + 1 (todos revisados) o cuando la bandera es Falso (hay un inválido). En ambos casos, invariante más condición de salida implican la poscondición.\n\nLa **terminación** se garantiza con una función de cota: n + 1 − i es un entero no negativo que disminuye en cada vuelta.\n\n## Contar operaciones\n\nPara estimar el costo se cuentan operaciones básicas en función de n. El validador hace como máximo n llamadas a Valido: crecimiento **lineal**. Detectar DNI duplicados comparando todos contra todos requiere n(n − 1)/2 comparaciones: crecimiento **cuadrático**.\n\n| n | log₂ n | n | n² |\n|---|---|---|---|\n| 1 000 | 10 | 1 000 | 1 000 000 |\n| 1 000 000 | 20 | 1 000 000 | 10¹² |\n| 33 000 000 | 25 | 33 000 000 | 1,09 × 10¹⁵ |\n\nLa última fila corresponde aproximadamente a la población del Perú estimada por el INEI. Un algoritmo cuadrático sobre un padrón nacional, a mil millones de operaciones por segundo, tardaría más de doce días; uno lineal, una fracción de segundo.\n\n## Búsqueda binaria: eficiencia con precondición\n\nSi los datos están ordenados, la búsqueda binaria descarta la mitad del espacio en cada paso:\n\n```python\ndef busqueda_binaria(lista, objetivo):\n    # Precondición: lista ordenada ascendentemente\n    inf, sup = 0, len(lista) - 1\n    while inf <= sup:\n        # Invariante: si objetivo está en lista, está en lista[inf..sup]\n        medio = (inf + sup) // 2\n        if lista[medio] == objetivo:\n            return medio\n        elif lista[medio] < objetivo:\n            inf = medio + 1\n        else:\n            sup = medio - 1\n    return -1   # cota sup - inf + 1 llegó a 0: no está\n```\n\nCon un millón de registros, la búsqueda binaria necesita a lo sumo 20 comparaciones. Pero si se viola la precondición, el resultado es incorrecto sin ningún mensaje de error: la eficiencia tiene un precio en supuestos.\n\n## Pruebas frente a demostraciones\n\nLas pruebas de escritorio y las pruebas automatizadas detectan errores en los casos elegidos; los invariantes justifican la corrección para todos los casos. En la práctica profesional se combinan: el invariante guía el diseño y la elección de casos de prueba, y las pruebas protegen contra errores de traducción al código. En sistemas críticos, como software de aviónica o de pagos interbancarios, se usan incluso herramientas de verificación formal basadas en estas mismas ideas.\n\n## Ideas clave\n\n1. Especifique con predicados y cuantificadores antes de diseñar.\n2. Todo bucle debe tener un invariante y una función de cota identificables.\n3. El crecimiento importa más que la velocidad de la máquina.\n4. Los algoritmos eficientes suelen exigir precondiciones más fuertes."
+   },
+   "case": {
+    "title": "Caso: Depuración del padrón de un programa social",
+    "content": "Un programa social de apoyo alimentario de alcance nacional, adscrito a un ministerio, recibió en 2025 una observación de la Contraloría General de la República: se habrían detectado pagos duplicados a beneficiarios registrados más de una vez en el padrón, con DNI repetidos por errores de digitación en las fichas de campo. El padrón tiene 1,8 millones de registros provenientes de 24 unidades territoriales, cada una con su propia hoja de cálculo.\n\nLa Oficina de Tecnologías de la Información asignó el problema a Jorge Ccori, analista recién contratado, y a Milagros Ramos, técnica en datos egresada de un instituto. Jorge escribió en un fin de semana un script que compara cada registro con todos los demás. Lo probó con la unidad territorial de Moquegua, de 9 000 registros, y tardó 40 segundos. Lo lanzó sobre el padrón completo un lunes a las 9:00; el martes a mediodía seguía ejecutándose y el jefe de la oficina preguntó si debía informar a la Contraloría que el análisis estaría listo \"en unos días\".\n\nMilagros revisó el script y encontró además un problema de corrección: el bucle interno empezaba en el mismo índice que el externo, de modo que cada registro se comparaba consigo mismo y se marcaba como duplicado. En la prueba de Moquegua esto produjo 9 000 \"duplicados\" adicionales que Jorge interpretó como \"errores del padrón regional\". Por otro lado, la comparación exacta de DNI no detecta los casos en que dos dígitos se invirtieron al digitar, que según una muestra manual de 500 fichas representan cerca de un tercio de los duplicados reales.\n\nMilagros propone tres cambios: ordenar el padrón por DNI y comparar solo registros vecinos; usar el dígito de verificación del DNI y la coincidencia de nombre y fecha de nacimiento para detectar inversiones de dígitos; y documentar el algoritmo con su invariante para presentarlo a la Contraloría como evidencia de rigor metodológico. Jorge sostiene que lo urgente es entregar un número esta semana y que la documentación puede esperar.\n\nEl jefe de la oficina debe decidir qué enfoque adoptar, qué decir a la Contraloría sobre los plazos y cómo garantizar que la lista de duplicados no excluya injustamente a beneficiarias legítimas, muchas de ellas mujeres jefas de hogar en zonas rurales.",
+    "questions": [
+     "Estime cuántas comparaciones realiza el script de Jorge con 9 000 y con 1,8 millones de registros, y explique por qué el tiempo no creció proporcionalmente.",
+     "Formule el invariante correcto del bucle de detección de duplicados y explique qué error de inicialización cometió Jorge.",
+     "Diseñe en pseudocódigo la propuesta de Milagros de ordenar y comparar vecinos, indicando su costo aproximado.",
+     "¿Qué riesgos éticos y legales tiene una lista de duplicados con falsos positivos y qué controles propondría antes de suspender pagos?",
+     "¿Qué recomendaría comunicar a la Contraloría sobre plazos y metodología? Justifique su decisión."
+    ]
+   },
+   "assignment": {
+    "title": "Diseño, verificación y comparación de dos algoritmos iterativos",
+    "instructions": "## Objetivo\nDiseñar dos algoritmos para un mismo problema de datos, demostrar su corrección con invariantes y compararlos en eficiencia.\n\n## Problema\nDado un registro de ventas diarias de una cadena de boticas (fecha, local, importe), elija uno: (a) detectar si existen dos ventas con exactamente el mismo importe en el mismo día; (b) encontrar el periodo de siete días consecutivos con mayor venta total; (c) verificar que todas las ventas de un local cumplen un monto mínimo y reportar la primera que no lo cumple.\n\n## Qué entregar\n1. **Especificación** con predicados y cuantificadores: precondición y poscondición.\n2. **Dos algoritmos en pseudocódigo**: uno directo y otro más eficiente.\n3. **Verificación**: para cada algoritmo, invariante de bucle con sus tres pruebas y función de cota.\n4. **Prueba de escritorio** con tabla de traza para al menos tres casos, incluido un caso límite.\n5. **Análisis de costo**: conteo de operaciones en función de n y tabla comparativa para n = 100, 10 000 y 1 000 000.\n6. **Implementación en Python** de ambos algoritmos en Colab, midiendo tiempos con datos generados.\n\n## Formato\nInforme PDF de hasta seis páginas y cuaderno de Colab. Trabajo en parejas.\n\n## Criterios\nSe valora la precisión de la especificación, el rigor de la verificación, la calidad del análisis de costo y la coherencia entre diseño e implementación.",
+    "rubric": [
+     {
+      "name": "Especificación con predicados y cuantificadores",
+      "points": 4
+     },
+     {
+      "name": "Diseño de los dos algoritmos",
+      "points": 5
+     },
+     {
+      "name": "Invariantes, cota y prueba de escritorio",
+      "points": 6
+     },
+     {
+      "name": "Análisis de costo e implementación comparada",
+      "points": 5
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 3: Iteración, predicados y verificación",
+    "questions": [
+     {
+      "prompt": "¿Cuál es la negación correcta de 'todos los comprobantes del lote tienen RUC válido'?",
+      "options": [
+       "Todos los comprobantes tienen RUC inválido",
+       "Existe al menos un comprobante con RUC válido",
+       "Existe al menos un comprobante con RUC inválido",
+       "Ningún comprobante tiene RUC válido"
+      ],
+      "correct": 2,
+      "explanation": "Por la negación de cuantificadores, ¬∀x P(x) equivale a ∃x ¬P(x): basta un contraejemplo para que la afirmación universal sea falsa."
+     },
+     {
+      "prompt": "Un algoritmo para hallar el máximo inicializa mayor ← 0 y recorre la lista. ¿Con qué datos falla?",
+      "options": [
+       "Cuando la lista tiene un solo elemento",
+       "Cuando hay valores repetidos",
+       "Cuando la lista está ordenada",
+       "Cuando todos los valores son negativos"
+      ],
+      "correct": 3,
+      "explanation": "Si todos los valores son negativos, ninguno supera a cero y el algoritmo devuelve 0, que no pertenece a la lista. Debe inicializarse con el primer elemento."
+     },
+     {
+      "prompt": "¿Qué diferencia hay entre ∀p ∃m Atiende(m, p) y ∃m ∀p Atiende(m, p)?",
+      "options": [
+       "La primera dice que cada paciente tiene algún médico; la segunda, que un médico atiende a todos",
+       "Son equivalentes porque los cuantificadores conmutan",
+       "La primera dice que un médico atiende a todos; la segunda, que cada paciente tiene médico",
+       "La segunda es la negación de la primera"
+      ],
+      "correct": 0,
+      "explanation": "El orden de cuantificadores distintos altera el significado: en la segunda fórmula el mismo médico m debe atender a todos los pacientes, una exigencia mucho más fuerte."
+     },
+     {
+      "prompt": "¿Qué afirma correctamente la propiedad de mantenimiento de un invariante de bucle?",
+      "options": [
+       "El invariante debe ser falso para que el bucle termine",
+       "Si el invariante es verdadero antes de una iteración, sigue siéndolo después",
+       "El invariante es verdadero solo al terminar el bucle",
+       "El invariante disminuye en cada iteración"
+      ],
+      "correct": 1,
+      "explanation": "El mantenimiento garantiza que cada iteración preserva la propiedad; la disminución corresponde a la función de cota, no al invariante."
+     },
+     {
+      "prompt": "Con un padrón ordenado de 1 000 000 de DNI, ¿cuántas comparaciones necesita como máximo la búsqueda binaria?",
+      "options": [
+       "Alrededor de 500 000",
+       "Alrededor de 1 000 000",
+       "Alrededor de 20",
+       "Alrededor de 1 000"
+      ],
+      "correct": 2,
+      "explanation": "La búsqueda binaria divide el espacio a la mitad en cada paso; log₂ de un millón es aproximadamente 20."
+     },
+     {
+      "prompt": "En una búsqueda binaria, un estudiante escribe inf ← medio en lugar de inf ← medio + 1. ¿Cuál es el riesgo principal?",
+      "options": [
+       "Que el algoritmo se vuelva lineal",
+       "Que la lista se desordene",
+       "Ninguno: ambas versiones son equivalentes",
+       "Un bucle infinito porque la cota puede dejar de disminuir"
+      ],
+      "correct": 3,
+      "explanation": "Cuando inf y sup son consecutivos, medio puede ser igual a inf; asignar inf ← medio no reduce el intervalo y la función de cota no disminuye."
+     },
+     {
+      "prompt": "Comparar cada registro con todos los demás tarda 40 segundos con 9 000 registros. Aproximadamente, ¿cuánto tardaría con 90 000?",
+      "options": [
+       "Unos 4 000 segundos",
+       "Unos 400 segundos",
+       "Unos 80 segundos",
+       "Unos 40 segundos"
+      ],
+      "correct": 0,
+      "explanation": "El costo es cuadrático: multiplicar n por 10 multiplica las comparaciones por 100, así que el tiempo pasa de 40 a unos 4 000 segundos."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 4 · Lógica aplicada a la inteligencia artificial y proyecto integrador",
+   "description": "Al finalizar la unidad, el estudiante modela decisiones con sistemas basados en reglas, árboles de decisión y búsqueda en espacios de estados, verifica su consistencia y completitud, analiza sus implicancias éticas y sustenta un proyecto integrador que resuelve un problema real del entorno peruano.",
+   "topics": [
+    "Representación del conocimiento con reglas y hechos",
+    "Encadenamiento hacia adelante y hacia atrás",
+    "Árboles de decisión: diseño, lectura y relación con las reglas",
+    "Búsqueda en espacios de estados: amplitud y profundidad",
+    "Explicabilidad, sesgos y responsabilidad en sistemas de decisión automatizada",
+    "Proyecto integrador: diseño, implementación, pruebas y sustentación"
+   ],
+   "slides": [
+    {
+     "title": "Dos tradiciones de la inteligencia artificial",
+     "bullets": [
+      "IA simbólica: conocimiento explícito en reglas lógicas; dominó entre 1956 y fines de los ochenta.",
+      "IA conexionista y estadística: aprende patrones de los datos; domina desde la década de 2010.",
+      "Los sistemas actuales combinan ambas: modelos que predicen y reglas que validan, limitan y explican.",
+      "Comprender la lógica permite auditar, depurar y gobernar cualquier sistema de IA."
+     ],
+     "notes": "Abra la unidad con una perspectiva histórica basada en Russell y Norvig. La conferencia de Dartmouth de 1956 inauguró la IA con una apuesta simbólica: razonar manipulando símbolos con reglas lógicas. Los sistemas expertos de los setenta y ochenta, como MYCIN para infecciones bacterianas o XCON para configurar computadoras en Digital Equipment, tuvieron éxito comercial pero chocaron con el cuello de botella de la adquisición del conocimiento. La revolución del aprendizaje profundo cambió el enfoque, pero la lógica no desapareció: los modelos de lenguaje actuales se despliegan rodeados de reglas de seguridad, validadores de formato y políticas de negocio. En banca peruana, un modelo puntúa el riesgo de una solicitud, pero reglas regulatorias de la SBS determinan límites que el modelo no puede violar. Pregunte: ¿qué ventaja tiene una regla explícita frente a un modelo estadístico? La respuesta clave es la explicabilidad."
+    },
+    {
+     "title": "Representar conocimiento con hechos y reglas",
+     "bullets": [
+      "Hechos: proposiciones o predicados verdaderos sobre el caso: Fiebre(paciente), Edad(paciente, 3).",
+      "Reglas de producción: SI condiciones ENTONCES conclusión o acción.",
+      "Base de conocimiento: conjunto de reglas del dominio; memoria de trabajo: hechos del caso.",
+      "Motor de inferencia: aplica las reglas a los hechos para derivar nuevas conclusiones.",
+      "Separar conocimiento y motor permite actualizar reglas sin reprogramar."
+     ],
+     "notes": "Muestre la arquitectura clásica de un sistema experto: base de conocimiento, memoria de trabajo, motor de inferencia e interfaz de explicación. Use un dominio cercano: la orientación sobre el régimen tributario adecuado para un emprendedor. Hechos: ingresos anuales estimados, tipo de actividad, número de trabajadores. Reglas: si los ingresos no superan cierto límite y la actividad es venta minorista al consumidor final, entonces evaluar el Nuevo RUS; si superan el límite del RER, entonces Régimen MYPE Tributario o General. Advierta que los límites deben verificarse con la normativa vigente de SUNAT, porque cambian. Enfatice la ventaja de separar conocimiento y motor: cuando la norma cambia, el contador actualiza la regla sin tocar el programa. Esa es también la filosofía de los motores de reglas de negocio usados en aseguradoras y bancos."
+    },
+    {
+     "title": "Encadenamiento hacia adelante",
+     "bullets": [
+      "Parte de los hechos conocidos y dispara las reglas cuyas condiciones se cumplen.",
+      "Cada conclusión nueva se agrega a la memoria de trabajo; se repite hasta que no haya reglas nuevas que aplicar.",
+      "Es la aplicación iterada del modus ponens visto en la unidad 1.",
+      "Adecuado para monitoreo y alertas: detecta todas las consecuencias de los datos."
+     ],
+     "notes": "Explique el algoritmo con pseudocódigo: repetir; para cada regla no disparada, si todas sus condiciones están en la memoria, agregar la conclusión y marcarla; hasta que en una vuelta completa no se agregue nada. Señale los conceptos de las unidades anteriores: es un bucle con bandera, la función de cota es el número de reglas aún no disparadas y cada disparo es un modus ponens. Trabaje un ejemplo de alerta de fraude con tarjetas: hechos, compra en el extranjero y compra mayor a 3 000 soles; regla 1, compra en el extranjero y sin aviso de viaje implica operación inusual; regla 2, operación inusual y monto alto implica bloquear y llamar al cliente. Haga la traza paso a paso en la pizarra. Pregunte qué ocurre si dos reglas concluyen acciones contradictorias, lo que abre la discusión sobre resolución de conflictos y prioridades entre reglas."
+    },
+    {
+     "title": "Encadenamiento hacia atrás",
+     "bullets": [
+      "Parte de una hipótesis u objetivo y busca reglas que la concluyan.",
+      "Las condiciones de esas reglas se convierten en subobjetivos, de forma recursiva.",
+      "Si un subobjetivo no se puede deducir, se pregunta al usuario o se descarta.",
+      "Adecuado para diagnóstico y para responder preguntas concretas; base del lenguaje Prolog."
+     ],
+     "notes": "Contraste con el encadenamiento hacia adelante. Aquí el sistema razona como un médico que sospecha un diagnóstico y busca evidencia que lo confirme o descarte. Formalmente es recursión, como vimos en la unidad 3: probar un objetivo consiste en probar las condiciones de alguna regla que lo concluya, y el caso base es un hecho conocido o una respuesta del usuario. Trabaje el ejemplo de soporte técnico: objetivo, el problema es la configuración DNS. Regla: si hay conexión a la red local y no se resuelven nombres pero sí se accede por dirección IP, entonces es un problema de DNS. El sistema pregunta solo lo necesario, lo que mejora la experiencia del usuario. Mencione que Prolog, creado en Francia en 1972, implementa este encadenamiento. Pregunte qué riesgo aparece si dos reglas se llaman mutuamente: un ciclo sin caso base."
+    },
+    {
+     "title": "Calidad de una base de reglas",
+     "bullets": [
+      "Consistencia: ningún conjunto de hechos posible dispara conclusiones contradictorias.",
+      "Completitud: toda combinación relevante de hechos produce alguna conclusión.",
+      "Redundancia: reglas que siempre se cumplen junto con otras más generales.",
+      "Reglas subsumidas y ciclos: detectarlos con tablas de decisión y grafos de dependencias."
+     ],
+     "notes": "Así como un programa puede tener errores, una base de reglas también. Proyecte una base de diez reglas de un sistema de admisión a un crédito y pida a los equipos detectar los defectos en diez minutos. Errores típicos: una regla aprueba a clientes con ingresos altos y otra rechaza a todo cliente con deuda vencida, sin establecer cuál prevalece cuando ambas se cumplen; un hueco para clientes sin historial crediticio, que el sistema no sabe clasificar; una regla redundante que es caso particular de otra. Muestre que la tabla de decisión de la unidad 2 es la herramienta para verificar completitud y consistencia, y que la lógica proposicional permite comprobarlas: dos reglas son contradictorias si la conjunción de sus condiciones es satisfacible y sus conclusiones se excluyen. Este análisis es parte del entregable del proyecto integrador."
+    },
+    {
+     "title": "Árboles de decisión: estructura y lectura",
+     "bullets": [
+      "Nodos internos: preguntas sobre atributos; ramas: respuestas; hojas: decisiones o clases.",
+      "Cada camino de la raíz a una hoja equivale a una regla SI … ENTONCES con conjunción de condiciones.",
+      "Un árbol bien formado es completo y consistente por construcción: cada caso cae en exactamente una hoja.",
+      "Pueden diseñarse a mano con expertos o aprenderse de datos, como en Aprendizaje Automático I."
+     ],
+     "notes": "Dibuje un árbol para decidir la modalidad de atención de un reclamo en una empresa de servicios: ¿el cliente es vulnerable? Sí, atención prioritaria. No: ¿el reclamo involucra corte del servicio? Sí, atención en 24 horas; no, atención ordinaria. Muestre que cada camino es una regla, por ejemplo: SI no vulnerable Y con corte ENTONCES atención en 24 horas. Destaque la gran ventaja: como en cada nodo las ramas son exhaustivas y excluyentes, el árbol garantiza completitud y consistencia, problemas que en una base de reglas sueltas había que verificar. Explique que en Aprendizaje Automático I aprenderán algoritmos como ID3 de Quinlan o CART de Breiman, que construyen el árbol a partir de datos eligiendo las preguntas más informativas. Aquí aprendemos a diseñarlos, leerlos y auditarlos, competencia necesaria para explicar a un usuario por qué el sistema decidió algo."
+    },
+    {
+     "title": "Elegir buenas preguntas: intuición de la ganancia de información",
+     "bullets": [
+      "Una buena pregunta separa los casos en grupos lo más homogéneos posible.",
+      "Entropía de Shannon: H = −Σ pᵢ log₂ pᵢ; vale 0 en un grupo puro y 1 en un grupo binario mitad y mitad.",
+      "Ganancia de información: reducción de entropía al dividir por un atributo.",
+      "Árboles más cortos son más fáciles de explicar y suelen generalizar mejor."
+     ],
+     "notes": "Use el juego de las veinte preguntas: para adivinar un personaje, preguntar '¿es peruano?' es mejor que '¿se llama Miguel Grau?', porque divide el espacio de forma más equilibrada. Esa intuición se mide con la entropía de Claude Shannon de 1948. Calcule con la clase un ejemplo pequeño: 10 solicitudes de crédito, 5 aprobadas y 5 rechazadas, entropía 1. Si el atributo 'tiene empleo formal' separa en un grupo de 6 con 5 aprobadas y otro de 4 con 0 aprobadas, la entropía ponderada baja considerablemente y la ganancia es alta. No profundice en el cálculo exhaustivo, que corresponde a Aprendizaje Automático I; el objetivo es entender por qué ciertas preguntas van arriba en el árbol. Conecte con la búsqueda binaria: una pregunta que divide a la mitad es la más informativa, igual que el elemento central en la búsqueda binaria."
+    },
+    {
+     "title": "Búsqueda en espacios de estados",
+     "bullets": [
+      "Problema formulado como estado inicial, acciones, modelo de transición, prueba de objetivo y costo.",
+      "El espacio de estados se representa como un grafo; resolver es encontrar un camino al objetivo.",
+      "Ejemplos: ruta de reparto, planificación de horarios, juegos y rompecabezas.",
+      "Formular bien el problema es aplicar abstracción: qué es un estado y qué es una acción."
+     ],
+     "notes": "Presente la formulación de Russell y Norvig con un problema logístico: un repartidor debe llevar un pedido desde un almacén en Ate hasta un cliente en Miraflores. Estado: la intersección donde se encuentra; acciones: avanzar por una calle; costo: minutos de recorrido; objetivo: llegar a la dirección del cliente. Haga notar que la abstracción de la unidad 2 es decisiva: ignoramos el color de las fachadas y nos quedamos con el grafo de calles y tiempos. Muestre otros problemas que parecen distintos y son búsqueda: armar el horario de un instituto sin cruces de docentes, resolver un sudoku o planificar los movimientos de un robot de almacén. Pregunte cuántos estados tiene un sudoku vacío para mostrar que el espacio puede ser enorme, lo que justifica estrategias inteligentes de búsqueda en lugar de enumerar todo."
+    },
+    {
+     "title": "Búsqueda en amplitud y en profundidad",
+     "bullets": [
+      "Amplitud (BFS): explora por niveles con una cola; encuentra el camino con menos pasos.",
+      "Profundidad (DFS): sigue una rama hasta el fondo con una pila; usa poca memoria, pero puede no encontrar el camino más corto.",
+      "Ambas marcan estados visitados para evitar ciclos infinitos.",
+      "Búsquedas informadas como A* usan una heurística para dirigir la exploración."
+     ],
+     "notes": "Simule en la pizarra un grafo pequeño de ocho distritos conectados y ejecute ambos algoritmos con la clase, anotando el contenido de la cola o de la pila en cada paso: es una prueba de escritorio como las de la unidad 3. Muestre que BFS encuentra el camino con menos tramos y DFS puede encontrar uno más largo. Enfatice el conjunto de visitados como mecanismo de terminación: sin él, un grafo con ciclos produce un bucle infinito. Comente que si los tramos tienen tiempos distintos, el camino con menos tramos no es necesariamente el más rápido, y para eso existen el algoritmo de Dijkstra y A*, de Hart, Nilsson y Raphael en 1968, que usan una heurística como la distancia en línea recta. Los aplicativos de navegación y de reparto que usan los estudiantes a diario se basan en variantes de estas ideas."
+    },
+    {
+     "title": "BFS en Python: del pseudocódigo al código",
+     "bullets": [
+      "Representar el grafo como diccionario de listas de adyacencia.",
+      "Usar collections.deque como cola y un conjunto de visitados.",
+      "Guardar el predecesor de cada estado para reconstruir el camino.",
+      "Probar con un grafo pequeño cuya respuesta se conoce de antemano."
+     ],
+     "notes": "Programe en vivo en Colab una búsqueda en amplitud de unas quince líneas sobre un grafo de distritos de Lima. Explique cada decisión: el diccionario representa la abstracción del mapa; la cola garantiza el orden por niveles; el conjunto de visitados asegura terminación; el diccionario de predecesores permite reconstruir el camino recorriendo hacia atrás desde el objetivo. Enuncie el invariante: la cola contiene estados ya descubiertos en orden no decreciente de distancia en número de tramos desde el origen. Pida a los estudiantes que modifiquen el grafo, agreguen un distrito aislado y verifiquen que el algoritmo informa correctamente que no hay camino. Destaque cómo este ejemplo integra todo el curso: lógica en las condiciones, abstracción en el modelo, iteración con invariante, análisis de costo y una técnica clásica de IA."
+    },
+    {
+     "title": "Explicabilidad, sesgo y responsabilidad",
+     "bullets": [
+      "Las decisiones automatizadas afectan derechos: créditos, beneficios sociales, atención en salud, empleo.",
+      "Reglas y árboles son explicables: cada decisión puede rastrearse hasta las condiciones que la causaron.",
+      "Atributos aparentemente neutrales, como el distrito, pueden actuar como sustitutos de características protegidas.",
+      "La Ley 29733 regula el tratamiento de datos personales; los datos de salud son sensibles.",
+      "Principio de supervisión humana: revisión de casos límite y canal de reclamo."
+     ],
+     "notes": "Dedique esta diapositiva a la dimensión ética, que se profundizará en Ética y Gobernanza de la IA del sexto ciclo. Explique que un sistema de reglas perfectamente válido puede ser injusto si sus premisas lo son. Ejemplo: una regla que rechaza créditos a solicitantes de ciertos distritos puede discriminar indirectamente por nivel socioeconómico u origen. Recuerde que la Ley 29733 de Protección de Datos Personales y su reglamento exigen consentimiento, finalidad y proporcionalidad, y que los datos de salud son datos sensibles. Mencione que el Perú aprobó la Ley 31814, que promueve el uso de la inteligencia artificial, y que su reglamento, aprobado en 2025, plantea un enfoque basado en riesgos. Pregunte a la clase qué información debería recibir una persona a la que un sistema le niega un beneficio. Cierre con la responsabilidad profesional: quien diseña las reglas responde por sus efectos."
+    },
+    {
+     "title": "Proyecto integrador: fases y entregables",
+     "bullets": [
+      "Fase 1: problema real, actores, datos y especificación con lógica de predicados.",
+      "Fase 2: base de reglas o árbol de decisión, con tabla de decisión que demuestre completitud y consistencia.",
+      "Fase 3: pseudocódigo, implementación en Python y pruebas con casos frontera.",
+      "Fase 4: análisis ético, limitaciones y sustentación oral de diez minutos."
+     ],
+     "notes": "Presente el proyecto integrador como la evaluación final del curso, con un peso de 30 %. Cada equipo de tres estudiantes elige un problema real de decisión en el entorno peruano: orientación tributaria para emprendedores, triaje en un centro de salud, priorización de reclamos, recomendación de rutas de reparto o elegibilidad para un beneficio. El sistema debe combinar al menos dos técnicas del curso, por ejemplo un árbol de decisión y una validación con cuantificadores, o reglas con encadenamiento hacia adelante y búsqueda en amplitud. Explique el cronograma: semana 13, propuesta y especificación; semana 14, diseño lógico verificado; semana 15, implementación y pruebas; semana 16, sustentación. Muestre la rúbrica y ejemplos de proyectos de ciclos anteriores. Insista en que se evalúa tanto el funcionamiento como la calidad del razonamiento: un sistema que funciona pero no puede justificarse no aprueba."
+    }
+   ],
+   "reading": {
+    "title": "Razonamiento automático: reglas, árboles y búsqueda como fundamentos de la IA",
+    "minutes": 40,
+    "content": "## La lógica en el corazón de la IA\n\nRussell y Norvig (2021) definen un **agente inteligente** como un sistema que percibe su entorno y actúa para alcanzar objetivos. Para decidir, el agente necesita representar conocimiento y razonar con él. Esta lectura presenta tres técnicas clásicas que siguen vigentes en la industria: los sistemas basados en reglas, los árboles de decisión y la búsqueda en espacios de estados.\n\n## Sistemas basados en reglas\n\nUn sistema basado en reglas tiene una **base de conocimiento** con reglas SI condiciones ENTONCES conclusión, una **memoria de trabajo** con los hechos del caso y un **motor de inferencia**. El encadenamiento hacia adelante aplica repetidamente el modus ponens:\n\n```python\nreglas = [\n    ({\"compra_extranjero\", \"sin_aviso_viaje\"}, \"operacion_inusual\"),\n    ({\"operacion_inusual\", \"monto_alto\"}, \"bloquear_tarjeta\"),\n    ({\"bloquear_tarjeta\"}, \"llamar_cliente\"),\n]\n\ndef encadenar_adelante(hechos, reglas):\n    hechos = set(hechos)\n    cambio = True\n    while cambio:                       # cota: reglas aún no disparadas\n        cambio = False\n        for condiciones, conclusion in reglas:\n            if condiciones <= hechos and conclusion not in hechos:\n                hechos.add(conclusion)  # modus ponens\n                cambio = True\n    return hechos\n\nprint(encadenar_adelante({\"compra_extranjero\", \"sin_aviso_viaje\", \"monto_alto\"}, reglas))\n```\n\nEl bucle termina porque cada vuelta productiva agrega al menos un hecho nuevo y el número de conclusiones posibles es finito. El **encadenamiento hacia atrás** parte de un objetivo y busca recursivamente reglas que lo justifiquen; es la estrategia de Prolog y de los sistemas de diagnóstico.\n\nUna base de reglas debe ser **consistente** (ninguna situación posible dispara conclusiones contradictorias) y **completa** (toda situación relevante recibe una conclusión). Las tablas de decisión y la lógica proposicional permiten verificarlo antes de desplegar el sistema.\n\n## Árboles de decisión\n\nUn árbol de decisión organiza preguntas en forma jerárquica. Cada camino de la raíz a una hoja equivale a una regla con una conjunción de condiciones, y como las ramas de cada nodo son exhaustivas y mutuamente excluyentes, el árbol es completo y consistente por construcción.\n\n¿Qué pregunta conviene poner en la raíz? La que más reduce la incertidumbre. Shannon (1948) la midió con la **entropía**:\n\nH(S) = − Σ pᵢ · log₂ pᵢ\n\nSi de 10 solicitudes de crédito 5 se aprueban y 5 se rechazan, H = 1 bit. Si el atributo \"empleo formal\" separa un grupo de 6 (5 aprobadas, 1 rechazada; H ≈ 0,65) y otro de 4 (todas rechazadas; H = 0), la entropía ponderada es 0,6 · 0,65 + 0,4 · 0 ≈ 0,39, y la **ganancia de información** es 1 − 0,39 = 0,61 bits. Algoritmos como ID3 de Quinlan (1986) y CART de Breiman y colaboradores (1984) automatizan esta elección; el curso Aprendizaje Automático I los desarrolla en detalle.\n\n## Búsqueda en espacios de estados\n\nMuchos problemas se formulan como encontrar un camino en un grafo: un **estado inicial**, **acciones**, un **modelo de transición**, una **prueba de objetivo** y un **costo**. La búsqueda en amplitud (BFS) explora por niveles con una cola y halla el camino con menos pasos:\n\n```python\nfrom collections import deque\n\ndef bfs(grafo, origen, destino):\n    cola, previo = deque([origen]), {origen: None}\n    while cola:\n        actual = cola.popleft()\n        if actual == destino:\n            camino = []\n            while actual is not None:\n                camino.append(actual)\n                actual = previo[actual]\n            return camino[::-1]\n        for vecino in grafo.get(actual, []):\n            if vecino not in previo:      # conjunto de visitados\n                previo[vecino] = actual\n                cola.append(vecino)\n    return None\n```\n\nLa búsqueda en profundidad usa una pila y menos memoria, pero no garantiza el camino más corto. Cuando las acciones tienen costos distintos, como minutos de viaje en Lima, se usan Dijkstra o A*, que incorpora una heurística admisible para dirigir la búsqueda.\n\n## Responsabilidad en la decisión automatizada\n\nLas técnicas simbólicas tienen una virtud decisiva: son **explicables**. Cuando un sistema niega un beneficio, se puede mostrar la regla exacta que se aplicó. Pero la validez lógica no garantiza justicia: si una regla usa el distrito de residencia como criterio, puede discriminar de forma indirecta. En el Perú, la Ley 29733 regula el tratamiento de datos personales y la Ley 31814 promueve un uso responsable de la inteligencia artificial. El profesional técnico debe documentar sus reglas, probar casos límite, prever supervisión humana y ofrecer un canal de reclamo.\n\n## Ideas clave\n\n1. Los motores de reglas son modus ponens iterado con condición de terminación.\n2. Un árbol de decisión es un conjunto de reglas completo y consistente por construcción.\n3. La entropía mide la calidad de una pregunta.\n4. Buscar es recorrer un grafo de estados con una estrategia y un control de visitados.\n5. Explicabilidad no es lo mismo que justicia: ambas deben diseñarse."
+   },
+   "case": {
+    "title": "Caso: Asistente de orientación tributaria para emprendedores de Gamarra",
+    "content": "Una asociación de empresarios del emporio comercial de Gamarra, en La Victoria, que agrupa a cerca de 1 200 confeccionistas y comerciantes, firmó un convenio con un instituto tecnológico para desarrollar un asistente digital que oriente a sus asociados sobre el régimen tributario más conveniente y las obligaciones asociadas. Según la propia asociación, cerca de 40 % de sus miembros desconoce en qué régimen está inscrito o cree estar en uno que ya no le corresponde por su nivel de ingresos.\n\nEl equipo del instituto, liderado por la docente Patricia Salazar e integrado por cuatro estudiantes de Inteligencia Artificial, propuso dos alternativas:\n\n**Alternativa A: sistema basado en reglas.** Un contador colegiado redactaría unas 40 reglas a partir de la normativa de SUNAT sobre el Nuevo RUS, el Régimen Especial, el Régimen MYPE Tributario y el Régimen General: límites de ingresos y compras, tipo de actividad, número de trabajadores, valor de activos fijos y tipo de comprobantes que emite. El asistente haría preguntas mediante encadenamiento hacia atrás y explicaría cada recomendación citando la regla aplicada.\n\n**Alternativa B: modelo de lenguaje generativo.** Un chatbot basado en un modelo de lenguaje comercial respondería en lenguaje natural, con acceso a documentos normativos. Es más flexible y conversa mejor, pero en pruebas preliminares con 30 preguntas, respondió de forma incorrecta 6, entre ellas una que confundía los límites de ingresos de dos regímenes, y en dos casos inventó una resolución de superintendencia inexistente.\n\nEn la revisión de la alternativa A, el contador detectó que las primeras 25 reglas tenían dos problemas: un caso de comerciante con ingresos bajos pero que necesita emitir facturas a empresas no producía ninguna recomendación, y dos reglas recomendaban regímenes distintos para un confeccionista con cinco trabajadores. Además, la normativa cambia: los límites se expresan en UIT, cuyo valor se actualiza cada año.\n\nLa presidenta de la asociación, la señora Elena Mamani, quiere el asistente operativo antes de la campaña de declaración anual. Le preocupa que un consejo equivocado lleve a sus asociados a multas, pero también que un asistente \"muy rígido\" no sea usado. La asociación debe decidir qué alternativa adoptar o si combina ambas, por ejemplo con reglas que determinen la recomendación y un modelo de lenguaje que solo explique en términos sencillos la decisión ya tomada. También debe definir quién asume la responsabilidad por las recomendaciones y cómo se informará a los usuarios sobre las limitaciones del sistema.",
+    "questions": [
+     "Identifique los defectos de completitud y consistencia detectados por el contador y explique cómo una tabla de decisión o un árbol los habría prevenido.",
+     "Compare las alternativas A y B en exactitud, explicabilidad, mantenimiento ante cambios de la UIT y experiencia de usuario.",
+     "Diseñe la arquitectura de una solución híbrida indicando qué decide el componente lógico y qué hace el modelo de lenguaje.",
+     "¿Qué obligaciones de transparencia, protección de datos y supervisión humana debería asumir la asociación frente a sus asociados?",
+     "¿Qué alternativa recomendaría a la señora Mamani considerando el plazo de la campaña? Justifique su decisión."
+    ]
+   },
+   "assignment": {
+    "title": "Proyecto integrador: sistema de decisión basado en lógica",
+    "instructions": "## Objetivo\nDiseñar, implementar, verificar y sustentar un sistema de decisión para un problema real del entorno peruano, integrando las técnicas del curso.\n\n## Requisitos del sistema\nDebe combinar al menos dos técnicas: base de reglas con encadenamiento, árbol de decisión, validación con cuantificadores o búsqueda en un espacio de estados. Temas sugeridos: orientación tributaria, triaje, priorización de reclamos, rutas de reparto, elegibilidad para becas o beneficios.\n\n## Entregables\n1. **Especificación** (semana 13): problema, usuarios, entradas, salidas, precondiciones y poscondiciones con predicados.\n2. **Diseño lógico** (semana 14): reglas o árbol, tabla de decisión que demuestre completitud y consistencia, y pseudocódigo con invariantes de los bucles principales.\n3. **Implementación** (semana 15): cuaderno de Colab en Python con al menos diez casos de prueba, incluidos casos frontera y datos inválidos, y una función que explique cada decisión.\n4. **Análisis ético**: riesgos de sesgo, tratamiento de datos según la Ley 29733, limitaciones y mecanismo de supervisión humana.\n5. **Sustentación** (semana 16): exposición de diez minutos y cinco de preguntas, con demostración en vivo.\n\n## Formato\nInforme PDF de hasta diez páginas, cuaderno de Colab y diapositivas. Equipos de tres estudiantes; cada integrante debe poder explicar cualquier parte del sistema.\n\n## Criterios\nSe evalúa la corrección lógica, la verificación, la calidad de la implementación, la profundidad del análisis ético y la claridad de la sustentación.",
+    "rubric": [
+     {
+      "name": "Especificación y diseño lógico completo y consistente",
+      "points": 6
+     },
+     {
+      "name": "Implementación funcional con explicación de decisiones",
+      "points": 5
+     },
+     {
+      "name": "Pruebas, invariantes y verificación",
+      "points": 4
+     },
+     {
+      "name": "Análisis ético y limitaciones",
+      "points": 2
+     },
+     {
+      "name": "Sustentación oral y dominio del equipo",
+      "points": 3
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 4: Razonamiento automático y búsqueda",
+    "questions": [
+     {
+      "prompt": "Un sistema parte de los hechos 'compra en el extranjero' y 'sin aviso de viaje' y deriva todas las alertas posibles. ¿Qué estrategia de inferencia usa?",
+      "options": [
+       "Aprendizaje supervisado",
+       "Encadenamiento hacia adelante",
+       "Encadenamiento hacia atrás",
+       "Búsqueda en profundidad"
+      ],
+      "correct": 1,
+      "explanation": "Parte de los hechos conocidos y aplica modus ponens repetidamente hasta no derivar nada nuevo, que es la definición del encadenamiento hacia adelante."
+     },
+     {
+      "prompt": "En una base de reglas, una regla aprueba a quienes tienen ingresos altos y otra rechaza a quienes tienen deuda vencida. ¿Qué defecto existe?",
+      "options": [
+       "Redundancia entre ambas reglas",
+       "Ninguno, porque las reglas tratan atributos distintos",
+       "Inconsistencia para clientes con ingresos altos y deuda vencida",
+       "Incompletitud para todos los clientes"
+      ],
+      "correct": 2,
+      "explanation": "Ambas condiciones pueden cumplirse a la vez y producir conclusiones opuestas; sin una prioridad explícita, la base es inconsistente."
+     },
+     {
+      "prompt": "¿Por qué un árbol de decisión bien formado es completo y consistente por construcción?",
+      "options": [
+       "Porque siempre se aprende de datos",
+       "Porque tiene menos reglas que un sistema experto",
+       "Porque usa entropía en todos los nodos",
+       "Porque en cada nodo las ramas son exhaustivas y mutuamente excluyentes"
+      ],
+      "correct": 3,
+      "explanation": "Cada caso sigue un único camino de la raíz a una hoja: ninguno queda sin decisión y ninguno recibe dos decisiones."
+     },
+     {
+      "prompt": "Un grupo tiene 8 casos: 4 aprobados y 4 rechazados. ¿Cuál es su entropía?",
+      "options": [
+       "1 bit",
+       "0 bits",
+       "0,5 bits",
+       "2 bits"
+      ],
+      "correct": 0,
+      "explanation": "Con dos clases en igual proporción, H = −0,5·log₂0,5 − 0,5·log₂0,5 = 1 bit, el máximo para un problema binario."
+     },
+     {
+      "prompt": "Se necesita la ruta con menos tramos entre dos distritos en un grafo no ponderado. ¿Qué algoritmo garantiza encontrarla?",
+      "options": [
+       "Búsqueda lineal en una lista",
+       "Búsqueda en amplitud",
+       "Búsqueda en profundidad",
+       "Encadenamiento hacia atrás"
+      ],
+      "correct": 1,
+      "explanation": "La búsqueda en amplitud explora por niveles, por lo que el primer camino que alcanza el destino es el de menor número de tramos."
+     },
+     {
+      "prompt": "¿Qué función cumple el conjunto de visitados en una búsqueda en grafos?",
+      "options": [
+       "Almacenar la heurística de cada estado",
+       "Garantizar el camino de menor costo",
+       "Evitar ciclos infinitos y trabajo repetido",
+       "Ordenar los estados por costo"
+      ],
+      "correct": 2,
+      "explanation": "Sin registrar los estados visitados, un grafo con ciclos haría que la búsqueda vuelva a los mismos estados indefinidamente."
+     },
+     {
+      "prompt": "Un sistema de reglas para becas es lógicamente válido, pero rechaza sistemáticamente a postulantes de ciertos distritos. ¿Qué conclusión es correcta?",
+      "options": [
+       "El sistema es justo porque es lógicamente válido",
+       "El problema solo se resuelve con aprendizaje profundo",
+       "Basta con ocultar el distrito en los reportes",
+       "La validez lógica no garantiza equidad; deben revisarse las premisas"
+      ],
+      "correct": 3,
+      "explanation": "La validez solo asegura que las conclusiones se siguen de las premisas; si una regla usa un sustituto de características protegidas, el resultado puede ser discriminatorio."
+     }
+    ]
+   }
+  }
+ ],
+ "weekly_plan": [
+  {
+   "week": 1,
+   "unit": 1,
+   "topic": "Lógica y computación; proposiciones y conectivos",
+   "activity": "Presentación del sílabo, control de entrada y taller de identificación de proposiciones y conectivos en avisos y normas reales.",
+   "evidence": "Ficha de proposiciones clasificadas"
+  },
+  {
+   "week": 2,
+   "unit": 1,
+   "topic": "Formalización del lenguaje natural y tablas de verdad",
+   "activity": "Formalización en equipos de reglas del reglamento institucional; construcción de tablas de verdad a mano y en Colab con itertools.",
+   "evidence": "Tablas de verdad verificadas en Colab"
+  },
+  {
+   "week": 3,
+   "unit": 1,
+   "topic": "Equivalencias, De Morgan, reglas de inferencia y validez",
+   "activity": "Análisis del caso de la municipalidad de Cerro Colorado; demostraciones con modus ponens, modus tollens y silogismo hipotético.",
+   "evidence": "Informe grupal del caso 1"
+  },
+  {
+   "week": 4,
+   "unit": 1,
+   "topic": "Falacias formales e informales; condiciones robustas en código",
+   "activity": "Taller de detección de falacias en titulares de prensa; entrega de la tarea de formalización normativa y cuestionario 1.",
+   "evidence": "Tarea 1 y cuestionario 1"
+  },
+  {
+   "week": 5,
+   "unit": 2,
+   "topic": "Pilares del pensamiento computacional y método de Polya",
+   "activity": "Aula invertida con la lectura de Wing; árbol de descomposición de un trámite real y discusión sobre abstracción.",
+   "evidence": "Árbol de descomposición en pizarra colaborativa"
+  },
+  {
+   "week": 6,
+   "unit": 2,
+   "topic": "Algoritmos, precondiciones y pseudocódigo en PSeInt",
+   "activity": "Diseño guiado del cálculo de detracciones SPOT en PSeInt, con precondiciones, poscondiciones y casos frontera.",
+   "evidence": "Pseudocódigo ejecutable en PSeInt"
+  },
+  {
+   "week": 7,
+   "unit": 2,
+   "topic": "Diagramas de flujo ISO 5807 y estructuras selectivas",
+   "activity": "Corrección de diagramas con errores deliberados; análisis del caso de triaje en el centro de salud de Ventanilla.",
+   "evidence": "Informe grupal del caso 2"
+  },
+  {
+   "week": 8,
+   "unit": 2,
+   "topic": "Selección múltiple, anidamiento y tablas de decisión",
+   "activity": "Construcción de tablas de decisión completas y consistentes; entrega de la tarea de diseño algorítmico y cuestionario 2.",
+   "evidence": "Tarea 2 y cuestionario 2"
+  },
+  {
+   "week": 9,
+   "unit": 3,
+   "topic": "Estructuras repetitivas y patrones iterativos",
+   "activity": "Resolución de problemas de ventas con contador, acumulador, bandera, máximo y centinela en PSeInt.",
+   "evidence": "Ejercicios de patrones iterativos resueltos"
+  },
+  {
+   "week": 10,
+   "unit": 3,
+   "topic": "Predicados, cuantificadores y prueba de escritorio",
+   "activity": "Especificación con predicados de un validador de lotes; pruebas de escritorio cruzadas entre equipos con errores deliberados.",
+   "evidence": "Tablas de traza revisadas por pares"
+  },
+  {
+   "week": 11,
+   "unit": 3,
+   "topic": "Invariantes de bucle, terminación y recursión",
+   "activity": "Demostración guiada de invariantes del máximo y de la búsqueda binaria; análisis del caso del padrón del programa social.",
+   "evidence": "Informe grupal del caso 3"
+  },
+  {
+   "week": 12,
+   "unit": 3,
+   "topic": "Conteo de operaciones y búsqueda lineal frente a binaria",
+   "activity": "Experimento en Colab midiendo tiempos de algoritmos lineales y cuadráticos; entrega de la tarea comparativa y cuestionario 3.",
+   "evidence": "Tarea 3 y cuestionario 3"
+  },
+  {
+   "week": 13,
+   "unit": 4,
+   "topic": "Sistemas basados en reglas y encadenamiento hacia adelante y atrás",
+   "activity": "Implementación de un motor de reglas sencillo en Python; presentación de la propuesta y especificación del proyecto integrador.",
+   "evidence": "Especificación del proyecto integrador"
+  },
+  {
+   "week": 14,
+   "unit": 4,
+   "topic": "Árboles de decisión, entropía y calidad de bases de reglas",
+   "activity": "Análisis del caso Gamarra; diseño del árbol o base de reglas del proyecto con tabla de decisión verificada.",
+   "evidence": "Informe del caso 4 y diseño lógico"
+  },
+  {
+   "week": 15,
+   "unit": 4,
+   "topic": "Búsqueda en espacios de estados; ética y explicabilidad",
+   "activity": "Taller de BFS sobre un grafo de distritos de Lima; implementación y pruebas del proyecto y cuestionario 4.",
+   "evidence": "Cuaderno del proyecto y cuestionario 4"
+  },
+  {
+   "week": 16,
+   "unit": 4,
+   "topic": "Proyecto integrador: sustentación y evaluación final",
+   "activity": "Sustentación oral del proyecto con demostración en vivo, preguntas del jurado docente y autoevaluación del aprendizaje.",
+   "evidence": "Sustentación y informe final del proyecto"
+  }
+ ]
+}

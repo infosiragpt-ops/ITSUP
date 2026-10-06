@@ -1,0 +1,1239 @@
+{
+  "name": "Matemática Discreta",
+  "slug": "matematica-discreta",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Matemática Discreta es un curso de formación específica, de naturaleza teórico-práctica, que se dicta en el primer ciclo de la carrera de Computación e Informática. Su propósito es desarrollar el razonamiento lógico y la capacidad de modelar con estructuras discretas los problemas que el profesional técnico resolverá con software, redes y bases de datos. Comprende cuatro unidades: lógica proposicional y de predicados con métodos de demostración; conjuntos, relaciones, funciones e inducción; combinatoria, aritmética modular y fundamentos de criptografía; y grafos, árboles y máquinas de estados finitos, que culminan en un proyecto integrador. Cada contenido se aplica con Python y con casos de organizaciones peruanas, como la validación del RUC, la planificación de mallas curriculares o el diseño de redes de fibra. El curso aporta al perfil de egreso la base formal que sostienen Algoritmos y Estructuras de Datos, Base de Datos, Redes de Computadoras y Seguridad Informática.",
+  "competency": "Modela y resuelve problemas computacionales de organizaciones reales mediante lógica, conjuntos, relaciones, combinatoria, aritmética modular y grafos, implementando y verificando algoritmos en Python y argumentando con rigor la corrección de sus soluciones y las decisiones técnicas que de ellas se derivan.",
+  "capacities": [
+    "Formaliza requisitos y reglas de negocio en lógica proposicional y de predicados, verifica equivalencias y construye demostraciones directas, contrapositivas, por contradicción y por inducción.",
+    "Modela datos y dependencias mediante conjuntos, relaciones, funciones y órdenes parciales, identificando sus propiedades y su correspondencia con estructuras de programación y bases de datos.",
+    "Aplica técnicas de conteo y aritmética modular para dimensionar espacios de búsqueda, validar identificadores y explicar mecanismos de hash y cifrado de clave pública.",
+    "Representa redes, rutas y procesos con grafos, árboles y máquinas de estados finitos, y aplica algoritmos de recorrido, camino más corto y árbol de expansión mínima para fundamentar decisiones."
+  ],
+  "indicators": [
+    "Traduce requisitos en lenguaje natural a fórmulas lógicas correctas y las verifica con tablas de verdad y leyes de equivalencia.",
+    "Simplifica condiciones de programas aplicando leyes lógicas y comprueba la equivalencia mediante pruebas automatizadas en Python.",
+    "Determina las propiedades de una relación, calcula su cierre transitivo y obtiene un ordenamiento topológico válido.",
+    "Demuestra por inducción propiedades de sumatorias, recurrencias o invariantes de ciclo con hipótesis explícita y pasos justificados.",
+    "Resuelve problemas de conteo seleccionando correctamente entre principio del producto, permutaciones, combinaciones e inclusión-exclusión.",
+    "Implementa validadores de dígito verificador y una versión didáctica de RSA usando el algoritmo de Euclides extendido.",
+    "Aplica BFS, Dijkstra y Kruskal a grafos de casos reales e interpreta los resultados para recomendar una decisión.",
+    "Diseña máquinas de estados finitos para procesos de negocio y justifica las transiciones permitidas."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa. Se aplica el aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y las diapositivas de la unidad, y en la sesión se resuelven problemas en equipo con retroalimentación inmediata. Cada unidad incluye un caso de una organización peruana que se analiza mediante el método de casos, conectando el concepto matemático con una decisión técnica. El aprendizaje basado en problemas se concreta en tareas con implementación en Python y verificación a mano de casos pequeños. La evaluación formativa se realiza con cuestionarios autocorregibles, foros de discusión y revisión entre pares de demostraciones. El curso culmina con un proyecto integrador en equipos que modela un problema real con estructuras discretas y se expone en la semana 16.",
+  "bibliography": [
+    "Rosen, K. H. (2019). Discrete mathematics and its applications (8th ed.). McGraw-Hill Education.",
+    "Rosen, K. H. (2004). Matemática discreta y sus aplicaciones (5.ª ed.). McGraw-Hill/Interamericana.",
+    "Epp, S. S. (2012). Matemáticas discretas con aplicaciones (4.ª ed.). Cengage Learning.",
+    "Johnsonbaugh, R. (2005). Matemáticas discretas (6.ª ed.). Pearson Educación.",
+    "Grimaldi, R. P. (1998). Matemáticas discreta y combinatoria: una introducción con aplicaciones (3.ª ed.). Addison-Wesley Iberoamericana.",
+    "Lehman, E., Leighton, F. T. y Meyer, A. R. (2017). Mathematics for computer science. Massachusetts Institute of Technology.",
+    "Graham, R. L., Knuth, D. E. y Patashnik, O. (1994). Concrete mathematics: A foundation for computer science (2nd ed.). Addison-Wesley.",
+    "Cormen, T. H., Leiserson, C. E., Rivest, R. L. y Stein, C. (2022). Introduction to algorithms (4th ed.). MIT Press.",
+    "Hopcroft, J. E., Motwani, R. y Ullman, J. D. (2007). Introducción a la teoría de autómatas, lenguajes y computación (3.ª ed.). Pearson Educación."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Promedio de los cuatro cuestionarios de unidad, la participación en el análisis de casos y las tareas aplicadas de las unidades 1, 2 y 3, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador en equipo: informe, código en Python verificado y exposición del modelo discreto aplicado a un problema real, evaluado con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Examen individual de resolución de problemas que integra lógica, relaciones, conteo, aritmética modular y grafos, con demostraciones y cálculos justificados."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Lógica proposicional, predicados y demostración",
+      "description": "Al finalizar la unidad, el estudiante formaliza enunciados del lenguaje natural y reglas de negocio en lógica proposicional y de predicados, verifica equivalencias con tablas de verdad y leyes lógicas, simplifica condiciones de programas y construye demostraciones directas, contrapositivas y por contradicción.",
+      "topics": [
+        "Proposiciones, conectivos y tablas de verdad",
+        "Equivalencias lógicas y simplificación de condiciones",
+        "Lógica de predicados y cuantificadores",
+        "Reglas de inferencia y validez de argumentos",
+        "Métodos de demostración y contraejemplos"
+      ],
+      "slides": [
+        {
+          "title": "Por qué la matemática discreta importa al programador",
+          "bullets": [
+            "Las computadoras operan con objetos discretos: bits, enteros, cadenas, registros y estados finitos, no con magnitudes continuas.",
+            "Cada sentencia if, consulta SQL con WHERE o regla de un firewall es una fórmula lógica que puede ser correcta o errónea.",
+            "Knuth y Rosen coinciden: razonar con precisión sobre estructuras discretas es la base de algoritmos, bases de datos, redes y seguridad.",
+            "Ruta del curso: lógica, conjuntos y funciones, conteo y aritmética modular, grafos y máquinas de estados."
+          ],
+          "notes": "Abra la clase preguntando cuántos estudiantes han visto un error de software que rechazó algo válido: una tarjeta, un RUC, una matrícula. Explique que muchos de esos errores no son de sintaxis sino de razonamiento: una condición mal escrita, un caso límite no considerado, un conteo equivocado. La matemática discreta estudia precisamente los objetos con los que trabaja una computadora: valores que se cuentan y no se miden. Presente el mapa del curso y conéctelo con Fundamentos de Programación, que llevan en paralelo, y con Algoritmos y Estructuras de Datos y Base de Datos del tercer ciclo, que usarán grafos, relaciones y conjuntos. Pregunte: ¿qué tienen en común un semáforo, un cajero automático y un formulario web? Todos son sistemas con estados discretos y reglas lógicas de transición."
+        },
+        {
+          "title": "Proposiciones y valores de verdad",
+          "bullets": [
+            "Proposición: enunciado declarativo que es verdadero (V) o falso (F), pero no ambos; se denota con p, q, r.",
+            "No son proposiciones las preguntas, órdenes ni enunciados abiertos como 'x es mayor que 5' sin asignar x.",
+            "Proposición atómica frente a compuesta: las compuestas se forman con conectivos lógicos.",
+            "En programación, una expresión booleana evaluada produce True o False: es una proposición en tiempo de ejecución."
+          ],
+          "notes": "Trabaje con ejemplos del entorno peruano para que distingan proposiciones de lo que no lo es. 'Lima es la capital del Perú' es una proposición verdadera; '2 + 2 = 5' es una proposición falsa; '¿Ya pagaste la UIT?' es una pregunta y no lo es; 'El monto supera los 1700 UIT' es un enunciado abierto hasta que se conoce el monto. Pida a la clase cinco enunciados y que los demás decidan si son proposiciones. Enfatice que en un programa la variable monto recibe un valor concreto y entonces la expresión monto > limite se convierte en proposición con valor definido. Esta idea anticipa la lógica de predicados, donde los enunciados abiertos se vuelven proposiciones al asignar o cuantificar sus variables."
+        },
+        {
+          "title": "Conectivos lógicos y su traducción a código",
+          "bullets": [
+            "Negación ¬p (not), conjunción p ∧ q (and), disyunción p ∨ q (or), disyunción exclusiva p ⊕ q (xor).",
+            "Python: not, and, or; Java y C: !, &&, ||; SQL: NOT, AND, OR con lógica de tres valores por NULL.",
+            "La disyunción lógica es inclusiva: 'pago con Yape o tarjeta' es verdadero si se usan ambos medios.",
+            "Evaluación en cortocircuito: en 'a and b' si a es falso, b no se evalúa; útil para evitar divisiones entre cero."
+          ],
+          "notes": "Muestre la tabla de verdad de cada conectivo y escriba en la pizarra su equivalente en Python. Haga notar la diferencia entre el 'o' del castellano cotidiano, que muchas veces es exclusivo ('sopa o segundo'), y el 'o' lógico, que es inclusivo. Esta ambigüedad causa errores reales al traducir requisitos de clientes. Explique el cortocircuito con el ejemplo: if n != 0 and total / n > 10. Si se invierte el orden, el programa puede fallar con división entre cero. Mencione que en SQL un valor NULL produce un tercer valor, desconocido, y que por eso WHERE columna = NULL nunca devuelve filas. Pregunte: ¿cómo expresarían 'solo uno de los dos descuentos aplica' en Python? Respuesta esperada: con xor, es decir, a != b para booleanos."
+        },
+        {
+          "title": "Condicional y bicondicional: la trampa más frecuente",
+          "bullets": [
+            "p → q es falso únicamente cuando p es verdadero y q es falso; en los demás casos es verdadero.",
+            "Recíproca q → p, inversa ¬p → ¬q y contrapositiva ¬q → ¬p: solo la contrapositiva equivale a la original.",
+            "p ↔ q es verdadero cuando ambos tienen el mismo valor; equivale a (p → q) ∧ (q → p).",
+            "Lectura técnica: 'p solo si q' es p → q; 'p es suficiente para q' es p → q; 'q es necesario para p' es p → q."
+          ],
+          "notes": "Use una promesa para explicar el condicional: 'Si apruebas con 13 o más, entonces avanzas al siguiente ciclo'. La promesa solo se rompe si el estudiante aprobó y no avanzó. Si desaprobó, la promesa no dice nada, por eso el condicional se considera verdadero. Este punto genera resistencia; dedíquele tiempo. Luego muestre que la recíproca no equivale: 'si avanzas, aprobaste' podría fallar si existe convalidación. Practique con requisitos de software: 'el usuario puede emitir factura solo si tiene RUC activo' se traduce como emite → rucActivo, no al revés. Pida a los estudiantes escribir la contrapositiva y verificar con una tabla que ambas columnas coinciden. Cierre preguntando qué conectivo usarían para validar que dos contraseñas ingresadas coinciden."
+        },
+        {
+          "title": "Tablas de verdad paso a paso",
+          "bullets": [
+            "Paso 1: identificar las n variables proposicionales; la tabla tendrá 2^n filas.",
+            "Paso 2: listar combinaciones en orden binario, desde todas verdaderas hasta todas falsas, o al revés.",
+            "Paso 3: crear una columna por subfórmula respetando precedencia: ¬, ∧, ∨, →, ↔.",
+            "Paso 4: evaluar la fórmula completa y clasificarla; con 10 variables ya son 1024 filas, por eso se automatiza."
+          ],
+          "notes": "Resuelva en vivo la tabla de (p → q) ∧ (q → r) → (p → r), con ocho filas. Pida que un estudiante dicte cada columna y que otro verifique. Señale la relación entre las 2^n filas y el conteo binario que verán en Arquitectura de Computadoras: cada fila corresponde a un número de n bits. Luego muestre que el crecimiento exponencial vuelve inviable hacer tablas a mano para fórmulas grandes; con 30 variables habría más de mil millones de filas. Por eso existen los resolutores SAT, usados en verificación de hardware y en planificación de horarios. Proponga un reto: escribir en Python un generador de tablas con itertools.product([True, False], repeat=n). Así se integra lo lógico con lo programático desde la primera semana."
+        },
+        {
+          "title": "Tautologías, contradicciones y contingencias",
+          "bullets": [
+            "Tautología: verdadera en todas las filas, por ejemplo p ∨ ¬p (tercio excluido).",
+            "Contradicción: falsa en todas las filas, por ejemplo p ∧ ¬p; en código produce ramas inalcanzables.",
+            "Contingencia: verdadera en algunas filas y falsa en otras; es el caso habitual de una condición útil.",
+            "Dos fórmulas A y B son equivalentes (A ≡ B) si y solo si A ↔ B es una tautología."
+          ],
+          "notes": "Explique que estas categorías tienen consecuencias prácticas. Si la condición de un if es una tautología, el else nunca se ejecuta y probablemente hay un error de diseño; si es una contradicción, el bloque es código muerto. Las herramientas de análisis estático, como los linters, detectan algunos de estos casos y emiten advertencias. Muestre un ejemplo: if edad >= 18 or edad < 18 es tautológico; if edad > 65 and edad < 18 es contradictorio. Pida a los estudiantes que construyan una contingencia de tres variables que modele una regla real: por ejemplo, otorgar beca si el promedio es mayor o igual a 16 y no tiene cursos desaprobados, o si pertenece a un convenio institucional. Luego que la clasifiquen con su tabla."
+        },
+        {
+          "title": "Leyes de equivalencia lógica",
+          "bullets": [
+            "De Morgan: ¬(p ∧ q) ≡ ¬p ∨ ¬q y ¬(p ∨ q) ≡ ¬p ∧ ¬q.",
+            "Distributivas: p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r); también con los conectivos intercambiados.",
+            "Condicional como disyunción: p → q ≡ ¬p ∨ q; contrapositiva: p → q ≡ ¬q → ¬p.",
+            "Absorción p ∨ (p ∧ q) ≡ p; idempotencia, doble negación, identidad y dominación completan el repertorio."
+          ],
+          "notes": "Presente las leyes como herramientas de transformación, similares a las identidades algebraicas. Demuestre una ley de De Morgan con tabla de verdad y luego úsela sin tabla. Enfatice que la negación invierte conectivos: la negación de 'tiene RUC y está habido' es 'no tiene RUC o no está habido'. Muchos errores de validación ocurren por negar solo una parte. Plantee el ejercicio de simplificar ¬(¬p ∨ q) ∨ (p ∧ q) paso a paso, justificando cada línea con el nombre de la ley: resulta p. Recuerde que este tipo de cálculo, llamado álgebra de Boole, fue sistematizado por George Boole en 1854 y Claude Shannon lo aplicó a circuitos de conmutación en 1938."
+        },
+        {
+          "title": "Simplificar condiciones en programas",
+          "bullets": [
+            "Paso 1: nombrar cada condición atómica con una variable proposicional.",
+            "Paso 2: escribir la fórmula completa del requisito y aplicar leyes para reducirla.",
+            "Paso 3: verificar la equivalencia con una tabla de verdad o con pruebas automatizadas exhaustivas.",
+            "Paso 4: reescribir el código con la versión simplificada y nombres de variables autoexplicativos."
+          ],
+          "notes": "Muestre un fragmento real de código enredado: if not (not activo or moroso) or (activo and not moroso and vip). Pida a los estudiantes que lo formalicen con a = activo, m = moroso, v = vip. La primera parte es a ∧ ¬m por De Morgan y doble negación; la segunda es a ∧ ¬m ∧ v, que queda absorbida. El resultado es simplemente a ∧ ¬m. Explique que el código simplificado es más legible, más rápido y menos propenso a errores en mantenimiento. Comente que equipos profesionales usan pruebas unitarias parametrizadas para recorrer todas las combinaciones booleanas cuando hay pocas variables. Pregunte: ¿cuántos casos de prueba necesitan para cubrir exhaustivamente tres condiciones booleanas? Respuesta: ocho, una por fila de la tabla."
+        },
+        {
+          "title": "Predicados y cuantificadores",
+          "bullets": [
+            "Predicado P(x): enunciado con variables que se vuelve proposición al asignar valores del dominio.",
+            "Cuantificador universal ∀x P(x): P vale para todo elemento del dominio; en Python, all().",
+            "Cuantificador existencial ∃x P(x): existe al menos un elemento que cumple P; en Python, any().",
+            "El dominio importa: ∀x (x² ≥ x) es verdadero en enteros y falso en reales, pues 0,5² < 0,5."
+          ],
+          "notes": "Introduzca predicados con una tabla de clientes. Sea D(x): 'el cliente x tiene deuda vencida'. La afirmación 'todos los clientes están al día' es ∀x ¬D(x); 'algún cliente tiene deuda' es ∃x D(x). Muestre que en Python se escribe all(not c.deuda for c in clientes) y any(c.deuda for c in clientes), y en SQL con NOT EXISTS y EXISTS. Insista en declarar el dominio: si cambia de clientes activos a todos los clientes, la verdad del enunciado puede cambiar. Comente que los cuantificadores anidados expresan relaciones más ricas: ∀x ∃y Matricula(x, y) significa que cada estudiante está matriculado en al menos un curso, mientras que ∃y ∀x Matricula(x, y) afirma que hay un curso en el que están todos."
+        },
+        {
+          "title": "Negación de cuantificadores",
+          "bullets": [
+            "¬∀x P(x) ≡ ∃x ¬P(x): para refutar un 'para todo' basta un contraejemplo.",
+            "¬∃x P(x) ≡ ∀x ¬P(x): negar una existencia exige mostrar que ningún elemento cumple.",
+            "Con cuantificadores anidados se invierten todos y la negación se desplaza hasta el predicado.",
+            "Ejemplo: ¬∀x ∃y P(x, y) ≡ ∃x ∀y ¬P(x, y)."
+          ],
+          "notes": "Esta diapositiva conecta lógica con pruebas de software. Una especificación del tipo 'para toda entrada válida el sistema responde en menos de dos segundos' se refuta con una sola entrada que tarde más: ese es el papel del caso de prueba que falla. En cambio, afirmar que 'no existe ninguna entrada que rompa el sistema' exige razonar sobre todo el dominio, cosa que las pruebas por sí solas no pueden garantizar, como advirtió Edsger Dijkstra: las pruebas muestran la presencia de errores, no su ausencia. Practique negando: 'todo estudiante tiene algún curso aprobado'. La negación es 'existe un estudiante que no tiene ningún curso aprobado'. Pida que lo escriban en notación formal y en una consulta SQL con NOT EXISTS."
+        },
+        {
+          "title": "Reglas de inferencia",
+          "bullets": [
+            "Modus ponens: de p → q y p se concluye q. Modus tollens: de p → q y ¬q se concluye ¬p.",
+            "Silogismo hipotético: de p → q y q → r se concluye p → r; silogismo disyuntivo: de p ∨ q y ¬p, q.",
+            "Un argumento es válido si la conjunción de premisas implica la conclusión en todos los casos.",
+            "Validez no es verdad: un argumento válido con premisas falsas puede tener conclusión falsa."
+          ],
+          "notes": "Muestre que los motores de reglas, sistemas expertos y lenguajes como Prolog aplican estas reglas de manera automática. Construya una cadena con un ejemplo de soporte técnico: si el equipo no tiene IP, entonces no hay conexión DHCP; si no hay conexión DHCP, entonces el cable o el servidor fallan; el equipo no tiene IP; por lo tanto, el cable o el servidor fallan. Pida a los estudiantes nombrar la regla aplicada en cada paso. Luego presente un argumento inválido, la falacia de afirmar el consecuente: si hay virus, el equipo está lento; el equipo está lento; luego hay virus. Pregunte qué otras causas podrían explicar la lentitud. Así se entrena el diagnóstico técnico riguroso, tan valorado en soporte y administración de redes."
+        },
+        {
+          "title": "Demostración directa, contrapositiva y por contradicción",
+          "bullets": [
+            "Directa: suponer p y, con definiciones y resultados previos, deducir q.",
+            "Contrapositiva: probar ¬q → ¬p; útil cuando la negación de la conclusión es más manejable.",
+            "Contradicción: suponer ¬q junto con p y derivar un absurdo; clásico: √2 es irracional (Euclides).",
+            "Estructura: enunciado, hipótesis, cadena de pasos justificados y conclusión marcada con ∎."
+          ],
+          "notes": "Demuestre en la pizarra que la suma de dos enteros pares es par: sean a = 2m y b = 2n, entonces a + b = 2(m + n), que es par. Luego demuestre por contrapositiva que si n² es par entonces n es par: si n es impar, n = 2k + 1 y n² = 4k² + 4k + 1, que es impar. Finalmente presente la prueba clásica de que √2 es irracional. Explique que estas técnicas se usan para justificar que un algoritmo es correcto, por ejemplo mediante invariantes de ciclo, tema que retomarán en Algoritmos y Estructuras de Datos. Pida que redacten una demostración propia y que un compañero la revise buscando pasos no justificados. La revisión entre pares imita la revisión de código profesional."
+        },
+        {
+          "title": "Falacias y contraejemplos",
+          "bullets": [
+            "Un contraejemplo único basta para refutar una afirmación universal.",
+            "Falacias comunes: afirmar el consecuente, negar el antecedente y generalizar a partir de pocos casos.",
+            "Ejemplo: n² + n + 41 es primo para n = 0 hasta 39 (Euler), pero falla en n = 40.",
+            "Probar con muchos casos no demuestra; sirve para formular conjeturas y luego demostrarlas."
+          ],
+          "notes": "Cierre la unidad con el polinomio de Euler n² + n + 41, que genera primos para los cuarenta primeros valores de n y falla en n = 40, pues da 1681 = 41². Pregunte a la clase si cuarenta casos exitosos les habrían convencido. La lección para el desarrollo de software es directa: que un programa pase cien pruebas no garantiza que sea correcto; hay que razonar sobre todos los casos o buscar activamente el contraejemplo. Conecte con las pruebas de casos límite: montos en cero, cadenas vacías, fechas del 29 de febrero. Asigne como reflexión individual identificar una afirmación que hayan creído verdadera por experiencia repetida y que luego resultó falsa, y escribir su refutación formal."
+        }
+      ],
+      "reading": {
+        "title": "Lógica para programar: del requisito a la condición correcta",
+        "minutes": 35,
+        "content": "## 1. El problema: requisitos ambiguos, código incorrecto\n\nLos requisitos de software llegan en lenguaje natural, y el lenguaje natural es ambiguo. Cuando un analista escribe \"el cliente accede al crédito si tiene ingresos demostrables o es trabajador formal y no figura en centrales de riesgo\", la frase admite al menos dos lecturas: (p ∨ q) ∧ ¬r o p ∨ (q ∧ ¬r). La diferencia no es académica: en la segunda lectura, una persona con ingresos demostrables pero con deudas reportadas a la central de riesgos de la SBS sería aprobada. La lógica proposicional, sistematizada por George Boole (1854) y formalizada por Gottlob Frege (1879), ofrece un lenguaje sin ambigüedad para fijar la intención correcta antes de programar.\n\n## 2. Formalizar en tres pasos\n\n1. **Identificar proposiciones atómicas.** p: \"tiene ingresos demostrables\"; q: \"es trabajador formal\"; r: \"figura en centrales de riesgo\".\n2. **Elegir los conectivos y la agrupación.** Tras validar con el área de negocio, la regla correcta es (p ∨ q) ∧ ¬r.\n3. **Verificar con tabla de verdad.** Con tres variables hay 2³ = 8 combinaciones; la regla es verdadera exactamente en tres de ellas: (V,V,F), (V,F,F) y (F,V,F).\n\nLa tabla de verdad funciona además como plan de pruebas: cada fila es un caso que el programa debe resolver como indica la columna final.\n\n```python\nfrom itertools import product\n\ndef aprueba(p, q, r):\n    return (p or q) and not r\n\nprint(\" p     q     r   | aprueba\")\nfor p, q, r in product([True, False], repeat=3):\n    print(f\"{p!s:5} {q!s:5} {r!s:5} | {aprueba(p, q, r)}\")\n```\n\n## 3. Equivalencias que ahorran errores\n\nLas leyes de equivalencia permiten reescribir una condición sin cambiar su significado. Las más usadas en programación son:\n\n- **De Morgan:** ¬(p ∧ q) ≡ ¬p ∨ ¬q. Si la regla dice \"rechazar cuando no se cumple (p ∨ q) ∧ ¬r\", la condición de rechazo es ¬(p ∨ q) ∨ r, es decir, (¬p ∧ ¬q) ∨ r.\n- **Condicional material:** p → q ≡ ¬p ∨ q. Una validación del tipo \"si el comprobante es factura, entonces el receptor debe tener RUC\" se programa como `not es_factura or tiene_ruc`.\n- **Absorción:** p ∨ (p ∧ q) ≡ p. Elimina ramas redundantes que se acumulan cuando varios programadores modifican el mismo código.\n\nUna práctica profesional es escribir la versión original y la simplificada, y comprobar con un ciclo sobre todas las combinaciones que coinciden. Para pocas variables, esa comprobación exhaustiva es una demostración completa.\n\n## 4. Predicados y cuantificadores en datos reales\n\nLa lógica proposicional no basta cuando hablamos de colecciones. La lógica de predicados introduce variables, dominios y cuantificadores. Sea C el conjunto de comprobantes emitidos en un mes y V(x) el predicado \"el comprobante x fue validado por el operador de servicios electrónicos\". Entonces:\n\n- ∀x ∈ C, V(x): todos los comprobantes fueron validados → `all(c.validado for c in C)`.\n- ∃x ∈ C, ¬V(x): hay al menos uno pendiente → `any(not c.validado for c in C)`.\n\nAmbas fórmulas son negación una de la otra, de acuerdo con la ley ¬∀x P(x) ≡ ∃x ¬P(x). En SQL, el patrón equivalente es `NOT EXISTS (SELECT 1 FROM comprobantes WHERE validado = FALSE)`.\n\n## 5. Del razonamiento a la demostración\n\nUn argumento es **válido** cuando no existe ninguna asignación que haga verdaderas las premisas y falsa la conclusión. Las reglas de inferencia, como el modus ponens y el modus tollens, garantizan validez. En el diagnóstico técnico se usa a diario el modus tollens: \"si el servidor DNS responde, entonces el ping al dominio resuelve; el ping no resuelve; por lo tanto, el DNS no responde\". En cambio, la falacia de afirmar el consecuente (\"si hay malware, el equipo está lento; el equipo está lento; luego hay malware\") lleva a diagnósticos equivocados.\n\nLos métodos de demostración —directa, contrapositiva y por contradicción— son la versión rigurosa de este razonamiento. Rosen (2019) y Epp (2012) insisten en que demostrar es una habilidad que se entrena: se empieza por las definiciones (par significa n = 2k), se escriben las hipótesis y se avanza con pasos justificados.\n\n## 6. Ideas clave\n\n- Formalice antes de programar: la ambigüedad del castellano se resuelve con paréntesis y conectivos.\n- Una tabla de verdad es también un plan de pruebas exhaustivo para condiciones con pocas variables.\n- Para refutar un \"para todo\" basta un contraejemplo; para afirmarlo se necesita una demostración.\n- La claridad lógica reduce errores, facilita el mantenimiento y mejora la comunicación con usuarios y analistas.\n"
+      },
+      "case": {
+        "title": "Caso: La regla de crédito de MicroFinanzas Andina",
+        "content": "**MicroFinanzas Andina** es una entidad microfinanciera ficticia con sede en Huancayo, supervisada por la SBS, que atiende a 85 000 clientes en Junín, Pasco y Huancavelica. En 2025 lanzó una aplicación móvil para preevaluar créditos de capital de trabajo de hasta S/ 15 000 en menos de cinco minutos.\n\nEl documento de requisitos, redactado por el área comercial, decía: \"Se preaprueba al solicitante si tiene al menos seis meses de antigüedad en su negocio o cuenta con un aval, y no registra deudas vencidas mayores a 30 días, salvo que sea cliente recurrente con historial puntual\".\n\nEl programador junior que implementó la regla escribió:\n\n```python\nif antiguedad >= 6 or aval and not deuda_vencida or recurrente_puntual:\n    preaprobar()\n```\n\nDurante el primer mes la aplicación preaprobó 4 120 solicitudes. La jefa de riesgos, Rocío Huamán, detectó que 312 solicitantes con deudas vencidas de más de 30 días habían sido preaprobados. Todos tenían más de seis meses de antigüedad. Por la precedencia de operadores en Python (`and` se evalúa antes que `or`), el código implementaba en realidad A ∨ (B ∧ ¬D) ∨ R, donde A es antigüedad, B aval, D deuda vencida y R cliente recurrente puntual.\n\nEl área comercial, por su parte, sostiene que la intención era ((A ∨ B) ∧ ¬D) ∨ R, pero el área legal duda: ¿el \"salvo que\" debía exonerar al cliente recurrente solo de la condición de deuda o de todas las condiciones? En otras palabras, la alternativa sería (A ∨ B) ∧ (¬D ∨ R).\n\nLa gerencia debe decidir esta semana qué regla adoptar, corregir el código y explicar al regulador cómo evitará que el error se repita. Además, se evalúa si conviene contactar a los 312 clientes preaprobados indebidamente o dejar que la evaluación presencial del asesor los filtre, lo que retrasaría a clientes legítimos.\n\nRocío propone que en adelante toda regla de negocio se documente en notación lógica, se verifique con tabla de verdad y se convierta en un conjunto de pruebas automatizadas antes de pasar a producción.",
+        "questions": [
+          "Construya la tabla de verdad de las tres fórmulas en juego y determine en qué combinaciones de A, B, D y R difieren.",
+          "¿Cuál de las dos interpretaciones del 'salvo que' es más coherente con una gestión prudente del riesgo? Justifique con argumentos lógicos y de negocio.",
+          "Reescriba el código en Python con paréntesis explícitos y nombres claros, y proponga los casos de prueba mínimos que garantizarían su corrección.",
+          "¿Qué debería hacer la gerencia con los 312 clientes preaprobados? Evalúe las opciones considerando riesgo, reputación y protección al consumidor.",
+          "Evalúe la propuesta de Rocío: ¿qué costos y beneficios tendría institucionalizar la formalización lógica de reglas de negocio?"
+        ]
+      },
+      "assignment": {
+        "title": "Formalización y verificación de reglas de negocio",
+        "instructions": "**Objetivo:** aplicar lógica proposicional y de predicados para formalizar, simplificar y verificar reglas de negocio reales.\n\n**Qué entregar:**\n\n1. Elija tres reglas de negocio de una organización peruana (por ejemplo, requisitos de matrícula en un instituto, condiciones de un régimen tributario o políticas de devolución de una tienda en línea). Cite la fuente o describa el contexto.\n2. Para cada regla: identifique las proposiciones atómicas, escriba la fórmula lógica y construya su tabla de verdad.\n3. Aplique al menos dos leyes de equivalencia (nombrándolas) para obtener una versión simplificada o su negación (la condición de rechazo).\n4. Exprese una de las reglas con cuantificadores sobre un conjunto de datos y tradúzcala a Python con all() o any().\n5. Escriba un script en Python que compruebe, recorriendo todas las combinaciones, que la fórmula original y la simplificada son equivalentes.\n\n**Formato:** informe PDF de 3 a 5 páginas más el archivo .py; tablas legibles y código comentado.\n\n**Criterios:** corrección de la formalización, uso justificado de leyes lógicas, correcta traducción a código y claridad de la comunicación.",
+        "rubric": [
+          {
+            "name": "Formalización correcta de las reglas",
+            "points": 6
+          },
+          {
+            "name": "Tablas de verdad y aplicación de leyes de equivalencia",
+            "points": 5
+          },
+          {
+            "name": "Cuantificadores y traducción a Python",
+            "points": 5
+          },
+          {
+            "name": "Verificación automatizada y claridad del informe",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: lógica y demostración",
+        "questions": [
+          {
+            "prompt": "Un requisito dice: 'el usuario puede descargar el reporte solo si es administrador'. ¿Cuál es su formalización correcta, con d = descarga y a = administrador?",
+            "options": [
+              "d → a",
+              "a → d",
+              "d ↔ a",
+              "a ∧ d"
+            ],
+            "correct": 0,
+            "explanation": "'p solo si q' se formaliza como p → q: descargar exige ser administrador, pero ser administrador no obliga a descargar."
+          },
+          {
+            "prompt": "¿Cuál es la negación correcta de 'el cliente tiene RUC activo y está habido'?",
+            "options": [
+              "El cliente no tiene RUC activo o no está habido",
+              "El cliente no tiene RUC activo y no está habido",
+              "El cliente tiene RUC activo o no está habido",
+              "El cliente no está habido"
+            ],
+            "correct": 0,
+            "explanation": "Por la ley de De Morgan, ¬(p ∧ q) ≡ ¬p ∨ ¬q: basta que falle una de las dos condiciones."
+          },
+          {
+            "prompt": "Una fórmula tiene 5 variables proposicionales. ¿Cuántas filas tiene su tabla de verdad completa?",
+            "options": [
+              "32",
+              "10",
+              "25",
+              "64"
+            ],
+            "correct": 0,
+            "explanation": "Cada variable tiene dos valores posibles, por lo que hay 2^5 = 32 combinaciones."
+          },
+          {
+            "prompt": "En Python, la condición 'a or b and not c' se evalúa como:",
+            "options": [
+              "a or (b and (not c))",
+              "(a or b) and (not c)",
+              "(a or b and not) c",
+              "not (a or b) and c"
+            ],
+            "correct": 0,
+            "explanation": "La precedencia es not, luego and y finalmente or; por eso conviene usar paréntesis explícitos."
+          },
+          {
+            "prompt": "¿Cuál es la negación de ∀x ∃y P(x, y)?",
+            "options": [
+              "∃x ∀y ¬P(x, y)",
+              "∀x ∃y ¬P(x, y)",
+              "∃x ∃y ¬P(x, y)",
+              "∀x ∀y ¬P(x, y)"
+            ],
+            "correct": 0,
+            "explanation": "Al negar se invierten los cuantificadores uno a uno y la negación llega hasta el predicado."
+          },
+          {
+            "prompt": "Un técnico razona: 'si hay malware, el equipo se pone lento; el equipo está lento; luego hay malware'. ¿Qué ocurre con este argumento?",
+            "options": [
+              "Es inválido: afirma el consecuente",
+              "Es válido por modus ponens",
+              "Es válido por modus tollens",
+              "Es válido por silogismo disyuntivo"
+            ],
+            "correct": 0,
+            "explanation": "De p → q y q no se sigue p; la lentitud puede deberse a otras causas, como poca memoria."
+          },
+          {
+            "prompt": "Para demostrar que 'si n² es impar, entonces n es impar' conviene usar:",
+            "options": [
+              "Contrapositiva: si n es par, n² es par",
+              "La recíproca: si n es impar, n² es impar",
+              "Un ejemplo con n = 3",
+              "La inversa: si n² es par, n es par"
+            ],
+            "correct": 0,
+            "explanation": "La contrapositiva es equivalente al enunciado y es fácil: n = 2k implica n² = 4k², que es par."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Conjuntos, relaciones, funciones e inducción",
+      "description": "Al finalizar la unidad, el estudiante modela datos y dependencias con conjuntos, relaciones y funciones, identifica sus propiedades, representa órdenes parciales como prerrequisitos y demuestra propiedades de sucesiones y algoritmos recursivos mediante inducción matemática.",
+      "topics": [
+        "Conjuntos, operaciones y producto cartesiano",
+        "Relaciones binarias y sus propiedades",
+        "Relaciones de equivalencia y órdenes parciales",
+        "Funciones: inyectivas, sobreyectivas y biyectivas",
+        "Sucesiones, sumatorias, inducción y recursión"
+      ],
+      "slides": [
+        {
+          "title": "Conjuntos: notación y pertenencia",
+          "bullets": [
+            "Conjunto: colección bien definida de objetos distintos, sin orden; se escribe por extensión o por comprensión.",
+            "Extensión: A = {2, 3, 5, 7}; comprensión: A = {x ∈ ℕ | x es primo y x < 10}.",
+            "Pertenencia x ∈ A, inclusión A ⊆ B, conjunto vacío ∅ y cardinalidad |A|.",
+            "Conjuntos numéricos clave: ℕ, ℤ, ℚ, ℝ; en computación se trabaja casi siempre con subconjuntos finitos."
+          ],
+          "notes": "Inicie mostrando que la teoría de conjuntos, formulada por Georg Cantor a fines del siglo XIX, es el lenguaje común de toda la matemática y también de las bases de datos. Una tabla relacional es, formalmente, un conjunto de tuplas: no admite filas duplicadas ni tiene un orden intrínseco. Pida a los estudiantes que describan por comprensión el conjunto de departamentos del Perú con costa y luego por extensión. Discuta la diferencia entre ∈ y ⊆, que confunde a muchos: 3 ∈ {1, 2, 3}, pero {3} ⊆ {1, 2, 3}. Pregunte si ∅ ⊆ A para cualquier A; la respuesta es sí, porque no hay ningún elemento de ∅ que falte en A, un caso de verdad vacía que conecta con la unidad anterior."
+        },
+        {
+          "title": "Operaciones de conjuntos y diagramas de Venn",
+          "bullets": [
+            "Unión A ∪ B, intersección A ∩ B, diferencia A − B, complemento Aᶜ respecto de un universo U.",
+            "Diferencia simétrica A ⊕ B = (A − B) ∪ (B − A): elementos en exactamente uno de los dos.",
+            "Leyes de De Morgan para conjuntos: (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ y (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ.",
+            "Correspondencia con lógica: ∪ con ∨, ∩ con ∧, complemento con ¬."
+          ],
+          "notes": "Dibuje dos conjuntos: clientes que compraron en la tienda física y clientes que compraron en línea. Pregunte qué operación da los clientes omnicanal (intersección), los que solo compran en línea (diferencia) y el total de clientes únicos (unión). Muestre que las leyes de De Morgan son las mismas que vieron en lógica, porque x ∈ A ∪ B significa x ∈ A ∨ x ∈ B. Esta correspondencia permite trasladar todo lo aprendido. Pida que demuestren una ley de conjuntos mediante doble inclusión: tomar un elemento arbitrario del lado izquierdo y mostrar que pertenece al derecho, y viceversa. Esa técnica de doble inclusión es la forma estándar de probar igualdades de conjuntos y la usarán en el cuestionario."
+        },
+        {
+          "title": "Conjunto potencia y producto cartesiano",
+          "bullets": [
+            "Conjunto potencia P(A): todos los subconjuntos de A; si |A| = n, entonces |P(A)| = 2^n.",
+            "Producto cartesiano A × B = {(a, b) | a ∈ A, b ∈ B}; |A × B| = |A|·|B|.",
+            "Los pares ordenados sí tienen orden: (a, b) ≠ (b, a) si a ≠ b.",
+            "Aplicación: un CROSS JOIN en SQL produce el producto cartesiano de dos tablas."
+          ],
+          "notes": "Explique el conjunto potencia con permisos de un sistema: si hay cuatro permisos (leer, escribir, borrar, administrar), los posibles perfiles de acceso son todos los subconjuntos, es decir 2^4 = 16. Relacione con los bits: cada subconjunto corresponde a una cadena de cuatro bits, idea que se usa en máscaras de permisos de Linux, que verán en Sistemas Operativos. Luego presente el producto cartesiano con tallas y colores de un catálogo: 5 tallas por 6 colores producen 30 variantes de producto. Advierta sobre el CROSS JOIN accidental en SQL: olvidar la condición de unión entre una tabla de 10 000 clientes y otra de 50 000 pedidos genera 500 millones de filas y puede tumbar un servidor."
+        },
+        {
+          "title": "Conjuntos en Python y en SQL",
+          "bullets": [
+            "Python: set y frozenset con operadores |, &, - y ^; pertenencia en tiempo promedio constante.",
+            "SQL: UNION, INTERSECT y EXCEPT operan sobre resultados de consultas como conjuntos.",
+            "UNION elimina duplicados; UNION ALL los conserva, por eso trabaja con multiconjuntos.",
+            "Convertir una lista en set elimina duplicados, pero pierde el orden original."
+          ],
+          "notes": "Haga una demostración en vivo con Python: a = {'Lima', 'Cusco', 'Piura'} y b = {'Cusco', 'Arequipa'}; muestre a | b, a & b, a - b y a ^ b. Explique que la pertenencia x in conjunto es mucho más rápida que en una lista porque se basa en tablas hash, tema que profundizarán en la unidad 3. Luego muestre el equivalente en SQL con dos consultas de clientes por canal. Señale la diferencia entre UNION y UNION ALL, porque es una fuente frecuente de reportes con totales inflados. Pida que depuren una lista de correos electrónicos con set y discutan qué pasa con las mayúsculas: 'Ana@x.pe' y 'ana@x.pe' serían distintos para Python, aunque para el negocio sean el mismo cliente."
+        },
+        {
+          "title": "Relaciones binarias y su representación",
+          "bullets": [
+            "Relación binaria R de A en B: cualquier subconjunto de A × B; se escribe a R b si (a, b) ∈ R.",
+            "Representaciones: lista de pares, matriz booleana de |A| × |B| y grafo dirigido.",
+            "Ejemplo: 'curso x es prerrequisito de curso y' es una relación sobre el conjunto de cursos.",
+            "En bases de datos, una tabla intermedia como matriculas(estudiante, curso) es una relación binaria."
+          ],
+          "notes": "Presente la relación como el concepto que da nombre al modelo relacional de Edgar F. Codd (1970). Use el plan de estudios de la carrera: Fundamentos de Programación es prerrequisito de Programación Orientada a Objetos. Represente cinco cursos y sus prerrequisitos de tres maneras: como pares, como matriz de ceros y unos y como grafo con flechas. Pregunte cuál representación es más conveniente para responder '¿cuáles son los prerrequisitos de Desarrollo Web?' y cuál para 'dibujar la malla curricular'. Explique que en una base de datos las relaciones muchos a muchos se implementan con tablas intermedias, como la tabla de matrículas, que es literalmente un subconjunto del producto cartesiano de estudiantes por cursos."
+        },
+        {
+          "title": "Propiedades de las relaciones",
+          "bullets": [
+            "Reflexiva: a R a para todo a. Simétrica: si a R b entonces b R a.",
+            "Antisimétrica: si a R b y b R a entonces a = b. Transitiva: si a R b y b R c entonces a R c.",
+            "En la matriz: reflexiva tiene diagonal de unos; simétrica es igual a su transpuesta.",
+            "Cierre transitivo: la menor relación transitiva que contiene a R; se calcula con el algoritmo de Warshall."
+          ],
+          "notes": "Recorra las cuatro propiedades con ejemplos concretos. 'Vive en el mismo distrito que' es reflexiva, simétrica y transitiva. 'Es prerrequisito directo de' no es reflexiva ni simétrica, y tampoco transitiva, pero su cierre transitivo sí lo es: 'debe aprobarse antes que'. 'Es amigo en una red social' es simétrica pero no transitiva. Pida que verifiquen las propiedades en una matriz de cuatro por cuatro. Presente brevemente el algoritmo de Warshall, de 1962, que calcula el cierre transitivo en tiempo cúbico. Pregunte: ¿cómo sabría un sistema de matrícula si un estudiante cumple todos los requisitos indirectos de un curso de quinto ciclo? Calculando precisamente ese cierre transitivo sobre la relación de prerrequisitos."
+        },
+        {
+          "title": "Relaciones de equivalencia y particiones",
+          "bullets": [
+            "Relación de equivalencia: reflexiva, simétrica y transitiva.",
+            "Clase de equivalencia [a] = {x | x R a}; las clases forman una partición del conjunto.",
+            "Teorema: toda relación de equivalencia induce una partición y toda partición define una equivalencia.",
+            "Ejemplos: congruencia módulo n, 'mismo grupo de matrícula', GROUP BY en SQL."
+          ],
+          "notes": "Explique que una relación de equivalencia agrupa elementos que, para cierto propósito, se consideran iguales. La sentencia GROUP BY departamento de SQL particiona a los clientes en clases de equivalencia según la relación 'tiene el mismo departamento'. Las clases no se solapan y cubren todo el conjunto, igual que las piezas de un rompecabezas. Adelante la congruencia módulo n, que estudiarán en la unidad 3: dos enteros son equivalentes si dejan el mismo residuo al dividir entre n; las horas de un reloj son clases módulo 12. Pida a los estudiantes proponer una relación que parezca de equivalencia pero no lo sea, como 'tener edades que difieren en a lo más un año', que no es transitiva."
+        },
+        {
+          "title": "Órdenes parciales y diagramas de Hasse",
+          "bullets": [
+            "Orden parcial: relación reflexiva, antisimétrica y transitiva; el par (A, ≼) se llama poset.",
+            "Parcial: pueden existir elementos incomparables, como dos cursos sin dependencia entre sí.",
+            "Diagrama de Hasse: omite lazos y aristas deducibles por transitividad; se dibuja de abajo hacia arriba.",
+            "Ordenamiento topológico: lista lineal compatible con el orden; base de la planificación de tareas."
+          ],
+          "notes": "Use la malla curricular de Computación e Informática: Base de Datos depende de cursos previos, pero Comunicación Efectiva y Matemática Discreta son incomparables, pues ninguno exige al otro. Dibuje el diagrama de Hasse de seis cursos con sus prerrequisitos. Explique que un ordenamiento topológico es un orden de matrícula válido y que suele haber varios. Este mismo concepto aparece en herramientas reales: pip resuelve dependencias de paquetes, make compila archivos en orden y los gestores de proyectos calculan rutas de tareas. Pregunte qué ocurriría si en el plan existiera un ciclo de prerrequisitos, A antes de B y B antes de A: no habría orden topológico y ningún estudiante podría egresar. Detectar ciclos es, por tanto, una validación crítica."
+        },
+        {
+          "title": "Funciones: inyectiva, sobreyectiva y biyectiva",
+          "bullets": [
+            "Función f: A → B asigna a cada elemento del dominio exactamente un elemento del codominio.",
+            "Inyectiva: elementos distintos tienen imágenes distintas; ejemplo: DNI → persona.",
+            "Sobreyectiva: todo elemento del codominio es imagen de alguno; biyectiva: inyectiva y sobreyectiva.",
+            "Las biyecciones tienen inversa y permiten contar: dos conjuntos finitos en biyección tienen igual cardinal."
+          ],
+          "notes": "Defina función como una relación especial y muestre contraejemplos: una persona con dos correos no define una función persona → correo. Discuta la inyectividad con identificadores: el número de DNI identifica de forma única a cada ciudadano, por eso actúa como clave primaria. Si un sistema asignara el mismo código a dos productos, la función código → producto dejaría de existir. Pregunte si la función que asigna a cada estudiante su nota final de 0 a 20 es inyectiva (no, dos pueden sacar 15) o sobreyectiva sobre el rango 0..20 (depende de la sección). Explique que las funciones hash no son inyectivas porque el dominio es mucho mayor que el codominio, lo que provoca colisiones, tema que retomarán en criptografía."
+        },
+        {
+          "title": "Composición e inversa de funciones",
+          "bullets": [
+            "Composición (g ∘ f)(x) = g(f(x)); requiere que el codominio de f encaje con el dominio de g.",
+            "La composición es asociativa pero, en general, no conmutativa: g ∘ f ≠ f ∘ g.",
+            "Inversa f⁻¹ existe solo si f es biyectiva; cumple f⁻¹(f(x)) = x.",
+            "En programación: tuberías de transformación de datos y pares codificar/decodificar."
+          ],
+          "notes": "Muestre la composición con un flujo de datos: f convierte soles a dólares con el tipo de cambio del BCRP y g aplica el IGV del 18 %. Pregunte si da igual aplicar primero el impuesto y luego convertir; en este caso sí, porque ambas son multiplicaciones, pero si g sumara una comisión fija en soles, el orden cambiaría el resultado. Esto ilustra la no conmutatividad. Luego presente pares de funciones inversas usados en software: codificar y decodificar Base64, cifrar y descifrar, serializar a JSON y deserializar. Enfatice que una función de resumen como SHA-256 no tiene inversa porque no es inyectiva; por eso se usa para almacenar contraseñas. Pida ejemplos de composición en sus primeros programas en Python."
+        },
+        {
+          "title": "Sucesiones y sumatorias",
+          "bullets": [
+            "Sucesión: función de ℕ en un conjunto; aritmética aₙ = a₀ + nd, geométrica aₙ = a₀·rⁿ.",
+            "Suma de Gauss: 1 + 2 + … + n = n(n + 1)/2.",
+            "Suma geométrica: 1 + r + … + rⁿ = (rⁿ⁺¹ − 1)/(r − 1) para r ≠ 1.",
+            "Las sumatorias permiten contar operaciones de ciclos anidados y estimar el tiempo de ejecución."
+          ],
+          "notes": "Relate la anécdota de Carl Friedrich Gauss sumando del 1 al 100 al emparejar términos. Luego conecte con algoritmos: un ciclo for i in range(n) que contiene otro for j in range(i) ejecuta 0 + 1 + … + (n − 1) = n(n − 1)/2 operaciones, lo que crece aproximadamente como n². Muestre la suma geométrica con un ejemplo financiero cercano: un ahorro que crece al 5 % anual, o con la duplicación de usuarios de una aplicación. Pida que calculen cuántas operaciones hace un doble ciclo con n = 1000 y que lo comparen con un ciclo simple. Este cálculo es la semilla del análisis de complejidad que desarrollarán en Algoritmos y Estructuras de Datos."
+        },
+        {
+          "title": "Inducción matemática",
+          "bullets": [
+            "Principio: si P(1) es verdadero y P(k) → P(k + 1) para todo k ≥ 1, entonces P(n) vale para todo n ≥ 1.",
+            "Paso base: verificar el primer caso. Paso inductivo: suponer P(k) (hipótesis) y probar P(k + 1).",
+            "Ejemplo: demostrar 1 + 2 + … + n = n(n + 1)/2.",
+            "Inducción fuerte: suponer P(1), …, P(k) para probar P(k + 1); útil con recursiones múltiples."
+          ],
+          "notes": "Use la analogía del efecto dominó: si cae la primera ficha y cada ficha derriba a la siguiente, caen todas. Demuestre la fórmula de Gauss: base n = 1, 1 = 1·2/2. Paso inductivo: suponiendo 1 + … + k = k(k + 1)/2, sumamos k + 1 y obtenemos (k + 1)(k + 2)/2. Insista en escribir explícitamente la hipótesis inductiva y en señalar dónde se usa. Luego muestre un error típico: 'todos los caballos son del mismo color', cuya demostración falsa falla en el paso de n = 1 a n = 2. Explique que la inducción es la herramienta para probar que programas recursivos y ciclos son correctos. Proponga demostrar que 2^n > n para todo n natural."
+        },
+        {
+          "title": "Recursión y relaciones de recurrencia",
+          "bullets": [
+            "Definición recursiva: caso base más regla que define el caso n a partir de casos menores.",
+            "Fibonacci: F(0) = 0, F(1) = 1, F(n) = F(n − 1) + F(n − 2).",
+            "Torres de Hanói: T(n) = 2T(n − 1) + 1, cuya solución es T(n) = 2^n − 1.",
+            "La recursión ingenua puede repetir cálculos; la memorización reduce el costo de exponencial a lineal."
+          ],
+          "notes": "Muestre código en Python de Fibonacci recursivo y pida que cuenten cuántas llamadas hace para n = 30: más de un millón. Luego aplique memorización con functools.lru_cache y compare tiempos en vivo. Esta experiencia ilustra que la misma definición matemática puede implementarse de forma eficiente o desastrosa. Resuelva la recurrencia de Hanói por sustitución: T(1) = 1, T(2) = 3, T(3) = 7, conjeture 2^n − 1 y demuéstrelo por inducción, cerrando el ciclo con la diapositiva anterior. Pregunte cuántos movimientos requieren 64 discos: más de 18 trillones, lo que a un movimiento por segundo tardaría cientos de miles de millones de años. Así se introduce la intuición del crecimiento exponencial."
+        }
+      ],
+      "reading": {
+        "title": "Relaciones e inducción: modelar dependencias y demostrar algoritmos",
+        "minutes": 35,
+        "content": "## 1. Del plan de estudios al poset\n\nTodo plan de estudios es una estructura matemática. Sea C el conjunto de cursos de la carrera y R la relación \"x es prerrequisito directo de y\". R es un subconjunto de C × C. Para saber qué cursos deben aprobarse antes de uno dado no basta R: se necesita su **cierre transitivo** R⁺, que incluye los requisitos indirectos. Si Fundamentos de Programación precede a Programación Orientada a Objetos y esta precede a Desarrollo de Software Empresarial, entonces el primero precede también al tercero.\n\nLa relación \"debe aprobarse antes que o es el mismo curso\" es un **orden parcial**: reflexiva, antisimétrica y transitiva. Es parcial porque hay cursos incomparables, como Comunicación Efectiva y Matemática Discreta. Rosen (2019) muestra que todo orden parcial finito admite al menos un **ordenamiento topológico**, una secuencia lineal compatible con las dependencias. Ese resultado garantiza que, si el plan no tiene ciclos, existe un orden de matrícula viable.\n\n```python\nfrom graphlib import TopologicalSorter  # Python 3.9+\n\nprerrequisitos = {\n    \"POO\": {\"Fundamentos de Programación\"},\n    \"Algoritmos y Estructuras de Datos\": {\"POO\", \"Matemática Discreta\"},\n    \"Base de Datos\": {\"Fundamentos de Programación\"},\n    \"Desarrollo Web\": {\"POO\", \"Base de Datos\"},\n}\norden = list(TopologicalSorter(prerrequisitos).static_order())\nprint(orden)  # un orden de matrícula válido\n```\n\nSi alguien introdujera por error un ciclo, por ejemplo que Base de Datos exija Desarrollo Web, la biblioteca lanzaría `CycleError`. La teoría predice exactamente ese comportamiento: un ciclo viola la antisimetría.\n\n## 2. Equivalencias y particiones en el análisis de datos\n\nUna **relación de equivalencia** es reflexiva, simétrica y transitiva. Sus clases forman una partición: bloques disjuntos que cubren todo el conjunto. Cuando un analista del INEI agrupa hogares por departamento o un desarrollador escribe `GROUP BY ruc_emisor`, está aplicando este teorema. Los agregados (sumas, conteos, promedios) se calculan por clase, y la partición garantiza que ningún registro se cuente dos veces ni quede fuera.\n\n## 3. Funciones e identificadores\n\nUna función asigna a cada elemento del dominio exactamente una imagen. La inyectividad es la propiedad que exigimos a los identificadores: el DNI o el RUC deben corresponder a un único titular. Cuando un sistema permite que dos registros compartan un código, la consulta \"dame el cliente con este código\" deja de ser una función y aparecen inconsistencias. Por eso las bases de datos imponen restricciones `PRIMARY KEY` y `UNIQUE`: son la versión técnica de la inyectividad.\n\n## 4. Inducción: la herramienta para razonar sobre lo infinito\n\n¿Cómo asegurar que un ciclo funciona para cualquier tamaño de entrada si solo podemos probar algunos? La **inducción matemática** responde con dos pasos: un caso base y un paso inductivo. Ejemplo clásico: demostrar que\n\n$$\\sum_{i=1}^{n} (2i - 1) = n^2$$\n\n- **Base:** para n = 1, el lado izquierdo es 1 y el derecho 1² = 1.\n- **Paso inductivo:** supongamos que la suma de los k primeros impares es k². La suma de los k + 1 primeros es k² + (2k + 1) = (k + 1)². ∎\n\nLa misma lógica justifica los **invariantes de ciclo**. Considere:\n\n```python\ndef suma_lista(xs):\n    total = 0\n    for i in range(len(xs)):\n        # Invariante: total == xs[0] + ... + xs[i-1]\n        total += xs[i]\n    return total\n```\n\nEl invariante vale antes de la primera iteración (suma vacía igual a cero) y, si vale antes de una iteración, vale después. Por inducción, al terminar el ciclo total contiene la suma completa. Así razonan Cormen et al. (2022) para probar la corrección de algoritmos.\n\n## 5. Recurrencias y costo de la recursión\n\nLas definiciones recursivas describen problemas en términos de versiones más pequeñas de sí mismos. La recurrencia de las Torres de Hanói, T(n) = 2T(n − 1) + 1 con T(1) = 1, tiene solución T(n) = 2ⁿ − 1, que se demuestra por inducción. Fibonacci recursivo sin memoria realiza un número de llamadas que crece exponencialmente; con memorización baja a n llamadas. Comprender esta diferencia es la base del análisis de complejidad que se estudiará en ciclos posteriores.\n\n## Ideas clave\n\n- Relaciones y órdenes parciales modelan dependencias: cursos, paquetes de software, tareas de proyecto.\n- Las particiones explican por qué GROUP BY y los agregados son correctos.\n- La inyectividad es la base matemática de las claves primarias.\n- La inducción y los invariantes permiten afirmar que un algoritmo es correcto para toda entrada.\n"
+      },
+      "case": {
+        "title": "Caso: El sistema de matrícula que no dejaba egresar",
+        "content": "El **Instituto Tecnológico del Sur** (institución ficticia de Arequipa, 3 200 estudiantes en modalidad virtual) migró en 2025 su sistema de matrícula a una nueva plataforma web. El equipo de TI, liderado por el ingeniero Marco Quispe, cargó los planes de estudio desde hojas de cálculo que cada coordinador de carrera mantenía por separado.\n\nEn la primera semana de matrícula del ciclo 2026-I, la mesa de ayuda recibió 410 reclamos. Tres patrones dominaban:\n\n1. **Bloqueo circular.** En la carrera de Contabilidad, el sistema exigía Costos y Presupuestos para matricularse en Contabilidad Gerencial, y a la vez Contabilidad Gerencial para Costos y Presupuestos. Ningún estudiante de cuarto ciclo podía avanzar.\n2. **Requisitos indirectos ignorados.** El sistema solo verificaba prerrequisitos directos. Ochenta estudiantes que habían convalidado cursos de otra institución se matricularon en Desarrollo Web sin haber aprobado Fundamentos de Programación, prerrequisito de un prerrequisito.\n3. **Secciones duplicadas.** Un mismo curso aparecía con dos códigos distintos (CEI-201 y CEI201) por un error de digitación; los estudiantes matriculados en uno no figuraban como aprobados del otro, y el sistema les exigía repetir el curso.\n\nLa directora académica, Lucía Paredes, debe presentar en diez días un plan de corrección al comité directivo. Marco propone tres medidas: validar automáticamente que la relación de prerrequisitos no tenga ciclos antes de publicar un plan, calcular el cierre transitivo para verificar requisitos indirectos y normalizar los códigos de curso para que la función código → curso sea inyectiva y sin duplicados.\n\nEl coordinador de Contabilidad se opone: sostiene que algunos cursos se pueden llevar \"en paralelo\" y que la herramienta debe admitir correquisitos. Además, el área de admisión advierte que el cálculo del cierre transitivo para todas las carreras podría ralentizar la matrícula en horas punta, cuando hasta 1 500 estudiantes acceden simultáneamente.\n\nLucía necesita entender qué propiedades matemáticas deben cumplir los datos del plan de estudios, cómo verificarlas y qué compromisos aceptar entre rigor, flexibilidad y rendimiento.",
+        "questions": [
+          "Modele la relación de prerrequisitos como relación binaria y explique qué propiedad se viola en el bloqueo circular y por qué ningún ordenamiento topológico es posible.",
+          "¿Por qué la verificación solo de prerrequisitos directos es insuficiente? Explique el papel del cierre transitivo con un ejemplo de la malla.",
+          "¿Cómo incorporaría los correquisitos sin perder las garantías de un orden parcial? Proponga una representación matemática.",
+          "¿Cuándo conviene calcular el cierre transitivo: en cada matrícula o al publicar el plan? Justifique considerando rendimiento y consistencia.",
+          "Redacte tres reglas de validación de datos que Lucía debería exigir a los coordinadores antes de cargar un plan de estudios."
+        ]
+      },
+      "assignment": {
+        "title": "Modelado de un plan de estudios como orden parcial",
+        "instructions": "**Objetivo:** aplicar relaciones, órdenes parciales e inducción para analizar un sistema de dependencias real.\n\n**Qué entregar:**\n\n1. Tome el plan de estudios de la carrera de Computación e Informática de TEPSUP (seis ciclos) y defina, con criterio fundamentado, al menos doce relaciones de prerrequisito entre cursos.\n2. Represente la relación como lista de pares, como matriz booleana y como diagrama de Hasse.\n3. Verifique qué propiedades cumple (reflexiva, simétrica, antisimétrica, transitiva) y calcule su cierre transitivo mostrando el procedimiento.\n4. Implemente en Python un programa que detecte ciclos y produzca un ordenamiento topológico; pruébelo introduciendo un ciclo artificial.\n5. Demuestre por inducción una propiedad de su elección relacionada con el problema, por ejemplo, que un plan con n cursos sin ciclos tiene al menos un curso sin prerrequisitos.\n\n**Formato:** informe PDF de 4 a 6 páginas y archivo .py comentado.\n\n**Criterios:** rigor en las definiciones, corrección del cierre transitivo, funcionamiento del programa y calidad de la demostración.",
+        "rubric": [
+          {
+            "name": "Modelado y representaciones de la relación",
+            "points": 5
+          },
+          {
+            "name": "Análisis de propiedades y cierre transitivo",
+            "points": 5
+          },
+          {
+            "name": "Programa de detección de ciclos y orden topológico",
+            "points": 5
+          },
+          {
+            "name": "Demostración por inducción",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: conjuntos, relaciones e inducción",
+        "questions": [
+          {
+            "prompt": "Un sistema tiene 5 permisos independientes. ¿Cuántos perfiles de acceso distintos, incluido el perfil sin permisos, pueden definirse?",
+            "options": [
+              "32",
+              "25",
+              "120",
+              "10"
+            ],
+            "correct": 0,
+            "explanation": "Cada perfil es un subconjunto de los 5 permisos; el conjunto potencia tiene 2^5 = 32 elementos."
+          },
+          {
+            "prompt": "Si A tiene 1 200 clientes y B tiene 300 productos, ¿cuántas filas produce un CROSS JOIN entre ambas tablas?",
+            "options": [
+              "360 000",
+              "1 500",
+              "1 200",
+              "900"
+            ],
+            "correct": 0,
+            "explanation": "El producto cartesiano tiene |A|·|B| = 1 200 × 300 = 360 000 pares."
+          },
+          {
+            "prompt": "La relación 'x tiene el mismo código de departamento que y' sobre los clientes es:",
+            "options": [
+              "Una relación de equivalencia",
+              "Un orden parcial",
+              "Antisimétrica pero no reflexiva",
+              "Una función inyectiva"
+            ],
+            "correct": 0,
+            "explanation": "Es reflexiva, simétrica y transitiva, por lo que particiona a los clientes por departamento, como hace GROUP BY."
+          },
+          {
+            "prompt": "¿Por qué una relación de prerrequisitos con un ciclo A → B → A impide egresar?",
+            "options": [
+              "Viola la antisimetría y no admite orden topológico",
+              "Porque no es reflexiva",
+              "Porque no es simétrica",
+              "Porque su matriz no es cuadrada"
+            ],
+            "correct": 0,
+            "explanation": "Con A antes de B y B antes de A, siendo distintos, se rompe la antisimetría; no existe secuencia lineal válida."
+          },
+          {
+            "prompt": "Una función que asigna a cada producto un código de 4 dígitos en una tienda con 12 000 productos:",
+            "options": [
+              "No puede ser inyectiva",
+              "Es necesariamente biyectiva",
+              "Es necesariamente sobreyectiva",
+              "Siempre es inyectiva"
+            ],
+            "correct": 0,
+            "explanation": "Solo existen 10 000 códigos de 4 dígitos; con 12 000 productos, al menos dos compartirían código."
+          },
+          {
+            "prompt": "En una demostración por inducción de P(n) para n ≥ 1, el paso inductivo consiste en:",
+            "options": [
+              "Probar que P(k) implica P(k + 1)",
+              "Probar P(1) y P(2)",
+              "Verificar P(n) para varios valores",
+              "Suponer P(n) para todo n"
+            ],
+            "correct": 0,
+            "explanation": "El paso inductivo usa la hipótesis P(k) para deducir P(k + 1); junto con la base, cubre todos los naturales."
+          },
+          {
+            "prompt": "¿Cuántos movimientos requiere resolver las Torres de Hanói con 10 discos, según T(n) = 2T(n − 1) + 1 y T(1) = 1?",
+            "options": [
+              "1 023",
+              "1 024",
+              "512",
+              "100"
+            ],
+            "correct": 0,
+            "explanation": "La solución cerrada es T(n) = 2^n − 1, por lo que T(10) = 1 024 − 1 = 1 023."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Combinatoria, aritmética modular y criptografía",
+      "description": "Al finalizar la unidad, el estudiante aplica principios de conteo, permutaciones, combinaciones y aritmética modular para dimensionar espacios de búsqueda, validar identificadores como el RUC, comprender funciones hash y explicar el funcionamiento del cifrado RSA.",
+      "topics": [
+        "Principios de suma y producto, permutaciones y combinaciones",
+        "Palomar e inclusión-exclusión",
+        "Divisibilidad, MCD y algoritmo de Euclides",
+        "Congruencias y dígitos verificadores",
+        "Hash y criptografía de clave pública RSA"
+      ],
+      "slides": [
+        {
+          "title": "Principios de suma y producto",
+          "bullets": [
+            "Principio de la suma: si una tarea se hace de m formas o de n formas excluyentes, hay m + n opciones.",
+            "Principio del producto: si un proceso tiene etapas con m y n opciones, hay m·n resultados.",
+            "Ejemplo: placa con tres letras (26) y tres dígitos (10): 26³ × 10³ = 17 576 000 combinaciones.",
+            "Contraseña de 8 caracteres con 62 símbolos: 62⁸ ≈ 2,18 × 10¹⁴ posibilidades."
+          ],
+          "notes": "Empiece preguntando cuántas contraseñas de cuatro dígitos tiene una tarjeta de débito: 10⁴ = 10 000. Luego pregunte por qué los bancos bloquean la tarjeta tras tres intentos fallidos: porque con tres intentos la probabilidad de acertar al azar es apenas 3 en 10 000. Explique el principio del producto como un árbol de decisiones donde cada nivel multiplica las ramas. Presente el modelo simplificado de placa vehicular con tres letras y tres dígitos y calcule su capacidad. Contraste con el principio de la suma: si una contraseña puede tener 6 o 7 caracteres, se suman los casos de cada longitud. Pida a la clase calcular cuántas contraseñas de 6 a 8 caracteres alfanuméricos existen, combinando ambos principios."
+        },
+        {
+          "title": "Permutaciones y variaciones",
+          "bullets": [
+            "Permutación: arreglo ordenado de objetos distintos; n objetos se ordenan de n! formas.",
+            "Variaciones o permutaciones parciales: P(n, r) = n!/(n − r)! al elegir r en orden.",
+            "Ejemplo: elegir presidente, secretario y tesorero entre 20 estudiantes: 20·19·18 = 6 840.",
+            "Permutaciones con repetición: n!/(n₁!·n₂!·…) para palabras con letras repetidas."
+          ],
+          "notes": "Use el ejemplo de la junta directiva del gremio estudiantil: el orden importa porque los cargos son distintos. Muestre que n! crece más rápido que cualquier potencia: 10! es 3 628 800 y 20! supera los dos trillones. Conecte con el problema del vendedor viajero: visitar 15 ciudades del Perú en todos los órdenes posibles implica 14!/2, más de 43 mil millones de rutas, inviables para probar por fuerza bruta. Calcule de cuántas formas se reordenan las letras de PERU (4! = 24) y luego las de CUSCO, donde la C se repite: 5!/2! = 60. Pida a los estudiantes generar permutaciones con itertools.permutations y verificar el conteo empíricamente para valores pequeños."
+        },
+        {
+          "title": "Combinaciones y coeficiente binomial",
+          "bullets": [
+            "Combinación: selección sin orden; C(n, r) = n!/(r!(n − r)!).",
+            "Ejemplo: lotería de 6 números entre 45: C(45, 6) = 8 145 060 combinaciones.",
+            "Identidad de Pascal: C(n, r) = C(n − 1, r − 1) + C(n − 1, r); base del triángulo de Pascal.",
+            "Teorema del binomio: (x + y)ⁿ = Σ C(n, k) xⁿ⁻ᵏ yᵏ."
+          ],
+          "notes": "La pregunta clave para distinguir permutaciones de combinaciones es: ¿importa el orden? En un equipo de proyecto de cuatro personas elegido entre doce, no importa: C(12, 4) = 495. Calcule la probabilidad de ganar una lotería de 6 entre 45 con un boleto: una en más de ocho millones. Este dato sirve para discutir decisiones racionales con datos. Construya el triángulo de Pascal hasta la fila 6 y muestre cómo la identidad de Pascal permite un algoritmo de programación dinámica que evita calcular factoriales gigantes. Mencione que math.comb(n, r) en Python ya implementa este cálculo. Pregunte cuántas formas hay de elegir 3 cursos electivos de una lista de 8 y de cuántas si dos de ellos son obligatorios."
+        },
+        {
+          "title": "Repeticiones y combinaciones con repetición",
+          "bullets": [
+            "Selecciones de r objetos de n tipos con repetición permitida: C(n + r − 1, r).",
+            "Técnica de estrellas y barras: r estrellas (objetos) y n − 1 barras (separadores).",
+            "Ejemplo: 10 pedidos de 4 sabores de helado: C(13, 3) = 286 combinaciones de cantidades.",
+            "Soluciones enteras no negativas de x₁ + x₂ + x₃ = 12: C(14, 2) = 91."
+          ],
+          "notes": "Esta técnica resuelve problemas de distribución frecuentes en logística y planificación. Plantee: una distribuidora debe repartir 12 lotes idénticos entre 3 almacenes de Lima Norte, Lima Sur y Callao; ¿cuántas distribuciones existen? Dibuje doce estrellas y dos barras: cada ordenamiento de los catorce símbolos representa un reparto distinto, de modo que la respuesta es C(14, 2) = 91. Si cada almacén debe recibir al menos un lote, se asigna uno a cada almacén y se reparten los nueve restantes: C(11, 2) = 55. Pida que resuelvan variantes y que verifiquen con un pequeño programa de fuerza bruta en Python. Insista en que la verificación computacional para casos pequeños es una excelente práctica para detectar errores de razonamiento combinatorio."
+        },
+        {
+          "title": "Principio del palomar",
+          "bullets": [
+            "Si se colocan n + 1 objetos en n cajas, al menos una caja contiene dos o más objetos.",
+            "Versión generalizada: con N objetos y k cajas, alguna caja tiene al menos ⌈N/k⌉ objetos.",
+            "Lima Metropolitana supera los 10 millones de habitantes y nadie tiene más de 200 000 cabellos: hay coincidencias.",
+            "Consecuencia en computación: toda función hash de entradas largas a salidas cortas tiene colisiones."
+          ],
+          "notes": "El principio del palomar, atribuido a Dirichlet, parece trivial pero tiene consecuencias profundas. Muestre que en un grupo de 367 personas dos cumplen años el mismo día con total certeza. Luego aplíquelo a compresión de datos: no existe un algoritmo que comprima sin pérdida todos los archivos, porque hay más archivos de n bits que archivos de menos de n bits. Esta es una demostración de imposibilidad, muy valiosa para no perseguir soluciones que no pueden existir. Relacione con las funciones hash de la unidad: SHA-256 produce 2²⁵⁶ salidas posibles, pero las entradas son infinitas, así que existen colisiones; la seguridad se basa en que encontrarlas sea computacionalmente impracticable. Proponga calcular cuántos estudiantes garantizan que tres compartan mes de nacimiento: 25."
+        },
+        {
+          "title": "Principio de inclusión-exclusión",
+          "bullets": [
+            "Dos conjuntos: |A ∪ B| = |A| + |B| − |A ∩ B|.",
+            "Tres conjuntos: |A ∪ B ∪ C| = Σ|A| − Σ|A ∩ B| + |A ∩ B ∩ C|.",
+            "Ejemplo: 120 estudiantes; 70 programan en Python, 50 en SQL y 30 en ambos: 90 en al menos uno.",
+            "Aplicación: contar enteros hasta 1000 divisibles por 2, 3 o 5 y deduplicar audiencias de campañas."
+          ],
+          "notes": "Explique que sumar los tamaños de grupos que se solapan cuenta dos veces a quienes están en la intersección, y por eso se resta. Muestre el ejemplo de habilidades: 70 + 50 − 30 = 90, de modo que 30 estudiantes no manejan ninguno de los dos lenguajes. Luego resuelva el conteo de enteros del 1 al 1000 divisibles por 2, 3 o 5: 500 + 333 + 200 − 166 − 100 − 66 + 33 = 734. Pida verificarlo con una línea de Python usando sum y any. Conecte con analítica: cuando una empresa reporta el alcance de una campaña en tres redes sociales, no puede sumar audiencias sin restar los usuarios que coinciden; de lo contrario sobreestima su alcance real y toma malas decisiones de inversión."
+        },
+        {
+          "title": "Divisibilidad y algoritmo de la división",
+          "bullets": [
+            "a divide a b (a | b) si existe un entero k con b = a·k.",
+            "Algoritmo de la división: para a y d > 0 existen únicos q y r con a = d·q + r y 0 ≤ r < d.",
+            "En Python: q = a // d y r = a % d; cuidado con negativos: −7 % 3 da 2.",
+            "Teorema fundamental de la aritmética: todo entero mayor que 1 se factoriza de forma única en primos."
+          ],
+          "notes": "Revise la división entera como la conocen desde la primaria, pero con lenguaje formal. Haga notar que distintos lenguajes tratan el residuo de números negativos de forma distinta: en Python −7 % 3 da 2, mientras que en C o Java da −1. Esta diferencia ha causado errores reales en cálculos de fechas y de índices circulares. Presente el teorema fundamental de la aritmética y factorice 360 = 2³·3²·5. Mencione que Euclides demostró hace más de dos mil años que hay infinitos primos, con una prueba por contradicción como las de la unidad 1. Pregunte por qué es fácil multiplicar dos primos grandes y muy difícil factorizar el producto: esa asimetría es la base de RSA, que verán al final de la unidad."
+        },
+        {
+          "title": "MCD y algoritmo de Euclides",
+          "bullets": [
+            "Máximo común divisor: mcd(a, b) es el mayor entero que divide a ambos.",
+            "Euclides: mcd(a, b) = mcd(b, a mod b) y mcd(a, 0) = a; muy eficiente incluso con números enormes.",
+            "Ejemplo: mcd(252, 105): 252 = 2·105 + 42; 105 = 2·42 + 21; 42 = 2·21 + 0 → 21.",
+            "Identidad de Bézout: existen x, y con ax + by = mcd(a, b); el algoritmo extendido los calcula."
+          ],
+          "notes": "Desarrolle el algoritmo de Euclides en la pizarra con 252 y 105 y luego impleméntelo en tres líneas de Python con un ciclo while. Destaque que es uno de los algoritmos más antiguos que siguen en uso, descrito en los Elementos hacia el año 300 a. C. Explique por qué funciona: cualquier divisor común de a y b también divide a a mod b. Su eficiencia es notable; Gabriel Lamé demostró en 1844 que el número de pasos es como mucho unas cinco veces la cantidad de dígitos del menor número. Presente la versión extendida, que obtiene los coeficientes de Bézout, porque se necesita para calcular inversos modulares en RSA. Pida calcular mcd(1071, 462) y encontrar los coeficientes de Bézout."
+        },
+        {
+          "title": "Aritmética modular y congruencias",
+          "bullets": [
+            "a ≡ b (mod n) si n divide a a − b; equivalentemente, a y b dejan el mismo residuo.",
+            "Se puede sumar y multiplicar módulo n: (a·b) mod n = ((a mod n)·(b mod n)) mod n.",
+            "Inverso modular: a⁻¹ existe módulo n si y solo si mcd(a, n) = 1.",
+            "Exponenciación modular rápida: pow(b, e, n) en Python, con O(log e) multiplicaciones."
+          ],
+          "notes": "Presente la aritmética modular como la aritmética del reloj: 9 horas después de las 8 son las 5, porque 17 ≡ 5 (mod 12). Muestre usos cotidianos en programación: índices circulares en un buffer, día de la semana de una fecha, paridad con n % 2. Explique la propiedad de reducir antes de multiplicar, que evita números gigantes. Calcule 3⁻¹ módulo 7, que es 5 porque 3·5 = 15 ≡ 1. Demuestre la exponenciación rápida calculando 3²⁰⁰ mod 13 con elevaciones al cuadrado sucesivas y verifique con pow(3, 200, 13) en Python. Pregunte por qué 4 no tiene inverso módulo 6: porque mcd(4, 6) = 2. Esta condición será esencial para elegir el exponente público en RSA."
+        },
+        {
+          "title": "Dígitos verificadores: el RUC de SUNAT",
+          "bullets": [
+            "El RUC tiene 11 dígitos; el último es un dígito verificador calculado con un esquema módulo 11.",
+            "Pesos 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 sobre los diez primeros dígitos; se suma el producto.",
+            "Dígito = 11 − (suma mod 11); si resulta 10 se usa 0 y si resulta 11 se usa 1.",
+            "Detecta casi todo error de un dígito y la mayoría de transposiciones; los códigos EAN-13 usan módulo 10."
+          ],
+          "notes": "Este es el ejemplo más tangible de aritmética modular en el Perú. Calcule en vivo el dígito verificador del número ilustrativo 2012345678: la suma ponderada es 148, 148 mod 11 = 5 y 11 − 5 = 6, por lo que el RUC completo sería 20123456786. Explique que validar el dígito en el formulario evita enviar a la base de datos o a un servicio externo números mal digitados, lo que ahorra consultas y reduce rechazos en la facturación electrónica. Enfatice que el dígito verificador detecta errores de tipeo, pero no comprueba que el contribuyente exista ni que esté activo y habido; para eso se consulta el padrón de SUNAT. Pida a los estudiantes implementar la función y probarla cambiando un dígito."
+        },
+        {
+          "title": "Funciones hash y tablas de dispersión",
+          "bullets": [
+            "Función hash: asigna a cada clave un índice en un rango fijo; ejemplo simple h(k) = k mod m.",
+            "Colisión: dos claves con el mismo índice; inevitable por el principio del palomar.",
+            "Resolución: encadenamiento (listas por casilla) o direccionamiento abierto (sondeo).",
+            "Hash criptográficos (SHA-256): resistentes a colisiones y no invertibles; se usan para contraseñas e integridad."
+          ],
+          "notes": "Muestre cómo un diccionario de Python o un set logran búsquedas en tiempo promedio constante: calculan el hash de la clave y van directamente a la casilla correspondiente. Simule una tabla de 7 casillas e inserte claves usando k mod 7, provocando colisiones. Explique por qué se recomienda que m sea primo: reduce patrones de colisión cuando las claves tienen regularidades. Luego distinga entre hash para estructuras de datos y hash criptográfico. Un sistema serio nunca guarda contraseñas en texto plano: guarda un hash con sal usando algoritmos lentos como bcrypt o Argon2. Mencione que la Ley 29733 de Protección de Datos Personales obliga a adoptar medidas de seguridad, y el hash de contraseñas es una de las básicas."
+        },
+        {
+          "title": "Criptografía de clave pública: RSA",
+          "bullets": [
+            "Generación: elegir primos p y q; n = p·q; φ(n) = (p − 1)(q − 1); e con mcd(e, φ) = 1; d = e⁻¹ mod φ.",
+            "Cifrado c = mᵉ mod n; descifrado m = cᵈ mod n; clave pública (e, n), privada (d, n).",
+            "Ejemplo didáctico: p = 61, q = 53, n = 3233, e = 17, d = 2753; m = 65 se cifra como 2790.",
+            "Seguridad: factorizar n de 2048 bits es impracticable con algoritmos clásicos conocidos."
+          ],
+          "notes": "Presente RSA, publicado por Rivest, Shamir y Adleman en 1977, como la síntesis de toda la unidad: primos, MCD, inversos modulares y exponenciación rápida. Recorra el ejemplo didáctico en Python: n = 61·53 = 3233, φ = 60·52 = 3120, e = 17 es coprimo con 3120 y su inverso es d = 2753, porque 17·2753 = 46 801 = 15·3120 + 1. Cifre 65 con pow(65, 17, 3233) para obtener 2790 y descifre con pow(2790, 2753, 3233). Explique que la misma idea, con números de más de 600 dígitos, protege conexiones HTTPS, firmas digitales y certificados como los que usa la facturación electrónica. Advierta que RSA real exige relleno seguro y bibliotecas probadas: nunca se implementa criptografía casera en producción."
+        },
+        {
+          "title": "Crecimiento combinatorio y seguridad",
+          "bullets": [
+            "El espacio de claves crece exponencialmente con la longitud: cada carácter extra multiplica las opciones.",
+            "Un PIN de 4 dígitos tiene 10⁴ opciones; una clave de 12 caracteres con 94 símbolos, más de 4,7 × 10²³.",
+            "Ataques de diccionario explotan contraseñas predecibles: la longitud real efectiva es menor.",
+            "Decisión técnica: limitar intentos, exigir longitud y usar segundo factor de autenticación."
+          ],
+          "notes": "Cierre la unidad integrando conteo y seguridad. Calcule cuánto tardaría un atacante que prueba mil millones de claves por segundo en recorrer un espacio de 62⁸ contraseñas: unos dos días y medio. Con doce caracteres de 94 símbolos, el tiempo supera la edad del universo. Sin embargo, si las personas eligen palabras comunes seguidas del año, el espacio efectivo se reduce a unos pocos millones y cae en segundos. Discuta qué política de contraseñas recomendarían a una mype limeña que vende en línea, equilibrando seguridad y usabilidad. Mencione que las guías modernas, como la NIST SP 800-63B, priorizan la longitud y la verificación contra listas de contraseñas filtradas por encima de reglas de complejidad arbitrarias."
+        }
+      ],
+      "reading": {
+        "title": "Aritmética modular en la práctica: del RUC al cifrado RSA",
+        "minutes": 40,
+        "content": "## 1. Contar antes de programar\n\nLa combinatoria responde a una pregunta que todo técnico enfrenta: ¿cuántos casos hay? Antes de diseñar un código de producto, una política de contraseñas o una prueba exhaustiva, conviene dimensionar el espacio. El **principio del producto** dice que un proceso con etapas independientes de m₁, m₂, …, mₖ opciones produce m₁·m₂·…·mₖ resultados. Un código de 3 letras y 4 dígitos admite 26³·10⁴ = 175 760 000 valores; uno de 6 dígitos, solo un millón. Si una empresa proyecta registrar dos millones de productos, la segunda opción es imposible por el **principio del palomar**: con más objetos que casillas, al menos dos objetos comparten casilla y el código deja de ser inyectivo.\n\n## 2. Congruencias: la aritmética del residuo\n\nDecimos que a ≡ b (mod n) cuando n divide a a − b. Las congruencias respetan la suma y la multiplicación, de modo que se puede reducir en cada paso y trabajar siempre con números pequeños. Esta propiedad sostiene tanto los dígitos verificadores como la criptografía moderna (Rosen, 2019; Graham, Knuth y Patashnik, 1994).\n\n## 3. El dígito verificador del RUC\n\nEl Registro Único de Contribuyentes de SUNAT tiene once dígitos. El último se calcula a partir de los diez primeros con pesos y aritmética módulo 11:\n\n```python\nPESOS = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]\n\ndef digito_ruc(base10: str) -> int:\n    suma = sum(int(d) * p for d, p in zip(base10, PESOS))\n    resto = 11 - (suma % 11)\n    return {10: 0, 11: 1}.get(resto, resto)\n\ndef ruc_valido(ruc: str) -> bool:\n    return (len(ruc) == 11 and ruc.isdigit()\n            and digito_ruc(ruc[:10]) == int(ruc[10]))\n\nprint(digito_ruc(\"2012345678\"))   # 6 -> RUC ilustrativo 20123456786\n```\n\nPara la base ilustrativa 2012345678 la suma ponderada es 2·5 + 0·4 + 1·3 + 2·2 + 3·7 + 4·6 + 5·5 + 6·4 + 7·3 + 8·2 = 148. Como 148 mod 11 = 5, el dígito es 11 − 5 = 6. Si un usuario digita 20123456796, la validación falla de inmediato. El esquema detecta casi cualquier error en un solo dígito porque 11 es primo y ningún peso es múltiplo de 11, de modo que cambiar un dígito altera el resto de la suma (la única excepción proviene de la regla final: los restos 0 y 10 producen ambos el dígito 1); también detecta la mayoría de transposiciones de dígitos adyacentes, porque los pesos consecutivos son distintos. Sin embargo, un dígito correcto no garantiza que el contribuyente exista ni su condición de activo y habido: esa es una validación diferente, contra el padrón.\n\n## 4. Algoritmo de Euclides e inversos modulares\n\nPara dividir en aritmética modular necesitamos inversos: a⁻¹ es el número tal que a·a⁻¹ ≡ 1 (mod n), y existe solo si mcd(a, n) = 1. El **algoritmo de Euclides extendido** obtiene a la vez el MCD y los coeficientes de Bézout:\n\n```python\ndef euclides_ext(a, b):\n    if b == 0:\n        return a, 1, 0\n    g, x, y = euclides_ext(b, a % b)\n    return g, y, x - (a // b) * y\n\ng, x, _ = euclides_ext(17, 3120)\nprint(g, x % 3120)   # 1 2753 -> inverso de 17 módulo 3120\n```\n\n## 5. RSA: confianza basada en un problema difícil\n\nRivest, Shamir y Adleman (1978) propusieron un sistema en el que cualquiera puede cifrar con una clave pública, pero solo el dueño de la clave privada puede descifrar. Con números didácticos:\n\n| Paso | Valor |\n|---|---|\n| Primos | p = 61, q = 53 |\n| Módulo | n = 3233 |\n| φ(n) | (61 − 1)(53 − 1) = 3120 |\n| Exponente público | e = 17, con mcd(17, 3120) = 1 |\n| Exponente privado | d = 2753, porque 17·2753 ≡ 1 (mod 3120) |\n\nCifrar el mensaje m = 65 da c = 65¹⁷ mod 3233 = 2790; descifrar da 2790²⁷⁵³ mod 3233 = 65. La corrección se apoya en el teorema de Euler: m^φ(n) ≡ 1 (mod n) cuando mcd(m, n) = 1. La seguridad descansa en que, conociendo n, es computacionalmente inviable hallar p y q cuando tienen cientos de dígitos. Este mecanismo, junto con otros algoritmos, protege las conexiones HTTPS de la banca por internet y respalda las firmas digitales de los comprobantes electrónicos.\n\n## 6. Advertencias profesionales\n\n- Los ejemplos con números pequeños son pedagógicos; en producción se usan bibliotecas auditadas y claves de al menos 2048 bits.\n- Validar un dígito verificador mejora la calidad del dato, no su veracidad.\n- El principio del palomar recuerda que todo hash tiene colisiones; el diseño debe manejarlas.\n"
+      },
+      "case": {
+        "title": "Caso: Errores de RUC y contraseñas débiles en Distribuidora Norteña",
+        "content": "**Distribuidora Norteña SAC** (empresa ficticia de Chiclayo) comercializa abarrotes a 2 800 bodegas y minimarkets de Lambayeque, Piura y La Libertad. En 2025 emitió 96 000 facturas electrónicas a través de un operador de servicios electrónicos. Su sistema de ventas, desarrollado internamente hace seis años, permite que los vendedores registren clientes desde una aplicación móvil.\n\nEl contador general, Jorge Vílchez, reporta dos problemas. Primero, el 3,8 % de las facturas fue rechazado en el primer intento por errores en el RUC del adquirente: dígitos cambiados, números de diez cifras o RUC de contribuyentes con baja. Cada rechazo obliga a anular, corregir y reemitir, con un costo estimado de S/ 9 entre tiempo administrativo y retrasos en la cobranza. Segundo, una auditoría externa encontró que las contraseñas de los 45 vendedores se almacenan en texto plano y que el 60 % usa claves de seis dígitos, muchas veces su fecha de nacimiento. El sistema no limita los intentos de acceso.\n\nLa gerente general, Patricia Chumpitaz, recibe dos propuestas. El analista interno, Kevin Santisteban, sugiere validar el dígito verificador del RUC en la aplicación, migrar las contraseñas a un hash con sal y exigir claves alfanuméricas de al menos diez caracteres, todo en seis semanas y con un costo de S/ 18 000. Un proveedor externo ofrece un servicio de validación en línea contra el padrón de contribuyentes, con un costo de S/ 0,05 por consulta, y una solución de autenticación con segundo factor por S/ 12 por usuario al mes.\n\nPatricia teme que exigir contraseñas largas frustre a los vendedores, que trabajan en campo con celulares de gama baja y conexión intermitente. También duda de que la validación del dígito verificador resuelva todos los rechazos.\n\nDebe decidir qué combinación de medidas implementar, en qué orden y cómo justificarla ante el directorio, considerando además las obligaciones de seguridad de la Ley 29733 sobre los datos personales de clientes y vendedores.",
+        "questions": [
+          "¿Qué tipos de error de RUC detecta el dígito verificador módulo 11 y cuáles no? Estime qué parte del 3,8 % podría eliminarse con cada propuesta.",
+          "Calcule el tamaño del espacio de contraseñas actual frente al propuesto y estime el tiempo de un ataque de fuerza bruta en cada caso.",
+          "Compare el costo anual de los rechazos con el costo de cada propuesta. ¿Cuál es la decisión económicamente más razonable?",
+          "¿Por qué almacenar contraseñas en texto plano es inaceptable y qué aporta un hash con sal desde la matemática de las funciones?",
+          "Proponga un plan priorizado de implementación que equilibre seguridad, usabilidad en campo y cumplimiento normativo."
+        ]
+      },
+      "assignment": {
+        "title": "Validador de identificadores y análisis de seguridad combinatoria",
+        "instructions": "**Objetivo:** aplicar conteo y aritmética modular para construir y evaluar mecanismos de validación y seguridad.\n\n**Qué entregar:**\n\n1. Un módulo en Python con funciones para validar el dígito verificador del RUC y de un código de barras EAN-13. Incluya al menos diez pruebas con casos válidos e inválidos y explique el fundamento matemático de cada esquema.\n2. Un experimento que simule errores de digitación (un dígito alterado y transposición de dos dígitos adyacentes) sobre 10 000 números generados al azar y mida qué porcentaje detecta cada esquema. Interprete los resultados.\n3. Un análisis combinatorio de tres políticas de contraseña (por ejemplo, PIN de 6 dígitos, 8 caracteres alfanuméricos, 12 caracteres con símbolos): tamaño del espacio, tiempo estimado de ataque y recomendación.\n4. La implementación de RSA con números pequeños (primos de dos o tres dígitos) usando el algoritmo de Euclides extendido y pow(), cifrando y descifrando un mensaje numérico.\n\n**Formato:** informe PDF de 4 a 6 páginas y archivos .py ejecutables.\n\n**Criterios:** corrección matemática, calidad del código y de las pruebas, interpretación de resultados y pertinencia de la recomendación.",
+        "rubric": [
+          {
+            "name": "Validadores correctos con fundamento matemático",
+            "points": 6
+          },
+          {
+            "name": "Experimento de detección de errores e interpretación",
+            "points": 5
+          },
+          {
+            "name": "Análisis combinatorio de contraseñas",
+            "points": 4
+          },
+          {
+            "name": "Implementación didáctica de RSA",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: conteo y aritmética modular",
+        "questions": [
+          {
+            "prompt": "Una tienda en línea genera cupones de 5 caracteres usando solo letras mayúsculas (26). ¿Cuántos cupones distintos puede crear?",
+            "options": [
+              "11 881 376",
+              "130",
+              "65 780",
+              "7 893 600"
+            ],
+            "correct": 0,
+            "explanation": "Por el principio del producto con repetición: 26^5 = 11 881 376. 7 893 600 sería sin repetir letras."
+          },
+          {
+            "prompt": "Se elige un comité de 3 personas entre 10 postulantes, sin cargos diferenciados. ¿Cuántos comités son posibles?",
+            "options": [
+              "120",
+              "720",
+              "30",
+              "1 000"
+            ],
+            "correct": 0,
+            "explanation": "El orden no importa: C(10, 3) = 10·9·8/3! = 120. 720 corresponde a cargos distintos."
+          },
+          {
+            "prompt": "De 200 clientes, 120 compran por web, 90 por app y 50 por ambos canales. ¿Cuántos no compran por ninguno de esos canales?",
+            "options": [
+              "40",
+              "10",
+              "90",
+              "0"
+            ],
+            "correct": 0,
+            "explanation": "Por inclusión-exclusión, 120 + 90 − 50 = 160 usan algún canal; 200 − 160 = 40 no usan ninguno."
+          },
+          {
+            "prompt": "¿Cuál es el valor de mcd(84, 36) según el algoritmo de Euclides?",
+            "options": [
+              "12",
+              "6",
+              "4",
+              "36"
+            ],
+            "correct": 0,
+            "explanation": "84 = 2·36 + 12 y 36 = 3·12 + 0, por lo que el MCD es 12."
+          },
+          {
+            "prompt": "¿Por qué 6 no tiene inverso multiplicativo módulo 15?",
+            "options": [
+              "Porque mcd(6, 15) = 3, distinto de 1",
+              "Porque 6 es par",
+              "Porque 15 no es primo",
+              "Porque 6 es menor que 15"
+            ],
+            "correct": 0,
+            "explanation": "Un inverso módulo n existe si y solo si el número y n son coprimos; aquí comparten el factor 3."
+          },
+          {
+            "prompt": "El dígito verificador del RUC permite detectar:",
+            "options": [
+              "Un dígito mal digitado, pero no si el contribuyente está activo",
+              "Si el contribuyente está activo y habido",
+              "Cualquier error, incluidos los de varios dígitos",
+              "Si la empresa emite facturas"
+            ],
+            "correct": 0,
+            "explanation": "Es un control de integridad sintáctica; la condición del contribuyente se consulta en el padrón de SUNAT."
+          },
+          {
+            "prompt": "En RSA con n = 3233 y φ(n) = 3120, ¿cuál de estos exponentes públicos es válido?",
+            "options": [
+              "e = 17",
+              "e = 26",
+              "e = 15",
+              "e = 40"
+            ],
+            "correct": 0,
+            "explanation": "e debe ser coprimo con 3120 = 2⁴·3·5·13; 17 no comparte factores, mientras que 26, 15 y 40 sí."
+          },
+          {
+            "prompt": "Un sistema guarda contraseñas con un hash de 32 bits. ¿Qué garantiza el principio del palomar?",
+            "options": [
+              "Que existen contraseñas distintas con el mismo hash",
+              "Que no existen colisiones",
+              "Que el hash es invertible",
+              "Que solo hay 32 contraseñas posibles"
+            ],
+            "correct": 0,
+            "explanation": "Hay más contraseñas posibles que valores de 32 bits, por lo que algunas comparten hash necesariamente."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Grafos, árboles y máquinas de estados: proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante modela redes, rutas y procesos con grafos, árboles y máquinas de estados finitos, aplica algoritmos de recorrido, camino más corto y árbol de expansión mínima, e integra los contenidos del curso en un proyecto aplicado a un problema real.",
+      "topics": [
+        "Grafos: terminología, representación y grados",
+        "Caminos, conexidad, circuitos eulerianos y hamiltonianos",
+        "Recorridos BFS y DFS y camino más corto de Dijkstra",
+        "Árboles, árboles de expansión mínima y árboles binarios de búsqueda",
+        "Coloreo de grafos y máquinas de estados finitos"
+      ],
+      "slides": [
+        {
+          "title": "Grafos: definiciones y terminología",
+          "bullets": [
+            "Grafo G = (V, E): conjunto de vértices V y conjunto de aristas E que conectan pares de vértices.",
+            "Tipos: no dirigido, dirigido (dígrafo), ponderado, simple, multigrafo; lazos y aristas paralelas.",
+            "Euler (1736) resolvió los puentes de Königsberg y fundó la teoría de grafos.",
+            "Modelan redes de computadoras, rutas de transporte, redes sociales, dependencias y estados."
+          ],
+          "notes": "Comience con el problema de Königsberg: siete puentes conectaban cuatro zonas de la ciudad y los habitantes se preguntaban si se podía cruzar cada puente una sola vez. Euler abstrajo el mapa en puntos y líneas y demostró que era imposible. Esa abstracción es la esencia de la teoría de grafos: quedarse con la estructura de conexiones e ignorar los detalles geométricos. Pida a los estudiantes que identifiquen grafos a su alrededor: las estaciones de la Línea 1 del Metro de Lima, los routers de la red de su casa, los seguidores en una red social, los cursos y sus prerrequisitos de la unidad 2. Pregunte en cuáles las aristas tienen dirección y en cuáles tienen peso: distancia, tiempo, costo o ancho de banda."
+        },
+        {
+          "title": "Representación: matriz y lista de adyacencia",
+          "bullets": [
+            "Matriz de adyacencia: arreglo n × n con 1 (o el peso) si existe arista; ocupa memoria proporcional a n².",
+            "Lista de adyacencia: para cada vértice, la lista de sus vecinos; ocupa memoria proporcional a n + m.",
+            "Grafos dispersos (pocas aristas) favorecen listas; densos favorecen matrices.",
+            "En Python: diccionario de listas o de diccionarios para grafos ponderados."
+          ],
+          "notes": "Muestre el mismo grafo de seis vértices en ambas representaciones. Pregunte qué operación es más rápida en cada una: comprobar si existe la arista entre u y v es inmediato en la matriz, mientras que recorrer los vecinos de un vértice es más eficiente en la lista. Calcule el costo de memoria de una red vial con un millón de intersecciones: la matriz necesitaría un billón de casillas, inviable; la lista solo almacena las calles existentes, unos pocos millones. Esta decisión de diseño aparece en todo sistema de mapas y en la gestión de redes. Escriba en Python el grafo como diccionario: grafo = {'A': ['B', 'C'], 'B': ['A'], ...} y luego la versión ponderada con diccionarios anidados, que usarán con Dijkstra."
+        },
+        {
+          "title": "Grado y teorema del apretón de manos",
+          "bullets": [
+            "Grado de un vértice: número de aristas incidentes; en dígrafos se distingue grado de entrada y de salida.",
+            "Teorema: la suma de los grados es igual a 2|E|, porque cada arista aporta dos extremos.",
+            "Corolario: todo grafo tiene un número par de vértices de grado impar.",
+            "Ejemplo: 10 switches con 3 enlaces cada uno requieren exactamente 15 cables."
+          ],
+          "notes": "Explique el teorema con el saludo en una reunión: cada apretón involucra dos manos, por lo que el total de manos estrechadas es el doble de saludos. Demuéstrelo con conteo doble, una técnica combinatoria que conecta con la unidad 3. Use el corolario para decidir rápidamente imposibilidades: ¿puede existir una red de 7 equipos en la que cada uno se conecte exactamente con otros 3? No, porque la suma de grados sería 21, un número impar. Este tipo de razonamiento ahorra tiempo de diseño en topologías de red, tema de Redes de Computadoras en el siguiente ciclo. Pida que calculen cuántos enlaces requiere una topología de malla completa con n nodos: n(n − 1)/2, y que comparen su costo con una topología en estrella."
+        },
+        {
+          "title": "Caminos, ciclos y conexidad",
+          "bullets": [
+            "Camino: secuencia de vértices unidos por aristas; simple si no repite vértices; ciclo si vuelve al inicio.",
+            "Grafo conexo: existe camino entre todo par de vértices; componentes conexas: subgrafos maximales conexos.",
+            "Vértice de corte y puente: su eliminación desconecta el grafo; indican puntos únicos de falla.",
+            "En dígrafos: conexidad fuerte si hay camino dirigido en ambos sentidos entre todo par."
+          ],
+          "notes": "Relacione la conexidad con la continuidad del servicio. Si una red corporativa con sedes en Lima, Trujillo y Arequipa depende de un único enlace entre Lima y Trujillo, ese enlace es un puente: su caída aísla una sede completa. Identificar puentes y vértices de corte es el primer paso de un análisis de redundancia. Muestre un grafo y pida que encuentren sus componentes conexas y sus puntos únicos de falla. Mencione que, para conectividad dirigida, como en una red de calles con sentido único, hay que verificar caminos de ida y de vuelta. Pregunte cuántas aristas como mínimo debe tener un grafo conexo de n vértices: n − 1, lo que anticipa la definición de árbol."
+        },
+        {
+          "title": "Caminos eulerianos y hamiltonianos",
+          "bullets": [
+            "Circuito euleriano: recorre cada arista exactamente una vez; existe si el grafo es conexo y todos los grados son pares.",
+            "Camino euleriano abierto: existe si hay exactamente dos vértices de grado impar.",
+            "Ciclo hamiltoniano: visita cada vértice una vez; no se conoce un criterio eficiente para decidirlo.",
+            "Aplicaciones: recorridos de recolección de residuos (aristas) y rutas de reparto o visitas (vértices)."
+          ],
+          "notes": "Contraste dos problemas parecidos con dificultades radicalmente distintas. Decidir si hay un circuito euleriano es fácil: basta revisar los grados. En Königsberg, las cuatro zonas tenían grado impar, por eso no había solución. En cambio, decidir si existe un ciclo hamiltoniano es un problema NP-completo: no se conoce ningún algoritmo eficiente y se cree que no existe. Ejemplifique con el servicio de limpieza de un distrito que debe barrer todas las calles, problema euleriano, y una empresa de courier que debe visitar todos sus clientes, problema hamiltoniano y del vendedor viajero. Explique que en la práctica se usan heurísticas que dan buenas soluciones sin garantizar la óptima. Esta distinción entre problemas tratables e intratables es fundamental para un desarrollador."
+        },
+        {
+          "title": "Recorridos en anchura y en profundidad",
+          "bullets": [
+            "BFS (búsqueda en anchura): usa una cola; visita por niveles; halla caminos con el menor número de aristas.",
+            "DFS (búsqueda en profundidad): usa una pila o recursión; explora una rama hasta el fondo antes de retroceder.",
+            "Ambos visitan cada vértice y arista una vez: tiempo proporcional a |V| + |E|.",
+            "Usos: componentes conexas, detección de ciclos, ordenamiento topológico, rastreadores web."
+          ],
+          "notes": "Simule BFS en la pizarra sobre un grafo pequeño, anotando el contenido de la cola en cada paso, y luego DFS con la pila. Pida que comparen el orden de visita. Explique que BFS responde a preguntas del tipo grados de separación: en una red social, qué contactos están a dos saltos; en una red, cuántos saltos hay entre dos routers. DFS es la base para detectar ciclos en el grafo de prerrequisitos que modelaron en la unidad 2 y para resolver laberintos. Muestre la implementación de BFS en Python con collections.deque en una docena de líneas. Señale que estos algoritmos son el punto de partida del curso de Algoritmos y Estructuras de Datos, donde se analizarán con mayor profundidad."
+        },
+        {
+          "title": "Camino más corto: algoritmo de Dijkstra",
+          "bullets": [
+            "Problema: hallar la ruta de menor peso total desde un origen en un grafo con pesos no negativos.",
+            "Idea voraz: extraer siempre el vértice no visitado con menor distancia tentativa y relajar sus aristas.",
+            "Con cola de prioridad (heapq) el tiempo es O((|V| + |E|) log |V|).",
+            "Con pesos negativos falla; se usa Bellman-Ford. Base de rutas en mapas y del protocolo OSPF."
+          ],
+          "notes": "Recorra el algoritmo con un grafo de distritos de Lima con tiempos de viaje en minutos: Barranco, Miraflores, Surquillo, San Isidro y Lince. Mantenga una tabla con distancias tentativas y marque los vértices definitivos en cada iteración. Muestre que la ruta más corta de Barranco a Lince pasa por Miraflores y San Isidro, con 25 minutos, aunque haya una alternativa por Surquillo. Explique la relajación: si llegar a v pasando por u es más barato que lo conocido, se actualiza la distancia. Mencione que Edsger Dijkstra diseñó el algoritmo en 1956 en unos veinte minutos, según su propio relato, y lo publicó en 1959. Los protocolos de enrutamiento de estado de enlace, como OSPF, que verán en Redes de Computadoras, lo usan en cada router."
+        },
+        {
+          "title": "Árboles y sus propiedades",
+          "bullets": [
+            "Árbol: grafo conexo y acíclico; con n vértices tiene exactamente n − 1 aristas.",
+            "Entre dos vértices de un árbol existe un único camino simple.",
+            "Árbol con raíz: padre, hijos, hojas, nivel y altura; estructura jerárquica.",
+            "Ejemplos: sistema de archivos, DOM de HTML, organigramas, árbol de dominios DNS."
+          ],
+          "notes": "Presente las caracterizaciones equivalentes de árbol y demuestre por inducción que un árbol con n vértices tiene n − 1 aristas: todo árbol con al menos dos vértices tiene una hoja; al quitarla queda un árbol con n − 1 vértices y, por hipótesis, n − 2 aristas. Así se integra la inducción de la unidad 2. Muestre árboles reales que los estudiantes usan sin notarlo: la estructura de carpetas de su computadora, el árbol DOM de una página web que verán en Desarrollo Web y la jerarquía DNS, donde .pe es un dominio de nivel superior administrado en el Perú. Pregunte qué ocurriría si el sistema de archivos permitiera ciclos: un comando que recorre carpetas podría entrar en un bucle infinito."
+        },
+        {
+          "title": "Árbol de expansión mínima: Kruskal y Prim",
+          "bullets": [
+            "Árbol de expansión: subgrafo que es árbol y contiene todos los vértices del grafo conexo.",
+            "Árbol de expansión mínima (AEM): el de menor peso total; conecta todo al menor costo.",
+            "Kruskal (1956): ordenar aristas por peso y agregarlas si no forman ciclo (estructura de conjuntos disjuntos).",
+            "Prim (1957): crecer el árbol desde un vértice añadiendo la arista más barata hacia afuera."
+          ],
+          "notes": "Plantee el problema de conectar con fibra óptica siete locales de una municipalidad al menor costo, conociendo el costo de tender cada tramo posible. La solución es un árbol de expansión mínima: conecta todos los locales y no tiene tramos redundantes. Resuelva un ejemplo con Kruskal paso a paso: ordenar los tramos de menor a mayor costo y aceptar cada uno salvo que cierre un ciclo. Muestre que la estructura de conjuntos disjuntos es una aplicación de las particiones de la unidad 2. Discuta luego la tensión entre costo mínimo y redundancia: un árbol no tiene rutas alternativas, de modo que cualquier corte desconecta la red. En la práctica se parte del AEM y se agregan enlaces de respaldo en los puntos críticos."
+        },
+        {
+          "title": "Árboles binarios de búsqueda",
+          "bullets": [
+            "Árbol binario: cada nodo tiene a lo más dos hijos, izquierdo y derecho.",
+            "Árbol binario de búsqueda (ABB): claves menores a la izquierda y mayores a la derecha.",
+            "Búsqueda, inserción y eliminación en tiempo proporcional a la altura h.",
+            "Balanceado: h ≈ log₂ n; con un millón de claves, unas 20 comparaciones. Degenerado: h = n."
+          ],
+          "notes": "Inserte en la pizarra las claves 50, 30, 70, 20, 40, 60 y 80 para construir un ABB balanceado y luego busque el 60 contando comparaciones. A continuación inserte las mismas claves en orden ascendente y muestre que el árbol degenera en una lista, donde buscar el último elemento requiere siete comparaciones. Explique que por este motivo existen árboles autobalanceados, como los AVL y rojo-negro, y que los índices de las bases de datos usan árboles B, una generalización que verán en Base de Datos. Conecte con logaritmos: duplicar la cantidad de datos solo añade una comparación en un árbol balanceado. Pregunte cuántas comparaciones haría una búsqueda en un árbol balanceado con los más de 34 millones de habitantes del Perú: alrededor de 25."
+        },
+        {
+          "title": "Coloreo de grafos y planificación",
+          "bullets": [
+            "Coloreo propio: asignar colores a vértices de modo que vértices adyacentes tengan colores distintos.",
+            "Número cromático χ(G): mínimo de colores necesario; calcularlo en general es NP-difícil.",
+            "Teorema de los cuatro colores (Appel y Haken, 1976): todo mapa plano se colorea con cuatro colores.",
+            "Aplicaciones: horarios de exámenes, asignación de frecuencias y de registros en compiladores."
+          ],
+          "notes": "Plantee el problema de programar exámenes finales: los cursos son vértices y se traza una arista entre dos cursos si comparten al menos un estudiante. Cada color es un turno de examen; el número cromático es la cantidad mínima de turnos sin cruces. Coloree un grafo de seis cursos con el algoritmo voraz y muestre que el resultado depende del orden en que se procesan los vértices, por lo que no siempre es óptimo. Mencione el teorema de los cuatro colores como el primer gran teorema demostrado con ayuda de computadora, lo que abrió un debate sobre qué cuenta como demostración. Pida a los estudiantes colorear el mapa de los departamentos de la costa norte del Perú con el mínimo de colores."
+        },
+        {
+          "title": "Máquinas de estados finitos",
+          "bullets": [
+            "Máquina de estados finitos: estados, alfabeto de entrada, función de transición, estado inicial y estados de aceptación.",
+            "Se representa como dígrafo: vértices son estados y aristas etiquetadas son transiciones.",
+            "Los autómatas finitos reconocen exactamente los lenguajes regulares (expresiones regulares).",
+            "Ejemplos: estados de un pedido, validación de formatos, protocolos de red, semáforos y videojuegos."
+          ],
+          "notes": "Modele el ciclo de vida de un pedido en una tienda en línea: registrado, pagado, despachado, entregado y anulado, con las transiciones permitidas. Pregunte si un pedido entregado puede volver a registrado; la máquina responde que no, porque no existe esa transición. Programar con estados explícitos evita errores de lógica dispersa en múltiples if. Luego construya un autómata que acepte cadenas de exactamente once dígitos, la estructura de un RUC, y muestre la expresión regular equivalente ^[0-9]{11}$. Explique que el teorema de Kleene establece la equivalencia entre autómatas finitos y expresiones regulares, base de los analizadores léxicos de los compiladores. Mencione que el protocolo TCP se especifica como máquina de estados, algo que verán en Redes."
+        },
+        {
+          "title": "Proyecto integrador: del problema al modelo discreto",
+          "bullets": [
+            "Paso 1: delimitar el problema real y los datos disponibles (rutas, costos, reglas, estados).",
+            "Paso 2: elegir el modelo: lógica, conjuntos y relaciones, conteo, grafo, árbol o máquina de estados.",
+            "Paso 3: aplicar el algoritmo pertinente e implementarlo en Python con datos verificables.",
+            "Paso 4: validar resultados, analizar limitaciones y comunicar una recomendación fundamentada."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso. Los equipos eligen un problema de una organización real o realista del Perú: rutas de reparto de una distribuidora en Arequipa, diseño de una red de fibra entre sedes, planificación de horarios de exámenes o el flujo de estados de un trámite. Deben justificar el modelo con los conceptos del curso, implementar al menos un algoritmo de grafos, incluir un análisis combinatorio o lógico y presentar conclusiones. Enfatice que un buen modelo no es el más complejo sino el que captura lo esencial del problema. Recuerde los criterios de evaluación y la fecha de exposición final. Pregunte a cada equipo qué decisión concreta podrá tomar la organización gracias a su modelo; esa pregunta orienta el trabajo."
+        }
+      ],
+      "reading": {
+        "title": "Grafos para redes y rutas: de Königsberg al Metro de Lima",
+        "minutes": 40,
+        "content": "## 1. El poder de la abstracción\n\nEn 1736 Leonhard Euler resolvió el problema de los puentes de Königsberg reduciendo un mapa a puntos (zonas de tierra) y líneas (puentes). Demostró que un recorrido que cruce cada puente una sola vez exige que, salvo quizá el inicio y el fin, todos los puntos tengan un número par de líneas. Como las cuatro zonas tenían grado impar, el paseo era imposible. Esa misma abstracción se aplica hoy a la Línea 1 del Metro de Lima, con 26 estaciones entre Villa El Salvador y San Juan de Lurigancho, a la red de routers de un proveedor de internet o a las rutas de una distribuidora en el sur del país.\n\nUn **grafo** G = (V, E) consta de vértices y aristas. Si las aristas tienen dirección, hablamos de dígrafo; si tienen un número asociado (distancia, tiempo, costo, latencia), de grafo ponderado. El **teorema del apretón de manos**, Σ grado(v) = 2|E|, permite verificar con rapidez si una topología propuesta es posible.\n\n## 2. Recorrer: BFS y DFS\n\nLa búsqueda en anchura (BFS) explora por niveles y encuentra el camino con menos aristas. La búsqueda en profundidad (DFS) avanza hasta el fondo antes de retroceder y sirve para detectar ciclos y componentes. Ambas tienen costo proporcional a |V| + |E| (Cormen et al., 2022).\n\n```python\nfrom collections import deque\n\ndef bfs(grafo, origen):\n    dist = {origen: 0}\n    cola = deque([origen])\n    while cola:\n        u = cola.popleft()\n        for v in grafo[u]:\n            if v not in dist:          # primera vez que lo alcanzamos\n                dist[v] = dist[u] + 1\n                cola.append(v)\n    return dist                        # saltos mínimos desde el origen\n```\n\n## 3. Camino más corto con Dijkstra\n\nCuando las aristas tienen pesos no negativos, el algoritmo de Dijkstra (1959) halla las rutas de menor costo desde un origen. Mantiene distancias tentativas y, en cada paso, fija el vértice no visitado más cercano.\n\n```python\nimport heapq\n\ndef dijkstra(grafo, origen):\n    dist = {v: float(\"inf\") for v in grafo}\n    dist[origen] = 0\n    heap = [(0, origen)]\n    while heap:\n        d, u = heapq.heappop(heap)\n        if d > dist[u]:\n            continue                   # entrada obsoleta\n        for v, peso in grafo[u].items():\n            if d + peso < dist[v]:     # relajación\n                dist[v] = d + peso\n                heapq.heappush(heap, (dist[v], v))\n    return dist\n\nlima = {\n    \"Barranco\":   {\"Miraflores\": 10, \"Surquillo\": 12},\n    \"Miraflores\": {\"Barranco\": 10, \"Surquillo\": 6, \"San Isidro\": 8},\n    \"Surquillo\":  {\"Barranco\": 12, \"Miraflores\": 6, \"San Isidro\": 9},\n    \"San Isidro\": {\"Miraflores\": 8, \"Surquillo\": 9, \"Lince\": 7},\n    \"Lince\":      {\"San Isidro\": 7},\n}\nprint(dijkstra(lima, \"Barranco\")[\"Lince\"])   # 25 minutos\n```\n\nLa ruta óptima Barranco → Miraflores → San Isidro → Lince suma 10 + 8 + 7 = 25 minutos, frente a 28 por Surquillo. Los pesos son ilustrativos; en una aplicación real se actualizan con datos de tráfico. El mismo principio emplea el protocolo OSPF para calcular rutas dentro de una red corporativa.\n\n## 4. Árboles: conectar al menor costo\n\nUn **árbol** es un grafo conexo sin ciclos; con n vértices tiene n − 1 aristas. Cuando una institución debe enlazar sedes con fibra óptica, el **árbol de expansión mínima** ofrece la conexión total más barata. El algoritmo de Kruskal ordena los tramos por costo y acepta cada uno si no cierra un ciclo, lo que se verifica con una estructura de conjuntos disjuntos, es decir, manteniendo una partición de los vértices en componentes. Proyectos de conectividad como la Red Dorsal Nacional de Fibra Óptica muestran, sin embargo, que el costo no es el único criterio: la redundancia frente a cortes y la cobertura social también cuentan. Un árbol carece de rutas alternativas; por eso los diseños reales agregan enlaces de respaldo.\n\n## 5. Estados y transiciones\n\nUna **máquina de estados finitos** es un dígrafo cuyos vértices son estados y cuyas aristas son transiciones disparadas por eventos. Modelar el ciclo de vida de un comprobante, un pedido o una conexión TCP como máquina de estados elimina transiciones imposibles y documenta el comportamiento del sistema. Por el teorema de Kleene, los autómatas finitos reconocen exactamente los lenguajes descritos por expresiones regulares (Hopcroft, Motwani y Ullman, 2007).\n\n## Ideas clave\n\n- Elegir la representación adecuada (matriz o lista) depende de la densidad del grafo.\n- BFS minimiza saltos; Dijkstra minimiza pesos no negativos.\n- El árbol de expansión mínima minimiza costo, no riesgo: la redundancia es una decisión adicional.\n- Algunos problemas de grafos son fáciles (euleriano) y otros intratables (hamiltoniano): reconocer la diferencia orienta el uso de heurísticas.\n"
+      },
+      "case": {
+        "title": "Caso: La red de fibra de la Municipalidad de Valle Sagrado",
+        "content": "La **Municipalidad Provincial de Valle Sagrado** (entidad ficticia de la región Cusco) necesita interconectar con fibra óptica siete locales: el palacio municipal (P), la oficina de rentas (R), el centro de salud (S), la biblioteca (B), el almacén (A), la comisaría (C) y el colegio emblemático (E). Hoy cada local usa un plan de internet independiente y los sistemas de trámite documentario y de rentas se caen con frecuencia, lo que genera colas y quejas de los vecinos.\n\nLa gerencia de tecnología, a cargo de la técnica Yesenia Mamani, obtuvo cotizaciones del costo de tender cada tramo factible (en miles de soles), considerando que algunos tramos cruzan el río o zonas arqueológicas protegidas y no se pueden construir:\n\n| Tramo | Costo | Tramo | Costo |\n|---|---|---|---|\n| P–R | 12 | R–A | 22 |\n| P–S | 18 | S–B | 9 |\n| P–B | 15 | S–E | 25 |\n| P–C | 10 | B–E | 14 |\n| R–S | 16 | C–A | 20 |\n| R–C | 8 | A–E | 30 |\n\nEl presupuesto aprobado es de S/ 80 000. El alcalde quiere \"conectar todo al menor costo posible\". Sin embargo, el jefe del centro de salud advierte que su local atiende emergencias y que una sola caída de un tramo no debería dejarlo aislado. El director del colegio, por su parte, solicita conexión directa con el palacio municipal porque el local se usa como centro de votación y de operaciones en emergencias por lluvias intensas.\n\nYesenia también debe proponer cómo se gestionarán las fallas: cada tramo tiene un estado (operativo, degradado, caído, en reparación) y el área de soporte necesita reglas claras para pasar de un estado a otro y para notificar a los usuarios afectados.\n\nDebe presentar al concejo municipal una propuesta técnica que equilibre costo, confiabilidad y prioridades sociales, con un sustento que los regidores puedan entender.",
+        "questions": [
+          "Modele la situación como grafo ponderado y calcule el árbol de expansión mínima con Kruskal. ¿Cuál es su costo y cabe en el presupuesto?",
+          "Identifique en su árbol los puentes cuya caída aislaría al centro de salud. ¿Qué tramo adicional recomendaría para dar redundancia y cuánto costaría?",
+          "¿Conviene atender el pedido del director del colegio? Evalúe el costo incremental frente al beneficio en situaciones de emergencia.",
+          "Diseñe la máquina de estados de un tramo de fibra con sus transiciones y eventos, y explique cómo ayuda al área de soporte.",
+          "Redacte la recomendación final al concejo justificando la decisión con criterios técnicos, económicos y sociales."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: modelo discreto de un problema real",
+        "instructions": "**Objetivo:** integrar los contenidos del curso para modelar, resolver y comunicar la solución de un problema real mediante estructuras discretas.\n\n**Qué entregar (en equipos de 3 o 4 integrantes):**\n\n1. **Planteamiento:** descripción de una organización peruana real o realista y de un problema de rutas, redes, planificación o flujo de estados, con datos concretos (al menos 8 vértices o estados).\n2. **Modelo:** representación formal como grafo, árbol o máquina de estados, justificando la elección. Incluya al menos una regla de negocio formalizada en lógica y un cálculo combinatorio relevante (por ejemplo, número de rutas o configuraciones posibles).\n3. **Solución algorítmica:** implementación en Python de al menos dos algoritmos del curso (BFS o DFS, Dijkstra, Kruskal o Prim, coloreo voraz, simulación de autómata) con resultados verificados a mano en un caso pequeño.\n4. **Análisis:** limitaciones del modelo, sensibilidad ante cambios en los datos y recomendación para la organización.\n5. **Exposición:** video o presentación en vivo de 10 minutos en la semana 16.\n\n**Formato:** informe PDF de 6 a 10 páginas, repositorio o carpeta con código ejecutable y diapositivas.\n\n**Criterios:** pertinencia del modelo, corrección de los algoritmos, profundidad del análisis y calidad de la comunicación.",
+        "rubric": [
+          {
+            "name": "Planteamiento y justificación del modelo discreto",
+            "points": 5
+          },
+          {
+            "name": "Implementación y verificación de algoritmos",
+            "points": 6
+          },
+          {
+            "name": "Integración de lógica y combinatoria",
+            "points": 3
+          },
+          {
+            "name": "Análisis crítico y recomendación",
+            "points": 3
+          },
+          {
+            "name": "Exposición y comunicación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: grafos, árboles y autómatas",
+        "questions": [
+          {
+            "prompt": "Una red tiene 12 equipos y 18 enlaces. ¿Cuál es la suma de los grados de todos los equipos?",
+            "options": [
+              "36",
+              "18",
+              "30",
+              "216"
+            ],
+            "correct": 0,
+            "explanation": "Por el teorema del apretón de manos, la suma de grados es 2|E| = 2 × 18 = 36."
+          },
+          {
+            "prompt": "Un grafo conexo tiene vértices con grados 2, 4, 3, 2, 3 y 4. ¿Qué se puede afirmar?",
+            "options": [
+              "Tiene un camino euleriano abierto, no un circuito",
+              "Tiene un circuito euleriano",
+              "No tiene ningún camino euleriano",
+              "Tiene un ciclo hamiltoniano"
+            ],
+            "correct": 0,
+            "explanation": "Hay exactamente dos vértices de grado impar, condición para un camino euleriano que empieza y termina en ellos."
+          },
+          {
+            "prompt": "Para hallar la ruta con menos saltos entre dos routers, sin considerar pesos, el algoritmo más adecuado es:",
+            "options": [
+              "BFS",
+              "DFS",
+              "Kruskal",
+              "Coloreo voraz"
+            ],
+            "correct": 0,
+            "explanation": "BFS explora por niveles, por lo que el primer momento en que alcanza un vértice corresponde a la menor cantidad de aristas."
+          },
+          {
+            "prompt": "Se deben conectar 9 sedes con fibra de forma que todas queden comunicadas y sin tramos redundantes. ¿Cuántos tramos tendrá la red?",
+            "options": [
+              "8",
+              "9",
+              "36",
+              "18"
+            ],
+            "correct": 0,
+            "explanation": "La red sin ciclos y conexa es un árbol; con 9 vértices tiene 9 − 1 = 8 aristas."
+          },
+          {
+            "prompt": "¿Por qué Dijkstra no es adecuado si algunas aristas tienen pesos negativos?",
+            "options": [
+              "Porque fija distancias que luego podrían mejorar",
+              "Porque no admite grafos dirigidos",
+              "Porque requiere una matriz de adyacencia",
+              "Porque solo funciona en árboles"
+            ],
+            "correct": 0,
+            "explanation": "Su estrategia voraz asume que una distancia fijada no puede reducirse; un peso negativo posterior lo invalida."
+          },
+          {
+            "prompt": "Se insertan en un ABB vacío las claves 10, 20, 30, 40 y 50 en ese orden. ¿Cuál es su altura, contando aristas?",
+            "options": [
+              "4",
+              "2",
+              "3",
+              "5"
+            ],
+            "correct": 0,
+            "explanation": "Cada clave queda como hijo derecho de la anterior; el árbol degenera en una cadena de cinco nodos y cuatro aristas."
+          },
+          {
+            "prompt": "Para programar exámenes sin cruces, los cursos con estudiantes en común se unen con aristas. El mínimo de turnos necesarios es:",
+            "options": [
+              "El número cromático del grafo",
+              "El número de aristas",
+              "El grado máximo más dos",
+              "El número de componentes conexas"
+            ],
+            "correct": 0,
+            "explanation": "Cada turno es un color y cursos adyacentes no pueden compartir turno; el mínimo de colores es χ(G)."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Proposiciones, conectivos y traducción de requisitos a código",
+      "activity": "Presentación del curso, aula invertida con la lectura 1 y taller de traducción de enunciados a expresiones booleanas en Python.",
+      "evidence": "Ejercicios de formalización en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Tablas de verdad, equivalencias y simplificación de condiciones",
+      "activity": "Resolución guiada de tablas de verdad, aplicación de leyes de De Morgan y simplificación de código real; análisis del caso MicroFinanzas Andina.",
+      "evidence": "Informe grupal del caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Predicados, cuantificadores y reglas de inferencia",
+      "activity": "Traducción de cuantificadores a all(), any() y SQL; identificación de argumentos válidos y falacias en diagnósticos técnicos; cuestionario 1.",
+      "evidence": "Cuestionario 1 resuelto"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Métodos de demostración y contraejemplos",
+      "activity": "Taller de demostraciones directas, contrapositivas y por contradicción con revisión entre pares; entrega de la tarea de formalización de reglas de negocio.",
+      "evidence": "Tarea 1: formalización y verificación"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Conjuntos, operaciones, conjunto potencia y producto cartesiano",
+      "activity": "Ejercicios con set de Python y operaciones UNION, INTERSECT y EXCEPT de SQL; demostraciones por doble inclusión.",
+      "evidence": "Práctica de conjuntos en Python"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Relaciones binarias, propiedades y cierre transitivo",
+      "activity": "Representación de prerrequisitos como pares, matriz y grafo; cálculo del cierre transitivo con Warshall; análisis del caso del sistema de matrícula.",
+      "evidence": "Informe grupal del caso"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Equivalencias, órdenes parciales y funciones",
+      "activity": "Construcción de diagramas de Hasse y ordenamiento topológico; clasificación de funciones e identificadores; cuestionario 2.",
+      "evidence": "Cuestionario 2 resuelto"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Sucesiones, inducción matemática y recursión",
+      "activity": "Taller de demostraciones por inducción e invariantes de ciclo; comparación de Fibonacci recursivo y memorizado; entrega de la tarea del plan de estudios.",
+      "evidence": "Tarea 2: plan como orden parcial"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Principios de conteo, permutaciones y combinaciones",
+      "activity": "Resolución de problemas de códigos, contraseñas y comités; verificación empírica con itertools en Python.",
+      "evidence": "Práctica de conteo verificada"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Palomar, inclusión-exclusión y divisibilidad",
+      "activity": "Aplicación del palomar a hash y compresión; inclusión-exclusión con datos de clientes; algoritmo de Euclides en Python.",
+      "evidence": "Ejercicios resueltos en el foro"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Congruencias, dígito verificador del RUC y funciones hash",
+      "activity": "Implementación del validador del RUC; simulación de tablas hash con colisiones; análisis del caso Distribuidora Norteña; cuestionario 3.",
+      "evidence": "Cuestionario 3 e informe del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Criptografía RSA y seguridad combinatoria",
+      "activity": "Taller de RSA con números pequeños y exponenciación modular; entrega de la tarea de validadores y análisis de contraseñas.",
+      "evidence": "Tarea 3: validadores y RSA"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Grafos, representaciones, grados y conexidad",
+      "activity": "Modelado de redes y rutas peruanas como grafos; caminos eulerianos y hamiltonianos; conformación de equipos y elección del problema del proyecto.",
+      "evidence": "Propuesta de proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Recorridos BFS y DFS y camino más corto de Dijkstra",
+      "activity": "Implementación de BFS y Dijkstra en Python sobre un grafo de distritos; avance del modelo del proyecto integrador.",
+      "evidence": "Avance 1 del proyecto"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Árboles, árbol de expansión mínima, coloreo y máquinas de estados",
+      "activity": "Kruskal aplicado al caso de la red de fibra municipal; coloreo para horarios y diseño de autómatas; cuestionario 4.",
+      "evidence": "Cuestionario 4 e informe del caso"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador y evaluación final",
+      "activity": "Exposición del proyecto integrador con retroalimentación, examen final individual y cierre reflexivo del curso.",
+      "evidence": "Proyecto integrador y examen final"
+    }
+  ]
+}
