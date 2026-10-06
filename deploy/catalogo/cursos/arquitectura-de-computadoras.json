@@ -1,0 +1,1201 @@
+{
+  "name": "Arquitectura de Computadoras",
+  "slug": "arquitectura-de-computadoras",
+  "course_type": "especifica",
+  "module_name": "Soporte y mantenimiento de infraestructura tecnológica",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Arquitectura de Computadoras es un curso de formación específica del primer ciclo de Computación e Informática, de naturaleza teórico-práctica. Su propósito es que el estudiante comprenda cómo funciona un computador desde la representación binaria de la información hasta los sistemas multinúcleo actuales, para razonar sobre el rendimiento del software y tomar decisiones técnicas sobre equipos. Desarrolla cuatro unidades: representación de datos y lógica digital; el procesador, su repertorio de instrucciones RISC-V, la ruta de datos, la segmentación y las métricas de desempeño; la jerarquía de memoria, el almacenamiento y la entrada/salida; y el paralelismo, las arquitecturas modernas, la energía y la confiabilidad, culminando en un proyecto de especificación y dimensionamiento de equipos para una organización. Sienta las bases de Sistemas Operativos, Redes de Computadoras y Soporte Técnico de Hardware y Software, y aporta al perfil del profesional técnico la capacidad de diagnosticar cuellos de botella y sustentar con evidencia cuantitativa la adquisición y repotenciación de infraestructura tecnológica.",
+  "competency": "Analiza la organización y el funcionamiento de los componentes de un computador, desde la lógica digital hasta los sistemas multinúcleo, para diagnosticar su rendimiento y especificar equipos acordes a las necesidades de una organización, sustentando sus decisiones con métricas cuantitativas, criterios de costo, confiabilidad y sostenibilidad, y la normativa vigente.",
+  "capacities": [
+    "Representa datos numéricos y textuales en binario, hexadecimal, complemento a dos, IEEE 754 y UTF-8, y diseña circuitos combinacionales y secuenciales básicos para explicar el funcionamiento del hardware.",
+    "Explica el funcionamiento del procesador mediante su repertorio de instrucciones, ruta de datos y segmentación, y evalúa su rendimiento con la ecuación de desempeño y la ley de Amdahl.",
+    "Analiza la jerarquía de memoria, el almacenamiento y los mecanismos de entrada/salida para diagnosticar cuellos de botella en equipos reales mediante mediciones y cálculos.",
+    "Especifica y dimensiona equipos de cómputo y servidores para perfiles de uso concretos, considerando paralelismo, consumo energético, disponibilidad, costo total de propiedad y disposición responsable."
+  ],
+  "indicators": [
+    "Convierte correctamente valores entre sistemas de numeración y formatos de representación, e identifica errores de desbordamiento, redondeo y codificación en casos reales.",
+    "Implementa en un simulador un circuito aritmético de 4 bits con detección de desbordamiento que funciona en todos los casos de prueba.",
+    "Escribe y ejecuta programas en ensamblador RISC-V comentados, y codifica manualmente instrucciones en binario y hexadecimal sin errores.",
+    "Calcula el tiempo de CPU, el CPI promedio y la aceleración con la ley de Amdahl, interpretando los resultados para comparar alternativas.",
+    "Calcula parámetros de caché, ancho de banda de memoria y tiempo medio de acceso a partir de las especificaciones de un equipo real.",
+    "Diagnostica el cuello de botella de un equipo a partir de indicadores de rendimiento y propone la mejora más rentable con sustento cuantitativo.",
+    "Elabora una especificación técnica sin marcas, con presupuesto, costo total de propiedad, consumo energético y plan de ciclo de vida, y la defiende oralmente."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa. Se aplica el aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y las diapositivas, y la sesión se dedica a resolver problemas cuantitativos y a discutir el caso de la unidad mediante el método de casos. Los laboratorios utilizan simuladores libres (Logisim Evolution, RARS) y herramientas de diagnóstico sobre el propio equipo del estudiante, con guías paso a paso. El aprendizaje basado en proyectos culmina en una propuesta de dimensionamiento de equipos para una organización. La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, foros de resolución de ejercicios y retroalimentación del docente sobre avances del proyecto.",
+  "bibliography": [
+    "Patterson, D. A. y Hennessy, J. L. (2011). Estructura y diseño de computadores: la interfaz hardware/software (4.ª ed.). Reverté.",
+    "Patterson, D. A. y Hennessy, J. L. (2021). Computer organization and design RISC-V edition: The hardware/software interface (2.ª ed.). Morgan Kaufmann.",
+    "Hennessy, J. L. y Patterson, D. A. (2019). Computer architecture: A quantitative approach (6.ª ed.). Morgan Kaufmann.",
+    "Stallings, W. (2006). Organización y arquitectura de computadores (7.ª ed.). Pearson Prentice Hall.",
+    "Tanenbaum, A. S. y Austin, T. (2013). Structured computer organization (6.ª ed.). Pearson.",
+    "Harris, D. M. y Harris, S. L. (2013). Digital design and computer architecture (2.ª ed.). Morgan Kaufmann.",
+    "Bryant, R. E. y O'Hallaron, D. R. (2016). Computer systems: A programmer's perspective (3.ª ed.). Pearson.",
+    "Mano, M. M. y Ciletti, M. D. (2013). Diseño digital (5.ª ed.). Pearson Educación."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuestionarios de las cuatro unidades, participación en foros de resolución de ejercicios y análisis de casos en sesiones síncronas."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 40,
+      "description": "Tareas y laboratorios de las unidades 1 a 3: informe de representación de datos, programas en RISC-V e informe de diagnóstico de memoria."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto final de especificación y dimensionamiento de equipos, con documento técnico, presupuesto, TCO y defensa oral."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Representación de la información y lógica digital",
+      "description": "Al finalizar la unidad, el estudiante representa números, caracteres y datos en binario, hexadecimal, complemento a dos e IEEE 754, y analiza circuitos combinacionales y secuenciales básicos mediante álgebra de Boole y tablas de verdad, justificando los errores de representación que aparecen en sistemas reales.",
+      "topics": [
+        "Niveles de abstracción y modelo de capas del computador",
+        "Sistemas de numeración y conversiones",
+        "Enteros con signo, desbordamiento y punto flotante IEEE 754",
+        "Codificación de caracteres ASCII y UTF-8",
+        "Álgebra de Boole, compuertas y circuitos combinacionales",
+        "Circuitos secuenciales: biestables, registros y reloj"
+      ],
+      "slides": [
+        {
+          "title": "El computador como jerarquía de niveles de abstracción",
+          "bullets": [
+            "Tanenbaum describe el computador como una pila de máquinas virtuales: aplicación, lenguaje de alto nivel, ensamblador, sistema operativo, arquitectura del repertorio de instrucciones (ISA), microarquitectura y lógica digital.",
+            "La ISA es el contrato entre software y hardware: define instrucciones, registros, tipos de datos y modos de direccionamiento.",
+            "Arquitectura responde a qué ve el programador; organización responde a cómo se implementa (Stallings).",
+            "Un mismo programa x86-64 corre en procesadores Intel y AMD con microarquitecturas muy distintas."
+          ],
+          "notes": "Abra la sesión preguntando: ¿qué ocurre físicamente cuando un cajero de una bodega en Villa El Salvador presiona 'cobrar' en su sistema de ventas? Recorra los niveles de arriba hacia abajo: la aplicación llama a una función, el compilador la tradujo a instrucciones de máquina, el sistema operativo administra la memoria y el procesador ejecuta esas instrucciones mediante millones de transistores. Insista en la distinción de Stallings entre arquitectura y organización: tener o no una instrucción de multiplicación es arquitectura; usar un multiplicador rápido o uno iterativo es organización. Pregunte a la clase por qué Apple pudo pasar de procesadores Intel a sus chips M1 con ARM y por qué eso obligó a recompilar o traducir programas: porque cambió la ISA, no solo la organización. Este marco de capas será el hilo conductor de todo el curso."
+        },
+        {
+          "title": "Por qué binario: del transistor al bit",
+          "bullets": [
+            "Un transistor MOSFET opera como interruptor controlado por voltaje: dos estados estables y fáciles de distinguir con ruido.",
+            "Un bit representa 0 o 1; con n bits se representan 2^n combinaciones distintas.",
+            "Unidades: 1 byte = 8 bits; 1 KiB = 1024 bytes frente a 1 kB = 1000 bytes (norma IEC 80000-13).",
+            "Un disco de '1 TB' muestra unos 931 GiB en Windows: no es fraude, es diferencia de prefijos."
+          ],
+          "notes": "Explique que el binario no es una elección caprichosa sino de ingeniería: distinguir dos niveles de voltaje es mucho más robusto frente al ruido, la temperatura y la variación de fabricación que distinguir diez. Muestre el cálculo: 10^12 bytes entre 2^30 da aproximadamente 931 GiB. Este ejemplo es muy útil para el futuro técnico de soporte, porque es una de las consultas más frecuentes de usuarios que creen que les vendieron un disco incompleto, e incluso llegan reclamos ante INDECOPI por este malentendido. Pregunte: si un sensor de temperatura necesita distinguir 300 valores, ¿cuántos bits requiere como mínimo? La respuesta es 9, porque 2^8 = 256 es insuficiente y 2^9 = 512 alcanza. Refuerce la idea de que toda información, texto, imagen o instrucción, termina siendo un patrón de bits cuyo significado depende de cómo se interprete."
+        },
+        {
+          "title": "Sistemas posicionales: decimal, binario, octal y hexadecimal",
+          "bullets": [
+            "Valor = suma de dígito × base^posición; 1011₂ = 8 + 0 + 2 + 1 = 11₁₀.",
+            "Decimal a binario: divisiones sucesivas entre 2 y lectura de restos de abajo hacia arriba.",
+            "Hexadecimal agrupa 4 bits por dígito: 1101 0110₂ = D6₁₆; es la notación estándar en depuradores y direcciones MAC.",
+            "Fracciones: 0,625₁₀ = 0,101₂ por multiplicaciones sucesivas por 2."
+          ],
+          "notes": "Resuelva en pizarra virtual tres conversiones completas: 200 decimal a binario (11001000), luego a hexadecimal (C8), y la fracción 0,625. Muestre que el hexadecimal existe por comodidad humana: es mucho más fácil leer 0x7FFF que dieciséis bits seguidos. Conecte con situaciones reales: una dirección MAC como 3C:52:82:1A:FF:01 son seis bytes en hexadecimal; los colores web #C96442 son tres bytes RGB; los códigos de error de pantalla azul de Windows también se expresan en hexadecimal. Luego plantee el problema de 0,1 decimal: al aplicar multiplicaciones sucesivas el patrón 0011 se repite indefinidamente, de modo que 0,1 no tiene representación binaria finita. Deje esta observación como gancho para la diapositiva de punto flotante y pregunte qué consecuencias podría tener en un sistema de cobranza que suma céntimos de sol."
+        },
+        {
+          "title": "Enteros con signo: complemento a dos",
+          "bullets": [
+            "Rango con n bits: de −2^(n−1) a 2^(n−1) − 1; con 8 bits, de −128 a 127.",
+            "Negar un número: invertir todos los bits y sumar 1; −5 en 8 bits = 1111 1011.",
+            "Una sola representación del cero y la misma circuitería sirve para sumar y restar.",
+            "Desbordamiento: al sumar dos positivos se obtiene un negativo; el hardware lo señala con el indicador V (overflow)."
+          ],
+          "notes": "Compare brevemente signo-magnitud, complemento a uno y complemento a dos, y explique por qué la industria adoptó el último: una única representación del cero y un solo sumador para sumar y restar, lo que ahorra transistores. Haga en vivo la suma 100 + 50 en 8 bits con signo: el resultado 1001 0110 se interpreta como −106, un desbordamiento. Cite el caso histórico del cohete Ariane 5 en 1996, que falló porque un valor de punto flotante de 64 bits se convirtió a un entero con signo de 16 bits que no podía contenerlo. Otro ejemplo didáctico es el contador de reproducciones de YouTube en 2014, que superó el máximo de un entero de 32 bits con signo. Pregunte: ¿qué tipo de dato usaría para almacenar el número de comprobantes electrónicos que procesa un sistema nacional en un año, y por qué?"
+        },
+        {
+          "title": "Punto flotante IEEE 754",
+          "bullets": [
+            "Formato: signo, exponente sesgado y mantisa con bit implícito; valor = (−1)^s × 1,m × 2^(e − sesgo).",
+            "Simple precisión: 32 bits (1 + 8 + 23, sesgo 127); doble precisión: 64 bits (1 + 11 + 52, sesgo 1023).",
+            "Valores especiales: ±0, ±infinito, NaN y números subnormales.",
+            "0,1 + 0,2 ≠ 0,3 en doble precisión: el dinero se maneja con enteros de céntimos o tipos decimales."
+          ],
+          "notes": "Codifique paso a paso −6,75 en simple precisión: en binario es 110,11, normalizado 1,1011 × 2^2, exponente 2 + 127 = 129 = 1000 0001, signo 1, mantisa 1011 seguida de ceros. El resultado hexadecimal es C0D80000. Luego muestre en una consola de Python que 0.1 + 0.2 devuelve 0.30000000000000004. Explique que la norma IEEE 754, impulsada por William Kahan, unificó el comportamiento numérico entre fabricantes. Para el contexto peruano, conecte con sistemas de facturación electrónica: los importes deben redondearse a dos decimales según las reglas de los comprobantes, y un error acumulado de representación puede producir diferencias de un céntimo que generan rechazos de validación. Pregunte a la clase qué alternativa propondrían: enteros en céntimos o tipos decimal como el módulo decimal de Python o DECIMAL en SQL."
+        },
+        {
+          "title": "Codificación de caracteres: de ASCII a Unicode",
+          "bullets": [
+            "ASCII usa 7 bits: 128 caracteres; 'A' = 65 = 0x41; no incluye ñ ni tildes.",
+            "ISO-8859-1 y Windows-1252 añadieron caracteres latinos en 8 bits, con incompatibilidades entre sí.",
+            "Unicode asigna un punto de código a cada carácter; UTF-8 lo codifica en 1 a 4 bytes y es compatible con ASCII.",
+            "'ñ' = U+00F1 se codifica en UTF-8 como C3 B1; el error clásico 'Ã±' revela una lectura con codificación equivocada."
+          ],
+          "notes": "Este tema es de enorme utilidad práctica en el Perú: apellidos como Núñez o Ccahuana, nombres de distritos como Ñahuimpuquio y textos en quechua con caracteres especiales sufren cuando un sistema mezcla codificaciones. Muestre el fenómeno del mojibake: un archivo CSV guardado en UTF-8 y abierto como Windows-1252 convierte 'ñ' en 'Ã±'. Explique la regla de UTF-8: los bytes que empiezan con 0 son ASCII; los que empiezan con 110 abren una secuencia de dos bytes; 1110, de tres; 11110, de cuatro. Codifique la ñ en vivo: U+00F1 = 000 1111 0001, que se reparte en 110 00011 y 10 110001, es decir C3 B1. Pregunte a los estudiantes si han visto errores así al importar padrones o listas de alumnos en Excel, y cómo lo resolverían eligiendo la codificación correcta al importar."
+        },
+        {
+          "title": "Álgebra de Boole y compuertas lógicas",
+          "bullets": [
+            "Operaciones básicas: AND (·), OR (+) y NOT (negación); George Boole (1854) y Claude Shannon (1938) las vincularon con circuitos.",
+            "Compuertas derivadas: NAND, NOR y XOR; NAND y NOR son universales: con ellas se construye cualquier función.",
+            "Leyes útiles: De Morgan, distributiva, absorción e idempotencia.",
+            "Una compuerta NAND CMOS usa 4 transistores; un procesador moderno integra decenas de miles de millones."
+          ],
+          "notes": "Presente la historia: Boole formalizó la lógica como álgebra en 1854 y Shannon, en su tesis de maestría en el MIT de 1938, demostró que los circuitos de relés podían analizarse con esa álgebra; esa tesis suele considerarse una de las más influyentes del siglo XX. Construya las tablas de verdad de AND, OR, XOR y NAND, y demuestre con la ley de De Morgan que la negación de (A·B) equivale a la negación de A más la negación de B. Después muestre cómo obtener NOT, AND y OR usando solo compuertas NAND, lo que explica por qué la industria favorece la NAND en tecnología CMOS. Pregunte: si una compuerta NAND necesita cuatro transistores, ¿cuántos se necesitarían, como mínimo, para un sumador completo construido solo con nueve compuertas NAND? Ayuda a dimensionar la complejidad."
+        },
+        {
+          "title": "Diseño combinacional: de la especificación al circuito",
+          "bullets": [
+            "Paso 1: describir el problema en una tabla de verdad con todas las combinaciones de entrada.",
+            "Paso 2: obtener la expresión en suma de productos (minitérminos) a partir de las filas con salida 1.",
+            "Paso 3: simplificar con álgebra de Boole o mapas de Karnaugh para reducir compuertas.",
+            "Paso 4: implementar y verificar en un simulador como Logisim Evolution o Digital."
+          ],
+          "notes": "Trabaje un ejemplo completo con el método de cuatro pasos: una alarma de un pequeño almacén en Gamarra que suena si la puerta está abierta (P) y el sistema está armado (A), o si el sensor de humo (H) se activa sin importar lo demás. La tabla de verdad tiene ocho filas; la expresión resultante, tras simplificar, es Alarma = P·A + H. Muestre el mapa de Karnaugh de tres variables y cómo los agrupamientos de unos adyacentes eliminan variables redundantes. Recalque que reducir compuertas significa menor costo, menor consumo y menor retardo de propagación. Indique que en el laboratorio usarán Logisim Evolution, software libre que corre en cualquier computadora, para construir y probar el circuito. Pregunte qué cambiaría si se agrega un interruptor de mantenimiento que desactive todo."
+        },
+        {
+          "title": "Bloques combinacionales clave: sumadores, multiplexores y decodificadores",
+          "bullets": [
+            "Semisumador: suma = A XOR B; acarreo = A AND B.",
+            "Sumador completo: incorpora el acarreo de entrada; encadenando n sumadores se obtiene un sumador de acarreo propagado.",
+            "Multiplexor 2^n a 1: selecciona una entrada con n líneas de control; base de la ruta de datos.",
+            "Decodificador n a 2^n: activa una sola salida; se usa para seleccionar chips de memoria y registros."
+          ],
+          "notes": "Estos bloques son los ladrillos de la unidad aritmético-lógica que estudiaremos en la unidad 2, por eso conviene que los estudiantes los comprendan a fondo. Dibuje el sumador completo y explique el retardo del acarreo propagado: en un sumador de 64 bits el acarreo puede atravesar 64 etapas, lo cual limita la frecuencia de reloj. Mencione que los procesadores reales usan sumadores con acarreo anticipado (carry lookahead) para reducir ese retardo, un ejemplo claro de la diferencia entre arquitectura y organización. Muestre un multiplexor de cuatro entradas como un selector de canales y un decodificador de 3 a 8 como el mecanismo que elige qué banco de memoria responde a una dirección. Pregunte: ¿cuántas líneas de selección requiere un multiplexor que elige uno de los 32 registros de un procesador RISC-V? Respuesta: cinco."
+        },
+        {
+          "title": "Lógica secuencial: memoria a partir de compuertas",
+          "bullets": [
+            "Un circuito secuencial depende de las entradas y del estado previo; necesita realimentación.",
+            "El latch SR y el biestable D (flip-flop) almacenan un bit; el flip-flop D captura la entrada en el flanco de reloj.",
+            "Un registro de n bits son n flip-flops compartiendo reloj; un contador es un registro con lógica de incremento.",
+            "La frecuencia máxima depende del camino crítico: f = 1 / (retardo más largo entre registros)."
+          ],
+          "notes": "Este es el salto conceptual de la unidad: hasta ahora la salida dependía solo de las entradas; con la realimentación aparece la memoria. Construya un latch SR con dos compuertas NOR y muestre cómo mantiene su estado. Luego introduzca el reloj como el metrónomo del sistema: todos los flip-flops cambian a la vez en el flanco de subida. Calcule un ejemplo: si el camino combinacional más largo entre dos registros tarda 0,25 nanosegundos, la frecuencia máxima es 4 GHz. Esto explica por qué los fabricantes dividen las tareas en etapas más cortas, idea que retomaremos al estudiar la segmentación. Pregunte a la clase por qué hacer overclocking puede producir errores aleatorios: porque se reduce el periodo por debajo del retardo real y los registros capturan valores incompletos, además del calor adicional."
+        },
+        {
+          "title": "Máquinas de estados finitos en dispositivos cotidianos",
+          "bullets": [
+            "Una máquina de estados finitos (FSM) se define por estados, entradas, transiciones y salidas.",
+            "Modelo de Moore: la salida depende solo del estado; modelo de Mealy: depende del estado y de las entradas.",
+            "Ejemplos: semáforos, máquinas expendedoras, controladores de ascensor y la unidad de control de un procesador.",
+            "Implementación: registro de estado + lógica de siguiente estado + lógica de salida."
+          ],
+          "notes": "Use el ejemplo del semáforo de una intersección en la avenida Javier Prado: estados verde, ámbar y rojo, con un temporizador como entrada. Dibuje el diagrama de estados y la tabla de transiciones, y muestre que con dos flip-flops se codifican hasta cuatro estados. Luego conecte con la arquitectura: la unidad de control de un procesador es, en esencia, una máquina de estados que decide qué señales activar en cada ciclo para buscar, decodificar y ejecutar instrucciones. Compare los modelos de Moore y Mealy en términos de rapidez de respuesta y estabilidad de las salidas. Proponga a la clase diseñar la FSM de una máquina expendedora que acepta monedas de un sol y entrega un producto de dos soles, identificando los estados necesarios y qué ocurre si alguien inserta una moneda adicional."
+        },
+        {
+          "title": "De la lógica digital a la arquitectura: síntesis de la unidad",
+          "bullets": [
+            "Datos: todo se reduce a patrones de bits cuyo significado depende del tipo (entero, flotante, carácter, instrucción).",
+            "Hardware: compuertas forman sumadores y multiplexores; flip-flops forman registros y máquinas de estado.",
+            "Ley de Moore (1965): duplicación aproximada de transistores por chip cada dos años; hoy se desacelera.",
+            "Laboratorio: construir en Logisim una ALU de 4 bits con suma, resta, AND y OR."
+          ],
+          "notes": "Cierre la unidad integrando: los estudiantes ya saben cómo se representa la información y con qué piezas se construye el hardware. Explique la Ley de Moore como observación empírica de Gordon Moore, cofundador de Intel, y discuta por qué hoy se habla de su desaceleración: límites físicos de miniaturización, costo de las fábricas y disipación de calor, lo que dio paso a los multinúcleo y aceleradores especializados que veremos en la unidad 4. Presente la tarea de la unidad y el laboratorio de la ALU, que será la base para entender la ruta de datos del procesador. Pregunte para metacognición: ¿qué concepto de la unidad les resultó más contraintuitivo? Suelen aparecer el complemento a dos y el punto flotante; refuércelos con un ejercicio adicional en el foro antes del cuestionario."
+        }
+      ],
+      "reading": {
+        "title": "Cómo representa el computador la información: enteros, flotantes y texto",
+        "minutes": 35,
+        "content": "## Introducción\n\nUn computador no conoce números, letras ni fotografías: solo manipula patrones de bits. El significado lo asigna la interpretación. La secuencia `1100 0011` puede ser el entero sin signo 195, el entero con signo −61 en complemento a dos o el primer byte de la letra ñ en UTF-8. Comprender estas interpretaciones es la base de la arquitectura de computadoras y la explicación de numerosos errores que un técnico de soporte encontrará en su trabajo diario.\n\n## Sistemas posicionales\n\nEn un sistema posicional de base *b*, el valor de una cifra depende de su posición. Para el número binario 1011,01:\n\n```\n1×2^3 + 0×2^2 + 1×2^1 + 1×2^0 + 0×2^-1 + 1×2^-2 = 8 + 2 + 1 + 0,25 = 11,25\n```\n\nEl hexadecimal (base 16) se usa porque cada dígito equivale exactamente a cuatro bits, lo que permite leer y escribir direcciones de memoria o volcados de datos con comodidad. Por ejemplo, la dirección `0x7FFE_1A40` es mucho más legible que sus 32 bits.\n\n## Enteros con signo y desbordamiento\n\nCasi todos los procesadores actuales usan **complemento a dos**. Con *n* bits, el rango es de −2^(n−1) a 2^(n−1)−1. Para obtener el negativo de un número se invierten los bits y se suma uno:\n\n```\n +5  = 0000 0101\n inv = 1111 1010\n +1  = 1111 1011  -> -5\n```\n\nLa ventaja es que el mismo sumador sirve para sumar y restar: A − B se calcula como A + (complemento de B) + 1. El riesgo es el **desbordamiento**: si sumamos 120 + 10 en 8 bits con signo, el resultado 130 no cabe y el hardware produce −126. Lenguajes como C no detectan este error por defecto; Java y C# lo envuelven silenciosamente; Python usa enteros de precisión arbitraria. Por ello, la elección del tipo de dato es una decisión de ingeniería y no un detalle.\n\n## Punto flotante IEEE 754\n\nPara números reales se usa la norma IEEE 754 (1985, revisada en 2008 y 2019). Un número en doble precisión ocupa 64 bits: 1 de signo, 11 de exponente con sesgo 1023 y 52 de fracción. El valor es:\n\n```\nvalor = (-1)^s × 1,fracción × 2^(exponente - 1023)\n```\n\nEsta representación ofrece unos 15 a 17 dígitos decimales significativos y un rango enorme, pero **no puede representar exactamente la mayoría de fracciones decimales**. El número 0,1 en binario es periódico (0,000110011...), de modo que se almacena una aproximación. Por eso:\n\n```python\n>>> 0.1 + 0.2\n0.30000000000000004\n>>> from decimal import Decimal\n>>> Decimal(\"0.10\") + Decimal(\"0.20\")\nDecimal('0.30')\n```\n\nEn aplicaciones financieras, como un sistema que emite comprobantes electrónicos con IGV del 18 %, se recomienda almacenar importes en enteros de céntimos o en tipos decimales (`DECIMAL(12,2)` en SQL). Calcular el IGV de S/ 10,05 en flotante puede producir 1,8089999999 en lugar de 1,809, y un redondeo descuidado genera diferencias de un céntimo entre el total declarado y la suma de las líneas.\n\n## Codificación de texto\n\nASCII (1963) asignó 128 códigos a letras inglesas, dígitos y símbolos de control. Las variantes de 8 bits, como ISO-8859-1, añadieron la ñ y las vocales con tilde, pero cada región usaba una tabla distinta. **Unicode** resolvió el problema asignando un punto de código único a cada carácter de casi todos los sistemas de escritura, y **UTF-8**, diseñado por Ken Thompson y Rob Pike en 1992, se convirtió en la codificación dominante de la web.\n\n| Carácter | Punto de código | UTF-8 |\n|---|---|---|\n| A | U+0041 | 41 |\n| ñ | U+00F1 | C3 B1 |\n| € | U+20AC | E2 82 AC |\n\nCuando un archivo UTF-8 se abre como Windows-1252, cada byte se interpreta por separado y la ñ aparece como «Ã±». En instituciones peruanas este error afecta padrones con apellidos como Ñahui o Quispe Ñaupa, y puede impedir que un registro coincida con el DNI en una consulta. La solución es declarar explícitamente la codificación al importar y estandarizar en UTF-8.\n\n## Del dato al circuito\n\nToda esta información se procesa con compuertas lógicas. Un sumador completo combina XOR, AND y OR; varios sumadores en cadena forman la parte aritmética de la ALU. Los flip-flops almacenan los bits entre ciclos de reloj. En la siguiente unidad veremos cómo estos bloques se organizan en un procesador capaz de ejecutar instrucciones.\n\n## Ideas clave\n\n- El significado de un patrón de bits depende de su tipo.\n- El complemento a dos permite sumar y restar con el mismo circuito, pero puede desbordarse.\n- IEEE 754 aproxima los reales; para dinero se usan enteros o decimales.\n- UTF-8 es compatible con ASCII y es la opción recomendada para textos en español y lenguas originarias.\n"
+      },
+      "case": {
+        "title": "Caso: El céntimo perdido de Distribuidora Andina",
+        "content": "**Distribuidora Andina S.A.C.** (empresa ficticia) es una mayorista de abarrotes con sede en Arequipa y 14 vendedores que levantan pedidos en tablets en Cusco, Puno y Moquegua. En 2025 contrató a un programador independiente para desarrollar un sistema propio de pedidos que envía la información al servicio de facturación electrónica de un proveedor autorizado.\n\nTras tres meses en producción, el área contable detectó tres problemas:\n\n1. **Rechazos de comprobantes.** Alrededor del 2 % de las facturas fueron observadas porque la suma de los valores de venta por línea más el IGV no coincidía con el importe total. Las diferencias eran siempre de S/ 0,01 o S/ 0,02. Revisando el código, el equipo encontró que los precios unitarios y los importes se guardaban como `float` de 32 bits en la tablet y como `double` en el servidor, y que el IGV (18 %) se calculaba línea por línea y luego otra vez sobre el total.\n\n2. **Nombres ilegibles.** Clientes como «Comercial Ñaupari E.I.R.L.» aparecían en los reportes como «Comercial Ã‘aupari». El archivo de clientes se exportaba desde la tablet en UTF-8 y el servidor lo importaba asumiendo Windows-1252.\n\n3. **Stock negativo imposible.** El campo de stock del almacén usaba un entero con signo de 16 bits. Un producto de alta rotación (fideos en paquetes unitarios) superó las 32 767 unidades tras una compra grande y el sistema empezó a mostrar existencias negativas, lo que bloqueó la venta durante dos días en plena campaña de fiestas patrias.\n\nLa gerente general, Rosa Mamani, debe decidir entre dos opciones: (a) contratar a otro programador para reescribir el sistema completo en tres meses, con un costo estimado de S/ 45 000, o (b) que el área de TI, liderada por un técnico egresado de un instituto, corrija los tres problemas en tres semanas con un presupuesto de S/ 8 000. El contador insiste en que «la computadora no puede equivocarse en sumas» y sospecha de manipulación de datos. Usted es el técnico de TI y debe presentar un diagnóstico técnico sustentado y una recomendación.\n",
+        "questions": [
+          "Explique, con un ejemplo numérico en binario, por qué el uso de float y double produce diferencias de un céntimo y desmienta la hipótesis de manipulación.",
+          "Proponga el tipo de dato y la estrategia de redondeo correctos para precios, IGV y totales, justificando dónde debe aplicarse el redondeo.",
+          "Describa paso a paso cómo se produce el error «Ã‘» y qué cambios de configuración lo corrigen en exportación e importación.",
+          "Calcule el rango del entero de 16 bits con signo y recomiende un tipo adecuado para el stock considerando el crecimiento esperado.",
+          "¿Recomendaría la opción (a) o la (b)? Argumente considerando costo, riesgo, tiempo y aprendizaje organizacional."
+        ]
+      },
+      "assignment": {
+        "title": "Informe técnico: diagnóstico de errores de representación de datos",
+        "instructions": "**Objetivo:** aplicar los conceptos de representación numérica y de caracteres para diagnosticar y corregir errores reales.\n\n**Qué entregar:**\n\n1. **Ejercicios de conversión (resueltos a mano y verificados):** convierta su número de DNI módulo 1000 a binario y hexadecimal; represente en complemento a dos de 8 bits los valores −1, −77 y 100; codifique −12,375 en IEEE 754 de simple precisión mostrando signo, exponente sesgado y mantisa.\n2. **Demostración práctica:** en Python o en una hoja de cálculo, muestre un ejemplo de error de redondeo con flotantes al calcular el IGV de cinco productos y su corrección con `Decimal` o enteros de céntimos. Adjunte capturas y el código comentado.\n3. **Diagnóstico de codificación:** cree un archivo CSV con cinco nombres que incluyan ñ y tildes, guárdelo en UTF-8 y ábralo con una codificación incorrecta; documente el resultado y el procedimiento de corrección.\n4. **Circuito:** en Logisim Evolution, implemente un sumador de 4 bits con indicador de desbordamiento y pruebe tres casos, incluido uno con overflow.\n\n**Formato:** informe en PDF de 4 a 6 páginas, con portada, secciones numeradas y conclusiones; adjunte el archivo `.circ` y el código. Entrega en el aula virtual al finalizar la semana 4.\n\n**Criterios:** exactitud de las conversiones, rigor del diagnóstico, funcionamiento del circuito y claridad de la comunicación técnica.",
+        "rubric": [
+          {
+            "name": "Exactitud de conversiones y codificaciones numéricas",
+            "points": 6
+          },
+          {
+            "name": "Demostración y corrección del error de punto flotante",
+            "points": 5
+          },
+          {
+            "name": "Diagnóstico y solución del problema de codificación",
+            "points": 4
+          },
+          {
+            "name": "Sumador de 4 bits funcional con detección de desbordamiento",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: representación de datos y lógica digital",
+        "questions": [
+          {
+            "prompt": "¿Qué valor decimal representa el byte 1110 1100 interpretado como entero con signo en complemento a dos?",
+            "options": [
+              "236",
+              "−108",
+              "−20",
+              "−19"
+            ],
+            "correct": 2,
+            "explanation": "El bit más significativo es 1, así que es negativo. Invertir y sumar uno da 0001 0100 = 20; por tanto, el valor es −20."
+          },
+          {
+            "prompt": "Un programador suma 0,1 + 0,2 en doble precisión y compara con 0,3; la comparación resulta falsa. ¿Cuál es la causa?",
+            "options": [
+              "0,1 no tiene representación binaria finita y se almacena aproximado",
+              "El procesador tiene un defecto en la unidad de punto flotante",
+              "La doble precisión solo admite números enteros",
+              "El exponente sesgado se desborda con fracciones pequeñas"
+            ],
+            "correct": 0,
+            "explanation": "0,1 en binario es periódico, por lo que IEEE 754 guarda una aproximación; la suma acumula el error de representación."
+          },
+          {
+            "prompt": "Un sensor debe distinguir 1500 niveles distintos de presión. ¿Cuántos bits necesita como mínimo?",
+            "options": [
+              "10",
+              "12",
+              "15",
+              "11"
+            ],
+            "correct": 3,
+            "explanation": "2^10 = 1024 es insuficiente y 2^11 = 2048 alcanza; se requieren 11 bits."
+          },
+          {
+            "prompt": "En un reporte aparece «Ã±» donde debería decir «ñ». ¿Qué diagnóstico es más probable?",
+            "options": [
+              "Texto en ASCII de 7 bits leído como UTF-8",
+              "Texto en UTF-8 leído como Windows-1252 o ISO-8859-1",
+              "Daño físico en sectores del disco duro",
+              "Desbordamiento de un entero de 8 bits"
+            ],
+            "correct": 1,
+            "explanation": "La ñ en UTF-8 son los bytes C3 B1; leídos individualmente en Windows-1252 se muestran como Ã y ±."
+          },
+          {
+            "prompt": "¿Por qué se dice que la compuerta NAND es universal?",
+            "options": [
+              "Es la compuerta más rápida en cualquier tecnología",
+              "Funciona con cualquier nivel de voltaje",
+              "Con solo NAND puede construirse cualquier función lógica",
+              "Puede almacenar un bit sin realimentación"
+            ],
+            "correct": 2,
+            "explanation": "Combinando NAND se obtienen NOT, AND y OR, y con ellas cualquier función booleana; por eso se llama universal."
+          },
+          {
+            "prompt": "El camino combinacional más largo entre dos registros de un circuito tarda 0,5 ns. ¿Cuál es la frecuencia máxima de reloj aproximada?",
+            "options": [
+              "500 MHz",
+              "2 GHz",
+              "5 GHz",
+              "0,5 GHz"
+            ],
+            "correct": 1,
+            "explanation": "f = 1 / T = 1 / 0,5 ns = 2 × 10^9 Hz, es decir 2 GHz."
+          },
+          {
+            "prompt": "Un multiplexor debe seleccionar uno de 16 registros. ¿Cuántas líneas de selección requiere?",
+            "options": [
+              "16",
+              "8",
+              "2",
+              "4"
+            ],
+            "correct": 3,
+            "explanation": "Con n líneas de selección se eligen 2^n entradas; 2^4 = 16."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · El procesador: repertorio de instrucciones, ruta de datos y rendimiento",
+      "description": "Al finalizar la unidad, el estudiante explica el funcionamiento del procesador según el modelo de von Neumann, traduce fragmentos de código a ensamblador RISC-V, describe la ruta de datos y la segmentación, y evalúa el rendimiento con la ecuación clásica de desempeño y la ley de Amdahl.",
+      "topics": [
+        "Modelo de von Neumann y ciclo de instrucción",
+        "Arquitectura del repertorio de instrucciones: RISC-V frente a x86",
+        "Programación en ensamblador y modos de direccionamiento",
+        "Ruta de datos, ALU y unidad de control",
+        "Segmentación y riesgos",
+        "Ecuación de desempeño de la CPU y ley de Amdahl"
+      ],
+      "slides": [
+        {
+          "title": "El modelo de von Neumann",
+          "bullets": [
+            "Propuesto en el informe sobre el EDVAC (1945): programa y datos comparten la misma memoria.",
+            "Componentes: unidad de procesamiento (ALU y registros), unidad de control, memoria y entrada/salida.",
+            "El cuello de botella de von Neumann: un único canal entre procesador y memoria limita el rendimiento (Backus, 1978).",
+            "La arquitectura Harvard separa memorias de instrucciones y datos; los procesadores actuales la aplican en las cachés L1."
+          ],
+          "notes": "Inicie situando históricamente el modelo: el borrador de John von Neumann sobre el EDVAC propuso que el programa se almacenara en memoria como si fueran datos, lo que permitió cambiar de tarea sin recablear la máquina. Explique los cuatro componentes y dibuje el bus que los conecta. Luego introduzca la crítica de John Backus en su conferencia del Premio Turing de 1978, que bautizó el cuello de botella de von Neumann: el procesador pasa gran parte del tiempo esperando datos de la memoria. Esa limitación motivará la jerarquía de memoria de la unidad 3. Mencione que los microcontroladores como los de la familia AVR de Arduino usan arquitectura Harvard pura, mientras que los procesadores de escritorio usan una arquitectura Harvard modificada, con cachés L1 separadas para instrucciones y datos. Pregunte: ¿qué ventaja de seguridad y qué desventaja tiene almacenar código y datos en la misma memoria?"
+        },
+        {
+          "title": "El ciclo de instrucción: búsqueda, decodificación y ejecución",
+          "bullets": [
+            "Búsqueda (fetch): el contador de programa (PC) indica la dirección; la instrucción se lee de memoria.",
+            "Decodificación: la unidad de control interpreta el código de operación y lee los registros fuente.",
+            "Ejecución: la ALU opera, se accede a memoria si es carga o almacenamiento y se escribe el resultado.",
+            "Actualización del PC: PC + 4 en RISC-V, o la dirección destino si hay salto o bifurcación."
+          ],
+          "notes": "Recorra el ciclo con una instrucción concreta, add x5, x6, x7, ubicada en la dirección 0x00400000. En la búsqueda, el PC envía esa dirección a la memoria de instrucciones y recibe la palabra de 32 bits. En la decodificación, la unidad de control detecta que es una operación de tipo R y lee los registros x6 y x7. En la ejecución, la ALU suma. En la escritura, el resultado se guarda en x5 y el PC pasa a 0x00400004. Repita con una instrucción de carga, lw x5, 8(x10), para mostrar la etapa de acceso a memoria. Haga notar que un procesador de 3 GHz repite este ciclo miles de millones de veces por segundo. Pregunte: ¿qué ocurriría si el PC se corrompe y apunta a una zona de datos? Conecte con ataques que inyectan datos para que se ejecuten como código."
+        },
+        {
+          "title": "Arquitectura del repertorio de instrucciones: RISC y CISC",
+          "bullets": [
+            "CISC (x86, 1978): instrucciones de longitud variable de 1 a 15 bytes, muchas operaciones con memoria.",
+            "RISC (Patterson y Hennessy, años ochenta): instrucciones simples de longitud fija, arquitectura de carga/almacenamiento.",
+            "ARM domina los teléfonos; x86-64 domina PC y servidores; RISC-V es abierta y libre de licencias.",
+            "Internamente, los x86 modernos traducen instrucciones CISC a microoperaciones de estilo RISC."
+          ],
+          "notes": "Explique el debate RISC frente a CISC como una decisión de diseño con contexto histórico: cuando la memoria era cara, convenía tener instrucciones densas y potentes; cuando los compiladores mejoraron y la memoria se abarató, instrucciones simples permitieron segmentar mejor y aumentar la frecuencia. David Patterson en Berkeley y John Hennessy en Stanford lideraron ese movimiento y recibieron el Premio Turing de 2017. Muestre que hoy la frontera es difusa: Intel y AMD decodifican x86 en microoperaciones internas. Presente RISC-V, nacido en Berkeley en 2010, como ISA abierta que cualquier universidad o empresa latinoamericana puede implementar sin pagar licencias; por eso la usaremos en el curso, con el simulador RARS o Venus. Pregunte qué implicancias tendría para la soberanía tecnológica de la región contar con una ISA abierta frente a depender de licencias de ARM o x86."
+        },
+        {
+          "title": "Registros y formatos de instrucción en RISC-V",
+          "bullets": [
+            "RV32I: 32 registros de 32 bits (x0 a x31); x0 siempre vale cero.",
+            "Convenciones: a0-a7 argumentos, t0-t6 temporales, s0-s11 preservados, sp puntero de pila, ra dirección de retorno.",
+            "Formatos de 32 bits: R (registro), I (inmediato y cargas), S (almacenamientos), B (bifurcaciones), U y J.",
+            "Campos del tipo R: funct7 | rs2 | rs1 | funct3 | rd | opcode (7+5+5+3+5+7 bits)."
+          ],
+          "notes": "Muestre la tabla de registros y explique que la convención de uso es un acuerdo de software, no de hardware, que permite combinar funciones compiladas por separado. Codifique en vivo add x5, x6, x7: opcode 0110011, rd 00101, funct3 000, rs1 00110, rs2 00111, funct7 0000000, lo que da 0x007302B3. Haga ver la regularidad: los campos rs1, rs2 y rd siempre están en las mismas posiciones, lo que simplifica y acelera la decodificación, un principio de diseño que Patterson y Hennessy resumen como «la simplicidad favorece la regularidad». Explique por qué con 5 bits por campo se direccionan exactamente 32 registros. Pregunte: ¿por qué conviene que x0 valga siempre cero? Respuesta: permite sintetizar instrucciones como mv o nop sin añadir códigos de operación. Ejercicio rápido: decodificar 0x00A50533 en el foro."
+        },
+        {
+          "title": "Del lenguaje de alto nivel al ensamblador",
+          "bullets": [
+            "Asignación: f = (g + h) − (i + j) se traduce a tres instrucciones add/sub con registros temporales.",
+            "Acceso a arreglos: la dirección es base + índice × 4 para enteros de 4 bytes (slli y add).",
+            "Decisiones: if y while se implementan con beq, bne, blt y saltos jal.",
+            "Llamadas a funciones: jal guarda el retorno en ra; la pila (sp) preserva registros."
+          ],
+          "notes": "Traduzca con la clase un fragmento conocido del curso de Fundamentos de Programación, que llevan en paralelo: la suma de los elementos de un arreglo de enteros. Escriba primero el bucle en pseudocódigo o Python y luego en RISC-V, usando t0 como índice, t1 como acumulador y a0 como dirección base. Muestre cómo el desplazamiento slli t2, t0, 2 multiplica el índice por cuatro. Ejecute el programa en RARS paso a paso, observando cómo cambian los registros y la memoria. Recalque que el compilador hace esto automáticamente, pero comprenderlo permite razonar sobre el rendimiento y depurar fallos de bajo nivel, por ejemplo una violación de segmento. Pregunte: ¿cuántas instrucciones se ejecutan para un arreglo de 100 elementos? Esa cifra alimentará la ecuación de desempeño que veremos más adelante."
+        },
+        {
+          "title": "Modos de direccionamiento",
+          "bullets": [
+            "Inmediato: el operando va en la instrucción (addi x5, x5, 10); RISC-V usa 12 bits con signo.",
+            "Registro: los operandos están en registros (add).",
+            "Base más desplazamiento: dirección = registro + constante (lw x5, 12(x10)); acceso a campos y pila.",
+            "Relativo al PC: bifurcaciones y jal calculan destino = PC + desplazamiento, útil para código reubicable."
+          ],
+          "notes": "Explique que un modo de direccionamiento responde a la pregunta: ¿dónde está el operando? Compare la parquedad de RISC-V, con cuatro modos esenciales, frente a x86, que ofrece modos complejos como base más índice escalado más desplazamiento en una sola instrucción. Muestre el ejemplo de una estructura de cliente con DNI en el desplazamiento 0, saldo en el desplazamiento 8 y código de distrito en el 12: lw x5, 12(x10) obtiene el distrito si x10 apunta al registro. Discuta la limitación del inmediato de 12 bits: para cargar una constante de 32 bits se combinan lui y addi. Explique que el direccionamiento relativo al PC permite que las bibliotecas compartidas se carguen en cualquier dirección, lo que también facilita técnicas de seguridad como la aleatorización del espacio de direcciones. Pregunte: ¿qué rango de valores admite un inmediato de 12 bits con signo?"
+        },
+        {
+          "title": "La ruta de datos de un ciclo",
+          "bullets": [
+            "Elementos: PC, memoria de instrucciones, banco de registros, ALU, memoria de datos y multiplexores.",
+            "Generador de inmediatos: extiende el signo de los campos de la instrucción a 32 bits.",
+            "Los multiplexores eligen entre registro o inmediato, y entre resultado de ALU o dato de memoria.",
+            "En un diseño de un solo ciclo, el periodo de reloj lo fija la instrucción más lenta: la carga (lw)."
+          ],
+          "notes": "Dibuje progresivamente la ruta de datos de un ciclo, agregando elementos a medida que se analizan instrucciones distintas: primero las de tipo R, luego las cargas y almacenamientos y finalmente las bifurcaciones. Muestre que los multiplexores, estudiados en la unidad 1, son los que permiten que una misma ruta atienda varios formatos. Con tiempos de ejemplo de Patterson y Hennessy, memoria 200 ps, registros 100 ps y ALU 200 ps, calcule la duración de lw: 200 + 100 + 200 + 200 + 100 = 800 ps, frente a 600 ps de una instrucción de tipo R. Como el reloj debe acomodar la instrucción más lenta, el diseño de un ciclo desperdicia tiempo en las rápidas. Esta ineficiencia motiva la segmentación. Pregunte a la clase cuál sería la frecuencia de este procesador hipotético: 1 / 800 ps = 1,25 GHz."
+        },
+        {
+          "title": "La unidad de control",
+          "bullets": [
+            "Genera señales: RegWrite, ALUSrc, MemRead, MemWrite, MemtoReg, Branch y ALUOp.",
+            "Control cableado: lógica combinacional o máquina de estados; rápido, típico de RISC.",
+            "Control microprogramado: una memoria de microinstrucciones; flexible, usado históricamente en CISC.",
+            "Los procesadores x86 actuales combinan decodificadores cableados con microcódigo actualizable."
+          ],
+          "notes": "Construya con la clase la tabla de verdad de la unidad de control para cuatro instrucciones: add, lw, sw y beq. Por ejemplo, lw activa RegWrite, ALUSrc, MemRead y MemtoReg, mientras sw activa MemWrite pero no RegWrite. Esto conecta directamente con los decodificadores y máquinas de estado de la unidad 1. Explique la diferencia entre control cableado y microprogramado, idea propuesta por Maurice Wilkes en 1951. Aterrice el concepto con un hecho que los técnicos ven en la práctica: las actualizaciones de BIOS o UEFI y de Windows incluyen parches de microcódigo, por ejemplo los que mitigaron las vulnerabilidades Spectre y Meltdown en 2018. Pregunte: si encontráramos un error en una instrucción de un procesador ya vendido, ¿qué tipo de control permitiría corregirlo sin cambiar el chip?"
+        },
+        {
+          "title": "Segmentación (pipelining)",
+          "bullets": [
+            "Divide la ejecución en etapas: IF, ID, EX, MEM y WB; cada ciclo inicia una nueva instrucción.",
+            "Mejora la productividad (throughput), no la latencia de cada instrucción.",
+            "Aceleración ideal = número de etapas, si las etapas están balanceadas y no hay riesgos.",
+            "Analogía de la lavandería: lavar, secar, planchar y guardar varias cargas en paralelo."
+          ],
+          "notes": "Use la analogía clásica de Patterson y Hennessy de la lavandería, adaptada: una lavandería del barrio que lava, seca, dobla y empaqueta. Si cada carga espera a que termine la anterior, cuatro cargas tardan dieciséis horas; si se solapan las etapas, tardan siete. Luego aplíquelo al procesador de cinco etapas y dibuje el diagrama de tiempo para cinco instrucciones. Calcule: con etapas de 200 ps, cada instrucción sigue tardando 1000 ps, pero en régimen estable termina una cada 200 ps. Enfatice que la segmentación mejora la productividad, no la latencia individual, distinción fundamental para interpretar fichas técnicas. Mencione que procesadores como el Intel Pentium 4 llegaron a tener más de veinte etapas y que las segmentaciones muy largas sufren más con los riesgos. Pregunte por qué las etapas deben estar balanceadas."
+        },
+        {
+          "title": "Riesgos de la segmentación y cómo se resuelven",
+          "bullets": [
+            "Riesgo estructural: dos instrucciones necesitan el mismo recurso; se evita con memorias separadas.",
+            "Riesgo de datos: una instrucción usa un resultado aún no escrito; se resuelve con adelantamiento (forwarding) o burbujas.",
+            "Riesgo de control: no se sabe el destino de una bifurcación; se usa predicción de saltos.",
+            "Predictores modernos aciertan más del 95 % de las veces; un fallo puede costar 15 a 20 ciclos."
+          ],
+          "notes": "Analice un fragmento con dependencia de datos: add x1, x2, x3 seguido de sub x4, x1, x5. Sin adelantamiento habría que esperar dos ciclos; con adelantamiento el resultado de la ALU pasa directamente a la siguiente instrucción. Muestre que una carga seguida de su uso inmediato aún obliga a una burbuja, y que los compiladores reordenan instrucciones para evitarla. Luego discuta la predicción de saltos: un bucle que se repite 1000 veces es fácil de predecir, pero un if que depende de datos aleatorios no lo es. Comente el experimento clásico de procesar un arreglo ordenado frente a uno desordenado, donde el ordenado es mucho más rápido por la predicción. Relacione con Spectre: la ejecución especulativa, que existe para aprovechar la predicción, abrió una vía de ataque. Pregunte qué compromiso existe entre rendimiento y seguridad."
+        },
+        {
+          "title": "La ecuación de desempeño de la CPU",
+          "bullets": [
+            "Tiempo de CPU = Número de instrucciones × CPI × Periodo de reloj.",
+            "Equivalente: Tiempo = (Instrucciones × CPI) / Frecuencia.",
+            "El algoritmo y el compilador afectan el número de instrucciones; la ISA y la organización afectan CPI y frecuencia.",
+            "La frecuencia en GHz por sí sola no permite comparar procesadores de distinta arquitectura."
+          ],
+          "notes": "Esta es quizá la fórmula más importante del curso, y conviene practicarla con ejemplos. Programa con 2 × 10^9 instrucciones, CPI de 1,5 y reloj de 3 GHz: tiempo = 2 × 10^9 × 1,5 / 3 × 10^9 = 1 segundo. Compare con un procesador de 4 GHz pero CPI de 2,5: tiempo = 1,25 segundos; es más lento a pesar de tener mayor frecuencia. Este es el mito de los megahercios, que fue tema de campañas publicitarias a inicios de los años dos mil. Explique cómo cada factor depende de distintos actores: el programador, el compilador, el diseñador de la ISA y el fabricante. Aterrice para el futuro técnico: cuando un cliente en una tienda de Wilson pregunta qué laptop es más rápida, la frecuencia no basta; hay que considerar generación, núcleos, caché y pruebas de rendimiento independientes. Pregunte cómo medirían el CPI real."
+        },
+        {
+          "title": "Ley de Amdahl y métricas de rendimiento",
+          "bullets": [
+            "Aceleración global = 1 / ((1 − f) + f / s), con f fracción mejorada y s aceleración de esa parte.",
+            "Si solo el 40 % del tiempo es mejorable, el límite teórico es 1 / 0,6 ≈ 1,67 veces.",
+            "Benchmarks: SPEC CPU para servidores, Geekbench y Cinebench para equipos de usuario.",
+            "Métricas complementarias: rendimiento por vatio y rendimiento por sol invertido."
+          ],
+          "notes": "Gene Amdahl formuló esta ley en 1967 y sigue siendo la herramienta para no malgastar dinero en mejoras. Ejemplo: en una municipalidad, un proceso de cierre mensual dura 10 horas, de las cuales 6 son consultas a disco y 4 son cálculo. Si se compra un procesador el doble de rápido, solo mejora la parte de cálculo: el nuevo tiempo es 6 + 2 = 8 horas, una aceleración de 1,25. Si en cambio se reemplaza el disco mecánico por un SSD que acelera diez veces la E/S, el tiempo es 0,6 + 4 = 4,6 horas, aceleración de 2,17. La conclusión: hay que mejorar el caso común, principio de Hennessy y Patterson. Explique también que los benchmarks deben elegirse según la carga real. Pregunte: con mejora infinita del cálculo, ¿cuál sería el tiempo mínimo? Respuesta: 6 horas, el límite de Amdahl."
+        }
+      ],
+      "reading": {
+        "title": "Instrucciones, ciclos y segundos: cómo razonar sobre el rendimiento del procesador",
+        "minutes": 40,
+        "content": "## La ISA como contrato\n\nLa arquitectura del repertorio de instrucciones (ISA) define lo que el software puede pedirle al hardware. En RISC-V, una ISA abierta creada en la Universidad de California en Berkeley en 2010, el conjunto base RV32I tiene alrededor de 40 instrucciones, todas de 32 bits. Esta regularidad facilita la decodificación y la segmentación, y permite que universidades y empresas, incluidas las latinoamericanas, diseñen procesadores sin pagar licencias.\n\n## Un programa en ensamblador\n\nConsideremos una función que suma los elementos de un arreglo de enteros, como las ventas diarias de una tienda:\n\n```asm\n# a0 = dirección base del arreglo, a1 = número de elementos\n# retorna la suma en a0\nsuma:\n    li   t0, 0          # i = 0\n    li   t1, 0          # acumulador = 0\nbucle:\n    bge  t0, a1, fin    # si i >= n, terminar\n    slli t2, t0, 2      # desplazamiento = i * 4\n    add  t2, a0, t2     # dirección = base + desplazamiento\n    lw   t3, 0(t2)      # t3 = arreglo[i]\n    add  t1, t1, t3     # acumulador += arreglo[i]\n    addi t0, t0, 1      # i++\n    j    bucle\nfin:\n    mv   a0, t1\n    ret\n```\n\nCada iteración ejecuta siete instrucciones. Para n = 1000, el programa ejecuta aproximadamente 7 × 1000 + 5 ≈ 7005 instrucciones. Un compilador con optimizaciones podría reducirlas, por ejemplo incrementando un puntero en lugar de recalcular la dirección, lo que elimina el `slli` y uno de los `add`.\n\n## La ecuación de desempeño\n\nHennessy y Patterson resumen el rendimiento en una ecuación:\n\n```\nTiempo de CPU = Instrucciones × CPI × Tiempo de ciclo\n              = (Instrucciones × CPI) / Frecuencia\n```\n\ndonde CPI son los ciclos promedio por instrucción. Si el programa anterior se ejecuta con CPI = 1,2 en un procesador de 2 GHz:\n\n```\nTiempo = 7005 × 1,2 / (2 × 10^9) ≈ 4,2 microsegundos\n```\n\nCuando las instrucciones tienen distinto costo, el CPI promedio se calcula ponderando: si el 50 % son aritméticas (CPI 1), el 30 % cargas (CPI 2) y el 20 % saltos (CPI 1,5), entonces CPI = 0,5 × 1 + 0,3 × 2 + 0,2 × 1,5 = 1,4.\n\nLa ecuación muestra que **ningún factor aislado describe el rendimiento**. Un procesador de 4 GHz con CPI de 2 es más lento que uno de 3 GHz con CPI de 1,2 para el mismo programa. Por eso, al recomendar equipos, un técnico debe basarse en pruebas de rendimiento con cargas representativas y no solo en la frecuencia.\n\n## Segmentación y sus límites\n\nLa segmentación divide la ejecución en etapas (búsqueda, decodificación, ejecución, memoria y escritura) para que varias instrucciones avancen a la vez. En condiciones ideales el CPI tiende a 1, pero los **riesgos** lo elevan:\n\n- **De datos:** una instrucción necesita un resultado que aún no está listo. El adelantamiento lo resuelve en la mayoría de casos; una carga seguida de su uso inmediato aún requiere un ciclo de espera.\n- **De control:** el procesador no sabe qué instrucción sigue a una bifurcación. Los predictores modernos aciertan más del 95 % de las veces, pero cada fallo descarta el trabajo especulativo.\n\nSi en un programa el 20 % son bifurcaciones, se predice mal el 5 % de ellas y cada fallo cuesta 15 ciclos, el CPI aumenta en 0,2 × 0,05 × 15 = 0,15.\n\n## La ley de Amdahl\n\nGene Amdahl (1967) observó que la mejora global está limitada por la parte que no se mejora:\n\n```\nAceleración = 1 / ((1 - f) + f / s)\n```\n\nSupongamos que la Caja Municipal ficticia «Sumaq» procesa un lote nocturno de 5 horas: 3 horas de cálculo de intereses y 2 de lectura de disco. Si duplica la velocidad de cálculo (f = 0,6; s = 2), la aceleración es 1 / (0,4 + 0,3) ≈ 1,43, y el lote baja a 3,5 horas. Aunque el cálculo fuera infinitamente rápido, el lote no bajaría de 2 horas. La lección para la gestión de TI es directa: antes de comprar hardware, **medir dónde se va el tiempo**.\n\n## Implicancias prácticas\n\n1. La elección del algoritmo y del compilador puede ser más decisiva que el hardware.\n2. Los programas con muchas bifurcaciones impredecibles aprovechan peor la segmentación.\n3. Las inversiones deben dirigirse al cuello de botella dominante; mejorar el caso común es el principio rector.\n\nEn la siguiente unidad veremos que, en la práctica, el cuello de botella más frecuente no es el procesador sino la memoria.\n"
+      },
+      "case": {
+        "title": "Caso: ¿Procesador más rápido o mejor diseño? El lote nocturno de CrediSur",
+        "content": "**CrediSur** (cooperativa de ahorro y crédito ficticia) atiende a 85 000 socios en Tacna, Moquegua y Arequipa. Cada noche ejecuta un proceso por lotes que calcula intereses, mora y provisiones, y genera los reportes que exige la normativa de supervisión. El proceso debe terminar antes de las 6:00 a. m., cuando abren las agencias.\n\nEn los últimos 18 meses la cartera creció 40 % y el lote pasó de 3 a 5,5 horas; en dos ocasiones no terminó a tiempo y las agencias abrieron con saldos desactualizados, lo que generó reclamos. El servidor actual tiene dos procesadores de 8 núcleos a 2,1 GHz y discos mecánicos en RAID 5.\n\nEl jefe de TI, Julio Condori, midió el proceso con herramientas de perfilado y obtuvo:\n\n| Componente | Tiempo | Observación |\n|---|---|---|\n| Cálculo de intereses y mora | 2,2 h | Un solo hilo; usa `double` |\n| Lectura y escritura en disco | 2,5 h | Acceso aleatorio a tablas |\n| Generación de reportes | 0,8 h | Paralelizable |\n\nTiene tres propuestas sobre la mesa:\n\n- **Propuesta A (proveedor de hardware):** un servidor nuevo con procesadores de 3,8 GHz «casi el doble de rápidos», por US$ 28 000. El vendedor asegura que el lote bajará a menos de 3 horas.\n- **Propuesta B (consultor de almacenamiento):** reemplazar los discos por SSD NVMe empresariales, con una aceleración estimada de 8 veces en E/S, por US$ 9 000.\n- **Propuesta C (equipo interno):** reescribir el cálculo de intereses para usar 8 hilos en paralelo y aritmética decimal exacta, en seis semanas, con un costo de horas-hombre de S/ 25 000. Se estima que el 90 % del cálculo es paralelizable.\n\nEl gerente general, que no es técnico, pide una recomendación sustentada con números para el directorio. Además, el auditor interno advirtió que el uso de `double` en cálculos de intereses podría producir diferencias con los montos esperados, aunque «hasta ahora nadie se ha quejado». Usted integra el equipo de TI y debe preparar el análisis.\n",
+        "questions": [
+          "Aplique la ley de Amdahl para estimar el tiempo del lote con cada propuesta por separado. ¿Es creíble la afirmación del proveedor de la propuesta A?",
+          "¿Qué combinación de propuestas recomendaría para garantizar el término antes de las 6:00 a. m. con margen de crecimiento?",
+          "¿Por qué la frecuencia de reloj no basta para estimar la mejora del cálculo? Relacione con CPI y microarquitectura.",
+          "¿Qué riesgos técnicos y operativos implica la propuesta C y cómo los mitigaría?",
+          "Evalúe la advertencia del auditor sobre el uso de double y conecte con lo aprendido en la unidad 1."
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio: programación en ensamblador RISC-V y análisis de rendimiento",
+        "instructions": "**Objetivo:** traducir algoritmos sencillos a ensamblador RISC-V, ejecutarlos en un simulador y analizar su rendimiento con la ecuación de desempeño.\n\n**Actividades:**\n\n1. **Programa 1:** en RARS, escriba una función que reciba un arreglo de 10 importes de ventas diarias (enteros en céntimos) y devuelva el máximo y el promedio entero. Comente cada instrucción.\n2. **Programa 2:** implemente una función que cuente cuántos caracteres de una cadena son vocales; use bifurcaciones y acceso a bytes (`lbu`).\n3. **Codificación:** elija tres instrucciones de su programa (tipos R, I y B) y codifíquelas manualmente en binario y hexadecimal; verifique con el volcado del simulador.\n4. **Análisis de rendimiento:** use el contador de instrucciones del simulador para obtener el número de instrucciones ejecutadas. Suponiendo CPI de 1 para aritméticas, 2 para cargas y 1,5 para saltos, calcule el CPI promedio y el tiempo de ejecución a 1,5 GHz. Proponga una optimización del código y recalcule.\n5. **Reflexión:** en un párrafo, explique qué riesgos de datos o de control aparecerían si su programa corriera en un procesador segmentado de cinco etapas.\n\n**Formato:** informe PDF de 3 a 5 páginas con capturas del simulador y los archivos `.asm`. Entrega al finalizar la semana 8.",
+        "rubric": [
+          {
+            "name": "Programas correctos, comentados y funcionales en el simulador",
+            "points": 7
+          },
+          {
+            "name": "Codificación binaria y hexadecimal exacta de instrucciones",
+            "points": 4
+          },
+          {
+            "name": "Cálculo de CPI, tiempo y optimización propuesta",
+            "points": 6
+          },
+          {
+            "name": "Análisis de riesgos de segmentación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: ISA, ruta de datos y rendimiento",
+        "questions": [
+          {
+            "prompt": "Un programa ejecuta 4 × 10^9 instrucciones con CPI promedio de 1,5 en un procesador de 3 GHz. ¿Cuál es su tiempo de CPU?",
+            "options": [
+              "2 segundos",
+              "1,125 segundos",
+              "8 segundos",
+              "0,5 segundos"
+            ],
+            "correct": 0,
+            "explanation": "Tiempo = 4 × 10^9 × 1,5 / 3 × 10^9 = 2 segundos."
+          },
+          {
+            "prompt": "El procesador P1 funciona a 4 GHz con CPI 2,4 y P2 a 3 GHz con CPI 1,5 para el mismo programa compilado igual. ¿Qué se concluye?",
+            "options": [
+              "P1 es más rápido por tener mayor frecuencia",
+              "Ambos tardan exactamente lo mismo",
+              "P2 es más rápido pese a su menor frecuencia",
+              "No se puede comparar sin conocer el tamaño de la caché"
+            ],
+            "correct": 2,
+            "explanation": "Tiempo por instrucción: P1 = 2,4/4 = 0,6 ns; P2 = 1,5/3 = 0,5 ns. P2 es más rápido."
+          },
+          {
+            "prompt": "El 30 % del tiempo de una aplicación es cálculo que se acelera 10 veces; el resto no cambia. ¿Cuál es la aceleración global aproximada?",
+            "options": [
+              "1,37 veces",
+              "3 veces",
+              "10 veces",
+              "1,03 veces"
+            ],
+            "correct": 0,
+            "explanation": "Amdahl: 1 / (0,7 + 0,3/10) = 1 / 0,73 ≈ 1,37."
+          },
+          {
+            "prompt": "¿Qué mejora principalmente la segmentación de un procesador?",
+            "options": [
+              "La latencia de cada instrucción individual",
+              "El número de instrucciones del programa",
+              "La capacidad de la memoria principal",
+              "La productividad: instrucciones completadas por unidad de tiempo"
+            ],
+            "correct": 3,
+            "explanation": "La segmentación solapa instrucciones; cada una sigue tardando lo mismo o más, pero terminan más por unidad de tiempo."
+          },
+          {
+            "prompt": "La secuencia lw x5, 0(x6) seguida inmediatamente de add x7, x5, x8 en un procesador de cinco etapas con adelantamiento provoca:",
+            "options": [
+              "Ningún retraso gracias al adelantamiento",
+              "Una burbuja de un ciclo por riesgo de dato tras la carga",
+              "Un riesgo de control que vacía la segmentación",
+              "Un riesgo estructural en el banco de registros"
+            ],
+            "correct": 1,
+            "explanation": "El dato cargado solo está disponible tras la etapa MEM; aun con adelantamiento se necesita un ciclo de espera."
+          },
+          {
+            "prompt": "¿Por qué en RISC-V los campos rs1, rs2 y rd ocupan siempre las mismas posiciones en los formatos?",
+            "options": [
+              "Para que las instrucciones ocupen menos de 32 bits",
+              "Porque lo exige la compatibilidad con x86",
+              "Para leer registros en paralelo con la decodificación, simplificando el hardware",
+              "Para poder direccionar 64 registros"
+            ],
+            "correct": 2,
+            "explanation": "La regularidad permite leer el banco de registros antes de conocer el tipo exacto de instrucción, acelerando la decodificación."
+          },
+          {
+            "prompt": "Un fabricante corrige un error de una instrucción en procesadores ya vendidos mediante una actualización de BIOS. ¿Qué lo hace posible?",
+            "options": [
+              "Un control completamente cableado",
+              "Un control parcialmente microprogramado con microcódigo actualizable",
+              "La ampliación de la memoria caché",
+              "La reconfiguración del bus PCIe"
+            ],
+            "correct": 1,
+            "explanation": "El microcódigo reside en una memoria que puede sobrescribirse al arrancar; el control cableado no puede modificarse."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Jerarquía de memoria, almacenamiento y entrada/salida",
+      "description": "Al finalizar la unidad, el estudiante analiza la jerarquía de memoria y el comportamiento de la caché, calcula el tiempo medio de acceso, explica la memoria virtual y compara tecnologías de almacenamiento, buses e interfaces de entrada/salida para diagnosticar cuellos de botella en equipos reales.",
+      "topics": [
+        "Principio de localidad y jerarquía de memoria",
+        "Memoria caché: organización, políticas y tiempo medio de acceso",
+        "Memoria principal DRAM y módulos DDR",
+        "Memoria virtual, paginación y TLB",
+        "Almacenamiento HDD, SSD SATA y NVMe",
+        "Buses, interrupciones, DMA e interfaces de E/S"
+      ],
+      "slides": [
+        {
+          "title": "La brecha procesador-memoria y el principio de localidad",
+          "bullets": [
+            "Desde los años ochenta el rendimiento del procesador creció mucho más rápido que la latencia de la DRAM: la «pared de memoria».",
+            "Un acceso a DRAM cuesta unos 60 a 100 ns: cientos de ciclos de un procesador de 3 GHz.",
+            "Localidad temporal: un dato usado recientemente probablemente se volverá a usar pronto.",
+            "Localidad espacial: es probable que se usen datos cercanos al recién accedido."
+          ],
+          "notes": "Comience con una pregunta provocadora: si el procesador ejecuta varias instrucciones por nanosegundo y la memoria tarda 80 nanosegundos en responder, ¿por qué los computadores no son lentísimos? La respuesta es la jerarquía de memoria apoyada en el principio de localidad. Use la analogía de una estudiante que prepara un examen: tiene en el escritorio los libros que usa ahora (caché), en el estante de su cuarto los del ciclo (memoria principal) y en la biblioteca del instituto el resto (disco). Explique la localidad temporal con las variables de un bucle y la espacial con el recorrido secuencial de un arreglo. Recuerde el cuello de botella de von Neumann mencionado en la unidad 2. Pregunte: ¿qué tipo de programa tendría mala localidad? Ejemplos: recorrer listas enlazadas dispersas o accesos aleatorios a una gran tabla."
+        },
+        {
+          "title": "La jerarquía de memoria en cifras",
+          "bullets": [
+            "Registros: menos de 1 ns, cientos de bytes.",
+            "Caché L1: ~1 ns, 32-64 KiB por núcleo; L2: ~4 ns, 0,5-2 MiB; L3: ~10-20 ns, decenas de MiB compartidos.",
+            "DRAM: 60-100 ns, 8 a 64 GiB en equipos de usuario; SSD NVMe: ~20-100 µs; HDD: 5-10 ms.",
+            "A mayor velocidad, mayor costo por byte y menor capacidad: SRAM frente a DRAM frente a flash."
+          ],
+          "notes": "Presente la pirámide con órdenes de magnitud aproximados, aclarando que varían según generación. Para que los estudiantes dimensionen las diferencias, use la escala humana popularizada por varios autores: si un acceso a L1 tomara un segundo, un acceso a DRAM tomaría casi dos minutos, una lectura de SSD alrededor de un día y un acceso a disco mecánico varios meses. Explique la diferencia tecnológica: la SRAM de las cachés usa seis transistores por bit y no necesita refresco; la DRAM usa un transistor y un condensador, es más densa y barata pero debe refrescarse. Pida a los estudiantes que abran el Administrador de tareas de Windows o el comando lscpu en Linux y anoten los tamaños de caché de su propia computadora; será insumo para la tarea. Pregunte: ¿por qué no se fabrica toda la memoria con SRAM?"
+        },
+        {
+          "title": "Organización de la caché: bloques, mapeo y etiquetas",
+          "bullets": [
+            "La caché se divide en líneas o bloques, típicamente de 64 bytes.",
+            "Una dirección se descompone en etiqueta | índice | desplazamiento.",
+            "Mapeo directo: cada bloque tiene una sola ubicación; asociativa por conjuntos de n vías: n ubicaciones posibles.",
+            "Ejemplo: caché de 32 KiB, bloques de 64 B, 8 vías → 64 conjuntos: 6 bits de índice y 6 de desplazamiento."
+          ],
+          "notes": "Desarrolle el cálculo completo del ejemplo: 32 KiB entre 64 bytes da 512 bloques; con 8 vías, 512 entre 8 da 64 conjuntos; por tanto 6 bits de índice, 6 bits de desplazamiento (porque 64 = 2^6) y, en direcciones de 32 bits, 20 bits de etiqueta. Muestre con una dirección concreta, por ejemplo 0x0040_1A48, cómo se extraen los tres campos. Explique que la etiqueta permite saber si el bloque almacenado corresponde a la dirección buscada y que un bit de validez indica si la línea contiene datos útiles. Compare mapeo directo, más simple y rápido pero con conflictos, frente a la asociatividad, que reduce conflictos a costa de comparadores adicionales. Pregunte: en una caché de mapeo directo, ¿qué ocurre si un programa alterna entre dos arreglos cuyas direcciones caen en el mismo índice? Se produce un conflicto constante."
+        },
+        {
+          "title": "Aciertos, fallos y tiempo medio de acceso",
+          "bullets": [
+            "AMAT = tiempo de acierto + tasa de fallos × penalización por fallo.",
+            "Ejemplo: 1 ns + 0,05 × 80 ns = 5 ns; reducir los fallos al 2 % baja AMAT a 2,6 ns.",
+            "Las tres C de los fallos: obligatorios, de capacidad y de conflicto (Hill).",
+            "Con varios niveles: AMAT = T_L1 + m_L1 × (T_L2 + m_L2 × T_memoria)."
+          ],
+          "notes": "Esta fórmula es la contraparte de la ecuación de desempeño para la memoria. Resuelva con la clase el ejemplo de la diapositiva y luego un caso de dos niveles: L1 de 1 ns con 5 % de fallos, L2 de 5 ns con 20 % de fallos locales y memoria de 80 ns. AMAT = 1 + 0,05 × (5 + 0,2 × 80) = 1 + 0,05 × 21 = 2,05 ns. Haga notar cuánto aporta la L2: sin ella, el AMAT sería 5 ns. Explique la clasificación de Mark Hill: los fallos obligatorios ocurren en el primer acceso, los de capacidad cuando el conjunto de trabajo no cabe y los de conflicto por el mapeo. Cada tipo tiene un remedio distinto: bloques más grandes, caché más grande o mayor asociatividad. Pregunte qué tipo de fallo domina cuando una base de datos procesa una tabla de 10 GB."
+        },
+        {
+          "title": "Políticas de escritura y reemplazo",
+          "bullets": [
+            "Escritura inmediata (write-through): se actualiza caché y memoria; simple pero genera tráfico.",
+            "Escritura diferida (write-back): solo se escribe en memoria al reemplazar el bloque, usando un bit de modificado.",
+            "Reemplazo: LRU (menos recientemente usado), pseudo-LRU o aleatorio.",
+            "Coherencia en multinúcleo: protocolos como MESI mantienen copias consistentes."
+          ],
+          "notes": "Explique que leer es sencillo, pero escribir obliga a decidir cuándo se actualiza la memoria principal. Con escritura inmediata, cada escritura viaja a memoria, lo que satura el bus; por eso se usan búferes de escritura. Con escritura diferida, el bloque se marca como modificado y solo se escribe al ser desalojado; es lo habitual en procesadores actuales. Para reemplazo, explique LRU con un ejemplo de conjunto de cuatro vías y una secuencia de accesos. Introduzca brevemente el problema de coherencia: si dos núcleos tienen copia del mismo saldo de cuenta y uno lo modifica, el otro no debe leer el valor antiguo. El protocolo MESI marca cada línea como Modificada, Exclusiva, Compartida o Inválida. Esto se retomará en la unidad 4 con multinúcleo. Pregunte qué política conviene en un controlador de disco con batería de respaldo."
+        },
+        {
+          "title": "Programar pensando en la caché",
+          "bullets": [
+            "Recorrer matrices por filas en C (orden de filas) aprovecha la localidad espacial.",
+            "Recorrerlas por columnas puede ser varias veces más lento por fallos de caché.",
+            "Estructuras compactas y arreglos contiguos superan a listas enlazadas dispersas.",
+            "Herramientas de medición: perf en Linux, Intel VTune, AMD uProf."
+          ],
+          "notes": "Muestre un experimento sencillo que los estudiantes pueden replicar: sumar los elementos de una matriz de 4096 por 4096 enteros recorriéndola por filas y luego por columnas, en C o con NumPy. En equipos típicos, el recorrido por columnas resulta varias veces más lento aunque hace exactamente las mismas operaciones. Explique la causa: cada fallo trae una línea de 64 bytes, es decir 16 enteros; por filas se usan todos, por columnas solo uno antes de que la línea sea desalojada. Conecte con lo que estudiarán en Algoritmos y Estructuras de Datos en el tercer ciclo: la complejidad asintótica no cuenta toda la historia, porque las constantes dependen de la jerarquía de memoria. Pregunte: ¿por qué una base de datos columnar es tan eficiente para reportes que suman una sola columna de millones de registros?"
+        },
+        {
+          "title": "Memoria principal: DRAM, DDR y canales",
+          "bullets": [
+            "DRAM almacena cada bit en un condensador que se refresca cada 64 ms.",
+            "DDR transfiere en ambos flancos del reloj; DDR4-3200 alcanza 25,6 GB/s por canal de 64 bits.",
+            "DDR5 duplica bancos, divide cada módulo en dos subcanales de 32 bits e incluye ECC en el chip.",
+            "Doble canal duplica el ancho de banda teórico: instalar módulos en pares en las ranuras correctas."
+          ],
+          "notes": "Calcule el ancho de banda con la clase: DDR4-3200 realiza 3200 millones de transferencias por segundo de 8 bytes cada una, es decir 25,6 GB/s por canal; en doble canal, 51,2 GB/s. Este cálculo es muy útil en soporte: muchas laptops de gama media se venden con un solo módulo de memoria, lo que reduce a la mitad el ancho de banda y afecta especialmente a los gráficos integrados que usan la memoria del sistema. Recomendar un segundo módulo idéntico puede mejorar notablemente el rendimiento por poco dinero. Explique también la latencia CAS y por qué una memoria más rápida en MT/s puede tener latencia en nanosegundos similar. Mencione la memoria ECC en servidores, que corrige errores de un bit. Pregunte qué verificarían antes de ampliar la memoria de una computadora de escritorio de una oficina contable."
+        },
+        {
+          "title": "Memoria virtual y paginación",
+          "bullets": [
+            "Cada proceso ve un espacio de direcciones propio; el sistema operativo y la MMU lo traducen a direcciones físicas.",
+            "Páginas típicas de 4 KiB; la tabla de páginas asocia número de página virtual con marco físico.",
+            "Fallo de página: la página no está en RAM y se trae del disco; cuesta millones de ciclos.",
+            "Beneficios: aislamiento entre procesos, protección, uso de más memoria que la física y compartición de bibliotecas."
+          ],
+          "notes": "Presente la memoria virtual como la idea de la máquina Atlas de Manchester, alrededor de 1962, que hoy usan todos los sistemas operativos. Muestre la traducción de una dirección virtual de 32 bits con páginas de 4 KiB: los 12 bits inferiores son el desplazamiento y los 20 superiores el número de página. Explique que la memoria principal actúa como caché del disco, con la diferencia de que la penalización por fallo es enorme, por lo que el sistema operativo usa políticas de reemplazo sofisticadas. Conecte con un fenómeno que todo técnico de soporte ha visto: una computadora con 4 GiB de RAM y muchas pestañas del navegador abiertas empieza a usar el archivo de paginación y se vuelve lentísima; es la hiperpaginación o thrashing. Pregunte cómo lo diagnosticarían con el Monitor de recursos de Windows. Esto prepara el curso de Sistemas Operativos del segundo ciclo."
+        },
+        {
+          "title": "La TLB y la protección de memoria",
+          "bullets": [
+            "La TLB es una caché de traducciones; evita consultar la tabla de páginas en cada acceso.",
+            "Tamaño típico: decenas a algunos miles de entradas, con tasas de acierto superiores al 99 %.",
+            "Bits de protección por página: lectura, escritura, ejecución (NX) y modo usuario o supervisor.",
+            "Meltdown (2018) explotó la ejecución especulativa para leer memoria del núcleo; se mitigó separando tablas de páginas."
+          ],
+          "notes": "Explique que, sin la TLB, cada acceso a memoria requeriría primero otro acceso, o varios en tablas multinivel, para traducir la dirección, lo que multiplicaría el tiempo. La TLB aprovecha la misma localidad que la caché. Luego destaque el papel de la memoria virtual en la seguridad: el bit NX impide ejecutar datos como código, una defensa contra ataques de desbordamiento de búfer que retomarán en Seguridad Informática. Comente el caso Meltdown: un fallo de diseño en la interacción entre ejecución especulativa y protección permitía a un proceso leer memoria privilegiada; los sistemas operativos lo mitigaron aislando las tablas de páginas del núcleo, con cierta pérdida de rendimiento en cargas con muchas llamadas al sistema. Pregunte a la clase: ¿por qué un parche de seguridad puede hacer más lento un servidor de base de datos?"
+        },
+        {
+          "title": "Almacenamiento: HDD, SSD SATA y NVMe",
+          "bullets": [
+            "HDD: tiempo de búsqueda + latencia rotacional (4,2 ms a 7200 rpm) + transferencia; ~100-200 IOPS.",
+            "SSD SATA: memoria flash NAND, limitado por la interfaz SATA III a ~550 MB/s.",
+            "SSD NVMe sobre PCIe 4.0 ×4: hasta ~7 GB/s y cientos de miles de IOPS en lectura aleatoria.",
+            "Durabilidad: TBW y DWPD; tipos de celdas SLC, MLC, TLC y QLC con distinta resistencia."
+          ],
+          "notes": "Compare las tres tecnologías con cifras que los estudiantes verán en fichas técnicas. Calcule la latencia rotacional media de un disco de 7200 rpm: media vuelta = 0,5 / (7200/60) = 4,17 ms. Explique por qué el SSD transformó la experiencia de usuario: no por la transferencia secuencial sino por el acceso aleatorio, que es el patrón del arranque del sistema operativo y de las bases de datos. Recomiende práctica de soporte: reemplazar el disco mecánico por un SSD es la mejora más rentable para equipos antiguos de oficinas y colegios. Explique la escritura en flash: se escribe por páginas y se borra por bloques, lo que exige nivelación de desgaste y el comando TRIM. Muestre cómo leer el estado SMART con CrystalDiskInfo o smartctl. Pregunte qué tipo de SSD elegirían para un servidor de cámaras de vigilancia que escribe continuamente."
+        },
+        {
+          "title": "Buses e interfaces: PCI Express, USB y Thunderbolt",
+          "bullets": [
+            "PCIe usa carriles seriales punto a punto; cada generación duplica la velocidad: 4.0 ≈ 2 GB/s por carril, 5.0 ≈ 4 GB/s.",
+            "Una ranura ×16 PCIe 4.0 ofrece ~32 GB/s por sentido para tarjetas gráficas.",
+            "USB 2.0: 480 Mb/s; USB 3.2 Gen 2: 10 Gb/s; USB4 y Thunderbolt 4: 40 Gb/s.",
+            "El conector USB-C no garantiza la velocidad: depende del controlador y del cable."
+          ],
+          "notes": "Explique la transición de buses paralelos compartidos, como el antiguo PCI, a enlaces seriales punto a punto: a altas frecuencias es más fácil sincronizar pocas líneas rápidas que muchas lentas. Haga el cálculo de PCIe 4.0: 16 GT/s con codificación 128b/130b da aproximadamente 1,97 GB/s por carril. Muestre que un SSD NVMe PCIe 4.0 instalado en una ranura M.2 que solo soporta PCIe 3.0 rendirá la mitad, error frecuente al ensamblar equipos. Advierta sobre la confusión de nombres de USB: el conector USB-C puede llevar desde USB 2.0 hasta USB4, y la diferencia se nota al copiar un respaldo de 200 GB. Calcule tiempos: a 480 Mb/s, unos 60 MB/s reales, el respaldo tardaría casi una hora; a 10 Gb/s, unos minutos. Pregunte cómo identificarían la versión real del puerto de un equipo."
+        },
+        {
+          "title": "Mecanismos de E/S: sondeo, interrupciones y DMA",
+          "bullets": [
+            "Sondeo (polling): el procesador consulta repetidamente el estado del dispositivo; simple pero desperdicia ciclos.",
+            "Interrupciones: el dispositivo avisa al procesador, que ejecuta una rutina de servicio y luego retoma.",
+            "DMA: un controlador transfiere bloques entre dispositivo y memoria sin intervención del procesador.",
+            "E/S mapeada en memoria: los registros del dispositivo se leen y escriben como direcciones."
+          ],
+          "notes": "Use la analogía de esperar un delivery: el sondeo es asomarse a la puerta cada minuto; la interrupción es esperar a que toque el timbre; el DMA es que el repartidor tenga llave y deje el pedido en la refrigeradora sin molestarnos. Explique cuándo conviene cada mecanismo: el sondeo es razonable en dispositivos muy rápidos o en microcontroladores simples; las interrupciones, en eventos esporádicos como el teclado; el DMA, en transferencias grandes como disco y red. Calcule el costo del sondeo: si un procesador de 2 GHz consulta un mouse 100 veces por segundo y cada consulta cuesta 400 ciclos, usa solo el 0,002 % del tiempo, pero sondear un disco a su ritmo de transferencia consumiría gran parte del procesador. Muestre en Windows el Administrador de dispositivos y los recursos de IRQ, y en Linux el archivo /proc/interrupts. Pregunte qué ocurre cuando un controlador defectuoso genera interrupciones continuas."
+        }
+      ],
+      "reading": {
+        "title": "La jerarquía de memoria: por qué la caché decide el rendimiento",
+        "minutes": 40,
+        "content": "## El problema\n\nUn procesador moderno puede completar varias instrucciones por nanosegundo, pero un acceso a la memoria DRAM tarda entre 60 y 100 nanosegundos. Si cada carga de datos tuviera que esperar a la DRAM, el procesador pasaría más del 90 % del tiempo inactivo. Wulf y McKee llamaron a este fenómeno la **pared de memoria** (1995). La solución de la industria es la jerarquía de memoria: niveles pequeños y rápidos cerca del procesador y niveles grandes y lentos lejos de él.\n\n## La localidad\n\nLa jerarquía funciona porque los programas no acceden a la memoria al azar:\n\n- **Localidad temporal:** las variables de un bucle se usan una y otra vez.\n- **Localidad espacial:** al recorrer un arreglo se accede a posiciones consecutivas.\n\nAl traer bloques completos (líneas de 64 bytes) y conservar los datos recientes, la caché satisface la mayoría de accesos.\n\n## Anatomía de una dirección\n\nEn una caché asociativa por conjuntos, una dirección se divide en tres campos:\n\n```\n| etiqueta | índice del conjunto | desplazamiento en el bloque |\n```\n\nPara una caché L1 de 48 KiB, 12 vías y bloques de 64 bytes:\n\n```\nbloques   = 48 × 1024 / 64 = 768\nconjuntos = 768 / 12 = 64      -> 6 bits de índice\nbloque    = 64 B               -> 6 bits de desplazamiento\netiqueta  = 64 - 6 - 6 = 52 bits (en direcciones de 64 bits)\n```\n\n## Tiempo medio de acceso\n\nEl rendimiento de la jerarquía se resume en el **tiempo medio de acceso a memoria (AMAT)**:\n\n```\nAMAT = tiempo de acierto + tasa de fallos × penalización por fallo\n```\n\nCon una L1 de 1 ns, 4 % de fallos, una L2 de 4 ns con 25 % de fallos locales y DRAM de 90 ns:\n\n```\nAMAT = 1 + 0,04 × (4 + 0,25 × 90) = 1 + 0,04 × 26,5 = 2,06 ns\n```\n\nSin la L2, el AMAT sería 1 + 0,04 × 90 = 4,6 ns, más del doble. Esto muestra por qué los fabricantes dedican gran parte del área del chip a la caché.\n\n## El efecto en el código\n\nEl siguiente programa en C suma una matriz de dos maneras:\n\n```c\n#define N 4096\nstatic int m[N][N];\n\nlong por_filas(void) {          /* recorre memoria contigua */\n    long s = 0;\n    for (int i = 0; i < N; i++)\n        for (int j = 0; j < N; j++)\n            s += m[i][j];\n    return s;\n}\n\nlong por_columnas(void) {       /* salta 16 KiB en cada acceso */\n    long s = 0;\n    for (int j = 0; j < N; j++)\n        for (int i = 0; i < N; i++)\n            s += m[i][j];\n    return s;\n}\n```\n\nAmbas funciones realizan las mismas 16,7 millones de sumas, pero la segunda suele ser varias veces más lenta: cada acceso cae en una línea distinta y casi todos son fallos. El mismo principio explica por qué las bases de datos analíticas almacenan por columnas.\n\n## Memoria virtual\n\nLa memoria virtual extiende la idea de caché a la relación entre RAM y disco. Cada proceso trabaja con direcciones virtuales que la **MMU** traduce a físicas mediante tablas de páginas, con ayuda de la **TLB**. Además de permitir usar más memoria que la instalada, aísla los procesos entre sí: un programa defectuoso no puede corromper la memoria de otro. El costo de un fallo de página que requiere leer el disco es tan alto que, cuando la RAM es insuficiente, el sistema entra en hiperpaginación. En muchas oficinas públicas y colegios del país todavía se encuentran equipos con 4 GiB de RAM y disco mecánico que ejecutan Windows 10 o 11: el síntoma de lentitud extrema suele deberse a esta combinación más que al procesador.\n\n## Almacenamiento y E/S\n\nEl último nivel de la jerarquía es el almacenamiento persistente. Un disco de 7200 rpm ofrece del orden de 100 a 200 operaciones aleatorias por segundo; un SSD NVMe, cientos de miles. Para la experiencia del usuario y para servidores de bases de datos, el acceso aleatorio es lo que importa. Los datos llegan a la memoria mediante **DMA**, de modo que el procesador solo interviene al inicio y al final de cada transferencia, notificado por una **interrupción**.\n\n## Ideas clave\n\n1. La jerarquía de memoria funciona gracias a la localidad.\n2. El AMAT permite cuantificar el aporte de cada nivel.\n3. El orden de acceso a los datos puede cambiar el rendimiento varias veces.\n4. Ante un equipo lento, revise primero RAM y almacenamiento antes de culpar al procesador.\n"
+      },
+      "case": {
+        "title": "Caso: Renovar o repotenciar el parque informático de la UGEL",
+        "content": "Una **Unidad de Gestión Educativa Local** (UGEL) ficticia de la sierra central administra la información de 320 instituciones educativas. Su sede cuenta con 60 computadoras de escritorio adquiridas en 2017: procesadores de cuatro núcleos de séptima generación, 4 GiB de RAM DDR4 en un solo módulo y discos mecánicos de 1 TB a 7200 rpm, con Windows 10. El soporte de Windows 10 terminó en octubre de 2025 y la entidad debe migrar a Windows 11, que además exige TPM 2.0 y procesadores de generaciones más recientes en su lista oficial de compatibilidad.\n\nLos usuarios reportan que el arranque tarda más de cuatro minutos, que el navegador se congela al abrir los sistemas web del sector y que las hojas de cálculo con planillas de 15 000 filas demoran en recalcular. El técnico de soporte, Edwin Huamán, registró durante una semana los siguientes indicadores con el Monitor de rendimiento en diez equipos representativos:\n\n| Indicador | Promedio |\n|---|---|\n| Uso de CPU | 35 % |\n| Memoria comprometida / RAM física | 145 % |\n| Uso de disco (tiempo activo) | 98 % |\n| Fallos de página duros por segundo | 220 |\n\nLa oficina de administración tiene un presupuesto de S/ 90 000 para el año y recibió dos propuestas:\n\n- **Opción 1:** comprar 30 computadoras nuevas compatibles con Windows 11 a S/ 3 000 cada una y mantener las otras 30 sin cambios.\n- **Opción 2:** repotenciar las 60 computadoras con un SSD SATA de 500 GB (S/ 160) y un segundo módulo de 8 GiB (S/ 170), y destinar el saldo a otra necesidad.\n\nEl director pregunta si la opción 2 es «botar plata en equipos viejos» y si conviene, en cambio, una tercera vía: migrar a una distribución de Linux o mantener Windows 10 con soporte extendido pagado. Usted debe preparar una recomendación técnica y económica sustentada en los datos.\n",
+        "questions": [
+          "Interprete los indicadores medidos: ¿cuál es el cuello de botella dominante y qué relación tiene con la memoria virtual?",
+          "Estime el efecto del SSD y de la RAM adicional en el tiempo de arranque y en la fluidez, explicando el mecanismo de cada mejora.",
+          "Calcule el costo total de cada opción y cuántos usuarios se benefician en cada caso.",
+          "¿Qué implicancias tienen la compatibilidad con Windows 11 y el fin de soporte en la decisión? ¿Qué riesgos de seguridad considera?",
+          "Formule una recomendación integral, posiblemente combinada y por fases, justificándola para un directivo no técnico."
+        ]
+      },
+      "assignment": {
+        "title": "Informe de diagnóstico de la jerarquía de memoria de un equipo real",
+        "instructions": "**Objetivo:** analizar la jerarquía de memoria y el almacenamiento de un computador real y proponer mejoras sustentadas con cálculos.\n\n**Actividades:**\n\n1. **Inventario técnico:** con CPU-Z, HWiNFO, `lscpu`, `dmidecode` o equivalentes, documente procesador, tamaños y asociatividad de las cachés L1, L2 y L3, tipo y velocidad de la RAM, número de canales en uso y tipo de almacenamiento (HDD, SATA o NVMe, con generación PCIe).\n2. **Cálculos:** para la caché L1 de datos, calcule número de conjuntos y bits de índice, desplazamiento y etiqueta. Calcule el ancho de banda teórico de su memoria y el AMAT de un modelo con los parámetros de su equipo (use latencias aproximadas justificadas).\n3. **Experimento:** ejecute el programa de recorrido de matrices por filas y por columnas (en C o Python con NumPy) para tres tamaños de matriz; registre tiempos en una tabla y un gráfico, y explique los resultados con el concepto de localidad.\n4. **Medición de almacenamiento:** mida lectura secuencial y aleatoria con CrystalDiskMark o `fio` y compare con las especificaciones.\n5. **Recomendación:** proponga, con costos del mercado peruano, la mejora más rentable para su equipo aplicando la ley de Amdahl.\n\n**Formato:** informe PDF de 4 a 6 páginas con capturas, tablas y referencias. Entrega al finalizar la semana 12.",
+        "rubric": [
+          {
+            "name": "Inventario técnico completo y preciso",
+            "points": 4
+          },
+          {
+            "name": "Cálculos de caché, ancho de banda y AMAT correctos",
+            "points": 6
+          },
+          {
+            "name": "Experimento de localidad ejecutado e interpretado",
+            "points": 5
+          },
+          {
+            "name": "Recomendación costeada y justificada",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: memoria, almacenamiento y entrada/salida",
+        "questions": [
+          {
+            "prompt": "Una caché tiene tiempo de acierto de 2 ns, tasa de fallos de 5 % y penalización por fallo de 60 ns. ¿Cuál es su AMAT?",
+            "options": [
+              "3 ns",
+              "62 ns",
+              "2,6 ns",
+              "5 ns"
+            ],
+            "correct": 3,
+            "explanation": "AMAT = 2 + 0,05 × 60 = 2 + 3 = 5 ns."
+          },
+          {
+            "prompt": "Una caché de 64 KiB, asociativa de 4 vías, con bloques de 64 bytes. ¿Cuántos conjuntos tiene?",
+            "options": [
+              "256",
+              "1024",
+              "64",
+              "16"
+            ],
+            "correct": 0,
+            "explanation": "64 KiB / 64 B = 1024 bloques; 1024 / 4 vías = 256 conjuntos."
+          },
+          {
+            "prompt": "Un equipo con 4 GiB de RAM muestra disco al 100 % y muchos fallos de página duros, con CPU al 30 %. ¿Qué mejora tendrá mayor impacto inmediato?",
+            "options": [
+              "Cambiar el procesador por uno de mayor frecuencia",
+              "Instalar una tarjeta gráfica dedicada",
+              "Ampliar la RAM y cambiar el disco por SSD",
+              "Aumentar el tamaño del archivo de paginación en el mismo disco"
+            ],
+            "correct": 2,
+            "explanation": "El cuello de botella es la hiperpaginación: falta RAM y el disco es lento. El procesador está subutilizado."
+          },
+          {
+            "prompt": "¿Por qué recorrer una matriz por columnas en C suele ser más lento que por filas?",
+            "options": [
+              "Rompe la localidad espacial y provoca más fallos de caché",
+              "Requiere más operaciones aritméticas",
+              "El compilador no puede generar bucles anidados por columnas",
+              "Obliga a usar memoria virtual en lugar de física"
+            ],
+            "correct": 0,
+            "explanation": "C almacena por filas; por columnas cada acceso salta a otra línea de caché y se aprovecha solo un elemento por línea."
+          },
+          {
+            "prompt": "Un SSD NVMe PCIe 4.0 ×4 se instala en una ranura M.2 que solo soporta PCIe 3.0 ×4. ¿Qué ocurre?",
+            "options": [
+              "No funciona por incompatibilidad eléctrica",
+              "Funciona a velocidad completa porque el SSD fija la velocidad",
+              "Funciona solo como dispositivo SATA",
+              "Funciona, pero su velocidad máxima queda limitada aproximadamente a la mitad"
+            ],
+            "correct": 3,
+            "explanation": "PCIe es compatible hacia atrás; el enlace negocia la generación más baja, con ~4 GB/s en lugar de ~8 GB/s."
+          },
+          {
+            "prompt": "¿Qué ventaja principal ofrece el DMA frente a la E/S por interrupciones en transferencias grandes?",
+            "options": [
+              "Elimina la necesidad de controladores de dispositivo",
+              "Libera al procesador de copiar cada dato entre dispositivo y memoria",
+              "Reduce la latencia de la memoria caché L1",
+              "Permite que el disco funcione sin energía"
+            ],
+            "correct": 1,
+            "explanation": "Con DMA el controlador mueve el bloque completo y el procesador solo interviene al inicio y con una interrupción al final."
+          },
+          {
+            "prompt": "¿Cuál es la función principal de la TLB?",
+            "options": [
+              "Guardar los datos más usados del disco",
+              "Predecir el destino de las bifurcaciones",
+              "Almacenar traducciones recientes de direcciones virtuales a físicas",
+              "Mantener la coherencia entre núcleos"
+            ],
+            "correct": 2,
+            "explanation": "La TLB es una caché de la tabla de páginas que evita accesos adicionales a memoria en cada traducción."
+          },
+          {
+            "prompt": "Un módulo DDR4-2666 funciona en un solo canal de 64 bits. ¿Cuál es su ancho de banda teórico aproximado?",
+            "options": [
+              "2,67 GB/s",
+              "21,3 GB/s",
+              "42,6 GB/s",
+              "170 GB/s"
+            ],
+            "correct": 1,
+            "explanation": "2666 millones de transferencias por segundo × 8 bytes ≈ 21,3 GB/s."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Paralelismo, arquitecturas modernas y proyecto de dimensionamiento",
+      "description": "Al finalizar la unidad, el estudiante compara arquitecturas multinúcleo, GPU, SoC y servidores, evalúa consumo energético y confiabilidad, y elabora un proyecto de especificación técnica y dimensionamiento de equipos para una organización real, sustentado con métricas de rendimiento, costos y criterios de sostenibilidad.",
+      "topics": [
+        "Fin del escalado de frecuencia y paralelismo multinúcleo",
+        "Taxonomía de Flynn, SIMD y GPU",
+        "Arquitecturas ARM, x86 y sistemas en chip",
+        "Energía, térmica y confiabilidad",
+        "Servidores, virtualización y nube",
+        "Especificación técnica y dimensionamiento de equipos"
+      ],
+      "slides": [
+        {
+          "title": "El fin del escalado de Dennard y la era multinúcleo",
+          "bullets": [
+            "Escalado de Dennard (1974): al reducir transistores, la densidad de potencia se mantenía constante.",
+            "Hacia 2005 se rompió: las fugas de corriente impidieron seguir subiendo frecuencia sin sobrecalentar el chip.",
+            "Potencia dinámica ≈ C × V² × f: bajar el voltaje y la frecuencia reduce mucho el consumo.",
+            "Respuesta de la industria: más núcleos por chip en lugar de núcleos más rápidos."
+          ],
+          "notes": "Retome la Ley de Moore de la unidad 1 y explique que la mejora de frecuencia se detuvo alrededor de los 3 a 5 GHz, aunque el número de transistores siguió creciendo. Robert Dennard, de IBM, mostró que al miniaturizar se podía subir la frecuencia sin aumentar la densidad de potencia; cuando el voltaje dejó de poder reducirse por las fugas, ese beneficio desapareció. Use la fórmula de potencia dinámica para mostrar que reducir el voltaje un 15 % y la frecuencia un 15 % reduce la potencia aproximadamente a 0,85 al cubo, es decir 61 %. Por eso dos núcleos más lentos pueden rendir más por vatio que uno rápido, siempre que el software sea paralelo. Este cambio trasladó la responsabilidad del rendimiento al programador. Pregunte: ¿qué programas que usan a diario aprovechan bien varios núcleos y cuáles no?"
+        },
+        {
+          "title": "Taxonomía de Flynn y niveles de paralelismo",
+          "bullets": [
+            "Flynn (1966): SISD, SIMD, MISD y MIMD según flujos de instrucciones y de datos.",
+            "Paralelismo a nivel de instrucción (ILP): segmentación, superescalaridad y ejecución fuera de orden.",
+            "Paralelismo de datos (SIMD): una instrucción opera sobre varios datos; extensiones SSE, AVX, NEON y RVV.",
+            "Paralelismo de hilos (MIMD): varios núcleos ejecutan flujos independientes; SMT o Hyper-Threading comparte un núcleo."
+          ],
+          "notes": "Presente la taxonomía de Michael Flynn como mapa para ubicar todas las técnicas vistas. Un procesador simple de la unidad 2 es SISD; las instrucciones AVX de los procesadores x86 que suman ocho números de punto flotante a la vez son SIMD; un procesador de ocho núcleos es MIMD. Explique la superescalaridad: núcleos que emiten cuatro o más instrucciones por ciclo, lo que lleva el CPI por debajo de uno; por eso a veces se habla de IPC, instrucciones por ciclo. Aclare el concepto de hilos de hardware: un núcleo con SMT presenta dos procesadores lógicos al sistema, aprovechando recursos ociosos, pero no duplica el rendimiento; las mejoras típicas rondan entre 15 % y 30 % según la carga. Pregunte: en la ficha técnica '8 núcleos, 16 hilos', ¿qué esperan realmente de rendimiento frente a '16 núcleos, 16 hilos'?"
+        },
+        {
+          "title": "Programar para multinúcleo: oportunidades y límites",
+          "bullets": [
+            "Ley de Amdahl en paralelo: con 95 % paralelizable, el límite teórico es 20 veces sin importar los núcleos.",
+            "Ley de Gustafson (1988): al crecer el problema, la fracción paralela suele crecer.",
+            "Problemas: condiciones de carrera, sincronización, coherencia de caché y falso compartimiento.",
+            "Herramientas: hilos del sistema operativo, OpenMP, procesos múltiples y modelos asíncronos."
+          ],
+          "notes": "Aplique Amdahl con núcleos: si el 90 % de un programa es paralelizable y se usan 8 núcleos, la aceleración es 1 / (0,1 + 0,9/8) = 4,7, no 8. Con 64 núcleos sería 8,8. Contraste con la mirada de John Gustafson: en la práctica, con más recursos se resuelven problemas más grandes, como simulaciones climáticas de mayor resolución, de modo que la parte paralela pesa más. Luego muestre un ejemplo de condición de carrera: dos hilos incrementando un contador compartido sin sincronización pierden actualizaciones, porque la operación leer-sumar-escribir no es atómica. Explique el falso compartimiento: dos variables independientes en la misma línea de caché provocan tráfico de coherencia MESI, como se vio en la unidad 3. Pregunte a la clase cómo afectaría esto a un sistema de reservas de pasajes interprovinciales que vende el mismo asiento desde dos agencias."
+        },
+        {
+          "title": "GPU y aceleradores especializados",
+          "bullets": [
+            "Una GPU agrupa miles de unidades simples organizadas en multiprocesadores que ejecutan hilos en grupos (warps de 32 en NVIDIA).",
+            "Ideal para paralelismo de datos masivo: gráficos, álgebra lineal, entrenamiento de redes neuronales.",
+            "Memoria de alto ancho de banda (GDDR6, HBM) a cambio de mayor latencia por hilo.",
+            "Aceleradores de dominio específico: TPU de Google, NPU en laptops y teléfonos para inferencia de IA."
+          ],
+          "notes": "Explique que la GPU sacrifica la lógica de control sofisticada y las grandes cachés de la CPU para dedicar el área del chip a unidades aritméticas. Una CPU es como un pequeño equipo de especialistas muy versátiles; una GPU, como un ejército de operarios que ejecutan la misma instrucción sobre datos distintos. Muestre por qué la multiplicación de matrices, base de las redes neuronales, encaja perfecto. Mencione el argumento de Hennessy y Patterson en su conferencia Turing de 2018, «Una nueva edad de oro para la arquitectura de computadoras», sobre las arquitecturas de dominio específico como el camino tras el fin de Dennard y Moore. Conecte con la realidad del mercado: las laptops recientes incluyen NPU para funciones de IA local. Pregunte: ¿para qué tareas de una empresa peruana mediana conviene una GPU, y cuándo es un gasto innecesario?"
+        },
+        {
+          "title": "ARM, x86 y los sistemas en chip",
+          "bullets": [
+            "x86-64 (Intel, AMD): dominante en PC y servidores; alta compatibilidad hacia atrás.",
+            "ARM: modelo de licencias; domina teléfonos y avanza en laptops (Apple M, Snapdragon X) y nube (AWS Graviton).",
+            "SoC: CPU, GPU, NPU, controladores de memoria y E/S integrados en un solo chip; memoria unificada.",
+            "Arquitectura heterogénea big.LITTLE: núcleos de alto rendimiento y núcleos eficientes."
+          ],
+          "notes": "Contextualice la competencia de arquitecturas con datos verificables: prácticamente todos los teléfonos inteligentes usan procesadores ARM, y desde 2020 Apple migró sus Mac a chips propios basados en ARM, logrando gran autonomía de batería. Explique el sistema en chip como la integración de casi todo el computador en un solo encapsulado, lo que reduce latencias y consumo pero impide ampliar memoria. Esto tiene consecuencias prácticas para soporte: en muchas laptops modernas la RAM viene soldada y debe elegirse bien al comprar. Explique los núcleos heterogéneos, presentes en los teléfonos y desde 2021 también en procesadores Intel de escritorio, y el papel del sistema operativo para asignar tareas. Pregunte: si una empresa usa un software contable antiguo solo disponible para x86 en Windows, ¿qué riesgos implica comprar laptops ARM? Mencione la emulación y su costo."
+        },
+        {
+          "title": "Energía, temperatura y eficiencia",
+          "bullets": [
+            "TDP o potencia base: guía para el diseño térmico; los picos de turbo pueden superarla ampliamente.",
+            "Estrangulamiento térmico (thermal throttling): el procesador baja su frecuencia al superar unos 95-105 °C.",
+            "Eficiencia de centros de datos: PUE = energía total / energía de equipos TI; ideal cercano a 1,0.",
+            "Costo energético: un equipo de 300 W encendido 24/7 consume unos 2628 kWh al año."
+          ],
+          "notes": "Este tema une arquitectura con costos operativos y sostenibilidad. Calcule con la clase el costo anual de un servidor de 300 W encendido todo el año: 0,3 kW × 8760 h = 2628 kWh. Con una tarifa referencial de alrededor de S/ 0,70 por kWh, son más de S/ 1800 al año solo en energía del equipo, sin contar el aire acondicionado. Explique la métrica PUE, propuesta por The Green Grid: si una sala de servidores tiene un PUE de 2, por cada vatio de cómputo se gasta otro en enfriamiento y pérdidas. Aterrice al soporte técnico: una laptop con el ventilador obstruido por polvo o pasta térmica seca pierde rendimiento por estrangulamiento térmico, y el usuario cree que el equipo está viejo. Muestre cómo monitorear temperaturas con HWiNFO. Pregunte qué efecto tiene la altitud de ciudades como Cusco o Puno en la refrigeración por aire."
+        },
+        {
+          "title": "Confiabilidad y disponibilidad del hardware",
+          "bullets": [
+            "Disponibilidad = MTTF / (MTTF + MTTR); 99,9 % equivale a unas 8,8 horas de caída al año.",
+            "Redundancia: RAID, fuentes de alimentación redundantes, memoria ECC y clústeres.",
+            "RAID 1 (espejo), RAID 5 (paridad distribuida) y RAID 10; RAID no reemplaza a las copias de respaldo.",
+            "Protección eléctrica: UPS y estabilizadores, críticos en zonas con variaciones de tensión."
+          ],
+          "notes": "Introduzca la confiabilidad como atributo de arquitectura tan importante como el rendimiento, siguiendo a Hennessy y Patterson. Calcule la disponibilidad: si un servidor falla en promedio cada 10 000 horas y se repara en 10 horas, su disponibilidad es 99,9 %; reducir el tiempo de reparación a una hora con repuestos en sitio la lleva a 99,99 %. Explique RAID 5 con un ejemplo de cuatro discos de 4 TB: capacidad útil de 12 TB y tolerancia a un disco fallido; destaque el riesgo durante la reconstrucción con discos grandes. Insista en la regla 3-2-1 de respaldos y en que RAID no protege contra borrados accidentales ni ransomware. En el contexto peruano, mencione la importancia de los UPS ante cortes y fluctuaciones eléctricas, frecuentes en varias zonas del país. Pregunte qué nivel de disponibilidad necesita un sistema de historias clínicas de un centro de salud."
+        },
+        {
+          "title": "Servidores, virtualización y nube",
+          "bullets": [
+            "Servidores: múltiples zócalos, memoria ECC registrada, administración remota (IPMI, iDRAC, iLO).",
+            "Virtualización asistida por hardware: Intel VT-x y AMD-V; la MMU soporta tablas de páginas anidadas.",
+            "Hipervisores tipo 1 (Proxmox VE, VMware ESXi, Hyper-V) frente a tipo 2 (VirtualBox).",
+            "Nube: se alquila arquitectura como servicio; las instancias se describen en vCPU, GiB de RAM e IOPS."
+          ],
+          "notes": "Explique que la virtualización permite consolidar varios servidores físicos subutilizados en uno solo, y que es viable gracias a extensiones de arquitectura: VT-x y AMD-V añaden modos de ejecución para el hipervisor, y la paginación anidada reduce el costo de traducir direcciones de las máquinas virtuales, conectando con la memoria virtual de la unidad 3. Señale que una vCPU en la nube suele corresponder a un hilo de hardware, no a un núcleo completo, detalle clave al comparar precios. Mencione que estos temas se profundizarán en Administración de Servidores y Nube en el cuarto ciclo. Muestre cómo verificar en la BIOS o UEFI que la virtualización esté habilitada, error frecuente cuando un estudiante no puede ejecutar máquinas virtuales. Pregunte: para una pyme con tres servidores físicos antiguos, ¿qué conviene más, consolidar en un servidor nuevo virtualizado o migrar a la nube?"
+        },
+        {
+          "title": "Metodología de especificación técnica de equipos",
+          "bullets": [
+            "Paso 1: levantar perfiles de usuario y cargas de trabajo (ofimática, diseño, desarrollo, servidor).",
+            "Paso 2: traducir cargas a requisitos medibles: núcleos, RAM, almacenamiento, gráficos, conectividad.",
+            "Paso 3: verificar compatibilidad (zócalo, chipset, PCIe, sistema operativo, TPM) y garantía.",
+            "Paso 4: comparar con benchmarks y costo total de propiedad (TCO) a 4-5 años."
+          ],
+          "notes": "Presente la metodología que usarán en el proyecto final. Insista en que la especificación técnica no se hace copiando la ficha del modelo más caro, sino partiendo de la carga de trabajo. Ejemplo: un perfil de asistente contable con navegador, hoja de cálculo y sistema contable en la nube requiere 4 a 6 núcleos, 16 GiB de RAM en doble canal y SSD de 512 GB; un diseñador gráfico necesita más memoria, GPU dedicada y pantalla calibrada. Explique que en el sector público peruano las especificaciones se redactan en términos de requisitos funcionales y de rendimiento, evitando marcas, conforme a la normativa de contrataciones del Estado, y que existen fichas técnicas de bienes estandarizados. Introduzca el TCO: precio de compra más energía, mantenimiento, licencias y tiempo de inactividad. Pregunte por qué un equipo más barato puede resultar más caro en cinco años."
+        },
+        {
+          "title": "Benchmarks y validación de la especificación",
+          "bullets": [
+            "Benchmarks sintéticos: Cinebench (render), Geekbench (CPU general), 3DMark (gráficos), CrystalDiskMark (disco).",
+            "Benchmarks de aplicación: PCMark, SPEC CPU, pruebas propias con la carga real del usuario.",
+            "Promediar resultados con media geométrica al combinar pruebas normalizadas.",
+            "Cuidado con resultados inflados: condiciones térmicas, controladores y configuraciones distintas."
+          ],
+          "notes": "Explique que un benchmark solo es útil si se parece a la carga real, recordando la ley de Amdahl. Muestre por qué SPEC usa la media geométrica al resumir razones de rendimiento: es independiente de qué equipo se tome como referencia, propiedad discutida por Hennessy y Patterson. Comente casos documentados en la industria en los que fabricantes optimizaron controladores o firmware para destacar en pruebas específicas, lo que obliga a contrastar varias fuentes independientes. Recomiende a los estudiantes construir su propio benchmark de aplicación: por ejemplo, medir cuánto tarda en abrir y recalcular una planilla real de la empresa, o compilar un proyecto. Explique también que una laptop delgada puede dar un gran resultado en una prueba corta y caer tras varios minutos por estrangulamiento térmico. Pregunte qué prueba diseñarían para un área de atención al cliente."
+        },
+        {
+          "title": "Sostenibilidad y gestión del ciclo de vida",
+          "bullets": [
+            "Residuos de aparatos eléctricos y electrónicos (RAEE): en el Perú se rigen por el D. S. 009-2019-MINAM.",
+            "Extender la vida útil (SSD, RAM, mantenimiento) reduce costos y huella ambiental.",
+            "Borrado seguro antes de dar de baja: herramientas del fabricante, ATA Secure Erase o NVMe Sanitize.",
+            "Criterios de compra: eficiencia energética, reparabilidad, disponibilidad de repuestos y garantía local."
+          ],
+          "notes": "Cierre la parte conceptual con la responsabilidad profesional. El reglamento peruano de RAEE establece obligaciones de manejo responsable para generadores y productores, y las entidades deben entregar los equipos dados de baja a operadores autorizados, no al chatarrero. Relacione con la protección de datos personales de la Ley 29733: un disco duro desechado sin borrado seguro puede exponer información de clientes o pacientes. Explique por qué en los SSD el simple formateo no basta, debido a la nivelación de desgaste vista en la unidad 3, y se requieren comandos de sanitización. Vincule con la decisión de repotenciar frente a renovar analizada en el caso de la unidad 3. Pregunte a la clase qué criterios ambientales incluirían en las especificaciones de compra de una municipalidad y cómo los verificarían."
+        },
+        {
+          "title": "Proyecto final: especificación y dimensionamiento para una organización",
+          "bullets": [
+            "Elegir una organización real o verosímil: pyme, institución educativa, centro de salud o municipalidad.",
+            "Entregables: diagnóstico del parque actual, perfiles de carga, especificación técnica, presupuesto y TCO.",
+            "Justificar cada componente con conceptos del curso: CPI, caché, RAM, almacenamiento, E/S y energía.",
+            "Exposición final de 10 minutos con defensa ante preguntas del docente y de los pares."
+          ],
+          "notes": "Presente el proyecto integrador, que se desarrollará entre las semanas 13 y 16. Los estudiantes, en equipos de tres, deben actuar como el área de TI de una organización y entregar una propuesta técnica que un gerente pueda aprobar. Explique que se valorará la trazabilidad: cada decisión debe vincularse a un concepto del curso y a una evidencia, por ejemplo un benchmark, un cálculo de ancho de banda o una estimación con la ley de Amdahl. Muestre ejemplos de buenas y malas justificaciones: «16 GiB porque es lo estándar» frente a «16 GiB en doble canal porque la medición de memoria comprometida promedio fue 11 GiB y el doble canal duplica el ancho de banda para la GPU integrada». Recuerde los criterios de la rúbrica y el cronograma de avances. Pregunte a cada equipo qué organización eligieron y qué datos podrán obtener realmente."
+        }
+      ],
+      "reading": {
+        "title": "Después de Moore: paralelismo, especialización y decisiones de compra informadas",
+        "minutes": 40,
+        "content": "## El cambio de paradigma de 2005\n\nDurante tres décadas, los programas se volvían más rápidos sin modificarlos: cada nueva generación de procesadores subía la frecuencia de reloj. Ese ciclo dependía del **escalado de Dennard**, según el cual los transistores más pequeños consumían proporcionalmente menos energía. Hacia 2005 las corrientes de fuga impidieron seguir bajando el voltaje y la frecuencia se estancó entre 3 y 5 GHz. Como la potencia dinámica se aproxima a\n\n```\nP ≈ C × V² × f\n```\n\nsubir la frecuencia exigía subir el voltaje, y la potencia crecía de forma insostenible. La industria respondió integrando **varios núcleos** en cada chip. Herb Sutter resumió el cambio en un artículo célebre de 2005: «se acabó el almuerzo gratis»; desde entonces, el rendimiento depende de que el software sea paralelo.\n\n## Los límites del paralelismo\n\nLa ley de Amdahl, aplicada a *N* núcleos con una fracción paralelizable *p*, es:\n\n```\nAceleración(N) = 1 / ((1 - p) + p / N)\n```\n\n| p | 4 núcleos | 16 núcleos | Límite |\n|---|---|---|---|\n| 0,50 | 1,6 | 1,9 | 2 |\n| 0,90 | 3,1 | 6,4 | 10 |\n| 0,99 | 3,9 | 13,9 | 100 |\n\nLa tabla muestra por qué un procesador de 16 núcleos no acelera una hoja de cálculo cuyo recálculo es mayormente secuencial, mientras que un renderizador de video, con *p* cercano a 0,99, sí lo aprovecha. Gustafson (1988) añadió un matiz: con más núcleos solemos resolver problemas más grandes, y en ellos la fracción paralela crece.\n\n## Especialización: GPU, NPU y SoC\n\nHennessy y Patterson, en su conferencia del Premio Turing (2018), sostuvieron que la siguiente etapa de la arquitectura serían los **aceleradores de dominio específico**. Las GPU dedican la mayor parte del chip a unidades aritméticas y ejecutan miles de hilos en paralelo; las NPU integradas en laptops y teléfonos aceleran la inferencia de redes neuronales con bajo consumo. Los **sistemas en chip** (SoC) integran CPU, GPU, NPU y controladores de memoria, y comparten una memoria unificada, lo que reduce latencias pero suele impedir ampliar la RAM.\n\n## Energía y disponibilidad\n\nLa arquitectura también determina costos operativos. Un servidor que consume en promedio 350 W durante todo el año utiliza:\n\n```\n0,35 kW × 8760 h = 3066 kWh/año\n```\n\nSi la sala tiene un PUE de 1,8, la energía total atribuible es 3066 × 1,8 ≈ 5519 kWh. Con una tarifa referencial de S/ 0,70 por kWh, son unos S/ 3860 anuales por servidor. Consolidar cinco servidores antiguos en uno virtualizado puede ahorrar más en energía que lo que cuesta la licencia del hipervisor.\n\nLa disponibilidad se calcula como:\n\n```\nDisponibilidad = MTTF / (MTTF + MTTR)\n```\n\nUn 99,9 % permite unas 8,8 horas de caída al año; un 99,99 %, menos de una hora. Alcanzar más «nueves» exige redundancia (RAID, fuentes dobles, memoria ECC, UPS) y, sobre todo, reducir el tiempo de reparación.\n\n## Del concepto a la decisión de compra\n\nUn técnico que domina la arquitectura evita dos errores frecuentes: comprar por la frecuencia en GHz o por el número de núcleos sin considerar la carga, y subestimar memoria y almacenamiento. Un procedimiento recomendable es:\n\n1. **Medir la carga actual** con el Monitor de rendimiento o herramientas como `htop` e `iostat`: uso de CPU por núcleo, memoria comprometida, tiempo activo de disco.\n2. **Identificar el cuello de botella** y estimar la mejora con Amdahl.\n3. **Especificar requisitos funcionales**, no marcas: núcleos e hilos, RAM y canales, tipo de almacenamiento y generación PCIe, puertos, TPM 2.0 y eficiencia energética. En el sector público peruano, la normativa de contrataciones exige describir el bien sin direccionar a una marca.\n4. **Validar con benchmarks** cercanos a la carga real y comparar el costo total de propiedad a cinco años.\n5. **Planificar el fin de vida**: borrado seguro conforme a la Ley 29733 y entrega de RAEE a operadores autorizados.\n\n## Conclusión\n\nLa arquitectura de computadoras no es solo teoría de chips: es la base para decidir qué comprar, cómo configurarlo y cómo diagnosticarlo. Las ecuaciones del curso, desempeño, AMAT, Amdahl, potencia y disponibilidad, son herramientas de gestión que permiten sustentar decisiones con números ante cualquier directivo.\n"
+      },
+      "case": {
+        "title": "Caso: El laboratorio de diseño y la oficina contable de Textiles Wari",
+        "content": "**Textiles Wari S.A.C.** (empresa ficticia) es una exportadora de prendas de algodón pima con planta en Ate y oficina comercial en Miraflores. Emplea a 120 personas, de las cuales 35 usan computadoras. En 2026 la gerencia aprobó un presupuesto de S/ 160 000 para renovar equipos e infraestructura, y encargó al nuevo coordinador de TI, Kevin Salazar, una propuesta técnica.\n\nEl levantamiento identificó cuatro perfiles:\n\n| Perfil | Usuarios | Carga principal |\n|---|---|---|\n| Diseño y patronaje | 6 | Diseño vectorial, modelado 3D de prendas, renderizado |\n| Contabilidad y finanzas | 8 | ERP en servidor local, hojas de cálculo grandes, facturación electrónica |\n| Comercial y administración | 15 | Correo, navegador, videollamadas con clientes de EE. UU. y Europa |\n| Planta (supervisores) | 6 | Consulta de órdenes de producción, en ambiente con polvo de algodón |\n\nEl servidor del ERP, adquirido en 2016, tiene un procesador de 6 núcleos, 32 GiB de RAM sin ECC, dos discos mecánicos en RAID 1 y no tiene UPS. En el último año sufrió tres caídas por cortes de energía, una de ellas durante el cierre contable, y la base de datos tardó un día en recuperarse.\n\nKevin recibió cotizaciones con propuestas contrapuestas:\n\n- Un proveedor recomienda «estandarizar» y comprar 35 laptops iguales de gama alta (S/ 4 200 c/u) «para no complicarse».\n- Otro propone migrar el ERP a la nube con un costo mensual de US$ 650, eliminando el servidor.\n- El jefe de diseño exige estaciones de trabajo con GPU dedicada de 16 GB porque los renderizados de muestrarios tardan 40 minutos y bloquean su trabajo.\n- El gerente de planta advierte que las computadoras de planta se dañan cada año por el polvo y el calor.\n\nLa gerencia quiere una propuesta que maximice productividad, disponibilidad del ERP y vida útil, sin exceder el presupuesto, y que incluya criterios ambientales para dar de baja los equipos antiguos.\n",
+        "questions": [
+          "¿Por qué la propuesta de estandarizar 35 laptops de gama alta es ineficiente? Proponga especificaciones diferenciadas por perfil con justificación técnica.",
+          "¿Qué aceleración puede esperarse en el renderizado con una GPU dedicada y de qué depende? Use la ley de Amdahl.",
+          "Compare la renovación del servidor local con UPS y RAID frente a la migración a la nube en disponibilidad y costo a cinco años.",
+          "¿Qué especificaciones y medidas de protección recomienda para los equipos de planta?",
+          "Elabore el presupuesto agregado y el plan de baja de equipos conforme a la Ley 29733 y la normativa de RAEE."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto final: propuesta técnica de dimensionamiento de equipos",
+        "instructions": "**Objetivo:** integrar los aprendizajes del curso en una propuesta técnica profesional de renovación o dimensionamiento de equipos para una organización.\n\n**Indicaciones:** en equipos de tres estudiantes, elijan una organización real (con autorización) o un escenario verosímil basado en el caso de Textiles Wari.\n\n**Entregables:**\n\n1. **Diagnóstico** (semana 13): inventario del parque actual, mediciones de carga y cuellos de botella identificados con evidencia.\n2. **Perfiles y requisitos** (semana 14): perfiles de usuario y su traducción a requisitos medibles de procesador, memoria, almacenamiento, gráficos, E/S y energía.\n3. **Especificación técnica y presupuesto** (semana 15): fichas técnicas sin marcas, al menos dos alternativas cotizadas en el mercado peruano, cálculo de TCO a cinco años, consumo energético anual y disponibilidad del servidor si lo hubiera.\n4. **Plan de ciclo de vida:** mantenimiento, respaldo, borrado seguro y disposición de RAEE.\n5. **Exposición** (semana 16): presentación de 10 minutos y defensa.\n\n**Formato:** documento PDF de 8 a 12 páginas, hoja de cálculo con presupuesto y TCO, y diapositivas. Cada decisión debe citar un concepto del curso (ecuación de desempeño, AMAT, Amdahl, ancho de banda, potencia o disponibilidad).\n\n**Criterios:** rigor del diagnóstico, coherencia técnica de la especificación, sustento económico, sostenibilidad y calidad de la defensa oral.",
+        "rubric": [
+          {
+            "name": "Diagnóstico con mediciones y cuellos de botella sustentados",
+            "points": 4
+          },
+          {
+            "name": "Especificación técnica coherente y justificada con conceptos del curso",
+            "points": 6
+          },
+          {
+            "name": "Presupuesto, TCO y análisis energético correctos",
+            "points": 4
+          },
+          {
+            "name": "Plan de ciclo de vida, seguridad y RAEE",
+            "points": 2
+          },
+          {
+            "name": "Exposición y defensa técnica",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: paralelismo, arquitecturas modernas y dimensionamiento",
+        "questions": [
+          {
+            "prompt": "Un programa es 80 % paralelizable. ¿Cuál es la aceleración teórica aproximada con 8 núcleos?",
+            "options": [
+              "8 veces",
+              "6,4 veces",
+              "5 veces",
+              "3,3 veces"
+            ],
+            "correct": 3,
+            "explanation": "1 / (0,2 + 0,8/8) = 1 / 0,3 ≈ 3,33."
+          },
+          {
+            "prompt": "¿Por qué la industria dejó de aumentar la frecuencia de reloj de forma sostenida hacia 2005?",
+            "options": [
+              "El fin del escalado de Dennard hizo insostenible la potencia y el calor",
+              "Los transistores dejaron de miniaturizarse por completo",
+              "Los sistemas operativos no soportaban más de 4 GHz",
+              "La memoria DRAM no podía conectarse a más de 4 GHz"
+            ],
+            "correct": 0,
+            "explanation": "Sin poder bajar el voltaje por las fugas, subir la frecuencia elevaba la potencia (C·V²·f) y la temperatura más allá de lo disipable."
+          },
+          {
+            "prompt": "Una ficha indica «8 núcleos, 16 hilos». ¿Qué afirmación es correcta?",
+            "options": [
+              "El procesador equivale exactamente a 16 núcleos físicos",
+              "Solo puede ejecutar 8 programas simultáneamente",
+              "Cada núcleo ejecuta dos hilos con SMT, con mejora parcial y no del doble",
+              "Los 16 hilos funcionan solo con GPU"
+            ],
+            "correct": 2,
+            "explanation": "SMT comparte los recursos de un núcleo entre dos hilos; aprovecha recursos ociosos, con ganancias típicas moderadas."
+          },
+          {
+            "prompt": "Un servidor tiene MTTF de 5000 horas y MTTR de 5 horas. ¿Cuál es su disponibilidad aproximada?",
+            "options": [
+              "99,9 %",
+              "99 %",
+              "99,99 %",
+              "95 %"
+            ],
+            "correct": 0,
+            "explanation": "5000 / 5005 ≈ 0,999, es decir 99,9 %."
+          },
+          {
+            "prompt": "¿Qué carga de trabajo aprovecha mejor una GPU frente a una CPU?",
+            "options": [
+              "Un intérprete que ejecuta código con muchas bifurcaciones impredecibles",
+              "Un servidor de correo con pocos usuarios",
+              "Un procesador de textos con un solo documento",
+              "Multiplicación de matrices grandes para entrenar una red neuronal"
+            ],
+            "correct": 3,
+            "explanation": "La GPU destaca en paralelismo de datos masivo y regular, como el álgebra lineal de las redes neuronales."
+          },
+          {
+            "prompt": "Una sala de servidores consume 30 kW en total y sus equipos de TI consumen 20 kW. ¿Cuál es su PUE?",
+            "options": [
+              "0,67",
+              "1,5",
+              "2,0",
+              "10"
+            ],
+            "correct": 1,
+            "explanation": "PUE = energía total / energía de TI = 30 / 20 = 1,5."
+          },
+          {
+            "prompt": "Antes de donar computadoras con SSD, ¿qué procedimiento protege mejor los datos personales?",
+            "options": [
+              "Formateo rápido desde el sistema operativo",
+              "Eliminar los archivos y vaciar la papelera",
+              "Sanitización con comandos del fabricante o NVMe Sanitize y registro del borrado",
+              "Reinstalar Windows sobre la partición existente"
+            ],
+            "correct": 2,
+            "explanation": "Por la nivelación de desgaste, el formateo no borra todas las celdas; la sanitización actúa sobre toda la memoria flash."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Niveles de abstracción, arquitectura frente a organización y sistemas de numeración",
+      "activity": "Sesión síncrona de presentación del curso, análisis del modelo de capas y ejercicios de conversión entre bases en foro.",
+      "evidence": "Ejercicios de conversión resueltos en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Enteros con signo, desbordamiento, punto flotante IEEE 754 y codificación UTF-8",
+      "activity": "Aula invertida con la lectura de la unidad; demostraciones en Python de errores de redondeo y de codificación; discusión del caso Distribuidora Andina.",
+      "evidence": "Análisis escrito del caso Distribuidora Andina"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Álgebra de Boole, compuertas y diseño de circuitos combinacionales",
+      "activity": "Laboratorio en Logisim Evolution: diseño de una alarma con tabla de verdad, mapa de Karnaugh y sumador completo.",
+      "evidence": "Archivo de circuito del laboratorio"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Lógica secuencial, biestables, registros y máquinas de estados finitos",
+      "activity": "Diseño de una máquina de estados; entrega de la tarea de diagnóstico de errores de representación y desarrollo del cuestionario 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Modelo de von Neumann, ciclo de instrucción y debate RISC frente a CISC",
+      "activity": "Sesión síncrona con recorrido del ciclo de instrucción y análisis comparativo de arquitecturas x86, ARM y RISC-V.",
+      "evidence": "Mapa conceptual del ciclo de instrucción"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Formatos de instrucción RISC-V, ensamblador y modos de direccionamiento",
+      "activity": "Laboratorio en RARS: traducción de bucles y condicionales a ensamblador y codificación manual de instrucciones.",
+      "evidence": "Programas en ensamblador comentados"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Ruta de datos, unidad de control, segmentación y riesgos",
+      "activity": "Resolución de diagramas de segmentación con riesgos de datos y de control; discusión del caso CrediSur con la ley de Amdahl.",
+      "evidence": "Informe grupal del caso CrediSur"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Ecuación de desempeño, CPI, ley de Amdahl y benchmarks",
+      "activity": "Taller de problemas de rendimiento; entrega del laboratorio de ensamblador y análisis de rendimiento y desarrollo del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Localidad, jerarquía de memoria y organización de la caché",
+      "activity": "Aula invertida y ejercicios de descomposición de direcciones en etiqueta, índice y desplazamiento con cachés reales.",
+      "evidence": "Ejercicios de caché resueltos"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "AMAT, políticas de escritura, DRAM y memoria virtual con TLB",
+      "activity": "Experimento de recorrido de matrices por filas y columnas; cálculo de AMAT y ancho de banda de memoria del equipo propio.",
+      "evidence": "Tabla de tiempos del experimento"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Almacenamiento HDD, SSD y NVMe, buses PCIe y USB, interrupciones y DMA",
+      "activity": "Medición de almacenamiento con CrystalDiskMark o fio; discusión del caso de repotenciación del parque informático de la UGEL.",
+      "evidence": "Análisis escrito del caso UGEL"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Diagnóstico integral de cuellos de botella de memoria y E/S",
+      "activity": "Entrega del informe de diagnóstico de la jerarquía de memoria de un equipo real y desarrollo del cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Fin del escalado de Dennard, multinúcleo, taxonomía de Flynn, GPU y SoC",
+      "activity": "Sesión síncrona sobre paralelismo y arquitecturas modernas; conformación de equipos y entrega del diagnóstico del proyecto final.",
+      "evidence": "Avance 1 del proyecto: diagnóstico"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Energía, confiabilidad, servidores, virtualización y nube",
+      "activity": "Cálculos de consumo, PUE y disponibilidad; análisis del caso Textiles Wari y entrega de perfiles y requisitos del proyecto.",
+      "evidence": "Avance 2 del proyecto y análisis del caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Especificación técnica, benchmarks, TCO y sostenibilidad",
+      "activity": "Taller de redacción de especificaciones sin marcas y cálculo del TCO; retroalimentación del docente y desarrollo del cuestionario 4.",
+      "evidence": "Avance 3 del proyecto y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Presentación y defensa del proyecto final de dimensionamiento",
+      "activity": "Exposición de 10 minutos por equipo con defensa ante preguntas del docente y pares; entrega del documento final.",
+      "evidence": "Proyecto final y exposición"
+    }
+  ]
+}
