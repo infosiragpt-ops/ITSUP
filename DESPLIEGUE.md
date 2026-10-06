@@ -186,6 +186,23 @@ Cada carrera se identifica por su `slug`: repetir el comando actualiza los datos
 carrera en caliente (foto, resolución, plan de estudios) usa Administración → Programas de estudio; para cambios
 masivos edita el JSON en la rama y vuelve a ejecutar `sudo isup-update && sudo isup-carreras`.
 
+## Cursos (catálogo académico)
+
+Cada curso del plan de estudios tiene su paquete en `deploy/catalogo/cursos/<slug>.json` (sumilla, competencia,
+capacidades, indicadores, metodología, bibliografía, sistema de evaluación, 4 unidades con diapositivas, lectura,
+caso de estudio, tarea con rúbrica y cuestionario, y cronograma de 16 semanas). `deploy/catalogo/cursos-index.json`
+indica en qué carrera, ciclo y código se dicta cada uno. El despliegue automático los importa al periodo activo:
+
+```bash
+sudo isup-cursos              # crea los cursos que falten; actualiza datos, sílabo y diapositivas de los existentes
+sudo isup-cursos --rehacer    # vuelve a crear el contenido de los cursos sin matrículas ni calificaciones
+```
+
+Las presentaciones (PowerPoint) se generan en el servidor a partir del paquete y quedan en `/var/lib/isup/uploads`
+como `catalogo-<slug>-uN.pptx`; se regeneran solo cuando cambia el contenido. Un curso ya existente conserva lo que
+el docente haya editado o añadido. Para validar un paquete antes de publicarlo:
+`node deploy/catalogo/validar.mjs deploy/catalogo/cursos/<slug>.json`.
+
 ## Operación diaria
 
 | Tarea | Cómo |

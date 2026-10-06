@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Pencil, Printer, Save, X, Plus, Trash2, Target, ListChecks, BookOpen, Scale, Clock, Layers, GraduationCap } from 'lucide-react';
+import { FileText, Pencil, Printer, Save, X, Plus, Trash2, Target, ListChecks, BookOpen, Scale, Clock, Layers, GraduationCap, CalendarDays } from 'lucide-react';
 import { api, useApi } from '../../../lib/api.js';
 import { useUi } from '../../../lib/context.jsx';
 import { Badge, Button, Card, ErrorState, Field, IconButton, Input, Skeleton, Textarea, cx } from '../../../components/ui.jsx';
@@ -104,6 +104,28 @@ export default function CourseSyllabus() {
                 ))}
               </div>
             </Section>
+            {Array.isArray(s.weekly_plan) && s.weekly_plan.length > 0 && (
+              <Section icon={CalendarDays} title="VI-A. Cronograma semanal">
+                <div className="overflow-hidden rounded-xl border border-line">
+                  <table className="w-full text-[13px]">
+                    <thead className="bg-sunken/70 text-left text-[11px] font-semibold text-faint uppercase">
+                      <tr><th className="px-3 py-2">Sem.</th><th className="px-3 py-2">Unidad</th><th className="px-3 py-2">Tema</th><th className="px-3 py-2">Actividades</th><th className="px-3 py-2">Evidencia</th></tr>
+                    </thead>
+                    <tbody>
+                      {s.weekly_plan.map((w, i) => (
+                        <tr key={i} className="border-t border-line align-top break-inside-avoid">
+                          <td className="px-3 py-2 font-semibold text-ink">{w.week}</td>
+                          <td className="px-3 py-2 text-muted">{w.unit}</td>
+                          <td className="px-3 py-2 text-ink">{w.topic}</td>
+                          <td className="px-3 py-2 text-ink-2">{w.activity}</td>
+                          <td className="px-3 py-2 text-muted">{w.evidence}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </Section>
+            )}
             <Section icon={GraduationCap} title="VII. Metodología"><p className="text-[14.5px] leading-relaxed text-ink-2">{s.methodology}</p></Section>
             <Section icon={Scale} title="VIII. Sistema de evaluación">
               <div className="overflow-hidden rounded-xl border border-line">

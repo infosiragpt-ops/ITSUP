@@ -80,6 +80,8 @@ r.put('/courses/:id/syllabus', (req, res) => {
     methodology: str(body.methodology, current.methodology), resources: arr(body.resources, current.resources),
     bibliography: arr(body.bibliography, current.bibliography), policies: str(body.policies, current.policies),
     approved_by: str(body.approved_by, current.approved_by), approved_at: str(body.approved_at, current.approved_at),
+    // Cronograma semanal (lo carga el catálogo de cursos); se conserva al editar los demás campos
+    weekly_plan: Array.isArray(body.weekly_plan) ? body.weekly_plan : (Array.isArray(current.weekly_plan) ? current.weekly_plan : []),
   };
   run('UPDATE courses SET syllabus_json = ? WHERE id = ?', JSON.stringify(next), course.id);
   if (body.categories) replaceCategories(course.id, body.categories);

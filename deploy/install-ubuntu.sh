@@ -326,6 +326,7 @@ install -m 0755 "$APP_DIR/deploy/restore.sh" /usr/local/bin/isup-restore
 install -m 0755 "$APP_DIR/deploy/update.sh" /usr/local/bin/isup-update
 install -m 0755 "$APP_DIR/deploy/reset-password.sh" /usr/local/bin/isup-reset-password
 install -m 0755 "$APP_DIR/deploy/import-programs.sh" /usr/local/bin/isup-carreras
+install -m 0755 "$APP_DIR/deploy/import-courses.sh" /usr/local/bin/isup-cursos
 install -m 0755 "$APP_DIR/deploy/autoupdate.sh" /usr/local/bin/isup-autoupdate
 # Despliegue automático: cada 5 minutos aplica los commits nuevos de la rama desplegada (con vuelta atrás si falla)
 cat > /etc/systemd/system/isup-autoupdate.service <<'EOF'
