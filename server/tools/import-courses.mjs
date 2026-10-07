@@ -84,9 +84,9 @@ for (const entry of index.courses) {
   const file = path.join(dir, 'cursos', `${entry.slug}.json`);
   if (!fs.existsSync(file)) { createShell(entry); continue; }
   let pkg;
-  try { pkg = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { problems.push(`${entry.slug}: JSON inválido (${e.message})`); continue; }
+  try { pkg = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { problems.push(`${entry.slug}: JSON inválido (${e.message}); se mantiene el curso base`); createShell(entry); continue; }
   const errors = validate(pkg, file);
-  if (errors.length) { problems.push(`${entry.slug}: ${errors.length} error(es) de validación (${errors[0]})`); continue; }
+  if (errors.length) { problems.push(`${entry.slug}: ${errors.length} error(es) de validación (${errors[0]}); se mantiene el curso base`); createShell(entry); continue; }
 
   // Diapositivas compartidas por todas las ofertas del curso (mismo contenido): catalogo-<slug>-uN.pptx
   const deckFiles = [];
