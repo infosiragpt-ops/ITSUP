@@ -10,7 +10,10 @@ import { dueInfo, fmtDateTime, fmtTime, fmtWeekday, fmtShort, fullName, sessionS
  * La ventana se abre de forma síncrona (evita bloqueadores de ventanas emergentes) y luego se avisa al servidor.
  */
 export function joinSession(s) {
-  if (!s?.meeting_url) return;
+  if (!s?.meeting_url) {
+    window.alert('Esta sesión aún no tiene sala de videoconferencia. El docente debe agregar el enlace desde "Sesiones en vivo".');
+    return;
+  }
   window.open(s.meeting_url, '_blank', 'noopener');
   api.post(`/sessions/${s.id}/join`).catch(() => {});
 }

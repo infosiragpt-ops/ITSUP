@@ -79,7 +79,7 @@ export default function CourseSessions() {
                 <div className="flex flex-wrap items-center gap-2">
                   {st !== 'past' && (
                     <Button icon={Video} variant={st === 'live' ? 'danger' : st === 'soon' ? 'primary' : 'secondary'} onClick={() => joinSession(s)}
-                      disabled={st === 'upcoming' && !canEdit}>
+                      disabled={st === 'upcoming' && !canEdit} title={s.meeting_url ? s.meeting_url : 'Sin sala de videoconferencia'}>
                       {canEdit ? 'Abrir sala' : 'Unirme'}
                     </Button>
                   )}
