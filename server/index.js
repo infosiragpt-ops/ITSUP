@@ -5,6 +5,7 @@ import { ROOT, UPLOADS_DIR, get, db } from './db.js';
 import { auth } from './auth.js';
 import { seed, seedMinimal } from './seed.js';
 import { autoEnrollAll } from './enrollment.js';
+import { fillMissingMeetingUrls } from './meetings.js';
 import authRoutes from './routes/auth.js';
 import publicRoutes from './routes/public.js';
 import courseRoutes from './routes/courses.js';
@@ -31,6 +32,8 @@ if (!get('SELECT COUNT(*) n FROM users').n) {
 
 // Matrícula automática: cada estudiante en los cursos de su carrera y ciclo del periodo activo
 {
+  const rooms = fillMissingMeetingUrls();
+  if (rooms) console.log(`Salas de videoconferencia asignadas a ${rooms} sesión(es) sin enlace`);
   const r = autoEnrollAll();
   if (r.added || r.removed) console.log(`Matrícula automática: ${r.added} matrícula(s) nueva(s), ${r.removed} retirada(s) en ${r.students} estudiante(s)`);
 }

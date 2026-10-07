@@ -27,6 +27,7 @@ const { get, run, insert, all, tx, settings, UPLOADS_DIR, DATA_DIR } = await imp
 const { validate } = await import('../../deploy/catalogo/validar.mjs');
 const { buildUnitDeck } = await import('./build-pptx.mjs');
 const { autoEnrollAll } = await import('../enrollment.js');
+const { courseRoomUrl, fillMissingMeetingUrls } = await import('../meetings.js');
 
 const index = JSON.parse(fs.readFileSync(path.join(dir, 'cursos-index.json'), 'utf8'));
 const term = get('SELECT * FROM terms WHERE is_active = 1 ORDER BY id DESC');
@@ -178,14 +179,17 @@ for (const entry of index.courses) {
         u.quiz.questions.forEach((q, qi) => insert('INSERT INTO quiz_questions (quiz_id, type, prompt, options, correct, explanation, points, position) VALUES (?,?,?,?,?,?,1,?)',
           qId, 'single', md(q.prompt), JSON.stringify(q.options.map(md)), JSON.stringify([q.correct]), md(q.explanation), qi));
       });
+      const room = courseRoomUrl({ id: courseId, code: off.code });
       pkg.weekly_plan.forEach((w, i) => {
-        insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min) VALUES (?,?,?,?,90)',
-          courseId, `Semana ${w.week} · ${md(w.topic)}`, `${md(w.activity)} Evidencia: ${md(w.evidence)}`, limaAt(i * 7 + day, hh, mm));
+        insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min, meeting_url) VALUES (?,?,?,?,90,?)',
+          courseId, `Semana ${w.week} · ${md(w.topic)}`, `${md(w.activity)} Evidencia: ${md(w.evidence)}`, limaAt(i * 7 + day, hh, mm), room);
       });
     });
   }
 }
 console.log(`Cursos: ${created} creado(s) con contenido completo, ${updated} actualizado(s), ${shells} curso(s) base creados (contenido en elaboración) · diapositivas generadas: ${decks} archivo(s) · periodo ${term.name}`);
+const rooms = fillMissingMeetingUrls();
+if (rooms) console.log(`Salas de videoconferencia asignadas a ${rooms} sesión(es) que no tenían enlace`);
 const enrolled = autoEnrollAll();
 console.log(`Matrícula automática por carrera y ciclo: ${enrolled.added} matrícula(s) nueva(s), ${enrolled.removed} retirada(s)`);
 if (problems.length) { console.error(`Problemas (${problems.length}):`); problems.forEach((p) => console.error(`  - ${p}`)); }

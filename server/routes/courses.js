@@ -5,6 +5,7 @@ import { all, get, run, insert, now, httpError, notify, UPLOADS_DIR, audit } fro
 import { courseAccess, requireEdit, requireOpen } from '../auth.js';
 import { upload, fileName, courseCard, coursesFor, courseProgress, studentIds, userBrief, activeTerm } from '../lib.js';
 import { studentStanding, buildActa, courseCategories, courseRules, riskFlags, COURSE_TYPE_LABEL } from '../academic.js';
+import { courseRoomUrl } from '../meetings.js';
 
 const r = Router();
 
@@ -265,7 +266,8 @@ r.post('/courses/:id/sessions', (req, res) => {
   requireOpen(course);
   const { title, description, starts_at, duration_min, meeting_url } = req.body;
   if (!title?.trim() || !starts_at) throw httpError(400, 'Título y fecha son obligatorios');
-  const url = meeting_url?.trim() || `https://meet.jit.si/ISUP-${course.code}-${Date.now().toString(36)}`;
+  // Sin enlace indicado se usa la sala estable del curso (la misma todo el periodo)
+  const url = meeting_url?.trim() || courseRoomUrl(course);
   const id = insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min, meeting_url) VALUES (?,?,?,?,?,?)',
     course.id, title.trim(), description || null, new Date(starts_at).toISOString(), Number(duration_min) || 90, url);
   notify(studentIds(course.id), {
