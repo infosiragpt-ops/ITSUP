@@ -1,0 +1,1351 @@
+{
+  "name": "Tipografía",
+  "slug": "tipografia",
+  "course_type": "especifica",
+  "module_name": "Comunicación visual y composición gráfica",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Tipografía es un curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo de la carrera de Diseño Gráfico. Su propósito es que el estudiante elija, componga, dibuje y sistematice letras con criterio técnico, comunicativo, accesible y legal. Sobre la base de Fundamentos del Diseño, Teoría del Color y Dibujo y Bocetaje, y en articulación con Diseño Editorial e Historia del Diseño del mismo ciclo, desarrolla cuatro unidades: anatomía, medida y clasificación de la letra; microtipografía, legibilidad y ortotipografía del español; macrotipografía, combinación de familias, lettering y diseño de letras con atención a la gráfica vernácula peruana; y tipografía en pantalla con CSS, accesibilidad según las WCAG 2.1, licencias en el marco legal peruano y sistemas tipográficos documentados. Culmina con un proyecto integrador para un cliente real, una guía tipográfica con su espécimen web, que aporta al portafolio y prepara para Identidad Visual y Branding, Diseño UX/UI y Producción Gráfica y Preprensa.",
+  "competency": "Diseña e implementa sistemas tipográficos para piezas impresas y digitales, seleccionando, combinando y componiendo tipos de letra con fundamento anatómico, perceptivo y normativo, de modo que los textos sean legibles, jerarquizados, expresivos y accesibles, cumplan las normas ortotipográficas del español y respeten las licencias y el marco legal vigente en el Perú.",
+  "capacities": [
+    "Analiza y clasifica tipos de letra con vocabulario anatómico preciso, mediciones en puntos, milímetros y unidades por em, y criterios formales e históricos, para seleccionar fuentes adecuadas al medio y al público.",
+    "Compone texto continuo legible y ortotipográficamente correcto, ajustando espaciado, interlineado, medida, alineación, partición y funciones OpenType con base en la evidencia sobre la lectura y en pruebas con lectores.",
+    "Organiza jerarquías con escalas modulares, combina familias con criterios de contraste y concordancia, y dibuja letras para logotipos y piezas expresivas con compensaciones ópticas y respeto por los referentes.",
+    "Implementa y documenta sistemas tipográficos multiplataforma con CSS, tokens y guías de estilo, verificando la accesibilidad según las WCAG 2.1 y gestionando licencias conforme al marco legal peruano."
+  ],
+  "indicators": [
+    "Rotula con precisión al menos doce partes anatómicas de una letra e identifica su eje, contraste y modelo de trazo según Noordzij.",
+    "Convierte cuerpos, alturas x e interlíneas entre puntos, milímetros y unidades por em, mostrando el cálculo y verificándolo en pruebas impresas.",
+    "Clasifica fuentes con la clasificación Vox-ATypI y con al menos otro sistema, argumentando coincidencias y limitaciones.",
+    "Compone un texto de ocho páginas con líneas de 45 a 75 caracteres, parámetros de justificación documentados y sin errores ortotipográficos.",
+    "Diseña una jerarquía tipográfica con una escala modular declarada y no más de dos familias además del lettering, verificada con una prueba de lectura.",
+    "Vectoriza un logotipo con nodos en los puntos extremos, compensaciones ópticas visibles y pruebas de reducción y ampliación.",
+    "Implementa un espécimen web con @font-face, WOFF2, unidades relativas y clamp que cumple los criterios WCAG 1.4.3, 1.4.4 y 1.4.12.",
+    "Elabora una tabla de licencias tipográficas que identifica usos permitidos, titular de la licencia y riesgos legales para el cliente."
+  ],
+  "methodology": "El curso combina aula invertida y aprendizaje basado en proyectos en modalidad virtual. Antes de cada sesión síncrona el estudiante revisa la lectura y realiza un microejercicio de observación o composición en el aula virtual. Las sesiones integran exposición dialogada breve, demostraciones en vivo con InDesign, Illustrator, editores de fuentes libres y código CSS, talleres de composición y dibujo de letras, y crítica entre pares con vocabulario técnico. Cada unidad incluye un caso peruano discutido en foro con el método de casos, una tarea aplicada evaluada con rúbrica analítica y un cuestionario con retroalimentación inmediata. Las pruebas con lectores reales, en especial adultos mayores, forman parte de cada entrega. La evaluación formativa se sostiene en la retroalimentación oportuna del docente, la coevaluación y un portafolio tipográfico que culmina en el proyecto integrador.",
+  "bibliography": [
+    "Bringhurst, R. (2008). Los elementos del estilo tipográfico (versión 3.1). Fondo de Cultura Económica.",
+    "Lupton, E. (2011). Pensar con tipos: una guía clave para estudiantes, diseñadores, editores y escritores. Gustavo Gili.",
+    "Kane, J. (2011). A type primer (2nd ed.). Laurence King Publishing.",
+    "Unger, G. (2018). Theory of type design. nai010 publishers.",
+    "Noordzij, G. (2005). The stroke: Theory of writing. Hyphen Press.",
+    "Cheng, K. (2020). Designing type (2nd ed.). Yale University Press.",
+    "Hochuli, J. (2008). Detail in typography. Hyphen Press.",
+    "Martínez de Sousa, J. (2008). Ortografía y ortotipografía del español actual (2.ª ed.). Trea.",
+    "Real Academia Española y Asociación de Academias de la Lengua Española. (2010). Ortografía de la lengua española. Espasa.",
+    "World Wide Web Consortium. (2018). Web Content Accessibility Guidelines (WCAG) 2.1. W3C."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Promedio de las tareas aplicadas de las unidades 1 a 3, los cuatro cuestionarios y la participación argumentada en los foros de casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador: auditoría tipográfica, guía tipográfica, espécimen web e informe de accesibilidad, evaluados con rúbrica analítica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación oral del sistema tipográfico ante el docente y pares, y prueba de aplicación con un encargo nuevo resuelto en tiempo limitado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos: anatomía, medida y clasificación de la letra",
+      "description": "Al finalizar la unidad, el estudiante analiza tipos de letra con vocabulario técnico preciso: describe su anatomía, contraste, eje y proporciones; mide y convierte cuerpos e interlíneas en los sistemas de medida vigentes, y clasifica cada tipo con criterios formales e históricos justificados para orientar decisiones de diseño.",
+      "topics": [
+        "La letra como signo: escritura, caligrafía, lettering y tipografía",
+        "El trazo como origen de la forma: traslación, expansión y rotación según Noordzij",
+        "Anatomía del carácter: líneas guía, partes, contraste y eje",
+        "Sistemas de medida: punto, pica, cuerpo, cuadratín y unidades por em",
+        "Clasificación tipográfica: Vox-ATypI, Bringhurst y enfoques contemporáneos",
+        "Familias, variantes, fuentes variables y formatos digitales"
+      ],
+      "slides": [
+        {
+          "title": "La tipografía como núcleo del diseño gráfico",
+          "bullets": [
+            "Bringhurst define la tipografía como el oficio de dotar al lenguaje humano de una forma visual duradera.",
+            "Casi toda pieza gráfica contiene texto: marca, publicación, interfaz, señalética, empaque y animación dependen de decisiones tipográficas.",
+            "La buena tipografía sirve primero al lector: legibilidad, jerarquía y tono preceden al ornamento.",
+            "Un error tipográfico se multiplica: un sistema mal definido se repite en miles de páginas, pantallas o señales.",
+            "El curso avanza de la letra al texto, del texto a la jerarquía y de la jerarquía al sistema tipográfico completo."
+          ],
+          "notes": "Abra la sesión pidiendo a cada estudiante que fotografíe, antes de la clase, tres textos de su entorno inmediato: una boleta electrónica, un letrero de su barrio y la pantalla de una aplicación bancaria. Proyecte algunas imágenes y pregunte qué decisiones tipográficas detectan y cuáles les parecen fallidas. Presente la definición de Robert Bringhurst y subraye la palabra «duradera»: la tipografía fija el lenguaje para que otros lo lean en otro lugar y otro momento. Explique que el diseñador técnico no elige letras por gusto, sino que toma decisiones verificables sobre lectura, jerarquía y producción. Muestre el recorrido del curso en cuatro unidades y anuncie el proyecto integrador: un sistema tipográfico documentado para un cliente real. Cierre preguntando: ¿qué pierde una marca peruana cuando su tipografía cambia en cada pieza que publica?"
+        },
+        {
+          "title": "Escritura, caligrafía, lettering y tipografía: cuatro oficios distintos",
+          "bullets": [
+            "Escritura: trazos hechos a mano para comunicar; su forma depende del instrumento, el soporte y el gesto.",
+            "Caligrafía: escritura con intención estética, sujeta a modelos históricos y a la disciplina del instrumento.",
+            "Lettering: letras dibujadas para una pieza única; cada carácter se ajusta a su contexto inmediato.",
+            "Tipografía: sistema de signos prefabricados y repetibles que deben funcionar en cualquier combinación.",
+            "Confundir estos oficios genera errores de presupuesto, plazos y licencias en encargos profesionales."
+          ],
+          "notes": "Esta distinción, difundida por autores como Gerrit Noordzij y Ellen Lupton, evita malentendidos con los clientes. Muestre cuatro ejemplos: una carta manuscrita, una pieza caligráfica en cancilleresca, el rótulo pintado a mano de una combi limeña y una fuente digital de texto. Pregunte qué diferencia al rótulo de la fuente: en el rótulo, el artista puede alargar una letra para llenar un espacio; en una fuente, la «a» debe convivir con cualquier otra letra en cualquier orden, porque el diseñador no sabe qué texto se escribirá. De ahí la exigencia sistémica de la tipografía. Comente un caso frecuente: un cliente pide «la letra del logo» para usarla en todo, cuando el logotipo fue dibujado como lettering y no existe como fuente. Plantee la pregunta: ¿cuánto costaría convertir ese lettering en una familia completa y quién debería pagarlo?"
+        },
+        {
+          "title": "El trazo según Gerrit Noordzij: traslación, expansión y rotación",
+          "bullets": [
+            "En The Stroke, Noordzij explica el contraste de grosores a partir del instrumento que traza la letra.",
+            "Traslación: la pluma de punta ancha conserva su ángulo; produce eje inclinado y contraste moderado, propio de humanas y garaldas.",
+            "Expansión: la plumilla flexible abre su punta con la presión; genera eje vertical y contraste fuerte, típico de las didonas.",
+            "Rotación: el instrumento gira durante el trazo; explica muchas formas caligráficas y letras de exhibición.",
+            "Reconocer el modelo de trazo ayuda a clasificar, combinar y corregir letras con coherencia interna."
+          ],
+          "notes": "Lleve a la sesión síncrona un lápiz doble, dos lápices unidos con cinta, que simula la pluma de punta ancha. Pida a los estudiantes que tracen una «o» manteniendo el ángulo a unos 30 grados: verán aparecer el contraste y el eje inclinado sin proponérselo. Luego muestre, en video o en vivo, una plumilla flexible que se abre con la presión: el contraste aparece en los trazos descendentes y el eje se vuelve vertical. Explique que Noordzij propone así una teoría del contraste basada en el gesto, no en estilos. Esta teoría tiene consecuencias prácticas: si una letra mezcla un eje inclinado en la «o» con un eje vertical en la «e», el lector percibe incoherencia aunque no sepa explicarla. Pregunte: ¿qué modelo de trazo reconocen en el texto de su libro de colegio y en el titular de un diario deportivo?"
+        },
+        {
+          "title": "Anatomía I: líneas guía y proporciones verticales",
+          "bullets": [
+            "Línea base: donde se apoyan las letras; altura x: altura de la minúscula x, sin ascendentes ni descendentes.",
+            "Ascendentes (b, d, h) y descendentes (p, q, g) sobrepasan la zona x; las ascendentes suelen superar a las mayúsculas.",
+            "Altura de mayúsculas: en tipos de texto suele ser algo menor que la línea de ascendentes.",
+            "Rebasamiento: las letras curvas y puntiagudas exceden levemente las líneas guía para parecer del mismo tamaño.",
+            "La relación entre altura x y cuerpo determina el tamaño aparente y la economía de espacio del texto."
+          ],
+          "notes": "Dibuje en la pizarra digital las cinco líneas guía sobre la palabra «Hipotecas». Pida que identifiquen qué letras tocan cada línea. Insista en el rebasamiento, también llamado compensación óptica: la «o» desciende por debajo de la línea base y sube por encima de la altura x entre uno y tres por ciento; si no lo hiciera, se vería más pequeña que la «x», porque una curva toca la línea en un solo punto mientras una recta la ocupa entera. Demuéstrelo ampliando a 400 pt una fuente profesional y trazando guías en Illustrator. Explique que muchas fuentes gratuitas de baja calidad descuidan estas compensaciones, y que el ojo entrenado lo detecta de inmediato. Pregunte a la clase por qué las ascendentes suelen ser más altas que las mayúsculas: la respuesta remite a la tradición humanista, que prioriza el ritmo de la minúscula en la lectura continua."
+        },
+        {
+          "title": "Anatomía II: nombres de las partes del carácter",
+          "bullets": [
+            "Asta o fuste: trazo principal vertical u oblicuo; brazo y travesaño: trazos horizontales libres o que unen astas.",
+            "Panza o bucle: trazo curvo que encierra una contraforma, como en b, d, p y q.",
+            "Contraforma: espacio interior cerrado (o) o abierto (c, n) que define la claridad a cuerpos pequeños.",
+            "Remate o serifa: terminación del trazo; puede ser triangular, filiforme, cuadrada o inexistente.",
+            "Gota, oreja, cola, hombro, espolón y vértice completan el vocabulario para describir y corregir letras."
+          ],
+          "notes": "El vocabulario anatómico no es erudición: es la herramienta para dar y recibir retroalimentación precisa. Compare dos comentarios de crítica: «la letra se ve rara» frente a «la contraforma de la e es demasiado cerrada y se empasta a 8 pt». Solo el segundo permite actuar. Proyecte la «g» de doble ojal de una garalda y nombre con la clase el ojal superior, el inferior, el cuello y la oreja. Luego compare con la «g» de un solo ojal de una lineal geométrica. Advierta que la terminología varía entre manuales en español, por ejemplo panza, bucle u ojal; lo importante es usarla de forma consistente dentro del equipo. Asigne como práctica rápida rotular, en una lámina, quince partes sobre letras ampliadas de dos fuentes distintas. Pregunte: ¿qué parte de la letra creen que más contribuye a distinguir la «c» de la «e» a cuerpos pequeños?"
+        },
+        {
+          "title": "Contraste, eje y modulación: cómo leer la estructura de una letra",
+          "bullets": [
+            "Contraste: diferencia entre trazos gruesos y finos; puede ser nulo, bajo, medio o extremo.",
+            "Eje: línea imaginaria que une las zonas más delgadas de las curvas; puede ser inclinado o vertical.",
+            "Eje inclinado y contraste bajo favorecen la lectura continua; eje vertical y contraste alto exigen cuerpos mayores.",
+            "Los trazos finos de las didonas desaparecen en papel absorbente, en tintas de baja calidad o en pantallas de baja densidad.",
+            "Método rápido de diagnóstico: observe la o y la e para leer eje, contraste y apertura."
+          ],
+          "notes": "Proyecte la palabra «Lima» compuesta en cuatro tipos: una humana, una garalda, una didona y una lineal grotesca. Pida a los estudiantes trazar sobre cada «o» la línea que une sus zonas delgadas: verán el eje inclinado de la humana, menos inclinado en la garalda, vertical en la didona y casi inexistente en la grotesca por su bajo contraste. Explique la relación con el medio: el periódico impreso en papel prensa, con su ganancia de punto, castiga los filetes finos; por eso los diarios usan tipos de contraste moderado y remates robustos. En cambio, una revista de moda en couché puede permitirse una didona de alto contraste en titulares. Pregunte: si debieran elegir un tipo para el texto de un recibo térmico de supermercado, que se imprime con baja resolución, ¿qué contraste y qué eje preferirían, y por qué?"
+        },
+        {
+          "title": "El cuerpo y los sistemas de medida tipográfica",
+          "bullets": [
+            "Fournier (1737) y Didot (hacia 1783) normalizaron el punto; el punto Didot mide 0,376 mm y el cícero, 12 puntos Didot.",
+            "El punto digital o PostScript equivale a 1/72 de pulgada, 0,3528 mm; la pica tiene 12 puntos, 4,233 mm.",
+            "El cuerpo mide la altura de la caja virtual del tipo, no la de ninguna letra visible.",
+            "El interlineado se expresa como cuerpo/interlínea: 10/13 indica letra de 10 pt sobre líneas de 13 pt.",
+            "Conversiones útiles: milímetros = puntos × 0,3528; puntos = milímetros × 2,835."
+          ],
+          "notes": "Narre brevemente el origen material del cuerpo: en la tipografía de plomo, cada letra estaba fundida sobre un prisma metálico y el cuerpo era la altura de ese prisma, siempre mayor que la letra. Por eso el cuerpo digital sigue midiendo una caja invisible. Resuelva con la clase un ejercicio de conversión: una señal de evacuación debe tener letras de mayúscula de 25 mm de alto; si la altura de mayúsculas de la fuente es 0,70 del cuerpo, el cuerpo necesario es 25 / 0,70 = 35,7 mm, es decir, unos 101 pt. Muestre que en señalética se especifica por altura de letra real, no por cuerpo. Mencione que en la industria gráfica peruana aún se oye hablar de cíceros en imprentas tradicionales, aunque todo el flujo digital usa el punto PostScript. Pregunte: ¿por qué un texto a 10 pt en InDesign y a 10 pt en un procesador de textos coincide, pero no en pantalla?"
+        },
+        {
+          "title": "El cuadratín, las unidades por em y la métrica digital",
+          "bullets": [
+            "El cuadratín o em es un espacio cuadrado igual al cuerpo: a 12 pt mide 12 × 12 pt.",
+            "Las fuentes digitales dividen el em en unidades: 1000 en contornos PostScript y, habitualmente, 2048 en TrueType.",
+            "Cada glifo tiene un ancho de avance y espacios laterales izquierdo y derecho, medidos en esas unidades.",
+            "InDesign e Illustrator ajustan kerning y tracking en milésimas de em, por lo que el ajuste escala con el cuerpo.",
+            "Medio cuadratín, espacio fino y espacio de cifra son medidas derivadas del em, útiles en composición fina."
+          ],
+          "notes": "Abra una fuente libre en FontForge o en la versión de prueba de Glyphs y muestre la ventana de métrica de la letra «n»: el contorno, los espacios laterales y el ancho de avance. Explique que cuando el texto se compone, el software coloca cada glifo sumando anchos de avance; el diseñador de la fuente decidió de antemano esos espacios, que determinan el ritmo del texto. Por eso el espaciado viene incorporado a la fuente y el diseñador gráfico solo lo corrige. Haga notar la ventaja de las unidades relativas: un tracking de +20 milésimas en un titular de 72 pt equivale a 1,44 pt, y a 10 pt equivale a 0,2 pt; la proporción se mantiene. Esto prepara la unidad 2. Pregunte: si un cliente exige «que todo el texto ocupe exactamente una página», ¿por qué sería mala práctica forzar un tracking negativo de -40 en todo el párrafo?"
+        },
+        {
+          "title": "Altura x y tamaño aparente: por qué 12 pt no es igual en todos los tipos",
+          "bullets": [
+            "La altura x varía aproximadamente entre 0,40 em en garaldas clásicas y 0,55 em en tipos diseñados para pantalla.",
+            "Dos fuentes al mismo cuerpo pueden diferir más de 20 % en tamaño aparente.",
+            "Altura x grande: más legible en cuerpos pequeños, pero menos caracteres por línea y ascendentes más cortas.",
+            "Al combinar familias, iguale alturas x ajustando los cuerpos, no copiando el mismo número de puntos.",
+            "Mida la altura x en milímetros sobre una prueba impresa, no solo en la pantalla."
+          ],
+          "notes": "Componga la misma frase, «Consulte su estado de cuenta», a 11 pt en una garalda como Garamond y en una humanista de pantalla como Verdana. La diferencia de tamaño aparente es evidente. Explique que el cuerpo es una convención heredada y que el lector percibe principalmente la altura x. Por eso un formulario público que exige «letra 12» no garantiza legibilidad: depende de la fuente elegida. Comente un uso profesional: las guías de accesibilidad y algunas normas de etiquetado especifican altura x mínima en milímetros, precisamente para evitar esa ambigüedad. Pida a los estudiantes imprimir una línea en tres fuentes y medir con regla la altura x a 10 pt; registrarán valores entre 1,4 y 1,9 mm aproximadamente. Pregunte: si el espacio es limitado en un empaque de alimentos, ¿qué ventajas y riesgos tiene elegir una fuente de altura x muy grande?"
+        },
+        {
+          "title": "La clasificación Vox-ATypI: grupos y criterios",
+          "bullets": [
+            "Maximilien Vox la propuso en 1954 y la ATypI la adoptó en 1962; agrupa tipos por rasgos formales con raíz histórica.",
+            "Romanas con remates: humanas, garaldas, reales o de transición y didonas, según eje, contraste y remates.",
+            "Mecanas o egipcias con remates gruesos; lineales sin remates; incisas con trazo cincelado y remates mínimos.",
+            "Escriptas y manuales evocan la escritura o el dibujo; las góticas o fracturas se incorporaron después.",
+            "Limitación: describe mal la producción digital, los híbridos y las escrituras no latinas; la ATypI dejó de respaldarla oficialmente en 2021."
+          ],
+          "notes": "Recuerde que el curso de Historia del Diseño de este mismo ciclo recorre a Garamond, Baskerville y Bodoni desde su contexto histórico; aquí el interés es operativo: usar la clasificación para describir y decidir. Construya con la clase una tabla de diagnóstico con tres columnas: eje, contraste y remates. Humanas: eje muy inclinado, contraste bajo, travesaño de la «e» oblicuo. Garaldas: eje inclinado, contraste moderado, remates triangulares. Reales: eje casi vertical, mayor contraste. Didonas: eje vertical, contraste extremo, remates filiformes. Luego pida clasificar diez muestras anónimas. Discuta las limitaciones: Vox nació para el tipo de plomo y deja casi todo lo digital en el gran cajón de las lineales. Pregunte: ¿en qué grupo pondrían una fuente con remates cuadrados y contraste alto? El desacuerdo de la clase demostrará que clasificar es argumentar."
+        },
+        {
+          "title": "Más allá de Vox: Bringhurst y las clasificaciones contemporáneas",
+          "bullets": [
+            "Las lineales suelen subdividirse en grotescas, neogrotescas, geométricas y humanistas, siguiendo la norma británica BS 2961 de 1967.",
+            "Bringhurst clasifica por períodos artísticos: renacentista, barroca, neoclásica, romántica, realista, modernista y posmoderna.",
+            "Las fundiciones y catálogos clasifican por uso: texto, titulares, pantalla, señalética, monoespaciadas y exhibición.",
+            "Una clasificación es una herramienta de decisión: sirve para buscar, combinar y argumentar, no para encasillar.",
+            "Ejercicio: clasificar una misma fuente con tres sistemas y comparar qué revela cada uno."
+          ],
+          "notes": "Explique la subdivisión de las lineales con ejemplos claros: grotesca, como Akzidenz-Grotesk; neogrotesca, como Helvetica o Univers; geométrica, como Futura; humanista, como Gill Sans, Frutiger o Fira Sans. Esta subdivisión es la más útil en la práctica actual, porque la mayoría de interfaces y marcas usan lineales. Luego presente la propuesta de Bringhurst, que vincula las letras con los movimientos artísticos y permite combinar familias por afinidad histórica, por ejemplo una renacentista con una lineal humanista. Agregue la mirada comercial: los catálogos en línea filtran por uso y por características medibles, como ancho, contraste o altura x. Pida a los estudiantes clasificar Montserrat, diseñada por la argentina Julieta Ulanovsky, con los tres sistemas. Pregunte: ¿cuál de las tres clasificaciones les resultaría más útil al explicar su elección a un cliente que no es diseñador?"
+        },
+        {
+          "title": "Familia tipográfica: pesos, anchos, estilos y superfamilias",
+          "bullets": [
+            "Familia: conjunto de fuentes con un diseño común que varía en peso, ancho, inclinación y tamaño óptico.",
+            "En CSS y OpenType los pesos van del 100 (fino) al 900 (negro); el 400 es regular y el 700, negrita.",
+            "La cursiva verdadera redibuja las formas; la oblicua solo inclina la redonda.",
+            "Las superfamilias reúnen versiones con y sin remates diseñadas juntas, como Fira, Source o Alegreya.",
+            "Para un sistema profesional suelen bastar regular, cursiva, seminegra y negrita bien elegidas."
+          ],
+          "notes": "Muestre una familia extensa y pregunte cuántos estilos se necesitan realmente en una publicación. La respuesta suele sorprender: un buen diario resuelve casi todo con cuatro o cinco estilos. Explique la diferencia entre cursiva y oblicua comparando la «a» y la «f» de una garalda en redonda y cursiva: la cursiva cambia de estructura y suele descender la «f». Advierta sobre las falsas negritas y falsas cursivas que generan algunos programas cuando la fuente no tiene ese estilo: el resultado deforma los trazos y es un error de principiante. Presente Alegreya, superfamilia con versión sin remates de la fundición argentina Huerta Tipográfica, como ejemplo latinoamericano de calidad internacional con licencia libre. Pregunte: ¿qué problemas aparecerían si un equipo usa tres familias distintas para cubrir pesos que una sola familia ya ofrecía?"
+        },
+        {
+          "title": "Fuentes variables: un archivo, múltiples instancias",
+          "bullets": [
+            "Se introdujeron en la especificación OpenType 1.8 (2016), desarrollada conjuntamente por Apple, Google, Microsoft y Adobe.",
+            "Ejes registrados: peso (wght), ancho (wdth), cursiva (ital), inclinación (slnt) y tamaño óptico (opsz).",
+            "Ventajas: menos archivos, ajuste fino de jerarquía y adaptación de la letra a cada pantalla.",
+            "Riesgos: instancias intermedias poco revisadas, soporte desigual en flujos de impresión antiguos y archivos pesados.",
+            "Pruebe siempre las instancias exactas que usará en el medio final, no solo los estilos nominales."
+          ],
+          "notes": "Demuestre una fuente variable en un probador en línea o en el panel de InDesign o Illustrator, moviendo el deslizador de peso desde fino hasta negro. Explique la lógica: el archivo contiene unos pocos diseños maestros y el software interpola los intermedios. El eje de tamaño óptico merece atención especial: recupera una práctica del tipo de plomo, en la que cada cuerpo se dibujaba distinto; a cuerpos pequeños la letra se vuelve más ancha, de menor contraste y con más espacio, y en titulares se afina. Comente los usos en pantalla: una aplicación puede engrosar levemente el texto en modo oscuro para compensar la irradiación. Señale también los riesgos para la imprenta: algunos flujos de preprensa antiguos no manejan bien estas fuentes, por lo que conviene exportar PDF con fuentes incrustadas y verificarlas. Pregunte: ¿en qué proyecto peruano real justificarían el uso de una fuente variable?"
+        },
+        {
+          "title": "Formatos de fuente y caracteres para el español y las lenguas del Perú",
+          "bullets": [
+            "El formato Type 1 (1984) quedó obsoleto: Adobe retiró su soporte en sus aplicaciones en 2023.",
+            "TrueType (TTF) y OpenType (OTF) son formatos de escritorio; WOFF2 es el formato comprimido para la web.",
+            "El español exige á, é, í, ó, ú, ü, ñ, ¿, ¡, «, », º y ª bien diseñados, nunca sustituidos.",
+            "Los alfabetos oficiales del quechua y el aimara usan apóstrofo en consonantes glotalizadas: verifique su forma y espaciado.",
+            "La Ley 29735 promueve el uso de lenguas originarias: los materiales públicos bilingües requieren fuentes completas."
+          ],
+          "notes": "Muchos estudiantes descargan fuentes gratuitas atractivas que carecen de la «ñ», de los signos de apertura o de las tildes, y lo descubren cuando el texto ya está maquetado. Pida que prueben en clase cinco fuentes con la frase de control «¿Añadió el pingüino 2 º y 3.ª líneas? ¡Sí!». Explique la diferencia entre formatos: OpenType puede contener contornos TrueType o PostScript y miles de glifos con funciones avanzadas; WOFF2 comprime esos datos para la web. Luego aborde el contexto peruano: textos en quechua como «p'unchay» o «t'ika» requieren un apóstrofo tipográfico bien espaciado, y su ausencia o mala forma afecta la lectura y la dignidad de la lengua. Recuerde que la Ley 29735 de 2011 regula el uso y difusión de las lenguas originarias, lo que aumenta la demanda de materiales bilingües. Pregunte: ¿qué verificarían antes de aprobar una fuente para un cartel municipal en castellano y quechua?"
+        },
+        {
+          "title": "Método de análisis tipográfico: la ficha técnica",
+          "bullets": [
+            "Identificación: nombre, diseñador, fundición, año, licencia y número de estilos disponibles.",
+            "Estructura: altura x, contraste, eje, apertura, remates y proporción de anchos.",
+            "Clasificación: grupo Vox-ATypI, período según Bringhurst y uso recomendado por la fundición.",
+            "Prueba: palabra de control como «hamburgefonstiv», cifras y signos del español a 9, 12 y 48 pt.",
+            "Juicio: fortalezas, limitaciones y contextos donde funcionaría o fracasaría, sustentados con evidencia visual."
+          ],
+          "notes": "Presente la ficha técnica como el instrumento que sintetiza la unidad y que se usará en la tarea. Complete una ficha en vivo con una fuente conocida, por ejemplo Source Serif, de Adobe, publicada con licencia libre. Muestre cómo se mide la altura x en unidades del em usando el editor de fuentes o, en su defecto, trazando guías sobre una ampliación. Explique el valor de la palabra «hamburgefonstiv», usada por diseñadores de tipos porque reúne las formas básicas de la minúscula: rectas, curvas, diagonales y ascendentes. Insista en que la prueba debe hacerse en el medio final: impresa si será impresa, en un teléfono si será leída en un teléfono. El juicio final debe ser argumentado con evidencia, no con preferencias. Pregunte: ¿qué dato de la ficha consideran decisivo para un cliente con presupuesto limitado? La respuesta, a menudo, es la licencia."
+        }
+      ],
+      "reading": {
+        "title": "La anatomía de la letra: una gramática para decidir",
+        "minutes": 35,
+        "content": "## Introducción\n\nQuien observa un texto ve palabras; quien diseña con tipos ve estructuras. Un diseñador gráfico profesional debe poder explicar por qué una fuente se lee bien en un boleto de bus y mal en una etiqueta farmacéutica, o por qué dos letras al mismo cuerpo parecen de tamaños distintos. Esta lectura presenta los conceptos básicos que permiten describir una letra con precisión: el trazo que la origina, su anatomía, el sistema de medidas y los criterios de clasificación. El objetivo no es memorizar nombres, sino adquirir una gramática para tomar y sustentar decisiones.\n\n## El trazo como origen de la forma\n\nEl tipógrafo neerlandés Gerrit Noordzij propuso en *The Stroke* que el contraste de una letra, es decir, la diferencia entre sus trazos gruesos y delgados, se explica por el instrumento que la traza. Con una pluma de punta ancha sostenida en un ángulo constante se produce **traslación**: el grosor depende de la dirección del trazo y las zonas delgadas de la «o» quedan en diagonal, generando un **eje inclinado**. Con una plumilla flexible que se abre bajo presión se produce **expansión**: el grosor depende de la fuerza y el eje se vuelve vertical. Un tercer modelo, la **rotación**, aparece cuando el instrumento gira durante el trazo.\n\nEsta teoría tiene un valor práctico inmediato: las letras de texto humanistas y garaldas, que dominan los libros desde el Renacimiento, responden a la traslación; las didonas de Bodoni y Didot, a la expansión. Cuando un diseñador mezcla ambos modelos en una misma letra o en una combinación de familias sin intención, el lector percibe una disonancia aunque no pueda nombrarla.\n\n## Anatomía: un vocabulario compartido\n\nToda letra latina se organiza sobre líneas guía: la **línea base**, la **altura x**, la **altura de mayúsculas** y las líneas de **ascendentes** y **descendentes**. La zona comprendida entre la línea base y la altura x concentra la mayor parte de la información que el ojo usa para reconocer palabras. Por eso la altura x es el dato más importante para estimar el tamaño aparente de un tipo.\n\nSobre esa estructura se nombran las partes: el **asta** o fuste, el **brazo**, el **travesaño**, la **panza** o bucle, la **contraforma**, el **remate** o serifa, la **gota**, la **oreja**, la **cola** y el **hombro**, entre otras. Dos fenómenos ópticos merecen especial atención. El primero es el **rebasamiento**: las letras redondas y puntiagudas sobrepasan ligeramente las líneas guía para parecer del mismo tamaño que las rectas. El segundo es la compensación de grosores: los trazos horizontales suelen ser más delgados que los verticales, incluso en lineales que parecen de grosor uniforme, porque el ojo percibe más gruesa una línea horizontal que una vertical del mismo espesor.\n\n## Medir lo que no se ve\n\nEl **cuerpo** de un tipo no es la altura de ninguna letra, sino la de la caja virtual que la contiene, herencia del prisma de plomo sobre el que se fundía cada carácter. Pierre-Simon Fournier (1737) y François-Ambroise Didot (hacia 1783) normalizaron el punto tipográfico; el punto Didot mide 0,376 mm. La autoedición impuso el **punto PostScript**, igual a 1/72 de pulgada:\n\n~~~\n1 pt = 25,4 mm / 72 = 0,3528 mm\n1 pica = 12 pt = 4,233 mm\nmm = pt × 0,3528        pt = mm × 2,835\n~~~\n\nEl **cuadratín** o em es un cuadrado cuyo lado mide lo mismo que el cuerpo. Las fuentes digitales lo dividen en unidades, normalmente 1000 o 2048, y todas las medidas internas de la fuente, como anchos, espacios laterales, kerning o altura x, se expresan en esas unidades. Así, una fuente con altura x de 520 unidades sobre 1000 compuesta a 10 pt tendrá letras minúsculas de 5,2 pt, unos 1,83 mm de alto. Esa misma frase en una fuente con altura x de 400 unidades medirá 1,41 mm: casi un 30 % más pequeña en apariencia, aunque ambas estén «a 10 pt».\n\nEsta diferencia explica errores frecuentes en el Perú y en toda la región: bases de licitación, formularios o contratos que exigen «letra tamaño 12» sin indicar la fuente, o etiquetas de productos cuya letra cumple un cuerpo mínimo pero resulta ilegible porque la fuente elegida tiene una altura x reducida. Especificar en milímetros de altura x, o de altura de mayúsculas en señalética, es la práctica correcta.\n\n## Clasificar para decidir\n\nLa clasificación de Maximilien Vox, adoptada por la Asociación Tipográfica Internacional (ATypI) en 1962, ordena los tipos en humanas, garaldas, reales, didonas, mecanas, lineales, incisas, escriptas y manuales, a los que luego se sumaron las góticas. Sus criterios son formales: eje, contraste, forma de los remates. Su debilidad es que la producción digital desbordó esas categorías, y por ello la propia ATypI dejó de respaldarla como estándar oficial en 2021. En la práctica se complementa con la subdivisión de las lineales en grotescas, neogrotescas, geométricas y humanistas, y con la clasificación de Robert Bringhurst por períodos artísticos, útil para combinar familias con afinidad histórica.\n\nLas tipografías latinoamericanas contemporáneas muestran por qué clasificar exige criterio. Montserrat, de Julieta Ulanovsky, se inspira en los rótulos del barrio porteño del mismo nombre: es una lineal geométrica, pero su origen vernáculo la acerca al lettering urbano. Alegreya, de Juan Pablo del Peral, combina el ritmo caligráfico de las humanas con un dibujo pensado para la literatura en pantalla y en papel.\n\n## Conclusión\n\nDescribir una letra con precisión es el primer paso para elegirla bien. La ficha técnica que se desarrollará en esta unidad integra trazo, anatomía, medidas y clasificación, y obliga a probar la fuente en el medio final. Un diseñador que domina esta gramática puede defender sus decisiones ante un cliente, corregir errores con exactitud y, más adelante, construir sistemas tipográficos completos."
+      },
+      "case": {
+        "title": "Caso: La fuente para los cuadernos de trabajo bilingües de Editorial Wiñay",
+        "content": "## Contexto\n\nEditorial Wiñay es una editorial cusqueña de 22 trabajadores que produce materiales educativos para instituciones educativas públicas y privadas del sur andino. En 2026 ganó un concurso para diseñar e imprimir 48 000 cuadernos de trabajo de comunicación para primer y segundo grado de primaria, en castellano y quechua sureño, destinados a escuelas de educación intercultural bilingüe de Cusco, Apurímac y Puno. Cada cuaderno tiene 96 páginas en formato A4, se imprime en offset a cuatro tintas sobre papel bond de 75 g y debe entregarse en cinco meses.\n\n## El problema\n\nLa coordinadora de diseño, Milagros Huamán, debe elegir la fuente principal del texto. El equipo pedagógico exige tres condiciones: que la letra se parezca a la que los niños aprenden a trazar en la escuela, que distinga con claridad la «I» mayúscula, la «l» minúscula y el número «1», y que escriba correctamente el quechua oficial, con apóstrofo en consonantes como «p'», «t'» y «q'». El área comercial añade que el presupuesto para licencias es de S/ 3 500 y que la fuente debe poder usarse también en la versión digital de los cuadernos, publicada en PDF.\n\n## Las alternativas\n\nEl equipo preseleccionó tres opciones:\n\n1. **Una lineal geométrica libre** con licencia OFL, con «a» y «g» de un solo ojal, muy parecidas a la escritura escolar. Su altura x es de 0,48 em, pero la «I», la «l» y el «1» son casi idénticas, y el apóstrofo es una simple raya vertical.\n2. **Una lineal humanista comercial** de una fundición europea, con alternativas estilísticas para niños que incluyen «a» y «g» de un ojal, «l» con cola y apóstrofo curvo. Su altura x es de 0,52 em. La licencia de escritorio para cinco usuarios y uso en PDF cuesta el equivalente a S/ 4 200.\n3. **Una garalda clásica** incluida en el sistema operativo, sin costo adicional, con altura x de 0,41 em y «a» y «g» de doble ojal. La licencia del sistema no aclara si permite incrustarla en publicaciones comerciales.\n\nEn una prueba con 30 niños de segundo grado de Sicuani, leyendo una página impresa a 16 pt, la opción 2 obtuvo 12 % menos errores de lectura que la opción 1 y 21 % menos que la opción 3. La opción 1 fue la preferida por los docentes por su parecido con la escritura de la pizarra.\n\n## El dilema\n\nMilagros debe presentar su recomendación al comité editorial en una semana. Puede proponer la opción 2 y negociar el sobrecosto, modificar la opción 1 aprovechando que su licencia permite crear versiones derivadas con otro nombre, o elegir la opción 3 y aumentar el cuerpo para compensar su altura x. Cualquier decisión afectará la paginación, el costo de impresión y los plazos.",
+        "questions": [
+          "¿Qué rasgos anatómicos y métricos de cada alternativa explican los resultados de la prueba de lectura con los niños de Sicuani?",
+          "¿Qué riesgos legales y técnicos implica cada opción, considerando la licencia, el uso en PDF y la correcta escritura del quechua?",
+          "Si se elige la opción 3, ¿qué cuerpo necesitaría para igualar el tamaño aparente de la opción 2 a 16 pt y cómo afectaría la paginación?",
+          "¿Qué modificaciones serían necesarias para que la opción 1 cumpla los requisitos pedagógicos, y quién debería realizarlas?",
+          "¿Qué recomendación haría usted al comité editorial y con qué evidencias la sustentaría?"
+        ]
+      },
+      "assignment": {
+        "title": "Ficha técnica y análisis anatómico comparado de tres tipos de letra",
+        "instructions": "**Objetivo:** analizar con vocabulario técnico, mediciones y criterios de clasificación tres tipos de letra para un uso concreto, y emitir un juicio profesional fundamentado.\n\n**Encargo:** una municipalidad provincial del Perú necesita elegir la fuente de texto para sus comunicados impresos y digitales dirigidos a la ciudadanía. Seleccione tres fuentes de grupos distintos (por ejemplo, una garalda o real, una lineal humanista y una lineal geométrica o neogrotesca), al menos una de ellas con licencia libre.\n\n**Qué entregar:** un PDF de 8 a 10 páginas que contenga:\n\n1. Una ficha técnica por fuente: nombre, diseñador, fundición, año, licencia, estilos disponibles, clasificación Vox-ATypI y según Bringhurst.\n2. Una lámina anatómica por fuente con al menos 12 partes rotuladas sobre letras ampliadas, indicando eje, contraste y rebasamiento.\n3. Una tabla de medidas: altura x y altura de mayúsculas en unidades por em y en milímetros a 10 pt, con el cálculo mostrado.\n4. Una prueba impresa y fotografiada de la frase de control del español y de un párrafo de 80 palabras a 9, 11 y 14 pt.\n5. Una recomendación final de 250 a 400 palabras que justifique la fuente elegida para el encargo.\n\n**Formato:** A4 horizontal, fuentes incrustadas, citas a la bibliografía del curso en formato APA.\n\n**Criterios:** precisión anatómica, rigor de las mediciones, clasificación argumentada y calidad del juicio profesional, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Precisión del análisis anatómico y del vocabulario técnico",
+            "points": 6
+          },
+          {
+            "name": "Rigor de las mediciones y conversiones entre unidades",
+            "points": 4
+          },
+          {
+            "name": "Clasificación argumentada con más de un sistema",
+            "points": 4
+          },
+          {
+            "name": "Juicio profesional, pruebas en el medio final y presentación",
+            "points": 6
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: anatomía, medida y clasificación",
+        "questions": [
+          {
+            "prompt": "Dos fuentes compuestas a 10 pt tienen alturas x de 400 y 540 unidades sobre 1000. ¿Cuál es la altura x aproximada de la segunda en milímetros?",
+            "options": [
+              "1,4 mm",
+              "1,9 mm",
+              "5,4 mm",
+              "3,5 mm"
+            ],
+            "correct": 1,
+            "explanation": "La altura x es 0,54 × 10 pt = 5,4 pt; multiplicado por 0,3528 mm por punto da unos 1,9 mm. La opción de 1,4 mm corresponde a la primera fuente."
+          },
+          {
+            "prompt": "Al observar la «o» de una fuente se nota que sus zonas más delgadas están arriba a la izquierda y abajo a la derecha, con contraste moderado. ¿Qué modelo de trazo describe mejor esa estructura?",
+            "options": [
+              "Traslación de una pluma de punta ancha con ángulo constante",
+              "Expansión de una plumilla flexible por presión",
+              "Trazo monolineal sin contraste de un rotulador",
+              "Rotación continua del instrumento durante el trazo"
+            ],
+            "correct": 0,
+            "explanation": "El eje inclinado con contraste moderado es la huella de la traslación descrita por Noordzij, propia de humanas y garaldas. La expansión produce eje vertical y contraste fuerte."
+          },
+          {
+            "prompt": "Un formulario público exige «letra tamaño 12» y un ciudadano reclama que el texto es ilegible pese a cumplir la norma. ¿Cuál es la explicación técnica más precisa?",
+            "options": [
+              "El punto tipográfico varía según el programa usado para imprimir",
+              "La letra a 12 pt siempre es legible y el problema es el papel",
+              "El cuerpo mide la altura de las mayúsculas, que no influye en la lectura",
+              "El cuerpo mide la caja virtual del tipo; el tamaño aparente depende de la altura x de la fuente elegida"
+            ],
+            "correct": 3,
+            "explanation": "El cuerpo no corresponde a ninguna letra visible; fuentes con altura x reducida se ven más pequeñas al mismo cuerpo. Por eso conviene especificar alturas en milímetros."
+          },
+          {
+            "prompt": "Una fuente tiene eje vertical, contraste extremo y remates filiformes sin apófige. ¿En qué grupo Vox-ATypI se clasifica y en qué medio presenta más riesgo?",
+            "options": [
+              "Garalda; en libros impresos en papel ahuesado",
+              "Mecana; en señalética vial vista a distancia",
+              "Didona; en papel prensa o pantallas de baja densidad, donde sus trazos finos se pierden",
+              "Humana; en titulares de revistas en papel couché"
+            ],
+            "correct": 2,
+            "explanation": "Eje vertical, contraste extremo y remates filiformes definen a las didonas, cuyos filetes delgados se empastan o desaparecen con ganancia de punto o baja resolución."
+          },
+          {
+            "prompt": "Un equipo necesita negrita en su sistema, pero la fuente elegida solo tiene estilo regular, y el programa genera una negrita automática. ¿Cuál es la mejor decisión?",
+            "options": [
+              "Usar la negrita sintética, pues es idéntica a una negrita diseñada",
+              "Elegir una familia que incluya una negrita diseñada, porque la negrita sintética deforma trazos y espacios",
+              "Aplicar un contorno de 0,5 pt al texto regular para engrosarlo",
+              "Aumentar el cuerpo del texto regular para simular la negrita"
+            ],
+            "correct": 1,
+            "explanation": "Las negritas y cursivas sintéticas alteran proporciones, contraformas y espaciado. Un sistema profesional usa estilos diseñados dentro de la misma familia o superfamilia."
+          },
+          {
+            "prompt": "Para un cartel municipal en castellano y quechua, ¿qué verificación sobre la fuente es imprescindible antes de aprobarla?",
+            "options": [
+              "Que incluya ñ, tildes, signos de apertura y un apóstrofo tipográfico bien diseñado y espaciado",
+              "Que tenga al menos doce pesos y una versión condensada",
+              "Que pertenezca al grupo de las didonas por su prestigio",
+              "Que sea una fuente variable con eje de tamaño óptico"
+            ],
+            "correct": 0,
+            "explanation": "Sin un juego de caracteres completo para el español y el quechua oficial, la fuente no puede escribir correctamente el mensaje; los pesos o ejes adicionales son secundarios."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Microtipografía: espaciado, legibilidad y ortotipografía del texto",
+      "description": "Al finalizar la unidad, el estudiante compone texto continuo legible y correcto para impresión y pantalla: ajusta espaciado, interlineado, medida, alineación y partición con criterios basados en la investigación sobre la lectura, y aplica las normas ortotipográficas del español y las funciones OpenType pertinentes, verificando el resultado mediante pruebas.",
+      "topics": [
+        "Legibilidad y lecturabilidad: lo que la investigación sabe sobre la lectura",
+        "Espaciado de letras y palabras: espacios laterales, kerning y tracking",
+        "El triángulo del texto: cuerpo, interlineado y medida",
+        "Alineación, justificación, partición y control de líneas viudas y huérfanas",
+        "Ortotipografía del español: comillas, rayas, cifras, siglas y versalitas",
+        "Funciones OpenType y protocolo de pruebas de texto"
+      ],
+      "slides": [
+        {
+          "title": "Legibilidad, lecturabilidad y visibilidad: tres conceptos distintos",
+          "bullets": [
+            "Walter Tracy distinguió la legibilidad, facilidad para reconocer caracteres, de la lecturabilidad, comodidad para leer textos largos.",
+            "Legibilidad depende del diseño de la letra: aperturas, contraformas, diferenciación entre caracteres parecidos.",
+            "Lecturabilidad depende de la composición: cuerpo, interlineado, medida, espaciado y alineación.",
+            "Visibilidad o perceptibilidad: capacidad de detectar el texto a distancia, con poca luz o en movimiento.",
+            "Una fuente muy legible puede producir un texto poco lecturable si se compone mal."
+          ],
+          "notes": "Estos conceptos, formulados por Walter Tracy en Letters of Credit, ordenan toda la unidad. Muestre dos versiones del mismo párrafo con la misma fuente: una compuesta a 9 pt en líneas de 120 caracteres con interlineado sólido y otra a 10/14 pt en líneas de 60 caracteres. La fuente es igual de legible en ambas, pero la segunda es mucho más lecturable. Luego muestre un letrero de paradero del Metropolitano visto desde lejos para introducir la visibilidad. Explique que cada encargo pone el acento en una dimensión: un prospecto farmacéutico exige legibilidad extrema a cuerpos pequeños; una novela, lecturabilidad durante horas; un panel vial, visibilidad a decenas de metros. Pregunte a la clase qué dimensión prioriza un estado de cuenta bancario y cuál una notificación en la pantalla bloqueada de un celular. Recalque que la diferencia entre conceptos permite diagnosticar con precisión y proponer la corrección adecuada."
+        },
+        {
+          "title": "Cómo leemos: fijaciones, movimientos sacádicos y reconocimiento de letras",
+          "bullets": [
+            "El ojo avanza a saltos: movimientos sacádicos de siete a nueve caracteres y fijaciones de unos 200 a 250 milisegundos.",
+            "Entre 10 % y 15 % de los movimientos son regresiones: el lector vuelve atrás para comprender.",
+            "La percepción útil abarca unos cuatro caracteres a la izquierda y quince a la derecha de cada fijación.",
+            "La hipótesis de la forma global de la palabra perdió fuerza: la evidencia favorece el reconocimiento paralelo de letras.",
+            "Consecuencia: cada letra debe ser inconfundible y el espaciado debe permitir aislarla sin romper la palabra."
+          ],
+          "notes": "Resuma los hallazgos de Keith Rayner sobre movimientos oculares, ampliamente replicados: la lectura no es un barrido continuo, sino una secuencia de saltos y pausas. Si dispone de un video de seguimiento ocular, muéstrelo; si no, pida a un estudiante que observe los ojos de un compañero mientras lee en silencio. Luego explique el debate sobre la forma de la palabra o bouma: durante décadas se afirmó que leemos por el contorno de la palabra, y de allí la creencia de que las mayúsculas sostenidas son ilegibles por su contorno rectangular. Kevin Larson, investigador de Microsoft, revisó en 2004 la evidencia y concluyó que el modelo de reconocimiento paralelo de letras explica mejor los datos. Las mayúsculas sostenidas se leen más lento sobre todo por falta de costumbre. Pregunte: si reconocemos letras en paralelo, ¿qué pares de letras del español serían más críticos de diferenciar en una fuente para personas mayores?"
+        },
+        {
+          "title": "Ritmo del texto: forma, contraforma y color tipográfico",
+          "bullets": [
+            "El texto es una alternancia de negros (trazos) y blancos (contraformas y espacios) que el ojo percibe como ritmo.",
+            "Color tipográfico: densidad gris uniforme que produce un párrafo bien compuesto visto con los ojos entornados.",
+            "El espacio entre letras debe equilibrar visualmente el espacio interior de las letras.",
+            "Manchas oscuras o huecos claros indican errores de kerning, espaciado entre palabras o justificación.",
+            "Gerard Unger recuerda que el buen texto se vuelve invisible: el lector atiende al contenido, no a las letras."
+          ],
+          "notes": "Introduzca el concepto de color tipográfico, que nada tiene que ver con el color cromático: se refiere a la textura gris del texto. Proyecte una página justificada con problemas y pida a los estudiantes entornar los ojos o alejarse de la pantalla; aparecerán manchas y ríos blancos. Explique la relación clave del oficio: el blanco entre dos letras debe parecer equivalente al blanco dentro de ellas. Por eso una fuente con contraformas abiertas necesita más espacio entre letras que una condensada. Relacione con Gerard Unger, quien en su obra sobre la lectura insiste en que la tipografía de texto exitosa pasa desapercibida. Plantee un ejercicio: invertir la página de cabeza para dejar de leer y evaluar solo la textura. Pregunte: ¿por qué un texto con color irregular cansa más aunque el lector no identifique el problema? Conecte la respuesta con el esfuerzo de fijación descrito en la diapositiva anterior."
+        },
+        {
+          "title": "Espaciado de letras: el método de Tracy para rectas y curvas",
+          "bullets": [
+            "El diseñador de la fuente fija los espacios laterales de cada glifo; el usuario solo los corrige excepcionalmente.",
+            "Método de Tracy: se espacia primero la «n» hasta que «nnnn» sea uniforme, luego la «o» en «nnonn».",
+            "En mayúsculas se repite el procedimiento con «H» y «O»: «HHOHH» y «HOHOH».",
+            "Las curvas necesitan menos espacio lateral que las rectas, porque solo tocan la línea vertical en un punto.",
+            "Comprender el método permite evaluar la calidad de una fuente y corregir lettering y logotipos."
+          ],
+          "notes": "Walter Tracy describió un procedimiento que aún se enseña en los programas de diseño de tipos: espaciar primero las letras de trazos rectos, luego las redondas, y a partir de ellas el resto. Haga el ejercicio en clase con letras recortadas en papel o en Illustrator: pida que compongan «minimo» separando cada letra con el mismo espacio numérico y observen cómo la «o» parece flotar lejos de sus vecinas. Luego corrijan a ojo. El resultado demuestra que el espaciado es óptico, no métrico. Explique la utilidad profesional: cuando un estudiante dibuje un logotipo con letras propias, en la unidad 3, deberá espaciarlo con este método; y al evaluar una fuente gratuita podrá detectar espaciados irregulares componiendo cadenas de control. Pregunte: ¿qué letras del alfabeto creen que resultan más difíciles de espaciar y por qué? Suelen aparecer la «r», la «v» y la «L» por sus espacios abiertos."
+        },
+        {
+          "title": "Kerning: corregir pares problemáticos con criterio",
+          "bullets": [
+            "El kerning ajusta el espacio entre pares específicos, como AV, To, Ty, LT, P. o «A, que el espaciado general no resuelve.",
+            "Kerning métrico usa las tablas del diseñador de la fuente; el óptico lo calcula el programa según la forma de los glifos.",
+            "En texto continuo, confíe en el kerning métrico de una fuente profesional; el óptico sirve para fuentes sin tablas.",
+            "En titulares y logotipos el kerning manual es obligatorio: a cuerpos grandes los desajustes se notan mucho.",
+            "En español revise pares con signos de apertura: ¿T, ¡V, «Y y combinaciones con tildes en mayúscula."
+          ],
+          "notes": "Muestre en InDesign el panel de carácter con las opciones de kerning métrico, óptico y cero, y compare un titular «TODAVÍA NO» con cada opción. Explique que una fuente profesional incluye miles de pares de kerning, frecuentemente organizados por clases, y que el kerning óptico puede ser útil cuando se combinan fuentes o cuando una fuente gratuita carece de tablas, pero puede empeorar una fuente bien hecha. Luego realice un ejercicio de kerning manual en un titular de 72 pt: «Tarapoto Verde». Aconseje mirar el titular invertido o difuminado para juzgar el equilibrio de espacios, y trabajar de izquierda a derecha por grupos de tres letras. Señale un detalle del español: muchas fuentes extranjeras no prevén pares con «¿» o con mayúsculas acentuadas como «Á» y «Í», que chocan con la línea superior. Pregunte: ¿por qué no conviene aplicar kerning manual letra por letra en un párrafo de texto continuo?"
+        },
+        {
+          "title": "Tracking: cuándo abrir y cuándo cerrar",
+          "bullets": [
+            "Tracking es el ajuste uniforme del espaciado en una palabra, línea o bloque, medido en milésimas de em.",
+            "Mayúsculas sostenidas y versalitas necesitan apertura: entre 5 % y 10 % del cuerpo, de 50 a 100 unidades.",
+            "Cuerpos pequeños, de 6 a 8 pt, ganan legibilidad con un tracking ligeramente positivo.",
+            "Titulares grandes admiten tracking negativo moderado; nunca deben hacer que las letras se toquen sin intención.",
+            "No use tracking para ajustar el texto continuo a la fuerza: altera el color y delata la manipulación."
+          ],
+          "notes": "Explique la lógica óptica: las fuentes se espacian para el uso más frecuente, la minúscula a cuerpo de texto. Cuando las letras se componen en mayúsculas, sus formas rectangulares quedan demasiado juntas, y por eso Bringhurst recomienda abrir siempre las cadenas de mayúsculas y versalitas. A cuerpos grandes ocurre lo contrario: los espacios diseñados para 10 pt se ven excesivos a 96 pt, por lo que muchas fuentes de titulares o los ejes de tamaño óptico ajustan el espaciado. Haga una demostración con «SUPERINTENDENCIA NACIONAL» en tres tracking: 0, +60 y +120. Luego discuta la práctica de reducir el tracking de un párrafo para eliminar una línea corta: un ajuste de -5 a -10 en un párrafo completo puede pasar inadvertido, pero valores mayores oscurecen el texto. Pregunte: ¿qué alternativas tiene el diseñador antes de recurrir al tracking para resolver una línea corta al final de un párrafo?"
+        },
+        {
+          "title": "Espacio entre palabras y uniformidad del párrafo",
+          "bullets": [
+            "El espacio entre palabras suele rondar un cuarto de em; debe separar palabras sin crear huecos.",
+            "En texto justificado, el programa estira o comprime ese espacio dentro de un rango mínimo, deseado y máximo.",
+            "Fuentes condensadas piden espacios más cerrados; fuentes anchas o de altura x grande, algo más abiertos.",
+            "Doble espacio después del punto es un hábito mecanográfico: en tipografía profesional se usa un solo espacio.",
+            "Espacios especiales: fino, de cifra y de no separación, para unir cifras, símbolos y abreviaturas."
+          ],
+          "notes": "Muestre el párrafo de un documento oficial descargado de internet, muchas veces con dobles espacios tras el punto y espacios múltiples para alinear tabulaciones. Explique que estos hábitos provienen de la máquina de escribir, cuya letra monoespaciada justificaba el doble espacio, y que en tipografía digital generan huecos y ríos. Enseñe a buscar y reemplazar dobles espacios en InDesign mediante expresiones regulares, un recurso que el curso de Diseño Editorial desarrolla en profundidad. Introduzca los espacios especiales: el espacio de no separación evita que «S/» quede en una línea y el importe en la siguiente, o que «25» se separe de «%». El espacio fino separa grupos de cifras en números largos, como recomienda la Ortografía académica. Pregunte: en un comprobante de pago con importes, ¿qué problemas aparecerían si «S/ 1 250.00» se partiera entre dos líneas, y cómo lo evitarían?"
+        },
+        {
+          "title": "El triángulo del texto: cuerpo, interlineado y medida",
+          "bullets": [
+            "Cuerpo, interlineado y medida son interdependientes: cambiar uno obliga a revisar los otros dos.",
+            "Interlineado de partida para texto impreso: entre 120 % y 145 % del cuerpo; en pantalla, entre 1,4 y 1,6.",
+            "Líneas más largas requieren más interlineado para que el ojo encuentre el inicio de la línea siguiente.",
+            "Fuentes de altura x grande o de lineales oscuras necesitan más interlineado que una garalda de altura x pequeña.",
+            "El interlineado entre párrafos y titulares debe derivarse del interlineado base para mantener el ritmo vertical."
+          ],
+          "notes": "Plantee el triángulo como el núcleo de la composición de texto. Haga un experimento en vivo con un párrafo de 120 palabras: primero 10/10 pt en 150 mm, luego 10/12 en 150 mm y finalmente 10/14 en 90 mm. Pida a los estudiantes leer en voz alta el inicio de cada línea siguiente y notar la dificultad del retorno en la primera versión. Explique que el interlineado automático de InDesign, 120 %, es solo un valor de partida y no una regla. Muestre cómo una lineal de altura x generosa, como las usadas en interfaces, a 10/12 se ve apretada, mientras una garalda a la misma proporción respira. Introduzca la idea de ritmo vertical: si el interlineado base es 14 pt, los espacios antes y después de titulares pueden ser múltiplos o fracciones de 14 pt, lo que conecta con la retícula base que verán en Diseño Editorial. Pregunte: ¿qué valor ajustarían primero si un cliente pide más texto en la misma página?"
+        },
+        {
+          "title": "Medida óptima: entre 45 y 75 caracteres por línea",
+          "bullets": [
+            "Bringhurst considera satisfactoria una línea de 45 a 75 caracteres, con 66 como referencia ideal para texto continuo.",
+            "En composiciones de varias columnas, como diarios o revistas, son aceptables líneas de 40 a 50 caracteres.",
+            "Líneas demasiado cortas fragmentan las frases y multiplican particiones; demasiado largas dificultan el retorno.",
+            "Estimación rápida: medida en puntos ≈ caracteres deseados × ancho medio del carácter (cerca de 0,47 em).",
+            "En pantalla la medida se controla con un ancho máximo en unidades ch, por ejemplo 66ch."
+          ],
+          "notes": "Resuelva un cálculo de ajuste de originales con la clase: para obtener líneas de unos 66 caracteres con una fuente de texto a 10 pt cuyo ancho medio de carácter es aproximadamente 0,47 em, la medida será 66 × 4,7 pt ≈ 310 pt, unos 109 mm. Verifique el cálculo componiendo el texto en InDesign y contando caracteres en tres líneas. Explique que el ancho medio varía con cada fuente: una condensada ofrece más caracteres en la misma medida, lo que la vuelve atractiva para diarios, pero con riesgo de menor legibilidad. Luego muestre páginas web peruanas de noticias o instituciones públicas en un monitor ancho, donde algunas líneas superan los 120 caracteres: la lectura se vuelve agotadora. Anticipe la unidad 4, donde controlarán la medida en CSS con la unidad ch. Pregunte: ¿qué harían si el formato impuesto por el cliente obliga a líneas de 140 mm con texto a 9 pt?"
+        },
+        {
+          "title": "Alineación: bandera, justificado y centrado, con sus costos",
+          "bullets": [
+            "Bandera a la izquierda: espaciado constante entre palabras y lectura cómoda; exige controlar el perfil del margen irregular.",
+            "Justificado: bloque compacto y tradicional; exige medidas suficientes y buenos parámetros de partición.",
+            "Centrado: útil en textos breves y ceremoniales; dificulta encontrar el inicio de cada línea en textos largos.",
+            "Bandera a la derecha: solo para textos muy breves, como pies de foto o notas marginales.",
+            "Las pautas de accesibilidad recomiendan evitar el texto justificado en pantalla para lectores con dislexia."
+          ],
+          "notes": "Compare cuatro versiones de un comunicado de 150 palabras. Señale que la bandera a la izquierda mantiene espacios constantes y es la opción más segura en pantalla y en medidas cortas, pero su margen derecho requiere cuidado: deben evitarse escalones regulares, formas de cuña o líneas muy cortas que dibujen huecos. El justificado ofrece una apariencia ordenada, pero en columnas estrechas produce ríos y espacios irregulares, porque el programa tiene pocas palabras por línea para repartir el excedente. Mencione el criterio 1.4.8 de las WCAG 2.1, de nivel AAA, que recomienda no justificar el texto en pantalla, porque los espacios irregulares dificultan la lectura de personas con dislexia. El centrado, frecuente en invitaciones y diplomas, se vuelve un problema cuando se aplica a párrafos largos. Pregunte: ¿qué alineación usarían para la ficha de un medicamento genérico y para la contraportada de una novela, y por qué?"
+        },
+        {
+          "title": "Justificación y partición: parámetros de composición en InDesign",
+          "bullets": [
+            "Use la composición de párrafo de Adobe, que evalúa todo el párrafo, en lugar de la composición línea a línea.",
+            "Punto de partida razonable: espacio entre palabras 85/100/120 %, entre letras -2/0/2 % y escala de glifos 100 %.",
+            "Particiones: palabras de al menos cinco letras, nunca dejar una vocal sola y máximo dos guiones consecutivos.",
+            "Asigne el idioma español al estilo de párrafo: sin él, el diccionario parte mal las palabras.",
+            "Active el resaltado de infracciones de composición para detectar líneas forzadas y corregirlas."
+          ],
+          "notes": "Abra el cuadro de justificación de un estilo de párrafo y explique cada parámetro. El espacio entre palabras tiene un mínimo, un deseado y un máximo: cuanto más estrecho el rango, más uniforme el texto, pero más particiones necesitará el programa. El espacio entre letras y la escala de glifos son recursos extremos; muchos tipógrafos prefieren no deformar glifos o limitarlo a uno o dos por ciento. Luego trabaje la partición según la Ortografía de la lengua española: no se deja una vocal sola a final o inicio de línea, no se dividen siglas ni cifras, y conviene evitar divisiones que formen palabras malsonantes. Muestre el resaltado de infracciones en las preferencias de composición: las líneas en amarillo intenso indican que el programa violó los parámetros. Pregunte: si un párrafo justificado en una columna de 45 mm presenta muchas líneas resaltadas, ¿qué cambiarían primero, los parámetros, la medida o la alineación?"
+        },
+        {
+          "title": "Líneas viudas, huérfanas, ríos y callejones",
+          "bullets": [
+            "Según Martínez de Sousa, línea viuda es la última de un párrafo que queda al inicio de página o columna.",
+            "Línea huérfana es la primera de un párrafo que queda sola al pie de página o columna; la terminología varía entre manuales.",
+            "Ríos y callejones: canales blancos verticales u oblicuos formados por espacios alineados en líneas sucesivas.",
+            "Una palabra corta o una sílaba sola en la última línea de un párrafo también rompe el ritmo de la página.",
+            "Las opciones de conservación de líneas ayudan, pero la corrección fina exige reescritura o ajuste manual."
+          ],
+          "notes": "Advierta que la terminología en español no es uniforme y que en manuales en inglés los términos widow y orphan a veces se usan al revés; lo importante es acordar la definición dentro del equipo editorial y usar el libro de estilo. Proyecte ejemplos de cada problema en páginas reales. Explique las opciones de conservación de líneas de InDesign, que impiden dejar una o dos líneas aisladas, y sus efectos colaterales: pueden generar columnas desiguales. Luego enseñe las soluciones finas: ajustar el tracking del párrafo en ±5 unidades, modificar una partición, pedir al editor una corrección de texto o reorganizar una imagen. En prensa, donde el cierre es rápido, la coordinación con el redactor es la solución más eficiente. Pregunte: ¿es aceptable en una revista pedir a un autor que cambie una palabra para eliminar una línea viuda? Discuta la ética del ajuste de textos y el rol del corrector de estilo."
+        },
+        {
+          "title": "Ortotipografía I: comillas, rayas y guiones en español",
+          "bullets": [
+            "La Ortografía académica recomienda las comillas angulares «» en primer nivel, luego las inglesas “ ” y finalmente las simples ‘ ’.",
+            "La raya (—) introduce incisos y diálogos; se escribe pegada al texto que encierra: —dijo— con voz baja.",
+            "El guion (-) une palabras compuestas, como franco-peruano, y marca la partición de palabras a final de línea.",
+            "No confunda guion, raya y signo menos (−): son caracteres distintos con funciones distintas.",
+            "Las comillas rectas de máquina de escribir delatan descuido: configure las comillas tipográficas en el programa."
+          ],
+          "notes": "La ortotipografía es el conjunto de normas que regulan la escritura con tipos, y Diseño Editorial la aplica en la maquetación; aquí se estudia su fundamento. Proyecte un fragmento de diálogo de una novela peruana mal compuesto, con guiones en lugar de rayas y comillas rectas, y pida identificar los errores. Explique la jerarquía de comillas recomendada por la Ortografía de la lengua española de 2010, con un ejemplo de anidamiento: «Dijo: “Lo llamaban ‘el Zambo’ en el barrio”». Enseñe a escribir los caracteres en el teclado y a configurar las comillas automáticas en InDesign según el idioma. Muestre cómo la raya de diálogo se escribe sin espacio respecto del inciso, pero con espacio respecto del texto exterior. Recuerde que el corrector de estilo y el diseñador comparten la responsabilidad del resultado final. Pregunte: ¿por qué un error ortotipográfico puede afectar la credibilidad de una marca o de una institución pública?"
+        },
+        {
+          "title": "Ortotipografía II: cifras, símbolos, siglas y versalitas",
+          "bullets": [
+            "Los números de más de cuatro cifras se agrupan de tres en tres con espacio fino: 12 345; los de cuatro cifras no se separan.",
+            "Los símbolos van separados de la cifra por un espacio de no separación: 25 %, 10 km, 15 °C, S/ 30.",
+            "Las abreviaturas llevan punto (pág., Sr.); los símbolos no (km, kg, h); los ordinales abreviados se escriben 1.º y 2.ª.",
+            "Las siglas no llevan puntos ni plural con s: las ONG, la SUNAT, el INEI.",
+            "Los números romanos de siglo se componen en versalitas: siglo xxi, nunca en mayúsculas sobredimensionadas."
+          ],
+          "notes": "Muestre un recibo, una nota de prensa institucional y una etiqueta con errores frecuentes: «25%» sin espacio, «Km.» con mayúscula y punto, «las ONGs», «S/.» con punto, forma anterior a la Ley 30381 de 2015, que cambió la denominación de la moneda a sol. Explique cada norma con su razón tipográfica: el espacio de no separación evita que el símbolo quede aislado en otra línea; la versalita integra los números romanos con la altura de la minúscula y no interrumpe el color del texto. Discuta el separador decimal: la Ortografía académica admite coma o punto y recomienda el punto para favorecer la unificación, mientras que en el Perú conviven ambos usos y la separación de millares con coma es frecuente en documentos comerciales. Lo profesional es definir la convención en la guía de estilo del cliente y aplicarla sin excepciones. Pregunte: ¿qué convención numérica recomendarían para una fintech que opera en el Perú y en Chile?"
+        },
+        {
+          "title": "Funciones OpenType para el texto: ligaduras, cifras y versalitas",
+          "bullets": [
+            "Ligaduras estándar (liga) como fi y fl evitan choques; las discrecionales (dlig) son decorativas y opcionales.",
+            "Versalitas verdaderas (smcp, c2sc) tienen grosor y proporción correctos; las falsas son mayúsculas reducidas y débiles.",
+            "Cifras elzevirianas (onum) se integran en el texto; las alineadas (lnum) acompañan a las mayúsculas.",
+            "Cifras tabulares (tnum) tienen el mismo ancho y alinean columnas; las proporcionales (pnum) mejoran el ritmo en el texto.",
+            "Otras funciones útiles: fracciones (frac), ordinales (ordn), formas sensibles a mayúsculas (case) y conjuntos estilísticos (ss01)."
+          ],
+          "notes": "Muestre el menú OpenType de InDesign con una fuente profesional, por ejemplo Source Serif o Alegreya, y active cada función sobre un texto de prueba. Compare unas versalitas falsas, generadas reduciendo mayúsculas, con las verdaderas: las falsas se ven delgadas y claras porque se redujo también el grosor de los trazos. Explique el uso de cifras según el contexto: en un informe anual con tablas financieras se usan cifras alineadas y tabulares para que las columnas cuadren; en un ensayo literario, cifras elzevirianas proporcionales que no sobresalen del texto. La función de formas sensibles a mayúsculas sube guiones y paréntesis para alinearlos con titulares en mayúsculas. Recuerde que no todas las fuentes incluyen estas funciones: revisar el juego de glifos forma parte de la ficha técnica de la unidad 1. Pregunte: ¿qué funciones OpenType exigirían en una fuente para los estados financieros de una caja municipal?"
+        },
+        {
+          "title": "Protocolo de pruebas de texto: imprimir, leer, medir y corregir",
+          "bullets": [
+            "Imprima al 100 % de escala en el papel final o pruebe en el dispositivo real; la pantalla del diseñador engaña.",
+            "Lea a la distancia de uso y con la iluminación prevista: un menú se lee con poca luz y una señal, en movimiento.",
+            "Evalúe la textura entornando los ojos o invirtiendo la página para detectar manchas, ríos y huecos.",
+            "Pruebe con lectores reales del público objetivo, incluidos adultos mayores y personas con baja visión.",
+            "Registre parámetros, problemas y correcciones en una hoja de pruebas que justifique las decisiones finales."
+          ],
+          "notes": "Cierre la unidad convirtiendo los criterios en un procedimiento verificable. Muestre una hoja de pruebas modelo con tres columnas: variante, parámetros y observaciones. Comente que en el Perú las imprentas y los clientes suelen aprobar sobre pantalla, lo que genera sorpresas en el impreso; el diseñador debe exigir pruebas físicas. Explique una prueba rápida con usuarios: pedir a cinco personas del público objetivo que lean un párrafo en voz alta, cronometrar y anotar errores o vacilaciones. No es un experimento científico, pero revela problemas obvios. Mencione que en la población peruana el envejecimiento es creciente, según las proyecciones del INEI, y que la presbicia afecta a la mayoría de adultos desde los cuarenta y tantos años, lo que hace indispensable probar con lectores mayores. Pregunte: ¿qué tres variables registrarían en una prueba de lectura de un comprobante electrónico y qué resultado considerarían aceptable?"
+        }
+      ],
+      "reading": {
+        "title": "Componer para el lector: microtipografía basada en evidencia",
+        "minutes": 35,
+        "content": "## Introducción\n\nLa macrotipografía decide qué se ve primero en una página; la microtipografía decide si el lector seguirá leyendo. Espaciado, interlineado, medida, alineación y ortotipografía son decisiones pequeñas que, acumuladas en miles de líneas, determinan la fatiga, la velocidad y la comprensión. Esta lectura sintetiza los criterios profesionales y la evidencia que los respalda, y propone un método de cálculo y prueba.\n\n## Legibilidad y lecturabilidad\n\nWalter Tracy distinguió dos cualidades: la **legibilidad**, que depende del diseño de cada letra y de su facilidad para ser reconocida, y la **lecturabilidad**, que depende de cómo se componen las letras en un texto extenso. La investigación sobre movimientos oculares, sintetizada por Keith Rayner, muestra que el ojo lee mediante saltos de siete a nueve caracteres y pausas de unos 200 a 250 milisegundos, con regresiones frecuentes. Kevin Larson revisó la teoría de la forma de la palabra y concluyó que la evidencia apoya el reconocimiento paralelo de las letras. La consecuencia práctica es doble: cada letra debe ser inconfundible y el espaciado debe permitir aislarla sin romper la unidad de la palabra.\n\n## El triángulo del texto\n\nCuerpo, interlineado y medida forman un sistema. Robert Bringhurst propone líneas de 45 a 75 caracteres, con 66 como referencia ideal en texto continuo, y de 40 a 50 en composiciones a varias columnas. El interlineado aumenta con la longitud de línea y con la altura x de la fuente. Una forma de estimar la medida es el **ajuste de originales**:\n\n~~~\nmedida (pt) ≈ caracteres por línea × ancho medio del carácter\nancho medio del carácter ≈ 0,47 em (varía según la fuente)\n\nEjemplo: 66 caracteres a 10 pt\n66 × (0,47 × 10 pt) = 310 pt\n310 pt × 0,3528 = 109 mm de medida\nInterlineado de partida: 10 pt × 1,35 = 13,5 pt  →  10/13,5\n~~~\n\nEl cálculo es una hipótesis que siempre se verifica componiendo el texto real. Una fuente condensada ofrecerá más caracteres en la misma medida; una de altura x grande pedirá más interlineado.\n\n## Espaciado: el ritmo del negro y el blanco\n\nEl espaciado de letras lo define quien diseña la fuente, con métodos como el de Tracy: se ajusta primero la «n» hasta lograr una secuencia uniforme, después la «o» y desde ellas el resto del alfabeto. El diseñador gráfico interviene con tres herramientas:\n\n- **Kerning**: corrige pares concretos, como «AV», «To» o «¿T». En texto continuo se confía en el kerning métrico de una buena fuente; en titulares y logotipos se ajusta a mano.\n- **Tracking**: abre o cierra el espaciado de forma uniforme. Las mayúsculas sostenidas y las versalitas necesitan entre 5 % y 10 % de apertura; los titulares grandes, un cierre moderado.\n- **Espacio entre palabras**: cercano a un cuarto de em, con un rango controlado en el texto justificado.\n\n## Alineación y partición\n\nLa bandera a la izquierda mantiene espacios constantes y es la opción más segura en pantalla y en columnas estrechas. El justificado exige medidas suficientes y una partición cuidadosa. En InDesign se recomienda la composición de párrafo, que evalúa todas las líneas a la vez, con un rango de espacio entre palabras cercano a 85/100/120 %, poca o ninguna escala de glifos y el idioma español asignado al estilo de párrafo. La Ortografía de la lengua española orienta la partición: no dejar una vocal sola a inicio o final de línea, no dividir siglas ni cifras y evitar más de dos guiones consecutivos. Las líneas viudas y huérfanas, los ríos y las palabras sueltas al final del párrafo se corrigen con ajustes finos y, cuando corresponde, en coordinación con el editor.\n\n## Ortotipografía del español\n\nLa corrección ortotipográfica es parte del diseño. Las comillas recomendadas son las angulares en primer nivel; la raya introduce incisos y diálogos; el guion une compuestos y marca la partición. Los números de más de cuatro cifras se agrupan con espacio fino, los símbolos se separan con espacio de no separación (25 %, 10 km, S/ 30) y las siglas no llevan plural con s. En el Perú, la Ley 30381 fijó en 2015 la denominación sol y el símbolo S/, sin el punto que acompañaba al antiguo nuevo sol. Las fuentes profesionales facilitan este trabajo con funciones OpenType: versalitas verdaderas, cifras elzevirianas o alineadas, tabulares o proporcionales, fracciones y ordinales.\n\n## Probar antes de aprobar\n\nNinguna regla sustituye la prueba. El texto se imprime al 100 % en el papel final, se lee a la distancia y con la luz de uso, se evalúa su textura entornando los ojos y se prueba con lectores reales, especialmente adultos mayores. Un diario regional, una boleta electrónica o un cuaderno escolar son leídos por personas concretas: la microtipografía es, en última instancia, una forma de respeto por ellas."
+      },
+      "case": {
+        "title": "Caso: El Sureño y las quejas de sus lectores mayores",
+        "content": "## Contexto\n\n*El Sureño* es un diario regional fundado en 1988 en Arequipa, con un tiraje impreso de 16 500 ejemplares de lunes a sábado y una edición web con unos 210 000 usuarios únicos mensuales. Se imprime en formato tabloide de 29 × 37 cm, en papel prensa de 45 g, con una retícula de seis columnas de 41 mm. Su principal ingreso proviene de la publicidad comercial y de los avisos clasificados y judiciales.\n\n## El problema\n\nEn 2025 el diario adoptó un nuevo diseño propuesto por una agencia de Lima: texto base en una lineal neogrotesca condensada a 8,5/9 pt, justificado, con unos 31 caracteres por línea. El cambio permitió ganar cerca de 12 % de espacio para publicidad. Sin embargo, el defensor del lector registró 287 quejas en seis meses, 74 % de ellas de lectores mayores de 55 años, grupo que representa el 46 % de los suscriptores impresos. Las quejas mencionan «letra muy pequeña», «se cansa la vista» y «las líneas tienen huecos». Una auditoría interna sobre 40 páginas encontró en promedio cuatro particiones cada diez líneas, ríos visibles en el 60 % de las columnas, comillas rectas y cifras sin espacio antes del símbolo de porcentaje. La edición web reproduce el mismo texto en líneas de hasta 130 caracteres en computadoras de escritorio.\n\n## Las alternativas\n\nLa directora de arte, Patricia Valdivia, tiene tres propuestas:\n\n1. **Mantener la fuente** y subir el texto a 9,5/11,5 pt en cinco columnas de 50 mm, alineado en bandera a la izquierda. El espacio para texto se reduciría 18 % y la redacción tendría que recortar notas.\n2. **Cambiar a una fuente con remates diseñada para prensa**, de altura x grande y ancho económico, a 9/10,8 pt en seis columnas justificadas con parámetros de partición revisados. La licencia anual cuesta el equivalente a S/ 14 000 y el espacio de texto se reduciría solo 4 %.\n3. **No tocar el impreso** e invertir en la edición web: tamaño de texto ajustable, medida máxima de 70 caracteres y una versión de lectura para adultos mayores.\n\nEl gerente comercial advierte que el área de publicidad ya vendió espacios del segundo semestre según la paginación actual. El jefe de redacción teme que la primera opción obligue a despedir a un redactor por menor volumen de texto.\n\n## El dilema\n\nPatricia debe presentar al directorio una propuesta que equilibre lecturabilidad, ingresos publicitarios, costos y plazos, y que incluya un plan de pruebas con lectores reales antes de implementar cualquier cambio.",
+        "questions": [
+          "¿Qué parámetros microtipográficos del diseño actual explican las quejas de los lectores mayores? Ordénelos según su impacto probable.",
+          "Calcule los caracteres por línea aproximados de las opciones 1 y 2 y evalúe si están dentro de los rangos recomendados para prensa.",
+          "¿Qué correcciones ortotipográficas y de partición podrían aplicarse de inmediato sin cambiar la fuente ni la retícula?",
+          "¿Es suficiente la opción 3 para resolver el problema? Analice el perfil de los lectores y los canales que usan.",
+          "Diseñe un plan de prueba con lectores reales que permita al directorio decidir con evidencia entre las alternativas."
+        ]
+      },
+      "assignment": {
+        "title": "Composición microtipográfica de un texto peruano y hoja de pruebas",
+        "instructions": "**Objetivo:** componer texto continuo de alta calidad para impresión y documentar con evidencia las decisiones microtipográficas.\n\n**Material:** el docente entregará un fragmento de unas 1 200 palabras de una obra peruana de dominio público, como las *Tradiciones peruanas* de Ricardo Palma, con 15 errores ortotipográficos intencionales.\n\n**Qué entregar:**\n\n1. **Hoja de pruebas** (2 páginas A4): el mismo párrafo compuesto en seis variantes que combinen dos fuentes de texto, dos interlineados y tres medidas, con la tabla de parámetros y caracteres por línea calculados y verificados.\n2. **Cuadernillo** de 8 páginas en formato A5, compuesto en InDesign con la variante elegida: estilos de párrafo definidos, idioma español asignado, parámetros de justificación y partición documentados y funciones OpenType pertinentes, como versalitas y cifras elzevirianas.\n3. **Informe de corrección** con los 15 errores ortotipográficos detectados, la norma aplicada y su fuente (Ortografía académica o Martínez de Sousa).\n4. **Registro de prueba de lectura** con tres lectores, al menos uno mayor de 50 años: tiempo, errores y comentarios.\n5. **Justificación** de 300 a 450 palabras que relacione la composición final con la evidencia reunida.\n\n**Formato:** un PDF único con fuentes incrustadas, más el paquete de InDesign comprimido.\n\n**Criterios:** calidad del color tipográfico, corrección ortotipográfica, rigor de las pruebas y argumentación, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Calidad microtipográfica del cuadernillo: espaciado, interlineado, medida y partición",
+            "points": 7
+          },
+          {
+            "name": "Corrección ortotipográfica y uso pertinente de funciones OpenType",
+            "points": 5
+          },
+          {
+            "name": "Rigor de la hoja de pruebas y del registro con lectores",
+            "points": 4
+          },
+          {
+            "name": "Justificación argumentada con la evidencia y la bibliografía",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: microtipografía y ortotipografía",
+        "questions": [
+          {
+            "prompt": "Un párrafo a 10 pt en una fuente cuyo ancho medio de carácter es 0,5 em ocupa una medida de 180 mm. ¿Cuántos caracteres por línea tendrá aproximadamente y qué conviene hacer?",
+            "options": [
+              "Unos 66 caracteres; la medida es ideal y no requiere cambios",
+              "Unos 36 caracteres; conviene ampliar la medida",
+              "Unos 102 caracteres; conviene reducir la medida o dividir en columnas",
+              "Unos 51 caracteres; conviene reducir el interlineado"
+            ],
+            "correct": 2,
+            "explanation": "180 mm equivalen a 510 pt; dividido entre 5 pt por carácter da unos 102 caracteres, muy por encima del rango de 45 a 75. Se debe acortar la medida o usar columnas."
+          },
+          {
+            "prompt": "En un titular de 80 pt compuesto con kerning métrico, el par «Te» se ve más abierto que el resto. ¿Cuál es la acción profesional adecuada?",
+            "options": [
+              "Aplicar tracking negativo de -80 a todo el titular",
+              "Aplicar kerning manual negativo al par y evaluar ópticamente el conjunto del titular",
+              "Cambiar a kerning óptico en todo el documento, incluido el texto continuo",
+              "Reducir el cuerpo del titular para que el hueco sea menos visible"
+            ],
+            "correct": 1,
+            "explanation": "A cuerpos grandes los pares problemáticos se corrigen con kerning manual y evaluación óptica. Un tracking general alteraría todo el titular y el kerning óptico puede empeorar el texto continuo."
+          },
+          {
+            "prompt": "Una columna justificada de 42 mm presenta ríos y muchas líneas resaltadas como infracciones de composición. ¿Qué medida resolvería el problema de raíz con menor costo de legibilidad?",
+            "options": [
+              "Cambiar a bandera a la izquierda con partición controlada",
+              "Ampliar la escala de glifos a 90/100/110 %",
+              "Aumentar el espacio máximo entre palabras a 200 %",
+              "Desactivar la partición de palabras en todo el texto"
+            ],
+            "correct": 0,
+            "explanation": "En columnas estrechas el justificado tiene pocos espacios para repartir el excedente. La bandera mantiene espacios constantes; deformar glifos o ampliar espacios empeora el color tipográfico."
+          },
+          {
+            "prompt": "¿Cuál de las siguientes líneas está correctamente compuesta según las normas ortotipográficas del español vigentes?",
+            "options": [
+              "La S.U.N.A.T. informó que el 25% de las ONGs declaró S/. 12.345 en el siglo XXI.",
+              "La SUNAT informó que el 25 % de las ONGs declaró S/ 12,345 en el siglo XXI.",
+              "La Sunat informó que el 25% de las O.N.G. declaró S/.12345 en el siglo 21.",
+              "La SUNAT informó que el 25 % de las ONG declaró S/ 12 345 en el siglo xxi."
+            ],
+            "correct": 3,
+            "explanation": "Las siglas no llevan puntos ni plural con s, los símbolos se separan con espacio, los millares se agrupan con espacio fino, el símbolo del sol es S/ y los siglos en romanos van en versalitas."
+          },
+          {
+            "prompt": "En los estados financieros de una caja municipal, las columnas de importes no se alinean pese a usar tabulaciones decimales. ¿Qué función OpenType debe activarse?",
+            "options": [
+              "Cifras elzevirianas proporcionales (onum, pnum)",
+              "Ligaduras discrecionales (dlig)",
+              "Cifras tabulares (tnum), que dan el mismo ancho a todos los dígitos",
+              "Formas sensibles a mayúsculas (case)"
+            ],
+            "correct": 2,
+            "explanation": "Las cifras tabulares tienen un ancho uniforme y permiten que las columnas numéricas cuadren. Las proporcionales varían de ancho y son preferibles en el texto corrido."
+          },
+          {
+            "prompt": "Un estudiante afirma que las mayúsculas sostenidas son ilegibles porque leemos por la silueta de la palabra. ¿Qué respuesta es más coherente con la evidencia actual?",
+            "options": [
+              "Es correcto: el cerebro reconoce solo la silueta global y por eso las mayúsculas no se pueden leer",
+              "La evidencia favorece el reconocimiento paralelo de letras; las mayúsculas se leen más lento sobre todo por menor familiaridad",
+              "Las mayúsculas son más legibles que las minúsculas en cualquier contexto",
+              "La forma de las letras no influye en la lectura; solo influye el interlineado"
+            ],
+            "correct": 1,
+            "explanation": "Revisiones como la de Kevin Larson muestran que el modelo de reconocimiento paralelo de letras explica mejor los datos. Las mayúsculas sostenidas son más lentas por costumbre, no ilegibles."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Macrotipografía y expresión: jerarquía, combinación y diseño de letras",
+      "description": "Al finalizar la unidad, el estudiante organiza jerarquías tipográficas con escalas modulares, combina familias con criterios de contraste y concordancia, y diseña letras para piezas expresivas y logotipos, desde el boceto hasta el vector con compensaciones ópticas, valorando la gráfica vernácula peruana y actuando con ética frente a referentes y licencias.",
+      "topics": [
+        "Jerarquía tipográfica: variables de contraste y niveles de lectura",
+        "Escalas tipográficas: escala clásica y escalas modulares",
+        "Combinación de familias: contraste, concordancia y superfamilias",
+        "Tipografía expresiva, lettering y gráfica vernácula peruana",
+        "Diseño de letras: del boceto al glifo vectorial con compensaciones ópticas",
+        "Logotipos tipográficos, licencias y ética en el uso de referentes"
+      ],
+      "slides": [
+        {
+          "title": "De la letra a la página: qué es la macrotipografía",
+          "bullets": [
+            "La microtipografía cuida el texto; la macrotipografía organiza la relación entre bloques de texto en la página o la pantalla.",
+            "Decide qué se lee primero, qué después y qué puede omitirse sin perder el mensaje.",
+            "Sus herramientas son la jerarquía, la escala, la combinación de familias y la relación con el espacio y la imagen.",
+            "Una buena jerarquía permite al lector escanear en segundos y profundizar solo si le interesa.",
+            "En esta unidad la tipografía pasa de servir al texto a construir la voz y la identidad de una pieza."
+          ],
+          "notes": "Inicie mostrando la portada de un diario peruano, la pantalla de inicio de una aplicación de delivery y un afiche cultural. Pida a los estudiantes que, en diez segundos, anoten qué leyeron y en qué orden. Compare las respuestas: si coinciden, la jerarquía funciona; si difieren, la pieza tiene problemas de macrotipografía. Explique la diferencia con la unidad anterior: allí el objetivo era que el texto continuo se leyera sin esfuerzo; ahora se trata de guiar la atención entre elementos distintos. Recuerde que Fundamentos del Diseño introdujo la jerarquía visual en términos generales; aquí se aplica con variables estrictamente tipográficas y con sistemas medibles, como las escalas modulares. Anuncie que la unidad culmina con un afiche tipográfico y un logotipo dibujado a mano. Pregunte: ¿cuántos niveles de jerarquía puede distinguir un lector en una misma pieza antes de confundirse? La respuesta práctica suele ser de tres a cinco."
+        },
+        {
+          "title": "Variables de jerarquía: tamaño, peso, estilo, color, posición y espacio",
+          "bullets": [
+            "Tamaño: la variable más evidente; diferencias pequeñas generan ambigüedad, diferencias claras generan orden.",
+            "Peso y estilo: negrita, cursiva o versalitas jerarquizan sin cambiar el tamaño ni alterar el interlineado.",
+            "Color y valor: un gris o un color de marca subordinan o destacan sin modificar la forma de la letra.",
+            "Posición y espacio: lo que está arriba, aislado o rodeado de blanco se percibe como más importante.",
+            "Regla práctica: cambie una o dos variables por nivel; combinar todas a la vez produce ruido."
+          ],
+          "notes": "Realice un ejercicio con un texto de evento: nombre, fecha, lugar, organizadores y precio. Pida a los estudiantes jerarquizarlo usando una sola variable a la vez: primero solo tamaño, luego solo peso, luego solo posición y espacio. Proyecte los resultados y discuta cuál comunica mejor. Descubrirán que la jerarquía no depende únicamente del tamaño, y que el espacio en blanco es una herramienta poderosa y económica. Explique el principio de economía de medios: cada variable adicional debe justificar su presencia. Un error frecuente es destacar el titular con mayúsculas, negrita, subrayado, color y sombra a la vez, lo que reduce su legibilidad sin añadir jerarquía. Relacione con las variables visuales de Jacques Bertin, si los estudiantes las conocen de cursos previos, como forma de pensar sistemáticamente. Pregunte: en una boleta electrónica de una tienda por departamentos, ¿qué dato debería tener la mayor jerarquía y con qué variable la lograrían sin aumentar el tamaño del papel?"
+        },
+        {
+          "title": "Niveles de lectura: titular, entradilla, cuerpo y apoyos",
+          "bullets": [
+            "Primer nivel: titular o mensaje principal, que capta la atención y resume la pieza.",
+            "Segundo nivel: entradilla, subtítulo o bajada, que contextualiza y decide si el lector sigue leyendo.",
+            "Tercer nivel: texto principal, compuesto con criterios de lecturabilidad estudiados en la unidad 2.",
+            "Apoyos: pies de foto, destacados, notas, créditos y datos legales, subordinados pero localizables.",
+            "Cada nivel debe tener un estilo único y constante en toda la pieza o publicación."
+          ],
+          "notes": "Analice una doble página de revista o una ficha de producto de comercio electrónico e identifique con la clase los niveles de lectura. Explique que los lectores rara vez leen de forma lineal: escanean titulares, imágenes y destacados, y solo después deciden leer el cuerpo. Por eso cada nivel debe responder una pregunta distinta del lector: el titular dice qué es, la entradilla por qué importa, el cuerpo explica cómo y los apoyos aportan evidencia o datos obligatorios. Insista en que los datos legales, como la advertencia sanitaria de un producto o las condiciones de una promoción, no pueden ocultarse: deben ser subordinados pero legibles, y en muchos casos la normativa peruana exige su presencia y legibilidad. Muestre cómo un estilo de párrafo por nivel garantiza constancia. Pregunte: en la página de un producto financiero, ¿dónde ubicarían la tasa de costo efectivo anual y con qué nivel jerárquico, considerando la transparencia que exige la regulación?"
+        },
+        {
+          "title": "La escala tipográfica clásica",
+          "bullets": [
+            "Bringhurst recupera la escala de los cuerpos tradicionales: 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60 y 72 pt.",
+            "Los saltos son pequeños en los cuerpos de texto y amplios en los de titulares, como en una escala musical.",
+            "Usar cuerpos de una escala produce relaciones reconocibles y evita tamaños arbitrarios como 13,7 o 19,2 pt.",
+            "La escala reduce decisiones: el diseñador elige entre opciones probadas en lugar de inventar cada tamaño.",
+            "Limite la pieza a cuatro o cinco cuerpos de la escala para mantener la coherencia."
+          ],
+          "notes": "Muestre la escala clásica como la presenta Bringhurst y explique su origen: en la tipografía de plomo cada cuerpo requería fundir un juego completo de letras, de modo que los impresores disponían solo de ciertos tamaños, que se fueron estandarizando. Esa limitación técnica tenía una virtud: imponía proporciones armónicas. Hoy el software permite cualquier tamaño, lo que facilita el caos. Pida a los estudiantes revisar un trabajo anterior suyo y contar cuántos cuerpos distintos usaron; es común encontrar diez o más, muchos con decimales sin justificación. Proponga rehacer la jerarquía con solo cuatro cuerpos de la escala: por ejemplo, 9 para apoyos, 11 para texto, 16 para subtítulos y 36 para titular. Explique que la escala no es una ley: es un punto de partida para lograr consistencia. Pregunte: ¿qué ventajas tendría para un equipo de cinco diseñadores trabajar con una escala compartida en todas las piezas de una marca?"
+        },
+        {
+          "title": "Escalas modulares: fórmula y aplicación",
+          "bullets": [
+            "Una escala modular multiplica un tamaño base por una razón constante: tamaño = base × razón elevado a n.",
+            "Razones frecuentes: tercera mayor 1,25; cuarta justa 1,333; quinta justa 1,5; sección áurea 1,618.",
+            "Base 10 pt con razón 1,333 produce 10; 13,3; 17,8; 23,7; 31,6 y 42,1 pt.",
+            "Razones pequeñas sirven para interfaces densas; razones grandes, para afiches y portadas con contraste dramático.",
+            "Tim Brown popularizó las escalas modulares para la web, donde se traducen en tokens de tamaño."
+          ],
+          "notes": "Resuelva en clase el cálculo de una escala con base 16 px y razón 1,25: 16; 20; 25; 31,25; 39 y 48,8 px, aproximadamente. Explique que los nombres de las razones provienen de los intervalos musicales, porque comparten la idea de proporción armónica. Luego muestre la diferencia entre una escala de razón 1,2, adecuada para un panel administrativo con muchos niveles de información, y una de razón 1,618, adecuada para un afiche donde el titular debe dominar. Advierta que los valores obtenidos se redondean a números prácticos, por ejemplo a medios puntos en impresión o a píxeles enteros en pantalla. Conecte con la unidad 4: en un sistema tipográfico digital, cada paso de la escala se convierte en un token reutilizable. Pregunte: si la pieza es una infografía para un teléfono móvil, ¿qué razón elegirían y cuántos pasos de la escala usarían? Pida que justifiquen la respuesta según el tamaño de pantalla y la cantidad de niveles."
+        },
+        {
+          "title": "Combinar familias: contraste, concordancia y conflicto",
+          "bullets": [
+            "Robin Williams distingue relaciones concordantes, contrastantes y conflictivas entre tipos de letra.",
+            "Concordancia: una sola familia o familias muy afines; resultado sereno y unitario, con riesgo de monotonía.",
+            "Contraste: familias claramente distintas en estructura, peso o clasificación; resultado dinámico y legible.",
+            "Conflicto: familias parecidas pero no iguales, como dos neogrotescas; el ojo percibe un error, no una intención.",
+            "Comparta algo y diferencie algo: proporciones o altura x similares con clasificaciones distintas."
+          ],
+          "notes": "Presente la tríada de Robin Williams con ejemplos proyectados: un afiche con una sola familia en varios pesos, otro con una didona en titulares y una lineal humanista en el texto, y un tercero con Arial en titulares y Helvetica en el texto. El tercer caso suele pasar inadvertido para los no diseñadores, pero produce una sensación de descuido. Explique que el contraste debe ser evidente para parecer intencional. Luego introduzca el criterio de afinidad estructural: combinar familias que compartan altura x, proporciones o modelo de trazo, aunque pertenezcan a grupos distintos. Por ejemplo, una garalda de eje inclinado combina mejor con una lineal humanista que con una geométrica, porque ambas comparten el gesto de la pluma. Haga notar que combinar más de dos familias rara vez es necesario. Pregunte: ¿qué tienen en común y en qué se diferencian las dos familias que usa la aplicación de su banco? Pida que lo verifiquen con capturas de pantalla."
+        },
+        {
+          "title": "Estrategias seguras de combinación tipográfica",
+          "bullets": [
+            "Superfamilias diseñadas en conjunto: IBM Plex, Source, Fira o Alegreya ofrecen versiones con y sin remates armonizadas.",
+            "Una sola familia extensa con pesos, anchos y tamaños ópticos resuelve la mayoría de sistemas de marca.",
+            "Texto con remates y titulares sin remates, o a la inversa, con alturas x equivalentes.",
+            "Una familia de exhibición con personalidad para titulares y una familia neutra y robusta para el texto.",
+            "Valide cada combinación en la pieza real con textos reales, no solo con palabras de muestra."
+          ],
+          "notes": "Muestre combinaciones probadas y explique por qué funcionan. Las superfamilias, como IBM Plex, publicada con licencia libre, o Alegreya, de la fundición argentina Huerta Tipográfica, fueron diseñadas con proporciones comunes, de modo que la combinación está resuelta desde el origen. Una familia extensa permite jerarquizar con peso y ancho sin introducir otra voz. La tercera estrategia, combinar con y sin remates, es la más tradicional, pero exige igualar el tamaño aparente, como se vio en la unidad 1. La cuarta es habitual en publicidad y empaques: una familia expresiva, quizás un lettering o una fuente de exhibición latinoamericana, acompañada de una lineal discreta. Insista en la prueba con contenido real: los nombres largos de instituciones peruanas, como «Superintendencia Nacional de Aduanas y de Administración Tributaria», ponen a prueba una combinación mucho más que una palabra corta. Pregunte: ¿qué estrategia elegirían para una marca de café de Villa Rica y por qué?"
+        },
+        {
+          "title": "Errores frecuentes en jerarquía y combinación",
+          "bullets": [
+            "Demasiadas familias: más de dos o tres voces fragmentan la identidad y confunden la jerarquía.",
+            "Saltos de tamaño insuficientes: 11 y 12 pt para niveles distintos parecen un error, no una jerarquía.",
+            "Mayúsculas sostenidas en textos largos, sin tracking y con interlineado estrecho.",
+            "Fuentes decorativas en textos informativos, como avisos de salud, contratos o instrucciones de seguridad.",
+            "Ignorar el medio: combinaciones que funcionan en pantalla de alta densidad y fallan en papel prensa o en un celular económico."
+          ],
+          "notes": "Organice una crítica rápida con piezas reales recogidas por los estudiantes: volantes de academias preuniversitarias, menús de restaurantes, avisos municipales y publicaciones de redes sociales. Pida identificar cada error de la lista y proponer una corrección concreta. Es probable que aparezcan volantes con cinco o seis fuentes distintas, contornos, sombras y deformaciones. Explique que estos errores no son solo estéticos: un aviso de vacunación compuesto en una fuente decorativa de difícil lectura puede reducir la comprensión del mensaje en poblaciones con menor hábito lector. Recuerde que, según datos del INEI, una parte significativa de la población peruana accede a internet principalmente desde el celular, a menudo con pantallas económicas, lo que exige pruebas en esos dispositivos. Proponga la regla de las tres preguntas antes de añadir una fuente: ¿qué función cumple?, ¿podría resolverlo la familia existente?, ¿cómo se verá en el peor medio de salida? Pregunte cuál de los errores consideran más grave y por qué."
+        },
+        {
+          "title": "Tipografía expresiva: cuando la forma es parte del mensaje",
+          "bullets": [
+            "La tipografía expresiva usa tamaño, posición, ritmo y forma de las letras para representar el sentido del texto.",
+            "Antecedentes: caligramas de Apollinaire, vanguardias y la versión tipográfica de La cantante calva de Massin (1964).",
+            "Recursos: escala extrema, superposición, ruptura de la línea base, texturas y letras dibujadas.",
+            "Es apropiada en afiches, portadas, títulos de crédito y campañas; rara vez en textos informativos extensos.",
+            "Toda expresión debe conservar el mensaje: si el público no puede leerlo, la pieza fracasa."
+          ],
+          "notes": "Historia del Diseño revisa las vanguardias desde su contexto; aquí interesa el recurso como herramienta proyectual. Muestre la versión tipográfica de La cantante calva, de Ionesco, realizada por Robert Massin, donde las voces de los personajes se representan con tamaños, pesos y superposiciones. Luego muestre carteles culturales latinoamericanos contemporáneos de festivales de cine o teatro. Explique que la tipografía expresiva traduce cualidades del contenido, como volumen, velocidad, tensión o ruptura, en decisiones formales. Proponga un ejercicio relámpago: componer la palabra «temblor», muy significativa en el Perú, solo con tipografía, sin imágenes, en tres variantes. Discuta los resultados: ¿cuál transmite la idea sin perder legibilidad? Advierta sobre el límite: en una señal de evacuación ante sismos, la expresión sería irresponsable, porque allí prima la visibilidad inmediata. Pregunte: ¿dónde termina la expresión y comienza el ruido? Use la respuesta para introducir la gráfica vernácula de la diapositiva siguiente."
+        },
+        {
+          "title": "Gráfica vernácula peruana: rótulos, carteles chicha y su sistema",
+          "bullets": [
+            "Los carteles chicha, nacidos para anunciar conciertos de cumbia andina, usan letras dibujadas, colores fluorescentes y serigrafía.",
+            "Su jerarquía es rigurosa: nombre del grupo, fecha y lugar dominan; los apoyos llenan cada espacio disponible.",
+            "Rotulistas de mercados, mototaxis y combis desarrollan alfabetos propios con proporciones, sombras y remates característicos.",
+            "Artistas como Elliot Túpac llevaron esta estética a murales y galerías, ampliando su reconocimiento cultural.",
+            "Estudiarla exige respeto: documentar autores, contextos y técnicas antes de reinterpretarla."
+          ],
+          "notes": "Presente la gráfica vernácula como un sistema tipográfico con reglas, no como un estilo espontáneo. Muestre carteles chicha y pida analizar su estructura: letras condensadas de palo seco dibujadas a mano, fondos negros o blancos, tintas fluorescentes impresas en serigrafía, máxima ocupación del formato y una jerarquía muy clara para ser leída al paso en la calle. Explique que estos carteles surgieron de talleres populares y que sus autores, durante décadas, no fueron reconocidos por el diseño académico. El artista Elliot Túpac, de raíces huancaínas, contribuyó a su difusión en murales y exposiciones. Luego amplíe a la rotulación de mercados y vehículos de transporte. Proponga que cada estudiante fotografíe un rótulo vernáculo de su localidad y lo analice con el vocabulario de la unidad 1: proporción, contraste, remates y espaciado. Pregunte: ¿qué podemos aprender de estos rotulistas sobre visibilidad y jerarquía, y qué riesgos éticos implica copiar su estética para una marca comercial?"
+        },
+        {
+          "title": "Lettering: proceso de trabajo del boceto al arte final",
+          "bullets": [
+            "Investigación: contenido, público, tono y referentes; defina si las letras serán caligráficas, dibujadas o constructivas.",
+            "Miniaturas: decenas de bocetos pequeños para explorar composición, peso y estilo antes de detallar.",
+            "Boceto refinado a lápiz a tamaño grande, con líneas guía, ejes y espaciado corregidos a mano.",
+            "Vectorización manual con pocos nodos, no calco automático; corrección de curvas y grosores.",
+            "Pruebas de reducción y ampliación: el lettering debe funcionar a 15 mm de ancho y a varios metros."
+          ],
+          "notes": "Muestre el proceso completo de un lettering profesional, idealmente con materiales de un caso real o de su propia práctica. Insista en la fase de miniaturas: los estudiantes tienden a enamorarse de la primera idea y a vectorizarla de inmediato. Pida que en clase produzcan veinte miniaturas de la palabra «Barranco» en cinco minutos, sin borrar. Luego explique el boceto refinado: se dibuja a un tamaño de unos 20 cm, con guías de altura x y de mayúsculas, y se corrigen los espacios con papel de calco superpuesto. La vectorización debe hacerse a mano, colocando nodos en los extremos de las curvas; el calco automático produce contornos irregulares y cientos de nodos imposibles de editar. Finalmente, el lettering se prueba en tamaños extremos, como el de un ícono de aplicación o el de un letrero de fachada. Pregunte: ¿qué parte del proceso creen que consume más tiempo en un encargo real y cómo la presupuestarían?"
+        },
+        {
+          "title": "Curvas Bézier: puntos extremos, tangentes y tensión",
+          "bullets": [
+            "Los contornos tipográficos se dibujan con curvas Bézier: cúbicas en fuentes PostScript y cuadráticas en TrueType.",
+            "Coloque nodos en los puntos extremos horizontales y verticales de cada curva, con manejadores horizontales o verticales.",
+            "Use el mínimo de nodos: menos puntos producen curvas más suaves, archivos más limpios y edición más rápida.",
+            "Un círculo se aproxima con cuatro curvas cúbicas cuyos manejadores miden cerca de 0,55 del radio.",
+            "Evite manejadores cruzados o desproporcionados: generan bultos, quiebres y tensiones irregulares."
+          ],
+          "notes": "Haga una demostración en Illustrator o en un editor de fuentes: dibuje una «o» con cuatro nodos en los extremos y manejadores ortogonales, y compárela con una «o» trazada con calco automático. Muestre el contorno en modo de contorno y cuente los nodos. Explique la regla de los extremos: si un nodo está en el punto más alto de una curva con su manejador horizontal, la curva será tangente a la línea guía y el rebasamiento se controlará con precisión. Presente el dato del factor 0,5523 para aproximar un círculo, que muestra que la proporción de los manejadores define la tensión de la curva: manejadores más largos producen curvas más cuadradas, como en las letras superelípticas, y más cortos, curvas más redondas. Proponga practicar con la «s», la letra más difícil de dibujar por su doble curvatura. Pregunte: ¿por qué un logotipo con contornos sucios puede generar problemas en el corte de vinil, el bordado o la impresión de gran formato?"
+        },
+        {
+          "title": "Compensaciones ópticas en el diseño de letras",
+          "bullets": [
+            "Los trazos horizontales se dibujan más delgados que los verticales para parecer del mismo grosor.",
+            "Las letras redondas rebasan las líneas guía y suelen ser algo más anchas que las rectas.",
+            "El travesaño de la H y la cintura de la B, S, 3 y 8 se ubican por encima del centro geométrico.",
+            "Las uniones de trazos se adelgazan para evitar manchas; a cuerpos pequeños se usan trampas de tinta.",
+            "Bell Centennial, de Matthew Carter (1978), usó trampas de tinta para guías telefónicas impresas a cuerpos mínimos."
+          ],
+          "notes": "Demuestre las compensaciones con experimentos visuales. Dibuje una cruz con dos rectángulos idénticos, uno vertical y otro horizontal: el horizontal parecerá más grueso. Dibuje una «S» con mitades iguales: parecerá que se cae, porque el ojo percibe más grande la mitad superior. Luego muestre ampliaciones de letras profesionales donde estas correcciones son visibles. Explique las trampas de tinta: muescas en las uniones agudas que, al imprimirse en papel absorbente, se llenan de tinta y dejan la forma correcta. Matthew Carter las diseñó en Bell Centennial para las guías telefónicas estadounidenses, impresas en papel de baja calidad a cuerpos muy pequeños. Hoy algunas fuentes de pantalla y de señalética retoman ese recurso. Insista en que estas correcciones también aplican al lettering y a los logotipos: un logotipo geométricamente perfecto suele verse ópticamente incorrecto. Pregunte: ¿qué compensaciones aplicarían a un logotipo que se imprimirá bordado en uniformes escolares y también se verá en una pantalla?"
+        },
+        {
+          "title": "Logotipos tipográficos: modificar, dibujar o licenciar",
+          "bullets": [
+            "Tres caminos: componer con una fuente existente, modificar una fuente o dibujar letras a medida.",
+            "FedEx (1994) ajustó letras inspiradas en Univers y Futura hasta crear la flecha en el espacio entre la E y la x.",
+            "Modificar una fuente comercial exige revisar su licencia: muchas permiten imágenes de logotipo, pero no derivar fuentes.",
+            "Un logotipo con letras propias facilita el registro de la marca ante la Dirección de Signos Distintivos del INDECOPI.",
+            "El logotipo necesita un sistema: fuentes de acompañamiento, versiones reducidas y reglas de espaciado."
+          ],
+          "notes": "Analice el logotipo de FedEx, diseñado por Lindon Leader en Landor Associates, como ejemplo de ajuste tipográfico: el espaciado y la forma de las letras se trabajaron hasta generar la flecha en el contraespacio, sin que el lector lo note de inmediato. Luego compare los tres caminos con su costo y riesgo. Componer con una fuente existente es rápido y barato, pero la marca será menos distintiva y dependerá de la licencia. Modificar una fuente ofrece un punto medio, siempre que la licencia lo permita; las licencias de fuentes libres OFL permiten modificar, pero la licencia comercial de cada fundición puede variar. Dibujar letras propias otorga máxima distinción y control, a mayor costo. Explique que en el Perú los signos distintivos se registran ante el INDECOPI, y que un logotipo original y bien documentado reduce conflictos con marcas similares. Pregunte: para una cadena de pollerías con veinte locales, ¿qué camino recomendarían y qué entregables incluirían en el presupuesto?"
+        },
+        {
+          "title": "Ética y propiedad: referentes, apropiación y créditos",
+          "bullets": [
+            "Inspirarse en un referente implica comprender sus principios; copiar su forma sin crédito es plagio.",
+            "La gráfica de comunidades y artistas populares merece reconocimiento, consentimiento y, cuando corresponde, retribución.",
+            "El kené shipibo-konibo, declarado Patrimonio Cultural de la Nación en 2008, ilustra los límites del uso comercial de patrimonio.",
+            "Las fuentes descargadas sin licencia exponen al diseñador y al cliente a reclamos por derechos de autor.",
+            "Documente fuentes, licencias, referentes y colaboradores en cada proyecto como parte del entregable."
+          ],
+          "notes": "Plantee un debate a partir de un caso hipotético: una marca de ropa limeña usa en sus etiquetas letras que imitan los carteles chicha de un taller específico, sin consultarlo. Pregunte quién se beneficia, quién pierde y qué podría hacerse distinto: contratar al rotulista, darle crédito, compartir regalías o desarrollar una propuesta propia inspirada en principios y no en formas. Explique la diferencia entre referencia, homenaje, apropiación y plagio. Mencione el kené de los pueblos shipibo-konibo, cuyos diseños fueron reconocidos como patrimonio cultural, como ejemplo de expresiones colectivas que plantean preguntas sobre consentimiento y beneficio. Recuerde además que descargar fuentes comerciales de sitios no autorizados expone a sanciones bajo el régimen de derechos de autor peruano, cuya autoridad administrativa es el INDECOPI. Concluya con una práctica profesional concreta: el registro de fuentes, licencias y referentes como anexo del proyecto. Pregunte: ¿qué harían si un cliente les pide explícitamente copiar el logotipo de un competidor extranjero?"
+        }
+      ],
+      "reading": {
+        "title": "Jerarquía y voz: la macrotipografía como sistema de decisiones",
+        "minutes": 35,
+        "content": "## Introducción\n\nUna página es una conversación en la que el diseñador decide quién habla primero, con qué voz y con qué volumen. La macrotipografía organiza esa conversación: establece niveles de lectura, elige tamaños según una escala, combina familias para crear voces distintas y, cuando el encargo lo pide, dibuja letras únicas que convierten la forma en mensaje. Esta lectura presenta los principios que permiten tomar esas decisiones con método y sustentarlas ante un cliente.\n\n## Jerarquía: pocas variables, diferencias claras\n\nLa jerarquía se construye con seis variables tipográficas: tamaño, peso, estilo, color o valor, posición y espacio. La regla profesional es cambiar una o dos variables por nivel y hacer que las diferencias sean evidentes. Dos cuerpos casi iguales, como 11 y 12 pt, no crean jerarquía: crean ambigüedad. En cambio, un titular de 36 pt sobre un texto de 11 pt, o una entradilla en cursiva y gris, establecen relaciones claras. El espacio en blanco es la variable más subestimada: aislar un elemento lo destaca sin aumentar su tamaño.\n\nLos lectores no leen de forma lineal; escanean. Por eso cada nivel debe responder a una pregunta: el titular dice qué es, la entradilla por qué importa, el cuerpo explica y los apoyos documentan. Los datos obligatorios, como advertencias sanitarias, tasas de interés o condiciones legales, deben ser subordinados pero legibles.\n\n## Escalas: proporción en lugar de arbitrariedad\n\nRobert Bringhurst recupera la escala clásica de cuerpos (6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60 y 72 pt), heredada de la fundición de tipos. Las escalas modulares, popularizadas para la web por Tim Brown, generan tamaños multiplicando una base por una razón constante:\n\n~~~\ntamaño(n) = base × razón^n\n\nBase 10 pt, razón 1,333 (cuarta justa):\nn = 0 → 10 pt     (texto)\nn = 1 → 13,3 pt   (subtítulo menor)\nn = 2 → 17,8 pt   (subtítulo)\nn = 3 → 23,7 pt   (titular de sección)\nn = 4 → 31,6 pt   (titular principal)\nn = -1 → 7,5 pt   (notas y créditos)\n~~~\n\nLas razones pequeñas, como 1,125 o 1,2, convienen a interfaces densas con muchos niveles; las grandes, como 1,5 o 1,618, a afiches y portadas. Los valores se redondean a cifras prácticas y se prueban en la pieza real.\n\n## Combinación de familias\n\nRobin Williams describe tres relaciones posibles entre tipos: concordancia, contraste y conflicto. La concordancia usa una sola familia o familias muy afines; el contraste combina tipos claramente distintos; el conflicto aparece cuando se mezclan tipos parecidos pero no iguales, y el lector lo percibe como un descuido. La estrategia más segura es compartir algo y diferenciar algo: por ejemplo, una garalda y una lineal humanista con alturas x similares comparten el gesto de la pluma de punta ancha, pero se distinguen por los remates. Las superfamilias, como IBM Plex, Source, Fira o Alegreya, resuelven la combinación desde su diseño. Rara vez se necesitan más de dos familias.\n\n## Expresión y gráfica vernácula\n\nLa tipografía expresiva usa la forma de las letras para representar el sentido del texto. Sus antecedentes van de los caligramas de Apollinaire a la versión tipográfica de *La cantante calva* realizada por Robert Massin en 1964. En el Perú, los carteles chicha ofrecen una lección notable: letras dibujadas a mano, tintas fluorescentes impresas en serigrafía y una jerarquía rigurosa pensada para ser leída al paso en la calle. Los rotulistas de mercados, mototaxis y combis desarrollan alfabetos con proporciones y sombras propias. Estudiar esta gráfica exige documentar a sus autores y reconocer su aporte; reinterpretar sus formas para una marca comercial sin consentimiento ni crédito es una forma de apropiación.\n\n## Dibujar letras\n\nEl lettering y el diseño de logotipos siguen un proceso: investigación, miniaturas, boceto refinado, vectorización manual y pruebas de escala. La vectorización se hace con curvas Bézier y nodos en los puntos extremos de cada curva, con manejadores horizontales o verticales. Las compensaciones ópticas son indispensables: trazos horizontales más delgados que los verticales, letras redondas que rebasan las líneas guía, travesaños y cinturas por encima del centro geométrico y uniones adelgazadas. Matthew Carter llevó estas ideas al extremo con las trampas de tinta de Bell Centennial, diseñada en 1978 para guías telefónicas.\n\n## Licencias y registro\n\nAntes de modificar una fuente para un logotipo hay que leer su licencia: algunas licencias comerciales permiten usarla en imágenes de logotipo, pero no crear fuentes derivadas, mientras que la licencia libre OFL permite modificarla con condiciones sobre el nombre. Un logotipo con letras propias facilita su registro como signo distintivo ante el INDECOPI. La documentación de fuentes, licencias y referentes es parte del entregable profesional.\n\n## Conclusión\n\nLa macrotipografía es un sistema de decisiones: pocas variables, escalas proporcionadas, combinaciones intencionales y letras dibujadas con rigor. Cuando la expresión aparece, debe servir al mensaje y respetar a quienes crearon los lenguajes visuales en los que se inspira."
+      },
+      "case": {
+        "title": "Caso: Cervecería Wayra y la tentación chicha",
+        "content": "## Contexto\n\nCervecería Wayra es una cervecería artesanal fundada en 2019 en Barranco, Lima, por tres socios. Produce unos 9 000 litros mensuales, vende en su bar propio, en 140 restaurantes y bodegas especializadas de Lima y por comercio electrónico. Su identidad actual es minimalista: logotipo compuesto en una lineal geométrica libre y etiquetas blancas con el nombre de cada cerveza en el mismo tipo.\n\n## El encargo\n\nPara 2027 la empresa lanzará la línea «Barrio», cuatro cervezas de edición limitada dedicadas a distritos populares de Lima. El gerente de marketing, Renzo Ccori, quiere una identidad inspirada en los carteles chicha: letras dibujadas, colores fluorescentes y la energía de la calle. Cada etiqueta de botella de 330 ml debe incluir, con jerarquía clara, el logotipo de Wayra, el nombre de la cerveza, el estilo, el grado alcohólico, el contenido neto, el registro sanitario, la lista de ingredientes, la advertencia exigida por la Ley 28681 y los datos del fabricante. La etiqueta mide 90 × 70 mm.\n\n## Las alternativas\n\nLa diseñadora de la marca, Lucía Paredes, recibió tres propuestas internas:\n\n1. **Fuente gratuita descargada**: un practicante encontró en un sitio de descargas una fuente «chicha» lista para usar. No tiene información de autor ni licencia, carece de tildes en mayúsculas y de la «Ñ», y su espaciado es irregular.\n2. **Encargo a un rotulista**: contratar a un rotulista con veinte años de trayectoria en carteles chicha en Lima Este para dibujar los cuatro nombres y un alfabeto básico. Pide S/ 7 500, crédito visible en la etiqueta y en redes, y una regalía de S/ 0,05 por botella. Se estima vender 40 000 botellas el primer año. Su trabajo es a mano y tendría que vectorizarse, lo que añadiría S/ 2 000 y tres semanas.\n3. **Lettering interno**: Lucía dibujaría las letras inspirándose en carteles chicha fotografiados en la calle, en dos semanas y sin costo adicional, pero sin experiencia previa en ese lenguaje.\n\nEl socio fundador teme que la propuesta 2 encarezca el producto; Renzo cree que el crédito al rotulista podría convertirse en el principal argumento de comunicación. Un colectivo cultural publicó meses atrás una crítica contra marcas que «usan la estética chicha sin dar nada a cambio», que se difundió ampliamente en redes.\n\n## El dilema\n\nLucía debe recomendar un camino y presentar un primer sistema tipográfico de la etiqueta que resuelva la jerarquía en 90 × 70 mm, combine la voz expresiva con un texto legal legible y sea sostenible para futuras ediciones.",
+        "questions": [
+          "¿Qué riesgos legales, técnicos y reputacionales presenta cada alternativa? Organícelos en una matriz y priorícelos.",
+          "Calcule el costo total de la alternativa 2 en el primer año por botella y evalúe si es razonable para un producto de edición limitada.",
+          "Proponga una jerarquía de cinco niveles para la etiqueta de 90 × 70 mm e indique las variables y cuerpos aproximados de cada nivel.",
+          "¿Qué familia acompañaría al lettering expresivo para los textos legales y por qué? Use los criterios de contraste y concordancia.",
+          "¿Qué recomendaría Lucía al directorio y cómo comunicaría la decisión de forma ética y coherente con la marca?"
+        ]
+      },
+      "assignment": {
+        "title": "Afiche tipográfico y logotipo con lettering para un evento cultural peruano",
+        "instructions": "**Objetivo:** aplicar jerarquía, escala modular, combinación de familias y diseño de letras en una pieza expresiva y legible.\n\n**Encargo:** elija un evento cultural real o verosímil de su región (festival, feria gastronómica, concierto, fiesta patronal o muestra de cine) y diseñe su afiche y el logotipo de su nombre.\n\n**Qué entregar:**\n\n1. **Logotipo con lettering** del nombre del evento: hoja de 20 miniaturas, boceto refinado fotografiado, vector final con contornos limpios (captura en modo contorno) y pruebas de reducción a 15 mm y ampliación.\n2. **Afiche** de 60 × 90 cm en PDF, solo tipográfico o con imagen mínima, con al menos cinco datos jerarquizados, máximo dos familias además del lettering y cuerpos derivados de una escala modular declarada.\n3. **Ficha del sistema**: escala usada con su razón y valores, familias y su justificación según contraste y concordancia, variables de jerarquía por nivel y licencias de cada fuente.\n4. **Registro ético**: referentes consultados, autores y forma en que se reconoce su aporte; si se inspira en gráfica vernácula, explique cómo evitó la apropiación.\n5. **Memoria** de 300 a 450 palabras con el análisis de una prueba de lectura del afiche a tres metros con cinco personas.\n\n**Formato:** PDF único y archivo vectorial editable del logotipo.\n\n**Criterios:** jerarquía y escala, calidad del lettering, combinación tipográfica y responsabilidad ética, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Jerarquía clara y uso correcto de la escala modular en el afiche",
+            "points": 6
+          },
+          {
+            "name": "Calidad del lettering: proceso, curvas, espaciado y compensaciones ópticas",
+            "points": 6
+          },
+          {
+            "name": "Combinación tipográfica justificada y licencias verificadas",
+            "points": 4
+          },
+          {
+            "name": "Registro ético, prueba de lectura y memoria argumentada",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: jerarquía, combinación y diseño de letras",
+        "questions": [
+          {
+            "prompt": "Con una escala modular de base 16 px y razón 1,5, ¿cuál es el tamaño del tercer paso hacia arriba (n = 3)?",
+            "options": [
+              "36 px",
+              "64 px",
+              "24 px",
+              "54 px"
+            ],
+            "correct": 3,
+            "explanation": "16 × 1,5³ = 16 × 3,375 = 54 px. El valor de 24 px corresponde a n = 1 y el de 36 px a n = 2."
+          },
+          {
+            "prompt": "Un diseñador combina Arial en los titulares y Helvetica en el texto de un informe. ¿Qué relación tipográfica describe mejor el resultado según Robin Williams?",
+            "options": [
+              "Contraste, porque pertenecen a fundiciones distintas",
+              "Concordancia, porque ambos son lineales y eso garantiza unidad",
+              "Conflicto, porque son tipos muy parecidos pero no iguales",
+              "Jerarquía expresiva, porque el lector distingue con facilidad ambos tipos"
+            ],
+            "correct": 2,
+            "explanation": "Dos neogrotescas casi idénticas no crean contraste perceptible ni unidad plena: el ojo percibe una diferencia sutil que parece un error. Es el caso típico de conflicto."
+          },
+          {
+            "prompt": "Al vectorizar la «o» de un logotipo, ¿cuál es la ubicación más adecuada de los nodos?",
+            "options": [
+              "Cada pocos milímetros a lo largo del contorno para mayor precisión",
+              "En los cuatro puntos extremos de la curva, con manejadores horizontales o verticales",
+              "En las diagonales a 45 grados, con manejadores inclinados",
+              "Donde los coloque el calco automático, sin modificarlos"
+            ],
+            "correct": 1,
+            "explanation": "Los nodos en los extremos con manejadores ortogonales producen curvas suaves, controlan el rebasamiento y reducen el número de puntos; el exceso de nodos genera irregularidades."
+          },
+          {
+            "prompt": "En un logotipo, la «S» dibujada con dos mitades geométricamente iguales parece inestable. ¿Qué corrección óptica corresponde?",
+            "options": [
+              "Reducir ligeramente la mitad superior y ubicar la cintura por encima del centro geométrico",
+              "Ampliar la mitad superior para equilibrar el peso visual",
+              "Inclinar la letra cinco grados hacia la derecha",
+              "Engrosar todos los trazos horizontales de la letra"
+            ],
+            "correct": 0,
+            "explanation": "El ojo percibe más grande la mitad superior; por eso la S, la B, el 3 y el 8 se dibujan con la parte superior algo menor. Los horizontales, además, se adelgazan."
+          },
+          {
+            "prompt": "Una marca quiere modificar las letras de una fuente comercial para crear su logotipo. ¿Qué debe verificarse primero?",
+            "options": [
+              "Que la fuente tenga al menos ocho pesos disponibles",
+              "Que la fuente pertenezca al grupo de las lineales geométricas",
+              "Que el logotipo use solo mayúsculas para evitar problemas legales",
+              "Que la licencia de la fuente permita su uso y modificación en un logotipo"
+            ],
+            "correct": 3,
+            "explanation": "Las licencias comerciales varían: algunas permiten logotipos pero no derivados. Verificarla evita conflictos legales para el diseñador y el cliente antes de invertir trabajo."
+          },
+          {
+            "prompt": "Para un panel administrativo web con siete niveles de información, ¿qué razón de escala modular es más adecuada y por qué?",
+            "options": [
+              "La sección áurea, 1,618, para lograr un contraste dramático",
+              "Una razón de 2, para duplicar el tamaño en cada nivel",
+              "Una razón pequeña, como 1,2, para que los siete niveles quepan sin tamaños extremos",
+              "Ninguna escala, porque las interfaces requieren tamaños arbitrarios"
+            ],
+            "correct": 2,
+            "explanation": "Con razón 1,2 y base 14 px, siete pasos llegan a unos 42 px; con 1,618 superarían los 250 px, impracticables en una interfaz densa."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Tipografía en pantalla, sistemas tipográficos y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante diseña, implementa y sustenta un sistema tipográfico multiplataforma para un cliente real: selecciona y licencia fuentes, define escala, estilos y tokens, implementa tipografía web accesible y eficiente con CSS, verifica los criterios WCAG 2.1 y documenta el conjunto en una guía tipográfica y un espécimen.",
+      "topics": [
+        "Tipografía en pantalla: renderizado, densidad, hinting y modo oscuro",
+        "Tipografía web con CSS: @font-face, WOFF2, unidades relativas y tipografía fluida",
+        "Accesibilidad tipográfica: criterios WCAG 2.1 y pruebas con usuarios",
+        "Licencias tipográficas y marco legal peruano",
+        "Sistemas tipográficos: roles, estilos, tokens y guía tipográfica",
+        "Proyecto integrador: espécimen, guía y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "De la página a la pantalla: qué cambia para la tipografía",
+          "bullets": [
+            "En pantalla el diseñador no controla el tamaño final: el lector cambia dispositivo, zoom, orientación y tamaño de texto.",
+            "La letra se forma con píxeles iluminados; la densidad de la pantalla determina cuánto detalle sobrevive.",
+            "La composición es fluida: las líneas se reorganizan según el ancho disponible y el idioma del documento.",
+            "Las fuentes deben descargarse: su peso afecta la velocidad de carga y el consumo de datos móviles.",
+            "La tipografía digital se especifica como código y como tokens, no como un arte final cerrado."
+          ],
+          "notes": "Abra la unidad mostrando la misma noticia en un diario impreso, en la web de escritorio y en un celular económico. Pida a los estudiantes listar diferencias tipográficas: tamaño, medida, interlineado, número de líneas por pantalla. Explique el cambio de paradigma: en impresión, el diseñador entrega un arte final idéntico para todos los lectores; en pantalla, entrega reglas que el navegador interpreta en millones de combinaciones de dispositivo y preferencia. Por eso el diseñador debe pensar en sistemas y no en composiciones fijas. Mencione que en el Perú la mayoría de usuarios de internet accede principalmente desde el teléfono móvil, según las encuestas de hogares del INEI, y muchos con planes de datos limitados: cada kilobyte de fuente cuenta. Anuncie el proyecto integrador: un sistema tipográfico completo, documentado e implementado en un espécimen web. Pregunte: ¿qué decisión tipográfica, que en impresión toma el diseñador, en pantalla toma el usuario?"
+        },
+        {
+          "title": "Renderizado: píxeles, suavizado, hinting y densidad",
+          "bullets": [
+            "El rasterizado convierte contornos vectoriales en píxeles; a cuerpos pequeños se pierden detalles finos.",
+            "El suavizado usa grises en los bordes; el suavizado de subpíxeles aprovecha los canales rojo, verde y azul.",
+            "El hinting son instrucciones que ajustan los contornos a la cuadrícula de píxeles en pantallas de baja densidad.",
+            "Celulares de gama alta superan 400 ppi; muchos equipos económicos rondan los 270 ppi y laptops corporativas, menos.",
+            "Diseñe para el peor dispositivo probable de su público, no para el monitor de alta densidad del estudio."
+          ],
+          "notes": "Muestre una ampliación de capturas de pantalla de la letra «e» a 12 px en un monitor de baja densidad y en un celular de alta densidad. Explique cómo los contornos se convierten en píxeles y por qué las fuentes con trazos finos, como las didonas, se degradan. Introduzca el hinting: instrucciones incluidas sobre todo en fuentes TrueType que alinean astas y alturas con la cuadrícula de píxeles; fue decisivo en la era de los monitores de baja resolución y sigue siendo relevante en laptops económicas con Windows. Comente que macOS dejó de usar por defecto el suavizado de subpíxeles en 2018, por lo que el mismo texto se ve distinto en cada sistema operativo. Calcule con la clase la densidad de un celular de 6,5 pulgadas con 1600 × 720 píxeles: unos 270 ppi. Pregunte: si su público principal son trabajadores de una cooperativa agraria con teléfonos de gama baja, ¿qué rasgos buscarían en la fuente de la aplicación?"
+        },
+        {
+          "title": "Criterios para elegir fuentes de pantalla",
+          "bullets": [
+            "Altura x generosa, aperturas amplias y contraformas abiertas para cuerpos de 14 a 18 px.",
+            "Contraste bajo o moderado; evitar filetes finos que desaparecen en pantallas de baja densidad.",
+            "Diferenciación clara de I, l y 1, de O y 0 y de rn frente a m, especialmente en datos y códigos.",
+            "Familia con pesos suficientes, cifras tabulares y, de preferencia, versión variable con eje de peso.",
+            "En modo oscuro, el texto claro se percibe más grueso: reduzca levemente el peso y evite el blanco puro."
+          ],
+          "notes": "Organice una comparación con cinco fuentes usadas en interfaces conocidas y pruébenlas en un celular real a 16 px. Pida evaluar la diferenciación de caracteres con la cadena «Il1 O0 rn m 5S 8B», crítica en códigos de verificación, números de cuenta o placas vehiculares. Explique el fenómeno de irradiación: en modo oscuro, el texto claro sobre fondo oscuro parece expandirse y verse más pesado; por eso algunas familias variables ofrecen un eje de grado que modifica el peso sin alterar el ancho, evitando que el texto se reacomode al cambiar de modo. Recomiende colores de fondo y texto que no sean negro y blanco absolutos, para reducir el deslumbramiento. Relacione con la unidad 1: la ficha técnica debe incluir ahora pruebas en pantalla. Pregunte: ¿por qué una fuente elegante en un catálogo impreso puede ser una mala elección para la aplicación del mismo cliente? Pida evidencias visuales de las pruebas realizadas."
+        },
+        {
+          "title": "Cargar fuentes en la web: @font-face y WOFF2",
+          "bullets": [
+            "La regla @font-face declara nombre de familia, archivo, peso, estilo y comportamiento de carga de cada fuente.",
+            "WOFF2 comprime con Brotli y reduce el peso cerca de 30 % frente a WOFF; es el formato estándar actual.",
+            "Declare pesos y estilos reales: si falta la cursiva, el navegador genera una cursiva sintética deformada.",
+            "Defina siempre una pila de respaldo, por ejemplo system-ui o Georgia, con métricas similares.",
+            "Sirva las fuentes desde su propio dominio cuando la licencia o la privacidad de los usuarios lo requieran."
+          ],
+          "notes": "Escriba en vivo una regla @font-face para una fuente libre, por ejemplo Source Sans 3, publicada por Adobe con licencia OFL, y explique cada propiedad. Muestre en las herramientas de desarrollo del navegador la pestaña de red, el peso de cada archivo y el momento en que se descarga. Explique que WOFF2 es un contenedor comprimido, no un formato de diseño distinto: el mismo diseño OpenType se empaqueta para la web. Insista en las declaraciones correctas: si se asigna font-weight 700 a un texto y no existe el archivo de negrita, el navegador engrosará artificialmente la regular, como ocurría con las negritas falsas en impresión. Discuta la pila de respaldo: mientras la fuente se descarga, o si falla, el texto se mostrará en la alternativa; elegir una con altura x parecida reduce saltos de diseño. Pregunte: ¿qué riesgos de privacidad y de licencia implica cargar fuentes desde servidores de terceros en un sitio de una entidad financiera?"
+        },
+        {
+          "title": "Rendimiento tipográfico: subconjuntos, precarga y font-display",
+          "bullets": [
+            "Cada archivo de fuente es una descarga: limite familias y estilos al mínimo necesario.",
+            "Los subconjuntos eliminan glifos no usados; unicode-range indica qué caracteres contiene cada archivo.",
+            "Una fuente variable puede reemplazar cuatro o más archivos estáticos, aunque pese más que uno solo.",
+            "font-display: swap muestra de inmediato la fuente de respaldo y la sustituye al terminar la descarga.",
+            "Precargue solo la fuente del texto principal; el exceso de precargas compite con otros recursos críticos."
+          ],
+          "notes": "Muestre un sitio que cargue seis archivos de fuentes con un total cercano a 700 KB y mida en las herramientas del navegador el tiempo de carga simulando una red móvil lenta. Luego aplique optimizaciones paso a paso: eliminar estilos no usados, crear un subconjunto latino que conserve todos los caracteres del español y el apóstrofo del quechua, reemplazar estáticos por una variable y declarar font-display. Explique los dos fenómenos que el usuario percibe: el texto invisible mientras se descarga la fuente y el salto de diseño cuando la fuente llega y reemplaza a la de respaldo. Recuerde que los subconjuntos deben respetar la licencia: algunas licencias comerciales prohíben modificar el archivo, mientras que la OFL lo permite. Destaque el impacto social: en zonas rurales del Perú con conectividad limitada, un sitio público más liviano es un sitio más accesible. Pregunte: ¿qué caracteres no deben faltar nunca en un subconjunto para un sitio en castellano y quechua?"
+        },
+        {
+          "title": "Unidades CSS para tipografía: px, rem, em, ch y vw",
+          "bullets": [
+            "px: unidad de referencia del navegador; no se adapta a la preferencia de tamaño de texto del usuario.",
+            "rem: relativa al tamaño raíz del documento; respeta la configuración del usuario y facilita escalas.",
+            "em: relativa al tamaño del elemento padre; útil para espaciados internos que crecen con el texto.",
+            "ch: ancho del carácter cero; max-width: 66ch controla la medida de línea estudiada en la unidad 2.",
+            "vw: porcentaje del ancho de la ventana; solo debe usarse combinado con rem para no impedir el zoom."
+          ],
+          "notes": "Muestre en el navegador cómo cambia un texto definido en píxeles y otro en rem cuando se modifica el tamaño de letra predeterminado en la configuración. Explique que muchos usuarios, especialmente adultos mayores, aumentan ese tamaño, y que fijar todo en píxeles ignora su preferencia. Introduzca la unidad ch como el puente entre la teoría de la medida de línea y el código: aunque mide el ancho del cero y no el promedio de los caracteres, max-width en torno a 60 a 70ch produce líneas cercanas al rango recomendado. Advierta sobre el uso de vw en solitario: un titular de 5vw no crece cuando el usuario hace zoom, lo que vulnera la accesibilidad. Proponga un ejercicio en un editor de código en línea: maquetar un artículo con rem para tamaños, unidades sin dimensión para el interlineado y ch para la medida. Pregunte: ¿por qué conviene escribir line-height: 1.5 sin unidad, en lugar de 24px?"
+        },
+        {
+          "title": "Tipografía fluida con clamp(): tamaños que se adaptan",
+          "bullets": [
+            "clamp(mínimo, preferido, máximo) limita un tamaño entre dos valores y lo hace crecer con la ventana.",
+            "El valor preferido combina rem y vw: por ejemplo, 1.48rem + 1.2vw.",
+            "Pendiente = (tamaño máximo − tamaño mínimo) / (ancho máximo − ancho mínimo de ventana).",
+            "Intercepto = tamaño mínimo − pendiente × ancho mínimo; se expresa en rem para respetar el zoom.",
+            "Use fluidez en titulares y escalas superiores; el texto principal puede mantenerse estable en 1rem a 1.125rem."
+          ],
+          "notes": "Resuelva con la clase el cálculo de un titular que debe medir 28 px en una ventana de 360 px y 39 px en una de 1280 px. La pendiente es 11 dividido entre 920, es decir, 0,01196, que equivale a 1,2vw. El intercepto es 28 menos 0,01196 por 360, unos 23,7 px, es decir, 1,48rem. La declaración resultante es clamp(1.75rem, 1.48rem + 1.2vw, 2.44rem). Verifiquen en el navegador redimensionando la ventana. Explique por qué se suma una parte en rem: así el titular sigue creciendo cuando el usuario hace zoom, condición del criterio 1.4.4 de las WCAG. Conecte con la escala modular de la unidad 3: se pueden definir escalas distintas para móvil y escritorio, por ejemplo razón 1,2 en pantallas pequeñas y 1,333 en grandes, interpolando cada paso con clamp. Pregunte: ¿qué problema aparecería si el texto principal también fuera fluido y en un monitor de 2560 px alcanzara 24 px?"
+        },
+        {
+          "title": "Funciones OpenType y fuentes variables en CSS",
+          "bullets": [
+            "font-variant-numeric: tabular-nums lining-nums alinea importes en tablas y estados de cuenta.",
+            "font-variant-caps: all-small-caps compone siglas en versalitas verdaderas cuando la fuente las incluye.",
+            "font-weight acepta cualquier valor entre 1 y 1000 en fuentes variables, por ejemplo 450 o 650.",
+            "font-optical-sizing: auto activa el eje de tamaño óptico según el cuerpo del texto.",
+            "font-variation-settings controla ejes no registrados, como el grado; úselo solo cuando no exista propiedad específica."
+          ],
+          "notes": "Recupere las funciones OpenType de la unidad 2 y muestre su equivalente en CSS. Explique la preferencia por las propiedades de alto nivel, como font-variant-numeric o font-variant-caps, frente a font-feature-settings, porque las primeras se heredan y combinan mejor. Muestre una tabla de cuotas de un crédito con cifras proporcionales y luego tabulares: la diferencia en la alineación es inmediata. Con una fuente variable, demuestre cómo un peso intermedio de 450 puede mejorar la lectura en modo oscuro sin pasar a la seminegra. Explique el eje de tamaño óptico: con font-optical-sizing activado, una fuente como Source Serif 4 ajusta su contraste y espaciado según el tamaño, algo que en el plomo exigía fundir cada cuerpo por separado. Advierta que font-variation-settings sobrescribe todos los ejes declarados a la vez, lo que puede generar errores en cascada. Pregunte: ¿qué propiedades OpenType activarían en la pantalla de movimientos de una billetera digital?"
+        },
+        {
+          "title": "Accesibilidad I: contraste y redimensionamiento según WCAG 2.1",
+          "bullets": [
+            "Criterio 1.4.3 (AA): contraste mínimo de 4,5:1 para texto normal y 3:1 para texto grande.",
+            "Texto grande: al menos 18 pt (24 px) o 14 pt en negrita (cerca de 18,7 px).",
+            "Razón de contraste = (L1 + 0,05) / (L2 + 0,05), donde L es la luminancia relativa del color más claro y del más oscuro.",
+            "Criterio 1.4.4 (AA): el texto debe poder ampliarse hasta 200 % sin pérdida de contenido ni funcionalidad.",
+            "Las WCAG 2.2, publicadas en 2023, mantienen estos criterios; la Ley 29973 respalda la accesibilidad en el Perú."
+          ],
+          "notes": "Teoría del Color ya trabajó la fórmula de luminancia relativa; aquí se aplica a la tipografía, donde el contraste interactúa con el peso y el tamaño. Muestre un botón con texto blanco sobre un naranja de marca: puede alcanzar 3:1, suficiente para un titular grande, pero insuficiente para texto de 14 px. Explique que un trazo delgado reduce el contraste percibido, de modo que una fuente ligera en gris claro puede fallar aunque el cálculo esté al límite. Use un verificador de contraste para evaluar en clase cinco pares de colores tomados de sitios peruanos. Luego demuestre el criterio 1.4.4 ampliando una página al 200 %: si el texto se superpone, se corta o desaparece, el sitio no cumple. Mencione que la Ley 29973, Ley General de la Persona con Discapacidad, establece obligaciones de accesibilidad en la información y la comunicación. Pregunte: ¿qué harían si el color de marca del cliente no alcanza 4,5:1 sobre blanco en ningún peso?"
+        },
+        {
+          "title": "Accesibilidad II: espaciado del texto y presentación visual",
+          "bullets": [
+            "Criterio 1.4.12 (AA): el contenido debe soportar interlineado de 1,5, espacio entre párrafos de 2 veces el cuerpo, sin pérdida.",
+            "El mismo criterio exige tolerar espacio entre letras de 0,12 y entre palabras de 0,16 veces el cuerpo.",
+            "Criterio 1.4.8 (AAA): líneas de hasta 80 caracteres, texto no justificado e interlineado de al menos 1,5.",
+            "Criterio 1.4.10 (AA): el contenido debe reorganizarse sin desplazamiento horizontal en 320 px de ancho.",
+            "Pruebe con usuarios con baja visión, dislexia y lectores de pantalla; las métricas no reemplazan la experiencia real."
+          ],
+          "notes": "Explique que el criterio 1.4.12 no obliga a diseñar con esos valores, sino a que el diseño no se rompa cuando un usuario los aplica mediante una extensión o una hoja de estilos propia, algo frecuente entre personas con dislexia o baja visión. Haga la prueba en vivo con un marcador o fragmento de CSS que aplique los cuatro valores a un sitio: es habitual que botones con alto fijo corten el texto o que tarjetas se superpongan. Luego revise el criterio 1.4.8, de nivel AAA, que coincide con las recomendaciones de la unidad 2 sobre medida, alineación e interlineado: la accesibilidad y la buena tipografía convergen. Presente el criterio de reorganización a 320 px, equivalente a ampliar al 400 % en una pantalla de 1280 px. Recomiende incluir en el proyecto una prueba breve con al menos un usuario con alguna discapacidad visual o de lectura. Pregunte: ¿qué decisiones de diseño de componentes facilitan que el texto se expanda sin romper la interfaz?"
+        },
+        {
+          "title": "Licencias tipográficas: qué compra realmente el cliente",
+          "bullets": [
+            "Comprar una fuente es adquirir una licencia de uso, no el diseño: el archivo sigue perteneciendo a su autor o fundición.",
+            "Tipos de licencia: escritorio por usuario, web por visitas o dominios, aplicaciones, libros electrónicos, publicidad digital y servidores.",
+            "La SIL Open Font License 1.1 permite usar, modificar y redistribuir, pero no vender la fuente sola.",
+            "Los servicios por suscripción permiten usar fuentes mientras la suscripción esté activa y según sus condiciones.",
+            "El diseñador no puede transferir sus licencias al cliente: el cliente debe licenciar a su nombre."
+          ],
+          "notes": "Lea con la clase fragmentos de un contrato de licencia de usuario final de una fundición y de la licencia OFL. Identifiquen qué usos están permitidos: instalar en cuántos equipos, incrustar en PDF, usar en un sitio con cuántas visitas mensuales, incluir en una aplicación o en un libro electrónico. Explique errores frecuentes: usar en la web una fuente con licencia solo de escritorio, entregar al cliente los archivos de fuente comprados por el diseñador o convertir una fuente comercial a WOFF2 sin permiso. Comente el caso de los servicios por suscripción: si el cliente deja de pagar, puede perder el derecho a usar las fuentes en nuevas piezas, lo que afecta la continuidad de una identidad. Recomiende una auditoría de licencias como parte del sistema tipográfico, con una tabla de fuentes, usos, titular de la licencia y fecha de renovación. Pregunte: si un cliente necesita su fuente de marca en la web, la aplicación y documentos de oficina, ¿qué licencias debe adquirir?"
+        },
+        {
+          "title": "Marco legal peruano: fuentes como software y derechos de autor",
+          "bullets": [
+            "El Decreto Legislativo 822, Ley sobre el Derecho de Autor (1996), protege los programas de ordenador.",
+            "El archivo de fuente es software: copiarlo o instalarlo sin licencia constituye una infracción.",
+            "La protección del dibujo del tipo como tal es discutida; puede ampararse como diseño industrial según la Decisión 486 andina.",
+            "El INDECOPI, a través de su Dirección de Derecho de Autor, resuelve infracciones y puede imponer multas.",
+            "Los logotipos y marcas se registran ante la Dirección de Signos Distintivos del mismo INDECOPI."
+          ],
+          "notes": "Presente el marco legal con prudencia: el objetivo no es formar abogados, sino diseñadores que eviten riesgos para sí mismos y para sus clientes. Explique que en el Perú, como en la Comunidad Andina, los programas de ordenador están protegidos por el derecho de autor, y que los archivos de fuente se consideran software. Por eso la instalación de fuentes comerciales descargadas de sitios no autorizados en los equipos de una empresa puede dar lugar a procedimientos administrativos ante el INDECOPI. Aclare que la protección del diseño del tipo, entendido como dibujo, es más discutida en el derecho comparado: en algunos países no se protege por derecho de autor, aunque puede registrarse como diseño industrial. Relacione con el curso Ética Profesional y Propiedad Intelectual del sexto ciclo, donde estos temas se profundizarán. Pregunte: ¿qué cláusula incluirían en su contrato de servicios de diseño para delimitar la responsabilidad sobre las licencias tipográficas del cliente?"
+        },
+        {
+          "title": "Sistema tipográfico: roles, estilos y tokens",
+          "bullets": [
+            "Un sistema tipográfico define roles (titular, subtítulo, cuerpo, interfaz, datos, legal) y no solo fuentes.",
+            "Cada rol especifica familia, peso, tamaño, interlineado, tracking, caja y color para cada medio.",
+            "Los tokens de diseño nombran esas decisiones, por ejemplo texto-cuerpo o titular-1, y las comparten entre diseño y código.",
+            "Se definen variantes por contexto: impresión, web de escritorio, móvil, presentaciones y documentos de oficina.",
+            "Se incluyen fuentes de respaldo para Word, PowerPoint y correo, donde las fuentes de marca no siempre están disponibles."
+          ],
+          "notes": "Muestre la estructura de un sistema tipográfico de una marca reconocida que publique su guía, o un ejemplo elaborado por el docente. Explique la diferencia entre elegir fuentes y diseñar un sistema: el sistema resuelve de antemano cómo se escribe cada tipo de contenido en cada medio. Introduzca los tokens con un ejemplo: el token titular-1 puede valer 31,6 pt en impresión y clamp con 2.44rem como máximo en la web, pero conserva el nombre y la función. Así diseñadores y desarrolladores hablan el mismo idioma. Insista en los entornos de oficina, frecuentemente olvidados: las cartas, informes y presentaciones del cliente se elaboran en Word o PowerPoint por personas sin las fuentes de marca, por lo que el sistema debe prever alternativas del sistema operativo con métricas similares. Proponga que cada estudiante dibuje el mapa de roles de su cliente del proyecto. Pregunte: ¿cuántos roles tipográficos necesita realmente una municipalidad distrital para sus comunicaciones?"
+        },
+        {
+          "title": "La guía tipográfica y el espécimen",
+          "bullets": [
+            "La guía tipográfica explica el porqué del sistema: concepto, familias elegidas, roles, escala y reglas de uso.",
+            "Incluye ejemplos correctos e incorrectos, casos de aplicación y especificaciones técnicas por medio.",
+            "El espécimen muestra la fuente en uso: alfabeto, cifras, signos del español, pesos, escalas y textos reales.",
+            "Un espécimen web en HTML y CSS demuestra el comportamiento responsivo, accesible y las funciones OpenType.",
+            "Documente licencias, archivos, fuentes de respaldo, contacto del responsable y fecha de versión."
+          ],
+          "notes": "Muestre ejemplos de especímenes históricos y contemporáneos: desde los catálogos de las fundiciones de plomo hasta los especímenes web interactivos de fundiciones independientes latinoamericanas. Explique que el espécimen tiene una doble función: comercial, para mostrar la fuente, y técnica, para probarla en contextos reales. Presente la estructura mínima de la guía tipográfica que deberán entregar: introducción y concepto, familias y justificación, escala y roles, reglas microtipográficas, ortotipografía y convenciones numéricas del cliente, especificaciones para impresión y para pantalla, accesibilidad, licencias y anexos. Insista en los ejemplos de uso incorrecto: muestran con claridad lo que el sistema prohíbe, como deformar letras, usar falsas negritas o componer textos largos en mayúsculas. Recomiende redactar la guía pensando en un practicante que se incorpora al equipo y no conoce el proyecto. Pregunte: ¿qué secciones de la guía consultaría con más frecuencia un desarrollador web y cuáles un community manager?"
+        },
+        {
+          "title": "Proyecto integrador: fases, entregables y sustentación",
+          "bullets": [
+            "Fase 1, semana 13: diagnóstico del cliente, auditoría tipográfica y de licencias, y propuesta de concepto.",
+            "Fase 2, semana 14: selección de familias, escala, roles y pruebas en impresión y en pantalla.",
+            "Fase 3, semana 15: guía tipográfica, espécimen web y verificación de accesibilidad con usuarios.",
+            "Fase 4, semana 16: sustentación de 15 minutos ante el docente y pares, con preguntas del cliente simulado.",
+            "Se evalúan coherencia, rigor técnico, accesibilidad, legalidad y calidad de la argumentación."
+          ],
+          "notes": "Presente el cronograma del proyecto integrador y los criterios de evaluación. Recomiende elegir un cliente real y accesible: un emprendimiento familiar, una organización social, una institución educativa o una municipalidad, que pueda proporcionar información y retroalimentación. La auditoría inicial debe documentar el estado actual: cuántas fuentes usa el cliente, con qué licencias, qué problemas de legibilidad y accesibilidad presentan sus piezas. Explique que la sustentación simula una reunión de presentación: el estudiante debe defender sus decisiones con evidencia de pruebas, no con preferencias, y responder objeciones típicas, como el costo de las licencias o el deseo del cliente de usar una fuente de moda. Comparta la rúbrica desde el inicio y programe asesorías individuales. Recuerde que el proyecto se integrará al portafolio y que conecta con Identidad Visual y Branding y Diseño UX/UI del tercer ciclo. Pregunte: ¿qué objeción esperan del cliente y cómo la responderían?"
+        }
+      ],
+      "reading": {
+        "title": "Del archivo al sistema: tipografía para pantallas y sistemas tipográficos",
+        "minutes": 40,
+        "content": "## Introducción\n\nDurante cinco siglos el tipógrafo entregó composiciones cerradas: cada lector recibía la misma página. En pantalla, el diseñador entrega reglas que un navegador interpreta en millones de combinaciones de dispositivos, tamaños de ventana y preferencias del usuario. Esta lectura presenta los fundamentos técnicos de la tipografía en pantalla, los criterios de accesibilidad y los aspectos legales de las licencias, e integra todo en el concepto de sistema tipográfico.\n\n## La letra hecha de píxeles\n\nLos contornos vectoriales de una fuente se convierten en píxeles mediante el rasterizado. En pantallas de alta densidad, por encima de 300 píxeles por pulgada, la letra conserva casi todo su detalle; en equipos económicos y laptops corporativas, los trazos finos y las contraformas pequeñas se degradan. El **hinting**, instrucciones que ajustan los contornos a la cuadrícula de píxeles, mejora la nitidez en pantallas de baja densidad. Por eso las fuentes de pantalla privilegian alturas x generosas, aperturas amplias, contraste moderado y caracteres bien diferenciados. En modo oscuro, el texto claro parece más grueso por irradiación, lo que justifica reducir levemente el peso.\n\n## Implementación con CSS\n\nUna implementación profesional declara las fuentes con `@font-face`, usa el formato WOFF2, define una pila de respaldo y expresa los tamaños en unidades relativas:\n\n~~~css\n@font-face {\n  font-family: 'Source Sans 3';\n  src: url('/fuentes/source-sans-3-latin.woff2') format('woff2');\n  font-weight: 200 900;          /* fuente variable: rango de pesos */\n  font-style: normal;\n  font-display: swap;            /* muestra el respaldo mientras descarga */\n  unicode-range: U+0000-00FF, U+02BC, U+2013-2014, U+2018-201E, U+2026;\n}\n\n:root {\n  --fuente-texto: 'Source Sans 3', system-ui, sans-serif;\n  --texto-cuerpo: 1.0625rem;                            /* 17 px */\n  --titular-1: clamp(1.75rem, 1.48rem + 1.2vw, 2.44rem); /* 28 a 39 px */\n  --interlineado-cuerpo: 1.55;\n}\n\nbody    { font-family: var(--fuente-texto); font-size: var(--texto-cuerpo);\n          line-height: var(--interlineado-cuerpo); }\narticle p { max-width: 66ch; hyphens: auto; }  /* requiere lang=es en html */\nh1      { font-size: var(--titular-1); line-height: 1.15; }\n.importe { font-variant-numeric: tabular-nums lining-nums; }\n.sigla  { font-variant-caps: all-small-caps; letter-spacing: 0.05em; }\n~~~\n\nEl subconjunto declarado en `unicode-range` incluye el latín básico y el suplemento latino, que contienen las vocales tildadas, la «ñ», los signos de apertura y las comillas angulares, además del apóstrofo modificador usado en textos en quechua, las rayas y las comillas tipográficas. El valor fluido del titular se calcula así:\n\n~~~\npendiente  = (39 px − 28 px) / (1280 px − 360 px) = 0,01196  → 1,2vw\nintercepto = 28 px − 0,01196 × 360 px = 23,7 px          → 1,48rem\n~~~\n\nLa parte en rem garantiza que el titular siga creciendo cuando el usuario amplía el texto.\n\n## Accesibilidad tipográfica\n\nLas Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1 del W3C, cuyos criterios mantiene la versión 2.2 de 2023, establecen requisitos directamente tipográficos:\n\n- **1.4.3 Contraste mínimo (AA):** 4,5:1 para texto normal y 3:1 para texto grande (desde 18 pt, o 14 pt en negrita).\n- **1.4.4 Cambio de tamaño del texto (AA):** ampliación hasta 200 % sin pérdida de contenido.\n- **1.4.10 Reorganización (AA):** lectura sin desplazamiento horizontal a 320 px de ancho.\n- **1.4.12 Espaciado del texto (AA):** el diseño debe tolerar interlineado de 1,5, párrafos separados por dos veces el cuerpo, espaciado entre letras de 0,12 y entre palabras de 0,16 veces el cuerpo.\n- **1.4.8 Presentación visual (AAA):** líneas de hasta 80 caracteres, texto sin justificar e interlineado mínimo de 1,5.\n\nEn el Perú, la Ley 29973, Ley General de la Persona con Discapacidad, respalda la obligación de ofrecer información accesible. Más allá de la norma, la evidencia es clara: lo que mejora la lectura de personas con baja visión o dislexia mejora la lectura de todos.\n\n## Licencias y marco legal\n\nComprar una fuente es adquirir una licencia de uso. Las licencias comerciales distinguen usos de escritorio, web, aplicaciones, libros electrónicos y publicidad digital; la SIL Open Font License permite usar, modificar y redistribuir, pero no vender la fuente aislada. En el Perú, el Decreto Legislativo 822 protege los programas de ordenador, categoría que incluye los archivos de fuente, y el INDECOPI es la autoridad que resuelve infracciones. El diseñador debe recomendar que el cliente licencie las fuentes a su nombre y mantener una tabla de licencias como parte del sistema.\n\n## El sistema tipográfico\n\nUn sistema tipográfico define **roles** (titular, cuerpo, interfaz, datos, legal), sus especificaciones por medio y **tokens** que nombran esas decisiones para compartirlas entre diseño y desarrollo. Se documenta en una **guía tipográfica**, que explica el porqué y las reglas de uso, y en un **espécimen**, que muestra las fuentes en acción. Incluye alternativas para entornos de oficina y correo electrónico, donde las fuentes de marca no siempre están disponibles.\n\n## Conclusión\n\nLa tipografía contemporánea es a la vez oficio visual, código y responsabilidad legal y social. El proyecto integrador de esta unidad reúne todo lo aprendido en el curso: anatomía y clasificación para elegir, microtipografía para componer, macrotipografía para jerarquizar y criterios técnicos, accesibles y legales para implementar un sistema que funcione para personas reales."
+      },
+      "case": {
+        "title": "Caso: El sistema tipográfico de Caja Ayllu Digital",
+        "content": "## Contexto\n\nCaja Ayllu es una caja municipal de ahorro y crédito del sur del Perú con 410 000 clientes, de los cuales el 38 % vive en zonas rurales y el 31 % tiene más de 50 años. En 2024 lanzó Caja Ayllu Digital, una aplicación móvil y un sitio web para consultar saldos, pagar créditos y abrir cuentas. El sitio recibe unas 900 000 visitas de página al mes.\n\n## El problema\n\nUna auditoría encargada por la gerencia de canales digitales encontró lo siguiente:\n\n- Se usan cuatro familias tipográficas: una lineal geométrica para titulares, otra lineal para el texto, una monoespaciada para importes y una caligráfica en campañas.\n- Existen 23 tamaños de texto distintos entre la aplicación y el sitio, varios con diferencias de un píxel.\n- La página de inicio descarga seis archivos de fuentes con un total de 680 KB; en una red 4G de baja calidad el texto tarda más de cuatro segundos en mostrarse.\n- Dieciocho combinaciones de color de texto no alcanzan el contraste de 4,5:1, incluido el texto gris claro de las condiciones de los créditos.\n- Al aplicar los valores de espaciado del criterio 1.4.12, los botones cortan el texto.\n- La fuente de titulares fue comprada con una licencia de escritorio para tres usuarios, pero se usa como fuente web y en la aplicación. La fundición envió una comunicación solicitando regularizar el uso; la licencia web y de aplicación costaría el equivalente a S/ 15 800 anuales.\n\nAdemás, el área de atención al cliente reporta que muchos usuarios mayores confunden la «l» minúscula y el «1» en los códigos de verificación.\n\n## Las alternativas\n\nEl jefe de diseño, Andrés Mamani, evalúa tres caminos:\n\n1. **Regularizar las licencias** y mantener las fuentes actuales, corrigiendo solo tamaños y contraste.\n2. **Migrar a una superfamilia libre** con licencia OFL, con versión variable, cifras tabulares y caracteres bien diferenciados, rediseñando el sistema completo con escala modular y tokens. Requiere unas diez semanas de trabajo de diseño y desarrollo.\n3. **Usar las fuentes del sistema operativo** del dispositivo de cada usuario, con peso de descarga nulo, aceptando que la marca se vea distinta en Android, iOS y Windows.\n\nLa gerencia de marketing defiende la fuente geométrica actual porque «es la cara de la marca»; la gerencia de riesgos exige resolver la situación de licencias antes de fin de año.\n\n## El dilema\n\nAndrés debe presentar al comité de gerencia una recomendación que equilibre identidad, legalidad, costo, rendimiento y accesibilidad para una población diversa.",
+        "questions": [
+          "¿Qué problemas de la auditoría son más graves desde las perspectivas legal, de accesibilidad y de negocio? Justifique su priorización.",
+          "Compare las tres alternativas con una matriz que considere costo, rendimiento, identidad, accesibilidad y riesgo legal.",
+          "Proponga una escala tipográfica con no más de ocho tamaños y los tokens correspondientes para la aplicación y el sitio.",
+          "¿Qué rasgos debe tener la fuente del texto y de los importes para resolver la confusión entre «l» y «1» y alinear cifras?",
+          "¿Cómo respondería al argumento de marketing de que la fuente actual «es la cara de la marca»?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: sistema tipográfico, guía y espécimen web para un cliente real",
+        "instructions": "**Objetivo:** diseñar, implementar y sustentar un sistema tipográfico completo, accesible y legal para un cliente real, integrando los aprendizajes del curso.\n\n**Cliente:** un emprendimiento, organización social, institución educativa o entidad pública de su localidad, con autorización para usar su información.\n\n**Qué entregar:**\n\n1. **Auditoría inicial** (3 a 5 páginas): fuentes en uso, licencias, problemas de legibilidad, jerarquía y accesibilidad, con evidencias fotográficas o capturas.\n2. **Guía tipográfica** (20 a 30 páginas, PDF): concepto, familias y justificación, roles, escala modular, especificaciones para impresión y pantalla, reglas microtipográficas y ortotipográficas, convenciones numéricas, fuentes de respaldo para oficina, ejemplos correctos e incorrectos y tabla de licencias.\n3. **Espécimen web** en HTML y CSS (una página, carpeta comprimida): fuentes con @font-face y WOFF2, tokens en variables CSS, tipografía fluida con clamp, funciones OpenType pertinentes y medida controlada con ch.\n4. **Informe de accesibilidad**: verificación de contraste, ampliación al 200 %, espaciado según el criterio 1.4.12 y prueba con al menos dos usuarios, uno de ellos mayor de 50 años.\n5. **Sustentación** de 15 minutos por videoconferencia, con respuesta a preguntas del cliente simulado.\n\n**Formato:** PDF con fuentes incrustadas, carpeta del espécimen y diapositivas de sustentación.\n\n**Criterios:** coherencia del sistema, rigor técnico de la implementación, accesibilidad verificada, legalidad de las licencias y calidad de la sustentación, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Coherencia y calidad del sistema tipográfico y de la guía",
+            "points": 6
+          },
+          {
+            "name": "Implementación técnica del espécimen web con CSS",
+            "points": 4
+          },
+          {
+            "name": "Accesibilidad verificada con criterios WCAG y usuarios",
+            "points": 4
+          },
+          {
+            "name": "Auditoría y gestión legal de licencias",
+            "points": 3
+          },
+          {
+            "name": "Sustentación argumentada con evidencia",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: tipografía en pantalla, accesibilidad y sistemas",
+        "questions": [
+          {
+            "prompt": "Un texto de 14 px en peso regular tiene una razón de contraste de 3,8:1 con su fondo. ¿Cumple el criterio 1.4.3 de las WCAG 2.1 en nivel AA?",
+            "options": [
+              "No, porque el texto normal requiere al menos 4,5:1",
+              "Sí, porque supera el mínimo de 3:1 para cualquier texto",
+              "Sí, porque el nivel AA solo exige contraste en titulares",
+              "No, porque todo texto debe alcanzar 7:1 en nivel AA"
+            ],
+            "correct": 0,
+            "explanation": "Un texto de 14 px regular no es texto grande; requiere 4,5:1. El umbral de 3:1 aplica desde 24 px o 18,7 px en negrita, y 7:1 corresponde al nivel AAA."
+          },
+          {
+            "prompt": "Un titular debe medir 24 px en una ventana de 400 px y 40 px en una de 1200 px. ¿Cuál es la pendiente de la fórmula fluida, expresada en vw?",
+            "options": [
+              "1vw",
+              "4vw",
+              "0,5vw",
+              "2vw"
+            ],
+            "correct": 3,
+            "explanation": "Pendiente = (40 − 24) / (1200 − 400) = 16 / 800 = 0,02, es decir, 2vw. El intercepto sería 24 − 0,02 × 400 = 16 px, equivalente a 1rem."
+          },
+          {
+            "prompt": "¿Por qué se recomienda definir el tamaño del texto principal en rem y no en px?",
+            "options": [
+              "Porque rem reduce el peso de los archivos de fuente",
+              "Porque px no funciona en navegadores móviles",
+              "Porque rem respeta el tamaño de texto que el usuario configura en su navegador",
+              "Porque rem activa automáticamente las funciones OpenType"
+            ],
+            "correct": 2,
+            "explanation": "El rem es relativo al tamaño raíz, que refleja la preferencia del usuario; los píxeles fijos ignoran esa configuración, lo que perjudica a personas con baja visión."
+          },
+          {
+            "prompt": "Un diseñador compró una fuente con licencia de escritorio y la convierte a WOFF2 para el sitio web de su cliente. ¿Cuál es la evaluación correcta?",
+            "options": [
+              "Es correcto, porque la fuente ya fue pagada",
+              "Es un uso no autorizado: se requiere una licencia web, preferentemente a nombre del cliente",
+              "Es correcto si el sitio tiene menos de mil visitas al mes",
+              "Es un uso permitido porque WOFF2 es solo un formato comprimido"
+            ],
+            "correct": 1,
+            "explanation": "Las licencias se otorgan por tipo de uso; la de escritorio no cubre la web. Además, el cliente debe licenciar a su nombre. En el Perú, el archivo de fuente se protege como software."
+          },
+          {
+            "prompt": "Al aplicar los valores del criterio 1.4.12 a una aplicación, el texto de los botones queda cortado. ¿Cuál es la causa más probable y su solución?",
+            "options": [
+              "Botones con altura fija; deben usar alturas mínimas y espaciados relativos que crezcan con el texto",
+              "La fuente es demasiado delgada; debe cambiarse a negrita",
+              "El contraste es insuficiente; debe oscurecerse el fondo",
+              "La fuente no es variable; debe reemplazarse por una variable"
+            ],
+            "correct": 0,
+            "explanation": "El criterio exige que el contenido tolere más interlineado y espaciado. Los contenedores con alto fijo cortan el texto; alturas mínimas y unidades relativas lo resuelven."
+          },
+          {
+            "prompt": "En la pantalla de movimientos de una billetera digital, los importes no se alinean verticalmente. ¿Qué declaración CSS lo corrige si la fuente tiene las funciones necesarias?",
+            "options": [
+              "font-variant-caps: all-small-caps;",
+              "font-optical-sizing: auto;",
+              "text-align: justify;",
+              "font-variant-numeric: tabular-nums;"
+            ],
+            "correct": 3,
+            "explanation": "Las cifras tabulares tienen un ancho uniforme y alinean columnas de importes. Las versalitas, el tamaño óptico o la justificación no modifican el ancho de los dígitos."
+          },
+          {
+            "prompt": "¿Qué ventaja principal ofrece declarar font-display: swap en una regla @font-face?",
+            "options": [
+              "La fuente se descarga más rápido porque se comprime en el navegador",
+              "El navegador genera automáticamente las cursivas faltantes",
+              "El texto se muestra de inmediato con la fuente de respaldo y se reemplaza al terminar la descarga",
+              "La licencia de la fuente queda verificada por el navegador"
+            ],
+            "correct": 2,
+            "explanation": "Swap evita el periodo de texto invisible: el contenido es legible desde el inicio. Su costo es un posible salto de diseño, que se reduce eligiendo respaldos con métricas similares."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Presentación del curso; la tipografía como núcleo del diseño; escritura, caligrafía, lettering y tipografía",
+      "activity": "Diagnóstico inicial; registro fotográfico de tres textos del entorno y análisis colectivo en sesión síncrona",
+      "evidence": "Registro fotográfico comentado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "El trazo según Noordzij y anatomía del carácter: líneas guía, partes, contraste y eje",
+      "activity": "Taller con lápiz doble para observar la traslación; lámina anatómica rotulada sobre letras ampliadas de dos fuentes",
+      "evidence": "Lámina anatómica"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Sistemas de medida, cuadratín, unidades por em y altura x",
+      "activity": "Ejercicios de conversión y medición de alturas x en pruebas impresas; inicio de la tarea de ficha técnica comparada",
+      "evidence": "Hoja de cálculos y avance de la tarea 1"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Clasificación Vox-ATypI y de Bringhurst; familias, fuentes variables y formatos",
+      "activity": "Discusión del caso Editorial Wiñay en foro; entrega de la ficha técnica comparada; resolución del cuestionario 1",
+      "evidence": "Tarea 1, foro del caso y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Legibilidad, lecturabilidad, evidencia sobre la lectura y color tipográfico",
+      "activity": "Lectura previa de la unidad; experimento de lectura en voz alta con tres composiciones del mismo texto",
+      "evidence": "Ficha de observación de lectura"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Espaciado de letras, kerning, tracking y espacio entre palabras",
+      "activity": "Taller de espaciado con el método de Tracy y kerning manual de titulares en Illustrator",
+      "evidence": "Ejercicio de kerning y espaciado"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Cuerpo, interlineado y medida; alineación, justificación y partición en InDesign",
+      "activity": "Hoja de pruebas con seis variantes y configuración de parámetros de justificación; inicio de la tarea 2",
+      "evidence": "Hoja de pruebas preliminar"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Ortotipografía del español, funciones OpenType y protocolo de pruebas",
+      "activity": "Discusión del caso El Sureño en foro; entrega del cuadernillo y la hoja de pruebas; resolución del cuestionario 2",
+      "evidence": "Tarea 2, foro del caso y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Jerarquía tipográfica, niveles de lectura y escalas clásica y modular",
+      "activity": "Ejercicio de jerarquía con una sola variable y cálculo de escalas modulares para tres formatos distintos",
+      "evidence": "Ejercicio de jerarquía y escala"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Combinación de familias: contraste, concordancia, conflicto y superfamilias",
+      "activity": "Crítica de piezas reales del entorno y propuesta de tres combinaciones tipográficas justificadas",
+      "evidence": "Matriz de combinaciones"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Tipografía expresiva, gráfica vernácula peruana y proceso de lettering",
+      "activity": "Registro de un rótulo vernáculo local; miniaturas y boceto refinado del logotipo de la tarea 3",
+      "evidence": "Registro vernáculo y bocetos"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Curvas Bézier, compensaciones ópticas, logotipos tipográficos, licencias y ética",
+      "activity": "Vectorización asesorada; discusión del caso Cervecería Wayra; entrega del afiche y logotipo; resolución del cuestionario 3",
+      "evidence": "Tarea 3, foro del caso y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Tipografía en pantalla: renderizado, criterios de elección, @font-face y rendimiento",
+      "activity": "Laboratorio de CSS con fuentes libres; auditoría tipográfica y de licencias del cliente del proyecto integrador",
+      "evidence": "Auditoría inicial del proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Unidades relativas, tipografía fluida, OpenType en CSS y accesibilidad según WCAG 2.1",
+      "activity": "Construcción del espécimen web con tokens y clamp; pruebas de contraste, ampliación al 200 % y espaciado",
+      "evidence": "Avance del espécimen web"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Licencias, marco legal peruano, sistemas tipográficos y guía tipográfica",
+      "activity": "Discusión del caso Caja Ayllu Digital; prueba con usuarios; redacción de la guía; resolución del cuestionario 4",
+      "evidence": "Guía preliminar, foro y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentación por videoconferencia ante el docente y pares; prueba de aplicación con un encargo nuevo",
+      "evidence": "Tarea 4: proyecto integrador y sustentación"
+    }
+  ]
+}

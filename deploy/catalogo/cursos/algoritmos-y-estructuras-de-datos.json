@@ -1,0 +1,1291 @@
+{
+  "name": "Algoritmos y Estructuras de Datos",
+  "slug": "algoritmos-y-estructuras-de-datos",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Algoritmos y Estructuras de Datos es un curso de formación específica, de naturaleza teórico-práctica, del tercer ciclo de la carrera de Computación e Informática (código CEI-303). Su propósito es que el estudiante diseñe, analice e implemente soluciones de software eficientes, eligiendo con fundamento las estructuras de datos y los algoritmos que mejor responden a los requerimientos de volumen, tiempo de respuesta y memoria. Comprende cuatro unidades: análisis asintótico y empírico de algoritmos con tipos de datos abstractos lineales; recursión, ordenamiento y búsqueda; tablas hash, árboles balanceados y colas de prioridad; y grafos y técnicas de diseño algorítmico (voraz, programación dinámica y vuelta atrás), que culminan en un proyecto integrador. Se trabaja en Java con genéricos, pruebas JUnit y mediciones reproducibles, contrastando cada estructura propia con su equivalente del Java Collections Framework. Construye sobre Fundamentos de Programación, Programación Orientada a Objetos y Matemática Discreta, dialoga con Base de Datos en el estudio de los índices y prepara para Análisis y Diseño de Sistemas, Desarrollo de Aplicaciones Móviles y Desarrollo de Software Empresarial.",
+  "competency": "Desarrolla componentes de software eficientes y verificables en Java, seleccionando, implementando y justificando estructuras de datos y algoritmos a partir del análisis asintótico y empírico de su desempeño, para resolver problemas de procesamiento, búsqueda, ordenamiento y optimización de organizaciones reales con criterios de calidad, escalabilidad y responsabilidad profesional.",
+  "capacities": [
+    "Analiza la eficiencia de algoritmos mediante notación asintótica, recurrencias y experimentos de razón duplicada, y fundamenta con evidencia la elección entre alternativas de implementación.",
+    "Implementa en Java tipos de datos abstractos lineales, tablas hash, árboles y montículos genéricos, verificando sus invariantes con pruebas unitarias y contrastándolos con el Java Collections Framework.",
+    "Aplica algoritmos de ordenamiento, búsqueda y recorrido de grafos para resolver problemas de negocio, considerando estabilidad, casos extremos, consumo de memoria y comportamiento con grandes volúmenes de datos.",
+    "Diseña soluciones con técnicas voraces, programación dinámica y vuelta atrás, reconoce los problemas intratables y propone heurísticas razonables cuando no existe un algoritmo exacto eficiente."
+  ],
+  "indicators": [
+    "Determina la complejidad temporal y espacial de fragmentos de código y de algoritmos recursivos, justificando el resultado con reglas de suma y producto o con el teorema maestro.",
+    "Diseña y ejecuta experimentos de razón duplicada con JMH o System.nanoTime, interpreta el exponente estimado y lo contrasta con la predicción teórica.",
+    "Implementa con genéricos e iteradores una estructura lineal propia que supera pruebas JUnit con casos límite como colección vacía, un elemento y redimensionamiento.",
+    "Selecciona el algoritmo de ordenamiento o búsqueda adecuado según tamaño, estabilidad requerida y estado de los datos, y lo aplica con comparadores multicriterio.",
+    "Implementa tablas de símbolos con hashing y con árboles binarios de búsqueda respetando el contrato equals y hashCode, y explica el efecto del factor de carga y del balanceo.",
+    "Modela un problema real como grafo y aplica BFS, DFS, orden topológico, Dijkstra o Kruskal, reportando la complejidad de la solución con la representación elegida.",
+    "Resuelve problemas de optimización con programación dinámica o con una técnica voraz, demostrando con argumento o contraejemplo cuándo la estrategia voraz falla.",
+    "Sustenta un proyecto integrador con código versionado, pruebas automatizadas, mediciones de desempeño y un informe técnico que justifica cada decisión de diseño."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, las visualizaciones de algoritmos y un cuestionario diagnóstico. Las sesiones en vivo se organizan en torno al método de casos, con un caso por unidad sobre organizaciones peruanas, y al aprendizaje basado en problemas mediante ejercicios breves de práctica deliberada resueltos en parejas remotas. Los laboratorios siguen el ciclo especificar, implementar, probar con JUnit y medir con experimentos reproducibles, con entregas en repositorios Git y retroalimentación automática por integración continua. La evaluación formativa es permanente: cuestionarios con retroalimentación inmediata, revisión de código entre pares con rúbrica y tutorías asíncronas en foros. El proyecto integrador articula las cuatro unidades y culmina en una sustentación técnica en línea.",
+  "bibliography": [
+    "Cormen, T. H., Leiserson, C. E., Rivest, R. L. y Stein, C. (2022). Introduction to algorithms (4.ª ed.). MIT Press.",
+    "Sedgewick, R. y Wayne, K. (2011). Algorithms (4.ª ed.). Addison-Wesley.",
+    "Weiss, M. A. (2012). Data structures and algorithm analysis in Java (3.ª ed.). Pearson.",
+    "Goodrich, M. T., Tamassia, R. y Goldwasser, M. H. (2014). Data structures and algorithms in Java (6.ª ed.). Wiley.",
+    "Joyanes Aguilar, L. y Zahonero Martínez, I. (2008). Estructuras de datos en Java. McGraw-Hill.",
+    "Kleinberg, J. y Tardos, É. (2006). Algorithm design. Pearson Addison-Wesley.",
+    "Skiena, S. S. (2020). The algorithm design manual (3.ª ed.). Springer.",
+    "Knuth, D. E. (1998). The art of computer programming: Vol. 3. Sorting and searching (2.ª ed.). Addison-Wesley.",
+    "Bloch, J. (2018). Effective Java (3.ª ed.). Addison-Wesley.",
+    "Bhargava, A. Y. (2016). Grokking algorithms: An illustrated guide for programmers and other curious people. Manning."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 25,
+      "description": "Cuestionarios de unidad con retroalimentación inmediata, laboratorios semanales de programación verificados con pruebas automáticas y participación argumentada en los foros de análisis de casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1, 2 y 3: implementaciones en Java con pruebas JUnit, mediciones de desempeño e informe técnico, calificadas con rúbrica analítica."
+    },
+    {
+      "name": "Proyecto integrador",
+      "weight": 25,
+      "description": "Solución en equipo basada en grafos y técnicas de diseño algorítmico, con repositorio versionado, pruebas, experimentos de desempeño, informe técnico y sustentación en línea."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 20,
+      "description": "Examen práctico individual supervisado: análisis de complejidad, selección justificada de estructuras y codificación en vivo de un algoritmo, con defensa oral breve."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Análisis de algoritmos y estructuras de datos lineales",
+      "description": "Al finalizar la unidad, el estudiante analiza la eficiencia de algoritmos con notación asintótica y experimentos de razón duplicada, e implementa en Java tipos de datos abstractos lineales genéricos (arreglos dinámicos, listas enlazadas, pilas, colas y deques), justificando su elección frente a las clases del Java Collections Framework.",
+      "topics": [
+        "Algoritmos, problemas computacionales, corrección y modelo de costo",
+        "Notación asintótica O, Omega y Theta y reglas de análisis",
+        "Análisis empírico: prueba de razón duplicada y JMH",
+        "Tipos de datos abstractos con interfaces genéricas e iteradores",
+        "Arreglos dinámicos, análisis amortizado y listas enlazadas",
+        "Pilas, colas y deques: implementaciones y aplicaciones"
+      ],
+      "slides": [
+        {
+          "title": "Por qué la eficiencia sigue importando en el software empresarial",
+          "bullets": [
+            "Un algoritmo cuadrático que procesa 1 000 registros en 1 ms tarda unos 90 s con 300 000: el volumen, no el hardware, decide la viabilidad.",
+            "La facturación electrónica, las billeteras digitales y el comercio en línea generan millones de transacciones diarias que deben procesarse en segundos.",
+            "Escalar servidores en la nube multiplica costos mensuales; mejorar el orden de crecimiento del algoritmo suele ser la optimización más barata.",
+            "Wirth (1976) lo resumió en el título de su libro: algoritmos más estructuras de datos es igual a programas."
+          ],
+          "notes": "Abra la sesión con una pregunta provocadora: si las computadoras aumentan su capacidad cada pocos años, ¿por qué seguimos preocupándonos por la eficiencia? La respuesta es que los datos crecen más rápido que el hardware y que los algoritmos ineficientes convierten ese crecimiento en un muro. Muestre el cálculo de la primera viñeta: multiplicar la entrada por 300 multiplica el tiempo de un algoritmo cuadrático por 90 000. Relacione con experiencias que los estudiantes conocen: campañas de comercio electrónico, pagos con billeteras digitales o emisión masiva de comprobantes electrónicos ante SUNAT. Subraye que añadir servidores tiene un costo mensual recurrente, mientras que mejorar el algoritmo es una inversión única. Cierre con la idea de Niklaus Wirth y anuncie la estructura del curso: medir, elegir estructuras, ordenar y buscar, y modelar con grafos. Pregunta para la clase: ¿qué sistema que usan a diario se vuelve lento en fechas de alta demanda y qué sospechan que ocurre por dentro?"
+        },
+        {
+          "title": "Problema computacional, algoritmo e instancia",
+          "bullets": [
+            "Problema: relación entre entradas válidas y salidas esperadas; instancia: una entrada concreta, por ejemplo una lista de 50 000 números de RUC.",
+            "Algoritmo según Knuth: finito, definido, con entradas, con salidas y efectivo; además debe ser correcto para toda instancia válida.",
+            "La corrección se argumenta con invariantes de ciclo: inicialización, mantenimiento y terminación (Cormen et al., 2022).",
+            "Un mismo problema admite algoritmos con costos muy distintos: buscar un DNI puede costar n, log n o tiempo constante esperado."
+          ],
+          "notes": "Distinga con precisión problema, instancia y algoritmo, porque muchos errores de diseño nacen de confundirlos. El problema «buscar un DNI en un padrón» se especifica con sus entradas y salidas; cada padrón concreto es una instancia. Recuerde las propiedades de Knuth que ya vieron en Fundamentos de Programación y profundice en la corrección: un algoritmo es correcto solo si produce la salida esperada para todas las instancias válidas, no para los tres ejemplos que probamos. Introduzca el invariante de ciclo con la búsqueda del máximo: al inicio de cada iteración, la variable max contiene el mayor de los elementos ya revisados. Muestre cómo se verifican la inicialización, el mantenimiento y la terminación. Finalmente, adelante que el mismo problema de búsqueda admite soluciones lineales, logarítmicas o de tiempo constante esperado, según la estructura de datos elegida. Pregunta para la clase: ¿qué invariante describe un ciclo que acumula el total de una boleta de venta?"
+        },
+        {
+          "title": "Modelo de costo: contar operaciones, no segundos",
+          "bullets": [
+            "Modelo RAM: cada operación elemental (asignación, comparación, acceso a un arreglo) cuesta una unidad de tiempo constante.",
+            "Tamaño de la entrada n: número de elementos, de bits o de vértices y aristas, según el problema.",
+            "Se distinguen peor caso, mejor caso y caso promedio; en sistemas con acuerdos de nivel de servicio prima el peor caso.",
+            "T(n) = 3n + 2 para un recorrido lineal; las constantes dependen de la máquina y se descartan al comparar el crecimiento."
+          ],
+          "notes": "Explique que medir segundos depende de la máquina, del lenguaje y de la carga del sistema; por eso los algoritmos se comparan contando operaciones elementales en un modelo abstracto, la máquina de acceso aleatorio o RAM. Escriba un recorrido que suma un arreglo y cuente: una asignación inicial, n + 1 comparaciones, n sumas y n incrementos; el resultado es una función lineal del tipo an + b. Discuta qué es n en distintos problemas: número de clientes, número de dígitos de un número grande, o vértices y aristas de una red. Diferencie peor, mejor y caso promedio con la búsqueda secuencial: la clave puede estar al inicio, al final o no estar. Enfatice que, cuando un sistema tiene un acuerdo de nivel de servicio, por ejemplo responder en menos de dos segundos, el peor caso es el que importa. Pregunta para la clase: ¿cuál es el peor caso al buscar un producto por código en un catálogo desordenado?"
+        },
+        {
+          "title": "Notación asintótica: O, Omega y Theta",
+          "bullets": [
+            "f(n) = O(g(n)) si existen c > 0 y n₀ tales que f(n) ≤ c·g(n) para todo n ≥ n₀: cota superior.",
+            "f(n) = Ω(g(n)) expresa una cota inferior; f(n) = Θ(g(n)) indica que se cumplen ambas: crecimiento ajustado.",
+            "Ejemplo: 3n² + 10n + 5 = Θ(n²); para la cota superior basta c = 4 y n₀ = 11.",
+            "Error frecuente: creer que O describe el peor caso; O es una cota y puede aplicarse a cualquier caso."
+          ],
+          "notes": "Presente las definiciones formales con calma; los estudiantes ya manejan cuantificadores desde Matemática Discreta. Explique que la notación O fija un techo, Omega un piso y Theta ambos. Resuelva en vivo el ejemplo: para demostrar que 3n² + 10n + 5 es O(n²) basta encontrar constantes; con c = 4 la desigualdad equivale a n² − 10n − 5 ≥ 0, que se cumple desde n = 11. Muestre gráficamente que antes de n₀ la función puede superar a c·g(n), lo cual no invalida la cota porque solo importa el comportamiento para entradas grandes. Corrija el error de asociar O con el peor caso: el peor caso de la búsqueda secuencial es Θ(n) y su mejor caso es Θ(1); ambas afirmaciones usan notación asintótica. Señale que decir que un algoritmo es O(n³) puede ser verdadero pero poco informativo si en realidad es Θ(n). Pregunta: ¿es correcto afirmar que la búsqueda binaria es O(n)? ¿Es útil decirlo?"
+        },
+        {
+          "title": "Reglas prácticas para derivar la complejidad",
+          "bullets": [
+            "Secuencia: se suman los costos y domina el mayor, O(f) + O(g) = O(máx(f, g)).",
+            "Ciclos anidados: se multiplican las iteraciones; dos ciclos for de 0 a n producen O(n²).",
+            "Un ciclo que reduce el problema a la mitad en cada paso, como i = i / 2, realiza O(log n) iteraciones.",
+            "Las llamadas a bibliotecas cuentan: lista.contains(x) dentro de un for convierte un recorrido O(n) en O(n²).",
+            "Condicionales: para el peor caso se toma la rama más costosa."
+          ],
+          "notes": "Trabaje con fragmentos reales de código Java. Primero, dos ciclos consecutivos de n iteraciones: la suma da O(n). Segundo, dos ciclos anidados: n por n, O(n²). Tercero, un ciclo donde i se divide entre dos: el número de iteraciones es aproximadamente log₂ n. Luego muestre la trampa más frecuente en el trabajo profesional: un for que recorre pedidos y dentro llama a lista.contains o a lista.indexOf. El código parece lineal, pero cada llamada recorre otra lista, de modo que el costo real es cuadrático. Lo mismo ocurre con consultas a la base de datos dentro de un ciclo, el conocido problema de las N + 1 consultas que verán en Desarrollo Web. Explique que en las condicionales se toma la rama más costosa para el peor caso. Proponga un ejercicio breve: analizar en parejas tres métodos del proyecto de Programación Orientada a Objetos del ciclo anterior y reportar su complejidad con justificación."
+        },
+        {
+          "title": "Órdenes de crecimiento y su impacto real",
+          "bullets": [
+            "Jerarquía: 1 < log n < n < n log n < n² < n³ < 2ⁿ < n!; cada salto cambia lo que es factible.",
+            "Con 10⁸ operaciones por segundo y n = 10⁶: n log n tarda unos 0,2 s; n², unas 2,8 horas; 2ⁿ es inviable.",
+            "Duplicar n multiplica el tiempo por 2 en un algoritmo lineal, por 4 en uno cuadrático y por 8 en uno cúbico.",
+            "Regla de diseño: con n ≥ 10⁵ evite algoritmos cuadráticos en las rutas críticas de la aplicación."
+          ],
+          "notes": "Use una tabla para que los estudiantes sientan las magnitudes. Suponga una máquina que ejecuta cien millones de operaciones simples por segundo, una cifra conservadora para Java. Con un millón de elementos, un algoritmo n log n termina en unos 0,2 segundos, mientras que uno cuadrático necesita casi tres horas y uno exponencial no terminaría nunca en términos prácticos. Explique la regla de duplicación, que será la base de la prueba empírica de la siguiente diapositiva: duplicar la entrada duplica el tiempo en algoritmos lineales y lo cuadruplica en cuadráticos. Indique que las constantes importan cuando n es pequeño, por eso inserción puede ganarle a mergesort con diez elementos, pero el orden de crecimiento siempre gana a largo plazo. Pregunta para la clase: si un reporte tarda 3 segundos con 50 000 ventas y el algoritmo es cuadrático, ¿cuánto tardará con 200 000? La respuesta, 48 segundos, suele sorprender y motiva el resto de la unidad."
+        },
+        {
+          "title": "Análisis empírico: la prueba de razón duplicada",
+          "bullets": [
+            "Ejecutar con n, 2n, 4n… y calcular la razón T(2n)/T(n); si tiende a 2ᵇ, el costo crece como nᵇ.",
+            "Exponente estimado b = log₂(T(2n)/T(n)); razón cercana a 4 sugiere cuadrático y cercana a 2, lineal o n log n (Sedgewick y Wayne, 2011).",
+            "En escala log-log una función potencia es una recta; su pendiente, estimada por mínimos cuadrados, es el exponente.",
+            "Repetir mediciones, descartar el calentamiento y reportar mediana y dispersión, nunca una sola ejecución."
+          ],
+          "notes": "Presente la prueba de razón duplicada propuesta por Sedgewick y Wayne como un método científico aplicado al software: formular una hipótesis sobre el orden de crecimiento, diseñar un experimento, observar y validar. Se ejecuta el programa con tamaños que se duplican y se calcula la razón entre tiempos consecutivos. Si la razón se estabiliza en 4, el exponente es 2; si se acerca a 8, es 3. El logaritmo en base dos de la razón estima directamente el exponente. Complementariamente, en una gráfica log-log una función potencia se convierte en recta y su pendiente es el exponente, lo que conecta con la regresión lineal que verán en Estadística Aplicada este mismo ciclo. Insista en la disciplina experimental: semilla fija para generar datos, varias repeticiones, reporte de la mediana y descripción del equipo utilizado. Pregunta para la clase: ¿por qué la razón de un algoritmo n log n resulta ligeramente mayor que 2?"
+        },
+        {
+          "title": "Medir bien en Java: JIT, recolector de basura y JMH",
+          "bullets": [
+            "La JVM compila en caliente con el JIT: las primeras iteraciones son más lentas y distorsionan la medición.",
+            "El recolector de basura introduce pausas; conviene fijar el heap con -Xms y -Xmx iguales durante los experimentos.",
+            "JMH (Java Microbenchmark Harness), del proyecto OpenJDK, gestiona calentamiento, iteraciones y bifurcación, y evita la eliminación de código muerto.",
+            "Para ejercicios rápidos basta System.nanoTime(), varias repeticiones y usar el resultado calculado para que el JIT no lo elimine."
+          ],
+          "notes": "Explique por qué medir en Java es más delicado que en otros lenguajes. La JVM inicia interpretando el bytecode y, cuando detecta métodos muy usados, los compila a código nativo con el compilador JIT; por eso las primeras repeticiones son más lentas. Además, el JIT puede eliminar cálculos cuyo resultado no se usa, y el experimento termina midiendo nada. El recolector de basura introduce pausas impredecibles. JMH, desarrollado dentro del proyecto OpenJDK, resuelve estos problemas con fases de calentamiento, iteraciones de medición, bifurcación de procesos y objetos que consumen los resultados. Muestre un benchmark mínimo con la anotación @Benchmark y explique los parámetros de calentamiento y medición. Para ejercicios rápidos en clase basta System.nanoTime con repeticiones y uso explícito del resultado. Pregunta para la clase: si un compañero reporta que su algoritmo tarda cero nanosegundos con un millón de datos, ¿qué pudo haber pasado y cómo lo comprobarían?"
+        },
+        {
+          "title": "Tipos de datos abstractos con interfaces genéricas",
+          "bullets": [
+            "Un TAD define qué operaciones ofrece y su contrato, no cómo se implementan (Liskov y Zilles, 1974).",
+            "En Java se expresa con una interfaz genérica: interface Pila<T> { void apilar(T x); T desapilar(); boolean estaVacia(); }",
+            "Separar contrato e implementación permite cambiar un arreglo por una lista enlazada sin tocar el código cliente.",
+            "Documentar precondiciones, postcondiciones y costo de cada operación forma parte del contrato profesional."
+          ],
+          "notes": "Recupere lo aprendido en Programación Orientada a Objetos sobre interfaces y genéricos, y dé un paso más: un tipo de dato abstracto es un contrato sobre un conjunto de valores y operaciones, idea formalizada por Barbara Liskov y Stephen Zilles en 1974. La interfaz Pila<T> dice qué se puede hacer; las clases PilaArreglo<T> y PilaEnlazada<T> dicen cómo. Muestre que el código cliente, por ejemplo un validador de paréntesis, no cambia si se intercambia la implementación. Pida que el Javadoc de cada método incluya precondiciones, como «la pila no está vacía», postcondiciones y el costo esperado, porque elegir una estructura sin conocer el costo de sus operaciones es como elegir un proveedor sin conocer sus precios. Mencione que el Java Collections Framework sigue exactamente este diseño con List, Deque y Map. Pregunta para la clase: ¿qué debería ocurrir si se desapila una pila vacía y cómo se documenta esa decisión?"
+        },
+        {
+          "title": "Arreglos dinámicos: cómo crece un ArrayList",
+          "bullets": [
+            "Arreglo con capacidad fija y contador de tamaño; al llenarse se reserva uno mayor y se copian los elementos.",
+            "ArrayList de OpenJDK crece aproximadamente 1,5 veces su capacidad; duplicar es la elección clásica de los manuales.",
+            "Acceso por índice O(1); inserción al final O(1) amortizado; insertar o eliminar al inicio O(n) por desplazamiento.",
+            "Análisis amortizado: n inserciones con duplicación copian menos de n elementos en total, costo promedio constante."
+          ],
+          "notes": "Dibuje el arreglo interno con capacidad y tamaño. Cuando el tamaño alcanza la capacidad, se reserva un arreglo mayor y se copian todos los elementos: esa inserción cuesta O(n). Sin embargo, como la capacidad crece en proporción geométrica, las copias costosas son cada vez más espaciadas. Haga la cuenta con duplicación: para llegar a n elementos se copian 1 + 2 + 4 + … + n/2 elementos, menos de n en total, más las n escrituras, lo que da menos de 2n operaciones o costo amortizado constante. Aclare que el análisis amortizado no es un promedio probabilístico, sino una garantía sobre toda secuencia de operaciones. Comente que ArrayList de OpenJDK crece un 50 % para equilibrar memoria y tiempo. Muestre por qué insertar al inicio es lineal: hay que desplazar todos los elementos. Pregunta para la clase: ¿qué pasaría con el costo total si la capacidad creciera de diez en diez elementos en lugar de multiplicarse?"
+        },
+        {
+          "title": "Listas enlazadas simples y dobles",
+          "bullets": [
+            "Cada nodo guarda el dato y una referencia al siguiente; la lista doble agrega una referencia al anterior.",
+            "Insertar o eliminar conociendo el nodo cuesta O(1); acceder a la posición i cuesta O(n) por recorrido.",
+            "LinkedList de Java es doblemente enlazada; en la práctica suele ser más lenta que ArrayList por la localidad de caché.",
+            "Casos límite obligatorios en las pruebas: lista vacía, un solo nodo, eliminar la cabeza y eliminar la cola."
+          ],
+          "notes": "Construya en vivo una lista enlazada simple con una clase interna estática Nodo<T> que guarda el dato y la referencia al siguiente. Muestre la inserción al inicio en tres líneas y la eliminación de la cabeza. Luego presente la lista doble y explique que la referencia al anterior permite eliminar un nodo conocido en tiempo constante, que es justamente lo que aprovecha una caché LRU. Contraste con la realidad del hardware: los nodos están dispersos en memoria, cada acceso puede provocar un fallo de caché y cada nodo tiene el sobrecosto de una cabecera de objeto; por ello, en la mayoría de cargas reales ArrayList o ArrayDeque superan a LinkedList. Termine con la lista de casos límite que toda prueba JUnit debe cubrir, porque allí se concentran las excepciones por referencias nulas. Pregunta para la clase: ¿en qué escenario concreto sí elegirían una lista enlazada y por qué?"
+        },
+        {
+          "title": "Iteradores y el recorrido seguro de colecciones",
+          "bullets": [
+            "Implementar Iterable<T> habilita el for-each y desacopla el recorrido de la representación interna.",
+            "Un Iterator<T> ofrece hasNext() y next(); remove() es opcional y debe respetar el contrato documentado.",
+            "Las colecciones de java.util son fail-fast: modificarlas durante un recorrido suele lanzar ConcurrentModificationException.",
+            "Patrón correcto para filtrar: iterator.remove() o removeIf(predicado), nunca lista.remove() dentro del for-each."
+          ],
+          "notes": "Explique que un iterador encapsula el estado del recorrido y permite que el cliente recorra la colección sin saber si internamente hay un arreglo, nodos o un árbol. Implemente un iterador para la lista enlazada con un campo actual. Luego muestre el comportamiento fail-fast: las colecciones de java.util guardan un contador de modificaciones estructurales y el iterador lo compara en cada llamada a next; si cambió, lanza ConcurrentModificationException. Ejecute el error típico de eliminar con lista.remove dentro de un for-each sobre clientes inactivos y muestre la excepción. Presente las dos soluciones correctas: el método remove del propio iterador y removeIf con una expresión lambda, que además es más legible. Aclare que fail-fast es un mecanismo de detección de errores, no una garantía para programas concurrentes; para varios hilos existen colecciones del paquete java.util.concurrent. Pregunta para la clase: ¿por qué es mejor fallar de inmediato que producir resultados silenciosamente incorrectos?"
+        },
+        {
+          "title": "Pilas: el principio LIFO y sus aplicaciones",
+          "bullets": [
+            "Operaciones push, pop y peek en O(1); se implementa con un arreglo dinámico o con una lista enlazada.",
+            "Aplicaciones: pila de llamadas, deshacer y rehacer en editores, navegación hacia atrás y validación de paréntesis.",
+            "El algoritmo de dos pilas de Dijkstra evalúa expresiones aritméticas totalmente parentizadas con operandos y operadores.",
+            "En Java moderno se prefiere ArrayDeque sobre la clase heredada Stack, que está sincronizada y extiende Vector."
+          ],
+          "notes": "Presente la pila como la estructura donde lo último que entra es lo primero que sale. Muestre sus usos cotidianos: el botón atrás del navegador, deshacer y rehacer en un editor, y la propia pila de llamadas de la JVM que estudiarán a fondo con la recursión. Desarrolle el algoritmo de dos pilas de Dijkstra para evaluar expresiones totalmente parentizadas: los operandos van a una pila, los operadores a otra y, al encontrar un paréntesis de cierre, se desapila un operador y dos operandos, se calcula y se apila el resultado. Simule paso a paso la expresión ((2 + 3) * 4). Explique por qué la clase Stack es un legado de Java 1.0: extiende Vector, sincroniza cada operación y permite accesos por índice que rompen el TAD. La documentación oficial recomienda usar la interfaz Deque implementada con ArrayDeque. Pregunta para la clase: ¿cómo validarían que una fórmula de hoja de cálculo tiene los paréntesis balanceados?"
+        },
+        {
+          "title": "Colas y deques: FIFO, arreglo circular y ArrayDeque",
+          "bullets": [
+            "Cola: encolar al final y desencolar al inicio en O(1); modela turnos de atención, trabajos de impresión y mensajes.",
+            "Arreglo circular: los índices de cabeza y cola avanzan con (i + 1) % capacidad, sin desplazar elementos.",
+            "ArrayList.remove(0) es O(n): usarlo como cola convierte n atenciones en un proceso O(n²).",
+            "ArrayDeque implementa Deque: inserción y extracción en ambos extremos en O(1) amortizado."
+          ],
+          "notes": "Use el caso de la unidad como hilo conductor: turnos de atención en una entidad financiera. Una cola atiende en orden de llegada y debe encolar y desencolar en tiempo constante. Muestre el arreglo circular: dos índices, cabeza y cola, que avanzan módulo la capacidad, de modo que nunca se desplazan elementos; cuando se llena, se redimensiona copiando los elementos en orden. Contraste con el antipatrón ArrayList.remove(0), que desplaza todos los elementos en cada atención: atender n clientes cuesta del orden de n²/2 movimientos. Con 6 000 turnos en un día de campaña son unos 18 millones de movimientos solo para la cola, sin contar las búsquedas. Presente ArrayDeque como la implementación recomendada para pilas y colas en Java. Pregunta para el foro: además de encolar y atender, ¿cómo informarían a cada cliente su posición en la cola sin recorrerla completa en cada consulta?"
+        }
+      ],
+      "reading": {
+        "title": "Medir antes de optimizar: análisis asintótico y empírico en Java",
+        "minutes": 35,
+        "content": "## Por qué analizar y medir\n\nEn 1974 Donald Knuth escribió que la optimización prematura es la raíz de muchos males de la programación, pero en la misma frase pidió no desaprovechar las oportunidades en el 3 % crítico del código. Para identificar ese 3 % el profesional técnico necesita dos herramientas: el **análisis asintótico**, que predice cómo crece el costo cuando crece la entrada, y el **análisis empírico**, que confirma la predicción con mediciones reproducibles. Ninguna basta por sí sola: la teoría ignora constantes y efectos del hardware, y la medición sin teoría no permite extrapolar.\n\n## El modelo de costo\n\nContamos operaciones elementales en función del tamaño de la entrada n y expresamos el resultado con notación asintótica. Decimos que f(n) = O(g(n)) si existen constantes c > 0 y n₀ tales que f(n) ≤ c·g(n) para todo n ≥ n₀; Omega expresa la cota inferior y Theta la cota ajustada. Las reglas prácticas son pocas: en una secuencia domina el término mayor, los ciclos anidados multiplican sus iteraciones y un ciclo que reduce el problema a la mitad aporta un factor log n.\n\n## Un problema real: DNI duplicados en un padrón\n\nUna cooperativa de ahorro y crédito de Junín migra su padrón de socios y debe verificar que ningún DNI se repita. Veamos tres soluciones con costos muy distintos.\n\n```java\n// Versión 1: compara cada par. Θ(n²) en el peor caso (sin duplicados)\nstatic boolean duplicadosCuadratico(int[] dni) {\n    for (int i = 0; i < dni.length; i++)\n        for (int j = i + 1; j < dni.length; j++)\n            if (dni[i] == dni[j]) return true;\n    return false;\n}\n\n// Versión 2: ordenar una copia y comparar vecinos. O(n log n)\nstatic boolean duplicadosOrdenando(int[] dni) {\n    int[] copia = dni.clone();            // no alteramos la entrada del cliente\n    Arrays.sort(copia);                   // quicksort de doble pivote para primitivos\n    for (int i = 1; i < copia.length; i++)\n        if (copia[i] == copia[i - 1]) return true;\n    return false;\n}\n\n// Versión 3: conjunto hash. O(n) esperado, con O(n) de memoria extra\nstatic boolean duplicadosHash(int[] dni) {\n    Set<Integer> vistos = new HashSet<>();\n    for (int d : dni)\n        if (!vistos.add(d)) return true;  // add devuelve false si ya existía\n    return false;\n}\n```\n\nLa primera realiza n(n − 1)/2 comparaciones en el peor caso, que ocurre precisamente cuando no hay duplicados. La segunda paga O(n log n) por el ordenamiento y luego un recorrido lineal. La tercera hace n inserciones con costo esperado constante.\n\n## La prueba de razón duplicada\n\nPara validar la hipótesis Θ(n²) de la primera versión, Sedgewick y Wayne (2011) proponen ejecutar el programa con tamaños que se duplican y observar la razón entre tiempos consecutivos.\n\n```java\nRandom rnd = new Random(42);                       // semilla fija: experimento reproducible\ndouble anterior = 0;\nfor (int n = 32_000; n <= 128_000; n *= 2) {\n    int[] datos = rnd.ints(10_000_000, 99_999_999) // DNI ficticios de 8 dígitos\n                     .distinct().limit(n).toArray(); // sin repetidos: peor caso\n    long inicio = System.nanoTime();\n    boolean r = duplicadosCuadratico(datos);\n    double seg = (System.nanoTime() - inicio) / 1e9;\n    System.out.printf(\"n=%,d t=%.2f s razón=%.1f (%b)%n\",\n                      n, seg, anterior == 0 ? 0 : seg / anterior, r);\n    anterior = seg;\n}\n```\n\nValores ilustrativos en una laptop de gama media:\n\n| n | tiempo (s) | razón |\n|---|---|---|\n| 32 000 | 0,26 | — |\n| 64 000 | 1,05 | 4,0 |\n| 128 000 | 4,18 | 4,0 |\n\nLa razón se estabiliza en 4 = 2², lo que confirma el exponente 2. Con esa evidencia podemos predecir: un padrón de 1 024 000 socios, ocho veces mayor, tardaría 8² = 64 veces más, unos cuatro minutos y medio.\n\n## Interpretar con criterio\n\nLa versión con HashSet parece siempre la mejor, pero el análisis debe incluir la memoria. Un HashSet<Integer> consume del orden de 40 a 50 bytes por elemento entre el objeto Integer, el nodo y la celda de la tabla. Para un padrón del tamaño de la población peruana, cerca de 34 millones de personas según las proyecciones del INEI, eso supera 1,5 GB, mientras que ordenar una copia del int[] requiere 4 bytes por DNI, unos 136 MB. Si el proceso corre en un contenedor con 1 GB de memoria, la solución O(n log n) es la única viable. La lección es esta: **elegir una estructura de datos es una decisión de ingeniería con costos de tiempo, memoria y riesgo**, y se sustenta con análisis y con evidencia.\n\n## Buenas prácticas de medición en la JVM\n\n- Ejecute fases de calentamiento para que el compilador JIT optimice el código antes de medir.\n- Use el resultado calculado para que el JIT no elimine el trabajo.\n- Fije la semilla del generador aleatorio y el tamaño del heap con -Xms y -Xmx.\n- Repita cada medición, reporte la mediana y, en trabajos formales, utilice JMH."
+      },
+      "case": {
+        "title": "Caso: Los turnos que colapsaron en Caja Municipal Selva Central",
+        "content": "**Caja Municipal Selva Central** (nombre ficticio) es una caja municipal de ahorro y crédito con sede en La Merced, Junín, 42 agencias en la sierra y selva central y unos 310 000 clientes, en su mayoría microempresarios, productores de café y trabajadores dependientes. En 2025 lanzó **TurnoYa**, un módulo web y móvil para sacar turno virtual de ventanilla, consultar la posición en la cola y recibir un aviso cuando faltan cinco turnos.\n\nUn proveedor local desarrolló el módulo en Java. Para responder rápido, mantiene en memoria una única lista con los turnos de todas las agencias:\n\n```java\nList<Turno> turnos = Collections.synchronizedList(new ArrayList<>());\n\nTurno sacarTurno(String dni, int agencia) {\n    if (turnos.stream().anyMatch(t -> t.dni().equals(dni)))     // evita duplicados\n        throw new TurnoDuplicadoException(dni);\n    Turno t = new Turno(dni, agencia, LocalDateTime.now());\n    turnos.add(t);\n    return t;\n}\nTurno atender(int agencia) {                                     // desde la ventanilla\n    for (int i = 0; i < turnos.size(); i++)\n        if (turnos.get(i).agencia() == agencia) return turnos.remove(i);\n    return null;\n}\nint posicion(Turno t) {                                          // la app consulta cada 15 s\n    return turnos.stream().filter(x -> x.agencia() == t.agencia())\n                 .toList().indexOf(t) + 1;\n}\n```\n\nEn días normales hay menos de 1 500 personas en cola en toda la red y el percentil 95 del tiempo de respuesta es de 120 ms. Durante la última campaña de depósito de CTS y pago de bonos, sin embargo, la red llegó a tener 41 000 turnos activos a la vez. Como cada aplicación consulta su posición cada 15 segundos, el servidor recibía unas 2 700 consultas por segundo. El percentil 95 subió a 9,8 s, la CPU de los dos servidores superó el 95 % y muchos clientes, al no recibir respuesta, pidieron turno otra vez, lo que agravó la carga. Los reclamos registrados en el Libro de Reclamaciones aumentaron 40 % ese mes.\n\nLa próxima campaña será en cinco semanas y hay dos propuestas sobre la mesa:\n\n- **Proveedor:** pasar de dos a seis servidores y trasladar la lista a un almacén en memoria administrado en la nube. Costo adicional: S/ 14 800 mensuales; implementación en tres días.\n- **Analista de sistemas junior:** rediseñar las estructuras con un Map<Integer, ArrayDeque<Turno>> por agencia, un HashSet<String> con los DNI que tienen turno activo y numeración correlativa por agencia para calcular la posición como «número del turno menos último número atendido». Estimación: ocho días de desarrollo y pruebas, sin costo recurrente.\n\nEl gerente de operaciones debe presentar una recomendación al directorio, que es sensible tanto a los costos como al riesgo reputacional ante sus clientes y ante la Superintendencia de Banca, Seguros y AFP.",
+        "questions": [
+          "Determine la complejidad de sacar turno, atender y consultar la posición con el diseño actual, y explique por qué el sistema responde bien en días normales y colapsa en campaña.",
+          "¿Resuelve el problema la propuesta del proveedor? Analice su costo, la consistencia de un estado en memoria repartido entre servidores y el orden de crecimiento del trabajo.",
+          "Diseñe las estructuras que permitirían sacar turno sin duplicados, atender y consultar la posición en O(1); justifique cada elección y señale sus límites.",
+          "Identifique el problema de concurrencia que existe en el código actual al recorrer la lista con streams y proponga una corrección que no sacrifique rendimiento.",
+          "¿Qué experimento de razón duplicada e indicadores presentaría al directorio para sustentar su recomendación antes de la campaña?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: cola genérica con arreglo circular y análisis de razón duplicada",
+        "instructions": "**Objetivo:** implementar un TAD cola genérico y eficiente, y demostrar con análisis y evidencia empírica su ventaja frente a alternativas ingenuas en el contexto del caso Caja Municipal Selva Central.\n\n**Qué entregar:**\n\n1. Interfaz `Cola<T>` con `encolar`, `desencolar`, `frente`, `tamanio` y `estaVacia`, documentada con precondiciones y costo de cada operación.\n2. Clase `ColaCircular<T>` que implemente `Cola<T>` e `Iterable<T>` sobre un arreglo circular que duplica su capacidad al llenarse y la reduce a la mitad cuando la ocupación cae por debajo del 25 %.\n3. Al menos 12 pruebas JUnit 5 que cubran cola vacía (`NoSuchElementException`), un elemento, envolvimiento de índices, redimensionamiento en ambos sentidos y recorrido en orden FIFO.\n4. Experimento de razón duplicada que compare atender n turnos con `ArrayList.remove(0)`, `LinkedList` y `ColaCircular`, para n desde 10 000 hasta 640 000, con semilla fija, cinco repeticiones y reporte de la mediana.\n5. Informe técnico de 2 a 3 páginas en PDF con el análisis asintótico, la tabla de razones, una gráfica log-log y una recomendación fundamentada para la caja.\n\n**Formato:** proyecto Maven en un repositorio Git con README y commits descriptivos; el enlace al repositorio se registra en el aula virtual. El código debe compilar con Java 17 o superior.\n\n**Criterios:** corrección de la implementación y de sus invariantes, calidad de las pruebas, rigor del experimento y solidez del análisis, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Corrección de la implementación e invariantes del arreglo circular",
+            "points": 6
+          },
+          {
+            "name": "Calidad y cobertura de las pruebas JUnit",
+            "points": 4
+          },
+          {
+            "name": "Diseño y rigor del experimento empírico",
+            "points": 5
+          },
+          {
+            "name": "Análisis asintótico e informe con recomendación",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 1: análisis de algoritmos y estructuras lineales",
+        "questions": [
+          {
+            "prompt": "Un método recorre una lista de n pedidos y, para cada uno, invoca otraLista.contains(codigo) sobre una ArrayList de n elementos. ¿Cuál es su complejidad temporal en el peor caso?",
+            "options": [
+              "O(n)",
+              "O(n log n)",
+              "O(n²)",
+              "O(2n)"
+            ],
+            "correct": 2,
+            "explanation": "contains recorre secuencialmente hasta n elementos y se ejecuta n veces, lo que produce del orden de n² comparaciones. O(2n) equivale a O(n) e ignora el costo oculto de la llamada a la biblioteca."
+          },
+          {
+            "prompt": "En una prueba de razón duplicada se obtienen 0,8 s, 6,5 s y 51,9 s para n = 10 000, 20 000 y 40 000. ¿Qué orden de crecimiento sugieren los datos?",
+            "options": [
+              "Cuadrático, porque el tiempo crece muy rápido",
+              "Cúbico, porque la razón se estabiliza cerca de 8",
+              "Exponencial, porque cada duplicación multiplica el tiempo",
+              "Lineal con constantes elevadas de la JVM"
+            ],
+            "correct": 1,
+            "explanation": "Las razones 6,5/0,8 ≈ 8,1 y 51,9/6,5 ≈ 8,0 tienden a 8 = 2³, por lo que el exponente estimado es 3. Un crecimiento exponencial mostraría razones que aumentan con n en lugar de estabilizarse."
+          },
+          {
+            "prompt": "¿Cuál de las siguientes afirmaciones sobre f(n) = 5n² + 300n es correcta?",
+            "options": [
+              "Es Θ(n³) porque está acotada superiormente por n³",
+              "Es Ω(n³) debido al término 300n",
+              "Es O(n) cuando n es pequeño",
+              "Es Θ(n²) y también O(n³)"
+            ],
+            "correct": 3,
+            "explanation": "El término dominante es 5n², por lo que f es Θ(n²). Como O solo expresa una cota superior, también es cierto, aunque poco informativo, que f es O(n³). La notación asintótica no depende de valores pequeños de n."
+          },
+          {
+            "prompt": "Un arreglo dinámico que duplica su capacidad recibe n inserciones al final, empezando vacío. ¿Cuál es el costo amortizado por inserción?",
+            "options": [
+              "O(1), porque el total de copias es menor que 2n",
+              "O(n), porque algunas inserciones copian todo el arreglo",
+              "O(log n), por el número de redimensionamientos",
+              "O(n²), por la suma de todas las copias"
+            ],
+            "correct": 0,
+            "explanation": "Las copias suman 1 + 2 + 4 + … + n/2, menos de n; junto con las n escrituras el total es menor que 2n operaciones, es decir, costo constante amortizado aunque una inserción aislada pueda costar O(n)."
+          },
+          {
+            "prompt": "Un sistema debe atender turnos en orden de llegada con miles de altas y atenciones por minuto. ¿Qué implementación en Java es la más adecuada?",
+            "options": [
+              "ArrayList con add y remove(0)",
+              "LinkedList recorrida con get(i)",
+              "Stack con push y pop",
+              "ArrayDeque con offer y poll"
+            ],
+            "correct": 3,
+            "explanation": "ArrayDeque implementa una cola sobre un arreglo circular con inserción y extracción en O(1) amortizado. remove(0) desplaza todos los elementos, get(i) en LinkedList es lineal y Stack atiende en orden inverso (LIFO)."
+          },
+          {
+            "prompt": "¿Qué suele ocurrir si se ejecuta lista.remove(cliente) dentro de un for-each que recorre esa misma ArrayList?",
+            "options": [
+              "Se elimina el elemento y el recorrido continúa sin problemas",
+              "Se lanza ConcurrentModificationException porque el iterador detecta la modificación",
+              "El compilador rechaza el programa por modificar la colección",
+              "Se duplica el elemento siguiente en el recorrido"
+            ],
+            "correct": 1,
+            "explanation": "Los iteradores de java.util son fail-fast: comparan un contador de modificaciones estructurales y lanzan la excepción en la siguiente llamada a next. La forma correcta es usar iterator.remove() o removeIf con un predicado."
+          },
+          {
+            "prompt": "Al evaluar ((2 + 3) * 4) con el algoritmo de dos pilas de Dijkstra, ¿qué se hace al leer cada paréntesis de cierre?",
+            "options": [
+              "Se apila el paréntesis en la pila de operadores",
+              "Se vacían ambas pilas y se reinicia el cálculo",
+              "Se desapilan un operador y dos operandos, se calcula y se apila el resultado",
+              "Se desapila un operando y se descarta"
+            ],
+            "correct": 2,
+            "explanation": "El paréntesis de cierre indica que una subexpresión está completa: se toma el último operador y los dos últimos operandos, se calcula y el resultado vuelve a la pila de operandos. Así 2 + 3 produce 5 y luego 5 * 4 produce 20."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Recursión, ordenamiento y búsqueda",
+      "description": "Al finalizar la unidad, el estudiante diseña algoritmos recursivos y de divide y vencerás, determina su costo con recurrencias y el teorema maestro, e implementa y selecciona algoritmos de búsqueda y ordenamiento en Java considerando estabilidad, memoria, casos extremos y el comportamiento real de Arrays.sort y List.sort.",
+      "topics": [
+        "Recursión, pila de llamadas y memoización",
+        "Recurrencias y teorema maestro",
+        "Búsqueda secuencial y binaria con invariantes",
+        "Ordenamientos elementales: selección, inserción y Shellsort",
+        "Mergesort, quicksort y cota inferior de los ordenamientos por comparación",
+        "Ordenamientos lineales, estabilidad y comparadores multicriterio en Java"
+      ],
+      "slides": [
+        {
+          "title": "Recursión: caso base, caso recursivo y progreso",
+          "bullets": [
+            "Un método recursivo resuelve una instancia apoyándose en instancias más pequeñas del mismo problema.",
+            "Tres reglas: caso base sin recursión, avance hacia el caso base y suposición de que la llamada interna es correcta.",
+            "Cada llamada ocupa un marco en la pila de la JVM; una recursión sin caso base termina en StackOverflowError.",
+            "La profundidad importa: recorrer recursivamente una lista de 100 000 nodos puede desbordar la pila por defecto."
+          ],
+          "notes": "Conecte con la inducción matemática estudiada en Matemática Discreta: el caso base de la recursión corresponde a la base de la inducción y la llamada recursiva al paso inductivo. Desarrolle un ejemplo cercano, como sumar los dígitos de un número de RUC o calcular el saldo de una cuenta con capitalización mensual. Enfatice la tercera regla, la suposición de confianza: al diseñar el método se asume que la llamada sobre la instancia menor ya funciona y solo se piensa en cómo combinar su resultado. Muestre en el depurador cómo se apilan los marcos de cada llamada con sus variables locales y cómo se desapilan al retornar. Luego provoque deliberadamente un StackOverflowError eliminando el caso base. Explique que la pila de cada hilo en la JVM suele ser de 1 MB en sistemas de 64 bits, por lo que la profundidad es un recurso limitado. Pregunta para la clase: ¿cuál es el caso base al recorrer recursivamente las carpetas de un disco?"
+        },
+        {
+          "title": "Pila de llamadas y recursión frente a iteración",
+          "bullets": [
+            "Java no optimiza la recursión de cola: toda llamada recursiva consume pila aunque sea la última instrucción.",
+            "Toda recursión puede convertirse en iteración con una pila explícita (ArrayDeque), útil cuando la profundidad es grande.",
+            "La recursión es natural para estructuras recursivas: árboles, expresiones, directorios y algoritmos de divide y vencerás.",
+            "Ampliar la pila con la opción -Xss es un paliativo, no un diseño."
+          ],
+          "notes": "Muestre que muchos lenguajes funcionales eliminan la llamada de cola reutilizando el marco, pero la JVM no lo hace, en parte para preservar trazas de pila completas útiles en la depuración y en la seguridad. Consecuencia práctica: un algoritmo recursivo cuya profundidad es proporcional a n, como recorrer una lista enlazada, no es apropiado en Java para entradas grandes. Convierta en vivo un recorrido recursivo de carpetas en uno iterativo con un ArrayDeque como pila explícita; el resultado es equivalente y la profundidad solo queda limitada por la memoria del heap. Aclare cuándo la recursión es la mejor opción: cuando la profundidad es logarítmica, como en mergesort o en árboles balanceados, o cuando la estructura es naturalmente recursiva, como un árbol de expresiones. Insista en que ampliar la pila resuelve el síntoma y no la causa. Pregunta para la clase: ¿qué profundidad máxima alcanza la recursión de mergesort con un millón de elementos?"
+        },
+        {
+          "title": "Memoización: evitar recalcular subproblemas",
+          "bullets": [
+            "Fibonacci recursivo ingenuo realiza un número exponencial de llamadas, del orden de 1,618ⁿ.",
+            "Memoizar es guardar en un arreglo o HashMap el resultado de cada subproblema ya resuelto y consultarlo antes de recalcular.",
+            "Con memoización, fib(n) pasa a O(n) en tiempo y O(n) en memoria; es la puerta de entrada a la programación dinámica.",
+            "Condición: la función debe ser pura; si depende de estado externo mutable, la caché devuelve resultados erróneos."
+          ],
+          "notes": "Ejecute fib(40) recursivo ingenuo y mida: verán que tarda de forma perceptible y que el número de llamadas supera los trescientos millones. Dibuje el árbol de llamadas de fib(5) y marque cuántas veces se recalcula fib(2). El crecimiento es proporcional a la razón áurea elevada a n, aproximadamente 1,618ⁿ. Luego agregue un arreglo long[] como caché: antes de calcular se consulta si el valor existe y, después de calcular, se guarda. El tiempo pasa a lineal. Explique que esta técnica se llama memoización, término acuñado por Donald Michie en 1968, y que constituye la versión descendente de la programación dinámica que estudiaremos en la Unidad 4. Advierta la condición de pureza: si la función depende de la fecha, de una base de datos o de un atributo mutable, la caché puede devolver resultados obsoletos. Pregunta para la clase: ¿qué cálculos de negocio podrían beneficiarse de memoización, por ejemplo tarifas escalonadas o cronogramas de pago?"
+        },
+        {
+          "title": "Recurrencias: medir algoritmos recursivos",
+          "bullets": [
+            "Se expresa el costo en términos de sí mismo: la búsqueda binaria cumple T(n) = T(n/2) + c.",
+            "Mergesort cumple T(n) = 2T(n/2) + cn, porque divide en dos mitades y mezcla en tiempo lineal.",
+            "Método del árbol de recursión: sumar el costo de cada nivel y multiplicar por el número de niveles, log₂ n.",
+            "Fibonacci ingenuo cumple T(n) = T(n − 1) + T(n − 2) + c, con crecimiento exponencial."
+          ],
+          "notes": "Enseñe a traducir código recursivo en una ecuación. La búsqueda binaria hace una comparación y una llamada sobre la mitad: T(n) = T(n/2) + c. Al expandir se obtiene c sumado log₂ n veces, es decir, Θ(log n). Para mergesort, dibuje el árbol de recursión: en el nivel cero se mezclan n elementos, en el nivel uno hay dos mezclas de n/2, y así sucesivamente; cada nivel cuesta cn y hay log₂ n niveles, por lo que T(n) = Θ(n log n). Contraste con Fibonacci ingenuo, cuya recurrencia genera un árbol que casi se duplica en cada nivel. Pida a los estudiantes que escriban la recurrencia de una función que recorre un arreglo de forma recursiva quitando un elemento por llamada: T(n) = T(n − 1) + c, que da Θ(n) pero con profundidad n, lo que conecta con el riesgo de desbordamiento de pila. Pregunta para la clase: ¿qué recurrencia describe un algoritmo que divide en tres partes y combina en tiempo constante?"
+        },
+        {
+          "title": "Teorema maestro para divide y vencerás",
+          "bullets": [
+            "Para T(n) = aT(n/b) + f(n) se compara f(n) con n^(log_b a), el costo total de las hojas del árbol.",
+            "Caso 1: f crece polinomialmente más lento, entonces T(n) = Θ(n^(log_b a)).",
+            "Caso 2: f(n) = Θ(n^(log_b a)), entonces T(n) = Θ(n^(log_b a) · log n); así se obtiene mergesort Θ(n log n).",
+            "Caso 3: f domina y cumple la condición de regularidad, entonces T(n) = Θ(f(n)).",
+            "Ejemplo: la multiplicación de Karatsuba, T(n) = 3T(n/2) + n, resulta Θ(n^1,585)."
+          ],
+          "notes": "Presente el teorema maestro como un atajo para recurrencias de la forma aT(n/b) + f(n), donde a es el número de subproblemas, b el factor de reducción y f el costo de dividir y combinar. La clave es comparar f(n) con n elevado a log_b a, que representa el trabajo total en las hojas del árbol de recursión. Si las hojas dominan, caso 1; si ambos están equilibrados, caso 2 y aparece un factor logarítmico; si la raíz domina, caso 3. Resuelva tres ejemplos: búsqueda binaria con a = 1, b = 2 y f constante, caso 2, Θ(log n); mergesort con a = 2, b = 2 y f lineal, caso 2, Θ(n log n); y la multiplicación de Karatsuba de 1962, con tres multiplicaciones de mitades, caso 1, Θ(n^1,585), más rápida que el método escolar Θ(n²). Advierta que el teorema no se aplica a recurrencias como T(n − 1) + c. Pregunta para la clase: resuelvan T(n) = 4T(n/2) + n."
+        },
+        {
+          "title": "Búsqueda secuencial y búsqueda binaria",
+          "bullets": [
+            "Secuencial: O(n) y no requiere orden; es la única opción sobre datos desordenados o en listas enlazadas.",
+            "Binaria: O(log n) sobre un arreglo ordenado; un millón de RUC se resuelven con 20 comparaciones como máximo.",
+            "Invariante: si la clave existe, está en a[lo..hi]; cada iteración descarta la mitad del intervalo.",
+            "Calcular el medio como lo + (hi − lo) / 2 o (lo + hi) >>> 1 evita el desbordamiento de enteros."
+          ],
+          "notes": "Contraste las dos búsquedas con números concretos: en un arreglo ordenado de un millón de RUC, la búsqueda secuencial puede requerir un millón de comparaciones y la binaria a lo sumo veinte. Escriba la versión iterativa y razone su corrección con el invariante: si la clave está en el arreglo, está entre lo y hi. Cada iteración conserva el invariante y reduce el intervalo a la mitad, por lo que el ciclo termina. Cuente la anécdota documentada por Joshua Bloch en 2006: la búsqueda binaria del JDK, basada en un libro clásico, calculaba el punto medio como (lo + hi) / 2, lo que desborda cuando la suma supera el máximo entero; el error pasó inadvertido durante años hasta que los arreglos crecieron. Muestre las dos formas correctas. Recalque que la búsqueda binaria no sirve sobre una LinkedList porque llegar al medio es lineal. Pregunta para la clase: ¿cuántas comparaciones haría con todo el padrón electoral peruano, de unos 27 millones de electores?"
+        },
+        {
+          "title": "Variantes de búsqueda binaria en la práctica",
+          "bullets": [
+            "Límite inferior: primera posición con a[i] ≥ clave; permite contar ocurrencias y resolver consultas por rango.",
+            "Arrays.binarySearch devuelve −(punto de inserción) − 1 si la clave no existe: información útil, no un error.",
+            "Búsqueda sobre la respuesta: hallar la mínima capacidad de camión que permite cumplir las entregas en k días.",
+            "Precondición crítica: los datos deben estar ordenados con el mismo criterio que usa la búsqueda."
+          ],
+          "notes": "Explique que en la práctica casi nunca se busca solo si una clave existe. Se necesita la primera aparición, el número de ocurrencias o los valores entre dos límites, por ejemplo cuántas facturas tienen montos entre S/ 1 000 y S/ 5 000. La función de límite inferior resuelve todo eso con un intervalo semiabierto, como se muestra en la lectura. Enseñe a interpretar el valor negativo de Arrays.binarySearch: si devuelve −8, la clave no existe y su punto de inserción es 7. Presente la técnica de búsqueda sobre la respuesta: cuando una propiedad es monótona, como «con capacidad C se cumplen las entregas en k días», se puede buscar binariamente el mínimo C que la satisface, aunque no exista un arreglo explícito. Insista en la precondición de orden: buscar por DNI en una lista ordenada por puntaje produce falsos negativos, error que aparece en el caso de esta unidad. Pregunta para la clase: ¿cómo contarían en O(log n) cuántos postulantes obtuvieron al menos 15 puntos?"
+        },
+        {
+          "title": "Ordenamientos elementales: selección e inserción",
+          "bullets": [
+            "Selección: busca el mínimo y lo intercambia; siempre unas n²/2 comparaciones, pero solo n intercambios.",
+            "Inserción: coloca cada elemento en la parte ya ordenada; O(n²) en el peor caso, casi O(n) con datos casi ordenados.",
+            "Inserción es estable y adaptativa; por eso los algoritmos híbridos la usan para subarreglos pequeños.",
+            "Shellsort (1959) aplica inserción con saltos decrecientes y mejora mucho el desempeño práctico."
+          ],
+          "notes": "Presente los dos algoritmos elementales con una animación o con cartas virtuales. Selección busca repetidamente el mínimo y lo coloca en su lugar: siempre hace del orden de n²/2 comparaciones, sin importar el estado inicial, pero solo n intercambios, lo que puede ser útil si mover datos es costoso. Inserción toma cada elemento y lo desplaza hacia la izquierda hasta su posición, como quien ordena cartas en la mano: en el peor caso es cuadrática, pero si los datos están casi ordenados realiza muy pocos desplazamientos y se vuelve prácticamente lineal. Además es estable y trabaja en el mismo arreglo. Por eso TimSort y las buenas implementaciones de mergesort la usan en subarreglos pequeños. Mencione Shellsort, propuesto por Donald Shell en 1959, que aplica inserción con saltos decrecientes. Pregunta para la clase: un archivo de ventas llega ordenado por fecha con unas pocas correcciones al final; ¿qué algoritmo elemental conviene y por qué?"
+        },
+        {
+          "title": "Mergesort: dividir, ordenar y mezclar",
+          "bullets": [
+            "Divide el arreglo en mitades, ordena cada una recursivamente y las mezcla usando un arreglo auxiliar.",
+            "Θ(n log n) en todos los casos y estable si, ante un empate, se toma primero el elemento de la mitad izquierda.",
+            "Costo: memoria auxiliar O(n); es ideal para listas enlazadas y para ordenar archivos que no caben en memoria.",
+            "Mejoras prácticas: inserción para subarreglos pequeños y omitir la mezcla si las mitades ya están en orden."
+          ],
+          "notes": "Desarrolle mergesort como el ejemplo canónico de divide y vencerás, atribuido a John von Neumann en 1945. Muestre la recursión que divide hasta subarreglos de un elemento y la mezcla que combina dos mitades ordenadas en tiempo lineal con un arreglo auxiliar. Explique cómo se garantiza la estabilidad: en caso de empate se toma primero el elemento de la mitad izquierda, que apareció antes en la entrada. Señale su principal costo, la memoria auxiliar proporcional a n, y su principal virtud, el tiempo Θ(n log n) garantizado. Comente que la mezcla de tramos ordenados es la base del ordenamiento externo de archivos que no caben en memoria, usado por los gestores de bases de datos. Presente las dos mejoras que aparecen en la lectura: cortar a inserción en subarreglos pequeños y omitir la mezcla cuando el último elemento de la izquierda ya es menor o igual que el primero de la derecha. Pregunta para la clase: ¿por qué mergesort es especialmente adecuado para listas enlazadas?"
+        },
+        {
+          "title": "Quicksort: partición y elección del pivote",
+          "bullets": [
+            "Elige un pivote, particiona en menores y mayores, y ordena recursivamente cada parte sin arreglo auxiliar.",
+            "Promedio Θ(n log n) con constantes pequeñas; peor caso Θ(n²) si el pivote es siempre un extremo de datos ordenados.",
+            "Defensas: barajar la entrada, elegir el pivote al azar o usar la mediana de tres.",
+            "La partición en tres vías de Dijkstra resuelve con eficiencia arreglos con muchas claves repetidas.",
+            "No es estable: puede alterar el orden relativo de elementos con claves iguales."
+          ],
+          "notes": "Presente quicksort, inventado por Tony Hoare y publicado a inicios de la década de 1960, como el algoritmo que ordena en el mismo arreglo con muy pocas operaciones por elemento. Muestre la partición de Lomuto por ser más fácil de seguir y mencione la de Hoare por ser más eficiente. Analice el peor caso: si el pivote es siempre el primer elemento y los datos ya están ordenados, cada partición deja un lado vacío, las llamadas se anidan n niveles y el costo es cuadrático; en Java, además, la profundidad puede provocar StackOverflowError. Las defensas son barajar la entrada, elegir el pivote al azar o usar la mediana de tres. Presente la partición en tres vías que propuso Dijkstra con el problema de la bandera holandesa: menores, iguales y mayores, muy eficaz cuando hay muchas claves repetidas, como los puntajes vigesimales. Recalque que quicksort no es estable. Pregunta para la clase: ¿qué ocurre con un quicksort de dos vías si la mitad de los puntajes es 14?"
+        },
+        {
+          "title": "Cota inferior: ningún ordenamiento por comparación supera n log n",
+          "bullets": [
+            "Un árbol de decisión que ordena n elementos debe tener al menos n! hojas, una por cada permutación posible.",
+            "Su altura mínima es log₂(n!), aproximadamente n log₂ n − 1,44 n por la aproximación de Stirling.",
+            "Conclusión: mergesort y heapsort son asintóticamente óptimos entre los ordenamientos por comparación.",
+            "Para superar la cota hay que dejar de comparar y aprovechar la estructura de las claves."
+          ],
+          "notes": "Esta diapositiva es la más conceptual de la unidad y conviene dedicarle tiempo. Cualquier algoritmo que solo compara pares de elementos puede representarse como un árbol de decisión binario: cada nodo interno es una comparación y cada hoja una permutación de salida. Como hay n! permutaciones posibles y el árbol debe distinguirlas todas, necesita al menos n! hojas, y un árbol binario con esa cantidad de hojas tiene altura de al menos log₂(n!). Con la aproximación de Stirling se obtiene aproximadamente n log₂ n − 1,44 n comparaciones en el peor caso. La consecuencia es poderosa: nadie, por talentoso que sea, escribirá un ordenamiento por comparación con un peor caso asintóticamente mejor que mergesort o heapsort. La única salida es aprovechar información adicional de las claves, tema de la siguiente diapositiva. Pregunta para la clase: ¿cuántas comparaciones se necesitan como mínimo en el peor caso para ordenar tres elementos?"
+        },
+        {
+          "title": "Ordenamientos lineales: conteo y radix",
+          "bullets": [
+            "Conteo: claves enteras en un rango pequeño k; O(n + k) y estable, por ejemplo notas vigesimales de 0 a 20.",
+            "Radix LSD: ordena dígito por dígito con un ordenamiento estable; DNI de 8 dígitos en 8 pasadas lineales.",
+            "Ordenamiento por cubetas: distribuye en cubetas y es lineal en promedio si los datos son uniformes.",
+            "Costo oculto: memoria auxiliar y aplicabilidad limitada a claves con estructura conocida."
+          ],
+          "notes": "Muestre que, cuando las claves son enteros en un rango acotado, se puede ordenar sin comparar. El ordenamiento por conteo crea un arreglo de frecuencias de tamaño k + 1, acumula las posiciones y coloca cada elemento en su lugar final recorriendo la entrada de derecha a izquierda para conservar la estabilidad. Con las notas de 0 a 20 de todos los estudiantes de un instituto, k es 20 y el algoritmo es lineal. Radix LSD aplica un ordenamiento estable dígito por dígito, desde el menos significativo; para DNI de ocho dígitos son ocho pasadas lineales, aunque en la práctica conviene agrupar dígitos en bytes para reducir pasadas. Mencione que la idea se remonta a los trabajos de Herman Hollerith con máquinas tabuladoras a fines del siglo XIX. Discuta los costos: memoria auxiliar y dependencia del formato de la clave. Pregunta para la clase: ¿sirve el ordenamiento por conteo para ordenar montos en soles con céntimos de una base de un millón de ventas?"
+        },
+        {
+          "title": "Estabilidad y el ordenamiento en Java",
+          "bullets": [
+            "Estable: conserva el orden relativo de elementos con claves iguales; es clave al ordenar por varios criterios.",
+            "Arrays.sort para primitivos usa quicksort de doble pivote (Yaroslavskiy): no es estable, pero en primitivos no importa.",
+            "Arrays.sort para objetos y List.sort usan TimSort: estable, adaptativo y O(n log n) en el peor caso.",
+            "TimSort, creado por Tim Peters para Python en 2002, aprovecha los tramos ya ordenados de los datos reales."
+          ],
+          "notes": "Defina estabilidad con un ejemplo de negocio: una lista de ventas ya ordenada por fecha se ordena luego por vendedor; si el algoritmo es estable, las ventas de cada vendedor quedan por fecha. Luego explique qué usa Java: para arreglos de primitivos, Arrays.sort aplica quicksort de doble pivote, propuesto por Vladimir Yaroslavskiy e incorporado en Java 7; la estabilidad no importa allí porque dos enteros iguales son indistinguibles. Para objetos, Arrays.sort, Collections.sort y List.sort usan TimSort, creado por Tim Peters para Python en 2002 y adoptado por Java 7: un híbrido de mezcla e inserción que detecta tramos ya ordenados y los aprovecha, de modo que con datos casi ordenados se acerca a tiempo lineal. Cuente que en 2015 un equipo que aplicaba verificación formal encontró un error en una invariante de TimSort que afectaba a Java y a Python, lo que muestra el valor del razonamiento riguroso. Pregunta para la clase: ¿por qué Java eligió algoritmos distintos para primitivos y para objetos?"
+        },
+        {
+          "title": "Comparadores multicriterio y errores frecuentes",
+          "bullets": [
+            "Comparator.comparingInt(Postulante::puntaje).reversed().thenComparing(Postulante::fechaPostulacion) expresa el desempate sin código frágil.",
+            "Evitar comparar restando enteros (a − b): puede desbordar; usar Integer.compare o Comparator.comparingInt.",
+            "Un comparador debe ser consistente y transitivo; si no lo es, TimSort puede lanzar IllegalArgumentException.",
+            "Para textos en español conviene Collator con la configuración regional es-PE, de modo que la ñ y las tildes se ordenen bien."
+          ],
+          "notes": "Muestre cómo la API de Comparator de Java permite expresar criterios de negocio de forma declarativa y legible. Construya el comparador de un ranking de becas: mayor puntaje primero, luego menor ingreso per cápita y luego la postulación más antigua. Explique por qué restar enteros es peligroso: si un valor es cercano al máximo entero y el otro es negativo, la resta desborda y el signo se invierte, provocando un orden incorrecto. Presente el contrato de un comparador: antisimetría, transitividad y consistencia; si se viola, por ejemplo usando aleatoriedad o comparando decimales con tolerancia, TimSort puede detectarlo y lanzar el mensaje «Comparison method violates its general contract». Finalmente, muestre que ordenar apellidos con compareTo coloca «Ñahui» después de «Zapata» y deja mal ubicadas las palabras con tilde; Collator con la configuración regional de Perú resuelve el problema. Pregunta para la clase: ¿cómo ordenarían clientes por distrito y, dentro de cada distrito, por monto de compra descendente?"
+        }
+      ],
+      "reading": {
+        "title": "Ordenar y buscar con garantías: del análisis al Java Collections Framework",
+        "minutes": 35,
+        "content": "## Por qué ordenar sigue siendo central\n\nOrdenar es la operación de procesamiento de datos más estudiada de la computación: Knuth le dedicó buena parte del tercer volumen de *The Art of Computer Programming*. La razón es práctica: con los datos ordenados, buscar cuesta O(log n), detectar duplicados es un recorrido lineal y los reportes por rangos se vuelven triviales. En el Perú, procesos como el ranking de postulantes a programas de becas, la asignación de vacantes en concursos públicos o la conciliación de comprobantes electrónicos dependen de ordenamientos correctos, estables y auditables.\n\n## Mergesort con criterio profesional\n\nLa siguiente implementación genérica incorpora dos mejoras recomendadas por Sedgewick y Wayne (2011): inserción para subarreglos pequeños y omisión de la mezcla cuando las mitades ya están en orden.\n\n```java\npublic final class Ordenamiento {\n    private static final int UMBRAL = 12;          // por debajo conviene inserción\n\n    public static <T> void mergesort(T[] a, Comparator<? super T> cmp) {\n        T[] aux = a.clone();                       // memoria auxiliar O(n), reservada una vez\n        ordenar(a, aux, 0, a.length - 1, cmp);\n    }\n\n    private static <T> void ordenar(T[] a, T[] aux, int lo, int hi, Comparator<? super T> cmp) {\n        if (hi - lo < UMBRAL) { insercion(a, lo, hi, cmp); return; }\n        int mid = (lo + hi) >>> 1;                 // evita el desbordamiento de lo + hi\n        ordenar(a, aux, lo, mid, cmp);\n        ordenar(a, aux, mid + 1, hi, cmp);\n        if (cmp.compare(a[mid], a[mid + 1]) <= 0) return;  // ya en orden: se omite la mezcla\n        mezclar(a, aux, lo, mid, hi, cmp);\n    }\n\n    private static <T> void mezclar(T[] a, T[] aux, int lo, int mid, int hi, Comparator<? super T> cmp) {\n        System.arraycopy(a, lo, aux, lo, hi - lo + 1);\n        int i = lo, j = mid + 1;\n        for (int k = lo; k <= hi; k++) {\n            if (i > mid)                              a[k] = aux[j++];\n            else if (j > hi)                          a[k] = aux[i++];\n            else if (cmp.compare(aux[j], aux[i]) < 0) a[k] = aux[j++]; // estricto: estabilidad\n            else                                      a[k] = aux[i++];\n        }\n    }\n    // insercion(a, lo, hi, cmp) se omite por brevedad\n}\n```\n\nLa recurrencia es T(n) = 2T(n/2) + Θ(n), que por el caso 2 del teorema maestro da Θ(n log n) en todos los casos. La comparación estricta en la mezcla garantiza la **estabilidad**: ante un empate se toma primero el elemento de la mitad izquierda, que apareció antes en la entrada.\n\n## Búsqueda binaria sin errores\n\nLa búsqueda binaria es breve pero tiene trampas: intervalos mal cerrados, ciclos infinitos y desbordamiento al calcular el punto medio. La versión de límite inferior con intervalo semiabierto [lo, hi) es robusta y responde varias preguntas.\n\n```java\n/** Primera posición i tal que a[i] >= clave; devuelve a.length si no existe. */\nstatic int limiteInferior(long[] a, long clave) {\n    int lo = 0, hi = a.length;\n    while (lo < hi) {\n        int mid = (lo + hi) >>> 1;\n        if (a[mid] < clave) lo = mid + 1;   // la respuesta está a la derecha de mid\n        else hi = mid;                      // mid todavía puede ser la respuesta\n    }\n    return lo;\n}\n```\n\nEl invariante es claro: todo elemento a la izquierda de lo es menor que la clave y todo elemento desde hi en adelante es mayor o igual. Así se cuenta en O(log n) cuántos comprobantes tiene un RUC en un arreglo ordenado: limiteInferior(a, ruc + 1) − limiteInferior(a, ruc).\n\n## Ordenar objetos en Java: TimSort y Comparator\n\nPara objetos, List.sort y Arrays.sort usan TimSort, que es estable y garantiza O(n log n). Ello permite expresar reglas de desempate en un solo comparador:\n\n```java\nrecord Postulante(String dni, int puntaje, double ingresoPerCapita, LocalDate fechaPostulacion) {}\n\nComparator<Postulante> orden = Comparator\n        .comparingInt(Postulante::puntaje).reversed()       // 1.° mayor puntaje\n        .thenComparingDouble(Postulante::ingresoPerCapita)  // 2.° menor ingreso per cápita\n        .thenComparing(Postulante::fechaPostulacion);       // 3.° postulación más antigua\npostulantes.sort(orden);\n```\n\nObserve que reversed() invierte solo el criterio construido hasta ese punto; colocarlo al final invertiría también los desempates, un error frecuente.\n\n## ¿Qué algoritmo elegir?\n\n| Situación | Recomendación | Justificación |\n|---|---|---|\n| Objetos con desempates | List.sort (TimSort) | Estable, O(n log n) garantizado |\n| Primitivos en memoria | Arrays.sort | Quicksort de doble pivote, muy rápido |\n| Enteros en rango pequeño | Conteo | O(n + k) y estable |\n| Pocos datos casi ordenados | Inserción | Adaptativo, casi lineal |\n\n## Transparencia y reproducibilidad\n\nCuando un ordenamiento decide quién recibe una beca, el algoritmo forma parte de una decisión pública. La Ley 27806, de Transparencia y Acceso a la Información Pública, permite a los ciudadanos solicitar información sobre esos procesos, por lo que el ranking debe ser reproducible: mismos datos y mismas reglas deben producir siempre el mismo orden. Un quicksort con pivote aleatorio, que no es estable, puede ubicar de manera distinta a los empatados en cada ejecución."
+      },
+      "case": {
+        "title": "Caso: El ranking de becas del Fondo Educativo Regional Ayllu",
+        "content": "El **Fondo Educativo Regional Ayllu** (nombre ficticio) es un programa de un gobierno regional del sur andino que cada año otorga 1 200 becas integrales para estudios técnicos y universitarios. En la convocatoria 2026 se inscribieron 46 300 postulantes. Las bases establecen que el ranking se ordena por puntaje final (escala de 0 a 20, con un decimal) en forma descendente y que, en caso de empate, se prioriza a quien tenga menor ingreso familiar per cápita y, de persistir el empate, a quien postuló primero.\n\nEl sistema fue desarrollado en 2019 por un proveedor que implementó su propio quicksort en Java, con el primer elemento como pivote. Para aplicar los desempates, el programador ordenaba primero por fecha de postulación, luego por ingreso y finalmente por puntaje, confiando en que cada pasada respetaría el orden de la anterior. La consulta pública de resultados busca el DNI del postulante con búsqueda binaria sobre la lista final del ranking.\n\nDurante la publicación de resultados ocurrieron tres incidentes:\n\n1. **Lentitud y caída.** El módulo de evaluación entregó la lista ya ordenada por puntaje. El quicksort tardó 41 minutos y, en dos intentos, terminó con StackOverflowError. Un técnico aumentó la pila de la JVM con -Xss512m para «resolverlo».\n2. **Desempates incorrectos.** En el puntaje de corte, 15,5, había 312 postulantes empatados para 87 becas restantes. Una postulante demostró, con su constancia de ingresos, que había quedado fuera pese a tener menor ingreso que 23 becarios con su mismo puntaje. Presentó un reclamo y una solicitud de acceso a la información pública; el caso llegó a la prensa regional.\n3. **Consultas fallidas.** Cerca del 3 % de los postulantes recibió el mensaje «DNI no encontrado» al consultar su resultado, aunque figuraban en la lista publicada.\n\nEl jefe de Tecnologías de la Información, Ing. Wilber Huamán, tiene diez días hábiles antes de la siguiente convocatoria y evalúa tres alternativas:\n\n- **A. Parche:** pivote aleatorio en el quicksort propio y mantener -Xss512m. Esfuerzo: dos días.\n- **B. Reescritura:** reemplazar el ordenamiento por List.sort con un comparador multicriterio, crear un índice HashMap<String, Postulante> para las consultas por DNI y agregar pruebas automatizadas con casos de empate. Esfuerzo: siete días.\n- **C. Delegar a la base de datos:** calcular el ranking con ORDER BY puntaje DESC, ingreso ASC, fecha ASC en PostgreSQL y publicar una vista. Esfuerzo: cinco días, aunque el equipo tiene poca experiencia en SQL avanzado.\n\nLa gerencia exige, además, que cualquier ciudadano pueda verificar el ranking con las reglas publicadas y que el proceso sea reproducible ante una auditoría de control.",
+        "questions": [
+          "Explique, con el análisis del peor caso de quicksort, por qué el ranking tardó 41 minutos y desbordó la pila cuando la lista llegó ordenada por puntaje.",
+          "¿Por qué falló la estrategia de ordenar en tres pasadas? ¿Qué propiedad debe tener el algoritmo para que funcione y qué alternativa es más clara?",
+          "Diagnostique la causa de los mensajes «DNI no encontrado» y proponga la estructura de datos correcta para la consulta, con su complejidad.",
+          "Evalúe las alternativas A, B y C según esfuerzo, riesgo técnico, reproducibilidad y transparencia, y formule una recomendación sustentada.",
+          "¿Qué pruebas automatizadas diseñaría para demostrar ante una auditoría que el ranking cumple exactamente las bases publicadas?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: motor de ranking estable, eficiente y auditable",
+        "instructions": "**Objetivo:** construir y evaluar un motor de ordenamiento y búsqueda que resuelva los problemas del caso Fondo Educativo Regional Ayllu con garantías de corrección, estabilidad y eficiencia.\n\n**Qué entregar:**\n\n1. Clase `Ordenamiento` con `mergesort` (con corte a inserción) y `quicksort` en tres vías con pivote aleatorio, ambos genéricos con `Comparator<? super T>`.\n2. Generador de 200 000 postulantes sintéticos con semilla fija, puntajes con un decimal entre 0 y 20 y abundantes empates.\n3. Comparador multicriterio según las bases del caso y método `limiteInferior` para responder cuántos postulantes alcanzan un puntaje mínimo.\n4. Pruebas JUnit 5 que verifiquen el orden resultante, la estabilidad de mergesort (los empatados conservan el orden de entrada), los casos vacío y de un elemento, y la coincidencia con `List.sort`.\n5. Experimento con n de 25 000 a 400 000 sobre cuatro distribuciones (aleatoria, ordenada, inversa y con muchas claves repetidas), con tabla de razones duplicadas y gráfica.\n6. Informe de 3 páginas que interprete los resultados, explique el peor caso observado y recomiende una alternativa al jefe de TI.\n\n**Formato:** repositorio Git con proyecto Maven, README con instrucciones de ejecución e informe en PDF. Java 17 o superior.\n\n**Criterios:** corrección de los algoritmos, calidad de las pruebas, rigor experimental y solidez de la recomendación, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Corrección de los algoritmos y manejo de casos límite",
+            "points": 6
+          },
+          {
+            "name": "Pruebas de estabilidad y de coincidencia con List.sort",
+            "points": 4
+          },
+          {
+            "name": "Diseño experimental y análisis de resultados",
+            "points": 5
+          },
+          {
+            "name": "Informe y recomendación sustentada al caso",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 2: recursión, ordenamiento y búsqueda",
+        "questions": [
+          {
+            "prompt": "¿Cuál es la solución de la recurrencia T(n) = 2T(n/2) + n según el teorema maestro?",
+            "options": [
+              "Θ(n)",
+              "Θ(n log n)",
+              "Θ(n²)",
+              "Θ(log n)"
+            ],
+            "correct": 1,
+            "explanation": "Con a = 2 y b = 2, n^(log_b a) = n, del mismo orden que f(n): es el caso 2 del teorema, que añade un factor logarítmico. Es la recurrencia de mergesort."
+          },
+          {
+            "prompt": "Un quicksort usa siempre el primer elemento como pivote. ¿Con qué entrada alcanza su peor caso?",
+            "options": [
+              "Con datos aleatorios sin repeticiones",
+              "Con un arreglo de dos elementos",
+              "Con un arreglo ya ordenado o en orden inverso",
+              "Con datos que tienen la mitad de claves distintas"
+            ],
+            "correct": 2,
+            "explanation": "Si los datos están ordenados, el primer elemento es el mínimo y la partición deja un lado vacío; se generan n niveles de recursión y Θ(n²) comparaciones. Barajar o elegir el pivote al azar evita este comportamiento."
+          },
+          {
+            "prompt": "Una lista de ventas ya ordenada por fecha se ordena por vendedor. ¿Qué condición asegura que, dentro de cada vendedor, las ventas sigan ordenadas por fecha?",
+            "options": [
+              "Que el segundo ordenamiento sea estable",
+              "Que el segundo ordenamiento trabaje en el mismo arreglo",
+              "Que se use quicksort con pivote aleatorio",
+              "Que la lista tenga menos de diez mil elementos"
+            ],
+            "correct": 0,
+            "explanation": "Un algoritmo estable conserva el orden relativo de los elementos con la misma clave, por lo que el orden previo por fecha se mantiene dentro de cada vendedor. List.sort de Java es estable; quicksort no lo es."
+          },
+          {
+            "prompt": "¿Cuántas comparaciones realiza como máximo la búsqueda binaria sobre 4 000 000 de registros ordenados?",
+            "options": [
+              "11",
+              "4 000",
+              "2 000 000",
+              "22"
+            ],
+            "correct": 3,
+            "explanation": "El número máximo de iteraciones es el techo de log₂(n + 1); como 2²² supera los 4,19 millones, bastan 22 comparaciones. Una búsqueda secuencial podría requerir los cuatro millones."
+          },
+          {
+            "prompt": "Arrays.binarySearch devuelve −8 al buscar una clave en un arreglo ordenado. ¿Qué significa ese resultado?",
+            "options": [
+              "La clave está en la posición 8",
+              "La clave no existe y su punto de inserción es 7",
+              "El arreglo no está ordenado",
+              "La clave aparece 8 veces"
+            ],
+            "correct": 1,
+            "explanation": "Cuando la clave no existe, el método devuelve −(punto de inserción) − 1. Si el resultado es −8, el punto de inserción es 7: allí debería insertarse la clave para mantener el orden."
+          },
+          {
+            "prompt": "¿Por qué no conviene implementar compare como return a.monto() - b.monto() cuando los montos son de tipo int?",
+            "options": [
+              "Porque la resta es más lenta que una comparación",
+              "Porque TimSort no acepta resultados negativos",
+              "Porque impide ordenar en forma descendente",
+              "Porque la resta puede desbordar e invertir el signo del resultado"
+            ],
+            "correct": 3,
+            "explanation": "Si un monto es muy grande y el otro negativo, la resta excede el rango de int y cambia de signo, produciendo un orden incorrecto. Integer.compare o Comparator.comparingInt evitan el problema."
+          },
+          {
+            "prompt": "Se deben ordenar 5 millones de notas vigesimales enteras, de 0 a 20. ¿Qué algoritmo es el más eficiente?",
+            "options": [
+              "Ordenamiento por conteo, O(n + k)",
+              "Mergesort, por su garantía Θ(n log n)",
+              "Inserción, porque las claves son pequeñas",
+              "Quicksort con pivote fijo"
+            ],
+            "correct": 0,
+            "explanation": "Con solo 21 valores posibles, el conteo recorre los datos y acumula frecuencias en tiempo lineal, por debajo de la cota n log n que limita a los ordenamientos por comparación."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Tablas hash, árboles y colas de prioridad",
+      "description": "Al finalizar la unidad, el estudiante implementa y selecciona tablas de símbolos con hashing y con árboles binarios de búsqueda balanceados, así como colas de prioridad con montículos binarios, respetando los contratos de igualdad y comparación, y las relaciona con HashMap, TreeMap, PriorityQueue y los índices de bases de datos.",
+      "topics": [
+        "Tablas de símbolos y el TAD Map",
+        "Funciones hash, colisiones, factor de carga y funcionamiento de HashMap",
+        "Contrato equals y hashCode, claves inmutables y riesgos de seguridad",
+        "Árboles binarios de búsqueda: operaciones, recorridos y degeneración",
+        "Árboles balanceados: AVL, rojo-negro, TreeMap y árboles B",
+        "Montículos binarios, PriorityQueue, top-k y heapsort"
+      ],
+      "slides": [
+        {
+          "title": "Tablas de símbolos: el problema de buscar por clave",
+          "bullets": [
+            "TAD Map: put(clave, valor), get(clave), remove(clave) y containsKey(clave); cada clave aparece una sola vez.",
+            "Usos: padrón de clientes por DNI, inventario por SKU, caché de tipo de cambio por fecha.",
+            "Implementaciones: arreglo ordenado con búsqueda O(log n) e inserción O(n); hash O(1) esperado; árbol balanceado O(log n).",
+            "Pregunta guía: ¿necesito orden y consultas por rango, o solo búsquedas exactas?"
+          ],
+          "notes": "Presente el problema del diccionario como el más frecuente del software empresarial: dado un identificador, recuperar el registro asociado. Ejemplos: buscar un cliente por DNI en caja, un producto por código de barras en el punto de venta o el tipo de cambio de una fecha para registrar una factura en dólares. Formalice el TAD Map de Java con sus operaciones y la regla de claves únicas. Construya con la clase una tabla comparativa de implementaciones: lista desordenada, arreglo ordenado con búsqueda binaria, tabla hash y árbol balanceado, con el costo de buscar, insertar, eliminar y recorrer en orden. Haga notar que ninguna es superior en todo: la tabla hash es la más rápida para búsquedas exactas, pero pierde el orden; el árbol mantiene el orden con costo logarítmico. Introduzca la pregunta guía que usarán durante toda la unidad. Pregunta para la clase: para el autocompletado de distritos en un formulario, ¿qué operaciones se necesitan y qué implementación elegirían?"
+        },
+        {
+          "title": "Funciones hash: de la clave al índice",
+          "bullets": [
+            "Una función hash transforma la clave en un entero; el índice se obtiene con el residuo respecto del tamaño de la tabla.",
+            "Propiedades deseables: determinista, rápida de calcular y con distribución uniforme de las claves.",
+            "String.hashCode de Java calcula s[0]·31^(n−1) + s[1]·31^(n−2) + … + s[n−1] con aritmética de 32 bits.",
+            "HashMap usa capacidades potencia de dos y mezcla los bits altos con h ^ (h >>> 16) antes de indexar."
+          ],
+          "notes": "Explique que la función hash convierte una clave arbitraria, como un DNI o un correo, en un entero, y que el residuo de dividirlo entre el número de celdas da el índice. Analice las propiedades: debe ser determinista, porque la misma clave siempre debe ir al mismo lugar; rápida, porque se calcula en cada operación; y uniforme, para repartir bien las claves. Muestre la fórmula de String.hashCode con el multiplicador 31, elegido por ser primo impar y porque multiplicar por 31 equivale a un desplazamiento y una resta. Explique por qué HashMap usa capacidades potencia de dos: el residuo se calcula con una operación AND de bits, más rápida que la división, pero así solo influirían los bits bajos; por ello mezcla los bits altos con un XOR. Calcule en vivo el hash de una cadena corta. Pregunta para la clase: ¿qué problema tendría una función hash que solo usa los dos primeros dígitos del DNI?"
+        },
+        {
+          "title": "Colisiones: encadenamiento separado y sondeo lineal",
+          "bullets": [
+            "Colisión: dos claves distintas producen el mismo índice; por el principio del palomar son inevitables.",
+            "Encadenamiento separado: cada celda guarda una lista de pares; costo esperado O(1 + α).",
+            "Sondeo lineal: si la celda está ocupada se prueba la siguiente; es rápido por localidad, pero sensible a los agrupamientos.",
+            "Eliminar en sondeo lineal exige reinsertar el bloque siguiente o usar marcas de borrado."
+          ],
+          "notes": "Use el principio del palomar estudiado en Matemática Discreta para justificar que las colisiones son inevitables: hay muchas más claves posibles que celdas. Presente las dos estrategias clásicas. En el encadenamiento separado, cada celda apunta a una lista de pares; si la función hash es uniforme, la longitud media de cada lista es el factor de carga y las operaciones cuestan O(1 + α). En el direccionamiento abierto con sondeo lineal, todas las claves viven en el propio arreglo: si la celda está ocupada se prueba la siguiente; es muy rápido gracias a la localidad de caché, pero forma agrupamientos que crecen al aumentar la ocupación, como analizó Knuth en 1963. Explique la dificultad de eliminar en sondeo lineal: borrar una clave rompe la secuencia de búsqueda de otras, por lo que hay que reinsertar el bloque siguiente o usar marcas de borrado. Pregunta para la clase: ¿por qué el sondeo lineal exige mantener la ocupación muy por debajo del cien por ciento?"
+        },
+        {
+          "title": "Factor de carga y redimensionamiento",
+          "bullets": [
+            "Factor de carga α = n / m, elementos entre celdas; controla la longitud media de las cadenas.",
+            "HashMap duplica su capacidad cuando α supera 0,75, su valor por defecto, y redistribuye las entradas.",
+            "Redimensionar cuesta O(n), pero el costo amortizado por inserción sigue siendo O(1), como en el arreglo dinámico.",
+            "Desde Java 8, una cubeta con más de 8 entradas en una tabla de al menos 64 celdas se convierte en árbol rojo-negro."
+          ],
+          "notes": "Defina el factor de carga como la razón entre elementos y celdas y muestre que es la variable de control del desempeño. HashMap de Java inicia con 16 celdas y un factor de carga máximo de 0,75; al superarlo duplica la capacidad y redistribuye las entradas. Esa operación es lineal, pero por el mismo argumento geométrico del arreglo dinámico el costo amortizado sigue siendo constante. Recomiende dimensionar el mapa cuando se conoce el volumen, por ejemplo al cargar 120 000 clientes; Java 19 incorporó el método HashMap.newHashMap(n) para calcular la capacidad adecuada. Explique la mejora de Java 8: si una cubeta acumula más de ocho entradas y la tabla tiene al menos 64 celdas, la lista se convierte en un árbol rojo-negro, lo que acota el peor caso a O(log n) por cubeta cuando las claves son comparables. Pregunta para la clase: ¿cuántos redimensionamientos sufre un HashMap creado sin capacidad inicial al cargar 120 000 elementos?"
+        },
+        {
+          "title": "El contrato equals y hashCode",
+          "bullets": [
+            "Si a.equals(b) es verdadero, a.hashCode() debe ser igual a b.hashCode(); lo inverso no es obligatorio.",
+            "Sobrescribir equals sin hashCode produce duplicados en HashSet y búsquedas fallidas en HashMap (Bloch, 2018).",
+            "Los record de Java generan equals y hashCode coherentes, pero a partir de todos sus componentes.",
+            "Nunca modifique los campos que participan en hashCode mientras el objeto está dentro de un HashMap o HashSet."
+          ],
+          "notes": "Esta es la regla que más errores produce en sistemas reales, por lo que conviene demostrarla en vivo. Cree una clase Cliente que sobrescribe equals comparando el DNI, pero no hashCode. Agregue dos objetos con el mismo DNI a un HashSet y muestre que el tamaño es dos: como hashCode se hereda de Object, cada objeto cae en una cubeta distinta y equals nunca llega a ejecutarse. Explique el contrato documentado en Object y desarrollado por Bloch en Effective Java: objetos iguales deben tener el mismo hash; objetos distintos pueden compartirlo. Muestre que los record generan ambos métodos a partir de todos sus componentes, lo que puede ser un problema si la identidad de negocio es solo el DNI. Finalmente, ilustre el riesgo de las claves mutables: si se cambia el nombre normalizado de un cliente después de insertarlo y ese campo participa en el hash, el objeto queda perdido en una cubeta incorrecta. Pregunta para la clase: ¿qué campos deberían definir la identidad de un producto en un inventario?"
+        },
+        {
+          "title": "Riesgos de seguridad y rendimiento en tablas hash",
+          "bullets": [
+            "Ataques de colisión: claves diseñadas para caer en la misma cubeta degradan cada operación a O(n).",
+            "En 2011 se demostró este ataque de denegación de servicio contra plataformas web de varios lenguajes mediante parámetros HTTP.",
+            "Mitigaciones: límites de parámetros por petición, árboles en cubetas saturadas y funciones hash con semilla aleatoria.",
+            "Para claves compuestas, combinar campos con un multiplicador primo, como hace Objects.hash."
+          ],
+          "notes": "Lleve la discusión al terreno de la seguridad. Si un atacante conoce la función hash, puede fabricar miles de claves que colisionan en la misma cubeta; cada inserción recorre la lista completa y el servidor pasa de operaciones constantes a lineales, lo que convierte una sola petición en trabajo cuadrático. En 2011, Alexander Klink y Julian Wälde demostraron este ataque de denegación de servicio contra plataformas web de varios lenguajes, enviando formularios con miles de parámetros cuidadosamente elegidos. Las respuestas de la industria fueron limitar el número de parámetros por petición, introducir funciones hash con semilla aleatoria en lenguajes como Python y, en Java 8, convertir las cubetas saturadas en árboles. Presente Objects.hash como una forma correcta de combinar campos, aunque señale que crea un arreglo en cada llamada y que en código crítico conviene la combinación manual con 31. Pregunta para la clase: ¿qué controles debería tener una API pública que recibe objetos JSON con claves arbitrarias?"
+        },
+        {
+          "title": "Árboles: terminología y recorridos",
+          "bullets": [
+            "Árbol: nodos con relación padre-hijo, una raíz y sin ciclos; la altura es el camino más largo hasta una hoja.",
+            "Recorridos en profundidad: preorden, inorden y postorden; en anchura: por niveles con una cola.",
+            "El inorden de un árbol binario de búsqueda produce las claves en orden ascendente.",
+            "Aplicaciones: sistemas de archivos, árbol DOM de una página web, árboles de expresiones y organigramas."
+          ],
+          "notes": "Recupere la terminología de árboles vista en Matemática Discreta y llévela al código: un nodo con referencias a sus hijos. Defina altura y profundidad con un dibujo y explique que casi todos los costos de los árboles dependen de la altura. Muestre los tres recorridos en profundidad con un árbol de expresión aritmética: el inorden produce la notación usual, el preorden la notación prefija y el postorden la notación posfija que se evalúa con una pila, como en la Unidad 1. Presente el recorrido por niveles con una cola, que conecta con la búsqueda en anchura de la próxima unidad. Mencione ejemplos reales que los estudiantes manipulan: el sistema de archivos, el árbol DOM que recorren en Desarrollo Web y los organigramas de una empresa. Destaque la propiedad clave para lo que sigue: el inorden de un árbol binario de búsqueda entrega las claves ordenadas. Pregunta para la clase: ¿qué recorrido usarían para calcular el espacio total que ocupa una carpeta con todas sus subcarpetas?"
+        },
+        {
+          "title": "Árbol binario de búsqueda: búsqueda e inserción",
+          "bullets": [
+            "Invariante: las claves del subárbol izquierdo son menores que el nodo y las del derecho, mayores.",
+            "Buscar e insertar recorren un camino desde la raíz: el costo es proporcional a la altura h.",
+            "Con claves aleatorias la profundidad promedio es cercana a 1,39 log₂ n; con claves ordenadas el árbol degenera en lista.",
+            "Operaciones ordenadas: mínimo, máximo, piso, techo, rango y k-ésimo menor en O(h)."
+          ],
+          "notes": "Defina el invariante del árbol binario de búsqueda y muestre que, gracias a él, cada comparación descarta un subárbol completo, igual que la búsqueda binaria descarta la mitad del arreglo. Implemente get y put en forma recursiva con el patrón de devolver el subárbol actualizado, que simplifica la inserción. Analice el costo: proporcional a la altura. Con claves insertadas en orden aleatorio, la profundidad promedio de los nodos es cercana a 1,39 log₂ n, un resultado clásico; pero si las claves llegan ordenadas, como los códigos correlativos de un sistema, el árbol degenera en una lista y las operaciones se vuelven lineales. Destaque la ventaja frente a la tabla hash: las operaciones ordenadas, como piso, techo, rango y selección del k-ésimo, que resuelven consultas como «el producto con precio inmediatamente inferior a S/ 50». Pregunta para la clase: si se insertan 100 000 facturas numeradas correlativamente en un árbol binario de búsqueda simple, ¿qué altura tendrá?"
+        },
+        {
+          "title": "Eliminación en el árbol binario de búsqueda",
+          "bullets": [
+            "Hoja: se elimina directamente; nodo con un hijo: se reemplaza por ese hijo.",
+            "Dos hijos, método de Hibbard (1962): se reemplaza por su sucesor, el mínimo del subárbol derecho.",
+            "Tras largas secuencias de inserciones y eliminaciones, el método sesga el árbol y la altura tiende a crecer hacia √n.",
+            "Conclusión: un árbol simple no ofrece garantías; los sistemas en producción usan árboles balanceados."
+          ],
+          "notes": "Presente los tres casos de eliminación con dibujos. Los dos primeros son directos. El tercero, un nodo con dos hijos, usa el método propuesto por Thomas Hibbard en 1962: se reemplaza el nodo por su sucesor, que es el mínimo de su subárbol derecho, y luego se elimina ese sucesor, que tiene a lo sumo un hijo. Explique que este método es asimétrico porque siempre toma el sucesor; tras muchas secuencias de inserciones y eliminaciones aleatorias, los estudios empíricos muestran que la altura promedio tiende a crecer hacia la raíz cuadrada de n en lugar de log n. Esto, sumado a la degeneración con claves ordenadas, lleva a la conclusión de que un árbol binario de búsqueda simple es una buena herramienta didáctica, pero no ofrece garantías para producción. La solución son los árboles autobalanceados de las siguientes diapositivas. Pregunta para la clase: ¿qué variante simétrica del método de Hibbard podría reducir el sesgo?"
+        },
+        {
+          "title": "Árboles AVL: equilibrio mediante rotaciones",
+          "bullets": [
+            "Adelson-Velsky y Landis (1962): en cada nodo, las alturas de los subárboles difieren como máximo en 1.",
+            "Garantiza una altura menor que 1,44 log₂ n y, por tanto, búsqueda, inserción y eliminación en O(log n).",
+            "Tras insertar se recalculan los factores de equilibrio y se aplica una rotación simple o doble según el caso.",
+            "Cuatro casos: izquierda-izquierda, derecha-derecha, izquierda-derecha y derecha-izquierda."
+          ],
+          "notes": "Presente el árbol AVL, propuesto por los matemáticos soviéticos Georgy Adelson-Velsky y Evgenii Landis en 1962, como el primer árbol autobalanceado. Cada nodo almacena su altura y se define el factor de equilibrio como la diferencia entre las alturas de sus subárboles. Tras una inserción, se recorre el camino de regreso a la raíz actualizando alturas; si algún factor llega a 2 o −2, se aplica una rotación. Dibuje la rotación simple a la derecha para el caso izquierda-izquierda y muestre que conserva el invariante de búsqueda mientras reduce la altura. Luego muestre el caso izquierda-derecha, que requiere una rotación doble. Explique la garantía: la altura es menor que aproximadamente 1,44 log₂ n, lo que se demuestra con los árboles de Fibonacci. Con un millón de claves, la altura nunca supera unos 29 niveles. Pregunta para la clase: inserten en un AVL vacío las claves 30, 20 y 10; ¿qué rotación se aplica y cuál es la raíz final?"
+        },
+        {
+          "title": "Árboles rojo-negro y TreeMap",
+          "bullets": [
+            "Cada nodo es rojo o negro; ningún rojo tiene hijo rojo y todo camino a las hojas nulas cruza igual número de negros.",
+            "Altura máxima 2 log₂(n + 1) y menos rotaciones que AVL en inserciones y eliminaciones.",
+            "TreeMap y TreeSet de Java son árboles rojo-negro: ofrecen floorKey, ceilingKey, subMap y recorridos ordenados.",
+            "Elija TreeMap cuando haya consultas por rango, como ventas entre dos fechas o el tipo de cambio vigente."
+          ],
+          "notes": "Presente los árboles rojo-negro, formulados por Leonidas Guibas y Robert Sedgewick en 1978 a partir de los árboles B binarios simétricos de Rudolf Bayer. Explique las reglas de color y su consecuencia: el camino más largo no puede duplicar al más corto, por lo que la altura queda acotada por 2 log₂(n + 1). Comparado con AVL, el equilibrio es menos estricto, lo que implica búsquedas ligeramente más largas pero menos rotaciones al insertar y eliminar; por eso es la elección de bibliotecas estándar como TreeMap de Java y del planificador de procesos del núcleo Linux que estudiaron en Sistemas Operativos. Muestre en código los métodos de navegación de TreeMap: floorKey, ceilingKey, headMap, tailMap y subMap, que resuelven consultas por rango en tiempo logarítmico. Ejemplos: ventas entre el 1 y el 15 de marzo, o el tipo de cambio vigente para una fecha sin publicación. Pregunta para la clase: ¿qué estructura usarían para una agenda de citas médicas que debe encontrar el siguiente horario libre?"
+        },
+        {
+          "title": "Árboles B: la estructura detrás de los índices",
+          "bullets": [
+            "Bayer y McCreight (1972): nodos con cientos de claves que caben en una página de disco.",
+            "Altura muy baja: con 500 claves por nodo, tres niveles indexan más de cien millones de registros.",
+            "PostgreSQL y MySQL InnoDB usan variantes B+ para sus índices por defecto, tema que dialoga con el curso Base de Datos.",
+            "Lección de diseño: el modelo de costo cambia cuando el acceso dominante es a disco y no a memoria."
+          ],
+          "notes": "Explique que el modelo de costo cambia radicalmente cuando los datos están en disco: leer una página puede costar miles de veces más que una comparación en memoria. Rudolf Bayer y Edward McCreight propusieron en 1972 los árboles B, cuyos nodos contienen cientos de claves y se ajustan al tamaño de una página de disco. Así la altura se reduce drásticamente: con un factor de ramificación de 500, tres niveles alcanzan 125 millones de registros y el nodo raíz suele permanecer en memoria. En la variante B+, todos los datos están en las hojas, enlazadas entre sí para recorrer rangos de forma secuencial. Conecte con el curso Base de Datos que llevan en paralelo: el índice que crean con CREATE INDEX en PostgreSQL es, por defecto, un árbol B, y EXPLAIN ANALYZE muestra cuándo se usa. Pregunta para la clase: ¿por qué un índice de árbol acelera una consulta con WHERE fecha BETWEEN, mientras que un índice hash no lo haría?"
+        },
+        {
+          "title": "Montículos binarios y colas de prioridad",
+          "bullets": [
+            "Montículo de mínimos: árbol binario completo donde cada padre es menor o igual que sus hijos.",
+            "Se almacena en un arreglo: hijos de i en 2i + 1 y 2i + 2; padre en (i − 1) / 2.",
+            "Insertar (flotar) y extraer el mínimo (hundir) cuestan O(log n); consultar el mínimo cuesta O(1).",
+            "Construir un montículo a partir de un arreglo cuesta O(n) con el método de Floyd, no O(n log n)."
+          ],
+          "notes": "Presente la cola de prioridad como el TAD que siempre entrega el elemento más urgente, y el montículo binario, propuesto por J. W. J. Williams en 1964 junto con heapsort, como su implementación clásica. Destaque la elegancia de la representación: un árbol completo se guarda en un arreglo sin referencias, calculando hijos y padre con aritmética de índices. Simule la inserción: el nuevo elemento se coloca al final y flota intercambiándose con su padre mientras sea menor. Simule la extracción del mínimo: se toma la raíz, se mueve el último elemento a la raíz y se hunde intercambiándose con el menor de sus hijos. Ambas operaciones recorren la altura, log₂ n. Explique el método de Floyd para construir un montículo en tiempo lineal hundiendo desde la mitad del arreglo hacia el inicio, con un argumento de suma de alturas. Pregunta para la clase: en un montículo de mínimos con 1 000 elementos, ¿cuántos intercambios como máximo requiere una inserción?"
+        },
+        {
+          "title": "PriorityQueue en Java: top-k, eventos y heapsort",
+          "bullets": [
+            "PriorityQueue es un montículo de mínimos; con Comparator.reverseOrder() se comporta como montículo de máximos.",
+            "Top-k de n elementos: mantener un montículo de tamaño k; cuesta O(n log k) en tiempo y O(k) en memoria.",
+            "Su iterador no recorre en orden de prioridad; para obtener ese orden hay que extraer con poll().",
+            "Heapsort ordena en el mismo arreglo en O(n log n) garantizado, aunque no es estable y tiene mala localidad de caché."
+          ],
+          "notes": "Pase del concepto a la API de Java. PriorityQueue es un montículo de mínimos según el orden natural o un Comparator; para obtener un montículo de máximos se pasa Comparator.reverseOrder o el comparador invertido. Desarrolle el patrón top-k, muy frecuente en reportes: para encontrar los diez productos de mayor margen entre millones, se mantiene un montículo de mínimos de tamaño diez y se descarta su raíz cada vez que se supera ese tamaño; el costo es n log k y la memoria no depende de n. Advierta un error común: imprimir una PriorityQueue o recorrerla con for-each no muestra los elementos en orden de prioridad, porque el arreglo interno solo cumple la propiedad de montículo. Presente heapsort como aplicación: construir el montículo y extraer repetidamente; garantiza n log n sin memoria adicional, pero no es estable y su acceso disperso a memoria lo hace más lento que quicksort en la práctica. Pregunta para la clase: ¿cómo combinarían en un solo flujo ordenado los reportes ya ordenados de 38 tiendas?"
+        },
+        {
+          "title": "Elegir la estructura: HashMap, TreeMap, LinkedHashMap o PriorityQueue",
+          "bullets": [
+            "Búsqueda exacta masiva sin necesidad de orden: HashMap, O(1) esperado.",
+            "Orden, rangos, predecesor o sucesor: TreeMap, O(log n) garantizado.",
+            "Orden de inserción o de acceso: LinkedHashMap; con orden de acceso y removeEldestEntry implementa una caché LRU.",
+            "Atender siempre al más urgente o al mínimo: PriorityQueue; no sirve para búsquedas arbitrarias."
+          ],
+          "notes": "Cierre la unidad con una matriz de decisión que los estudiantes usarán en la tarea y en el proyecto. HashMap es la opción por defecto para búsquedas exactas, siempre que se respete el contrato de igualdad. TreeMap se elige cuando el requerimiento menciona orden, rangos, predecesor o sucesor. LinkedHashMap mantiene el orden de inserción, útil para reportes reproducibles, y con el constructor que activa el orden de acceso y la sobrescritura de removeEldestEntry implementa en pocas líneas una caché LRU, como la de consultas frecuentes de tipo de cambio o de perfiles de usuario. PriorityQueue resuelve la atención por urgencia, la planificación de eventos y el top-k, pero no busca elementos arbitrarios de forma eficiente. Recuerde que en un sistema real suelen combinarse varias estructuras sobre los mismos datos, como en el caso de esta unidad. Pregunta para la clase: diseñen las estructuras de un sistema de despacho que debe buscar pedidos por código, listarlos por hora de entrega y atender primero los urgentes."
+        }
+      ],
+      "reading": {
+        "title": "Hashing y árboles en la práctica: cómo funcionan HashMap, TreeMap y PriorityQueue",
+        "minutes": 35,
+        "content": "## El problema del diccionario\n\nBuena parte del software empresarial consiste en recuperar un registro a partir de una clave: un cliente por su DNI o RUC, un producto por su código de barras, el tipo de cambio de una fecha. El TAD **Map** formaliza esa necesidad y Java ofrece dos familias de implementaciones con garantías distintas: las tablas hash (HashMap, HashSet, LinkedHashMap), con costo esperado O(1) pero sin orden, y los árboles rojo-negro (TreeMap, TreeSet), con costo O(log n) garantizado y recorridos ordenados.\n\n## El contrato que no se puede romper\n\nUna tabla hash ubica cada clave en una cubeta según su hashCode y, dentro de la cubeta, la compara con equals. Si ambos métodos no son coherentes, la estructura falla en silencio:\n\n```java\npublic class Cliente {\n    private final String documento;\n    private String nombre;\n    public Cliente(String documento, String nombre) { this.documento = documento; this.nombre = nombre; }\n    @Override public boolean equals(Object o) {\n        return o instanceof Cliente c && documento.equals(c.documento);\n    }\n    // Falta hashCode(): dos clientes «iguales» caen en cubetas distintas\n}\n\nSet<Cliente> padron = new HashSet<>();\npadron.add(new Cliente(\"45879632\", \"Rosa Quispe\"));\npadron.add(new Cliente(\"45879632\", \"ROSA QUISPE\"));\nSystem.out.println(padron.size());   // casi siempre imprime 2\n```\n\nLa corrección es agregar `hashCode` basado en el mismo campo que usa `equals`: `return documento.hashCode();`. Cuidado con la tentación de convertir la clase en un `record Cliente(String documento, String nombre)`: el record compara **todos** sus componentes, de modo que los dos objetos anteriores seguirían siendo distintos por la diferencia en el nombre. Si la identidad de negocio es el documento, lo más claro es indexar con `Map<String, Cliente>` usando el documento normalizado como clave. Y una regla adicional, documentada por Bloch (2018): los campos que participan en hashCode no deben cambiar mientras el objeto está dentro de la colección.\n\n## Una tabla hash por dentro\n\nEl núcleo de una tabla con encadenamiento separado cabe en pocas líneas:\n\n```java\nprivate int indice(K clave, int m) {\n    int h = clave.hashCode();\n    h ^= (h >>> 16);                  // mezcla bits altos, como HashMap\n    return (h & 0x7fffffff) % m;      // índice no negativo\n}\n\npublic void put(K clave, V valor) {\n    if (n >= 0.75 * celdas.length) redimensionar(2 * celdas.length);  // amortizado O(1)\n    int i = indice(clave, celdas.length);\n    for (Nodo<K, V> x = celdas[i]; x != null; x = x.sig)\n        if (x.clave.equals(clave)) { x.valor = valor; return; }        // actualiza\n    celdas[i] = new Nodo<>(clave, valor, celdas[i]);                   // inserta al inicio\n    n++;\n}\n```\n\nCon una función hash uniforme, la longitud media de las cadenas es el factor de carga α = n/m. Mantenerlo por debajo de 0,75 asegura cadenas cortas. HashMap agrega una defensa: desde Java 8, las cubetas con más de ocho entradas se convierten en árboles, lo que limita el daño de una mala función hash o de un ataque de colisiones.\n\n## Árboles para preguntas ordenadas\n\nLas tablas hash no responden preguntas de orden. La normativa tributaria peruana dispone que, cuando un día no se publica el tipo de cambio, se use el último publicado. Con TreeMap esa regla es una sola llamada:\n\n```java\nTreeMap<LocalDate, BigDecimal> tipoCambio = new TreeMap<>();\ntipoCambio.put(LocalDate.of(2026, 3, 6), new BigDecimal(\"3.712\"));  // viernes (ilustrativo)\ntipoCambio.put(LocalDate.of(2026, 3, 9), new BigDecimal(\"3.705\"));  // lunes (ilustrativo)\nvar vigente = tipoCambio.floorEntry(LocalDate.of(2026, 3, 8));    // domingo: usa el viernes\n```\n\nfloorEntry, ceilingEntry y subMap cuestan O(log n) porque el árbol rojo-negro mantiene una altura máxima de 2 log₂(n + 1). Para datos en disco, los gestores de bases de datos llevan la idea más lejos con los árboles B+, cuyos nodos contienen cientos de claves.\n\n## Colas de prioridad: lo más urgente primero\n\nPriorityQueue implementa un montículo binario en un arreglo. El patrón top-k obtiene, por ejemplo, los diez productos de mayor margen de un catálogo sin ordenarlo completo:\n\n```java\nPriorityQueue<Producto> top = new PriorityQueue<>(Comparator.comparing(Producto::margen));\nfor (Producto p : catalogo) {\n    top.offer(p);\n    if (top.size() > 10) top.poll();   // descarta el de menor margen\n}\n```\n\nEl costo es O(n log k) con memoria O(k), frente a O(n log n) y memoria O(n) de ordenar todo. Recuerde que recorrer la cola no la entrega en orden: para eso hay que extraer con poll().\n\n## Criterio de elección\n\nPregúntese siempre qué operaciones dominan: búsquedas exactas (HashMap), consultas por orden o rango (TreeMap), orden de llegada o caché LRU (LinkedHashMap) o atención por prioridad (PriorityQueue). En sistemas reales suelen convivir varias estructuras sobre los mismos datos."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Ferretera Chavín y los clientes que se duplicaban",
+        "content": "**Distribuidora Ferretera Chavín S.A.C.** (nombre ficticio) opera 38 tiendas en La Libertad, Lambayeque, Piura y Áncash, y vende materiales de construcción a maestros de obra, pequeñas constructoras y familias que autoconstruyen sus viviendas. Su sistema comercial, desarrollado internamente en Java, administra 120 000 clientes, 45 000 códigos de producto (SKU) y cerca de 9 000 comprobantes electrónicos diarios.\n\nEn 2025 lanzó el programa de fidelización **Maestro Chavín**, que otorga puntos a los maestros de obra por cada compra. A los seis meses, el área comercial detectó tres problemas:\n\n**1. Clientes duplicados.** Una auditoría encontró 3 600 clientes registrados dos o más veces, con puntos repartidos entre registros. El padrón se carga en un HashSet<Cliente>. La clase Cliente sobrescribe equals comparando el número de documento, pero no hashCode. Para «arreglarlo», un desarrollador agregó un hashCode que combina documento y nombre; poco después se incorporó un proceso nocturno que normaliza el nombre (mayúsculas y sin tildes) de los clientes ya cargados en memoria.\n\n**2. Consentimiento ignorado.** Un cliente que revocó su consentimiento para recibir publicidad siguió recibiendo mensajes de texto durante tres meses: la revocatoria se registró en uno de sus registros duplicados y la campaña usó el otro. El cliente anunció una denuncia ante la Autoridad Nacional de Protección de Datos Personales por incumplimiento de la Ley 29733.\n\n**3. Reportes lentos.** El tablero gerencial demora más de 40 segundos porque cada uno de sus 12 indicadores recorre secuencialmente una List<Venta> con los 13 millones de ventas de los últimos cuatro años y filtra por fecha. Además, la alerta de «reposición urgente» ordena los 45 000 SKU por índice de cobertura de stock cada cinco minutos, solo para mostrar los 20 más críticos.\n\nLa gerente de Tecnología, Lic. Milagros Paredes, dispone de un solo sprint de dos semanas y de dos desarrolladores. El gerente comercial pide priorizar los reportes porque «son los que ve el directorio». El asesor legal pide priorizar el padrón y el consentimiento, porque las multas por infracciones graves a la Ley 29733 pueden alcanzar decenas de unidades impositivas tributarias. Un desarrollador sénior propone, en cambio, migrar todo a una base de datos NoSQL «para no tener que pensar en estructuras de datos».",
+        "questions": [
+          "Explique por qué el HashSet admite clientes duplicados y por qué el hashCode que combina documento y nombre, junto con la normalización nocturna, empeora el problema.",
+          "Proponga la estructura de datos adecuada para el padrón, el reporte de ventas por rango de fechas y la alerta de reposición, indicando la complejidad de cada operación.",
+          "Analice las implicancias del incidente de consentimiento frente a la Ley 29733 y explique cómo el diseño de la identidad del cliente previene este tipo de riesgos.",
+          "Evalúe la propuesta de migrar a una base NoSQL «para no pensar en estructuras de datos»: ¿ataca las causas de fondo de los tres problemas?",
+          "Con un solo sprint, ¿cómo priorizaría los cambios y qué pruebas y mediciones presentaría al directorio para demostrar su impacto?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: índice en memoria para el catálogo de una distribuidora",
+        "instructions": "**Objetivo:** implementar y comparar estructuras de tabla de símbolos y colas de prioridad que resuelvan los requerimientos del caso Distribuidora Ferretera Chavín.\n\n**Qué entregar:**\n\n1. `TablaHash<K, V>` con encadenamiento separado, redimensionamiento al superar un factor de carga de 0,75 y operaciones `put`, `get`, `remove` y `size`.\n2. `ArbolBusqueda<K extends Comparable<K>, V>` con `put`, `get`, `floor`, `ceiling`, `rango(desde, hasta)`, `altura` e iterador en inorden. El balanceo AVL es opcional y se valora dentro del criterio de implementación del árbol.\n3. Una clase de identidad de cliente que respete el contrato equals/hashCode, con pruebas que demuestren la ausencia de duplicados aun con nombres escritos de forma distinta.\n4. Método `topK` con `PriorityQueue` que obtenga los 20 SKU de menor cobertura de stock.\n5. Pruebas JUnit 5 para claves inexistentes, actualizaciones, rangos vacíos y redimensionamiento.\n6. Experimento con 100 000 SKU sintéticos: tiempos de inserción y búsqueda frente a `HashMap` y `TreeMap`, y altura del árbol con claves aleatorias y con claves ordenadas.\n7. Informe de 3 páginas con resultados y una propuesta de estructuras para el sprint del caso.\n\n**Formato:** repositorio Git con proyecto Maven, README e informe en PDF; Java 17 o superior.\n\n**Criterios:** corrección de las implementaciones, pruebas, rigor de la medición y calidad de la propuesta, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Implementación de la tabla hash y redimensionamiento",
+            "points": 5
+          },
+          {
+            "name": "Implementación del árbol y operaciones ordenadas",
+            "points": 5
+          },
+          {
+            "name": "Pruebas y verificación del contrato equals y hashCode",
+            "points": 4
+          },
+          {
+            "name": "Medición comparativa y propuesta para el caso",
+            "points": 6
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 3: tablas hash, árboles y colas de prioridad",
+        "questions": [
+          {
+            "prompt": "Una clase Producto sobrescribe equals comparando el SKU, pero no hashCode. ¿Qué ocurre al agregar dos objetos con el mismo SKU a un HashSet?",
+            "options": [
+              "El compilador obliga a implementar hashCode",
+              "Probablemente se almacenan ambos, porque caen en cubetas distintas",
+              "Se almacena solo el primero gracias a equals",
+              "Se lanza una excepción en tiempo de ejecución"
+            ],
+            "correct": 1,
+            "explanation": "Sin hashCode sobrescrito se usa el de Object, que suele diferir entre instancias; el HashSet busca en otra cubeta, nunca invoca equals con el objeto existente y admite el duplicado."
+          },
+          {
+            "prompt": "Una tabla hash con encadenamiento separado tiene 1 000 celdas y 3 000 claves distribuidas uniformemente. ¿Cuál es la longitud media esperada de cada cadena?",
+            "options": [
+              "1",
+              "3",
+              "1 000",
+              "log₂ 3 000"
+            ],
+            "correct": 1,
+            "explanation": "La longitud media es el factor de carga α = n/m = 3 000/1 000 = 3. Por eso conviene redimensionar: HashMap duplica su capacidad cuando α supera 0,75."
+          },
+          {
+            "prompt": "Se insertan las claves 10, 20, 30, 40 y 50, en ese orden, en un árbol binario de búsqueda sin balanceo. ¿Cuál es su altura medida en aristas?",
+            "options": [
+              "2, porque el árbol queda balanceado",
+              "3, por la regla logarítmica",
+              "4, porque degenera en una lista",
+              "5, una por cada clave"
+            ],
+            "correct": 2,
+            "explanation": "Cada clave es mayor que la anterior y se inserta como hijo derecho; el árbol es una cadena de cinco nodos y cuatro aristas. Los árboles AVL o rojo-negro evitan esta degeneración."
+          },
+          {
+            "prompt": "Se necesita obtener el tipo de cambio vigente en una fecha sin publicación, usando el último publicado. ¿Qué estructura y método de Java son los más adecuados?",
+            "options": [
+              "HashMap con get(fecha)",
+              "PriorityQueue con peek()",
+              "ArrayList con indexOf(fecha)",
+              "TreeMap con floorEntry(fecha)"
+            ],
+            "correct": 3,
+            "explanation": "floorEntry devuelve la entrada con la mayor clave menor o igual que la fecha consultada en O(log n). HashMap solo resuelve coincidencias exactas y una lista exigiría un recorrido lineal."
+          },
+          {
+            "prompt": "En un montículo binario almacenado en un arreglo que comienza en el índice 0, ¿en qué posiciones están los hijos del nodo ubicado en la posición 4?",
+            "options": [
+              "8 y 9",
+              "9 y 10",
+              "5 y 6",
+              "2 y 3"
+            ],
+            "correct": 1,
+            "explanation": "Con índice base 0, los hijos de i están en 2i + 1 y 2i + 2, es decir, 9 y 10. El padre de i se ubica en (i − 1) / 2 con división entera."
+          },
+          {
+            "prompt": "Llegan en flujo 2 millones de registros de stock y se requieren los 20 con menor cobertura. ¿Cuál es la estrategia más eficiente?",
+            "options": [
+              "Ordenar todos los registros y tomar los 20 primeros",
+              "Insertar todo en un TreeMap y recorrerlo",
+              "Mantener un montículo de máximos de tamaño 20 y descartar su raíz al exceder ese tamaño",
+              "Buscar el mínimo 20 veces con recorridos completos"
+            ],
+            "correct": 2,
+            "explanation": "El montículo de máximos conserva los 20 menores vistos: el mayor de ellos está en la raíz y se descarta cuando llega uno menor. Cuesta O(n log 20) con memoria O(20), frente a O(n log n) y memoria O(n) de ordenar todo."
+          },
+          {
+            "prompt": "¿Por qué los índices de las bases de datos relacionales usan árboles B+ en lugar de árboles AVL?",
+            "options": [
+              "Porque sus nodos agrupan muchas claves por página de disco y reducen los accesos",
+              "Porque los árboles AVL no admiten claves repetidas",
+              "Porque los árboles B+ no necesitan mantener las claves ordenadas",
+              "Porque los árboles AVL solo funcionan con números enteros"
+            ],
+            "correct": 0,
+            "explanation": "El costo dominante en disco es leer páginas. Un nodo B+ con cientos de claves reduce la altura a tres o cuatro niveles y sus hojas enlazadas permiten recorrer rangos de forma secuencial."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Grafos, técnicas de diseño algorítmico y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante modela problemas reales como grafos, implementa en Java recorridos, orden topológico, caminos mínimos y árboles de expansión mínima, aplica técnicas voraces, programación dinámica y vuelta atrás, reconoce la intratabilidad y sustenta un proyecto integrador probado y medido.",
+      "topics": [
+        "Representación de grafos y recorridos BFS y DFS",
+        "Orden topológico y detección de ciclos",
+        "Caminos mínimos con Dijkstra y árboles de expansión mínima con Kruskal y unión-búsqueda",
+        "Algoritmos voraces y programación dinámica",
+        "Vuelta atrás, intratabilidad y heurísticas",
+        "Proyecto integrador: diseño, pruebas, medición y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Del modelo discreto a la implementación: grafos en Java",
+          "bullets": [
+            "Grafo G = (V, E): vértices y aristas, dirigidas o no, con o sin pesos, como se estudió en Matemática Discreta.",
+            "Lista de adyacencia: List<List<Arista>>, memoria O(V + E), ideal para grafos dispersos como las redes viales.",
+            "Matriz de adyacencia: memoria O(V²) y consulta de arista O(1); conviene solo en grafos densos o pequeños.",
+            "Con 50 000 intersecciones y 120 000 calles, la matriz necesitaría 2 500 millones de celdas; la lista, unas 290 000 entradas."
+          ],
+          "notes": "Recupere la definición de grafo de Matemática Discreta y anuncie el cambio de enfoque: allí se razonó sobre propiedades; aquí se implementa con eficiencia sobre cientos de miles de aristas. Muestre la clase Grafo de la lectura con una lista de listas de aristas y discuta la elección de un record Arista con destino y peso. Contraste las representaciones con el ejemplo de la red vial de una ciudad intermedia: la matriz necesitaría 2 500 millones de celdas, unos 10 GB si cada celda es un int, mientras que la lista de adyacencia ocupa memoria proporcional a vértices más aristas. Explique que los grafos reales suelen ser dispersos: cada intersección tiene pocas calles y cada usuario de una red social sigue a una fracción ínfima del total. Señale cuándo sí conviene la matriz: grafos pequeños y densos, o algoritmos como Floyd-Warshall. Pregunta para la clase: ¿cómo modelarían como grafo las dependencias entre los módulos del sistema que desarrollaron en Programación Orientada a Objetos?"
+        },
+        {
+          "title": "Búsqueda en anchura (BFS)",
+          "bullets": [
+            "Explora por niveles con una cola y marca los vértices visitados para no repetirlos.",
+            "En grafos sin pesos encuentra el camino con el menor número de aristas desde el origen.",
+            "Su complejidad es O(V + E) con lista de adyacencia.",
+            "Aplicaciones: menor número de transbordos, grados de separación en redes sociales y rastreo web por niveles."
+          ],
+          "notes": "Desarrolle BFS con un ArrayDeque como cola y un arreglo de distancias inicializado en −1 para marcar los vértices no visitados. Simule en una red pequeña de paraderos cómo se descubren los vértices por niveles: primero todos los que están a una arista, luego los que están a dos, y así sucesivamente. Demuestre la propiedad clave: en un grafo sin pesos, la primera vez que se descubre un vértice se hace por un camino con el mínimo número de aristas. Guardando el predecesor de cada vértice se reconstruye ese camino. Analice el costo: cada vértice entra una vez a la cola y cada lista de adyacencia se recorre una vez, por lo que el total es O(V + E). Presente aplicaciones: la opción «menos transbordos» de un planificador de viajes, los grados de separación en una red profesional o la propagación de un mensaje en una red de computadoras. Pregunta para la clase: ¿por qué BFS no sirve cuando las aristas tienen tiempos de viaje distintos?"
+        },
+        {
+          "title": "Búsqueda en profundidad (DFS)",
+          "bullets": [
+            "Avanza lo más profundo posible y retrocede; se implementa con recursión o con una pila explícita.",
+            "Complejidad O(V + E); los estados blanco, gris y negro permiten clasificar aristas y detectar ciclos.",
+            "Identifica componentes conexas, puntos de articulación y relaciones de alcanzabilidad.",
+            "En grafos grandes conviene la versión iterativa para evitar StackOverflowError."
+          ],
+          "notes": "Presente DFS como la exploración de un laberinto con un hilo: avanzar mientras se pueda y retroceder al llegar a un callejón sin salida. Implemente la versión recursiva y luego la iterativa con pila explícita, recordando la limitación de profundidad de la JVM estudiada en la Unidad 2. Introduzca los tres estados de un vértice: blanco, no descubierto; gris, en exploración; negro, terminado. En un grafo dirigido, encontrar una arista hacia un vértice gris revela un ciclo, lo que permite detectar dependencias circulares entre módulos o tareas. Mencione otras aplicaciones: contar componentes conexas de una red de distribución eléctrica, encontrar puntos de articulación cuya falla desconecta la red, como estudió Robert Tarjan en 1972, y resolver la alcanzabilidad, por ejemplo qué servicios quedan afectados si cae un servidor. Pregunta para la clase: en la red de fibra de un distrito, ¿cómo identificarían los nodos cuya caída deja vecinos sin servicio?"
+        },
+        {
+          "title": "Orden topológico y detección de ciclos",
+          "bullets": [
+            "Orden lineal de un grafo dirigido acíclico donde cada arista u → v coloca a u antes que a v.",
+            "Algoritmo de Kahn (1962): procesar con una cola los vértices de grado de entrada cero; O(V + E).",
+            "Si quedan vértices sin procesar, existe un ciclo y es imposible ordenar.",
+            "Usos: dependencias de Maven, planificación de tareas de un proyecto y validación de prerrequisitos de una malla curricular."
+          ],
+          "notes": "Defina el orden topológico con un ejemplo cercano: la malla curricular de la carrera, donde cada curso con prerrequisitos debe aparecer después de ellos. Desarrolle el algoritmo de Arthur Kahn de 1962: se calcula el grado de entrada de cada vértice, se encolan los que tienen grado cero y, al procesar cada uno, se reduce el grado de sus sucesores, encolando los que llegan a cero. Si al final quedan vértices sin procesar, existe un ciclo. Muestre que herramientas como Maven y Gradle resuelven así el orden de construcción de módulos y reportan error ante dependencias circulares; lo mismo hacen las hojas de cálculo con las referencias circulares entre celdas. Explique la alternativa con DFS: el orden inverso de finalización de los vértices es un orden topológico. Pregunta para la clase: con las dependencias de las tareas del proyecto integrador, ¿qué tareas pueden ejecutarse en paralelo durante la primera semana?"
+        },
+        {
+          "title": "Algoritmo de Dijkstra con cola de prioridad",
+          "bullets": [
+            "Calcula caminos mínimos desde un origen en grafos con pesos no negativos (Dijkstra, 1959).",
+            "Extrae el vértice con menor distancia tentativa y relaja sus aristas: si d[u] + w < d[v], actualiza d[v].",
+            "Con PriorityQueue y reinserción perezosa cuesta O((V + E) log V).",
+            "Guardar el predecesor de cada vértice permite reconstruir la ruta, no solo su costo."
+          ],
+          "notes": "Presente el algoritmo que Edsger Dijkstra diseñó en 1956 y publicó en 1959, según contó, en unos veinte minutos mientras tomaba café. La idea es mantener distancias tentativas y extraer cada vez el vértice no definitivo con menor distancia, cuya distancia ya no puede mejorar si los pesos son no negativos. Explique la relajación con un ejemplo de tiempos de viaje entre paraderos. Recorra el código de la lectura y destaque la técnica perezosa: en lugar de disminuir la prioridad en la cola, operación que PriorityQueue no ofrece, se inserta una nueva entrada y se descartan las obsoletas al extraerlas. Analice el costo: cada arista puede generar una inserción, de modo que la cola tiene a lo sumo E entradas y el total es O((V + E) log V). Muestre la reconstrucción de la ruta siguiendo predecesores desde el destino. Pregunta para la clase: ¿qué cambiaría en el algoritmo si se quisiera minimizar el costo del pasaje en lugar del tiempo de viaje?"
+        },
+        {
+          "title": "Limitaciones de Dijkstra y alternativas",
+          "bullets": [
+            "Con pesos negativos falla; Bellman-Ford los admite en O(V·E) y detecta ciclos negativos.",
+            "A* (Hart, Nilsson y Raphael, 1968) añade una heurística admisible, como la distancia en línea recta, y explora menos vértices.",
+            "Floyd-Warshall calcula todos los pares en O(V³): viable con cientos de vértices, no con decenas de miles.",
+            "Los navegadores comerciales precalculan jerarquías de atajos para responder en milisegundos sobre redes enormes."
+          ],
+          "notes": "Discuta los límites de Dijkstra con un contraejemplo de tres vértices y una arista negativa: el algoritmo fija una distancia que luego podría mejorarse. Presente Bellman-Ford, que relaja todas las aristas V − 1 veces y detecta ciclos negativos, útil en problemas financieros como la detección de arbitraje de divisas. Introduzca A*, de Hart, Nilsson y Raphael en 1968: prioriza los vértices según la distancia recorrida más una estimación optimista de lo que falta, como la distancia en línea recta; si la heurística nunca sobreestima, el resultado es óptimo y se exploran muchos menos vértices. Muestre que Floyd-Warshall, con tres ciclos anidados, es elegante pero cúbico: con 10 000 vértices serían un billón de operaciones y una matriz de 800 MB. Mencione que los navegadores comerciales usan jerarquías de contracción y otras técnicas de preprocesamiento para responder en milisegundos. Pregunta para la clase: ¿qué heurística admisible usarían para A* en una red de transporte urbano?"
+        },
+        {
+          "title": "Árbol de expansión mínima: Kruskal y unión-búsqueda",
+          "bullets": [
+            "Conecta todos los vértices con el menor costo total y sin ciclos; sirve para tender fibra, tuberías o redes eléctricas.",
+            "Kruskal (1956): ordena las aristas por peso y agrega cada una si no forma ciclo; O(E log E).",
+            "Unión-búsqueda con unión por rango y compresión de caminos decide si dos vértices ya están conectados en tiempo casi constante.",
+            "Prim (1957) hace crecer el árbol desde un vértice con una cola de prioridad; conviene en grafos densos."
+          ],
+          "notes": "Plantee el problema con un caso peruano: una municipalidad rural debe conectar con fibra óptica 60 centros poblados al menor costo, sin importar la ruta exacta entre cada par. Eso es un árbol de expansión mínima, que en Matemática Discreta resolvieron a mano. Ahora lo implementamos. Kruskal ordena las aristas por costo y las agrega mientras no formen ciclo; la pregunta «¿ya están conectados estos dos vértices?» se responde con la estructura unión-búsqueda. Implemente find con compresión de caminos y union por rango: con ambas mejoras, Tarjan demostró en 1975 que el costo amortizado por operación es la inversa de la función de Ackermann, menor que 5 para cualquier tamaño práctico. El costo total lo domina el ordenamiento de aristas, O(E log E). Contraste con Prim, que hace crecer un único árbol con una cola de prioridad. Pregunta para la clase: ¿qué otros problemas podrían resolverse con unión-búsqueda, por ejemplo agrupar registros de clientes que comparten teléfono o dirección?"
+        },
+        {
+          "title": "Algoritmos voraces: decisiones locales",
+          "bullets": [
+            "Eligen en cada paso la opción que parece mejor y nunca la reconsideran; son simples y rápidos.",
+            "Son óptimos si el problema tiene propiedad de elección voraz y subestructura óptima, como Kruskal o la selección de actividades.",
+            "Vuelto con monedas peruanas de S/ 5, 2, 1, 0,50, 0,20 y 0,10: el voraz es óptimo porque el sistema es canónico.",
+            "Contraejemplo: con monedas de 1, 3 y 4 para pagar 6, el voraz usa tres monedas (4 + 1 + 1) y el óptimo dos (3 + 3)."
+          ],
+          "notes": "Defina el enfoque voraz y sus dos condiciones de optimalidad: la propiedad de elección voraz, según la cual una decisión localmente óptima forma parte de alguna solución óptima, y la subestructura óptima. Recuerde que Dijkstra, Prim y Kruskal son voraces correctos, y añada la selección de actividades: para asignar el máximo de reuniones a una sala, conviene elegir siempre la que termina primero. Desarrolle el vuelto con monedas peruanas: con S/ 5, S/ 2, S/ 1 y monedas de 50, 20 y 10 céntimos, el voraz siempre usa el mínimo de monedas porque el sistema es canónico. Luego muestre el contraejemplo con monedas de 1, 3 y 4: para pagar 6, el voraz elige 4 + 1 + 1 y el óptimo es 3 + 3. Concluya que un algoritmo voraz necesita una demostración o, al menos, una búsqueda sistemática de contraejemplos antes de usarse en producción. Pregunta para la clase: ¿es óptimo elegir siempre el pedido de mayor monto para llenar un camión de capacidad limitada?"
+        },
+        {
+          "title": "Programación dinámica: subproblemas solapados",
+          "bullets": [
+            "Bellman, en la década de 1950: resolver cada subproblema una sola vez y guardar su resultado en una tabla.",
+            "Requiere subestructura óptima y subproblemas solapados; puede ser descendente con memoización o ascendente con tabla.",
+            "Pasos: definir el estado, la recurrencia, los casos base, el orden de cálculo y la reconstrucción de la solución.",
+            "Cambio de monedas con cualquier sistema: dp[x] = 1 + mín(dp[x − c]) para cada moneda c ≤ x, en O(x·k)."
+          ],
+          "notes": "Presente la programación dinámica, nombre elegido por Richard Bellman en la década de 1950, como la generalización de la memoización vista en la Unidad 2. Explique sus condiciones: la solución óptima se construye con soluciones óptimas de subproblemas y esos subproblemas se repiten. Enseñe el método de cinco pasos con el problema del cambio de monedas para cualquier sistema: el estado es el monto x; la recurrencia toma el mínimo entre usar cada moneda; el caso base es dp[0] = 0; el orden de cálculo es ascendente; y la reconstrucción guarda qué moneda se eligió en cada monto. Recorra el código de la lectura y verifique que para el sistema 1, 3 y 4 devuelve dos monedas al pagar 6. Compare el enfoque descendente, con recursión y memoización, y el ascendente, con tabla iterativa, que evita el riesgo de desbordar la pila. Pregunta para la clase: ¿cuántas celdas tiene la tabla para pagar S/ 50 expresados en céntimos con seis denominaciones y cuántas operaciones realiza?"
+        },
+        {
+          "title": "Programación dinámica aplicada: mochila y distancia de edición",
+          "bullets": [
+            "Mochila 0/1: elegir proyectos con presupuesto W que maximicen el beneficio; O(n·W), un costo seudopolinomial.",
+            "Distancia de Levenshtein entre dos textos en O(m·n): detecta errores de digitación en nombres y direcciones.",
+            "La subsecuencia común más larga es la base conceptual de las herramientas de comparación de archivos.",
+            "Optimización de memoria: muchas tablas solo necesitan la fila anterior, de O(n·W) a O(W)."
+          ],
+          "notes": "Desarrolle dos problemas emblemáticos. En la mochila 0/1, una empresa con un presupuesto de inversión W elige entre n proyectos, cada uno con costo y beneficio; la tabla dp[i][w] guarda el mejor beneficio usando los primeros i proyectos con presupuesto w. Explique por qué el algoritmo es seudopolinomial: su costo depende del valor numérico de W, no de su longitud en bits, por lo que con presupuestos expresados en céntimos la tabla puede volverse enorme. En la distancia de edición de Vladimir Levenshtein, de 1965, dp[i][j] es el número mínimo de inserciones, eliminaciones y sustituciones para transformar un prefijo en otro; sirve para detectar que «Ccallo» y «Callo» probablemente son el mismo apellido mal digitado, lo que conecta con la limpieza de padrones del caso anterior. Mencione que la subsecuencia común más larga sustenta las herramientas de comparación de archivos. Cierre con la optimización a una sola fila. Pregunta para la clase: ¿cuál es la distancia de edición entre «QUISPE» y «QISPE»?"
+        },
+        {
+          "title": "Vuelta atrás y poda",
+          "bullets": [
+            "Construye soluciones parciales y retrocede cuando una decisión no puede conducir a una solución válida.",
+            "Ejemplos: asignación de horarios con restricciones, sudoku, n reinas y generación de combinaciones.",
+            "La poda por factibilidad o por cota, como en ramificación y acotamiento, descarta ramas enteras del árbol de búsqueda.",
+            "El peor caso sigue siendo exponencial; la calidad de la poda decide si el problema es resoluble en la práctica."
+          ],
+          "notes": "Presente la vuelta atrás como una búsqueda en profundidad sobre el árbol de decisiones parciales. Desarrolle un ejemplo cercano: asignar horarios de exámenes a aulas virtuales de modo que ningún estudiante tenga dos evaluaciones a la misma hora. Se asigna un curso a la vez y, si una asignación viola una restricción, se deshace y se prueba la siguiente opción. Explique la poda por factibilidad, que descarta ramas que ya violan restricciones, y la ramificación y acotamiento, que descarta ramas cuyo mejor resultado posible no supera la mejor solución conocida. Con el problema de las ocho reinas muestre cómo la poda reduce más de cuatro mil millones de configuraciones posibles del tablero a unos quince mil nodos explorados para hallar todas las soluciones. Advierta que el peor caso sigue siendo exponencial y que la eficacia depende del orden de las decisiones, por ejemplo asignar primero los cursos con más restricciones. Pregunta para la clase: ¿qué heurística de orden usarían para armar los horarios de un instituto con 40 secciones?"
+        },
+        {
+          "title": "Intratabilidad: P, NP y heurísticas",
+          "bullets": [
+            "P: problemas resolubles en tiempo polinomial; NP: problemas cuyas soluciones se verifican en tiempo polinomial.",
+            "NP-completos (Cook, 1971; Karp, 1972): viajante de comercio, mochila en su versión de decisión y coloreo de grafos.",
+            "Ante un problema NP-difícil se usan heurísticas, algoritmos de aproximación o métodos exactos para instancias pequeñas.",
+            "Una ruta de reparto con 40 paradas admite 39!/2 recorridos; se usa vecino más cercano y luego mejora 2-opt."
+          ],
+          "notes": "Presente la pregunta abierta más famosa de la computación con el lenguaje adecuado para un técnico: P agrupa los problemas que sabemos resolver en tiempo polinomial; NP, los problemas cuyas soluciones propuestas se verifican en tiempo polinomial. Stephen Cook en 1971 y Richard Karp en 1972 mostraron que muchos problemas prácticos son NP-completos: si uno se resolviera eficientemente, todos lo harían. Nadie ha demostrado que P sea distinto de NP y el Instituto Clay ofrece un millón de dólares por la respuesta. La consecuencia profesional es reconocer estos problemas para no prometer soluciones exactas imposibles en rutas de reparto, horarios o empaquetamiento. Calcule con la clase: 40 paradas generan 39!/2 recorridos, del orden de 10⁴⁶. Presente las alternativas: heurísticas constructivas como el vecino más cercano, mejoras locales como 2-opt, algoritmos de aproximación con garantía y solucionadores especializados. Pregunta para la clase: si un proveedor promete la ruta óptima para cualquier instancia de 5 000 paradas en un segundo, ¿qué preguntas le harían?"
+        },
+        {
+          "title": "Del algoritmo al sistema: medir, perfilar y reutilizar",
+          "bullets": [
+            "Primero corrección con pruebas; luego medición con JMH; al final, optimización guiada por un perfilador como Java Flight Recorder.",
+            "Reutilizar bibliotecas probadas, como las colecciones del JDK, Guava o JGraphT, antes de reinventar estructuras.",
+            "Documentar la complejidad y los supuestos en el Javadoc de cada método público.",
+            "Vigilar la memoria: un Integer ocupa unos 16 bytes frente a 4 de un int, y cada entrada de HashMap unos 32 adicionales."
+          ],
+          "notes": "Conecte los algoritmos con la práctica profesional. El orden correcto de trabajo es: primero corrección, demostrada con pruebas automatizadas sobre casos pequeños calculados a mano; luego medición, con JMH y datos representativos; y solo después optimización, guiada por un perfilador como Java Flight Recorder, que muestra dónde se gasta realmente el tiempo. Recomiende reutilizar bibliotecas maduras: el JDK ya trae estructuras excelentes, Guava añade multimapas y cachés, y JGraphT ofrece decenas de algoritmos de grafos probados. Implementar estructuras propias en el curso sirve para comprenderlas, no para reemplazar sin motivo las bibliotecas en producción. Explique el costo de memoria de los objetos en la JVM: con decenas de millones de elementos, la diferencia entre int e Integer, o entre un arreglo y un mapa, decide si el sistema cabe en el servidor contratado. Pregunta para la clase: ¿cómo documentarían en Javadoc la complejidad de un método público para que otro equipo lo use correctamente?"
+        },
+        {
+          "title": "Proyecto integrador: alcance, entregables y sustentación",
+          "bullets": [
+            "Problema real modelado como grafo con al menos 1 000 vértices, con datos sintéticos o abiertos de fuente documentada.",
+            "Entregables: repositorio Git con Maven, pruebas JUnit, experimentos de desempeño e informe técnico de 8 a 10 páginas.",
+            "Debe integrar una estructura propia, dos algoritmos de grafos y una técnica voraz o de programación dinámica justificada.",
+            "Sustentación en línea de 15 minutos: demostración, decisiones de diseño, mediciones y preguntas individuales del jurado."
+          ],
+          "notes": "Presente el proyecto integrador como la evidencia principal de la competencia del curso. Los equipos de dos o tres estudiantes eligen uno de tres escenarios: planificador de rutas de transporte urbano, gestor de dependencias y cronograma de un proyecto de software, o diseño de una red de fibra con presupuesto limitado. Explique los requisitos mínimos de la diapositiva y la rúbrica publicada en el aula virtual. Insista en tres aspectos que distinguen un trabajo profesional: pruebas con grafos pequeños cuya respuesta se calcula a mano, experimentos que validan la complejidad teórica con la prueba de razón duplicada y un informe que justifica cada decisión con las alternativas descartadas. Explique la dinámica de la sustentación en la semana 16: quince minutos de demostración y defensa, preguntas individuales a cada integrante y evaluación de la contribución mediante el historial de commits. Pregunta para la clase: ¿qué riesgos técnicos anticipan en su escenario y cómo los mitigarán desde la primera semana?"
+        }
+      ],
+      "reading": {
+        "title": "Grafos en acción: rutas, dependencias y optimización en Java",
+        "minutes": 40,
+        "content": "## Los grafos como modelo universal\n\nUna red de paraderos, las dependencias entre módulos de software, los prerrequisitos de una malla curricular o la red de fibra óptica de un distrito comparten una estructura: entidades conectadas por relaciones. En Matemática Discreta se estudiaron sus propiedades; en este curso nos interesa implementarlos con eficiencia. La decisión inicial es la representación: para grafos dispersos, que son la mayoría en la práctica, la **lista de adyacencia** ocupa memoria O(V + E) y permite recorrer los vecinos de un vértice en tiempo proporcional a su grado.\n\n## Caminos mínimos con Dijkstra\n\n```java\npublic record Arista(int destino, double peso) {}\n\n/** Dijkstra con reinserción perezosa: O((V + E) log V). Requiere pesos no negativos. */\nstatic double[] dijkstra(List<List<Arista>> ady, int origen, int[] previo) {\n    double[] dist = new double[ady.size()];\n    Arrays.fill(dist, Double.POSITIVE_INFINITY);\n    Arrays.fill(previo, -1);\n    dist[origen] = 0;\n    PriorityQueue<double[]> pq = new PriorityQueue<>(Comparator.comparingDouble(e -> e[1]));\n    pq.offer(new double[]{origen, 0});\n    while (!pq.isEmpty()) {\n        double[] actual = pq.poll();\n        int u = (int) actual[0];\n        if (actual[1] > dist[u]) continue;          // entrada obsoleta: ya hay algo mejor\n        for (Arista a : ady.get(u)) {\n            double nueva = dist[u] + a.peso();\n            if (nueva < dist[a.destino()]) {        // relajación\n                dist[a.destino()] = nueva;\n                previo[a.destino()] = u;\n                pq.offer(new double[]{a.destino(), nueva});\n            }\n        }\n    }\n    return dist;\n}\n```\n\nLa corrección descansa en un invariante: cuando un vértice sale de la cola con su distancia vigente, esa distancia es definitiva, porque cualquier otro camino pasaría por vértices con distancia mayor o igual y los pesos no son negativos. El arreglo previo permite reconstruir la ruta desde el destino hacia el origen. Para un grafo de 9 800 vértices y 31 000 aristas, como el del caso de esta unidad, una consulta realiza del orden de medio millón de operaciones: milisegundos.\n\n## Dependencias y orden topológico\n\nCuando las aristas expresan «debe hacerse antes que», el problema es encontrar un orden compatible o demostrar que no existe. El algoritmo de Kahn (1962) lo resuelve en O(V + E):\n\n```java\nstatic List<Integer> ordenTopologico(List<List<Arista>> ady) {\n    int n = ady.size();\n    int[] gradoEntrada = new int[n];\n    for (List<Arista> vecinos : ady)\n        for (Arista a : vecinos) gradoEntrada[a.destino()]++;\n    Deque<Integer> cola = new ArrayDeque<>();\n    for (int u = 0; u < n; u++) if (gradoEntrada[u] == 0) cola.add(u);\n    List<Integer> orden = new ArrayList<>(n);\n    while (!cola.isEmpty()) {\n        int u = cola.poll();\n        orden.add(u);\n        for (Arista a : ady.get(u))\n            if (--gradoEntrada[a.destino()] == 0) cola.add(a.destino());\n    }\n    if (orden.size() < n) throw new IllegalStateException(\"Hay un ciclo de dependencias\");\n    return orden;\n}\n```\n\nAsí resuelven Maven y Gradle el orden de construcción de los módulos de un proyecto, y así puede validarse que una malla curricular no tenga prerrequisitos circulares.\n\n## Redes de costo mínimo: Kruskal y unión-búsqueda\n\nPara conectar centros poblados con fibra óptica al menor costo, Kruskal (1956) ordena los tramos por costo y acepta cada uno si no cierra un ciclo. La pregunta «¿ya están conectados?» la responde la estructura unión-búsqueda:\n\n```java\nfinal class UnionBusqueda {\n    private final int[] padre, rango;\n    UnionBusqueda(int n) {\n        padre = new int[n]; rango = new int[n];\n        for (int i = 0; i < n; i++) padre[i] = i;\n    }\n    int buscar(int x) {\n        if (padre[x] != x) padre[x] = buscar(padre[x]);   // compresión de caminos\n        return padre[x];\n    }\n    boolean unir(int a, int b) {\n        int ra = buscar(a), rb = buscar(b);\n        if (ra == rb) return false;                       // ya conectados: cerraría un ciclo\n        if (rango[ra] < rango[rb]) { int t = ra; ra = rb; rb = t; }\n        padre[rb] = ra;                                   // unión por rango\n        if (rango[ra] == rango[rb]) rango[ra]++;\n        return true;\n    }\n}\n```\n\nCon unión por rango, la profundidad de cada árbol no supera log₂ n, por lo que la recursión de buscar es segura; con ambas mejoras, el costo amortizado por operación es prácticamente constante (Tarjan, 1975). El costo total de Kruskal lo domina el ordenamiento de los tramos: O(E log E).\n\n## Cuando lo voraz no basta: programación dinámica\n\nEl vuelto con monedas peruanas se resuelve de forma voraz porque el sistema es canónico. Pero con denominaciones arbitrarias, como 1, 3 y 4, el voraz falla. La programación dinámica de Bellman encuentra siempre el óptimo:\n\n```java\n/** Mínimo de monedas para pagar 'monto'; -1 si es imposible. O(monto · k). */\nstatic int minimoMonedas(int monto, int[] monedas) {\n    int[] dp = new int[monto + 1];\n    Arrays.fill(dp, Integer.MAX_VALUE);\n    dp[0] = 0;                                        // caso base\n    for (int x = 1; x <= monto; x++)                  // orden ascendente\n        for (int c : monedas)\n            if (c <= x && dp[x - c] != Integer.MAX_VALUE)\n                dp[x] = Math.min(dp[x], dp[x - c] + 1); // recurrencia\n    return dp[monto] == Integer.MAX_VALUE ? -1 : dp[monto];\n}\n```\n\n## Saber cuándo detenerse\n\nNo todo problema tiene un algoritmo eficiente conocido. El viajante de comercio, la asignación de horarios o el empaquetamiento son NP-difíciles: para ellos se combinan heurísticas, como el vecino más cercano, con mejoras locales, como 2-opt, y se mide la calidad obtenida frente a cotas conocidas. Un profesional técnico competente reconoce estos problemas, evita prometer óptimos imposibles y sustenta sus decisiones con pruebas y mediciones."
+      },
+      "case": {
+        "title": "Caso: RutaSIT y el planificador de viajes de Arequipa",
+        "content": "**RutaSIT** (nombre ficticio) es una empresa emergente arequipeña fundada en 2024 por tres egresados de institutos tecnológicos. Su aplicación móvil ayuda a los usuarios del transporte público de Arequipa a planificar viajes que combinan rutas del Sistema Integrado de Transporte, a partir de datos de paraderos y recorridos publicados por la municipalidad y verificados en campo. Tiene 85 000 usuarios activos al mes y atiende alrededor de 1,2 millones de consultas mensuales, con picos de 120 consultas por minuto entre las 6:30 y las 8:00.\n\nPara modelar los transbordos, el equipo construyó un grafo expandido: cada vértice representa un par (paradero, ruta), de modo que seguir en la misma ruta y cambiar de ruta en un paradero son aristas distintas; el cambio de ruta lleva una penalidad de 6 minutos de espera promedio. El grafo tiene 9 800 vértices y 31 000 aristas dirigidas, ponderadas con el tiempo promedio de viaje por franja horaria.\n\nEl producto mínimo viable calcula cada noche todas las rutas óptimas con Floyd-Warshall y guarda en memoria las matrices de distancias y de predecesores. El proceso tarda unos 25 minutos y consume cerca de 1,2 GB de RAM en un servidor en la nube. Durante el día, cada consulta solo lee la matriz y responde en 15 ms.\n\nTres hechos obligan a replantear el diseño:\n\n1. **Desvíos por obras.** La municipalidad anuncia cierres de vías con pocas horas de anticipación. Mientras la matriz no se recalcula, la aplicación recomienda rutas que ya no existen; el último mes recibió 2 300 reseñas negativas.\n2. **Nuevas opciones.** Los usuarios piden elegir entre «más rápido» y «menos transbordos», y una asociación de personas con discapacidad solicitó rutas que usen solo paraderos accesibles, lo que exige calcular sobre subgrafos distintos.\n3. **Expansión a Lima.** Un fondo de inversión ofrece financiamiento si en seis meses la aplicación opera en Lima Metropolitana, cuyo grafo expandido se estima en 60 000 vértices y 210 000 aristas.\n\nEn la reunión de directorio se presentan tres propuestas:\n\n- **Dijkstra bajo demanda** con PriorityQueue, calculado en cada consulta sobre el grafo vigente; la propone la desarrolladora principal, Karina Llerena.\n- **A estrella** con una heurística igual a la distancia en línea recta dividida entre la velocidad máxima de los buses; la propone el segundo desarrollador.\n- **API comercial de rutas** de un proveedor internacional, a USD 0,005 por consulta; la propone el representante del fondo para «salir rápido al mercado».\n\nEl directorio debe decidir esta semana. El presupuesto mensual de infraestructura es de S/ 4 500 y el tiempo de respuesta debe mantenerse por debajo de 300 ms.",
+        "questions": [
+          "Estime el tiempo y la memoria que requeriría Floyd-Warshall para el grafo de Lima a partir de los datos de Arequipa y concluya sobre su viabilidad.",
+          "Explique cómo el grafo expandido modela los transbordos y cómo atendería las opciones «menos transbordos» y «solo paraderos accesibles».",
+          "Compare las tres propuestas en tiempo de respuesta esperado, costo mensual, actualización ante desvíos y dependencia tecnológica.",
+          "¿Qué condición debe cumplir la heurística de A estrella para garantizar rutas óptimas? ¿La cumple la heurística propuesta?",
+          "Diseñe el plan de pruebas y de medición que exigiría antes del lanzamiento en Lima."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: solución basada en grafos y diseño algorítmico",
+        "instructions": "**Objetivo:** integrar las cuatro unidades del curso en una solución de software que modele un problema real como grafo, aplique algoritmos eficientes y sustente sus decisiones con pruebas y mediciones.\n\n**Escenarios (elegir uno):**\n\n- Planificador de rutas de transporte urbano con opciones «más rápido» y «menos transbordos».\n- Gestor de dependencias y cronograma de un proyecto de software con orden topológico, detección de ciclos y ruta crítica.\n- Diseño de la red de fibra de una municipalidad con árbol de expansión mínima y selección de tramos con presupuesto limitado.\n\n**Requisitos mínimos:**\n\n1. Grafo con listas de adyacencia y al menos 1 000 vértices, con datos sintéticos o abiertos de fuente documentada.\n2. Al menos dos algoritmos de grafos de la unidad y una técnica voraz o de programación dinámica justificada.\n3. Una estructura implementada por el equipo en unidades anteriores (cola, montículo, tabla hash o unión-búsqueda).\n4. Al menos 25 pruebas JUnit 5, incluidas pruebas con grafos pequeños resueltos a mano.\n5. Experimentos con tamaños de 1 000 a 64 000 vértices que contrasten la complejidad teórica con la observada.\n\n**Entregables:** repositorio Git con Maven y README, informe técnico de 8 a 10 páginas, video de demostración de 5 minutos y sustentación en línea en la semana 16. El historial de commits evidenciará el aporte de cada integrante.\n\n**Criterios:** modelado, corrección, pruebas, experimentación y comunicación técnica, según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Modelado del problema y elección de estructuras",
+            "points": 4
+          },
+          {
+            "name": "Corrección e implementación de los algoritmos",
+            "points": 6
+          },
+          {
+            "name": "Pruebas automatizadas y calidad del código",
+            "points": 4
+          },
+          {
+            "name": "Experimentación y análisis de complejidad",
+            "points": 3
+          },
+          {
+            "name": "Informe técnico y sustentación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 4: grafos y técnicas de diseño algorítmico",
+        "questions": [
+          {
+            "prompt": "¿Qué representación conviene para una red vial de 80 000 intersecciones con un promedio de tres calles por intersección?",
+            "options": [
+              "Matriz de adyacencia, por su consulta O(1)",
+              "Lista de adyacencia, por su memoria O(V + E)",
+              "Lista de aristas sin ningún índice",
+              "Matriz de incidencia vértice-arista"
+            ],
+            "correct": 1,
+            "explanation": "El grafo es disperso: unas 240 000 entradas en listas frente a 6 400 millones de celdas en una matriz. Además, los recorridos cuestan O(V + E) con listas de adyacencia."
+          },
+          {
+            "prompt": "En un grafo sin pesos, ¿qué algoritmo obtiene el camino con menos transbordos (aristas) entre dos paraderos?",
+            "options": [
+              "Búsqueda en profundidad",
+              "Kruskal",
+              "Búsqueda en anchura",
+              "Floyd-Warshall con pesos aleatorios"
+            ],
+            "correct": 2,
+            "explanation": "BFS descubre los vértices por niveles; la primera vez que alcanza un vértice lo hace por un camino con el menor número de aristas, en O(V + E). DFS no garantiza caminos mínimos."
+          },
+          {
+            "prompt": "Al aplicar el algoritmo de Kahn sobre las dependencias de un proyecto quedan tres tareas sin procesar con grado de entrada mayor que cero. ¿Qué se concluye?",
+            "options": [
+              "Existe un ciclo de dependencias entre esas tareas",
+              "Esas tareas no tienen dependencias",
+              "El orden topológico obtenido es único",
+              "Hay que usar Dijkstra en lugar de Kahn"
+            ],
+            "correct": 0,
+            "explanation": "Una tarea solo se procesa cuando todas sus dependencias ya se procesaron. Si algunas nunca llegan a grado cero, dependen mutuamente: hay un ciclo y no existe orden topológico."
+          },
+          {
+            "prompt": "¿Por qué Dijkstra puede dar resultados incorrectos cuando el grafo tiene aristas de peso negativo?",
+            "options": [
+              "Porque PriorityQueue no admite números negativos",
+              "Porque da por definitiva una distancia que una arista negativa posterior podría mejorar",
+              "Porque los pesos negativos vuelven no conexo al grafo",
+              "Porque necesita una matriz de adyacencia"
+            ],
+            "correct": 1,
+            "explanation": "Dijkstra supone que, al extraer el vértice de menor distancia, ya no habrá un camino mejor hacia él, lo cual solo se cumple con pesos no negativos. Bellman-Ford maneja pesos negativos."
+          },
+          {
+            "prompt": "Con monedas de 1, 3 y 4 unidades, ¿cuántas monedas usa el algoritmo voraz para pagar 6 y cuántas usa la solución óptima?",
+            "options": [
+              "Voraz 2 y óptimo 2",
+              "Voraz 3 y óptimo 3",
+              "Voraz 2 y óptimo 3",
+              "Voraz 3 y óptimo 2"
+            ],
+            "correct": 3,
+            "explanation": "El voraz toma 4 y luego 1 + 1, tres monedas; el óptimo es 3 + 3, dos monedas. El sistema no es canónico, por lo que se requiere programación dinámica para garantizar el óptimo."
+          },
+          {
+            "prompt": "La mochila 0/1 resuelta con programación dinámica cuesta O(n·W). ¿Por qué se considera un algoritmo seudopolinomial?",
+            "options": [
+              "Porque usa recursión con memoización",
+              "Porque su costo depende del valor de W, que crece exponencialmente respecto de su número de dígitos",
+              "Porque solo admite pesos enteros menores que n",
+              "Porque la tabla se llena en orden descendente"
+            ],
+            "correct": 1,
+            "explanation": "El tamaño de una entrada se mide en bits; W se representa con unos log W bits, de modo que O(n·W) crece exponencialmente con esa longitud. Es eficiente solo cuando W es moderado."
+          },
+          {
+            "prompt": "Un proveedor garantiza la ruta de reparto óptima exacta para cualquier instancia de 5 000 paradas en menos de un segundo. ¿Cuál es la postura técnica más razonable?",
+            "options": [
+              "Aceptar, porque los servidores actuales son muy rápidos",
+              "Usar Dijkstra, que ya calcula rutas óptimas con varias paradas",
+              "Dudar: el problema es NP-difícil; pedir evidencia y evaluar heurísticas con métricas de calidad",
+              "Probar todas las permutaciones con un servidor más potente"
+            ],
+            "correct": 2,
+            "explanation": "No se conoce un algoritmo que garantice el óptimo del viajante de comercio en tiempo polinomial para toda instancia. Lo razonable es exigir evidencia con instancias de prueba y comparar heurísticas frente a cotas conocidas."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Eficiencia algorítmica: problema, instancia, corrección y modelo de costo",
+      "activity": "Aula invertida con la lectura de la unidad, diagnóstico de Java y análisis en parejas del costo de fragmentos de código del proyecto de POO.",
+      "evidence": "Hoja de análisis de complejidad"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Notación asintótica, órdenes de crecimiento y prueba de razón duplicada con JMH",
+      "activity": "Laboratorio: medir tres algoritmos de detección de DNI duplicados, calcular razones duplicadas y graficar en escala log-log.",
+      "evidence": "Tabla de mediciones y gráfico log-log"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Tipos de datos abstractos, arreglos dinámicos, listas enlazadas e iteradores",
+      "activity": "Implementación guiada de una lista enlazada genérica con iterador y pruebas JUnit; análisis del caso Caja Municipal Selva Central en el foro.",
+      "evidence": "Repositorio con pruebas y aporte al foro del caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Pilas, colas, deques y arreglo circular",
+      "activity": "Taller de evaluación de expresiones con dos pilas; entrega de la Tarea 1 (cola circular y razón duplicada) y cuestionario de la Unidad 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Recursión, pila de llamadas y memoización",
+      "activity": "Depuración de recursión en vivo, conversión de recursión a iteración con pila explícita y ejercicios de memoización en parejas remotas.",
+      "evidence": "Ejercicios de recursión resueltos"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Recurrencias, teorema maestro y búsqueda binaria con invariantes",
+      "activity": "Resolución colaborativa de recurrencias; laboratorio de límite inferior y búsqueda sobre la respuesta con pruebas de casos límite.",
+      "evidence": "Guía de recurrencias y laboratorio de búsqueda"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Ordenamientos elementales, mergesort, quicksort y cota inferior",
+      "activity": "Laboratorio comparativo de ordenamientos con cuatro distribuciones de datos; discusión del caso Fondo Educativo Regional Ayllu en sesión síncrona.",
+      "evidence": "Informe breve de laboratorio y participación en el caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Ordenamientos lineales, estabilidad, TimSort y comparadores multicriterio",
+      "activity": "Taller de comparadores para el ranking de becas; entrega de la Tarea 2 (motor de ranking) y cuestionario de la Unidad 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Tablas de símbolos, funciones hash y resolución de colisiones",
+      "activity": "Construcción guiada de una tabla hash con encadenamiento separado y experimento sobre la distribución de claves y el factor de carga.",
+      "evidence": "Laboratorio de tabla hash"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Contrato equals y hashCode, factor de carga y funcionamiento interno de HashMap",
+      "activity": "Demostración de errores de igualdad y claves mutables; análisis en equipos del caso Distribuidora Ferretera Chavín.",
+      "evidence": "Informe grupal del caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Árboles binarios de búsqueda, AVL, rojo-negro, TreeMap y árboles B",
+      "activity": "Laboratorio de árbol binario de búsqueda con operaciones ordenadas, simulación de rotaciones AVL y relación con los índices del curso Base de Datos.",
+      "evidence": "Laboratorio de árboles"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Montículos binarios, PriorityQueue, top-k y heapsort",
+      "activity": "Taller de colas de prioridad y patrón top-k; entrega de la Tarea 3 (índice en memoria) y cuestionario de la Unidad 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Representación de grafos, BFS, DFS y orden topológico",
+      "activity": "Laboratorio de recorridos sobre una red de paraderos; conformación de equipos y elección del escenario del proyecto integrador.",
+      "evidence": "Laboratorio de grafos y ficha del proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Dijkstra, A estrella, árbol de expansión mínima y unión-búsqueda",
+      "activity": "Implementación de Dijkstra y Kruskal con pruebas; debate del caso RutaSIT; primer avance del proyecto con modelado y pruebas.",
+      "evidence": "Avance 1 del proyecto integrador"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Algoritmos voraces, programación dinámica, vuelta atrás e intratabilidad",
+      "activity": "Taller de programación dinámica (monedas, mochila y Levenshtein); cuestionario de la Unidad 4; segundo avance del proyecto con experimentos.",
+      "evidence": "Cuestionario 4 y avance 2 del proyecto"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentación en línea del proyecto integrador ante jurado y examen práctico individual supervisado con defensa oral breve.",
+      "evidence": "Proyecto integrador y evaluación final"
+    }
+  ]
+}
