@@ -1,0 +1,1355 @@
+{
+  "name": "Análisis y Diseño de Sistemas",
+  "slug": "analisis-y-diseno-de-sistemas",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Análisis y Diseño de Sistemas es un curso de formación específica, de naturaleza teórico-práctica, del cuarto ciclo de la carrera de Computación e Informática (código CEI-401). Su propósito es que el estudiante transforme necesidades de negocio en especificaciones y modelos de software verificables, que un equipo de desarrollo pueda construir sin ambigüedades. Comprende cuatro unidades: pensamiento sistémico, ciclos de vida, modelado de procesos con BPMN 2.0 y estudio de factibilidad; ingeniería de requisitos con historias de usuario, casos de uso, atributos de calidad ISO/IEC 25010 y trazabilidad; análisis y diseño orientado a objetos con UML 2.5 y patrones GRASP; y diseño arquitectónico con escenarios de calidad, modelo C4, registros de decisiones, prototipos e integración con servicios como la facturación electrónica de la SUNAT. Construye sobre Programación Orientada a Objetos, Base de Datos y Desarrollo Web, y prepara Desarrollo de Software Empresarial, Gestión de Proyectos de TI, Seguridad Informática y el Proyecto Integrador de Software. Aporta al perfil del analista programador que comprende el negocio, comunica el diseño con precisión y reduce el costo de los errores tempranos.",
+  "competency": "Analiza los procesos y necesidades de una organización y diseña la solución de software que los atiende, elaborando un documento de análisis y diseño con modelos BPMN y UML, requisitos verificables y trazables, y una arquitectura justificada por atributos de calidad, conforme a estándares internacionales como ISO/IEC/IEEE 29148 y UML 2.5 y a la normativa peruana de protección de datos personales.",
+  "capacities": [
+    "Modela los procesos de negocio en su situación actual y propuesta con BPMN 2.0, identifica problemas y oportunidades de automatización y sustenta la factibilidad técnica, económica, operativa y legal de la solución.",
+    "Educe, especifica, prioriza y valida requisitos funcionales y no funcionales mediante historias de usuario, casos de uso y criterios de aceptación, manteniendo su trazabilidad hasta los objetivos del negocio.",
+    "Construye modelos de análisis y diseño orientado a objetos con UML (dominio, secuencia, actividad y estados), asigna responsabilidades con patrones GRASP y deriva el modelo de datos y el contrato de la API.",
+    "Diseña la arquitectura de la solución a partir de escenarios de atributos de calidad, la documenta con el modelo C4 y registros de decisiones, y la valida con prototipos y revisiones técnicas."
+  ],
+  "indicators": [
+    "Elabora diagramas BPMN de la situación actual y propuesta, sintácticamente correctos, con carriles, eventos y compuertas, y cuantifica al menos tres mejoras con indicadores de tiempo de ciclo o costo.",
+    "Calcula el valor actual neto, la tasa interna de retorno y el periodo de recuperación del proyecto y emite una recomendación de factibilidad argumentada.",
+    "Redacta historias de usuario que cumplen los criterios INVEST, con criterios de aceptación en Gherkin que un tercero puede verificar sin interpretación.",
+    "Especifica casos de uso en formato extendido con escenario principal, extensiones, precondiciones y garantías, sin ambigüedades ni detalles de interfaz.",
+    "Expresa los requisitos no funcionales como escenarios medibles de atributos de calidad ISO/IEC 25010, incluidos los derivados de la Ley 29733 y de la facturación electrónica.",
+    "Construye un modelo de dominio y diagramas de secuencia coherentes entre sí y justifica la asignación de responsabilidades con patrones GRASP.",
+    "Documenta la arquitectura con diagramas C4 de contexto, contenedores y componentes, y con al menos tres registros de decisiones arquitectónicas que comparan alternativas.",
+    "Mantiene una matriz de trazabilidad completa entre objetivos, requisitos, elementos de diseño y pruebas de aceptación, y sustenta el diseño ante un panel técnico."
+  ],
+  "methodology": "El curso se desarrolla en el aula virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y las diapositivas, y en la sesión se resuelven problemas de modelado en vivo. Cada unidad aplica el método de casos con organizaciones peruanas (distribuidoras, clínicas, cooperativas y cadenas de boticas), discutidos en foros con argumentos y evidencia. El eje es un proyecto por equipos de tres o cuatro estudiantes: analizar y diseñar un sistema para una mype o institución real, mediante entregas incrementales del documento de análisis y diseño en un repositorio Git, con diagramas como código en PlantUML y herramientas como Bizagi Modeler o draw.io. Se practican entrevistas de educción con el docente en el rol de cliente, revisiones entre pares y evaluación formativa con rúbricas y retroalimentación en cada entrega.",
+  "bibliography": [
+    "Kendall, K. E. y Kendall, J. E. (2011). Análisis y diseño de sistemas (8.ª ed.). Pearson Educación.",
+    "Larman, C. (2003). UML y patrones: una introducción al análisis y diseño orientado a objetos y al proceso unificado (2.ª ed.). Pearson Educación.",
+    "Sommerville, I. (2011). Ingeniería de software (9.ª ed.). Pearson Educación.",
+    "Wiegers, K. y Beatty, J. (2013). Software requirements (3rd ed.). Microsoft Press.",
+    "Cohn, M. (2004). User stories applied: For agile software development. Addison-Wesley.",
+    "Cockburn, A. (2001). Writing effective use cases. Addison-Wesley.",
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). Fundamentals of business process management (2nd ed.). Springer.",
+    "Bass, L., Clements, P. y Kazman, R. (2021). Software architecture in practice (4th ed.). Addison-Wesley.",
+    "International Institute of Business Analysis. (2015). A guide to the business analysis body of knowledge (BABOK Guide) (v3). IIBA.",
+    "ISO/IEC/IEEE. (2018). ISO/IEC/IEEE 29148:2018 Systems and software engineering: Life cycle processes, requirements engineering. International Organization for Standardization."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 35,
+      "description": "Cuestionarios de las cuatro unidades, tareas 1 a 3 del proyecto y participación argumentada en los foros de casos, valorados con rúbricas y retroalimentación oportuna."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Documento de análisis y diseño integrado del proyecto de equipo, con modelos BPMN y UML, requisitos trazables, arquitectura C4 y registros de decisiones, calificado con la rúbrica de la Tarea 4."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación individual del diseño ante un panel técnico y prueba de resolución de un caso de análisis y diseño en tiempo limitado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos del análisis de sistemas y modelado de procesos de negocio",
+      "description": "Al finalizar la unidad, el estudiante analiza una organización como sistema, elige con fundamento un ciclo de vida para el proyecto, modela sus procesos actuales y propuestos con BPMN 2.0, los mide con indicadores y sustenta la factibilidad técnica, económica, operativa y legal de una solución de software.",
+      "topics": [
+        "Pensamiento sistémico y sistemas de información en la organización",
+        "El analista de sistemas y el análisis de negocio según el BABOK",
+        "Ciclos de vida: cascada, modelo en V, Proceso Unificado y enfoques ágiles",
+        "Modelado de procesos con BPMN 2.0: situación actual y propuesta",
+        "Análisis cuantitativo de procesos: tiempo de ciclo, Ley de Little y desperdicios",
+        "Estudio de factibilidad y caso de negocio"
+      ],
+      "slides": [
+        {
+          "title": "¿Por qué fracasan los proyectos de software?",
+          "bullets": [
+            "Fred Brooks (1987): «la parte más difícil de construir un sistema de software es decidir con precisión qué construir».",
+            "Boehm y Basili (2001): corregir un defecto después de la entrega puede costar unas 100 veces más que corregirlo en requisitos o diseño.",
+            "Los informes CHAOS del Standish Group señalan de forma recurrente requisitos incompletos, cambiantes y poca participación del usuario como causas principales de fracaso.",
+            "El análisis y diseño reduce la incertidumbre antes de escribir código: es la actividad de mayor retorno por hora invertida en un proyecto."
+          ],
+          "notes": "Abra la sesión con una pregunta al grupo: ¿alguno ha usado un sistema que funcionaba técnicamente, pero no servía para el trabajo real? Pida ejemplos concretos: un sistema de matrícula, una aplicación municipal, un punto de venta. Luego presente la cita de Brooks y explique que el problema central del software rara vez es la tecnología, sino la comprensión del problema. Use la cifra de Boehm y Basili para mostrar la curva de costo del defecto: un error de requisitos descubierto en producción obliga a rehacer diseño, código, pruebas, documentación y capacitación. Aclare que las cifras del Standish Group son discutidas metodológicamente, pero que la tendencia sobre las causas es consistente con la investigación académica. Cierre preguntando: si el análisis es tan rentable, ¿por qué los equipos lo omiten? Anote las respuestas (presión de plazos, clientes impacientes, creencia de que «ágil significa no documentar») porque las retomará en la sesión sobre ciclos de vida."
+        },
+        {
+          "title": "Pensamiento sistémico: la organización como sistema",
+          "bullets": [
+            "Ludwig von Bertalanffy (1968), teoría general de sistemas: elementos, relaciones, frontera, entorno, entradas, procesos, salidas y retroalimentación.",
+            "Las organizaciones son sistemas abiertos: intercambian información, dinero y materiales con clientes, proveedores, el Estado y la competencia.",
+            "Peter Checkland (1981), metodología de sistemas blandos: en situaciones humanas confusas, primero se construye una definición raíz con CATWOE.",
+            "CATWOE: clientes, actores, transformación, visión del mundo (Weltanschauung), propietarios y restricciones del entorno.",
+            "Ejemplo: una agroexportadora de Ica integra los subsistemas de compras, campo, empacadora, logística y comercio exterior, regulados por SENASA y SUNAT."
+          ],
+          "notes": "Explique que el analista no mira un programa, mira un sistema: personas, procedimientos, datos, tecnología y reglas que interactúan para lograr un propósito. Dibuje en la pizarra virtual el esquema entrada-proceso-salida con un lazo de retroalimentación y pregunte qué ocurre cuando la retroalimentación llega tarde, por ejemplo un reporte de ventas que la gerencia recibe con un mes de retraso. Introduzca a Checkland como contrapeso al enfoque puramente técnico: en muchas organizaciones peruanas los problemas no están bien definidos y cada actor tiene una visión distinta. Aplique CATWOE en vivo al proceso de exportación de uva de una empresa de Ica: los clientes son importadores europeos, los actores son el personal de empacadora, la transformación convierte fruta cosechada en contenedores certificados, los propietarios son los accionistas y las restricciones incluyen SENASA y los protocolos fitosanitarios. Pregunte: ¿qué parte de este sistema conviene automatizar primero y por qué?"
+        },
+        {
+          "title": "Tipos de sistemas de información en la organización",
+          "bullets": [
+            "Sistemas de procesamiento de transacciones: registran operaciones diarias, como ventas en punto de venta con comprobantes electrónicos.",
+            "Sistemas de información gerencial e inteligencia de negocios: resumen transacciones en indicadores para mandos medios y alta dirección.",
+            "Sistemas de apoyo a decisiones: modelos y simulaciones para elegir entre alternativas, como rutas de reparto o niveles de inventario.",
+            "Sistemas empresariales integrados: ERP, CRM y gestión de la cadena de suministro comparten una base de datos y procesos estandarizados.",
+            "Todo sistema que trata datos personales queda sujeto a la Ley 29733 desde su diseño, no como añadido posterior."
+          ],
+          "notes": "Presente la clasificación como una herramienta para ubicar el proyecto, no como teoría para memorizar. Pida a los estudiantes que clasifiquen sistemas que conocen: el sistema de facturación de una bodega, el tablero de ventas de una cadena de tiendas, el planificador de rutas de una empresa de reparto, un ERP como los que usan medianas empresas industriales. Subraye que la clase de sistema condiciona el análisis: en un sistema transaccional importan la integridad y el rendimiento; en uno gerencial importan la calidad del dato y la oportunidad; en uno de apoyo a decisiones importa la validez del modelo. Explique que en el Perú la mayoría de mypes opera con hojas de cálculo y mensajería instantánea, lo que constituye un sistema de información informal que el analista debe documentar antes de reemplazarlo. Cierre recordando que la protección de datos personales es una restricción transversal: si el sistema guarda DNI, teléfonos o datos de salud, el diseño debe contemplar consentimiento, finalidad y medidas de seguridad desde el inicio."
+        },
+        {
+          "title": "El analista de sistemas y el análisis de negocio según el BABOK",
+          "bullets": [
+            "El BABOK v3 (IIBA, 2015) define el análisis de negocio como habilitar el cambio identificando necesidades y recomendando soluciones que entregan valor.",
+            "Modelo de conceptos centrales (BACCM): cambio, necesidad, solución, interesado, valor y contexto; si falta uno, el análisis está incompleto.",
+            "Seis áreas de conocimiento: planificación, educción y colaboración, ciclo de vida de requisitos, análisis de la estrategia, análisis de requisitos y diseño, evaluación de la solución.",
+            "Competencias clave: pensamiento analítico, conocimiento del negocio, comunicación, negociación, modelado y conducta ética."
+          ],
+          "notes": "Explique que en el mercado laboral peruano el puesto aparece con nombres distintos: analista de sistemas, analista funcional, analista de negocio, analista programador o, en equipos ágiles, dueño de producto. Lo que los une es la responsabilidad de traducir necesidades en soluciones. Presente el BACCM como una lista de verificación: pida a los estudiantes que, para un proyecto de digitalización de mesa de partes en una municipalidad, identifiquen el cambio, la necesidad, la solución, los interesados, el valor y el contexto. Haga notar que muchos proyectos fallidos describen la solución («queremos una app») sin haber formulado la necesidad. Sobre las competencias, insista en la ética: el analista accede a información sensible de la organización, escucha conflictos internos y debe mantener confidencialidad e imparcialidad. Pregunte: ¿qué diferencia hay entre lo que el cliente pide y lo que el cliente necesita? Use la respuesta para introducir la idea de que el analista cuestiona con respeto, no transcribe."
+        },
+        {
+          "title": "Ciclo de vida del software y la norma ISO/IEC/IEEE 12207",
+          "bullets": [
+            "Fases genéricas: planificación, análisis, diseño, construcción, pruebas, despliegue y mantenimiento; su orden y repetición dependen del modelo elegido.",
+            "ISO/IEC/IEEE 12207:2017 define procesos de acuerdo, organizacionales, de gestión técnica y técnicos, sin imponer un orden.",
+            "En el Perú, la RM 041-2017-PCM aprobó el uso obligatorio de la NTP-ISO/IEC 12207:2016 en las entidades de la administración pública.",
+            "Distinga proceso (qué se hace: definir requisitos, diseñar la arquitectura) de modelo de ciclo de vida (cuándo y cuántas veces se hace)."
+          ],
+          "notes": "Muestre que todas las metodologías comparten las mismas actividades esenciales: alguien decide qué construir, alguien diseña cómo, alguien construye, alguien verifica y alguien opera el sistema. Lo que cambia es la secuencia, la duración de los ciclos y la cantidad de documentación. Presente la norma 12207 como el vocabulario común que usan contratos, auditorías y licitaciones. Mencione que, por la resolución ministerial de 2017, las entidades públicas peruanas deben aplicar la versión técnica peruana de la norma, de modo que un técnico que trabaje para un ministerio, gobierno regional o municipalidad encontrará términos de referencia redactados con este lenguaje. Aclare la distinción entre proceso y modelo con un ejemplo: en Scrum también se definen requisitos y se diseña la arquitectura; simplemente ocurre en ciclos cortos y repetidos. Pregunte a la clase: ¿qué proceso de la norma suele quedar sin dueño en las mypes? La respuesta habitual es el mantenimiento o la gestión de la configuración, y ello anticipa contenidos de Auditoría y Calidad de Sistemas."
+        },
+        {
+          "title": "Modelos prescriptivos: cascada y modelo en V",
+          "bullets": [
+            "Winston Royce (1970) describió la cascada, pero advirtió que su versión lineal era riesgosa y recomendó retroalimentación y un prototipo previo.",
+            "La cascada asume requisitos estables: cada fase termina con un entregable aprobado que alimenta a la siguiente.",
+            "El modelo en V empareja cada nivel de definición con un nivel de prueba: requisitos con aceptación, arquitectura con integración, diseño detallado con pruebas unitarias.",
+            "Encaja en contextos regulados, sistemas críticos o contratos de alcance cerrado; fracasa cuando el usuario solo descubre lo que quiere al ver el software."
+          ],
+          "notes": "Corrija un mito frecuente: Royce no promovió la cascada pura; su artículo mostraba el modelo lineal precisamente para señalar sus riesgos. Aun así, la cascada sigue siendo útil cuando los requisitos son conocidos y estables, por ejemplo la adecuación de un sistema a un nuevo formato de comprobante definido por la SUNAT, donde la especificación está publicada. Explique el modelo en V dibujando ambos brazos y pregunte qué gana el equipo al diseñar las pruebas de aceptación al mismo tiempo que los requisitos: la respuesta es que un requisito que no puede probarse queda expuesto de inmediato. Plantee una situación: una entidad pública licita un sistema con alcance, plazo y precio fijos; ¿qué modelo exigirán implícitamente las bases? Discuta cómo los contratos de alcance cerrado empujan hacia modelos prescriptivos y cómo un buen analista mitiga el riesgo con prototipos tempranos y validaciones intermedias, aun dentro de un esquema lineal."
+        },
+        {
+          "title": "Modelos iterativos e incrementales: espiral y Proceso Unificado",
+          "bullets": [
+            "Barry Boehm (1988), modelo en espiral: cada vuelta identifica objetivos, analiza riesgos, desarrolla y planifica la siguiente iteración.",
+            "Proceso Unificado (Jacobson, Booch y Rumbaugh, 1999): dirigido por casos de uso, centrado en la arquitectura, iterativo e incremental.",
+            "Cuatro fases del Proceso Unificado: inicio, elaboración, construcción y transición; el análisis domina el inicio y la elaboración, pero continúa en todas.",
+            "Al cerrar la elaboración se exige una arquitectura ejecutable probada contra los riesgos técnicos más altos."
+          ],
+          "notes": "Explique que los modelos iterativos nacieron para atacar el riesgo de forma temprana. En la espiral, la pregunta central de cada ciclo es: ¿qué podría hacer fracasar el proyecto y cómo lo reducimos ahora? Presente el Proceso Unificado porque Larman lo usa como marco para el análisis y diseño orientado a objetos que estudiarán en la unidad 3. Dibuje el clásico gráfico de jorobas: las disciplinas de requisitos y análisis tienen más esfuerzo al inicio, pero nunca desaparecen. Destaque la idea de arquitectura ejecutable: no basta con un documento; al final de la elaboración debe existir un esqueleto del sistema que pruebe, por ejemplo, que la integración con el operador de servicios electrónicos funciona y que la base de datos soporta el volumen esperado. Pregunte: en un proyecto de banca por internet para una cooperativa, ¿cuáles serían los dos riesgos que atacaría en la primera iteración? Oriente hacia seguridad e integración con el sistema central."
+        },
+        {
+          "title": "Enfoques ágiles y el trabajo del analista",
+          "bullets": [
+            "Manifiesto Ágil (2001): individuos e interacciones, software funcionando, colaboración con el cliente y respuesta al cambio, sin despreciar lo de la derecha.",
+            "Scrum (Guía 2020): dueño de producto, desarrolladores y Scrum Master; la pila del producto se refina de forma continua.",
+            "El análisis no desaparece: se vuelve continuo y oportuno; se detalla solo lo que entrará en los próximos sprints.",
+            "Definición de listo: una historia entra al sprint solo si es comprensible, estimada, con criterios de aceptación y dependencias resueltas."
+          ],
+          "notes": "Desmonte la idea de que en los equipos ágiles no hay análisis. Lea la frase final del manifiesto: se valoran más los elementos de la izquierda, pero los de la derecha también tienen valor. En Scrum, el refinamiento de la pila del producto es trabajo de análisis puro: dividir épicas, aclarar reglas de negocio, escribir criterios de aceptación y detectar dependencias. Muchos equipos peruanos de banca, retail y startups trabajan con un analista funcional que acompaña al dueño de producto en esta tarea. Aclare que los aspectos de gestión, como la planificación de sprints, la velocidad del equipo y las métricas de avance, se estudiarán en Gestión de Proyectos de TI del quinto ciclo; aquí interesa la calidad de lo que entra al sprint. Proponga un ejercicio breve: muestre una historia mal redactada y pida que el grupo indique qué le falta para cumplir la definición de listo. Esto prepara la unidad 2."
+        },
+        {
+          "title": "Criterios para elegir un ciclo de vida",
+          "bullets": [
+            "Boehm y Turner (2003) comparan agilidad y disciplina en cinco dimensiones: tamaño, criticidad, dinamismo, personal y cultura.",
+            "Alta volatilidad de requisitos y cliente disponible favorecen enfoques ágiles; alta criticidad y regulación favorecen enfoques planificados.",
+            "Los enfoques híbridos son la norma: arquitectura y requisitos de alto nivel planificados, construcción en iteraciones cortas.",
+            "Pregunta guía: ¿qué cuesta más en este proyecto, equivocarse en el alcance o llegar tarde con algo útil?"
+          ],
+          "notes": "Presente la elección del ciclo de vida como una decisión de diseño del proceso, no como una preferencia ideológica. Explique las cinco dimensiones de Boehm y Turner con ejemplos: un sistema de control de dosis en un hospital tiene alta criticidad; una tienda virtual de una marca de ropa tiene alto dinamismo; un equipo de practicantes sin experiencia necesita más estructura. Organice un ejercicio de diez minutos en salas pequeñas: cada grupo recibe un proyecto (sistema de trámites para una municipalidad, aplicación de pedidos para una pollería con delivery, sistema de historias clínicas, plataforma de un emprendimiento educativo) y debe elegir un modelo justificando con al menos tres dimensiones. En la puesta en común, haga notar que casi todos llegan a soluciones híbridas. Termine con la pregunta guía y explique que el análisis de riesgos del proyecto debe quedar documentado en el plan de análisis que entregarán en la tarea de la unidad."
+        },
+        {
+          "title": "BPMN 2.0: elementos esenciales de la notación",
+          "bullets": [
+            "BPMN 2.0 es un estándar del Object Management Group (2011), también publicado como ISO/IEC 19510:2013.",
+            "Objetos de flujo: eventos (inicio, intermedio, fin), actividades (tareas y subprocesos) y compuertas (exclusiva, paralela, inclusiva, basada en eventos).",
+            "Objetos de conexión: flujo de secuencia dentro de un participante, flujo de mensaje entre participantes y asociación con artefactos.",
+            "Contenedores y artefactos: piscinas para participantes, carriles para roles y objetos de datos, grupos y anotaciones."
+          ],
+          "notes": "Explique por qué el curso usa BPMN y no diagramas de flujo libres: es un estándar comprendido tanto por usuarios de negocio como por técnicos, tiene semántica precisa e incluso puede ejecutarse en motores de procesos. Muestre un diagrama sencillo de atención de pedidos con una piscina para la distribuidora y otra para el cliente. Señale la diferencia clave entre flujo de secuencia y flujo de mensaje: el primero ordena actividades dentro de una misma organización; el segundo representa comunicación entre organizaciones independientes, como el envío de un comprobante a la SUNAT. Revise las compuertas con cuidado, porque son la fuente de la mayoría de errores: la exclusiva elige un solo camino, la paralela activa todos, la inclusiva activa uno o varios según condiciones. Pregunte: si el despacho y la emisión del comprobante pueden hacerse al mismo tiempo, ¿qué compuerta usarían y cómo se sincronizan antes del evento de fin?"
+        },
+        {
+          "title": "Buenas prácticas de modelado de procesos",
+          "bullets": [
+            "Pasos: definir alcance y evento disparador, identificar participantes, modelar el camino feliz, añadir excepciones y validar con los actores.",
+            "Nombres: actividades con verbo más objeto («Verificar stock»); eventos como estados alcanzados («Pedido recibido»).",
+            "Siete pautas 7PMG (Mendling, Reijers y van der Aalst, 2010): pocos elementos, un evento de inicio y uno de fin, modelos estructurados, evitar compuertas inclusivas.",
+            "Si el modelo supera unos 50 elementos, descompóngalo en subprocesos; un diagrama que no cabe en una pantalla no se valida."
+          ],
+          "notes": "Presente el procedimiento de modelado paso a paso y realice una demostración en Bizagi Modeler o en draw.io con el proceso de reclamos de un cliente según el Libro de Reclamaciones exigido por el Código de Protección y Defensa del Consumidor. Primero defina el evento disparador (reclamo registrado) y el resultado esperado (respuesta enviada dentro del plazo legal). Luego identifique participantes: cliente, área de atención y área responsable. Modele el camino feliz y, solo después, las excepciones. Insista en las convenciones de nombres porque facilitan la lectura y luego se convierten en nombres de casos de uso. Presente las pautas 7PMG como evidencia empírica: los autores mostraron que modelos que las cumplen tienen menos errores y se comprenden mejor. Pida a los estudiantes que revisen un modelo con errores deliberados, como un flujo de secuencia que cruza piscinas o una compuerta paralela cerrada con una exclusiva, y que los corrijan."
+        },
+        {
+          "title": "Del proceso actual al proceso propuesto",
+          "bullets": [
+            "El modelo de situación actual documenta cómo se trabaja realmente, no cómo dice el manual de procedimientos.",
+            "Señales de problema: reprocesos, esperas, traspasos excesivos, registros duplicados, controles manuales y decisiones sin información.",
+            "Heurísticas de rediseño (Reijers y Limam Mansar, 2005): eliminar tareas, automatizar, paralelizar, integrar, triaje y caso único.",
+            "El modelo propuesto marca la frontera del sistema: qué tareas pasan a ser del software y cuáles siguen siendo humanas."
+          ],
+          "notes": "Enfatice que el análisis de la situación actual se hace observando y preguntando a quien ejecuta el trabajo, no solo al jefe. Cuente que es habitual descubrir hojas de cálculo paralelas, grupos de mensajería que funcionan como sistema de pedidos y pasos que existen solo porque un sistema anterior obligaba a ello. Presente las heurísticas de rediseño con un ejemplo: en una distribuidora, el vendedor recibe el pedido por mensajería, lo transcribe a una hoja de cálculo y luego un asistente lo vuelve a digitar en el sistema de facturación; eliminar la doble digitación y validar el stock en el momento del pedido aplica las heurísticas de eliminación e integración. Advierta contra un error clásico: automatizar un proceso malo solo produce errores más rápido. Explique que el modelo propuesto es el puente hacia la unidad 2, porque cada tarea asignada al sistema se convertirá en uno o más requisitos. Pregunte qué tareas nunca deberían automatizarse en una clínica y por qué."
+        },
+        {
+          "title": "Análisis cuantitativo de procesos",
+          "bullets": [
+            "Tiempo de ciclo = tiempo de procesamiento + tiempo de espera; la eficiencia del ciclo es el tiempo que agrega valor dividido entre el tiempo de ciclo.",
+            "Ley de Little: trabajo en proceso = tasa de llegada × tiempo de ciclo; con 120 pedidos diarios y 2 días de ciclo hay 240 pedidos abiertos.",
+            "Siete desperdicios de Taiichi Ohno: transporte, inventario, movimiento, espera, sobreproducción, sobreprocesamiento y defectos.",
+            "Toda mejora propuesta debe expresarse en un indicador medible con línea base y meta, por ejemplo reducir el tiempo de aprobación de 5 a 1 día."
+          ],
+          "notes": "Muestre que un proceso se puede medir antes de rediseñarlo y que esas mediciones son la base del caso de negocio. Trabaje el ejemplo de la Ley de Little en vivo: si una cooperativa recibe 30 solicitudes de crédito diarias y cada una tarda 6 días en resolverse, en promedio hay 180 solicitudes abiertas; si el sistema reduce el ciclo a 2 días, el trabajo en proceso baja a 60, lo que libera carga de seguimiento y llamadas de socios preocupados. Explique la eficiencia del ciclo con un dato típico: es frecuente encontrar procesos administrativos en los que menos del 10 % del tiempo agrega valor y el resto es espera entre bandejas. Relacione los desperdicios de Ohno con el trabajo de oficina: la doble digitación es sobreprocesamiento y los errores de transcripción son defectos. Pida que cada equipo identifique tres indicadores para su proyecto y explique cómo obtendrá la línea base: registros históricos, muestreo o cronometraje."
+        },
+        {
+          "title": "Estudio de factibilidad",
+          "bullets": [
+            "Técnica: ¿existe la tecnología y el equipo sabe usarla? Económica: ¿los beneficios superan los costos en el horizonte del proyecto?",
+            "Operativa: ¿los usuarios adoptarán el sistema y la organización puede operarlo? De cronograma: ¿puede estar listo cuando se necesita?",
+            "Legal: Ley 29733 y su reglamento (DS 016-2024-JUS), comprobantes electrónicos de la SUNAT, contratos y licencias de software.",
+            "Alternativas a comparar: desarrollar a medida, comprar un paquete, contratar un servicio en la nube o mejorar el proceso sin software nuevo."
+          ],
+          "notes": "Explique que el estudio de factibilidad es el momento en que el analista puede recomendar no construir. Presente las cinco dimensiones con preguntas concretas y aclare que la factibilidad operativa suele ser la más subestimada: un sistema técnicamente impecable fracasa si los vendedores siguen tomando pedidos por mensajería porque es más rápido. En la dimensión legal, mencione el reglamento vigente de la Ley de Protección de Datos Personales aprobado en 2024, que refuerza obligaciones de seguridad y de gestión de incidentes, y las obligaciones de emisión electrónica de comprobantes. Insista en comparar alternativas: muchas veces un sistema en la nube ya existente cubre el 80 % de la necesidad a menor costo y riesgo que un desarrollo propio; otras veces el diferencial competitivo de la empresa justifica construir. Proponga una pregunta para el foro: ¿en qué situación recomendarían a una mype no adquirir ningún software y, en su lugar, rediseñar el proceso?"
+        },
+        {
+          "title": "Caso de negocio: VAN, TIR y periodo de recuperación",
+          "bullets": [
+            "VAN = −I₀ + Σ FNₜ / (1 + r)ᵗ; se acepta el proyecto si el VAN es mayor que cero a la tasa de descuento exigida.",
+            "Ejemplo: inversión de S/ 60 000, beneficio neto anual de S/ 25 000 durante 4 años, tasa del 12 %: VAN ≈ S/ 15 934.",
+            "La TIR es la tasa que hace VAN = 0; en el ejemplo es aproximadamente 24 %; el periodo de recuperación simple es 2,4 años.",
+            "Use el costo total de propiedad: licencias, nube, soporte, capacitación, migración de datos y tiempo del personal clave."
+          ],
+          "notes": "Desarrolle el cálculo en una hoja de cálculo compartida: descuente cada flujo anual de S/ 25 000 al 12 % y obtenga 22 321, 19 930, 17 795 y 15 888; la suma, 75 934, menos la inversión de 60 000 da un VAN cercano a 15 934 soles. Muestre cómo calcular la TIR con la función correspondiente y explique que el periodo de recuperación simple ignora el valor del dinero en el tiempo, por lo que solo debe usarse como indicador complementario. Haga notar que los beneficios deben provenir del análisis cuantitativo de procesos: horas de digitación eliminadas, errores evitados, ventas recuperadas por mejor disponibilidad de stock. Advierta sobre el sesgo optimista: los costos de migración de datos, capacitación y soporte suelen olvidarse, y el beneficio rara vez llega desde el primer mes. Pida a los equipos que construyan un escenario pesimista con beneficios 30 % menores y verifiquen si el VAN sigue siendo positivo; esa prueba de sensibilidad será obligatoria en la tarea."
+        }
+      ],
+      "reading": {
+        "title": "Del proceso al sistema: pensamiento sistémico, BPMN y factibilidad",
+        "minutes": 35,
+        "content": "## El problema de decidir qué construir\n\nEn 1987, Fred Brooks escribió que la parte más difícil de construir un sistema de software es decidir con precisión qué construir. Cuatro décadas después, la afirmación sigue vigente. Los equipos dominan lenguajes, marcos de trabajo y servicios en la nube, pero los proyectos continúan fracasando porque resuelven el problema equivocado o lo resuelven a medias. El análisis y diseño de sistemas es la disciplina que reduce esa incertidumbre antes de que el costo de corregirla se multiplique: Boehm y Basili estimaron que un defecto descubierto después de la entrega puede costar alrededor de cien veces más que uno detectado en requisitos o diseño.\n\n## La organización como sistema\n\nLa teoría general de sistemas de Ludwig von Bertalanffy ofrece el lente básico: una organización es un conjunto de elementos relacionados, con una frontera, un entorno, entradas, procesos, salidas y mecanismos de retroalimentación. Una distribuidora de materiales de construcción en Arequipa recibe pedidos, mercadería y pagos; los transforma mediante procesos de venta, almacén y despacho; y entrega productos, comprobantes electrónicos e información para la gerencia. Cuando la retroalimentación falla, por ejemplo cuando el kárdex no refleja el stock real, el sistema completo se degrada: se venden productos que no existen y se compran los que sobran.\n\nPeter Checkland añadió que en los sistemas humanos los problemas rara vez están bien definidos. Su metodología de sistemas blandos propone construir una definición raíz con el nemotécnico CATWOE (clientes, actores, transformación, visión del mundo, propietarios y entorno) antes de pensar en soluciones. El analista que omite este paso suele construir lo que pidió la persona con más poder, no lo que necesita la organización.\n\n## Elegir cómo trabajar: el ciclo de vida\n\nTodas las metodologías comparten actividades esenciales que la norma ISO/IEC/IEEE 12207 describe como procesos; en el Perú, la RM 041-2017-PCM hizo obligatoria su versión técnica peruana en las entidades públicas. Lo que varía es la secuencia. La cascada y el modelo en V funcionan cuando los requisitos son estables; el Proceso Unificado y la espiral atacan los riesgos con iteraciones; los enfoques ágiles refinan continuamente una pila de producto. Boehm y Turner recomiendan decidir según cinco dimensiones: tamaño, criticidad, dinamismo, personal y cultura. En la práctica, la mayoría de proyectos peruanos combina un análisis inicial de alcance y arquitectura con construcción iterativa.\n\n## Modelar procesos con BPMN 2.0\n\nAntes de especificar software conviene entender el proceso que el software apoyará. BPMN 2.0, estándar del Object Management Group publicado también como ISO/IEC 19510, permite representar eventos, actividades, compuertas, participantes y mensajes con una semántica precisa. Un modelo BPMN no es solo un dibujo: se serializa en XML y puede intercambiarse entre herramientas o ejecutarse en un motor de procesos. El siguiente fragmento corresponde al inicio de un proceso de atención de pedidos:\n\n~~~xml\n<bpmn:process id=\"AtencionPedido\" isExecutable=\"false\">\n  <bpmn:startEvent id=\"PedidoRecibido\" name=\"Pedido recibido\"/>\n  <bpmn:task id=\"VerificarStock\" name=\"Verificar stock\"/>\n  <bpmn:exclusiveGateway id=\"HayStock\" name=\"¿Hay stock suficiente?\"/>\n  <bpmn:sequenceFlow id=\"f1\" sourceRef=\"PedidoRecibido\" targetRef=\"VerificarStock\"/>\n  <bpmn:sequenceFlow id=\"f2\" sourceRef=\"VerificarStock\" targetRef=\"HayStock\"/>\n</bpmn:process>\n~~~\n\nLas pautas 7PMG de Mendling, Reijers y van der Aalst resumen la evidencia empírica sobre modelos comprensibles: usar pocos elementos, un solo evento de inicio y de fin, estructuras anidadas correctamente, etiquetas de tipo verbo más objeto y descomposición en subprocesos cuando el modelo crece demasiado.\n\n## Medir antes de rediseñar\n\nUn modelo de situación actual adquiere valor cuando se mide. El tiempo de ciclo es la suma del tiempo de procesamiento y del tiempo de espera; la eficiencia del ciclo compara el tiempo que agrega valor con el tiempo total. La Ley de Little relaciona tres variables:\n\n~~~text\nL = λ × W\nL: trabajo en proceso (casos abiertos)\nλ: tasa de llegada (casos por día)\nW: tiempo de ciclo promedio (días)\nEjemplo: 30 solicitudes/día × 6 días = 180 solicitudes abiertas\nMeta:    30 solicitudes/día × 2 días =  60 solicitudes abiertas\n~~~\n\nCon estos datos, el rediseño deja de ser una opinión. Las heurísticas de Reijers y Limam Mansar (eliminar tareas, automatizar, paralelizar, integrar, aplicar triaje) orientan el modelo propuesto, que además define la frontera del sistema: qué tareas pasan al software y cuáles permanecen humanas.\n\n## Factibilidad y caso de negocio\n\nLa factibilidad se evalúa en cinco dimensiones: técnica, económica, operativa, legal y de cronograma. En el plano legal peruano destacan la Ley 29733 y su reglamento aprobado por el DS 016-2024-JUS, así como las obligaciones de emisión electrónica de la SUNAT. En el plano económico se usa el valor actual neto:\n\n~~~text\nVAN = −I0 + Σ FNt / (1 + r)^t,  t = 1..n\nI0 = 60 000; FN = 25 000 anuales; n = 4; r = 12 %\nVAN = −60 000 + 22 321 + 19 930 + 17 795 + 15 888 ≈ 15 934 soles\nTIR ≈ 24 %; recuperación simple = 60 000 / 25 000 = 2,4 años\n~~~\n\nUn VAN positivo no basta: el analista debe probar la sensibilidad del resultado con escenarios pesimistas y comparar alternativas como comprar un paquete, contratar un servicio en la nube o simplemente mejorar el proceso.\n\n## Ideas clave\n\nEl análisis empieza por la organización, no por la tecnología. Modelar y medir el proceso permite proponer cambios verificables, y el caso de negocio convierte esas mejoras en una decisión de inversión defendible."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Los Andes y los pedidos por mensajería",
+        "content": "**Distribuidora Los Andes S.A.C.** es una empresa familiar de Arequipa fundada en 1998 que vende cemento, fierro, tuberías, pinturas y herramientas a unas 1 200 ferreterías minoristas y maestros de obra del sur del país. Tiene 38 trabajadores, un almacén central en el Cono Norte y ventas anuales cercanas a S/ 14 millones.\n\n## Cómo se trabaja hoy\n\nSeis vendedores reciben los pedidos por mensajería instantánea y llamadas telefónicas. Cada vendedor anota el pedido en una hoja de cálculo propia y, dos veces al día, la envía a una asistente que vuelve a digitar los pedidos en el sistema de facturación electrónica contratado a un proveedor. El almacén recibe la guía impresa y recién entonces verifica el stock físico. El kárdex se actualiza al cierre del día.\n\nEn una muestra de 400 pedidos tomada por el área de administración en marzo se encontró lo siguiente:\n\n- El 9 % tenía errores de producto, cantidad o precio atribuibles a la transcripción.\n- El 14 % se despachó incompleto por falta de stock que nadie conocía al momento de vender.\n- El tiempo promedio entre la recepción del pedido y la salida del camión fue de 26 horas.\n- La asistente dedica unas 6 horas diarias a digitación y conciliación.\n- Las notas de crédito por errores representaron S/ 310 000 en el último año.\n\n## Tres propuestas sobre la mesa\n\nEl gerente general, hijo del fundador, quiere «una aplicación como la de las grandes cadenas» para que los clientes hagan pedidos directamente. Un sobrino que estudia ingeniería ofrece desarrollarla en seis meses por S/ 45 000. El jefe de almacén sostiene que el problema real es el kárdex y que ninguna aplicación servirá si el inventario sigue desactualizado. Un proveedor de ERP en la nube presentó una cotización de S/ 2 800 mensuales más S/ 18 000 de implementación, con módulos de ventas, inventario y facturación electrónica integrados, pero exige estandarizar códigos de productos y listas de precios, hoy dispersas en las hojas de los vendedores.\n\nLos vendedores, por su parte, temen perder a sus clientes si los pedidos llegan directamente a la empresa, porque parte de su comisión depende de la cartera que manejan. Dos de ellos han expresado que «el WhatsApp funciona bien».\n\n## El encargo\n\nLa gerencia contrata a un analista de sistemas y le da un mes para recomendar qué hacer. El presupuesto máximo disponible para este año es de S/ 80 000 y la empresa espera recuperar la inversión en menos de tres años. El analista debe decidir por dónde empezar, a quién escuchar, cómo medir y qué alternativa recomendar, sabiendo que cualquier opción afectará la forma de trabajar de vendedores, almacén y administración.",
+        "questions": [
+          "Construya una definición raíz con CATWOE para la situación de Distribuidora Los Andes. ¿Qué visiones del mundo en conflicto identifica y cómo afectan el análisis?",
+          "Modele en BPMN el proceso actual de atención de pedidos e identifique los desperdicios de Ohno presentes. ¿Cuáles explican los indicadores de la muestra?",
+          "Estime el beneficio económico anual de eliminar la doble digitación y reducir los errores a la mitad. ¿Qué supuestos debe validar con la empresa?",
+          "Compare las tres alternativas en las cinco dimensiones de factibilidad. ¿Cuál recomendaría y qué condición previa exigiría antes de invertir?",
+          "¿Cómo gestionaría la resistencia de los vendedores para asegurar la factibilidad operativa de la solución recomendada?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Modelado de procesos y estudio de factibilidad del proyecto",
+        "instructions": "**Objetivo:** analizar un proceso real de la organización elegida para el proyecto del curso, modelarlo con BPMN 2.0 y sustentar la factibilidad de una solución de software.\n\n**Instrucciones (equipos de tres o cuatro estudiantes)**\n\n1. Elijan una mype o institución peruana real con un proceso que pueda mejorarse con software (ventas, citas, inventario, matrícula, trámites). Obtengan autorización de un responsable y anonimicen datos personales.\n2. Realicen al menos una entrevista y una observación del proceso. Adjunten la guía de preguntas y un acta breve.\n3. Elaboren una definición raíz con CATWOE.\n4. Modelen la situación actual en BPMN 2.0 con piscinas, carriles, eventos y compuertas, aplicando las pautas 7PMG.\n5. Midan al menos tres indicadores de línea base (tiempo de ciclo, errores, horas de trabajo) e identifiquen desperdicios.\n6. Modelen la situación propuesta, aplicando heurísticas de rediseño, y marquen la frontera del sistema.\n7. Desarrollen el estudio de factibilidad en sus cinco dimensiones, comparando al menos tres alternativas, y calculen VAN, TIR y periodo de recuperación con un escenario pesimista.\n\n**Formato de entrega:** informe en PDF de 8 a 12 páginas, archivos BPMN exportados y hoja de cálculo del caso de negocio, todo publicado en el repositorio del equipo.\n\n**Criterios:** corrección de la notación, coherencia entre medición y rediseño, rigor del cálculo y claridad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Educción y modelo BPMN de la situación actual correcto y validado",
+            "points": 6
+          },
+          {
+            "name": "Medición de indicadores y rediseño con heurísticas justificadas",
+            "points": 5
+          },
+          {
+            "name": "Estudio de factibilidad y caso de negocio con análisis de sensibilidad",
+            "points": 5
+          },
+          {
+            "name": "Claridad del informe, recomendación y uso del repositorio",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Sistemas, ciclos de vida, BPMN y factibilidad",
+        "questions": [
+          {
+            "prompt": "Un equipo debe adecuar un sistema a un nuevo formato de comprobante electrónico cuya especificación ya publicó la SUNAT, con fecha de vigencia fija. ¿Qué modelo de ciclo de vida resulta más razonable?",
+            "options": [
+              "Un modelo planificado tipo cascada o en V, porque los requisitos son estables y conocidos",
+              "Scrum puro sin documentación, porque el cambio siempre es inevitable",
+              "El modelo en espiral, porque el riesgo principal es la aceptación del usuario",
+              "Prototipado evolutivo, porque el usuario no sabe lo que quiere"
+            ],
+            "correct": 0,
+            "explanation": "Cuando la especificación está publicada y es estable, un enfoque planificado con pruebas emparejadas a cada nivel de definición controla bien el alcance y la fecha."
+          },
+          {
+            "prompt": "En un diagrama BPMN, la distribuidora envía la orden de compra a su proveedor, que es otra empresa. ¿Cómo debe representarse esa comunicación?",
+            "options": [
+              "Con un flujo de secuencia que cruza de un carril a otro",
+              "Con un flujo de mensaje entre dos piscinas distintas",
+              "Con una asociación hacia un objeto de datos",
+              "Con una compuerta paralela que une ambas organizaciones"
+            ],
+            "correct": 1,
+            "explanation": "El flujo de secuencia solo ordena actividades dentro de un mismo participante; la comunicación entre organizaciones independientes se modela con flujo de mensaje entre piscinas."
+          },
+          {
+            "prompt": "Una oficina recibe 40 expedientes diarios y cada uno tarda en promedio 5 días en resolverse. Según la Ley de Little, ¿cuántos expedientes abiertos hay en promedio?",
+            "options": [
+              "8 expedientes",
+              "45 expedientes",
+              "200 expedientes",
+              "400 expedientes"
+            ],
+            "correct": 2,
+            "explanation": "L = λ × W = 40 expedientes por día × 5 días = 200 expedientes en proceso en promedio."
+          },
+          {
+            "prompt": "Un proyecto requiere S/ 50 000 de inversión y genera S/ 20 000 netos anuales durante 3 años. Con una tasa del 10 %, ¿cuál es la conclusión correcta?",
+            "options": [
+              "El VAN es de S/ 10 000, porque los flujos suman S/ 60 000 y se resta la inversión",
+              "El VAN es positivo, porque la inversión se recupera antes de terminar el tercer año",
+              "No se puede calcular el VAN sin conocer antes la TIR del proyecto",
+              "El VAN es ligeramente negativo, cerca de −S/ 263, aunque la recuperación simple ocurre en 2,5 años"
+            ],
+            "correct": 3,
+            "explanation": "Descontando al 10 %: 18 182 + 16 529 + 15 026 = 49 737, menos 50 000 da un VAN de unos −263 soles. El periodo de recuperación simple engaña porque ignora el valor del dinero en el tiempo."
+          },
+          {
+            "prompt": "Según el modelo de conceptos centrales del BABOK, ¿qué falta en la frase «la gerencia quiere una aplicación móvil para los clientes»?",
+            "options": [
+              "La solución, porque no se indica la tecnología de desarrollo",
+              "La necesidad y el valor esperado, porque solo se describe una solución",
+              "El contexto, porque toda aplicación móvil tiene el mismo contexto",
+              "Nada, porque el interesado y la solución bastan para iniciar"
+            ],
+            "correct": 1,
+            "explanation": "La frase describe una solución y un interesado, pero no la necesidad que resuelve ni el valor que debería generar; sin ellos no puede evaluarse si la aplicación es la mejor respuesta."
+          },
+          {
+            "prompt": "En el análisis de un proceso de facturación se detecta que los pedidos se digitan dos veces, primero en una hoja de cálculo y luego en el sistema. ¿Qué heurística de rediseño aplica mejor?",
+            "options": [
+              "Paralelizar ambas digitaciones para reducir el tiempo de ciclo",
+              "Añadir un control de calidad adicional después de la segunda digitación",
+              "Eliminar la tarea redundante e integrar la captura en un único registro",
+              "Aplicar triaje para separar pedidos grandes y pequeños"
+            ],
+            "correct": 2,
+            "explanation": "La doble digitación es sobreprocesamiento; la mejor respuesta es eliminar la tarea redundante e integrar la captura, lo que además reduce los errores de transcripción."
+          },
+          {
+            "prompt": "Según Boehm y Turner, ¿qué combinación de características favorece un enfoque más planificado frente a uno ágil?",
+            "options": [
+              "Alta criticidad, requisitos estables y equipo grande y distribuido",
+              "Equipo pequeño, requisitos muy cambiantes y cliente disponible a diario",
+              "Cultura que valora la autonomía y baja criticidad del sistema",
+              "Producto nuevo en un mercado que cambia cada mes"
+            ],
+            "correct": 0,
+            "explanation": "La alta criticidad, la estabilidad de requisitos y los equipos grandes inclinan la balanza hacia la disciplina planificada; las demás opciones describen condiciones favorables a la agilidad."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Ingeniería de requisitos: educción, especificación y gestión",
+      "description": "Al finalizar la unidad, el estudiante identifica y analiza a los interesados, aplica técnicas de educción, especifica requisitos funcionales y no funcionales como historias de usuario y casos de uso con criterios de aceptación verificables, los prioriza con fundamento y gestiona su trazabilidad y sus cambios.",
+      "topics": [
+        "Interesados, análisis de poder e interés y técnicas de educción",
+        "Requisitos funcionales, no funcionales, reglas de negocio y restricciones",
+        "Atributos de calidad ISO/IEC 25010 y requisitos derivados de la normativa peruana",
+        "Historias de usuario, criterios INVEST y criterios de aceptación en Gherkin",
+        "Casos de uso: diagrama y especificación en formato extendido",
+        "Priorización, estimación, validación y trazabilidad de requisitos"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es un requisito y en qué niveles se expresa?",
+          "bullets": [
+            "ISO/IEC/IEEE 29148: un requisito es un enunciado que traduce o expresa una necesidad y sus restricciones y condiciones asociadas.",
+            "Requisitos de negocio: objetivos de la organización, como reducir el ausentismo de pacientes del 18 % al 10 % en un año.",
+            "Requisitos de usuario o de interesados: lo que cada grupo necesita lograr con el sistema, expresado en su lenguaje.",
+            "Requisitos de software: comportamiento y propiedades que el sistema debe exhibir para satisfacer los niveles anteriores.",
+            "Wiegers y Beatty: un requisito de software sin un requisito de negocio que lo justifique es candidato a eliminarse."
+          ],
+          "notes": "Inicie preguntando qué entienden por requisito. Suelen aparecer respuestas como «lo que el cliente pide» o «las funciones del sistema». Contraste esas ideas con la definición de la norma 29148, que vincula el requisito a una necesidad y a sus condiciones. Explique los tres niveles con un ejemplo vertical de una clínica: el objetivo de negocio es reducir el ausentismo; el requisito de usuario es que el paciente pueda confirmar o cancelar su cita desde el celular; el requisito de software es que el sistema envíe un recordatorio 24 horas antes con un enlace de confirmación y libere el turno si no hay respuesta en un plazo definido. Haga notar que cada nivel responde a la pregunta «¿por qué?» del nivel inferior. Proponga que, en sus proyectos, todo requisito tenga un identificador y una referencia al objetivo que lo justifica; esto será la base de la matriz de trazabilidad que construirán al final de la unidad."
+        },
+        {
+          "title": "Identificación y análisis de interesados",
+          "bullets": [
+            "Interesado: persona u organización que afecta o es afectada por el sistema, incluidos los que nunca lo usarán directamente.",
+            "Categorías: usuarios directos, usuarios indirectos, patrocinadores, operadores, reguladores (SUNAT, SUSALUD, SBS, ANPD) y proveedores.",
+            "Matriz de poder e interés (Mendelow): gestionar de cerca, mantener satisfechos, mantener informados y monitorear.",
+            "Para cada grupo registre objetivos, preocupaciones, nivel de influencia, disponibilidad y canal de comunicación preferido."
+          ],
+          "notes": "Explique que olvidar a un interesado es la forma más rápida de descubrir requisitos tarde. Ilustre con ejemplos: un sistema de citas que no consideró a las aseguradoras que deben autorizar ciertas atenciones, o un sistema de ventas que no consideró al contador externo que necesita reportes para las declaraciones mensuales. Introduzca a los reguladores como interesados silenciosos: no asisten a reuniones, pero sus normas son requisitos obligatorios. Dibuje la matriz de poder e interés con un caso de clínica y ubique a la gerencia, los médicos, el personal de admisión, los pacientes y el área de sistemas. Pregunte: ¿dónde ubicarían a los médicos si tienen poco interés en el proyecto, pero pueden bloquearlo negándose a usarlo? Esa discusión muestra que las posiciones cambian y que el analista debe gestionar activamente a los interesados de alto poder. Pida que cada equipo construya la matriz para su proyecto como primer entregable de la Tarea 2."
+        },
+        {
+          "title": "Técnicas de educción: entrevistas y observación",
+          "bullets": [
+            "Educción, no recolección: los requisitos no están listos para recogerse; se descubren y construyen con los interesados.",
+            "Entrevista semiestructurada: guía con preguntas abiertas, contexto antes que funciones y cierre con resumen validado por el entrevistado.",
+            "Técnica de los cinco porqués para pasar del síntoma («el reporte es lento») a la causa y a la necesidad real.",
+            "Observación e indagación contextual (Beyer y Holtzblatt): ver el trabajo en su lugar revela conocimiento tácito y atajos que nadie menciona."
+          ],
+          "notes": "Aclare por qué el BABOK prefiere el término educción: el analista ayuda al interesado a expresar algo que muchas veces no tiene formulado. Modele una buena entrevista: presentarse y explicar el propósito, empezar por el contexto del trabajo («cuénteme cómo fue su día de ayer»), luego problemas y finalmente expectativas. Muestre errores típicos: preguntas cerradas que inducen la respuesta, hablar de pantallas demasiado pronto, entrevistar solo al jefe. Haga una demostración en vivo de los cinco porqués con un estudiante que actúe como cajero de una botica que dice «el sistema es lento»; normalmente se descubre que el problema es buscar productos por nombre comercial cuando el cliente pide por principio activo. Presente la indagación contextual como complemento indispensable: lo que las personas dicen que hacen difiere de lo que hacen. En modalidad virtual, la observación puede hacerse con una videollamada en la que el usuario comparte pantalla mientras trabaja, con su consentimiento y cuidando los datos personales visibles."
+        },
+        {
+          "title": "Talleres, análisis documental, cuestionarios y prototipos",
+          "bullets": [
+            "Talleres de requisitos tipo JAD: reúnen a interesados clave con un facilitador para acordar alcance y resolver conflictos en horas, no semanas.",
+            "Análisis documental: formatos, reportes, manuales, normas y procedimientos como el TUPA o las bases de una licitación.",
+            "Cuestionarios: útiles para validar hipótesis con muchos usuarios dispersos, no para descubrir requisitos nuevos.",
+            "Prototipos de baja fidelidad: bocetos y maquetas que provocan reacciones concretas y exponen supuestos ocultos."
+          ],
+          "notes": "Presente cada técnica con su mejor uso y su riesgo. Los talleres son eficientes para negociar prioridades, pero requieren un facilitador neutral y una agenda estricta; sin ellos se convierten en reuniones dominadas por quien tiene más poder. El análisis documental es barato y suele adelantar mucho trabajo: los formatos en papel de una clínica revelan los datos que se capturan hoy, y el Texto Único de Procedimientos Administrativos de una municipalidad define plazos y requisitos de cada trámite. Los cuestionarios sirven para dimensionar, por ejemplo cuántos clientes de una cooperativa usan banca por celular, pero no para descubrir necesidades. Los prototipos son la técnica más poderosa para combatir el síndrome de «sí, pero»: el usuario ve algo concreto y reacciona. Advierta que un prototipo muy pulido genera la falsa impresión de que el sistema está casi listo. Pida a los equipos que seleccionen una combinación de al menos tres técnicas para su proyecto y justifiquen la elección."
+        },
+        {
+          "title": "Problemas frecuentes en la educción",
+          "bullets": [
+            "Ambigüedad: «el sistema debe ser rápido» o «fácil de usar» no puede verificarse sin una medida.",
+            "Requisitos implícitos: lo obvio para el usuario, como imprimir el voucher o anular una venta, nunca se menciona.",
+            "Conflictos entre interesados: gerencia quiere sobreagendar citas y los médicos lo rechazan; el analista no decide, facilita la decisión.",
+            "Soluciones disfrazadas de requisitos: «quiero un botón que exporte a Excel» esconde la necesidad de analizar datos fuera del sistema."
+          ],
+          "notes": "Presente estos problemas como patrones que deben reconocer de inmediato. Para la ambigüedad, muestre ejemplos reales de términos de referencia con frases como «interfaz amigable» o «alta disponibilidad» sin cifras y pida reformularlas. Para los requisitos implícitos, use el modelo de Kano: las expectativas básicas no se mencionan porque se dan por sentadas, pero su ausencia genera rechazo inmediato. Para los conflictos, enfatice la ética profesional: el analista expone alternativas, consecuencias y costos, pero la decisión pertenece a quien tiene la autoridad, idealmente con criterios acordados. Para las soluciones disfrazadas, practique la pregunta «¿para qué lo necesita?»: el botón de exportar puede revelar que la gerencia necesita un reporte de rentabilidad por producto que nadie había pedido explícitamente. Proponga una dinámica: entregue cinco frases tomadas de entrevistas y pida identificar qué problema presenta cada una y cómo lo resolverían en la siguiente reunión con el usuario."
+        },
+        {
+          "title": "Funcionales, no funcionales, reglas de negocio y restricciones",
+          "bullets": [
+            "Funcional: lo que el sistema hace ante un estímulo, por ejemplo registrar una venta y emitir la boleta electrónica.",
+            "No funcional o atributo de calidad: cuán bien lo hace, por ejemplo emitir la boleta en menos de 3 segundos en el 95 % de los casos.",
+            "Regla de negocio: política que existe aunque no haya sistema, como «no se otorga crédito a socios con más de 30 días de mora».",
+            "Restricción: límite impuesto a la solución, como usar PostgreSQL, alojar los datos en el país o integrarse con un operador de servicios electrónicos."
+          ],
+          "notes": "Explique la clasificación con un mismo dominio, por ejemplo una cooperativa de ahorro y crédito. Insista en que las reglas de negocio deben documentarse aparte y referenciarse desde los requisitos, porque cambian con independencia del software: si la cooperativa modifica su política de mora, el cambio debe localizarse en un solo lugar. Wiegers y Beatty proponen clasificar las reglas en hechos, restricciones, activadores de acción, inferencias y cálculos; muestre un ejemplo de cada una. Advierta que las restricciones reducen el espacio de diseño y deben justificarse: «usar Java» puede deberse a las competencias del equipo de mantenimiento, lo cual es válido, pero debe registrarse. Pida a los estudiantes que clasifiquen diez enunciados tomados de un acta de entrevista y que identifiquen cuáles están mal clasificados en la columna «requisito funcional» del documento original. Este ejercicio revela que muchos documentos de requisitos mezclan políticas, preferencias tecnológicas y funciones sin distinguirlas."
+        },
+        {
+          "title": "Atributos de calidad según ISO/IEC 25010",
+          "bullets": [
+            "ISO/IEC 25010:2011 definió ocho características: adecuación funcional, eficiencia de desempeño, compatibilidad, usabilidad, fiabilidad, seguridad, mantenibilidad y portabilidad.",
+            "La revisión de 2023 añade la protección frente a daños, renombra usabilidad como capacidad de interacción y portabilidad como flexibilidad.",
+            "Un requisito no funcional útil es medible: métrica, umbral, condiciones de carga y forma de verificación.",
+            "Ejemplo: «con 200 usuarios concurrentes, el 95 % de las búsquedas de pacientes responde en menos de 2 segundos»."
+          ],
+          "notes": "Presente el modelo de calidad como una lista de verificación para no olvidar dimensiones. En las entrevistas, los usuarios rara vez mencionan atributos de calidad, salvo cuando ya sufren su ausencia; por eso el analista debe preguntar activamente: ¿cuántos usuarios simultáneos habrá?, ¿qué pasa si el sistema se cae una hora en temporada alta?, ¿quién podrá ver los diagnósticos? Explique que la versión 2023 de la norma reorganizó algunas características, y que lo importante no es memorizar la lista sino expresar cada atributo de forma verificable. Muestre la transformación de un requisito vago en uno medible: «el sistema debe ser seguro» pasa a «todo acceso a una historia clínica queda registrado con usuario, fecha, hora y motivo, y el registro no puede modificarse». Indique que en la unidad 4 estos requisitos se convertirán en escenarios de atributos de calidad que guiarán la arquitectura, y que Auditoría y Calidad de Sistemas profundizará en su medición."
+        },
+        {
+          "title": "Requisitos derivados de la normativa peruana",
+          "bullets": [
+            "Ley 29733 y su reglamento (DS 016-2024-JUS): consentimiento, finalidad, proporcionalidad, medidas de seguridad y atención de derechos ARCO.",
+            "Los datos de salud, ingresos y origen son datos sensibles: requieren consentimiento expreso y por escrito, además de controles reforzados.",
+            "SUNAT: emisión electrónica de comprobantes en formato UBL 2.1, envío a la SUNAT o a un operador de servicios electrónicos y conservación.",
+            "Código de Protección y Defensa del Consumidor: Libro de Reclamaciones, información de precios y plazos de respuesta.",
+            "Accesibilidad: Ley 29973 de la persona con discapacidad y criterios WCAG en servicios digitales del Estado."
+          ],
+          "notes": "Muestre que las normas son una fuente sistemática de requisitos y que conviene revisarlas en la educción, no después. Para cada norma, guíe a los estudiantes a derivar requisitos concretos. De la Ley 29733: el formulario de registro de pacientes debe solicitar consentimiento informado separado para cada finalidad, el sistema debe permitir atender solicitudes de acceso, rectificación, cancelación y oposición, y debe existir un registro de accesos. Del régimen de comprobantes electrónicos: el sistema debe generar el XML firmado, enviarlo, recibir la constancia de recepción y manejar rechazos. Del Código del Consumidor: un comercio electrónico debe ofrecer un Libro de Reclamaciones virtual. Enfatice que estos requisitos son obligatorios y por tanto se clasifican como imprescindibles en cualquier priorización. Recomiende identificar en el documento la fuente normativa de cada requisito, con el artículo correspondiente cuando sea posible, para facilitar auditorías. Seguridad Informática profundizará los controles técnicos en el quinto ciclo."
+        },
+        {
+          "title": "Historias de usuario: formato y las tres C",
+          "bullets": [
+            "Formato Connextra: «Como <rol>, quiero <objetivo> para <beneficio>»; el beneficio conecta la historia con el valor de negocio.",
+            "Ron Jeffries (2001), las tres C: tarjeta (recordatorio), conversación (donde se construye el entendimiento) y confirmación (criterios de aceptación).",
+            "Ejemplo: «Como paciente, quiero confirmar mi cita desde el recordatorio para no perder el turno ni hacer llamadas».",
+            "Las historias se agrupan en épicas y temas; una épica es una historia demasiado grande para un solo sprint."
+          ],
+          "notes": "Explique que la historia de usuario no es una especificación completa, sino una promesa de conversación. Su fortaleza es que obliga a declarar quién se beneficia y por qué. Analice con el grupo historias mal escritas: «Como usuario, quiero un login» no indica un rol real ni un beneficio; «Como sistema, quiero validar el DNI» confunde el actor con el software. Muestre cómo reescribirlas: «Como cajero, quiero ingresar con mis credenciales personales para que cada venta quede asociada a mi turno». Destaque la tercera C: sin criterios de aceptación, la historia no puede darse por terminada y se convierte en fuente de discusiones al final del sprint. Mencione el trabajo de Mike Cohn como referencia principal y el de Jeff Patton sobre mapeo de historias, que verán más adelante. Pida que cada estudiante escriba tres historias para el proyecto de su equipo y las intercambie con un compañero para recibir retroalimentación en el foro."
+        },
+        {
+          "title": "Criterios INVEST y división de historias",
+          "bullets": [
+            "Bill Wake (2003): independiente, negociable, valiosa, estimable, pequeña y comprobable (testable).",
+            "Dividir por pasos del flujo, variaciones de reglas de negocio, variaciones de datos, operaciones o camino feliz frente a excepciones.",
+            "Evite dividir por capas técnicas («historia de base de datos», «historia de pantalla»): ninguna entrega valor por sí sola.",
+            "Una historia lista cabe en un sprint, tiene criterios de aceptación acordados y dependencias identificadas."
+          ],
+          "notes": "Recorra cada letra de INVEST con ejemplos del dominio de una clínica. Independiente: las historias que dependen unas de otras complican la priorización. Negociable: los detalles se acuerdan en la conversación. Valiosa: cada historia aporta algo perceptible al usuario o al negocio. Estimable: si el equipo no puede estimarla, falta información o es demasiado grande. Pequeña: cabe en un sprint con holgura. Comprobable: existe una forma objetiva de decidir si está terminada. Presente los patrones de división propuestos por Richard Lawrence, como separar las variaciones de reglas: «reservar cita con seguro» y «reservar cita particular» pueden ser historias distintas. Muestre por qué dividir por capas técnicas es un error: produce trabajo que no puede demostrarse al usuario. Haga un ejercicio en vivo: tome la épica «gestionar citas médicas» y divídanla juntos en ocho a diez historias que cumplan INVEST. Guarde el resultado para la sesión de priorización y mapeo de historias."
+        },
+        {
+          "title": "Criterios de aceptación con Gherkin",
+          "bullets": [
+            "Desarrollo guiado por comportamiento (Dan North, 2006): ejemplos concretos acordados por negocio, análisis y pruebas.",
+            "Estructura: Dado (contexto), Cuando (acción), Entonces (resultado observable); Gherkin admite palabras clave en español.",
+            "Un escenario por regla o ejemplo relevante; incluya casos límite, como el turno que se libera exactamente a la hora límite.",
+            "Los escenarios pueden automatizarse con herramientas como Cucumber y se convierten en pruebas de aceptación ejecutables."
+          ],
+          "notes": "Presente Gherkin como un lenguaje estructurado que el negocio puede leer y que el equipo puede automatizar. Escriba en vivo una característica en español con la cabecera de idioma, la palabra Característica y dos escenarios: uno del camino feliz y otro de una regla de negocio, por ejemplo que un paciente no puede tener dos citas con la misma especialidad el mismo día. Muestre la diferencia entre un escenario declarativo, que describe comportamiento, y uno imperativo, que describe clics en pantalla; recomiende el estilo declarativo porque sobrevive a los cambios de interfaz. Explique la técnica de mapeo de ejemplos: para cada historia se listan reglas, para cada regla ejemplos y se registran preguntas abiertas. Señale que estos escenarios son el puente con el modelo en V visto en la unidad 1: la prueba de aceptación se diseña al mismo tiempo que el requisito. Pida que cada historia del proyecto tenga al menos dos escenarios, incluido un caso de error."
+        },
+        {
+          "title": "Casos de uso: actores, objetivos y diagrama",
+          "bullets": [
+            "Ivar Jacobson (1992): un caso de uso describe cómo un actor logra un objetivo de valor interactuando con el sistema.",
+            "Actor principal: quien inicia para lograr su objetivo; actor de apoyo: sistema o persona que presta un servicio, como el OSE o una pasarela de pagos.",
+            "Niveles de Cockburn: resumen, objetivo de usuario (una sesión, un resultado) y subfunción; priorice el nivel de objetivo de usuario.",
+            "El diagrama UML muestra la frontera del sistema, actores y casos; use «include» y «extend» con moderación."
+          ],
+          "notes": "Explique que los casos de uso y las historias de usuario no compiten: los casos de uso describen de forma más completa interacciones con muchas variantes, y son frecuentes en contratos públicos, sistemas regulados y documentación de sistemas existentes. Defina el nivel de objetivo de usuario con la prueba de Cockburn: ¿el actor puede irse satisfecho después de completarlo? «Reservar cita» cumple; «ingresar al sistema» no, porque nadie inicia sesión por gusto. Dibuje un diagrama para la clínica con actores Paciente, Recepcionista, Médico y Aseguradora, y casos como reservar cita, reprogramar cita, registrar atención y autorizar cobertura. Advierta sobre el abuso de las relaciones de inclusión y extensión: los diagramas llenos de flechas parecen técnicos, pero comunican poco. El valor real de un caso de uso está en su texto, no en el dibujo. Pida a los estudiantes que identifiquen en su proyecto entre seis y diez casos de uso de nivel de usuario y los representen en PlantUML."
+        },
+        {
+          "title": "Especificación de casos de uso en formato extendido",
+          "bullets": [
+            "Plantilla de Cockburn: nombre (verbo + objeto), actor principal, interesados e intereses, precondiciones, garantías mínimas y de éxito.",
+            "Escenario principal de 3 a 9 pasos numerados, alternando actor y sistema, sin mencionar botones ni pantallas.",
+            "Extensiones numeradas según el paso que las origina (2a, 4b) con su condición y su manejo, incluidos los errores de sistemas externos.",
+            "Requisitos especiales y preguntas abiertas al final; cada caso debe poder recorrerse para diseñar pruebas."
+          ],
+          "notes": "Muestre una especificación completa del caso «Reservar cita» y analícela línea por línea. Destaque los interesados e intereses, porque obligan a pensar en lo que el sistema debe proteger: el paciente quiere un turno conveniente, el médico no quiere sobrecupos, la clínica quiere reducir ausencias y la aseguradora necesita autorización previa. Explique la diferencia entre garantías mínimas, que se cumplen incluso si el caso falla, como registrar el intento en la bitácora, y garantías de éxito, que se cumplen si termina bien. Insista en escribir pasos que expresen intención y no interfaz: «el paciente selecciona especialidad y fecha» en lugar de «el paciente hace clic en el combo desplegable». Recorra las extensiones más importantes: no hay turnos disponibles, el seguro no cubre la especialidad, falla el envío del correo de confirmación. Pida que cada equipo especifique tres casos de uso críticos de su proyecto y que otro equipo los revise buscando pasos ambiguos o extensiones faltantes."
+        },
+        {
+          "title": "Priorización: MoSCoW, Kano y mapeo de historias",
+          "bullets": [
+            "MoSCoW (Clegg, DSDM): imprescindible, debería, podría y no esta vez; DSDM recomienda que lo imprescindible no supere el 60 % del esfuerzo.",
+            "Modelo de Kano (1984): requisitos básicos, de desempeño y de deleite; los básicos no generan satisfacción, pero su ausencia genera rechazo.",
+            "Matriz valor frente a esfuerzo: primero lo de alto valor y bajo esfuerzo; cuestionar lo de bajo valor y alto esfuerzo.",
+            "Mapeo de historias (Patton, 2014): actividades del usuario en horizontal, historias en vertical y cortes por entregas que definen el producto mínimo viable."
+          ],
+          "notes": "Explique que priorizar es decidir qué no se hará, y que esa decisión debe ser explícita. Aplique MoSCoW en vivo a las historias de la clínica generadas en la sesión anterior y muestre que, sin la regla del 60 %, todo termina clasificado como imprescindible. Relacione Kano con los requisitos implícitos: imprimir el comprobante es básico, la confirmación por mensaje es de desempeño y la sugerencia automática del turno más cercano puede ser de deleite. Construya un mapa de historias sencillo: actividades como buscar médico, reservar, recordar, atender y cobrar; debajo, historias ordenadas por importancia; luego trace la línea de la primera entrega, que debe permitir recorrer el flujo completo aunque sea de forma básica. Destaque que el producto mínimo viable no es la mitad de cada función, sino un recorrido completo que entrega valor. Pida que cada equipo presente su primer corte de entrega y justifique qué dejó fuera y por qué."
+        },
+        {
+          "title": "Estimación temprana: puntos de caso de uso y planning poker",
+          "bullets": [
+            "Karner (1993): UUCW pondera casos por transacciones (simple 5, medio 10, complejo 15); UAW pondera actores (1, 2 o 3).",
+            "UCP = (UUCW + UAW) × TCF × ECF, con TCF = 0,6 + 0,01 × ΣTF y ECF = 1,4 − 0,03 × ΣEF.",
+            "Ejemplo: UUCW 120, UAW 9, TCF 0,95 y ECF 0,89 dan unos 109 UCP; a 20 horas por UCP, unas 2 180 horas.",
+            "En enfoques ágiles, planning poker (Grenning, 2002) estima historias en puntos relativos mediante consenso del equipo."
+          ],
+          "notes": "Explique que el analista suele participar en la estimación inicial porque conoce el alcance mejor que nadie. Presente el método de puntos de caso de uso paso a paso: clasificar cada caso por número de transacciones (hasta 3, de 4 a 7, más de 7), clasificar actores según interactúen por API, protocolo o interfaz gráfica, calcular los factores técnico y ambiental a partir de las tablas de Karner y multiplicar. Desarrolle el ejemplo completo: 129 por 0,95 por 0,89 da unos 109 puntos; con el factor de productividad de 20 horas que propuso Karner se obtienen unas 2 180 horas-persona. Subraye que la cifra es una estimación de orden de magnitud y que debe calibrarse con datos históricos de la organización. Contraste con planning poker, que estima de forma relativa y aprovecha el conocimiento del equipo. Aclare que el uso de estas estimaciones para cronogramas y presupuestos se trabajará en Gestión de Proyectos de TI; aquí interesa entender cómo el alcance documentado condiciona el esfuerzo."
+        },
+        {
+          "title": "Validación, trazabilidad y gestión de cambios",
+          "bullets": [
+            "ISO/IEC/IEEE 29148: cada requisito debe ser necesario, apropiado, inequívoco, completo, singular, factible, verificable, correcto y conforme.",
+            "Validación: revisiones e inspecciones, recorridos con usuarios, prototipos y escritura temprana de pruebas de aceptación.",
+            "Matriz de trazabilidad: objetivo → requisito → caso de uso o historia → elemento de diseño → prueba, en ambos sentidos.",
+            "Gestión de cambios: línea base, solicitud de cambio, análisis de impacto, decisión del comité o del dueño de producto y actualización de la matriz."
+          ],
+          "notes": "Explique la diferencia entre verificar un requisito, que responde si está bien escrito, y validarlo, que responde si es el requisito correcto. Recorra las características de la norma 29148 con un ejemplo deficiente y pida a la clase que identifique qué características incumple: «el sistema debe permitir gestionar los pacientes de forma rápida y segura y emitir reportes» no es singular, no es verificable y no es inequívoco. Muestre una matriz de trazabilidad simple en una hoja de cálculo y explique sus dos usos: la trazabilidad hacia atrás demuestra que todo requisito tiene una razón de negocio; la trazabilidad hacia adelante permite estimar el impacto de un cambio. Presente el flujo de gestión de cambios y aclare que en entornos ágiles el dueño de producto cumple el papel del comité, pero el análisis de impacto sigue siendo necesario. Cierre la unidad indicando que la Tarea 2 exige una matriz inicial que se completará con elementos de diseño en las unidades 3 y 4."
+        }
+      ],
+      "reading": {
+        "title": "Requisitos verificables: de la conversación a la especificación",
+        "minutes": 40,
+        "content": "## Tres niveles y una pregunta\n\nWiegers y Beatty distinguen requisitos de negocio, de usuario y de software. La relación entre ellos es una cadena de porqués. Una clínica de Trujillo quiere reducir el ausentismo de pacientes del 18 % al 10 % (negocio); para ello, los pacientes necesitan confirmar o cancelar sus citas sin llamar (usuario); en consecuencia, el sistema debe enviar un recordatorio con enlace de confirmación y liberar el turno si no hay respuesta (software). Cuando un requisito de software no puede vincularse a uno de negocio, probablemente sobra; cuando un objetivo de negocio no tiene requisitos que lo atiendan, el alcance está incompleto.\n\n## Educción: descubrir, no recolectar\n\nLos requisitos no están esperando a ser recogidos. Se descubren combinando técnicas: entrevistas semiestructuradas que empiezan por el contexto del trabajo, observación en el puesto, análisis de formatos y normas, talleres para negociar y prototipos de baja fidelidad para provocar reacciones concretas. La técnica de los cinco porqués ayuda a pasar de la solución pedida («un botón para exportar a Excel») a la necesidad real (analizar la rentabilidad por producto). Las normas son una fuente sistemática: la Ley 29733 y su reglamento exigen consentimiento, finalidad y medidas de seguridad; el régimen de comprobantes electrónicos de la SUNAT define formatos, envíos y constancias; el Código de Protección y Defensa del Consumidor exige el Libro de Reclamaciones.\n\n## Atributos de calidad medibles\n\nLos requisitos no funcionales fracasan cuando son adjetivos. La norma ISO/IEC 25010 ofrece una lista de características para no olvidar dimensiones, pero cada requisito debe expresarse con métrica, umbral y condiciones:\n\n~~~text\nRNF-07 (eficiencia de desempeño)\nCon 200 usuarios concurrentes en horario punta, el 95 % de las búsquedas\nde disponibilidad de turnos responde en menos de 2 segundos.\nVerificación: prueba de carga con datos de un mes típico.\n\nRNF-12 (seguridad, Ley 29733)\nTodo acceso a la historia clínica registra usuario, fecha, hora y motivo;\nel registro no puede modificarse ni eliminarse desde la aplicación.\n~~~\n\n## Historias de usuario con ejemplos ejecutables\n\nUna historia de usuario es una promesa de conversación con tres componentes: tarjeta, conversación y confirmación. La confirmación se expresa con criterios de aceptación. El desarrollo guiado por comportamiento propone escribirlos como ejemplos concretos en Gherkin, un formato que el negocio puede leer y que herramientas como Cucumber pueden ejecutar:\n\n~~~gherkin\n# language: es\nCaracterística: Confirmación de citas por recordatorio\n  Como paciente\n  Quiero confirmar mi cita desde el recordatorio\n  Para no perder el turno ni tener que llamar\n\n  Escenario: El paciente confirma dentro del plazo\n    Dado que Ana tiene una cita con Cardiología el 12/05 a las 10:00\n    Y el recordatorio se envió el 11/05 a las 10:00\n    Cuando Ana confirma la cita el 11/05 a las 15:00\n    Entonces la cita queda en estado \"Confirmada\"\n\n  Escenario: El turno se libera si no hay respuesta\n    Dado que Ana no respondió al recordatorio\n    Cuando se cumple el plazo de 6 horas antes de la cita\n    Entonces la cita queda en estado \"Liberada\"\n    Y el turno vuelve a estar disponible para otros pacientes\n~~~\n\nObserve que los escenarios son declarativos: describen comportamiento, no clics, y por eso sobreviven a cambios de interfaz. Cada escenario corresponde a una regla de negocio, y los casos límite, como el plazo exacto de liberación, merecen su propio ejemplo.\n\n## Casos de uso cuando la interacción es compleja\n\nPara interacciones con muchas variantes, el formato extendido de Cockburn es más completo. Un caso de uso de nivel de objetivo de usuario se nombra con verbo y objeto, identifica al actor principal y a los interesados con sus intereses, define precondiciones y garantías, y describe un escenario principal de tres a nueve pasos seguido de extensiones:\n\n~~~text\nCU-03 Reservar cita\nActor principal: Paciente      Actor de apoyo: Aseguradora\nPrecondición: el paciente está identificado\nGarantía de éxito: la cita queda registrada y confirmada al paciente\nEscenario principal\n 1. El paciente indica especialidad y rango de fechas.\n 2. El sistema muestra médicos y turnos disponibles.\n 3. El paciente elige un turno y el tipo de pago.\n 4. El sistema solicita autorización de cobertura a la aseguradora.\n 5. El sistema registra la cita y envía la confirmación.\nExtensiones\n 2a. No hay turnos: el sistema ofrece lista de espera.\n 4a. La aseguradora rechaza: el sistema ofrece atención particular.\n 4b. La aseguradora no responde en 30 s: la cita queda pendiente de cobertura.\n~~~\n\n## Priorizar, estimar y trazar\n\nNingún proyecto puede construir todo. MoSCoW obliga a declarar qué se hará, qué debería hacerse, qué podría hacerse y qué no se hará ahora; DSDM recomienda que lo imprescindible no supere el 60 % del esfuerzo. El mapeo de historias de Jeff Patton define entregas que recorren el flujo completo. La estimación por puntos de caso de uso de Karner aporta un orden de magnitud temprano, que debe calibrarse con datos históricos.\n\nFinalmente, la matriz de trazabilidad vincula objetivos, requisitos, elementos de diseño y pruebas. Es la herramienta que permite responder dos preguntas que todo gerente hará: ¿por qué construimos esto? y ¿qué se rompe si lo cambiamos?\n\n## Ideas clave\n\nUn buen requisito es necesario, inequívoco, singular, factible y verificable. Si no puede probarse, todavía no es un requisito: es una intención."
+      },
+      "case": {
+        "title": "Caso: Clínica Santa Rosa y el sistema de citas que nadie quería",
+        "content": "La **Clínica Santa Rosa** es una clínica privada de Trujillo con 22 especialidades, 64 médicos y unas 9 500 citas ambulatorias al mes. Atiende a pacientes particulares y asegurados de tres compañías de seguros y dos entidades prestadoras de salud.\n\n## El antecedente\n\nEn 2023 la clínica contrató a un proveedor de Lima para desarrollar un sistema de citas en línea. El proveedor elaboró un documento de requisitos de 120 páginas a partir de reuniones con la gerencia administrativa. Ocho meses después entregó un sistema que cumplía el documento, pero los médicos se negaron a usarlo porque no les permitía bloquear horarios para cirugías ni controlar sobrecupos, y el personal de admisión siguió usando la agenda en hojas de cálculo porque el sistema no consultaba la cobertura de los seguros. La clínica pagó S/ 210 000 y el sistema quedó en desuso.\n\n## La situación actual\n\nLas citas se reservan por teléfono a través de una central de seis operadoras. En horario punta, entre las 8:00 y las 10:00, el 31 % de las llamadas se abandona antes de ser atendido. El ausentismo de pacientes alcanza el 18 %, lo que deja consultorios vacíos mientras otros pacientes esperan hasta tres semanas por especialidades como Dermatología o Endocrinología. La gerencia estima que cada cita perdida representa S/ 95 de ingreso no percibido.\n\n## Los interesados\n\n- La **gerente general** quiere sobreagendar un 15 % para compensar el ausentismo.\n- El **director médico** rechaza el sobreagendamiento y exige que cada médico gestione su propia agenda.\n- La **jefa de admisión** necesita validar la cobertura del seguro antes de confirmar la cita.\n- El **área de sistemas**, con dos personas, mantiene el sistema de historias clínicas y teme otra integración fallida.\n- Los **pacientes**, según una encuesta de satisfacción, piden poder reservar y cancelar desde el celular.\n- El **oficial de datos personales** recuerda que la información de salud es un dato sensible.\n\n## El reto\n\nLa gerencia ha contratado a un nuevo equipo de análisis con un presupuesto de S/ 150 000 y cuatro meses para poner en producción una primera versión. Una estimación preliminar indica que, con ese presupuesto, solo puede construirse alrededor del 40 % de las funciones que los interesados han mencionado. El equipo debe decidir cómo educir los requisitos sin repetir el error anterior, cómo resolver el conflicto sobre el sobreagendamiento y qué incluir en la primera entrega para que el sistema sea adoptado y genere resultados medibles.",
+        "questions": [
+          "¿Qué errores de educción y de gestión de interesados explican el fracaso del primer sistema? Ubique a cada interesado en la matriz de poder e interés.",
+          "Diseñe un plan de educción de cuatro semanas que combine al menos cuatro técnicas. Justifique qué técnica usaría con cada interesado.",
+          "¿Cómo trataría el conflicto entre la gerente general y el director médico? Formule el desacuerdo como alternativas con datos, consecuencias y responsable de decidir.",
+          "Proponga el primer corte de entrega con un mapa de historias y MoSCoW. ¿Qué objetivo de negocio medible debería lograr esa entrega?",
+          "Redacte tres requisitos no funcionales medibles, uno de ellos derivado de la Ley 29733, que el proveedor anterior omitió."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Especificación de requisitos del proyecto",
+        "instructions": "**Objetivo:** especificar los requisitos del sistema que su equipo analiza, con calidad verificable y trazabilidad hacia los objetivos de negocio definidos en la Tarea 1.\n\n**Entregables**\n\n1. **Interesados:** registro con objetivos, preocupaciones e influencia, y matriz de poder e interés.\n2. **Educción:** evidencia de al menos tres técnicas aplicadas (guías, actas validadas, fotos de bocetos o capturas de prototipos), con datos personales anonimizados.\n3. **Historias de usuario:** entre 12 y 15 historias que cumplan INVEST, agrupadas en épicas, cada una con al menos dos escenarios en Gherkin, uno de ellos de error o caso límite.\n4. **Casos de uso:** diagrama en PlantUML y tres casos de uso críticos en formato extendido de Cockburn.\n5. **Requisitos no funcionales:** seis requisitos medibles basados en ISO/IEC 25010, al menos dos derivados de normas peruanas con su fuente.\n6. **Reglas de negocio:** catálogo con identificador y tipo.\n7. **Priorización:** clasificación MoSCoW respetando la regla del 60 % y mapa de historias con el corte de la primera entrega.\n8. **Trazabilidad:** matriz inicial objetivo → requisito → escenario de aceptación.\n\n**Formato:** documento en Markdown o PDF en el repositorio del equipo, con archivos fuente de diagramas y la matriz en hoja de cálculo. Extensión orientativa: 12 a 18 páginas.\n\n**Criterios:** calidad de cada requisito según la norma 29148, coherencia con la Tarea 1, verificabilidad y justificación de la priorización.",
+        "rubric": [
+          {
+            "name": "Análisis de interesados y evidencia de educción",
+            "points": 4
+          },
+          {
+            "name": "Historias INVEST con criterios de aceptación en Gherkin",
+            "points": 6
+          },
+          {
+            "name": "Casos de uso en formato extendido y diagrama",
+            "points": 4
+          },
+          {
+            "name": "Requisitos no funcionales medibles y fuentes normativas",
+            "points": 3
+          },
+          {
+            "name": "Priorización justificada y matriz de trazabilidad",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Ingeniería de requisitos",
+        "questions": [
+          {
+            "prompt": "¿Cuál de los siguientes enunciados es un requisito no funcional correctamente especificado?",
+            "options": [
+              "El sistema debe ser rápido y fácil de usar para todos los pacientes",
+              "Con 150 usuarios concurrentes, el 95 % de las reservas se confirma en menos de 3 segundos",
+              "El sistema debe permitir reservar citas por especialidad",
+              "El sistema debe usar la última versión del lenguaje de programación"
+            ],
+            "correct": 1,
+            "explanation": "Es medible: indica la carga, el percentil, el umbral y el comportamiento evaluado. La primera opción es ambigua, la tercera es funcional y la cuarta es una restricción tecnológica."
+          },
+          {
+            "prompt": "En una entrevista, el jefe de ventas pide «un botón para exportar todo a Excel». ¿Cuál es la mejor reacción del analista?",
+            "options": [
+              "Registrarlo tal cual como requisito funcional imprescindible",
+              "Rechazarlo porque exportar datos viola la Ley 29733",
+              "Preguntar para qué necesita los datos fuera del sistema, hasta llegar a la necesidad real",
+              "Reemplazarlo de inmediato por un tablero de inteligencia de negocios"
+            ],
+            "correct": 2,
+            "explanation": "Es una solución disfrazada de requisito; preguntar por el propósito puede revelar una necesidad de análisis, como un reporte de rentabilidad, que se atiende mejor de otra forma."
+          },
+          {
+            "prompt": "La historia «Como sistema, quiero validar el stock para evitar errores» presenta un problema. ¿Cuál?",
+            "options": [
+              "El rol no es un usuario o interesado real, por lo que no expresa quién recibe el valor",
+              "No cumple INVEST porque el beneficio está explícito",
+              "Debería escribirse como caso de uso en formato extendido obligatoriamente",
+              "No tiene problemas; es una historia correcta y comprobable"
+            ],
+            "correct": 0,
+            "explanation": "El sistema no es un rol de usuario. Una mejor versión sería «Como vendedor, quiero ver el stock disponible al registrar el pedido para no prometer productos agotados»."
+          },
+          {
+            "prompt": "Un equipo clasificó el 85 % del esfuerzo estimado como «imprescindible» en MoSCoW. ¿Qué riesgo señala la práctica de DSDM?",
+            "options": [
+              "Ninguno, porque cuanto más imprescindible, mejor priorizado está el producto",
+              "Que el equipo no podrá usar historias de usuario",
+              "Que la clasificación de Kano queda automáticamente invalidada",
+              "Que no queda holgura para absorber imprevistos sin incumplir lo comprometido"
+            ],
+            "correct": 3,
+            "explanation": "DSDM recomienda que lo imprescindible no supere el 60 % del esfuerzo, para que las categorías inferiores funcionen como margen de contingencia."
+          },
+          {
+            "prompt": "En un caso de uso, el paso dice: «El cajero hace clic en el botón verde y selecciona el producto del combo desplegable». ¿Qué corrección aplica?",
+            "options": [
+              "Añadir el color exacto del botón en código hexadecimal",
+              "Expresar la intención sin detalles de interfaz: «El cajero indica el producto y la cantidad»",
+              "Mover el paso a la sección de garantías mínimas",
+              "Dividirlo en dos casos de uso independientes"
+            ],
+            "correct": 1,
+            "explanation": "Los casos de uso describen intenciones y responsabilidades; los detalles de interfaz cambian con frecuencia y pertenecen al diseño de la interacción."
+          },
+          {
+            "prompt": "Un caso de uso tiene 6 transacciones y el sistema tiene UUCW = 80 y UAW = 6, con TCF = 1,0 y ECF = 0,9. ¿Cuántos puntos de caso de uso resultan?",
+            "options": [
+              "77,4 UCP",
+              "86 UCP",
+              "95,6 UCP",
+              "72 UCP"
+            ],
+            "correct": 0,
+            "explanation": "UCP = (UUCW + UAW) × TCF × ECF = (80 + 6) × 1,0 × 0,9 = 77,4. El dato de transacciones solo sirve para clasificar ese caso como medio."
+          },
+          {
+            "prompt": "La gerencia decide cambiar la regla de mora para créditos de 30 a 15 días. ¿Qué artefacto permite estimar rápidamente qué requisitos, diseños y pruebas se ven afectados?",
+            "options": [
+              "El diagrama de casos de uso",
+              "El mapa de historias",
+              "La matriz de trazabilidad con vínculos hacia adelante",
+              "La matriz de poder e interés"
+            ],
+            "correct": 2,
+            "explanation": "La trazabilidad hacia adelante vincula cada regla y requisito con los elementos de diseño y las pruebas que dependen de él, lo que permite el análisis de impacto."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Análisis y diseño orientado a objetos con UML",
+      "description": "Al finalizar la unidad, el estudiante construye el modelo de dominio, los diagramas de secuencia del sistema, de actividad y de máquina de estados, asigna responsabilidades con patrones GRASP en diagramas de interacción y de clases de diseño, y deriva de ellos el modelo de datos y el contrato de la API.",
+      "topics": [
+        "UML 2.5: propósito, tipos de diagramas y modelado como código",
+        "Modelo de dominio: clases conceptuales, atributos y asociaciones",
+        "Diagramas de secuencia del sistema y contratos de operación",
+        "Diagramas de actividad y de máquina de estados",
+        "Asignación de responsabilidades con patrones GRASP",
+        "Del modelo de diseño al modelo de datos y al contrato OpenAPI"
+      ],
+      "slides": [
+        {
+          "title": "Del qué al cómo: análisis frente a diseño",
+          "bullets": [
+            "Larman: el análisis investiga el problema y los requisitos («hacer lo correcto»); el diseño propone una solución conceptual («hacerlo correctamente»).",
+            "Cadena de artefactos: casos de uso → modelo de dominio → diagramas de secuencia del sistema → contratos → interacción de diseño → clases de diseño.",
+            "Cada modelo responde una pregunta distinta: qué conceptos existen, qué pide el actor, qué cambia y quién hace qué.",
+            "Modelar es barato comparado con refactorizar: un diagrama se corrige en minutos; una base de datos en producción, en semanas."
+          ],
+          "notes": "Ubique la unidad dentro del curso: en la unidad 2 se definió qué debe hacer el sistema; ahora se construyen los modelos que explican cómo lo hará. Recalque que análisis y diseño no son fases rígidas, sino perspectivas que se alternan en cada iteración. Presente la cadena de artefactos de Larman como un hilo conductor: el modelo de dominio da el vocabulario, los diagramas de secuencia del sistema identifican las operaciones que el sistema debe exponer, los contratos precisan qué cambia en cada operación y los diagramas de interacción reparten esas responsabilidades entre objetos. Recuerde lo aprendido en Programación Orientada a Objetos: allí se escribieron clases y se aplicaron principios SOLID sobre código; ahora se razona antes del código y a mayor escala. Pregunte: ¿cuántas veces han tenido que reescribir una clase porque descubrieron tarde un concepto del negocio? Use las respuestas para justificar el modelado previo, sin caer en el exceso de documentación."
+        },
+        {
+          "title": "UML 2.5: catorce diagramas y tres modos de uso",
+          "bullets": [
+            "UML 2.5.1 (OMG, 2017) define siete diagramas estructurales: clases, objetos, componentes, despliegue, paquetes, estructura compuesta y perfiles.",
+            "Siete diagramas de comportamiento: casos de uso, actividad, máquina de estados, secuencia, comunicación, tiempos y visión general de interacción.",
+            "Martin Fowler distingue tres usos: boceto para pensar y comunicar, plano para construir y lenguaje de programación para generar código.",
+            "En la práctica profesional bastan cinco o seis diagramas bien elegidos; dibujar todos los tipos es un antipatrón."
+          ],
+          "notes": "Presente UML como un lenguaje, no como una metodología: define notación y semántica, pero no dice en qué orden usarla. Muestre la taxonomía de catorce diagramas y aclare que en la industria se usan con frecuencia los de clases, secuencia, actividad, estados, casos de uso, componentes y despliegue. Explique los modos de uso de Fowler con ejemplos: un boceto en la pizarra virtual durante una reunión de diseño, un plano que acompaña el contrato con un proveedor y la generación de código a partir de modelos, poco común fuera de ciertos dominios. Recomiende el modo boceto riguroso: diagramas precisos en lo esencial, sin intentar representar cada detalle del código. Pregunte qué diagramas usaron ya en cursos anteriores; probablemente mencionen clases en Programación Orientada a Objetos y entidad-relación en Base de Datos. Aclare que el modelo entidad-relación no es UML, aunque tiene parecidos con el diagrama de clases, y que la unidad mostrará cómo pasar de uno a otro."
+        },
+        {
+          "title": "Modelado como código con PlantUML",
+          "bullets": [
+            "PlantUML describe diagramas en texto plano: se versionan en Git, se revisan en solicitudes de cambio y se regeneran sin redibujar.",
+            "Flujo: escribir el archivo .puml, generar la imagen, revisarla con el equipo y confirmar ambos en el repositorio.",
+            "Alternativas: Mermaid, integrado en muchas plataformas de documentación, y herramientas gráficas como draw.io o StarUML.",
+            "Convención del curso: una carpeta docs/modelos con un archivo por diagrama y nombres que reflejan el caso de uso."
+          ],
+          "notes": "Explique por qué el curso adopta diagramas como código: en equipos reales, los diagramas dibujados a mano en herramientas gráficas se desactualizan porque modificarlos cuesta. Un archivo de texto, en cambio, se edita en el mismo editor que el código, se compara línea por línea y forma parte de la revisión entre pares. Haga una demostración en vivo: cree una clase de dominio con dos atributos y una asociación, genere la imagen con la extensión del editor y muestre cómo un cambio en el texto actualiza el diagrama. Muestre también un diagrama de secuencia mínimo para que los estudiantes vean la sintaxis de mensajes. Advierta que la disposición automática a veces produce diagramas difíciles de leer; enseñe a dividir diagramas grandes y a usar paquetes. Indique la estructura de carpetas esperada en el repositorio del proyecto y explique que las tareas se revisarán sobre los archivos fuente, no solo sobre las imágenes exportadas, para evaluar la consistencia entre modelos."
+        },
+        {
+          "title": "Modelo de dominio: encontrar clases conceptuales",
+          "bullets": [
+            "Modelo de dominio: representación visual de conceptos del mundo real, sus atributos y asociaciones; no contiene métodos ni tablas.",
+            "Técnica de frases nominales (Abbott, 1983): subrayar sustantivos en los casos de uso y filtrar sinónimos, atributos y conceptos irrelevantes.",
+            "Lista de categorías de Larman: transacciones, líneas de transacción, productos, roles, lugares, eventos, registros y catálogos.",
+            "Reutilice patrones de análisis (Fowler, 1996), como Parte, Cuenta o Transacción, cuando el dominio lo permita."
+          ],
+          "notes": "Defina el modelo de dominio como el diccionario visual del negocio: si los usuarios no reconocen sus conceptos en el diagrama, el modelo es incorrecto. Trabaje en vivo con el caso de uso «Solicitar crédito» de una cooperativa: subraye sustantivos como socio, solicitud, crédito, monto, plazo, garantía, agencia, analista, cronograma y cuota. Luego filtre: monto y plazo son atributos, no clases; analista es un rol de un empleado; cronograma y cuota sí son conceptos con identidad. Use la lista de categorías como verificación: ¿dónde está la transacción?, ¿dónde están los registros que el negocio necesita conservar? Explique que el modelo de dominio pertenece al análisis y por eso no lleva métodos ni tipos de datos de programación. Pregunte: ¿«Sistema» debe ser una clase del modelo de dominio? La respuesta es no, porque el modelo describe el negocio, no el software. Pida que cada equipo identifique entre diez y quince conceptos de su proyecto."
+        },
+        {
+          "title": "Atributos, asociaciones y clases de descripción",
+          "bullets": [
+            "Atributos con tipos simples o tipos de valor del dominio (Dinero, Dirección, DNI); no incluya claves foráneas como atributos.",
+            "Asociaciones con nombre, dirección de lectura y multiplicidad: un Socio presenta 0..* Solicitudes; cada Solicitud pertenece a 1 Socio.",
+            "Clase de descripción (Larman): separe ProductoCrédito (tasa, plazo máximo) de Crédito (monto otorgado, fecha de desembolso).",
+            "Clase de asociación cuando la relación tiene datos propios, como la participación de un Aval en una Solicitud."
+          ],
+          "notes": "Explique que los atributos del modelo de dominio son conceptuales: interesa qué información existe, no cómo se almacena. Insista en el error de poner claves foráneas como atributos, por ejemplo idSocio dentro de Solicitud; en el modelo de dominio esa relación se expresa con una asociación. Presente los tipos de valor: el dinero no es un número decimal cualquiera, porque tiene moneda y reglas de redondeo; el DNI tiene un formato y un dígito de verificación. Desarrolle el patrón de clase de descripción con el ejemplo de la cooperativa: el producto «crédito mype» define tasa efectiva anual, plazo máximo y garantías requeridas, mientras que cada crédito concreto tiene monto, fecha y estado. Si no se separan, al eliminar el último crédito de un producto se perdería la información del producto. Muestre la clase de asociación para el aval y pregunte qué datos le pertenecen: monto avalado, fecha de firma y relación con el socio. Finalmente, revise las multiplicidades del modelo leyendo cada asociación en voz alta."
+        },
+        {
+          "title": "Errores frecuentes en modelos de dominio",
+          "bullets": [
+            "Modelar la base de datos existente o las pantallas en lugar del negocio; heredar nombres crípticos como TBL_SOL_CRED.",
+            "Atributos que deberían ser clases: si un concepto tiene identidad o comportamiento propio, como Agencia, es una clase.",
+            "Ausencia de conceptos de transacción y de registro, lo que impide luego cumplir requisitos de auditoría y trazabilidad.",
+            "Exceso de detalle: cuarenta clases para un proyecto pequeño suelen indicar que se confundieron atributos con conceptos."
+          ],
+          "notes": "Proyecte un modelo de dominio con errores deliberados y pida a los estudiantes que los encuentren en grupos durante diez minutos. Incluya una clase Sistema, una clase PantallaSolicitud, atributos como idSocio y nombreAgencia dentro de Solicitud, y la ausencia de una clase que registre las evaluaciones del comité de créditos. En la puesta en común, explique la causa de cada error. Copiar la base de datos heredada es tentador porque parece ahorrar trabajo, pero arrastra decisiones antiguas y nombres que los usuarios no reconocen. Señale que la falta de conceptos de registro, como Evaluación o CambioDeEstado, se descubre tarde, cuando un auditor o un regulador pide saber quién aprobó un crédito y cuándo. Recuerde que en la normativa de cooperativas supervisadas por la SBS la trazabilidad de las decisiones de crédito es esencial. Cierre con un criterio práctico: un modelo de dominio útil cabe en una o dos páginas y puede explicarse a un usuario en diez minutos."
+        },
+        {
+          "title": "Diagramas de secuencia del sistema",
+          "bullets": [
+            "Muestran, para un escenario de caso de uso, los eventos que el actor envía al sistema tratado como caja negra.",
+            "Nombran operaciones del sistema por intención: registrarSolicitud(dni, producto, monto, plazo), no clickBotonGuardar().",
+            "Se elabora uno por escenario principal y por extensión relevante; las respuestas del sistema se muestran como retornos.",
+            "Las operaciones identificadas son la base de los contratos, de la capa de aplicación y de los puntos finales de la API."
+          ],
+          "notes": "Explique que el diagrama de secuencia del sistema es un puente entre requisitos y diseño: toma un caso de uso y extrae la lista de operaciones que el sistema debe ofrecer. Construya en vivo el diagrama del escenario principal de «Solicitar crédito»: el socio inicia la solicitud, ingresa datos del negocio, adjunta documentos y confirma; el sistema responde con un número de solicitud y un estado. Insista en tratar el sistema como caja negra, sin objetos internos todavía. Muestre cómo nombrar operaciones a nivel de intención y con parámetros del dominio, porque esos nombres reaparecerán en el código. Señale una consecuencia de diseño importante: si el diagrama muestra seis operaciones para un solo escenario, quizá la interacción es demasiado conversacional para una aplicación móvil con mala conectividad en zonas rurales de Junín, lo que sugiere agrupar operaciones. Pida que cada equipo elabore dos diagramas de secuencia del sistema para sus casos de uso más importantes."
+        },
+        {
+          "title": "Contratos de operación",
+          "bullets": [
+            "Un contrato describe el efecto de una operación del sistema sobre los objetos del dominio, no los pasos para lograrlo.",
+            "Secciones: operación, referencias cruzadas, precondiciones y poscondiciones.",
+            "Poscondiciones en pasado: instancia creada o eliminada, atributo modificado, asociación formada o rota.",
+            "Ejemplo: tras aprobarSolicitud(id) la Solicitud pasó a «Aprobada», se creó un Crédito asociado y se registró una Evaluación del analista."
+          ],
+          "notes": "Presente los contratos como la herramienta para precisar operaciones complejas, no para documentar todas. Úselos cuando la operación modifica varios objetos o cuando su efecto no es evidente. Escriba en vivo el contrato de aprobarSolicitud: precondición, la solicitud existe y está en estado «En evaluación» con la documentación completa; poscondiciones, el estado cambió a «Aprobada», se creó una instancia de Crédito con monto y tasa del producto, se formó la asociación entre Solicitud y Crédito, se creó una Evaluación vinculada al analista con fecha y resultado. Explique por qué las poscondiciones se escriben en pasado: describen el estado observable después de la operación, lo que facilita diseñar pruebas. Muestre que al escribir el contrato suelen aparecer conceptos que faltaban en el modelo de dominio, como Evaluación, y que eso es una señal sana de que el análisis está madurando. Pregunte: ¿qué poscondición falta si la cooperativa debe notificar al socio?"
+        },
+        {
+          "title": "Diagramas de actividad",
+          "bullets": [
+            "Representan flujos de control y de objetos: acciones, decisiones y fusiones, bifurcaciones y uniones, nodos de objeto y particiones.",
+            "Útiles para flujos internos del sistema y algoritmos de negocio, como el cálculo de un cronograma o la validación de una solicitud.",
+            "BPMN modela el proceso de negocio entre participantes; el diagrama de actividad modela el comportamiento dentro del sistema.",
+            "Cuide la semántica de tokens: una bifurcación activa todas las ramas y la unión espera a que todas terminen."
+          ],
+          "notes": "Explique que el diagrama de actividad es el pariente UML del diagrama de flujo, con semántica más precisa basada en tokens. Distinga claramente su uso del de BPMN, visto en la unidad 1: BPMN describe cómo trabaja la organización, quién interviene y qué mensajes intercambia; el diagrama de actividad describe cómo el sistema ejecuta una operación o un flujo complejo. Construya en vivo el diagrama de la evaluación automática de una solicitud: validar identidad del socio, en paralelo consultar la central de riesgos y calcular la capacidad de pago, unir, decidir según el puntaje si se deriva al comité o se rechaza, y registrar la evaluación. Señale el uso de bifurcación y unión para la consulta paralela, y explique que si una rama puede no ejecutarse, la unión quedaría esperando indefinidamente: un error de modelado frecuente. Pregunte qué ocurre si la central de riesgos no responde y cómo se modelaría un tiempo máximo de espera."
+        },
+        {
+          "title": "Diagramas de máquina de estados",
+          "bullets": [
+            "Modelan el ciclo de vida de un objeto con estados, transiciones «evento [condición] / acción», estados inicial y final, y estados compuestos.",
+            "Ejemplo de Solicitud: Registrada → En evaluación → Observada ↔ En evaluación → Aprobada → Desembolsada, o Rechazada.",
+            "Revelan reglas de negocio ocultas: no se desembolsa sin pagaré firmado; una solicitud observada vence a los 15 días.",
+            "Indique qué evento dispara cada transición y quién puede provocarlo; las transiciones no previstas deben rechazarse."
+          ],
+          "notes": "Presente el diagrama de estados como una de las herramientas de análisis con mayor retorno: en conceptos con ciclo de vida, como solicitudes, pedidos, expedientes o citas, la mayoría de los errores de producción se deben a transiciones no previstas. Construya en vivo la máquina de estados de la solicitud de crédito y pida a la clase que identifique transiciones faltantes: ¿puede el socio desistir en cualquier estado?, ¿qué ocurre si una solicitud aprobada no se desembolsa en treinta días?, ¿se puede reabrir una rechazada? Cada respuesta es una regla de negocio que debe validarse con el usuario. Explique la notación de guardas y acciones, por ejemplo la transición de Aprobada a Desembolsada con el evento desembolsar, la condición pagaré firmado y la acción generar cronograma. Anticipe la discusión de diseño: estas reglas deben vivir en el dominio y no dispersas en pantallas o disparadores de base de datos. Pida que cada equipo modele los estados del concepto central de su proyecto."
+        },
+        {
+          "title": "GRASP I: Experto en información, Creador y Controlador",
+          "bullets": [
+            "GRASP (Larman): nueve patrones para asignar responsabilidades a objetos de forma razonada y comunicable.",
+            "Experto en información: asigne la responsabilidad a la clase que tiene la información necesaria; Cronograma calcula su saldo pendiente.",
+            "Creador: B crea instancias de A si B contiene, agrega o registra A, o tiene los datos para inicializarlo; Crédito crea sus Cuotas.",
+            "Controlador: un objeto que no es de interfaz recibe las operaciones del sistema, como ServicioSolicitudes, coordinando sin hacer el trabajo del dominio."
+          ],
+          "notes": "Explique que diseñar orientado a objetos es, sobre todo, decidir responsabilidades: qué sabe y qué hace cada objeto. GRASP no es un conjunto de recetas mágicas, sino un vocabulario para justificar decisiones en una revisión de diseño. Trabaje el Experto con un ejemplo: ¿quién debe calcular el total adeudado de un crédito? La clase que conoce las cuotas, es decir, Cronograma o Crédito, y no un servicio externo que extrae datos de cada cuota; esto evita el antipatrón de modelo anémico. Para el Creador, muestre que el Crédito, al generarse, crea sus cuotas porque las contiene. Para el Controlador, explique que la operación aprobarSolicitud, identificada en el diagrama de secuencia del sistema, llega a un objeto de la capa de aplicación que delega en el dominio; advierta sobre el controlador saturado, que concentra toda la lógica. Relacione con lo visto en Programación Orientada a Objetos: el Experto refuerza el encapsulamiento y la responsabilidad única."
+        },
+        {
+          "title": "GRASP II: acoplamiento, cohesión y protección frente al cambio",
+          "bullets": [
+            "Bajo acoplamiento: minimice dependencias para que un cambio no se propague; Alta cohesión: cada clase con responsabilidades relacionadas y enfocadas.",
+            "Polimorfismo: cuando el comportamiento varía por tipo, use subtipos en lugar de condicionales; por ejemplo, políticas de cálculo de interés.",
+            "Fabricación pura e Indirección: clases inventadas, como un Repositorio o un Adaptador, para preservar la cohesión del dominio.",
+            "Variaciones protegidas: identifique puntos de cambio previsibles y protéjalos con interfaces estables, como el proveedor de firma digital."
+          ],
+          "notes": "Presente estos patrones como principios evaluativos: permiten comparar dos diseños y decidir cuál es mejor. Muestre dos alternativas para registrar una solicitud: en la primera, la clase Solicitud conoce la base de datos, el servicio de correo y la central de riesgos; en la segunda, un repositorio y un adaptador se encargan de esas dependencias. Pida a la clase que evalúe ambas con acoplamiento y cohesión. Explique el Polimorfismo con el cálculo de cuotas: cuota fija, cuota decreciente o pagos con periodo de gracia son variantes que se modelan mejor con una interfaz de política de cálculo que con una cadena de condicionales. Relacione Variaciones protegidas con el principio abierto-cerrado visto en SOLID: ambos buscan que lo nuevo se agregue sin modificar lo estable. Señale que la integración con servicios externos, como centrales de riesgo o firma digital, es el punto de cambio más probable en sistemas peruanos, porque proveedores y normas cambian con frecuencia."
+        },
+        {
+          "title": "Diagramas de secuencia de diseño",
+          "bullets": [
+            "Muestran cómo colaboran los objetos para cumplir una operación del sistema: líneas de vida, mensajes síncronos, retornos y creación.",
+            "Fragmentos combinados: alt para alternativas, opt para opcionales y loop para repeticiones, con condiciones entre corchetes.",
+            "Pasos: tomar el contrato, ubicar el controlador, asignar cada poscondición con GRASP y verificar que no queden responsabilidades huérfanas.",
+            "Cada mensaje enviado a un objeto implica un método en su clase; el diagrama alimenta directamente el diagrama de clases de diseño."
+          ],
+          "notes": "Construya en vivo el diagrama de secuencia de diseño para aprobarSolicitud a partir del contrato escrito antes. El controlador recibe la operación y obtiene la solicitud mediante el repositorio; la solicitud, como experta en su estado, valida la transición y registra la evaluación; el producto de crédito, experto en la tasa, participa en la creación del crédito; el crédito, como creador, genera sus cuotas; por último, el repositorio persiste los cambios. Señale cómo cada poscondición del contrato quedó cubierta por algún mensaje. Explique los fragmentos combinados con el caso de que la central de riesgos reporte deuda vencida: un fragmento alt muestra el rechazo. Advierta sobre dos errores comunes: diagramas donde un único objeto envía todos los mensajes, que delatan un controlador saturado, y diagramas que mezclan detalles de interfaz gráfica. Pida a los estudiantes que, en parejas, diseñen la secuencia de otra operación y justifiquen cada asignación nombrando el patrón GRASP aplicado."
+        },
+        {
+          "title": "Diagrama de clases de diseño y organización en capas",
+          "bullets": [
+            "Incluye métodos, tipos, visibilidad, navegabilidad, dependencias e interfaces derivados de los diagramas de interacción.",
+            "Organice en paquetes: presentación, aplicación (controladores y servicios), dominio (entidades y reglas) e infraestructura (repositorios y adaptadores).",
+            "Regla de dependencia: el dominio no depende de la infraestructura; los repositorios se definen como interfaces en el dominio.",
+            "Valide la coherencia: todo mensaje del diagrama de secuencia existe como método y toda asociación navegable tiene uso."
+          ],
+          "notes": "Explique que el diagrama de clases de diseño es la síntesis de las decisiones tomadas en los diagramas de interacción, no un dibujo independiente. Muestre cómo cada mensaje del diagrama de secuencia anterior se convierte en un método y cómo la dirección de los mensajes determina la navegabilidad de las asociaciones. Introduzca la organización en capas, que se profundizará en la unidad 4 desde la perspectiva arquitectónica, y la regla de dependencia: el dominio define una interfaz RepositorioSolicitudes y la infraestructura la implementa con PostgreSQL. Esto permite probar el dominio sin base de datos, algo que conocieron con JUnit en Programación Orientada a Objetos. Proponga una lista de verificación de consistencia entre modelos: nombres del modelo de dominio conservados en el diseño, operaciones del sistema presentes en los controladores, transiciones de la máquina de estados implementadas en métodos de la entidad. Indique que esta verificación será un criterio explícito de la rúbrica de la Tarea 3."
+        },
+        {
+          "title": "Del modelo de clases al modelo de datos",
+          "bullets": [
+            "Clase persistente → tabla; atributo simple → columna; tipo de valor (Dinero) → columnas embebidas o tipo compuesto.",
+            "Asociación uno a muchos → clave foránea en el lado «muchos»; muchos a muchos → tabla intermedia; clase de asociación → tabla con sus atributos.",
+            "Herencia según Fowler: una sola tabla, una tabla por clase o una tabla por clase concreta, con ventajas y costos distintos.",
+            "Verifique la normalización hasta 3FN y documente cualquier desnormalización con su justificación de rendimiento."
+          ],
+          "notes": "Conecte explícitamente con el curso de Base de Datos: allí partieron del modelo entidad-relación; aquí parten del modelo de clases y deben llegar a un esquema relacional correcto. Explique el desajuste de impedancia entre objetos y tablas: identidad, herencia, colecciones y navegación funcionan distinto en ambos mundos, y por eso existen herramientas de mapeo objeto-relacional como JPA o Hibernate, que verán en Desarrollo de Software Empresarial. Trabaje el mapeo de la cooperativa: Socio, Solicitud, Crédito y Cuota se convierten en tablas; la clase de asociación del aval genera una tabla con monto avalado y fecha; la jerarquía de productos de crédito puede resolverse con una sola tabla y una columna discriminadora, simple y rápida pero con columnas nulas, o con una tabla por clase, más normalizada pero con más uniones. Pida que justifiquen la estrategia elegida según las consultas más frecuentes. Recuerde que los datos personales sensibles deben identificarse en el esquema para aplicar cifrado y controles de acceso."
+        },
+        {
+          "title": "Del caso de uso al contrato de la API",
+          "bullets": [
+            "Recursos derivados del modelo de dominio (solicitudes, créditos, cuotas) y operaciones derivadas de los diagramas de secuencia del sistema.",
+            "Diseño primero el contrato: especificación OpenAPI 3.1 revisada por consumidores antes de implementar.",
+            "Transiciones de estado como acciones explícitas: POST /solicitudes/{id}/aprobacion, con 409 si la transición no es válida.",
+            "Defina códigos de estado, errores con estructura uniforme, paginación, idempotencia de operaciones críticas y versión de la API."
+          ],
+          "notes": "Recuerde que en Desarrollo Web construyeron API REST con Express; ahora la pregunta es cómo diseñarlas a partir del análisis, antes de escribir código. Explique el enfoque de contrato primero: el equipo redacta la especificación OpenAPI, la revisan quienes desarrollarán la aplicación móvil y la web, y solo entonces se implementa; así se detectan inconsistencias cuando corregirlas es barato. Muestre cómo los recursos salen del modelo de dominio y cómo las operaciones del sistema se convierten en puntos finales. Discuta el modelado de transiciones de estado: en lugar de permitir que el cliente actualice libremente el campo estado, se exponen acciones como aprobación o desembolso, que el dominio valida según la máquina de estados; si la transición no es válida, la API responde con un conflicto. Destaque la idempotencia en operaciones de dinero: un desembolso repetido por un reintento de red sería grave. Indique que la Tarea 3 exige un extracto de contrato OpenAPI con cuatro operaciones como mínimo."
+        }
+      ],
+      "reading": {
+        "title": "Del modelo de dominio al contrato: análisis y diseño orientado a objetos en la práctica",
+        "minutes": 40,
+        "content": "## Una cadena de modelos, no una colección de dibujos\n\nCraig Larman propone recorrer una cadena de artefactos en la que cada uno se apoya en el anterior: casos de uso, modelo de dominio, diagramas de secuencia del sistema, contratos de operación, diagramas de interacción de diseño y diagrama de clases de diseño. El valor no está en producir todos los diagramas, sino en mantenerlos consistentes: los nombres del dominio deben reaparecer en el diseño y en el código, y cada operación del sistema debe tener un responsable claro. Tomemos como ejemplo una cooperativa de ahorro y crédito de Junín que quiere digitalizar la solicitud de créditos para mypes.\n\n## El modelo de dominio\n\nEl modelo de dominio es el vocabulario visual del negocio. Se construye a partir de los casos de uso, subrayando frases nominales y filtrando atributos y sinónimos, y se verifica con la lista de categorías de Larman. No contiene métodos ni claves foráneas. Escrito como código en PlantUML, un fragmento luce así:\n\n~~~plantuml\n@startuml\nhide methods\nclass Socio {\n  dni : DNI\n  nombre : Texto\n}\nclass Solicitud {\n  numero : Texto\n  monto : Dinero\n  plazoMeses : Entero\n  estado : EstadoSolicitud\n}\nclass ProductoCredito {\n  nombre : Texto\n  tasaEfectivaAnual : Porcentaje\n  plazoMaximo : Entero\n}\nclass Evaluacion {\n  fecha : FechaHora\n  resultado : Texto\n}\nSocio \"1\" -- \"0..*\" Solicitud : presenta >\nSolicitud \"0..*\" -- \"1\" ProductoCredito : se basa en >\nSolicitud \"1\" -- \"0..*\" Evaluacion : registra >\n@enduml\n~~~\n\nProductoCredito es una clase de descripción: conserva la tasa y el plazo máximo aunque no exista ningún crédito vigente de ese producto. Evaluacion es un registro, imprescindible para demostrar ante un supervisor quién decidió y cuándo.\n\n## Comportamiento: estados y contratos\n\nLos conceptos con ciclo de vida merecen una máquina de estados. Ella hace explícitas reglas que en las entrevistas aparecen dispersas:\n\n~~~plantuml\n@startuml\n[*] --> Registrada\nRegistrada --> EnEvaluacion : enviar [documentos completos]\nEnEvaluacion --> Observada : observar / notificar socio\nObservada --> EnEvaluacion : subsanar\nObservada --> Vencida : 15 días sin subsanar\nEnEvaluacion --> Aprobada : aprobar [puntaje >= mínimo]\nEnEvaluacion --> Rechazada : rechazar\nAprobada --> Desembolsada : desembolsar [pagaré firmado] / generar cronograma\nDesembolsada --> [*]\n@enduml\n~~~\n\nPara cada operación del sistema con efectos complejos se escribe un contrato con precondiciones y poscondiciones en pasado. Para aprobarSolicitud: la solicitud pasó a Aprobada, se creó una Evaluacion asociada al analista y se creó un Credito con la tasa del producto.\n\n## Asignar responsabilidades con GRASP\n\nLos patrones GRASP guían quién hace qué. El Experto en información sugiere que la propia solicitud valide sus transiciones, porque conoce su estado; el Creador, que el crédito cree sus cuotas, porque las contiene; el Controlador, que una clase de aplicación reciba la operación y delegue. El resultado es un dominio rico, no anémico:\n\n~~~java\npublic class Solicitud {\n    private EstadoSolicitud estado;\n    private final List<Evaluacion> evaluaciones = new ArrayList<>();\n\n    // Experto en información: la solicitud conoce su estado y sus reglas\n    public Credito aprobar(Analista analista, ProductoCredito producto) {\n        if (estado != EstadoSolicitud.EN_EVALUACION) {\n            throw new TransicionInvalidaException(estado, \"aprobar\");\n        }\n        estado = EstadoSolicitud.APROBADA;\n        evaluaciones.add(new Evaluacion(analista, \"APROBADA\"));\n        // Creador: la solicitud tiene los datos para inicializar el crédito\n        return new Credito(this, producto.tasaEfectivaAnual());\n    }\n}\n~~~\n\nBajo acoplamiento y Variaciones protegidas justifican que la consulta a la central de riesgos se haga mediante una interfaz implementada por un adaptador, de modo que cambiar de proveedor no afecte al dominio.\n\n## Del diseño a los datos y a la API\n\nEl diagrama de clases de diseño se traduce a un esquema relacional: cada clase persistente es una tabla, las asociaciones uno a muchos son claves foráneas, las clases de asociación generan tablas propias y la herencia se resuelve con una de las tres estrategias descritas por Fowler. La normalización hasta 3FN, estudiada en Base de Datos, sigue siendo el criterio de calidad.\n\nEl mismo análisis produce el contrato de la API. Con el enfoque de contrato primero, la especificación OpenAPI se revisa antes de programar:\n\n~~~yaml\nopenapi: 3.1.0\ninfo: { title: API de Solicitudes de Crédito, version: 1.0.0 }\npaths:\n  /solicitudes/{id}/aprobacion:\n    post:\n      summary: Aprueba una solicitud en evaluación\n      parameters:\n        - { name: id, in: path, required: true, schema: { type: string } }\n      responses:\n        \"201\": { description: Crédito creado a partir de la solicitud }\n        \"404\": { description: La solicitud no existe }\n        \"409\": { description: La transición no es válida en el estado actual }\n~~~\n\nObserve cómo el código 409 materializa la máquina de estados en la interfaz pública del sistema.\n\n## Ideas clave\n\nCada modelo responde una pregunta: qué conceptos existen, qué cambia, quién decide y cómo se expone. Un diseño es bueno cuando sus modelos son consistentes entre sí y cada responsabilidad tiene una justificación explícita."
+      },
+      "case": {
+        "title": "Caso: Cooperativa San Cristóbal y la clase que lo hacía todo",
+        "content": "La **Cooperativa de Ahorro y Crédito San Cristóbal** opera en Huancayo desde 1994, tiene 42 000 socios y siete agencias en Junín. Desde la reforma de la Ley 30822, que puso a las cooperativas bajo la supervisión de la SBS, debe demostrar trazabilidad en sus decisiones de crédito y controles sobre sus sistemas de información.\n\n## El problema de negocio\n\nLas solicitudes de crédito para mypes se registran en papel en las agencias, se escanean y se envían por correo al área de riesgos. El tiempo promedio desde la solicitud hasta el desembolso es de seis días hábiles, frente a dos días que ofrecen dos cajas municipales de la región. En el último año, la cooperativa perdió alrededor del 12 % de las solicitudes aprobadas porque los socios ya habían conseguido financiamiento en otra entidad.\n\n## El proyecto\n\nLa gerencia aprobó un proyecto para que los socios soliciten créditos desde una aplicación móvil y los analistas evalúen en una plataforma web. Un equipo interno de cinco personas terminó el análisis de requisitos con 28 historias de usuario y seis casos de uso. Al pasar al diseño surgieron tres problemas.\n\n**Primero**, el modelo de dominio tiene 47 clases porque se elaboró a partir de las tablas del sistema central heredado, con nombres como TBL_SOL_CRED y SOC_DATOS_ADIC. Los analistas de crédito no reconocen los conceptos y no pueden validarlo.\n\n**Segundo**, el programador con más experiencia diseñó una clase SolicitudCredito con 63 atributos y 41 métodos: calcula el cronograma, consulta la central de riesgos, envía mensajes, genera el PDF del pagaré y guarda en la base de datos. Argumenta que «todo lo de la solicitud está en un solo lugar y es fácil de encontrar».\n\n**Tercero**, no hay acuerdo sobre dónde implementar las reglas de estado. El administrador de base de datos propone disparadores en PostgreSQL que impidan transiciones inválidas, porque «así ninguna aplicación puede saltárselas». Los desarrolladores prefieren implementarlas en el código del dominio. Entre las reglas mencionadas en entrevistas están: una solicitud observada vence a los 15 días; no se desembolsa sin pagaré firmado digitalmente; el comité debe aprobar montos mayores a S/ 30 000; y el socio puede desistir antes del desembolso.\n\nAdemás, el proveedor de la central de riesgos anunció que cambiará su servicio web el próximo año, y la cooperativa evalúa cambiar también de proveedor de firma digital.\n\n## La decisión\n\nEl jefe de sistemas debe presentar en dos semanas al comité de gerencia una propuesta de diseño que permita empezar la construcción sin comprometer la mantenibilidad ni la trazabilidad exigida por el supervisor. Le preocupa que una refactorización posterior cueste más que el retraso de ahora.",
+        "questions": [
+          "¿Qué riesgos genera un modelo de dominio derivado de las tablas heredadas? Proponga un modelo de dominio de diez a quince clases que los analistas puedan validar.",
+          "Evalúe la clase SolicitudCredito con los patrones GRASP de cohesión, acoplamiento y Experto. ¿Cómo redistribuiría sus responsabilidades?",
+          "Modele la máquina de estados de la solicitud con las cuatro reglas mencionadas. ¿Qué transiciones faltan y deben validarse con el negocio?",
+          "¿Dónde implementaría las reglas de estado: en disparadores, en el dominio o en ambos? Argumente con mantenibilidad, pruebas y trazabilidad.",
+          "¿Qué patrón GRASP aplicaría ante los cambios anunciados de la central de riesgos y de la firma digital? Dibuje la solución."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Modelos de análisis y diseño orientado a objetos del proyecto",
+        "instructions": "**Objetivo:** construir los modelos de análisis y diseño del sistema del proyecto, coherentes entre sí y trazables a los requisitos de la Tarea 2.\n\n**Entregables (diagramas en PlantUML en la carpeta docs/modelos del repositorio)**\n\n1. **Modelo de dominio** de 10 a 20 clases conceptuales, con atributos, asociaciones nombradas y multiplicidades; al menos una clase de descripción o de asociación.\n2. **Dos diagramas de secuencia del sistema** para los casos de uso más importantes y **contratos** de dos operaciones complejas.\n3. **Un diagrama de actividad** de un flujo interno del sistema con decisión y paralelismo.\n4. **Una máquina de estados** del concepto central, con eventos, condiciones y acciones, y la lista de reglas de negocio que revela.\n5. **Dos diagramas de secuencia de diseño** con la justificación GRASP de cada asignación de responsabilidad.\n6. **Diagrama de clases de diseño** organizado en capas.\n7. **Modelo de datos** relacional derivado, con la estrategia de herencia justificada y los datos personales sensibles identificados.\n8. **Extracto de contrato OpenAPI 3.1** con al menos cuatro operaciones y sus respuestas de error.\n9. **Matriz de trazabilidad actualizada** con los elementos de diseño.\n\n**Formato:** documento técnico de 10 a 15 páginas más los archivos fuente. Incluyan una lista de verificación de consistencia entre modelos firmada por todos los integrantes.\n\n**Criterios:** corrección de la notación UML, fidelidad al dominio, calidad de las decisiones de diseño y consistencia entre modelos.",
+        "rubric": [
+          {
+            "name": "Modelo de dominio fiel al negocio y bien estructurado",
+            "points": 5
+          },
+          {
+            "name": "Secuencias del sistema y contratos de operación",
+            "points": 3
+          },
+          {
+            "name": "Modelos de comportamiento: actividad y máquina de estados",
+            "points": 3
+          },
+          {
+            "name": "Diseño con GRASP: secuencias y clases de diseño en capas",
+            "points": 5
+          },
+          {
+            "name": "Modelo de datos, contrato de API y trazabilidad",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Análisis y diseño orientado a objetos",
+        "questions": [
+          {
+            "prompt": "En un modelo de dominio de ventas aparece la clase Venta con el atributo idCliente. ¿Cuál es la corrección adecuada?",
+            "options": [
+              "Mantenerlo, porque toda clase necesita la clave de las clases relacionadas",
+              "Reemplazarlo por una asociación entre Venta y Cliente con su multiplicidad",
+              "Convertir idCliente en un método obtenerCliente()",
+              "Eliminar la clase Cliente para simplificar el modelo"
+            ],
+            "correct": 1,
+            "explanation": "El modelo de dominio expresa relaciones con asociaciones, no con claves foráneas; las claves pertenecen al modelo de datos que se deriva después."
+          },
+          {
+            "prompt": "¿Qué clase debería calcular el saldo pendiente de un crédito, según el patrón Experto en información?",
+            "options": [
+              "La clase de interfaz que muestra el saldo al socio",
+              "Un servicio de utilidades que recorre las cuotas desde fuera",
+              "La clase Credito o su Cronograma, que conocen las cuotas y sus pagos",
+              "El repositorio, porque accede a la base de datos"
+            ],
+            "correct": 2,
+            "explanation": "El Experto asigna la responsabilidad a quien tiene la información necesaria; así se evita un modelo anémico y se mantiene el encapsulamiento."
+          },
+          {
+            "prompt": "Un estudiante dibujó un diagrama de secuencia del sistema con objetos internos como Repositorio y Controlador. ¿Qué error cometió?",
+            "options": [
+              "Mezcló diseño con análisis: el diagrama del sistema trata al sistema como caja negra",
+              "Ninguno, porque todo diagrama de secuencia debe mostrar la persistencia",
+              "Debió usar un diagrama de actividad con particiones",
+              "Debió incluir también los botones de la interfaz"
+            ],
+            "correct": 0,
+            "explanation": "El diagrama de secuencia del sistema solo muestra los eventos entre actores y el sistema; los objetos internos aparecen en los diagramas de secuencia de diseño."
+          },
+          {
+            "prompt": "En una máquina de estados, la transición «desembolsar [pagaré firmado] / generar cronograma» significa que:",
+            "options": [
+              "El cronograma se genera siempre y luego se verifica el pagaré",
+              "El pagaré se firma automáticamente cuando ocurre el desembolso",
+              "Generar cronograma es un estado intermedio obligatorio",
+              "Ante el evento desembolsar, si el pagaré está firmado, se transita y se ejecuta la acción de generar el cronograma"
+            ],
+            "correct": 3,
+            "explanation": "La notación es evento [condición de guarda] / acción: la transición ocurre solo si la guarda es verdadera, y la acción se ejecuta al transitar."
+          },
+          {
+            "prompt": "Una clase concentra cálculo de cuotas, envío de correos, generación de PDF y acceso a la base de datos. ¿Qué principios GRASP vulnera principalmente?",
+            "options": [
+              "Alta cohesión y Bajo acoplamiento",
+              "Creador y Polimorfismo",
+              "Controlador e Indirección",
+              "Ninguno, porque centralizar facilita encontrar el código"
+            ],
+            "correct": 0,
+            "explanation": "Mezcla responsabilidades no relacionadas, lo que reduce la cohesión, y depende de muchos servicios externos, lo que aumenta el acoplamiento y la fragilidad ante cambios."
+          },
+          {
+            "prompt": "Al mapear una jerarquía de productos de crédito con estrategia de una sola tabla, ¿qué consecuencia debe aceptarse?",
+            "options": [
+              "Más uniones en cada consulta de productos",
+              "Imposibilidad de consultar todos los productos a la vez",
+              "Columnas que quedan nulas para los subtipos que no las usan y una columna discriminadora",
+              "Duplicación de las claves primarias en varias tablas"
+            ],
+            "correct": 2,
+            "explanation": "La tabla única es simple y rápida para consultas polimórficas, pero acumula columnas específicas de cada subtipo que quedan nulas en los demás."
+          },
+          {
+            "prompt": "Una API permite actualizar libremente el campo estado de una solicitud con PATCH. ¿Qué alternativa de diseño protege mejor las reglas de negocio?",
+            "options": [
+              "Validar el estado solo en la aplicación móvil",
+              "Exponer acciones de transición, como POST /solicitudes/{id}/aprobacion, validadas por el dominio",
+              "Eliminar el estado y deducirlo de las fechas",
+              "Permitir PATCH pero registrar el cambio en un archivo de texto"
+            ],
+            "correct": 1,
+            "explanation": "Las acciones explícitas permiten que el dominio aplique la máquina de estados y responda 409 si la transición no es válida, sin depender de cada cliente."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Diseño arquitectónico, prototipado y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante diseña y documenta la arquitectura de la solución a partir de escenarios de atributos de calidad, especifica las integraciones con servicios externos, prototipa y evalúa la interacción, y sustenta un documento de análisis y diseño completo, coherente y trazable.",
+      "topics": [
+        "Atributos de calidad, escenarios y tácticas arquitectónicas",
+        "Estilos arquitectónicos: capas, hexagonal, monolito modular, microservicios y eventos",
+        "Documentación con el modelo C4, diagramas de despliegue y registros de decisiones",
+        "Integración con servicios externos: facturación electrónica, pagos e interoperabilidad del Estado",
+        "Diseño de la interacción: flujos, prototipos y heurísticas de usabilidad",
+        "Revisión del diseño, trazabilidad final y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es la arquitectura de software?",
+          "bullets": [
+            "Bass, Clements y Kazman: conjunto de estructuras necesarias para razonar sobre el sistema, con sus elementos, relaciones y propiedades.",
+            "Martin Fowler: las decisiones arquitectónicas son las que resultan costosas de cambiar más adelante.",
+            "La arquitectura se elige para satisfacer atributos de calidad; casi cualquier estructura puede cumplir los requisitos funcionales.",
+            "Toda decisión arquitectónica implica compromisos: ganar disponibilidad puede costar consistencia, simplicidad o dinero."
+          ],
+          "notes": "Abra la unidad con una idea provocadora: dos sistemas con exactamente los mismos casos de uso pueden necesitar arquitecturas radicalmente distintas. Un sistema de ventas para una sola bodega y otro para una cadena de cincuenta boticas con comercio electrónico hacen lo mismo funcionalmente, pero difieren en volumen, disponibilidad, seguridad e integración. Por eso la arquitectura se deriva de los atributos de calidad identificados en la unidad 2. Presente la definición de Bass y colaboradores y destaque la palabra razonar: la arquitectura existe para que el equipo pueda predecir el comportamiento del sistema antes de construirlo. Use la frase de Fowler para distinguir arquitectura de diseño detallado: cambiar el nombre de una clase es barato; cambiar de una base de datos central a bases distribuidas no lo es. Pregunte a la clase qué decisiones de sus proyectos serían difíciles de revertir dentro de un año. Anote las respuestas: serán candidatas a registros de decisiones arquitectónicas en la tarea final."
+        },
+        {
+          "title": "Escenarios de atributos de calidad",
+          "bullets": [
+            "Seis partes: fuente del estímulo, estímulo, artefacto, entorno, respuesta y medida de la respuesta.",
+            "Ejemplo: un cajero registra una venta (estímulo) en el punto de venta (artefacto) sin Internet durante 8 horas (entorno).",
+            "Respuesta: la venta se completa, se emite el comprobante firmado localmente y su envío queda en cola; medida: 100 % de ventas registradas.",
+            "Árbol de utilidad: priorice escenarios por importancia para el negocio y dificultad técnica; los de alta-alta guían la arquitectura."
+          ],
+          "notes": "Explique que los escenarios convierten atributos abstractos en casos concretos que pueden discutirse y probarse. Retome los requisitos no funcionales de la Tarea 2 y muestre cómo enriquecerlos con las seis partes. Desarrolle tres escenarios en vivo para una cadena de boticas: disponibilidad, con el punto de venta sin conexión; desempeño, con mil consultas simultáneas de stock desde la tienda en línea durante una campaña; y modificabilidad, con la incorporación de un nuevo operador de servicios electrónicos en menos de diez días de trabajo. Destaque que el entorno es la parte que más se olvida: no es lo mismo el comportamiento en operación normal que en sobrecarga o durante una falla. Presente el árbol de utilidad del método ATAM como técnica de priorización: los interesados califican la importancia y los arquitectos la dificultad. Los escenarios con ambas calificaciones altas son los que justifican las decisiones más importantes. Pida a cada equipo que redacte cinco escenarios para su proyecto."
+        },
+        {
+          "title": "Tácticas arquitectónicas por atributo de calidad",
+          "bullets": [
+            "Disponibilidad: detección por latidos, reintentos con espera exponencial, redundancia, degradación controlada y operación sin conexión.",
+            "Desempeño: caché, procesamiento concurrente, colas para trabajo diferido, índices y limitación de la demanda.",
+            "Seguridad: autenticar, autorizar con mínimo privilegio, cifrar en tránsito y en reposo, auditar y limitar la exposición.",
+            "Modificabilidad: encapsular, usar intermediarios, reducir dependencias y diferir decisiones mediante configuración."
+          ],
+          "notes": "Presente las tácticas como bloques de construcción de la arquitectura, catalogados por Bass, Clements y Kazman. Una táctica es una decisión de diseño que influye en la respuesta a un escenario de calidad; los estilos y patrones arquitectónicos combinan varias tácticas. Para cada atributo, relacione una táctica con un ejemplo del contexto peruano. Disponibilidad: el punto de venta que trabaja sin conexión y sincroniza después, indispensable en provincias con conectividad intermitente. Desempeño: una caché del catálogo de productos para la tienda en línea durante campañas de alta demanda. Seguridad: registro de auditoría de accesos a recetas médicas, que son datos de salud protegidos por la Ley 29733. Modificabilidad: un adaptador que encapsula al operador de servicios electrónicos para poder cambiarlo. Advierta que las tácticas tienen costos: la operación sin conexión introduce conflictos de sincronización y la caché introduce datos desactualizados. Pida que, para cada escenario redactado, los equipos identifiquen al menos una táctica y su efecto secundario."
+        },
+        {
+          "title": "Cálculo de disponibilidad y composición de servicios",
+          "bullets": [
+            "Disponibilidad = MTBF / (MTBF + MTTR); reducir el tiempo de recuperación es tan eficaz como reducir las fallas.",
+            "99,9 % equivale a unas 8,76 horas de indisponibilidad al año; 99,99 %, a unos 52,6 minutos.",
+            "En serie la disponibilidad se multiplica: aplicación 0,999 × base de datos 0,999 × enlace 0,98 ≈ 0,978, unas 193 horas al año.",
+            "En paralelo: 1 − (1 − A₁)(1 − A₂); con un segundo enlace de 0,98 el tramo sube a 0,9996 y el total a unas 21 horas al año."
+          ],
+          "notes": "Trabaje los cálculos en vivo, porque muestran de forma contundente por qué ciertas decisiones son necesarias. Calcule primero la indisponibilidad anual de 99,9 % multiplicando 0,001 por las 8 760 horas del año. Luego plantee una botica en provincia cuya venta depende de tres componentes en serie: la aplicación central, la base de datos y el enlace de Internet de la tienda. Aunque los dos primeros sean excelentes, el enlace domina: el resultado es cercano a 97,8 %, lo que equivale a más de una semana de ventas perdidas al año. Muestre el efecto de agregar un enlace móvil de respaldo en paralelo: el tramo de conexión sube a 99,96 % y la indisponibilidad total baja a unas 21 horas. Finalmente, pregunte cómo llegar a casi cero horas sin pagar más enlaces; la respuesta es eliminar la dependencia con la táctica de operación sin conexión. Explique que estos cálculos simplificados suponen fallas independientes y que sirven para comparar alternativas, no como promesa contractual."
+        },
+        {
+          "title": "Estilo en capas y arquitectura hexagonal",
+          "bullets": [
+            "Capas: presentación, aplicación, dominio e infraestructura; cada capa usa solo servicios de la inferior, de forma estricta o relajada.",
+            "Arquitectura hexagonal o de puertos y adaptadores (Cockburn, 2005): el dominio define puertos y la tecnología se conecta mediante adaptadores.",
+            "Arquitectura limpia (Martin, 2017): las dependencias del código apuntan hacia adentro, hacia las reglas de negocio.",
+            "Beneficio: el dominio se prueba sin base de datos ni red; costo: más interfaces y mapeos entre representaciones."
+          ],
+          "notes": "Conecte con el diagrama de clases de diseño de la unidad 3, donde ya se organizó el código en capas. Ahora se mira la misma idea como decisión arquitectónica. Explique el estilo en capas tradicional y su principal debilidad: cuando el dominio depende directamente de la infraestructura, cambiar de base de datos o de proveedor externo obliga a tocar las reglas de negocio. Presente la arquitectura hexagonal como la solución: el dominio declara lo que necesita, por ejemplo un puerto para emitir comprobantes o para consultar la central de riesgos, y los adaptadores implementan esos puertos con tecnologías concretas. Dibuje un hexágono con adaptadores de entrada, como la API REST y la interfaz de consola, y adaptadores de salida, como PostgreSQL, el operador de servicios electrónicos y el servicio de mensajería. Señale que este estilo encarna los patrones GRASP de Indirección y Variaciones protegidas a nivel de sistema. Pregunte: ¿qué adaptadores tendría el sistema de su proyecto y cuál cambiaría con mayor probabilidad?"
+        },
+        {
+          "title": "Monolito modular frente a microservicios",
+          "bullets": [
+            "Lewis y Fowler (2014): microservicios son servicios pequeños, desplegables de forma independiente, organizados por capacidades de negocio y con datos propios.",
+            "Costos: red no confiable, consistencia eventual, observabilidad distribuida, más infraestructura y equipos con experiencia en operaciones.",
+            "Monolito modular: un solo despliegue con módulos de límites estrictos; Fowler (2015) recomienda empezar por el monolito.",
+            "Ley de Conway (1968): la estructura del sistema tiende a reflejar la estructura de comunicación de la organización."
+          ],
+          "notes": "Aborde este tema con espíritu crítico, porque es una de las decisiones donde más se equivocan los equipos jóvenes por seguir tendencias. Explique las ventajas reales de los microservicios: escalado independiente, despliegues autónomos y equipos que avanzan sin coordinarse. Luego enumere sus costos con ejemplos concretos: una venta que antes era una transacción en una base de datos ahora atraviesa tres servicios y puede quedar a medias si uno falla. Presente el monolito modular como alternativa razonable para la mayoría de organizaciones peruanas medianas: módulos con límites claros, comunicación por interfaces y sin compartir tablas, de modo que, si algún día un módulo necesita separarse, la división sea factible. Use la Ley de Conway: un equipo de cinco desarrolladores difícilmente puede operar nueve servicios independientes. Proponga un debate breve con dos grupos defendiendo cada opción para el caso de la unidad; exija argumentos basados en escenarios de calidad, tamaño del equipo y costo, no en preferencias tecnológicas."
+        },
+        {
+          "title": "Arquitectura orientada a eventos y mensajería",
+          "bullets": [
+            "Productores publican eventos («VentaRegistrada») y consumidores reaccionan sin conocerse; una cola o intermediario desacopla tiempos y disponibilidad.",
+            "Usos: envío diferido de comprobantes, notificaciones, actualización del stock web e integración entre módulos.",
+            "Consistencia eventual: los datos convergen en segundos o minutos; el negocio debe aceptar y conocer ese retraso.",
+            "Patrón bandeja de salida: guardar el evento en la misma transacción que el cambio de datos y publicarlo después, sin perder mensajes."
+          ],
+          "notes": "Explique que la mensajería es la táctica natural cuando dos partes del sistema no necesitan responder al mismo tiempo. El ejemplo más claro es la facturación electrónica: la venta no debe esperar a que el operador de servicios electrónicos responda; basta con registrar el comprobante, ponerlo en cola y procesarlo después con reintentos. Presente el concepto de consistencia eventual con el stock de la tienda en línea: si el inventario se actualiza por eventos, puede haber un retraso de algunos minutos; el analista debe validar con el negocio si ese retraso es aceptable y qué ocurre si se vende un producto agotado. Explique el problema de la doble escritura: si el sistema guarda la venta y luego falla antes de publicar el evento, el evento se pierde. El patrón bandeja de salida lo resuelve guardando el evento en una tabla dentro de la misma transacción. Recuerde que Administración de Servidores y Nube aborda la operación de estas plataformas, y que aquí interesa la decisión de diseño."
+        },
+        {
+          "title": "El modelo C4 para documentar la arquitectura",
+          "bullets": [
+            "Simon Brown propone cuatro niveles de zoom: contexto, contenedores, componentes y código.",
+            "Contexto: el sistema, sus usuarios y los sistemas externos (SUNAT u OSE, pasarela de pagos, central de riesgos); para todo público.",
+            "Contenedores: aplicaciones y almacenes desplegables con su tecnología; componentes: módulos principales dentro de un contenedor.",
+            "Pasos: definir audiencia, dibujar contexto, descomponer en contenedores, detallar solo los contenedores críticos y añadir leyenda."
+          ],
+          "notes": "Presente C4 como una respuesta práctica al problema de los diagramas de arquitectura ambiguos: cajas y flechas sin leyenda que cada lector interpreta distinto. Su aporte es definir niveles de abstracción con audiencias claras. Muestre los cuatro niveles con el ejemplo de la cadena de boticas: en contexto aparecen clientes, cajeros, químicos farmacéuticos, el operador de servicios electrónicos y la pasarela de pagos; en contenedores aparecen el punto de venta de escritorio con su base local, el núcleo comercial, la tienda en línea, la base de datos central y la cola de mensajes; en componentes se detalla el núcleo con sus módulos de ventas, inventario, clientes y facturación. Insista en que cada elemento debe indicar su responsabilidad y su tecnología, y cada relación su propósito y protocolo. Recomiende no dibujar el nivel de código salvo para partes críticas, porque el diagrama de clases de diseño ya lo cubre. Muestre que C4-PlantUML, incluido en la biblioteca estándar de PlantUML, permite mantener estos diagramas como código."
+        },
+        {
+          "title": "Diagrama de despliegue y decisiones de infraestructura",
+          "bullets": [
+            "El diagrama de despliegue UML muestra nodos, entornos de ejecución, artefactos desplegados y vías de comunicación.",
+            "Decisiones a documentar: nube, servidores propios o híbrido; región y residencia de los datos; redundancia y copias de seguridad.",
+            "La Ley 29733 regula el flujo transfronterizo de datos personales: alojar en otra región exige garantías y su análisis legal.",
+            "Incluya entornos separados de desarrollo, pruebas y producción, y la estrategia de despliegue continuo."
+          ],
+          "notes": "Explique que el diagrama de despliegue responde dónde corre cada contenedor y cómo se comunican físicamente. Complementa la vista de contenedores de C4. Construya en vivo el despliegue de la cadena de boticas: cada tienda tiene una computadora con el punto de venta y una base de datos local cifrada, un enlace principal y un enlace móvil de respaldo; el núcleo comercial y la base central corren en un proveedor de nube con réplica en otra zona; la tienda en línea usa una red de distribución de contenidos. Enfatice la dimensión legal de alojar datos personales fuera del país: la Ley 29733 regula el flujo transfronterizo y la organización debe evaluar que el destino ofrezca niveles de protección adecuados. Pregunte qué riesgos de seguridad aparecen al tener una base de datos local en cada tienda: robo del equipo, acceso no autorizado y necesidad de cifrado. Recuerde que Administración de Servidores y Nube, que llevan en paralelo, profundiza la configuración de estos entornos."
+        },
+        {
+          "title": "Registros de decisiones arquitectónicas (ADR)",
+          "bullets": [
+            "Michael Nygard (2011): documentos breves con título, estado, contexto, decisión y consecuencias, guardados en el repositorio.",
+            "Un ADR no se edita cuando cambia la decisión: se crea uno nuevo que lo reemplaza y se marca el anterior como sustituido.",
+            "Incluya alternativas consideradas y su evaluación frente a los escenarios de calidad prioritarios.",
+            "Responden la pregunta que todo desarrollador nuevo hará: «¿por qué lo hicieron así?»."
+          ],
+          "notes": "Explique que los diagramas muestran qué se decidió, pero no por qué. Sin esa razón, los equipos futuros revierten decisiones correctas o mantienen decisiones obsoletas por miedo. Presente el formato de Nygard y muestre un ejemplo completo: ADR-003, usar un monolito modular en lugar de microservicios. En el contexto se describen el tamaño del equipo, el presupuesto y los escenarios de disponibilidad; en la decisión, la elección y sus límites; en las consecuencias, tanto las positivas como las negativas, por ejemplo que el escalado será conjunto y que habrá que vigilar los límites entre módulos. Insista en registrar las alternativas descartadas y la razón, porque es la parte más valiosa para el futuro. Muestre cómo se guardan en una carpeta del repositorio con numeración correlativa y cómo se revisan en solicitudes de cambio como cualquier código. Pida que cada equipo redacte al menos tres registros para su proyecto, uno de ellos sobre la estrategia de integración con un servicio externo."
+        },
+        {
+          "title": "Integración con la facturación electrónica de la SUNAT",
+          "bullets": [
+            "Los comprobantes electrónicos se generan en XML con el estándar UBL 2.1 y se firman digitalmente con el certificado del emisor.",
+            "El emisor los envía a la SUNAT o a un operador de servicios electrónicos (OSE), que valida y devuelve la constancia de recepción (CDR).",
+            "Las boletas pueden informarse de forma individual o mediante resumen diario, dentro de los plazos que fija la SUNAT.",
+            "Diseño: módulo de facturación aislado tras un puerto, cola con reintentos, idempotencia por serie y número, y manejo explícito de rechazos."
+          ],
+          "notes": "Presente la facturación electrónica como el ejemplo más importante de integración externa para cualquier sistema comercial peruano. Explique el flujo: la venta genera un comprobante con serie y número correlativo, se construye el XML según el estándar UBL 2.1, se firma con el certificado digital, se envía y se recibe la constancia de recepción, que puede indicar aceptación, aceptación con observaciones o rechazo. Analice las implicancias de diseño: el envío no debe bloquear la venta, por lo que conviene una cola con reintentos; cada comprobante debe identificarse de forma única para no enviarlo dos veces; los rechazos deben generar alertas y un flujo de corrección, por ejemplo mediante notas de crédito. Recomiende encapsular la integración con un adaptador, de modo que cambiar de operador o adaptarse a nuevas versiones del formato afecte un solo módulo. Advierta que las especificaciones y plazos cambian por resoluciones de superintendencia, por lo que el analista debe verificar siempre la normativa vigente antes de diseñar."
+        },
+        {
+          "title": "Pagos digitales e interoperabilidad con el Estado",
+          "bullets": [
+            "Pasarelas de pago y billeteras: delegue la captura de tarjetas al proveedor y use tokens para reducir el alcance de PCI DSS.",
+            "Pagos inmediatos por código QR y billeteras móviles, cuya interoperabilidad impulsa el BCRP: confirme cada pago antes de entregar el bien.",
+            "Plataforma de Interoperabilidad del Estado (PIDE): permite a entidades públicas consultar servicios de RENIEC, SUNARP y otras entidades.",
+            "Capa anticorrupción (Evans, 2003): traduzca el modelo del proveedor al modelo propio para que sus cambios no contaminen el dominio."
+          ],
+          "notes": "Amplíe el análisis de integraciones a pagos y servicios públicos. En pagos, la regla de oro es no almacenar datos de tarjetas: la pasarela captura los datos, devuelve un token y el sistema guarda solo la referencia; así se reduce drásticamente el alcance de la norma de seguridad de la industria de tarjetas. Para pagos con billeteras móviles, explique el riesgo de confirmar una venta solo porque el cliente muestra una captura de pantalla, un fraude conocido en comercios peruanos; el diseño debe verificar la notificación del proveedor. En el sector público, presente la plataforma de interoperabilidad, que evita pedir al ciudadano documentos que el Estado ya tiene, en línea con la Ley de Gobierno Digital. Introduzca la capa anticorrupción de Evans: un módulo que traduce los formatos y conceptos del proveedor externo a los del dominio propio. Pregunte qué ocurriría si el modelo de datos de la pasarela se usara directamente en las clases del dominio y luego la empresa cambiara de pasarela."
+        },
+        {
+          "title": "Diseño de la interacción: del flujo al prototipo",
+          "bullets": [
+            "Flujos de usuario: recorridos completos derivados de los casos de uso, con decisiones, errores y estados vacíos.",
+            "Bocetos y esquemas de baja fidelidad para estructura; prototipos navegables de alta fidelidad en Figma o Penpot para validar.",
+            "Nielsen (2000): cinco usuarios por ronda de pruebas encuentran la mayoría de problemas de usabilidad; es mejor hacer varias rondas pequeñas.",
+            "Mida tasa de éxito de la tarea, tiempo, errores y satisfacción; registre los hallazgos como cambios en requisitos o diseño."
+          ],
+          "notes": "Explique que el diseño de la interacción no es decoración: valida los requisitos con usuarios antes de construir. Muestre cómo un caso de uso se convierte en un flujo de usuario y luego en pantallas. Presente la progresión de fidelidad y su propósito: los bocetos permiten explorar muchas alternativas rápido; los prototipos navegables permiten observar a usuarios reales intentando completar tareas. Explique la recomendación de Nielsen de probar con cinco usuarios por ronda, basada en su trabajo con Landauer, y aclare que supone usuarios de un mismo perfil; si hay perfiles distintos, como cajeros y químicos farmacéuticos, se requieren grupos por perfil. Organice una prueba rápida en clase: un voluntario intenta completar una tarea en el prototipo de otro equipo mientras piensa en voz alta, y el resto toma notas sin ayudar. Señale que las pruebas remotas por videollamada son válidas en nuestra modalidad. Insista en que cada hallazgo debe convertirse en una acción concreta y trazable."
+        },
+        {
+          "title": "Heurísticas de usabilidad y accesibilidad",
+          "bullets": [
+            "Diez heurísticas de Nielsen (1994): visibilidad del estado, lenguaje del usuario, control y libertad, consistencia y prevención de errores.",
+            "Además: reconocer antes que recordar, flexibilidad, diseño minimalista, ayuda para recuperarse de errores y documentación.",
+            "Evaluación heurística: tres a cinco evaluadores revisan de forma independiente, clasifican la gravedad de cada problema y consolidan.",
+            "Accesibilidad WCAG 2.2 nivel AA desde el diseño: contraste, navegación por teclado, etiquetas y mensajes de error comprensibles."
+          ],
+          "notes": "Presente las heurísticas de Nielsen como una herramienta de inspección económica que complementa las pruebas con usuarios. Recorra las diez con ejemplos de sistemas peruanos conocidos por los estudiantes: un formulario estatal que borra todos los datos si un campo tiene error viola la prevención y recuperación de errores; un punto de venta que exige recordar códigos de productos viola reconocer antes que recordar; un mensaje que dice «error 500» no habla el lenguaje del usuario. Explique el procedimiento de evaluación heurística: varios evaluadores independientes, escala de gravedad de cero a cuatro y consolidación. Retome la accesibilidad trabajada en Desarrollo Web y explique que, en la etapa de diseño, se decide gran parte del cumplimiento: contraste de colores, orden de navegación, tamaño de los objetivos táctiles y textos alternativos. Pida que cada equipo realice una evaluación heurística del prototipo de otro equipo y entregue un informe con los cinco problemas más graves y sus recomendaciones."
+        },
+        {
+          "title": "Revisión del diseño y validación de la arquitectura",
+          "bullets": [
+            "ATAM (Kazman y colaboradores, SEI): árbol de utilidad, análisis de enfoques, puntos de sensibilidad, compromisos, riesgos y no riesgos.",
+            "Versión ligera para equipos pequeños: recorrer los escenarios prioritarios sobre los diagramas C4 y verificar qué táctica los satisface.",
+            "Verificación de consistencia: requisitos con diseño, dominio con datos, estados con API y escenarios con decisiones registradas.",
+            "Matriz de trazabilidad final: objetivo, requisito, elemento de diseño, decisión arquitectónica y prueba de aceptación."
+          ],
+          "notes": "Explique que un diseño no está terminado hasta que ha sido revisado por alguien distinto a su autor. Presente el método ATAM del Instituto de Ingeniería de Software como referencia formal: reúne a interesados y arquitectos, construye el árbol de utilidad y analiza cómo cada enfoque arquitectónico responde a los escenarios, identificando puntos de sensibilidad, donde una decisión afecta un atributo, y puntos de compromiso, donde afecta a varios en sentidos opuestos. Proponga una versión ligera para los proyectos del curso: en una sesión de una hora, otro equipo recorre los cinco escenarios principales y pregunta cómo responde la arquitectura a cada uno. Presente una lista de verificación de consistencia entre modelos y explique que los errores más frecuentes son entidades del modelo de datos que no existen en el dominio, operaciones de la API sin caso de uso que las justifique y transiciones de estado no implementadas. Recuerde que Auditoría y Calidad de Sistemas, en el sexto ciclo, formalizará estas revisiones."
+        },
+        {
+          "title": "El documento de análisis y diseño y su sustentación",
+          "bullets": [
+            "Plantilla arc42 (Starke y Hruschka): metas, restricciones, contexto, estrategia, bloques, ejecución, despliegue, conceptos, decisiones, calidad, riesgos y glosario.",
+            "Documento del curso: caso de negocio, procesos, requisitos, modelos de análisis, arquitectura, diseño detallado, interacción y trazabilidad.",
+            "Sustentación: problema y valor, decisiones clave con alternativas, recorrido de un escenario de punta a punta y riesgos abiertos.",
+            "Prepare respuestas a preguntas de compromiso: ¿qué sacrificaron?, ¿qué cambiarían con el doble de presupuesto?"
+          ],
+          "notes": "Presente la plantilla arc42 como un estándar de facto para documentar arquitecturas, usado por muchas organizaciones, y muestre cómo el documento del curso integra lo producido en las cuatro tareas. Insista en que la documentación debe servir a sus lectores: el gerente lee el caso de negocio y el contexto; el desarrollador, los modelos y las decisiones; el auditor, la trazabilidad. Explique la estructura de la sustentación final: en quince minutos, el equipo presenta el problema y el valor esperado, las tres decisiones más importantes con sus alternativas, y recorre un escenario completo desde el proceso BPMN hasta la API y la arquitectura, demostrando trazabilidad. Luego el panel pregunta de forma individual. Practique con preguntas difíciles: ¿qué requisito no funcional les costó más satisfacer?, ¿qué riesgo no han resuelto?, ¿qué decisión revertirían? Recalque que reconocer limitaciones con argumentos demuestra madurez profesional y que el documento será la base del Proyecto Integrador de Software del sexto ciclo."
+        }
+      ],
+      "reading": {
+        "title": "Arquitectura guiada por atributos de calidad: escenarios, estilos y decisiones documentadas",
+        "minutes": 40,
+        "content": "## La arquitectura responde a la calidad, no a las funciones\n\nDos sistemas con los mismos casos de uso pueden requerir arquitecturas opuestas. Lo que diferencia a un sistema de ventas para una bodega de otro para una cadena de cincuenta boticas no son sus funciones, sino sus atributos de calidad: volumen, disponibilidad, seguridad, facilidad de cambio. Por eso Bass, Clements y Kazman definen la arquitectura como el conjunto de estructuras que permiten razonar sobre el sistema, y proponen derivarla de escenarios de calidad concretos.\n\n## Escenarios y tácticas\n\nUn escenario de atributo de calidad tiene seis partes: fuente, estímulo, artefacto, entorno, respuesta y medida. Para una botica en Tumbes, un escenario de disponibilidad sería: un cajero (fuente) registra una venta (estímulo) en el punto de venta (artefacto) mientras la tienda lleva ocho horas sin Internet (entorno); la venta se completa, el comprobante se firma localmente y su envío queda en cola (respuesta); el 100 % de las ventas queda registrado y sincronizado en menos de diez minutos tras recuperar la conexión (medida).\n\nCada escenario se satisface con tácticas: operación sin conexión, reintentos, redundancia, caché, colas, cifrado o intermediarios. Los cálculos de disponibilidad ayudan a decidir:\n\n~~~text\nA = MTBF / (MTBF + MTTR)\n99,9 %  → 0,001 × 8 760 h = 8,76 h de indisponibilidad al año\nSerie:    A = A1 × A2 × A3\n          0,999 × 0,999 × 0,98 (enlace) ≈ 0,978 → ~193 h/año\nParalelo: A = 1 − (1 − A1)(1 − A2)\n          dos enlaces de 0,98 → 0,9996; total ≈ 0,9976 → ~21 h/año\n~~~\n\nEl cálculo muestra que, en provincias con conectividad intermitente, ninguna inversión en servidores compensa un enlace frágil; la táctica decisiva es eliminar la dependencia mediante operación sin conexión.\n\n## Estilos arquitectónicos\n\nEl estilo en capas separa presentación, aplicación, dominio e infraestructura. La arquitectura hexagonal de Alistair Cockburn da un paso más: el dominio declara puertos y la tecnología se conecta mediante adaptadores, de modo que la base de datos, el operador de servicios electrónicos o la pasarela de pagos pueden cambiarse sin tocar las reglas de negocio.\n\nLa elección entre monolito modular y microservicios merece especial cuidado. Lewis y Fowler describen los microservicios como servicios desplegables de forma independiente, organizados por capacidades de negocio y con datos propios. Sus beneficios son reales, pero también sus costos: red no confiable, consistencia eventual, observabilidad distribuida y exigencias de operación. La Ley de Conway recuerda que la estructura del sistema tiende a reflejar la de la organización: un equipo de cinco personas difícilmente opera nueve servicios. Para la mayoría de organizaciones peruanas medianas, un monolito modular con límites estrictos entre módulos y mensajería para las integraciones asíncronas es un punto de partida más prudente.\n\n## Documentar con C4 y registros de decisiones\n\nEl modelo C4 de Simon Brown ofrece cuatro niveles: contexto, contenedores, componentes y código. La biblioteca estándar de PlantUML incluye C4-PlantUML, lo que permite versionar los diagramas:\n\n~~~plantuml\n@startuml\n!include <C4/C4_Container>\nPerson(cajero, \"Cajero\", \"Registra ventas en la botica\")\nSystem_Boundary(ns, \"Plataforma comercial\") {\n  Container(pos, \"Punto de venta\", \"Escritorio, base local cifrada\", \"Vende y firma comprobantes sin conexión\")\n  Container(nucleo, \"Núcleo comercial\", \"Java, monolito modular\", \"Ventas, inventario, clientes y facturación\")\n  ContainerDb(bd, \"Base central\", \"PostgreSQL\", \"Stock consolidado y ventas\")\n}\nSystem_Ext(ose, \"Operador de servicios electrónicos\", \"Valida comprobantes y devuelve la CDR\")\nRel(cajero, pos, \"Usa\")\nRel(pos, nucleo, \"Sincroniza ventas\", \"HTTPS/JSON\")\nRel(nucleo, bd, \"Lee y escribe\", \"SQL\")\nRel(nucleo, ose, \"Envía XML UBL 2.1 firmado\", \"HTTPS, asíncrono\")\n@enduml\n~~~\n\nLos diagramas dicen qué se decidió; los registros de decisiones arquitectónicas de Michael Nygard dicen por qué:\n\n~~~markdown\n# ADR-003: Monolito modular con punto de venta sin conexión\nEstado: Aceptada\nContexto: 48 tiendas con enlaces inestables; equipo de 5 personas;\npresupuesto de S/ 380 000; escenario prioritario de venta sin Internet.\nDecisión: núcleo como monolito modular; punto de venta con base local\ny sincronización por cola; facturación encapsulada tras un puerto.\nAlternativas descartadas: nueve microservicios en orquestador de\ncontenedores (costo operativo y falta de experiencia del equipo).\nConsecuencias: despliegue simple; escalado conjunto; conflictos de\nsincronización de stock que requieren reglas de resolución explícitas.\n~~~\n\n## Integraciones y validación\n\nLas integraciones externas son el punto de cambio más probable: la facturación electrónica en UBL 2.1 con envío a la SUNAT o a un OSE, las pasarelas de pago con tokenización y la interoperabilidad con entidades públicas. Encapsularlas tras puertos y capas anticorrupción protege el dominio. Finalmente, el diseño se valida con prototipos probados con usuarios, evaluación heurística y una revisión arquitectónica inspirada en ATAM que recorre los escenarios prioritarios.\n\n## Ideas clave\n\nUna buena arquitectura no es la más moderna, sino la que satisface los escenarios prioritarios con el menor costo y riesgo para la organización, y deja documentado por qué."
+      },
+      "case": {
+        "title": "Caso: Boticas Norte Salud y la decisión de arquitectura",
+        "content": "**Boticas Norte Salud S.A.C.** es una cadena regional con 48 boticas en Piura, Lambayeque y Tumbes. Registra unas 16 000 ventas diarias y en 2025 lanzó una tienda en línea con reparto a domicilio en Piura y Chiclayo.\n\n## La situación tecnológica\n\nCada botica usa un punto de venta de escritorio desarrollado hace diez años, con base de datos local y sincronización nocturna con la oficina central. La emisión de comprobantes electrónicos se hace mediante un operador de servicios electrónicos. Los problemas se acumulan:\n\n- El stock consolidado tiene un día de retraso. El 8 % de los pedidos en línea se cancela porque el producto ya no estaba disponible.\n- En 2025 se registraron 310 cortes de Internet de más de 30 minutos en las tiendas; en temporada de lluvias, algunas boticas de Piura y Tumbes quedaron sin conexión varios días. Durante los cortes se usan comprobantes físicos de contingencia que luego deben regularizarse.\n- La trazabilidad de lotes y fechas de vencimiento es manual, y los productos que requieren receta médica se registran sin vincular la receta a la venta.\n- La gerencia comercial quiere abrir 20 tiendas más en dos años.\n\n## Las propuestas\n\nUn **consultor externo** propone una arquitectura de nueve microservicios en un orquestador de contenedores, con comunicación por eventos y una aplicación web para el punto de venta. Estima diez meses y S/ 520 000. Sostiene que «es lo que usan las grandes cadenas y permitirá escalar sin límites».\n\nEl **desarrollador senior** de la empresa propone un monolito modular en la nube, con un punto de venta que funciona sin conexión mediante una base local cifrada y sincronización por cola de mensajes, y la facturación encapsulada en un módulo propio. Estima seis meses y S/ 300 000.\n\nUn **proveedor de software comercial** ofrece una plataforma en la nube para farmacias a S/ 1 100 mensuales por tienda, con implementación en tres meses, pero su punto de venta es web y no opera sin conexión.\n\n## Restricciones\n\nEl presupuesto aprobado es de S/ 380 000. El equipo interno tiene cinco desarrolladores con experiencia en Java y PostgreSQL; ninguno ha operado orquestadores de contenedores en producción. La química farmacéutica directora técnica exige registrar lote, vencimiento y receta en las ventas de productos controlados. El oficial de datos personales advierte que las recetas contienen datos de salud, sensibles según la Ley 29733.\n\n## La decisión\n\nEl gerente general debe elegir en un mes. Pide al equipo de análisis un documento breve con escenarios de calidad priorizados, una comparación de alternativas y una recomendación documentada, y quiere saber qué se pierde con cada opción.",
+        "questions": [
+          "Redacte los cuatro escenarios de atributos de calidad más importantes del caso, con sus seis partes, y priorícelos en un árbol de utilidad.",
+          "Calcule la disponibilidad aproximada de la venta en una tienda con un enlace de 98 % bajo cada propuesta. ¿Qué táctica marca la diferencia?",
+          "Compare las tres alternativas frente a los escenarios, el presupuesto, el costo total a cinco años y las capacidades del equipo. ¿Cuál recomienda?",
+          "Redacte el registro de decisión arquitectónica de su recomendación, incluidas alternativas descartadas y consecuencias negativas.",
+          "¿Qué requisitos de diseño derivan de la facturación electrónica, de la Ley 29733 y del control de recetas y lotes?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Documento de análisis y diseño integrado y sustentación",
+        "instructions": "**Objetivo:** integrar el trabajo del semestre en un documento de análisis y diseño completo, coherente y trazable, que un equipo de desarrollo pueda usar para construir el sistema, y sustentarlo ante un panel técnico.\n\n**Contenido mínimo del documento (basado en arc42)**\n\n1. Contexto, objetivos medibles y caso de negocio actualizado (Tarea 1).\n2. Procesos BPMN actuales y propuestos.\n3. Requisitos priorizados, reglas de negocio y criterios de aceptación (Tarea 2).\n4. Modelos de análisis y diseño, modelo de datos y contrato OpenAPI (Tarea 3).\n5. **Arquitectura:** cinco escenarios de atributos de calidad priorizados en un árbol de utilidad, tácticas aplicadas, diagramas C4 de contexto, contenedores y componentes, y diagrama de despliegue.\n6. **Decisiones:** al menos tres registros de decisiones arquitectónicas con alternativas evaluadas, uno sobre una integración externa.\n7. **Interacción:** prototipo navegable de los flujos principales, evaluado con al menos cinco usuarios o mediante evaluación heurística, con hallazgos y cambios realizados.\n8. **Revisión:** informe de la revisión arquitectónica hecha por otro equipo y respuesta a sus observaciones.\n9. Matriz de trazabilidad final, riesgos abiertos y glosario.\n\n**Formato:** documento en el repositorio con diagramas fuente, enlace interno al prototipo y versión en PDF. Presentación de 15 minutos por equipo y preguntas individuales del panel.\n\n**Criterios:** calidad de las decisiones, documentación, validación con usuarios, coherencia global y dominio individual del diseño.",
+        "rubric": [
+          {
+            "name": "Escenarios de calidad, tácticas y registros de decisiones justificados",
+            "points": 5
+          },
+          {
+            "name": "Documentación C4 y de despliegue clara y consistente",
+            "points": 4
+          },
+          {
+            "name": "Integraciones especificadas y prototipo validado con usuarios",
+            "points": 4
+          },
+          {
+            "name": "Coherencia, revisión entre pares y trazabilidad del documento",
+            "points": 4
+          },
+          {
+            "name": "Sustentación y respuesta individual a preguntas del panel",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Arquitectura, integración e interacción",
+        "questions": [
+          {
+            "prompt": "Un sistema depende en serie de una aplicación con 99,9 %, una base de datos con 99,9 % y un enlace con 99 % de disponibilidad. ¿Cuál es la disponibilidad aproximada del conjunto?",
+            "options": [
+              "99,9 %, porque manda el componente más confiable",
+              "99,0 %, porque manda el componente menos confiable",
+              "Aproximadamente 98,8 %, porque en serie las disponibilidades se multiplican",
+              "Aproximadamente 99,6 %, el promedio de los tres valores"
+            ],
+            "correct": 2,
+            "explanation": "0,999 × 0,999 × 0,99 ≈ 0,988. En serie, cada componente añade su probabilidad de falla, por lo que el conjunto es menos disponible que su parte más débil."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes enunciados es un escenario de atributo de calidad completo?",
+            "options": [
+              "El sistema debe estar siempre disponible y ser muy rápido",
+              "Usaremos microservicios para garantizar escalabilidad ilimitada",
+              "El sistema debe registrar ventas y emitir comprobantes",
+              "Con 1 000 usuarios concurrentes en campaña, una búsqueda en la tienda en línea responde en menos de 1 s en el 95 % de los casos"
+            ],
+            "correct": 3,
+            "explanation": "Incluye estímulo, entorno, artefacto implícito, respuesta y medida. Las demás opciones son adjetivos, una solución tecnológica o un requisito funcional."
+          },
+          {
+            "prompt": "Un equipo de cinco desarrolladores sin experiencia en operación de contenedores debe construir un sistema comercial mediano. ¿Qué recomendación es más coherente con la literatura revisada?",
+            "options": [
+              "Empezar con un monolito modular de límites estrictos y separar servicios solo si un escenario lo exige",
+              "Diseñar desde el inicio un microservicio por cada entidad del modelo de dominio",
+              "Usar una sola clase controladora para todo el sistema",
+              "Evitar cualquier modularización para simplificar el despliegue"
+            ],
+            "correct": 0,
+            "explanation": "Fowler recomienda empezar por el monolito y la Ley de Conway advierte que la arquitectura debe ser operable por la organización; los límites modulares preservan la opción de separar."
+          },
+          {
+            "prompt": "En el diseño de la integración con el operador de servicios electrónicos, ¿qué decisión evita que una caída del operador detenga las ventas?",
+            "options": [
+              "Enviar el comprobante de forma síncrona y bloquear la venta hasta recibir la CDR",
+              "Registrar el comprobante y encolar su envío con reintentos e idempotencia por serie y número",
+              "Desactivar la emisión electrónica durante las horas punta",
+              "Guardar los comprobantes solo en la base de datos local sin enviarlos"
+            ],
+            "correct": 1,
+            "explanation": "La cola desacopla la venta de la disponibilidad del operador; los reintentos e identificadores únicos aseguran el envío sin duplicados y dentro del plazo."
+          },
+          {
+            "prompt": "Un ADR aceptado hace un año ya no es válido porque cambió el contexto. ¿Qué práctica corresponde según Nygard?",
+            "options": [
+              "Editar el ADR original para que refleje la nueva decisión",
+              "Eliminar el ADR del repositorio para evitar confusiones",
+              "Crear un nuevo ADR que reemplace al anterior y marcar el original como sustituido",
+              "Registrar el cambio solo en el acta de la reunión"
+            ],
+            "correct": 2,
+            "explanation": "Los ADR son inmutables: conservar el historial muestra cómo evolucionaron el contexto y las decisiones, información valiosa para el equipo futuro."
+          },
+          {
+            "prompt": "En el modelo C4, ¿qué diagrama mostraría que el sistema se comunica con el operador de servicios electrónicos y con la pasarela de pagos, para una audiencia no técnica?",
+            "options": [
+              "El diagrama de contexto",
+              "El diagrama de componentes",
+              "El diagrama de código",
+              "El diagrama de secuencia de diseño"
+            ],
+            "correct": 0,
+            "explanation": "El diagrama de contexto presenta el sistema como una caja, con sus usuarios y sistemas externos, y está pensado para todo tipo de audiencia."
+          },
+          {
+            "prompt": "Un formulario de trámite borra todos los datos ingresados cuando un campo tiene un error. ¿Qué heurística de Nielsen vulnera de forma más directa?",
+            "options": [
+              "Diseño estético y minimalista",
+              "Ayudar a reconocer, diagnosticar y recuperarse de errores",
+              "Flexibilidad y eficiencia de uso",
+              "Ayuda y documentación"
+            ],
+            "correct": 1,
+            "explanation": "El usuario no puede recuperarse del error sin rehacer todo el trabajo; el diseño debería conservar los datos y señalar con claridad el campo a corregir."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Pensamiento sistémico, sistemas de información y rol del analista según el BABOK",
+      "activity": "Sesión de diagnóstico; análisis CATWOE de una organización peruana en salas pequeñas; conformación de equipos y elección de la organización del proyecto.",
+      "evidence": "Definición raíz CATWOE y ficha del proyecto"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Ciclos de vida: cascada, modelo en V, Proceso Unificado, enfoques ágiles y criterios de elección",
+      "activity": "Aula invertida con la lectura de la unidad; debate por salas sobre el ciclo de vida adecuado para cuatro proyectos según Boehm y Turner.",
+      "evidence": "Justificación escrita del ciclo de vida del proyecto"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Modelado BPMN 2.0 de la situación actual y análisis cuantitativo del proceso",
+      "activity": "Taller de modelado en Bizagi Modeler; entrevista y observación en la organización; discusión del caso Distribuidora Los Andes en el foro.",
+      "evidence": "Modelo BPMN actual y participación en el foro del caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Rediseño del proceso, estudio de factibilidad y caso de negocio con VAN y TIR",
+      "activity": "Laboratorio de caso de negocio en hoja de cálculo con escenario pesimista; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Interesados, matriz de poder e interés y técnicas de educción",
+      "activity": "Entrevista simulada con el docente en el rol de cliente; práctica de los cinco porqués; elaboración del plan de educción del proyecto.",
+      "evidence": "Matriz de interesados y guía de entrevista"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Requisitos funcionales y no funcionales, reglas de negocio, ISO/IEC 25010 y normativa peruana",
+      "activity": "Clasificación de enunciados de un acta de entrevista; reescritura de requisitos ambiguos como requisitos medibles; discusión del caso Clínica Santa Rosa en el foro.",
+      "evidence": "Catálogo de requisitos no funcionales y foro del caso"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Historias de usuario INVEST, criterios de aceptación en Gherkin y casos de uso en formato extendido",
+      "activity": "Taller de división de épicas y redacción de escenarios Gherkin; revisión cruzada de casos de uso entre equipos.",
+      "evidence": "Historias con escenarios y casos de uso revisados"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Priorización con MoSCoW, mapeo de historias, estimación y trazabilidad",
+      "activity": "Construcción del mapa de historias y estimación por puntos de caso de uso; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "UML 2.5, modelado como código con PlantUML y modelo de dominio",
+      "activity": "Demostración de PlantUML; construcción guiada del modelo de dominio de una cooperativa; detección de errores en un modelo defectuoso.",
+      "evidence": "Modelo de dominio del proyecto en el repositorio"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Diagramas de secuencia del sistema, contratos de operación, actividad y máquina de estados",
+      "activity": "Modelado en parejas de secuencias del sistema y estados; discusión del caso Cooperativa San Cristóbal en el foro.",
+      "evidence": "Diagramas de comportamiento y foro del caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Patrones GRASP, diagramas de secuencia de diseño y diagrama de clases en capas",
+      "activity": "Revisión de diseño entre pares justificando cada responsabilidad con GRASP; refactorización en el modelo de una clase sobrecargada.",
+      "evidence": "Diagramas de diseño con justificación GRASP"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Del modelo de clases al modelo de datos y al contrato OpenAPI",
+      "activity": "Laboratorio de mapeo objeto-relacional y redacción del contrato OpenAPI; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Escenarios de calidad, tácticas, cálculo de disponibilidad y estilos arquitectónicos",
+      "activity": "Construcción del árbol de utilidad del proyecto; debate entre monolito modular y microservicios con el caso Boticas Norte Salud.",
+      "evidence": "Árbol de utilidad y participación en el debate"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Modelo C4, despliegue, registros de decisiones e integraciones externas",
+      "activity": "Taller de C4-PlantUML; redacción de registros de decisiones; diseño de la integración con facturación electrónica y pagos digitales.",
+      "evidence": "Diagramas C4 y tres ADR en el repositorio"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Diseño de la interacción, prototipos, heurísticas de usabilidad y revisión arquitectónica",
+      "activity": "Pruebas remotas del prototipo con usuarios; evaluación heurística cruzada; revisión arquitectónica ligera entre equipos.",
+      "evidence": "Informe de pruebas y de revisión arquitectónica"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Integración del documento de análisis y diseño y sustentación final",
+      "activity": "Sustentación por equipos ante panel técnico con preguntas individuales; entrega de la Tarea 4, resolución del Cuestionario 4 y prueba final de caso.",
+      "evidence": "Tarea 4, Cuestionario 4 y sustentación"
+    }
+  ]
+}

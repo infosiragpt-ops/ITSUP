@@ -1,0 +1,1322 @@
+{
+  "name": "Desarrollo de Aplicaciones Móviles",
+  "slug": "desarrollo-de-aplicaciones-moviles",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Desarrollo de Aplicaciones Móviles es un curso de formación específica, de naturaleza teórico-práctica, del cuarto ciclo de la carrera de Computación e Informática (código CEI-402). Su propósito es que el estudiante diseñe, construya, pruebe y publique aplicaciones móviles nativas para Android que resuelvan necesidades reales de organizaciones peruanas, con calidad, seguridad y buen desempeño en equipos de gama media y redes inestables. Se trabaja con Kotlin y Jetpack Compose según la arquitectura recomendada por Android. Comprende cuatro unidades: ecosistema móvil, plataforma Android, lenguaje Kotlin y elección de la estrategia de desarrollo; interfaces declarativas con Compose, Material Design 3, navegación y accesibilidad; arquitectura por capas con ViewModel, corrutinas, Retrofit y Room para operar sin conexión; y pruebas, seguridad según el OWASP MASVS y la Ley 29733, rendimiento y publicación en Google Play, que culminan en un proyecto integrador. Construye sobre Programación Orientada a Objetos, Algoritmos y Estructuras de Datos, Base de Datos y Desarrollo Web, y prepara Seguridad Informática, Desarrollo de Software Empresarial y el Proyecto Integrador de Software.",
+  "competency": "Desarrolla aplicaciones móviles nativas para Android con Kotlin y Jetpack Compose —interfaces accesibles y adaptables, arquitectura por capas, consumo de servicios REST y persistencia local con funcionamiento sin conexión—, aplicando pruebas automatizadas, controles de seguridad del OWASP MASVS y la normativa peruana de protección de datos personales, hasta publicarlas en Google Play para resolver necesidades reales de organizaciones.",
+  "capacities": [
+    "Analiza el ecosistema móvil y la arquitectura de la plataforma Android, selecciona con criterios técnicos y económicos la estrategia de desarrollo (nativa, multiplataforma o web progresiva) y programa en Kotlin aprovechando la seguridad frente a nulos y el estilo funcional.",
+    "Diseña e implementa interfaces declarativas con Jetpack Compose y Material Design 3, gestionando el estado, la navegación entre pantallas, la adaptación a distintos tamaños de ventana y la accesibilidad para todas las personas usuarias.",
+    "Estructura aplicaciones con la arquitectura recomendada por Android —capas de interfaz, dominio y datos— usando ViewModel, corrutinas, Flow, Retrofit, Room, DataStore, WorkManager e inyección de dependencias para operar de forma confiable con o sin conexión.",
+    "Asegura la calidad de la aplicación mediante pruebas automatizadas, medición del rendimiento y controles de seguridad y privacidad, y la publica en Google Play con firma, integración continua y monitoreo de la estabilidad posterior al lanzamiento."
+  ],
+  "indicators": [
+    "Justifica en un informe técnico la estrategia de plataforma de un caso real mediante una matriz de decisión ponderada que compara audiencia, costo total, rendimiento, acceso al hardware y competencias del equipo.",
+    "Escribe código Kotlin idiomático con tipos anulables, clases de datos, clases selladas, funciones de extensión y lambdas, que compila sin advertencias y sin usos injustificados del operador !!.",
+    "Construye pantallas en Compose con estado elevado, listas perezosas con claves estables, navegación tipada y tema de Material 3, que funcionan con TalkBack, letra al 200 % y objetivos táctiles de 48 dp.",
+    "Implementa un ViewModel que expone un StateFlow de estado inmutable y coordina un repositorio que combina Retrofit y Room, mostrando estados de carga, vacío, error y contenido.",
+    "Demuestra en modo avión que la aplicación conserva los registros creados sin conexión y los sincroniza con WorkManager, sin duplicados ni pérdidas, al restablecerse la red.",
+    "Alcanza al menos 70 % de cobertura en las capas de dominio y datos con pruebas unitarias y de interfaz, y corrige los hallazgos de una revisión de seguridad basada en el OWASP MASVS.",
+    "Publica en un canal de prueba de Google Play un Android App Bundle firmado, con política de privacidad y formulario de seguridad de los datos coherentes con la Ley 29733."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, las diapositivas y un microlaboratorio guiado en Android Studio; en la sesión se analiza un caso de una organización peruana mediante el método de casos y se resuelven retos de codificación en vivo con programación en pareja en salas paralelas. El aprendizaje basado en proyectos articula las cuatro unidades: cada equipo construye, por entregas incrementales en un repositorio Git, una aplicación Android para una organización real o verosímil, que se prueba en equipos de gama media y con conectividad limitada. La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, revisión de código entre pares con rúbrica, reportes automáticos de pruebas y análisis estático, y retroalimentación del docente en cada solicitud de integración.",
+  "bibliography": [
+    "Sills, B., Gardner, B., Marsicano, K. y Stewart, C. (2022). Android programming: The Big Nerd Ranch guide (5th ed.). Big Nerd Ranch.",
+    "Jemerov, D. y Isakova, S. (2017). Kotlin in action. Manning Publications.",
+    "Moskała, M. (2022). Kotlin coroutines: Deep dive. Kt. Academy.",
+    "Meier, R. y Lake, I. (2018). Professional Android (4th ed.). Wrox.",
+    "Martin, R. C. (2017). Clean architecture: A craftsman's guide to software structure and design. Prentice Hall.",
+    "Cohn, M. (2009). Succeeding with agile: Software development using Scrum. Addison-Wesley.",
+    "Neil, T. (2014). Mobile design pattern gallery: UI patterns for smartphone apps (2nd ed.). O'Reilly Media.",
+    "Wroblewski, L. (2011). Mobile first. A Book Apart.",
+    "OWASP Foundation. (2023). OWASP Mobile Application Security Verification Standard (MASVS) v2.0. OWASP Foundation.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 35,
+      "description": "Cuestionarios de las cuatro unidades, tareas 1 a 3, laboratorios semanales y participación argumentada en los foros de casos, valorados con rúbricas y retroalimentación oportuna."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Proyecto integrador: aplicación Android desarrollada en equipo por entregas incrementales, con pruebas, controles de seguridad y publicación en un canal de prueba de Google Play, calificada con la rúbrica de la Tarea 4."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación técnica individual del proyecto con modificación de código en vivo y prueba práctica supervisada de desarrollo móvil en línea."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Ecosistema móvil, plataforma Android y lenguaje Kotlin",
+      "description": "Al finalizar la unidad, el estudiante explica la arquitectura de la plataforma Android y el ciclo de vida de sus componentes, decide con una matriz ponderada la estrategia de desarrollo más adecuada para un caso peruano y escribe programas idiomáticos en Kotlin dentro de un proyecto de Android Studio gestionado con Gradle y Git.",
+      "topics": [
+        "Ecosistema móvil: mercado peruano, restricciones de los dispositivos y modelos de distribución",
+        "Estrategias de desarrollo: nativa, multiplataforma y aplicación web progresiva",
+        "Arquitectura de Android: núcleo Linux, ART, marco de aplicaciones y componentes",
+        "Kotlin para programadores Java: nulabilidad, clases de datos y selladas, lambdas y extensiones",
+        "Android Studio, Gradle, manifiesto, recursos, permisos y ciclo de vida de la actividad",
+        "Depuración con Logcat, emulador y ADB; control de versiones con Git"
+      ],
+      "slides": [
+        {
+          "title": "Por qué móvil: el contexto peruano y latinoamericano",
+          "bullets": [
+            "Según el INEI, más del 90 % de los hogares peruanos tiene al menos un teléfono celular; para muchas familias es el único acceso a internet.",
+            "Android equipa a alrededor de ocho de cada diez teléfonos en uso en el Perú según StatCounter; iOS se concentra en segmentos de mayor ingreso.",
+            "Billeteras como Yape y Plin, con millones de usuarios, mostraron que una buena app móvil puede incluir financieramente a población antes no bancarizada.",
+            "Restricciones reales del público objetivo: equipos de gama de entrada con 2 a 4 GB de RAM, planes de datos prepago y cobertura irregular fuera de las ciudades."
+          ],
+          "notes": "Abra la sesión con una pregunta: ¿cuántas aplicaciones usaron hoy antes de conectarse a esta clase? Luego contraste esa experiencia urbana con la de un productor de Puno o una comerciante de Pucallpa, para quienes el celular es a menudo el único dispositivo con internet. Explique que las cifras del INEI sobre tenencia de celulares y las de StatCounter sobre sistemas operativos no son datos decorativos: definen para quién se diseña. El predominio de Android en el Perú justifica que el curso se centre en esa plataforma, sin ignorar iOS. Use el ejemplo de las billeteras digitales: su éxito se explica tanto por la tecnología como por la comprensión del usuario (montos pequeños, interoperabilidad, confianza). Pregunta para la clase: ¿qué servicio público o privado de su región todavía no tiene una aplicación móvil útil y por qué creen que es así?"
+        },
+        {
+          "title": "Restricciones del entorno móvil que condicionan el diseño",
+          "bullets": [
+            "Memoria: el sistema finaliza procesos en segundo plano sin aviso; la app debe poder restaurar su estado al volver.",
+            "Batería: cada activación de la radio celular consume energía; conviene agrupar las solicitudes de red y diferir lo no urgente.",
+            "Red: latencia variable, pérdida de paquetes y zonas sin señal; diseñar para fallar con elegancia y trabajar sin conexión.",
+            "Interrupciones: llamadas, rotación, multiventana y cambio de idioma; la app no controla su propio ciclo de vida.",
+            "Diversidad de pantallas: desde teléfonos de 360 dp de ancho hasta plegables y tabletas."
+          ],
+          "notes": "Esta diapositiva sostiene todo el curso: casi cada decisión técnica posterior responde a una de estas restricciones. Explique que Android puede finalizar el proceso de una app en segundo plano cuando necesita memoria, sin avisarle; por eso, en la Unidad 3, el estado se guardará en el ViewModel y en almacenamiento persistente. Relacione la batería con la red: encender la radio celular para una sola solicitud pequeña cuesta casi lo mismo que para varias agrupadas, de ahí que la sincronización se programe con WorkManager. Mencione que en el Perú todavía circulan muchos equipos de gama de entrada con poca memoria y versiones de Android de varios años de antigüedad. Pida a los estudiantes que revisen en su propio teléfono la versión de Android, la RAM y el almacenamiento libre, y que compartan los datos en el foro para construir un perfil real del dispositivo objetivo del curso."
+        },
+        {
+          "title": "Estrategias de desarrollo: nativa, multiplataforma y web progresiva",
+          "bullets": [
+            "Nativa: Kotlin y Compose en Android, Swift y SwiftUI en iOS; máximo rendimiento y acceso inmediato a nuevas API, con dos bases de código.",
+            "Multiplataforma con motor propio: Flutter (Dart) dibuja su interfaz y garantiza la misma apariencia en ambas plataformas.",
+            "Multiplataforma con componentes nativos: React Native (JavaScript o TypeScript) y Kotlin Multiplatform para compartir la lógica de negocio.",
+            "Aplicación web progresiva: HTML, CSS y JavaScript con service workers; se instala sin tienda, pero su acceso al hardware es limitado, sobre todo en iOS."
+          ],
+          "notes": "Presente las cuatro familias sin sesgo comercial. La opción nativa ofrece el mejor rendimiento y acceso inmediato a cada nueva API del sistema, pero duplica el esfuerzo si también se necesita iOS. Flutter dibuja su propia interfaz con un motor gráfico, lo que asegura consistencia visual; React Native reutiliza el conocimiento de JavaScript que el estudiante adquirió en Desarrollo Web. Kotlin Multiplatform permite compartir la lógica y, opcionalmente, la interfaz con Compose Multiplatform, conservando código nativo donde conviene. La web progresiva es la vía más barata, aunque su soporte en iOS es más limitado y no aparece de forma natural en las tiendas. Aclare que el curso usa Kotlin y Compose porque sus conceptos (estado declarativo, corrutinas, arquitectura por capas) se transfieren a cualquier otra opción. Pregunta: ¿qué estrategia elegirían para la app de una municipalidad distrital con presupuesto reducido y por qué?"
+        },
+        {
+          "title": "Matriz de decisión ponderada para elegir la estrategia",
+          "bullets": [
+            "Criterios típicos: audiencia por plataforma, rendimiento requerido, acceso a hardware (cámara, NFC, Bluetooth), trabajo sin conexión, presupuesto y plazo.",
+            "Competencias del equipo y del mercado laboral local: costo de contratar, capacitar y retener especialistas.",
+            "Costo total de propiedad: las actualizaciones anuales de Android e iOS exigen mantenimiento continuo, que a lo largo de la vida útil supera al desarrollo inicial.",
+            "Procedimiento: fijar pesos que sumen 100 % antes de evaluar, puntuar cada alternativa de 1 a 5 con evidencia y calcular el puntaje ponderado.",
+            "Análisis de sensibilidad: si variar un peso en diez puntos invierte el resultado, la decisión es frágil."
+          ],
+          "notes": "Modele en vivo una matriz de decisión ponderada, técnica clásica de análisis multicriterio que el estudiante usará en la Tarea 1. Primero se definen los criterios y sus pesos con los interesados, antes de mirar las alternativas, para evitar justificar una preferencia previa. Luego se puntúa cada alternativa de 1 a 5 con evidencia: por ejemplo, si la app debe leer tarjetas por NFC en cualquier teléfono, la web progresiva obtiene una nota baja. Insista en el costo total de propiedad: cada año Android e iOS publican versiones que obligan a actualizar dependencias y adaptar comportamientos, y ese mantenimiento recurrente pesa más que el desarrollo inicial. Termine con el análisis de sensibilidad: si un cambio pequeño de pesos invierte el resultado, la decisión necesita más información antes de comprometer el presupuesto. Pregunta: ¿qué criterio suele omitirse en estas decisiones y luego resulta decisivo?"
+        },
+        {
+          "title": "Arquitectura de la plataforma Android",
+          "bullets": [
+            "Núcleo Linux: procesos, memoria, controladores y aislamiento; cada aplicación se ejecuta con su propio usuario del sistema (sandbox).",
+            "Capa de abstracción de hardware (HAL) y bibliotecas nativas en C y C++, como SQLite y OpenGL ES.",
+            "Android Runtime (ART): ejecuta bytecode DEX combinando compilación en tiempo de ejecución y anticipada guiada por perfiles; reemplazó a Dalvik en Android 5.0.",
+            "Marco de aplicaciones: servicios del sistema para actividades, paquetes, ubicación, notificaciones y ventanas, accesibles desde Kotlin y Java."
+          ],
+          "notes": "Dibuje la pila de abajo hacia arriba. El núcleo Linux aporta el aislamiento: cada aplicación recibe un identificador de usuario propio y no puede leer los archivos de otra, base del modelo de seguridad que retomaremos en la Unidad 4. La capa de abstracción de hardware permite que el mismo Android funcione en equipos de distintos fabricantes. Explique ART con calma: el código Kotlin se compila a bytecode de la JVM y luego al formato DEX; en el dispositivo, ART combina interpretación, compilación en tiempo de ejecución y compilación anticipada guiada por perfiles de uso. Por eso los perfiles de referencia que veremos al final del curso aceleran el inicio. Conecte con Arquitectura de Computadoras y Sistemas Operativos: procesos, memoria virtual y planificación reaparecen aquí en un contexto móvil. Pregunta: ¿por qué conviene que cada aplicación sea un usuario distinto del sistema?"
+        },
+        {
+          "title": "Componentes de una aplicación Android e intents",
+          "bullets": [
+            "Activity: punto de entrada con interfaz; con Compose basta normalmente una sola actividad que aloja todas las pantallas.",
+            "Service: trabajo sin interfaz; un servicio en primer plano exige una notificación visible y declarar su tipo.",
+            "BroadcastReceiver: responde a eventos del sistema; ContentProvider: comparte datos estructurados entre aplicaciones con permisos.",
+            "Intent explícito: abre un componente concreto de la propia app; intent implícito: pide una acción, como compartir o abrir un mapa."
+          ],
+          "notes": "Los cuatro componentes son los puntos de entrada que el sistema puede invocar, y todos se declaran en el manifiesto. Aclare que en una app moderna con Compose suele existir una sola actividad que aloja toda la navegación; ya no se crea una actividad por pantalla. Explique los intents con ejemplos cotidianos: un intent implícito con la acción de compartir abre el selector con WhatsApp, el correo u otras apps; uno explícito abre una pantalla concreta de la propia aplicación. Mencione que los servicios en primer plano están cada vez más restringidos y deben declarar su tipo, como ubicación o reproducción multimedia, y que para trabajo diferible se prefiere WorkManager. Pregunta para la clase: una app de delivery que debe mostrar la ubicación del repartidor mientras el cliente espera, ¿qué componente necesita y qué obligaciones le impone la plataforma?"
+        },
+        {
+          "title": "Kotlin: el lenguaje preferente para Android",
+          "bullets": [
+            "Creado por JetBrains; versión 1.0 en 2016; Google lo declaró oficial en 2017 y anunció el enfoque Kotlin primero en 2019.",
+            "Interoperable con Java: comparte bibliotecas, se compila a bytecode de la JVM y ambos lenguajes conviven en un mismo proyecto.",
+            "Nulabilidad explícita en el sistema de tipos: el compilador previene la mayoría de NullPointerException.",
+            "Concisión y expresividad: inferencia de tipos, clases de datos, funciones de orden superior y corrutinas para la asincronía."
+          ],
+          "notes": "El estudiante llega con Java desde Programación Orientada a Objetos y Algoritmos y Estructuras de Datos; Kotlin no lo reemplaza, lo extiende. Cuente la historia: JetBrains, la empresa de IntelliJ IDEA, creó Kotlin para reducir la verbosidad y los errores por nulos de Java; Google lo adoptó oficialmente en 2017 y en 2019 anunció que el desarrollo Android sería Kotlin primero, de modo que las nuevas bibliotecas de Jetpack se diseñan pensando en él. Destaque la interoperabilidad: un proyecto puede mezclar archivos Java y Kotlin, y las bibliotecas Java existentes siguen sirviendo. Muestre un mismo modelo escrito en ambos lenguajes para que el ahorro de líneas sea evidente. Pregunta: según su experiencia en POO, ¿cuántos de sus errores en tiempo de ejecución fueron NullPointerException y cómo los habría evitado el compilador?"
+        },
+        {
+          "title": "Seguridad frente a nulos en la práctica",
+          "bullets": [
+            "String no admite null; String? sí, y el compilador obliga a tratar el caso nulo antes de usar el valor.",
+            "Llamada segura ?. y operador Elvis ?: para valores por defecto: cliente?.email ?: \"sin correo\".",
+            "Conversión inteligente (smart cast): después de comprobar que x != null, el compilador trata x como no nulo.",
+            "El operador !! afirma que el valor no es nulo y lanza excepción si se equivoca; en código profesional se evita o se justifica."
+          ],
+          "notes": "Tony Hoare llamó a la referencia nula su error de mil millones de dólares; Kotlin lo aborda desde el sistema de tipos. Escriba en vivo una función que obtiene el correo de un cliente que podría no tenerlo y muestre cómo el compilador rechaza el acceso directo a una variable anulable. Practique la cadena de llamadas seguras con Elvis, por ejemplo pedido?.cliente?.distrito ?: \"Sin distrito\". Explique que la conversión inteligente evita conversiones explícitas después de una comprobación. Sea firme con el operador !!: cada uso es una promesa de que el valor nunca será nulo, y si la promesa se rompe la aplicación se cierra frente al usuario. En las revisiones de código del curso, cada !! deberá justificarse por escrito. Pregunta: ¿cuándo es legítimo que un valor sea nulo en el dominio y cuándo es señal de un mal modelado?"
+        },
+        {
+          "title": "Modelado del dominio con clases de datos y clases selladas",
+          "bullets": [
+            "data class genera equals, hashCode, toString y copy; es la base de los estados inmutables que usará Compose.",
+            "sealed interface restringe las variantes posibles; un when exhaustivo obliga a manejar todos los casos sin rama else.",
+            "enum class para conjuntos fijos de constantes con propiedades, como los tipos de comprobante.",
+            "Importes en soles con BigDecimal o en céntimos enteros, nunca con Double, para evitar errores de redondeo."
+          ],
+          "notes": "Esta diapositiva conecta con el modelado de dominio de POO. Muestre una data class Producto con código, nombre y precio y explique que copy permite crear versiones modificadas sin mutar el original, base del estado inmutable que usaremos en Compose. Luego introduzca las clases selladas como la forma de representar alternativas cerradas: un pago puede estar Pendiente, Aprobado o Rechazado con un motivo. El when exhaustivo hace que, si mañana se agrega el estado Reembolsado, el compilador señale cada lugar que debe actualizarse. Insista en usar BigDecimal o céntimos enteros para montos en soles, nunca Double, por los errores de redondeo vistos en Fundamentos de Programación. Pregunta: ¿qué estados imposibles podría representar por error una clase con tres campos independientes, cargando, error y datos, y cómo los eliminaría una clase sellada?"
+        },
+        {
+          "title": "Funciones, lambdas y funciones de extensión",
+          "bullets": [
+            "Parámetros con valor por defecto y argumentos con nombre reemplazan muchas sobrecargas de Java.",
+            "Funciones de orden superior sobre colecciones: filter, map, groupBy, sumOf, sortedByDescending y take.",
+            "Funciones de extensión: añaden comportamiento a tipos existentes, como BigDecimal.aSoles() para formatear importes.",
+            "Funciones de alcance let, apply, also, run y with: útiles con moderación; la claridad prima sobre la brevedad."
+          ],
+          "notes": "Las funciones de orden superior ya aparecieron con los streams de Java; en Kotlin son más directas. Resuelva en vivo un problema de negocio: a partir de la lista de ventas de una bodega, obtener el total por categoría con groupBy y sumOf, y los cinco productos más vendidos con sortedByDescending y take. Luego defina una función de extensión que formatee un BigDecimal como importe en soles con el símbolo S/ y dos decimales, y muestre que se invoca como si fuera un método propio del tipo. Advierta sobre el abuso de las funciones de alcance: encadenar let, also y apply produce código ingenioso pero ilegible. Relacione el costo de groupBy, que es lineal, con lo estudiado sobre tablas hash. Pregunta: ¿en qué se diferencia una función de extensión de la herencia y por qué no rompe el encapsulamiento de la clase extendida?"
+        },
+        {
+          "title": "Android Studio y el sistema de construcción Gradle",
+          "bullets": [
+            "Android Studio, basado en IntelliJ IDEA: editor, vista previa de Compose, inspector de diseño, perfilador y emulador.",
+            "Gradle con Kotlin DSL: módulos, tipos de compilación (debug y release) y catálogo de versiones libs.versions.toml.",
+            "minSdk define la versión más antigua que puede instalar la app; targetSdk, los comportamientos que asume; compileSdk, las API disponibles al compilar.",
+            "Elegir minSdk es una decisión de negocio: bajarlo amplía la audiencia, pero aumenta el código de compatibilidad y las pruebas."
+          ],
+          "notes": "Haga una demostración creando un proyecto con la plantilla de actividad vacía de Compose. Recorra el archivo libs.versions.toml y explique que centralizar versiones evita conflictos entre módulos. Aclare la diferencia entre minSdk, targetSdk y compileSdk, que suele confundirse: minSdk define quién puede instalar la app; targetSdk indica para qué versión se probó y activa los comportamientos nuevos del sistema; compileSdk determina qué API se pueden usar al compilar. Plantee la decisión de minSdk con datos: el asistente de nuevo proyecto muestra qué porcentaje aproximado de dispositivos activos cubriría cada nivel. Para un público con equipos antiguos conviene un minSdk bajo, a costa de más pruebas. Pregunta: si la mitad de los recolectores de una cooperativa usa equipos con Android 9, ¿qué minSdk propondrían y qué costo asumirían?"
+        },
+        {
+          "title": "Estructura del proyecto, recursos y manifiesto",
+          "bullets": [
+            "AndroidManifest.xml declara componentes, permisos, filtros de intents, ícono, tema y metadatos de la aplicación.",
+            "Carpeta res: cadenas, colores, íconos y recursos alternativos según idioma, densidad de pantalla y modo oscuro.",
+            "Los textos van en strings.xml y no en el código: así se traducen, por ejemplo al quechua, sin tocar la lógica.",
+            "El applicationId, por ejemplo pe.cooperativa.valleverde, identifica la app en Google Play y no puede cambiarse después de publicar."
+          ],
+          "notes": "Abra el manifiesto de un proyecto real y comente cada elemento: la etiqueta application con el ícono y el tema, la actividad principal con su filtro de intents MAIN y LAUNCHER, y los permisos declarados. Explique el sistema de recursos alternativos: el archivo de cadenas puede tener una versión por idioma y Android elige la adecuada según la configuración del dispositivo, sin cambiar una sola línea de Kotlin. Señale que separar los textos del código no solo sirve para traducir, sino que permite que el área de negocio revise la redacción. Advierta que el applicationId no puede cambiarse una vez publicado sin perder a los usuarios existentes, por lo que se decide con cuidado desde el primer día. Pregunta: ¿qué recursos deberían variar entre modo claro y oscuro, y cuáles nunca deberían hacerlo?"
+        },
+        {
+          "title": "Ciclo de vida de la actividad",
+          "bullets": [
+            "Secuencia: onCreate, onStart, onResume (primer plano), onPause, onStop y onDestroy.",
+            "Un cambio de configuración (rotación, idioma, tamaño de letra) destruye y recrea la actividad por defecto.",
+            "En segundo plano, el sistema puede finalizar el proceso; al volver, la app debe restaurar el estado guardado.",
+            "Liberar recursos costosos, como cámara, sensores o ubicación, al pasar a segundo plano para ahorrar batería."
+          ],
+          "notes": "Use un diagrama del ciclo de vida y realice el laboratorio de la semana 2: registrar en Logcat cada método y observar qué ocurre al rotar el equipo, al presionar Inicio y al volver. El hallazgo clave es que la rotación destruye la actividad y, si el estado vive en variables de la actividad, se pierde lo que el usuario escribió. Distinga dos escenarios: el cambio de configuración, que el ViewModel resuelve, y la muerte del proceso en segundo plano, que requiere estado guardado mediante rememberSaveable o SavedStateHandle. Demuestre la muerte del proceso con la opción de desarrollador que no conserva actividades o con un comando de ADB. Pregunta: un repartidor llena un formulario de entrega, recibe una llamada larga y al volver lo encuentra vacío; ¿qué falló exactamente y en qué unidad del curso lo resolveremos?"
+        },
+        {
+          "title": "Permisos y modelo de seguridad de la plataforma",
+          "bullets": [
+            "Permisos normales, como internet, se conceden al instalar; los peligrosos (ubicación, cámara, contactos) se piden en tiempo de ejecución desde Android 6.0.",
+            "Solicitar el permiso en el momento en que la función lo necesita, explicar su finalidad y degradar con elegancia si el usuario lo niega.",
+            "Minimización: preferir el selector de fotos, la ubicación aproximada o los permisos de una sola vez cuando bastan.",
+            "Coherencia con la Ley 29733: finalidad, proporcionalidad y consentimiento informado del titular de los datos."
+          ],
+          "notes": "Explique la evolución: hasta Android 5 los permisos se aceptaban todos al instalar; desde Android 6.0 los permisos peligrosos se solicitan en tiempo de ejecución y el usuario puede revocarlos en cualquier momento. Las versiones recientes añadieron permisos de una sola vez, ubicación aproximada, el selector de fotos que no requiere permiso de almacenamiento y el permiso para mostrar notificaciones desde Android 13. Enfatice la buena práctica: pedir el permiso cuando la función lo necesita, explicando el beneficio, y no todos al abrir la app. Vincule con la Ley 29733: el principio de proporcionalidad exige recoger solo los datos necesarios para la finalidad declarada. Pregunta: una app de citas médicas pide acceso a contactos, ubicación precisa y micrófono al iniciar; ¿qué riesgos legales y de experiencia de usuario genera y cómo la rediseñarían?"
+        },
+        {
+          "title": "Depuración y flujo de trabajo profesional",
+          "bullets": [
+            "Logcat con niveles de Verbose a Error y filtros por paquete; nunca registrar DNI, tokens ni otros datos personales.",
+            "Depurador con puntos de interrupción condicionales, evaluación de expresiones e inspector de diseño.",
+            "ADB: instalar compilaciones, listar dispositivos, capturar registros y simular modo sin conexión o muerte del proceso.",
+            "Git desde el primer día: .gitignore para local.properties y almacenes de claves, ramas por funcionalidad y commits descriptivos."
+          ],
+          "notes": "Cierre la unidad con los hábitos que distinguen al profesional. Muestre cómo filtrar Logcat por paquete y nivel, y advierta que los registros pueden leerse con acceso de depuración: escribir allí un DNI o un token de sesión es una fuga de datos. Practique el depurador con un error de nulos provocado a propósito y el inspector de diseño para revisar la jerarquía de la interfaz. Con ADB, instale una compilación, capture registros y active el modo avión para observar el comportamiento sin red. Revise el archivo .gitignore: local.properties y los almacenes de claves nunca deben subirse al repositorio. Pida a cada estudiante que suba su primera aplicación con al menos cinco commits significativos antes de la semana 3. Pregunta: ¿qué información de diagnóstico es aceptable registrar en producción y cuál no?"
+        }
+      ],
+      "reading": {
+        "title": "Kotlin y Android: del modelo mental de Java a la primera aplicación móvil",
+        "minutes": 35,
+        "content": "## Por qué Kotlin y por qué ahora\n\nQuien llega a este curso domina Java desde Programación Orientada a Objetos y ha medido el costo de sus algoritmos en Algoritmos y Estructuras de Datos. Kotlin no exige olvidar nada de eso: se compila al mismo bytecode, usa las mismas bibliotecas y respeta el mismo modelo de objetos. Lo que cambia es la ergonomía y, sobre todo, la cantidad de errores que el compilador detecta antes de que lleguen al usuario. Desde que Google anunció en 2019 que Android sería *Kotlin primero*, las bibliotecas de Jetpack —Compose, Room, WorkManager, Navigation— se diseñan aprovechando sus características: corrutinas, funciones de extensión y tipos anulables.\n\nEn el contexto peruano esta robustez tiene consecuencias concretas. Una aplicación de cobranza de una cooperativa que se cierra inesperadamente en medio de una operación en Juliaca no solo frustra al usuario: puede dejar registros a medias y erosionar la confianza en un canal que a la organización le costó construir.\n\n## Nulabilidad en el sistema de tipos\n\nEn Java cualquier referencia puede ser `null`. En Kotlin, la posibilidad de ausencia forma parte del tipo:\n\n```kotlin\ndata class Socio(val dni: String, val nombre: String, val celular: String?)\n\nfun contacto(socio: Socio): String {\n    // socio.celular.length   -> no compila: celular puede ser nulo\n    val celular = socio.celular ?: return \"Sin celular registrado\"\n    return \"Llamar al $celular\"   // aquí celular ya es String (conversión inteligente)\n}\n```\n\nEl operador Elvis (`?:`) ofrece un valor alternativo o, como aquí, termina la función. La llamada segura (`?.`) encadena accesos que pueden fallar: `pedido?.socio?.celular`. El operador `!!` existe para interoperar con código que el compilador no puede analizar, pero cada uso traslada el riesgo al tiempo de ejecución. Una buena regla de revisión de código es exigir una justificación escrita para cada `!!`.\n\n## Modelar el dominio con clases de datos y clases selladas\n\nLas clases de datos generan `equals`, `hashCode`, `toString` y `copy`. Las clases selladas restringen las variantes posibles de un tipo, de modo que el compilador verifica que todas se manejen:\n\n```kotlin\nimport java.math.BigDecimal\n\ndata class Acopio(val socioDni: String, val litros: BigDecimal, val precioPorLitro: BigDecimal) {\n    init { require(litros > BigDecimal.ZERO) { \"Los litros deben ser positivos\" } }\n    val importe: BigDecimal get() = litros * precioPorLitro\n}\n\nsealed interface EstadoEnvio {\n    data object Pendiente : EstadoEnvio\n    data class Sincronizado(val idServidor: Long) : EstadoEnvio\n    data class Rechazado(val motivo: String) : EstadoEnvio\n}\n\nfun etiqueta(estado: EstadoEnvio): String = when (estado) {\n    EstadoEnvio.Pendiente -> \"Por enviar\"\n    is EstadoEnvio.Sincronizado -> \"Enviado (#${estado.idServidor})\"\n    is EstadoEnvio.Rechazado -> \"Rechazado: ${estado.motivo}\"\n}   // sin else: si se agrega una variante, el compilador lo advierte\n```\n\nObserve tres decisiones profesionales. Primero, los importes usan `BigDecimal` y no `Double`, porque la representación binaria de los números de punto flotante produce errores de redondeo inaceptables cuando se trata de dinero. Segundo, el bloque `init` con `require` protege una invariante del dominio, tal como se estudió en encapsulamiento. Tercero, la clase sellada vuelve imposibles combinaciones absurdas, por ejemplo un envío que esté a la vez pendiente y rechazado.\n\n## Colecciones y funciones de orden superior\n\nKotlin distingue entre colecciones de solo lectura (`List`, `Map`) y mutables (`MutableList`). Preferir las primeras reduce errores cuando varias partes del programa comparten datos. Las funciones de orden superior expresan la intención del cálculo:\n\n```kotlin\nfun BigDecimal.aSoles(): String =\n    \"S/ \" + setScale(2, java.math.RoundingMode.HALF_UP).toPlainString()\n\nfun totalPorSocio(acopios: List<Acopio>): Map<String, BigDecimal> =\n    acopios.groupBy { it.socioDni }\n        .mapValues { (_, lista) -> lista.fold(BigDecimal.ZERO) { acc, a -> acc + a.importe } }\n\nval top3 = totalPorSocio(acopiosDelDia).entries\n    .sortedByDescending { it.value }\n    .take(3)\n    .map { \"${it.key}: ${it.value.aSoles()}\" }\n```\n\n`groupBy` recorre la lista una sola vez, con costo O(n), y agrupa en un `LinkedHashMap`, lo que conecta con lo estudiado sobre tablas hash; ordenar las entradas cuesta O(k log k), donde k es el número de socios.\n\n## Del código a la pantalla\n\nUna aplicación moderna suele tener una sola actividad que delega la interfaz en Compose:\n\n```kotlin\nclass MainActivity : ComponentActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        Log.d(\"Ciclo\", \"onCreate\")   // nunca registrar datos personales\n        setContent { CooperativaTheme { PantallaInicio() } }\n    }\n}\n```\n\n`onCreate` vuelve a ejecutarse cada vez que el sistema recrea la actividad, por ejemplo al rotar el teléfono. Por eso el estado de negocio no debe vivir en la actividad, sino en componentes diseñados para sobrevivir a esos cambios, como el `ViewModel` de la Unidad 3.\n\n## Ideas clave\n\n- La nulabilidad explícita convierte errores de ejecución en errores de compilación.\n- Las clases de datos y selladas modelan estados válidos y descartan los imposibles.\n- El dinero se representa con `BigDecimal` o en céntimos enteros, nunca con `Double`.\n- La actividad es efímera: el estado importante debe vivir fuera de ella.\n"
+      },
+      "case": {
+        "title": "Caso: Cooperativa Lechera Valle Verde, ¿qué aplicación construir?",
+        "content": "La **Cooperativa Agraria Lechera Valle Verde** (nombre ficticio) agrupa a 1 400 pequeños productores de leche de las provincias de Cajamarca, San Marcos y Celendín. Cada madrugada, 38 recolectores recorren rutas rurales para recoger la leche en porongos, medir los litros, registrar la acidez y entregar un comprobante al productor. Hoy todo se anota en cuadernos que se transcriben a una hoja de cálculo al llegar a la planta. La gerencia estima que los errores de transcripción y los reclamos por pagos incorrectos cuestan alrededor de S/ 9 000 mensuales y, peor aún, erosionan la confianza de los socios.\n\nLa cooperativa obtuvo un cofinanciamiento de S/ 140 000 de un fondo concursable de innovación y debe tener una solución operativa en seis meses. Las condiciones de campo son exigentes:\n\n- En el 60 % de las rutas no hay cobertura de datos durante gran parte del recorrido.\n- Los recolectores usan teléfonos Android de gama de entrada, con 2 a 3 GB de RAM y versiones que van de Android 9 a Android 13.\n- Varios recolectores tienen más de 50 años y poca experiencia con aplicaciones.\n- La gerencia quiere que los productores consulten sus liquidaciones quincenales desde su celular; una encuesta interna muestra que el 85 % usa Android, el 6 % iPhone y el 9 % no tiene teléfono inteligente.\n\nEl área de sistemas está formada por dos técnicos: Rosa, que domina Java y desarrolló el sistema de planillas, y Martín, que conoce JavaScript y construyó la web institucional. Un proveedor de Trujillo ofrece desarrollar una aplicación multiplataforma en Flutter por S/ 110 000, con un mantenimiento anual de S/ 25 000, pero sin transferir el código fuente. Un asesor externo recomienda una aplicación web progresiva, más barata, que podría construir Martín. Rosa propone una app nativa en Kotlin para los recolectores —con lectura de una balanza digital por Bluetooth en una segunda fase— y una consulta web sencilla para los productores.\n\nEl gerente, Ing. Walter Chávez, debe presentar la decisión al consejo de administración en dos semanas. Le preocupan tres cosas: que la aplicación funcione sin señal y no pierda ningún registro; que la cooperativa no quede atada a un proveedor; y que la solución pueda crecer, por ejemplo para integrar la balanza y emitir comprobantes electrónicos.\n\nComo analista de la cooperativa, usted debe preparar la recomendación técnica que el gerente llevará al consejo.\n",
+        "questions": [
+          "¿Qué criterios incluiría en una matriz de decisión ponderada para este caso y qué peso asignaría a cada uno? Justifique con los datos del caso.",
+          "Compare la propuesta nativa, la multiplataforma del proveedor y la web progresiva en funcionamiento sin conexión, acceso a Bluetooth y costo total de propiedad a tres años.",
+          "¿Qué minSdk recomendaría considerando los equipos de los recolectores y qué implicancias tendría para el desarrollo y las pruebas?",
+          "¿Es razonable separar la solución en una app para recolectores y otro canal para productores? ¿Qué riesgos y beneficios tiene esa división?",
+          "¿Qué cláusulas contractuales o decisiones técnicas evitarían que la cooperativa dependa de un único proveedor?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Estrategia de plataforma y núcleo del dominio en Kotlin",
+        "instructions": "**Objetivo:** fundamentar la estrategia de desarrollo de una aplicación móvil para una organización peruana real o verosímil e implementar en Kotlin el núcleo de su modelo de dominio. Esta aplicación será la base del proyecto integrador del curso.\n\n**Parte A — Informe de estrategia (máximo cuatro páginas)**\n\n1. Descripción de la organización, de sus usuarios y de sus dispositivos (versión de Android, memoria, conectividad).\n2. Matriz de decisión ponderada que compare al menos tres estrategias (nativa, multiplataforma y web progresiva) con un mínimo de seis criterios, pesos justificados y análisis de sensibilidad.\n3. Recomendación con el minSdk propuesto, los permisos que necesitará la app y los riesgos principales.\n\n**Parte B — Proyecto en Android Studio**\n\n1. Proyecto en Kotlin con catálogo de versiones de Gradle y repositorio Git con al menos ocho commits descriptivos.\n2. Modelo de dominio con al menos cuatro clases de datos, una clase sellada que represente los estados de un proceso y dos funciones de extensión útiles para el negocio.\n3. Funciones que procesen colecciones (agrupación, filtrado y totales) con montos en `BigDecimal`.\n4. Al menos seis pruebas unitarias con JUnit que verifiquen invariantes y casos límite.\n5. Ningún uso de `!!` sin justificación documentada.\n\n**Entrega:** informe en PDF y enlace al repositorio en el aula virtual al cierre de la semana 4. El código debe compilar sin advertencias.\n",
+        "rubric": [
+          {
+            "name": "Matriz de decisión y fundamentación de la estrategia",
+            "points": 6
+          },
+          {
+            "name": "Modelo de dominio idiomático en Kotlin",
+            "points": 6
+          },
+          {
+            "name": "Pruebas unitarias y tratamiento de casos límite",
+            "points": 4
+          },
+          {
+            "name": "Organización del proyecto, uso de Git y documentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Plataforma Android y fundamentos de Kotlin",
+        "questions": [
+          {
+            "prompt": "Un recolector rota su teléfono mientras llena un formulario y los datos ingresados desaparecen. ¿Cuál es la causa más probable?",
+            "options": [
+              "El sistema borró la base de datos local de la aplicación",
+              "La actividad se recreó por el cambio de configuración y el estado vivía en ella",
+              "Compose no permite cambiar la orientación de la pantalla",
+              "La memoria RAM se llenó con la caché de imágenes"
+            ],
+            "correct": 1,
+            "explanation": "Por defecto, un cambio de configuración como la rotación destruye y recrea la actividad. Si el estado se guarda en variables de la actividad, se pierde; debe conservarse con ViewModel o con mecanismos de estado guardado."
+          },
+          {
+            "prompt": "¿Qué imprime este código Kotlin? val c: String? = null; println(c?.length ?: -1)",
+            "options": [
+              "-1",
+              "null",
+              "0",
+              "Lanza NullPointerException"
+            ],
+            "correct": 0,
+            "explanation": "La llamada segura devuelve null porque c es nulo, y el operador Elvis sustituye ese null por -1. No se lanza excepción porque no se usó el operador !!."
+          },
+          {
+            "prompt": "Una app debe leer tarjetas por NFC, funcionar sin conexión y estar en Google Play; el equipo solo sabe JavaScript y el 95 % de usuarios usa Android. ¿Qué alternativa es la menos adecuada?",
+            "options": [
+              "React Native con un módulo nativo para NFC",
+              "Aplicación nativa en Kotlin con capacitación del equipo",
+              "Aplicación web progresiva instalada desde el navegador",
+              "Kotlin Multiplatform compartiendo la lógica de negocio"
+            ],
+            "correct": 2,
+            "explanation": "La web progresiva accede a NFC solo de forma limitada y en algunos navegadores, y no se distribuye de forma natural por Google Play. React Native aprovecha el conocimiento de JavaScript y las opciones nativas cubren NFC sin restricciones."
+          },
+          {
+            "prompt": "¿Por qué se recomienda BigDecimal en lugar de Double para importes en soles?",
+            "options": [
+              "Porque Double ocupa más memoria en teléfonos de gama baja",
+              "Porque Double no representa exactamente muchas fracciones decimales y acumula errores de redondeo",
+              "Porque Kotlin no permite operar con Double dentro de clases de datos",
+              "Porque BigDecimal aplica automáticamente el formato de moneda peruano"
+            ],
+            "correct": 1,
+            "explanation": "Los números de punto flotante binarios no representan con exactitud valores como 0,10, y los errores se acumulan en sumas y multiplicaciones. BigDecimal o los céntimos enteros garantizan exactitud en cálculos monetarios."
+          },
+          {
+            "prompt": "¿Qué ventaja ofrece usar un when exhaustivo sobre una sealed interface EstadoPago?",
+            "options": [
+              "Ejecuta las ramas en paralelo y reduce el tiempo de respuesta",
+              "Convierte los estados en registros de la base de datos",
+              "Elimina la necesidad de pruebas unitarias del dominio",
+              "Si se agrega una variante, el compilador señala cada when que no la maneja"
+            ],
+            "correct": 3,
+            "explanation": "Como el compilador conoce todas las variantes de una jerarquía sellada, un when sin else debe cubrirlas todas. Al agregar una nueva, las expresiones incompletas dejan de compilar y nada queda olvidado."
+          },
+          {
+            "prompt": "Respecto de minSdk, targetSdk y compileSdk, ¿qué afirmación es correcta?",
+            "options": [
+              "minSdk determina la versión más antigua de Android en la que puede instalarse la app",
+              "targetSdk determina la versión más antigua en la que puede instalarse la app",
+              "compileSdk debe ser siempre igual a minSdk para evitar errores",
+              "minSdk activa los comportamientos nuevos de la última versión de Android"
+            ],
+            "correct": 0,
+            "explanation": "minSdk fija el nivel mínimo de API para instalar la app. targetSdk declara para qué versión se probó y activa sus comportamientos, y compileSdk define qué API pueden usarse al compilar."
+          },
+          {
+            "prompt": "Una app de citas médicas solicita ubicación precisa, contactos y micrófono apenas se abre por primera vez. Según la Ley 29733 y las buenas prácticas de Android, ¿qué es lo más adecuado?",
+            "options": [
+              "Mantener las solicitudes al inicio para no interrumpir después",
+              "Declarar los permisos en el manifiesto para que se concedan sin preguntar",
+              "Pedir cada permiso solo cuando una función lo necesite y explicar su finalidad",
+              "Solicitar todos los permisos y cifrar los datos en el servidor"
+            ],
+            "correct": 2,
+            "explanation": "El principio de proporcionalidad exige recoger solo lo necesario para la finalidad declarada, y Android recomienda solicitar permisos en contexto. Los permisos peligrosos no se conceden con solo declararlos en el manifiesto."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Interfaces declarativas con Jetpack Compose y Material Design 3",
+      "description": "Al finalizar la unidad, el estudiante construye interfaces móviles declarativas con Jetpack Compose y Material Design 3, gestiona correctamente el estado y la navegación entre pantallas y verifica que sean accesibles, adaptables a distintos tamaños de ventana y fluidas en equipos de gama media.",
+      "topics": [
+        "Paradigma declarativo, funciones composables y recomposición",
+        "Estado en Compose: remember, rememberSaveable y elevación del estado",
+        "Distribución con modificadores, Scaffold y listas perezosas",
+        "Material Design 3: temas, color dinámico, tipografía y componentes",
+        "Navegación tipada, formularios, validación y efectos secundarios",
+        "Accesibilidad, diseño adaptable y rendimiento de la interfaz"
+      ],
+      "slides": [
+        {
+          "title": "Del modelo imperativo de vistas al declarativo",
+          "bullets": [
+            "Sistema clásico de vistas: diseños XML y código que busca cada vista y la modifica paso a paso cuando algo cambia.",
+            "Compose: la interfaz es una función del estado (UI = f(estado)); cuando el estado cambia, el marco vuelve a ejecutar solo lo afectado.",
+            "Misma idea que React, SwiftUI y Flutter, ya conocida por el estudiante en Desarrollo Web con los componentes.",
+            "Compose es estable desde 2021 y es el kit recomendado por Google para interfaces nuevas en Android.",
+            "Interoperabilidad: ComposeView y AndroidView permiten migrar aplicaciones existentes pantalla por pantalla."
+          ],
+          "notes": "Muestre lado a lado la misma pantalla en el sistema clásico de vistas y en Compose. En el primero, el código busca cada vista y la modifica cuando algo cambia, lo que obliga a sincronizar a mano el estado y la interfaz; los errores típicos son textos desactualizados o botones habilitados cuando no deberían. En Compose, la interfaz se describe a partir del estado y el marco se encarga de actualizarla. Recuerde que en Desarrollo Web se discutieron los criterios para adoptar un marco de componentes; aquí se aplica la misma idea en móvil. Mencione que muchas empresas peruanas mantienen apps con vistas XML y migran gradualmente, de modo que conocer la interoperabilidad es una ventaja laboral. Pregunta: ¿qué errores de sincronización entre datos e interfaz han tenido en sus proyectos web y cómo los evitaría el enfoque declarativo?"
+        },
+        {
+          "title": "Funciones composables y vistas previas",
+          "bullets": [
+            "Se anotan con @Composable y emiten elementos al árbol de interfaz; no devuelven vistas.",
+            "Deben ser rápidas, idempotentes y sin efectos secundarios: pueden ejecutarse muchas veces, omitirse o ejecutarse en otro orden.",
+            "Convención: nombres en PascalCase como sustantivos (TarjetaProducto, PantallaPedido) y un parámetro modifier opcional.",
+            "@Preview muestra variantes en modo oscuro, letra grande, otros idiomas y textos largos sin ejecutar la app."
+          ],
+          "notes": "Escriba en vivo una función composable TarjetaProducto que reciba nombre, precio y una lambda onAgregar. Subraye que la función no devuelve nada: emite elementos de interfaz al árbol de composición. Explique por qué debe ser idempotente y sin efectos secundarios: Compose puede ejecutarla muchas veces por segundo durante una animación, omitirla u ordenarla de otra forma. Por eso, escribir en una base de datos o incrementar un contador global dentro de un composable produce errores difíciles de rastrear. Muestre el poder de @Preview creando variantes con modo oscuro, letra grande y nombres de productos de cuarenta caracteres, que suelen romper los diseños. Recomiende recibir siempre un parámetro modifier para que quien usa el componente controle su ubicación. Pregunta: ¿qué ocurriría si dentro de un composable se registrara en analítica cada visualización de la tarjeta?"
+        },
+        {
+          "title": "Recomposición, estabilidad y omisión inteligente",
+          "bullets": [
+            "Compose vuelve a ejecutar solo las funciones que leen un estado modificado y omite las que reciben parámetros sin cambios.",
+            "Tipos estables: primitivos, String, funciones y clases de datos inmutables; el modo de omisión fuerte compara además por identidad.",
+            "Leer el estado lo más abajo posible en el árbol y diferir lecturas frecuentes con modificadores basados en lambdas.",
+            "El inspector de diseño muestra conteos de recomposición y de omisión para detectar trabajo innecesario."
+          ],
+          "notes": "La recomposición inteligente explica por qué Compose rinde bien, pero exige comprender cómo decide qué volver a ejecutar. Explique que el compilador de Compose analiza los parámetros: si no cambiaron, la función se omite. Comente que el modo de omisión fuerte, activo por defecto en las versiones recientes del compilador, permite omitir también funciones con parámetros inestables comparándolos por identidad, lo que reduce la optimización manual. Muestre el inspector de diseño con el conteo de recomposiciones de una lista mientras se desplaza y busque funciones que se recomponen sin necesidad. Enseñe a diferir la lectura del estado con un modificador que recibe una lambda, como offset con lambda, para valores que cambian en cada cuadro. Pregunta: si una pantalla entera se recompone al escribir cada letra en un buscador, ¿qué parte del diseño revisarían primero?"
+        },
+        {
+          "title": "Estado local: remember, rememberSaveable y estado derivado",
+          "bullets": [
+            "mutableStateOf crea un estado observable; leerlo dentro de un composable suscribe esa función a sus cambios.",
+            "remember conserva el valor entre recomposiciones; rememberSaveable además sobrevive a la rotación y a la muerte del proceso.",
+            "derivedStateOf evita recomponer en exceso cuando un valor depende de otro que cambia con mucha frecuencia.",
+            "Error típico: crear el estado sin remember, de modo que se reinicia en cada recomposición."
+          ],
+          "notes": "Construya un contador y luego un campo de búsqueda para ilustrar tres niveles de persistencia del estado. Primero sin remember, para que los estudiantes vean que el valor se reinicia en cada recomposición; luego con remember, que sobrevive a recomposiciones pero no a la rotación; y por último con rememberSaveable, que guarda el valor en el estado de instancia y sobrevive incluso a la muerte del proceso. Advierta que rememberSaveable solo admite tipos que pueden guardarse en un Bundle o que tienen un Saver, y que no sirve para listas grandes. Presente derivedStateOf con un ejemplo: mostrar el botón de volver arriba solo cuando el primer elemento visible de la lista es mayor que cero, evitando recomponer en cada píxel desplazado. Pregunta: ¿qué estado de la pantalla de pedido debe sobrevivir a la muerte del proceso y cuál puede perderse sin perjuicio?"
+        },
+        {
+          "title": "Elevación del estado y flujo unidireccional de datos",
+          "bullets": [
+            "Patrón: el composable recibe el valor y un evento (valor, onValorCambia) y no guarda estado propio.",
+            "El estado desciende como parámetros y los eventos ascienden como lambdas hasta quien posee el estado.",
+            "Fuente única de verdad: el estado vive en el ancestro común más bajo que lo necesita o en el ViewModel.",
+            "Beneficios: componentes reutilizables, validación centralizada y pruebas sin simular interacciones internas."
+          ],
+          "notes": "Este es el patrón más importante de la unidad. Refactorice en vivo un campo de texto con estado interno hacia una versión sin estado que recibe value y onValueChange. Explique las ventajas: el componente se reutiliza en distintos formularios, el padre puede validar o transformar la entrada y las pruebas se escriben sin simular interacciones internas. Dibuje el flujo unidireccional: el estado desciende por parámetros y los eventos ascienden por lambdas hasta quien posee el estado. Conecte con la Unidad 3, donde el dueño final del estado de la pantalla será el ViewModel. Comente que los componentes de Material, como TextField o Checkbox, siguen exactamente este patrón. Pregunta: en una pantalla de carrito con una lista de productos y un total, ¿dónde debe vivir el estado de las cantidades para que el total siempre sea coherente con lo que el usuario ve?"
+        },
+        {
+          "title": "Distribución de la pantalla: Column, Row, Box y modificadores",
+          "bullets": [
+            "Column y Row ordenan con Arrangement y Alignment; Box superpone elementos; Spacer separa.",
+            "Modifier encadena tamaño, relleno, fondo, borde, clic y semántica; el orden altera el resultado visual y el área táctil.",
+            "Dimensiones en dp, independientes de la densidad; textos en sp, que además respetan el tamaño de letra del usuario.",
+            "Scaffold estructura la pantalla con barra superior, contenido, botón flotante, mensajes y márgenes del sistema."
+          ],
+          "notes": "Construya una pantalla de detalle de producto combinando Column, Row y Box. Dedique tiempo al orden de los modificadores, fuente frecuente de errores: aplicar padding y luego background deja el margen fuera del color, mientras que el orden inverso lo incluye; aplicar clickable antes o después del padding cambia el área que responde al toque. Explique que dp es independiente de la densidad de píxeles y que sp, además, escala con el tamaño de letra elegido por el usuario, por lo que los textos nunca deben definirse en dp. Introduzca Scaffold como el esqueleto de una pantalla de Material, que coordina la barra superior, el contenido, el botón flotante y los mensajes, respetando las barras del sistema. Pregunta: ¿por qué un texto definido en dp perjudica a una persona adulta mayor que configuró letra grande en su teléfono?"
+        },
+        {
+          "title": "Listas eficientes con LazyColumn",
+          "bullets": [
+            "Solo compone los elementos visibles y algunos adyacentes: indispensable para catálogos de cientos o miles de productos.",
+            "Una key estable, como el código del producto, conserva el estado de cada fila y anima inserciones y eliminaciones.",
+            "contentType permite reutilizar composiciones cuando conviven encabezados, tarjetas y anuncios.",
+            "Paging 3 carga páginas de fuentes remotas grandes; evitar anidar listas desplazables en la misma dirección."
+          ],
+          "notes": "Compare Column con desplazamiento frente a LazyColumn con una lista de 2 000 productos de una distribuidora: la primera compone todos los elementos y consume memoria y tiempo; la segunda solo los visibles. Explique la importancia de key: sin una clave estable, si se inserta un producto al inicio, Compose asocia el estado por posición y la casilla marcada salta al elemento equivocado. Presente contentType para listas con encabezados de categoría y tarjetas, de modo que se reutilicen composiciones del mismo tipo. Mencione Paging 3 para catálogos remotos con miles de registros, que se integra con la paginación por cursor de la API. Advierta que anidar una lista vertical desplazable dentro de otra genera errores de medida. Pregunta: ¿qué campo de su modelo usarían como key y por qué no deberían usar el índice de la lista?"
+        },
+        {
+          "title": "Material Design 3 como sistema de diseño",
+          "bullets": [
+            "Esquema de color por roles (primary, secondary, surface, error) con tonos que garantizan contraste en modo claro y oscuro.",
+            "Color dinámico desde Android 12: la paleta se deriva del fondo de pantalla; las marcas con identidad fuerte pueden desactivarlo.",
+            "Escala tipográfica (display, headline, title, body, label) y formas por tamaño de componente.",
+            "MaterialTheme centraliza colorScheme, typography y shapes; los componentes usan roles, no colores fijos."
+          ],
+          "notes": "Material Design 3 es el sistema de diseño de Google; conocerlo evita reinventar componentes y asegura coherencia con el resto del sistema operativo. Explique los roles de color: cada componente usa un rol, como primary o surfaceVariant, y no un color fijo, lo que permite cambiar de tema sin tocar cada pantalla. El color dinámico, disponible desde Android 12, genera la paleta a partir del fondo de pantalla del usuario; para marcas con identidad fuerte, como una entidad financiera, conviene desactivarlo o combinarlo con el color institucional. Muestre Material Theme Builder para generar un esquema a partir del color de marca y revisar el contraste. Relacione con los tokens de diseño vistos en Desarrollo Web. Pregunta: ¿qué componentes de Material resolverían la pantalla de resumen de un pedido sin crear ninguno propio?"
+        },
+        {
+          "title": "Navegación entre pantallas con Navigation Compose",
+          "bullets": [
+            "NavHost define el grafo de destinos; NavController ejecuta la navegación y administra la pila de retroceso.",
+            "Rutas tipadas con clases serializables (desde Navigation 2.8): los argumentos se verifican al compilar.",
+            "Pasar solo identificadores entre pantallas; el destino carga los datos actualizados desde su fuente.",
+            "popUpTo con inclusive retira el inicio de sesión de la pila; los enlaces profundos abren un detalle desde una notificación."
+          ],
+          "notes": "Construya el grafo de navegación del proyecto con tres destinos: lista, detalle y formulario. Explique que desde la versión 2.8 de Navigation Compose las rutas pueden definirse como clases u objetos serializables, de modo que los argumentos se verifican en compilación y desaparecen los errores por cadenas mal escritas. Insista en pasar solo el identificador: si se pasara el objeto completo, la pantalla podría mostrar datos desactualizados o perderlos al recrearse. Ilustre la pila de retroceso con un flujo de inicio de sesión: después de autenticarse, la pantalla de ingreso debe salir de la pila para que el botón atrás no regrese a ella. Mencione los enlaces profundos, que permiten abrir el detalle de un pedido desde una notificación. Pregunta: ¿qué pasaría si el detalle recibiera el objeto completo y el precio cambiara en el servidor mientras el usuario navega?"
+        },
+        {
+          "title": "Patrones de navegación móvil",
+          "bullets": [
+            "Barra de navegación inferior para tres a cinco destinos principales de igual jerarquía.",
+            "Riel o cajón de navegación en pantallas amplias; NavigationSuiteScaffold elige el patrón según el tamaño de la ventana.",
+            "Flujo lineal con indicador de progreso para procesos de varios pasos, como un registro o una solicitud de crédito.",
+            "Gesto atrás predictivo: muestra el destino antes de completar el gesto; interceptarlo solo para evitar pérdida de datos."
+          ],
+          "notes": "Relacione la estructura de navegación con la arquitectura de información vista en Desarrollo Web. La barra inferior funciona para entre tres y cinco destinos de igual importancia, como Inicio, Pedidos, Pagos y Perfil; con más destinos se recurre a un cajón o a una pantalla de inicio con accesos. En tabletas y plegables, el riel lateral aprovecha mejor el ancho, y NavigationSuiteScaffold elige automáticamente el patrón adecuado. Para procesos con pasos, como una solicitud de crédito, recomiende un flujo lineal con indicador de progreso y la posibilidad de guardar y continuar luego. Explique el gesto atrás predictivo, que muestra una vista previa del destino: la app debe declararlo y evitar interceptar el retroceso salvo para confirmar la pérdida de datos. Pregunta: ¿qué patrón usarían para la app de una municipalidad con doce trámites distintos?"
+        },
+        {
+          "title": "Formularios y validación de entradas",
+          "bullets": [
+            "OutlinedTextField con label, supportingText e isError para mensajes visibles y accesibles.",
+            "KeyboardOptions: teclado numérico para DNI, celular o montos; ImeAction para avanzar al siguiente campo.",
+            "Reglas peruanas: DNI de 8 dígitos, celular de 9 dígitos que empieza con 9, RUC de 11 dígitos (por lo general con prefijo 10 o 20).",
+            "Validar en el cliente mejora la experiencia; validar en el servidor garantiza la seguridad.",
+            "Mostrar errores al perder el foco o al enviar, no en cada tecla, y deshabilitar el envío mientras se procesa."
+          ],
+          "notes": "Diseñe en vivo el formulario de registro de un cliente con DNI, celular y correo. Muestre cómo el teclado numérico reduce errores de digitación y cómo ImeAction permite avanzar al siguiente campo sin cerrar el teclado. Implemente validaciones de formato propias del Perú: el DNI tiene 8 dígitos y el celular 9 dígitos que comienzan con 9; el RUC tiene 11 dígitos y, por lo general, empieza con 10 para personas naturales o 20 para personas jurídicas. Enfatice que la validación en el cliente mejora la experiencia, pero la autoridad es el servidor, porque una app puede modificarse o la API invocarse directamente. Explique cuándo mostrar errores: validar en cada pulsación frustra a quien aún está escribiendo. Pregunta: ¿qué debería pasar con el botón Registrar mientras la solicitud está en curso y qué problema evita ese comportamiento?"
+        },
+        {
+          "title": "Efectos secundarios en Compose",
+          "bullets": [
+            "LaunchedEffect(clave) ejecuta una corrutina al entrar en la composición y la reinicia cuando la clave cambia.",
+            "rememberCoroutineScope lanza acciones desde eventos del usuario, como mostrar un Snackbar tras un clic.",
+            "DisposableEffect registra y libera escuchas, como observadores del ciclo de vida o sensores.",
+            "La lógica de negocio y las llamadas a la API no van en efectos de la pantalla, sino en el ViewModel."
+          ],
+          "notes": "Explique que una función composable no debe ejecutar trabajo asíncrono directamente porque se repetiría en cada recomposición. Los efectos son puntos controlados para interactuar con el mundo exterior. LaunchedEffect lanza una corrutina vinculada a la composición: si la clave cambia, la corrutina anterior se cancela y se lanza una nueva; si el composable sale de la pantalla, también se cancela. Muestre rememberCoroutineScope para mostrar un Snackbar desde un clic, y DisposableEffect para observar el ciclo de vida y liberar recursos en onDispose. Prevenga un antipatrón frecuente: llamar a la API dentro de LaunchedEffect en la pantalla. Aunque funciona, mezcla responsabilidades y se repite al recrear la pantalla; en la Unidad 3 esa carga se trasladará al ViewModel. Pregunta: ¿qué clave usarían en LaunchedEffect para desplazar la lista al inicio cuando cambia el distrito seleccionado?"
+        },
+        {
+          "title": "Accesibilidad como requisito, no como extra",
+          "bullets": [
+            "La Ley 29973, Ley General de la Persona con Discapacidad, reconoce el acceso a las tecnologías de la información y la comunicación.",
+            "contentDescription en íconos con significado; null en los decorativos; mergeDescendants para leer una tarjeta como unidad.",
+            "Objetivos táctiles de al menos 48 × 48 dp y contraste de texto mínimo de 4,5:1, coherente con las WCAG 2.2.",
+            "Verificar con TalkBack, Accessibility Scanner y tamaño de letra al 200 %."
+          ],
+          "notes": "Plantee la accesibilidad como obligación legal y ética, no como mejora opcional. La Ley 29973 reconoce el derecho de las personas con discapacidad a acceder a las tecnologías de la información, y el Censo 2017 del INEI registró más de tres millones de personas con alguna discapacidad en el Perú. Muestre cómo TalkBack lee la interfaz a partir del árbol semántico de Compose: un ícono de carrito sin descripción se anuncia como un botón sin etiqueta. Practique mergeDescendants para que una tarjeta de producto se lea como una unidad. Revise el contraste con Accessibility Scanner y el tamaño mínimo de 48 dp en botones con íconos. Pida a cada estudiante que recorra su prototipo con los ojos cerrados usando TalkBack durante dos minutos. Pregunta: ¿qué barreras encontraron y cuánto costaría corregirlas ahora frente a hacerlo después del lanzamiento?"
+        },
+        {
+          "title": "Diseño adaptable: teléfonos, plegables y tabletas",
+          "bullets": [
+            "Clases de tamaño de ventana por ancho: compacta (menos de 600 dp), mediana (600 a 840 dp) y expandida (840 dp o más).",
+            "Patrón lista-detalle: una columna con navegación en teléfono; dos paneles simultáneos en tableta.",
+            "Las versiones recientes de Android ignoran en pantallas grandes las restricciones de orientación fija: hay que diseñar para cualquier proporción.",
+            "Probar rotación, multiventana y emulador redimensionable sin pérdida de estado."
+          ],
+          "notes": "Muestre la misma pantalla en un teléfono, un plegable abierto y una tableta usando el emulador redimensionable. Explique que las clases de tamaño de ventana se basan en el ancho disponible para la app y no en el tipo de dispositivo, porque en multiventana un teléfono grande puede ofrecer menos espacio que uno pequeño. Implemente el patrón lista-detalle: en ventanas compactas se navega de la lista al detalle; en expandidas, ambos paneles conviven. Comente que las versiones recientes de Android ignoran en pantallas grandes las restricciones de orientación y tamaño fijo, por lo que bloquear la app en vertical ya no es una solución. Mencione que las tabletas se usan cada vez más en puntos de venta, almacenes y aulas. Pregunta: ¿qué información adicional podría mostrar la pantalla de pedidos cuando un supervisor la usa en una tableta en la tienda?"
+        },
+        {
+          "title": "Rendimiento de la interfaz",
+          "bullets": [
+            "Presupuesto de 16,7 ms por cuadro a 60 Hz y 8,3 ms a 120 Hz; superarlo produce saltos visibles (jank).",
+            "Ordenar y filtrar listas fuera de la composición, en el ViewModel, y no en cada recomposición.",
+            "Imágenes remotas con Coil: tamaño ajustado al contenedor y caché en memoria y en disco.",
+            "Medir en compilación release con Macrobenchmark y perfiles de referencia; la compilación debug no es representativa."
+          ],
+          "notes": "Introduzca el presupuesto de cuadro: a 60 Hz el sistema dibuja un cuadro cada 16,7 ms, y si la composición, la medición y el dibujo exceden ese tiempo, el usuario percibe saltos. En equipos de gama de entrada el margen es aún menor. Señale tres causas frecuentes: ordenar o filtrar listas dentro del composable, cargar imágenes a resolución completa y recomponer de más por lecturas de estado ubicadas demasiado arriba. Recomiende Coil para imágenes, con tamaño de destino y caché. Explique que las mediciones en compilación debug no son representativas, porque ese código no está optimizado; se mide en release con Macrobenchmark y perfiles de referencia, temas de la Unidad 4. Pregunta: ¿cómo comprobarían de manera objetiva que el catálogo se desplaza con fluidez en el teléfono más modesto de su público objetivo?"
+        }
+      ],
+      "reading": {
+        "title": "Pensar en Compose: estado, recomposición y diseño accesible",
+        "minutes": 35,
+        "content": "## La interfaz como función del estado\n\nDurante más de una década, las interfaces Android se construyeron con diseños XML y código que localizaba cada vista para modificarla. Ese enfoque imperativo obliga al programador a recordar todas las transiciones posibles: si llega un nuevo precio, actualizar el texto; si el carrito queda vacío, ocultar el botón; si hay error, mostrar el mensaje y deshabilitar el formulario. Cada transición olvidada es un error visible.\n\nJetpack Compose invierte el razonamiento. El programador declara cómo debe verse la pantalla **para un estado dado**, y el marco se encarga de actualizarla cuando ese estado cambia. Es la misma idea que el estudiante conoció en Desarrollo Web al discutir los marcos de componentes, y que comparten SwiftUI y Flutter. El costo de este modelo es conceptual: hay que entender quién posee el estado, cuándo se vuelve a ejecutar una función y cómo evitar trabajo innecesario.\n\n## Estado y elevación del estado\n\nUn composable sin estado recibe lo que debe mostrar y notifica lo que el usuario hizo. Observe un campo de DNI reutilizable:\n\n```kotlin\n@Composable\nfun CampoDni(valor: String, onValorCambia: (String) -> Unit, modifier: Modifier = Modifier) {\n    val invalido = valor.isNotEmpty() && valor.length != 8\n    OutlinedTextField(\n        value = valor,\n        onValueChange = { nuevo -> onValorCambia(nuevo.filter(Char::isDigit).take(8)) },\n        label = { Text(stringResource(R.string.etiqueta_dni)) },\n        isError = invalido,\n        supportingText = { if (invalido) Text(stringResource(R.string.error_dni)) },\n        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Next),\n        singleLine = true,\n        modifier = modifier.fillMaxWidth()\n    )\n}\n\n@Composable\nfun PantallaRegistro(onRegistrar: (String) -> Unit) {\n    var dni by rememberSaveable { mutableStateOf(\"\") }   // sobrevive a rotación y muerte del proceso\n    Column(Modifier.padding(16.dp)) {\n        CampoDni(valor = dni, onValorCambia = { dni = it })\n        Button(onClick = { onRegistrar(dni) }, enabled = dni.length == 8) { Text(\"Registrar\") }\n    }\n}\n```\n\n`CampoDni` no sabe dónde se guarda el valor: lo recibe y comunica los cambios. Por eso puede usarse en el registro de clientes, en la búsqueda de socios o en una prueba automatizada. El filtro de dígitos y el límite de ocho caracteres previenen errores frecuentes, pero no sustituyen la validación del servidor. Cuando la pantalla crezca, el estado subirá un nivel más, al `ViewModel`, siguiendo el mismo principio: **el estado baja, los eventos suben**.\n\n## Listas: claves estables y rendimiento\n\nUn catálogo de una distribuidora puede tener miles de productos. `LazyColumn` compone solo los elementos visibles y necesita una clave estable para no confundir el estado de una fila con el de otra:\n\n```kotlin\n@Composable\nfun ListaProductos(productos: List<ProductoUi>, onAgregar: (String) -> Unit) {\n    LazyColumn(contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {\n        items(items = productos, key = { it.codigo }, contentType = { \"producto\" }) { p ->\n            TarjetaProducto(producto = p, onAgregar = { onAgregar(p.codigo) })\n        }\n    }\n}\n```\n\nSi la lista llega desordenada, el ordenamiento debe hacerse antes —en el `ViewModel`—, nunca dentro de la composición, porque se repetiría en cada recomposición y consumiría el presupuesto de 16,7 ms por cuadro.\n\n## Semántica y accesibilidad\n\nTalkBack, las pruebas automatizadas y otros servicios leen el **árbol semántico** que Compose construye en paralelo a la interfaz. Una tarjeta bien construida se anuncia como una sola unidad con una acción clara:\n\n```kotlin\nRow(\n    modifier = Modifier\n        .semantics(mergeDescendants = true) {}\n        .clickable(onClickLabel = \"Ver detalle\") { onAbrir(p.codigo) }\n        .heightIn(min = 48.dp)\n        .padding(12.dp)\n) {\n    AsyncImage(model = p.foto, contentDescription = null, modifier = Modifier.size(56.dp)) // decorativa\n    Column { Text(p.nombre); Text(p.precio.aSoles()) }\n}\n```\n\nLa imagen es decorativa porque el nombre ya describe el producto; el área táctil supera los 48 dp y la acción tiene una etiqueta comprensible. Estos detalles no son cosméticos: en el Perú la Ley 29973 reconoce el derecho de las personas con discapacidad a acceder a las tecnologías de la información.\n\n## Adaptación al tamaño de ventana\n\nLas clases de tamaño de ventana —compacta, mediana y expandida— permiten decidir la estructura según el ancho disponible. En un teléfono, la lista y el detalle son pantallas sucesivas; en una tableta del punto de venta, conviven. Diseñar así desde el inicio cuesta poco; adaptar después una app rígida cuesta mucho.\n\n## Errores frecuentes\n\n- Guardar estado sin `remember` y perderlo en cada recomposición.\n- Pasar objetos completos entre pantallas en lugar de identificadores.\n- Definir textos en `dp`, lo que ignora el tamaño de letra elegido por el usuario.\n- Medir el rendimiento en compilación debug y sacar conclusiones equivocadas.\n"
+      },
+      "case": {
+        "title": "Caso: Boticas Salud Norte y el pedido que nadie terminaba",
+        "content": "**Boticas Salud Norte** (nombre ficticio) es una cadena de 46 boticas con presencia en Trujillo, Chiclayo, Piura y Cajamarca. En 2021 encargó a una agencia una aplicación Android para pedidos con entrega a domicilio, construida con el sistema clásico de vistas XML. La app tuvo un buen inicio durante la pandemia, pero en 2026 la situación preocupa a la jefa de Canales Digitales, Lucía Paredes.\n\nLos datos del último trimestre son elocuentes:\n\n- Valoración de 3,2 estrellas en Google Play; las reseñas negativas repiten frases como «letras muy pequeñas», «no encuentro el botón de pagar» y «se borró mi pedido cuando giré el celular».\n- El 41 % de los usuarios activos tiene más de 50 años y muchos compran medicamentos de uso continuo para sí mismos o para sus padres.\n- De cada 100 personas que agregan productos al carrito, solo 32 completan el pedido; el abandono se concentra en la pantalla de dirección y pago.\n- Dos asociaciones de personas con discapacidad visual enviaron cartas señalando que la app es inutilizable con TalkBack.\n- Android vitals muestra un porcentaje alto de cuadros lentos en el catálogo, que carga fotos a resolución completa en una lista no perezosa.\n\nEl equipo interno está formado por dos desarrolladores que aprendieron Compose el último año. Lucía tiene cuatro meses antes de la campaña de fin de año y tres opciones sobre la mesa:\n\n1. **Reescribir toda la app en Compose** (estimado: cinco meses). Resolvería la deuda técnica, pero no llegaría a la campaña.\n2. **Migrar solo el flujo de compra** —carrito, dirección y pago— a Compose dentro de la app actual, usando interoperabilidad (estimado: dos meses), y corregir el catálogo con una lista perezosa.\n3. **Parchar las vistas XML** existentes: agrandar textos, agregar descripciones y fijar la orientación vertical (estimado: un mes).\n\nAl mismo tiempo, Marketing exige incluir antes de la campaña un programa de puntos que, según sus proyecciones, aumentaría la recompra en 15 %. El gerente general pidió a Lucía una recomendación que equilibre experiencia de usuario, accesibilidad, riesgo técnico y resultados comerciales, y que indique cómo se medirá el éxito.\n\nUsted forma parte del equipo que debe preparar esa recomendación.\n",
+        "questions": [
+          "¿Qué problemas del caso son de experiencia de usuario, cuáles de accesibilidad y cuáles de arquitectura o rendimiento? Clasifíquelos y relaciónelos con conceptos de la unidad.",
+          "Evalúe las tres opciones con criterios de riesgo, plazo, impacto en la conversión y cumplimiento de la Ley 29973. ¿Cuál recomendaría y por qué?",
+          "¿Por qué fijar la orientación vertical no resuelve la pérdida del pedido al girar el teléfono? Proponga la solución técnica correcta.",
+          "¿Cómo priorizaría el programa de puntos frente a las mejoras del flujo de compra? Argumente con datos del caso.",
+          "Defina tres indicadores y sus metas para evaluar el éxito de la intervención a los tres meses del lanzamiento."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Prototipo funcional de interfaz en Jetpack Compose",
+        "instructions": "**Objetivo:** construir la interfaz del proyecto integrador con Jetpack Compose y Material Design 3, aplicando gestión correcta del estado, navegación tipada, accesibilidad y diseño adaptable. En esta etapa los datos pueden provenir de una fuente simulada en memoria.\n\n**Requisitos funcionales**\n\n1. Al menos cuatro pantallas: listado, detalle, formulario y una pantalla de resumen o perfil, conectadas con Navigation Compose y rutas tipadas.\n2. Listado con `LazyColumn`, claves estables y estados de interfaz vacío y con contenido.\n3. Formulario con validaciones propias del contexto peruano (DNI, celular, RUC o montos), teclado adecuado y mensajes de error accesibles.\n4. Estado elevado: los componentes reutilizables no guardan estado propio; los datos que deben sobrevivir a la rotación usan `rememberSaveable`.\n5. Tema propio de Material 3 con modo claro y oscuro generado a partir del color de la organización.\n\n**Requisitos de calidad**\n\n- Patrón lista-detalle en ventanas expandidas, verificado en el emulador redimensionable.\n- Lista de verificación de accesibilidad: TalkBack, letra al 200 %, objetivos de 48 dp y contraste revisado con Accessibility Scanner.\n- Vistas previas de cada componente en al menos dos variantes.\n\n**Entregables:** repositorio actualizado, video de hasta cinco minutos que muestre la navegación, la rotación sin pérdida de datos y el recorrido con TalkBack, y la lista de verificación de accesibilidad con capturas. Entrega al cierre de la semana 8.\n",
+        "rubric": [
+          {
+            "name": "Estructura de composables y gestión del estado",
+            "points": 6
+          },
+          {
+            "name": "Navegación, formularios y validación",
+            "points": 5
+          },
+          {
+            "name": "Accesibilidad y diseño adaptable verificados",
+            "points": 5
+          },
+          {
+            "name": "Tema de Material 3, vistas previas y calidad del código",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Interfaces declarativas con Compose",
+        "questions": [
+          {
+            "prompt": "En un Text se aplica Modifier.padding(16.dp).background(Color.Yellow). ¿Qué se observa?",
+            "options": [
+              "El fondo amarillo cubre el texto y también el margen de 16 dp",
+              "Compose reordena los modificadores y el resultado no cambia",
+              "El fondo amarillo cubre solo el área interior y el margen de 16 dp queda sin color",
+              "Se produce un error de compilación porque background debe ir primero"
+            ],
+            "correct": 2,
+            "explanation": "Los modificadores se aplican en orden, de afuera hacia adentro. Primero se reserva el relleno de 16 dp y después se pinta el fondo en el espacio restante, por lo que el margen queda fuera del color."
+          },
+          {
+            "prompt": "Un campo de búsqueda usa remember { mutableStateOf(\"\") }. El usuario escribe, rota el teléfono y el texto desaparece. ¿Qué cambio lo resuelve dentro de la interfaz?",
+            "options": [
+              "Usar una variable global en el archivo",
+              "Reemplazar remember por rememberSaveable",
+              "Fijar la orientación vertical en el manifiesto",
+              "Envolver el campo en una LazyColumn"
+            ],
+            "correct": 1,
+            "explanation": "remember conserva el valor solo entre recomposiciones. rememberSaveable lo guarda en el estado de instancia, que sobrevive a la recreación por rotación y a la muerte del proceso."
+          },
+          {
+            "prompt": "¿Cuál es la principal ventaja de convertir un composable con estado interno en uno sin estado que recibe valor y onValorCambia?",
+            "options": [
+              "Se recompone menos porque no lee ningún estado observable",
+              "Deja de necesitar la anotación @Composable",
+              "Guarda automáticamente su valor en la base de datos local",
+              "Puede reutilizarse, probarse y validarse desde el componente que posee el estado"
+            ],
+            "correct": 3,
+            "explanation": "La elevación del estado separa la presentación de la propiedad del dato. El componente queda reutilizable y fácil de probar, y el padre o el ViewModel controla la validación y la fuente única de verdad."
+          },
+          {
+            "prompt": "En una LazyColumn sin key se inserta un producto al inicio y la casilla marcada aparece ahora en otro producto. ¿Por qué ocurre?",
+            "options": [
+              "El estado se asoció por posición; una key estable lo asocia al identificador del producto",
+              "LazyColumn no admite estado dentro de sus elementos",
+              "La lista debe ordenarse alfabéticamente para conservar el estado",
+              "Se usaron dp en lugar de sp en las tarjetas"
+            ],
+            "correct": 0,
+            "explanation": "Sin clave, Compose identifica cada elemento por su posición. Al insertar al inicio, las posiciones cambian y el estado queda en la fila equivocada; una key basada en el código del producto lo evita."
+          },
+          {
+            "prompt": "Al navegar de la lista al detalle de un pedido, ¿qué conviene pasar como argumento de la ruta?",
+            "options": [
+              "El objeto Pedido completo serializado",
+              "Solo el identificador del pedido, para que el destino cargue datos actualizados",
+              "La lista entera para evitar nuevas consultas",
+              "Una referencia al ViewModel de la pantalla de lista"
+            ],
+            "correct": 1,
+            "explanation": "Pasar solo el identificador mantiene una fuente única de verdad: el destino obtiene los datos vigentes de su repositorio y no depende de copias que pueden quedar desactualizadas o perderse al recrearse."
+          },
+          {
+            "prompt": "Un botón que solo muestra un ícono de papelera mide 32 × 32 dp y no tiene contentDescription. ¿Qué problemas de accesibilidad presenta?",
+            "options": [
+              "Ninguno, porque los íconos de Material se entienden universalmente",
+              "Solo el tamaño, ya que TalkBack deduce la función a partir del ícono",
+              "TalkBack no anuncia su función y el área táctil es menor que los 48 dp recomendados",
+              "Solo la falta de descripción, porque 32 dp supera el mínimo de Material"
+            ],
+            "correct": 2,
+            "explanation": "Sin descripción, TalkBack lo anuncia como un botón sin etiqueta, y un área táctil menor de 48 × 48 dp dificulta su uso a personas con temblor o baja precisión motora."
+          },
+          {
+            "prompt": "Una pantalla filtra y ordena 3 000 productos dentro del composable cada vez que el usuario escribe en el buscador. ¿Qué mejora es la más adecuada?",
+            "options": [
+              "Reemplazar LazyColumn por Column con desplazamiento",
+              "Aumentar el tamaño de letra para mostrar menos productos",
+              "Ejecutar el filtrado en un LaunchedEffect sin clave dentro de la pantalla",
+              "Trasladar el filtrado al ViewModel con debounce y exponer la lista resultante como estado"
+            ],
+            "correct": 3,
+            "explanation": "El cálculo costoso no debe repetirse en cada recomposición. En el ViewModel puede aplicarse un debounce, ejecutarse fuera del hilo principal y entregarse a la interfaz como estado listo para mostrar."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Arquitectura, datos y conectividad sin conexión",
+      "description": "Al finalizar la unidad, el estudiante estructura la aplicación en capas con flujo unidireccional de datos, consume servicios REST de forma asíncrona con corrutinas y Retrofit, y persiste información con Room y DataStore para que la aplicación funcione sin conexión y se sincronice de forma confiable con WorkManager.",
+      "topics": [
+        "Arquitectura recomendada: capas de interfaz, dominio y datos",
+        "ViewModel, estado de interfaz y flujo unidireccional de datos",
+        "Corrutinas, concurrencia estructurada, Flow y StateFlow",
+        "Consumo de API REST con Retrofit, OkHttp, manejo de errores e idempotencia",
+        "Persistencia local con Room y DataStore; estrategia sin conexión primero",
+        "Inyección de dependencias con Hilt y trabajo en segundo plano con WorkManager"
+      ],
+      "slides": [
+        {
+          "title": "Por qué la arquitectura importa en móvil",
+          "bullets": [
+            "Ciclo de vida impredecible, recursos limitados y red intermitente exigen separar responsabilidades desde el inicio.",
+            "Principios de la guía oficial de Android: separación de responsabilidades, interfaz guiada por modelos de datos, fuente única de verdad y flujo unidireccional.",
+            "Beneficios: pruebas aisladas, cambios localizados y trabajo en paralelo dentro del equipo.",
+            "Se articula con Análisis y Diseño de Sistemas, que estudia en paralelo los estilos en capas y hexagonal."
+          ],
+          "notes": "Abra con una pregunta provocadora: ¿por qué no basta con llamar a la API desde el botón y mostrar el resultado? Construya con la clase la lista de problemas: la rotación repite la llamada, la muerte del proceso pierde los datos, sin red la pantalla queda vacía y probar la lógica exige un dispositivo. La guía oficial de arquitectura de Android responde con cuatro principios que conviene aplicar con criterio: separar responsabilidades, construir la interfaz a partir de modelos de datos persistentes, mantener una fuente única de verdad para cada dato y hacer que el estado fluya en una sola dirección. Conecte con Análisis y Diseño de Sistemas, que en paralelo estudia estilos arquitectónicos como capas y hexagonal; aquí verán su aplicación concreta en móvil. Pregunta: ¿cuál de los problemas listados ha causado más reclamos en las aplicaciones que ustedes usan a diario?"
+        },
+        {
+          "title": "Capas de la aplicación y regla de dependencia",
+          "bullets": [
+            "Capa de interfaz: composables y ViewModel; transforma datos en estado de pantalla y recibe eventos.",
+            "Capa de dominio, opcional: casos de uso reutilizables con reglas de negocio, como calcular el total de un pedido con IGV de 18 %.",
+            "Capa de datos: repositorios que ocultan las fuentes remotas, locales y de preferencias.",
+            "Las dependencias apuntan hacia las reglas de negocio, que no conocen Retrofit, Room ni Android (Martin, 2017)."
+          ],
+          "notes": "Dibuje las tres capas como columnas y muestre hacia dónde apuntan las dependencias. La capa de interfaz contiene los composables y los ViewModel; la de datos, los repositorios y las fuentes de datos remotas y locales; la de dominio, opcional, agrupa casos de uso que varias pantallas comparten, como calcular el total de un pedido con descuentos y el IGV de 18 %. Explique la regla de dependencia de Martin: el código de negocio no debe depender de detalles como Retrofit o Room, para poder probarlo y reemplazar esas tecnologías. Advierta contra la sobrearquitectura: crear un caso de uso que solo reenvía una llamada al repositorio añade archivos sin valor. Pregunta: en la aplicación de la cooperativa lechera, ¿qué regla de negocio justificaría un caso de uso propio y cuál no lo justificaría?"
+        },
+        {
+          "title": "ViewModel y estado de la interfaz",
+          "bullets": [
+            "Sobrevive a cambios de configuración y se destruye cuando la pantalla sale definitivamente de la pila de navegación.",
+            "Expone un único StateFlow de solo lectura con el estado inmutable; recibe eventos mediante funciones públicas como onBuscar.",
+            "UiState como clase sellada (Cargando, Contenido, Vacío, Error) o clase de datos sin combinaciones contradictorias.",
+            "Nunca guardar referencias a Context de actividad ni a vistas: provoca fugas de memoria.",
+            "SavedStateHandle conserva entradas del usuario y argumentos ante la muerte del proceso."
+          ],
+          "notes": "Explique el ciclo de vida del ViewModel: se crea la primera vez que la pantalla lo solicita, sobrevive a rotaciones y se destruye cuando la pantalla sale definitivamente de la pila, momento en que se invoca onCleared y se cancela viewModelScope. Muestre un UiState modelado como clase sellada y discuta la alternativa de una clase de datos con campos de carga, error y contenido; ambas son válidas si impiden estados contradictorios. Insista en exponer un StateFlow de solo lectura y mantener privado el MutableStateFlow, de modo que solo el ViewModel modifique el estado. Explique por qué guardar el Context de una actividad provoca fugas: el ViewModel vive más que la actividad y retendría toda su jerarquía de objetos. Pregunta: ¿qué datos de un formulario de solicitud de crédito guardarían en SavedStateHandle y cuáles no?"
+        },
+        {
+          "title": "Corrutinas: asincronía sin bloquear el hilo principal",
+          "bullets": [
+            "El hilo principal procesa toques y dibuja cuadros; si no responde a una entrada en 5 segundos, el sistema muestra un ANR.",
+            "Las funciones suspend pausan la ejecución sin bloquear el hilo y se reanudan cuando el resultado está disponible.",
+            "Despachadores: Main para la interfaz, IO para red y disco, Default para cálculo intensivo; withContext cambia de despachador.",
+            "Comparadas con async/await de JavaScript, añaden despachadores explícitos y cancelación estructurada."
+          ],
+          "notes": "Recuerde el modelo de un solo hilo de interfaz: el hilo principal procesa los eventos táctiles y dibuja los cuadros; si se bloquea con una consulta de red o de disco, la app se congela y, tras cinco segundos sin responder a una entrada, el sistema muestra el diálogo de ANR. Presente las corrutinas como tareas ligeras: se pueden lanzar miles sin agotar memoria porque, al suspenderse, liberan el hilo. Compare con async y await de JavaScript, que vieron en Desarrollo Web: la sintaxis es parecida, pero Kotlin agrega despachadores explícitos y cancelación estructurada. Muestre withContext dentro del repositorio y no en la interfaz, para que quien llama no necesite saber qué hilo usar; Room y Retrofit ya lo hacen internamente en sus funciones suspend. Pregunta: ¿qué tareas de su proyecto son de entrada y salida y cuáles de cálculo intensivo?"
+        },
+        {
+          "title": "Concurrencia estructurada y cancelación",
+          "bullets": [
+            "Toda corrutina vive en un ámbito; viewModelScope se cancela automáticamente al destruirse el ViewModel.",
+            "Si una corrutina hija falla, el error se propaga y cancela el ámbito padre, salvo que se use SupervisorJob.",
+            "launch dispara trabajo sin resultado; async y await obtienen resultados en paralelo, como perfil y saldo a la vez.",
+            "La cancelación es cooperativa: atrapar CancellationException sin relanzarla rompe el mecanismo."
+          ],
+          "notes": "La concurrencia estructurada resuelve un problema clásico: tareas que siguen ejecutándose cuando ya nadie espera su resultado, consumiendo batería y datos. Explique la jerarquía padre e hijo: cancelar el ámbito cancela todas las corrutinas hijas, y un error en una hija se propaga al padre. Muestre con async y await cómo cargar en paralelo el perfil del socio y su saldo, de modo que el tiempo total sea el de la solicitud más lenta y no la suma. Discuta SupervisorJob para casos en que un fallo no debe cancelar las demás tareas, como varias secciones independientes de un tablero. Advierta sobre un error sutil: un catch genérico que atrapa CancellationException y no la relanza impide la cancelación. Pregunta: si el usuario sale de la pantalla mientras se descarga un catálogo de 5 MB, ¿qué debería ocurrir y qué mecanismo lo garantiza?"
+        },
+        {
+          "title": "Flow, StateFlow y SharedFlow",
+          "bullets": [
+            "Flow: secuencia fría de valores asíncronos que se ejecuta cuando alguien la recolecta.",
+            "Operadores map, filter, combine, debounce, flatMapLatest y catch transforman flujos de manera declarativa.",
+            "StateFlow: flujo caliente con valor actual, ideal para estado; stateIn convierte un Flow del repositorio en estado.",
+            "SharedFlow: difunde eventos a varios recolectores; en Compose se recolecta con collectAsStateWithLifecycle."
+          ],
+          "notes": "Explique la diferencia entre flujos fríos y calientes con una analogía: un Flow es como una receta que se prepara cada vez que alguien la pide; un StateFlow es como una pizarra que siempre muestra el último valor a quien la mire. Muestre cómo Room devuelve un Flow que emite cada vez que cambia la tabla, y cómo el ViewModel lo transforma con map y lo convierte en estado con stateIn usando WhileSubscribed de cinco segundos, valor recomendado para no reiniciar la consulta durante una rotación. Implemente un buscador con debounce de 300 ms y flatMapLatest, que cancela la búsqueda anterior cuando llega una nueva letra. Explique que collectAsStateWithLifecycle deja de recolectar cuando la app no está visible y así ahorra recursos. Pregunta: ¿qué problema aparecería si el estado de la pantalla se publicara en un SharedFlow sin repetición del último valor?"
+        },
+        {
+          "title": "Diseño del contrato con la API REST",
+          "bullets": [
+            "Reutilizar la API construida en Desarrollo Web (Node.js, Express y PostgreSQL) o una API documentada con OpenAPI.",
+            "Objetos de transferencia (DTO) distintos del modelo de dominio: la API puede cambiar sin romper la interfaz.",
+            "Paginación por cursor, filtros y versión en la ruta, por ejemplo /v1/pedidos, para convivir con clientes antiguos.",
+            "Las apps instaladas tardan semanas o meses en actualizarse: el servidor debe mantener compatibilidad hacia atrás."
+          ],
+          "notes": "Esta diapositiva conecta el curso con Desarrollo Web: la API REST que construyeron con Express y PostgreSQL puede ser el servidor de su app móvil. Revise con la clase el contrato documentado en OpenAPI, tema que también aparece en Análisis y Diseño de Sistemas. Explique por qué separar los objetos de transferencia de los modelos de dominio: si el servidor renombra un campo, solo cambia el mapeo y no toda la aplicación. Enfatice una diferencia clave entre web y móvil: en la web todos reciben la última versión al recargar, mientras que en móvil muchas personas tardan semanas o meses en actualizar, de modo que el servidor debe atender varias versiones del cliente al mismo tiempo. Pregunta: ¿qué cambios en una API son compatibles hacia atrás, como agregar un campo opcional, y cuáles romperían las versiones instaladas?"
+        },
+        {
+          "title": "Retrofit, OkHttp y serialización",
+          "bullets": [
+            "Retrofit convierte una interfaz Kotlin anotada (@GET, @POST, @Path, @Query, @Body) en llamadas HTTP con funciones suspend.",
+            "kotlinx.serialization o Moshi convierten JSON en clases de datos y viceversa.",
+            "OkHttp gestiona tiempos de espera, caché HTTP, reintentos de conexión e interceptores que agregan el token de acceso.",
+            "El registro de tráfico se habilita solo en depuración y nunca debe mostrar tokens ni datos personales."
+          ],
+          "notes": "Escriba en vivo la interfaz de un servicio con Retrofit: una función suspend anotada con GET que recibe parámetros de consulta y devuelve una lista de objetos de transferencia. Explique que Retrofit genera la implementación y que el convertidor de kotlinx.serialization traduce el JSON a clases anotadas como serializables. Configure OkHttp con tiempos de espera razonables para redes móviles y un interceptor que agregue la cabecera Authorization con el token de acceso. Muestre el interceptor de registro de tráfico y la condición para habilitarlo solo en compilaciones de depuración: en producción, los registros podrían exponer tokens o datos personales. Relacione con la caché HTTP vista en Desarrollo Web, que OkHttp respeta. Pregunta: ¿qué tiempo de espera de conexión elegirían para recolectores en zonas rurales y qué riesgo tiene uno demasiado largo?"
+        },
+        {
+          "title": "Manejo de errores de red e idempotencia",
+          "bullets": [
+            "Distinguir sin conexión (IOException), errores HTTP 4xx y 5xx, tiempo agotado y errores de deserialización.",
+            "El repositorio traduce excepciones a resultados de dominio; la interfaz solo decide cómo mostrarlos.",
+            "Reintentos con espera exponencial solo para operaciones idempotentes; GET, PUT y DELETE lo son, POST no.",
+            "Clave de idempotencia generada en el cliente (UUID) para que el servidor reconozca un reenvío y no duplique el registro."
+          ],
+          "notes": "Clasifique con la clase los errores posibles de una solicitud y lo que la interfaz debería mostrar en cada caso: sin conexión, datos en caché con un aviso discreto; error 401, renovar el token o cerrar la sesión; error 422, el mensaje de validación del servidor; error 500, reintentar más tarde. Explique por qué la traducción de excepciones ocurre en el repositorio, que devuelve un resultado de dominio, y no en el composable. Profundice en la idempotencia: GET, PUT y DELETE son idempotentes por definición en HTTP, POST no. Si un repartidor registra una entrega y la respuesta se pierde, reintentar podría duplicarla; una clave de idempotencia generada en el teléfono permite al servidor reconocer el reenvío. Pregunta: ¿por qué un reintento automático de un pago con tarjeta o billetera digital debe diseñarse con especial cuidado?"
+        },
+        {
+          "title": "Persistencia local con Room",
+          "bullets": [
+            "Capa de abstracción sobre SQLite que verifica las consultas SQL en tiempo de compilación.",
+            "@Entity define tablas, @Dao las consultas y @Database la versión del esquema y las migraciones.",
+            "Las consultas que devuelven Flow actualizan la interfaz automáticamente cuando cambian los datos.",
+            "Migraciones explícitas y probadas: la migración destructiva borraría los registros pendientes de sincronizar.",
+            "Aplica lo aprendido en Base de Datos: claves, índices, transacciones y normalización."
+          ],
+          "notes": "Relacione con Base de Datos: Room es una capa sobre SQLite, el motor embebido presente en todos los dispositivos Android. Escriba una entidad, un DAO con una consulta que devuelve Flow y otra suspend para insertar, y la clase de base de datos. Destaque que Room valida las consultas SQL al compilar: un nombre de columna mal escrito no llega a producción. Explique las migraciones: cada cambio de esquema incrementa la versión y requiere una migración con el ALTER TABLE correspondiente o una migración automática declarada; usar la migración destructiva en producción borraría los datos pendientes. Muestre el asistente de pruebas de migración. Recomiende índices en columnas de búsqueda y transacciones para operaciones que afectan varias tablas. Pregunta: ¿qué ocurriría con los acopios no sincronizados de un recolector si una actualización usara migración destructiva?"
+        },
+        {
+          "title": "DataStore y almacenamiento de preferencias",
+          "bullets": [
+            "Preferences DataStore guarda pares clave-valor (tema, último distrito, fecha de sincronización) con una API asíncrona basada en Flow.",
+            "Proto DataStore almacena objetos tipados definidos con un esquema de Protocol Buffers.",
+            "Reemplaza a SharedPreferences, que podía bloquear el hilo principal y no garantizaba consistencia.",
+            "Datos relacionales y listas grandes van en Room; tokens y datos sensibles nunca se guardan en texto plano."
+          ],
+          "notes": "Presente DataStore como el reemplazo moderno de SharedPreferences, que realizaba lecturas sincrónicas que podían bloquear el hilo principal y causar ANR, además de no notificar cambios de forma confiable. Preferences DataStore guarda pares clave-valor y expone un Flow; Proto DataStore usa un esquema de Protocol Buffers para obtener tipado fuerte. Indique qué guardar allí: preferencias de tema, el último distrito seleccionado o la marca de la última sincronización; y qué no: listas grandes o datos relacionales, que pertenecen a Room. Advierta desde ya que un token de sesión o un DNI en texto plano dentro de cualquier archivo de la app es un hallazgo de seguridad; en la Unidad 4 se protegerán con claves del Android Keystore. Pregunta: ¿dónde guardarían la fecha de la última sincronización exitosa y por qué allí?"
+        },
+        {
+          "title": "Estrategia sin conexión primero",
+          "bullets": [
+            "La base de datos local es la fuente única de verdad: la interfaz siempre lee de Room.",
+            "Lecturas: mostrar de inmediato lo almacenado y refrescar desde la red en segundo plano.",
+            "Escrituras: guardar localmente con estado PENDIENTE e identificador generado en el cliente, y sincronizar después.",
+            "Conflictos: gana el servidor, gana el último en escribir, versiones por registro o movimientos en lugar de saldos.",
+            "Indispensable en zonas altoandinas y amazónicas con cobertura intermitente."
+          ],
+          "notes": "Este es el concepto que más valor aporta en el contexto peruano. Explique que, con la estrategia sin conexión primero, la interfaz nunca espera a la red: lee siempre de Room, que se actualiza en segundo plano. Para escrituras, el registro se guarda localmente con un estado de sincronización y un identificador generado en el cliente, y un proceso posterior lo envía al servidor. Discuta las estrategias de conflicto con ejemplos: en un catálogo de precios gana el servidor; en un formulario que edita una sola persona puede ganar el último; en inventarios conviene registrar movimientos en lugar de saldos para sumarlos sin conflictos. Mencione que OSIPTEL publica información de cobertura por operador y que muchas rutas rurales tienen tramos sin señal. Pregunta: ¿qué estrategia de conflicto usarían para el stock de una bodega modificado por dos vendedores sin conexión?"
+        },
+        {
+          "title": "WorkManager: trabajo garantizado en segundo plano",
+          "bullets": [
+            "Ejecuta tareas diferibles que deben completarse aunque la app se cierre o el teléfono se reinicie.",
+            "Restricciones: red disponible, red no medida, batería suficiente o equipo cargando.",
+            "enqueueUniqueWork con nombre evita sincronizaciones duplicadas; la espera exponencial ordena los reintentos.",
+            "No sirve para tareas exactas en hora ni para procesos continuos como el seguimiento de ubicación en vivo."
+          ],
+          "notes": "WorkManager es la biblioteca recomendada para trabajo que debe completarse aunque el usuario cierre la app o reinicie el teléfono, porque persiste las solicitudes en su propia base de datos y respeta las restricciones de batería de cada versión de Android. Configure en vivo un CoroutineWorker de sincronización con la restricción de red conectada y una política de reintento exponencial. Explique enqueueUniqueWork con nombre para no encolar diez sincronizaciones si el usuario toca diez veces el botón, y discuta qué política de trabajo existente conviene cuando llega un registro nuevo durante una sincronización en curso. Muestre el trabajo periódico, cuyo intervalo mínimo es de quince minutos. Pregunta: ¿qué restricciones configurarían para subir fotos de entregas en una zona donde los datos móviles son caros y el wifi solo está disponible en la base?"
+        },
+        {
+          "title": "Inyección de dependencias con Hilt",
+          "bullets": [
+            "Las clases reciben sus dependencias por constructor en lugar de crearlas, lo que permite usar dobles en las pruebas.",
+            "Hilt, construido sobre Dagger, genera el grafo en compilación: @HiltAndroidApp, @AndroidEntryPoint, @HiltViewModel e @Inject.",
+            "Módulos con @Provides para bibliotecas externas como Retrofit y Room, y @Binds para asociar interfaces con implementaciones.",
+            "Ámbitos: @Singleton garantiza una sola instancia de la base de datos en toda la aplicación."
+          ],
+          "notes": "Explique la inyección de dependencias con un ejemplo previo a cualquier biblioteca: si el ViewModel crea su propio repositorio, es imposible probarlo con un repositorio falso. Recibir las dependencias por constructor resuelve el problema, y Hilt automatiza la construcción del grafo de objetos. Recorra las anotaciones principales: HiltAndroidApp en la clase Application, AndroidEntryPoint en la actividad, HiltViewModel e Inject en los constructores. Muestre un módulo que provee Retrofit y la base de datos Room como instancias únicas, y un Binds que asocia la interfaz del repositorio con su implementación. Mencione que Hilt genera el código al compilar, por lo que los errores de configuración aparecen antes de ejecutar; en proyectos pequeños, un contenedor manual también es válido. Pregunta: ¿por qué la base de datos debe ser una única instancia en toda la aplicación?"
+        },
+        {
+          "title": "Del diagrama al código: flujo completo de una pantalla",
+          "bullets": [
+            "Evento: el usuario toca Confirmar entrega y la pantalla invoca una función del ViewModel.",
+            "El repositorio guarda en Room con estado PENDIENTE y encola la sincronización en WorkManager.",
+            "Room emite la lista actualizada por su Flow; el ViewModel la convierte en UiState y Compose recompone.",
+            "Cada flecha es un punto de prueba: fakes para la red, base en memoria para Room y aserciones sobre el StateFlow."
+          ],
+          "notes": "Integre todo recorriendo un flujo de punta a punta con el diagrama de secuencia de la pantalla de entregas. El evento del usuario sube al ViewModel; este invoca al repositorio dentro de viewModelScope; el repositorio guarda en Room y encola la sincronización; Room emite el nuevo contenido por su Flow; el ViewModel lo transforma en estado y Compose recompone solo lo necesario. Más tarde, el trabajador de WorkManager envía los pendientes y actualiza su estado, y la interfaz se entera sin que nadie la llame. Pida a los estudiantes que identifiquen dónde se maneja cada tipo de error y dónde se haría cada prueba. Este diagrama es obligatorio en la Tarea 3 y en la sustentación final. Pregunta: si la pantalla sigue mostrando una entrega como pendiente después de sincronizar, ¿en qué flechas del diagrama buscarían el error primero?"
+        }
+      ],
+      "reading": {
+        "title": "Arquitectura sin conexión primero con Room, Flow y WorkManager",
+        "minutes": 40,
+        "content": "## El problema: la red no es confiable\n\nEn una ciudad como Lima, una solicitud a la API suele responder en menos de un segundo. En una ruta entre Arequipa y Puno, el mismo teléfono puede pasar veinte minutos sin señal. Una aplicación que depende de la red para cada operación obliga al usuario a esperar, a reintentar o, peor, a anotar en papel. La estrategia **sin conexión primero** (*offline-first*) invierte la relación: la aplicación trabaja siempre contra una base de datos local, y la red se usa para sincronizar cuando está disponible.\n\n## La base local como fuente única de verdad\n\nCon Room, la entidad registra también el estado de sincronización y un identificador generado en el teléfono:\n\n```kotlin\n@Entity(tableName = \"entregas\", indices = [Index(\"estado\")])\ndata class EntregaEntity(\n    @PrimaryKey val id: String,          // UUID generado en el teléfono\n    val pedidoId: Long,\n    val receptorDni: String,\n    val registradaEn: Long,              // milisegundos desde la época Unix\n    val estado: String = \"PENDIENTE\"     // PENDIENTE | SINCRONIZADA | RECHAZADA\n)\n\n@Dao\ninterface EntregaDao {\n    @Query(\"SELECT * FROM entregas ORDER BY registradaEn DESC\")\n    fun observarTodas(): Flow<List<EntregaEntity>>\n\n    @Query(\"SELECT * FROM entregas WHERE estado = 'PENDIENTE'\")\n    suspend fun pendientes(): List<EntregaEntity>\n\n    @Insert\n    suspend fun insertar(e: EntregaEntity)\n\n    @Query(\"UPDATE entregas SET estado = :estado WHERE id = :id\")\n    suspend fun marcar(id: String, estado: String)\n}\n```\n\nEl índice sobre `estado` acelera la búsqueda de pendientes, y la consulta que devuelve `Flow` hace que la interfaz se actualice sola cuando cambia cualquier fila.\n\n## El repositorio coordina las fuentes\n\n```kotlin\nclass EntregaRepositorio @Inject constructor(\n    private val dao: EntregaDao,\n    private val api: EntregaApi,\n    private val sync: ProgramadorSync\n) {\n    val entregas: Flow<List<Entrega>> = dao.observarTodas().map { filas -> filas.map { it.aDominio() } }\n\n    suspend fun registrar(pedidoId: Long, dni: String) {\n        dao.insertar(EntregaEntity(UUID.randomUUID().toString(), pedidoId, dni, System.currentTimeMillis()))\n        sync.solicitar()                 // se enviará cuando haya red\n    }\n\n    suspend fun sincronizarPendientes(): Boolean {\n        var completo = true\n        for (e in dao.pendientes()) {\n            try {\n                api.enviar(claveIdempotencia = e.id, cuerpo = e.aDto())\n                dao.marcar(e.id, \"SINCRONIZADA\")\n            } catch (ex: HttpException) {\n                if (ex.code() == 422) dao.marcar(e.id, \"RECHAZADA\") else completo = false\n            } catch (ex: IOException) {\n                completo = false         // sin red: se reintentará\n            }\n        }\n        return completo\n    }\n}\n```\n\nTres decisiones merecen atención. El registro se guarda **antes** de intentar enviarlo, de modo que nunca se pierde. El identificador local viaja como **clave de idempotencia**: si la respuesta del servidor se pierde y el envío se repite, el servidor reconoce la clave y no crea un duplicado. Y los `catch` son específicos: atrapar `Exception` en general capturaría también `CancellationException` y rompería la cancelación estructurada de las corrutinas.\n\n## El ViewModel expone estado\n\n```kotlin\n@HiltViewModel\nclass EntregasViewModel @Inject constructor(private val repo: EntregaRepositorio) : ViewModel() {\n    val estado: StateFlow<EntregasUiState> = repo.entregas\n        .map { if (it.isEmpty()) EntregasUiState.Vacio else EntregasUiState.Contenido(it) }\n        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), EntregasUiState.Cargando)\n\n    fun onConfirmar(pedidoId: Long, dni: String) {\n        viewModelScope.launch { repo.registrar(pedidoId, dni) }\n    }\n}\n```\n\nLa pantalla recolecta `estado` con `collectAsStateWithLifecycle()` y no sabe si los datos vinieron de la red o del disco.\n\n## Sincronización con WorkManager\n\n```kotlin\n@HiltWorker\nclass SyncWorker @AssistedInject constructor(\n    @Assisted ctx: Context, @Assisted params: WorkerParameters,\n    private val repo: EntregaRepositorio\n) : CoroutineWorker(ctx, params) {\n    override suspend fun doWork(): Result =\n        if (repo.sincronizarPendientes()) Result.success() else Result.retry()\n}\n\nval solicitud = OneTimeWorkRequestBuilder<SyncWorker>()\n    .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())\n    .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 30, TimeUnit.SECONDS)\n    .build()\nworkManager.enqueueUniqueWork(\"sync-entregas\", ExistingWorkPolicy.APPEND_OR_REPLACE, solicitud)\n```\n\nEl trabajo único con nombre evita sincronizaciones paralelas que enviarían dos veces lo mismo. La política `APPEND_OR_REPLACE` encadena una nueva ejecución si llega un registro mientras otra está en curso; con `KEEP`, ese registro esperaría al siguiente disparo.\n\n## Conflictos: una decisión de negocio\n\nSi un pedido se reasigna a otro repartidor mientras el primero lo entregaba sin señal, ¿qué registro vale? No existe una respuesta técnica universal. El servidor puede rechazar con 409 y la app mostrar el conflicto; puede ganar el último en escribir; o pueden conservarse ambos eventos para que un supervisor decida. Lo importante es que la regla se defina con el negocio, se documente y se pruebe.\n"
+      },
+      "case": {
+        "title": "Caso: EnvíosSur y las entregas fantasma",
+        "content": "**EnvíosSur** (nombre ficticio) es una empresa de mensajería con sede en Arequipa que reparte pedidos de comercio electrónico en Arequipa, Moquegua, Tacna y Puno. Cuenta con 120 repartidores propios y terceros, y realiza alrededor de 3 500 entregas diarias, un tercio de ellas con pago contra entrega en efectivo o con billetera digital.\n\nEn 2023 lanzó una aplicación Android para que los repartidores confirmen cada entrega con el DNI del receptor y una foto. La app llama directamente a la API cuando el repartidor toca **Confirmar entrega**: si no hay señal, muestra «Error de conexión» y el repartidor debe reintentar más tarde. En la práctica, muchos anotan la entrega en papel y la registran al final del día, cuando la recuerdan.\n\nEl jefe de Operaciones, Renzo Quispe, presentó al directorio las cifras del último trimestre:\n\n- El 3,4 % de las entregas no tiene registro digital o lo tiene con más de seis horas de retraso; los clientes de comercio electrónico reciben reclamos de compradores que ven su pedido como «en ruta» cuando ya lo recibieron.\n- El 1,1 % de las entregas aparece duplicado: cuando la respuesta tarda, los repartidores tocan el botón dos o tres veces.\n- La conciliación de cobros contra entrega arroja diferencias promedio de S/ 18 000 mensuales que el área de Finanzas tarda semanas en aclarar.\n- Dos tiendas en línea, que representan el 22 % de los ingresos, anunciaron que evaluarán otro operador si la trazabilidad no mejora en el próximo trimestre.\n\nLa líder técnica, Carla Mamani, propone rediseñar la app con la estrategia sin conexión primero: registrar todo en Room, sincronizar con WorkManager y usar claves de idempotencia. Estima ocho semanas de trabajo para dos desarrolladores y cambios en la API. Renzo prefiere una solución inmediata: bloquear el botón hasta que haya señal y exigir que los repartidores esperen en un lugar con cobertura. El gerente de Finanzas pregunta cuánto costará y qué pasará con los cobros registrados sin conexión si el teléfono se pierde o se daña antes de sincronizar.\n\nHay además un caso pendiente que inquieta a todos: un pedido fue reasignado a otro repartidor mientras el primero ya lo estaba entregando en una zona sin señal. Ambos registraron la entrega y el cliente fue cobrado dos veces.\n\nEl gerente general ha pedido una propuesta técnica que responda a todas estas preocupaciones antes de la próxima reunión con los clientes.\n",
+        "questions": [
+          "¿Qué causas técnicas explican las entregas sin registro y las duplicadas? Relaciónelas con los conceptos de la unidad.",
+          "Compare la propuesta de Carla con la de Renzo en costo, riesgo operativo, experiencia del repartidor y retención de clientes. ¿Cuál recomienda?",
+          "Diseñe la regla de resolución de conflictos para un pedido reasignado que dos repartidores registran como entregado. ¿Quién decide y cómo se informa?",
+          "¿Qué medidas mitigarían la pérdida de cobros registrados sin conexión si el teléfono se daña antes de sincronizar?",
+          "¿Qué cambios necesita la API del servidor para soportar la estrategia sin conexión primero y la idempotencia?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Capa de datos con funcionamiento sin conexión",
+        "instructions": "**Objetivo:** dotar al proyecto integrador de una arquitectura por capas con datos reales, capaz de operar sin conexión y sincronizar de forma confiable.\n\n**Requisitos funcionales**\n\n1. Cada pantalla tiene un `ViewModel` que expone un `StateFlow` de estado inmutable con, al menos, los estados de carga, vacío, error y contenido.\n2. Integración con una API REST mediante Retrofit y kotlinx.serialization: puede ser la API construida en Desarrollo Web o un servidor simulado documentado con OpenAPI.\n3. Persistencia con Room: al menos dos entidades relacionadas, consultas que devuelven `Flow` y una migración de esquema probada.\n4. Una preferencia del usuario almacenada con DataStore.\n5. Escrituras sin conexión: los registros se guardan localmente como pendientes y se sincronizan con WorkManager, usando claves de idempotencia.\n6. Inyección de dependencias con Hilt o con un contenedor manual justificado.\n\n**Requisitos de calidad**\n\n- Pruebas unitarias del repositorio con fakes que cubran éxito, falta de red y rechazo del servidor.\n- Diagrama de secuencia del flujo principal y regla de resolución de conflictos documentada en el README.\n\n**Entregables:** repositorio actualizado y video de hasta cinco minutos que muestre la creación de registros en modo avión, la sincronización al recuperar la red sin duplicados y la recuperación tras rotación. Entrega al cierre de la semana 12.\n",
+        "rubric": [
+          {
+            "name": "Arquitectura en capas y estado de interfaz",
+            "points": 5
+          },
+          {
+            "name": "Integración con la API y manejo de errores",
+            "points": 5
+          },
+          {
+            "name": "Persistencia local y sincronización sin conexión",
+            "points": 6
+          },
+          {
+            "name": "Pruebas, diagrama y documentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Arquitectura, corrutinas y datos sin conexión",
+        "questions": [
+          {
+            "prompt": "Un ViewModel guarda una referencia a la Activity para mostrar mensajes al usuario. ¿Qué problema genera?",
+            "options": [
+              "Ninguno, porque ambos se destruyen al mismo tiempo",
+              "Un ANR, porque la actividad se ejecuta en otro hilo",
+              "Una fuga de memoria, porque el ViewModel sobrevive a la actividad y la retiene",
+              "Un error de compilación detectado por Hilt"
+            ],
+            "correct": 2,
+            "explanation": "El ViewModel sobrevive a la recreación de la actividad. Si guarda una referencia a ella, impide que el recolector de basura libere la actividad destruida y toda su jerarquía, lo que causa una fuga de memoria."
+          },
+          {
+            "prompt": "¿Qué ocurre con las corrutinas lanzadas en viewModelScope cuando el usuario sale definitivamente de la pantalla?",
+            "options": [
+              "Se cancelan automáticamente al destruirse el ViewModel",
+              "Continúan hasta terminar aunque nadie use el resultado",
+              "Se transfieren a WorkManager para completarse",
+              "Se pausan y se reanudan cuando el usuario vuelve"
+            ],
+            "correct": 0,
+            "explanation": "viewModelScope está ligado al ciclo de vida del ViewModel; al invocarse onCleared se cancela el ámbito y, por la concurrencia estructurada, todas sus corrutinas hijas."
+          },
+          {
+            "prompt": "Un repositorio envuelve una llamada suspend en try { } catch (e: Exception) { } y la descarga continúa después de salir de la pantalla. ¿Cuál es la causa probable?",
+            "options": [
+              "Las funciones suspend no pueden usarse dentro de un bloque try",
+              "Atrapa CancellationException sin relanzarla e interrumpe la cancelación cooperativa",
+              "Dispatchers.IO no admite la cancelación de corrutinas",
+              "Exception no incluye los errores de red de Retrofit"
+            ],
+            "correct": 1,
+            "explanation": "La cancelación de corrutinas se comunica mediante CancellationException. Un catch genérico la absorbe y el código sigue ejecutándose; deben atraparse excepciones específicas o relanzar la cancelación."
+          },
+          {
+            "prompt": "En una arquitectura sin conexión primero, ¿cuál es la fuente única de verdad que lee la interfaz?",
+            "options": [
+              "La respuesta más reciente de la API guardada en el ViewModel",
+              "La caché HTTP de OkHttp",
+              "Las preferencias almacenadas en DataStore",
+              "La base de datos local, que se actualiza con la red en segundo plano"
+            ],
+            "correct": 3,
+            "explanation": "La interfaz observa siempre la base local, por ejemplo un Flow de Room. La red actualiza esa base cuando está disponible, de modo que la app funciona igual con o sin conexión."
+          },
+          {
+            "prompt": "Un repartidor confirma una entrega, la respuesta del servidor se pierde y la app reintenta el POST. ¿Qué evita el registro duplicado?",
+            "options": [
+              "Cambiar el método POST por GET",
+              "Aumentar el tiempo de espera de OkHttp a dos minutos",
+              "Enviar una clave de idempotencia generada en el cliente que el servidor reconoce",
+              "Deshabilitar los reintentos de WorkManager"
+            ],
+            "correct": 2,
+            "explanation": "Con una clave de idempotencia, el servidor detecta que ya procesó esa operación y devuelve el resultado anterior sin crear otro registro. Cambiar a GET violaría la semántica de HTTP."
+          },
+          {
+            "prompt": "¿Para cuál de estas tareas es más adecuado WorkManager?",
+            "options": [
+              "Actualizar cada segundo la posición del repartidor en un mapa en vivo",
+              "Subir las entregas pendientes cuando haya red, aunque la app se cierre",
+              "Mostrar un Snackbar después de guardar un formulario",
+              "Animar la transición entre dos pantallas"
+            ],
+            "correct": 1,
+            "explanation": "WorkManager está diseñado para trabajo diferible y garantizado que sobrevive al cierre de la app y a reinicios. El seguimiento continuo requiere un servicio en primer plano y las tareas de interfaz pertenecen a la pantalla."
+          },
+          {
+            "prompt": "Una actualización cambia el esquema de Room y usa migración destructiva. ¿Cuál es la consecuencia para el usuario?",
+            "options": [
+              "Pierde los datos locales, incluidos los registros aún no sincronizados",
+              "La app no compila hasta definir la migración",
+              "Room convierte automáticamente las tablas antiguas",
+              "Solo se borran las preferencias de DataStore"
+            ],
+            "correct": 0,
+            "explanation": "La migración destructiva elimina y recrea las tablas. En una app sin conexión primero, eso borra registros pendientes de sincronizar; por eso las migraciones deben escribirse y probarse."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Calidad, seguridad, publicación y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante verifica la calidad de su aplicación con pruebas automatizadas y mediciones de rendimiento, aplica controles de seguridad y privacidad del OWASP MASVS y la Ley 29733, la publica en un canal de prueba de Google Play con integración continua y sustenta el proyecto integrador.",
+      "topics": [
+        "Estrategia de pruebas: unitarias, de integración y de interfaz con Compose",
+        "Rendimiento y estabilidad: inicio, memoria, R8, fallos, ANR y Android vitals",
+        "Seguridad móvil: OWASP MASVS, Mobile Top 10, secretos y comunicaciones",
+        "Privacidad por diseño: Ley 29733, su reglamento y requisitos de Google Play",
+        "Firma, Android App Bundle, canales de prueba e integración continua",
+        "Métricas de producto y sustentación del proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "Pirámide de pruebas en aplicaciones móviles",
+          "bullets": [
+            "Base amplia de pruebas unitarias rápidas, menos pruebas de integración y pocas de extremo a extremo (Cohn, 2009).",
+            "Pruebas locales en la JVM se ejecutan en segundos; las instrumentadas requieren dispositivo o emulador y son más lentas.",
+            "Robolectric ejecuta en la JVM parte del código que usa API de Android, como punto intermedio.",
+            "La cobertura útil es la de reglas de negocio y caminos de error, no un porcentaje global inflado con código trivial."
+          ],
+          "notes": "Presente la pirámide de pruebas de Cohn como guía de inversión, no como dogma. Las pruebas unitarias en la JVM son rápidas y estables, por eso deben ser la mayoría; las instrumentadas en dispositivo son lentas y más frágiles, aunque imprescindibles para verificar la integración con el sistema; las de extremo a extremo se reservan para los flujos críticos, como registrar un pedido y pagarlo. Mencione Robolectric como punto intermedio que simula partes de Android en la JVM. Discuta la cobertura con honestidad: un 90 % de líneas cubiertas no sirve si las aserciones son débiles; importa cubrir las reglas de negocio y los caminos de error. Comente que en los procesos de selección de empresas de software se pregunta cada vez más por pruebas automatizadas. Pregunta: ¿qué tres flujos de su proyecto merecen una prueba de extremo a extremo y por qué?"
+        },
+        {
+          "title": "Pruebas unitarias de ViewModel y repositorio",
+          "bullets": [
+            "Fakes, implementaciones simples en memoria de la misma interfaz, suelen dar pruebas más legibles que los mocks excesivos.",
+            "runTest de kotlinx-coroutines-test ejecuta con tiempo virtual: debounce y esperas exponenciales se prueban al instante.",
+            "Una regla de prueba reemplaza Dispatchers.Main; los despachadores se inyectan en lugar de escribirse dentro de las clases.",
+            "Verificar secuencias de estado: Cargando, luego Contenido, o Cargando, luego Error ante un fallo de red simulado."
+          ],
+          "notes": "Escriba en vivo una prueba del ViewModel de entregas con un repositorio falso. Explique por qué los fakes suelen producir pruebas más legibles y menos acopladas que los mocks configurados con decenas de expectativas: verifican el resultado y no los detalles de implementación. Muestre runTest, que ejecuta el código con tiempo virtual, de modo que un debounce de 300 ms o una espera exponencial se prueban al instante y de forma determinista. Introduzca la regla que reemplaza Dispatchers.Main por un despachador de prueba, porque en la JVM no existe el hilo principal de Android. Insista en inyectar los despachadores como dependencia. Verifique la secuencia de estados ante un fallo de red simulado. Pregunta: ¿qué caso límite de su dominio podría fallar en producción y todavía no tiene una prueba que lo proteja?"
+        },
+        {
+          "title": "Pruebas de interfaz con Compose",
+          "bullets": [
+            "createComposeRule y buscadores semánticos: onNodeWithText, onNodeWithContentDescription y onNodeWithTag.",
+            "Acciones como performClick y performTextInput, y aserciones como assertIsDisplayed y assertIsNotEnabled.",
+            "Las pruebas leen el mismo árbol semántico que TalkBack: una interfaz accesible es más fácil de probar.",
+            "Pruebas de captura de pantalla para detectar regresiones visuales en temas, idiomas y tamaños de letra."
+          ],
+          "notes": "Muestre una prueba de interfaz que escribe un DNI incompleto, verifica que aparece el mensaje de error y que el botón permanece deshabilitado. Explique que los buscadores semánticos usan el mismo árbol que TalkBack, por lo que una interfaz sin descripciones accesibles también es difícil de probar: accesibilidad y facilidad de prueba van de la mano. Recomiende testTag solo cuando no exista un texto o una descripción estable. Presente las pruebas de captura de pantalla, que comparan imágenes de componentes en varios temas y tamaños de letra para detectar regresiones visuales; herramientas como Roborazzi o Paparazzi las ejecutan en la JVM. Advierta sobre pruebas frágiles que dependen de textos que cambian con la traducción. Pregunta: ¿cómo probarían que la pantalla muestra el estado de error cuando el repositorio falla, sin depender de la red real?"
+        },
+        {
+          "title": "Rendimiento: inicio, memoria y tamaño",
+          "bullets": [
+            "Inicio en frío medido con Macrobenchmark en compilación release; Android vitals considera excesivo un inicio en frío de 5 s o más.",
+            "Perfiles de referencia (Baseline Profiles): indican a ART qué código compilar por adelantado y aceleran inicio y desplazamiento.",
+            "LeakCanary detecta objetos retenidos después de destruirse una pantalla; el perfilador de memoria muestra asignaciones.",
+            "R8 reduce, optimiza y ofusca el código; con recursos reducidos, disminuye el tamaño de descarga para planes prepago."
+          ],
+          "notes": "Distinga tres dimensiones de rendimiento y cómo medir cada una. El inicio en frío, desde que el usuario toca el ícono hasta que ve contenido útil, se mide con Macrobenchmark en compilación release; Android vitals considera excesivos los inicios en frío de cinco segundos o más, aunque los usuarios abandonan mucho antes. Los perfiles de referencia indican a ART qué código compilar por adelantado y suelen mejorar de forma notable el inicio y la fluidez. Para memoria, LeakCanary detecta en desarrollo objetos retenidos tras destruirse una pantalla. R8 elimina código no usado y ofusca nombres: en un país donde muchas personas usan planes prepago, cada megabyte de descarga cuenta. Muestre el analizador de APK para comparar tamaños antes y después de R8. Pregunta: ¿qué compromiso implica la ofuscación al leer los reportes de fallos y cómo se resuelve?"
+        },
+        {
+          "title": "Estabilidad: fallos y ANR en Android vitals",
+          "bullets": [
+            "Google Play mide la tasa de fallos y la tasa de ANR percibidos por el usuario, es decir, durante la interacción.",
+            "Umbrales generales de mal comportamiento: 1,09 % de fallos y 0,47 % de ANR; 8 % para un modelo de teléfono específico.",
+            "Superarlos puede reducir la visibilidad de la app en la tienda y mostrar advertencias en su ficha.",
+            "Reporte de fallos en producción (por ejemplo, Firebase Crashlytics) con archivos de mapeo de R8 para leer trazas."
+          ],
+          "notes": "Abra la consola de Google Play con una app de ejemplo y recorra Android vitals. Explique la diferencia entre fallos totales y fallos percibidos por el usuario, que son los que ocurren mientras la persona interactúa con la app. Presente los umbrales de mal comportamiento: 1,09 % de usuarios activos diarios con fallos percibidos y 0,47 % con ANR percibidos a nivel general, y 8 % para un modelo de teléfono específico. Superarlos puede reducir la visibilidad de la app en la tienda y mostrar advertencias en su ficha. Por eso se integra una herramienta de reporte de fallos y se suben los archivos de mapeo de R8 para leer las trazas sin ofuscación. Pregunta: si la tasa de fallos se concentra en un modelo de gama de entrada muy vendido en el Perú, ¿qué harían antes de publicar la siguiente versión?"
+        },
+        {
+          "title": "Panorama de seguridad móvil: OWASP",
+          "bullets": [
+            "OWASP MASVS v2: controles agrupados en STORAGE, CRYPTO, AUTH, NETWORK, PLATFORM, CODE, RESILIENCE y PRIVACY.",
+            "OWASP MASTG: guía de pruebas con técnicas para verificar cada control del MASVS.",
+            "Mobile Top 10 (2024): encabezan el uso inadecuado de credenciales y la seguridad insuficiente de la cadena de suministro.",
+            "Modelo de amenazas: el atacante puede instalar la app en un equipo que controla, descompilarla y modificarla."
+          ],
+          "notes": "Presente el trabajo de OWASP en móvil como el equivalente del OWASP Top 10 web que vieron en Desarrollo Web. El MASVS define qué controles verificar, agrupados en categorías; el MASTG explica cómo probarlos; y el Mobile Top 10 de 2024 resume los riesgos más frecuentes. Destaque que en esa versión el uso inadecuado de credenciales y la seguridad de la cadena de suministro ocupan los primeros lugares: claves incrustadas en el código y bibliotecas de terceros comprometidas. Explique el cambio de mentalidad del modelo de amenazas: a diferencia de un servidor, el atacante puede instalar la app en un teléfono con acceso de superusuario, descompilarla y modificarla. Anuncie que Seguridad Informática, en el quinto ciclo, profundizará en estas técnicas. Pregunta: ¿qué datos o funciones de su proyecto serían más atractivos para un atacante y por qué?"
+        },
+        {
+          "title": "Almacenamiento seguro y manejo de secretos",
+          "bullets": [
+            "Todo lo que viaja dentro del APK debe considerarse público: las claves privadas de servicios se quedan en el servidor.",
+            "Android Keystore genera claves no exportables, respaldadas por hardware seguro cuando el equipo lo permite.",
+            "Cifrar tokens y datos sensibles con claves del Keystore, por ejemplo mediante la biblioteca Tink.",
+            "Excluir archivos sensibles de las copias de seguridad automáticas y borrar la caché al cerrar sesión."
+          ],
+          "notes": "Haga una demostración controlada: descompile una APK de ejemplo propia con una herramienta como jadx y muestre cómo aparece en texto legible una clave de API incluida en BuildConfig. La lección es que todo lo que viaja dentro del paquete debe considerarse público; los secretos verdaderos permanecen en el servidor, que actúa como intermediario con los servicios de terceros. Explique el Android Keystore: genera claves que no pueden extraerse del dispositivo y, en equipos con hardware seguro, se almacenan en un entorno aislado. Mencione que Google declaró obsoleta la biblioteca de cifrado de Jetpack y recomienda usar el Keystore directamente o bibliotecas como Tink. Revise las reglas de copia de seguridad para excluir archivos sensibles. Pregunta: ¿cómo consumiría su app un servicio de mapas de pago sin exponer la clave del contrato?"
+        },
+        {
+          "title": "Comunicación segura y autenticación",
+          "bullets": [
+            "Desde Android 9 el tráfico HTTP sin cifrar está bloqueado por defecto; network_security_config declara excepciones solo para desarrollo.",
+            "Fijación de certificados solo con pines de respaldo y plan de rotación: un pin vencido deja a todos sin servicio.",
+            "OAuth 2.0 con PKCE para iniciar sesión en apps nativas; tokens de acceso de vida corta y renovación segura.",
+            "Credential Manager unifica contraseñas, llaves de acceso (passkeys) e inicio con proveedores; BiometricPrompt protege acciones locales.",
+            "El cliente móvil nunca es frontera de confianza: permisos y montos se validan en el servidor."
+          ],
+          "notes": "Explique que desde Android 9 la plataforma bloquea por defecto el tráfico HTTP sin cifrar, y que la configuración de seguridad de red permite declarar excepciones solo para entornos de desarrollo. Discuta la fijación de certificados con sus dos caras: protege contra certificados fraudulentos, pero si el certificado del servidor rota y la app no tiene un pin de respaldo, todos los usuarios quedan sin servicio hasta actualizar. Presente OAuth 2.0 con PKCE como el flujo recomendado para apps nativas, que impide reutilizar un código de autorización interceptado. Muestre Credential Manager como la API unificada para contraseñas, llaves de acceso e inicio con proveedores. Reitere el principio central: toda validación de permisos y montos ocurre en el servidor. Pregunta: si un atacante modifica la app para ocultar el límite de retiro diario, ¿qué debería impedir que lo supere?"
+        },
+        {
+          "title": "Privacidad por diseño y Ley 29733",
+          "bullets": [
+            "Ley 29733 y su reglamento aprobado por el D. S. 016-2024-JUS: consentimiento informado, finalidad, proporcionalidad y seguridad.",
+            "Datos sensibles, como salud, datos biométricos e ingresos económicos, exigen protección y consentimiento reforzados.",
+            "Derechos de acceso, rectificación, cancelación y oposición: la app debe facilitar su ejercicio, incluida la eliminación de la cuenta.",
+            "Los SDK de analítica y publicidad también tratan datos: inventariarlos, minimizarlos y declararlos."
+          ],
+          "notes": "Repase la Ley 29733 desde la perspectiva del desarrollador móvil. Su reglamento vigente, aprobado por el Decreto Supremo 016-2024-JUS, actualiza las obligaciones de los responsables del tratamiento, entre ellas las referidas a la seguridad y a la gestión de incidentes. Explique los principios aplicados al diseño: consentimiento informado antes de recolectar, finalidad declarada, proporcionalidad y seguridad. Recuerde que la ley considera datos sensibles, entre otros, la salud, los datos biométricos y los ingresos económicos. Los derechos de acceso, rectificación, cancelación y oposición deben poder ejercerse; Google Play exige además ofrecer la eliminación de la cuenta desde la app y desde la web. Advierta que los SDK de terceros recogen datos por su cuenta y la organización responde por ellos. Pregunta: ¿qué datos de su proyecto son sensibles y cómo se informa al usuario antes de recolectarlos?"
+        },
+        {
+          "title": "Requisitos para publicar en Google Play",
+          "bullets": [
+            "Cuenta de desarrollador con pago único y verificación de identidad; las organizaciones requieren además un número D-U-N-S.",
+            "Android App Bundle (AAB) obligatorio para apps nuevas desde 2021: Play genera APK optimizados por dispositivo.",
+            "Nivel de API objetivo: debe mantenerse dentro de un año de la última versión principal de Android para publicar actualizaciones.",
+            "Formulario de seguridad de los datos, política de privacidad, clasificación de contenido y opción de eliminar la cuenta.",
+            "Cuentas personales nuevas: prueba cerrada previa con un mínimo de evaluadores durante 14 días antes de producción."
+          ],
+          "notes": "Recorra el proceso de publicación en Google Play Console. La cuenta de desarrollador requiere un pago único y verificación de identidad; las cuentas de organización requieren además un número D-U-N-S. Explique el Android App Bundle: el desarrollador sube un único paquete y Google Play genera APK optimizados por idioma, densidad y arquitectura, lo que reduce la descarga. Insista en el requisito de nivel de API objetivo, que obliga a actualizar la app cada año para adoptar los comportamientos de seguridad y privacidad más recientes. Muestre el formulario de seguridad de los datos y explique que lo declarado debe coincidir con lo que la app y sus SDK realmente hacen. Comente la prueba cerrada obligatoria para cuentas personales nuevas, que hoy exige doce evaluadores. Pregunta: ¿cómo organizarían a doce evaluadores reales durante catorce días para su proyecto?"
+        },
+        {
+          "title": "Firma de la aplicación, versionado y variantes",
+          "bullets": [
+            "Firma de apps de Play: Google custodia la clave de firma y el equipo firma cada carga con una clave de carga reemplazable.",
+            "El almacén de claves y sus contraseñas se guardan en un gestor de secretos, nunca en el repositorio.",
+            "versionCode es un entero creciente para Play; versionName sigue el versionado semántico visible para el usuario.",
+            "Variantes debug, staging y release con distinta URL de API para no probar contra datos reales."
+          ],
+          "notes": "Explique la firma digital de las apps: garantiza que las actualizaciones provienen del mismo autor. Con la Firma de apps de Play, Google custodia la clave de firma y el desarrollador firma cada carga con una clave de carga; si esta se pierde o se compromete, puede reemplazarse mediante soporte, algo imposible en el esquema antiguo donde perder la clave significaba no poder actualizar nunca más la app. Muestre cómo configurar la firma en Gradle leyendo contraseñas de variables de entorno. Explique la diferencia entre versionCode, el entero que Play usa para ordenar versiones, y versionName, visible para el usuario. Configure variantes con distintas direcciones de API para desarrollo, pruebas y producción. Pregunta: ¿qué consecuencias tendría subir por error a un repositorio público el almacén de claves con sus contraseñas?"
+        },
+        {
+          "title": "Canales de prueba y lanzamiento escalonado",
+          "bullets": [
+            "Pruebas internas (hasta 100 evaluadores, disponibles en minutos), cerradas, abiertas y producción.",
+            "Lanzamiento escalonado: 5 %, 20 %, 50 % y 100 % vigilando fallos, ANR y reseñas; detenerlo si empeoran.",
+            "La API de actualizaciones en la app permite solicitar una versión con correcciones críticas.",
+            "Notas de versión claras y respuestas a reseñas como parte del soporte y fuente de requisitos."
+          ],
+          "notes": "Describa los canales de Google Play como una escalera de riesgo creciente. Las pruebas internas permiten distribuir en minutos a hasta cien personas del equipo; las cerradas, a grupos definidos, como los recolectores piloto de una cooperativa; las abiertas, a cualquiera que se inscriba; y producción, a todos. Explique el lanzamiento escalonado: publicar primero a un porcentaje pequeño de usuarios, vigilar fallos, ANR y reseñas, y ampliar gradualmente; si un indicador empeora, se detiene el despliegue antes de afectar a la mayoría. Muestre la API de actualizaciones en la app para pedir la instalación de una corrección de seguridad. Destaque que responder reseñas con empatía y datos concretos mejora la reputación. Pregunta: ¿qué indicadores y umbrales definirían para decidir pasar del 20 % al 50 % de usuarios?"
+        },
+        {
+          "title": "Integración y entrega continuas",
+          "bullets": [
+            "En cada solicitud de integración: compilación, análisis estático con Android Lint y detekt, y pruebas unitarias.",
+            "En la rama principal: pruebas instrumentadas en emuladores y reportes de cobertura.",
+            "Con cada etiqueta de versión: AAB firmado con secretos del entorno y carga automática al canal de pruebas internas.",
+            "Cadena de suministro: versiones fijadas en el catálogo de Gradle y alertas de vulnerabilidades en dependencias."
+          ],
+          "notes": "Relacione con Administración de Servidores y Nube, donde se trabaja la automatización y la infraestructura como código. Configure con la clase una canalización que, en cada solicitud de integración, compile la app, ejecute Android Lint y detekt, corra las pruebas unitarias y publique los reportes. En la rama principal se agregan pruebas instrumentadas en emuladores y, al crear una etiqueta de versión, se genera el AAB firmado con secretos del entorno de integración y se sube automáticamente al canal de pruebas internas. Explique la relación con el riesgo de cadena de suministro del Mobile Top 10: fijar versiones, revisar dependencias con alertas de vulnerabilidades y verificar su procedencia. La meta es que publicar sea un evento aburrido y repetible. Pregunta: ¿qué verificación automática habría evitado el incidente más grave que imaginan para su proyecto?"
+        },
+        {
+          "title": "Métricas de producto después del lanzamiento",
+          "bullets": [
+            "Conversión de la ficha de la tienda: visitas que terminan en instalación.",
+            "Retención por cohortes en los días 1, 7 y 30; el cociente DAU/MAU indica la frecuencia de uso.",
+            "Usuarios sin fallos, valoración promedio y análisis temático de reseñas como fuente de requisitos.",
+            "Analítica con información previa al usuario, datos mínimos y consentimiento cuando corresponda."
+          ],
+          "notes": "Cierre el ciclo técnico con la mirada de producto: publicar no es el final, hay que saber si la app crea valor. Explique la retención por cohortes: qué porcentaje de quienes instalaron un día vuelve al día 1, al día 7 y al día 30; una caída brusca entre el día 1 y el día 7 suele indicar que la propuesta de valor no se comprende. El cociente entre usuarios activos diarios y mensuales mide la frecuencia de uso; para una app de pagos se espera más alto que para una de trámites anuales. Combine métricas de estabilidad, como el porcentaje de usuarios sin fallos, con la valoración y el análisis de reseñas. Insista en que la analítica también es tratamiento de datos personales. Pregunta: ¿qué métrica principal demostraría el éxito de la app de la cooperativa lechera y cómo la medirían?"
+        },
+        {
+          "title": "Proyecto integrador: criterios de sustentación",
+          "bullets": [
+            "Demostración en dispositivo real: flujo principal, modo avión con sincronización posterior y recuperación tras rotación.",
+            "Arquitectura explicada con diagrama de capas y al menos tres registros de decisiones de arquitectura.",
+            "Evidencias de calidad: reporte de pruebas, cobertura de la lógica, medición del inicio y lista MASVS verificada.",
+            "Publicación en canal de prueba con ficha, política de privacidad y formulario de seguridad de los datos.",
+            "Reflexión sobre deuda técnica, riesgos y hoja de ruta hacia iOS o multiplataforma."
+          ],
+          "notes": "Explique los criterios de la sustentación final con la rúbrica a la vista. La demostración se hace en un dispositivo real, preferentemente de gama media, e incluye el flujo principal, la operación en modo avión con sincronización posterior y la recuperación tras rotación y muerte del proceso. Cada equipo presenta el diagrama de capas, al menos tres registros de decisiones de arquitectura y las evidencias de calidad: reporte de pruebas, cobertura de la lógica, mediciones de inicio y la lista de controles del MASVS verificados. Se revisa la ficha en el canal de prueba, la política de privacidad y el formulario de seguridad de los datos. Cierre con la reflexión sobre deuda técnica y la hoja de ruta. Pregunta: si tuvieran que llevar la app a iOS mañana, ¿qué partes reutilizarían con Kotlin Multiplatform y cuáles reescribirían?"
+        }
+      ],
+      "reading": {
+        "title": "Del laboratorio a la tienda: pruebas, seguridad y publicación responsable",
+        "minutes": 40,
+        "content": "## La calidad como evidencia, no como opinión\n\nDecir que una aplicación «funciona bien» no basta para publicarla. Antes de llegar a miles de teléfonos, el equipo debe presentar evidencias verificables: pruebas que pasan, mediciones de rendimiento, controles de seguridad revisados y declaraciones de privacidad coherentes con lo que el código realmente hace. Esta lectura recorre esas cuatro evidencias con ejemplos ejecutables.\n\n## Probar el ViewModel con tiempo virtual\n\nLas pruebas unitarias del `ViewModel` se ejecutan en la JVM, en segundos, con un repositorio falso que implementa la misma interfaz que el real:\n\n```kotlin\nclass EntregasViewModelTest {\n    @get:Rule val mainRule = MainDispatcherRule()   // reemplaza Dispatchers.Main\n\n    @Test\n    fun registrarUnaEntregaMuestraContenido() = runTest {\n        val repo = FakeEntregaRepositorio()            // lista en memoria, sin red ni disco\n        val vm = EntregasViewModel(repo)\n        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.estado.collect {} }\n\n        assertEquals(EntregasUiState.Vacio, vm.estado.value)\n        vm.onConfirmar(pedidoId = 1042, dni = \"45879632\")\n        advanceUntilIdle()\n        assertTrue(vm.estado.value is EntregasUiState.Contenido)\n    }\n}\n```\n\n`runTest` controla un reloj virtual: un `debounce` de 300 ms o una espera exponencial se resuelven sin esperar tiempo real. El recolector en `backgroundScope` activa el `StateFlow` configurado con `WhileSubscribed`, y se cancela solo al terminar la prueba.\n\n## Probar la interfaz por su semántica\n\n```kotlin\nclass RegistroTest {\n    @get:Rule val compose = createComposeRule()\n\n    @Test\n    fun dniIncompletoMantieneBotonDeshabilitado() {\n        compose.setContent { PantallaRegistro(onRegistrar = {}) }\n        compose.onNodeWithText(\"DNI\").performTextInput(\"4587\")\n        compose.onNodeWithText(\"Registrar\").assertIsNotEnabled()\n    }\n}\n```\n\nLa prueba localiza los elementos por su texto, igual que lo haría TalkBack. Si un botón no tuviera etiqueta, la prueba no podría encontrarlo con facilidad: accesibilidad y capacidad de prueba son dos caras de la misma calidad.\n\n## Comunicaciones y secretos\n\nDesde Android 9 el tráfico HTTP sin cifrar está bloqueado por defecto. La configuración de seguridad de red lo hace explícito y limita las excepciones a la compilación de depuración:\n\n```xml\n<network-security-config>\n    <base-config cleartextTrafficPermitted=\"false\" />\n    <debug-overrides>\n        <trust-anchors><certificates src=\"user\" /></trust-anchors>\n    </debug-overrides>\n</network-security-config>\n```\n\nLos secretos de firma tampoco se escriben en el código. Gradle los lee de variables de entorno que el servidor de integración continua inyecta:\n\n```kotlin\nandroid {\n    signingConfigs {\n        create(\"release\") {\n            storeFile = System.getenv(\"KEYSTORE_PATH\")?.let { file(it) }\n            storePassword = System.getenv(\"KEYSTORE_PASSWORD\")\n            keyAlias = System.getenv(\"KEY_ALIAS\")\n            keyPassword = System.getenv(\"KEY_PASSWORD\")\n        }\n    }\n    buildTypes {\n        release {\n            isMinifyEnabled = true        // R8: reduce, optimiza y ofusca\n            isShrinkResources = true\n            signingConfig = signingConfigs.getByName(\"release\")\n        }\n    }\n}\n```\n\nRecuerde la regla de oro del OWASP MASVS: todo lo que viaja dentro del paquete puede extraerse. Una clave privada de un proveedor de SMS o de mapas debe quedarse en el servidor, que actúa como intermediario. Los tokens de sesión se cifran con claves del Android Keystore, que no pueden exportarse del dispositivo.\n\n## Privacidad por diseño y Ley 29733\n\nLa Ley 29733 y su reglamento aprobado por el D. S. 016-2024-JUS exigen consentimiento informado, finalidad determinada, proporcionalidad y medidas de seguridad. En una app móvil eso se traduce en decisiones concretas:\n\n- Solicitar permisos en contexto y solo los necesarios.\n- No registrar datos personales en Logcat ni en herramientas de reporte de fallos.\n- Inventariar los SDK de terceros y declarar en el formulario de seguridad de los datos de Google Play lo que cada uno recoge.\n- Permitir eliminar la cuenta y los datos desde la app y desde la web.\n\nUna declaración inexacta no es un detalle administrativo: incumple las políticas de la tienda y puede constituir una infracción ante la Autoridad Nacional de Protección de Datos Personales.\n\n## Lista de verificación previa al lanzamiento\n\n1. Pruebas unitarias y de interfaz en verde en la canalización de integración continua.\n2. Inicio en frío medido en un equipo de gama media con perfil de referencia incluido.\n3. Tasa de fallos percibidos muy por debajo del 1,09 % y de ANR por debajo del 0,47 % en la prueba cerrada.\n4. Controles del MASVS revisados: almacenamiento, red, autenticación, plataforma, código y privacidad.\n5. Política de privacidad, formulario de seguridad de los datos y nivel de API objetivo vigentes.\n6. Lanzamiento escalonado con umbrales definidos para avanzar o detenerse.\n"
+      },
+      "case": {
+        "title": "Caso: Financiera Andina del Sur, ¿lanzar o postergar?",
+        "content": "**Financiera Andina del Sur** (nombre ficticio) es una entidad de microfinanzas supervisada por la SBS, con 64 agencias en Cusco, Puno, Apurímac y Madre de Dios y cerca de 180 000 clientes, en su mayoría micro y pequeños empresarios. Su nueva aplicación Android permitirá consultar saldos, pagar cuotas y solicitar desembolsos de créditos preaprobados sin acudir a una agencia.\n\nLa gerencia comercial fijó el lanzamiento para la campaña de Fiestas Patrias y ya invirtió S/ 180 000 en publicidad en radio y redes sociales. Dos semanas antes de la fecha, una firma externa entregó el informe de la prueba de penetración basada en el OWASP MASVS:\n\n1. **Crítico:** el servidor acepta solicitudes de desembolso por montos superiores al límite preaprobado; el límite solo se valida en la interfaz de la app.\n2. **Alto:** la clave del proveedor de mensajes SMS está incluida en el código y se extrae al descompilar el APK.\n3. **Alto:** el token de sesión se guarda en texto plano en las preferencias de la app.\n4. **Medio:** los registros de depuración muestran el DNI y el número de cuenta del cliente.\n5. **Medio:** el formulario de seguridad de los datos declara que no se comparten datos con terceros, pero un SDK de analítica envía el identificador de publicidad del dispositivo a su proveedor.\n\nLa prueba cerrada con 300 clientes mostró además una tasa de fallos percibidos de 1,6 %, concentrada en un modelo de gama de entrada muy popular en la región, y un inicio en frío promedio de 6,2 segundos en ese mismo equipo.\n\nEn la reunión de comité, el gerente comercial, Jorge Valdivia, propuso lanzar en la fecha prevista y corregir los hallazgos en las semanas siguientes: «Ningún cliente va a descompilar la app». El jefe de TI, Óscar Huamán, pidió postergar tres semanas para corregir todo. La oficial de cumplimiento, Patricia Ccori, recordó que la entidad debe cumplir el reglamento de gestión de seguridad de la información y ciberseguridad de la SBS y la Ley 29733, y que un incidente con datos de clientes debe gestionarse y reportarse. Una tercera vía surgió al final: lanzar en la fecha solo con consulta de saldos y pago de cuotas, desactivar los desembolsos, y hacerlo con un despliegue escalonado.\n\nEl gerente general debe decidir mañana y le pide a usted, como analista de desarrollo móvil, una recomendación fundamentada.\n",
+        "questions": [
+          "Priorice los cinco hallazgos según su impacto y probabilidad. ¿Cuáles deben corregirse obligatoriamente antes de cualquier lanzamiento y por qué?",
+          "Evalúe el argumento de que «ningún cliente va a descompilar la app» a la luz del modelo de amenazas móvil y del OWASP Mobile Top 10.",
+          "¿Es viable la tercera vía? Defina qué funciones se lanzarían, con qué porcentaje inicial y qué umbrales de estabilidad detendrían el despliegue.",
+          "¿Qué implicancias tiene el hallazgo del SDK de analítica frente a las políticas de Google Play y la Ley 29733? Proponga la corrección.",
+          "¿Qué acciones técnicas reducirían la tasa de fallos y el tiempo de inicio en el modelo de gama de entrada antes de ampliar el lanzamiento?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Proyecto integrador, aplicación lista para producción",
+        "instructions": "**Objetivo:** llevar el proyecto integrador a un estado publicable, con evidencias de calidad, seguridad y privacidad, y sustentarlo técnicamente.\n\n**Requisitos**\n\n1. **Funcionalidad completa:** flujo principal operativo con datos reales, operación sin conexión y sincronización sin duplicados.\n2. **Pruebas:** al menos 20 pruebas unitarias y 5 pruebas de interfaz con Compose; cobertura mínima de 70 % en las capas de dominio y datos.\n3. **Rendimiento:** medición del inicio en frío con Macrobenchmark en un equipo de gama media, perfil de referencia incluido y R8 activado.\n4. **Seguridad y privacidad:** lista de al menos 15 controles del OWASP MASVS verificados con evidencias; ningún secreto en el código ni datos personales en los registros; política de privacidad coherente con la Ley 29733.\n5. **Publicación:** Android App Bundle firmado en un canal de prueba de Google Play, con ficha, clasificación de contenido y formulario de seguridad de los datos.\n6. **Integración continua:** canalización que compila, analiza y prueba en cada solicitud de integración.\n\n**Entregables:** repositorio final; informe técnico de hasta 12 páginas con diagrama de capas, tres registros de decisiones de arquitectura, resultados de pruebas y mediciones, lista MASVS y hoja de ruta; y sustentación por equipo de 15 minutos con demostración en dispositivo real, seguida de 10 minutos de preguntas individuales. Entrega en la semana 16.\n",
+        "rubric": [
+          {
+            "name": "Funcionalidad completa y operación sin conexión",
+            "points": 5
+          },
+          {
+            "name": "Calidad verificada: pruebas, rendimiento y estabilidad",
+            "points": 4
+          },
+          {
+            "name": "Seguridad y privacidad conforme al MASVS y la Ley 29733",
+            "points": 4
+          },
+          {
+            "name": "Publicación, integración continua y documentación",
+            "points": 4
+          },
+          {
+            "name": "Sustentación técnica y defensa de decisiones",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Calidad, seguridad y publicación",
+        "questions": [
+          {
+            "prompt": "Un equipo guarda la clave privada de un servicio de SMS en BuildConfig y activa R8. ¿Está protegida la clave?",
+            "options": [
+              "Sí, porque R8 cifra todas las constantes del código",
+              "Sí, siempre que la app se distribuya solo por Google Play",
+              "No, salvo que la clave se divida en varias cadenas",
+              "No: el paquete puede descompilarse y la clave extraerse; debe permanecer en el servidor"
+            ],
+            "correct": 3,
+            "explanation": "R8 ofusca nombres de clases y métodos, pero no protege las cadenas constantes. Cualquier secreto incluido en el paquete puede extraerse; el servidor debe actuar como intermediario con el proveedor."
+          },
+          {
+            "prompt": "Según Android vitals, ¿cuál de estas situaciones supera el umbral general de mal comportamiento?",
+            "options": [
+              "Una tasa de ANR percibidos de 0,3 %",
+              "Una tasa de fallos percibidos por el usuario de 1,6 %",
+              "Un inicio en frío promedio de 1,8 segundos",
+              "Una tasa de fallos percibidos de 0,9 % en todos los modelos"
+            ],
+            "correct": 1,
+            "explanation": "Los umbrales generales son 1,09 % para fallos percibidos y 0,47 % para ANR percibidos. Una tasa de fallos de 1,6 % los supera; 0,3 % de ANR y 0,9 % de fallos están por debajo."
+          },
+          {
+            "prompt": "¿Por qué se usa runTest para probar un ViewModel que aplica un debounce de 300 ms?",
+            "options": [
+              "Ejecuta con tiempo virtual, de modo que las esperas se resuelven al instante y de forma determinista",
+              "Permite ejecutar la prueba en un dispositivo físico conectado",
+              "Desactiva las corrutinas y ejecuta todo de forma sincrónica",
+              "Reemplaza automáticamente el repositorio real por un mock"
+            ],
+            "correct": 0,
+            "explanation": "runTest usa un planificador de prueba con reloj virtual; las demoras avanzan sin esperar tiempo real, lo que vuelve las pruebas rápidas y reproducibles."
+          },
+          {
+            "prompt": "Una app permite solicitar desembolsos y valida el límite aprobado solo en la interfaz. ¿Cuál es la corrección adecuada?",
+            "options": [
+              "Ofuscar el código con R8 para que no pueda modificarse",
+              "Agregar fijación de certificados para impedir cambios",
+              "Validar el límite en el servidor, tratando al cliente móvil como no confiable",
+              "Ocultar el campo de monto cuando supere el límite"
+            ],
+            "correct": 2,
+            "explanation": "Un atacante puede modificar la app o llamar directamente a la API. Las reglas de negocio y de autorización deben aplicarse en el servidor; las validaciones del cliente solo mejoran la experiencia."
+          },
+          {
+            "prompt": "¿Qué ventaja principal ofrece la Firma de apps de Play frente al esquema en que el equipo custodia la única clave de firma?",
+            "options": [
+              "Elimina la necesidad de firmar los paquetes antes de subirlos",
+              "Si la clave de carga se pierde o se compromete, puede reemplazarse sin perder la app",
+              "Permite cambiar el applicationId en cada versión",
+              "Hace innecesario el requisito de nivel de API objetivo"
+            ],
+            "correct": 1,
+            "explanation": "Google custodia la clave de firma de la app y el equipo usa una clave de carga. Si esta se pierde o se filtra, se reemplaza mediante soporte; en el esquema antiguo, perder la clave impedía actualizar la app."
+          },
+          {
+            "prompt": "Durante un lanzamiento escalonado al 10 %, la tasa de ANR sube de 0,2 % a 0,9 %. ¿Qué corresponde hacer?",
+            "options": [
+              "Ampliar al 100 % para obtener más datos",
+              "Esperar a que los usuarios afectados reinstalen",
+              "Retirar la app de la tienda y crear una nueva ficha",
+              "Detener el despliegue, analizar las trazas y publicar una corrección"
+            ],
+            "correct": 3,
+            "explanation": "El lanzamiento escalonado existe para contener el daño: si un indicador supera el umbral, se detiene el avance, se diagnostica con las trazas de Android vitals y se publica una versión corregida."
+          },
+          {
+            "prompt": "Una app integra un SDK que envía el identificador de publicidad a un tercero, pero el formulario de seguridad de los datos declara que no se comparten datos. ¿Qué implica?",
+            "options": [
+              "Es una declaración inexacta que incumple las políticas de Google Play y puede vulnerar la Ley 29733",
+              "No hay problema, porque el responsable es el proveedor del SDK",
+              "Solo importa si el SDK recoge datos de salud",
+              "Basta con mencionarlo en las notas de la versión"
+            ],
+            "correct": 0,
+            "explanation": "El desarrollador responde por todos los datos que recoge su app, incluidos los de SDK de terceros. La declaración debe ser exacta y el tratamiento debe informarse al titular conforme a la Ley 29733."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Ecosistema móvil peruano, restricciones de los dispositivos y estrategias de desarrollo",
+      "activity": "Sesión de diagnóstico; análisis de tres aplicaciones peruanas de uso masivo; instalación de Android Studio y del emulador; primer proyecto versionado en Git.",
+      "evidence": "Ficha de análisis y proyecto creado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Arquitectura de Android, componentes, manifiesto y ciclo de vida de la actividad",
+      "activity": "Aula invertida con la lectura de la unidad; laboratorio que registra en Logcat el ciclo de vida al rotar y minimizar; discusión del caso Cooperativa Lechera Valle Verde.",
+      "evidence": "Participación argumentada en el foro del caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Kotlin para programadores Java: nulabilidad, clases de datos, clases selladas y colecciones",
+      "activity": "Katas de Kotlin en parejas; migración de una clase Java del curso de POO a Kotlin idiomático; revisión cruzada de código con lista de verificación.",
+      "evidence": "Ejercicios de Kotlin en el repositorio"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Funciones de extensión, permisos, depuración con ADB y decisión de plataforma",
+      "activity": "Taller de matriz de decisión ponderada; práctica de depuración y permisos en tiempo de ejecución; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Paradigma declarativo, funciones composables, recomposición y vistas previas",
+      "activity": "Aula invertida con la lectura de la unidad; laboratorio de migración de una pantalla XML a Compose; análisis de recomposiciones con el inspector de diseño.",
+      "evidence": "Pantalla migrada en el repositorio"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Estado, elevación del estado, Material Design 3 y listas perezosas",
+      "activity": "Taller de tema propio con Material Theme Builder; catálogo con LazyColumn y claves estables; discusión del caso Boticas Salud Norte.",
+      "evidence": "Catálogo funcional y aporte al foro del caso"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Navegación tipada, formularios con validación de datos peruanos y efectos secundarios",
+      "activity": "Programación en pareja del flujo lista, detalle y formulario; validación de DNI y celular; revisión cruzada de código con rúbrica.",
+      "evidence": "Flujo de navegación y formulario validado"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Accesibilidad con TalkBack, diseño adaptable y rendimiento de la interfaz",
+      "activity": "Auditoría de accesibilidad con TalkBack y Accessibility Scanner; pruebas en emulador redimensionable; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Arquitectura por capas, ViewModel, estado de interfaz y corrutinas",
+      "activity": "Aula invertida; refactorización del prototipo hacia ViewModel con StateFlow; ejercicios de concurrencia estructurada y cancelación.",
+      "evidence": "ViewModel con estado de interfaz"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Flow y StateFlow; consumo de API REST con Retrofit, OkHttp y manejo de errores",
+      "activity": "Integración con la API construida en Desarrollo Web o un servidor simulado; buscador con debounce; discusión del caso EnvíosSur.",
+      "evidence": "Integración con la API y aporte al foro del caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Persistencia con Room y DataStore; inyección de dependencias con Hilt",
+      "activity": "Taller de entidades, DAO y migración probada; configuración de módulos Hilt; revisión de código entre pares.",
+      "evidence": "Base local con migración probada"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Estrategia sin conexión primero, sincronización con WorkManager e idempotencia",
+      "activity": "Demostración en modo avión con sincronización posterior; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Pirámide de pruebas, pruebas de ViewModel y de interfaz; rendimiento y Android vitals",
+      "activity": "Aula invertida; laboratorio de pruebas con runTest y createComposeRule; medición del inicio con Macrobenchmark y perfil de referencia.",
+      "evidence": "Reporte de pruebas y medición de inicio"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Seguridad móvil con OWASP MASVS y privacidad según la Ley 29733",
+      "activity": "Análisis del caso Financiera Andina del Sur; revisión cruzada de seguridad entre equipos con la lista MASVS; redacción de la política de privacidad.",
+      "evidence": "Lista MASVS verificada y aporte al foro"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Firma, Android App Bundle, integración continua y publicación en canal de prueba",
+      "activity": "Configuración de la canalización de integración continua; generación del AAB firmado; carga al canal de pruebas internas y formulario de seguridad de los datos.",
+      "evidence": "AAB publicado en canal de prueba"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentación técnica por equipos con demostración en dispositivo real; entrega de la Tarea 4, resolución del Cuestionario 4 y evaluación final individual.",
+      "evidence": "Tarea 4, Cuestionario 4 y evaluación final"
+    }
+  ]
+}

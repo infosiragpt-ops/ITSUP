@@ -1,0 +1,1367 @@
+{
+  "name": "Administración de Servidores y Nube",
+  "slug": "administracion-de-servidores-y-nube",
+  "course_type": "especifica",
+  "module_name": "Administración de redes e infraestructura tecnológica",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Curso de formación específica del cuarto ciclo de la carrera de Computación e Informática, de naturaleza teórico-práctica. Su propósito es que el estudiante diseñe, implemente, automatice y opere infraestructura de servidores en entornos propios y en la nube pública, con criterios de disponibilidad, seguridad, costo y cumplimiento normativo. Construye sobre Sistemas Operativos, Redes de Computadoras, Base de Datos y Desarrollo Web, y prepara para Seguridad Informática, Desarrollo de Software Empresarial y el Proyecto Integrador de Software. Comprende cuatro unidades: infraestructura de servidores, disponibilidad y virtualización con KVM y Proxmox VE; servicios de infraestructura como DNS, DHCP, Nginx, certificados TLS, directorio y archivos compartidos; computación en la nube según el modelo del NIST, redes virtuales, identidades, costos y normativa peruana de protección de datos personales; y automatización con infraestructura como código, contenedores, observabilidad con objetivos de nivel de servicio y recuperación ante desastres. Aporta al perfil del egresado la capacidad de administrar los servidores y servicios en la nube que sostienen la operación diaria de organizaciones reales.",
+  "competency": "Administra infraestructura de servidores físicos, virtuales y en la nube pública, implementando servicios de red seguros, automatizando su aprovisionamiento y configuración como código, y garantizando su disponibilidad, observabilidad y recuperación ante fallas con criterios técnicos, económicos y de cumplimiento de la normativa peruana de protección de datos personales.",
+  "capacities": [
+    "Dimensiona y virtualiza infraestructura de servidores calculando disponibilidad, capacidad y almacenamiento, y configura acceso administrativo seguro con llaves SSH, bastión y gestión fuera de banda.",
+    "Implementa, asegura y diagnostica servicios de infraestructura —DNS, DHCP, web con proxy inverso y TLS, directorio y archivos compartidos— en servidores Linux y entornos Windows.",
+    "Diseña e implementa arquitecturas en la nube pública con redes virtuales, identidades de mínimo privilegio, cómputo y almacenamiento, estimando costos y evaluando los requisitos de la Ley 29733.",
+    "Automatiza infraestructura con Terraform, Ansible y contenedores, y garantiza la continuidad del servicio mediante monitoreo con objetivos de nivel de servicio, copias inmutables y planes de recuperación probados."
+  ],
+  "indicators": [
+    "Calcula la disponibilidad de una arquitectura con componentes en serie y en paralelo y propone redundancias justificadas por su efecto cuantitativo.",
+    "Implementa una plataforma virtualizada con acceso SSH por llaves a través de un bastión, documentando comandos, configuraciones e inventario de servidores.",
+    "Configura una zona DNS, un proxy inverso Nginx con TLS automatizado y un recurso compartido con permisos por grupo, verificando cada servicio con herramientas de diagnóstico.",
+    "Despliega en una cuenta de nube una red virtual con subredes públicas y privadas en dos zonas, grupos de seguridad por capas y políticas IAM de mínimo privilegio.",
+    "Estima y compara el costo mensual de una arquitectura en la nube con distintos modelos de precios y justifica el diseño con los pilares de buena arquitectura.",
+    "Recrea un entorno completo desde código con Terraform, Ansible y Docker Compose sin intervención manual, demostrando idempotencia y ausencia de deriva.",
+    "Define indicadores y objetivos de nivel de servicio con alertas accionables y ejecuta una prueba de recuperación cronometrada que contrasta el tiempo real con el RTO y el RPO comprometidos."
+  ],
+  "methodology": "El curso aplica metodologías activas en modalidad 100 % virtual. Cada unidad se inicia con aula invertida: lectura académica y diapositivas comentadas antes de la sesión síncrona, que se dedica a demostraciones en vivo, resolución de problemas y discusión de un caso al estilo del método de casos, con decisiones que el estudiante debe defender con cálculos. La práctica se desarrolla en laboratorios guiados sobre máquinas virtuales y cuentas educativas en la nube, con bitácora técnica obligatoria. El aprendizaje basado en proyectos articula las tareas de las unidades en un proyecto integrador sustentado ante el docente. La evaluación formativa se realiza mediante cuestionarios con retroalimentación inmediata, revisión de configuraciones entre pares y retroalimentación del docente con rúbricas conocidas de antemano.",
+  "bibliography": [
+    "Limoncelli, T. A., Hogan, C. J. y Chalup, S. R. (2016). The practice of system and network administration: DevOps and other best practices for enterprise IT (3.ª ed., Vol. 1). Addison-Wesley.",
+    "Nemeth, E., Snyder, G., Hein, T. R., Whaley, B. y Mackin, D. (2017). UNIX and Linux system administration handbook (5.ª ed.). Addison-Wesley.",
+    "Mell, P. y Grance, T. (2011). The NIST definition of cloud computing (NIST Special Publication 800-145). National Institute of Standards and Technology.",
+    "Erl, T., Mahmood, Z. y Puttini, R. (2013). Cloud computing: Concepts, technology & architecture. Prentice Hall.",
+    "Beyer, B., Jones, C., Petoff, J. y Murphy, N. R. (Eds.). (2016). Site reliability engineering: How Google runs production systems. O'Reilly Media.",
+    "Morris, K. (2020). Infrastructure as code: Dynamic systems for the cloud age (2.ª ed.). O'Reilly Media.",
+    "Brikman, Y. (2022). Terraform: Up & running. Writing infrastructure as code (3.ª ed.). O'Reilly Media.",
+    "Kane, S. P. y Matthias, K. (2023). Docker: Up & running. Shipping reliable containers in production (3.ª ed.). O'Reilly Media.",
+    "Popek, G. J. y Goldberg, R. P. (1974). Formal requirements for virtualizable third generation architectures. Communications of the ACM, 17(7), 412-421.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades y laboratorios semanales evidenciados con bitácora técnica, comandos, archivos de configuración y capturas verificables."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3, calificadas con rúbrica: plataforma virtualizada segura, servicios de infraestructura y arquitectura en la nube presupuestada."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador con infraestructura como código, contenedores, monitoreo con objetivos de servicio y prueba de recuperación cronometrada, sustentado con demostración en vivo."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Infraestructura de servidores, disponibilidad y virtualización",
+      "description": "Al finalizar la unidad, el estudiante dimensiona y documenta una infraestructura de servidores virtualizada, calcula su disponibilidad esperada, selecciona el esquema de almacenamiento y el hipervisor adecuados y configura un acceso administrativo seguro basado en llaves SSH y servidor bastión.",
+      "topics": [
+        "Roles de servidor, centros de datos y niveles de disponibilidad Tier",
+        "Cálculo de disponibilidad, MTBF, MTTR y acuerdos de nivel de servicio",
+        "Almacenamiento para servidores: RAID, DAS, NAS y SAN",
+        "Virtualización: requisitos de Popek y Goldberg, KVM, Hyper-V y Proxmox VE",
+        "Acceso remoto seguro con OpenSSH, bastión y gestión fuera de banda",
+        "Dimensionamiento de capacidad y consolidación de servidores"
+      ],
+      "slides": [
+        {
+          "title": "El administrador de servidores en la organización",
+          "bullets": [
+            "Garantiza que los servicios de TI estén disponibles, sean seguros, rindan lo esperado y puedan recuperarse ante fallas.",
+            "Limoncelli, Hogan y Chalup distinguen tres frentes: operación diaria, gestión de cambios y mejora continua de la infraestructura.",
+            "Construye sobre Sistemas Operativos y Redes de Computadoras: el foco pasa del equipo aislado al servicio que consumen cientos de usuarios.",
+            "Perfiles demandados en el Perú: administrador de sistemas, ingeniero de infraestructura, administrador de nube y SRE junior."
+          ],
+          "notes": "Abra la unidad con una pregunta provocadora: ¿qué diferencia a quien sabe instalar Linux de quien administra servidores para una empresa? Conduzca la conversación hacia la idea de servicio: el usuario no ve un servidor, ve la facturación electrónica que funciona o no funciona. Recuerde que en ciclos anteriores trabajaron systemd, permisos, scripts de respaldo y redes con VLAN y enrutamiento; este curso integra esos saberes para operar servicios completos, primero en infraestructura propia y luego en la nube. Presente el marco de Limoncelli y colaboradores: un buen administrador reduce el trabajo reactivo mediante procesos, documentación y automatización. Muestre avisos de empleo de portales peruanos, sin nombrar empresas, y pida identificar las competencias más repetidas: Linux, virtualización, nube pública, contenedores y monitoreo. Cierre preguntando qué servicios de su trabajo o de su vida cotidiana dependen de un servidor que alguien administra."
+        },
+        {
+          "title": "Formatos de servidor y arquitectura física",
+          "bullets": [
+            "Torre: económico y silencioso, adecuado para pymes con uno o dos servidores y sin sala técnica.",
+            "Rack de 19 pulgadas: se mide en unidades U de 44,45 mm; optimiza espacio, cableado y refrigeración.",
+            "Blade e hiperconvergencia (HCI): cómputo, almacenamiento y red integrados y administrados como un solo clúster.",
+            "Componentes diferenciales: memoria ECC, fuentes redundantes, discos intercambiables en caliente y controladora de gestión remota."
+          ],
+          "notes": "Explique que un servidor no es una computadora de escritorio más potente: su diseño prioriza la continuidad. La memoria ECC detecta y corrige errores de un bit, frecuentes en equipos encendidos todo el año; las fuentes redundantes se conectan a circuitos eléctricos distintos; los discos intercambiables en caliente permiten reemplazar una unidad sin apagar el equipo. Muestre la equivalencia de la unidad de rack: un servidor 2U ocupa 88,9 mm de altura y un gabinete típico tiene 42U. Presente la hiperconvergencia como tendencia: en lugar de un arreglo de almacenamiento central costoso, cada nodo aporta discos que el software agrupa. Pregunte a la clase: para una cadena de cinco boticas en Chiclayo con un sistema de ventas y facturación electrónica, ¿conviene un servidor torre en la oficina, un rack en un centro de datos alquilado o servicios en la nube? Anote los argumentos en la pizarra virtual; se retomarán en la unidad 3."
+        },
+        {
+          "title": "Centros de datos: norma ANSI/TIA-942 y niveles Tier",
+          "bullets": [
+            "ANSI/TIA-942 establece requisitos de arquitectura, energía, climatización, cableado y seguridad física de un centro de datos.",
+            "Uptime Institute certifica cuatro niveles: Tier I básico, II con componentes redundantes, III mantenible concurrentemente y IV tolerante a fallas.",
+            "Disponibilidades de referencia citadas habitualmente: 99,671 %, 99,741 %, 99,982 % y 99,995 % para los niveles I a IV.",
+            "En Lima existen centros de datos comerciales que ofrecen coubicación con diseños Tier III; conviene verificar el certificado vigente."
+          ],
+          "notes": "Precise la diferencia entre la norma ANSI/TIA-942, que establece requisitos de diseño e infraestructura, y la certificación de Uptime Institute, organización que evalúa el diseño, la construcción y la operación sostenible. El concepto clave es la mantenibilidad concurrente del Tier III: cualquier componente puede retirarse para mantenimiento sin interrumpir la carga, porque existen rutas de energía y refrigeración alternas. Traduzca los porcentajes a horas de interrupción anual: 99,671 % equivale a unas 28,8 horas al año, mientras que 99,982 % equivale aproximadamente a 1,6 horas. Advierta que el nivel del edificio no garantiza la disponibilidad de la aplicación: un servidor sin redundancia alojado en un centro Tier IV sigue siendo un punto único de falla. Pregunte: ¿por qué un banco y una tienda en línea de artesanía pueden elegir niveles distintos con igual racionalidad? Introduzca así la idea de que la disponibilidad se compra y debe justificarse con el costo de la interrupción."
+        },
+        {
+          "title": "Disponibilidad, MTBF, MTTR y acuerdos de nivel de servicio",
+          "bullets": [
+            "Disponibilidad A = MTBF / (MTBF + MTTR): depende tanto de fallar poco como de reparar rápido.",
+            "Regla de los nueves: 99,9 % permite 8,76 h de caída anual; 99,99 %, 52,6 min; 99,999 %, 5,3 min.",
+            "Un SLA es un compromiso contractual con métrica, ventana de medición, exclusiones y créditos o penalidades.",
+            "Reducir el MTTR con monitoreo, procedimientos documentados y repuestos suele ser más barato que aumentar el MTBF."
+          ],
+          "notes": "Desarrolle la fórmula con un ejemplo: un servidor con MTBF de 2 000 horas y MTTR de 8 horas tiene una disponibilidad de 2 000 / 2 008, es decir, 99,60 %. Si gracias a un procedimiento documentado y a un disco de repuesto el MTTR baja a 2 horas, la disponibilidad sube a 99,90 % sin comprar hardware nuevo. Este es uno de los mensajes centrales del curso: la disciplina operativa también es ingeniería. Explique la diferencia entre SLA, el contrato con el cliente; SLO, el objetivo interno, normalmente más exigente; y SLI, el indicador que realmente se mide. Muestre cómo leer el SLA de un proveedor: qué se considera caída, cómo se calcula el porcentaje mensual y qué créditos se otorgan, que rara vez compensan la pérdida real del negocio. Pregunta para la clase: si un proveedor de facturación electrónica promete 99,5 % mensual, ¿cuántas horas puede estar caído en un mes de 30 días? Respuesta: 3,6 horas."
+        },
+        {
+          "title": "Disponibilidad de sistemas en serie y en paralelo",
+          "bullets": [
+            "En serie, todos los componentes son necesarios: A = A1 × A2 × … × An, siempre menor que el eslabón más débil.",
+            "En paralelo, basta un componente activo: A = 1 − (1 − A1) × (1 − A2).",
+            "Ejemplo: servidor web de 99 %, base de datos de 99 % y enlace de 99,5 % en serie dan 97,52 %.",
+            "Dos servidores web redundantes de 99 % alcanzan 99,99 % en ese tramo, siempre que sus fallas sean independientes.",
+            "La independencia real exige separar energía, red, ubicación física y, a veces, versiones de software."
+          ],
+          "notes": "Dibuje en la pizarra virtual una aplicación típica: balanceador, dos servidores web, una base de datos y un enlace a Internet. Pida a los estudiantes que identifiquen qué componentes están en serie y cuáles en paralelo, y que calculen la disponibilidad total. Luego muestre la trampa de la independencia: si los dos servidores web corren en el mismo host físico o comparten la misma fuente de energía, la redundancia es ilusoria, porque una sola falla los derriba a ambos. Este es el concepto de falla de modo común. Relacione con Redes de Computadoras, donde los enlaces redundantes y STP aplicaban la misma lógica en capa 2. Pregunta de aplicación: con un presupuesto que solo alcanza para duplicar un componente, ¿cuál duplicaría primero? La respuesta se obtiene calculando qué duplicación eleva más la disponibilidad total; normalmente conviene atacar el componente con menor disponibilidad individual."
+        },
+        {
+          "title": "RAID: niveles, capacidad y penalidad de escritura",
+          "bullets": [
+            "RAID 1 (espejo): la mitad de la capacidad bruta; tolera la falla de un disco por par; penalidad de escritura 2.",
+            "RAID 5: capacidad de n − 1 discos, paridad distribuida, tolera una falla; penalidad de escritura 4.",
+            "RAID 6: capacidad de n − 2 discos, doble paridad, tolera dos fallas; penalidad 6; recomendable con discos grandes.",
+            "RAID 10: espejos en franjas, capacidad n/2, alto rendimiento para bases de datos; penalidad 2.",
+            "RAID no es copia de seguridad: replica también borrados, corrupción lógica y cifrado por ransomware."
+          ],
+          "notes": "Trabaje un ejemplo numérico con seis discos de 4 TB: en RAID 5 se obtienen 20 TB útiles; en RAID 6, 16 TB; en RAID 10, 12 TB. Explique la penalidad de escritura: en RAID 5 cada escritura pequeña exige leer el dato y la paridad antiguos y escribir el dato y la paridad nuevos, cuatro operaciones. Así, si una base de datos necesita 1 000 IOPS con 30 % de escrituras, el arreglo en RAID 5 debe entregar 700 + 300 × 4 = 1 900 IOPS internas. Discuta el riesgo de reconstrucción: con discos de muchos terabytes, reconstruir tarda horas o días, y durante ese tiempo una segunda falla o un error de lectura no recuperable provoca la pérdida del arreglo en RAID 5; por eso RAID 6 o RAID 10 son preferibles. Mencione que ZFS, usado por Proxmox VE, implementa RAID-Z con sumas de verificación que detectan corrupción silenciosa. Cierre con la frase que deben recordar: RAID protege la disponibilidad, no los datos."
+        },
+        {
+          "title": "Almacenamiento en red: DAS, NAS y SAN",
+          "bullets": [
+            "DAS: discos conectados directamente al servidor; simple y rápido, pero no compartible entre hosts.",
+            "NAS: comparte archivos por la red mediante NFS o SMB; ideal para documentos y carpetas de áreas.",
+            "SAN: entrega bloques por Fibre Channel o iSCSI; el servidor ve un disco local y lo formatea.",
+            "iSCSI usa la red Ethernet existente: iniciador en el servidor, objetivo en el arreglo e identificadores IQN.",
+            "La virtualización en clúster requiere almacenamiento compartido o replicado: SAN, NFS o Ceph."
+          ],
+          "notes": "Use la analogía del nivel de abstracción: la NAS entrega archivos ya organizados y administra el sistema de archivos; la SAN entrega bloques en bruto y deja que el servidor los formatee. Esta diferencia explica por qué una base de datos suele preferir almacenamiento de bloques y por qué dos servidores no deben montar el mismo volumen de bloques con ext4 al mismo tiempo, ya que corromperían el sistema de archivos. Muestre el formato de un identificador iSCSI, por ejemplo iqn.2026-03.example.empresa:almacen.lun1, y recuerde que el tráfico iSCSI debe ir en una VLAN dedicada, aplicando lo aprendido en Redes de Computadoras. Presente Ceph como almacenamiento distribuido definido por software que replica objetos entre nodos y que es la base de muchas nubes privadas. Pregunta para la clase: una consultora contable de quince personas necesita carpetas compartidas por área; ¿NAS o SAN? Pida justificar con costo, simplicidad de operación y tipo de dato."
+        },
+        {
+          "title": "Virtualización: los requisitos de Popek y Goldberg",
+          "bullets": [
+            "Popek y Goldberg (1974) definieron tres propiedades del monitor de máquinas virtuales: equivalencia, control de recursos y eficiencia.",
+            "Teorema: una arquitectura es virtualizable eficientemente si sus instrucciones sensibles son un subconjunto de las privilegiadas.",
+            "La arquitectura x86 clásica incumplía el teorema; VMware lo sorteó con traducción binaria en 1999.",
+            "Intel VT-x (2005) y AMD-V (2006) añadieron soporte de hardware que hoy usan KVM, Hyper-V y ESXi."
+          ],
+          "notes": "Esta diapositiva conecta con Arquitectura de Computadoras y Sistemas Operativos: los anillos de protección y el modo núcleo. Explique que una instrucción sensible es la que modifica o consulta el estado privilegiado de la máquina; si se ejecuta en modo usuario sin provocar una trampa, el hipervisor no puede interceptarla y el sistema invitado se comporta de forma incorrecta. Robin e Irvine identificaron en el año 2000 diecisiete instrucciones problemáticas de este tipo en x86, como POPF. La industria respondió primero con software, mediante la traducción binaria de VMware y la paravirtualización de Xen, que modificaba el núcleo invitado, y luego con extensiones de hardware. Enfatice la propiedad de eficiencia: la mayoría de instrucciones se ejecuta directamente en el procesador, por eso una máquina virtual moderna pierde poco rendimiento. Pregunte: ¿qué consecuencia tendría para la seguridad que un hipervisor no cumpla la propiedad de control de recursos? Oriente la discusión hacia el escape de máquina virtual."
+        },
+        {
+          "title": "Hipervisores tipo 1 y tipo 2",
+          "bullets": [
+            "Tipo 1 (nativo): se ejecuta directamente sobre el hardware; ejemplos: VMware ESXi, Microsoft Hyper-V, Xen y KVM.",
+            "Tipo 2 (alojado): corre sobre un sistema operativo anfitrión; ejemplos: VirtualBox y VMware Workstation, útiles para laboratorios.",
+            "KVM convierte al núcleo Linux en hipervisor; QEMU emula dispositivos y libvirt ofrece una interfaz de gestión uniforme.",
+            "Criterios de elección: licenciamiento, soporte, alta disponibilidad, respaldo integrado, comunidad y habilidades del equipo.",
+            "Los cambios de licenciamiento tras la compra de VMware por Broadcom (2023) impulsaron evaluaciones de Proxmox VE e Hyper-V."
+          ],
+          "notes": "Aclare un punto que confunde a muchos: KVM se clasifica como tipo 1 porque el propio núcleo Linux, que controla directamente el hardware, actúa como hipervisor; no es una aplicación encima de un sistema operativo, aunque el anfitrión tenga herramientas de usuario. Construya con la clase un cuadro comparativo con licencia, consola de gestión, alta disponibilidad, respaldo y costo aproximado. Discuta el caso real del mercado: tras la adquisición de VMware por Broadcom, la compañía eliminó las licencias perpetuas y pasó a suscripciones por núcleo, lo que elevó los costos de muchas organizaciones latinoamericanas y abrió una ola de evaluaciones de alternativas. Es un ejemplo de riesgo de dependencia de proveedor que volverá en la unidad 3. Pregunta para la clase: si administra una municipalidad provincial con poco presupuesto y personal que conoce Windows, ¿Hyper-V o Proxmox VE? Pida argumentos técnicos, económicos y de capacidades del equipo humano, no preferencias personales."
+        },
+        {
+          "title": "KVM y libvirt en Linux: pasos de implementación",
+          "bullets": [
+            "Verificar soporte del procesador: grep -Ec '(vmx|svm)' /proc/cpuinfo debe devolver un valor mayor que cero.",
+            "Instalar qemu-kvm, libvirt-daemon-system y virtinst; validar el anfitrión con virt-host-validate.",
+            "Crear una red en puente (bridge) para que las máquinas virtuales obtengan direcciones de la LAN.",
+            "Crear la máquina con virt-install indicando vCPU, memoria, disco qcow2, red y medio de instalación.",
+            "Operar con virsh: list --all, start, shutdown, snapshot-create-as y dominfo."
+          ],
+          "notes": "Haga una demostración en vivo en un servidor de laboratorio o en una instancia en la nube con virtualización anidada. Explique el formato qcow2: es de aprovisionamiento delgado, crece según se usa y admite instantáneas, a diferencia del formato raw, que ofrece algo más de rendimiento. Muestre la diferencia entre la red NAT predeterminada de libvirt, útil en laboratorio, y un puente Linux, necesario para que un servidor virtual sea accesible por otros equipos de la red empresarial. Recalque que las instantáneas no son copias de seguridad: viven en el mismo almacenamiento y, si se acumulan, degradan el rendimiento. Pida a los estudiantes que anoten cada comando en su bitácora técnica, hábito que se evaluará en la tarea de la unidad. Pregunta de comprobación: si virt-host-validate advierte que IOMMU no está habilitado, ¿qué funcionalidad se pierde? La respuesta es la asignación directa de dispositivos PCI, como tarjetas de red o GPU, a una máquina virtual."
+        },
+        {
+          "title": "Proxmox VE: clúster, alta disponibilidad y migración en vivo",
+          "bullets": [
+            "Distribución basada en Debian que integra KVM, contenedores LXC, ZFS, Ceph y una consola web de gestión.",
+            "El clúster usa Corosync y requiere quórum: mínimo tres nodos, o dos nodos más un dispositivo QDevice.",
+            "La migración en vivo traslada una máquina encendida entre nodos copiando su memoria de forma iterativa.",
+            "Las plantillas y la clonación vinculada permiten aprovisionar servidores idénticos en segundos.",
+            "Proxmox Backup Server ofrece copias incrementales, deduplicadas y verificables de máquinas y contenedores."
+          ],
+          "notes": "Explique por qué el quórum es indispensable: si un clúster de dos nodos pierde la comunicación entre ellos, cada nodo podría creer que el otro cayó y arrancar las mismas máquinas virtuales, provocando un cerebro dividido que corrompe datos. Con tres votos, solo la partición que conserva la mayoría sigue operando. Describa la migración en vivo: se copia la memoria mientras la máquina sigue funcionando, se reenvían las páginas modificadas en rondas sucesivas y, al final, se pausa la máquina unos milisegundos para transferir el estado restante. Requiere almacenamiento compartido o replicado y una red de migración rápida. Muestre la diferencia entre una máquina virtual completa y un contenedor LXC, que comparte el núcleo del anfitrión y consume menos recursos, pero ofrece menor aislamiento. Pregunte: ¿qué se debe probar antes de declarar que un clúster tiene alta disponibilidad? Oriente hacia pruebas de falla controladas, programadas y documentadas."
+        },
+        {
+          "title": "Acceso remoto seguro con OpenSSH",
+          "bullets": [
+            "Generar llaves modernas con ssh-keygen -t ed25519 y protegerlas con una frase de contraseña.",
+            "Instalar la llave pública con ssh-copy-id y verificar el acceso antes de cerrar la sesión actual.",
+            "En sshd_config: PasswordAuthentication no, PermitRootLogin no y AllowGroups admins-ssh.",
+            "Validar con sshd -t y recargar el servicio; complementar con fail2ban y un firewall que limite el origen.",
+            "Verificar la huella del servidor en la primera conexión para evitar ataques de intermediario."
+          ],
+          "notes": "En Sistemas Operativos los estudiantes configuraron usuarios y sudo; ahora el foco es el acceso remoto, la puerta de entrada más atacada de cualquier servidor expuesto a Internet. Muestre el registro de autenticación de un servidor de prueba en la nube a las pocas horas de creado: aparecerán miles de intentos automáticos con usuarios como root, admin u oracle. Explique por qué la autenticación por llave elimina el ataque de fuerza bruta: la llave privada nunca viaja por la red y la prueba se basa en una firma digital. Insista en el procedimiento seguro: mantener abierta una sesión mientras se prueba la nueva configuración en otra terminal, porque un error en sshd_config puede dejar al administrador fuera del servidor. Explique por qué Ed25519 es preferible a RSA de 2048 bits: llaves más cortas, firmas rápidas y menos errores de implementación. Pregunta: ¿qué haría si un colaborador con acceso SSH deja la empresa? Respuesta esperada: retirar su llave de authorized_keys en todos los servidores."
+        },
+        {
+          "title": "Servidor bastión y gestión fuera de banda",
+          "bullets": [
+            "El bastión es el único punto de entrada administrativo; los demás servidores solo aceptan SSH desde él.",
+            "Salto transparente con ssh -J usuario@bastion usuario@servidor-interno o con la directiva ProxyJump.",
+            "La gestión fuera de banda (IPMI, iDRAC, iLO) permite encender, reinstalar y ver la consola sin sistema operativo.",
+            "Las interfaces de gestión deben ir en una red aislada y nunca exponerse a Internet.",
+            "Registrar y auditar cada sesión administrativa fortalece la trazabilidad exigida por auditorías y normas."
+          ],
+          "notes": "Dibuje la topología: Internet, firewall, bastión en una zona desmilitarizada y servidores internos en una VLAN de producción a la que solo se llega desde el bastión. Explique que concentrar el acceso reduce la superficie de ataque y facilita el registro de sesiones. Muestre un fragmento de configuración del cliente SSH con un bloque Host interno, HostName 10.0.20.15 y ProxyJump bastion, para que los estudiantes vean que la experiencia del administrador no se complica. Luego presente la gestión fuera de banda: controladoras como iDRAC de Dell o iLO de HPE tienen su propia interfaz de red y permiten administrar el servidor aunque el sistema operativo no arranque. Advierta que estas controladoras han tenido vulnerabilidades graves y que se han encontrado miles expuestas en Internet mediante buscadores de dispositivos. Pregunte a la clase cómo resolverían el acceso de un proveedor externo que da soporte una vez al mes: cuenta temporal en el bastión, con caducidad, doble factor y registro de sesión."
+        },
+        {
+          "title": "Dimensionamiento de capacidad y consolidación",
+          "bullets": [
+            "Medir antes de decidir: CPU, memoria, IOPS, latencia de disco y tráfico de red en el percentil 95 durante semanas.",
+            "Sobresuscripción de vCPU: de 3:1 a 4:1 suele ser tolerable en cargas generales; bases de datos, cercana a 1:1.",
+            "Criterio N+1: en un clúster de tres nodos, la carga total no debe superar dos tercios de la capacidad.",
+            "Prever crecimiento a tres años y margen para picos estacionales, como cierres contables o campañas comerciales.",
+            "Documentar un inventario con rol, sistema operativo, recursos, dependencias, responsable y criticidad de cada servidor."
+          ],
+          "notes": "Presente el dimensionamiento como un problema cuantitativo y no de intuición. Trabaje un ejemplo: una empresa tiene doce servidores físicos antiguos que, sumados, usan en el percentil 95 un total de 40 núcleos y 180 GB de RAM. Si se consolidan en tres nodos de 32 núcleos y 256 GB, la capacidad total es de 96 núcleos y 768 GB, pero con el criterio N+1 solo se pueden usar los recursos de dos nodos: 64 núcleos y 512 GB. La carga cabe con margen para crecer. Explique por qué se usa el percentil 95 y no el promedio: el promedio oculta los picos que generan lentitud. Mencione que la memoria suele ser el recurso que primero se agota en virtualización y que su sobresuscripción es más riesgosa que la de CPU. Pida a los estudiantes que propongan qué métricas recogerían, con qué herramientas, como sar, vmstat o el monitoreo del hipervisor, y durante cuánto tiempo, antes de una consolidación real."
+        }
+      ],
+      "reading": {
+        "title": "Disponibilidad, almacenamiento y virtualización: fundamentos cuantitativos del servidor empresarial",
+        "minutes": 35,
+        "content": "## Por qué un administrador necesita números\n\nDecir que un servidor «es estable» no permite negociar un presupuesto ni firmar un acuerdo de nivel de servicio. Decir que el sistema de ventas tuvo una disponibilidad de 99,62 % en el último trimestre, con un tiempo medio de reparación de cuatro horas, sí lo permite. Limoncelli, Hogan y Chalup insisten en que la administración profesional de sistemas se distingue por medir, documentar y mejorar de forma sistemática. Esta lectura presenta tres herramientas cuantitativas que se usarán durante todo el curso: el cálculo de disponibilidad, el análisis de arreglos de discos y el dimensionamiento de plataformas virtualizadas.\n\n## Disponibilidad: fallar poco y reparar rápido\n\nLa disponibilidad de un componente depende del tiempo medio entre fallas (MTBF) y del tiempo medio de reparación (MTTR). Cuando un servicio depende de varios componentes, se combinan en serie o en paralelo:\n\n```text\nA = MTBF / (MTBF + MTTR)\nHoras de caída al año = (1 − A) × 8 760\nSerie (todos necesarios):     A = A1 × A2 × … × An\nParalelo (basta uno activo):  A = 1 − (1 − A1) × (1 − A2) × … × (1 − An)\n```\n\nConsidere una distribuidora limeña cuya facturación electrónica depende de cuatro elementos en serie: el servidor del ERP (99,5 %), la base de datos (99,5 %), el enlace a Internet (99,0 %) y el operador de servicios electrónicos que valida los comprobantes ante la SUNAT (99,9 %). La disponibilidad del servicio es 0,995 × 0,995 × 0,990 × 0,999 ≈ 97,91 %: unas 183 horas de interrupción al año, más de siete días. El eslabón más débil es el enlace. Si se contrata un segundo enlace con otro operador, ese tramo pasa a 1 − 0,01² = 99,99 % y el servicio sube a 98,89 %, con unas 97 horas de caída anual: casi la mitad, con una sola inversión bien elegida.\n\nDos advertencias completan el análisis. Primero, la independencia debe ser real: dos enlaces que llegan por el mismo poste o dos servidores en el mismo host físico comparten un modo común de falla. Segundo, reducir el MTTR suele ser más barato que aumentar el MTBF: un procedimiento documentado, un repuesto en almacén y un monitoreo que avise antes que los usuarios pueden convertir una reparación de ocho horas en una de dos.\n\n## Arreglos RAID: capacidad, tolerancia y rendimiento\n\nLa elección del nivel RAID equilibra capacidad útil, tolerancia a fallas y rendimiento de escritura. Para *n* discos de capacidad *C*:\n\n```text\nRAID 1 / RAID 10: capacidad = (n / 2) × C   penalidad de escritura = 2\nRAID 5:           capacidad = (n − 1) × C   penalidad de escritura = 4\nRAID 6:           capacidad = (n − 2) × C   penalidad de escritura = 6\nIOPS internas = IOPS de lectura + (IOPS de escritura × penalidad)\n```\n\nSuponga un ERP que demanda 2 000 IOPS con 60 % de lecturas. En RAID 10 el arreglo debe entregar 1 200 + 800 × 2 = 2 800 IOPS; en RAID 5, 4 400; en RAID 6, 6 000. Con discos mecánicos de unas 140 IOPS, RAID 10 exige 20 discos y RAID 6 alrededor de 43. Con unidades de estado sólido, que entregan decenas de miles de operaciones, la penalidad importa menos y el criterio pasa a ser la resistencia al desgaste y el tiempo de reconstrucción. En cualquier caso, RAID protege la disponibilidad, no los datos: un borrado accidental o un cifrado por ransomware se replican al instante en todos los discos.\n\n## Virtualización con KVM paso a paso\n\nPopek y Goldberg demostraron en 1974 que una arquitectura puede virtualizarse eficientemente si todas sus instrucciones sensibles son privilegiadas. Las extensiones Intel VT-x y AMD-V hicieron que x86 cumpliera esa condición, y sobre ellas trabaja KVM, integrado en el núcleo Linux desde 2007. Un despliegue mínimo en Ubuntu Server sigue estos pasos:\n\n```bash\n# 1. Extensiones de virtualización (vmx = Intel, svm = AMD): debe ser mayor que 0\ngrep -Ec '(vmx|svm)' /proc/cpuinfo\n# 2. Hipervisor, libvirt y herramientas; validar el anfitrión\nsudo apt install -y qemu-kvm libvirt-daemon-system virtinst\nsudo virt-host-validate qemu\n# 3. Máquina virtual con disco qcow2 (aprovisionamiento delgado) en el puente br0\nsudo virt-install --name erp01 --vcpus 4 --memory 8192 --disk size=80,format=qcow2 --network bridge=br0 --os-variant ubuntu24.04 --cdrom /var/lib/libvirt/images/ubuntu-24.04-live-server-amd64.iso\n# 4. Ciclo de vida\nvirsh list --all\nvirsh snapshot-create-as erp01 antes-de-actualizar   # instantánea, no respaldo\nvirsh dominfo erp01\n```\n\n## Dimensionar con criterio N+1\n\nAl consolidar servidores en un clúster, la capacidad utilizable no es la suma de los nodos: el clúster debe absorber la caída de uno de ellos sin degradar el servicio.\n\n```text\nCapacidad utilizable (N+1) = (N − 1) / N × capacidad total\n```\n\nUna municipalidad que consolida doce servidores antiguos, cuya carga en el percentil 95 suma 40 núcleos y 180 GB de RAM, en tres nodos de 32 núcleos y 256 GB, dispone de 64 núcleos y 512 GB utilizables. La carga cabe y deja margen para crecer cerca de 10 % anual durante tres años (40 × 1,1³ ≈ 53 núcleos). Se usa el percentil 95 y no el promedio porque el promedio oculta los picos, que es precisamente cuando los usuarios sufren la lentitud.\n\n## Ideas clave\n\n- La disponibilidad se calcula, se negocia y se paga; cada nueve adicional cuesta más que el anterior.\n- La redundancia solo funciona si las fallas son independientes.\n- RAID y las instantáneas mejoran la continuidad, pero no sustituyen a las copias de seguridad.\n- Dimensionar exige medir durante semanas, usar percentiles y reservar capacidad para la falla de un nodo."
+      },
+      "case": {
+        "title": "Caso: Consolidar o renovar en la Clínica Sur Andina",
+        "content": "## Contexto\n\nLa Clínica Sur Andina (nombre ficticio) es una institución privada de Arequipa con 85 camas, servicio de emergencia las 24 horas, 420 colaboradores y unas 18 000 atenciones mensuales. Su área de TI tiene tres personas: un jefe, un administrador de sistemas egresado de un instituto tecnológico y un técnico de soporte.\n\nLa infraestructura está formada por nueve servidores físicos adquiridos entre 2015 y 2018, todos sin garantía vigente: historia clínica electrónica, admisión y facturación electrónica, sistema de laboratorio, archivo de imágenes médicas (PACS) con 14 TB, controlador de dominio, correo interno, servidor de archivos y dos servidores de aplicaciones administrativas. Cada servidor usa RAID 5 con discos mecánicos y una sola fuente de alimentación.\n\n## Incidentes del último año\n\nEn los últimos doce meses hubo cinco caídas no planificadas que sumaron 31 horas en los servicios críticos. La más grave ocurrió un domingo: falló la fuente del servidor de historia clínica y el repuesto tardó nueve horas en llegar desde Lima. Los médicos de emergencia volvieron a las fichas en papel y la digitación posterior generó errores de registro. En otro incidente, un segundo disco falló durante la reconstrucción del RAID del servidor de laboratorio y hubo que restaurar una copia con 20 horas de antigüedad.\n\n## Medición de capacidad\n\nDurante cuatro semanas el administrador registró la carga en el percentil 95: 46 núcleos físicos, 210 GB de RAM, 3 800 IOPS y 22 TB de almacenamiento, de los cuales 14 TB corresponden al PACS. La CPU, la memoria y los datos administrativos crecen alrededor de 10 % anual; el PACS crece 25 % anual por la nueva unidad de tomografía.\n\n## Alternativas\n\n- **A. Renovación uno a uno:** reemplazar los cuatro servidores más críticos por equipos nuevos con fuentes redundantes. Costo: S/ 210 000.\n- **B. Clúster Proxmox VE de tres nodos con Ceph:** cada nodo con 32 núcleos, 384 GB de RAM y 46 TB brutos en SSD; Ceph con tres réplicas, conmutadores de 25 GbE y Proxmox Backup Server. Costo: S/ 340 000 más S/ 12 000 anuales de suscripción de soporte. Requiere capacitar al equipo.\n- **C. Clúster Hyper-V de dos nodos con un arreglo SAN iSCSI:** S/ 300 000. El equipo conoce Windows Server, pero la SAN cotizada tiene una sola controladora.\n\nEl gerente financiero propone, además, «llevar todo a la nube». El jefe de TI teme por la latencia del PACS en la sala de imágenes, el volumen de datos y la condición de datos sensibles de salud, protegidos por la Ley 29733 y regulados también por la Ley 30024, que creó el Registro Nacional de Historias Clínicas Electrónicas.\n\n## Dilema\n\nEl presupuesto de inversión aprobado para este año es de S/ 320 000. La gerencia general debe decidir en 30 días y pide una recomendación sustentada en cifras, no en preferencias tecnológicas. El jefe de TI sabe que cualquier opción que elija será evaluada en el próximo incidente.",
+        "questions": [
+          "Calcule la disponibilidad observada de los servicios críticos en el último año y proponga un SLO realista para la historia clínica de un servicio de emergencias que opera 24/7.",
+          "Verifique con el criterio N+1 si la opción B soporta la carga actual y la proyectada a tres años en CPU, memoria y almacenamiento útil de Ceph. ¿Qué limitación descubre?",
+          "Identifique los puntos únicos de falla que persisten en cada alternativa y proponga cómo mitigarlos sin exceder el presupuesto aprobado.",
+          "¿Qué alternativa, o combinación por fases, recomendaría a la gerencia? Justifique con disponibilidad, costo, capacidades del equipo y obligaciones sobre datos de salud."
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio documentado: plataforma virtualizada con acceso seguro",
+        "instructions": "**Objetivo:** diseñar, implementar y documentar una plataforma de virtualización mínima para una pyme, con acceso administrativo seguro y un análisis cuantitativo de disponibilidad y almacenamiento.\n\n**Qué entregar:**\n\n1. Una plataforma con KVM y libvirt o con Proxmox VE (en el laboratorio virtual de la institución o mediante virtualización anidada) con dos máquinas virtuales Linux: un **bastión** y un **servidor de aplicaciones**. Use su apellido en el nombre de las máquinas para acreditar la autoría.\n2. OpenSSH configurado con llaves Ed25519, inicio de sesión de root y por contraseña deshabilitados, y acceso al servidor interno solo a través del bastión con ProxyJump. El servidor interno debe rechazar conexiones SSH que no provengan del bastión.\n3. Un diagrama del servicio propuesto con sus componentes en serie y en paralelo, el cálculo de su disponibilidad anual y una propuesta de redundancia que la mejore, con el cálculo del nuevo valor.\n4. Una recomendación de nivel RAID para una base de datos de 1 500 IOPS con 40 % de escrituras, justificada con capacidad útil, tolerancia a fallas e IOPS internas.\n5. Un inventario de servidores en tabla: rol, sistema operativo, vCPU, memoria, disco, dependencias, criticidad y responsable.\n\n**Formato:** informe en PDF de 6 a 10 páginas con capturas legibles, comandos comentados en bloques de código y fórmulas desarrolladas. Adjunte un video de 3 a 5 minutos en el que demuestre la conexión a través del bastión y el rechazo del acceso por contraseña.\n\n**Criterios de evaluación:** funcionamiento verificable de la plataforma, seguridad de la configuración, rigor y corrección de los cálculos, y claridad de la documentación técnica.",
+        "rubric": [
+          {
+            "name": "Implementación de la plataforma virtualizada",
+            "points": 6
+          },
+          {
+            "name": "Configuración segura del acceso remoto con bastión",
+            "points": 5
+          },
+          {
+            "name": "Cálculos de disponibilidad, RAID y capacidad",
+            "points": 5
+          },
+          {
+            "name": "Documentación técnica e inventario",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: disponibilidad, almacenamiento y virtualización",
+        "questions": [
+          {
+            "prompt": "Un servidor tiene un MTBF de 4 000 horas y un MTTR de 10 horas. ¿Cuál es su disponibilidad aproximada?",
+            "options": [
+              "97,50 %",
+              "99,75 %",
+              "99,00 %",
+              "99,95 %"
+            ],
+            "correct": 1,
+            "explanation": "A = MTBF / (MTBF + MTTR) = 4 000 / 4 010 ≈ 0,9975. Si el MTTR bajara a 2 horas, la disponibilidad subiría a 99,95 % sin cambiar el hardware."
+          },
+          {
+            "prompt": "Una aplicación requiere en serie un servidor web (99 %) y una base de datos (99,5 %). Si se agrega un segundo servidor web independiente en paralelo, ¿cuál es la disponibilidad total aproximada?",
+            "options": [
+              "99,50 %",
+              "98,51 %",
+              "99,99 %",
+              "99,25 %"
+            ],
+            "correct": 0,
+            "explanation": "El tramo web pasa a 1 − 0,01² = 99,99 %; multiplicado por el 99,5 % de la base de datos da ≈ 99,50 %. El nuevo cuello de botella es la base de datos, no el servidor web."
+          },
+          {
+            "prompt": "Con ocho discos de 4 TB, ¿qué configuración ofrece mayor capacidad útil tolerando la falla simultánea de dos discos cualesquiera?",
+            "options": [
+              "RAID 5, con 28 TB útiles",
+              "RAID 10, con 16 TB útiles",
+              "RAID 0, con 32 TB útiles",
+              "RAID 6, con 24 TB útiles"
+            ],
+            "correct": 3,
+            "explanation": "RAID 6 usa doble paridad y tolera dos fallas cualesquiera con (8 − 2) × 4 = 24 TB. RAID 10 solo tolera dos fallas si caen en espejos distintos; RAID 5 tolera una y RAID 0 ninguna."
+          },
+          {
+            "prompt": "¿Por qué KVM se clasifica como un hipervisor de tipo 1?",
+            "options": [
+              "Porque emula todo el hardware mediante traducción binaria sin apoyo del procesador",
+              "Porque se instala como una aplicación dentro de Windows o macOS",
+              "Porque el núcleo Linux, que controla directamente el hardware, actúa como hipervisor",
+              "Porque solo funciona con procesadores de un único fabricante"
+            ],
+            "correct": 2,
+            "explanation": "KVM es un módulo del núcleo Linux que aprovecha VT-x o AMD-V; el núcleo, que gestiona directamente el hardware, se convierte en el hipervisor. QEMU solo emula dispositivos en espacio de usuario."
+          },
+          {
+            "prompt": "Un administrador edita sshd_config para deshabilitar la autenticación por contraseña en un servidor remoto. ¿Cuál es el procedimiento más seguro?",
+            "options": [
+              "Deshabilitar temporalmente el firewall para evitar bloqueos durante la prueba",
+              "Validar con sshd -t, recargar el servicio y probar en una nueva sesión sin cerrar la actual",
+              "Reiniciar el servidor de inmediato para que el cambio afecte a todos los usuarios",
+              "Cerrar la sesión actual y volver a conectarse para comprobar el cambio"
+            ],
+            "correct": 1,
+            "explanation": "La validación detecta errores de sintaxis y la sesión abierta permite revertir si la nueva configuración impide el acceso. Cerrar la sesión o reiniciar sin probar puede dejar al administrador fuera del servidor."
+          },
+          {
+            "prompt": "Un clúster de tres nodos idénticos de 32 núcleos debe tolerar la caída de un nodo. La carga medida en el percentil 95 es de 70 núcleos. ¿Qué conclusión es correcta?",
+            "options": [
+              "No cumple N+1: con un nodo caído solo quedan 64 núcleos",
+              "Cumple N+1 porque la capacidad total es de 96 núcleos",
+              "Cumple si se sobresuscribe la CPU en proporción 4:1",
+              "No cumple porque el percentil 95 siempre subestima la carga"
+            ],
+            "correct": 0,
+            "explanation": "Con el criterio N+1 la capacidad utilizable es la de dos nodos, 64 núcleos, inferior a 70. La sobresuscripción de vCPU no crea núcleos físicos: habría que agregar un nodo o reducir la carga."
+          },
+          {
+            "prompt": "¿Cuál es la principal razón para exigir quórum en un clúster de virtualización como Proxmox VE?",
+            "options": [
+              "Aumentar la velocidad de la migración en vivo entre nodos",
+              "Reducir el consumo eléctrico de los nodos inactivos",
+              "Permitir que cada nodo ejecute una versión distinta del hipervisor",
+              "Evitar que dos particiones aisladas arranquen las mismas máquinas y corrompan datos"
+            ],
+            "correct": 3,
+            "explanation": "Sin quórum, una partición de red podría provocar un cerebro dividido: ambos lados creerían que el otro cayó y ejecutarían las mismas máquinas sobre el mismo almacenamiento, corrompiendo datos."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Servicios de infraestructura: DNS, DHCP, web, certificados y directorio",
+      "description": "Al finalizar la unidad, el estudiante implementa, asegura y diagnostica los servicios que sostienen a una organización —resolución de nombres, asignación de direcciones, publicación web con TLS, directorio y archivos compartidos— en servidores Linux y entornos Windows, documentando su configuración, dependencias y verificación.",
+      "topics": [
+        "Servidor DNS autoritativo y recursivo con BIND 9",
+        "Asignación dinámica de direcciones con Kea DHCP",
+        "Servidor web Nginx, hosts virtuales y proxy inverso",
+        "Certificados TLS, infraestructura de clave pública y automatización con ACME",
+        "Servicios de directorio: LDAP, Kerberos, Active Directory y Samba",
+        "Compartición de archivos con SMB y NFS y diagnóstico de servicios"
+      ],
+      "slides": [
+        {
+          "title": "Mapa de servicios de infraestructura de una organización",
+          "bullets": [
+            "Servicios fundacionales: DNS, DHCP, NTP y directorio; si fallan, casi todo lo demás falla con ellos.",
+            "Servicios de publicación: web, proxy inverso, correo e interfaces de programación expuestas a clientes y socios.",
+            "Servicios colaborativos: archivos compartidos, impresión y autenticación única para los usuarios.",
+            "Cada servicio requiere responsable, dependencias, puertos, registros, respaldo y procedimiento de verificación."
+          ],
+          "notes": "Inicie preguntando qué ocurre en una oficina cuando el DNS interno deja de responder: los usuarios reportan que «no hay Internet», el ERP no conecta y el correo falla, aunque la red esté perfectamente operativa. Este ejercicio muestra la jerarquía de dependencias: DNS y NTP son fundacionales; Kerberos, por ejemplo, rechaza autenticaciones si los relojes difieren más de cinco minutos. Construya con los estudiantes un mapa de dependencias de una pyme típica, con flechas desde cada servicio hacia aquellos que necesita. Recuerde que en Redes de Computadoras estudiaron DNS, DHCP y HTTP como protocolos; en esta unidad los implementarán y operarán como servicios en producción, con configuración, seguridad, registros y diagnóstico. Introduzca la ficha de servicio como herramienta profesional: una página por servicio con su propósito, servidores, puertos, dependencias, responsable y prueba de verificación. Esta ficha formará parte de la tarea de la unidad."
+        },
+        {
+          "title": "DNS autoritativo y recursivo: funciones que conviene separar",
+          "bullets": [
+            "El servidor autoritativo responde por las zonas que administra y no busca respuestas ajenas.",
+            "El resolutor recursivo recorre la jerarquía raíz, TLD y autoritativos, y guarda las respuestas en caché según el TTL.",
+            "Un resolutor abierto a Internet puede usarse en ataques de amplificación; restrinja con allow-recursion.",
+            "Los dominios .pe los administra la Red Científica Peruana mediante NIC.pe; la delegación se declara con registros NS.",
+            "Software habitual: BIND 9 para ambos roles, Unbound como resolutor y el DNS de Windows integrado con Active Directory."
+          ],
+          "notes": "Recuerde la resolución iterativa estudiada en Redes de Computadoras y conéctela con decisiones de administración. Separar funciones reduce riesgos: un autoritativo publicado en Internet no debe ofrecer recursión, y un resolutor interno no debe ser alcanzable desde fuera. Explique el ataque de amplificación: el atacante envía consultas pequeñas con la dirección de origen falsificada de la víctima y el resolutor abierto responde con paquetes mucho más grandes, multiplicando el tráfico contra ella. Comente la delegación: cuando una empresa registra su dominio .pe, indica qué servidores son autoritativos, y estos deben responder de forma consistente. Muestre dig con la opción +trace para recorrer la cadena desde la raíz hasta el autoritativo. Pregunta para la clase: una empresa usa el mismo servidor BIND como autoritativo público y como resolutor de sus empleados; ¿qué riesgos identifican y cómo los separarían con el presupuesto de una pyme? Oriente hacia vistas de BIND o servidores separados."
+        },
+        {
+          "title": "Archivo de zona en BIND 9: registros esenciales",
+          "bullets": [
+            "SOA: servidor primario, contacto y temporizadores; el número de serie con formato AAAAMMDDnn se incrementa en cada cambio.",
+            "NS y A/AAAA: servidores autoritativos y direcciones IPv4 o IPv6 de cada nombre.",
+            "MX para correo, CNAME para alias y TXT para SPF, DKIM, DMARC y verificaciones de dominio.",
+            "El TTL equilibra rendimiento y agilidad: redúzcalo días antes de una migración planificada.",
+            "Validar con named-checkconf y named-checkzone antes de ejecutar rndc reload."
+          ],
+          "notes": "Muestre un archivo de zona completo, el mismo de la lectura, y recórralo línea por línea. El error más común en producción es olvidar incrementar el número de serie: el primario carga el cambio, pero los secundarios no lo transfieren, y la organización termina con respuestas inconsistentes según qué servidor conteste. Explique el último valor del SOA, que según el RFC 2308 define el tiempo de caché negativo, es decir, cuánto tiempo recordarán los resolutores que un nombre no existe. Dedique tiempo a los registros TXT de correo: SPF indica qué servidores pueden enviar en nombre del dominio, DKIM firma los mensajes y DMARC define la política ante fallas; sin ellos, los correos con comprobantes electrónicos terminan en la carpeta de correo no deseado de los clientes. Ejercicio rápido: planificar la migración del portal a un nuevo servidor minimizando la interrupción. Respuesta esperada: bajar el TTL a 300 segundos con anticipación, cambiar el registro A y restaurar el TTL después."
+        },
+        {
+          "title": "DHCP en servidores: proceso DORA, ámbitos y reservas con Kea",
+          "bullets": [
+            "DORA: Discover, Offer, Request y Acknowledge, sobre UDP 67 en el servidor y 68 en el cliente.",
+            "Un ámbito define rango, máscara, puerta de enlace, servidores DNS y tiempo de concesión por subred.",
+            "Las reservas asocian una dirección MAC a una IP fija; útiles para impresoras y equipos de red.",
+            "ISC DHCP dejó de recibir mantenimiento en 2022; su sucesor, Kea, usa configuración JSON y una interfaz de control.",
+            "Con varias VLAN, el enrutador reenvía las solicitudes al servidor central mediante un agente de retransmisión (ip helper-address)."
+          ],
+          "notes": "Recuerde la mecánica de DORA y concéntrese en la operación. Muestre un fragmento de configuración de Kea DHCPv4 con una subred, un rango de direcciones, las opciones de puerta de enlace y DNS, y una reserva. Explique por qué la duración de la concesión es una decisión de diseño: en una red de invitados con alta rotación conviene una concesión corta, por ejemplo de una hora, para no agotar el rango; en una red de oficina estable puede ser de ocho horas o más. Relacione con la configuración de VLAN y del agente de retransmisión vista en Redes de Computadoras: un único servidor DHCP central puede atender a varias VLAN si los enrutadores reenvían las solicitudes. Advierta sobre los servidores DHCP no autorizados, por ejemplo un enrutador doméstico conectado por error, que pueden entregar puertas de enlace falsas; la defensa es DHCP snooping en los conmutadores. Pregunta: ¿por qué no conviene asignar direcciones fijas a mano en cuarenta impresoras? Oriente hacia la gestión centralizada y la documentación."
+        },
+        {
+          "title": "Servidores web: Nginx frente a Apache HTTP Server",
+          "bullets": [
+            "Apache (1995) atiende conexiones mediante módulos de multiprocesamiento: prefork, worker o event.",
+            "Nginx (2004), creado por Igor Sysoev para resolver el problema C10K, usa un modelo asíncrono dirigido por eventos.",
+            "Nginx destaca sirviendo archivos estáticos y como proxy inverso, con bajo consumo de memoria.",
+            "Apache admite configuración distribuida con .htaccess, útil en alojamiento compartido, pero con costo de rendimiento.",
+            "Comandos clave: nginx -t para validar y systemctl reload nginx para aplicar sin cortar conexiones."
+          ],
+          "notes": "Explique el problema C10K, planteado por Dan Kegel en 1999: cómo atender diez mil conexiones simultáneas en un solo servidor. El modelo clásico de un proceso o hilo por conexión consume memoria y tiempo de cambio de contexto, conceptos estudiados en Sistemas Operativos. Nginx resuelve el problema con pocos procesos trabajadores que atienden miles de conexiones mediante la notificación de eventos del núcleo, como epoll en Linux. No presente la elección como una competencia: muchas arquitecturas combinan Nginx al frente y servidores de aplicaciones detrás, como el servidor Node.js construido en Desarrollo Web. Muestre la diferencia entre reload y restart: reload relee la configuración y reemplaza los procesos trabajadores de forma ordenada, sin cortar las conexiones activas; restart detiene el servicio. Pregunta: el portal de una universidad colapsa el día de publicación de resultados del examen de admisión; ¿qué datos pediría antes de culpar al servidor web? Oriente hacia métricas de conexiones, CPU, memoria y base de datos."
+        },
+        {
+          "title": "Hosts virtuales y proxy inverso con Nginx",
+          "bullets": [
+            "Cada sitio se define en un bloque server; server_name distingue dominios que comparten una misma IP.",
+            "Como proxy inverso, la directiva proxy_pass reenvía las solicitudes a la aplicación interna, por ejemplo al puerto 3000 local.",
+            "Las cabeceras Host, X-Forwarded-For y X-Forwarded-Proto preservan para la aplicación el origen real del cliente.",
+            "El proxy centraliza TLS, compresión, caché, límites de tasa y registros de acceso.",
+            "Para aplicaciones PHP se usa fastcgi_pass hacia PHP-FPM, que gestiona su propio grupo de procesos."
+          ],
+          "notes": "Explique el patrón de proxy inverso con un esquema: el cliente solo ve a Nginx en el puerto 443; la aplicación Node.js o Python escucha en 127.0.0.1 y no es accesible desde fuera. Este diseño permite actualizar la aplicación, balancear entre varias instancias y aplicar políticas de seguridad en un solo punto. Explique por qué se necesitan las cabeceras de reenvío: sin X-Forwarded-For, la aplicación registraría que todas las solicitudes vienen de 127.0.0.1 y perdería la trazabilidad necesaria para auditoría y para limitar abusos. Muestre los archivos access.log y error.log y cómo interpretar un código 502 Bad Gateway: Nginx funciona, pero la aplicación detrás no responde. Proponga un ejercicio mental: el portal devuelve 502 tras un despliegue; ¿cuáles serían los tres primeros comandos que ejecutaría? Respuesta esperada: systemctl status de la aplicación, ss -tlpn para comprobar que escucha en el puerto y tail del error.log de Nginx."
+        },
+        {
+          "title": "TLS y la infraestructura de clave pública",
+          "bullets": [
+            "TLS 1.3 (RFC 8446, 2018) reduce el saludo inicial a una ida y vuelta y elimina algoritmos inseguros.",
+            "Un certificado X.509 vincula un nombre de dominio con una llave pública y lo firma una autoridad certificadora.",
+            "Cadena de confianza: raíz preinstalada en el sistema o navegador, certificado intermedio y certificado del servidor.",
+            "Errores frecuentes: cadena incompleta, nombre que no coincide, certificado vencido o llave privada expuesta.",
+            "Inspección: openssl s_client -connect host:443 -servername host y openssl x509 -noout -dates."
+          ],
+          "notes": "Repase brevemente la criptografía de llave pública y concéntrese en la operación. La llave privada nunca sale del servidor y debe tener permisos restrictivos; el certificado es público. Explique por qué la cadena incompleta es un error traicionero: algunos navegadores de escritorio la completan descargando el intermedio, pero las aplicaciones móviles y los clientes de servicios fallan, de modo que el administrador cree que todo funciona porque lo probó en su navegador. Muestre en vivo la salida de openssl s_client hacia un sitio conocido y localice el emisor, el sujeto, las fechas de validez y la cadena. Comente que en el Perú, además de los certificados de servidor web, existe la Infraestructura Oficial de Firma Electrónica, cuya autoridad administrativa competente es el INDECOPI, que acredita a entidades emisoras de certificados para firma digital de documentos; son ecosistemas relacionados pero distintos. Pregunta: si se filtra la llave privada de un servidor, ¿basta con renovar el certificado? No: hay que generar una nueva llave, revocar el certificado anterior y emitir uno nuevo."
+        },
+        {
+          "title": "Automatización de certificados con ACME y Let's Encrypt",
+          "bullets": [
+            "ACME (RFC 8555) permite que un cliente solicite, valide y renueve certificados sin intervención humana.",
+            "La validación HTTP-01 publica un archivo en el sitio; DNS-01 crea un registro TXT y admite certificados comodín.",
+            "Let's Encrypt emite certificados gratuitos de 90 días; certbot renew se programa con un temporizador de systemd.",
+            "El CA/Browser Forum aprobó reducir la vigencia máxima a 200 días desde marzo de 2026 y a 47 días desde 2029.",
+            "Con vigencias tan cortas, la renovación manual deja de ser viable: automatizar y monitorear el vencimiento es obligatorio."
+          ],
+          "notes": "Narre el problema histórico: certificados de uno o dos años renovados a mano, con recordatorios en el calendario de una persona que luego deja la empresa. Las caídas por certificados vencidos son tan frecuentes que les ocurren incluso a grandes compañías tecnológicas. Explique el flujo ACME: el cliente crea una cuenta, solicita un certificado para un dominio, demuestra control publicando un desafío por HTTP o DNS y recibe el certificado firmado. Muestre certbot con el complemento de Nginx y la prueba certbot renew --dry-run. Presente la decisión del CA/Browser Forum de 2025, que reduce progresivamente la vigencia máxima de los certificados públicos: 200 días desde marzo de 2026, 100 días desde marzo de 2027 y 47 días desde marzo de 2029. La conclusión operativa es clara: toda organización necesita automatizar la renovación y monitorear el vencimiento con alertas anticipadas. Pregunta: ¿qué método de validación usaría para un servidor interno que no es accesible desde Internet? Respuesta: DNS-01."
+        },
+        {
+          "title": "Servicios de directorio: LDAP y el árbol de información",
+          "bullets": [
+            "Un directorio centraliza identidades, grupos, equipos y políticas, y se optimiza para lecturas frecuentes.",
+            "LDAP (RFC 4511) organiza entradas en un árbol de información identificado por nombres distinguidos (DN).",
+            "Ejemplo de DN: uid=rquispe,ou=ventas,dc=empresa,dc=example; cada entrada pertenece a clases de objetos.",
+            "LDAPS o StartTLS cifran la comunicación; un enlace simple sin cifrado expone contraseñas en la red.",
+            "Implementaciones: OpenLDAP, 389 Directory Server, Active Directory y Samba AD."
+          ],
+          "notes": "Parta de un problema reconocible: en una empresa sin directorio, cada sistema tiene sus propios usuarios y contraseñas; cuando alguien renuncia, hay que recordar desactivarlo en diez lugares y casi siempre se olvida alguno. El directorio resuelve el ciclo de vida de las identidades: alta, cambio de área y baja en un único punto. Explique la estructura jerárquica con una organización peruana dividida en unidades organizativas por sede y por área. Distinga autenticación, verificar quién es, de autorización, decidir qué puede hacer. Muestre una consulta ldapsearch filtrada por grupo y advierta del riesgo de enlaces sin cifrar en la red interna: un atacante con acceso a la red puede capturar credenciales. Relacione con el principio de mínimo privilegio y con la Ley 29733: un directorio bien gestionado permite demostrar quién tuvo acceso a datos personales y retirarlo oportunamente. Pregunta: ¿qué proceso de recursos humanos debería disparar automáticamente la desactivación de una cuenta?"
+        },
+        {
+          "title": "Active Directory: dominios, unidades organizativas y directivas de grupo",
+          "bullets": [
+            "Jerarquía lógica: bosque, árbol, dominio y unidades organizativas; los controladores de dominio replican la base.",
+            "Localiza servicios mediante registros DNS de tipo SRV y usa Kerberos como protocolo de autenticación principal.",
+            "Las directivas de grupo (GPO) aplican configuraciones de seguridad y software de forma centralizada.",
+            "Cinco roles FSMO concentran operaciones únicas; deben documentarse y transferirse ordenadamente.",
+            "Nombre el dominio como subdominio de uno registrado, por ejemplo ad.empresa.example, y evite sufijos .local."
+          ],
+          "notes": "Active Directory es el servicio de directorio más extendido en empresas y entidades públicas peruanas, por lo que su dominio es una competencia de alta empleabilidad. Explique por qué depende de DNS: los equipos encuentran a los controladores de dominio consultando registros SRV, de modo que un DNS mal configurado provoca fallas de inicio de sesión que parecen problemas de contraseña. Muestre directivas de grupo útiles: bloqueo de pantalla tras diez minutos, política de contraseñas, despliegue de un certificado interno y restricción de dispositivos USB en áreas que tratan datos personales. Explique la recomendación sobre el nombre del dominio: el sufijo .local genera conflictos con mDNS y no admite certificados públicos. Mencione que Windows Server 2016 deja de recibir soporte extendido en enero de 2027, de modo que muchas organizaciones deben planificar ahora la migración de sus controladores de dominio. Pregunta: ¿por qué una organización debe tener al menos dos controladores de dominio? Por disponibilidad de la autenticación y para no perder el directorio ante una falla."
+        },
+        {
+          "title": "Kerberos: autenticación mediante tickets",
+          "bullets": [
+            "Desarrollado en el MIT dentro del proyecto Athena; el usuario se autentica una vez y obtiene un ticket TGT.",
+            "El centro de distribución de llaves (KDC) emite tickets de servicio sin que la contraseña viaje por la red.",
+            "Exige relojes sincronizados: la tolerancia predeterminada es de cinco minutos, por lo que NTP es crítico.",
+            "Ataques conocidos como kerberoasting y golden ticket se mitigan con contraseñas robustas en cuentas de servicio y monitoreo."
+          ],
+          "notes": "Use la analogía de un parque de diversiones: en la entrada se muestra el documento de identidad una sola vez y se recibe una pulsera, el TGT; luego, en cada juego se canjea la pulsera por un boleto específico, el ticket de servicio, sin volver a mostrar el documento. Así se logra el inicio de sesión único. Explique por qué la sincronización horaria es obligatoria: los tickets incluyen marcas de tiempo para impedir ataques de repetición y, si el reloj de un servidor se desvía más de cinco minutos, las autenticaciones fallan con mensajes poco claros. Por eso, en un dominio, el controlador que tiene el rol de emulador PDC debe sincronizarse con fuentes de tiempo confiables y el resto de equipos con él. Mencione los ataques solo de forma conceptual, pues se estudiarán a fondo en Seguridad Informática el próximo ciclo. Pregunta para la clase: los usuarios de una sede no pueden iniciar sesión, pero en la sede central todo funciona; ¿qué verificaría primero? Respuesta esperada: la hora y el DNS de los equipos de la sede."
+        },
+        {
+          "title": "Samba: controlador de dominio y servidor de archivos en Linux",
+          "bullets": [
+            "Samba 4 puede actuar como controlador de dominio compatible con Active Directory mediante samba-tool domain provision.",
+            "Como servidor de archivos, comparte carpetas por SMB con permisos por grupo del dominio.",
+            "Recurso típico en smb.conf: path, valid users = @contabilidad, read only = no y una create mask restrictiva.",
+            "Deshabilite SMBv1: el gusano WannaCry (2017) explotó una vulnerabilidad de esa versión del protocolo.",
+            "Validar la configuración con testparm y comprobar los accesos con smbclient -L."
+          ],
+          "notes": "Presente Samba como alternativa de código abierto cuando el presupuesto de licencias es limitado, situación frecuente en colegios, municipalidades pequeñas y pymes. Aclare sus límites: Samba AD es maduro para dominios pequeños y medianos, pero algunas funciones avanzadas de Active Directory y ciertas herramientas de terceros requieren pruebas adicionales. Conecte con Sistemas Operativos: los permisos del recurso compartido se combinan con los permisos del sistema de archivos y las ACL, y prevalece el más restrictivo. Recuerde el caso de WannaCry en 2017, que afectó a hospitales, operadores de telecomunicaciones y empresas de todo el mundo explotando SMBv1 en equipos sin parches; el aprendizaje operativo es doble: aplicar actualizaciones y retirar protocolos obsoletos. Pida a los estudiantes que diseñen la estructura de carpetas compartidas de una consultora con áreas de contabilidad, legal y gerencia, indicando qué grupo accede a qué carpeta y con qué permiso. Insista en que las carpetas con datos personales deben tener acceso mínimo y auditado."
+        },
+        {
+          "title": "NFS para compartir almacenamiento entre servidores Linux",
+          "bullets": [
+            "NFSv4 usa un solo puerto (2049/TCP), admite autenticación Kerberos y es preferible a NFSv3.",
+            "Exportación en /etc/exports: /srv/datos 10.0.20.0/24(rw,sync,root_squash); aplicar con exportfs -ra.",
+            "root_squash convierte al root remoto en un usuario sin privilegios; no lo desactive sin una razón documentada.",
+            "Montaje persistente en /etc/fstab con las opciones _netdev y nofail para no bloquear el arranque."
+          ],
+          "notes": "Distinga los casos de uso: SMB es el estándar para usuarios con Windows; NFS es habitual entre servidores Linux, por ejemplo para compartir contenidos entre varios servidores web o como almacenamiento de máquinas virtuales en Proxmox VE. Explique la opción sync frente a async: async responde antes de escribir en disco y mejora el rendimiento, pero puede perder datos si el servidor se apaga abruptamente. Muestre por qué root_squash es una protección esencial: sin ella, cualquier persona con privilegios de root en un cliente obtiene control total sobre los archivos exportados. Recuerde lo aprendido sobre montaje persistente en Sistemas Operativos y agregue las opciones específicas de red: _netdev indica que el montaje requiere red y nofail impide que el equipo quede detenido en el arranque si el servidor NFS no responde. Pregunta de aplicación: dos servidores web deben compartir las imágenes que suben los usuarios; ¿NFS es suficiente o conviene almacenamiento de objetos? Deje la pregunta abierta para retomarla en la unidad 3."
+        },
+        {
+          "title": "Diagnóstico sistemático de servicios",
+          "bullets": [
+            "Estado y registros: systemctl status servicio y journalctl -u servicio --since today.",
+            "Puertos en escucha: ss -tulpn confirma qué proceso atiende cada puerto y en qué interfaz.",
+            "Nombres, HTTP y cifrado por separado: dig, curl -I y openssl s_client prueban cada capa de forma independiente.",
+            "Método: del síntoma a la hipótesis, una prueba por capa y un solo cambio a la vez, documentando cada paso.",
+            "Toda corrección termina con una verificación desde la perspectiva del usuario y una nota en la bitácora."
+          ],
+          "notes": "Retome el método de diagnóstico por capas de Redes de Computadoras y extiéndalo a los servicios. Presente un flujo de trabajo: primero confirmar el síntoma y su alcance, es decir, quién está afectado y desde cuándo; luego verificar el servicio y sus registros; después, la escucha en el puerto; luego la resolución de nombres; finalmente, la capa de cifrado y la aplicación. Insista en la disciplina de un cambio a la vez: cuando un administrador modifica tres configuraciones simultáneamente y el problema se resuelve, no sabe cuál fue la causa y no podrá prevenir la recurrencia. Realice un ejercicio en vivo con un servidor de laboratorio al que previamente se le haya introducido una falla, por ejemplo un error de sintaxis en Nginx o un registro DNS con el número de serie sin incrementar, y pida a los estudiantes que dicten los comandos. Cierre recordando que la bitácora técnica es una evidencia profesional: un buen registro permite elaborar el análisis posterior al incidente que estudiarán en la unidad 4."
+        },
+        {
+          "title": "Gestión de la configuración de los servicios",
+          "bullets": [
+            "Versionar /etc con Git o etckeeper permite saber qué cambió, cuándo y quién lo hizo.",
+            "Respaldar por separado configuración, datos y llaves; las llaves privadas requieren cifrado y custodia restringida.",
+            "Cada cambio en producción necesita solicitud, evaluación de riesgo, plan de reversión y ventana acordada con el usuario.",
+            "La configuración manual de muchos servidores no escala: esta limitación motiva la automatización de la unidad 4."
+          ],
+          "notes": "Cierre la unidad con una reflexión sobre la sostenibilidad del trabajo realizado. Los estudiantes han configurado DNS, DHCP, Nginx, certificados, directorio y archivos compartidos; si el servidor desaparece mañana, ¿podrían reconstruirlo? Presente etckeeper, herramienta que guarda automáticamente en un repositorio Git los cambios del directorio /etc, incluidos los que realiza el gestor de paquetes, y muestre cómo un git log revela el cambio que rompió un servicio. Explique la gestión de cambios en términos sencillos: solicitar, evaluar el riesgo, planificar la reversión, ejecutar en una ventana acordada y verificar. En una distribuidora o en un banco, un cambio no planificado en horario comercial puede detener las ventas o la atención en agencias. Recalque la separación de respaldos: la configuración se puede regenerar, los datos no, y las llaves privadas requieren protección especial. Anticipe que en la unidad 4 la configuración se expresará como código con Ansible, lo que convierte la documentación en algo ejecutable. Pregunta final: ¿qué parte de su laboratorio sería la más difícil de reconstruir y por qué?"
+        }
+      ],
+      "reading": {
+        "title": "Publicar un servicio de principio a fin: DNS, Nginx y certificados TLS",
+        "minutes": 35,
+        "content": "## Una solicitud, cinco puntos de falla\n\nCuando un vendedor abre en su teléfono el portal de pedidos de su empresa ocurren al menos cinco eventos encadenados: el resolutor DNS traduce el nombre a una dirección IP; el cliente abre una conexión TCP al puerto 443; se negocia TLS y se valida el certificado; el servidor web recibe la solicitud y la entrega a la aplicación; y la aplicación consulta su base de datos. El administrador debe poder verificar cada eslabón por separado, porque el usuario solo dirá que «el sistema no funciona». Los ejemplos usan el dominio reservado empresa.example y direcciones reservadas para documentación (RFC 2606 y RFC 5737); en producción se reemplazan por el dominio .pe y las direcciones públicas de la organización.\n\n## Paso 1: la zona autoritativa\n\n```text\n$TTL 3600\n@        IN SOA  ns1.empresa.example. ti.empresa.example. (\n                 2026100701 ; serie AAAAMMDDnn: incrementar en cada cambio\n                 3600       ; refresh: frecuencia de consulta del secundario\n                 900        ; retry: reintento si el primario no responde\n                 1209600    ; expire: el secundario deja de responder tras 14 días\n                 300 )      ; TTL de respuestas negativas (RFC 2308)\n         IN NS   ns1.empresa.example.\n         IN NS   ns2.empresa.example.\n         IN MX   10 correo.empresa.example.\n         IN TXT  \"v=spf1 mx -all\"\nns1      IN A    203.0.113.10\nns2      IN A    198.51.100.20\ncorreo   IN A    203.0.113.25\nportal   IN A    203.0.113.30\nwww      IN CNAME portal\n```\n\nEl contacto del SOA se escribe con un punto en lugar de la arroba. El registro SPF declara que solo los servidores MX envían correo del dominio, medida clave para que los comprobantes electrónicos enviados por correo no terminen como correo no deseado. Antes de recargar, se valida:\n\n```bash\nsudo named-checkconf\nsudo named-checkzone empresa.example /etc/bind/zonas/db.empresa.example\nsudo rndc reload empresa.example\ndig @203.0.113.10 portal.empresa.example A +short\ndig @198.51.100.20 empresa.example SOA +short   # el serial debe coincidir en ambos\n```\n\nEn named.conf, allow-recursion se limita a las redes internas o se deshabilita en el autoritativo publicado en Internet, para no convertirlo en amplificador de ataques de denegación de servicio.\n\n## Paso 2: el servidor web\n\nNginx atiende miles de conexiones con pocos procesos gracias a su modelo dirigido por eventos. El siguiente bloque publica una aplicación PHP, por ejemplo una mesa de ayuda de código abierto, a través de PHP-FPM. Para una API en Node.js o Python el patrón es idéntico, pero fastcgi_pass se reemplaza por proxy_pass dirigido al puerto local de la aplicación, junto con las cabeceras Host, X-Forwarded-For y X-Forwarded-Proto.\n\n```nginx\nserver {\n    listen 443 ssl;\n    server_name portal.empresa.example;\n    root /var/www/portal/public;\n    index index.php;\n\n    ssl_certificate     /etc/letsencrypt/live/portal.empresa.example/fullchain.pem;\n    ssl_certificate_key /etc/letsencrypt/live/portal.empresa.example/privkey.pem;\n    ssl_protocols TLSv1.2 TLSv1.3;\n    add_header Strict-Transport-Security \"max-age=31536000\" always;\n\n    location / {\n        try_files $uri $uri/ /index.php?$query_string;\n    }\n    location ~ \\.php$ {\n        include snippets/fastcgi-php.conf;\n        fastcgi_pass unix:/run/php/php8.3-fpm.sock;\n    }\n    access_log /var/log/nginx/portal.access.log;\n    error_log  /var/log/nginx/portal.error.log;\n}\n```\n\nSe usa fullchain.pem, que incluye el certificado intermedio; usar solo el certificado del servidor provoca la falla clásica en la que el navegador de escritorio funciona y la aplicación móvil no. Cada cambio se valida con nginx -t y se aplica con systemctl reload nginx, que no corta las conexiones activas.\n\n## Paso 3: certificados que se renuevan solos\n\nEl protocolo ACME (RFC 8555) automatiza la emisión. Con certbot y su complemento para Nginx, la primera emisión valida el dominio por HTTP-01, instala el certificado y agrega la redirección permanente del puerto 80 al 443:\n\n```bash\nsudo certbot --nginx -d portal.empresa.example --redirect\nsudo certbot renew --dry-run          # simula la renovación\nsystemctl list-timers | grep certbot  # temporizador de renovación automática\n```\n\nLa automatización ya no es opcional: el CA/Browser Forum aprobó en 2025 reducir la vigencia máxima de los certificados públicos a 200 días desde marzo de 2026 y a 47 días desde marzo de 2029. Para servidores internos sin acceso desde Internet se usa la validación DNS-01, que requiere un proveedor de DNS con interfaz de programación, o una autoridad certificadora interna distribuida mediante directivas de grupo.\n\n## Paso 4: verificar como lo haría un auditor\n\n```bash\nss -tlpn | grep -E ':(80|443) '\nopenssl s_client -connect portal.empresa.example:443 -servername portal.empresa.example </dev/null | openssl x509 -noout -subject -issuer -dates\nsudo tail -n 50 /var/log/nginx/portal.error.log\n```\n\nEstas órdenes confirman que el servicio escucha, que se entrega el certificado correcto y vigente con su emisor, y que no hay errores recientes. Su salida, pegada en la bitácora técnica, es la evidencia que exige cualquier revisión de cambios.\n\n## Ideas clave\n\n- Cada eslabón —DNS, TCP, TLS, servidor web y aplicación— se verifica por separado.\n- Validar antes de recargar evita convertir un cambio en una caída.\n- Los certificados se automatizan y se monitorean; su vencimiento es una falla evitable.\n- La configuración comentada y versionada es parte del servicio, no un anexo."
+      },
+      "case": {
+        "title": "Caso: El viernes en que venció el certificado de Distribuidora Norteña",
+        "content": "## La empresa\n\nDistribuidora Norteña S. A. C. (nombre ficticio) abastece de medicamentos y productos de cuidado personal a unas 1 300 boticas y farmacias de La Libertad, Lambayeque, Piura y Cajamarca desde su sede en Trujillo. Tiene 160 colaboradores, tres almacenes y 35 vendedores de campo que registran pedidos desde una aplicación móvil conectada a una interfaz de programación publicada en su portal de pedidos. Sus ventas promedian S/ 480 000 diarios. El área de TI está formada por un jefe y dos analistas.\n\n## La infraestructura\n\n- Dos controladores de dominio con Windows Server 2016, cuyo soporte extendido termina el 12 de enero de 2027, que también ofrecen el DNS interno.\n- Un servidor Ubuntu con Nginx como proxy inverso del portal y de la interfaz de programación. El certificado TLS, comprado a una autoridad comercial con vigencia anual, lo renovaba manualmente un analista que renunció en marzo.\n- DNS público administrado en el panel web del registrador del dominio, sin interfaz de programación.\n- Un servidor de archivos Windows con SMBv1 habilitado «por compatibilidad» con una impresora multifuncional antigua del almacén principal.\n- No existen fichas de servicio ni un inventario actualizado.\n\n## El incidente\n\nEl viernes 21 de agosto de 2026, a las 6:40 a. m., los vendedores dejaron de enviar pedidos: el certificado había vencido a medianoche. Nadie recibió una alerta. A las 11:00 a. m. el jefe de TI identificó la causa y a las 3:50 p. m. instaló un certificado nuevo comprado de urgencia. Los navegadores de escritorio funcionaron de inmediato, pero la aplicación móvil siguió fallando dos horas más porque el servidor no enviaba el certificado intermedio. La gerencia comercial estimó que el 40 % de los pedidos del día se perdió o se trasladó a la competencia.\n\nEl lunes siguiente, el auditor externo añadió tres observaciones: SMBv1 habilitado, controladores de dominio próximos al fin de soporte y ausencia de procedimientos documentados.\n\n## Opciones sobre la mesa\n\n1. Automatizar los certificados con ACME y monitorear su vencimiento: costo de licencias casi nulo, aunque el registrador no permite la validación DNS-01 automatizada.\n2. Migrar los controladores de dominio a Windows Server 2025 en máquinas virtuales nuevas: S/ 38 000 entre licencias de servidor y licencias de acceso de cliente.\n3. Reemplazar el dominio por Samba AD, sin costo de licencias, aunque el equipo no lo conoce, o adoptar un servicio de identidad en la nube con suscripción por usuario.\n4. Retirar SMBv1 reemplazando la impresora multifuncional: S/ 9 500.\n\nEl presupuesto disponible para TI en lo que resta del año es de S/ 45 000. El gerente general pide un plan priorizado de una página para la próxima sesión de directorio y advierte que no aceptará otra caída del canal de ventas.",
+        "questions": [
+          "Reconstruya la cadena de causas del incidente distinguiendo causas técnicas, de proceso y organizacionales. ¿Qué falló además del certificado?",
+          "Estime la pérdida económica del incidente y compárela con el costo de cada medida propuesta. ¿Cuáles se pagan solas?",
+          "Diseñe el esquema de emisión, renovación y monitoreo de certificados considerando que el registrador no ofrece interfaz de programación. ¿Qué alternativas técnicas existen?",
+          "Proponga un plan priorizado de seis meses que atienda el fin de soporte de Windows Server 2016 y el retiro de SMBv1 dentro del presupuesto, justificando el orden."
+        ]
+      },
+      "assignment": {
+        "title": "Implementación de servicios de infraestructura para una pyme",
+        "instructions": "**Objetivo:** implementar, asegurar y verificar los servicios de infraestructura de una pyme ficticia sobre el laboratorio virtual construido en la unidad 1.\n\n**Qué entregar:**\n\n1. **DNS:** zona autoritativa en BIND 9 para un dominio de laboratorio bajo .example con registros SOA, NS, A, MX, CNAME y TXT (SPF), validada con named-checkzone, y un resolutor interno con la recursión restringida a la red del laboratorio.\n2. **Web:** Nginx con dos hosts virtuales: un sitio estático y un proxy inverso hacia una aplicación (puede reutilizar la API de Desarrollo Web) con las cabeceras de reenvío correctas y TLS. Si su servidor no es público, cree una autoridad certificadora interna con openssl, emita el certificado con la cadena completa y documente cómo se distribuiría la raíz a los clientes.\n3. **Archivos:** recurso compartido Samba para dos áreas con permisos por grupo, SMBv1 deshabilitado y comprobación de accesos permitidos y denegados.\n4. **Fichas de servicio:** una por servicio, con propósito, puertos, dependencias, archivos de configuración, registros, prueba de verificación y procedimiento de reversión.\n5. **Evidencias de diagnóstico:** salidas comentadas de dig, ss -tulpn, nginx -t, testparm y openssl s_client.\n\n**Formato:** informe en PDF de 8 a 12 páginas y un repositorio Git compartido con el docente que contenga los archivos de configuración comentados y un historial de cambios con mensajes descriptivos. No incluya llaves privadas en el repositorio.\n\n**Criterios de evaluación:** funcionamiento verificable de cada servicio, aplicación de buenas prácticas de seguridad, calidad de las fichas y rigor de las evidencias de diagnóstico.",
+        "rubric": [
+          {
+            "name": "Servicio DNS correcto, validado y con recursión restringida",
+            "points": 5
+          },
+          {
+            "name": "Publicación web con proxy inverso y TLS",
+            "points": 6
+          },
+          {
+            "name": "Recurso compartido con permisos por grupo y SMBv1 deshabilitado",
+            "points": 4
+          },
+          {
+            "name": "Fichas de servicio y evidencias de diagnóstico",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: servicios de infraestructura",
+        "questions": [
+          {
+            "prompt": "Un administrador cambió el registro A del portal en el servidor DNS primario, pero horas después los secundarios siguen respondiendo la dirección antigua. ¿Cuál es la causa más probable?",
+            "options": [
+              "El servidor primario no tiene la recursión habilitada",
+              "Falta un registro MX en la zona del dominio",
+              "No incrementó el número de serie del registro SOA",
+              "El TTL del registro A era demasiado bajo"
+            ],
+            "correct": 2,
+            "explanation": "Los secundarios comparan el número de serie del SOA para decidir si transfieren la zona. Si no se incrementa, conservan la versión anterior y las respuestas quedan inconsistentes."
+          },
+          {
+            "prompt": "¿Qué método de validación ACME es el adecuado para obtener un certificado comodín para *.empresa.example?",
+            "options": [
+              "Ninguno, porque ACME no permite emitir comodines",
+              "DNS-01, creando un registro TXT en la zona",
+              "HTTP-01, publicando un archivo en cada subdominio",
+              "Validación por correo al contacto del registro SOA"
+            ],
+            "correct": 1,
+            "explanation": "Let's Encrypt solo emite certificados comodín con el desafío DNS-01, porque demuestra control sobre toda la zona. HTTP-01 únicamente prueba el control de un nombre concreto."
+          },
+          {
+            "prompt": "Tras renovar un certificado, el portal abre bien en navegadores de escritorio, pero la aplicación móvil reporta un error de confianza. ¿Qué es lo más probable?",
+            "options": [
+              "El servidor no envía el certificado intermedio de la cadena",
+              "La llave privada tiene permisos demasiado restrictivos",
+              "El TTL del registro DNS todavía no ha expirado",
+              "El servidor negocia TLS 1.3 en lugar de TLS 1.2"
+            ],
+            "correct": 0,
+            "explanation": "Algunos navegadores completan la cadena descargando el intermedio, pero muchos clientes móviles no. Configurar fullchain.pem, que incluye el intermedio, resuelve el problema."
+          },
+          {
+            "prompt": "Nginx devuelve 502 Bad Gateway en un sitio configurado como proxy inverso. ¿Qué indica este código?",
+            "options": [
+              "El certificado TLS del sitio ha vencido",
+              "El cliente no tiene permisos sobre el recurso solicitado",
+              "El registro DNS del dominio no existe",
+              "Nginx funciona, pero no obtiene una respuesta válida de la aplicación interna"
+            ],
+            "correct": 3,
+            "explanation": "Un 502 significa que el proxy recibió una respuesta inválida o ninguna del servidor de origen. Se diagnostica revisando el estado de la aplicación, su puerto de escucha y el error.log de Nginx."
+          },
+          {
+            "prompt": "Los usuarios de una sede no pueden iniciar sesión en el dominio, aunque la red funciona y las contraseñas son correctas. ¿Qué verificaría primero?",
+            "options": [
+              "El número de serie de la zona DNS pública de la empresa",
+              "La capacidad del arreglo RAID del controlador de dominio",
+              "La sincronización horaria y la resolución DNS de los equipos de la sede",
+              "La versión del protocolo SMB del servidor de archivos"
+            ],
+            "correct": 2,
+            "explanation": "Kerberos rechaza tickets si los relojes difieren más de cinco minutos, y los equipos localizan a los controladores de dominio mediante registros SRV del DNS. Ambos son causas típicas de este síntoma."
+          },
+          {
+            "prompt": "¿Por qué la opción root_squash es importante en una exportación NFS?",
+            "options": [
+              "Permite montar la exportación sin conexión de red",
+              "Impide que el root de un cliente tenga privilegios de root sobre los archivos exportados",
+              "Cifra el tráfico entre el cliente y el servidor NFS",
+              "Acelera las escrituras confirmándolas antes de llegar al disco"
+            ],
+            "correct": 1,
+            "explanation": "root_squash asigna al root remoto una identidad sin privilegios. Sin ella, quien controle un cliente como root podría leer, modificar o borrar cualquier archivo exportado."
+          },
+          {
+            "prompt": "Un resolutor DNS de la empresa responde consultas recursivas a cualquier dirección de Internet. ¿Cuál es el principal riesgo?",
+            "options": [
+              "Ser usado en ataques de amplificación contra terceros",
+              "Que los usuarios internos no puedan resolver nombres",
+              "Que el número de serie de la zona deje de incrementarse",
+              "Que los certificados TLS no puedan renovarse"
+            ],
+            "correct": 0,
+            "explanation": "Un resolutor abierto responde con paquetes grandes a consultas con origen falsificado, multiplicando el tráfico contra la víctima. Se mitiga limitando la recursión a las redes internas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Computación en la nube: modelos, servicios y arquitectura",
+      "description": "Al finalizar la unidad, el estudiante diseña e implementa una arquitectura básica en un proveedor de nube pública —red virtual, cómputo, almacenamiento e identidades— aplicando el modelo de responsabilidad compartida, estimando su costo con distintos modelos de precios y evaluando las exigencias de la normativa peruana sobre datos personales.",
+      "topics": [
+        "Definición del NIST: características esenciales, modelos de servicio y de despliegue",
+        "Modelo de responsabilidad compartida e infraestructura global de los proveedores",
+        "Redes virtuales, cómputo elástico y almacenamiento en la nube",
+        "Gestión de identidades y accesos con mínimo privilegio",
+        "Modelos de precios, FinOps y marco de buena arquitectura",
+        "Normativa peruana aplicable: Ley 29733, flujo transfronterizo y regulación sectorial"
+      ],
+      "slides": [
+        {
+          "title": "De la virtualización a la nube: qué cambia realmente",
+          "bullets": [
+            "La nube industrializa la virtualización: autoservicio mediante interfaces de programación, facturación por uso y escala global.",
+            "AWS lanzó S3 y EC2 en 2006; Microsoft Azure y Google Cloud consolidaron el mercado en la década siguiente.",
+            "Según Synergy Research Group, los tres mayores proveedores concentran en conjunto más del 60 % del mercado mundial de infraestructura en la nube.",
+            "El rol del administrador pasa de instalar hardware a diseñar, automatizar, asegurar y controlar costos."
+          ],
+          "notes": "Conecte con la unidad 1: lo que hicieron con KVM y Proxmox VE es, en esencia, lo que hace un proveedor de nube, pero a escala de millones de servidores y con una capa de software que permite crear recursos en segundos. Cuente el origen de AWS: Amazon convirtió en servicio su capacidad interna de infraestructura y en 2006 lanzó S3 para almacenamiento de objetos y EC2 para máquinas virtuales. Subraye que la nube no elimina al administrador: cambia sus tareas. Ya no reemplaza discos, pero debe diseñar redes virtuales, definir permisos, automatizar despliegues y vigilar una factura que puede crecer sin control. Pida a los estudiantes que mencionen servicios en la nube que usan a diario, desde el correo hasta las plataformas de video, y que clasifiquen quién administra qué. Pregunta crítica: ¿la nube es siempre más barata? Deje la respuesta abierta para la diapositiva de costos y anticipe que depende del patrón de uso y de la disciplina de gestión."
+        },
+        {
+          "title": "Las cinco características esenciales según NIST SP 800-145",
+          "bullets": [
+            "Autoservicio bajo demanda: el usuario aprovisiona recursos sin intervención humana del proveedor.",
+            "Amplio acceso por red desde clientes heterogéneos mediante mecanismos estándar.",
+            "Agrupación de recursos multiinquilino, con independencia relativa de la ubicación física.",
+            "Elasticidad rápida: los recursos crecen y se reducen, a veces automáticamente, según la demanda.",
+            "Servicio medido: el uso se monitorea, controla e informa, lo que permite cobrar por consumo."
+          ],
+          "notes": "Presente la definición de Mell y Grance, publicada por el Instituto Nacional de Estándares y Tecnología de los Estados Unidos en 2011, como el lenguaje común de la industria y de muchas normas técnicas y contractuales. Use las cinco características como lista de verificación crítica: un proveedor local que alquila servidores virtuales solicitados por correo y con contrato anual fijo no cumple el autoservicio ni la elasticidad, aunque lo llame nube. Explique la agrupación multiinquilino con la analogía del edificio de departamentos: los inquilinos comparten la estructura, pero cada uno tiene su llave. Esa compartición es la que exige controles de aislamiento y explica por qué algunos reguladores piden evaluaciones específicas. Dé un ejemplo de elasticidad en el Perú: una tienda en línea que durante el Cyber Wow multiplica su tráfico por diez durante tres días y luego vuelve a su nivel normal. Pregunta: ¿cuál de las cinco características produce mayor impacto económico y por qué?"
+        },
+        {
+          "title": "Modelos de servicio: IaaS, PaaS y SaaS",
+          "bullets": [
+            "IaaS: el cliente administra sistema operativo, middleware y aplicación; ejemplos: Amazon EC2, Azure Virtual Machines y Compute Engine.",
+            "PaaS: el proveedor administra la plataforma y el cliente despliega código o datos; ejemplos: Amazon RDS y Azure App Service.",
+            "SaaS: aplicación completa por suscripción; ejemplos: Microsoft 365, Google Workspace o un ERP en línea.",
+            "Las funciones sin servidor (FaaS), como AWS Lambda, cobran por ejecución y escalan a cero.",
+            "A mayor abstracción, menos control y menos carga operativa: la elección depende de capacidades y requisitos."
+          ],
+          "notes": "Use la conocida analogía de la pizza como servicio, pero vaya más allá: pida a los estudiantes que para cada modelo indiquen quién aplica parches al sistema operativo, quién configura respaldos y quién responde si la aplicación es lenta. Muestre que PaaS libera al equipo de tareas de bajo valor: una base de datos administrada aplica parches, respalda y replica automáticamente, tareas que en Base de Datos requerían trabajo manual. Analice el costo oculto de la abstracción: dependencia del proveedor y menor capacidad de ajuste fino. Presente las funciones sin servidor como un modelo útil para cargas esporádicas, por ejemplo procesar los comprobantes electrónicos que llegan a un buzón o generar reportes nocturnos. Ejercicio: clasifiquen estos servicios: una máquina virtual con Ubuntu, una base de datos PostgreSQL administrada, el correo institucional y una función que redimensiona imágenes. Pregunta de cierre: ¿qué modelo elegiría una pyme sin personal de TI para su contabilidad? Probablemente SaaS, con atención a la portabilidad de sus datos."
+        },
+        {
+          "title": "Modelos de despliegue: pública, privada, híbrida y comunitaria",
+          "bullets": [
+            "Nube pública: infraestructura del proveedor compartida por múltiples clientes, con máxima elasticidad.",
+            "Nube privada: para una sola organización, en sus instalaciones o de un tercero, por ejemplo con OpenStack.",
+            "Nube híbrida: combina ambas con portabilidad de datos y aplicaciones, por ejemplo respaldos o picos en la pública.",
+            "Nube comunitaria: compartida por organizaciones con requisitos comunes, como entidades de un mismo sector.",
+            "Multinube: usar varios proveedores públicos para reducir dependencia o aprovechar servicios específicos."
+          ],
+          "notes": "Advierta contra la lectura ingenua de estos modelos: una nube privada no es simplemente un servidor propio; debe ofrecer autoservicio, elasticidad dentro de su capacidad y servicio medido, lo que exige software como OpenStack y procesos maduros. Explique la nube híbrida con ejemplos realistas del Perú: una entidad que conserva su sistema transaccional en su centro de datos por razones regulatorias o de latencia, pero envía copias de seguridad cifradas a almacenamiento de objetos en la nube pública; o una universidad que atiende con servidores propios todo el año y usa la nube durante el proceso de admisión. Discuta la multinube con sentido crítico: reduce la dependencia de un solo proveedor, pero multiplica la complejidad, las habilidades requeridas y los costos de transferencia de datos. Pregunta para la clase: el directorio de una caja municipal propone «llevar todo a la nube» en un año. ¿Qué modelo de despliegue recomendarían como paso inicial y qué cargas moverían primero? Oriente hacia cargas de bajo riesgo y alto aprendizaje."
+        },
+        {
+          "title": "Modelo de responsabilidad compartida",
+          "bullets": [
+            "El proveedor responde por la seguridad de la nube: centros de datos, hardware, red física e hipervisor.",
+            "El cliente responde por la seguridad en la nube: datos, identidades, configuración, cifrado y sistema operativo en IaaS.",
+            "La frontera se desplaza según el modelo: incluso en SaaS el cliente responde por usuarios, permisos y datos.",
+            "Muchas filtraciones en la nube se originan en errores de configuración del cliente, como depósitos de almacenamiento públicos."
+          ],
+          "notes": "Este es el concepto más importante de la unidad para la seguridad. Muestre la fórmula que usa AWS: seguridad de la nube frente a seguridad en la nube. Recorra una tabla con filas para datos, identidades, aplicación, sistema operativo, red virtual, hipervisor y centro de datos, y columnas para IaaS, PaaS y SaaS, marcando quién es responsable en cada caso. Insista en que los datos y las identidades siempre son responsabilidad del cliente, en cualquier modelo. Comente que numerosos incidentes públicos en el mundo y en la región se han originado en depósitos de almacenamiento configurados como públicos o en llaves de acceso publicadas por error en repositorios de código. El proveedor no falló; falló la configuración del cliente. Esto se conecta con la Ley 29733, que obliga al titular del banco de datos a adoptar medidas de seguridad sin importar dónde estén alojados los datos. Pregunta: si una empresa usa una base de datos administrada y se filtra información por una contraseña débil, ¿quién responde ante la autoridad de protección de datos?"
+        },
+        {
+          "title": "Infraestructura global: regiones, zonas de disponibilidad y presencia en Lima",
+          "bullets": [
+            "Región: área geográfica con varias zonas de disponibilidad; cada zona agrupa uno o más centros de datos independientes.",
+            "Desplegar en al menos dos zonas protege ante la falla de un centro de datos sin salir de la región.",
+            "Las regiones más cercanas al Perú se ubican en São Paulo, Santiago de Chile y Querétaro, según el proveedor.",
+            "AWS ofrece una zona local en Lima y los proveedores mantienen puntos de presencia para sus redes de distribución de contenidos.",
+            "Elegir región considera latencia, precio, catálogo de servicios disponible y exigencias legales sobre los datos."
+          ],
+          "notes": "Explique la jerarquía con un mapa: región, zonas de disponibilidad y centros de datos. Las zonas de una región están separadas varios kilómetros, con energía y redes independientes, pero conectadas por enlaces de baja latencia que permiten replicación sincrónica. Comente que no todas las regiones ofrecen los mismos servicios ni los mismos precios: São Paulo suele ser más cara que Virginia del Norte, una de las regiones con mayor catálogo y tarifas más bajas. Explique la zona local: una extensión de una región, con un subconjunto de servicios de cómputo y almacenamiento, ubicada cerca de los usuarios para reducir la latencia. Proponga un ejercicio práctico: medir con las herramientas de prueba de latencia de los proveedores la latencia desde la casa de cada estudiante hacia distintas regiones y comparar resultados en el foro. La conclusión suele sorprender: la diferencia entre regiones puede ser poco relevante para aplicaciones administrativas, pero decisiva para voz, videojuegos o transacciones en tiempo real. Pregunta: ¿qué región elegiría para el sistema de una pyme limeña y por qué?"
+        },
+        {
+          "title": "Redes virtuales: VPC, subredes y tablas de rutas",
+          "bullets": [
+            "Una VPC es una red privada aislada con un bloque CIDR, por ejemplo 10.20.0.0/16.",
+            "Subred pública: su tabla de rutas envía 0.0.0.0/0 a una puerta de enlace de Internet.",
+            "Subred privada: sale a Internet mediante una puerta de enlace NAT y no acepta conexiones entrantes.",
+            "AWS reserva cinco direcciones por subred; planifique con VLSM como en Redes de Computadoras.",
+            "Diseño mínimo recomendado: subredes públicas y privadas repetidas en dos zonas de disponibilidad."
+          ],
+          "notes": "Aquí el estudiante reutiliza lo aprendido en Redes de Computadoras: subredes, VLSM, tablas de enrutamiento y NAT. La diferencia es que todo se define por software. Dibuje una VPC 10.20.0.0/16 con cuatro subredes /24: dos públicas para balanceadores y bastión, y dos privadas para aplicaciones y bases de datos, repartidas en dos zonas. Explique que lo que hace pública a una subred no es su nombre, sino su tabla de rutas. Advierta un costo con frecuencia ignorado: la puerta de enlace NAT administrada se cobra por hora y por gigabyte procesado, y en cuentas pequeñas puede ser uno de los rubros más caros de la factura. Mencione los equivalentes: Virtual Network en Azure y VPC en Google Cloud, con diferencias de detalle, como que en Google Cloud la VPC es global y las subredes son regionales. Ejercicio: planificar el direccionamiento de una VPC que en tres años podría conectarse por VPN con la red de la oficina 10.0.0.0/16. ¿Qué bloque elegirían para evitar solapamientos?"
+        },
+        {
+          "title": "Grupos de seguridad y listas de control de acceso de red",
+          "bullets": [
+            "Grupo de seguridad: firewall con estado aplicado a la interfaz de cada instancia; solo admite reglas de permiso.",
+            "ACL de red: sin estado, aplicada a la subred, con reglas de permiso y denegación evaluadas en orden.",
+            "Patrón por capas: el balanceador acepta 443 desde Internet y la aplicación solo desde el grupo del balanceador.",
+            "La base de datos acepta 5432 solo desde el grupo de la aplicación y SSH solo desde el bastión.",
+            "Nunca abra 22 o 3389 a 0.0.0.0/0; prefiera el bastión o un servicio de sesión administrada."
+          ],
+          "notes": "Relacione con las listas de control de acceso de Redes de Computadoras y con el firewall de Linux. La diferencia clave entre con estado y sin estado: el grupo de seguridad recuerda las conexiones y permite automáticamente su respuesta; la ACL de red no, por lo que hay que permitir explícitamente los puertos efímeros de retorno. Muestre la potencia de referenciar grupos en lugar de direcciones: la regla «permitir 5432 desde el grupo de la aplicación» sigue siendo válida aunque las instancias cambien de dirección al escalar. Mencione los servicios de sesión administrada, como AWS Systems Manager Session Manager o Azure Bastion, que permiten administrar instancias sin abrir puertos de entrada. Ejercicio de análisis: presente una configuración con SSH abierto a todo Internet y la base de datos accesible desde 0.0.0.0/0, y pida a los estudiantes que reescriban las reglas siguiendo el patrón por capas. Pregunta: ¿qué evidencia mostraría a un auditor para demostrar que la base de datos no es accesible desde Internet?"
+        },
+        {
+          "title": "Cómputo elástico: instancias, imágenes y escalado automático",
+          "bullets": [
+            "Familias de instancias según perfil: propósito general, optimizadas para cómputo, para memoria o con aceleradores.",
+            "Las instancias con créditos de CPU convienen a cargas bajas con picos breves, no a uso sostenido.",
+            "Las imágenes de máquina y cloud-init permiten crear servidores idénticos y configurados al arrancar.",
+            "El escalado automático ajusta la cantidad de instancias según métricas, como una CPU promedio objetivo de 60 %.",
+            "Diseñe instancias desechables: el estado debe vivir en bases de datos o en almacenamiento compartido."
+          ],
+          "notes": "Explique cómo leer la nomenclatura de los tipos de instancia: familia, generación, atributos y tamaño. Discuta el error frecuente de elegir instancias con créditos de CPU para bases de datos: funcionan bien en pruebas y se degradan en producción cuando se agotan los créditos. Presente cloud-init como el puente entre la imagen genérica y el servidor configurado: una definición que instala paquetes, crea usuarios con llaves SSH y arranca servicios en el primer inicio. Explique el grupo de escalado automático con valores mínimo, deseado y máximo, y una política de seguimiento de objetivo. El principio de diseño es el de instancias desechables: si una instancia puede destruirse y recrearse sin pérdida, la elasticidad funciona; si guarda en su disco local los archivos subidos por los usuarios, estos se perderán al reducir la cantidad de instancias. Pregunta para la clase: retomen la pregunta de la unidad 2 sobre las imágenes que suben los usuarios. ¿Dónde deberían almacenarse ahora? Respuesta: en almacenamiento de objetos."
+        },
+        {
+          "title": "Almacenamiento en la nube: bloques, archivos y objetos",
+          "bullets": [
+            "Bloques (Amazon EBS, Azure Managed Disks): discos para una instancia, respaldados con instantáneas.",
+            "Archivos (Amazon EFS, Azure Files): sistema de archivos compartido por NFS o SMB entre varias instancias.",
+            "Objetos (Amazon S3, Azure Blob Storage, Cloud Storage): datos con metadatos accesibles por interfaz de programación y escala prácticamente ilimitada.",
+            "S3 está diseñado para 99,999999999 % de durabilidad anual de los objetos; durabilidad no es disponibilidad.",
+            "Las clases de almacenamiento y las reglas de ciclo de vida mueven los datos fríos a niveles más baratos."
+          ],
+          "notes": "Relacione con la unidad 1: DAS y SAN equivalen al almacenamiento de bloques; NAS, al de archivos; el almacenamiento de objetos es la gran novedad de la nube. Explique sus propiedades: cada objeto tiene una clave, datos y metadatos, se accede mediante una interfaz de programación y no se modifica parcialmente, sino que se reemplaza completo. Aclare la diferencia entre los once nueves de durabilidad, que expresan la probabilidad de no perder un objeto, y la disponibilidad, que expresa la probabilidad de poder acceder a él en un momento dado y suele ser de 99,9 % o 99,99 % según la clase. Presente las reglas de ciclo de vida con un ejemplo peruano: un estudio contable debe conservar comprobantes y libros electrónicos durante el plazo de prescripción tributaria; los documentos del año en curso se consultan a diario, pero los de años anteriores pueden pasar a clases de archivo mucho más baratas. Advierta del costo y la demora de recuperación de esas clases. Pregunta: ¿qué almacenamiento usaría para la base de datos de un ERP, para la carpeta compartida de un área y para respaldos de diez años?"
+        },
+        {
+          "title": "Identidades y accesos: IAM con mínimo privilegio",
+          "bullets": [
+            "Proteja la cuenta raíz con MFA, sin llaves de acceso, y úsela solo para tareas excepcionales.",
+            "Asigne permisos a grupos y roles, no a personas individuales; use inicio de sesión único cuando sea posible.",
+            "Las políticas JSON definen Effect, Action, Resource y Condition; una denegación explícita prevalece sobre cualquier permiso.",
+            "Las aplicaciones en instancias usan roles con credenciales temporales, nunca llaves escritas en el código.",
+            "Revise periódicamente los accesos no usados con herramientas como IAM Access Analyzer."
+          ],
+          "notes": "Comience con una historia frecuente: un desarrollador sube a un repositorio público un archivo de configuración con llaves de acceso; en pocas horas, programas automatizados las detectan y crean instancias para minar criptomonedas, generando facturas de miles de dólares. Esa es la razón para preferir credenciales temporales mediante roles. Muestre la política de la lectura, que permite leer y escribir solo en un depósito específico, y analice cada elemento. Explique la lógica de evaluación: por defecto todo está denegado, un permiso explícito habilita la acción y una denegación explícita siempre gana. Conecte con el principio de mínimo privilegio de Saltzer y Schroeder estudiado en Sistemas Operativos: el mismo principio, ahora aplicado a recursos en la nube. Recomiende integrar la identidad con el directorio de la organización mediante inicio de sesión único, para que la baja de un colaborador retire también su acceso a la nube. Pregunta de análisis: un practicante necesita ver la facturación sin modificar recursos; ¿qué política le asignaría y cómo verificaría que funciona?"
+        },
+        {
+          "title": "Bases de datos administradas y servicios sin servidor",
+          "bullets": [
+            "Las bases administradas (Amazon RDS, Azure SQL Database, Cloud SQL) automatizan parches, respaldos y réplicas.",
+            "Despliegue multizona: réplica sincrónica en otra zona con conmutación automática ante fallas.",
+            "Las funciones sin servidor ejecutan código ante eventos: subida de un archivo, mensaje en una cola o solicitud web.",
+            "Límites a considerar: tiempo máximo de ejecución, arranque en frío y dependencia de servicios propietarios."
+          ],
+          "notes": "Muestre cómo cambia el trabajo del administrador al usar una base de datos administrada: ya no instala PostgreSQL ni programa respaldos con cron, pero debe elegir el tamaño, configurar la ventana de mantenimiento, decidir la retención de respaldos, habilitar el cifrado y restringir el acceso por red. Compare el costo: la base administrada cuesta más por hora que una instancia equivalente con PostgreSQL instalado a mano, pero incluye trabajo operativo que de otro modo requiere horas de personal especializado. Explique las funciones sin servidor con un ejemplo concreto: cuando un proveedor envía una factura en XML a un depósito, una función valida su estructura, extrae los datos y los registra en la base de datos; la organización paga solo por los milisegundos de ejecución. Discuta el arranque en frío, la demora de la primera invocación tras un periodo de inactividad, aceptable en procesos por lotes pero no en servicios con exigencias estrictas de latencia. Pregunta: ¿qué perdería una empresa que quisiera mover a otro proveedor una solución construida enteramente con servicios propietarios?"
+        },
+        {
+          "title": "Modelos de precios: bajo demanda, compromisos y capacidad sobrante",
+          "bullets": [
+            "Bajo demanda: se paga por segundo u hora sin compromiso; máxima flexibilidad y mayor precio unitario.",
+            "Instancias reservadas y planes de ahorro: compromiso de uno o tres años con descuentos que pueden superar el 60 %.",
+            "Instancias de capacidad sobrante (spot): hasta 90 % de descuento, con interrupción avisada dos minutos antes.",
+            "Costos que suelen olvidarse: transferencia de datos de salida, direcciones IP públicas, NAT, instantáneas y registros.",
+            "Etiquete cada recurso con proyecto, ambiente y responsable para asignar los costos."
+          ],
+          "notes": "Trabaje un ejemplo numérico con precios hipotéticos redondos, aclarando que los precios reales varían por región y cambian con el tiempo: una instancia cuesta 0,10 dólares por hora bajo demanda; operando todo el mes, unas 730 horas, cuesta 73 dólares. Con un compromiso de un año y 40 % de descuento costaría 43,80 dólares. Si solo se necesita en horario de oficina, unas 220 horas al mes, bajo demanda cuesta 22 dólares y el compromiso no conviene. La lección es que el modelo de precio depende del patrón de uso, no de una regla general. Explique la capacidad sobrante: el proveedor vende barata la capacidad ociosa, pero puede recuperarla; conviene para procesamiento por lotes, renderizado o entrenamiento de modelos tolerantes a interrupciones, nunca para la base de datos principal. Resalte el costo de transferencia de salida, que sorprende a quienes migran sistemas que entregan muchos archivos. Pregunta: ¿qué recursos de su laboratorio olvidaría apagar y cuánto costarían en un mes?"
+        },
+        {
+          "title": "FinOps y costo total de propiedad",
+          "bullets": [
+            "La FinOps Foundation propone tres fases iterativas: informar, optimizar y operar.",
+            "Informar: visibilidad de costos por equipo y proyecto mediante etiquetas, presupuestos y alertas.",
+            "Optimizar: ajustar tamaños, apagar ambientes de prueba fuera de horario y comprar compromisos para la carga base.",
+            "El costo total de propiedad compara la nube con la infraestructura propia incluyendo energía, espacio, licencias, personal y obsolescencia.",
+            "La decisión no es solo económica: agilidad, riesgo, habilidades y regulación también pesan."
+          ],
+          "notes": "Presente FinOps como una práctica cultural y no solo financiera: ingeniería, finanzas y negocio comparten la responsabilidad del gasto en la nube. Muestre cómo un presupuesto con alertas al 50 %, 80 % y 100 % evita sorpresas a fin de mes, y cómo la falta de etiquetas impide saber qué proyecto generó un costo. Construya con los estudiantes una plantilla de costo total de propiedad a tres años para un servidor propio: precio del equipo, licencias, soporte del fabricante, energía, climatización, espacio en rack, horas de administración y reemplazo al final de su vida útil. Compare con el costo en la nube incluyendo transferencias, respaldos y soporte del proveedor. Enfatice que muchas comparaciones publicadas por proveedores tienden a favorecerlos y que el estudiante debe construir su propia hoja de cálculo con supuestos explícitos. Pregunta crítica: ¿por qué algunas empresas han anunciado que retiran cargas de la nube pública? Oriente hacia cargas estables y predecibles, donde la elasticidad aporta poco."
+        },
+        {
+          "title": "Marco de buena arquitectura: seis pilares",
+          "bullets": [
+            "Excelencia operativa: automatizar, hacer cambios pequeños y reversibles y aprender de las fallas.",
+            "Seguridad y confiabilidad: proteger datos e identidades, recuperarse automáticamente y probar la recuperación.",
+            "Eficiencia del rendimiento y optimización de costos: usar el recurso adecuado y pagar solo lo necesario.",
+            "Sostenibilidad, añadida en 2021: minimizar el impacto ambiental de las cargas de trabajo.",
+            "Azure y Google Cloud publican marcos equivalentes; sirven como lista de revisión de cualquier diseño."
+          ],
+          "notes": "Presente el AWS Well-Architected Framework como una herramienta de revisión estructurada y no como teoría. Cada pilar se acompaña de preguntas que el arquitecto debe poder responder: cómo se detecta una falla, cómo se protegen las credenciales, cómo se prueba la recuperación, cómo se controla el gasto. Explique que los pilares entran en tensión: más redundancia mejora la confiabilidad, pero aumenta el costo; la decisión correcta depende del valor del negocio y del costo de la interrupción calculado en la unidad 1. Use el pilar de sostenibilidad para discutir el consumo energético de los centros de datos y cómo elegir regiones y tamaños adecuados reduce también la huella de carbono. Ejercicio: tomen la arquitectura del caso de la unidad y evalúenla con una pregunta por pilar, identificando el riesgo más alto. Este ejercicio prepara la tarea, en la que deberán justificar su diseño con estos pilares. Pregunta: ¿qué pilar sacrificaría primero una empresa emergente en su etapa inicial y cuál nunca debería sacrificar?"
+        },
+        {
+          "title": "Normativa peruana y nube: datos personales y regulación sectorial",
+          "bullets": [
+            "Ley 29733 y su reglamento (D. S. 016-2024-JUS): el titular del banco de datos responde por la seguridad aunque contrate la nube.",
+            "El flujo transfronterizo exige garantizar un nivel adecuado de protección en el destino y cumplir las comunicaciones que establece el reglamento.",
+            "Los datos sensibles, como los de salud, exigen medidas reforzadas y consentimiento expreso, salvo excepciones legales.",
+            "Las entidades supervisadas por la SBS siguen el reglamento de seguridad de la información y ciberseguridad (Resolución SBS 504-2021).",
+            "En el sector público, la Ley de Gobierno Digital (D. Leg. 1412) orienta la adopción tecnológica del Estado."
+          ],
+          "notes": "Esta diapositiva conecta la arquitectura técnica con el cumplimiento normativo, competencia muy valorada por los empleadores. Explique que alojar datos en un proveedor con centros de datos en el extranjero constituye, en la práctica, un flujo transfronterizo de datos personales, y que el titular del banco de datos debe asegurarse de que el destinatario ofrezca garantías adecuadas, normalmente mediante cláusulas contractuales, y cumplir con las comunicaciones ante la Autoridad Nacional de Protección de Datos Personales del Ministerio de Justicia y Derechos Humanos. Recuerde que el nuevo reglamento de la Ley 29733, aprobado a fines de 2024, refuerza obligaciones como la notificación de incidentes de seguridad. Para el sistema financiero, la SBS exige gestionar los riesgos de los proveedores de servicios en la nube y mantener la capacidad de supervisión. Aclare que el curso no reemplaza la asesoría legal: el rol del técnico es diseñar controles y aportar evidencia, como cifrado, registros de acceso, ubicación de los datos y contratos. Pregunta: ¿qué le preguntaría al proveedor antes de alojar historias clínicas de pacientes peruanos?"
+        }
+      ],
+      "reading": {
+        "title": "Diseñar una arquitectura mínima en la nube: red, identidad, cómputo y costos",
+        "minutes": 40,
+        "content": "## Del diagrama a los recursos\n\nUna tienda en línea peruana que vende a todo el país necesita una arquitectura que resista la falla de un centro de datos, escale durante campañas como el Cyber Wow y proteja los datos personales de sus clientes. Esta lectura construye una arquitectura mínima viable en AWS; los conceptos se trasladan a Azure o Google Cloud con otros nombres. Se sigue un orden deliberado: primero red e identidad, luego cómputo y, al final, costos y cumplimiento. Invertir ese orden —crear servidores y después pensar en la seguridad— es el origen de muchas configuraciones inseguras.\n\n## Paso 1: una red en dos zonas de disponibilidad\n\nEl bloque 10.20.0.0/16 se divide con la lógica de VLSM estudiada en Redes de Computadoras: subredes públicas para el balanceador y el bastión, y privadas para la aplicación y la base de datos, repetidas en dos zonas. Conviene elegir un bloque que no se solape con la red de la oficina, porque en el futuro ambas podrían conectarse por VPN.\n\n```bash\naws ec2 create-vpc --cidr-block 10.20.0.0/16 --tag-specifications 'ResourceType=vpc,Tags=[{Key=Name,Value=vpc-tienda}]'\naws ec2 create-subnet --vpc-id vpc-0a1b2c --cidr-block 10.20.1.0/24 --availability-zone sa-east-1a   # pública A\naws ec2 create-subnet --vpc-id vpc-0a1b2c --cidr-block 10.20.2.0/24 --availability-zone sa-east-1b   # pública B\naws ec2 create-subnet --vpc-id vpc-0a1b2c --cidr-block 10.20.11.0/24 --availability-zone sa-east-1a  # privada A\naws ec2 create-subnet --vpc-id vpc-0a1b2c --cidr-block 10.20.12.0/24 --availability-zone sa-east-1b  # privada B\n# Seguridad por capas: cada capa solo acepta tráfico del grupo de la capa anterior\naws ec2 authorize-security-group-ingress --group-id sg-0app --protocol tcp --port 3000 --source-group sg-0alb\naws ec2 authorize-security-group-ingress --group-id sg-0bd --protocol tcp --port 5432 --source-group sg-0app\n```\n\nLo que hace pública a una subred es su tabla de rutas, con 0.0.0.0/0 hacia la puerta de enlace de Internet. Las subredes privadas salen a Internet, por ejemplo para descargar actualizaciones, mediante una puerta de enlace NAT, y no aceptan conexiones entrantes.\n\n## Paso 2: identidad antes que servidores\n\nLa cuenta raíz se protege con autenticación multifactor y se reserva para emergencias. Las personas acceden con identidades federadas al directorio de la organización y las aplicaciones con roles que entregan credenciales temporales. La siguiente política permite a la aplicación leer y escribir solo en el depósito de comprobantes y rechaza cualquier objeto que no se cifre con llaves administradas:\n\n```json\n{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    { \"Sid\": \"ComprobantesLecturaEscritura\", \"Effect\": \"Allow\",\n      \"Action\": [\"s3:GetObject\", \"s3:PutObject\"],\n      \"Resource\": \"arn:aws:s3:::tienda-comprobantes-prod/*\" },\n    { \"Sid\": \"ExigirCifradoKMS\", \"Effect\": \"Deny\", \"Action\": \"s3:PutObject\",\n      \"Resource\": \"arn:aws:s3:::tienda-comprobantes-prod/*\",\n      \"Condition\": { \"StringNotEquals\": { \"s3:x-amz-server-side-encryption\": \"aws:kms\" } } }\n  ]\n}\n```\n\nLa evaluación sigue tres reglas: todo está denegado por defecto, un Allow explícito habilita la acción y un Deny explícito prevalece siempre. Es el principio de mínimo privilegio de Saltzer y Schroeder: la aplicación no puede listar otros depósitos, borrar objetos ni administrar usuarios.\n\n## Paso 3: cómputo reproducible\n\nLas instancias de aplicación se crean desde una imagen base y se configuran al arrancar con cloud-init, de modo que cualquiera pueda destruirse y recrearse sin pérdida. El estado vive en la base de datos administrada y en el almacenamiento de objetos, nunca en el disco local.\n\n```yaml\n#cloud-config\npackage_update: true\npackages: [nginx, fail2ban]\nusers:\n  - name: operador\n    groups: [sudo]\n    shell: /bin/bash\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA... operador@tienda\nruncmd:\n  - systemctl enable --now nginx\n```\n\nUn grupo de escalado automático con un mínimo de dos instancias, una por zona, y una política de seguimiento de objetivo de 60 % de CPU mantiene el servicio ante la falla de una zona y añade instancias durante las campañas.\n\n## Paso 4: estimar el costo antes de construir\n\nEl costo mensual se modela sumando lo que se cobra por tiempo, por volumen almacenado y por transferencia:\n\n```text\nCosto mensual ≈ Σ(instancias × horas × tarifa) + base de datos + GB almacenados × tarifa\n                + GB transferidos a Internet × tarifa + NAT + balanceador\n```\n\nCon tarifas hipotéticas redondeadas, útiles solo para practicar el método: dos instancias de US$ 0,05 por hora durante 730 horas suman US$ 73; una base de datos multizona de US$ 0,20 por hora, US$ 146; 200 GB de objetos a US$ 0,025, US$ 5; 500 GB de transferencia de salida a US$ 0,09, US$ 45; y una puerta de enlace NAT a US$ 0,045 por hora, US$ 32,85 más el procesamiento. El total ronda los US$ 302 mensuales antes de impuestos. El ejercicio revela que la base de datos y la red pesan más que los servidores y que la transferencia de salida crece con cada imagen de producto entregada. Las cifras reales se obtienen con la calculadora oficial del proveedor y se convierten a soles con el tipo de cambio publicado por la SBS.\n\n## Paso 5: cumplimiento\n\nAlojar la base de clientes en São Paulo configura un flujo transfronterizo de datos personales según la Ley 29733 y su reglamento: el titular del banco de datos debe asegurar un nivel de protección adecuado en el destino, normalmente mediante cláusulas contractuales, y cumplir las comunicaciones ante la Autoridad Nacional de Protección de Datos Personales. El cifrado en reposo y en tránsito, los registros de acceso y la separación de ambientes son las evidencias técnicas que respaldan ese cumplimiento.\n\n## Ideas clave\n\n- Red e identidad se diseñan antes que los servidores.\n- La seguridad por capas referencia grupos, no direcciones.\n- Las instancias son desechables; el estado vive en servicios administrados.\n- El costo se modela, se etiqueta y se vigila desde el primer día."
+      },
+      "case": {
+        "title": "Caso: Mercado Andino frente al próximo Cyber Wow",
+        "content": "## La empresa\n\nMercado Andino S. A. C. (nombre ficticio) es una tienda en línea limeña que vende textiles de alpaca, artesanía y productos gourmet de pequeños productores de Cusco, Puno y Ayacucho. Despacha a todo el Perú y, desde 2024, a clientes de Estados Unidos. Procesa unos 2 400 pedidos mensuales con un ticket promedio de S/ 185, y el 72 % de su tráfico proviene de teléfonos móviles. Su equipo técnico está formado por dos desarrolladores y un administrador de sistemas.\n\n## La infraestructura actual\n\nLa tienda opera en dos servidores físicos alquilados en un centro de datos de Lima: uno con la aplicación web y otro con la base de datos PostgreSQL, que almacena nombres, DNI, direcciones y teléfonos de 85 000 clientes. Los pagos se procesan en una pasarela externa, de modo que la tienda no almacena datos de tarjetas. El costo mensual es de S/ 6 800, incluido el enlace a Internet.\n\n## El problema\n\nDurante la última edición del Cyber Wow, la campaña de comercio electrónico que organiza IAB Perú, el tráfico se multiplicó por doce. A las 9 p. m. del primer día, el servidor de aplicación agotó su memoria y la tienda estuvo caída cinco horas en el momento de mayor demanda. La gerencia estimó ventas perdidas por S/ 210 000. En el resto del año, los servidores trabajan al 15 % de su capacidad.\n\n## Las propuestas\n\n- **Consultora externa:** migrar a AWS en la región de São Paulo con escalado automático en dos zonas, base de datos administrada multizona, almacenamiento de objetos con red de distribución de contenidos para las imágenes y respaldos automáticos. Costo estimado: US$ 1 150 mensuales en meses normales y US$ 2 900 en meses de campaña, que son tres al año. La migración costaría US$ 18 000 por única vez y el contrato con el centro de datos actual se cancelaría.\n- **Administrador de sistemas:** mantener la coubicación, agregar un tercer servidor y una red de distribución de contenidos para las imágenes y optimizar la aplicación. Costo adicional: S/ 2 500 mensuales y S/ 30 000 por única vez.\n- **Gerente financiero:** le preocupan la exposición al dólar, la imprevisibilidad de la factura y las obligaciones de la Ley 29733 si los datos de los clientes salen del país.\n\nUse un tipo de cambio referencial de S/ 3,70 por dólar. Ninguna de las propuestas garantiza por sí sola que la aplicación soporte la carga: los desarrolladores reconocen que la tienda guarda en el disco del servidor las imágenes que suben los productores.\n\n## El dilema\n\nLa gerencia general debe decidir en las próximas dos semanas. El siguiente Cyber Wow será en diez semanas y el equipo técnico nunca ha administrado una cuenta en la nube. Una nueva caída en campaña afectaría, además, la relación con los productores, que dependen de esas fechas para vender buena parte de su producción anual.",
+        "questions": [
+          "Use las cinco características esenciales del NIST para explicar qué problema real resolvería la nube para Mercado Andino y cuál no resolvería.",
+          "Compare el costo del primer año y de los años siguientes de ambas propuestas, incluyendo la pérdida esperada por caídas en campaña. ¿Qué supuestos determinan el resultado?",
+          "Elabore la matriz de responsabilidad compartida de la arquitectura propuesta por la consultora e identifique tres controles que Mercado Andino no puede delegar.",
+          "¿Qué obligaciones de la Ley 29733 deben cumplirse antes de alojar los datos de clientes en São Paulo y qué evidencias técnicas las respaldarían?",
+          "Con diez semanas y un equipo sin experiencia en la nube, ¿qué plan recomendaría para llegar con seguridad al próximo Cyber Wow?"
+        ]
+      },
+      "assignment": {
+        "title": "Arquitectura en la nube justificada y presupuestada",
+        "instructions": "**Objetivo:** diseñar, implementar parcialmente y justificar la arquitectura en la nube de una aplicación web, tomando como base el caso Mercado Andino o una organización peruana aprobada por el docente.\n\n**Qué entregar:**\n\n1. **Diagrama de arquitectura** con una red virtual, subredes públicas y privadas en dos zonas, grupos de seguridad por capas, cómputo con escalado automático, base de datos administrada y almacenamiento de objetos.\n2. **Implementación mínima** en una cuenta educativa (AWS Academy Learner Lab, Azure for Students o la capa gratuita de un proveedor): red virtual, subredes, tablas de rutas, grupos de seguridad y una instancia configurada con cloud-init. Incluya los comandos de la CLI o capturas que permitan verificar cada recurso.\n3. **Política IAM** de mínimo privilegio para la aplicación, comentada línea por línea.\n4. **Matriz de responsabilidad compartida** y una lista de verificación de cumplimiento de la Ley 29733, incluido el flujo transfronterizo.\n5. **Estimación de costo mensual** con la calculadora oficial del proveedor en dos escenarios (mes normal y mes de campaña), comparando bajo demanda con compromisos y expresando el resultado en soles.\n6. **Justificación** del diseño con los seis pilares del marco de buena arquitectura, señalando para cada uno una decisión y un riesgo residual.\n\n**Formato:** informe en PDF de 8 a 12 páginas. Al terminar, elimine todos los recursos creados y adjunte la evidencia del borrado para evitar costos.\n\n**Criterios de evaluación:** coherencia y seguridad del diseño de red, verificabilidad de la implementación, rigor de la política IAM y del análisis normativo, y precisión de la estimación de costos.",
+        "rubric": [
+          {
+            "name": "Diseño de red y seguridad por capas",
+            "points": 6
+          },
+          {
+            "name": "Implementación en la nube y evidencias",
+            "points": 5
+          },
+          {
+            "name": "Política IAM y cumplimiento de la Ley 29733",
+            "points": 4
+          },
+          {
+            "name": "Estimación de costos y justificación con los seis pilares",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: arquitectura y gestión en la nube",
+        "questions": [
+          {
+            "prompt": "Un proveedor local alquila servidores virtuales que se solicitan por correo, se entregan en 48 horas y se contratan por un año fijo. ¿Qué características esenciales del NIST incumple?",
+            "options": [
+              "Amplio acceso por red y agrupación de recursos",
+              "Servicio medido y amplio acceso por red",
+              "Ninguna, porque todo servidor virtual es nube",
+              "Autoservicio bajo demanda y elasticidad rápida"
+            ],
+            "correct": 3,
+            "explanation": "La solicitud por correo requiere intervención humana del proveedor y el contrato anual fijo impide crecer y reducir recursos según la demanda. La virtualización por sí sola no convierte un servicio en nube."
+          },
+          {
+            "prompt": "En un servicio de base de datos administrada (PaaS), ¿qué responsabilidad conserva siempre el cliente?",
+            "options": [
+              "Reemplazar los discos dañados del centro de datos",
+              "Mantener actualizado el hipervisor",
+              "Gestionar usuarios, permisos y la clasificación de sus datos",
+              "Aplicar parches al sistema operativo del servidor de base de datos"
+            ],
+            "correct": 2,
+            "explanation": "En PaaS el proveedor administra el sistema operativo, el hipervisor y el hardware, pero los datos, las identidades y los permisos son siempre responsabilidad del cliente, en cualquier modelo de servicio."
+          },
+          {
+            "prompt": "La tabla de rutas de una subred envía 0.0.0.0/0 a una puerta de enlace NAT. ¿Cómo se clasifica esa subred?",
+            "options": [
+              "Pública, siempre que sus instancias tengan direcciones privadas",
+              "Privada: sus instancias salen a Internet, pero no reciben conexiones entrantes",
+              "Pública: sus instancias reciben tráfico directamente desde Internet",
+              "Aislada: no tiene ninguna salida a Internet"
+            ],
+            "correct": 1,
+            "explanation": "Lo que hace pública a una subred es una ruta hacia la puerta de enlace de Internet. La NAT solo permite conexiones iniciadas desde dentro, por lo que la subred es privada."
+          },
+          {
+            "prompt": "La capa de aplicación debe aceptar tráfico solo del balanceador, aunque sus instancias cambien de dirección al escalar. ¿Qué regla es la más adecuada?",
+            "options": [
+              "Permitir el puerto de la aplicación con origen en el grupo de seguridad del balanceador",
+              "Permitir el puerto de la aplicación desde 0.0.0.0/0 y confiar en la ACL",
+              "Permitir todo el tráfico desde el bloque completo de la VPC",
+              "Registrar a mano la IP de cada instancia nueva en la regla"
+            ],
+            "correct": 0,
+            "explanation": "Referenciar el grupo de seguridad del balanceador mantiene la regla válida sin importar las direcciones de las instancias y aplica el mínimo privilegio entre capas."
+          },
+          {
+            "prompt": "Un servidor de reportes se usa solo 200 horas al mes. Bajo demanda cuesta US$ 0,20 por hora; con compromiso anual, US$ 0,12 por hora por las 730 horas del mes. ¿Qué opción conviene?",
+            "options": [
+              "Compromiso anual, porque un descuento del 40 % siempre conviene",
+              "Compromiso anual: US$ 24 frente a US$ 40 mensuales",
+              "Son equivalentes, porque el precio por hora se compensa",
+              "Bajo demanda: US$ 40 frente a US$ 87,60 mensuales"
+            ],
+            "correct": 3,
+            "explanation": "Bajo demanda se pagan 200 × 0,20 = US$ 40; el compromiso cobra todas las horas: 730 × 0,12 = US$ 87,60. Los compromisos convienen para cargas base que operan casi todo el mes."
+          },
+          {
+            "prompt": "Una aplicación que corre en una instancia necesita escribir en un depósito de almacenamiento de objetos. ¿Cuál es la práctica correcta?",
+            "options": [
+              "Hacer público el depósito para evitar problemas de permisos",
+              "Usar las credenciales de la cuenta raíz protegidas con MFA",
+              "Asignar a la instancia un rol con una política limitada a ese depósito",
+              "Guardar en el código las llaves de acceso de un usuario administrador"
+            ],
+            "correct": 2,
+            "explanation": "Un rol entrega credenciales temporales que rotan automáticamente y la política aplica el mínimo privilegio. Las llaves fijas en el código pueden filtrarse y la cuenta raíz nunca debe usarse para operar."
+          },
+          {
+            "prompt": "Una empresa peruana alojará la base de datos de sus clientes en una región de São Paulo. Según la Ley 29733, ¿qué implica esta decisión?",
+            "options": [
+              "Solo la obligación de cifrar los datos durante su transmisión",
+              "Un flujo transfronterizo que exige garantías de protección adecuadas en el destino",
+              "Ninguna obligación, porque el proveedor asume toda la responsabilidad",
+              "La prohibición absoluta de almacenar datos personales fuera del Perú"
+            ],
+            "correct": 1,
+            "explanation": "Transferir datos personales fuera del país es un flujo transfronterizo: el titular debe asegurar un nivel adecuado de protección y cumplir las comunicaciones del reglamento. La responsabilidad no se traslada al proveedor."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Automatización, contenedores, observabilidad y continuidad del servicio",
+      "description": "Al finalizar la unidad, el estudiante automatiza el aprovisionamiento y la configuración de infraestructura como código, despliega aplicaciones en contenedores, implementa monitoreo con objetivos de nivel de servicio y diseña y prueba un plan de recuperación ante desastres, integrando lo aprendido en un proyecto sustentado.",
+      "topics": [
+        "Infraestructura como código con Terraform y gestión de configuración con Ansible",
+        "Contenedores con Docker y Docker Compose; introducción a Kubernetes",
+        "Observabilidad: métricas, registros, trazas, SLI, SLO y presupuesto de error",
+        "Copias de seguridad inmutables y estrategias de recuperación ante desastres",
+        "Gestión de incidentes, migración a la nube con las 7 R y proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "De servidores mascota a servidores ganado",
+          "bullets": [
+            "Mascota: servidor único, configurado a mano e irremplazable; cuando enferma, se le cuida.",
+            "Ganado: servidores idénticos creados por código; cuando uno falla, se reemplaza.",
+            "La metáfora, atribuida a Bill Baker y difundida por Randy Bias, resume el paso hacia la infraestructura inmutable.",
+            "Deriva de configuración: diferencias acumuladas entre servidores que deberían ser iguales."
+          ],
+          "notes": "Abra la unidad recordando la pregunta final de la unidad 2: ¿podrían reconstruir su servidor si desapareciera? Muchos estudiantes reconocerán que no del todo. Presente la metáfora: en la infraestructura tradicional cada servidor tiene nombre propio, historia y cambios manuales acumulados durante años, y nadie sabe exactamente cómo está configurado. Esa deriva produce el clásico «en el servidor de pruebas funcionaba». En la infraestructura moderna, los servidores se describen en código y se crean de forma idéntica; si uno presenta problemas, se destruye y se vuelve a crear. Aclare que no todo puede ser ganado: una base de datos con estado requiere cuidados especiales, aunque también puede automatizarse su creación y su recuperación. Pregunte a la clase qué servidores de su laboratorio son mascotas y qué haría falta para convertirlos en ganado. Anticipe que la respuesta incluye las herramientas de esta unidad: Terraform para crear recursos, Ansible para configurarlos y contenedores para empaquetar las aplicaciones."
+        },
+        {
+          "title": "Infraestructura como código: principios",
+          "bullets": [
+            "Definir todo como código versionado: redes, servidores, permisos, monitoreo y alertas.",
+            "Enfoque declarativo: se describe el estado deseado y la herramienta calcula los cambios necesarios.",
+            "Idempotencia: aplicar la misma definición varias veces produce el mismo resultado sin efectos adicionales.",
+            "Revisión por pares mediante solicitudes de cambio y pruebas automáticas antes de aplicar en producción.",
+            "Kief Morris (2020): construir piezas pequeñas, probar continuamente y facilitar el cambio seguro."
+          ],
+          "notes": "Explique la diferencia entre el enfoque imperativo, que lista pasos a ejecutar como un script de Bash, y el declarativo, que describe el resultado esperado. El script de respaldo de Sistemas Operativos era imperativo: si se ejecuta dos veces, puede duplicar acciones. Una herramienta declarativa compara el estado actual con el deseado y solo hace lo necesario. Vincule con el control de versiones que usan en programación: si la infraestructura es código, cada cambio queda registrado con autor, fecha y motivo; se puede revisar antes de aplicarlo y revertir si causa problemas. Esto también facilita las auditorías, porque la configuración real es verificable. Presente los principios de Kief Morris, autor de referencia en el tema, y subraye que la automatización no busca solo velocidad, sino seguridad para cambiar con frecuencia. Pregunta para la clase: ¿qué riesgos introduce la infraestructura como código? Oriente hacia secretos escritos en el código, cambios masivos por error y la necesidad de proteger el archivo de estado."
+        },
+        {
+          "title": "Terraform: proveedores, recursos, estado y ciclo de trabajo",
+          "bullets": [
+            "Lenguaje declarativo HCL con proveedores para AWS, Azure, Google Cloud, Proxmox VE y cientos de servicios.",
+            "Ciclo de trabajo: terraform init, fmt, validate, plan para revisar y apply para ejecutar.",
+            "El archivo de estado registra los recursos administrados; guárdelo remoto, cifrado y con bloqueo.",
+            "Variables y módulos permiten reutilizar la misma definición en desarrollo, pruebas y producción.",
+            "En 2023 cambió a la licencia BSL; la comunidad creó OpenTofu, bifurcación abierta bajo la Linux Foundation."
+          ],
+          "notes": "Muestre el código de la lectura, que crea una red virtual con subredes, y ejecute en vivo terraform plan. Explique cómo leer la salida: el signo más indica recursos a crear, el signo menos recursos a destruir y la tilde, modificaciones. Insista en la regla de oro: nunca aplicar sin leer el plan, sobre todo si aparece una destrucción inesperada, que podría borrar una base de datos de producción. Explique el estado: Terraform necesita saber qué recursos creó para calcular diferencias; si el estado se pierde o dos personas aplican a la vez sin bloqueo, la infraestructura puede quedar inconsistente. Por eso se almacena en un servicio remoto con versionado y bloqueo, y nunca en un repositorio público, porque puede contener datos sensibles. Comente el cambio de licencia de HashiCorp y el surgimiento de OpenTofu como ejemplo de cómo el licenciamiento afecta a las organizaciones, igual que en el caso de VMware. Pregunta: ¿qué haría si alguien modificó a mano en la consola un grupo de seguridad administrado por Terraform? Respuesta: detectar la deriva con plan y reconciliar."
+        },
+        {
+          "title": "Ansible: configuración sin agentes e idempotente",
+          "bullets": [
+            "Se conecta por SSH sin instalar agentes; solo requiere Python en los nodos administrados.",
+            "Inventario: lista de servidores agrupados por función, como web, base_de_datos o bastion.",
+            "Playbook en YAML: tareas que usan módulos idempotentes como apt, template, user y service.",
+            "Los manejadores (handlers) reinician servicios solo cuando una tarea cambió su configuración.",
+            "Ejecutar primero con --check --diff para ver qué cambiaría sin aplicar nada."
+          ],
+          "notes": "Presente Ansible como el complemento natural de Terraform: Terraform crea la máquina y la red; Ansible configura lo que va dentro, como usuarios, paquetes, archivos de Nginx y endurecimiento de SSH. Muestre el playbook de la lectura y compárelo con un script de Bash equivalente: el módulo apt con state present no reinstala si el paquete ya existe, y el módulo template solo reemplaza el archivo si su contenido difiere, notificando al manejador para recargar Nginx. Explique el valor del modo de verificación con diff, que permite revisar cambios en producción antes de aplicarlos, práctica muy valorada por los auditores. Mencione Ansible Vault para cifrar secretos dentro del repositorio. Proponga el ejercicio de convertir en un playbook la configuración segura de SSH de la unidad 1 y aplicarla a tres servidores a la vez; luego, modificar a mano uno de ellos y volver a ejecutar el playbook para observar cómo corrige la deriva. Pregunta: ¿en qué casos sería más adecuado un script de Bash que Ansible? Oriente hacia tareas puntuales en un único servidor."
+        },
+        {
+          "title": "Contenedores frente a máquinas virtuales",
+          "bullets": [
+            "Una máquina virtual incluye su propio núcleo; un contenedor comparte el núcleo del anfitrión.",
+            "El aislamiento se basa en espacios de nombres (namespaces) y en límites de recursos con cgroups del núcleo Linux.",
+            "Arranque en segundos, imágenes ligeras y la misma imagen desde desarrollo hasta producción.",
+            "Menor aislamiento que una máquina virtual: una vulnerabilidad del núcleo afecta a todos los contenedores.",
+            "La especificación abierta OCI estandariza imágenes y entornos de ejecución; Docker popularizó el modelo desde 2013."
+          ],
+          "notes": "Conecte con Sistemas Operativos: los espacios de nombres hacen que un proceso vea su propio árbol de procesos, su propia red y su propio sistema de archivos; los cgroups limitan cuánta CPU y memoria puede usar. Un contenedor es, en esencia, un proceso aislado con esas herramientas, no una máquina virtual ligera. Demuéstrelo ejecutando un contenedor y mostrando desde el anfitrión, con ps, que su proceso aparece en la lista. Explique el valor práctico: la imagen empaqueta la aplicación con sus dependencias exactas y elimina el clásico problema de diferencias entre la computadora del desarrollador y el servidor. Discuta cuándo conviene cada tecnología: máquinas virtuales para cargas que requieren otro sistema operativo o un aislamiento fuerte entre clientes; contenedores para aplicaciones modernas y despliegues frecuentes. A menudo se combinan: contenedores dentro de máquinas virtuales. Pregunta para la clase: ¿puede ejecutarse un contenedor de Windows sobre un anfitrión Linux? No de forma nativa, porque comparten el núcleo."
+        },
+        {
+          "title": "Dockerfile: construir imágenes seguras y reproducibles",
+          "bullets": [
+            "Partir de imágenes base oficiales y livianas con versión fija, por ejemplo node:22-alpine, nunca latest.",
+            "Construcción en varias etapas: preparar en una imagen y copiar solo los artefactos necesarios a la imagen final.",
+            "Ordenar instrucciones para aprovechar la caché de capas: dependencias primero, código después.",
+            "Ejecutar como usuario sin privilegios con USER y declarar HEALTHCHECK para verificar el servicio.",
+            "Excluir secretos y archivos innecesarios con .dockerignore y escanear vulnerabilidades antes de publicar."
+          ],
+          "notes": "Recorra el Dockerfile de la lectura instrucción por instrucción. Explique las capas: cada instrucción genera una capa y Docker reutiliza las que no cambiaron; por eso se copian primero los archivos de dependencias, que cambian poco, y luego el código, que cambia mucho. Así, una modificación del código no obliga a reinstalar todas las dependencias. Muestre el efecto de la construcción multietapa comparando el tamaño de una imagen con herramientas de compilación y el de la imagen final: la diferencia suele ser de cientos de megabytes, lo que reduce el tiempo de despliegue y la superficie de ataque. Insista en no ejecutar como root dentro del contenedor y en no incluir contraseñas en la imagen, porque cualquiera que la descargue puede inspeccionar sus capas. Presente herramientas de escaneo de vulnerabilidades como Trivy y la importancia de reconstruir las imágenes periódicamente para incorporar parches. Pregunta: ¿por qué usar la etiqueta latest en producción es una mala práctica? Porque el despliegue deja de ser reproducible."
+        },
+        {
+          "title": "Docker Compose: aplicaciones de varios contenedores",
+          "bullets": [
+            "Un archivo compose.yaml declara servicios, redes, volúmenes, secretos y variables de entorno de la aplicación.",
+            "Los servicios se descubren por nombre en la red interna: la aplicación se conecta al host db.",
+            "Los volúmenes con nombre conservan los datos aunque el contenedor se destruya y se vuelva a crear.",
+            "depends_on con condition: service_healthy ordena el arranque según las verificaciones de salud.",
+            "Comandos: docker compose up -d, ps, logs -f y down; en producción, con políticas de reinicio."
+          ],
+          "notes": "Compose es la herramienta ideal para pasar del laboratorio a un servidor pequeño de producción, por ejemplo la aplicación de una pyme con Nginx, una API y PostgreSQL en un único servidor. Muestre el archivo de la lectura y destaque cómo la contraseña de la base de datos se entrega como secreto montado en un archivo y no como texto en el propio compose.yaml. Explique el error más frecuente de los principiantes: guardar los datos de la base en el sistema de archivos del contenedor, que desaparece al recrearlo; los volúmenes resuelven el problema, pero también deben respaldarse. Señale el límite de Compose: administra contenedores en un solo anfitrión; si el servidor cae, toda la aplicación cae. Para varios servidores, alta disponibilidad y escalado automático se requiere un orquestador. Haga una demostración: levantar la aplicación, simular la caída del contenedor de la API con docker kill y observar cómo la política de reinicio lo recupera. Pregunta: ¿dónde está ahora el punto único de falla de esta arquitectura? Respuesta: el propio anfitrión."
+        },
+        {
+          "title": "Orquestación con Kubernetes: conceptos esenciales",
+          "bullets": [
+            "Nació de la experiencia de Google con Borg, se publicó en 2014 y se donó a la CNCF en 2015.",
+            "Modelo de estado deseado: un bucle de control reconcilia continuamente lo declarado con lo real.",
+            "Objetos clave: Pod, Deployment para réplicas y actualizaciones, Service para acceso estable e Ingress para la entrada web.",
+            "Los servicios administrados (Amazon EKS, Azure AKS, Google GKE) reducen la carga de operar el plano de control.",
+            "Su complejidad se justifica con muchos servicios y equipos; para una pyme, Compose o PaaS pueden bastar."
+          ],
+          "notes": "No pretenda enseñar Kubernetes completo en una sesión; el objetivo es que el estudiante entienda sus conceptos y sepa cuándo conviene. Explique el bucle de reconciliación con un ejemplo: si un Deployment declara tres réplicas y un nodo falla con una de ellas, el controlador detecta que hay dos y crea otra en un nodo sano, sin intervención humana. Muestre un manifiesto mínimo de Deployment y Service. Discuta con sentido crítico la adopción: muchas organizaciones adoptan Kubernetes por moda y terminan con una plataforma que su equipo no puede operar; el criterio debe ser el tamaño del problema, la cantidad de servicios y la capacidad del equipo. Mencione que en el mercado laboral peruano, en bancos, operadores de telecomunicaciones y empresas de tecnología, se valora la experiencia con contenedores y Kubernetes, y que Desarrollo de Software Empresarial profundizará en los despliegues. Pregunta: ¿qué alternativa recomendaría a una empresa con dos aplicaciones y un solo administrador? Oriente hacia Compose con buenas prácticas o un servicio de contenedores administrado."
+        },
+        {
+          "title": "Observabilidad: métricas, registros y trazas",
+          "bullets": [
+            "El monitoreo responde si algo falla; la observabilidad permite entender por qué, incluso ante fallas imprevistas.",
+            "Métricas: series numéricas en el tiempo, baratas de almacenar e ideales para alertas y tendencias.",
+            "Registros: eventos detallados con contexto; centralícelos y estructúrelos en JSON para buscarlos.",
+            "Trazas distribuidas: siguen una solicitud a través de varios servicios; OpenTelemetry es el estándar abierto.",
+            "Cuatro señales doradas de Google: latencia, tráfico, errores y saturación."
+          ],
+          "notes": "Explique que en un servidor único bastaba con revisar los registros locales, pero en una arquitectura con balanceador, varias instancias, contenedores y servicios administrados, encontrar la causa de una lentitud exige datos correlacionados. Presente las tres fuentes y sus costos: las métricas son compactas; los registros, voluminosos y caros si se guardan sin criterio; las trazas, muy útiles en arquitecturas de microservicios. Recuerde la Ley 29733 en este contexto: los registros no deben contener contraseñas ni datos personales innecesarios, y su retención debe definirse. Presente las cuatro señales doradas del libro de ingeniería de confiabilidad de Google y complemente con el método USE de Brendan Gregg para recursos, que mide utilización, saturación y errores, y el método RED de Tom Wilkie para servicios, que mide tasa, errores y duración. Ejercicio: para la tienda en línea del caso de la unidad 3, defina una métrica por cada señal dorada. Pregunta: ¿por qué medir la latencia con el promedio puede ocultar un problema grave? Porque los percentiles altos revelan la experiencia de los usuarios más afectados."
+        },
+        {
+          "title": "Monitoreo con Prometheus, Grafana y alertas accionables",
+          "bullets": [
+            "Prometheus recolecta métricas por extracción desde exportadores, como node_exporter, cada 15 a 60 segundos.",
+            "PromQL calcula tasas y percentiles, por ejemplo: rate(http_requests_total{status=~\"5..\"}[5m]).",
+            "Grafana construye tableros; Alertmanager agrupa, silencia y envía alertas a correo o mensajería.",
+            "Zabbix es una alternativa muy difundida en Latinoamérica para infraestructura tradicional.",
+            "Alerte por síntomas que afectan al usuario, no por cada causa posible; cada alerta debe tener un procedimiento."
+          ],
+          "notes": "Muestre una instalación mínima con Prometheus, node_exporter y Grafana en Docker Compose, reutilizando lo aprendido en esta unidad. Explique el modelo de extracción: Prometheus consulta periódicamente el punto de métricas de cada servicio, lo que facilita detectar cuándo un objetivo deja de responder. Escriba en vivo consultas PromQL para la tasa de solicitudes con error y para el percentil 95 de latencia. Luego aborde el problema de la fatiga de alertas: un equipo que recibe cientos de avisos diarios termina ignorándolos, incluido el importante. La recomendación del libro de ingeniería de confiabilidad de Google es alertar por síntomas, como «el 2 % de las solicitudes falla desde hace diez minutos», y no por causas, como «la CPU está al 85 %», que puede ser normal. Cada alerta debe ser accionable y remitir a un procedimiento escrito. Comente que Zabbix es muy utilizado en empresas y entidades públicas de la región. Pregunta: ¿qué alerta configuraría para detectar que el certificado del caso de la unidad 2 está por vencer? Una alerta con al menos 21 días de anticipación."
+        },
+        {
+          "title": "SLI, SLO y presupuesto de error",
+          "bullets": [
+            "SLI: indicador medido, por ejemplo la proporción de solicitudes exitosas respondidas en menos de 300 ms.",
+            "SLO: meta interna para el SLI en una ventana de tiempo, por ejemplo 99,9 % en 30 días.",
+            "Presupuesto de error = 1 − SLO: con 99,9 % mensual se toleran 43,2 minutos de indisponibilidad.",
+            "Si el presupuesto se agota, se prioriza la confiabilidad y se congelan los cambios riesgosos.",
+            "Ninguna meta debe ser 100 %: cada nueve adicional multiplica el costo y frena la innovación."
+          ],
+          "notes": "Presente el concepto central de la ingeniería de confiabilidad de sitio propuesta por Google: la confiabilidad es una característica del producto que se negocia con el negocio, no un ideal absoluto. Calcule con los estudiantes: un mes de 30 días tiene 43 200 minutos; con un SLO de 99,9 % se pueden perder 43,2 minutos; con 99,95 %, 21,6 minutos; con 99,99 %, solo 4,32 minutos, lo que exige automatización y redundancia costosas. Explique cómo el presupuesto de error alinea incentivos: mientras quede presupuesto, el equipo puede desplegar novedades; si se agotó, prioriza la estabilidad. Esto convierte una discusión emocional entre desarrollo y operaciones en una decisión basada en datos. Relacione con los SLA de proveedores vistos en la unidad 1: el SLO interno debe ser más estricto que el SLA comprometido con los clientes, para tener margen. Ejercicio: definan SLI y SLO para el portal de pedidos de la distribuidora del caso de la unidad 2, considerando el horario de trabajo de los vendedores. Pregunta: ¿tiene sentido el mismo SLO para el portal de pedidos y para los reportes gerenciales?"
+        },
+        {
+          "title": "Copias de seguridad resistentes al ransomware",
+          "bullets": [
+            "Regla 3-2-1: tres copias, en dos medios distintos y una fuera del sitio; la variante 3-2-1-1-0 añade una copia inmutable y cero errores verificados.",
+            "Inmutabilidad: almacenamiento WORM o bloqueo de objetos que impide borrar o cifrar copias durante su retención.",
+            "Separar credenciales: el sistema de respaldo no debe compartir el dominio ni las cuentas administrativas de producción.",
+            "Una copia no probada no existe: programe restauraciones periódicas y mida el tiempo real de recuperación.",
+            "Herramientas: Proxmox Backup Server, restic, Bacula, Veeam o los servicios de respaldo del proveedor de nube."
+          ],
+          "notes": "Recuerde que en Base de Datos estudiaron RPO y RTO, y que en Sistemas Operativos escribieron un script de respaldo. Ahora el enfoque es la resistencia ante un adversario: el ransomware moderno busca primero las copias de seguridad y las cifra o borra antes de atacar la producción, usando credenciales administrativas robadas. Por eso no basta con tener copias: deben estar aisladas y ser inmutables. Explique el bloqueo de objetos del almacenamiento en la nube y el almacenamiento WORM, en el que ni siquiera un administrador puede borrar una copia antes de que termine su retención. Insista en la prueba de restauración: muchas organizaciones descubren durante un incidente que sus copias estaban incompletas o que restaurar terabytes toma días, no horas. Proponga un cálculo: restaurar 4 TB a 200 MB/s toma unas 5,6 horas, sin contar la verificación ni el arranque de los servicios. Pregunta: si el servidor de respaldos está unido al mismo dominio de Active Directory que producción, ¿qué ocurre cuando un atacante obtiene credenciales de administrador del dominio?"
+        },
+        {
+          "title": "Estrategias de recuperación ante desastres",
+          "bullets": [
+            "Copia y restauración: menor costo; RPO y RTO de horas; la infraestructura se crea recién tras el desastre.",
+            "Luz piloto: datos replicados y servicios mínimos encendidos; RTO de decenas de minutos.",
+            "Respaldo en caliente: réplica reducida operativa que escala ante la contingencia; RTO de minutos.",
+            "Multisitio activo-activo: ambos sitios atienden tráfico; RPO y RTO cercanos a cero, con mayor costo y complejidad.",
+            "La infraestructura como código reduce el RTO al recrear el entorno de forma automática y probada."
+          ],
+          "notes": "Presente las cuatro estrategias descritas en la documentación de recuperación ante desastres de AWS como un espectro de costo frente a velocidad de recuperación. La elección se basa en el análisis de impacto en el negocio: cuánto cuesta cada hora de interrupción y cuántos datos puede perder la organización. Retome los cálculos de la unidad 1: si una hora de caída del sistema de ventas cuesta S/ 40 000, invertir en un respaldo en caliente puede justificarse; para un sistema de reportes internos, la copia y restauración basta. Explique cómo la infraestructura como código cambia el juego: con Terraform y Ansible, recrear un entorno completo en otra región puede tomar minutos y estar probado, mientras que reconstruirlo a mano puede tomar días. Mencione la necesidad de un plan documentado, roles claros, pruebas al menos anuales y criterios para declarar el desastre. Ejercicio: clasifique los sistemas de la clínica del caso de la unidad 1 y asigne a cada uno la estrategia adecuada. Pregunta: ¿qué estrategia exigiría un sistema de emergencias que no puede detenerse?"
+        },
+        {
+          "title": "Gestión de incidentes y análisis posterior sin culpables",
+          "bullets": [
+            "Roles definidos: comandante del incidente, responsable técnico, comunicaciones y registro de la línea de tiempo.",
+            "Prioridad: restaurar el servicio primero e investigar la causa raíz después.",
+            "ITIL 4 distingue las prácticas de gestión de incidentes, gestión de problemas y habilitación de cambios.",
+            "El análisis posterior sin culpables documenta línea de tiempo, impacto, causas contribuyentes y acciones con responsables.",
+            "La normativa puede exigir notificar incidentes: la Ley 29733 ante la autoridad de datos y la regulación sectorial, como la de la SBS."
+          ],
+          "notes": "Explique que los incidentes graves son inevitables y que lo que distingue a una organización madura es cómo los gestiona y qué aprende de ellos. Describa la estructura de roles inspirada en los sistemas de comando de incidentes de emergencias: una persona coordina y decide, otras investigan, otra comunica a usuarios y gerencia, y alguien registra cada acción con su hora. Insista en la prioridad: en medio de una caída, el objetivo es restaurar el servicio, aunque sea con una solución temporal; el análisis profundo viene después. Presente la cultura sin culpables del libro de ingeniería de confiabilidad de Google: si se castiga al operador que cometió un error, las personas ocultarán información y la organización no aprenderá; la pregunta correcta es qué condiciones del sistema permitieron el error. Analice con los estudiantes un informe posterior publicado por un proveedor de nube, identificando causas contribuyentes y acciones correctivas. Pregunta: ¿qué debería contener la comunicación a los clientes durante una caída? Oriente hacia transparencia, impacto, hora de la próxima actualización y no prometer tiempos sin fundamento."
+        },
+        {
+          "title": "Migración a la nube: las 7 R",
+          "bullets": [
+            "Retirar y retener: apagar lo innecesario y mantener lo que aún no conviene mover.",
+            "Realojar y reubicar: mover tal cual, con rapidez y poco beneficio de las capacidades de la nube.",
+            "Replataformar: ajustes moderados, por ejemplo pasar la base de datos a un servicio administrado.",
+            "Recomprar sustituye por SaaS; refactorizar rediseña la aplicación con servicios nativos de nube.",
+            "Gartner propuso cinco R en 2010; AWS amplió el marco a siete R para planificar carteras de aplicaciones."
+          ],
+          "notes": "Presente el marco como una herramienta para clasificar la cartera de aplicaciones de una organización, no como una receta única. Una migración real combina estrategias: el correo pasa a SaaS, el ERP se realoja temporalmente, la base de datos se replataforma a un servicio administrado y un sistema antiguo sin usuarios se retira. Explique que realojar es rápido, pero rara vez reduce costos, porque también traslada las ineficiencias; refactorizar aprovecha la elasticidad, pero requiere tiempo y desarrolladores. Recomiende un enfoque por oleadas: primero cargas de bajo riesgo que generan aprendizaje, como ambientes de prueba o respaldos; después, sistemas críticos con un plan de reversión. Recuerde el factor regulatorio y de datos personales de la unidad 3 en cada decisión. Ejercicio: clasifique los sistemas de la distribuidora del caso de la unidad 2 según las siete R y justifique cada elección. Pregunta: ¿por qué retener puede ser una decisión correcta y no un fracaso? Por razones de latencia, regulación, costo o fin de vida próximo del sistema."
+        },
+        {
+          "title": "Proyecto integrador: alcance, entregables y sustentación",
+          "bullets": [
+            "Escenario: una organización peruana real o simulada con al menos un servicio crítico y datos personales.",
+            "Entregables: código de infraestructura, aplicación en contenedores, monitoreo con SLO y plan de recuperación probado.",
+            "Evidencia de la prueba de recuperación: tiempo real medido frente al RTO y al RPO comprometidos.",
+            "Informe ejecutivo para la gerencia: costos, riesgos, cumplimiento normativo y hoja de ruta.",
+            "Sustentación de 15 minutos con demostración en vivo y defensa de las decisiones técnicas."
+          ],
+          "notes": "Presente el proyecto como la síntesis del curso: los estudiantes demuestran que pueden diseñar, construir, operar y recuperar una plataforma. Explique cada entregable y su relación con las unidades: virtualización y acceso seguro de la unidad 1, servicios y certificados de la unidad 2, arquitectura y costos en la nube de la unidad 3, y automatización, contenedores, observabilidad y recuperación de la unidad 4. Recalque que la prueba de recuperación es obligatoria: destruir intencionalmente el entorno, recrearlo desde el código y restaurar los datos, cronometrando el proceso. Esta prueba es la evidencia más convincente ante un empleador o un auditor. Oriente sobre la sustentación: comenzar por el problema del negocio, mostrar la arquitectura, hacer la demostración y cerrar con riesgos residuales y próximos pasos; responder con datos y reconocer los límites sin improvisar. Recomiende ensayar la demostración y tener un video de respaldo por si falla la conexión. Pregunta de cierre del curso: ¿qué decisión técnica de su proyecto defendería con más convicción ante un gerente escéptico y por qué?"
+        }
+      ],
+      "reading": {
+        "title": "Automatizar para recuperar: infraestructura como código, contenedores y objetivos de servicio",
+        "minutes": 40,
+        "content": "## El argumento central\n\nUna organización no se recupera de un desastre con buena voluntad, sino con la capacidad de reconstruir su plataforma de forma rápida, correcta y verificable. Esa capacidad depende de tres condiciones: que la infraestructura esté descrita como código, que las aplicaciones estén empaquetadas de forma reproducible y que el equipo sepa, con datos, cuándo el servicio se degrada. Esta lectura integra esas tres piezas.\n\n## Infraestructura como código con Terraform\n\nTerraform describe recursos en el lenguaje declarativo HCL. Su ciclo es init, plan y apply: plan muestra qué se creará (+), modificará (~) o destruirá (-), y nunca se aplica sin leerlo.\n\n```hcl\nterraform {\n  backend \"s3\" {                  # estado remoto, cifrado y con bloqueo\n    bucket       = \"tienda-estado-terraform\"\n    key          = \"prod/red.tfstate\"\n    region       = \"sa-east-1\"\n    encrypt      = true\n    use_lockfile = true\n  }\n}\n\nprovider \"aws\" {\n  region = \"sa-east-1\"\n  default_tags { tags = { proyecto = \"tienda\", ambiente = \"prod\" } }\n}\n\ndata \"aws_availability_zones\" \"zonas\" { state = \"available\" }\n\nresource \"aws_vpc\" \"principal\" {\n  cidr_block           = \"10.20.0.0/16\"\n  enable_dns_hostnames = true\n}\n\nresource \"aws_subnet\" \"privada\" {\n  count             = 2   # 10.20.11.0/24 y 10.20.12.0/24, una por zona\n  vpc_id            = aws_vpc.principal.id\n  cidr_block        = cidrsubnet(aws_vpc.principal.cidr_block, 8, count.index + 11)\n  availability_zone = data.aws_availability_zones.zonas.names[count.index]\n}\n```\n\nEl archivo de estado registra qué recursos administra Terraform; por eso se guarda en almacenamiento remoto con versionado y bloqueo, nunca en un repositorio público. Desde 2023 Terraform se distribuye con licencia BSL; OpenTofu, su bifurcación abierta, acepta el mismo código.\n\n## Configuración idempotente con Ansible\n\nTerraform crea la máquina; Ansible define lo que ocurre dentro. Sus módulos son idempotentes: si el estado ya es el deseado, no hacen nada.\n\n```yaml\n- name: Configurar servidores web\n  hosts: web\n  become: true\n  tasks:\n    - name: Instalar Nginx\n      ansible.builtin.apt: { name: nginx, state: present, update_cache: true }\n    - name: Publicar el sitio desde una plantilla\n      ansible.builtin.template:\n        src: plantillas/portal.conf.j2\n        dest: /etc/nginx/conf.d/portal.conf\n        mode: \"0644\"\n      notify: Recargar Nginx\n    - name: Prohibir el acceso SSH por contraseña\n      ansible.builtin.lineinfile:\n        path: /etc/ssh/sshd_config\n        regexp: '^#?PasswordAuthentication'\n        line: PasswordAuthentication no\n        validate: sshd -t -f %s\n      notify: Recargar SSH\n  handlers:\n    - name: Recargar Nginx\n      ansible.builtin.service: { name: nginx, state: reloaded }\n    - name: Recargar SSH\n      ansible.builtin.service: { name: ssh, state: reloaded }\n```\n\nEjecutarlo primero con ansible-playbook -i inventario.ini sitio.yml --check --diff muestra los cambios sin aplicarlos. Si alguien modificó un servidor a mano, la siguiente ejecución corrige la deriva.\n\n## Aplicaciones empaquetadas en contenedores\n\n```dockerfile\nFROM node:22-alpine AS dependencias\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --omit=dev\n\nFROM node:22-alpine\nWORKDIR /app\nENV NODE_ENV=production\nCOPY --from=dependencias /app/node_modules ./node_modules\nCOPY src ./src\nUSER node\nEXPOSE 3000\nHEALTHCHECK --interval=30s --timeout=3s CMD node src/salud.js\nCMD [\"node\", \"src/servidor.js\"]\n```\n\nLa construcción en dos etapas deja fuera lo innecesario, la imagen se ejecuta sin privilegios de root y la verificación de salud permite detectar un proceso colgado. Docker Compose une la aplicación con su base de datos:\n\n```yaml\nservices:\n  api:\n    build: .\n    restart: unless-stopped\n    environment: { DB_HOST: db, DB_PASSWORD_FILE: /run/secrets/db_password }\n    secrets: [db_password]\n    depends_on:\n      db: { condition: service_healthy }\n  db:\n    image: postgres:17\n    restart: unless-stopped\n    environment: { POSTGRES_PASSWORD_FILE: /run/secrets/db_password }\n    volumes: [datos_db:/var/lib/postgresql/data]\n    secrets: [db_password]\n    healthcheck: { test: [\"CMD-SHELL\", \"pg_isready -U postgres\"], interval: 10s }\nvolumes:\n  datos_db:\nsecrets:\n  db_password: { file: ./secretos/db_password.txt }\n```\n\nEl volumen con nombre conserva los datos cuando el contenedor se recrea, pero no es una copia de seguridad: debe respaldarse con pg_dump hacia almacenamiento inmutable.\n\n## Medir lo que importa: SLI, SLO y presupuesto de error\n\nLa ingeniería de confiabilidad de sitio, sistematizada por Beyer y colaboradores en Google, propone fijar objetivos explícitos y administrar el margen de error:\n\n```text\nMinutos en 30 días = 30 × 24 × 60 = 43 200\nSLO 99,9 %  → presupuesto de error = 0,001 × 43 200 = 43,2 min\nSLO 99,95 % → 21,6 min        SLO 99,99 % → 4,32 min\nUn despliegue fallido con 12 min de caída consume 12 / 43,2 ≈ 27,8 % del presupuesto\n```\n\nSi el presupuesto se agota, el equipo congela los cambios riesgosos y prioriza la confiabilidad. Para un portal de pedidos, un SLI razonable es la proporción de solicitudes exitosas respondidas en menos de 300 ms, medida en el balanceador, más cerca de la experiencia del usuario que la CPU de un servidor.\n\n## Recuperar es un procedimiento, no una esperanza\n\nCon la infraestructura en código, las imágenes en un registro y los datos en copias inmutables, la recuperación se convierte en una secuencia verificable: aplicar Terraform en el sitio alterno, ejecutar Ansible, levantar los contenedores y restaurar la última copia. Cronometrar esa secuencia en un simulacro produce el RTO real, que se compara con el comprometido. Así, una entidad supervisada por la SBS, una clínica o una distribuidora pueden demostrar con evidencia, y no con promesas, que su plan de continuidad funciona.\n\n## Ideas clave\n\n- Lo que no está en código no se puede reconstruir con confianza.\n- Las imágenes hacen reproducible la aplicación; los volúmenes y las copias protegen los datos.\n- Los SLO convierten la confiabilidad en una decisión de negocio medible.\n- La única prueba válida de un plan de recuperación es ejecutarlo."
+      },
+      "case": {
+        "title": "Caso: Ransomware en Financiera Altiplano",
+        "content": "## La organización\n\nFinanciera Altiplano (nombre ficticio) es una entidad microfinanciera supervisada por la SBS, con sede principal en Huancayo, 46 agencias en la sierra central y sur, 1 100 colaboradores y unos 210 000 clientes, en su mayoría micro y pequeños empresarios. Su sistema financiero central y sus canales digitales operan en un centro de datos propio en Huancayo, virtualizado con 140 máquinas virtuales. Como respaldo, el servidor de copias graba cintas semanales que un servicio de mensajería traslada cada lunes a una bóveda en Lima.\n\n## El ataque\n\nUn domingo de mayo de 2026, a las 3:10 a. m., un grupo de ransomware cifró las 140 máquinas virtuales. Semanas antes había obtenido las credenciales de un administrador del dominio mediante un correo de suplantación. El servidor de copias, unido al mismo dominio, fue cifrado primero, junto con su catálogo. Las únicas copias intactas eran las cintas de la bóveda, con seis días de antigüedad.\n\nEl lunes, las agencias atendieron en contingencia manual y con límites de operación; la banca por internet y la aplicación móvil estuvieron fuera de servicio tres días. El sistema central se restauró desde cintas en 52 horas y las transacciones de seis días se reconstruyeron con los registros del proveedor de pagos y los comprobantes en papel. La entidad reportó el incidente a la SBS y, ante la posible exfiltración de datos, a la Autoridad Nacional de Protección de Datos Personales. El costo estimado, entre ingresos perdidos, horas extra, consultoría forense y comunicación con clientes, ascendió a S/ 4,2 millones, sin contar posibles sanciones ni el daño a la reputación.\n\n## Las alternativas\n\nEl directorio aprobó una partida especial y pidió al gerente de TI elegir una estrategia de recuperación:\n\n- **A. Copias inmutables en la nube** con bloqueo de objetos, credenciales separadas del dominio y restauración diaria de prueba en un sitio de Lima: S/ 380 000 iniciales y S/ 18 000 mensuales. RPO de 24 horas y RTO estimado de 24 horas.\n- **B. Luz piloto en la nube:** replicación de la base de datos central cada 15 minutos e infraestructura como código para recrear las aplicaciones: S/ 950 000 iniciales y S/ 55 000 mensuales. RPO de 15 minutos y RTO de 4 horas. Requiere evaluar al proveedor según la regulación de la SBS y gestionar el flujo transfronterizo de datos personales.\n- **C. Respaldo en caliente en un centro de datos Tier III de Lima**, con réplica asíncrona: S/ 2,1 millones iniciales y S/ 70 000 mensuales. RPO de 5 minutos y RTO de 1 hora.\n\nLa regulación de la SBS sobre continuidad del negocio exige planes probados y proporcionales a la criticidad de cada proceso. Un director sostiene que bastaría con «comprar un mejor antivirus». El gerente de TI debe presentar su recomendación en tres semanas y sabe que el directorio pedirá cifras, no adjetivos.",
+        "questions": [
+          "Identifique las fallas técnicas, de arquitectura y de gobierno que convirtieron el ataque en una interrupción de 52 horas con seis días de datos por reconstruir.",
+          "Construya un análisis costo-beneficio a cinco años de las tres alternativas. ¿Qué probabilidad anual de un incidente grave hace rentable cada una?",
+          "¿Qué estrategia recomendaría para el sistema financiero central y cuál para los sistemas secundarios? Justifique con RPO, RTO y costo.",
+          "Diseñe tres controles concretos que impidan que un atacante con credenciales de dominio vuelva a destruir las copias de seguridad.",
+          "¿Cómo respondería al director que propone comprar un mejor antivirus? Argumente con los conceptos del curso."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: plataforma automatizada, observable y recuperable",
+        "instructions": "**Objetivo:** integrar las competencias del curso en una plataforma automatizada, observable y recuperable para una organización peruana real o simulada, cuyo alcance se aprueba con el docente en la semana 13.\n\n**Qué entregar:**\n\n1. **Repositorio Git** compartido con el docente que contenga:\n   - código de Terraform u OpenTofu para la red, el cómputo y los grupos de seguridad; si trabaja en infraestructura propia, la definición de las máquinas virtuales en Proxmox VE;\n   - playbooks de Ansible con el endurecimiento de SSH y la configuración de Nginx con TLS;\n   - un README con las instrucciones para recrear todo el entorno desde cero.\n2. **Aplicación en contenedores** desplegada con Docker Compose (proxy, API y base de datos), con imágenes multietapa, usuario sin privilegios, secretos y volúmenes.\n3. **Observabilidad:** Prometheus y Grafana (o Zabbix) con un tablero de las cuatro señales doradas, dos SLO definidos con su SLI y al menos dos alertas accionables, cada una con su procedimiento de respuesta.\n4. **Plan de continuidad:** análisis de impacto, RPO y RTO por servicio, estrategia elegida y copias inmutables. Incluya un **video de la prueba de recuperación**: destruir el entorno, recrearlo desde el código y restaurar los datos, cronometrando el tiempo real frente al RTO comprometido.\n5. **Informe ejecutivo** de cuatro páginas como máximo: arquitectura, costo mensual estimado, riesgos residuales, cumplimiento de la Ley 29733 y hoja de ruta.\n6. **Sustentación** de 15 minutos con demostración en vivo y ronda de preguntas.\n\n**Formato:** el repositorio no debe contener secretos ni llaves privadas; el historial de cambios debe mostrar el trabajo progresivo durante las semanas 13 a 16.\n\n**Criterios de evaluación:** reproducibilidad del entorno desde el código, seguridad del despliegue, calidad de los indicadores y alertas, evidencia objetiva de la recuperación y claridad para comunicar decisiones técnicas a la gerencia.",
+        "rubric": [
+          {
+            "name": "Infraestructura como código y configuración automatizada",
+            "points": 5
+          },
+          {
+            "name": "Contenedores y despliegue seguro",
+            "points": 4
+          },
+          {
+            "name": "Observabilidad con SLO y alertas accionables",
+            "points": 4
+          },
+          {
+            "name": "Plan de continuidad y prueba de recuperación cronometrada",
+            "points": 4
+          },
+          {
+            "name": "Informe ejecutivo y sustentación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: automatización, observabilidad y continuidad",
+        "questions": [
+          {
+            "prompt": "¿Qué significa que una tarea de Ansible sea idempotente?",
+            "options": [
+              "Ejecutarla varias veces produce el mismo estado final sin cambios adicionales",
+              "Se ejecuta en paralelo en todos los servidores del inventario",
+              "Solo puede ejecutarse una vez en cada servidor",
+              "Revierte automáticamente los cambios si ocurre un error"
+            ],
+            "correct": 0,
+            "explanation": "Un módulo idempotente compara el estado actual con el deseado y solo actúa si difieren. Por eso un playbook puede ejecutarse repetidamente para corregir la deriva sin efectos colaterales."
+          },
+          {
+            "prompt": "Al revisar terraform plan, se observa que se destruirá y recreará la base de datos de producción. ¿Qué debe hacer?",
+            "options": [
+              "Ejecutar apply, porque Terraform conserva los datos automáticamente",
+              "Borrar el archivo de estado para que Terraform no detecte la base",
+              "Aplicar con -auto-approve fuera del horario laboral",
+              "Detener la aplicación del plan e investigar qué cambio provoca el reemplazo"
+            ],
+            "correct": 3,
+            "explanation": "Un reemplazo implica destruir el recurso y sus datos. Se debe identificar el atributo que lo fuerza, ajustar el código o proteger el recurso, por ejemplo con prevent_destroy, antes de aplicar."
+          },
+          {
+            "prompt": "¿Por qué los datos de PostgreSQL desplegado con Docker Compose deben guardarse en un volumen con nombre?",
+            "options": [
+              "Porque PostgreSQL no puede escribir dentro de contenedores",
+              "Porque los volúmenes replican los datos a otra zona",
+              "Porque el sistema de archivos del contenedor se pierde al recrearlo",
+              "Porque los volúmenes cifran los datos automáticamente"
+            ],
+            "correct": 2,
+            "explanation": "La capa escribible del contenedor desaparece al recrearlo. El volumen persiste los datos fuera del ciclo de vida del contenedor, aunque igualmente debe respaldarse."
+          },
+          {
+            "prompt": "Un servicio tiene un SLO de 99,9 % en una ventana de 30 días y ya acumuló 30 minutos de caída. ¿Cuánto presupuesto de error le queda?",
+            "options": [
+              "Ninguno, porque ya se agotó",
+              "13,2 minutos",
+              "43,2 minutos",
+              "4,3 minutos"
+            ],
+            "correct": 1,
+            "explanation": "El presupuesto mensual es 0,001 × 43 200 = 43,2 minutos; tras consumir 30, quedan 13,2. Con ese margen conviene priorizar la estabilidad y limitar los cambios riesgosos."
+          },
+          {
+            "prompt": "Una organización necesita un RTO de pocos minutos, pero no puede pagar un segundo sitio activo completo. ¿Qué estrategia de recuperación es la más adecuada?",
+            "options": [
+              "Respaldo en caliente con una réplica reducida operativa",
+              "Copia y restauración desde almacenamiento de objetos",
+              "Multisitio activo-activo en dos regiones",
+              "Retener los sistemas sin plan de recuperación"
+            ],
+            "correct": 0,
+            "explanation": "El respaldo en caliente mantiene una réplica funcionando a menor escala que crece ante la contingencia, logrando un RTO de minutos con un costo menor que el activo-activo."
+          },
+          {
+            "prompt": "El ransomware cifró la producción y también el servidor de respaldos, unido al mismo dominio. ¿Qué control lo habría evitado con mayor probabilidad?",
+            "options": [
+              "Un arreglo RAID 6 en el servidor de respaldos",
+              "Instantáneas más frecuentes de las máquinas virtuales",
+              "Contraseñas más largas solo en los servidores web",
+              "Copias inmutables con credenciales separadas del dominio de producción"
+            ],
+            "correct": 3,
+            "explanation": "La inmutabilidad impide borrar o cifrar las copias durante su retención y las credenciales separadas evitan que el compromiso del dominio alcance al sistema de respaldo. RAID e instantáneas no protegen ante un atacante."
+          },
+          {
+            "prompt": "Según las prácticas de ingeniería de confiabilidad, ¿cuál de estas alertas es la más accionable?",
+            "options": [
+              "Se reinició un contenedor de pruebas durante la noche",
+              "El disco del servidor de desarrollo está al 60 %",
+              "El 2 % de las solicitudes del portal falla desde hace diez minutos",
+              "La CPU de un servidor superó el 85 % durante un minuto"
+            ],
+            "correct": 2,
+            "explanation": "Alertar por síntomas que afectan al usuario, sostenidos en el tiempo, reduce la fatiga de alertas. Las otras opciones describen causas posibles que pueden ser normales y no exigen acción inmediata."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Rol del administrador de servidores, formatos de servidor, centros de datos y niveles Tier",
+      "activity": "Lectura previa, foro de presentación con análisis de avisos laborales del sector y diagnóstico de conocimientos de Linux y redes.",
+      "evidence": "Participación en foro y prueba diagnóstica"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Disponibilidad, MTBF, MTTR, acuerdos de nivel de servicio y sistemas en serie y paralelo",
+      "activity": "Taller de cálculo de disponibilidad con un caso de facturación electrónica; discusión inicial del caso de la clínica de Arequipa.",
+      "evidence": "Hoja de cálculo de disponibilidad"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "RAID, almacenamiento en red y virtualización con KVM y Proxmox VE",
+      "activity": "Laboratorio: instalación de KVM con libvirt, creación de máquinas virtuales con virt-install, red en puente e instantáneas.",
+      "evidence": "Bitácora técnica del laboratorio"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Acceso remoto seguro con OpenSSH, bastión y dimensionamiento de capacidad",
+      "activity": "Laboratorio de llaves Ed25519 y ProxyJump; resolución del caso de la clínica; entrega de la tarea 1 y cuestionario de la unidad 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "DNS autoritativo y recursivo con BIND 9: zonas, registros y verificación",
+      "activity": "Laboratorio de zona DNS validada con named-checkzone y dig; análisis de los riesgos de un resolutor abierto.",
+      "evidence": "Archivo de zona validado"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "DHCP con Kea, servidor web Nginx, hosts virtuales y proxy inverso",
+      "activity": "Laboratorio: publicar un sitio estático y una API detrás de Nginx; diagnóstico guiado de errores 502.",
+      "evidence": "Configuración de Nginx comentada"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "TLS, infraestructura de clave pública y automatización de certificados con ACME",
+      "activity": "Emisión y renovación automática de certificados, inspección con openssl y discusión del caso de la distribuidora de Trujillo.",
+      "evidence": "Evidencias de certificados y aporte al foro del caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Directorio con LDAP, Kerberos, Active Directory y Samba; archivos compartidos con SMB y NFS",
+      "activity": "Laboratorio de recurso compartido Samba con permisos por grupo; entrega de la tarea 2 y cuestionario de la unidad 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Definición del NIST, modelos de servicio y de despliegue, responsabilidad compartida",
+      "activity": "Aula invertida con la lectura de la unidad; elaboración de una matriz de responsabilidad compartida para tres servicios reales.",
+      "evidence": "Matriz de responsabilidad compartida"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Regiones, zonas de disponibilidad, VPC, subredes, grupos de seguridad y cómputo elástico",
+      "activity": "Laboratorio en cuenta educativa: red virtual con subredes en dos zonas y una instancia configurada con cloud-init.",
+      "evidence": "Capturas y comandos de la CLI"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Almacenamiento, IAM, bases de datos administradas y funciones sin servidor",
+      "activity": "Laboratorio de políticas IAM de mínimo privilegio; discusión del caso Mercado Andino frente al Cyber Wow.",
+      "evidence": "Política IAM comentada y aporte al foro del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Modelos de precios, FinOps, marco de buena arquitectura y normativa peruana",
+      "activity": "Taller de estimación de costos en dos escenarios; entrega de la tarea 3 y cuestionario de la unidad 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Infraestructura como código con Terraform y Ansible; definición del proyecto integrador",
+      "activity": "Laboratorio: recrear la red de la unidad 3 con Terraform y configurar servidores con Ansible; aprobación del alcance del proyecto.",
+      "evidence": "Repositorio inicial y alcance aprobado"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Contenedores con Docker y Docker Compose; conceptos de Kubernetes",
+      "activity": "Laboratorio: empaquetar la API en una imagen multietapa y desplegar proxy, API y base de datos con Compose.",
+      "evidence": "Dockerfile y compose.yaml funcionales"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Observabilidad, SLO, copias inmutables y estrategias de recuperación ante desastres",
+      "activity": "Tablero en Grafana con alertas, análisis del caso de la financiera y prueba de recuperación cronometrada del proyecto.",
+      "evidence": "Tablero, SLO y video de recuperación"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Gestión de incidentes, migración con las 7 R y sustentación del proyecto integrador",
+      "activity": "Sustentación del proyecto integrador con demostración en vivo, cuestionario de la unidad 4 y retroalimentación final del curso.",
+      "evidence": "Proyecto integrador y cuestionario 4"
+    }
+  ]
+}
