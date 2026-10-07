@@ -1,0 +1,1276 @@
+{
+  "name": "Desarrollo Web",
+  "slug": "desarrollo-web",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Desarrollo Web es un curso de formación específica, de naturaleza teórico-práctica, del tercer ciclo de la carrera de Computación e Informática (código CEI-302). Su propósito es que el estudiante construya aplicaciones web completas, accesibles, adaptables y seguras, desde la interfaz que el usuario emplea en su celular hasta el servicio que procesa y guarda los datos en el servidor. Comprende cuatro unidades: arquitectura de la web, protocolo HTTP, HTML semántico y accesibilidad según las WCAG 2.2; diseño de interfaces con CSS, Flexbox, Grid, diseño adaptable y métricas Core Web Vitals; JavaScript moderno con DOM, eventos, asincronía y consumo de API REST; y desarrollo del lado del servidor con Node.js, Express y PostgreSQL, autenticación, controles del OWASP Top 10 y despliegue de un proyecto integrador. Construye sobre Fundamentos de Programación, Programación Orientada a Objetos y Redes de Computadoras, se articula con Base de Datos, que se cursa en paralelo, y prepara Desarrollo de Aplicaciones Móviles, Administración de Servidores y Nube, Seguridad Informática y Desarrollo de Software Empresarial.",
+  "competency": "Desarrolla aplicaciones web completas —interfaz adaptable y accesible, lógica en el cliente y servicios REST en el servidor con persistencia en base de datos— aplicando los estándares del W3C, las buenas prácticas de seguridad del OWASP y la normativa peruana de protección de datos personales, para resolver necesidades reales de organizaciones con calidad, rendimiento verificable y control de versiones.",
+  "capacities": [
+    "Explica el funcionamiento de la web —cliente-servidor, DNS, HTTP y HTTPS— y estructura documentos HTML semánticos, válidos y accesibles conforme a los criterios de conformidad de las WCAG 2.2.",
+    "Diseña interfaces adaptables con CSS moderno, aplicando la cascada, el modelo de caja, Flexbox, Grid, el enfoque móvil primero y técnicas de optimización medidas con las Core Web Vitals.",
+    "Programa la interacción en el navegador con JavaScript moderno, manipulando el DOM, gestionando eventos, validando formularios y consumiendo API REST de manera asíncrona y segura.",
+    "Implementa servicios web REST con Node.js y Express conectados a PostgreSQL, con autenticación, validación de entradas, controles del OWASP Top 10, pruebas automatizadas y despliegue documentado."
+  ],
+  "indicators": [
+    "Analiza una transacción HTTP en las herramientas de desarrollo del navegador e identifica el método, el código de estado y las cabeceras de caché y de seguridad, explicando su efecto en el comportamiento de la página.",
+    "Construye páginas HTML semánticas que pasan el validador del W3C sin errores y alcanzan al menos 90 puntos de accesibilidad en Lighthouse, verificadas además con teclado y lector de pantalla.",
+    "Maqueta interfaces adaptables con Flexbox y Grid que funcionan desde 320 píxeles de ancho y cumplen LCP de 2,5 s o menos, INP de 200 ms o menos y CLS de 0,1 o menos.",
+    "Desarrolla módulos JavaScript que consumen una API REST con async/await, gestionan errores, estados de carga y cancelación, y evitan la inyección de código usando textContent y validación de datos.",
+    "Implementa una API REST con Express que aplica rutas, middleware, códigos de estado correctos, consultas parametrizadas a PostgreSQL y contraseñas protegidas con bcrypt o Argon2id.",
+    "Despliega con HTTPS y sustenta un proyecto integrador full stack versionado en Git, documentando decisiones técnicas, pruebas realizadas, riesgos del OWASP Top 10 mitigados y cumplimiento de la Ley 29733."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, las diapositivas y un microlaboratorio guiado; en la sesión se discute un caso de una organización peruana mediante el método de casos y se resuelven retos de codificación en vivo con programación en pareja en salas paralelas. El aprendizaje basado en proyectos articula las cuatro unidades: cada equipo construye, por entregas incrementales en un repositorio Git, una aplicación web para una mype real o verosímil. La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, revisión de código entre pares con rúbrica, auditorías automáticas con Lighthouse y validadores, y retroalimentación del docente en cada solicitud de integración.",
+  "bibliography": [
+    "Duckett, J. (2011). HTML and CSS: Design and build websites. John Wiley & Sons.",
+    "Meyer, E. A. y Weyl, E. (2023). CSS: The definitive guide. Web layout and presentation (5th ed.). O'Reilly Media.",
+    "Haverbeke, M. (2018). Eloquent JavaScript: A modern introduction to programming (3rd ed.). No Starch Press.",
+    "Flanagan, D. (2020). JavaScript: The definitive guide (7th ed.). O'Reilly Media.",
+    "Brown, E. (2019). Web development with Node and Express: Leveraging the JavaScript stack (2nd ed.). O'Reilly Media.",
+    "Marcotte, E. (2011). Responsive web design. A Book Apart.",
+    "Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability (3rd ed.). New Riders.",
+    "Fielding, R. T. (2000). Architectural styles and the design of network-based software architectures [Tesis doctoral, University of California, Irvine].",
+    "World Wide Web Consortium. (2023). Web Content Accessibility Guidelines (WCAG) 2.2. W3C Recommendation.",
+    "OWASP Foundation. (2021). OWASP Top 10: The ten most critical web application security risks. OWASP Foundation."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 35,
+      "description": "Cuestionarios de las cuatro unidades, tareas 1 a 3, laboratorios semanales y participación argumentada en los foros de casos, valorados con rúbricas y retroalimentación oportuna."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Proyecto integrador full stack desarrollado en equipo por entregas incrementales, con repositorio Git, despliegue con HTTPS e informe técnico, calificado con la rúbrica de la Tarea 4."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación técnica individual del proyecto con modificación de código en vivo y prueba práctica supervisada de desarrollo web en línea."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de la web: HTTP, HTML semántico y accesibilidad",
+      "description": "Al finalizar la unidad, el estudiante explica cómo viaja una solicitud web desde el navegador hasta el servidor, analiza transacciones HTTP con las herramientas de desarrollo y construye páginas HTML semánticas, válidas y accesibles conforme a las WCAG 2.2, versionadas con Git.",
+      "topics": [
+        "Arquitectura cliente-servidor, URL, DNS y ciclo de vida de una solicitud web",
+        "Protocolo HTTP: métodos, códigos de estado, cabeceras, cookies y HTTPS",
+        "HTML5 semántico: estructura del documento, contenido multimedia y formularios",
+        "Accesibilidad web: WCAG 2.2, principios POUR, ARIA y marco normativo peruano",
+        "Entorno profesional: editor, herramientas de desarrollo, validadores y Git"
+      ],
+      "slides": [
+        {
+          "title": "La web como sistema: de Berners-Lee a las aplicaciones actuales",
+          "bullets": [
+            "Tim Berners-Lee propuso la web en el CERN (1989) sobre tres pilares: URL para identificar, HTTP para transferir y HTML para describir.",
+            "La web es una aplicación que corre sobre Internet: usa TCP/IP y DNS, estudiados en Redes de Computadoras.",
+            "Evolución: documentos estáticos, páginas dinámicas generadas en el servidor, aplicaciones de página única y aplicaciones web progresivas.",
+            "Estándares abiertos: W3C y WHATWG mantienen HTML y CSS; Ecma International (TC39) mantiene ECMAScript; el IETF mantiene HTTP."
+          ],
+          "notes": "Inicie la clase preguntando: ¿qué ocurre exactamente desde que escriben una dirección en el navegador hasta que ven la página? Recoja las respuestas en la pizarra virtual y anote los conceptos que aparecen. Explique que la web no es Internet: es un servicio que corre encima de la infraestructura que estudiaron en Redes de Computadoras. Destaque la genialidad de la propuesta de Berners-Lee: tres estándares simples y abiertos, sin dueño, que permitieron que cualquier persona publicara. Subraye que los organismos de estandarización importan en la práctica: cuando una característica de CSS o JavaScript 'no funciona', casi siempre la respuesta está en la especificación o en la tabla de compatibilidad de navegadores. Cierre con una pregunta para el foro: ¿qué servicios del Estado peruano usan hoy en la web y cuáles les han resultado difíciles de usar desde el celular?"
+        },
+        {
+          "title": "Arquitectura cliente-servidor y el recorrido de una solicitud",
+          "bullets": [
+            "Paso 1: el navegador analiza el URL: esquema, host, puerto, ruta, parámetros de consulta y fragmento.",
+            "Paso 2: resolución DNS del nombre a una dirección IP, con caché del navegador, del sistema operativo y del resolvedor.",
+            "Paso 3: conexión TCP y negociación TLS; HTTP/3 usa QUIC sobre UDP para reducir la latencia de conexión.",
+            "Paso 4: solicitud HTTP, respuesta del servidor y renderizado: DOM, CSSOM, árbol de renderizado, diseño y pintado."
+          ],
+          "notes": "Conecte esta diapositiva con lo aprendido en Redes de Computadoras: DNS, TCP y el modelo de capas. Haga una demostración en vivo abriendo la pestaña Red de las herramientas de desarrollo y cargando un portal público peruano; muestre la columna de tiempos y señale cuánto corresponde a DNS, conexión, TLS, espera del servidor (TTFB) y descarga. Explique que en una red móvil cada viaje de ida y vuelta puede costar entre 50 y 150 milisegundos, por lo que reducir solicitudes y reutilizar conexiones importa. Mencione que el navegador empieza a construir el DOM mientras recibe el HTML y que las hojas de estilo bloquean el renderizado. Pregunta para la clase: si el DNS ya está en caché, ¿qué etapas se acortan en la segunda visita y cuáles no?"
+        },
+        {
+          "title": "Anatomía de un mensaje HTTP",
+          "bullets": [
+            "Solicitud: línea inicial (método, ruta, versión), cabeceras como Host, Accept, Cookie y User-Agent, y cuerpo opcional.",
+            "Respuesta: línea de estado con código, cabeceras como Content-Type, Cache-Control y Set-Cookie, y el cuerpo con el recurso.",
+            "HTTP es sin estado: cada solicitud es independiente; las cookies y los tokens permiten mantener la sesión.",
+            "Versiones: HTTP/1.1 (RFC 9112), HTTP/2 con multiplexación binaria y HTTP/3 sobre QUIC (RFC 9114)."
+          ],
+          "notes": "Muestre una solicitud y una respuesta reales en la pestaña Red, alternando entre la vista formateada y la vista de origen. Insista en que HTTP/1.1 es texto legible, lo que facilita la depuración, mientras que HTTP/2 y HTTP/3 son binarios pero conservan la misma semántica de métodos, cabeceras y códigos. Explique el concepto de protocolo sin estado con una analogía: cada solicitud es como una llamada a una central donde el operador no recuerda llamadas anteriores, salvo que el cliente indique su número de ticket, que es la cookie. Mencione que las RFC 9110 a 9114, publicadas en 2022, consolidaron la especificación actual de HTTP. Pida a los estudiantes que identifiquen en una respuesta real las cabeceras Content-Type y Cache-Control y expliquen qué le indican al navegador."
+        },
+        {
+          "title": "Métodos y códigos de estado: el contrato entre cliente y servidor",
+          "bullets": [
+            "GET obtiene sin efectos secundarios; POST crea; PUT reemplaza; PATCH modifica parcialmente; DELETE elimina.",
+            "Métodos seguros (GET, HEAD) no alteran el estado; los idempotentes (GET, PUT, DELETE) producen el mismo efecto si se repiten.",
+            "Familias de códigos: 2xx éxito, 3xx redirección, 4xx error del cliente y 5xx error del servidor.",
+            "Errores frecuentes: responder 200 con un mensaje de error, o usar 404 cuando corresponde 401, 403 o 422."
+          ],
+          "notes": "Esta diapositiva es la base del diseño de API REST de la Unidad 4, así que conviene consolidarla. Explique la seguridad y la idempotencia con ejemplos bancarios: consultar el saldo es seguro; reintentar una transferencia con POST puede duplicarla, mientras que repetir un PUT que fija un valor deja el mismo resultado. Por eso los navegadores advierten al recargar una página tras un POST. Presente errores frecuentes en sistemas reales: responder 200 con un texto de error, o devolver 500 cuando el usuario envió un DNI mal formado. Cada código incorrecto confunde a los clientes, a las herramientas de monitoreo y a los buscadores. Actividad breve: presente cinco situaciones (sesión expirada, recurso eliminado, datos inválidos, servidor caído, recurso creado) y pida que elijan el código correcto en una encuesta en vivo."
+        },
+        {
+          "title": "HTTPS, cookies y cabeceras de seguridad",
+          "bullets": [
+            "TLS cifra y autentica: el certificado digital vincula el dominio con una clave pública firmada por una autoridad certificadora.",
+            "Atributos de cookies: HttpOnly impide la lectura desde JavaScript, Secure exige HTTPS y SameSite mitiga la falsificación de solicitudes.",
+            "Cabeceras clave: Strict-Transport-Security, Content-Security-Policy, X-Content-Type-Options y Referrer-Policy.",
+            "Un formulario de datos personales servido por HTTP expone la información en cualquier red Wi-Fi pública."
+          ],
+          "notes": "Explique TLS sin entrar en el detalle criptográfico que verán en Seguridad Informática: el certificado prueba la identidad del dominio y el canal queda cifrado e íntegro. Demuestre en el navegador cómo inspeccionar un certificado: emisor, vigencia y dominio. Luego muestre las cookies de un sitio y sus atributos. Plantee el escenario de una persona que se conecta al Wi-Fi gratuito de un centro comercial y completa un formulario sin HTTPS: cualquier dispositivo en esa red podría capturar los datos. Presente las cabeceras de seguridad como defensa en profundidad de bajo costo: se configuran una vez en el servidor y protegen todas las páginas. Pregunta para debate: ¿por qué un sitio informativo sin formularios también debería usar HTTPS? Oriente la respuesta hacia la integridad del contenido, la privacidad de la navegación y el posicionamiento."
+        },
+        {
+          "title": "Herramientas de desarrollo del navegador: el laboratorio del desarrollador",
+          "bullets": [
+            "Pestaña Elementos: inspeccionar el DOM y las reglas CSS aplicadas, con su origen y especificidad.",
+            "Pestaña Red: ver cada solicitud, tiempos de DNS, conexión, espera y descarga, tamaños y cabeceras.",
+            "Consola: errores de JavaScript, advertencias de contenido mixto y bloqueos por CORS.",
+            "Lighthouse: auditorías de rendimiento, accesibilidad, buenas prácticas y SEO con recomendaciones priorizadas."
+          ],
+          "notes": "Dedique buena parte del tiempo a la práctica: los estudiantes deben salir de la sesión sabiendo abrir las herramientas con F12, inspeccionar un elemento, ver los estilos calculados y revisar la pestaña Red. Enseñe a simular una red 4G lenta y un dispositivo móvil, porque así navega la mayoría de usuarios peruanos. Muestre cómo filtrar solicitudes por tipo y comparar el tamaño transferido con el tamaño real, lo que revela si hay compresión. Ejecute una auditoría Lighthouse en modo móvil y explique que sus puntajes son de laboratorio: útiles para comparar versiones, pero distintos de los datos de usuarios reales. Asigne un microrreto: encontrar en un sitio cualquiera la solicitud más pesada y proponer una mejora concreta, con evidencia en captura de pantalla."
+        },
+        {
+          "title": "HTML semántico: significado antes que apariencia",
+          "bullets": [
+            "HTML describe la estructura y el significado del contenido; la presentación corresponde a CSS y el comportamiento a JavaScript.",
+            "Elementos de sección: header, nav, main, article, section, aside y footer reemplazan a la 'sopa de div'.",
+            "Jerarquía de encabezados h1 a h6 sin saltos: los lectores de pantalla la usan como índice de navegación.",
+            "Beneficios medibles: accesibilidad, posicionamiento en buscadores, mantenimiento y menor necesidad de ARIA."
+          ],
+          "notes": "Presente dos páginas que se ven idénticas: una construida solo con div y otra con elementos semánticos. Luego active un lector de pantalla o muestre el árbol de accesibilidad del navegador para evidenciar la diferencia: la segunda página expone regiones, encabezados y navegación; la primera es una masa indiferenciada. Explique la separación de responsabilidades: estructura en HTML, presentación en CSS y comportamiento en JavaScript, principio que facilita el mantenimiento en equipo. Destaque que los buscadores también interpretan la semántica para generar resultados enriquecidos. Pregunta para la clase: ¿cuál es la diferencia entre section y article? Guíe hacia el criterio de que article es contenido autónomo y redistribuible, como una noticia o una tarjeta de producto, mientras que section agrupa contenido temático que lleva su propio encabezado."
+        },
+        {
+          "title": "Estructura mínima de un documento HTML5",
+          "bullets": [
+            "Declaración doctype html y elemento html con lang='es-PE' para que el lector de pantalla use la pronunciación correcta.",
+            "En head: meta charset UTF-8, meta viewport para móviles, title descriptivo y enlaces a las hojas de estilo.",
+            "En body: un solo main por página, navegación con listas de enlaces y contenido organizado en artículos y secciones.",
+            "El validador del W3C detecta etiquetas mal cerradas, atributos inválidos e identificadores duplicados."
+          ],
+          "notes": "Escriba en vivo el esqueleto del documento y explique cada línea. El doctype activa el modo estándar del navegador; sin él, la página se renderiza en modo de compatibilidad con comportamientos antiguos. El atributo lang permite que el lector de pantalla use la pronunciación correcta y que el navegador ofrezca una traducción adecuada. La etiqueta meta viewport es indispensable en móviles: sin ella, el celular simula una pantalla de escritorio y reduce todo el contenido. Explique que el title es lo primero que anuncia un lector de pantalla y lo que aparece en los resultados de búsqueda, por lo que debe ser específico, por ejemplo 'Reserva de citas | Clínica San Gabriel'. Muestre el validador del W3C con un documento que contiene errores intencionales y pida a los estudiantes que los corrijan en parejas."
+        },
+        {
+          "title": "Contenido multimedia, enlaces e imágenes con propósito",
+          "bullets": [
+            "Atributo alt: describe la función de la imagen; se deja vacío (alt='') cuando es puramente decorativa.",
+            "figure y figcaption para gráficos y fotografías con leyenda; picture y srcset para ofrecer varias resoluciones.",
+            "Enlaces con texto descriptivo: 'Descargar el reglamento (PDF, 2 MB)' en lugar de 'clic aquí'.",
+            "Video y audio con subtítulos (elemento track) y transcripción, según la pauta 1.2 de las WCAG."
+          ],
+          "notes": "Trabaje la escritura de textos alternativos con ejemplos concretos. Para la foto de un producto, el alt describe lo que un comprador necesita saber, como 'Café tostado de Chanchamayo, bolsa de 250 g'. Para un ícono de lupa dentro de un botón, el alt debe expresar la función, 'Buscar', no 'lupa'. Para una imagen decorativa, alt vacío para que el lector de pantalla la ignore. Explique que omitir el atributo es distinto de dejarlo vacío: sin atributo, algunos lectores anuncian el nombre del archivo. Sobre los enlaces, recuerde que los usuarios de lectores de pantalla suelen navegar con una lista de enlaces fuera de contexto, donde diez enlaces 'clic aquí' resultan inútiles. Ejercicio: mejorar cinco textos alternativos y cinco enlaces tomados de sitios peruanos reales."
+        },
+        {
+          "title": "Formularios accesibles y validación nativa",
+          "bullets": [
+            "Cada control con su label asociado mediante for e id; fieldset y legend agrupan opciones relacionadas.",
+            "Tipos de entrada email, tel, number y date; atributos required, minlength, pattern y autocomplete.",
+            "La validación del navegador mejora la experiencia, pero el servidor siempre debe volver a validar.",
+            "Mensajes de error claros, junto al campo y vinculados al control con aria-describedby."
+          ],
+          "notes": "Los formularios son el punto donde una página genera valor o lo pierde: una reserva, una compra, un reclamo. Construya en vivo un formulario de registro con label, fieldset y tipos de entrada adecuados, y muéstrelo en un celular: el tipo email despliega el teclado con arroba y el tipo tel el teclado numérico, lo que reduce errores. Explique el atributo autocomplete, que permite al navegador completar datos conocidos y responde además al criterio 1.3.5 de las WCAG. Subraye que la validación del cliente es una comodidad para el usuario, nunca una medida de seguridad: cualquier persona puede enviar datos directamente al servidor sin pasar por el formulario. Pregunta para la clase: ¿qué información debe acompañar a un formulario que recoge datos personales según la Ley 29733?"
+        },
+        {
+          "title": "Accesibilidad web: las WCAG 2.2 y los principios POUR",
+          "bullets": [
+            "Perceptible, Operable, Comprensible y Robusto: cuatro principios, trece pautas y criterios de conformidad A, AA y AAA.",
+            "El nivel AA es la referencia habitual: contraste mínimo de 4,5:1 en texto normal y 3:1 en texto grande.",
+            "WCAG 2.2 (2023) añadió criterios como tamaño mínimo del objetivo táctil (24 × 24 px) y foco no oculto.",
+            "En el Perú, el Censo 2017 del INEI registró 3 051 612 personas con alguna discapacidad, el 10,4 % de la población."
+          ],
+          "notes": "Presente la accesibilidad como un atributo de calidad, igual que la seguridad o el rendimiento. Explique cada principio con un ejemplo: perceptible, textos alternativos y subtítulos; operable, navegación completa con teclado; comprensible, mensajes de error claros y comportamiento predecible; robusto, código que funcione con las tecnologías de apoyo actuales y futuras. Muestre una herramienta de verificación de contraste y analice la paleta de un sitio real. Comente la cifra del Censo 2017 y añada que la discapacidad no siempre es permanente: una persona con el brazo enyesado, un adulto mayor con baja visión o alguien que usa el celular bajo el sol de mediodía también se benefician. Pregunta para debate: ¿por qué las empresas suelen tratar la accesibilidad como un extra y cómo podrían medir su retorno?"
+        },
+        {
+          "title": "ARIA: cuándo usarla y cuándo no",
+          "bullets": [
+            "Primera regla de ARIA: si existe un elemento HTML nativo con la semántica necesaria, úselo en lugar de añadir roles.",
+            "Roles, estados y propiedades: role='alert', aria-expanded, aria-label y aria-live para regiones dinámicas.",
+            "Un button nativo ya es enfocable y responde a Enter y Espacio; un div con evento de clic no lo es.",
+            "Pruebas: navegación solo con teclado, lectores de pantalla NVDA o VoiceOver y auditorías automáticas como axe."
+          ],
+          "notes": "Advierta que ARIA mal usada empeora la accesibilidad: los estudios anuales de WebAIM sobre un millón de páginas de inicio han encontrado que las páginas que usan ARIA presentan, en promedio, más errores detectados que las que no la usan. ARIA no añade comportamiento, solo describe: un div con role button sigue sin ser enfocable ni responder al teclado. Muestre casos legítimos: una región aria-live que anuncia 'Producto agregado al carrito', o aria-expanded en un botón que despliega un menú. Haga una demostración con NVDA en Windows o VoiceOver en macOS y celulares: navegar por encabezados, por regiones y por formularios. Proponga a los estudiantes que naveguen diez minutos un sitio usando solo el teclado y anoten cada obstáculo que encuentren, con el criterio WCAG que se incumple."
+        },
+        {
+          "title": "Marco normativo peruano relevante para el desarrollo web",
+          "bullets": [
+            "Ley 28530: promueve el acceso a Internet de las personas con discapacidad y exige portales públicos accesibles.",
+            "Ley 29973, Ley General de la Persona con Discapacidad: reconoce el derecho a la accesibilidad en las tecnologías de la información.",
+            "Ley 29733 de Protección de Datos Personales: todo formulario que recoge datos requiere finalidad informada y consentimiento.",
+            "Código de Protección y Defensa del Consumidor (Ley 29571): información veraz y Libro de Reclamaciones virtual en el comercio electrónico."
+          ],
+          "notes": "Aclare que el desarrollador no es abogado, pero sí debe reconocer cuándo su código implementa una obligación legal. Explique que la Ley 28530 y la Ley 29973 sustentan la exigencia de accesibilidad en los portales públicos y la promueven en los servicios privados. Relacione la Ley 29733 con decisiones de diseño concretas: qué datos pedir y cuáles no, cómo informar la finalidad, cómo registrar el consentimiento y cómo proteger la transmisión con HTTPS. Mencione que los proveedores que venden en línea deben ofrecer un Libro de Reclamaciones virtual accesible desde su página, supervisado por el INDECOPI. Pregunta para la clase: en un formulario de reserva de una clínica, ¿qué datos son sensibles y qué medidas adicionales requieren frente a un formulario de suscripción a un boletín de noticias?"
+        },
+        {
+          "title": "Flujo de trabajo profesional: editor, Git y publicación",
+          "bullets": [
+            "Editor con extensiones de formateo y verificación (Prettier, ESLint, validador HTML) configuradas por proyecto.",
+            "Git: commits pequeños con mensajes descriptivos, ramas por funcionalidad y solicitudes de integración revisadas por pares.",
+            "Estructura de carpetas: index.html, css/, js/, img/ y un README con propósito, instalación y decisiones.",
+            "Publicación estática en un servicio de alojamiento con HTTPS habilitado y dominio propio cuando corresponda."
+          ],
+          "notes": "Retome lo aprendido sobre Git en Fundamentos de Programación y Programación Orientada a Objetos, y llévelo al trabajo en equipo del curso. Demuestre cómo crear una rama por funcionalidad, abrir una solicitud de integración y comentar líneas de código en una revisión. Explique que el historial de commits del proyecto integrador servirá como evidencia del aporte individual, por lo que deben ser frecuentes y descriptivos, por ejemplo 'Agrega formulario de reserva con validación nativa', en lugar de 'cambios'. Configure en vivo un formateador y un verificador para que todo el equipo comparta el mismo estilo. Muestre cómo publicar un sitio estático con HTTPS en un servicio gratuito de alojamiento. Cierre la unidad recordando la entrega de la Tarea 1 y el Cuestionario 1 en la semana 4."
+        }
+      ],
+      "reading": {
+        "title": "Cómo funciona la web: del mensaje HTTP al documento accesible",
+        "minutes": 35,
+        "content": "## 1. La web es un protocolo de conversación\n\nCuando una ciudadana de Huancayo abre en su celular el portal de una municipalidad para pagar un arbitrio, su navegador inicia una conversación muy estructurada con un servidor que puede estar a cientos de kilómetros. Esa conversación sigue el modelo cliente-servidor: el cliente solicita recursos y el servidor responde. La web, propuesta por Tim Berners-Lee en el CERN en 1989, descansa en tres estándares: el URL, que identifica el recurso; el protocolo HTTP, que define cómo pedirlo y entregarlo; y HTML, que describe su contenido.\n\nEl recorrido completo tiene cinco etapas: (1) el navegador descompone el URL en esquema, host, ruta y parámetros; (2) resuelve el nombre de dominio a una dirección IP mediante DNS; (3) abre una conexión TCP y negocia TLS; (4) envía la solicitud HTTP y recibe la respuesta; y (5) construye el DOM y el CSSOM, calcula el diseño y pinta la página. En una red móvil 4G de provincia cada etapa se nota, por eso el desarrollador debe saber medir dónde se pierde el tiempo.\n\n## 2. Anatomía de una transacción HTTP\n\nHTTP es un protocolo sin estado: el servidor no recuerda solicitudes anteriores salvo que el cliente envíe un identificador, normalmente en una cookie. Observe una solicitud simplificada:\n\n```http\nPOST /citas HTTP/1.1\nHost: citas.clinicaejemplo.pe\nContent-Type: application/x-www-form-urlencoded\nCookie: sid=8f3a91c2\n\ndni=40112233&especialidad=pediatria&fecha=2026-10-12\n```\n\nY la respuesta del servidor:\n\n```http\nHTTP/1.1 201 Created\nContent-Type: application/json; charset=utf-8\nLocation: /citas/7781\nCache-Control: no-store\nStrict-Transport-Security: max-age=31536000\n\n{\"id\": 7781, \"estado\": \"programada\"}\n```\n\nTres decisiones de diseño merecen análisis. Primero, se usa **POST** porque la operación crea un recurso; un GET no debe modificar datos, ya que buscadores y cachés pueden repetirlo. Segundo, **201 Created** comunica con precisión el resultado y la cabecera Location indica dónde está la nueva cita; responder 200 con el texto \"error\" obliga al cliente a adivinar. Tercero, **Cache-Control: no-store** evita que una computadora compartida guarde datos de salud, considerados sensibles por la Ley 29733.\n\nLas familias de códigos son un lenguaje común: 2xx éxito, 3xx redirección, 4xx error atribuible al cliente (400 solicitud mal formada, 401 no autenticado, 403 sin permiso, 404 no encontrado, 422 datos inválidos) y 5xx falla del servidor.\n\n## 3. HTTPS no es opcional\n\nTLS cifra el canal y autentica al servidor mediante un certificado digital firmado por una autoridad certificadora. Sin TLS, cualquier persona conectada a la misma red Wi-Fi de un centro comercial puede leer contraseñas y números de documento. Los navegadores modernos marcan como \"No seguro\" los formularios servidos por HTTP y bloquean el contenido mixto activo. La cabecera Strict-Transport-Security ordena al navegador usar solo HTTPS con ese dominio.\n\n## 4. HTML semántico: el significado es la interfaz\n\nHTML no sirve para \"dibujar\" la página, sino para declarar qué es cada parte del contenido. Un lector de pantalla como NVDA o un buscador no ven colores: leen la estructura.\n\n```html\n<main>\n  <h1>Reserva tu cita</h1>\n  <form action=\"/citas\" method=\"post\">\n    <label for=\"dni\">DNI del paciente</label>\n    <input id=\"dni\" name=\"dni\" inputmode=\"numeric\"\n           pattern=\"[0-9]{8}\" required aria-describedby=\"dni-ayuda\">\n    <p id=\"dni-ayuda\">Ocho dígitos, sin espacios.</p>\n    <fieldset>\n      <legend>Turno preferido</legend>\n      <input type=\"radio\" id=\"manana\" name=\"turno\" value=\"m\">\n      <label for=\"manana\">Mañana</label>\n      <input type=\"radio\" id=\"tarde\" name=\"turno\" value=\"t\">\n      <label for=\"tarde\">Tarde</label>\n    </fieldset>\n    <button type=\"submit\">Solicitar cita</button>\n  </form>\n</main>\n```\n\nCada `label` se vincula a su control mediante `for` e `id`: al tocar el texto se activa el campo y el lector de pantalla anuncia su nombre. El `fieldset` con `legend` da contexto a los botones de opción y el `button` nativo es enfocable y responde al teclado sin código adicional. Nada de esto requiere ARIA; la primera regla de ARIA es no usarla cuando existe un elemento nativo equivalente.\n\n## 5. Accesibilidad: requisito técnico, ético y legal\n\nLas Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, recomendación del W3C de 2023, organizan los requisitos en cuatro principios —perceptible, operable, comprensible y robusto— y criterios verificables de nivel A, AA y AAA. El nivel AA es la referencia habitual: contraste de 4,5:1 para texto normal, operación completa con teclado, foco visible, objetivos táctiles de al menos 24 × 24 píxeles CSS y errores identificados con texto.\n\nEn el Perú, el Censo 2017 del INEI registró más de tres millones de personas con alguna discapacidad, el 10,4 % de la población. La Ley 28530 promueve el acceso a Internet de las personas con discapacidad y exige portales públicos accesibles, y la Ley 29973 reconoce la accesibilidad como derecho. Diseñar para la accesibilidad no es un favor: amplía el mercado, reduce reclamos y mejora la calidad del código.\n\n## Ideas clave\n\n- La web es una conversación cliente-servidor regida por HTTP; medirla con las herramientas de desarrollo es una competencia básica.\n- Métodos y códigos de estado correctos forman un contrato que facilita la integración y el diagnóstico.\n- El HTML semántico es la base de la accesibilidad, del posicionamiento y del mantenimiento.\n"
+      },
+      "case": {
+        "title": "Caso: El portal de citas de la Clínica San Gabriel",
+        "content": "**Clínica San Gabriel** es una clínica privada de mediana complejidad ubicada en Trujillo, La Libertad, con 42 consultorios, 18 especialidades y alrededor de 9 500 atenciones ambulatorias al mes. En 2021 encargó a un proveedor externo un portal para reservar citas en línea. El sitio se construyó a partir de una plantilla comercial antigua: la estructura se basa en elementos `div` anidados, los botones son imágenes con eventos de clic y el formulario de reserva no tiene etiquetas asociadas a sus campos.\n\nEn julio de 2026, la nueva jefa de Transformación Digital, la ingeniera Milagros Rebaza, solicitó un diagnóstico. La analítica de los últimos seis meses mostró lo siguiente:\n\n- El 71 % de las visitas proviene de teléfonos móviles y el 58 % de ellas usa redes 4G.\n- De cada 100 personas que inician el formulario de reserva en el celular, 43 lo abandonan; en escritorio abandonan 19.\n- Lighthouse arroja 48 puntos en accesibilidad y 37 en rendimiento en la página de reservas.\n- La página principal se sirve por HTTPS, pero el formulario envía los datos a un subdominio con HTTP y el navegador muestra advertencias de contenido mixto.\n- Ante un DNI mal escrito, el servidor responde con código 200 y la palabra \"error\" en el cuerpo, por lo que la aplicación móvil de la clínica no puede distinguir las fallas.\n\nA ello se suma un hecho reciente: una asociación regional de personas con discapacidad visual remitió una carta notarial señalando que sus afiliados no pueden reservar citas con lector de pantalla, porque los campos se anuncian solo como \"editar texto\" y el calendario no es operable con teclado. La asociación anunció que evaluará presentar un reclamo ante el INDECOPI. En paralelo, el área legal advirtió que el formulario recoge datos de salud —sensibles según la Ley 29733— sin informar la finalidad ni solicitar consentimiento.\n\nEl gerente general, Óscar Vásquez, plantea dos alternativas. La primera, propuesta por el proveedor original, consiste en \"parchar\" el sitio en tres semanas por S/ 9 000: añadir atributos ARIA a los `div`, forzar HTTPS en el subdominio y agregar una casilla de consentimiento. La segunda, propuesta por un desarrollador interno, implica reconstruir en seis semanas la capa de presentación con HTML semántico, un formulario nativo accesible y respuestas HTTP con códigos correctos, por S/ 21 000, conservando el sistema de agenda existente. El presupuesto anual de TI no contempla esta inversión y la temporada de campañas preventivas empieza en octubre.\n\nMilagros debe presentar una recomendación fundamentada al directorio en diez días.\n",
+        "questions": [
+          "¿Qué problemas del portal son de protocolo (HTTP y HTTPS), cuáles de semántica HTML y cuáles de accesibilidad? Clasifíquelos y priorícelos por impacto y urgencia.",
+          "¿Por qué añadir atributos ARIA sobre elementos div puede no resolver las barreras reportadas? Argumente con la primera regla de ARIA y los principios POUR.",
+          "Estime el efecto de reducir el abandono móvil del 43 % al 25 % sobre las reservas mensuales, explicite sus supuestos y úselo para comparar ambas alternativas.",
+          "¿Qué recomendación presentaría al directorio y qué indicadores verificables usaría para demostrar, en tres meses, que la decisión fue correcta?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Auditoría técnica y reconstrucción semántica de una página de servicio",
+        "instructions": "**Objetivo:** aplicar el análisis de HTTP, el HTML semántico y las WCAG 2.2 para diagnosticar y mejorar una página real de atención al usuario.\n\n**Instrucciones**\n\n1. Elija una página de un servicio público o privado peruano que incluya un formulario (reserva de citas, solicitud de información, reclamos). Identifíquela por el nombre de la organización y del servicio.\n2. **Análisis HTTP:** con la pestaña Red de las herramientas de desarrollo, registre la solicitud principal y el envío del formulario: método, código de estado, cabeceras de caché y de seguridad (HSTS, CSP, atributos de cookies). Interprete al menos cinco hallazgos.\n3. **Auditoría de accesibilidad:** ejecute Lighthouse, recorra la página solo con teclado y verifique el contraste. Documente como mínimo seis barreras indicando el criterio WCAG 2.2 incumplido, su nivel (A o AA) y la evidencia (captura).\n4. **Reconstrucción:** rehaga la página en HTML5 semántico, sin CSS elaborado ni JavaScript, con encabezados jerárquicos, regiones (header, nav, main, footer), alternativas textuales y un formulario accesible con validación nativa y aviso de finalidad del tratamiento de datos conforme a la Ley 29733.\n5. Valide su HTML con el validador del W3C (cero errores) y alcance 90 o más puntos de accesibilidad en Lighthouse.\n\n**Entregables:** repositorio Git con al menos cinco commits descriptivos y un README; informe en PDF de máximo cuatro páginas con el análisis, la auditoría y la comparación antes y después.\n\n**Formato:** trabajo individual; entrega en el aula virtual al cierre de la semana 4.\n",
+        "rubric": [
+          {
+            "name": "Análisis HTTP fundamentado con evidencias de las herramientas de desarrollo",
+            "points": 4
+          },
+          {
+            "name": "Auditoría de accesibilidad con criterios WCAG 2.2 y evidencias",
+            "points": 5
+          },
+          {
+            "name": "Reconstrucción semántica, válida y accesible",
+            "points": 7
+          },
+          {
+            "name": "Uso de Git, documentación y redacción del informe",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: HTTP, HTML semántico y accesibilidad",
+        "questions": [
+          {
+            "prompt": "Un formulario de registro envía los datos de un usuario y el servidor crea una cuenta nueva. ¿Qué combinación de método y código de estado es la más adecuada?",
+            "options": [
+              "GET y 200 OK",
+              "POST y 201 Created",
+              "PUT y 204 No Content",
+              "POST y 302 Found"
+            ],
+            "correct": 1,
+            "explanation": "POST es el método para crear recursos y 201 Created comunica que se creó uno nuevo, idealmente con la cabecera Location. GET no debe modificar datos y 302 es una redirección, no un resultado de creación."
+          },
+          {
+            "prompt": "Un usuario autenticado intenta ver el historial clínico de otro paciente y el servidor se lo impide porque no tiene permiso. ¿Qué código de estado corresponde semánticamente?",
+            "options": [
+              "403 Forbidden",
+              "401 Unauthorized",
+              "404 Not Found",
+              "422 Unprocessable Content"
+            ],
+            "correct": 0,
+            "explanation": "403 indica que el servidor identificó al usuario pero no le concede acceso al recurso. 401 se usa cuando falta la autenticación o es inválida; 422 corresponde a datos que no cumplen las reglas de validación."
+          },
+          {
+            "prompt": "¿Qué atributo de cookie impide que un script inyectado en la página lea el identificador de sesión?",
+            "options": [
+              "Secure",
+              "SameSite=Strict",
+              "HttpOnly",
+              "Max-Age"
+            ],
+            "correct": 2,
+            "explanation": "HttpOnly hace que la cookie no sea accesible mediante document.cookie, lo que limita el robo de sesión por XSS. Secure exige HTTPS, SameSite mitiga la falsificación de solicitudes entre sitios y Max-Age define la vigencia."
+          },
+          {
+            "prompt": "Un botón 'Siguiente' está construido con un div y un evento de clic. Una persona que navega solo con teclado no puede activarlo. ¿Cuál es la mejor corrección?",
+            "options": [
+              "Agregar role='button' al div",
+              "Agregar tabindex='0' y un evento keydown al div",
+              "Agregar aria-label='Siguiente' al div",
+              "Reemplazar el div por un elemento button nativo"
+            ],
+            "correct": 3,
+            "explanation": "La primera regla de ARIA indica usar el elemento nativo: button ya es enfocable, responde a Enter y Espacio y expone su rol a las tecnologías de apoyo. Las otras opciones resuelven solo partes del problema y exigen más código propenso a errores."
+          },
+          {
+            "prompt": "Un diseñador propone párrafos en gris claro sobre fondo blanco con una relación de contraste de 2,8:1. ¿Qué dictamen corresponde según las WCAG 2.2 de nivel AA?",
+            "options": [
+              "Cumple, porque supera el mínimo de 2:1",
+              "Cumple solo si el texto está en negrita",
+              "No cumple: el texto normal requiere al menos 4,5:1",
+              "No cumple: el nivel AA exige 7:1"
+            ],
+            "correct": 2,
+            "explanation": "El criterio 1.4.3 (nivel AA) exige 4,5:1 para texto normal y 3:1 para texto grande. La relación de 7:1 corresponde al nivel AAA. Con 2,8:1 el texto no es legible para muchas personas con baja visión."
+          },
+          {
+            "prompt": "Una página de pagos se sirve por HTTPS, pero carga un script desde una dirección con HTTP. ¿Qué hace un navegador moderno?",
+            "options": [
+              "Bloquea el script por ser contenido mixto activo",
+              "Carga el script porque la página principal es segura",
+              "Convierte toda la página a HTTP",
+              "Solo muestra una advertencia en la barra de direcciones"
+            ],
+            "correct": 0,
+            "explanation": "Los navegadores bloquean el contenido mixto activo, como scripts e iframes, porque un atacante podría modificarlo en tránsito y controlar la página segura. El contenido mixto pasivo, como imágenes, suele actualizarse a HTTPS o generar advertencias."
+          },
+          {
+            "prompt": "¿Por qué una jerarquía de encabezados h1 a h6 sin saltos es importante para una persona que usa lector de pantalla?",
+            "options": [
+              "Porque determina el tamaño de letra por defecto",
+              "Porque permite navegar saltando entre secciones del contenido",
+              "Porque mejora la velocidad de carga de la página",
+              "Porque el validador rechaza documentos con saltos de nivel"
+            ],
+            "correct": 1,
+            "explanation": "Los lectores de pantalla generan una lista de encabezados que funciona como índice: el usuario salta directamente a la sección que le interesa. El tamaño visual se controla con CSS y la jerarquía no afecta la velocidad de carga."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Diseño de interfaces con CSS: cascada, maquetación y diseño adaptable",
+      "description": "Al finalizar la unidad, el estudiante diseña interfaces adaptables y consistentes con CSS moderno, aplicando la cascada, el modelo de caja, Flexbox, Grid y el enfoque móvil primero, y optimiza su rendimiento con evidencia de las métricas Core Web Vitals.",
+      "topics": [
+        "Cascada, especificidad, herencia y organización del CSS con BEM y capas",
+        "Modelo de caja, unidades relativas y tipografía fluida",
+        "Maquetación con Flexbox y CSS Grid",
+        "Diseño adaptable: móvil primero, consultas de medios y de contenedor",
+        "Sistemas de diseño con propiedades personalizadas y tokens",
+        "Rendimiento percibido: Core Web Vitals e imágenes optimizadas"
+      ],
+      "slides": [
+        {
+          "title": "Cómo decide el navegador qué estilo aplicar: la cascada",
+          "bullets": [
+            "Origen e importancia: estilos del navegador, del usuario y del autor; !important invierte el orden de prioridad.",
+            "Capas de cascada (@layer): declaran la prioridad entre restablecimiento, base, componentes y utilidades.",
+            "Luego decide la especificidad del selector y, en caso de empate, el orden de aparición: gana la última declaración.",
+            "Herencia: propiedades como color y font-family se heredan; margin, padding y border no se heredan."
+          ],
+          "notes": "Comience con un experimento: muestre un párrafo con tres reglas en conflicto y pida que predigan su color antes de revelarlo en el navegador. La mayoría de errores de CSS provienen de no comprender este algoritmo, no de desconocer propiedades. Explique que la cascada permite que el usuario aumente el tamaño de letra o fuerce un modo de alto contraste, por eso también es una característica de accesibilidad. Presente las capas de cascada como la herramienta moderna para ordenar estilos de terceros y propios sin pelear con la especificidad. Use la pestaña Estilos de las herramientas de desarrollo para mostrar reglas tachadas, es decir, sobrescritas, y su archivo de origen. Pregunta para la clase: ¿por qué abusar de !important se considera deuda técnica en un equipo de desarrollo?"
+        },
+        {
+          "title": "Especificidad: el cálculo que resuelve los conflictos",
+          "bullets": [
+            "Se expresa como terna (a, b, c): a = identificadores; b = clases, atributos y seudoclases; c = elementos y seudoelementos.",
+            "Ejemplos: 'nav a' vale (0,0,2); '.menu .activo' vale (0,2,0); '#principal' vale (1,0,0).",
+            "Los estilos en línea superan a cualquier selector; :where() aporta especificidad cero y :is() la de su argumento más específico.",
+            "Buena práctica: selectores de una sola clase, sin identificadores para estilos y sin anidamientos profundos."
+          ],
+          "notes": "Resuelva varios ejercicios de cálculo con la clase, aumentando la dificultad: combinaciones de clases, atributos, seudoclases como :hover y seudoelementos como ::before. Enfatice que la comparación se hace por posiciones y no como una suma decimal: once clases nunca superan a un identificador. Muestre cómo las herramientas de desarrollo indican la especificidad al pasar el cursor sobre un selector. Luego conecte con la mantenibilidad: un proyecto con selectores como '#contenido div ul li a' obliga a escribir selectores cada vez más largos para cualquier cambio. Presente :where() como recurso para estilos base fáciles de sobrescribir. Actividad: entregue una hoja de estilos con conflictos y pida a los equipos refactorizarla para que ningún selector supere (0,2,0) sin cambiar la apariencia de la página."
+        },
+        {
+          "title": "El modelo de caja y box-sizing",
+          "bullets": [
+            "Cada elemento es una caja con contenido, relleno (padding), borde y margen, en ese orden desde adentro hacia afuera.",
+            "Con content-box, width mide solo el contenido; con border-box incluye el relleno y el borde.",
+            "Regla base profesional: *, *::before, *::after { box-sizing: border-box; }.",
+            "Los márgenes verticales de bloques adyacentes colapsan; dentro de contenedores flex y grid no colapsan."
+          ],
+          "notes": "Use el panel de modelo de caja de las herramientas de desarrollo para que los estudiantes vean las cuatro capas con sus medidas. Plantee el cálculo clásico: una caja de 300 píxeles de ancho con 20 de relleno y 5 de borde ocupa 350 con content-box, lo que explica por qué tantas maquetaciones se desbordan. Demuestre el cambio con border-box. Explique el colapso de márgenes con dos párrafos consecutivos y cómo desaparece al usar gap en contenedores flex o grid, una razón más para preferir gap frente a los márgenes. Distinga los elementos de bloque y en línea, y el valor inline-block. Pregunta para la clase: ¿por qué un enlace con relleno vertical parece superponerse a las líneas vecinas? La respuesta es que se trata de un elemento en línea."
+        },
+        {
+          "title": "Unidades y tipografía fluida",
+          "bullets": [
+            "Absolutas (px) frente a relativas: rem al tamaño raíz, em al elemento, % al contenedor, vw y vh a la ventana.",
+            "Usar rem en la tipografía respeta el tamaño de letra que la persona configuró en su navegador.",
+            "clamp(mínimo, preferido, máximo) crea tipografía y espaciados fluidos sin consultas de medios.",
+            "Longitud de línea legible entre 45 y 75 caracteres, controlable con max-width: 65ch."
+          ],
+          "notes": "Muestre qué pasa cuando el usuario aumenta el tamaño de letra predeterminado del navegador a 20 píxeles: una página con tamaños en px no cambia, mientras que una con rem escala correctamente. Esto es especialmente relevante para adultos mayores, un público creciente en servicios bancarios y de salud. Explique la unidad ch como herramienta para limitar la longitud de línea según el rango clásico que recomienda Robert Bringhurst en su manual de estilo tipográfico. Construya en vivo una escala tipográfica con clamp y muestre cómo crece suavemente al redimensionar la ventana. Advierta sobre 100vh en móviles, donde la barra del navegador altera la altura disponible, y presente las unidades dvh y svh como alternativa moderna. Pregunta para la clase: ¿cuándo sí tiene sentido usar píxeles?"
+        },
+        {
+          "title": "Flexbox: distribución en una dimensión",
+          "bullets": [
+            "display: flex convierte a los hijos en elementos flexibles alineados sobre un eje principal y un eje transversal.",
+            "justify-content distribuye en el eje principal; align-items alinea en el eje transversal; gap define el espaciado.",
+            "flex: 1 1 0 combina crecimiento, contracción y base; flex-wrap permite pasar a nuevas líneas.",
+            "El orden visual y el del DOM deben coincidir: la propiedad order puede romper la navegación con teclado."
+          ],
+          "notes": "Explique Flexbox con la metáfora de una fila de personas en un banco: el eje principal es la dirección de la fila y el transversal, su altura. Haga demostraciones en vivo cambiando flex-direction y observe cómo justify-content y align-items intercambian su efecto visual. Detenga la explicación en flex-grow, flex-shrink y flex-basis, que concentran la mayoría de confusiones: muestre cómo tres tarjetas con flex: 1 se reparten el espacio por igual. Advierta sobre la accesibilidad: reordenar visualmente con order o con row-reverse hace que el foco del teclado salte de forma ilógica, lo que incumple el criterio 2.4.3 de las WCAG. Recomiende practicar con juegos interactivos de Flexbox y luego resolver los patrones de la siguiente diapositiva en el repositorio del curso."
+        },
+        {
+          "title": "Patrones resueltos con Flexbox",
+          "bullets": [
+            "Barra de navegación: logotipo a la izquierda y menú a la derecha con justify-content: space-between.",
+            "Centrado perfecto: display: flex; align-items: center; justify-content: center en el contenedor.",
+            "Pie de tarjeta alineado: tarjeta en columna y margin-top: auto en el botón final.",
+            "Grupo de etiquetas o filtros que se ajustan a varias líneas con flex-wrap: wrap y gap."
+          ],
+          "notes": "Esta diapositiva es práctica: construya cada patrón en vivo y deje el código en el repositorio del curso. El patrón de tarjetas con botón al pie resuelve un problema muy común en catálogos de productos peruanos, donde los nombres tienen distinta longitud y los botones quedan desalineados. Explique que margin-top: auto dentro de un contenedor flexible absorbe el espacio sobrante y empuja el elemento al final. Para la barra de navegación, muestre cómo se comporta en 320 píxeles y discuta si conviene un menú desplegable o una navegación inferior en móviles. Pida a los estudiantes que identifiquen estos cuatro patrones en la tienda en línea de una empresa peruana que conozcan y que los reproduzcan en un archivo de práctica antes de la siguiente sesión síncrona."
+        },
+        {
+          "title": "CSS Grid: maquetación en dos dimensiones",
+          "bullets": [
+            "display: grid define filas y columnas con grid-template-columns y grid-template-rows.",
+            "La unidad fr reparte el espacio disponible: 1fr 2fr asigna un tercio y dos tercios del ancho libre.",
+            "grid-template-areas permite dibujar la estructura con nombres legibles: cabecera, lateral, principal y pie.",
+            "Regla práctica: Grid cuando el diseño define el tamaño; Flexbox cuando el contenido define el tamaño."
+          ],
+          "notes": "Presente Grid como el primer sistema de maquetación real de CSS: durante años se usaron tablas, luego float y después marcos de rejilla basados en clases. Muestre el inspector de Grid de las herramientas de desarrollo, que dibuja líneas, áreas y números de pista. Construya la estructura de una página con grid-template-areas y luego reorganícela para escritorio cambiando solo esa propiedad dentro de una consulta de medios, sin tocar el HTML. Explique la unidad fr y su diferencia con los porcentajes cuando hay gap. Insista en que Grid y Flexbox no compiten: una página típica usa Grid para la estructura general y Flexbox dentro de cada componente. Pregunta para la clase: ¿cómo maquetaría un panel administrativo con barra lateral, cabecera fija y una rejilla de indicadores?"
+        },
+        {
+          "title": "Grid adaptable sin consultas de medios",
+          "bullets": [
+            "repeat(auto-fit, minmax(16rem, 1fr)) crea tantas columnas como quepan con un ancho mínimo garantizado.",
+            "auto-fill conserva las pistas vacías; auto-fit las colapsa y estira los elementos existentes.",
+            "minmax(0, 1fr) evita desbordes causados por contenido largo, como códigos o palabras sin espacios.",
+            "subgrid alinea el contenido interno de tarjetas hermanas con la rejilla del contenedor."
+          ],
+          "notes": "Esta técnica, difundida por especialistas como Jen Simmons y Rachel Andrew, reduce drásticamente la cantidad de consultas de medios. Demuéstrela redimensionando la ventana: la rejilla pasa de una a cuatro columnas sin una sola línea adicional. Explique la diferencia entre auto-fill y auto-fit con dos o tres tarjetas en una pantalla ancha, donde el efecto es visible. Muestre el problema clásico del desborde: una tarjeta con un código de pedido muy largo rompe la rejilla porque 1fr tiene como mínimo el tamaño del contenido; la solución es minmax(0, 1fr) u overflow-wrap. Presente subgrid, ya compatible con los principales navegadores, para alinear títulos, precios y botones entre tarjetas. Reto para la clase: construir el catálogo de una librería con portada, título, autor y precio alineados."
+        },
+        {
+          "title": "Diseño adaptable y enfoque móvil primero",
+          "bullets": [
+            "Marcotte (2010): rejillas fluidas, imágenes flexibles y consultas de medios como base del diseño adaptable.",
+            "Móvil primero (Wroblewski): estilos base para pantallas pequeñas y mejoras progresivas con min-width.",
+            "Puntos de quiebre definidos por el contenido, no por modelos de dispositivos, y expresados en rem.",
+            "Objetivos táctiles de al menos 24 × 24 px (WCAG 2.2) y, en controles principales, preferiblemente 44 × 44 px."
+          ],
+          "notes": "Contextualice con datos del país: los informes técnicos del INEI sobre tecnologías de la información muestran que el teléfono móvil es el principal medio de acceso a Internet de los peruanos, y en zonas rurales es prácticamente el único. Diseñar primero para escritorio y luego 'achicar' produce interfaces sobrecargadas en el celular. Explique que el enfoque móvil primero obliga a decidir qué es esencial y que las mejoras se agregan cuando hay espacio. Muestre por qué conviene definir los puntos de quiebre donde el diseño se rompe y no en anchos de modelos específicos, que cambian cada año. Recuerde la recomendación de 44 puntos de las guías de interfaz de Apple. Pregunta para la clase: ¿qué elementos de una página de inicio eliminaría o reubicaría en 320 píxeles?"
+        },
+        {
+          "title": "Consultas de contenedor y componentes autónomos",
+          "bullets": [
+            "container-type: inline-size convierte a un elemento en un contenedor que puede consultarse.",
+            "@container (min-width: 30rem) aplica estilos según el ancho del contenedor, no el de la ventana.",
+            "Un mismo componente de tarjeta funciona en una barra lateral angosta y en el área principal ancha.",
+            "Las consultas de preferencias respetan al usuario: prefers-reduced-motion y prefers-color-scheme."
+          ],
+          "notes": "Las consultas de contenedor son uno de los cambios más importantes de CSS en la última década y ya están disponibles en todos los navegadores modernos. Plantee el problema que resuelven: una tarjeta de producto que debe verse horizontal en el área principal y vertical en una barra lateral, en la misma pantalla, algo imposible con consultas de medios. Construya el ejemplo en vivo. Luego presente las consultas de preferencias del usuario: prefers-reduced-motion permite desactivar animaciones para personas con trastornos vestibulares, en línea con el criterio 2.3.3 de las WCAG, y prefers-color-scheme permite ofrecer un tema oscuro. Pregunta para la clase: ¿qué ventaja ofrecen los componentes autónomos cuando el equipo crece y varias personas maquetan distintas páginas a la vez?"
+        },
+        {
+          "title": "Propiedades personalizadas y tokens de diseño",
+          "bullets": [
+            "Variables CSS: --color-primario: #0f766e; se usan con var(--color-primario) y se heredan en cascada.",
+            "Tokens de diseño: decisiones de color, tipografía, espaciado y radios centralizadas en un solo archivo.",
+            "Temas claro y oscuro redefiniendo tokens dentro de prefers-color-scheme o de un atributo data-theme.",
+            "Verificar el contraste AA de cada combinación de texto y fondo antes de aprobar la paleta."
+          ],
+          "notes": "Explique que un sistema de diseño es un acuerdo entre diseño y desarrollo para tomar decisiones una vez y reutilizarlas. Muestre una hoja de estilos con el mismo color escrito 47 veces y simule un cambio de identidad de marca: con tokens, el cambio se hace en una línea. Diferencie las propiedades personalizadas de las variables de preprocesadores como Sass: las de CSS existen en tiempo de ejecución, se heredan y pueden cambiarse con JavaScript o con consultas de medios. Construya un tema oscuro en vivo redefiniendo cinco tokens. Conecte con la Tarea 2: cada equipo debe entregar su archivo de tokens con contraste verificado. Pregunta para la clase: ¿qué nombre es mejor para un token, --azul-500 o --color-accion-primaria, y por qué la respuesta depende del nivel de abstracción?"
+        },
+        {
+          "title": "Organizar el CSS: BEM, capas y marcos de trabajo",
+          "bullets": [
+            "BEM: .bloque, .bloque__elemento y .bloque--modificador mantienen la especificidad en (0,1,0).",
+            "Estructura sugerida: restablecimiento, tokens, base, diseño, componentes y utilidades, ordenados con @layer.",
+            "Marcos como Bootstrap aceleran prototipos; los de utilidades como Tailwind cambian la forma de escribir estilos.",
+            "Criterios de elección: tamaño del equipo, identidad visual, rendimiento, curva de aprendizaje y vida útil del proyecto."
+          ],
+          "notes": "Presente BEM con un componente real, como una tarjeta de producto, y muestre cómo los nombres comunican la estructura sin necesidad de leer el HTML. Luego discuta los marcos de trabajo con criterio y no con fanatismo. Bootstrap ofrece componentes listos y es útil para paneles internos, aunque tiende a uniformar la apariencia; Tailwind propone clases de utilidad y reduce el CSS no utilizado, pero llena el HTML de clases. En este curso se exige CSS propio para dominar los fundamentos: quien entiende la cascada, Grid y Flexbox aprende cualquier marco rápidamente. Retome el caso Café Selva Central y pregunte: ¿qué riesgos tiene adoptar una plantilla comercial sin entender su CSS cuando la empresa necesita una identidad visual propia y diferenciada?"
+        },
+        {
+          "title": "Core Web Vitals: medir la experiencia real",
+          "bullets": [
+            "LCP (Largest Contentful Paint): bueno si es de 2,5 s o menos en el percentil 75 de las visitas.",
+            "INP (Interaction to Next Paint): bueno si es de 200 ms o menos; reemplazó a FID en marzo de 2024.",
+            "CLS (Cumulative Layout Shift): bueno si es de 0,1 o menos; mide los saltos inesperados del contenido.",
+            "Datos de laboratorio (Lighthouse) para diagnosticar; datos de campo de usuarios reales para decidir."
+          ],
+          "notes": "Explique por qué Google definió estas métricas en 2020: los puntajes técnicos no siempre reflejaban lo que siente el usuario. LCP responde a la pregunta ¿ya cargó lo importante?; INP, ¿responde cuando toco?; CLS, ¿se queda quieto lo que intento leer o tocar? Comente que estas métricas forman parte de las señales de experiencia de página que considera el buscador, aunque el contenido relevante sigue siendo lo principal. Diferencie los datos de laboratorio, obtenidos en condiciones controladas, de los datos de campo recolectados de usuarios reales. Haga una demostración de CLS con un banner que se inserta tarde. Pregunta para la clase: en una tienda donde el botón de compra se desplaza justo cuando el usuario va a tocarlo, ¿qué consecuencias comerciales y de confianza puede haber?"
+        },
+        {
+          "title": "Optimización de imágenes, fuentes y carga crítica",
+          "bullets": [
+            "Imágenes en AVIF o WebP, con srcset y sizes para varias resoluciones, y width y height declarados.",
+            "loading='lazy' solo para imágenes fuera de la primera pantalla; fetchpriority='high' para la imagen LCP.",
+            "Fuentes: limitar familias y grosores, usar WOFF2, font-display: swap y precargar la fuente principal.",
+            "Presupuesto de rendimiento: por ejemplo, menos de 1 MB por página y LCP menor de 2,5 s en 4G simulado."
+          ],
+          "notes": "Muestre una página de catálogo antes y después de optimizar sus imágenes: es común pasar de varios megabytes a unos cientos de kilobytes sin pérdida visible de calidad. Explique cómo el navegador elige la imagen adecuada a partir de srcset y sizes según el ancho de la pantalla y la densidad de píxeles. Advierta el error frecuente de aplicar carga diferida a la imagen principal, que empeora el LCP. Sobre las fuentes, explique el fenómeno del texto invisible mientras se descarga la tipografía y cómo font-display: swap lo evita. Presente el concepto de presupuesto de rendimiento como un acuerdo del equipo que se verifica en cada entrega. Cierre la unidad recordando que la Tarea 2 exige mediciones antes y después, y que el Cuestionario 2 se rinde en la semana 8."
+        }
+      ],
+      "reading": {
+        "title": "Maquetar con intención: cascada, Flexbox, Grid y rendimiento",
+        "minutes": 35,
+        "content": "## 1. La cascada no es un defecto: es el algoritmo\n\nCSS significa hojas de estilo en cascada. Cuando dos reglas compiten por la misma propiedad de un elemento, el navegador decide con un algoritmo ordenado: origen e importancia (estilos del navegador, del usuario y del autor, y declaraciones `!important`), capas de cascada (`@layer`), especificidad del selector y, por último, orden de aparición. La especificidad se expresa como una terna (a, b, c): a cuenta identificadores; b, clases, atributos y seudoclases; y c, elementos y seudoelementos.\n\n```css\n/* (0,0,2) */ nav a          { color: #1d4ed8; }\n/* (0,2,0) */ .menu .activo  { color: #b91c1c; }\n/* (1,0,0) */ #principal     { color: #15803d; }\n```\n\nUn equipo que abusa de identificadores y de `!important` termina en una \"guerra de especificidad\", donde cada corrección exige un selector más fuerte. La metodología BEM (bloque, elemento, modificador), creada en Yandex, mantiene la especificidad plana con una sola clase por regla: `.tarjeta`, `.tarjeta__titulo`, `.tarjeta--destacada`.\n\n## 2. El modelo de caja y las unidades\n\nTodo elemento es una caja con contenido, relleno (padding), borde y margen. Por defecto, `width` mide solo el contenido, lo que provoca desbordes cuando se suman relleno y borde. La regla `box-sizing: border-box` hace que el ancho incluya relleno y borde, y es la primera línea de casi cualquier hoja de estilos profesional.\n\nLas unidades relativas respetan las preferencias del usuario: `rem` se basa en el tamaño de letra raíz que la persona configuró en su navegador, `em` en el del elemento, `%` y `vw` en el contenedor o la ventana. La función `clamp(mínimo, preferido, máximo)` produce tipografía fluida sin consultas de medios:\n\n```css\n:root { --texto-base: clamp(1rem, 0.9rem + 0.5vw, 1.25rem); }\nh1    { font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem); }\n```\n\n## 3. Flexbox y Grid: herramientas complementarias\n\nFlexbox distribuye elementos en **una dimensión** (fila o columna) y es ideal para barras de navegación, grupos de botones y alineación de contenido. Grid organiza en **dos dimensiones** y es la herramienta para la estructura de la página y las rejillas de tarjetas. Regla práctica: si el contenido define el tamaño, Flexbox; si el diseño define el tamaño, Grid.\n\n```css\n.barra { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }\n\n.catalogo {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));\n  gap: 1.5rem;\n}\n\n.pagina { display: grid; grid-template-areas: \"cabecera\" \"principal\" \"pie\"; }\n\n@media (min-width: 64rem) {\n  .pagina {\n    grid-template-columns: 16rem 1fr;\n    grid-template-areas: \"cabecera cabecera\" \"lateral principal\" \"pie pie\";\n  }\n}\n```\n\nLa declaración `repeat(auto-fit, minmax(16rem, 1fr))` crea tantas columnas como quepan, cada una de al menos 16 rem: en un celular habrá una, en una tableta dos y en una laptop cuatro, sin escribir una sola consulta de medios.\n\n## 4. Móvil primero y consultas de contenedor\n\nEthan Marcotte acuñó en 2010 el término diseño web adaptable (*responsive web design*) a partir de tres ingredientes: rejillas fluidas, imágenes flexibles y consultas de medios. Luke Wroblewski propuso después el enfoque móvil primero: diseñar primero para la pantalla más pequeña obliga a priorizar el contenido, y luego se añaden mejoras con `min-width`. En un país donde, según los informes técnicos del INEI, el celular es el principal medio de acceso a Internet, este enfoque es una condición de negocio y no una moda.\n\nLas consultas de contenedor (`@container`) dan un paso más: un componente se adapta al espacio de su contenedor y no al de la ventana, de modo que la misma tarjeta funciona en una barra lateral angosta o en el área principal.\n\n## 5. Rendimiento: lo que el usuario siente\n\nGoogle propuso en 2020 las Core Web Vitals para medir la experiencia real. Los umbrales de una experiencia \"buena\", medidos en el percentil 75 de las visitas, son: **LCP** (renderizado del elemento de contenido más grande) de 2,5 s o menos; **INP** (interacción hasta el siguiente pintado, que reemplazó a FID en marzo de 2024) de 200 ms o menos; y **CLS** (cambio acumulado de diseño) de 0,1 o menos.\n\nLas causas más comunes de un mal desempeño en sitios de mypes son las imágenes enormes, las fuentes que bloquean el renderizado y los banners sin espacio reservado. Las correcciones son concretas:\n\n```html\n<img src=\"cafe-800.avif\"\n     srcset=\"cafe-400.avif 400w, cafe-800.avif 800w, cafe-1600.avif 1600w\"\n     sizes=\"(min-width: 64rem) 50vw, 100vw\"\n     width=\"800\" height=\"533\" fetchpriority=\"high\"\n     alt=\"Taza de café de Villa Rica sobre una mesa de madera\">\n```\n\nLos atributos `width` y `height` permiten reservar el espacio y evitar saltos (CLS); `srcset` y `sizes` entregan la resolución adecuada; los formatos AVIF y WebP suelen reducir el peso frente a JPEG de forma significativa; y `loading=\"lazy\"` difiere las imágenes fuera de la pantalla inicial, nunca la imagen principal.\n\n## Ideas clave\n\n- Entender la cascada y mantener baja la especificidad evita hojas de estilo frágiles.\n- Flexbox para una dimensión y Grid para dos; ambos reducen la necesidad de consultas de medios.\n- El rendimiento se mide con datos (LCP, INP, CLS) antes y después de cada optimización.\n"
+      },
+      "case": {
+        "title": "Caso: Café Selva Central y el catálogo que no vendía en el celular",
+        "content": "**Café Selva Central S.A.C.** es una empresa familiar de La Merced, Chanchamayo (Junín), que tuesta y comercializa café de especialidad de productores de la zona. Desde 2022 opera una tienda en línea que en 2025 facturó S/ 1,2 millones, el 38 % de sus ventas totales. Sus clientes están principalmente en Lima, Arequipa y Trujillo, y en fechas como el Día del Padre y Navidad el tráfico se triplica.\n\nEl sitio fue diseñado en 2019 por una agencia con un ancho fijo de 1 200 píxeles, columnas construidas con `float` y una hoja de estilos de 4 800 líneas en la que conviven 312 declaraciones con `!important`. Cuando el área comercial pidió adaptarlo a celulares, un practicante añadió consultas de medios página por página, lo que produjo estilos duplicados y comportamientos imprevisibles: al corregir el menú en una página se rompía la grilla de productos en otra.\n\nEl nuevo jefe de Comercio Electrónico, Rodrigo Quispe, reunió estos datos del último trimestre:\n\n| Indicador | Móvil | Escritorio |\n|---|---|---|\n| Participación en las visitas | 76 % | 24 % |\n| Tasa de conversión | 0,6 % | 2,3 % |\n| LCP (percentil 75) | 6,9 s | 2,1 s |\n| CLS (percentil 75) | 0,32 | 0,05 |\n| Peso de la página de catálogo | 7,4 MB | 7,4 MB |\n\nLa imagen principal de la portada es un JPEG de 3,8 MB sin dimensiones declaradas, el banner de ofertas se inserta tarde y desplaza el contenido, y se cargan cuatro familias tipográficas con seis grosores cada una. Los botones de \"Agregar al carrito\" miden 28 píxeles de alto y están muy juntos.\n\nEn el equipo hay tres posturas. La agencia propone migrar a una plantilla comercial basada en Bootstrap, lista en tres semanas, aunque con una apariencia similar a la de muchas otras tiendas. Una desarrolladora independiente propone reconstruir la capa visual con CSS propio usando Grid, Flexbox, propiedades personalizadas y BEM, en siete semanas. El área de marketing, por su parte, insiste en reemplazar la imagen principal por un video de reproducción automática y un carrusel de cinco diapositivas, porque \"la competencia lo tiene\".\n\nLa campaña de Navidad empieza en once semanas y el presupuesto aprobado es de S/ 25 000. Rodrigo debe decidir qué hacer, en qué orden y cómo medirá el resultado ante la gerencia.\n",
+        "questions": [
+          "¿Qué causas técnicas explican los valores de LCP y CLS en móvil? Relacione cada causa con una corrección concreta de HTML o CSS.",
+          "Compare la plantilla basada en Bootstrap y la reconstrucción con CSS propio según especificidad, mantenimiento, rendimiento, identidad de marca y plazo. ¿Qué elegiría y por qué?",
+          "¿Cómo respondería, con datos y criterios de accesibilidad y rendimiento, a la propuesta de marketing del video de reproducción automática y el carrusel?",
+          "Diseñe un plan de once semanas con hitos medibles en Core Web Vitals y en la tasa de conversión móvil, indicando cómo y cuándo medirá cada uno."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Interfaz adaptable y sistema de diseño del proyecto integrador",
+        "instructions": "**Objetivo:** construir la capa de presentación del proyecto integrador con CSS moderno, enfoque móvil primero y rendimiento medido.\n\n**Contexto:** en la semana 7 cada equipo de tres integrantes definió su proyecto: una aplicación web para una mype real o verosímil (restaurante, hostal, botica, taller, academia). Esta tarea es la primera entrega incremental.\n\n**Qué entregar**\n\n1. **Sistema de diseño** en un archivo `tokens.css` con propiedades personalizadas para colores (contraste AA verificado), tipografía fluida con `clamp()`, espaciados y radios.\n2. **Tres vistas** en HTML semántico y CSS propio: página de inicio, listado o catálogo con rejilla de tarjetas y formulario principal. Use Grid para la estructura y Flexbox para los componentes; nombre las clases con BEM.\n3. **Diseño adaptable verificado** en 320, 768 y 1 280 píxeles de ancho, sin desplazamiento horizontal, con capturas de las tres resoluciones.\n4. **Informe de rendimiento:** mediciones de Lighthouse en modo móvil (LCP, CLS y peso total) antes y después de optimizar imágenes (AVIF o WebP, `srcset`, dimensiones declaradas) y fuentes, explicando cada mejora.\n5. **Trabajo en equipo:** repositorio con ramas por funcionalidad y al menos una solicitud de integración revisada por otro integrante.\n\n**Formato:** informe de máximo tres páginas más el repositorio; entrega al cierre de la semana 8. Cada integrante debe registrar commits propios: la nota puede individualizarse según el historial.\n",
+        "rubric": [
+          {
+            "name": "Maquetación con Grid y Flexbox sobre HTML semántico",
+            "points": 6
+          },
+          {
+            "name": "Diseño adaptable verificado en tres anchos de pantalla",
+            "points": 5
+          },
+          {
+            "name": "Sistema de diseño y organización del CSS con BEM",
+            "points": 4
+          },
+          {
+            "name": "Rendimiento y accesibilidad medidos y explicados",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: CSS, maquetación y rendimiento",
+        "questions": [
+          {
+            "prompt": "Un enlace coincide con dos reglas: 'nav ul a' con color azul, declarada al final, y '.menu .activo' con color rojo, declarada antes. Sin !important, ¿de qué color se mostrará?",
+            "options": [
+              "Azul, porque la regla aparece después",
+              "Rojo, porque su especificidad (0,2,0) supera a (0,0,3)",
+              "Azul, porque los selectores de elemento tienen prioridad",
+              "Depende del navegador utilizado"
+            ],
+            "correct": 1,
+            "explanation": "La especificidad se compara antes que el orden de aparición. Dos clases (0,2,0) superan a tres elementos (0,0,3), así que gana el rojo aunque se declare antes. El orden solo decide cuando la especificidad empata."
+          },
+          {
+            "prompt": "Una caja tiene width: 300px, padding: 20px y border: 5px, con box-sizing: content-box. ¿Cuál es su ancho total renderizado, sin contar márgenes?",
+            "options": [
+              "300 px",
+              "325 px",
+              "350 px",
+              "340 px"
+            ],
+            "correct": 2,
+            "explanation": "Con content-box, width mide solo el contenido: 300 + 2 × 20 de relleno + 2 × 5 de borde = 350 px. Con border-box el ancho total sería 300 px y el área de contenido se reduciría a 250 px."
+          },
+          {
+            "prompt": "Necesita una rejilla de tarjetas que muestre una columna en celulares y tantas columnas como quepan en pantallas grandes, sin consultas de medios. ¿Qué declaración usaría?",
+            "options": [
+              "display: flex; flex-wrap: nowrap;",
+              "grid-template-columns: repeat(4, 1fr);",
+              "float: left; width: 25%;",
+              "grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));"
+            ],
+            "correct": 3,
+            "explanation": "auto-fit con minmax crea tantas columnas como quepan con un mínimo de 16 rem y las estira para ocupar el espacio libre. repeat(4, 1fr) fija siempre cuatro columnas, nowrap impide el ajuste y float es una técnica obsoleta para maquetar."
+          },
+          {
+            "prompt": "Lighthouse reporta un CLS de 0,28 en la portada de una tienda en línea. ¿Cuál es la causa más probable y su corrección?",
+            "options": [
+              "Imágenes y banners sin espacio reservado; declarar width y height o aspect-ratio",
+              "Demasiadas solicitudes HTTP; combinar todos los archivos CSS",
+              "Tareas largas de JavaScript; dividirlas en fragmentos",
+              "Servidor lento; contratar un plan de alojamiento mayor"
+            ],
+            "correct": 0,
+            "explanation": "CLS mide desplazamientos inesperados del diseño, causados típicamente por elementos que se cargan o insertan sin espacio reservado. Las tareas largas afectan principalmente al INP y un servidor lento afecta sobre todo al LCP."
+          },
+          {
+            "prompt": "En una hoja de estilos escrita con enfoque móvil primero, ¿cómo se plantean normalmente las consultas de medios?",
+            "options": [
+              "Con max-width, quitando estilos a medida que la pantalla se reduce",
+              "Con min-width, añadiendo mejoras a medida que la pantalla crece",
+              "Con orientation: landscape para todas las tabletas",
+              "Con un archivo CSS distinto para cada modelo de celular"
+            ],
+            "correct": 1,
+            "explanation": "En el enfoque móvil primero los estilos base sirven a la pantalla pequeña y las consultas con min-width añaden columnas y detalles cuando hay más espacio. Así los celulares procesan menos reglas que no necesitan."
+          },
+          {
+            "prompt": "¿Cuál de estas decisiones sobre la imagen principal de una página, que es el elemento LCP, resulta contraproducente?",
+            "options": [
+              "Servirla en AVIF o WebP con srcset",
+              "Declarar sus atributos width y height",
+              "Aplicarle loading='lazy' para diferir su carga",
+              "Marcarla con fetchpriority='high'"
+            ],
+            "correct": 2,
+            "explanation": "La carga diferida retrasa la imagen que define el LCP, porque el navegador espera a calcular el diseño antes de solicitarla. loading='lazy' debe reservarse para imágenes fuera de la pantalla inicial; las demás opciones mejoran el LCP o el CLS."
+          },
+          {
+            "prompt": "¿Por qué la metodología BEM facilita el mantenimiento de hojas de estilo grandes en un equipo?",
+            "options": [
+              "Porque mantiene la especificidad baja y uniforme con una clase por regla",
+              "Porque elimina la necesidad de usar clases en el HTML",
+              "Porque obliga a usar identificadores únicos en cada elemento",
+              "Porque genera el CSS automáticamente a partir del HTML"
+            ],
+            "correct": 0,
+            "explanation": "BEM nombra bloques, elementos y modificadores con clases únicas y descriptivas, de modo que casi todas las reglas tienen especificidad (0,1,0). Así se evitan las guerras de especificidad y los estilos de un componente no afectan a otros."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · JavaScript en el navegador: DOM, eventos, asincronía y consumo de API",
+      "description": "Al finalizar la unidad, el estudiante programa la interacción de una aplicación web con JavaScript moderno: manipula el DOM, gestiona eventos, valida formularios y consume API REST de forma asíncrona, controlando errores, estados de carga y riesgos de inyección de código en el cliente.",
+      "topics": [
+        "JavaScript moderno: tipos, funciones, ámbito, clausuras y módulos ES",
+        "El DOM: selección, creación y modificación segura de elementos",
+        "Eventos, propagación, delegación y validación de formularios",
+        "Asincronía: bucle de eventos, promesas y async/await",
+        "Consumo de API REST con fetch, JSON, CORS y almacenamiento local",
+        "Estado, componentes y criterios para adoptar un framework"
+      ],
+      "slides": [
+        {
+          "title": "JavaScript en contexto: el lenguaje de la plataforma web",
+          "bullets": [
+            "Creado por Brendan Eich en 1995 en Netscape; estandarizado como ECMAScript por Ecma International (comité TC39).",
+            "Desde ES2015 se publica una versión anual: let y const, clases, módulos, promesas, async/await y operadores modernos.",
+            "Se ejecuta en navegadores, servidores (Node.js), aplicaciones móviles híbridas y aplicaciones de escritorio.",
+            "Mejora progresiva: el contenido esencial funciona sin JavaScript y el script añade interactividad."
+          ],
+          "notes": "Contextualice la historia brevemente: JavaScript nació apresurado en Netscape y arrastra decisiones de diseño discutibles, pero el proceso del comité TC39, con propuestas que avanzan por etapas, lo ha convertido en un lenguaje moderno y bien especificado. Explique que el estudiante ya domina los conceptos de programación en Python y Java; aquí aprenderá un tercer lenguaje con un modelo de ejecución distinto, orientado a eventos y a la asincronía. Presente la mejora progresiva como filosofía profesional: un formulario debe poder enviarse aun si el script falla por una mala conexión, algo frecuente en redes móviles de provincia. Pregunta para la clase: ¿qué partes de una tienda en línea deberían funcionar incluso si JavaScript no carga y cuáles pueden depender de él sin perjudicar al usuario?"
+        },
+        {
+          "title": "Del Python y Java a JavaScript: diferencias que causan errores",
+          "bullets": [
+            "Tipado dinámico con coerción implícita: '5' + 1 es '51' y '5' - 1 es 4; usar siempre === y !==.",
+            "let y const tienen ámbito de bloque; var tiene ámbito de función y se eleva (hoisting): evitarlo.",
+            "Valores falsy: false, 0, '', null, undefined y NaN; los arreglos y objetos vacíos son truthy.",
+            "Números de doble precisión: 0.1 + 0.2 no es exactamente 0.3; manejar dinero en céntimos enteros."
+          ],
+          "notes": "Presente cada diferencia con un fragmento ejecutado en la consola del navegador y pida a los estudiantes que predigan el resultado antes de ejecutarlo; los errores de predicción fijan el aprendizaje. Compare con Python, donde '5' + 1 produce un error de tipo, y con Java, donde la verificación ocurre al compilar. Explique por qué la igualdad flexible == genera resultados sorprendentes, como que 0 == '' sea verdadero. Dedique tiempo al tema monetario: en aplicaciones de pagos, cobranzas o cambio de divisas, los errores de redondeo con decimales binarios pueden generar diferencias contables; la práctica recomendada es trabajar en céntimos enteros y formatear con Intl.NumberFormat al mostrar. Pregunta para la clase: ¿por qué la condición if (lista) siempre es verdadera aunque la lista esté vacía?"
+        },
+        {
+          "title": "Funciones, clausuras y funciones de orden superior",
+          "bullets": [
+            "Funciones flecha: const total = (items) => items.reduce((s, i) => s + i.precio, 0).",
+            "Clausura: una función recuerda las variables del ámbito donde fue creada, incluso después de que este termina.",
+            "Funciones de orden superior: map, filter, reduce, find y sort reciben funciones como argumento.",
+            "Patrones basados en clausuras: debounce, memoización y fábricas de funciones con configuración."
+          ],
+          "notes": "Relacione las funciones de orden superior con las expresiones lambda y los streams que los estudiantes vieron en Java: la idea es la misma, transformar colecciones de forma declarativa. Escriba en vivo una cadena con filter, map y reduce para calcular el total de un carrito con IGV del 18 %, y compárela con un bucle tradicional. Luego explique la clausura con un contador privado y, sobre todo, con la implementación de debounce, que usarán en el cotizador y en los buscadores del proyecto: la función recuerda el temporizador anterior y lo cancela. Advierta que las funciones flecha no tienen su propio this, lo que importa al trabajar con métodos de objetos y eventos. Pregunta para la clase: ¿qué ventajas ofrece una función pura cuando hay que escribir pruebas unitarias?"
+        },
+        {
+          "title": "Objetos, arreglos, desestructuración y módulos ES",
+          "bullets": [
+            "Literales de objeto y arreglo; desestructuración: const { nombre, precio } = producto.",
+            "Operador de propagación para copiar sin mutar: const nuevo = { ...producto, stock: 0 }.",
+            "Encadenamiento opcional (?.) y fusión nula (??) para datos incompletos provenientes de una API.",
+            "Módulos ES con export e import: cada archivo tiene su ámbito y se carga con script type='module'."
+          ],
+          "notes": "Muestre cómo la desestructuración y la propagación simplifican el manejo de datos JSON que llegan de una API, y por qué la inmutabilidad, es decir, crear copias en lugar de modificar el original, facilita razonar sobre el estado de la interfaz. Explique el encadenamiento opcional con un caso real: una API simulada de consulta de DNI que a veces no devuelve la dirección; sin ?. el código falla con un error de tipo. Diferencie ?? de ||: con ||, un stock de 0 se reemplazaría erróneamente por el valor por defecto. Presente los módulos ES como el equivalente de los paquetes de Java y los módulos de Python; explique que los scripts de tipo módulo se difieren automáticamente y trabajan en modo estricto. Actividad: refactorizar un archivo de 300 líneas en tres módulos con responsabilidades claras."
+        },
+        {
+          "title": "El DOM como árbol de objetos",
+          "bullets": [
+            "El navegador convierte el HTML en un árbol de nodos: documento, elementos, atributos y texto.",
+            "Selección con document.querySelector y querySelectorAll mediante selectores CSS; getElementById para identificadores.",
+            "Atributos data-* y la propiedad dataset para asociar datos a elementos sin abusar de las clases.",
+            "classList.add, remove y toggle para cambiar estados visuales, delegando la apariencia a CSS."
+          ],
+          "notes": "Abra la pestaña Elementos y la consola en paralelo para mostrar que cada etiqueta es un objeto con propiedades y métodos. Seleccione un elemento con querySelector, cambie su texto y su clase en vivo, y observe el resultado. Explique la diferencia entre el HTML original, que es texto, y el DOM, que es una estructura viva que JavaScript puede modificar; por eso 'ver código fuente' y el inspector muestran cosas distintas. Recomiende cambiar clases en lugar de estilos en línea desde JavaScript, para que la apariencia siga definida en CSS y el código sea mantenible. Muestre los atributos data como forma limpia de guardar identificadores de producto. Pregunta para la clase: ¿qué devuelve querySelectorAll y en qué se diferencia de un arreglo común de JavaScript?"
+        },
+        {
+          "title": "Modificar el DOM de forma segura y eficiente",
+          "bullets": [
+            "Crear nodos con createElement, asignar texto con textContent y añadirlos con append o replaceChildren.",
+            "innerHTML con datos externos permite XSS (OWASP A03:2021): nunca insertar entradas del usuario como marcado.",
+            "Agrupar cambios con DocumentFragment para evitar recálculos de diseño repetidos al renderizar listas.",
+            "Elemento template de HTML: plantillas inertes que se clonan con cloneNode(true) y se completan con textContent."
+          ],
+          "notes": "Esta diapositiva es crítica para la seguridad. Muestre en un entorno controlado cómo una cadena con una etiqueta img y un atributo onerror, insertada con innerHTML, ejecuta código: ese es el mecanismo del ataque descrito en el caso CambiaYa. Luego muestre la versión segura con textContent. Explique que la política de seguridad de contenido (CSP) agrega una segunda barrera al bloquear scripts en línea. Sobre eficiencia, explique que cada modificación que afecta la geometría puede provocar un recálculo de diseño; construir los nodos en un fragmento y añadirlos de una vez es más eficiente al renderizar listas largas. Demuestre el elemento template para generar tarjetas de producto. Actividad: renderizar una lista de cien productos a partir de un arreglo JSON sin usar innerHTML."
+        },
+        {
+          "title": "Eventos: captura, burbujeo y delegación",
+          "bullets": [
+            "addEventListener(tipo, manejador, opciones); opciones útiles: once, passive y signal para eliminar escuchadores.",
+            "Fases: captura desde la raíz, objetivo y burbujeo hacia la raíz; stopPropagation detiene el recorrido.",
+            "Delegación: un escuchador en el contenedor y event.target.closest('[data-id]') para identificar el origen.",
+            "preventDefault evita la acción nativa, como enviar un formulario o seguir un enlace."
+          ],
+          "notes": "Dibuje el árbol de una lista de productos y muestre el recorrido de un clic desde el documento hasta el botón y de regreso. Haga una demostración registrando escuchadores en tres niveles y observe el orden de ejecución en la consola. Luego presente la delegación de eventos con una lista que se regenera al filtrar: si se registraran escuchadores en cada botón, habría que volver a registrarlos tras cada filtrado y se acumularían en memoria. Explique la opción passive para eventos de desplazamiento, que mejora la fluidez, y signal con AbortController para eliminar escuchadores en bloque. Advierta sobre el abuso de stopPropagation, que rompe otras funcionalidades como la analítica. Pregunta para la clase: ¿por qué usar closest en lugar de comparar directamente event.target con el botón?"
+        },
+        {
+          "title": "Validación de formularios con la API de restricciones",
+          "bullets": [
+            "Los atributos nativos required, pattern, min, max y type generan validación sin código adicional.",
+            "La API de restricciones expone validity, checkValidity() y setCustomValidity() para reglas propias.",
+            "Mensajes de error junto al campo, vinculados con aria-describedby y anunciados con aria-live.",
+            "La validación del cliente mejora la experiencia; el servidor vuelve a validar siempre todos los datos."
+          ],
+          "notes": "Construya en vivo la validación de un formulario de registro de clientes con DNI de ocho dígitos, correo y fecha de nacimiento. Muestre que el navegador ya valida mucho por sí mismo y que el objeto validity indica exactamente qué falló: valueMissing, patternMismatch o tooShort, entre otros. Luego implemente una regla propia, como verificar que la fecha corresponda a una persona mayor de edad, con setCustomValidity. Explique el patrón de validar al perder el foco y al enviar, en lugar de en cada pulsación, para no agobiar al usuario mientras escribe. Recalque, con una demostración desde la consola, que cualquier persona puede saltarse la validación del cliente y enviar datos arbitrarios al servidor. Pregunta para la clase: ¿qué reglas solo pueden validarse en el servidor y por qué?"
+        },
+        {
+          "title": "El bucle de eventos: por qué JavaScript no se bloquea",
+          "bullets": [
+            "Un solo hilo con una pila de llamadas; las operaciones lentas se delegan a las API del navegador.",
+            "Al terminar, sus funciones de retorno pasan a colas: microtareas (promesas) y tareas (temporizadores, eventos).",
+            "Tras cada tarea se vacía toda la cola de microtareas y luego el navegador puede repintar la pantalla.",
+            "Las tareas de más de 50 ms bloquean la interacción y empeoran el INP: dividirlas o usar Web Workers."
+          ],
+          "notes": "Use una visualización paso a paso del bucle de eventos con un ejemplo que combine console.log, setTimeout con cero milisegundos y una promesa resuelta; pida a los estudiantes que predigan el orden antes de mostrarlo. Explique la consecuencia práctica: si un manejador de clic ejecuta un cálculo pesado de dos segundos, la página entera se congela, incluidos el desplazamiento y los demás botones. Conecte con la métrica INP vista en la unidad anterior y muestre en la pestaña Rendimiento cómo se identifican las tareas largas, marcadas en rojo. Mencione que Philip Roberts popularizó esta explicación en una conferencia muy difundida en 2014. Pregunta para la clase: ¿por qué un setTimeout de cero milisegundos no se ejecuta inmediatamente después de la línea que lo programa?"
+        },
+        {
+          "title": "Promesas y async/await",
+          "bullets": [
+            "Una promesa tiene tres estados: pendiente, cumplida o rechazada; se encadena con then, catch y finally.",
+            "async/await (ES2017) permite escribir flujos asíncronos con apariencia secuencial y manejo con try/catch.",
+            "Promise.all ejecuta en paralelo y falla si una falla; Promise.allSettled reporta todos los resultados.",
+            "Error común: usar await dentro de un bucle con solicitudes independientes; preferir Promise.all."
+          ],
+          "notes": "Explique la evolución desde las funciones de retorno anidadas, el llamado 'infierno de callbacks', hacia las promesas y luego hacia async/await. Escriba el mismo flujo de tres formas y pida a los estudiantes que comparen la legibilidad y el manejo de errores. Recalque que una función async siempre devuelve una promesa y que olvidar el await es un error frecuente que muestra objetos de promesa pendientes en la interfaz. Muestre la diferencia de tiempo entre cargar tres recursos independientes en secuencia y en paralelo con Promise.all, usando la pestaña Red. Presente allSettled para paneles que consultan varias fuentes y deben mostrar lo disponible aunque una falle. Pregunta para la clase: ¿qué ocurre con una promesa rechazada que nadie captura y cómo aparece en la consola?"
+        },
+        {
+          "title": "Consumir una API REST con fetch",
+          "bullets": [
+            "fetch(recurso, opciones) devuelve una promesa de Response; verificar response.ok antes de leer el cuerpo.",
+            "Enviar JSON: method 'POST', cabecera Content-Type: application/json y body: JSON.stringify(datos).",
+            "AbortController cancela solicitudes obsoletas y permite implementar tiempos de espera máximos.",
+            "Estados de interfaz explícitos: cargando, vacío, error recuperable y éxito, anunciados con aria-live."
+          ],
+          "notes": "Desarrolle en vivo un pequeño cliente que consuma una API de prueba con datos de productos, siguiendo el patrón de la lectura de la unidad. Primero escriba la versión ingenua y luego hágala robusta paso a paso: verificar response.ok, capturar errores de red, mostrar estados y cancelar solicitudes anteriores. Explique que fetch no rechaza ante un 404 o un 500 y que esa es la causa del 'S/ NaN' del caso CambiaYa. Mencione que el BCRP publica sus series estadísticas con una interfaz de consulta programática, un buen ejemplo para practicar el consumo de datos públicos peruanos. Pida a los estudiantes que observen en la pestaña Red las cabeceras y el cuerpo de cada solicitud. Pregunta para la clase: ¿qué debería ver el usuario si la API tarda más de diez segundos?"
+        },
+        {
+          "title": "CORS, JSON y almacenamiento en el navegador",
+          "bullets": [
+            "Política del mismo origen: esquema, dominio y puerto deben coincidir para leer respuestas de otro sitio.",
+            "CORS lo autoriza el servidor con Access-Control-Allow-Origin; las solicitudes no simples envían antes una consulta OPTIONS.",
+            "localStorage y sessionStorage guardan cadenas: serializar con JSON.stringify y leer con JSON.parse.",
+            "Nunca almacenar tokens de sesión ni datos personales sensibles en localStorage: cualquier script inyectado los lee."
+          ],
+          "notes": "El error de CORS es probablemente el más buscado por desarrolladores principiantes, y muchas respuestas en foros sugieren soluciones incorrectas. Explique que la política del mismo origen protege al usuario: impide que un sitio malicioso abierto en otra pestaña lea los datos de su banco usando sus cookies. CORS es la forma controlada en que un servidor declara que confía en otro origen. Muestre una solicitud de verificación previa OPTIONS en la pestaña Red. Luego presente el almacenamiento local como herramienta para preferencias, como el tema oscuro o un carrito no confirmado, y explique por qué no es adecuado para credenciales. Pregunta para la clase: si el frontend y la API están en subdominios distintos de la misma empresa, ¿aplica CORS? La respuesta es sí, porque son orígenes diferentes."
+        },
+        {
+          "title": "Estado y renderizado: el modelo mental de los componentes",
+          "bullets": [
+            "Principio central de React, Vue o Angular: la interfaz es una función del estado de la aplicación.",
+            "Patrón en JavaScript puro: un objeto de estado, una función render(estado) y acciones que lo actualizan y vuelven a renderizar.",
+            "Componentes: unidades reutilizables con entradas (propiedades), estado interno y eventos de salida.",
+            "Adoptar un framework se justifica por la complejidad de la interfaz, el equipo y el ecosistema, no por moda."
+          ],
+          "notes": "Construya en vivo un pequeño carrito de compras con un objeto de estado y una función render, sin framework. Muestre que, cuando el estado cambia, se vuelve a dibujar la parte de la interfaz afectada, y que esto elimina errores de sincronización, como un contador del carrito que no coincide con los productos listados. Explique que React, liberado por Facebook en 2013, popularizó este modelo declarativo, y que Vue y Angular comparten la idea con enfoques distintos. Advierta que un framework añade peso, dependencias y curva de aprendizaje, por lo que conviene adoptarlo cuando la aplicación lo justifica; en Desarrollo de Aplicaciones Móviles y Desarrollo de Software Empresarial profundizarán en marcos de trabajo. Pregunta para la clase: ¿qué señales indican que una aplicación ya necesita un framework?"
+        },
+        {
+          "title": "Calidad del código JavaScript: depuración, ESLint y pruebas",
+          "bullets": [
+            "Depurar con puntos de interrupción en la pestaña Fuentes en lugar de llenar el código de console.log.",
+            "ESLint detecta variables no usadas, comparaciones flexibles y errores comunes antes de ejecutar.",
+            "Pruebas unitarias de funciones puras con Vitest o Jest: formateo de moneda, filtros y validaciones.",
+            "Separar la lógica de negocio de la manipulación del DOM para que la lógica sea fácil de probar."
+          ],
+          "notes": "Muestre una sesión de depuración real: coloque un punto de interrupción en el manejador del cotizador, inspeccione variables, avance paso a paso y observe la pila de llamadas. Los estudiantes que aprenden a depurar con herramientas resuelven errores mucho más rápido que quienes solo imprimen mensajes. Configure ESLint en el proyecto y muestre cómo detecta un == accidental o una variable no declarada. Luego escriba pruebas unitarias para una función que calcula el total con IGV y otra que filtra productos por categoría, retomando lo aprendido con pytest y JUnit. Explique que separar la lógica pura del código que toca el DOM es lo que hace posible probarla de forma aislada. Cierre la unidad recordando la entrega de la Tarea 3 y el Cuestionario 3 en la semana 12."
+        }
+      ],
+      "reading": {
+        "title": "JavaScript asíncrono y DOM: interfaces que conversan con API",
+        "minutes": 40,
+        "content": "## 1. Un lenguaje, un hilo, muchas tareas\n\nJavaScript, estandarizado como ECMAScript por el comité TC39 de Ecma International, es el único lenguaje que todos los navegadores ejecutan de forma nativa. Para quien viene de Python y Java conviene fijar tres diferencias que causan errores frecuentes. Primero, el tipado es dinámico y con coerción implícita: `'5' + 1` produce `'51'`, mientras `'5' - 1` produce `4`; por eso se usa siempre la igualdad estricta `===`. Segundo, `let` y `const` tienen ámbito de bloque, a diferencia del antiguo `var`. Tercero, las funciones son valores: se pasan como argumentos y forman clausuras que recuerdan las variables de su entorno.\n\nEl motor de JavaScript del navegador ejecuta el código en un solo hilo. Si una operación tardara dos segundos de forma bloqueante, la página se congelaría. La solución es el **bucle de eventos**: las operaciones lentas (red, temporizadores) se delegan al navegador y, cuando terminan, sus funciones de retorno se encolan para ejecutarse cuando la pila de llamadas quede libre. Las promesas usan una cola de microtareas que tiene prioridad sobre la cola de tareas.\n\n## 2. El DOM: el documento como árbol de objetos\n\nEl *Document Object Model* representa el HTML como un árbol de nodos que JavaScript puede consultar y modificar. Seleccionar con `document.querySelector` y crear nodos con `document.createElement` es más seguro que concatenar cadenas en `innerHTML`, porque este último interpreta el texto como marcado y abre la puerta a la inyección de código (XSS), incluida en la categoría A03 del OWASP Top 10 de 2021.\n\n```js\n// Inseguro: si nombre contiene <img src=x onerror=...>, se ejecuta código\nsaludo.innerHTML = 'Hola, ' + nombre;\n\n// Seguro: el valor se inserta como texto, nunca como marcado\nsaludo.textContent = `Hola, ${nombre}`;\n```\n\n## 3. Eventos y delegación\n\nLos eventos se propagan en tres fases: captura (de la raíz al objetivo), objetivo y burbujeo (del objetivo a la raíz). La delegación aprovecha el burbujeo: en lugar de registrar un escuchador por cada botón de una lista de 500 productos, se registra uno en el contenedor y se identifica el origen con `closest()`. Así se ahorra memoria y los elementos agregados después funcionan automáticamente.\n\n```js\nlista.addEventListener('click', (evento) => {\n  const boton = evento.target.closest('button[data-id]');\n  if (!boton) return;\n  agregarAlCarrito(Number(boton.dataset.id));\n});\n```\n\n## 4. Promesas, async/await y fetch\n\nUna promesa representa un valor futuro que puede cumplirse o rechazarse. La sintaxis `async/await` (ES2017) permite escribir código asíncrono con apariencia secuencial. La función `fetch` devuelve una promesa que **solo se rechaza ante fallas de red o cancelaciones**: un 404 o un 500 se consideran respuestas válidas, por lo que hay que revisar `resp.ok`. El siguiente módulo consulta un servicio propio de cotizaciones, maneja errores, muestra estados de carga y cancela solicitudes obsoletas con `AbortController` para evitar condiciones de carrera cuando el usuario escribe rápido:\n\n```js\n// cotizador.js (módulo ES)\nlet controlador = null;\n\nexport async function cotizar(monto, moneda) {\n  controlador?.abort();                 // cancela la solicitud anterior\n  controlador = new AbortController();\n  estado.textContent = 'Calculando...';\n  try {\n    const params = new URLSearchParams({ monto, moneda });\n    const resp = await fetch(`/api/cotizaciones?${params}`, {\n      signal: controlador.signal,\n      headers: { Accept: 'application/json' },\n    });\n    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);\n    const datos = await resp.json();\n    resultado.textContent = datos.total.toLocaleString('es-PE', {\n      style: 'currency', currency: 'PEN',\n    });\n    estado.textContent = '';\n  } catch (error) {\n    if (error.name === 'AbortError') return;   // solicitud reemplazada\n    estado.textContent = 'No pudimos obtener la cotización. Intente nuevamente.';\n    console.error(error);\n  }\n}\n```\n\nCombinado con un *debounce* —esperar unos 300 ms desde la última pulsación antes de consultar—, este patrón reduce la carga del servidor y garantiza que se muestre la respuesta de la última solicitud y no la de la más lenta.\n\n## 5. CORS y almacenamiento en el navegador\n\nLa política del mismo origen impide que un script lea respuestas de otro origen, definido por esquema, dominio y puerto. CORS es el mecanismo por el cual el **servidor** autoriza explícitamente otros orígenes mediante la cabecera Access-Control-Allow-Origin; no se \"arregla\" desde el cliente. Para guardar preferencias se usa `localStorage`, pero nunca tokens de sesión ni datos personales sensibles, porque cualquier script inyectado puede leerlos. Para la sesión, la opción recomendada es una cookie HttpOnly, Secure y SameSite, inaccesible desde JavaScript.\n\n## 6. ¿Y los frameworks?\n\nReact, Vue o Angular resuelven un problema real: mantener sincronizado el estado de la aplicación con la interfaz cuando hay decenas de componentes. Su idea central —la interfaz es una función del estado— puede practicarse con JavaScript puro antes de adoptarlos. Quien domina el DOM, los eventos y la asincronía aprende cualquier framework en semanas; quien empieza por el framework suele quedar indefenso ante el primer error que ningún tutorial explica.\n"
+      },
+      "case": {
+        "title": "Caso: CambiaYa y el cotizador que mostraba el monto equivocado",
+        "content": "**CambiaYa** es una casa de cambio digital fundada en 2021 en Lima e inscrita en el registro de empresas de cambio de moneda que supervisa la Superintendencia de Banca, Seguros y AFP (SBS). Procesa unas 14 000 operaciones mensuales con un ticket promedio de US$ 1 600, y su ventaja competitiva es un diferencial cambiario menor al de las ventanillas bancarias. La mayoría de sus clientes son trabajadores independientes y pequeñas empresas que cambian dólares para pagar proveedores o alquileres.\n\nEl elemento central del sitio es el **cotizador**: el usuario escribe un monto y la página muestra, en tiempo real, cuántos soles recibirá o deberá transferir. Está programado en JavaScript sin framework y consulta una API interna en cada pulsación de tecla.\n\nEn septiembre de 2026, el equipo de atención al cliente registró tres tipos de reclamos:\n\n1. **Montos inconsistentes.** Varios clientes capturaron pantallas en las que, tras escribir 15 000, el cotizador mostraba el resultado correspondiente a 1 500. El análisis de registros mostró que las respuestas de la API a veces llegan en desorden: la solicitud por 1 500 tardó 900 ms y la de 15 000, solo 300 ms.\n2. **Pantalla con \"NaN\".** Cuando la API se reinicia durante los despliegues, devuelve un código 503 con una página HTML. El código ejecuta `resp.json()` sin verificar `resp.ok`, la conversión falla y el usuario ve \"S/ NaN\".\n3. **Mensaje sospechoso.** Un cliente reportó que, al abrir un enlace de referidos recibido por WhatsApp, apareció un formulario que le pedía su contraseña. El enlace incluía un parámetro `nombre` que el sitio insertaba con `innerHTML` en el saludo de bienvenida. Además, el token de sesión se guarda en `localStorage`.\n\nDos reclamos llegaron a la plataforma de reclamaciones del INDECOPI y la gerencia teme un daño reputacional en un mercado donde la confianza lo es todo. Falta un mes para la campaña Cyber Wow, en la que CambiaYa espera duplicar sus operaciones.\n\nLa directora de tecnología, Daniela Paredes, recibe dos propuestas. El líder de interfaz propone reescribir todo el sitio en React en seis semanas, con el argumento de que \"el problema es el JavaScript puro\". Un desarrollador junior propone corregir el código existente en dos semanas: cancelar solicitudes obsoletas con AbortController, aplicar *debounce*, validar las respuestas, reemplazar `innerHTML` por `textContent`, añadir una política de seguridad de contenido y trasladar la sesión a cookies HttpOnly. Daniela debe decidir antes del viernes y presentar su plan al comité de riesgos.\n",
+        "questions": [
+          "Explique, con el modelo del bucle de eventos y las promesas, por qué el cotizador mostró el resultado de 1 500 en lugar del de 15 000.",
+          "¿Qué cambios de código eliminan cada uno de los tres problemas? Escriba en JavaScript o pseudocódigo la solución del primero.",
+          "¿Por qué el ataque del enlace de referidos es grave aunque no se haya robado la base de datos? Relaciónelo con XSS y con el uso de localStorage.",
+          "¿Reescribir en React resolvería por sí solo los problemas? Recomiende una decisión a Daniela considerando riesgo, plazo y la campaña Cyber Wow."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Interactividad y consumo de API en el proyecto integrador",
+        "instructions": "**Objetivo:** incorporar al proyecto integrador la lógica de cliente con JavaScript moderno, aplicando manipulación segura del DOM, eventos y asincronía.\n\n**Requisitos funcionales**\n\n1. **Listado dinámico:** el catálogo o listado de la Tarea 2 debe generarse a partir de datos JSON obtenidos con `fetch` desde una API simulada (por ejemplo, json-server o un archivo estático servido localmente).\n2. **Búsqueda y filtros** con *debounce* de 300 ms y cancelación de solicitudes obsoletas con `AbortController`.\n3. **Estados de interfaz:** cargando, vacío, error (incluida una respuesta con código distinto de 2xx) y éxito, anunciados a lectores de pantalla con `aria-live`.\n4. **Formulario principal** validado en el cliente con la API de restricciones y mensajes accesibles; el envío se realiza con `fetch` y método POST.\n5. **Delegación de eventos** en al menos un componente con elementos generados dinámicamente.\n\n**Requisitos de calidad**\n\n- Código organizado en módulos ES; ningún dato externo insertado con `innerHTML`.\n- ESLint sin errores y al menos cinco pruebas unitarias de funciones puras (formateo, filtrado, validación).\n- README actualizado con la arquitectura del cliente y una tabla de los endpoints consumidos.\n\n**Entregables:** repositorio con historial de commits de cada integrante, video de máximo cinco minutos que muestre los estados de interfaz y la pestaña Red de las herramientas de desarrollo, y una reflexión de una página sobre las decisiones de seguridad. Entrega al cierre de la semana 12.\n",
+        "rubric": [
+          {
+            "name": "Manipulación del DOM y gestión de eventos",
+            "points": 5
+          },
+          {
+            "name": "Consumo asíncrono con estados de interfaz y manejo de errores",
+            "points": 6
+          },
+          {
+            "name": "Seguridad en el cliente y validación accesible",
+            "points": 4
+          },
+          {
+            "name": "Calidad del código, pruebas y documentación",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: JavaScript, DOM y asincronía",
+        "questions": [
+          {
+            "prompt": "¿Qué valores produce en JavaScript la instrucción console.log('5' + 1, '5' - 1)?",
+            "options": [
+              "6 y 4",
+              "51 y 4",
+              "6 y '4'",
+              "Un error de tipos en ambas operaciones"
+            ],
+            "correct": 1,
+            "explanation": "Con una cadena, el operador + concatena, por lo que '5' + 1 produce la cadena '51'. El operador - solo es numérico, así que convierte '5' a número y produce 4. Esta coerción implícita motiva usar === y conversiones explícitas."
+          },
+          {
+            "prompt": "Un parámetro 'nombre' tomado del enlace de la página se muestra en un saludo. ¿Qué instrucción evita una inyección de código (XSS)?",
+            "options": [
+              "saludo.textContent = 'Hola ' + nombre",
+              "saludo.innerHTML = 'Hola ' + nombre",
+              "document.write('Hola ' + nombre)",
+              "saludo.insertAdjacentHTML('beforeend', nombre)"
+            ],
+            "correct": 0,
+            "explanation": "textContent inserta el valor como texto plano, sin interpretarlo como marcado. innerHTML, document.write e insertAdjacentHTML analizan el texto como HTML, por lo que una etiqueta con un manejador onerror ejecutaría código del atacante."
+          },
+          {
+            "prompt": "Un código ejecuta const datos = await fetch('/api/x').then((r) => r.json()); y el servidor responde 500 con una página HTML. ¿Qué ocurre?",
+            "options": [
+              "fetch rechaza la promesa con un error HTTP 500",
+              "fetch se cumple, pero r.json() falla al analizar el HTML y lanza un error de sintaxis",
+              "datos queda como un objeto vacío",
+              "El navegador reintenta la solicitud automáticamente"
+            ],
+            "correct": 1,
+            "explanation": "fetch solo rechaza ante fallas de red o cancelaciones; un 500 es una respuesta válida. Al intentar analizar HTML como JSON, r.json() rechaza con SyntaxError. Por eso se verifica response.ok antes de procesar el cuerpo."
+          },
+          {
+            "prompt": "¿En qué orden se imprime? console.log('A'); setTimeout(() => console.log('B'), 0); Promise.resolve().then(() => console.log('C')); console.log('D');",
+            "options": [
+              "A B C D",
+              "A D B C",
+              "A D C B",
+              "A C D B"
+            ],
+            "correct": 2,
+            "explanation": "El código síncrono se ejecuta primero (A y D). Luego el bucle de eventos vacía la cola de microtareas, donde está la promesa (C), y después toma la siguiente tarea, el temporizador (B), aunque su retardo sea cero."
+          },
+          {
+            "prompt": "Una lista de 500 productos se vuelve a generar cada vez que el usuario filtra. ¿Por qué conviene la delegación de eventos en el contenedor?",
+            "options": [
+              "Porque los eventos no burbujean en elementos generados dinámicamente",
+              "Porque addEventListener no funciona dentro de bucles",
+              "Porque la delegación impide que el evento llegue al documento",
+              "Porque un solo escuchador atiende elementos actuales y futuros, ahorrando memoria"
+            ],
+            "correct": 3,
+            "explanation": "Gracias al burbujeo, el clic en un botón llega al contenedor, donde event.target.closest identifica el origen. Así no hay que registrar 500 escuchadores ni volver a registrarlos cada vez que la lista se regenera."
+          },
+          {
+            "prompt": "El frontend, alojado en un origen, llama a una API en otro dominio y la consola muestra un error de CORS. ¿Dónde se resuelve correctamente?",
+            "options": [
+              "En el cliente, agregando mode: 'no-cors' a fetch",
+              "En el servidor, enviando Access-Control-Allow-Origin con los orígenes autorizados",
+              "Desactivando la política del mismo origen en el navegador",
+              "Reemplazando fetch por XMLHttpRequest"
+            ],
+            "correct": 1,
+            "explanation": "CORS es una autorización que concede el servidor mediante cabeceras. El modo no-cors produce respuestas opacas que no se pueden leer, desactivar la seguridad del navegador no es una solución de producción y XMLHttpRequest está sujeto a la misma política."
+          },
+          {
+            "prompt": "¿Dónde se recomienda guardar el identificador de sesión de una aplicación web que maneja operaciones financieras?",
+            "options": [
+              "En localStorage, porque persiste entre pestañas",
+              "En sessionStorage, porque se borra al cerrar la pestaña",
+              "En una variable global de JavaScript",
+              "En una cookie HttpOnly, Secure y SameSite"
+            ],
+            "correct": 3,
+            "explanation": "Una cookie HttpOnly no es accesible desde JavaScript, por lo que un XSS no puede leerla; Secure la limita a HTTPS y SameSite mitiga la falsificación de solicitudes. localStorage, sessionStorage y las variables globales son legibles por cualquier script."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Desarrollo del lado del servidor, seguridad y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante implementa una API REST con Node.js y Express conectada a PostgreSQL, incorpora autenticación y controles del OWASP Top 10, prueba y despliega la aplicación completa, y sustenta técnicamente un proyecto integrador que responde a la necesidad de una organización real.",
+      "topics": [
+        "Node.js, npm y el modelo de entrada y salida no bloqueante",
+        "Express: rutas, middleware y diseño de API REST",
+        "Persistencia en PostgreSQL con consultas parametrizadas y arquitectura en capas",
+        "Autenticación, sesiones, JWT y almacenamiento seguro de contraseñas",
+        "OWASP Top 10, Ley 29733 y pruebas de la API",
+        "Despliegue, documentación y sustentación del proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "Node.js: JavaScript en el servidor",
+          "bullets": [
+            "Creado por Ryan Dahl en 2009 sobre el motor V8: entrada y salida no bloqueante, orientada a eventos, con la biblioteca libuv.",
+            "Un solo proceso atiende miles de conexiones concurrentes mientras espera a la red o a la base de datos.",
+            "No es ideal para cálculo intensivo de CPU sin hilos de trabajo (worker threads) o servicios especializados.",
+            "Ventaja para el equipo: un mismo lenguaje en cliente y servidor, con validaciones compartidas."
+          ],
+          "notes": "Explique la motivación original de Node.js: muchos servidores tradicionales asignaban un hilo por conexión, lo que consumía mucha memoria cuando miles de clientes esperaban respuestas lentas. Node aplica al servidor el mismo bucle de eventos que los estudiantes acaban de estudiar en el navegador. Use una analogía: un mozo que toma pedidos de muchas mesas y no se queda parado junto a la cocina esperando cada plato. Advierta la contraparte: si el mozo se pone a cocinar, todas las mesas esperan; por eso un cálculo pesado bloquea a todos los usuarios. Mencione que empresas de comercio electrónico, medios y servicios financieros de la región usan Node.js para sus API. Pregunta para la clase: ¿qué tipo de funcionalidad del proyecto integrador se beneficia más de este modelo y cuál menos?"
+        },
+        {
+          "title": "npm y la gestión responsable de dependencias",
+          "bullets": [
+            "package.json declara metadatos, scripts y dependencias; package-lock.json fija versiones exactas para todo el equipo.",
+            "Versionado semántico MAYOR.MENOR.PARCHE: ^1.4.2 acepta cambios menores y parches; ~1.4.2 solo parches.",
+            "Cada dependencia es código de terceros que corre en su servidor: evaluar mantenimiento, popularidad y licencia.",
+            "npm audit identifica vulnerabilidades conocidas; OWASP A06:2021 trata los componentes vulnerables y desactualizados."
+          ],
+          "notes": "Inicie un proyecto en vivo con npm init, instale Express y muestre los archivos generados. Explique por qué package-lock.json debe versionarse y la carpeta node_modules no. Presente el versionado semántico con ejemplos concretos y discuta qué riesgo implica aceptar actualizaciones menores automáticas. Comente incidentes conocidos de la cadena de suministro de software, como el retiro del paquete left-pad en 2016, que rompió miles de proyectos, o los paquetes publicados con código malicioso, para mostrar que cada dependencia es una decisión de seguridad. Ejecute npm audit y analice el reporte con la clase. Pregunta para la clase: antes de instalar un paquete para validar correos electrónicos, ¿qué criterios revisarían y cuándo es preferible escribir la función propia?"
+        },
+        {
+          "title": "Diseño de API REST: recursos, verbos y representaciones",
+          "bullets": [
+            "Fielding (2000): cliente-servidor, sin estado, cacheable, interfaz uniforme, sistema en capas y código bajo demanda opcional.",
+            "Recursos como sustantivos en plural: /api/productos, /api/productos/15, /api/clientes/8/pedidos.",
+            "Filtros, orden y paginación con parámetros de consulta: ?categoria=cafe&orden=precio&pagina=2.",
+            "Respuestas JSON consistentes, errores con estructura uniforme y versionado de la API (/api/v1)."
+          ],
+          "notes": "Retome los métodos y códigos de estado de la Unidad 1 y aplíquelos al diseño de una API. Muestre ejemplos de malas rutas, como /api/obtenerProductos o /api/borrarCliente?id=8, y rediséñelas con la clase siguiendo el estilo REST. Explique la restricción de ausencia de estado: el servidor no guarda contexto entre solicitudes, lo que permite escalar horizontalmente agregando servidores. Presente un formato uniforme de error con código, mensaje y detalle por campo, que facilita el trabajo del equipo de interfaz. Mencione la especificación OpenAPI como forma estándar de documentar el contrato de una API, que se profundizará en Desarrollo de Software Empresarial. Actividad: diseñar en equipos la tabla de recursos, métodos, rutas y códigos de estado de su proyecto integrador y someterla a revisión de otro equipo."
+        },
+        {
+          "title": "Express: rutas y controladores",
+          "bullets": [
+            "app.get, app.post, app.patch y app.delete asocian un método y una ruta con una función controladora.",
+            "Datos de la solicitud: parámetros de ruta (req.params), de consulta (req.query) y cuerpo (req.body con express.json()).",
+            "express.Router agrupa las rutas de cada recurso en módulos independientes.",
+            "El controlador responde con res.status(código).json(datos) o delega los errores con next(error)."
+          ],
+          "notes": "Construya en vivo una API mínima de productos con datos en memoria: listar, obtener por identificador, crear, actualizar y eliminar. Pruebe cada ruta con una herramienta de solicitudes HTTP o con una extensión del editor, mostrando métodos, cabeceras y códigos de estado. Explique cada fuente de datos de la solicitud: los parámetros de ruta identifican el recurso, los de consulta filtran y el cuerpo contiene la representación enviada. Organice luego las rutas con Router en un archivo por recurso, anticipando la arquitectura en capas. Recalque que todo dato que llega en req.params, req.query o req.body es entrada no confiable. Pregunta para la clase: ¿qué código de estado debe devolver la ruta de obtener producto si el identificador no existe y qué debe contener el cuerpo de la respuesta?"
+        },
+        {
+          "title": "Middleware: la cadena de procesamiento",
+          "bullets": [
+            "Función (req, res, next) que puede leer y modificar la solicitud, responder o ceder el control con next().",
+            "El orden de registro importa: registro de eventos, seguridad, análisis del cuerpo, autenticación, rutas y errores.",
+            "Middleware de terceros: helmet para cabeceras de seguridad, cors y express-rate-limit contra la fuerza bruta.",
+            "Middleware propio: autenticación que verifica la sesión y autorización por rol antes del controlador."
+          ],
+          "notes": "Dibuje la cadena de middleware como una línea de control de calidad en una planta: cada estación revisa algo y deja pasar el producto o lo retira. Escriba un middleware propio que registre método, ruta y tiempo de respuesta, y otro que exija autenticación. Muestre qué ocurre cuando se olvida llamar a next: la solicitud queda colgada hasta que el cliente agota su tiempo de espera, un error difícil de diagnosticar. Explique que el orden es crítico: si el middleware de autenticación se registra después de las rutas, estas quedan desprotegidas. Presente helmet, que configura cabeceras como Content-Security-Policy y Strict-Transport-Security vistas en la Unidad 1. Pregunta para la clase: ¿dónde colocaría el límite de intentos, en toda la API o solo en el inicio de sesión, y por qué?"
+        },
+        {
+          "title": "Validación de entradas y manejo centralizado de errores",
+          "bullets": [
+            "Validar tipo, formato, longitud y reglas de negocio en el servidor, con esquemas declarativos como Zod o Joi.",
+            "Rechazar con 400 o 422 y un detalle por campo; nunca confiar en la validación del cliente.",
+            "Manejador de errores con cuatro parámetros (err, req, res, next) registrado al final de la cadena.",
+            "No exponer trazas ni mensajes internos al cliente; registrarlos en el servidor con un identificador de correlación."
+          ],
+          "notes": "Muestre la diferencia entre una API que valida y otra que no: envíe un precio negativo, una fecha inválida y un texto de diez mil caracteres a ambas. Implemente la validación con un esquema declarativo y explique sus ventajas: reglas legibles, mensajes consistentes y reutilización. Luego construya un manejador centralizado de errores que distinga los errores esperados, como datos inválidos o recursos inexistentes, de los inesperados, que se registran con detalle y se responden con un mensaje genérico. Explique que una traza de error expuesta revela rutas de archivos, versiones y consultas, información valiosa para un atacante, lo que se relaciona con la categoría A05 del OWASP. Pregunta para la clase: ¿qué información mínima debería registrar el servidor para investigar un error reportado por un cliente?"
+        },
+        {
+          "title": "Persistencia con PostgreSQL y el paquete pg",
+          "bullets": [
+            "Pool de conexiones: reutiliza conexiones y limita la carga sobre el motor de base de datos.",
+            "Consultas parametrizadas con $1, $2: el valor nunca se interpreta como código SQL.",
+            "Transacciones con BEGIN, COMMIT y ROLLBACK para operaciones compuestas, como reserva y pago.",
+            "Cadena de conexión en variables de entorno y usuario de aplicación con privilegios mínimos."
+          ],
+          "notes": "Coordine esta sesión con lo que los estudiantes aprenden en paralelo en Base de Datos: modelado, SQL, transacciones y roles. Conecte la API a PostgreSQL y reemplace los datos en memoria por consultas reales. Haga una demostración controlada de inyección SQL sobre una ruta vulnerable que concatena texto, por ejemplo enviando una comilla seguida de OR 1=1, y luego corríjala con una consulta parametrizada. Explique el pool de conexiones: abrir una conexión por solicitud es costoso y puede agotar el límite del servidor. Muestre una transacción que registra una reserva y descuenta disponibilidad: si algo falla, todo se revierte. Pregunta para la clase: ¿por qué la aplicación no debe conectarse a la base de datos con el usuario administrador postgres, aunque sea más cómodo durante el desarrollo?"
+        },
+        {
+          "title": "Arquitectura en capas en el servidor",
+          "bullets": [
+            "Rutas: definen la interfaz HTTP; controladores: traducen la solicitud y la respuesta.",
+            "Servicios: contienen las reglas de negocio, como validar disponibilidad o calcular el IGV.",
+            "Repositorios: encapsulan el acceso a datos y las consultas SQL.",
+            "Beneficios: pruebas aisladas, cambios de base de datos sin tocar la lógica y trabajo en paralelo del equipo."
+          ],
+          "notes": "Retome la arquitectura en capas y el patrón Repository que los estudiantes aplicaron en Programación Orientada a Objetos con Java, ahora en el servidor web. Muestre una ruta que lo hace todo, validación, reglas de negocio y SQL, en cincuenta líneas, y refactorícela en capas con la clase. Explique que el controlador no debería conocer SQL y que el repositorio no debería conocer HTTP. Discuta la estructura de carpetas sugerida para el proyecto integrador: rutas, controladores, servicios, repositorios, middleware y configuración. Mencione que esta separación de responsabilidades es la base de los marcos empresariales que verán más adelante, como Spring o NestJS. Pregunta para la clase: si mañana el hostal decide cambiar de motor de base de datos, ¿qué capas habría que modificar en una arquitectura bien diseñada?"
+        },
+        {
+          "title": "Autenticación: sesiones frente a tokens JWT",
+          "bullets": [
+            "La autenticación verifica quién es el usuario; la autorización determina qué puede hacer.",
+            "Sesiones: estado en el servidor e identificador en cookie HttpOnly, Secure y SameSite; revocación inmediata.",
+            "JWT (RFC 7519): token firmado con datos del usuario; verificación sin estado, pero revocación más difícil.",
+            "Buenas prácticas: expiración corta, renovación controlada, cierre de sesión efectivo y doble factor para administradores."
+          ],
+          "notes": "Explique ambos enfoques con un diagrama de secuencia: inicio de sesión, emisión de la credencial y solicitudes posteriores. Las sesiones son simples y seguras para una aplicación web monolítica como la del proyecto integrador; los JWT son útiles cuando varias API o aplicaciones móviles deben verificar la identidad sin compartir un almacén de sesiones. Desmonte un mito frecuente: un JWT está firmado, no cifrado, por lo que cualquiera puede leer su contenido decodificándolo; nunca debe contener datos sensibles. Muestre la decodificación de un token de ejemplo. Recalque que la autorización debe verificarse en cada solicitud y para cada recurso, como evidencia el caso del hostal. Pregunta para la clase: ¿qué enfoque elegiría para una aplicación web que en el siguiente ciclo tendrá también una aplicación móvil?"
+        },
+        {
+          "title": "Contraseñas: hash con sal y funciones lentas",
+          "bullets": [
+            "Nunca texto plano ni cifrado reversible: se guarda un hash calculado con una función de derivación de claves.",
+            "MD5, SHA-1 y SHA-256 son rápidos: una tarjeta gráfica prueba miles de millones de candidatas por segundo.",
+            "bcrypt (factor de costo 12 o más) y Argon2id incorporan sal y costo configurable, según la guía del OWASP.",
+            "Complementos: longitud mínima, verificación contra contraseñas filtradas y límite de intentos."
+          ],
+          "notes": "Explique qué es un hash y por qué es de un solo sentido. Luego muestre el problema: si la base de datos se filtra y las contraseñas están en MD5, un atacante recupera la mayoría en poco tiempo con diccionarios y tablas precalculadas, y como las personas reutilizan contraseñas, el daño se extiende a sus correos y cuentas bancarias. Explique la sal, un valor aleatorio único por usuario que hace que contraseñas iguales tengan hashes distintos, y el costo, que vuelve lento cada intento. Implemente en vivo el registro y el inicio de sesión con bcrypt y mida cuánto tarda un hash con distintos factores de costo. Mencione las recomendaciones del NIST en su guía SP 800-63B sobre longitud y listas de contraseñas comprometidas. Pregunta para la clase: ¿por qué aquí una función lenta es una ventaja?"
+        },
+        {
+          "title": "OWASP Top 10 (2021) aplicado a la aplicación del curso",
+          "bullets": [
+            "A01 Pérdida de control de acceso: verificar en el servidor que cada recurso pertenece al usuario.",
+            "A02 Fallas criptográficas y A03 Inyección: HTTPS, hash robusto y consultas parametrizadas.",
+            "A05 Configuración de seguridad incorrecta y A06 Componentes vulnerables: cabeceras, errores genéricos y dependencias auditadas.",
+            "A07 Fallas de identificación y autenticación y A09 Fallas de registro y monitoreo: límites de intentos y bitácoras."
+          ],
+          "notes": "Presente el OWASP Top 10 como un documento de concienciación construido con datos de cientos de miles de aplicaciones, no como una lista de verificación exhaustiva. Recorra las categorías con ejemplos del propio curso: la referencia directa insegura a objetos del caso del hostal, la inyección SQL de esta unidad, el XSS del caso CambiaYa y la exposición de secretos en repositorios. Explique que la versión 2021 colocó la pérdida de control de acceso en el primer lugar porque fue la categoría con mayor número de ocurrencias en los datos analizados. Mencione que el curso Seguridad Informática profundizará en pruebas de penetración y gestión de vulnerabilidades. Actividad: cada equipo completa una matriz del OWASP Top 10 para su proyecto, indicando el riesgo, la medida aplicada y la evidencia que la respalda."
+        },
+        {
+          "title": "Protección de datos personales en la aplicación web",
+          "bullets": [
+            "Ley 29733 y su reglamento (D.S. 016-2024-JUS): finalidad, consentimiento, seguridad y derechos ARCO.",
+            "Consentimiento libre, previo, informado, expreso e inequívoco: casillas no premarcadas y registro de la aceptación.",
+            "Minimización: recoger solo los datos necesarios y definir plazos de conservación y eliminación.",
+            "Bancos de datos personales inscritos ante la Autoridad Nacional de Protección de Datos Personales."
+          ],
+          "notes": "Conecte la ley con decisiones de ingeniería concretas, que es lo que se espera de un profesional técnico. La privacidad desde el diseño empieza en el modelo de datos: si no necesita la fecha de nacimiento, no la pida; si necesita el DNI para emitir un comprobante, explique para qué. Muestre cómo registrar en la base de datos la versión de la política aceptada y la fecha y hora del consentimiento, como evidencia ante una fiscalización. Explique los derechos ARCO y cómo la aplicación debe permitir atenderlos, por ejemplo con una función para exportar o eliminar los datos de un usuario. Comente que la Autoridad Nacional de Protección de Datos Personales, del Ministerio de Justicia y Derechos Humanos, fiscaliza y sanciona. Pregunta para la clase: ¿qué datos del proyecto integrador son prescindibles?"
+        },
+        {
+          "title": "Pruebas de la API y control de calidad",
+          "bullets": [
+            "Pirámide de pruebas (Cohn): muchas unitarias, varias de integración y pocas de extremo a extremo.",
+            "Pruebas de integración con Supertest: solicitud HTTP real a la aplicación y verificación del código y del cuerpo.",
+            "Casos obligatorios: datos válidos, datos inválidos, usuario no autenticado, usuario sin permiso y recurso inexistente.",
+            "Integración continua: ejecutar pruebas, ESLint y npm audit automáticamente en cada solicitud de integración."
+          ],
+          "notes": "Presente la pirámide de pruebas de Mike Cohn y explique por qué las pruebas de extremo a extremo, aunque valiosas, son lentas y frágiles. Escriba en vivo pruebas de integración para la ruta de creación de pedidos: una con datos correctos que espera 201, otra con datos inválidos que espera 422, otra sin sesión que espera 401 y otra con un usuario que intenta ver un pedido ajeno y espera 403 o 404. Explique el uso de una base de datos de prueba separada que se restablece antes de cada ejecución. Muestre cómo configurar un flujo de integración continua en la plataforma del repositorio para que ejecute las pruebas en cada cambio. Pregunta para la clase: ¿qué prueba habría detectado a tiempo la falla de control de acceso del caso Hostal Inti Wasi?"
+        },
+        {
+          "title": "Despliegue: del repositorio a producción",
+          "bullets": [
+            "Doce factores: configuración en variables de entorno, dependencias declaradas y paridad entre entornos.",
+            "Opciones: plataforma como servicio, contenedores Docker o servidor virtual con un proxy inverso.",
+            "Lista de verificación: HTTPS, variables de producción, migraciones, respaldo de la base de datos y monitoreo.",
+            "Registros estructurados y alertas para detectar errores y accesos anómalos tras el lanzamiento."
+          ],
+          "notes": "Explique que desplegar no es copiar archivos a un servidor, sino un proceso repetible y verificable. Presente la metodología de los doce factores, publicada por ingenieros de Heroku, como guía para aplicaciones que se ejecutan en la nube. Haga un despliegue en vivo en una plataforma como servicio con capa gratuita: conectar el repositorio, configurar variables de entorno, aprovisionar PostgreSQL y verificar HTTPS. Muestre cómo revisar los registros de la aplicación en producción. Aclare que el curso Administración de Servidores y Nube profundizará en servidores Linux, contenedores, proxies inversos y escalamiento, por lo que aquí basta con un despliegue funcional y seguro. Pregunta para la clase: ¿qué debería verificar el equipo en los primeros treinta minutos después de publicar una nueva versión?"
+        },
+        {
+          "title": "Sustentación técnica: cómo defender decisiones de ingeniería",
+          "bullets": [
+            "Estructura sugerida: problema y usuarios, arquitectura, demostración, seguridad, pruebas, métricas y lecciones aprendidas.",
+            "Registros de decisiones de arquitectura (ADR): contexto, alternativas, decisión y consecuencias.",
+            "Demostración en vivo del flujo principal con datos realistas y un respaldo grabado por si falla la conexión.",
+            "Cada integrante explica y modifica en vivo una parte del código que desarrolló."
+          ],
+          "notes": "Prepare a los estudiantes para la sustentación final, que también es un ensayo de entrevista técnica. Explique que un buen informe técnico no narra lo que se hizo, sino por qué se hizo así y qué alternativas se descartaron. Presente el formato de registro de decisiones de arquitectura propuesto por Michael Nygard y muestre un ejemplo: elegir sesiones en lugar de JWT para el proyecto. Recomiende ensayar la demostración con cronómetro y tener una grabación de respaldo por si falla la conexión. Explique que el docente pedirá a cada integrante realizar un cambio pequeño en vivo, como agregar un campo validado, para verificar su dominio individual. Pregunta para la clase: ¿qué métricas de su proyecto demostrarían a la mype cliente que la aplicación cumple su propósito?"
+        }
+      ],
+      "reading": {
+        "title": "Construir una API REST segura con Node.js, Express y PostgreSQL",
+        "minutes": 40,
+        "content": "## 1. REST como estilo arquitectónico\n\nRoy Fielding definió REST (*Representational State Transfer*) en su tesis doctoral del año 2000 en la Universidad de California, Irvine, como un conjunto de restricciones: cliente-servidor, ausencia de estado, cacheabilidad, interfaz uniforme, sistema en capas y, de forma opcional, código bajo demanda. En la práctica, una API REST bien diseñada expone **recursos** identificados por sustantivos (`/reservas`, `/habitaciones/12`), manipulados con los métodos HTTP según su semántica y representados en JSON.\n\n| Operación | Método y ruta | Respuesta esperada |\n|---|---|---|\n| Listar reservas | GET /api/reservas?fecha=2026-06-24 | 200 con un arreglo |\n| Crear reserva | POST /api/reservas | 201 y cabecera Location |\n| Cambiar estado | PATCH /api/reservas/58 | 200 con el recurso actualizado |\n| Eliminar | DELETE /api/reservas/58 | 204 sin contenido |\n| Datos inválidos | POST con fecha pasada | 422 con el detalle del error |\n\n## 2. Node.js y Express\n\nNode.js ejecuta JavaScript en el servidor sobre el motor V8 con un modelo de entrada y salida no bloqueante: un solo proceso atiende miles de conexiones mientras espera a la base de datos o a la red, aunque no es la mejor opción para cálculos intensivos de CPU. Express es un marco mínimo cuya pieza central es el **middleware**: funciones `(req, res, next)` que procesan la solicitud en cadena —registro, análisis del cuerpo, autenticación, validación— antes de llegar al controlador.\n\n```js\n// app.js\nimport express from 'express';\nimport helmet from 'helmet';\nimport rateLimit from 'express-rate-limit';\nimport { router as reservas } from './rutas/reservas.js';\n\nconst app = express();\napp.use(helmet());                          // cabeceras de seguridad (CSP, HSTS...)\napp.use(express.json({ limit: '100kb' }));  // cuerpo JSON con límite de tamaño\napp.use('/api/login', rateLimit({ windowMs: 15 * 60 * 1000, limit: 10 }));\napp.use('/api/reservas', reservas);\n\napp.use((err, req, res, next) => {          // manejador centralizado de errores\n  console.error(err);\n  res.status(err.status ?? 500).json({ error: err.publicMessage ?? 'Error interno' });\n});\n\nexport default app;\n```\n\n## 3. Persistencia segura con PostgreSQL\n\nLa inyección SQL forma parte de la categoría A03 (Inyección) del OWASP Top 10 de 2021. Ocurre cuando se concatena la entrada del usuario en la consulta. La defensa es usar **consultas parametrizadas**, en las que el texto SQL y los valores viajan por separado:\n\n```js\n// repositorios/reservas.js\nimport pg from 'pg';\nconst pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });\n\n// Vulnerable: `SELECT * FROM reservas WHERE documento = '${doc}'`\nexport async function buscarPorDocumento(doc) {\n  const { rows } = await pool.query(\n    'SELECT id, habitacion_id, fecha_ingreso, estado FROM reservas WHERE documento = $1',\n    [doc]\n  );\n  return rows;\n}\n```\n\nObserve dos prácticas adicionales: la cadena de conexión se lee de una **variable de entorno** y nunca se escribe en el código ni se sube al repositorio, y la consulta selecciona solo las columnas necesarias, en aplicación del principio de minimización de datos.\n\n## 4. Autenticación y contraseñas\n\nLas contraseñas jamás se guardan en texto plano ni con funciones rápidas como MD5 o SHA-1, que una tarjeta gráfica prueba a razón de miles de millones de intentos por segundo. Se usan funciones de derivación lentas y con sal, como **bcrypt** o **Argon2id**, recomendadas por la guía de almacenamiento de contraseñas del OWASP:\n\n```js\nimport bcrypt from 'bcrypt';\nconst hash = await bcrypt.hash(clave, 12);          // factor de costo 12\nconst valida = await bcrypt.compare(intento, hash);  // comparación segura\n```\n\nTras autenticar, el servidor necesita reconocer al usuario en las solicitudes siguientes. Las **sesiones** guardan el estado en el servidor y entregan un identificador en una cookie HttpOnly, Secure y SameSite; los **JWT** (RFC 7519) son tokens firmados que el servidor verifica sin consultar estado. Los JWT facilitan que varias API compartan la autenticación, pero su revocación es más difícil: deben tener una expiración corta y no guardarse en localStorage.\n\n## 5. Datos personales y despliegue responsable\n\nUna aplicación que registra nombres, DNI, correos o pasaportes trata datos personales y queda sujeta a la Ley 29733 y a su reglamento aprobado por el Decreto Supremo 016-2024-JUS: debe informar la finalidad, obtener un consentimiento libre, previo, informado, expreso e inequívoco, aplicar medidas de seguridad y atender los derechos de acceso, rectificación, cancelación y oposición (ARCO). En el código esto se traduce en casillas de consentimiento no premarcadas, política de privacidad visible, cifrado en tránsito, registros de acceso y procedimientos para eliminar datos.\n\nPara desplegar se sigue la metodología de los doce factores: configuración en variables de entorno, dependencias declaradas en `package.json` con versiones bloqueadas, registros tratados como flujos de eventos y paridad entre desarrollo y producción. Antes de publicar, ejecute `npm audit`, las pruebas automatizadas y una revisión de las diez categorías del OWASP Top 10.\n\n## Ideas clave\n\n- REST es un conjunto de restricciones; recursos, métodos y códigos de estado forman el contrato de la API.\n- Middleware, validación y manejo centralizado de errores hacen predecible el comportamiento del servidor.\n- Consultas parametrizadas, hash lento de contraseñas y secretos fuera del código son obligatorios, no mejoras opcionales.\n"
+      },
+      "case": {
+        "title": "Caso: Hostal Inti Wasi y la plataforma de reservas propia",
+        "content": "**Hostal Inti Wasi** es un establecimiento de hospedaje de dos estrellas ubicado en el barrio de San Blas, en Cusco, con 18 habitaciones y una ocupación promedio anual del 68 %. El 62 % de sus reservas llega a través de agencias de viaje en línea que cobran comisiones de entre 15 % y 18 %. Para reducir esa dependencia, la propietaria, Rosa Huamán, contrató a Bruno, estudiante de computación, para desarrollar una plataforma de reservas directas.\n\nEn cuatro meses, Bruno construyó una API con Node.js y Express conectada a PostgreSQL y una interfaz en HTML, CSS y JavaScript. La plataforma funciona: los huéspedes consultan la disponibilidad, reservan y pagan un adelanto mediante una pasarela de pagos, y el personal de recepción gestiona las reservas desde un panel administrativo. Se registran nombre, correo, teléfono, nacionalidad y número de pasaporte o DNI de cada huésped, porque así lo exige el registro de huéspedes del sector.\n\nAntes del lanzamiento, Rosa pidió a una consultora una revisión de seguridad. El informe encontró lo siguiente:\n\n- La búsqueda de reservas arma la consulta concatenando el número de documento recibido en `req.query.doc`.\n- Las contraseñas del personal se guardan con MD5 sin sal.\n- El token JWT del panel no tiene expiración y se guarda en `localStorage`.\n- El archivo `.env`, con la contraseña de la base de datos y la clave de la pasarela de pagos, fue subido hace dos meses a un repositorio público.\n- La ruta `/api/reservas/:id` devuelve cualquier reserva a cualquier usuario autenticado, aunque no le pertenezca.\n- Los errores devuelven al navegador la traza completa del servidor, con rutas de archivos y consultas SQL.\n- No existe política de privacidad, la casilla de aceptación de términos aparece premarcada y el banco de datos personales no ha sido inscrito ante la Autoridad Nacional de Protección de Datos Personales.\n- `npm audit` reporta dependencias con vulnerabilidades críticas.\n\nEl Inti Raymi, que se celebra cada 24 de junio, marca el inicio de la temporada alta, y faltan cinco semanas. Rosa calcula que cada semana de retraso le cuesta alrededor de S/ 4 500 en comisiones que podría ahorrar. Bruno sostiene que es posible lanzar ya y \"corregir sobre la marcha\", porque \"nadie va a atacar un hostal pequeño\". La consultora recomienda postergar el lanzamiento hasta mitigar, como mínimo, los hallazgos críticos.\n\nRosa le pide a usted, como desarrollador(a) contratado(a) para apoyar a Bruno, una recomendación fundamentada y un plan de trabajo semanal que pueda entender sin conocimientos técnicos.\n",
+        "questions": [
+          "Clasifique cada hallazgo según las categorías del OWASP Top 10 de 2021 y estime su severidad e impacto para el hostal y para los huéspedes.",
+          "¿Qué acciones inmediatas exige la exposición del archivo .env en el repositorio público? ¿Basta con borrarlo del repositorio? Justifique.",
+          "¿Qué obligaciones de la Ley 29733 incumple la plataforma y cómo se corrigen en la interfaz, en la API y en la base de datos?",
+          "¿Recomendaría lanzar ahora, lanzar parcialmente o postergar? Justifique con costos, riesgos y un plan semanal para las cinco semanas disponibles."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Proyecto integrador full stack desplegado y sustentado",
+        "instructions": "**Objetivo:** integrar el cliente desarrollado en las unidades anteriores con una API REST propia, segura y persistente, desplegarla y sustentar las decisiones técnicas.\n\n**Requisitos mínimos**\n\n1. **API REST con Express** con al menos dos recursos relacionados (por ejemplo, productos y pedidos), operaciones CRUD, códigos de estado correctos, validación de entradas y manejador centralizado de errores.\n2. **Persistencia en PostgreSQL** con un modelo de al menos cuatro tablas, coordinado con lo aprendido en Base de Datos, y uso exclusivo de consultas parametrizadas.\n3. **Autenticación** con contraseñas protegidas con bcrypt o Argon2id, sesión en cookie HttpOnly o JWT de corta duración, y control de acceso por rol (cliente y administrador).\n4. **Seguridad:** helmet, límite de intentos en el inicio de sesión, secretos en variables de entorno, `npm audit` sin vulnerabilidades críticas y una matriz de las diez categorías del OWASP Top 10 con las medidas aplicadas.\n5. **Protección de datos:** política de privacidad, consentimiento no premarcado y procedimiento para atender derechos ARCO conforme a la Ley 29733.\n6. **Pruebas** de integración de la API (por ejemplo, con Supertest) que cubran casos válidos, inválidos y no autorizados.\n7. **Despliegue** en un servicio en la nube con HTTPS.\n\n**Entregables:** repositorio con historial de cada integrante, informe técnico de máximo ocho páginas (arquitectura, modelo de datos, contrato de la API, pruebas, seguridad y lecciones aprendidas) y sustentación grupal de 15 minutos con preguntas y una modificación de código individual. Entrega en la semana 16.\n",
+        "rubric": [
+          {
+            "name": "Funcionalidad full stack integrada",
+            "points": 6
+          },
+          {
+            "name": "Seguridad y protección de datos personales",
+            "points": 5
+          },
+          {
+            "name": "Calidad: arquitectura en capas, pruebas y uso de Git",
+            "points": 4
+          },
+          {
+            "name": "Despliegue con HTTPS y documentación técnica",
+            "points": 2
+          },
+          {
+            "name": "Sustentación y dominio individual",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: API REST, persistencia y seguridad",
+        "questions": [
+          {
+            "prompt": "En Express, ¿qué ocurre si un middleware no envía una respuesta ni llama a next()?",
+            "options": [
+              "Express pasa automáticamente al siguiente middleware",
+              "La solicitud queda sin respuesta hasta que el cliente agota su tiempo de espera",
+              "Express devuelve un 404 de inmediato",
+              "El servidor se reinicia automáticamente"
+            ],
+            "correct": 1,
+            "explanation": "Cada middleware debe terminar el ciclo con una respuesta o ceder el control con next(). Si no hace ninguna de las dos cosas, la solicitud queda colgada y el cliente recibe un error por tiempo de espera, un defecto difícil de diagnosticar."
+          },
+          {
+            "prompt": "¿Cuál de estas consultas con el paquete pg de Node.js es segura frente a la inyección SQL?",
+            "options": [
+              "pool.query(`SELECT * FROM reservas WHERE dni = '${dni}'`)",
+              "pool.query('SELECT * FROM reservas WHERE dni = ' + dni)",
+              "pool.query('SELECT * FROM reservas WHERE dni = $1', [dni])",
+              "pool.query('SELECT * FROM reservas WHERE dni = ' + limpiar(dni))"
+            ],
+            "correct": 2,
+            "explanation": "En la consulta parametrizada el texto SQL y el valor viajan por separado y el motor nunca interpreta el dato como código. Las plantillas y concatenaciones, incluso con funciones de limpieza caseras, siguen siendo vulnerables."
+          },
+          {
+            "prompt": "Un sistema guarda las contraseñas de sus usuarios con SHA-256 sin sal. ¿Cuál es el principal problema?",
+            "options": [
+              "Es rápido y sin sal: facilita ataques masivos de diccionario y tablas precalculadas",
+              "SHA-256 es reversible si se conoce la clave del servidor",
+              "Produce cadenas demasiado largas para PostgreSQL",
+              "No está disponible en Node.js sin bibliotecas externas"
+            ],
+            "correct": 0,
+            "explanation": "Las funciones hash de propósito general están optimizadas para ser rápidas, lo que favorece al atacante, y sin sal las contraseñas iguales producen el mismo hash. bcrypt y Argon2id son lentas, configurables e incorporan sal."
+          },
+          {
+            "prompt": "Un usuario autenticado cambia en la ruta /api/pedidos/1041 el número por 1042 y obtiene el pedido de otra persona. ¿Qué categoría del OWASP Top 10 (2021) describe la falla?",
+            "options": [
+              "A03: Inyección",
+              "A02: Fallas criptográficas",
+              "A01: Pérdida de control de acceso",
+              "A07: Fallas de identificación y autenticación"
+            ],
+            "correct": 2,
+            "explanation": "Es una referencia directa insegura a objetos, incluida en A01 Pérdida de control de acceso. El usuario sí está autenticado; lo que falta es verificar en el servidor que el recurso le pertenece antes de devolverlo."
+          },
+          {
+            "prompt": "Una API recibe un POST para crear una reserva con una fecha de ingreso que ya pasó. ¿Qué respuesta es la más adecuada?",
+            "options": [
+              "200 con el mensaje 'error: fecha inválida'",
+              "500 Internal Server Error",
+              "404 Not Found",
+              "422 con un cuerpo JSON que detalla el campo y el motivo"
+            ],
+            "correct": 3,
+            "explanation": "El servidor entendió la solicitud, pero los datos no cumplen las reglas de negocio: 422, o 400 según la convención del equipo, con detalle estructurado permite al cliente mostrar el error. 200 oculta la falla y 500 culpa al servidor."
+          },
+          {
+            "prompt": "El archivo .env con la contraseña de la base de datos se subió por error a un repositorio público. ¿Cuál es la acción prioritaria?",
+            "options": [
+              "Borrar el archivo en un nuevo commit",
+              "Hacer privado el repositorio",
+              "Rotar de inmediato las credenciales expuestas y luego limpiar el historial",
+              "Agregar .env al archivo .gitignore"
+            ],
+            "correct": 2,
+            "explanation": "Los secretos publicados deben considerarse comprometidos, porque hay programas automatizados que rastrean repositorios públicos. Lo primero es revocarlos y generar nuevos; borrar el archivo, privatizar el repositorio o actualizar .gitignore no elimina las copias ya descargadas ni el historial."
+          },
+          {
+            "prompt": "Según la Ley 29733, ¿qué práctica en un formulario de registro permite acreditar válidamente el consentimiento del titular de los datos?",
+            "options": [
+              "Una casilla no premarcada vinculada a una política de privacidad que informa la finalidad",
+              "Una casilla de aceptación premarcada",
+              "Un aviso en el pie de página sin casilla",
+              "La aceptación implícita al continuar navegando"
+            ],
+            "correct": 0,
+            "explanation": "La norma exige un consentimiento libre, previo, informado, expreso e inequívoco. Una casilla premarcada o la aceptación implícita no expresan una voluntad activa del titular, y un aviso sin acción del usuario no acredita el consentimiento."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "La web como sistema: cliente-servidor, URL, DNS y recorrido de una solicitud",
+      "activity": "Sesión de diagnóstico; laboratorio para trazar con las herramientas de desarrollo la carga de un portal del Estado peruano; configuración del editor y de Git.",
+      "evidence": "Ficha de análisis de la solicitud y repositorio creado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Protocolo HTTP: métodos, códigos de estado, HTTPS, cookies y cabeceras de seguridad",
+      "activity": "Aula invertida con la lectura de la unidad; análisis de cabeceras de tres sitios peruanos; discusión del caso Clínica San Gabriel.",
+      "evidence": "Participación argumentada en el foro del caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "HTML5 semántico, contenido multimedia y formularios accesibles",
+      "activity": "Taller de maquetación semántica en parejas; validación con el servicio del W3C y revisión cruzada de código.",
+      "evidence": "Página semántica validada en el repositorio"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Accesibilidad con WCAG 2.2, ARIA y marco normativo peruano",
+      "activity": "Auditoría con Lighthouse, teclado y lector de pantalla; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Cascada, especificidad, herencia, modelo de caja y unidades relativas",
+      "activity": "Retos de especificidad en vivo y ejercicios de depuración de estilos con las herramientas de desarrollo.",
+      "evidence": "Retos de CSS resueltos en el repositorio"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Maquetación con Flexbox y CSS Grid",
+      "activity": "Laboratorio guiado para reconstruir barra de navegación, rejilla de tarjetas y panel con Flexbox y Grid.",
+      "evidence": "Laboratorio de patrones de maquetación"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Diseño adaptable móvil primero, consultas de contenedor y tokens de diseño",
+      "activity": "Discusión del caso Café Selva Central; definición del proyecto integrador y del sistema de diseño de cada equipo.",
+      "evidence": "Ficha del proyecto y participación en el foro del caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Core Web Vitals y optimización de imágenes, fuentes y carga crítica",
+      "activity": "Medición antes y después con Lighthouse; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "JavaScript moderno: tipos, funciones, clausuras, objetos y módulos ES",
+      "activity": "Katas de JavaScript con pruebas automáticas y comparación de soluciones con Python y Java.",
+      "evidence": "Katas aprobadas en el repositorio"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "DOM, eventos, delegación y validación de formularios con la API de restricciones",
+      "activity": "Laboratorio: lista filtrable y formulario validado del proyecto; revisión entre pares centrada en la seguridad del DOM.",
+      "evidence": "Componente interactivo funcional"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Bucle de eventos, promesas, async/await y consumo de API con fetch",
+      "activity": "Discusión del caso CambiaYa; laboratorio de consumo de una API con estados de carga, error y cancelación.",
+      "evidence": "Foro del caso y laboratorio de fetch"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "CORS, almacenamiento en el navegador, estado y criterios para adoptar frameworks",
+      "activity": "Integración de la capa cliente del proyecto; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Node.js, npm, Express, rutas, middleware y diseño de API REST",
+      "activity": "Laboratorio: API REST de un recurso con validación de entradas y manejo centralizado de errores.",
+      "evidence": "API básica en el repositorio"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Persistencia en PostgreSQL, arquitectura en capas y autenticación con contraseñas seguras",
+      "activity": "Conexión de la API a PostgreSQL con consultas parametrizadas; registro e inicio de sesión con bcrypt y control por rol.",
+      "evidence": "API persistente con autenticación"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "OWASP Top 10, protección de datos personales, pruebas de la API y despliegue",
+      "activity": "Discusión del caso Hostal Inti Wasi; auditoría de seguridad cruzada entre equipos y despliegue con HTTPS.",
+      "evidence": "Matriz OWASP, pruebas y despliegue verificado"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Entrega de la Tarea 4, resolución del Cuestionario 4, sustentación técnica por equipo y prueba práctica individual.",
+      "evidence": "Tarea 4, Cuestionario 4 y prueba final"
+    }
+  ]
+}

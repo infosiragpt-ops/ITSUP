@@ -1,0 +1,1294 @@
+{
+  "name": "Aprendizaje Automático I",
+  "slug": "aprendizaje-automatico-i",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Aprendizaje Automático I es un curso de formación específica, de naturaleza teórico-práctica, del tercer ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante formule problemas reales como tareas de aprendizaje supervisado y construya, evalúe y documente modelos predictivos reproducibles con Python y scikit-learn. Integra lo aprendido en Fundamentos de Programación en Python, Matemática para Ciencia de Datos, Estadística y Probabilidad y Base de Datos, y se articula con Análisis y Visualización de Datos y Álgebra Lineal Aplicada, que se cursan en paralelo. Comprende cuatro unidades: fundamentos y flujo de trabajo del aprendizaje supervisado (CRISP-DM, partición de datos, fuga de información, pipelines y k vecinos más cercanos); modelos de regresión lineal, polinomial y regularizada; modelos de clasificación (regresión logística, Naive Bayes y árboles de decisión) evaluados según el costo del error; y validación cruzada, ajuste de hiperparámetros, interpretabilidad, equidad y documentación del modelo. Aporta al perfil de egreso la capacidad de entrenar modelos de forma ética y responsable, y sienta las bases de Aprendizaje Automático II (métodos de ensamble y aprendizaje no supervisado).",
+  "competency": "Desarrolla modelos de aprendizaje supervisado de regresión y clasificación para resolver problemas de organizaciones peruanas, aplicando un flujo de trabajo reproducible en Python y scikit-learn —desde la formulación del problema y la preparación de los datos hasta la validación, la interpretación y la documentación del modelo—, con métricas alineadas al costo del error y respetando la normativa de protección de datos personales y los principios de uso responsable de la inteligencia artificial.",
+  "capacities": [
+    "Formula problemas de negocio como tareas de aprendizaje supervisado y prepara los datos mediante particiones sin fuga de información y pipelines de preprocesamiento reproducibles en scikit-learn.",
+    "Entrena, diagnostica y regulariza modelos de regresión lineal y polinomial, interpretando coeficientes, residuos y métricas de error expresadas en las unidades del problema.",
+    "Construye y evalúa modelos de clasificación con regresión logística, Naive Bayes y árboles de decisión, eligiendo métricas y umbrales de decisión según el costo de los errores.",
+    "Optimiza, interpreta y documenta modelos mediante validación cruzada, búsqueda de hiperparámetros, análisis de importancia de variables, auditoría de equidad y tarjetas de modelo."
+  ],
+  "indicators": [
+    "Redacta la formulación de un problema predictivo indicando tarea, variable objetivo, unidad de análisis, métrica de éxito, línea base y riesgos de fuga de información.",
+    "Implementa un Pipeline con ColumnTransformer que imputa, codifica y escala variables, y lo evalúa con validación cruzada sin contaminar el conjunto de prueba.",
+    "Ajusta modelos de regresión regularizados y reporta MAE, RMSE y R², justificando el modelo elegido con curvas de validación, curvas de aprendizaje y análisis de residuos.",
+    "Construye la matriz de confusión e interpreta precisión, exhaustividad, F1, ROC-AUC y promedio de precisión en un problema con clases desbalanceadas.",
+    "Selecciona el umbral de decisión de un clasificador calibrado a partir de una matriz de costos y explica su impacto económico en la operación de la organización.",
+    "Optimiza hiperparámetros con GridSearchCV o RandomizedSearchCV usando el esquema de validación adecuado a la estructura de los datos, incluido el temporal.",
+    "Elabora una tarjeta de modelo que documenta datos, desempeño por subgrupos, limitaciones, riesgos éticos y cumplimiento de la Ley 29733.",
+    "Sustenta oralmente un proyecto integrador de aprendizaje supervisado, defendiendo sus decisiones técnicas y éticas con evidencia cuantitativa."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona, el estudiante revisa la lectura de la unidad, videos breves y un cuaderno Jupyter guiado en Google Colab. Las sesiones en vivo se dedican a la discusión de casos peruanos y latinoamericanos con el método de casos, a la programación en vivo y a talleres de aprendizaje basado en problemas, en los que equipos resuelven retos con datos abiertos del INEI, el BCRP y la Plataforma Nacional de Datos Abiertos. El aprendizaje basado en proyectos articula las cuatro unidades: cada tarea es un entregable parcial del proyecto integrador. La evaluación formativa es continua mediante cuestionarios autocalificados con retroalimentación inmediata, revisión de código entre pares con rúbricas y tutorías asíncronas en el foro del aula virtual. Se exige control de versiones con Git y cuadernos reproducibles.",
+  "bibliography": [
+    "Géron, A. (2022). Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow (3.ª ed.). O'Reilly Media.",
+    "James, G., Witten, D., Hastie, T., Tibshirani, R. y Taylor, J. (2023). An introduction to statistical learning: With applications in Python. Springer.",
+    "Hastie, T., Tibshirani, R. y Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction (2.ª ed.). Springer.",
+    "Mitchell, T. M. (1997). Machine learning. McGraw-Hill.",
+    "Raschka, S., Liu, Y. y Mirjalili, V. (2022). Machine learning with PyTorch and Scikit-Learn. Packt Publishing.",
+    "Müller, A. C. y Guido, S. (2016). Introduction to machine learning with Python: A guide for data scientists. O'Reilly Media.",
+    "Provost, F. y Fawcett, T. (2013). Data science for business: What you need to know about data mining and data-analytic thinking. O'Reilly Media.",
+    "Kuhn, M. y Johnson, K. (2013). Applied predictive modeling. Springer.",
+    "Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O. et al. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, tareas aplicadas de las unidades 1 a 3 y participación argumentada en la discusión de casos, con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador de aprendizaje supervisado: repositorio reproducible, pipeline completo, informe técnico y tarjeta de modelo (tarea de la unidad 4)."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Examen práctico individual en Colab con datos nuevos y sustentación oral del proyecto integrador, con preguntas sobre decisiones técnicas y éticas."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos y flujo de trabajo del aprendizaje supervisado",
+      "description": "Al finalizar la unidad, el estudiante formula un problema de una organización peruana como tarea de aprendizaje supervisado, particiona los datos sin fuga de información y construye un pipeline reproducible en scikit-learn que supera una línea base con k vecinos más cercanos.",
+      "topics": [
+        "Definición de Mitchell, tipos de aprendizaje y formulación de tareas predictivas",
+        "Metodología CRISP-DM y traducción de objetivos de negocio a métricas",
+        "Partición en entrenamiento, validación y prueba; fuga de información",
+        "Preprocesamiento con Pipeline y ColumnTransformer: imputación, codificación y escalado",
+        "k vecinos más cercanos, modelos de línea base y maldición de la dimensionalidad"
+      ],
+      "slides": [
+        {
+          "title": "Qué significa aprender a partir de datos",
+          "bullets": [
+            "Mitchell (1997): un programa aprende de la experiencia E respecto de una tarea T y una medida P si su desempeño en T, medido por P, mejora con E.",
+            "Programación tradicional: reglas + datos → respuestas; aprendizaje automático: datos + respuestas → reglas, es decir, el modelo.",
+            "Ejemplo peruano: T = predecir mora a 90 días; E = historial de 50 000 créditos de una caja municipal; P = área bajo la curva ROC.",
+            "El objetivo real es generalizar a casos nuevos, no memorizar los datos de entrenamiento."
+          ],
+          "notes": "Abra la sesión preguntando: ¿qué diferencia hay entre un programa que calcula el IGV y uno que detecta transacciones fraudulentas? El primero aplica una regla conocida (18 %); el segundo debe inferir patrones que nadie escribió explícitamente. Presente la definición de Mitchell y pida a los estudiantes que identifiquen T, E y P en tres ejemplos: el filtro de spam de su correo, la recomendación de series en una plataforma de streaming y la priorización de fiscalizaciones de la SUNAT. Insista en que la medida P debe definirse antes de entrenar, porque condiciona todo el proyecto. Cierre con la idea de generalización: un estudiante que memoriza el solucionario aprueba la práctica, pero falla en el examen; un modelo que memoriza sus datos fracasa en producción."
+        },
+        {
+          "title": "Tipos de aprendizaje y alcance del curso",
+          "bullets": [
+            "Supervisado: datos etiquetados (x, y); regresión si y es numérica, clasificación si y es categórica.",
+            "No supervisado: solo se observa x; agrupamiento y reducción de dimensionalidad, temas de Aprendizaje Automático II.",
+            "Por refuerzo: un agente aprende una política mediante recompensas; aplicaciones en robótica, control y juegos.",
+            "Autosupervisado: el propio dato genera la etiqueta; es la base de los grandes modelos de lenguaje del quinto ciclo."
+          ],
+          "notes": "Use un cuadro de doble entrada para ubicar cada tipo de aprendizaje según los datos que requiere y la pregunta que responde. Precise que este curso se centra en el aprendizaje supervisado porque concentra la mayor parte de las aplicaciones empresariales: calificación crediticia, pronóstico de demanda, detección de fraude y tasación de inmuebles. Explique que el aprendizaje no supervisado (k-medias, análisis de componentes principales) se estudia en Aprendizaje Automático II y que el autosupervisado sustenta los modelos de lenguaje del quinto ciclo, para mostrar la progresión curricular. Pregunta para la clase: una empresa de telecomunicaciones quiere segmentar a sus clientes sin categorías previas y luego predecir cuáles se irán a la competencia; ¿qué tipo de aprendizaje corresponde a cada fase? Respuesta esperada: primero no supervisado y luego supervisado."
+        },
+        {
+          "title": "Las dos culturas del modelado: inferir o predecir",
+          "bullets": [
+            "Breiman (2001) distingue la cultura del modelado de datos, orientada a la inferencia, y la cultura algorítmica, orientada a la predicción.",
+            "Inferencia: estimar el efecto de una variable con supuestos explícitos; predicción: minimizar el error fuera de la muestra.",
+            "Un buen modelo predictivo no implica causalidad: subir el límite de una tarjeta no «causa» un buen comportamiento de pago.",
+            "En la industria se combinan: se predice para decidir y se interpreta para rendir cuentas."
+          ],
+          "notes": "Leo Breiman, estadístico de Berkeley y creador de CART y de los bosques aleatorios, publicó en 2001 «Statistical Modeling: The Two Cultures», un artículo que todo profesional de datos debería leer. Explique que un economista del BCRP que estima la elasticidad del consumo frente a la tasa de interés busca inferencia: necesita coeficientes interpretables y supuestos verificables. En cambio, un equipo de riesgos que debe ordenar solicitudes por probabilidad de impago busca, ante todo, una predicción precisa. Advierta sobre la trampa de la causalidad: los modelos predictivos explotan correlaciones que pueden desaparecer cuando se interviene. Pregunte: si un modelo muestra que los clientes que usan la aplicación móvil pagan mejor, ¿conviene obligar a todos a instalarla para reducir la mora? Discuta variables de confusión como el nivel de ingresos y la bancarización previa."
+        },
+        {
+          "title": "Formular el problema antes de escribir código",
+          "bullets": [
+            "Paso 1: identificar la decisión de negocio que el modelo apoyará y quién la tomará.",
+            "Paso 2: definir la variable objetivo observable, el horizonte temporal y la unidad de análisis (cliente, transacción, día).",
+            "Paso 3: listar solo variables disponibles en el momento de la predicción, nunca información posterior.",
+            "Paso 4: fijar una métrica técnica, una métrica de negocio y una línea base que superar.",
+            "Paso 5: evaluar riesgos éticos, legales (Ley 29733) y operativos de cada tipo de error."
+          ],
+          "notes": "Esta diapositiva es la más importante de la unidad. Muestre un ejemplo mal formulado: «queremos usar IA para mejorar las ventas». Luego reformúlelo junto con la clase: «predecir, el primer día de cada mes, qué clientes con compras en los últimos 90 días no comprarán en los próximos 60, para asignar un cupón de S/ 20 al 10 % de mayor riesgo». Señale cómo cada elemento se vuelve verificable: unidad de análisis, horizonte, acción y presupuesto. Recalque que las variables deben existir en el momento de la predicción. Pida que, en grupos de tres, reformulen en cinco minutos el siguiente pedido de una clínica privada: «queremos reducir las citas perdidas». Revise dos propuestas en plenaria y evalúe si la línea base adecuada sería la tasa histórica de inasistencia por especialidad."
+        },
+        {
+          "title": "CRISP-DM: el ciclo de vida de un proyecto de datos",
+          "bullets": [
+            "Seis fases (Chapman et al., 2000): comprensión del negocio, comprensión de los datos, preparación, modelado, evaluación y despliegue.",
+            "Es iterativo: la evaluación suele devolver al equipo a redefinir el problema o a recolectar nuevos datos.",
+            "La preparación de datos consume con frecuencia más de la mitad del esfuerzo total del proyecto.",
+            "Cada fase deja entregables: acta del problema, diccionario de datos, cuaderno reproducible e informe de evaluación."
+          ],
+          "notes": "CRISP-DM nació entre 1996 y 2000 de un consorcio de empresas europeas, entre ellas Daimler-Benz, NCR, SPSS y OHRA, y sigue siendo la metodología más citada por los profesionales de minería de datos. Dibuje el ciclo y enfatice las flechas de retorno: es normal que, tras evaluar, el equipo descubra que la variable objetivo estaba mal definida. Relacione cada fase con los entregables que el estudiante producirá en el curso: la Tarea 1 cubre comprensión del negocio y preparación; las Tareas 2 y 3, modelado y evaluación; el proyecto integrador, todo el ciclo. Mencione que el despliegue y el monitoreo se profundizan en el curso de Despliegue de Modelos (MLOps) del quinto ciclo. Pregunta: ¿por qué la preparación de datos suele ser la fase más costosa en organizaciones peruanas? Oriente hacia sistemas heredados y datos dispersos."
+        },
+        {
+          "title": "Error de generalización y partición de datos",
+          "bullets": [
+            "El error de entrenamiento es optimista; lo que importa es el error esperado en datos nunca vistos.",
+            "Partición típica: 60-70 % entrenamiento, 15-20 % validación y 15-20 % prueba, o validación cruzada sobre el entrenamiento.",
+            "El conjunto de prueba se usa una sola vez, al final, como un examen sellado.",
+            "train_test_split(X, y, test_size=0.2, stratify=y, random_state=42) preserva la proporción de clases y la reproducibilidad.",
+            "Con datos temporales se entrena con el pasado y se prueba con el futuro, nunca al azar."
+          ],
+          "notes": "Explique la diferencia entre error de entrenamiento y error de generalización con una analogía: el conjunto de entrenamiento son las prácticas resueltas, el de validación son los simulacros y el de prueba es el examen final, que se rinde una sola vez. Si el equipo mira el examen y ajusta el modelo, la nota deja de medir el aprendizaje. Muestre en vivo train_test_split y explique el parámetro stratify: si la mora es de 6 %, sin estratificación una muestra de prueba pequeña puede quedar con 4 % u 8 % por puro azar. Para datos temporales, use el ejemplo de la demanda de un supermercado: mezclar días de 2025 en el entrenamiento para predecir 2024 equivale a conocer el futuro. Pregunte qué ocurre con el error estimado si se viola esta regla y por qué la gerencia se decepcionará después."
+        },
+        {
+          "title": "Fuga de información: el enemigo silencioso",
+          "bullets": [
+            "Fuga de objetivo: variables que contienen la respuesta, como «fecha de castigo contable» para predecir mora.",
+            "Fuga por preprocesamiento: imputar o escalar con estadísticos calculados sobre todos los datos, incluida la prueba.",
+            "Fuga temporal: usar información generada después del momento de la decisión.",
+            "Fuga por duplicados: el mismo cliente en entrenamiento y prueba; se controla con GroupKFold.",
+            "Señal de alarma: un desempeño «demasiado bueno», como AUC de 0,99, en el primer intento."
+          ],
+          "notes": "Kaufman, Rosset y Perlich (2012) documentaron competencias de minería de datos ganadas gracias a fugas, como identificadores de pacientes que codificaban el hospital y, por tanto, el diagnóstico. Presente los cuatro tipos con ejemplos peruanos: en cobranzas, la variable «cliente derivado a estudio jurídico» es consecuencia de la mora; en salud, «medicamento recetado» puede delatar el diagnóstico que se quiere predecir. Explique que la fuga por preprocesamiento es más sutil: imputar con la media global usa información del conjunto de prueba. Enseñe la regla práctica: para cada variable, pregunte «¿conocería este valor en el instante exacto en que debo tomar la decisión?». Ejercicio: entregue una lista de diez variables de un modelo de deserción universitaria y pida identificar en tres minutos las que filtran información, justificando cada elección."
+        },
+        {
+          "title": "Tipos de variables y su tratamiento",
+          "bullets": [
+            "Numéricas continuas (ingreso, área en m²) y discretas (número de hijos, cuotas atrasadas).",
+            "Categóricas nominales (distrito, operador móvil) y ordinales (nivel educativo, calificación SBS del deudor).",
+            "Fechas y texto requieren ingeniería de variables: mes, día de la semana, días desde el último pago.",
+            "Los estimadores de scikit-learn esperan matrices numéricas y, en su mayoría, sin valores faltantes."
+          ],
+          "notes": "Repase la tipología de variables vista en Estadística y Probabilidad, ahora con la mirada del modelado. Destaque que la calificación SBS del deudor es ordinal (Normal, CPP, Deficiente, Dudoso, Pérdida) y que tratarla como nominal desperdicia información, mientras que tratar el distrito como ordinal inventa un orden inexistente. Muestre cómo una fecha se descompone en variables útiles: mes (estacionalidad de campañas como Navidad o Fiestas Patrias), día de la semana y días desde el último pago. Señale que el texto libre, como los motivos de reclamo, requiere técnicas de procesamiento de lenguaje natural que verán en el cuarto ciclo. Pregunta: ¿cómo representarías la variable «hora de la transacción» para que el modelo entienda que las 23:00 y la 01:00 están cerca? Introduzca la codificación con seno y coseno."
+        },
+        {
+          "title": "Imputación de valores faltantes",
+          "bullets": [
+            "Mecanismos de Rubin: MCAR, MAR y MNAR; el mecanismo determina el sesgo que introduce la imputación.",
+            "SimpleImputer: media o mediana para numéricas; moda o una constante para categóricas.",
+            "add_indicator=True agrega una columna que marca el faltante, a menudo muy predictiva.",
+            "Ejemplo ENAHO: el ingreso no declarado no es aleatorio y tiende a concentrarse en ciertos perfiles de hogar."
+          ],
+          "notes": "Presente la taxonomía de Rubin con ejemplos: MCAR, cuando un formulario se perdió por una falla del servidor; MAR, cuando los jóvenes omiten con mayor frecuencia el estado civil, pero la edad está observada; MNAR, cuando quienes tienen ingresos altos no declaran su ingreso precisamente por ser altos. Explique que imputar con la mediana es robusto y sencillo, pero reduce la varianza y puede atenuar relaciones. Muestre que add_indicator=True permite al modelo aprender si la ausencia en sí misma es informativa, algo frecuente en datos de crédito: no reportar empleador suele asociarse con informalidad laboral, que en el Perú afecta a alrededor del 70 % de la población ocupada según el INEI. Pregunta: ¿cuándo sería preferible eliminar filas con faltantes en lugar de imputar? Discuta el tamaño de muestra y el mecanismo."
+        },
+        {
+          "title": "Codificación de variables categóricas",
+          "bullets": [
+            "One-hot: una columna binaria por categoría; handle_unknown='ignore' evita errores ante categorías nuevas en producción.",
+            "Ordinal: preserva el orden (primaria < secundaria < superior); no debe usarse en variables nominales.",
+            "Alta cardinalidad, como los casi 1 900 distritos del Perú: agrupar categorías raras o usar TargetEncoder con validación cruzada interna.",
+            "Nunca codificar con enteros arbitrarios una variable nominal en modelos lineales o basados en distancias."
+          ],
+          "notes": "Muestre en pantalla una tabla con la variable «operador móvil» (Claro, Movistar, Entel, Bitel) y su codificación one-hot. Explique por qué asignar 1, 2, 3 y 4 sería un error en un modelo lineal o en k-NN: implicaría que Bitel está «más lejos» de Claro que Movistar. Discuta handle_unknown='ignore': si en producción aparece un operador nuevo, el pipeline no se rompe. Para alta cardinalidad, introduzca TargetEncoder, disponible en scikit-learn desde la versión 1.3, que reemplaza cada categoría por la media del objetivo, y advierta que sin validación cruzada interna produce fuga y sobreajuste. Pregunta para la clase: ¿qué harías con una categoría que aparece solo tres veces en 100 000 registros? Presente el parámetro min_frequency de OneHotEncoder, que agrupa las categorías infrecuentes en una sola columna."
+        },
+        {
+          "title": "Escalado de variables numéricas",
+          "bullets": [
+            "Estandarización con StandardScaler: z = (x − μ) / σ, con media 0 y desviación estándar 1.",
+            "Normalización min-max: x' = (x − mín) / (máx − mín); es muy sensible a valores atípicos.",
+            "RobustScaler usa la mediana y el rango intercuartílico; útil con ingresos muy asimétricos.",
+            "Imprescindible en k-NN, regresión regularizada y descenso de gradiente; irrelevante en árboles de decisión."
+          ],
+          "notes": "Haga el cálculo en vivo: un cliente con saldo de S/ 12 000, cuando la media es S/ 8 000 y la desviación estándar S/ 4 000, tiene z = 1. Luego muestre que en k-NN, sin escalado, una diferencia de S/ 1 000 en saldo pesa mil veces más que una diferencia de un año en antigüedad, lo que vuelve irrelevante a esta última. Explique que los árboles de decisión son invariantes a transformaciones monótonas y no necesitan escalado, aunque incluirlo no los perjudica. Resalte que el escalador se ajusta con fit solo sobre el entrenamiento y se aplica con transform al resto. Pregunta: los ingresos de la ENAHO tienen una cola derecha muy larga; ¿qué transformación y qué escalador aplicarías antes de usar k-NN? Respuesta esperada: logaritmo seguido de RobustScaler o StandardScaler."
+        },
+        {
+          "title": "Pipeline y ColumnTransformer en scikit-learn",
+          "bullets": [
+            "ColumnTransformer aplica transformaciones distintas a columnas numéricas y categóricas, y concatena los resultados.",
+            "Pipeline encadena preprocesamiento y modelo en un único estimador con los métodos fit y predict.",
+            "Dentro de la validación cruzada, cada pliegue calcula sus propios estadísticos: no hay fuga por preprocesamiento.",
+            "El pipeline completo se serializa con joblib y se despliega como una sola pieza que recibe datos crudos."
+          ],
+          "notes": "Esta es la herramienta que diferencia a un profesional de un aficionado. Muestre primero un cuaderno «desordenado» que imputa, codifica y escala con pandas antes de dividir los datos; luego reescríbalo con Pipeline y ColumnTransformer. Ejecute cross_val_score sobre el pipeline y explique que, en cada pliegue, el imputador y el escalador se ajustan solo con los datos de entrenamiento de ese pliegue. Muestre la representación gráfica del pipeline en Jupyter, útil para documentar. Resalte la ventaja en producción: el equipo de tecnología recibe un solo objeto que acepta datos crudos y devuelve predicciones, sin reescribir el preprocesamiento en otro lenguaje. Ejercicio: pida agregar al pipeline una variable categórica nueva y verificar que el resultado cambia sin tocar el resto del código. Comente que este patrón se usará en todas las tareas."
+        },
+        {
+          "title": "k vecinos más cercanos (k-NN)",
+          "bullets": [
+            "Cover y Hart (1967): se predice con la clase mayoritaria, o el promedio, de los k ejemplos más cercanos.",
+            "Distancia euclidiana d(a, b) = √Σ(aᵢ − bᵢ)²; la distancia Manhattan es una alternativa más robusta a atípicos.",
+            "k pequeño: bajo sesgo y alta varianza; k grande: fronteras suaves y mayor sesgo.",
+            "Modelo perezoso: no entrena, pero cada predicción cuesta O(n·d) sin estructuras de búsqueda como KD-tree."
+          ],
+          "notes": "Ilustre k-NN con un ejemplo visual: clientes en un plano de antigüedad y saldo, coloreados según si cancelaron su cuenta. Para un cliente nuevo se buscan sus k vecinos y se vota. Calcule a mano la distancia euclidiana entre dos clientes estandarizados, por ejemplo (0,5; 1,2) y (1,0; 0,2): √(0,25 + 1) ≈ 1,12. Explique que k-NN no tiene una fase de entrenamiento real, por eso se le llama «perezoso», y que el costo se traslada al momento de predecir; estructuras como KD-tree o ball tree aceleran la búsqueda en baja dimensión, tema conectado con los árboles de Estructuras de Datos y Algoritmos. Discuta la ponderación por distancia con weights='distance'. Pregunta: ¿por qué conviene un k impar en clasificación binaria? Porque evita empates en la votación."
+        },
+        {
+          "title": "Líneas base y maldición de la dimensionalidad",
+          "bullets": [
+            "DummyClassifier (clase más frecuente) y DummyRegressor (media) fijan el piso mínimo aceptable de desempeño.",
+            "Con 95 % de clientes al día, un modelo con 95 % de exactitud puede no aportar absolutamente nada.",
+            "En alta dimensión las distancias se concentran: el vecino más cercano y el más lejano se parecen.",
+            "Teorema de «no hay almuerzo gratis» (Wolpert, 1996): ningún algoritmo es superior en todos los problemas."
+          ],
+          "notes": "Cierre la unidad con la disciplina de la línea base. Muestre que en un problema de fraude con 3 % de positivos, DummyClassifier alcanza 97 % de exactitud sin aprender nada; por eso la línea base debe reportarse siempre y la métrica debe elegirse con cuidado, tema que se profundiza en la Unidad 3. Explique la maldición de la dimensionalidad con un experimento mental: para abarcar el 10 % del volumen de un hipercubo de 100 dimensiones se necesita una vecindad que cubra casi el 98 % del rango de cada eje. Por eso k-NN se degrada cuando hay muchas variables poco informativas. Concluya con Wolpert: no existe un algoritmo universalmente mejor; la experimentación honesta y la validación son la única guía. Anuncie la Tarea 1 y el Cuestionario 1 de la semana 4."
+        }
+      ],
+      "reading": {
+        "title": "Del problema de negocio al pipeline reproducible",
+        "minutes": 35,
+        "content": "## 1. Del problema a la tarea predictiva\n\nEn el aprendizaje supervisado buscamos una función f que, a partir de un vector de características x, prediga una respuesta y. Disponemos de una muestra D = {(x₁, y₁), …, (xₙ, yₙ)} extraída de una distribución desconocida P(x, y) y queremos el modelo f̂ que minimice el **riesgo esperado** R(f) = E[L(y, f(x))], donde L es una función de pérdida, como el error cuadrático. Como P es desconocida, minimizamos el **riesgo empírico** sobre los datos de entrenamiento y estimamos el riesgo real con datos que el modelo nunca vio. La distancia entre ambos errores es la **brecha de generalización**, el concepto central de este curso.\n\nLa definición operativa de Tom Mitchell (1997) obliga a precisar la tarea T, la experiencia E y la medida de desempeño P. Un error frecuente en proyectos reales es empezar por el algoritmo. El orden correcto, coherente con CRISP-DM (Chapman et al., 2000), es: decisión de negocio → variable objetivo → datos disponibles en el momento de la predicción → métrica → línea base.\n\n## 2. Un ejemplo peruano: cancelación de cuentas en una caja municipal\n\nSupongamos que una caja municipal quiere anticipar qué clientes de ahorro cancelarán su cuenta en los próximos 90 días para ofrecerles una tasa preferencial. La unidad de análisis es el cliente-mes; la variable objetivo es binaria (cancela o no en los 90 días siguientes al corte); y las variables explicativas deben calcularse **con información disponible al cierre del mes de corte**: saldo promedio, número de operaciones, antigüedad, canal preferido y agencia. Si se incluye «fecha de solicitud de cancelación», el modelo tendrá un desempeño espectacular en el laboratorio y será inútil en producción: es una **fuga de objetivo** (Kaufman, Rosset y Perlich, 2012).\n\n## 3. Partición y validación\n\nLa regla de oro es separar el conjunto de prueba antes de cualquier exploración que influya en decisiones de modelado. En datos transversales se usa una partición aleatoria estratificada; en datos temporales, una partición cronológica; y cuando un mismo cliente aparece varias veces, una partición por grupos.\n\n```python\nfrom sklearn.model_selection import train_test_split\n\nX = df.drop(columns=['cancela_90d'])\ny = df['cancela_90d']\n# stratify conserva la proporción de cancelaciones en ambos conjuntos\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, stratify=y, random_state=42)\n```\n\n## 4. Preprocesamiento sin fuga: Pipeline y ColumnTransformer\n\nCalcular la media para imputar o la desviación estándar para escalar **sobre todo el conjunto de datos** filtra información de la prueba hacia el entrenamiento. La solución de scikit-learn (Pedregosa et al., 2011) es encapsular cada transformación en un `Pipeline`, de modo que `fit` solo aprenda de los datos de entrenamiento de cada pliegue.\n\n```python\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.dummy import DummyClassifier\nfrom sklearn.model_selection import cross_val_score\n\nnum = ['saldo_promedio', 'n_operaciones', 'antiguedad_meses']\ncat = ['canal', 'agencia']\n\nprep = ColumnTransformer([\n    ('num', Pipeline([('imp', SimpleImputer(strategy='median', add_indicator=True)),\n                      ('esc', StandardScaler())]), num),\n    ('cat', Pipeline([('imp', SimpleImputer(strategy='most_frequent')),\n                      ('ohe', OneHotEncoder(handle_unknown='ignore'))]), cat)])\n\nknn = Pipeline([('prep', prep), ('modelo', KNeighborsClassifier(n_neighbors=15))])\nbase = DummyClassifier(strategy='prior')  # línea base: AUC = 0,5\n\nfor nombre, m in [('Línea base', base), ('k-NN', knn)]:\n    auc = cross_val_score(m, X_train, y_train, cv=5, scoring='roc_auc')\n    print(nombre, round(auc.mean(), 3), '±', round(auc.std(), 3))\n```\n\n## 5. k vecinos más cercanos y el compromiso sesgo-varianza\n\nk-NN (Cover y Hart, 1967) clasifica un punto nuevo según la votación de sus k vecinos más próximos. Con k = 1 el error de entrenamiento es cero, porque cada punto es su propio vecino, pero el modelo es extremadamente sensible al ruido; con k muy grande la predicción tiende a la clase mayoritaria. La elección de k es nuestro primer **hiperparámetro** y debe decidirse con validación, nunca con el conjunto de prueba. Como k-NN se basa en distancias, el escalado es obligatorio: sin él, una variable en soles (saldo de 0 a 500 000) dominaría a otra en meses (antigüedad de 0 a 240).\n\n## 6. Ideas para llevar\n\n1. Ningún algoritmo compensa un problema mal formulado.\n2. Toda transformación aprendida de los datos va dentro del pipeline.\n3. Un modelo vale por cuánto supera a la línea base en la métrica que importa al negocio.\n4. El conjunto de prueba se abre una sola vez."
+      },
+      "case": {
+        "title": "Caso: MercaPerú y el modelo que era demasiado bueno",
+        "content": "**MercaPerú** (nombre ficticio) es un supermercado en línea fundado en 2019 que atiende cerca de 38 000 pedidos mensuales en Lima Metropolitana y el Callao. Tras el auge del comercio electrónico durante la pandemia, la empresa enfrenta una competencia intensa de cadenas tradicionales y aplicativos de reparto, y su tasa mensual de abandono —clientes activos que no vuelven a comprar en 60 días— llegó a 9 %.\n\nLa gerente de marketing, Carla Rengifo, encargó al analista junior Diego Paredes un modelo que identifique a los clientes en riesgo para enviarles cupones de S/ 20. El presupuesto aprobado para la campaña es de S/ 120 000, suficiente para 6 000 cupones al mes.\n\nDiego reunió 210 000 registros cliente-mes de 2023 a 2025 con 34 variables, entre ellas: ticket promedio, número de pedidos, distrito, método de pago, días desde la última compra, número de reclamos registrados en el Libro de Reclamaciones en los últimos 60 días, calificación de la última entrega y si el cliente desactivó las notificaciones de la aplicación. Dividió los datos al azar en 80 % para entrenamiento y 20 % para prueba, escaló todas las variables con la media y la desviación estándar del conjunto completo y entrenó un k-NN con k = 5. El resultado: AUC de 0,97 y exactitud de 96 %.\n\nEn la reunión de presentación, el jefe de inteligencia comercial, Óscar Villanueva, hizo tres observaciones. Primero, los «días desde la última compra» se calcularon a la fecha de extracción de los datos y no al cierre de cada mes. Segundo, los reclamos y la desactivación de notificaciones se midieron en los 60 días posteriores al corte, el mismo periodo en que se define el abandono. Tercero, un mismo cliente aparece en promedio 18 veces en la base, de modo que casi todos los clientes de prueba también están en el entrenamiento. Además, recordó que el 91 % de los clientes no abandona, por lo que una exactitud de 96 % no le dice mucho.\n\nCarla necesita lanzar la campaña la próxima semana porque se acerca la campaña de Fiestas Patrias, y pregunta si puede usar el modelo tal como está. Diego cree que, aunque haya imperfecciones, el modelo «algo debe estar captando». Óscar propone rehacer el análisis, lo que tomaría tres semanas. Diego debe preparar una recomendación para el comité comercial del lunes.",
+        "questions": [
+          "¿Qué fuentes de fuga de información identificas en el modelo de Diego y cómo afectaría cada una su desempeño en producción?",
+          "Reformula el problema: define la unidad de análisis, la fecha de corte, la ventana de observación y la variable objetivo sin ambigüedades.",
+          "¿Qué esquema de partición, qué preprocesamiento y qué línea base propondrías para obtener una estimación honesta del desempeño?",
+          "Con 6 000 cupones de S/ 20 al mes, ¿cómo traducirías el desempeño del modelo en una métrica de negocio que permita decidir el lanzamiento?",
+          "¿Qué recomendarías al comité comercial: lanzar ahora, esperar tres semanas o una alternativa intermedia? Justifica tu decisión."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Formulación del problema y pipeline base con k-NN",
+        "instructions": "**Objetivo:** formular un problema predictivo real y construir un pipeline reproducible que supere una línea base, sin fuga de información.\n\n**Insumos:** elige un conjunto de datos abierto peruano (Plataforma Nacional de Datos Abiertos, microdatos del INEI como la ENAHO o el conjunto que proponga el docente) con al menos 2 000 registros y una variable objetivo categórica.\n\n**Qué entregar:**\n1. *Acta del problema* (máximo una página): decisión de negocio, tarea T, experiencia E, medida P, unidad de análisis, variable objetivo, línea base y riesgos de fuga o de privacidad conforme a la Ley 29733.\n2. *Cuaderno de Colab* ejecutable de inicio a fin que: (a) separe el conjunto de prueba con estratificación; (b) construya un `Pipeline` con `ColumnTransformer` que impute, codifique con one-hot y escale; (c) compare `DummyClassifier` y `KNeighborsClassifier` con validación cruzada de cinco pliegues para k ∈ {1, 5, 15, 31, 51}; (d) grafique el desempeño en función de k y lo interprete en términos de sesgo y varianza; (e) evalúe una sola vez el mejor modelo en el conjunto de prueba.\n3. *Auditoría de fuga*: tabla con cada variable, el momento en que está disponible y la decisión de usarla o descartarla.\n\n**Formato:** un PDF con el acta y la auditoría, y el cuaderno compartido en el aula virtual, con código comentado y semilla fija (`random_state=42`). Plazo: domingo de la semana 4, a las 23:59.",
+        "rubric": [
+          {
+            "name": "Formulación del problema y acta",
+            "points": 5
+          },
+          {
+            "name": "Partición de datos y auditoría de fuga",
+            "points": 5
+          },
+          {
+            "name": "Pipeline de preprocesamiento reproducible",
+            "points": 6
+          },
+          {
+            "name": "Comparación con la línea base e interpretación de k",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Fundamentos y flujo de trabajo",
+        "questions": [
+          {
+            "prompt": "Un equipo entrena un modelo de mora y obtiene un AUC de 0,99 en validación. Entre las variables figura «número de llamadas de cobranza recibidas en el mes». ¿Cuál es el diagnóstico más probable?",
+            "options": [
+              "Fuga de objetivo: la variable se genera como consecuencia de la mora",
+              "Subajuste del modelo por exceso de regularización",
+              "Desbalance de clases que infla artificialmente el AUC",
+              "Falta de escalado de la variable de llamadas"
+            ],
+            "correct": 0,
+            "explanation": "Las llamadas de cobranza ocurren porque el cliente ya está en mora: la variable contiene la respuesta y no estará disponible al momento de decidir. El AUC no se infla por el desbalance de clases."
+          },
+          {
+            "prompt": "¿Por qué el StandardScaler debe incluirse dentro de un Pipeline evaluado con validación cruzada, en lugar de aplicarse antes a todo el conjunto de datos?",
+            "options": [
+              "Porque StandardScaler no funciona fuera de un Pipeline",
+              "Para reducir el tiempo de entrenamiento del modelo",
+              "Para que la media y la desviación se calculen solo con los datos de entrenamiento de cada pliegue",
+              "Porque el escalado previo elimina los valores atípicos del conjunto de prueba"
+            ],
+            "correct": 2,
+            "explanation": "Si el escalador se ajusta con todos los datos, los estadísticos incorporan información de los pliegues de validación y la estimación del desempeño resulta optimista: es fuga por preprocesamiento."
+          },
+          {
+            "prompt": "En k-NN, al pasar de k = 1 a k = 101 en un conjunto de 5 000 observaciones, ¿qué se espera que ocurra?",
+            "options": [
+              "Disminuyen tanto el sesgo como la varianza",
+              "Aumenta el sesgo, disminuye la varianza y la frontera de decisión se suaviza",
+              "Aumenta la varianza y el error de entrenamiento cae a cero",
+              "El modelo deja de depender del escalado de las variables"
+            ],
+            "correct": 1,
+            "explanation": "Con más vecinos la predicción promedia más puntos: es más estable (menor varianza) pero menos flexible (mayor sesgo). El error de entrenamiento cero corresponde a k = 1."
+          },
+          {
+            "prompt": "Un banco tiene 3 % de transacciones fraudulentas. Un modelo reporta 97 % de exactitud. ¿Qué conclusión es correcta?",
+            "options": [
+              "El modelo es excelente porque supera el 95 % de exactitud",
+              "El modelo tiene sobreajuste porque la exactitud es muy alta",
+              "La exactitud es la métrica adecuada para eventos raros",
+              "No se puede afirmar que aporte valor: predecir siempre «no fraude» logra la misma exactitud"
+            ],
+            "correct": 3,
+            "explanation": "Un DummyClassifier que predice siempre la clase mayoritaria obtiene 97 %. Sin comparar con la línea base y sin métricas como exhaustividad o precisión, la exactitud no prueba valor."
+          },
+          {
+            "prompt": "Una cadena de boticas quiere predecir las ventas diarias por local para 2026 con datos de 2021 a 2025. ¿Qué partición es adecuada?",
+            "options": [
+              "Entrenar con los años más antiguos y validar con los más recientes, respetando el orden temporal",
+              "Partición aleatoria estratificada de 80/20 sobre todos los días",
+              "Validación cruzada aleatoria de diez pliegues mezclando años",
+              "Usar todos los datos para entrenar y evaluar con el error de entrenamiento"
+            ],
+            "correct": 0,
+            "explanation": "El modelo se usará para predecir el futuro; mezclar fechas permite aprender de días posteriores a los evaluados y sobrestima el desempeño. La validación debe imitar el uso real."
+          },
+          {
+            "prompt": "La variable «distrito de residencia» tiene casi 1 900 categorías. ¿Cuál es la estrategia más razonable para un modelo lineal?",
+            "options": [
+              "Asignar un número entero a cada distrito según el orden alfabético",
+              "Eliminar la variable porque las categóricas nunca aportan a un modelo lineal",
+              "Agrupar categorías poco frecuentes o usar codificación por objetivo dentro de la validación cruzada",
+              "Aplicar StandardScaler directamente sobre los nombres de los distritos"
+            ],
+            "correct": 2,
+            "explanation": "Los enteros arbitrarios inventan un orden inexistente. Agrupar categorías raras (min_frequency) o usar TargetEncoder con validación interna controla la dimensionalidad sin introducir fuga."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Modelos de regresión: lineal, polinomial y regularizada",
+      "description": "Al finalizar la unidad, el estudiante entrena, diagnostica y regulariza modelos de regresión para estimar variables numéricas de negocio, interpreta coeficientes y residuos, y selecciona la complejidad del modelo con base en el compromiso sesgo-varianza y en métricas expresadas en soles.",
+      "topics": [
+        "Regresión lineal múltiple: mínimos cuadrados, ecuación normal y descenso de gradiente",
+        "Métricas de regresión: MAE, RMSE, R² y MAPE",
+        "Supuestos, diagnóstico de residuos, multicolinealidad e interpretación de coeficientes",
+        "Regresión polinomial, sesgo-varianza y curvas de validación y de aprendizaje",
+        "Regularización Ridge, Lasso y Elastic Net"
+      ],
+      "slides": [
+        {
+          "title": "El problema de regresión",
+          "bullets": [
+            "Objetivo: estimar E[y | x], el valor esperado de una variable numérica dado un conjunto de predictores.",
+            "Ejemplos: precio por m² de un departamento, demanda diaria de un producto, consumo eléctrico de un distrito.",
+            "Modelo lineal: ŷ = β₀ + β₁x₁ + … + βₚxₚ; es lineal en los parámetros, no necesariamente en las variables.",
+            "Raíces históricas: mínimos cuadrados de Legendre (1805) y Gauss; «regresión hacia la media» de Galton (1886)."
+          ],
+          "notes": "Inicie con una pregunta: ¿cuánto vale un departamento de 85 m² en Jesús María con dos dormitorios y cinco años de antigüedad? Pida estimaciones a la clase y muestre la dispersión de respuestas: ese es el problema de regresión. Explique que el modelo estima la media condicional y que, por tanto, siempre habrá error alrededor de ella. Aclare la expresión «lineal en los parámetros»: ŷ = β₀ + β₁x + β₂x² sigue siendo un modelo lineal porque los β entran de forma lineal. Haga una breve mención histórica: Francis Galton observó que los hijos de padres muy altos tendían a ser menos altos que ellos, fenómeno que llamó regresión hacia la media, de donde proviene el nombre de la técnica. Conecte con la pregunta de negocio que guiará la unidad: la tasación automatizada de inmuebles."
+        },
+        {
+          "title": "Mínimos cuadrados ordinarios y ecuación normal",
+          "bullets": [
+            "Se eligen los β que minimizan la suma de cuadrados de los residuos: SCR = Σ(yᵢ − ŷᵢ)².",
+            "Solución cerrada (ecuación normal): β̂ = (XᵀX)⁻¹Xᵀy, cuando XᵀX es invertible.",
+            "Costo computacional del orden de O(np² + p³): eficiente con pocas variables, costoso con miles.",
+            "Teorema de Gauss-Markov: bajo sus supuestos, MCO es el mejor estimador lineal insesgado."
+          ],
+          "notes": "Recuerde que en Matemática para Ciencia de Datos derivaron los mínimos cuadrados para una sola variable; ahora se generaliza a p variables con notación matricial, que se profundiza en Álgebra Lineal Aplicada. Muestre que la ecuación normal surge de igualar a cero el gradiente de la suma de cuadrados. Explique que, si dos columnas son linealmente dependientes, por ejemplo área en m² y área en pies², XᵀX no es invertible; LinearRegression de scikit-learn resuelve el problema por mínimos cuadrados con métodos numéricos estables, sin invertir la matriz explícitamente. Comente Gauss-Markov: bajo linealidad, exogeneidad y homocedasticidad, MCO tiene la menor varianza entre los estimadores lineales insesgados. Pregunta: si el estimador es insesgado y de mínima varianza, ¿por qué más adelante aceptaremos estimadores sesgados como Ridge? Deje la intriga abierta hasta la diapositiva de regularización."
+        },
+        {
+          "title": "Descenso de gradiente para regresión lineal",
+          "bullets": [
+            "Gradiente del error cuadrático medio: ∇J(β) = (2/n)·Xᵀ(Xβ − y); actualización β ← β − η·∇J(β).",
+            "Tasa de aprendizaje η: si es muy pequeña converge lento; si es muy grande diverge.",
+            "Variantes por lotes, estocástica (SGDRegressor) y por minilotes, base del entrenamiento de redes neuronales.",
+            "Requiere variables escaladas para que la superficie de costo no forme un valle alargado."
+          ],
+          "notes": "Muestre un gráfico de contorno del error cuadrático medio con dos parámetros y la trayectoria del descenso de gradiente. Explique que el gradiente apunta en la dirección de mayor crecimiento y que restarlo nos acerca al mínimo. Ejecute en Colab una implementación de diez líneas con NumPy y compare los coeficientes obtenidos con LinearRegression: deben coincidir hasta varios decimales. Haga variar η: con 0,001 converge lento, con 0,1 converge rápido y con un valor demasiado alto diverge. Explique por qué con variables no escaladas el contorno se vuelve una elipse alargada y el algoritmo zigzaguea. Mencione que SGDRegressor es útil cuando los datos no caben en memoria y que esta misma idea, con millones de parámetros, entrena las redes neuronales del quinto ciclo. Pregunta: ¿qué criterio de parada usarías en la práctica?"
+        },
+        {
+          "title": "Métricas de error en regresión",
+          "bullets": [
+            "MAE = (1/n)Σ|yᵢ − ŷᵢ|: error típico en unidades originales y robusto a valores atípicos.",
+            "RMSE = √[(1/n)Σ(yᵢ − ŷᵢ)²]: penaliza más los errores grandes y conserva la unidad de y.",
+            "R² = 1 − SCR/SCT: proporción de varianza explicada; puede ser negativo en el conjunto de prueba.",
+            "MAPE: error porcentual medio; se indefine cuando y = 0 y penaliza de forma asimétrica.",
+            "La métrica se elige según el costo: ¿duele igual subestimar que sobrestimar la demanda?"
+          ],
+          "notes": "Construya con la clase una tabla con cinco predicciones de precios y calcule MAE y RMSE a mano. Muestre que un solo error grande eleva mucho más el RMSE que el MAE. Interprete el R² con cuidado: un valor de 0,80 significa que el modelo explica el 80 % de la variabilidad respecto de predecir siempre la media, no que acierte el 80 % de las veces. Explique por qué el R² en prueba puede ser negativo: el modelo resulta peor que la media. Discuta el MAPE en el pronóstico de demanda de una distribuidora: si un producto vende cero unidades algunos días, la métrica se indefine. Pregunta de decisión: para una minera que planifica el inventario de repuestos críticos, ¿es igual de costoso subestimar que sobrestimar? Introduzca la idea de pérdidas asimétricas y la regresión cuantílica como alternativa."
+        },
+        {
+          "title": "Interpretación de coeficientes",
+          "bullets": [
+            "β₁ es el cambio esperado en y por una unidad adicional de x₁, manteniendo constantes las demás variables.",
+            "Con variables estandarizadas, la magnitud de los coeficientes se vuelve comparable entre predictores.",
+            "Variable ficticia: diferencia respecto de la categoría de referencia, por ejemplo Miraflores frente a Lince.",
+            "Modelo log-lineal: con log(precio), un β = 0,08 implica alrededor de 8 % más de precio por unidad de x."
+          ],
+          "notes": "Use un modelo estimado con datos de departamentos: precio = 120 000 + 6 800·área + 35 000·cochera − 2 100·antigüedad + efectos de distrito. Interprete cada coeficiente con la cláusula «manteniendo lo demás constante». Explique que las variables ficticias se interpretan frente a una categoría de referencia y que su elección cambia los valores, pero no las predicciones. Muestre la ventaja de modelar el logaritmo del precio: los efectos se vuelven porcentuales, más naturales en mercados donde un metro adicional vale más en San Isidro que en Lince. Advierta que la interpretación causal requiere un diseño experimental o cuasiexperimental. Pregunta: si el coeficiente de «número de baños» resulta negativo, ¿significa que un baño adicional reduce el precio? Discuta la colinealidad con el área y el efecto de mantener constante el resto de variables."
+        },
+        {
+          "title": "Supuestos y diagnóstico de residuos",
+          "bullets": [
+            "Supuestos clásicos: linealidad, independencia, homocedasticidad y normalidad de los errores, esta última para la inferencia.",
+            "Residuos frente a valores ajustados: una forma de embudo indica heterocedasticidad.",
+            "Gráfico Q-Q para la normalidad; estadístico de Durbin-Watson para la autocorrelación en series temporales.",
+            "Remedios: transformar y con logaritmo, añadir términos no lineales o usar errores estándar robustos."
+          ],
+          "notes": "Muestre cuatro gráficos de residuos: uno ideal (nube sin patrón), uno con curvatura (falta un término no lineal), uno en forma de embudo (heterocedasticidad típica de los precios: los errores crecen con el valor) y uno con autocorrelación (ventas diarias). Explique que la normalidad importa para intervalos y pruebas de hipótesis, no para la predicción puntual, y relacione con lo visto en Estadística y Probabilidad sobre inferencia. Muestre cómo la transformación logarítmica del precio estabiliza la varianza. Mencione statsmodels como alternativa para obtener tablas de inferencia completas, con errores estándar robustos del tipo HC3. Ejercicio: entregue un gráfico de residuos de un modelo de consumo eléctrico residencial que muestra un patrón estacional y pida diagnosticar el problema y proponer una solución, como incluir variables de mes o temperatura."
+        },
+        {
+          "title": "Multicolinealidad y estabilidad de los coeficientes",
+          "bullets": [
+            "Predictores muy correlacionados, como área total y número de dormitorios, inflan la varianza de los β.",
+            "Factor de inflación de la varianza: VIF = 1/(1 − R²ⱼ); valores mayores que 10 son una alerta.",
+            "No necesariamente reduce la capacidad predictiva, pero vuelve inestables los coeficientes y su interpretación.",
+            "Soluciones: eliminar redundancias, combinar variables o regularizar con Ridge."
+          ],
+          "notes": "Explique la multicolinealidad con un ejemplo intuitivo: si el área y el número de dormitorios se mueven casi juntos, el modelo no puede separar sus efectos y reparte el crédito de forma inestable; con otra muestra, los signos pueden invertirse. Calcule el VIF en vivo con la función variance_inflation_factor de statsmodels para un conjunto de datos inmobiliario. Destaque que la multicolinealidad no daña la predicción si la estructura de correlación se mantiene en producción, pero sí la interpretación, que es crítica cuando el modelo debe explicarse a un banco o a un cliente. Anticipe que Ridge resuelve este problema de forma elegante. Pregunta: un modelo de ventas incluye el gasto en televisión, el gasto en radio y el gasto total en publicidad; ¿qué problema presenta? Respuesta: colinealidad perfecta, porque el total es la suma exacta de los otros dos."
+        },
+        {
+          "title": "Regresión polinomial y relaciones no lineales",
+          "bullets": [
+            "PolynomialFeatures(degree=d) crea términos como x², x³ e interacciones x₁·x₂.",
+            "Sigue siendo regresión lineal en los parámetros y se ajusta con mínimos cuadrados.",
+            "Con p variables y grado d, el número de términos crece combinatoriamente: C(p + d, d).",
+            "Los grados altos producen oscilaciones extremas en los bordes del rango (fenómeno de Runge)."
+          ],
+          "notes": "Muestre en Colab un conjunto de datos sintético con forma de parábola y ajuste polinomios de grado 1, 2, 3, 10 y 20. Visualice cómo el grado 1 subajusta, el 2 o 3 captura la tendencia y el 20 oscila de forma descontrolada entre los puntos. Explique el crecimiento combinatorio: con 10 variables y grado 3 se generan 286 términos, lo que multiplica el riesgo de sobreajuste. Resalte que PolynomialFeatures debe ir dentro del pipeline, seguido de un escalador. Comente una aplicación real: la relación entre temperatura y demanda eléctrica suele tener forma de U en ciudades con estaciones marcadas, porque se usa calefacción con frío y aire acondicionado con calor. Pregunta: ¿cómo decidirías el grado del polinomio sin mirar el conjunto de prueba? Respuesta esperada: con una curva de validación sobre la validación cruzada."
+        },
+        {
+          "title": "Sesgo, varianza y error irreducible",
+          "bullets": [
+            "Descomposición: E[(y − f̂)²] = sesgo² + varianza + σ² (Geman, Bienenstock y Doursat, 1992).",
+            "Subajuste: alto sesgo; el modelo es demasiado simple, como una recta para una relación curva.",
+            "Sobreajuste: alta varianza; el modelo memoriza el ruido de los datos de entrenamiento.",
+            "σ² es el piso del error: ningún modelo puede predecir el ruido aleatorio."
+          ],
+          "notes": "Esta es la idea más poderosa de la unidad. Dibuje la diana clásica: alto sesgo y baja varianza (disparos agrupados lejos del centro), bajo sesgo y alta varianza (disparos dispersos alrededor del centro) y el caso ideal. Explique que la varianza mide cuánto cambiaría el modelo si lo entrenáramos con otra muestra de la misma población. Haga el experimento en Colab: entrene 50 polinomios de grado 15 con muestras bootstrap y grafíquelos superpuestos; luego repita con grado 2. La diferencia visual es elocuente. Recalque que el error irreducible proviene de variables no observadas, como el estado de conservación interior de un departamento o la urgencia del vendedor. Pregunta: si un modelo tiene un error de entrenamiento de 5 % y de validación de 25 %, ¿qué problema tiene y qué harías para corregirlo?"
+        },
+        {
+          "title": "Curvas de validación y de aprendizaje",
+          "bullets": [
+            "Curva de validación: error frente a complejidad (grado, α); el mínimo en validación marca la complejidad óptima.",
+            "Curva de aprendizaje: error frente al tamaño de la muestra de entrenamiento.",
+            "Brecha amplia entre ambas curvas: sobreajuste; conseguir más datos o regularizar ayuda.",
+            "Ambas curvas altas y juntas: subajuste; se necesitan más variables o un modelo más flexible."
+          ],
+          "notes": "Muestre cómo generar ambas curvas con validation_curve y learning_curve de scikit-learn. En la curva de validación, explique que el error de entrenamiento siempre baja con la complejidad, mientras que el de validación forma una U: la complejidad óptima está en su mínimo. En la curva de aprendizaje, interprete los dos diagnósticos típicos. Subraye las consecuencias económicas: si el modelo sufre subajuste, comprar más datos a una central de riesgos no servirá; si sufre sobreajuste, sí puede ayudar. Ejercicio en grupos: entregue tres pares de curvas y pida un diagnóstico y una recomendación justificada para cada uno, con cinco minutos por caso. Relacione con la Tarea 2, en la que deberán incluir e interpretar ambas curvas para su propio modelo y justificar con ellas la complejidad elegida."
+        },
+        {
+          "title": "Regularización Ridge (L2)",
+          "bullets": [
+            "Minimiza SCR + α·Σβⱼ² (Hoerl y Kennard, 1970).",
+            "Encoge los coeficientes hacia cero sin anularlos y estabiliza el modelo ante la multicolinealidad.",
+            "α = 0 equivale a mínimos cuadrados ordinarios; α muy grande lleva todos los β hacia cero.",
+            "Siempre estandarizar antes: la penalización depende de la escala de cada variable."
+          ],
+          "notes": "Responda la intriga planteada al presentar la ecuación normal: Ridge acepta un poco de sesgo a cambio de una gran reducción de varianza, y el resultado neto es un menor error de generalización. Muestre la trayectoria de los coeficientes al variar α en escala logarítmica de 10⁻³ a 10³: todos se encogen suavemente hacia cero. Explique la interpretación geométrica: la restricción L2 es un círculo y la solución es el punto donde las elipses de la suma de cuadrados tocan ese círculo. Insista en el escalado previo: sin él, una variable medida en soles recibiría una penalización distinta a otra medida en metros. Comente que Hoerl y Kennard propusieron el método en 1970 precisamente para problemas de multicolinealidad en ingeniería. Pregunta: ¿qué valor de α elegirías y con qué procedimiento? Respuesta: el que minimice el error en validación cruzada."
+        },
+        {
+          "title": "Regularización Lasso (L1) y Elastic Net",
+          "bullets": [
+            "Lasso minimiza SCR + α·Σ|βⱼ| (Tibshirani, 1996) y anula coeficientes: selecciona variables.",
+            "Con predictores correlacionados, Lasso elige uno de ellos de forma algo arbitraria e inestable.",
+            "Elastic Net combina las penalizaciones L1 y L2 mediante el parámetro l1_ratio (Zou y Hastie, 2005).",
+            "RidgeCV, LassoCV y ElasticNetCV eligen α por validación cruzada interna."
+          ],
+          "notes": "Muestre la geometría de Lasso: la restricción L1 es un rombo con vértices sobre los ejes, por lo que la solución tiende a caer en un vértice donde algunos coeficientes son exactamente cero. Ejecute LassoCV en un conjunto con 40 variables y muestre cuántas sobreviven. Explique la ventaja para la comunicación: un modelo con ocho variables relevantes es más fácil de explicar a un comité de crédito o a un tasador. Advierta la inestabilidad de la selección cuando hay variables correlacionadas y presente Elastic Net como solución intermedia. Comente que Robert Tibshirani, coautor de dos textos de la bibliografía, propuso Lasso en 1996. Pregunta: si Lasso elimina la variable «cochera» y el equipo comercial insiste en que es clave, ¿cómo lo investigarías? Oriente hacia la correlación con el área y el distrito y hacia la estabilidad entre pliegues."
+        },
+        {
+          "title": "Flujo completo de regresión en scikit-learn",
+          "bullets": [
+            "1. Separar la prueba y transformar el objetivo asimétrico con TransformedTargetRegressor.",
+            "2. Construir el pipeline: imputación, one-hot, escalado y, si aplica, PolynomialFeatures.",
+            "3. Comparar DummyRegressor, LinearRegression, RidgeCV y LassoCV con cross_validate y varias métricas.",
+            "4. Diagnosticar los residuos del mejor modelo y revisar los errores por segmento (distrito, tramo de precio).",
+            "5. Reportar el MAE en soles y la distribución del error relativo en el conjunto de prueba."
+          ],
+          "notes": "Muestre en vivo el flujo completo con un conjunto de datos inmobiliario. Explique TransformedTargetRegressor, que aplica el logaritmo al objetivo para entrenar y lo revierte al predecir, de modo que las métricas se calculan en soles. Use cross_validate con varias métricas a la vez (neg_mean_absolute_error, neg_root_mean_squared_error y r2) y construya una tabla comparativa. Enfatice el análisis de errores por segmento: el MAE promedio puede esconder que el modelo falla en el segmento de lujo o en departamentos de estreno. Concluya explicando que solo el modelo elegido se evalúa una vez en el conjunto de prueba. Recomiende registrar los resultados de cada experimento en una tabla con fecha, variables, hiperparámetros y métricas, práctica que se formaliza con herramientas de seguimiento de experimentos en el curso de Despliegue de Modelos."
+        },
+        {
+          "title": "Del error estadístico a la decisión de negocio",
+          "bullets": [
+            "Un MAE de S/ 45 000 puede ser aceptable en departamentos de S/ 900 000, pero no en viviendas de S/ 150 000.",
+            "Analizar el error relativo por segmento evita que un buen promedio oculte tramos con mal desempeño.",
+            "Los modelos de tasación deben ser explicables para clientes, bancos, auditores y supervisores.",
+            "Documentar el rango de validez: no extrapolar fuera de los datos con que se entrenó el modelo."
+          ],
+          "notes": "Lleve la discusión al terreno de la decisión. Explique que un banco que otorga créditos hipotecarios necesita tasaciones confiables para calcular la relación entre préstamo y valor de la garantía, y que un error sistemático de sobrevaluación incrementa su riesgo. Por eso la métrica relevante puede ser el porcentaje de tasaciones con error relativo mayor a 10 %, no solo el MAE. Comente que los modelos automatizados de valoración se usan internacionalmente para tasaciones masivas, pero suelen complementarse con la verificación de un perito. Destaque el rango de validez: un modelo entrenado con departamentos de Lima Moderna no debe usarse para casas de playa en el sur chico. Pregunta de cierre: ¿qué información adicional pedirías antes de recomendar el modelo a un banco? Anuncie la Tarea 2 y el Cuestionario 2 de la semana 8."
+        }
+      ],
+      "reading": {
+        "title": "Regresión lineal, sesgo-varianza y regularización",
+        "minutes": 40,
+        "content": "## 1. El modelo lineal y los mínimos cuadrados\n\nEn un problema de regresión queremos estimar la media condicional E[y | x]. El modelo lineal múltiple supone ŷ = β₀ + β₁x₁ + β₂x₂ + … + βₚxₚ y elige los coeficientes que minimizan la suma de cuadrados de los residuos, SCR = Σ(yᵢ − ŷᵢ)². En notación matricial, con X de tamaño n × (p + 1), la solución es la ecuación normal β̂ = (XᵀX)⁻¹Xᵀy. Bajo los supuestos de Gauss-Markov (linealidad, errores con media cero, homocedasticidad e independencia), este es el mejor estimador lineal insesgado. Cuando n o p son muy grandes se prefiere el descenso de gradiente, que actualiza β ← β − η·(2/n)·Xᵀ(Xβ − y).\n\n## 2. Ejemplo: precio de departamentos en Lima\n\nEl BCRP publica indicadores del mercado inmobiliario con el precio por metro cuadrado de departamentos en distritos de Lima Moderna, como Miraflores, San Isidro, Santiago de Surco, San Borja, La Molina, Barranco, Jesús María, Lince, Magdalena del Mar y Pueblo Libre. Supongamos un conjunto de avisos con área, dormitorios, baños, antigüedad, piso, cochera y distrito. Como los precios tienen una distribución asimétrica a la derecha y los errores crecen con el valor del inmueble, conviene modelar log(precio): así, un coeficiente β se interpreta aproximadamente como un cambio de 100·β % en el precio por unidad de la variable.\n\n```python\nimport numpy as np\nfrom sklearn.compose import ColumnTransformer, TransformedTargetRegressor\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import OneHotEncoder, StandardScaler\nfrom sklearn.linear_model import LinearRegression, RidgeCV, LassoCV\nfrom sklearn.model_selection import cross_validate, KFold\n\nnum = ['area_m2', 'dormitorios', 'banos', 'antiguedad', 'piso']\ncat = ['distrito', 'cochera']\nprep = ColumnTransformer([\n    ('num', StandardScaler(), num),\n    ('cat', OneHotEncoder(handle_unknown='ignore'), cat)])\n\ndef modelo(reg):\n    # entrena con log(precio) y devuelve las predicciones en soles\n    return TransformedTargetRegressor(\n        regressor=Pipeline([('prep', prep), ('reg', reg)]),\n        func=np.log, inverse_func=np.exp)\n\ncandidatos = {\n    'MCO': modelo(LinearRegression()),\n    'Ridge': modelo(RidgeCV(alphas=np.logspace(-3, 3, 30))),\n    'Lasso': modelo(LassoCV(cv=5, random_state=42))}\ncv = KFold(n_splits=5, shuffle=True, random_state=42)\nfor nombre, m in candidatos.items():\n    r = cross_validate(m, X_train, y_train, cv=cv,\n                       scoring=['neg_mean_absolute_error', 'r2'])\n    print(nombre, -r['test_neg_mean_absolute_error'].mean().round(0),\n          r['test_r2'].mean().round(3))\n```\n\n## 3. Métricas y su lectura de negocio\n\nEl MAE expresa el error típico en soles y es robusto a valores extremos; el RMSE penaliza más los errores grandes; el R² = 1 − SCR/SCT compara el modelo con la predicción constante de la media. Ninguna es «la correcta» en abstracto: para un banco que financia hipotecas, sobrevalorar un inmueble es más grave que subvalorarlo, porque eleva la relación entre préstamo y garantía y el riesgo de pérdida. Por ello conviene complementar las métricas globales con el porcentaje de tasaciones cuyo error relativo supera el 10 % y con el error por distrito y por tramo de precio.\n\n## 4. El compromiso sesgo-varianza\n\nEl error cuadrático esperado de un modelo en un punto nuevo se descompone como E[(y − f̂(x))²] = Sesgo[f̂(x)]² + Var[f̂(x)] + σ² (Geman, Bienenstock y Doursat, 1992). Un modelo demasiado simple tiene sesgo alto; uno demasiado flexible, como un polinomio de grado 15, tiene varianza alta: cambia drásticamente con cada muestra. La **curva de validación** (error frente a complejidad) y la **curva de aprendizaje** (error frente al tamaño de la muestra) son las herramientas de diagnóstico. Si ambas curvas convergen en un error alto, hay subajuste y más datos no ayudarán; si existe una brecha amplia entre entrenamiento y validación, hay sobreajuste y conviene regularizar, simplificar o recolectar más datos.\n\n## 5. Regularización: sesgo a cambio de estabilidad\n\nRidge (Hoerl y Kennard, 1970) minimiza SCR + α·Σβⱼ²; Lasso (Tibshirani, 1996) minimiza SCR + α·Σ|βⱼ|; Elastic Net (Zou y Hastie, 2005) combina ambas penalizaciones. Ridge encoge todos los coeficientes y estabiliza el modelo cuando hay multicolinealidad, por ejemplo entre área, dormitorios y baños. Lasso, por la geometría de la norma L1, anula coeficientes y realiza selección de variables, lo que produce modelos más fáciles de explicar. En ambos casos α es un hiperparámetro que se elige por validación cruzada y las variables deben estar estandarizadas, porque la penalización no es invariante a la escala.\n\n## 6. Ideas para llevar\n\nUn modelo lineal bien especificado, con el objetivo transformado y una regularización elegida por validación, es una línea base exigente y muy interpretable. Antes de pasar a modelos más complejos, como los ensambles de Aprendizaje Automático II, el analista debe agotar el diagnóstico de residuos, el análisis por segmentos y la discusión sobre el costo del error."
+      },
+      "case": {
+        "title": "Caso: HabitaData y la tasación automatizada en Lima Moderna",
+        "content": "**HabitaData S.A.C.** (nombre ficticio) es una empresa emergente limeña de tecnología inmobiliaria fundada en 2021 que ofrece a bancos y cajas un servicio de valoración automatizada de departamentos para precalificar solicitudes de crédito hipotecario. Su base contiene 14 600 transacciones y avisos depurados de 2022 a 2025 en diez distritos de Lima Moderna, con área, dormitorios, baños, antigüedad, piso, ascensor, cochera, distrito y precio de cierre en soles.\n\nLa analista Rosa Quispe entrenó tres modelos con validación cruzada de cinco pliegues y obtuvo los siguientes resultados:\n\n| Modelo | MAE (S/) | R² entrenamiento | R² validación |\n|---|---|---|---|\n| Regresión lineal (precio en soles) | 61 400 | 0,79 | 0,77 |\n| Polinomial de grado 3 | 49 800 | 0,95 | 0,63 |\n| Lasso con log(precio) | 42 300 | 0,85 | 0,84 |\n\nEl gráfico de residuos del modelo lineal muestra forma de embudo: los errores crecen con el precio. En los departamentos de más de S/ 1,5 millones —el 7 % de la muestra, concentrado en San Isidro, Miraflores y Barranco— el error relativo medio es de 19 %, frente a 8 % en el resto. Además, Lasso eliminó la variable «cochera», que el gerente comercial, Martín Salazar, considera decisiva porque, según él, «en Miraflores una cochera vale entre S/ 40 000 y S/ 60 000». Rosa sospecha que el efecto ya está capturado por el área y el distrito, porque casi todos los departamentos grandes de esos distritos tienen cochera.\n\nEl Banco del Pacífico Sur (también ficticio), principal cliente potencial, exige tres condiciones antes de firmar un contrato anual de S/ 380 000: que el 80 % de las tasaciones tenga un error relativo menor a 10 %; que cada valoración vaya acompañada de una explicación de los factores que la determinan, para sustentar sus decisiones ante su auditoría interna y ante la SBS; y que el modelo no se use fuera del rango de los datos con que fue entrenado. Hoy, con el modelo Lasso, solo el 74 % de las tasaciones cumple la meta de error.\n\nEl directorio de HabitaData debe decidir en dos semanas si presenta el modelo Lasso tal como está, invierte tres meses en mejorar el segmento de lujo o restringe el servicio a inmuebles de hasta S/ 1,5 millones. Rosa debe preparar la recomendación técnica.",
+        "questions": [
+          "¿Qué explica la diferencia entre el R² de entrenamiento y el de validación del modelo polinomial, y qué revela sobre el compromiso sesgo-varianza?",
+          "¿Por qué la transformación logarítmica del precio mejora el desempeño y qué relación tiene con la forma de embudo de los residuos?",
+          "¿Cómo investigarías si la variable «cochera» aporta información propia o está siendo absorbida por el área y el distrito?",
+          "¿Qué opciones técnicas propondrías para alcanzar la meta de 80 % de tasaciones con error menor a 10 % y cómo las validarías?",
+          "¿Recomendarías presentar el modelo, mejorar el segmento de lujo o restringir el servicio? Justifica con argumentos técnicos y comerciales."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Modelo de regresión regularizado con informe de diagnóstico",
+        "instructions": "**Objetivo:** construir, diagnosticar y regularizar un modelo de regresión para una variable numérica de interés organizacional y comunicar su desempeño en unidades de negocio.\n\n**Datos:** usa el conjunto de avisos inmobiliarios de Lima que proporciona el docente o un conjunto abierto equivalente (consumo de energía, ventas, tiempos de atención) con al menos 1 500 registros y cinco predictores.\n\n**Qué entregar:**\n1. *Cuaderno de Colab* reproducible que: (a) separe el conjunto de prueba; (b) compare `DummyRegressor`, `LinearRegression`, `RidgeCV` y `LassoCV` dentro de pipelines, con validación cruzada de cinco pliegues y las métricas MAE, RMSE y R²; (c) evalúe la transformación logarítmica del objetivo con `TransformedTargetRegressor`; (d) presente una curva de validación (grado polinomial o α) y una curva de aprendizaje; (e) analice los residuos y calcule el VIF de los predictores numéricos.\n2. *Informe técnico* de máximo tres páginas: tabla comparativa de modelos, interpretación de cinco coeficientes del modelo final (en porcentaje si usaste logaritmo), diagnóstico de sesgo y varianza, error por segmento y recomendación de uso con su rango de validez.\n\n**Formato:** PDF y cuaderno compartido en el aula virtual; gráficos con título y ejes rotulados; semilla fija. Plazo: domingo de la semana 8, a las 23:59.",
+        "rubric": [
+          {
+            "name": "Preparación de datos y pipeline sin fuga",
+            "points": 4
+          },
+          {
+            "name": "Comparación de modelos y regularización",
+            "points": 6
+          },
+          {
+            "name": "Diagnóstico: residuos, VIF y curvas",
+            "points": 5
+          },
+          {
+            "name": "Interpretación y recomendación de negocio",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Modelos de regresión",
+        "questions": [
+          {
+            "prompt": "Un modelo de demanda obtiene R² = 0,92 en entrenamiento y R² = 0,41 en validación. ¿Qué acción es más coherente con este diagnóstico?",
+            "options": [
+              "Aumentar el grado polinomial para capturar más patrones",
+              "Aplicar regularización o reducir la complejidad del modelo",
+              "Evaluar en el conjunto de prueba para confirmar el resultado",
+              "Eliminar la validación cruzada porque introduce ruido"
+            ],
+            "correct": 1,
+            "explanation": "La brecha amplia indica sobreajuste, es decir, alta varianza. Regularizar, simplificar o conseguir más datos reduce la varianza; aumentar la complejidad la agravaría y usar la prueba para decidir la contaminaría."
+          },
+          {
+            "prompt": "En un modelo con log(precio) como variable objetivo, el coeficiente de «cochera» (1 = sí) es 0,06. ¿Cómo se interpreta?",
+            "options": [
+              "Tener cochera aumenta el precio en S/ 0,06",
+              "La cochera explica el 6 % de la variabilidad del precio",
+              "La probabilidad de que un departamento tenga cochera es 6 %",
+              "Tener cochera se asocia con un precio cerca de 6 % mayor, manteniendo constante lo demás"
+            ],
+            "correct": 3,
+            "explanation": "En un modelo log-lineal, un coeficiente β implica un cambio aproximado de 100·β % en y; con β = 0,06 el efecto exacto es e^0,06 − 1 ≈ 6,2 %, manteniendo constantes las demás variables."
+          },
+          {
+            "prompt": "¿Cuál es la diferencia principal entre la regularización Ridge y la regularización Lasso?",
+            "options": [
+              "Ridge anula coeficientes y Lasso solo los encoge",
+              "Ridge no requiere estandarizar variables y Lasso sí",
+              "Lasso puede anular coeficientes y seleccionar variables; Ridge los encoge sin anularlos",
+              "Lasso solo funciona con variables categóricas"
+            ],
+            "correct": 2,
+            "explanation": "La penalización L1 de Lasso, por su geometría con vértices sobre los ejes, lleva coeficientes exactamente a cero. La L2 de Ridge los encoge de forma continua. Ambas requieren estandarizar."
+          },
+          {
+            "prompt": "Las curvas de aprendizaje muestran errores de entrenamiento y de validación altos y casi iguales, aun al aumentar los datos. ¿Qué recomendarías?",
+            "options": [
+              "Añadir variables informativas o usar un modelo más flexible",
+              "Comprar más datos históricos a una central de riesgos",
+              "Aumentar la regularización α",
+              "Reducir el tamaño del conjunto de entrenamiento"
+            ],
+            "correct": 0,
+            "explanation": "Curvas altas y juntas indican subajuste (alto sesgo). Más datos no cerrarán la brecha porque no existe; mayor regularización empeoraría el sesgo. Se requiere más capacidad o mejores variables."
+          },
+          {
+            "prompt": "Un pronóstico de ventas diarias incluye muchos días con cero unidades vendidas. ¿Qué métrica resulta problemática en este caso?",
+            "options": [
+              "MAE",
+              "RMSE",
+              "MAPE",
+              "R²"
+            ],
+            "correct": 2,
+            "explanation": "El MAPE divide el error entre el valor real; cuando y = 0 el cociente se indefine o se vuelve enorme. MAE y RMSE se calculan sin dividir entre el valor observado."
+          },
+          {
+            "prompt": "En un modelo inmobiliario se obtienen VIF de 14 para «área» y de 12 para «dormitorios». ¿Cuál es la consecuencia principal?",
+            "options": [
+              "Los coeficientes de esas variables son inestables y difíciles de interpretar",
+              "El modelo pierde necesariamente toda su capacidad predictiva",
+              "Los residuos dejan de tener media cero",
+              "El R² del modelo se vuelve negativo"
+            ],
+            "correct": 0,
+            "explanation": "Un VIF mayor que 10 indica multicolinealidad fuerte: la varianza de los coeficientes se infla y sus signos pueden cambiar entre muestras, aunque la predicción global puede mantenerse."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Modelos de clasificación y evaluación sensible al costo",
+      "description": "Al finalizar la unidad, el estudiante construye clasificadores con regresión logística, Naive Bayes y árboles de decisión, los evalúa con métricas adecuadas para clases desbalanceadas y selecciona umbrales de decisión que minimizan el costo esperado del error en un contexto organizacional regulado.",
+      "topics": [
+        "Regresión logística: sigmoide, pérdida logarítmica y razón de probabilidades",
+        "Clasificador Naive Bayes y árboles de decisión CART con poda",
+        "Matriz de confusión, precisión, exhaustividad, F1, ROC-AUC y curva precisión-exhaustividad",
+        "Clases desbalanceadas, umbral de decisión y matriz de costos",
+        "Calibración de probabilidades, regulación peruana y comunicación del riesgo"
+      ],
+      "slides": [
+        {
+          "title": "Clasificación: de la probabilidad a la decisión",
+          "bullets": [
+            "El clasificador estima P(y = 1 | x); la decisión se toma comparando esa probabilidad con un umbral t.",
+            "Separar el modelo, que estima la probabilidad, de la política, que fija umbral y acción, es clave.",
+            "Ejemplos: aprobar un crédito, priorizar una fiscalización tributaria, alertar una transacción sospechosa.",
+            "Variantes: binaria, multiclase (uno contra el resto o multinomial) y multietiqueta."
+          ],
+          "notes": "Comience con una pregunta: si un modelo dice que un cliente tiene 30 % de probabilidad de no pagar, ¿se le aprueba o no el crédito? La respuesta depende del margen, del costo del impago y de la estrategia comercial, no del modelo. Por eso separamos la estimación de la probabilidad, que es una tarea estadística, de la política de decisión, que es una tarea de negocio. Explique las variantes: binaria (paga o no), multiclase (clasificar un reclamo en facturación, cobertura o atención) y multietiqueta (un mismo correo puede ser urgente y, a la vez, de facturación). Mencione que la mayoría de los algoritmos de scikit-learn resuelve el caso multiclase de forma automática. Pregunta: ¿qué ejemplos de clasificación identifican en las entidades públicas peruanas? Discuta la priorización de fiscalizaciones y de inspecciones laborales."
+        },
+        {
+          "title": "Regresión logística",
+          "bullets": [
+            "Modelo: p = σ(z) = 1 / (1 + e⁻ᶻ), con z = β₀ + βᵀx (Cox, 1958).",
+            "La frontera de decisión es lineal en el espacio de las variables: z = 0 equivale a p = 0,5.",
+            "Se ajusta por máxima verosimilitud con métodos iterativos como lbfgs; no hay solución cerrada.",
+            "En scikit-learn se regulariza por defecto (L2 con C = 1); C es el inverso de la fuerza de regularización."
+          ],
+          "notes": "Muestre la curva sigmoide y recuerde que la derivaron en Matemática para Ciencia de Datos. Explique que la regresión logística modela la probabilidad mediante una transformación de una combinación lineal, por lo que la frontera de decisión es un hiperplano. Señale que David Cox formalizó el modelo en 1958 y que desde entonces es el caballo de batalla de la calificación crediticia. Advierta un detalle práctico importante: LogisticRegression de scikit-learn aplica regularización L2 por defecto, a diferencia de statsmodels, que estima sin penalización; esto explica diferencias en los coeficientes entre ambas librerías. Muestre cómo cambian los coeficientes al variar C. Pregunta: si las clases son perfectamente separables, ¿qué les ocurre a los coeficientes sin regularización? Respuesta: crecen sin límite, porque la verosimilitud siempre mejora al aumentar su magnitud."
+        },
+        {
+          "title": "Pérdida logarítmica o entropía cruzada",
+          "bullets": [
+            "Log-loss = −(1/n)Σ[yᵢ·log pᵢ + (1 − yᵢ)·log(1 − pᵢ)].",
+            "Castiga con dureza las predicciones confiadas y equivocadas, como p = 0,99 cuando y = 0.",
+            "Es convexa en los parámetros: la optimización alcanza el mínimo global.",
+            "Su gradiente, Xᵀ(p − y)/n, conecta con la derivada de la sigmoide vista en Matemática para Ciencia de Datos."
+          ],
+          "notes": "Calcule la pérdida logarítmica para tres casos: y = 1 con p = 0,9 (pérdida 0,105), y = 1 con p = 0,5 (0,693) e y = 1 con p = 0,01 (4,61). La lección es que la confianza equivocada se paga cara, lo que incentiva probabilidades honestas. Explique que la log-loss es la entropía cruzada que encontrarán de nuevo en las redes neuronales. Recuerde que, gracias a la derivada de la sigmoide, el gradiente tiene una forma muy simple: el error de predicción multiplicado por las variables. Muestre que log_loss de scikit-learn y la métrica neg_log_loss permiten usarla en validación cruzada. Pregunta: ¿por qué no usamos el error cuadrático para entrenar la regresión logística? Respuesta: combinado con la sigmoide produce una función no convexa, con gradientes muy pequeños cuando el modelo se equivoca con confianza."
+        },
+        {
+          "title": "Interpretación mediante razones de probabilidades",
+          "bullets": [
+            "Odds = p / (1 − p); el modelo es lineal en el logaritmo de los odds, llamado logit.",
+            "e^βⱼ es el factor multiplicativo de los odds por cada unidad adicional de xⱼ.",
+            "Ejemplo: β = 0,41 en «número de entidades con deuda» implica e^0,41 ≈ 1,51; cada entidad adicional multiplica los odds de mora por 1,5.",
+            "Es el estándar histórico de la calificación crediticia por su transparencia ante supervisores y comités."
+          ],
+          "notes": "Explique los odds con un ejemplo de apuestas: si la probabilidad de mora es 0,20, los odds son 0,25, es decir, «uno a cuatro». Muestre que el modelo es lineal en el logit y que al exponenciar un coeficiente se obtiene un factor multiplicativo. Trabaje el ejemplo de la diapositiva y luego uno con una variable binaria: si «tiene ingresos formales» tiene β = −0,69, entonces e^−0,69 ≈ 0,50, lo que reduce a la mitad los odds de mora. Señale que estos factores son comprensibles para un comité de créditos y para el supervisor, razón por la que muchas entidades financieras mantienen modelos logísticos con variables agrupadas en tramos, como en las tarjetas de puntaje. Pregunta: ¿duplicar los odds equivale a duplicar la probabilidad? Respuesta: no, salvo de forma aproximada cuando la probabilidad es muy pequeña."
+        },
+        {
+          "title": "Clasificador Naive Bayes",
+          "bullets": [
+            "Aplica el teorema de Bayes: P(y | x) ∝ P(y)·Πⱼ P(xⱼ | y).",
+            "Supuesto «ingenuo»: las variables son condicionalmente independientes dada la clase.",
+            "Variantes: GaussianNB (continuas), MultinomialNB (conteos de palabras) y BernoulliNB (binarias).",
+            "Rápido y robusto con pocos datos; base clásica de filtros de spam y clasificación de textos.",
+            "Sus probabilidades suelen estar mal calibradas, aunque su capacidad de ordenar sea aceptable."
+          ],
+          "notes": "Repase el teorema de Bayes visto en Estadística y Probabilidad y muestre cómo se convierte en un clasificador. Use el ejemplo de un filtro de mensajes de texto fraudulentos que suplantan a bancos: la probabilidad de que un mensaje sea fraude, dado que contiene las palabras «bloqueo», «clave» y «enlace», se calcula multiplicando las probabilidades de cada palabra en la clase fraude por la probabilidad previa. Explique por qué el supuesto de independencia es casi siempre falso y, sin embargo, el clasificador funciona bien para ordenar: el error en las probabilidades no siempre altera el orden. Mencione el suavizado de Laplace para palabras no vistas. Pregunta: ¿qué variante usarías para clasificar por tema los reclamos de consumidores presentados ante INDECOPI a partir de su texto? Respuesta: MultinomialNB con conteos de palabras."
+        },
+        {
+          "title": "Árboles de decisión CART",
+          "bullets": [
+            "Breiman, Friedman, Olshen y Stone (1984): particiones binarias recursivas del espacio de variables.",
+            "Impureza de Gini: G = 1 − Σpₖ²; entropía: H = −Σpₖ·log₂pₖ.",
+            "En cada nodo se elige la variable y el corte que más reducen la impureza ponderada de los hijos.",
+            "Producen reglas legibles: «si cuotas atrasadas > 2 y antigüedad < 6 meses, entonces riesgo alto»."
+          ],
+          "notes": "Construya un árbol pequeño en la pizarra virtual con diez clientes y dos variables: cuotas atrasadas y antigüedad. Calcule la impureza de Gini del nodo raíz con cuatro morosos y seis clientes al día: 1 − (0,4² + 0,6²) = 0,48. Luego evalúe un corte y calcule la impureza ponderada de los nodos hijos para mostrar la ganancia. Explique que CART prueba todos los cortes posibles en cada variable y elige el mejor de forma voraz, lo que conecta con los algoritmos voraces de Estructuras de Datos y Algoritmos. Resalte la legibilidad: el árbol puede exportarse como reglas con export_text, algo muy valorado por las áreas de auditoría y cumplimiento. Pregunta: ¿por qué un árbol no necesita escalado de variables? Respuesta: los cortes dependen solo del orden de los valores, no de su magnitud."
+        },
+        {
+          "title": "Controlar la complejidad del árbol",
+          "bullets": [
+            "Un árbol sin restricciones memoriza el entrenamiento y sobreajusta de forma extrema.",
+            "Prepoda: max_depth, min_samples_leaf y min_samples_split limitan el crecimiento.",
+            "Pospoda por costo-complejidad: el parámetro ccp_alpha se elige con validación cruzada.",
+            "Alta varianza: pequeños cambios en los datos alteran todo el árbol; es la motivación de los ensambles."
+          ],
+          "notes": "Muestre en Colab un árbol sin restricciones: alcanzará una exactitud de 100 % en entrenamiento y bastante menos en validación. Ajuste max_depth y min_samples_leaf y observe la curva de validación. Luego explique la poda por costo-complejidad: cost_complexity_pruning_path entrega una secuencia de valores de ccp_alpha, cada uno asociado a un árbol más pequeño, y se elige el mejor con validación cruzada. Enfatice la inestabilidad: entrene el árbol con dos muestras bootstrap distintas y compare sus primeras divisiones, que suelen cambiar. Esta alta varianza es justamente lo que los bosques aleatorios y el boosting, que estudiarán en Aprendizaje Automático II, corrigen al combinar muchos árboles. Pregunta: ¿qué es preferible para un comité de riesgos, un árbol de profundidad 3 o uno de profundidad 15? Discuta el balance entre interpretabilidad y desempeño."
+        },
+        {
+          "title": "La matriz de confusión",
+          "bullets": [
+            "Cuatro celdas: verdaderos positivos (VP), falsos positivos (FP), falsos negativos (FN) y verdaderos negativos (VN).",
+            "Convención: positivo es el evento de interés (mora, fraude, enfermedad), no «lo bueno» para el negocio.",
+            "Exactitud = (VP + VN) / total; es engañosa cuando las clases están desbalanceadas.",
+            "En scikit-learn: confusion_matrix(y_test, y_pred) y ConfusionMatrixDisplay para visualizarla."
+          ],
+          "notes": "Dibuje la matriz y defina la convención: la clase positiva es el evento que queremos detectar, aunque sea negativo para el negocio, como la mora o el fraude. Use un ejemplo numérico: 10 000 créditos con 500 morosos; el modelo identifica 350 de ellos (VP = 350, FN = 150) y alerta por error a 650 buenos pagadores (FP = 650, VN = 8 850). Calcule la exactitud: 92 %, que suena bien, pero una regla que nunca alerta obtiene 95 %. Discuta el significado de cada celda en términos de negocio: un FP es un buen cliente rechazado, con pérdida de margen y mala experiencia; un FN es un crédito impago. Muestre ConfusionMatrixDisplay en Colab. Pregunta: en un tamizaje de tuberculosis, ¿qué error es más grave para la salud pública? Respuesta: el falso negativo, porque un caso no detectado sigue contagiando."
+        },
+        {
+          "title": "Precisión, exhaustividad y F1",
+          "bullets": [
+            "Precisión = VP / (VP + FP): de los casos que alerté, ¿cuántos eran realmente positivos?",
+            "Exhaustividad o sensibilidad = VP / (VP + FN): de los positivos reales, ¿cuántos detecté?",
+            "F1 = 2·P·R / (P + R): media armónica, útil cuando ambos errores importan.",
+            "Especificidad = VN / (VN + FP); en tamizajes médicos se prioriza la exhaustividad."
+          ],
+          "notes": "Continúe con el ejemplo anterior: precisión = 350/1 000 = 0,35 y exhaustividad = 350/500 = 0,70. Interprete: de cada 100 alertas, 35 son morosos reales, y el modelo detecta 7 de cada 10 morosos. F1 = 2·0,35·0,70/1,05 ≈ 0,47. Explique el compromiso: subir el umbral aumenta la precisión y reduce la exhaustividad. Discuta qué métrica prioriza cada contexto: un área de prevención de lavado de activos que recibe miles de alertas valora la precisión para no saturar a sus analistas, mientras que un tamizaje médico prioriza la exhaustividad. Presente la métrica Fβ como generalización cuando un error pesa más que el otro. Ejercicio: calcule las métricas para un segundo modelo con VP = 300 y FP = 300 sobre los mismos 500 morosos, y compare cuál conviene según el contexto."
+        },
+        {
+          "title": "Curvas ROC y precisión-exhaustividad",
+          "bullets": [
+            "ROC: tasa de verdaderos positivos frente a tasa de falsos positivos para todos los umbrales posibles.",
+            "AUC-ROC: probabilidad de que un positivo al azar reciba mayor puntaje que un negativo al azar.",
+            "Con eventos raros, como fraudes menores a 1 %, la curva precisión-exhaustividad y el promedio de precisión informan mejor.",
+            "En banca: Gini = 2·AUC − 1 y estadístico KS como separación máxima entre distribuciones."
+          ],
+          "notes": "Explique que la curva ROC resume el desempeño en todos los umbrales posibles y que el AUC tiene una interpretación probabilística muy útil para comunicar: un AUC de 0,80 significa que, al tomar un moroso y un buen pagador al azar, el modelo asigna mayor puntaje al moroso el 80 % de las veces. Advierta que, con eventos muy raros, la curva ROC puede verse optimista porque la tasa de falsos positivos se diluye entre miles de negativos; la curva precisión-exhaustividad muestra mejor el costo real de las alertas, como documentaron Saito y Rehmsmeier (2015). Presente las métricas habituales de la industria financiera: el índice de Gini y el estadístico de Kolmogórov-Smirnov. Pregunta: si un modelo tiene AUC de 0,50, ¿qué significa? Respuesta: no discrimina mejor que el azar. ¿Y si tiene 0,30? Invertir sus predicciones daría 0,70."
+        },
+        {
+          "title": "Clases desbalanceadas",
+          "bullets": [
+            "Con mora de 5 % o fraude de 0,1 %, el modelo puede ignorar la clase minoritaria y aun así parecer exacto.",
+            "class_weight='balanced' pondera los errores de forma inversa a la frecuencia de cada clase.",
+            "Remuestreo: submuestreo de la mayoría o SMOTE (Chawla et al., 2002), siempre dentro del entrenamiento.",
+            "A menudo basta con métricas adecuadas y un umbral bien elegido, sin remuestrear."
+          ],
+          "notes": "Explique por qué el desbalance es problemático: los algoritmos minimizan el error promedio y la clase minoritaria aporta poco a ese promedio. Muestre el efecto de class_weight='balanced' en una regresión logística: aumenta la exhaustividad a costa de la precisión, de forma similar a bajar el umbral. Presente SMOTE, que genera ejemplos sintéticos interpolando vecinos de la clase minoritaria, y subraye que el remuestreo debe aplicarse solo dentro de cada pliegue de entrenamiento, por ejemplo con el Pipeline de la librería imbalanced-learn; aplicarlo antes de dividir genera fuga. Comente que, con modelos bien calibrados, ajustar el umbral suele ser tan eficaz como remuestrear y distorsiona menos las probabilidades. Pregunta: ¿por qué nunca se debe balancear el conjunto de prueba? Respuesta: debe reflejar la distribución real que el modelo encontrará en producción."
+        },
+        {
+          "title": "Umbral óptimo con una matriz de costos",
+          "bullets": [
+            "Costo esperado = C_FP·FP + C_FN·FN; el umbral de 0,5 rara vez es el óptimo.",
+            "Con probabilidades calibradas, se clasifica como positivo si p > C_FP / (C_FP + C_FN).",
+            "Ejemplo: rechazar un buen crédito cuesta S/ 600 de margen y aprobar uno malo S/ 4 000; el umbral es 0,13.",
+            "TunedThresholdClassifierCV (scikit-learn 1.5 o superior) optimiza el umbral por validación cruzada."
+          ],
+          "notes": "Este es el puente entre el modelo y la rentabilidad. Derive la regla del umbral: conviene clasificar como positivo cuando el costo esperado de no actuar, p·C_FN, supera el costo esperado de actuar, (1 − p)·C_FP, lo que lleva a p > C_FP/(C_FP + C_FN). Aplique el ejemplo: con S/ 600 de margen perdido por rechazar a un buen cliente y S/ 4 000 de pérdida por un impago, el umbral de rechazo es 0,13, muy lejos del 0,5 por defecto. Advierta que la regla supone probabilidades calibradas. Muestre TunedThresholdClassifierCV con una función de costo personalizada creada con make_scorer. Ejercicio: recalculen el umbral si la pérdida por impago baja a S/ 2 000 gracias a garantías. Respuesta: 600/2 600 ≈ 0,23. Discuta también la restricción de capacidad operativa del área de evaluación."
+        },
+        {
+          "title": "Calibración de probabilidades",
+          "bullets": [
+            "Un modelo calibrado que predice 20 % de mora debe acertar en cerca del 20 % de esos casos.",
+            "Diagnóstico: curva de calibración (calibration_curve) y puntaje de Brier.",
+            "Métodos: escalamiento de Platt (sigmoide) y regresión isotónica con CalibratedClassifierCV.",
+            "Indispensable cuando la probabilidad alimenta precios, provisiones o cálculos de costo esperado."
+          ],
+          "notes": "Explique que un ordenamiento correcto no garantiza probabilidades correctas. Muestre una curva de calibración: se agrupan las predicciones en intervalos y se compara la probabilidad promedio predicha con la frecuencia observada; un modelo perfectamente calibrado sigue la diagonal. Comente que Naive Bayes tiende a dar probabilidades extremas y que los árboles profundos también se descalibran. Presente el puntaje de Brier, que es el error cuadrático medio de las probabilidades. Explique que el escalamiento de Platt ajusta una sigmoide sobre los puntajes y que la regresión isotónica es más flexible, pero requiere más datos (Niculescu-Mizil y Caruana, 2005). Relacione con las provisiones: una entidad que usa probabilidades descalibradas puede subestimar sus pérdidas esperadas. Pregunta: ¿con qué datos debe ajustarse el calibrador? Respuesta: con datos no usados para entrenar el modelo."
+        },
+        {
+          "title": "Clasificación y regulación en el Perú",
+          "bullets": [
+            "Resolución SBS 11356-2008: clasifica al deudor en Normal, CPP, Deficiente, Dudoso y Pérdida, con provisiones asociadas.",
+            "Ley 29733, artículo 23: derecho al tratamiento objetivo frente a decisiones basadas únicamente en tratamientos automatizados.",
+            "Los datos sobre origen racial o étnico, salud o convicciones religiosas son datos sensibles con protección reforzada.",
+            "Ley 31814 (2023) promueve el uso de la inteligencia artificial con enfoque de riesgos, transparencia y supervisión humana."
+          ],
+          "notes": "Presente el marco normativo que rodea a los clasificadores en el Perú. La Resolución SBS 11356-2008 establece las categorías de riesgo del deudor y las provisiones asociadas; los modelos internos de las entidades deben ser coherentes con ese marco y están sujetos a supervisión. Explique el sentido del artículo 23 de la Ley 29733: el titular tiene derecho a no verse sometido a una decisión con efectos jurídicos o significativos sustentada únicamente en un tratamiento destinado a evaluar aspectos de su personalidad o conducta, salvo excepciones como la ejecución de un contrato, y siempre con la posibilidad de defender su punto de vista. Recuerde qué datos considera sensibles la ley. Mencione la Ley 31814 de 2023 y su reglamento. Pregunta: ¿usar la lengua materna como variable de un modelo de crédito es legal y es ético? Promueva un debate argumentado."
+        },
+        {
+          "title": "Elegir y comunicar un clasificador",
+          "bullets": [
+            "Comparar modelos con la misma partición, la misma métrica de negocio y validación cruzada estratificada.",
+            "Reportar la matriz de confusión al umbral operativo, no solo el AUC.",
+            "Traducir para la gerencia: «de cada 100 alertas, 35 son morosos reales; detectamos 7 de cada 10 morosos».",
+            "Monitorear después del despliegue: la tasa de eventos y la población cambian con el tiempo."
+          ],
+          "notes": "Cierre la unidad con la comunicación. Muestre dos versiones del mismo resultado: «el modelo tiene un AUC de 0,81» frente a «si revisamos el 20 % de solicitudes con mayor puntaje, capturamos el 62 % de los futuros morosos y evitamos pérdidas estimadas de S/ 1,2 millones al año». La segunda permite decidir. Explique la tabla de ganancias acumuladas por deciles, de uso habitual en riesgos y en marketing. Subraye que el desempeño en producción cambia: la pandemia de 2020 y los programas de reprogramación de deudas alteraron los patrones de pago y obligaron a recalibrar muchos modelos de riesgo en la región, un ejemplo claro de deriva de datos. Anuncie la Tarea 3 y el Cuestionario 3 de la semana 12, e indique que el caso Caja Andina servirá de modelo para su memorando."
+        }
+      ],
+      "reading": {
+        "title": "Clasificadores probabilísticos y decisiones bajo costo",
+        "minutes": 40,
+        "content": "## 1. De la probabilidad a la acción\n\nUn clasificador binario útil para el negocio cumple dos funciones distintas: estimar p = P(y = 1 | x) y transformar esa probabilidad en una acción mediante un umbral t. La primera es estadística; la segunda es una decisión económica que debe tomarse con información de costos y de capacidad operativa.\n\n## 2. Regresión logística\n\nLa regresión logística (Cox, 1958) modela el logaritmo de los odds como una función lineal: log(p / (1 − p)) = β₀ + β₁x₁ + … + βₚxₚ, lo que equivale a p = 1 / (1 + e^−(β₀ + βᵀx)). Los coeficientes se estiman maximizando la verosimilitud, es decir, minimizando la pérdida logarítmica −(1/n)Σ[yᵢ log pᵢ + (1 − yᵢ) log(1 − pᵢ)]. Al exponenciar un coeficiente se obtiene la razón de odds: si β = 0,41 para el número de entidades con deuda, cada entidad adicional multiplica los odds de mora por e^0,41 ≈ 1,51. Esta transparencia explica su permanencia en la calificación crediticia regulada.\n\n## 3. Naive Bayes y árboles de decisión\n\nNaive Bayes aplica el teorema de Bayes con el supuesto de independencia condicional: P(y | x) ∝ P(y)·Πⱼ P(xⱼ | y). Es rápido y eficaz con texto, aunque sus probabilidades suelen estar descalibradas. Los árboles CART (Breiman et al., 1984) dividen recursivamente el espacio con la variable y el corte que más reducen la impureza de Gini, G = 1 − Σpₖ². Capturan interacciones y no linealidades sin necesidad de escalado, pero sobreajustan con facilidad; se controlan con max_depth, min_samples_leaf o poda por costo-complejidad (ccp_alpha).\n\n## 4. Métricas para eventos raros\n\nCon 10 000 créditos y 500 morosos, un modelo que detecta 350 morosos y alerta por error a 650 buenos pagadores tiene una exactitud de 92 %, inferior al 95 % de no alertar nunca. Por eso se usan la precisión, VP/(VP + FP) = 0,35; la exhaustividad, VP/(VP + FN) = 0,70; el F1 ≈ 0,47; el AUC-ROC, que mide la capacidad de ordenar; y la curva precisión-exhaustividad, más informativa con desbalances severos (Saito y Rehmsmeier, 2015). En banca se reportan también el Gini (2·AUC − 1) y el estadístico KS.\n\n```python\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.naive_bayes import GaussianNB\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import StratifiedKFold, cross_validate\nfrom sklearn.pipeline import Pipeline\n\n# prep: ColumnTransformer de la unidad 1 con sparse_threshold=0 (GaussianNB exige matriz densa)\nmodelos = {\n    'Logística': LogisticRegression(C=1.0, class_weight='balanced', max_iter=1000),\n    'Naive Bayes': GaussianNB(),\n    'Árbol': DecisionTreeClassifier(max_depth=5, min_samples_leaf=50, random_state=42)}\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)\nfor nombre, clf in modelos.items():\n    pipe = Pipeline([('prep', prep), ('clf', clf)])\n    r = cross_validate(pipe, X_train, y_train, cv=cv,\n                       scoring=['roc_auc', 'average_precision'])\n    print(nombre, r['test_roc_auc'].mean().round(3),\n          r['test_average_precision'].mean().round(3))\n```\n\n## 5. El umbral que minimiza el costo\n\nSi C_FP es el costo de rechazar a un buen cliente (margen perdido) y C_FN el costo de aprobar a un moroso (pérdida esperada), conviene rechazar cuando p·C_FN > (1 − p)·C_FP, es decir, cuando p > t* = C_FP / (C_FP + C_FN). Con C_FP = S/ 600 y C_FN = S/ 4 000, t* ≈ 0,13. La regla exige probabilidades **calibradas**: si el modelo dice 20 %, la mora observada en ese grupo debe rondar el 20 %. La calibración se verifica con calibration_curve y el puntaje de Brier, y se corrige con CalibratedClassifierCV (método sigmoide de Platt o isotónico). En la práctica, el umbral también depende de la capacidad operativa: si el área de evaluación solo puede revisar 300 casos por semana, se prioriza a los 300 de mayor riesgo.\n\n```python\nimport numpy as np\nfrom sklearn.metrics import confusion_matrix\n\ndef costo(y_true, p, t, c_fp=600, c_fn=4000):\n    # positivo = rechazar por riesgo de mora\n    tn, fp, fn, tp = confusion_matrix(y_true, (p >= t).astype(int)).ravel()\n    return c_fp * fp + c_fn * fn\n\numbrales = np.linspace(0.05, 0.60, 56)\ncostos = [costo(y_val, p_val, t) for t in umbrales]\nprint('Umbral de menor costo:', umbrales[int(np.argmin(costos))])\n```\n\n## 6. Contexto regulatorio peruano\n\nLa Resolución SBS 11356-2008 clasifica a los deudores en cinco categorías (Normal, CPP, Deficiente, Dudoso y Pérdida) que determinan las provisiones, y los modelos internos deben ser coherentes con ese marco. La Ley 29733 reconoce, en su artículo 23, el derecho al tratamiento objetivo: nadie debe quedar sujeto a una decisión con efectos significativos basada únicamente en un tratamiento automatizado que evalúe su personalidad o conducta, salvo excepciones como la ejecución de un contrato, y siempre con la posibilidad de defender su punto de vista. Un clasificador responsable combina buen desempeño, umbrales justificados, explicaciones comprensibles y supervisión humana en los casos límite."
+      },
+      "case": {
+        "title": "Caso: Caja Andina y el umbral de aprobación de microcréditos",
+        "content": "**Caja Andina** (nombre ficticio) es una caja rural de ahorro y crédito con 46 agencias en Puno, Cusco, Arequipa y Apurímac, especializada en microcréditos de S/ 2 000 a S/ 15 000 para emprendedores del comercio, la agricultura y el transporte. En 2025 desembolsó cerca de 85 000 créditos. Su proceso de admisión depende del criterio de los asesores de negocios, que visitan al cliente, y de una regla simple: rechazar si el solicitante registra una calificación distinta de Normal en el sistema financiero.\n\nLa gerencia de riesgos, a cargo de Lucía Mamani, encargó un modelo de admisión con 62 000 créditos desembolsados entre 2021 y 2024. La variable objetivo es haber superado 30 días de atraso en los primeros 12 meses, condición que se presentó en el 9,5 % de los casos. El equipo comparó tres modelos con validación cruzada estratificada:\n\n| Modelo | AUC-ROC | Promedio de precisión |\n|---|---|---|\n| Regresión logística | 0,78 | 0,31 |\n| Árbol de decisión (profundidad 6) | 0,74 | 0,26 |\n| Naive Bayes gaussiano | 0,71 | 0,22 |\n\nCon el umbral por defecto de 0,5, la regresión logística rechaza apenas el 1,8 % de las solicitudes y detecta solo el 9 % de los futuros morosos. El área de finanzas estima que un crédito bueno deja un margen promedio de S/ 520, mientras que un crédito moroso genera una pérdida promedio de S/ 3 100 después de las recuperaciones.\n\nDos variables generan debate. La primera, «lengua materna» (castellano, quechua o aimara), tomada de la ficha del cliente, aumenta el AUC en 0,01; los clientes quechuahablantes presentan mayor mora histórica, pero también se concentran en zonas con menor acceso a agencias y a canales digitales de pago. La segunda, «número de recargas de celular en los últimos tres meses», provendría de un convenio con una operadora y mejora la discriminación en los clientes sin historial crediticio, que representan el 35 % de las solicitudes.\n\nEl directorio pide una propuesta para su próxima sesión que responda: ¿qué umbral usar?, ¿qué variables incluir?, ¿qué decisiones serán automáticas y cuáles revisará un asesor?, y ¿cómo garantizar el cumplimiento de la Ley 29733 y de las normas de la SBS? El presidente del directorio advierte: «No queremos dejar de atender a los emprendedores del campo; esa es nuestra misión».",
+        "questions": [
+          "Calcula el umbral teórico de rechazo con la información de costos y explica por qué el umbral de 0,5 es inadecuado en este caso.",
+          "¿Por qué el promedio de precisión es tan bajo comparado con el AUC-ROC y qué implica para la carga de trabajo de los asesores?",
+          "¿Incluirías la variable «lengua materna»? Analiza la decisión desde el desempeño, la equidad, la Ley 29733 y la misión de la caja.",
+          "¿Qué condiciones legales y de consentimiento deben verificarse antes de usar los datos de recargas de celular de la operadora?",
+          "Diseña una política con zonas de aprobación automática, revisión humana y rechazo, y explica cómo la monitorearías durante el primer año."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Clasificador sensible al costo para una decisión organizacional",
+        "instructions": "**Objetivo:** construir y comparar clasificadores, y convertir sus probabilidades en una política de decisión que minimice el costo esperado.\n\n**Datos:** conjunto de crédito, deserción o fraude proporcionado por el docente, o uno abierto con al menos 3 000 registros y una clase positiva menor al 20 %.\n\n**Qué entregar:**\n1. *Cuaderno de Colab* que: (a) compare regresión logística, Naive Bayes y un árbol de decisión podado dentro de pipelines, con validación cruzada estratificada; (b) reporte AUC-ROC, promedio de precisión, matriz de confusión, precisión, exhaustividad y F1; (c) evalúe el efecto de `class_weight='balanced'`; (d) construya la curva de calibración y el puntaje de Brier del mejor modelo, y lo calibre si es necesario; (e) defina una matriz de costos justificada y encuentre el umbral que minimiza el costo esperado en validación; (f) aplique ese umbral una sola vez en el conjunto de prueba.\n2. *Memorando ejecutivo* de dos páginas dirigido a la gerencia: problema, modelo elegido, umbral, resultado esperado en soles, interpretación de tres razones de odds, riesgos éticos y legales (Ley 29733, artículo 23) y propuesta de revisión humana para los casos límite.\n\n**Formato:** PDF y cuaderno compartido en el aula virtual, con semilla fija. Plazo: domingo de la semana 12, a las 23:59.",
+        "rubric": [
+          {
+            "name": "Construcción y comparación de clasificadores",
+            "points": 5
+          },
+          {
+            "name": "Elección e interpretación de métricas",
+            "points": 5
+          },
+          {
+            "name": "Calibración y umbral basado en costos",
+            "points": 6
+          },
+          {
+            "name": "Memorando ejecutivo y análisis ético-legal",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Clasificación y evaluación",
+        "questions": [
+          {
+            "prompt": "Un clasificador de fraude marca 400 transacciones, de las cuales 100 son fraudes reales. En total había 125 fraudes. ¿Cuáles son la precisión y la exhaustividad?",
+            "options": [
+              "Precisión 0,25 y exhaustividad 0,80",
+              "Precisión 0,80 y exhaustividad 0,25",
+              "Precisión 0,25 y exhaustividad 0,31",
+              "Precisión 0,31 y exhaustividad 0,80"
+            ],
+            "correct": 0,
+            "explanation": "Precisión = VP/(VP + FP) = 100/400 = 0,25. Exhaustividad = VP/(VP + FN) = 100/125 = 0,80. El modelo detecta la mayoría de fraudes, pero tres de cada cuatro alertas son falsas."
+          },
+          {
+            "prompt": "En una regresión logística de mora, el coeficiente de «tiene ingresos formales» es −0,69. ¿Qué significa?",
+            "options": [
+              "Reduce la probabilidad de mora en 69 puntos porcentuales",
+              "Multiplica los odds de mora por cerca de 0,5, es decir, los reduce a la mitad",
+              "La variable no es significativa porque su coeficiente es negativo",
+              "Reduce la probabilidad de mora exactamente a la mitad"
+            ],
+            "correct": 1,
+            "explanation": "e^−0,69 ≈ 0,50: los odds de mora se reducen a la mitad. El efecto sobre la probabilidad depende del nivel de partida, por lo que no es exactamente la mitad de la probabilidad."
+          },
+          {
+            "prompt": "Rechazar a un buen cliente cuesta S/ 500 y aprobar a un moroso, S/ 4 500. Con probabilidades calibradas, ¿qué umbral de rechazo minimiza el costo esperado?",
+            "options": [
+              "0,50",
+              "0,90",
+              "0,10",
+              "0,25"
+            ],
+            "correct": 2,
+            "explanation": "t* = C_FP / (C_FP + C_FN) = 500 / 5 000 = 0,10. Como aprobar a un moroso es nueve veces más costoso, conviene rechazar desde probabilidades bajas de mora."
+          },
+          {
+            "prompt": "¿En qué situación es preferible analizar la curva precisión-exhaustividad en lugar de la curva ROC?",
+            "options": [
+              "Cuando las clases están balanceadas al 50 %",
+              "Cuando el evento positivo es muy raro, como un fraude de 0,2 %",
+              "Cuando el modelo es una regresión lineal",
+              "Cuando no se dispone de probabilidades, sino solo de etiquetas"
+            ],
+            "correct": 1,
+            "explanation": "Con eventos raros, la tasa de falsos positivos se diluye entre muchos negativos y la ROC luce optimista; la precisión revela cuántas alertas son falsas y refleja mejor el costo operativo."
+          },
+          {
+            "prompt": "Un árbol de decisión logra 100 % de exactitud en entrenamiento y 71 % en validación. ¿Qué ajuste es más adecuado?",
+            "options": [
+              "Aumentar max_depth para capturar más patrones",
+              "Estandarizar las variables numéricas",
+              "Eliminar la validación cruzada",
+              "Aumentar min_samples_leaf o aplicar poda con ccp_alpha"
+            ],
+            "correct": 3,
+            "explanation": "El árbol memorizó el entrenamiento (sobreajuste). Limitar el tamaño de las hojas o podar reduce la varianza; escalar no afecta a los árboles y más profundidad agravaría el problema."
+          },
+          {
+            "prompt": "Un equipo aplica SMOTE a todo el conjunto de datos y después realiza la validación cruzada. ¿Cuál es el problema?",
+            "options": [
+              "SMOTE solo funciona con variables categóricas",
+              "Hay fuga: ejemplos sintéticos derivados de observaciones de validación entran al entrenamiento",
+              "La validación cruzada no admite clases balanceadas",
+              "SMOTE reduce el tamaño del conjunto de entrenamiento"
+            ],
+            "correct": 1,
+            "explanation": "SMOTE interpola entre vecinos; si se aplica antes de dividir, los puntos sintéticos llevan información de los pliegues de validación y el desempeño se sobrestima. Debe ir dentro del pipeline."
+          },
+          {
+            "prompt": "Un modelo asigna 30 % de probabilidad de mora a un grupo de 1 000 clientes y, al cabo de un año, 120 cayeron en mora. ¿Qué indica este resultado?",
+            "options": [
+              "El modelo sobreestima el riesgo de ese grupo: está descalibrado",
+              "El modelo está bien calibrado",
+              "El modelo tiene necesariamente un AUC bajo",
+              "El umbral de decisión es demasiado alto"
+            ],
+            "correct": 0,
+            "explanation": "Se esperaban unas 300 moras y se observaron 120 (12 %). Las probabilidades están descalibradas, aunque la capacidad de ordenar (AUC) podría ser buena; se corrige con Platt o regresión isotónica."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Validación, optimización, interpretabilidad y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante estima con honestidad el desempeño de un modelo mediante validación cruzada acorde a la estructura de los datos, optimiza hiperparámetros con validación anidada, interpreta y audita el modelo por subgrupos, y lo documenta en una tarjeta de modelo dentro de un proyecto integrador reproducible que sustenta oralmente.",
+      "topics": [
+        "Validación cruzada estratificada, agrupada y temporal",
+        "Búsqueda de hiperparámetros: rejilla, aleatoria y reducción sucesiva a la mitad",
+        "Validación cruzada anidada y comparación rigurosa de modelos",
+        "Interpretabilidad: importancia por permutación, dependencia parcial, curvas ICE y valores SHAP",
+        "Equidad algorítmica, auditoría por subgrupos y tarjetas de modelo",
+        "Reproducibilidad, persistencia del pipeline y sustentación del proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "Por qué una sola partición no basta",
+          "bullets": [
+            "Una única partición entrenamiento-prueba produce una estimación ruidosa: con 1 000 casos, el AUC puede variar ±0,03 según la semilla.",
+            "Usar el conjunto de prueba para elegir modelos o hiperparámetros lo convierte en validación y sesga el resultado al alza.",
+            "La validación cruzada reutiliza los datos de entrenamiento para estimar el error y su variabilidad sin tocar la prueba.",
+            "Regla de oro: la prueba se usa una sola vez, al final, para reportar el desempeño esperado en producción."
+          ],
+          "notes": "Inicie recordando la Unidad 1: separamos un conjunto de prueba para estimar el error de generalización. Plantee el problema: si comparamos diez configuraciones contra ese mismo conjunto y elegimos la mejor, estamos optimizando sobre la prueba y el número reportado será optimista; Cawley y Talbot (2010) llaman a este fenómeno sobreajuste en la selección del modelo. Muestre en vivo un experimento: entrene la misma regresión logística con veinte semillas de partición distintas y grafique la dispersión del AUC; con muestras pequeñas, la diferencia entre la mejor y la peor semilla puede superar tres puntos porcentuales, suficiente para ganar una comparación por azar. Pregunte a la clase: si un proveedor les reporta un AUC de 0,91 sin decir cómo lo midió, ¿qué preguntas harían antes de creerle? Oriente hacia tres respuestas: cómo particionó los datos, cuántas veces lo hizo y si la prueba se usó para tomar decisiones de modelado."
+        },
+        {
+          "title": "Validación cruzada k-fold y estratificada",
+          "bullets": [
+            "Se divide el entrenamiento en k pliegues; cada pliegue se usa una vez como validación y k − 1 veces para entrenar.",
+            "Se reporta la media y la desviación estándar de las k puntuaciones; k = 5 o 10 equilibra sesgo, varianza y costo.",
+            "StratifiedKFold conserva la proporción de clases en cada pliegue: imprescindible con una clase positiva del 5 %.",
+            "cross_validate(pipe, X, y, cv=cv, scoring=['roc_auc', 'average_precision']) evalúa varias métricas a la vez.",
+            "El preprocesamiento va dentro del pipeline para que se ajuste solo con los pliegues de entrenamiento."
+          ],
+          "notes": "Dibuje los cinco pliegues como una tabla de cinco filas en la que el bloque de validación se desplaza en diagonal. Explique por qué k = 5 o 10 es la recomendación habitual (Kohavi, 1995; James et al., 2023): con k pequeño el estimador es pesimista, porque cada modelo entrena con menos datos; con k igual a n, dejar uno fuera, la varianza crece y el costo se dispara. Insista en el error más frecuente: escalar o imputar todo el conjunto antes de llamar a cross_val_score, lo que filtra información de los pliegues de validación. Muestre StratifiedKFold(n_splits=5, shuffle=True, random_state=42) y comente que, con shuffle, la semilla debe fijarse para reproducir resultados. Ejercicio rápido: con 2 000 registros de entrenamiento y 4 % de positivos, ¿cuántos positivos tendrá cada pliegue de validación? Respuesta: cerca de 16; por eso la desviación del promedio de precisión será alta y conviene usar RepeatedStratifiedKFold."
+        },
+        {
+          "title": "Validación agrupada y temporal",
+          "bullets": [
+            "Si un cliente, paciente o tienda aparece en varias filas, GroupKFold impide que esté a la vez en entrenamiento y validación.",
+            "En datos ordenados en el tiempo, TimeSeriesSplit entrena con el pasado y valida con el futuro inmediato.",
+            "Mezclar aleatoriamente datos temporales permite ver el futuro e infla las métricas de forma sistemática.",
+            "El esquema de validación debe imitar cómo se usará el modelo: a quién se aplica, cuándo y con qué información disponible."
+          ],
+          "notes": "Esta es la diapositiva conceptual más importante de la unidad. Presente un ejemplo: una empresa de telecomunicaciones tiene doce registros mensuales por cliente; con KFold aleatorio, el modelo aprende rasgos propios de cada cliente en entrenamiento y los reconoce en validación, algo que no ocurrirá con clientes nuevos. Con GroupKFold y el identificador del cliente como grupo, la estimación cae, pero es honesta. Luego pase al caso temporal con ventas o demanda: TimeSeriesSplit(n_splits=5, gap=1) entrena con meses anteriores, deja un mes de separación y valida con el siguiente, imitando la operación real. Mencione que los quiebres estructurales, como la pandemia de 2020 o El Niño costero de 2017, producen cambios de distribución que solo una validación temporal revela. Pregunta para la clase: en el caso Caja Andina de la unidad anterior, ¿qué esquema habría sido el correcto? Espere respuestas que combinen tiempo, por cosechas de créditos, y grupos, por clientes recurrentes."
+        },
+        {
+          "title": "Parámetros e hiperparámetros",
+          "bullets": [
+            "Parámetros: se aprenden de los datos durante el ajuste, como los coeficientes β de una regresión logística.",
+            "Hiperparámetros: se fijan antes del ajuste y controlan la complejidad, como alpha en Ridge, C en logística o max_depth en un árbol.",
+            "En un pipeline se nombran con doble guion bajo: 'modelo__C' o 'prep__num__imputer__strategy'.",
+            "Las decisiones de preprocesamiento también son hiperparámetros: estrategia de imputación, grado polinomial o tipo de codificación."
+          ],
+          "notes": "Recupere ejemplos de las unidades 2 y 3: alpha controlaba la intensidad de la regularización y max_depth la profundidad del árbol; en ambos casos vimos con curvas de validación que existe un valor intermedio óptimo. Explique que la búsqueda de hiperparámetros es, en el fondo, la optimización de una curva de validación en varias dimensiones a la vez. Muestre pipe.get_params().keys() en Colab para que los estudiantes vean la nomenclatura con doble guion bajo, fuente de errores frecuentes. Destaque que tratar las decisiones de preprocesamiento como hiperparámetros evita elegirlas a mano mirando todo el conjunto, lo que sería otra forma de fuga de información. Pregunta: ¿el umbral de decisión de la Unidad 3 es un parámetro o un hiperparámetro? Discuta que no se aprende al ajustar el modelo y que, por tanto, debe elegirse con validación, como hace TunedThresholdClassifierCV, y nunca con el conjunto de prueba."
+        },
+        {
+          "title": "GridSearchCV y RandomizedSearchCV",
+          "bullets": [
+            "GridSearchCV evalúa todas las combinaciones de una rejilla: 4 valores de C × 2 penalizaciones × 5 pliegues = 40 ajustes.",
+            "RandomizedSearchCV muestrea n_iter combinaciones de distribuciones, como loguniform(1e-3, 1e2) para C.",
+            "Bergstra y Bengio (2012) mostraron que la búsqueda aleatoria es más eficiente cuando pocos hiperparámetros importan.",
+            "Atributos clave: best_params_, best_score_, cv_results_ y best_estimator_, reentrenado con todo el entrenamiento.",
+            "Defina scoring alineado al negocio: 'average_precision', 'neg_mean_absolute_error' o un evaluador de costo propio."
+          ],
+          "notes": "Muestre el código en vivo con param_grid = {'modelo__C': [0.01, 0.1, 1, 10], 'modelo__penalty': ['l1', 'l2']} y solver liblinear. Calcule con la clase el número de ajustes y el tiempo estimado en Colab. Luego explique el argumento de Bergstra y Bengio: si de dos hiperparámetros solo uno influye realmente, una rejilla de 3 × 3 explora solo tres valores del importante, mientras que nueve puntos aleatorios exploran nueve. Recomiende escalas logarítmicas para C y alpha, porque su efecto es multiplicativo. Enseñe a leer cv_results_ como un DataFrame ordenado por rank_test_score y a revisar std_test_score: si las diferencias entre los primeros candidatos son menores que una desviación estándar, conviene elegir el modelo más simple, según la regla de un error estándar de Hastie et al. (2009). Pregunta: ¿qué ocurre si la mejor combinación está en el borde de la rejilla? Respuesta: hay que ampliar el rango y repetir la búsqueda."
+        },
+        {
+          "title": "Reducción sucesiva a la mitad y presupuesto de cómputo",
+          "bullets": [
+            "HalvingGridSearchCV y HalvingRandomSearchCV entrenan muchos candidatos con pocos datos y descartan los peores en cada ronda.",
+            "Con factor = 3, solo un tercio de los candidatos pasa a la siguiente ronda, con el triple de recursos.",
+            "Requieren importar enable_halving_search_cv desde sklearn.experimental, porque aún son experimentales.",
+            "Planifique el presupuesto: candidatos × pliegues × tiempo por ajuste; use n_jobs=-1 para paralelizar."
+          ],
+          "notes": "Explique la intuición del algoritmo de reducción sucesiva a la mitad (Jamieson y Talwalkar, 2016): no vale la pena gastar todos los datos en configuraciones claramente malas. En la primera ronda se entrenan, por ejemplo, 81 candidatos con 500 filas; los 27 mejores pasan a la segunda ronda con 1 500 filas; los 9 mejores a la tercera con 4 500, y así sucesivamente. Advierta el riesgo: un modelo complejo puede parecer malo con pocos datos y ser eliminado prematuramente. Relacione con la realidad del curso: la versión gratuita de Colab ofrece recursos limitados y sesiones que se interrumpen, por lo que planificar el presupuesto de cómputo es una competencia profesional. Mencione que en Aprendizaje Automático II y en Despliegue de Modelos se verán optimizadores bayesianos. Ejercicio: estimen cuánto tomaría una rejilla de 200 combinaciones con cinco pliegues si cada ajuste demora tres segundos. Respuesta: 50 minutos; pidan propuestas para reducirlo."
+        },
+        {
+          "title": "Validación cruzada anidada",
+          "bullets": [
+            "best_score_ es optimista: es el máximo de muchas estimaciones ruidosas obtenidas sobre los mismos pliegues.",
+            "Un bucle interno elige hiperparámetros y un bucle externo estima el desempeño del procedimiento completo.",
+            "En código: cross_val_score(GridSearchCV(pipe, grid, cv=interno), X, y, cv=externo).",
+            "Estima el desempeño del método de construcción del modelo, no de un modelo concreto con hiperparámetros fijos."
+          ],
+          "notes": "Use una analogía: si cien estudiantes lanzan una moneda diez veces y premiamos al que obtuvo más caras, su habilidad observada será alta, pero en una nueva ronda volverá al promedio. Lo mismo pasa con best_score_: seleccionar el máximo introduce un sesgo optimista que crece con el número de candidatos (Varma y Simon, 2006; Cawley y Talbot, 2010). Dibuje dos bucles concéntricos: el externo con cinco pliegues y, dentro de cada entrenamiento externo, una búsqueda con tres pliegues internos. El resultado son cinco puntuaciones externas que estiman cómo rendirá el procedimiento de buscar y reentrenar con datos nuevos. Aclare que el modelo que se entrega es el de la búsqueda ajustada con todo el entrenamiento, y que la validación anidada sirve para reportar su desempeño esperado y comparar familias de modelos. Pregunta: con cinco pliegues externos, tres internos y 20 candidatos, ¿cuántos ajustes hay? Respuesta: 300, más los cinco reentrenamientos internos."
+        },
+        {
+          "title": "Comparar modelos con rigor estadístico",
+          "bullets": [
+            "Compare todos los modelos con los mismos pliegues, usando el mismo objeto cv con semilla fija, para emparejar diferencias.",
+            "Una diferencia de 0,005 en AUC con desviación estándar de 0,02 no justifica un modelo más complejo.",
+            "Pruebas: t corregida de Nadeau y Bengio (2003) para pliegues correlacionados, o McNemar sobre la prueba.",
+            "A igualdad de desempeño, prefiera el modelo más simple, interpretable, barato de mantener y auditable."
+          ],
+          "notes": "Muestre una tabla con los tres modelos de la Unidad 3 evaluados con RepeatedStratifiedKFold de cinco por cinco: regresión logística 0,812 ± 0,018; árbol podado 0,798 ± 0,024, y Naive Bayes 0,771 ± 0,021. Pregunte si la logística es realmente mejor que el árbol. Explique que las puntuaciones de los pliegues no son independientes, porque comparten datos de entrenamiento, y que la prueba t clásica subestima la varianza; Nadeau y Bengio propusieron una corrección que amplía el intervalo. Para comparar dos clasificadores sobre un único conjunto de prueba, la prueba de McNemar analiza los casos en que discrepan (Dietterich, 1998). Más allá de la estadística, introduzca el criterio de negocio: un modelo levemente superior pero opaco puede ser inaceptable en un sector regulado o para una entidad que debe explicar sus decisiones a los usuarios. Cierre con la navaja de Ockham aplicada al aprendizaje automático."
+        },
+        {
+          "title": "Importancia de variables por permutación",
+          "bullets": [
+            "Mide cuánto empeora la métrica cuando se baraja una variable, rompiendo su relación con el objetivo.",
+            "Es agnóstica al modelo y se calcula en validación o prueba: permutation_importance(modelo, X_val, y_val, n_repeats=10).",
+            "La importancia por impureza de los árboles favorece variables continuas o con muchas categorías; la permutación evita ese sesgo.",
+            "Limitación: con variables muy correlacionadas, la importancia se reparte y puede parecer baja en ambas."
+          ],
+          "notes": "Explique el algoritmo paso a paso (Breiman, 2001): se calcula la métrica de referencia; se baraja una columna, se recalcula la métrica y la diferencia es la importancia; se repite varias veces para obtener una media y una desviación. Muestre un gráfico de cajas con las importancias del modelo de Caja Andina: número de entidades con deuda, días de atraso máximo y antigüedad del negocio. Advierta que importancia no es causalidad: indica en qué se apoya el modelo para predecir, no qué ocurriría si cambiáramos la variable. Contraste con feature_importances_ de los árboles, sesgada hacia variables con muchos cortes posibles (Strobl et al., 2007). Ejercicio: si 'distrito' aparece como la variable más importante en un modelo de crédito, ¿qué preguntas técnicas y éticas deberíamos hacernos? Oriente la discusión hacia variables que actúan como sustitutos del nivel socioeconómico o del origen étnico, y hacia la necesidad de auditar el modelo por subgrupos."
+        },
+        {
+          "title": "Dependencia parcial y curvas ICE",
+          "bullets": [
+            "La dependencia parcial muestra el efecto promedio de una variable sobre la predicción, manteniendo las demás como en los datos.",
+            "Las curvas ICE grafican ese efecto para cada observación y revelan interacciones que el promedio oculta.",
+            "PartialDependenceDisplay.from_estimator(modelo, X, ['area', 'antiguedad'], kind='both') las dibuja en scikit-learn.",
+            "Supuesto crítico: con variables correlacionadas se evalúan combinaciones irreales, como veinte años de experiencia laboral a los 22 años."
+          ],
+          "notes": "Presente la definición de Friedman (2001): la función de dependencia parcial promedia las predicciones del modelo al fijar la variable de interés en un valor y dejar las demás en sus valores observados. Muestre un ejemplo de tasación de la Unidad 2: el precio predicho crece con el área hasta unos 120 m² y luego se estabiliza, algo que un coeficiente lineal no revela. Luego muestre las curvas ICE (Goldstein et al., 2015): si algunas líneas suben y otras bajan, existe una interacción, por ejemplo entre área y distrito. Use estas gráficas para validar el modelo con expertos del negocio: si la probabilidad de mora disminuye cuando aumentan los días de atraso, algo está mal en los datos o en el modelo. Pregunta para la clase: ¿qué harían si la dependencia parcial contradice la intuición del área comercial? Discuta que puede ser un error, un artefacto de correlaciones o un hallazgo genuino que requiere verificación."
+        },
+        {
+          "title": "Explicaciones locales con valores SHAP",
+          "bullets": [
+            "Los valores SHAP (Lundberg y Lee, 2017) reparten una predicción individual entre las variables según los valores de Shapley.",
+            "Propiedad aditiva: predicción = valor base + suma de las contribuciones de cada variable para ese caso.",
+            "Útiles para explicar a un cliente por qué se rechazó su solicitud o para revisar casos límite.",
+            "Límites: costo de cómputo, dependencia del conjunto de referencia y explicaciones engañosas con variables correlacionadas."
+          ],
+          "notes": "Explique la intuición del valor de Shapley (Shapley, 1953): cuánto aporta en promedio cada jugador cuando se une a todas las coaliciones posibles; aquí los jugadores son las variables y el premio es la desviación de la predicción respecto del promedio. Muestre un gráfico de cascada para un solicitante: valor base de 12 % de mora, más nueve puntos por tener cuatro entidades con deuda, menos tres puntos por siete años de antigüedad del negocio, hasta una predicción de 18 %. Relacione con el artículo 23 de la Ley 29733, que reconoce el derecho a no ser sujeto de decisiones con efectos significativos basadas únicamente en un tratamiento automatizado que evalúe la conducta de la persona, lo que exige poder explicar y revisar la decisión. Advierta, siguiendo a Rudin (2019), que en decisiones de alto impacto es preferible un modelo interpretable por diseño. Indique que la librería shap no forma parte de scikit-learn y se usará de forma introductoria."
+        },
+        {
+          "title": "Equidad algorítmica: definiciones en tensión",
+          "bullets": [
+            "Paridad demográfica: la tasa de decisiones positivas es similar entre grupos, sin importar la tasa real de cada uno.",
+            "Igualdad de oportunidades: la exhaustividad o tasa de verdaderos positivos es similar entre grupos (Hardt et al., 2016).",
+            "Paridad predictiva: la precisión o la calibración es similar entre grupos.",
+            "Imposibilidad: si las tasas base difieren, no pueden cumplirse todas a la vez (Kleinberg et al., 2016; Chouldechova, 2017).",
+            "Eliminar la variable sensible no basta: distrito, lengua o centro educativo pueden actuar como sustitutos."
+          ],
+          "notes": "Comience con el caso COMPAS, documentado por ProPublica en 2016, y la respuesta de la empresa desarrolladora: ambos tenían razón según la definición de equidad que eligieron, porque el instrumento estaba calibrado por grupo, pero las tasas de falsos positivos eran mayores para la población afroamericana. Así se ilustra el teorema de imposibilidad de Kleinberg, Mullainathan y Raghavan, y de Chouldechova. Lleve la discusión al Perú: los grupos relevantes pueden ser región natural, lengua materna, sexo, edad o ámbito urbano o rural, variables que el INEI caracteriza en el Censo 2017. Enfatice que la elección de la métrica de equidad es una decisión ética y de negocio que debe documentarse y consultarse con las partes interesadas, no un detalle técnico. Pregunta para debatir: en un programa de becas, ¿qué definición de equidad priorizarían y por qué? Mencione que esta reflexión se profundizará en Ética y Gobernanza de la IA, en el sexto ciclo."
+        },
+        {
+          "title": "Auditoría de desempeño por subgrupos",
+          "bullets": [
+            "Desagregue métricas por grupo: exhaustividad, precisión, tasa de falsos positivos, calibración y tamaño de muestra.",
+            "Calcule la razón entre el grupo menos y el más favorecido; la regla de los cuatro quintos es una referencia, no una norma peruana.",
+            "Con grupos pequeños, reporte intervalos de confianza por bootstrap antes de concluir que existe disparidad.",
+            "Mitigación: mejores datos, umbrales por grupo justificados, restricciones de equidad o revisión humana de casos."
+          ],
+          "notes": "Muestre un código sencillo con pandas: df.groupby('ambito').apply(lambda g: recall_score(g.y, g.pred)) y luego una tabla con tasa de selección, exhaustividad y falsos positivos por ámbito urbano y rural. Comente la librería Fairlearn, cuya clase MetricFrame automatiza este análisis. Explique la regla de los cuatro quintos, originada en las guías de selección de personal de Estados Unidos de 1978, como heurística útil y no como estándar legal en el Perú. Insista en la incertidumbre estadística: si el grupo rural tiene 80 casos positivos, una diferencia de exhaustividad de cinco puntos puede deberse al azar; el bootstrap permite cuantificarlo. Discuta las opciones de mitigación y sus costos: recolectar más datos del grupo subrepresentado suele ser la solución más sólida. Ejercicio: con exhaustividad de 0,78 en Lima y 0,55 en zonas rurales, calculen la razón, que es 0,71, y propongan dos acciones concretas para el equipo."
+        },
+        {
+          "title": "Tarjetas de modelo y hojas de datos",
+          "bullets": [
+            "Tarjeta de modelo (Mitchell et al., 2019): uso previsto, datos, métricas globales y por subgrupo, limitaciones y consideraciones éticas.",
+            "Hoja de datos (Gebru et al., 2021): motivación, composición, recolección, consentimiento, preprocesamiento y mantenimiento del conjunto.",
+            "Incluya la base legal del tratamiento según la Ley 29733, la anonimización aplicada y el titular del banco de datos.",
+            "Es un documento vivo: se actualiza con cada reentrenamiento y sirve de evidencia ante auditorías internas o del regulador."
+          ],
+          "notes": "Presente una plantilla de tarjeta de modelo con nueve secciones: detalles del modelo, uso previsto y usos fuera de alcance, factores relevantes, métricas, datos de evaluación, datos de entrenamiento, análisis cuantitativo por subgrupos, consideraciones éticas y advertencias. Muestre un ejemplo breve de un modelo de deserción estudiantil: uso previsto, priorizar tutorías; uso fuera de alcance, negar matrícula o becas. Relacione con la Ley 29733: la tarjeta debe declarar si se tratan datos sensibles, como los de salud, con qué consentimiento y qué medidas de seguridad se aplican. Mencione también la Ley 31814, que promueve el uso de la inteligencia artificial en el Perú, cuyo reglamento adopta un enfoque basado en riesgos y exige mayor transparencia en los usos de riesgo alto. Pregunta: ¿quién lee una tarjeta de modelo? Respuesta: auditores, gerentes, desarrolladores futuros y, en ocasiones, las personas afectadas por las decisiones del modelo."
+        },
+        {
+          "title": "Reproducibilidad y persistencia del modelo",
+          "bullets": [
+            "Fije semillas con random_state, registre versiones de librerías en requirements.txt y versione el código con Git.",
+            "Guarde el pipeline completo, no solo el estimador: joblib.dump(busqueda.best_estimator_, 'modelo_v1.joblib').",
+            "Un archivo joblib solo es confiable con la misma versión de scikit-learn y nunca debe cargarse si su origen es desconocido.",
+            "Estructura mínima del repositorio: data, notebooks, src, models y reports, con un README que explique cómo ejecutar todo."
+          ],
+          "notes": "Explique que un resultado no reproducible no es un resultado: si otro analista no obtiene el mismo AUC con el mismo código y los mismos datos, el informe pierde valor. Muestre cómo guardar y cargar el pipeline con joblib, y por qué debe persistirse completo: si se guarda solo el clasificador, en producción faltarán la imputación, la codificación y el escalado aprendidos en entrenamiento. Advierta el riesgo de seguridad: joblib y pickle pueden ejecutar código arbitrario al cargarse, por lo que nunca deben abrirse archivos de origen desconocido; mencione formatos alternativos como skops u ONNX, que se profundizarán en Despliegue de Modelos (MLOps). Recomiende registrar la fecha de corte de los datos, la semilla y los hiperparámetros en un archivo de metadatos junto al modelo. Ejercicio en vivo: clonen el repositorio de un compañero, ejecuten su cuaderno de principio a fin y verifiquen si obtienen las mismas métricas."
+        },
+        {
+          "title": "Proyecto integrador: estructura y sustentación",
+          "bullets": [
+            "Problema real formulado con CRISP-DM, línea base y métrica alineada al costo del error.",
+            "Pipeline completo, validación acorde a la estructura de los datos y búsqueda de hiperparámetros con validación anidada.",
+            "Interpretación global y local, auditoría por subgrupos y tarjeta de modelo con análisis ético y legal.",
+            "Sustentación de diez minutos más cinco de preguntas: decisiones técnicas, resultados en la prueba y recomendaciones."
+          ],
+          "notes": "Use esta diapositiva para presentar el proyecto integrador que se entrega en la semana 15 y se sustenta en la semana 16. Recalque que integra las tres tareas anteriores: la formulación y el pipeline de la Tarea 1, el diagnóstico de la Tarea 2 y el análisis de costos de la Tarea 3. Muestre la estructura sugerida de la presentación: contexto y pregunta de negocio, un minuto; datos y riesgos de fuga, dos minutos; modelado y validación, tres minutos; interpretación y equidad, dos minutos; impacto esperado en soles y recomendaciones, dos minutos. Comparta errores frecuentes: reportar best_score_ como desempeño final, olvidar la línea base, mostrar código en lugar de conclusiones y no declarar limitaciones. Explique cómo se evaluará con la rúbrica y que cada integrante debe poder responder sobre cualquier parte del proyecto. Pregunta final: ¿qué evidencia convencería a un gerente escéptico de poner su modelo en producción?"
+        }
+      ],
+      "reading": {
+        "title": "Validar, optimizar y explicar: del modelo prometedor al modelo confiable",
+        "minutes": 40,
+        "content": "## 1. El problema de la estimación honesta\n\nUn modelo de aprendizaje supervisado solo es valioso si su desempeño en datos nuevos es el que prometimos. En las unidades anteriores reservamos un conjunto de prueba con ese fin, pero en la práctica el analista compara decenas de configuraciones: modelos, hiperparámetros, variables y umbrales. Si todas esas decisiones se toman mirando el mismo conjunto, la métrica final es optimista. Cawley y Talbot (2010) llaman a este fenómeno **sobreajuste en la selección del modelo**: elegir el máximo entre muchas estimaciones ruidosas premia, en parte, la suerte.\n\nLa respuesta metodológica tiene tres piezas: validación cruzada para estimar el error con los datos de entrenamiento, búsqueda sistemática de hiperparámetros dentro de esa validación y un conjunto de prueba que se usa **una sola vez**, al final.\n\n## 2. Elegir el esquema de validación\n\nEn la validación cruzada con k pliegues, el conjunto de entrenamiento se divide en k partes; cada una sirve una vez como validación mientras las k − 1 restantes entrenan el modelo. Se reportan la media y la desviación estándar de las k puntuaciones. Kohavi (1995) mostró que k = 10 estratificado ofrece un buen equilibrio entre sesgo y varianza; k = 5 es una alternativa razonable cuando el cómputo es limitado.\n\nSin embargo, la pregunta clave no es cuántos pliegues usar, sino **cómo deben separarse los datos para imitar la producción**:\n\n- **StratifiedKFold**: conserva la proporción de clases; indispensable cuando la clase positiva es rara, como el fraude o la mora.\n- **GroupKFold**: impide que un mismo cliente, paciente o tienda aparezca en entrenamiento y validación a la vez. Si un operador de telecomunicaciones tiene doce registros mensuales por cliente, una partición aleatoria permite al modelo \"reconocer\" clientes en lugar de generalizar a clientes nuevos.\n- **TimeSeriesSplit**: entrena con el pasado y valida con el futuro. Es obligatorio cuando el modelo se usará para anticipar hechos posteriores, como la demanda de un supermercado o la mora de una cosecha de créditos. Los quiebres estructurales, como la pandemia de 2020 o El Niño costero de 2017, solo se revelan con una validación temporal.\n\n## 3. Búsqueda de hiperparámetros y validación anidada\n\nLos hiperparámetros, como `C` en la regresión logística, `alpha` en Ridge o `max_depth` en un árbol, no se aprenden al ajustar el modelo: se eligen comparando su desempeño en validación. `GridSearchCV` recorre todas las combinaciones de una rejilla; `RandomizedSearchCV` muestrea combinaciones de distribuciones. Bergstra y Bengio (2012) demostraron que la búsqueda aleatoria es más eficiente cuando solo unos pocos hiperparámetros influyen de verdad, lo que es frecuente.\n\nComo `best_score_` es el máximo de muchas estimaciones, también es optimista. La **validación cruzada anidada** corrige el sesgo: un bucle interno elige hiperparámetros y un bucle externo estima el desempeño del procedimiento completo (Varma y Simon, 2006).\n\n```python\nfrom sklearn.model_selection import (StratifiedKFold, GridSearchCV,\n                                     cross_val_score)\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.linear_model import LogisticRegression\n\npipe = Pipeline([(\"prep\", preprocesador),            # ColumnTransformer de la Unidad 1\n                 (\"modelo\", LogisticRegression(max_iter=2000, solver=\"liblinear\"))])\ngrid = {\"modelo__C\": [0.01, 0.1, 1, 10],\n        \"modelo__penalty\": [\"l1\", \"l2\"]}\n\ninterno = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)\nexterno = StratifiedKFold(n_splits=5, shuffle=True, random_state=7)\n\nbusqueda = GridSearchCV(pipe, grid, cv=interno, scoring=\"average_precision\")\npuntajes = cross_val_score(busqueda, X_train, y_train, cv=externo,\n                           scoring=\"average_precision\")\nprint(f\"AP anidado: {puntajes.mean():.3f} ± {puntajes.std():.3f}\")\n\nbusqueda.fit(X_train, y_train)            # modelo final con todo el entrenamiento\nprint(busqueda.best_params_)\n```\n\nEl número reportado es la media de los cinco pliegues externos; el modelo que se entrega es `busqueda.best_estimator_`, reentrenado con todo el entrenamiento y evaluado una sola vez en la prueba. Si dos configuraciones difieren menos de una desviación estándar, la regla de un error estándar (Hastie, Tibshirani y Friedman, 2009) aconseja quedarse con la más simple.\n\n## 4. Interpretar sin confundir predicción con causalidad\n\nLa **importancia por permutación** (Breiman, 2001) mide cuánto empeora la métrica al barajar una variable en datos de validación; a diferencia de la importancia por impureza de los árboles, no favorece variables con muchas categorías. La **dependencia parcial** (Friedman, 2001) y las **curvas ICE** muestran cómo cambia la predicción al variar una variable, y permiten que los expertos del negocio detecten comportamientos absurdos. Los **valores SHAP** (Lundberg y Lee, 2017) reparten una predicción individual entre las variables y ayudan a explicar casos concretos.\n\nTodas estas herramientas describen **en qué se apoya el modelo**, no qué ocurriría si interviniéramos sobre una variable. Además, con variables muy correlacionadas, la importancia se reparte y puede parecer baja en ambas. Para decisiones de alto impacto, Rudin (2019) recomienda preferir modelos interpretables por diseño antes que explicar a posteriori una caja negra.\n\n## 5. Equidad y documentación\n\nUn modelo con buen AUC global puede fallar sistemáticamente en un grupo. Por eso se desagregan las métricas por subgrupos pertinentes al contexto peruano: ámbito urbano o rural, región, sexo, edad o lengua materna. Kleinberg, Mullainathan y Raghavan (2016) y Chouldechova (2017) demostraron que, cuando las tasas base difieren entre grupos, no es posible cumplir a la vez la calibración por grupo y la igualdad de tasas de error: elegir la definición de equidad es una decisión ética que debe justificarse.\n\nFinalmente, el modelo se documenta con una **tarjeta de modelo** (Mitchell et al., 2019): uso previsto y usos fuera de alcance, datos, métricas globales y por subgrupo, limitaciones y consideraciones éticas. En el Perú debe declarar, además, la base legal del tratamiento según la Ley 29733, el uso de datos sensibles y el mecanismo de revisión humana que exige su artículo 23 cuando la decisión afecta significativamente a una persona.\n\n## 6. Lista de verificación antes de entregar un modelo\n\n1. ¿El esquema de validación imita la producción (grupos y tiempo)?\n2. ¿Todo el preprocesamiento está dentro del pipeline?\n3. ¿El desempeño se estimó con validación anidada o con una prueba no usada para decidir?\n4. ¿Las métricas están alineadas con el costo del error y superan la línea base?\n5. ¿Se auditó el desempeño por subgrupos y se documentaron las limitaciones?\n6. ¿Otro analista puede reproducir los resultados con el repositorio?"
+      },
+      "case": {
+        "title": "Caso: Clínicas Sanar y el modelo de inasistencia a citas",
+        "content": "**Clínicas Sanar** (nombre ficticio) es una red privada de salud con nueve sedes en Piura, Chiclayo y Trujillo que atiende a afiliados de EPS, asegurados de compañías privadas y pacientes particulares. En 2024 programó 412 000 citas ambulatorias y registró una tasa de inasistencia del 21 %. La gerencia de operaciones estima que cada turno vacío cuesta en promedio S/ 85 entre honorarios médicos, consultorio y personal de apoyo, es decir, cerca de S/ 7,4 millones al año.\n\nEn octubre de 2024, el equipo de analítica, formado por tres personas, desarrolló un modelo para predecir la probabilidad de inasistencia de cada cita. Usó 1,1 millones de citas de 2022 a 2024 y variables como días entre la reserva y la cita, especialidad, día y hora, canal de reserva, edad, tipo de seguro, distrito de residencia y la **tasa histórica de inasistencia del paciente**. Con validación cruzada aleatoria de cinco pliegues, una regresión logística regularizada obtuvo un AUC de 0,88 y un árbol podado, 0,86.\n\nUn piloto de enero a marzo de 2025, con citas reales, arrojó un AUC de solo 0,73. La analista sénior, Rosa Chunga, revisó el trabajo y encontró dos problemas. Primero, el 38 % de los pacientes tenía más de cinco citas en la base, de modo que un mismo paciente aparecía en entrenamiento y validación. Segundo, la tasa histórica de inasistencia se había calculado con **todas** las citas del paciente, incluidas las posteriores a la cita que se quería predecir. Al recalcularla solo con información previa y validar con GroupKFold por paciente y una partición temporal, el AUC fue de 0,76.\n\nLa gerencia de operaciones quiere usar el modelo para una política de **sobrecupo**: asignar un segundo paciente a los turnos con probabilidad de inasistencia mayor a 0,45, lo que, según sus cálculos, recuperaría S/ 2,2 millones al año. Rosa realizó una auditoría por subgrupos con los datos del piloto:\n\n| Ámbito de residencia | Citas | Inasistencia real | Turnos con sobrecupo | Exhaustividad | Falsos positivos |\n|---|---|---|---|---|---|\n| Urbano | 84 000 | 18 % | 9 % | 0,52 | 4 % |\n| Rural (sierra de Piura) | 11 000 | 34 % | 41 % | 0,79 | 28 % |\n\nLos pacientes rurales viajan entre cuatro y seis horas para llegar a la sede de Piura. Cuando asisten a un turno con sobrecupo, esperan en promedio 95 minutos más o son reprogramados. El gerente médico propone otra política: llamadas de recordatorio y reprogramación flexible para las citas de mayor riesgo, con un costo de S/ 6 por llamada.\n\nAdemás, el área legal advierte que los datos de salud son **datos sensibles** según la Ley 29733 y que el formulario de consentimiento vigente solo menciona la \"atención médica y la facturación\". El directorio se reúne en dos semanas y espera una recomendación del equipo de analítica.\n\n**Dilema:** ¿desplegar el modelo para el sobrecupo en abril, como pide operaciones; reorientarlo hacia recordatorios focalizados, o postergar el despliegue hasta resolver los problemas de validación, equidad y consentimiento?",
+        "questions": [
+          "¿Qué errores de validación explican la caída del AUC de 0,88 a 0,73 y qué esquema de validación debió usarse desde el inicio?",
+          "Con los datos de la auditoría por subgrupos, ¿qué definición de equidad es más pertinente para la política de sobrecupo y qué concluyen sobre su impacto en los pacientes rurales?",
+          "¿Es legítimo, según la Ley 29733, usar los datos de salud de los pacientes para este modelo? ¿Qué acciones deben completarse antes de cualquier despliegue?",
+          "Compare el sobrecupo con los recordatorios focalizados en costo esperado, riesgo para los pacientes y reputación. ¿Qué recomendarían al directorio y por qué?",
+          "Redacten las tres advertencias principales que deberían figurar en la tarjeta de modelo de Clínicas Sanar."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Proyecto integrador de aprendizaje supervisado",
+        "instructions": "**Objetivo:** integrar lo aprendido en el curso en un modelo de aprendizaje supervisado validado con rigor, interpretado, auditado y documentado, listo para presentarse a un comité de decisión.\n\n**Datos:** el mismo problema y conjunto de datos de las tareas 1 a 3, o uno nuevo aprobado por el docente en la semana 13, con al menos 3 000 registros. Si contiene datos personales, deben estar anonimizados.\n\n**Qué entregar (en equipos de tres):**\n1. *Repositorio en GitHub* con estructura `data/`, `notebooks/`, `src/`, `models/` y `reports/`, `requirements.txt` y un README que permita reproducir los resultados.\n2. *Cuaderno principal* que: (a) justifique el esquema de validación (estratificado, agrupado o temporal) según la estructura de los datos; (b) compare al menos tres familias de modelos del curso con validación cruzada anidada; (c) optimice hiperparámetros con `GridSearchCV` o `RandomizedSearchCV` y una métrica alineada al costo del error; (d) evalúe el modelo final **una sola vez** en la prueba y lo compare con la línea base; (e) presente importancia por permutación, dos gráficos de dependencia parcial o ICE y una explicación local; (f) audite el desempeño por al menos un subgrupo relevante con intervalos por bootstrap; (g) guarde el pipeline completo con `joblib`.\n3. *Tarjeta de modelo* de dos a tres páginas según Mitchell et al. (2019), con uso previsto, usos fuera de alcance, métricas por subgrupo, limitaciones, base legal según la Ley 29733 y mecanismo de revisión humana.\n4. *Presentación* de diez minutos para la sustentación oral.\n\n**Formato:** enlace al repositorio y PDF de la tarjeta en el aula virtual. Plazo: domingo de la semana 15, a las 23:59; sustentación en la semana 16. Cada integrante debe poder responder sobre cualquier parte del proyecto.",
+        "rubric": [
+          {
+            "name": "Validación, búsqueda de hiperparámetros y desempeño en prueba",
+            "points": 6
+          },
+          {
+            "name": "Interpretabilidad y auditoría de equidad por subgrupos",
+            "points": 5
+          },
+          {
+            "name": "Tarjeta de modelo, reproducibilidad y repositorio",
+            "points": 5
+          },
+          {
+            "name": "Sustentación oral y defensa de decisiones",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Validación, optimización e interpretabilidad",
+        "questions": [
+          {
+            "prompt": "Una empresa de telecomunicaciones tiene doce registros mensuales por cliente. Con KFold aleatorio obtiene un AUC de 0,90, pero con clientes nuevos el AUC es 0,78. ¿Qué cambio en la validación habría anticipado ese resultado?",
+            "options": [
+              "Aumentar k de 5 a 10 para reducir la varianza del estimador",
+              "Usar StratifiedKFold para conservar la proporción de bajas",
+              "Usar GroupKFold con el identificador del cliente como grupo",
+              "Escalar las variables antes de la validación cruzada para homogeneizar los pliegues"
+            ],
+            "correct": 2,
+            "explanation": "Con KFold aleatorio, las filas de un mismo cliente quedan en entrenamiento y validación, y el modelo reconoce clientes en lugar de generalizar. GroupKFold imita la llegada de clientes nuevos."
+          },
+          {
+            "prompt": "Se construye un modelo para pronosticar la demanda mensual de un supermercado con datos de 2019 a 2025. ¿Cuál es el esquema de validación más adecuado?",
+            "options": [
+              "KFold con shuffle=True y semilla fija para garantizar reproducibilidad",
+              "TimeSeriesSplit, que entrena con meses anteriores y valida con los siguientes",
+              "Dejar uno fuera, porque aprovecha al máximo los pocos datos mensuales",
+              "StratifiedKFold sobre la variable de demanda discretizada en cuartiles"
+            ],
+            "correct": 1,
+            "explanation": "En un pronóstico, el modelo solo dispondrá del pasado. TimeSeriesSplit respeta el orden temporal y revela quiebres como el de 2020, que una partición aleatoria ocultaría."
+          },
+          {
+            "prompt": "Tras probar 120 combinaciones con GridSearchCV, el equipo reporta best_score_ = 0,842 como el desempeño esperado en producción. ¿Cuál es el problema principal?",
+            "options": [
+              "La cifra es optimista, porque es el máximo de muchas estimaciones; debe usarse validación anidada o una prueba intacta",
+              "best_score_ se calcula con el conjunto de prueba, por lo que hay fuga de información",
+              "GridSearchCV no reentrena el mejor modelo, así que la cifra corresponde a otro estimador",
+              "Con 120 combinaciones, la búsqueda aleatoria habría dado exactamente el mismo resultado"
+            ],
+            "correct": 0,
+            "explanation": "Seleccionar el máximo entre muchas estimaciones ruidosas introduce un sesgo optimista. La validación anidada o una única evaluación en la prueba dan una estimación honesta."
+          },
+          {
+            "prompt": "Una rejilla tiene 3 valores de max_depth y 4 valores de min_samples_leaf, con cv=5 y refit=True. ¿Cuántos ajustes realiza GridSearchCV en total?",
+            "options": [
+              "12 ajustes",
+              "17 ajustes",
+              "60 ajustes",
+              "61 ajustes"
+            ],
+            "correct": 3,
+            "explanation": "Son 3 × 4 = 12 combinaciones por 5 pliegues, es decir, 60 ajustes, más un reentrenamiento final del mejor modelo con todo el entrenamiento: 61."
+          },
+          {
+            "prompt": "En un modelo de mora, ingreso mensual y gasto mensual tienen una correlación de 0,95 y ambas muestran una importancia por permutación cercana a cero. ¿Cuál es la interpretación más adecuada?",
+            "options": [
+              "Ninguna de las dos variables se relaciona con la mora y deben eliminarse",
+              "Comparten información: al permutar una, el modelo usa la otra, y su importancia conjunta puede ser alta",
+              "La importancia por permutación solo es válida en árboles de decisión",
+              "El modelo está sobreajustado, porque las importancias deberían sumar uno"
+            ],
+            "correct": 1,
+            "explanation": "Con variables muy correlacionadas, la permutación de una no degrada el modelo porque la otra conserva la información. Conviene permutarlas en bloque o agruparlas antes de concluir."
+          },
+          {
+            "prompt": "Un modelo de mora está bien calibrado en zona urbana y rural, pero la mora real es del 8 % urbana y del 15 % rural. ¿Qué se puede afirmar?",
+            "options": [
+              "Al estar calibrado por grupo, cumple automáticamente la igualdad de oportunidades",
+              "Basta eliminar la variable de ámbito para que todas las métricas se igualen",
+              "En general, no podrá igualar a la vez las tasas de falsos positivos y de falsos negativos entre grupos",
+              "La calibración por grupo garantiza paridad demográfica en las aprobaciones"
+            ],
+            "correct": 2,
+            "explanation": "Kleinberg et al. (2016) y Chouldechova (2017) demostraron que, con tasas base distintas, la calibración por grupo y la igualdad de tasas de error son incompatibles, salvo un predictor perfecto."
+          },
+          {
+            "prompt": "Un equipo entrega un modelo de alerta temprana de deserción estudiantil. Según Mitchell et al. (2019), ¿qué elemento es imprescindible en su tarjeta de modelo?",
+            "options": [
+              "Usos previstos y fuera de alcance, y métricas desagregadas por subgrupos relevantes",
+              "El código fuente completo del pipeline y una copia de los datos de entrenamiento",
+              "Solo el AUC global en la prueba y la matriz de confusión del modelo final",
+              "La lista de todas las combinaciones de hiperparámetros probadas y sus tiempos"
+            ],
+            "correct": 0,
+            "explanation": "La tarjeta de modelo comunica para qué sirve y para qué no, cómo rinde en cada subgrupo y cuáles son sus limitaciones y riesgos éticos; no es un volcado técnico."
+          },
+          {
+            "prompt": "¿Por qué debe guardarse con joblib el pipeline completo y no solo el clasificador entrenado?",
+            "options": [
+              "Porque joblib no permite guardar estimadores sueltos de scikit-learn",
+              "Porque el pipeline completo ocupa menos espacio en disco",
+              "Porque así el modelo se reentrena automáticamente al cargarse",
+              "Porque la imputación, la codificación y el escalado aprendidos deben aplicarse igual a los datos nuevos"
+            ],
+            "correct": 3,
+            "explanation": "Las transformaciones se aprenden en entrenamiento; si no se guardan con el modelo, los datos de producción llegarán sin procesar o procesados de otra forma, y las predicciones serán erróneas."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Aprendizaje a partir de datos: definición de Mitchell, tipos de aprendizaje y las dos culturas del modelado",
+      "activity": "Lectura previa y cuaderno guiado en Colab; sesión síncrona con ejemplos peruanos y foro de propuesta de ideas de proyecto.",
+      "evidence": "Participación en foro y cuaderno exploratorio"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Formulación de problemas con CRISP-DM, partición de datos y fuga de información",
+      "activity": "Discusión del caso MercaPerú con método de casos; taller de formulación de problemas predictivos con datos abiertos del INEI.",
+      "evidence": "Análisis escrito del caso MercaPerú"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Preprocesamiento con Pipeline y ColumnTransformer: imputación, codificación y escalado",
+      "activity": "Programación en vivo de un pipeline reproducible y revisión de código entre pares con rúbrica.",
+      "evidence": "Pipeline funcional en Colab"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "k vecinos más cercanos, líneas base y maldición de la dimensionalidad",
+      "activity": "Taller de comparación contra la línea base; resolución del Cuestionario 1 y entrega de la Tarea 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Regresión lineal múltiple: mínimos cuadrados, ecuación normal y descenso de gradiente",
+      "activity": "Aula invertida con la lectura de la unidad; implementación del descenso de gradiente con NumPy y comparación con LinearRegression.",
+      "evidence": "Cuaderno de descenso de gradiente"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Métricas de regresión, interpretación de coeficientes y diagnóstico de residuos",
+      "activity": "Discusión del caso HabitaData; taller de diagnóstico de residuos y multicolinealidad con datos inmobiliarios de Lima.",
+      "evidence": "Análisis del caso HabitaData"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Regresión polinomial, compromiso sesgo-varianza y curvas de validación y de aprendizaje",
+      "activity": "Laboratorio de complejidad del modelo: construcción e interpretación de curvas de validación y de aprendizaje en equipos.",
+      "evidence": "Informe breve de curvas"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Regularización Ridge, Lasso y Elastic Net, y traducción del error a decisiones de negocio",
+      "activity": "Programación en vivo de modelos regularizados; resolución del Cuestionario 2 y entrega de la Tarea 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Regresión logística, pérdida logarítmica e interpretación mediante razones de probabilidades",
+      "activity": "Aula invertida y taller de interpretación de razones de odds en un problema de mora crediticia.",
+      "evidence": "Cuaderno de regresión logística"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Naive Bayes y árboles de decisión CART con control de complejidad y poda",
+      "activity": "Laboratorio comparativo de Naive Bayes y árboles podados dentro de pipelines, con discusión de resultados en foro.",
+      "evidence": "Comparación de clasificadores"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Matriz de confusión, métricas para clases desbalanceadas y curvas ROC y precisión-exhaustividad",
+      "activity": "Discusión del caso Caja Andina; taller de cálculo e interpretación de métricas con datos desbalanceados.",
+      "evidence": "Análisis del caso Caja Andina"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Umbral óptimo con matriz de costos, calibración de probabilidades y regulación peruana",
+      "activity": "Taller de selección de umbral y calibración; resolución del Cuestionario 3 y entrega de la Tarea 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Validación cruzada estratificada, agrupada y temporal",
+      "activity": "Discusión del caso Clínicas Sanar; taller que compara KFold, GroupKFold y TimeSeriesSplit sobre el mismo conjunto; aprobación del tema del proyecto.",
+      "evidence": "Análisis del caso y propuesta de proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Búsqueda de hiperparámetros, validación cruzada anidada y comparación rigurosa de modelos",
+      "activity": "Programación en vivo con GridSearchCV, RandomizedSearchCV y validación anidada; asesoría de avance del proyecto integrador por equipo.",
+      "evidence": "Informe de avance del proyecto"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Interpretabilidad, auditoría de equidad por subgrupos, tarjetas de modelo y reproducibilidad",
+      "activity": "Taller de importancia por permutación, dependencia parcial y auditoría por subgrupos; resolución del Cuestionario 4 y entrega de la Tarea 4.",
+      "evidence": "Cuestionario 4 y proyecto integrador"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentaciones orales por equipo con preguntas del docente y examen práctico individual en Colab con datos nuevos.",
+      "evidence": "Sustentación y examen práctico final"
+    }
+  ]
+}
