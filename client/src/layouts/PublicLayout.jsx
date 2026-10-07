@@ -88,6 +88,10 @@ function SiteHeader() {
               </>
             )}
           </div>
+          {/* Celular: acceso al aula junto al menú, en texto discreto */}
+          <Link to={user ? '/app' : '/login'} className="inline-flex h-10 items-center gap-1.5 shrink-0 rounded-xl px-2 text-[13.5px] font-medium whitespace-nowrap text-ink-2 hover:bg-sunken hover:text-ink sm:hidden">
+            <LogIn size={16} /> {user ? 'Mi aula' : 'Iniciar sesión'}
+          </Link>
           <button className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-ink hover:bg-sunken lg:hidden" onClick={() => setMobile(true)} aria-label="Abrir menú">
             <Menu size={22} />
           </button>
