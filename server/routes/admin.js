@@ -5,6 +5,7 @@ import { role, publicUser } from '../auth.js';
 import { courseCard, checkPassword } from '../lib.js';
 import { buildActa, closeActa, reopenActa, creditsFor } from '../academic.js';
 import { randomPassword } from '../seed.js';
+import { normalizeCurriculum } from '../curriculum.js';
 import { autoEnrollStudent, autoEnrollCourse, autoEnrollAll } from '../enrollment.js';
 
 const r = Router();
@@ -220,7 +221,7 @@ r.delete('/courses/:id/enrollments/:uid', (req, res) => {
 r.get('/programs', (req, res) => {
   res.json(all(`SELECT p.*, (SELECT COUNT(*) FROM users u WHERE u.program_id = p.id AND u.role = 'student') AS students,
     (SELECT COUNT(*) FROM courses c WHERE c.program_id = p.id) AS courses FROM programs p ORDER BY p.id`)
-    .map((p) => ({ ...p, curriculum: JSON.parse(p.curriculum || '[]') })));
+    .map((p) => ({ ...p, curriculum: normalizeCurriculum(p.curriculum) })));
 });
 
 const PROGRAM_TEXT = ['name', 'short', 'description', 'duration', 'modality', 'field', 'profile', 'color', 'icon', 'level', 'degree', 'resolution'];
@@ -247,7 +248,7 @@ r.put('/programs/:id', (req, res) => {
   // Área, foto y resolución sí pueden quedar vacías
   for (const k of ['area', 'image']) { f.push(k); v.push(req.body[k] === undefined ? p[k] : String(req.body[k] || '').trim() || null); }
   for (const k of ['total_credits', 'total_hours']) { f.push(k); v.push(req.body[k] === undefined ? p[k] : Number(req.body[k]) || p[k]); }
-  if (req.body.curriculum !== undefined) { f.push('curriculum'); v.push(JSON.stringify(Array.isArray(req.body.curriculum) ? req.body.curriculum : [])); }
+  if (req.body.curriculum !== undefined) { f.push('curriculum'); v.push(JSON.stringify(normalizeCurriculum(req.body.curriculum))); }
   const active = req.body.active === undefined ? p.active : req.body.active ? 1 : 0;
   run(`UPDATE programs SET ${f.map((k) => `${k} = ?`).join(', ')}, active = ? WHERE id = ?`, ...v, active, p.id);
   audit(req, 'program.update', { entity: 'program', entityId: p.id });

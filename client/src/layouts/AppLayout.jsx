@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import {
   Home, BookOpen, CalendarDays, GraduationCap, Bell, LifeBuoy, Search, Menu, X, Moon, Sun, LogOut, User, ChevronDown, ShieldCheck,
   LayoutDashboard, Users, Library, Layers, UserPlus, Headset, Megaphone, ClipboardList, ListChecks, MessagesSquare, FileText, CornerDownLeft, UserCheck, FileCheck2, ScrollText,
@@ -174,7 +175,7 @@ export default function AppLayout() {
             </div>
           </header>
           <main id="contenido-app" className="mx-auto max-w-[1320px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8 print:max-w-none print:p-0">
-            <Outlet />
+            <ErrorBoundary><Outlet /></ErrorBoundary>
           </main>
         </div>
         {palette && <CommandPalette onClose={() => setPalette(false)} />}

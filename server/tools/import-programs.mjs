@@ -23,6 +23,7 @@ if (typeof process.getuid === 'function' && process.getuid() === 0 && !process.e
 const fs = await import('node:fs');
 const path = await import('node:path');
 const { get, run, insert, all, tx } = await import('../db.js');
+const { normalizeCurriculum } = await import('../curriculum.js');
 
 let data;
 try {
@@ -53,7 +54,7 @@ tx(() => {
       degree: p.degree?.trim() || `Profesional Técnico en ${name}`, total_credits: Number(p.total_credits) || 120,
       total_hours: Number(p.total_hours) || 2550, resolution: p.resolution?.trim() || null,
     };
-    const curriculum = JSON.stringify(Array.isArray(p.curriculum) ? p.curriculum : []);
+    const curriculum = JSON.stringify(normalizeCurriculum(p.curriculum));
     const row = get('SELECT id FROM programs WHERE slug = ?', slug);
     if (row) {
       run(`UPDATE programs SET ${FIELDS.map((k) => `${k} = ?`).join(', ')}, curriculum = ?, active = 1 WHERE id = ?`,

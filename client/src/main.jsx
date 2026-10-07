@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-route
 import './index.css';
 import { AuthProvider, UiProvider, useAuth } from './lib/context.jsx';
 import { PageLoader } from './components/ui.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import PublicLayout from './layouts/PublicLayout.jsx';
 import AppLayout from './layouts/AppLayout.jsx';
 
@@ -71,6 +72,7 @@ const Admin = ({ children }) => <RequireAuth role="admin">{children}</RequireAut
 
 function App() {
   return (
+    <ErrorBoundary>
     <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route element={<PublicLayout />}>
@@ -124,6 +126,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
+    </ErrorBoundary>
   );
 }
 

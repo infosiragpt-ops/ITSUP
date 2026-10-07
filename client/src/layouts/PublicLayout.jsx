@@ -6,6 +6,7 @@ import { CareersMega, CareersMobileList } from '../components/programs.jsx';
 import { Button, cx, useClickOutside } from '../components/ui.jsx';
 import { useAuth } from '../lib/context.jsx';
 import { useApi } from '../lib/api.js';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
 export default function PublicLayout() {
   const loc = useLocation();
@@ -18,7 +19,7 @@ export default function PublicLayout() {
     <div className="min-h-dvh bg-bg">
       <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2">Saltar al contenido</a>
       <SiteHeader />
-      <main id="contenido"><Outlet /></main>
+      <main id="contenido"><ErrorBoundary><Outlet /></ErrorBoundary></main>
       <SiteFooter />
       <HelpWidget />
     </div>

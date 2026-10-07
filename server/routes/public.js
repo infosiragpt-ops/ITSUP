@@ -1,19 +1,46 @@
 import { Router } from 'express';
 import { all, get, insert, httpError, settings } from '../db.js';
 import { verifyDocument } from '../academic.js';
+import { normalizeCurriculum } from '../curriculum.js';
 
 const r = Router();
 
-const parseProgram = (p) => p && { ...p, curriculum: JSON.parse(p.curriculum || '[]') };
+const parseProgram = (p) => p && { ...p, curriculum: normalizeCurriculum(p.curriculum) };
+const keyOf = (s) => String(s || '').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+/**
+ * Plan de estudios detallado por ciclo: código, créditos, horas y tipo de cada unidad didáctica, tomados de los
+ * cursos ofertados en el periodo más reciente. Si un ciclo aún no tiene cursos creados, se usa el plan publicado.
+ */
+function studyPlan(p, curriculum) {
+  const term = get('SELECT id FROM terms WHERE is_active = 1') || get('SELECT t.id FROM terms t JOIN courses c ON c.term_id = t.id WHERE c.program_id = ? ORDER BY t.start_date DESC LIMIT 1', p.id);
+  const offered = term ? all(
+    `SELECT code, name, cycle, credits, hours_theory, hours_practice, course_type, module_name FROM courses
+     WHERE program_id = ? AND term_id = ? AND cycle IS NOT NULL ORDER BY cycle, code`, p.id, term.id) : [];
+  const cycles = new Set([...curriculum.map((c) => c.cycle), ...offered.map((c) => c.cycle)]);
+  return [...cycles].sort((a, b) => a - b).map((cycle) => {
+    const fromDb = offered.filter((c) => c.cycle === cycle);
+    const seen = new Set();
+    const courses = (fromDb.length ? fromDb : (curriculum.find((c) => c.cycle === cycle)?.courses || []).map((name) => ({ name })))
+      .filter((c) => !seen.has(keyOf(c.name)) && seen.add(keyOf(c.name)))
+      .map((c) => ({
+        name: c.name, code: c.code || null, credits: c.credits ?? null,
+        hours: c.hours_theory != null || c.hours_practice != null ? (c.hours_theory || 0) + (c.hours_practice || 0) : null,
+        type: c.course_type || null, module: c.module_name || null,
+      }));
+    const sum = (k) => (courses.every((c) => c[k] != null) ? courses.reduce((n, c) => n + c[k], 0) : null);
+    return { cycle, courses, credits: sum('credits'), hours: sum('hours') };
+  });
+}
 
 r.get('/programs', (req, res) => {
   res.json(all('SELECT * FROM programs WHERE active = 1 ORDER BY id').map(parseProgram));
 });
 
 r.get('/programs/:slug', (req, res) => {
-  const p = get('SELECT * FROM programs WHERE slug = ? AND active = 1', req.params.slug);
+  const p = parseProgram(get('SELECT * FROM programs WHERE slug = ? AND active = 1', req.params.slug));
   if (!p) throw httpError(404, 'Carrera no encontrada');
-  res.json(parseProgram(p));
+  res.json({ ...p, plan: studyPlan(p, p.curriculum) });
 });
 
 r.get('/events', (req, res) => {
