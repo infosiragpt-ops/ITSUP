@@ -1,0 +1,1316 @@
+{
+  "name": "Visión por Computadora",
+  "slug": "vision-por-computadora",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Visión por Computadora (IAR-403) es un curso de formación específica, de naturaleza teórico-práctica, del cuarto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante diseñe, implemente y evalúe soluciones que extraen información útil de imágenes y video para organizaciones peruanas, como la selección de fruta de exportación, el control de equipos de protección personal en minería, la digitalización de comprobantes o el monitoreo de la deforestación con imágenes satelitales. Comprende cuatro unidades: formación de la imagen digital y operaciones de píxel con OpenCV y NumPy; filtrado por convolución, bordes, morfología y segmentación clásica; geometría de la imagen, características locales y clasificación con descriptores; y redes convolucionales preentrenadas, detección de objetos y un proyecto integrador. Construye sobre Álgebra Lineal Aplicada y Aprendizaje Automático I, se articula con Aprendizaje Automático II y Procesamiento de Lenguaje Natural, que se cursan en paralelo, y prepara para Aprendizaje Profundo y Despliegue de Modelos (MLOps). Aporta al perfil de egreso la capacidad de construir sistemas de visión rigurosos, eficientes y respetuosos de la privacidad de las personas.",
+  "competency": "Desarrolla soluciones de visión por computadora para problemas productivos y de servicio en organizaciones peruanas, combinando procesamiento clásico de imágenes, características locales, geometría proyectiva y redes convolucionales preentrenadas en Python con OpenCV y PyTorch; las evalúa con métricas pertinentes y protocolos libres de fuga de información, y documenta sus límites, costos y riesgos conforme a la Ley 29733 y a principios de inteligencia artificial responsable.",
+  "capacities": [
+    "Representa y transforma imágenes digitales como arreglos numéricos, aplicando el modelo de cámara, espacios de color, histogramas y operaciones de intensidad para preparar datos visuales confiables.",
+    "Aplica filtrado por convolución, detección de bordes, operaciones morfológicas y técnicas de segmentación clásica para aislar, contar y medir objetos de interés en imágenes reales.",
+    "Extrae y empareja características locales, estima transformaciones geométricas robustas y construye clasificadores de imágenes con descriptores y aprendizaje automático, evaluados sin fuga de información.",
+    "Adapta redes convolucionales preentrenadas y detectores de objetos a conjuntos de datos propios, evaluándolos con métricas adecuadas y documentando su desempeño, sesgos, costos y cumplimiento normativo."
+  ],
+  "indicators": [
+    "Convierte imágenes entre los espacios RGB, HSV y CIELAB y justifica la elección según la tarea con evidencia de histogramas y separabilidad.",
+    "Implementa un flujo de segmentación con filtrado, umbral de Otsu o adaptativo y morfología, y lo valida con IoU o Dice contra máscaras de referencia.",
+    "Cuenta y mide objetos en milímetros con componentes conexas, watershed y un patrón de calibración, reportando error absoluto medio y sesgo.",
+    "Estima una homografía con ORB y RANSAC, reportando el porcentaje de inliers, el error de reproyección y un criterio de revisión humana.",
+    "Entrena un clasificador HOG con SVM evaluado con validación cruzada agrupada, matriz de confusión y análisis de errores por causa.",
+    "Ajusta por transferencia de aprendizaje una red convolucional preentrenada y la compara con una línea base clásica usando F1 macro o mAP.",
+    "Elige el umbral operativo de un detector según el costo de cada error, la exhaustividad mínima aceptable y la latencia por cuadro medida.",
+    "Elabora una tarjeta de modelo con uso previsto, desempeño desagregado por condición, limitaciones y medidas de protección de datos personales según la Ley 29733."
+  ],
+  "methodology": "El curso aplica una metodología activa en modalidad 100 % virtual. Cada semana combina aula invertida, con la lectura de la unidad y cuadernos de Google Colab previos a la sesión; una clase síncrona con demostraciones de código en vivo sobre imágenes reales; y un laboratorio guiado con OpenCV, scikit-learn y PyTorch. En cada unidad se analiza un caso de una organización peruana mediante el método de casos: preparación individual, discusión en equipos con roles y decisión argumentada en plenaria. El aprendizaje basado en proyectos articula las tareas aplicadas de las unidades 1 a 3 con el proyecto integrador de la unidad 4, desarrollado por equipos desde la semana 9. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión de código entre pares, galerías de errores comentadas y asesorías por equipo en el foro técnico.",
+  "bibliography": [
+    "Szeliski, R. (2022). Computer vision: Algorithms and applications (2.ª ed.). Springer.",
+    "Gonzalez, R. C. y Woods, R. E. (2018). Digital image processing (4.ª ed.). Pearson.",
+    "Forsyth, D. A. y Ponce, J. (2012). Computer vision: A modern approach (2.ª ed.). Pearson.",
+    "Hartley, R. y Zisserman, A. (2004). Multiple view geometry in computer vision (2.ª ed.). Cambridge University Press.",
+    "Goodfellow, I., Bengio, Y. y Courville, A. (2016). Deep learning. MIT Press.",
+    "Bradski, G. y Kaehler, A. (2008). Learning OpenCV: Computer vision with the OpenCV library. O'Reilly Media.",
+    "Lowe, D. G. (2004). Distinctive image features from scale-invariant keypoints. International Journal of Computer Vision, 60(2), 91-110.",
+    "Canny, J. (1986). A computational approach to edge detection. IEEE Transactions on Pattern Analysis and Machine Intelligence, 8(6), 679-698.",
+    "Redmon, J., Divvala, S., Girshick, R. y Farhadi, A. (2016). You only look once: Unified, real-time object detection. En Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 779-788). IEEE.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, laboratorios semanales en Colab y participación argumentada en el análisis de los casos, con retroalimentación formativa y revisión de código entre pares."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3, evaluadas con rúbrica analítica: preparación y segmentación de imágenes, conteo y medición clásica, y alineamiento con clasificación por descriptores."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador de la unidad 4: sistema de visión con transferencia de aprendizaje, línea base, tarjeta de modelo, video demostrativo y sustentación oral ante jurado docente."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Formación de la imagen digital y operaciones a nivel de píxel",
+      "description": "Al finalizar la unidad, el estudiante representa imágenes como arreglos de NumPy, explica su formación con el modelo de cámara estenopeica y aplica espacios de color, histogramas, transformaciones de intensidad y umbralización para preparar imágenes reales de procesos productivos peruanos, validando cada decisión con métricas.",
+      "topics": [
+        "Visión por computadora: tareas canónicas, historia y aplicaciones en el Perú",
+        "Formación de la imagen: luz, sensor, modelo de cámara estenopeica y calibración",
+        "Muestreo, cuantización y representación de imágenes en NumPy y OpenCV",
+        "Espacios de color RGB, HSV y CIELAB; balance de blancos",
+        "Histogramas, transformaciones de intensidad, ecualización y CLAHE",
+        "Umbralización global, de Otsu y adaptativa; evaluación con IoU"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es la visión por computadora?",
+          "bullets": [
+            "Disciplina que extrae información útil de imágenes y video: qué objetos hay, dónde están, cuánto miden y cómo se mueven.",
+            "Es un problema inverso mal planteado: infiere una escena tridimensional desde proyecciones bidimensionales que perdieron la profundidad.",
+            "Tareas canónicas: clasificación, detección, segmentación, seguimiento, reconstrucción 3D y reconocimiento óptico de caracteres.",
+            "Se diferencia del procesamiento de imágenes, cuya salida es otra imagen, y de la computación gráfica, que sintetiza imágenes desde modelos."
+          ],
+          "notes": "Inicie con la definición de Szeliski: la visión por computadora intenta describir el mundo que vemos en una o más imágenes y reconstruir sus propiedades, como forma, iluminación y distribución del color. Subraye que es un problema inverso: infinitas escenas distintas pueden producir la misma imagen, de modo que todo sistema necesita supuestos o conocimiento previo, ya sea diseñado por el ingeniero o aprendido de los datos. Recuerde la anécdota del Summer Vision Project del MIT (1966), en el que Seymour Papert propuso resolver buena parte de la visión en un verano con estudiantes; seis décadas después seguimos trabajando en ello. Pregunte a la clase: ¿por qué a un operario le resulta trivial reconocer una palta madura y a una máquina no? Guíe la discusión hacia la variabilidad de iluminación, punto de vista, oclusión y diferencias dentro de una misma clase. Cierre presentando las seis tareas canónicas que estructurarán el curso."
+        },
+        {
+          "title": "Breve historia: de los bordes al aprendizaje profundo",
+          "bullets": [
+            "1963-1982: Roberts reconstruye sólidos poliédricos desde imágenes y Marr propone analizar la visión en niveles computacional, algorítmico y de implementación.",
+            "1986-2005: detector de bordes de Canny, detector de rostros de Viola y Jones, descriptores SIFT de Lowe y HOG de Dalal y Triggs.",
+            "2012: AlexNet reduce el error top-5 en ImageNet de 26,2 % a 15,3 % e inaugura la era de las redes convolucionales.",
+            "2015 en adelante: ResNet, YOLO, U-Net, transformadores de visión y modelos fundacionales como CLIP y SAM."
+          ],
+          "notes": "Use la línea de tiempo para mostrar el tránsito de las características diseñadas a mano hacia las características aprendidas de los datos. Explique que Marr, en su libro Vision (1982), separó qué problema se resuelve, con qué algoritmo y en qué hardware, una distinción que sigue siendo útil para diseñar sistemas. Destaque que la competencia ImageNet de 2012 fue un punto de quiebre: AlexNet, entrenada en dos GPU, superó por más de diez puntos al segundo lugar. Sin embargo, advierta que los métodos clásicos no desaparecieron: se usan en dispositivos con poca capacidad de cómputo, cuando hay pocos datos etiquetados, cuando se requiere explicabilidad y como preprocesamiento de las redes. Por eso este curso recorre ambos mundos, y Aprendizaje Profundo, en el quinto ciclo, profundizará en el entrenamiento de redes. Pregunte: ¿qué condiciones técnicas hicieron posible el salto de 2012? Espere respuestas sobre datos masivos, GPU y mejoras algorítmicas."
+        },
+        {
+          "title": "Aplicaciones de visión en el Perú y Latinoamérica",
+          "bullets": [
+            "Agroexportación: selección de arándanos, paltas y mangos por calibre, color y defectos en líneas de empaque de Ica, La Libertad y Piura.",
+            "Minería: verificación de casco, chaleco y lentes exigidos por el D. S. 024-2016-EM y estimación de la fragmentación de roca.",
+            "Ciudades: lectura automática de placas, conteo vehicular y fiscalización electrónica del tránsito en Lima Metropolitana.",
+            "Ambiente: monitoreo de deforestación y minería ilegal en Madre de Dios con imágenes de PerúSAT-1 y Sentinel-2.",
+            "Servicios: verificación de identidad con DNI y biometría facial, y digitalización de comprobantes de pago electrónicos."
+          ],
+          "notes": "Presente cada aplicación como un problema de decisión con entradas, salidas y costo del error. En agroexportación, el Perú es el primer exportador mundial de arándanos y un falso negativo en la detección de fruta blanda puede generar el rechazo de un contenedor en destino. En minería, el Reglamento de Seguridad y Salud Ocupacional en Minería obliga al uso de equipos de protección personal; un sistema de visión puede apoyar, no reemplazar, la supervisión. En monitoreo ambiental, PerúSAT-1, operado por CONIDA desde 2016, ofrece resolución de 0,7 m, mientras Sentinel-2 ofrece 10 m, pero con acceso libre y revisita frecuente. Organice a la clase en grupos de tres y pida que, para una aplicación, identifiquen la tarea canónica, la métrica pertinente y quién asume el costo de un falso positivo y de un falso negativo. Recoja las respuestas en una pizarra colaborativa."
+        },
+        {
+          "title": "Formación de la imagen: luz, óptica y sensor",
+          "bullets": [
+            "La imagen registra la luz reflejada por la escena que atraviesa la lente y llega a un sensor CMOS formado por millones de fotodiodos.",
+            "Cada fotodiodo integra fotones durante la exposición; aumentar la ganancia ISO amplifica la señal y también el ruido.",
+            "Filtro de Bayer RGGB: cada píxel mide un solo color y la demosaicación interpola los dos canales faltantes.",
+            "En planta, la iluminación homogénea, el fondo controlado y la velocidad de obturación determinan la mitad del éxito del sistema."
+          ],
+          "notes": "Insista en que en visión industrial la adquisición importa tanto como el algoritmo: una buena iluminación ahorra semanas de programación. Haga un cálculo con la clase: una faja transporta arándanos a 1 m/s y la cámara expone 1/500 s; durante la exposición la fruta avanza 2 mm. Si cada píxel cubre 0,2 mm, el desenfoque por movimiento será de unos 10 píxeles, suficiente para borrar defectos pequeños. Las soluciones son reducir el tiempo de exposición, compensar con iluminación estroboscópica o usar cámaras de barrido lineal. Explique el filtro de Bayer: hay el doble de fotodiodos verdes porque el ojo humano es más sensible a esa banda, y la demosaicación puede generar artefactos de color en bordes finos. Pregunte: ¿qué ocurre con la medición de color si la planta cambia sus fluorescentes por luminarias LED de otra temperatura de color? Use la respuesta para anticipar el tema de balance de blancos."
+        },
+        {
+          "title": "Modelo de cámara estenopeica y parámetros intrínsecos",
+          "bullets": [
+            "Proyección perspectiva: el punto (X, Y, Z) se proyecta en x = f·X/Z, y = f·Y/Z; el tamaño aparente cae con la distancia.",
+            "La matriz intrínseca K reúne las distancias focales fx y fy en píxeles y el punto principal (cx, cy).",
+            "Los parámetros extrínsecos R y t ubican la cámara en el mundo; en coordenadas homogéneas, x ∼ K·[R | t]·X.",
+            "La distorsión radial y tangencial de las lentes reales se corrige calibrando con un tablero de ajedrez mediante el método de Zhang."
+          ],
+          "notes": "Conecte con Álgebra Lineal Aplicada: las coordenadas homogéneas convierten la proyección, que es no lineal por la división entre Z, en una multiplicación de matrices seguida de una normalización. Resuelva un ejemplo: con fx = 800 píxeles, un trabajador de 1,7 m ubicado a 10 m ocupa unos 136 píxeles de alto; a 20 m, solo 68. Si un detector de cascos necesita al menos 30 píxeles sobre la cabeza, ¿hasta qué distancia funcionará? Explique que la calibración de Zhang (2000) estima K y los coeficientes de distorsión a partir de varias fotografías de un patrón plano, y que OpenCV la implementa en cv2.calibrateCamera. Una cámara calibrada permite medir en milímetros, rectificar imágenes y combinar varias vistas. Pida a los estudiantes que identifiquen en qué aplicaciones del curso es imprescindible calibrar y en cuáles basta una referencia de escala colocada en la escena."
+        },
+        {
+          "title": "Muestreo, cuantización y resolución necesaria",
+          "bullets": [
+            "El muestreo espacial fija la resolución en píxeles; la cuantización fija los niveles de intensidad, típicamente 256 en imágenes de 8 bits.",
+            "Criterio práctico derivado de Nyquist: el detalle más pequeño que se quiere detectar debe ocupar al menos dos o tres píxeles.",
+            "Reducir una imagen sin filtrarla produce aliasing y patrones de moiré; primero se suaviza y luego se submuestrea.",
+            "Las imágenes médicas y satelitales usan 12 o 16 bits; convertirlas a 8 bits sin escalar pierde información relevante."
+          ],
+          "notes": "Muestre cómo dimensionar una cámara a partir del requisito. Si se deben detectar golpes de 2 mm en mangos y el campo de visión mide 400 mm, cada píxel debe cubrir como máximo 1 mm, es decir, al menos 400 píxeles de ancho; con margen de seguridad se elegirían 800 o más. Aplique el mismo razonamiento a imágenes satelitales: una poza de minería ilegal de 20 m de lado ocupa unos 2 × 2 píxeles en Sentinel-2, a 10 m por píxel, y unos 28 × 28 en la banda pancromática de PerúSAT-1, a 0,7 m. Explique la cuantización y el error que introduce, y por qué las radiografías digitales se almacenan en formato DICOM con más bits. Pregunte: ¿siempre conviene la máxima resolución? Discuta el costo en almacenamiento, ancho de banda y tiempo de inferencia que implica duplicar la resolución en cada eje."
+        },
+        {
+          "title": "La imagen como arreglo en NumPy y OpenCV",
+          "bullets": [
+            "Una imagen en color es un arreglo de forma (alto, ancho, 3) y tipo uint8, con origen en la esquina superior izquierda.",
+            "OpenCV carga los canales en orden BGR, mientras Matplotlib y Pillow usan RGB; confundirlos intercambia rojos y azules.",
+            "La indexación es img[fila, columna]: la coordenada vertical va primero y los recortes son vistas que comparten memoria.",
+            "La aritmética uint8 desborda: en NumPy 250 + 10 da 4, mientras cv2.add satura el resultado en 255."
+          ],
+          "notes": "Haga una demostración en vivo en Google Colab. Cargue una imagen con cv2.imread, imprima img.shape e img.dtype y muéstrela con Matplotlib sin convertir: los estudiantes verán un cielo anaranjado. Luego aplique cv2.cvtColor con COLOR_BGR2RGB o img[:, :, ::-1]. Explique que un recorte como img[100:200, 50:150] es una vista y que modificarlo altera la imagen original, salvo que se use .copy(). Muestre el desbordamiento sumando dos arreglos uint8 y compárelo con cv2.add. Recomiende convertir a float32 en el rango de 0 a 1 para operaciones aritméticas encadenadas y volver a uint8 al final con recorte explícito. Pregunte: ¿cuánta memoria ocupa un minuto de video Full HD a 30 cuadros por segundo sin compresión? La respuesta, unos 11 GB, motiva la discusión sobre compresión, formatos y almacenamiento en proyectos reales."
+        },
+        {
+          "title": "Espacios de color: RGB, HSV y CIELAB",
+          "bullets": [
+            "RGB mezcla color e iluminación: una sombra modifica los tres canales a la vez y complica segmentar por color.",
+            "HSV separa tono, saturación y valor; en OpenCV el tono de las imágenes de 8 bits va de 0 a 179.",
+            "CIELAB es aproximadamente uniforme en percepción: la distancia euclidiana ΔE aproxima diferencias de color percibidas.",
+            "Elección según la tarea: HSV para segmentar por tono; Lab para medir madurez o controlar la calidad del color."
+          ],
+          "notes": "Explique que el tono es una variable circular: el rojo aparece cerca de 0 y también cerca de 179, por lo que segmentar tomates o ajíes rojos exige dos rangos unidos con una operación OR. Muestre una palta Hass que pasa de verde a morado oscuro durante la maduración y discuta por qué el canal a* de Lab, que va del verde al rojo, resulta más informativo que cualquier canal RGB aislado. Mencione que una diferencia ΔE*ab cercana a 2,3 suele considerarse apenas perceptible para un observador humano, lo que permite fijar tolerancias de control de calidad comprensibles para la planta. Advierta que OpenCV escala L, a y b al rango de 0 a 255 en imágenes de 8 bits, de modo que hay que reescalar antes de calcular ΔE. Pida que cada estudiante convierta una misma imagen a los tres espacios y describa qué canal separa mejor el objeto del fondo."
+        },
+        {
+          "title": "Balance de blancos y constancia de color",
+          "bullets": [
+            "El color registrado depende del iluminante: la misma fruta luce más amarilla bajo luz de sodio que bajo LED de 6500 K.",
+            "Supuesto de mundo gris: el promedio de la escena es acromático, por lo que se escala cada canal hasta igualar las medias.",
+            "Con una carta de color en escena se estima una matriz de corrección de 3 × 3 por mínimos cuadrados.",
+            "En producción se fijan exposición y balance manualmente: los modos automáticos introducen deriva entre lotes."
+          ],
+          "notes": "Relacione la constancia de color humana con su ausencia en las cámaras: nuestro cerebro compensa el iluminante, el sensor no. Muestre el algoritmo de mundo gris en tres líneas: calcular la media de cada canal, calcular la media global y multiplicar cada canal por el cociente. Luego explique la corrección con carta de color: si se conocen los valores de referencia de 24 parches, se plantea un sistema sobredeterminado y se resuelve por mínimos cuadrados, exactamente como en Álgebra Lineal Aplicada. Cuente un problema frecuente: un modelo de clasificación de madurez funciona en enero y falla en marzo porque la cámara, en modo automático, cambió su balance al variar la luz natural que entra por el techo de la planta. Pregunte qué controles de proceso propondrían: bloquear parámetros, encerrar la cámara en una cabina, colocar un parche gris de referencia y monitorear su valor en cada cuadro."
+        },
+        {
+          "title": "Histogramas: el primer diagnóstico de la imagen",
+          "bullets": [
+            "El histograma cuenta píxeles por nivel de intensidad; normalizado, estima la distribución p(r_k) = n_k / (M·N).",
+            "Un histograma concentrado a la izquierda revela subexposición; picos en 0 o 255 indican recorte irrecuperable.",
+            "Un histograma bimodal sugiere que objeto y fondo pueden separarse con un único umbral global.",
+            "Comparar histogramas entre lotes permite detectar deriva de iluminación antes de que caiga el desempeño del modelo."
+          ],
+          "notes": "Muestre cv2.calcHist y la versión con np.histogram, y grafique los histogramas por canal de tres imágenes: una subexpuesta, una sobreexpuesta y una correcta. Explique que los píxeles recortados en 255 ya no contienen información y que ninguna corrección posterior la recupera, por lo que la exposición debe ajustarse en la cámara. Introduzca la idea de monitoreo: si la distancia entre el histograma de referencia y el del día, medida con chi cuadrado o con la distancia de Bhattacharyya mediante cv2.compareHist, supera un umbral, el sistema emite una alerta. Este concepto anticipa la deriva de datos que se tratará en Despliegue de Modelos. Pregunte a la clase: ¿un histograma idéntico garantiza imágenes idénticas? La respuesta es no, porque el histograma descarta la información espacial; muestre dos imágenes distintas con el mismo histograma para reforzar la idea."
+        },
+        {
+          "title": "Transformaciones de intensidad y corrección gamma",
+          "bullets": [
+            "Transformación puntual s = T(r): cada píxel cambia según su propio valor, sin considerar a sus vecinos.",
+            "Negativo s = 255 − r, estiramiento lineal de contraste y transformación logarítmica para rangos dinámicos amplios.",
+            "Corrección gamma s = 255·(r/255)^γ: con γ < 1 se aclaran las sombras; con γ > 1 se oscurecen los tonos medios.",
+            "Se implementa eficientemente con una tabla de consulta de 256 entradas aplicada mediante cv2.LUT."
+          ],
+          "notes": "Resuelva un ejemplo numérico: un píxel oscuro con r = 64 y γ = 0,5 produce s = 255·(0,251)^0,5 ≈ 128, es decir, duplica su brillo, mientras un píxel de 200 apenas sube a 226. Esto explica por qué la corrección gamma aclara sombras sin saturar las zonas claras. Muestre el estiramiento lineal de contraste que lleva el percentil 2 a 0 y el percentil 98 a 255, más robusto que usar mínimo y máximo, que son sensibles a píxeles aislados. Explique que la transformación logarítmica es útil para visualizar espectros de Fourier o imágenes térmicas. Enfatice la eficiencia: como solo hay 256 valores posibles, se calcula la tabla una vez y se aplica a millones de píxeles en milisegundos. Pregunte: ¿estas transformaciones agregan información a la imagen? No; solo redistribuyen los niveles para que el ojo humano o el algoritmo posterior los aprovechen mejor."
+        },
+        {
+          "title": "Ecualización de histograma y CLAHE",
+          "bullets": [
+            "La ecualización usa la distribución acumulada: s_k = (L − 1)·Σ p(r_j), sumando desde j = 0 hasta k.",
+            "Maximiza el contraste global, pero amplifica el ruido en regiones homogéneas y puede alterar la apariencia natural.",
+            "CLAHE ecualiza por bloques, por ejemplo de 8 × 8, y limita el recorte del histograma para contener el ruido.",
+            "En imágenes a color se ecualiza solo el canal L de Lab o V de HSV para no distorsionar el tono."
+          ],
+          "notes": "Deduzca la fórmula de ecualización a partir de la idea de transformar la distribución de intensidades en una aproximadamente uniforme: la función de distribución acumulada es monótona creciente y por eso conserva el orden de los niveles. Muestre el efecto sobre una radiografía de tórax: la ecualización global resalta estructuras, pero también el ruido del fondo; CLAHE, con clipLimit de 2,0 y bloques de 8 × 8, mejora el contraste local de forma más controlada. Explique que el límite de recorte redistribuye el exceso de cada barra del histograma entre las demás, y que la interpolación bilineal entre bloques evita que aparezcan cuadrículas visibles. Advierta un riesgo metodológico: si se ecualiza antes de un clasificador, la misma transformación debe aplicarse en entrenamiento y en producción. Pida a los estudiantes que comparen visualmente la ecualización global y CLAHE sobre fotos nocturnas de placas vehiculares."
+        },
+        {
+          "title": "Umbralización: global, Otsu y adaptativa",
+          "bullets": [
+            "Umbral global: el píxel es objeto si su intensidad supera T; es simple, pero frágil ante iluminación no uniforme.",
+            "Otsu (1979) elige el T que maximiza la varianza entre clases σ²_B(T) = ω₀·ω₁·(μ₀ − μ₁)².",
+            "El umbral adaptativo calcula T en cada vecindad como media o media gaussiana, menos una constante C.",
+            "La máscara resultante se valida contra referencias etiquetadas con IoU o con el coeficiente Dice."
+          ],
+          "notes": "Explique la intuición de Otsu: se prueban los 256 umbrales posibles y se elige el que separa el histograma en dos grupos lo más distintos posible; maximizar la varianza entre clases equivale a minimizar la varianza dentro de cada clase. Funciona muy bien con histogramas bimodales, como fruta oscura sobre una faja clara, y falla cuando el objeto ocupa una fracción muy pequeña de la imagen o la iluminación es desigual. Para documentos fotografiados con celular, con sombras de la mano o pliegues, el umbral adaptativo con bloques de 31 píxeles y C = 10 suele dar mejores resultados. Muestre ambos casos lado a lado. Recalque que ningún método se elige por apariencia visual: se mide con IoU o Dice contra máscaras de referencia en un conjunto de validación. Pregunte: ¿qué ocurre con Otsu si la imagen tiene tres regiones de intensidad? Introduzca la variante multinivel y la necesidad de métodos más sofisticados."
+        },
+        {
+          "title": "Flujo de trabajo de un proyecto de visión",
+          "bullets": [
+            "Definir la decisión operativa, el costo de cada tipo de error y la métrica antes de capturar la primera imagen.",
+            "Diseñar la adquisición: cámara, lente, iluminación, distancia, frecuencia y variaciones esperadas en operación.",
+            "Construir un conjunto etiquetado representativo, separado por lote, día o cámara para evitar fuga de información.",
+            "Registrar versiones, parámetros y semillas, y documentar consentimiento y anonimización cuando aparecen personas."
+          ],
+          "notes": "Integre la unidad con el flujo CRISP-DM visto en Aprendizaje Automático I, adaptado a datos visuales. Subraye que en visión el error más caro suele cometerse antes de programar: capturar imágenes en condiciones que no se repetirán en producción. Explique que las imágenes de un mismo lote, día o cámara son muy parecidas entre sí; si se reparten al azar entre entrenamiento y prueba, la métrica se infla. Recuerde que una imagen donde se reconoce a una persona es un dato personal según la Ley 29733, y que los datos biométricos reciben el tratamiento reforzado de los datos sensibles; además, la autoridad nacional de protección de datos personales emitió en 2020 una directiva específica sobre videovigilancia. Pida que cada equipo redacte, para su caso de uso, una ficha de una página con la decisión, la métrica, el plan de adquisición y los riesgos de privacidad. Esta ficha será la base de la tarea de la unidad."
+        }
+      ],
+      "reading": {
+        "title": "La imagen digital como dato: del fotón al arreglo NumPy",
+        "minutes": 35,
+        "content": "## Una imagen es una función muestreada\n\nPara la computadora, una imagen en escala de grises es una función f(x, y) que asigna una intensidad a cada posición del plano. La cámara digital realiza dos discretizaciones: el **muestreo**, que restringe las posiciones a una rejilla de M filas por N columnas, y la **cuantización**, que restringe las intensidades a L niveles, normalmente L = 256 en imágenes de 8 bits. Una imagen en color añade una tercera dimensión con tres canales. Gonzalez y Woods (2018) insisten en que estas decisiones se toman antes de cualquier algoritmo y limitan lo que será posible detectar: si un defecto de 1 mm ocupa menos de un píxel, ningún modelo lo encontrará, por sofisticado que sea.\n\n## La geometría de la formación de la imagen\n\nEl modelo de cámara estenopeica describe cómo un punto del mundo llega al sensor. En coordenadas homogéneas, la proyección se escribe como un producto de matrices:\n\n```\nλ · [u, v, 1]ᵀ = K · [R | t] · [X, Y, Z, 1]ᵀ\n\nK = | fx   0   cx |\n    |  0   fy  cy |\n    |  0   0    1 |\n```\n\nLa matriz K contiene los parámetros intrínsecos: las distancias focales expresadas en píxeles y el punto principal. R y t son los parámetros extrínsecos, que ubican la cámara en el mundo. La consecuencia práctica es inmediata: el tamaño aparente de un objeto es inversamente proporcional a su distancia. Con fx = 1 200 píxeles, un arándano de 15 mm a 0,50 m ocupa 1 200 × 0,015 / 0,50 = 36 píxeles de diámetro; si la faja se desnivela y el fruto queda a 0,60 m, ocupará 30 píxeles y el sistema subestimará su calibre en 17 %. Por eso, en metrología visual se fija la distancia de trabajo o se calibra la cámara con el método de Zhang, implementado en `cv2.calibrateCamera`.\n\n## Elegir el espacio de color\n\nEl espacio RGB es el que entrega el sensor, pero mezcla color e iluminación: una sombra reduce los tres canales a la vez. El espacio HSV separa el tono (H), la saturación (S) y el valor (V), lo que facilita segmentar por color; en OpenCV, H va de 0 a 179 y es circular, de modo que el rojo aparece en ambos extremos. CIELAB fue diseñado para ser aproximadamente uniforme en percepción, por lo que la diferencia de color entre dos muestras se resume en:\n\n```\nΔE*ab = √[(L₁ − L₂)² + (a₁ − a₂)² + (b₁ − b₂)²]\n```\n\nUn ΔE cercano a 2,3 suele considerarse apenas perceptible, lo que permite traducir tolerancias de calidad en números auditables, por ejemplo para clasificar la madurez de paltas Hass, cuya piel pasa de verde a morado oscuro.\n\n## Histograma, contraste y umbral\n\nEl histograma normalizado p(r_k) = n_k / (M·N) estima la distribución de intensidades y es el primer diagnóstico de una imagen. La ecualización transforma cada nivel mediante la distribución acumulada, s_k = (L − 1)·Σ p(r_j), y CLAHE aplica la misma idea por bloques, con un límite de recorte para no amplificar el ruido. Para separar objeto y fondo, Otsu (1979) elige el umbral T que maximiza la varianza entre clases:\n\n```\nσ²_B(T) = ω₀(T) · ω₁(T) · [μ₀(T) − μ₁(T)]²\n```\n\ndonde ω son las proporciones de píxeles de cada clase y μ sus medias. Funciona bien cuando el histograma es bimodal y falla con iluminación desigual, caso en el que conviene el umbral adaptativo.\n\n## Un flujo mínimo y reproducible en Python\n\nEl siguiente fragmento prepara una imagen de arándanos sobre una faja clara y evalúa la segmentación contra una máscara de referencia:\n\n```python\nimport cv2\nimport numpy as np\n\nimg = cv2.imread(\"arandanos_lote07.jpg\")             # BGR, uint8, forma (alto, ancho, 3)\n\n# 1. Balance de blancos por mundo gris\nf = img.astype(np.float32)\nmedias = f.reshape(-1, 3).mean(axis=0)\nf *= medias.mean() / medias\nimg_bal = np.clip(f, 0, 255).astype(np.uint8)\n\n# 2. Contraste local en el canal L de Lab (no altera el tono)\nL, a, b = cv2.split(cv2.cvtColor(img_bal, cv2.COLOR_BGR2LAB))\nclahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))\nL_eq = clahe.apply(L)\n\n# 3. Otsu: fruta oscura sobre faja clara, por eso se invierte\nT, mascara = cv2.threshold(L_eq, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)\nprint(f\"Umbral elegido por Otsu: {T:.0f}\")\n\n# 4. Evaluación contra la máscara de referencia\nref = cv2.imread(\"arandanos_lote07_mascara.png\", cv2.IMREAD_GRAYSCALE) > 127\npred = mascara > 0\niou = (pred & ref).sum() / (pred | ref).sum()\nprint(f\"IoU = {iou:.3f}\")\n```\n\n## Lecciones para la práctica\n\nTres ideas guían el trabajo de esta unidad. Primero, la adquisición manda: una cúpula de iluminación difusa o una exposición fija resuelven problemas que ningún algoritmo corrige después. Segundo, toda decisión de preprocesamiento se valida con una métrica, como el IoU, sobre imágenes que no se usaron para ajustarla. Tercero, el preprocesamiento forma parte del modelo: si en entrenamiento se aplicó CLAHE, en producción debe aplicarse exactamente igual. Estas ideas, aparentemente modestas, separan un prototipo vistoso de un sistema que funciona durante toda una campaña agroexportadora."
+      },
+      "case": {
+        "title": "Caso: Calibre y color en una empacadora de arándanos de Chao",
+        "content": "**AgroNorte Berries S. A. C.** es una empresa agroexportadora ficticia, inspirada en operaciones reales del valle de Chao, en La Libertad, que procesa arándanos para clientes de Estados Unidos, Europa y China. Durante la campaña de agosto a diciembre, su planta de empaque recibe hasta 180 toneladas diarias de fruta y opera dos turnos. La separación por calibre la realiza una máquina mecánica, pero la inspección de defectos —fruta blanda, partida, con restos de pedúnculo o con pérdida de pruina, la capa cerosa que da el tono azul grisáceo— depende de 64 operarias por turno distribuidas en cuatro líneas.\n\nEn la campaña anterior la empresa recibió dos reclamos de un importador europeo por fruta blanda que superó la tolerancia contractual de 3 %, con descuentos que sumaron cerca de US$ 210 000. La gerencia de operaciones encargó a Lucía Ramos, ingeniera industrial, y a Diego Quispe, profesional técnico en inteligencia artificial, evaluar un sistema de visión.\n\nUn proveedor extranjero ofrece una seleccionadora óptica completa por US$ 480 000 por línea, con cámaras multiespectrales e instalación incluida, pero con un plazo de entrega de nueve meses. Diego propone un piloto interno: una cámara industrial de 5 megapíxeles sobre la línea 2, iluminación LED y un flujo de procesamiento clásico en Python que segmente cada fruto, mida su diámetro y su color en Lab, y marque candidatos a defecto.\n\nTras cuatro semanas, el piloto arroja estos resultados sobre 1 200 imágenes etiquetadas por la jefa de calidad:\n\n| Condición | Imágenes | IoU promedio | Error de calibre |\n|---|---|---|---|\n| Faja seca, turno día | 640 | 0,91 | 0,4 mm |\n| Faja seca, turno noche | 330 | 0,86 | 0,6 mm |\n| Faja húmeda tras lavado | 230 | 0,62 | 1,9 mm |\n\nDiego explica que, con la faja húmeda, los reflejos especulares saturan el canal L y el umbral de Otsu confunde brillos con fondo. Además, la planta tiene techo traslúcido y el balance automático de la cámara varía durante el día. La fruta avanza a 0,8 m/s y la cámara expone 1/250 s. Las imágenes del piloto se repartieron al azar entre ajuste y evaluación.\n\nLucía debe presentar una recomendación al directorio en dos semanas. El jefe de mantenimiento sostiene que el problema es de iluminación y que una cúpula difusora de US$ 6 000 lo resolvería; el gerente comercial prefiere comprar la máquina importada para no arriesgar la próxima campaña; y la jefa de calidad advierte que la pérdida de pruina, el defecto más reclamado, casi no se distingue en RGB.\n\nNadie en el equipo duda del valor de automatizar. La discusión es qué decisión tomar con la evidencia disponible y qué experimentos adicionales realizar antes de comprometer la inversión.",
+        "questions": [
+          "Calcule el desenfoque por movimiento en milímetros y en píxeles si cada píxel cubre 0,15 mm, y explique su efecto sobre la medición del calibre.",
+          "¿Qué parte del bajo desempeño con faja húmeda atribuiría a la adquisición y qué parte al algoritmo? Proponga dos experimentos que lo demuestren.",
+          "¿Qué espacio de color y qué transformaciones de intensidad recomendaría para detectar la pérdida de pruina, y qué limitaciones reconoce en su propuesta?",
+          "¿Por qué la partición aleatoria de imágenes puede inflar los resultados del piloto y cómo rediseñaría la evaluación?",
+          "Construya el argumento económico para el directorio comparando el piloto mejorado con la seleccionadora importada, considerando riesgo, plazo y costo del error."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Diagnóstico y preparación de imágenes de un proceso real",
+        "instructions": "**Objetivo:** diagnosticar la calidad de adquisición de un conjunto de imágenes y construir un flujo reproducible de preparación y segmentación por umbral, evaluado cuantitativamente.\n\n**Insumos:** el docente publica en el aula virtual tres conjuntos de 40 imágenes, cada uno con 10 máscaras de referencia: fruta sobre faja, documentos ficticios fotografiados con celular y hojas de papa. Elija uno.\n\n**Qué entregar:**\n\n1. Cuaderno de Colab ejecutable de principio a fin que: (a) calcule y comente los histogramas por canal de al menos seis imágenes; (b) compare RGB, HSV y Lab para separar objeto y fondo; (c) aplique balance de blancos, corrección gamma o CLAHE según su diagnóstico; (d) compare umbral global, Otsu y adaptativo.\n2. Tabla con IoU y Dice, por imagen y en promedio, de las tres estrategias de umbralización. Use cinco máscaras para ajustar parámetros y reserve las otras cinco exclusivamente para reportar el resultado final.\n3. Informe de máximo dos páginas con el diagnóstico de adquisición, la configuración elegida, el análisis de los tres peores casos y dos recomendaciones de mejora de captura dirigidas a la organización.\n\n**Formato:** cuaderno .ipynb y PDF nombrados Apellido_Tarea1. Fije las versiones de las bibliotecas en la primera celda.\n\n**Criterios:** se valora la justificación cuantitativa de cada decisión, no la cantidad de técnicas aplicadas. Un resultado moderado bien explicado vale más que uno alto obtenido ajustando sobre las máscaras de reporte.",
+        "rubric": [
+          {
+            "name": "Diagnóstico de adquisición con histogramas y espacios de color",
+            "points": 5
+          },
+          {
+            "name": "Implementación reproducible del flujo de preparación y umbralización",
+            "points": 6
+          },
+          {
+            "name": "Evaluación cuantitativa con IoU y Dice sin fuga de información",
+            "points": 5
+          },
+          {
+            "name": "Análisis de errores y recomendaciones para la organización",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Imagen digital, color y umbralización",
+        "questions": [
+          {
+            "prompt": "Un estudiante carga una foto de tomates con cv2.imread y la muestra con Matplotlib: los tomates se ven azules. ¿Cuál es la causa más probable?",
+            "options": [
+              "La imagen se guardó con un perfil de color CIELAB",
+              "OpenCV almacena los canales en orden BGR y Matplotlib los interpreta como RGB",
+              "Matplotlib aplica automáticamente una ecualización de histograma",
+              "El archivo JPEG perdió el canal rojo al comprimirse"
+            ],
+            "correct": 1,
+            "explanation": "cv2.imread devuelve los canales en orden BGR; al mostrarlos como RGB se intercambian rojo y azul. Se corrige con cv2.cvtColor y COLOR_BGR2RGB."
+          },
+          {
+            "prompt": "En NumPy se suman directamente con el operador + dos arreglos uint8 cuyos valores son 200 y 100. ¿Qué valor se obtiene?",
+            "options": [
+              "255",
+              "300",
+              "Se produce un error de tipo",
+              "44"
+            ],
+            "correct": 3,
+            "explanation": "El tipo uint8 almacena valores módulo 256: 300 − 256 = 44. cv2.add saturaría en 255; por eso conviene convertir a float32 antes de operar."
+          },
+          {
+            "prompt": "Una cámara con fx = 1 000 píxeles observa un casco de 0,30 m de ancho a 6 m de distancia. ¿Cuántos píxeles de ancho ocupa aproximadamente en la imagen?",
+            "options": [
+              "50 píxeles",
+              "180 píxeles",
+              "20 píxeles",
+              "300 píxeles"
+            ],
+            "correct": 0,
+            "explanation": "Por proyección perspectiva, x = f·X/Z = 1 000 × 0,30 / 6 = 50 píxeles. El tamaño aparente es inversamente proporcional a la distancia."
+          },
+          {
+            "prompt": "Para segmentar ajíes rojos en HSV con OpenCV, un analista usa un solo rango de tono entre 0 y 10 y pierde muchos frutos. ¿Qué corrección es la adecuada?",
+            "options": [
+              "Cambiar a RGB y umbralizar solo el canal rojo",
+              "Ampliar el rango de tono de 0 a 90",
+              "Añadir un segundo rango cercano a 170-179 y unir ambas máscaras, porque el tono es circular",
+              "Ecualizar el canal de tono antes de umbralizar"
+            ],
+            "correct": 2,
+            "explanation": "El rojo se ubica en ambos extremos del eje circular del tono; en OpenCV se requieren dos rangos combinados con OR. Ecualizar el tono distorsionaría el color."
+          },
+          {
+            "prompt": "Se fotografían boletas con celular y una sombra de la mano cubre la mitad del documento. ¿Qué técnica separa mejor el texto del papel?",
+            "options": [
+              "Umbral global fijo en 127",
+              "Método de Otsu aplicado a toda la imagen",
+              "Umbral adaptativo con media gaussiana por vecindad",
+              "Ecualización global seguida de un umbral fijo"
+            ],
+            "correct": 2,
+            "explanation": "Con iluminación no uniforme, ningún umbral único sirve para la zona iluminada y la sombreada. El umbral adaptativo calcula T localmente y compensa la sombra."
+          },
+          {
+            "prompt": "¿Qué efecto produce una corrección gamma con γ = 0,5 sobre una imagen subexpuesta?",
+            "options": [
+              "Aclara proporcionalmente más los tonos oscuros que los claros",
+              "Oscurece los tonos medios y aumenta el contraste en las luces",
+              "Invierte la imagen como un negativo",
+              "Elimina el ruido gaussiano del sensor"
+            ],
+            "correct": 0,
+            "explanation": "Con γ < 1, s = 255·(r/255)^γ eleva más los valores bajos: 64 pasa a unos 128, mientras 200 solo sube a 226. No elimina ruido ni invierte la imagen."
+          },
+          {
+            "prompt": "¿Qué criterio optimiza el método de Otsu al elegir el umbral de una imagen en escala de grises?",
+            "options": [
+              "Minimiza la diferencia entre las medias de ambas clases",
+              "Iguala el número de píxeles de objeto y de fondo",
+              "Maximiza la entropía del histograma acumulado",
+              "Maximiza la varianza entre las clases objeto y fondo"
+            ],
+            "correct": 3,
+            "explanation": "Otsu busca el T que maximiza σ²_B = ω₀ω₁(μ₀ − μ₁)², lo que equivale a minimizar la varianza dentro de cada clase. Maximizar la entropía corresponde a otro método."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Filtrado, bordes, morfología y segmentación clásica",
+      "description": "Al finalizar la unidad, el estudiante aplica convolución, filtros de suavizado, detectores de bordes, operaciones morfológicas y técnicas de segmentación clásica para aislar, contar y medir objetos en imágenes reales, justificando cada parámetro con evidencia cuantitativa y reconociendo los límites del enfoque.",
+      "topics": [
+        "Convolución y correlación bidimensional, núcleos separables y modelos de ruido",
+        "Suavizado: filtros de media, gaussiano, mediana y bilateral",
+        "Gradiente, operador de Sobel, Laplaciano y detector de bordes de Canny",
+        "Morfología matemática: erosión, dilatación, apertura, cierre y top-hat",
+        "Componentes conexas, contornos, descriptores de forma y medición calibrada",
+        "Transformada de Hough, watershed, agrupamiento de color y evaluación de segmentación"
+      ],
+      "slides": [
+        {
+          "title": "Vecindad y convolución bidimensional",
+          "bullets": [
+            "Un filtro lineal combina cada píxel con sus vecinos: g(x, y) = Σ Σ h(s, t)·f(x − s, y − t).",
+            "La correlación no invierte el núcleo y la convolución sí; para núcleos simétricos ambas operaciones coinciden.",
+            "El costo es proporcional a k²·M·N: un núcleo de 15 × 15 sobre una imagen Full HD exige unos 466 millones de multiplicaciones.",
+            "En los bordes se requiere relleno constante, por replicación o por reflejo; cada opción produce artefactos distintos."
+          ],
+          "notes": "Presente la convolución como la operación más importante del curso, porque reaparecerá en la unidad 4 como la base de las redes convolucionales; la diferencia será que allí los coeficientes del núcleo se aprenden de los datos. Resuelva a mano un ejemplo con una vecindad de 3 × 3 y un núcleo de promedio, y luego con un núcleo que resalta diferencias horizontales. Explique por qué cv2.filter2D en realidad calcula correlación y en qué casos importa la diferencia. Muestre el efecto de los modos de relleno con una imagen que tiene un borde negro: el relleno con ceros oscurece el contorno del resultado, mientras el reflejo conserva la apariencia. Pida que los estudiantes implementen la convolución con dos bucles en NumPy y midan su tiempo frente a OpenCV; la diferencia, de dos o tres órdenes de magnitud, motiva hablar de vectorización y de implementaciones optimizadas."
+        },
+        {
+          "title": "Núcleos separables y eficiencia computacional",
+          "bullets": [
+            "Un núcleo es separable si se expresa como producto externo de dos vectores: h = v·wᵀ, es decir, una matriz de rango 1.",
+            "El gaussiano es separable: un filtro de k × k se reemplaza por dos pasadas unidimensionales de k coeficientes.",
+            "Para k = 15 el costo por píxel baja de 225 a 30 multiplicaciones, una reducción de 7,5 veces.",
+            "Para núcleos muy grandes conviene la transformada rápida de Fourier, que convierte la convolución en multiplicación."
+          ],
+          "notes": "Conecte con Álgebra Lineal Aplicada: un núcleo separable es una matriz de rango 1, y la descomposición en valores singulares permite aproximar núcleos no separables como suma de pocos núcleos separables. Muestre que el núcleo de Sobel también es separable: un suavizado [1, 2, 1] en una dirección por una derivada [−1, 0, 1] en la otra. Calcule con la clase el ahorro para distintos tamaños y discuta por qué esta propiedad importa en dispositivos de borde, como una cámara inteligente en una línea de empaque o una Raspberry Pi en un paradero. Mencione el teorema de convolución: la convolución en el dominio espacial equivale a una multiplicación en el dominio de la frecuencia, de modo que para núcleos muy grandes la FFT puede ser más rápida. Pregunte: ¿todos los filtros útiles son lineales? Esto prepara la discusión sobre la mediana y el filtro bilateral."
+        },
+        {
+          "title": "Modelos de ruido y medición de calidad",
+          "bullets": [
+            "Ruido gaussiano: de origen térmico y electrónico, aditivo y de media cero; aumenta con la ganancia ISO.",
+            "Ruido impulsivo o sal y pimienta: píxeles aislados en 0 o 255 por fallas del sensor o de la transmisión.",
+            "Ruido de Poisson o de disparo: dominante con poca luz; su varianza crece con la intensidad de la señal.",
+            "La relación señal a ruido pico se calcula como PSNR = 10·log₁₀(255² / MSE) y se expresa en decibeles."
+          ],
+          "notes": "Muestre ejemplos reales: una cámara de seguridad nocturna presenta ruido gaussiano y de disparo; una transmisión inalámbrica defectuosa produce ruido impulsivo; un video muy comprimido muestra bloques de 8 × 8 propios de JPEG. Explique que identificar el tipo de ruido determina el filtro adecuado, y que el PSNR es una medida objetiva pero imperfecta: dos imágenes con igual PSNR pueden verse muy distintas. Mencione el índice de similitud estructural, SSIM, como alternativa más cercana a la percepción. Haga un ejercicio: si el error cuadrático medio entre una imagen y su versión filtrada es 25, el PSNR es de unos 34 dB, lo que suele considerarse buena calidad. Pregunte a la clase cómo medirían el ruido de una cámara instalada en planta sin tener una imagen de referencia limpia; oriente la respuesta hacia capturar varias tomas de una escena estática y promediarlas."
+        },
+        {
+          "title": "Filtros de suavizado: media, gaussiano, mediana y bilateral",
+          "bullets": [
+            "Media: promedia la vecindad; reduce el ruido gaussiano, pero desenfoca los bordes y crea artefactos en forma de caja.",
+            "Gaussiano: pondera por distancia con desviación σ; se recomienda un núcleo de tamaño cercano a 6σ + 1.",
+            "Mediana: no lineal, reemplaza por el valor central ordenado; elimina sal y pimienta y conserva los bordes.",
+            "Bilateral: combina pesos espaciales y de diferencia de intensidad; suaviza regiones y preserva contornos, a mayor costo."
+          ],
+          "notes": "Haga una demostración comparativa con la misma imagen contaminada con ruido gaussiano y luego con ruido impulsivo. Con ruido impulsivo, la media dispersa cada punto blanco en una mancha gris, mientras la mediana lo elimina por completo, porque un valor extremo minoritario nunca queda en el centro de la lista ordenada. Explique el parámetro σ del gaussiano como escala: σ pequeño elimina ruido fino, σ grande elimina también detalles reales. El filtro bilateral, propuesto por Tomasi y Manduchi en 1998, es útil para suavizar la superficie de una fruta sin borrar su contorno, pero su costo es alto en video. Proponga una regla práctica: elegir el filtro según el tipo de ruido diagnosticado y fijar sus parámetros con la métrica final, como el IoU de la segmentación posterior, no por apariencia. Pregunte qué filtro usarían antes de leer placas vehiculares en video nocturno y por qué."
+        },
+        {
+          "title": "Gradiente de la imagen y operador de Sobel",
+          "bullets": [
+            "El gradiente ∇f = (Gx, Gy) apunta hacia el mayor aumento de intensidad; su magnitud mide la fuerza del borde.",
+            "Magnitud √(Gx² + Gy²) y dirección θ = atan2(Gy, Gx), perpendicular al borde.",
+            "Sobel combina derivada central y suavizado: Gx usa el núcleo [[−1, 0, 1], [−2, 0, 2], [−1, 0, 1]].",
+            "Calcular en CV_64F conserva los valores negativos; convertir antes a uint8 pierde la mitad de los bordes."
+          ],
+          "notes": "Explique que un borde es un cambio brusco de intensidad y que la derivada lo detecta; en imágenes discretas se aproxima con diferencias finitas. Advierta que derivar amplifica el ruido, por eso Sobel incorpora un suavizado perpendicular a la dirección de derivación. Muestre la trampa frecuente: si se calcula Sobel con salida uint8, las transiciones de claro a oscuro producen valores negativos que se recortan a cero y desaparecen. La solución es usar cv2.CV_64F y luego tomar el valor absoluto. Visualice Gx, Gy y la magnitud sobre la foto de una boleta: los trazos verticales de las letras dominan Gx y los renglones dominan Gy. Introduzca la orientación del gradiente como información útil: el histograma de orientaciones será la base del descriptor HOG en la unidad 3. Pregunte: ¿por qué la dirección del gradiente es perpendicular al borde y no paralela a él?"
+        },
+        {
+          "title": "Detector de bordes de Canny paso a paso",
+          "bullets": [
+            "Paso 1: suavizado gaussiano para reducir el ruido sin desplazar los bordes.",
+            "Paso 2: cálculo de la magnitud y la dirección del gradiente con Sobel.",
+            "Paso 3: supresión de no máximos, que adelgaza cada borde a un píxel de ancho a lo largo de la dirección del gradiente.",
+            "Paso 4: histéresis con umbral alto y bajo, en proporción de 2:1 a 3:1; los bordes débiles se conservan si se conectan a fuertes."
+          ],
+          "notes": "Presente a Canny (1986) como un ejemplo de diseño guiado por criterios: buena detección, buena localización y una única respuesta por borde. Explique la supresión de no máximos con un dibujo: en cada píxel se compara la magnitud con sus dos vecinos en la dirección del gradiente y solo se conserva si es máxima. La histéresis es la clave de su robustez: un umbral único fragmentaría los bordes débiles o aceptaría ruido, mientras dos umbrales permiten seguir contornos continuos. Proponga un ejercicio con la foto de un documento sobre una mesa de madera: con umbrales bajos aparece la veta de la madera; con umbrales altos se fragmenta el contorno del documento. Muestre la heurística de fijar los umbrales en 0,66 y 1,33 veces la mediana de intensidades, y advierta que debe verificarse con datos. Pregunte por qué Canny sigue siendo útil en la era del aprendizaje profundo."
+        },
+        {
+          "title": "Laplaciano, nitidez y control de enfoque",
+          "bullets": [
+            "El Laplaciano ∇²f = ∂²f/∂x² + ∂²f/∂y² responde a cambios de curvatura y produce cruces por cero en los bordes.",
+            "La máscara de desenfoque realza la nitidez: g = f + k·(f − G_σ * f), con k entre 0,5 y 1,5.",
+            "La varianza del Laplaciano es una medida simple de enfoque: valores bajos indican imagen borrosa.",
+            "Aplicación: rechazar automáticamente fotos de documentos desenfocadas antes de enviarlas a lectura óptica."
+          ],
+          "notes": "Explique que la segunda derivada es aún más sensible al ruido que la primera; por eso se usa el Laplaciano de gaussiana, propuesto por Marr y Hildreth en 1980. Su aplicación más práctica en la industria es el control de calidad de la captura: en la aplicación móvil de una financiera que recibe fotos del DNI, calcular la varianza del Laplaciano y rechazar imágenes por debajo de un umbral calibrado evita que lleguen al proceso fotos ilegibles, ahorrando reprocesos y reclamos. Muestre cómo calibrar ese umbral: se etiquetan 200 fotos como nítidas o borrosas y se elige el valor que equilibra falsos rechazos y falsas aceptaciones según su costo. La máscara de desenfoque, por su parte, mejora la percepción humana, pero no agrega información y puede amplificar el ruido. Pregunte: ¿por qué el umbral de nitidez depende de la resolución y del contenido de la imagen?"
+        },
+        {
+          "title": "Morfología matemática: erosión y dilatación",
+          "bullets": [
+            "Opera sobre imágenes binarias o en escala de grises con un elemento estructurante: rectángulo, elipse o cruz.",
+            "Erosión: el píxel permanece si el elemento cabe por completo en el objeto; adelgaza y elimina puntos aislados.",
+            "Dilatación: el píxel se activa si el elemento toca el objeto; engrosa, une fragmentos y rellena huecos pequeños.",
+            "Son operaciones duales: erosionar el objeto equivale a dilatar el fondo; su efecto depende de la forma y del tamaño del elemento."
+          ],
+          "notes": "Presente la morfología matemática, desarrollada por Matheron y Serra en la Escuela de Minas de París en los años sesenta precisamente para analizar la estructura de minerales, un vínculo interesante con la minería peruana. Dibuje en la pizarra una máscara binaria con ruido y aplique erosión y dilatación con un elemento de 3 × 3, celda por celda. Muestre que la elección del elemento importa: un elemento horizontal de 15 × 1 conserva los renglones y elimina trazos verticales, útil para detectar líneas de tablas en facturas. Explique que en escala de grises la erosión equivale a un filtro de mínimo y la dilatación a uno de máximo. Pregunte a la clase cómo eliminarían manchas pequeñas de una máscara de fruta sin reducir el tamaño medido de cada fruto; la respuesta conduce a la apertura, tema de la siguiente diapositiva."
+        },
+        {
+          "title": "Apertura, cierre y operaciones compuestas",
+          "bullets": [
+            "Apertura = erosión seguida de dilatación: elimina objetos menores que el elemento y conserva el tamaño de los demás.",
+            "Cierre = dilatación seguida de erosión: rellena huecos y grietas internas y une regiones muy cercanas.",
+            "Gradiente morfológico = dilatación − erosión: produce el contorno del objeto con un grosor controlado.",
+            "Top-hat = imagen − apertura: corrige iluminación desigual y resalta objetos claros pequeños sobre fondo variable."
+          ],
+          "notes": "Muestre que la apertura y el cierre son idempotentes: aplicarlos dos veces da el mismo resultado que una, propiedad que los hace predecibles. En el flujo típico de inspección se encadenan umbralización, apertura para eliminar ruido y cierre para rellenar los reflejos especulares dentro de cada fruto. Calcule con la clase el tamaño del elemento a partir de la física: si el ruido no supera 3 píxeles y el objeto más pequeño de interés mide 20, un elemento elíptico de 5 × 5 es razonable. Explique el top-hat con un ejemplo de lectura de códigos grabados en piezas metálicas con iluminación lateral irregular. Proponga un mini reto en Colab: obtener la máscara más limpia posible de granos de café sobre bandeja, medida con Dice contra una referencia, en no más de cinco operaciones. Discuta luego por qué el orden de las operaciones altera el resultado."
+        },
+        {
+          "title": "Componentes conexas y contornos",
+          "bullets": [
+            "Conectividad 4 considera vecinos horizontales y verticales; conectividad 8 añade diagonales y une objetos que se tocan en un vértice.",
+            "cv2.connectedComponentsWithStats devuelve etiquetas, área, caja envolvente y centroide de cada objeto.",
+            "cv2.findContours extrae fronteras; RETR_EXTERNAL ignora los huecos internos y CHAIN_APPROX_SIMPLE comprime el trazo.",
+            "Filtrar por área, relación de aspecto o posición elimina ruido y objetos cortados en el borde de la imagen."
+          ],
+          "notes": "Explique el algoritmo de etiquetado en dos pasadas: la primera asigna etiquetas provisionales y registra equivalencias; la segunda las resuelve con una estructura de conjuntos disjuntos, un buen ejemplo de lo aprendido en Estructuras de Datos y Algoritmos. Muestre que el número de componentes es un conteo directo de objetos, siempre que estén separados. Advierta dos errores comunes: contar el fondo como un componente, ya que la etiqueta 0 corresponde al fondo, y contar objetos que aparecen cortados en el borde, que en una faja continua deben excluirse o tratarse aparte. Haga una demostración con monedas peruanas sobre fondo oscuro: se segmentan, se etiquetan y se obtiene el área y el centroide de cada una. Pregunte: ¿cómo se podría estimar el monto total en soles a partir del área de cada moneda? Esto introduce la medición física y los descriptores de forma."
+        },
+        {
+          "title": "Descriptores de forma y medición física",
+          "bullets": [
+            "Área, perímetro, diámetro equivalente √(4A/π) y rectángulo rotado de área mínima con cv2.minAreaRect.",
+            "Circularidad 4πA/P²: vale 1 en un círculo perfecto y disminuye en formas alargadas o irregulares.",
+            "Solidez = área / área de la envolvente convexa: detecta grietas, mordeduras o frutos partidos.",
+            "Conversión a milímetros con un patrón de calibración ubicado en el plano del objeto, por ejemplo 0,18 mm por píxel."
+          ],
+          "notes": "Muestre que los descriptores de forma convierten una máscara en un vector de variables tabulares que puede alimentar un modelo de Aprendizaje Automático I o II. Calcule un ejemplo: un arándano con área de 6 360 píxeles tiene un diámetro equivalente de unos 90 píxeles; con 0,18 mm por píxel mide 16,2 mm y se asigna al calibre correspondiente. Explique que la medición física exige que los objetos estén aproximadamente en el mismo plano que el patrón de calibración; de lo contrario, el error de perspectiva sesga la medida. Mencione los momentos de Hu, siete combinaciones invariantes a traslación, escala y rotación, útiles para reconocer formas simples como piezas o símbolos. Pregunte qué descriptor usarían para distinguir paltas deformes de paltas normales y cómo fijarían el umbral con datos etiquetados por el área de calidad."
+        },
+        {
+          "title": "Transformada de Hough para rectas y círculos",
+          "bullets": [
+            "Representa una recta como ρ = x·cos θ + y·sen θ; cada píxel de borde vota por todas las rectas que pasan por él.",
+            "Los máximos del acumulador en el espacio (ρ, θ) corresponden a las rectas presentes en la imagen.",
+            "HoughLinesP devuelve segmentos con extremos y es más eficiente; HoughCircles detecta círculos usando el gradiente.",
+            "Aplicaciones: bordes de documentos, carriles viales, tuberías, monedas, tabletas y medidores analógicos."
+          ],
+          "notes": "Explique la idea de votación: en lugar de buscar rectas en la imagen, cada punto de borde vota en un espacio de parámetros y las rectas reales acumulan muchos votos. Es una técnica robusta a oclusiones parciales y a ruido, porque una recta interrumpida sigue acumulando votos. Use la parametrización polar para evitar el problema de las rectas verticales, cuya pendiente es infinita. Demuestre su aplicación para encontrar los cuatro bordes de una boleta fotografiada sobre un escritorio, insumo para la rectificación que se verá en la unidad 3. Comente un caso de mantenimiento: leer automáticamente manómetros analógicos en una planta, detectando el círculo del dial y la recta de la aguja. Pregunte cuáles son los parámetros críticos de HoughLinesP, como el umbral de votos y la longitud mínima del segmento, y cómo los ajustarían con un conjunto de validación."
+        },
+        {
+          "title": "Watershed para separar objetos en contacto",
+          "bullets": [
+            "Interpreta la imagen como un relieve topográfico y lo inunda desde marcadores; las líneas divisorias separan las cuencas.",
+            "La transformada de distancia asigna a cada píxel su distancia al fondo; sus máximos marcan los centros de los objetos.",
+            "Flujo: máscara binaria, transformada de distancia, umbral para marcadores, región desconocida y cv2.watershed.",
+            "Riesgo principal: sobresegmentación por exceso de marcadores; se controla con suavizado y umbral sobre la distancia."
+          ],
+          "notes": "Plantee el problema con fruta en la faja: dos arándanos que se tocan forman una sola componente conexa y se contarían como uno, con un calibre falso. La transformada de distancia convierte cada fruto en una colina cuyo pico está en el centro; al umbralizar, por ejemplo, en el 50 % del máximo, se obtiene un marcador por fruto. Watershed inunda desde esos marcadores y traza la frontera donde se encuentran las aguas. Muestre que con piedras irregulares, como en la fragmentación minera, aparecen varios máximos por roca y el algoritmo divide un fragmento en varios, lo que sesga la distribución de tamaños hacia valores pequeños. Discuta estrategias: suavizar la transformada, exigir una distancia mínima entre picos o fusionar regiones con criterios de forma. Pregunte cómo validarían el conteo resultante; la respuesta conduce a la diapositiva de evaluación."
+        },
+        {
+          "title": "Segmentación por agrupamiento de color y superpíxeles",
+          "bullets": [
+            "k-medias en el espacio Lab agrupa píxeles por similitud de color; K se elige según el número de materiales esperados.",
+            "Añadir coordenadas espaciales escaladas al vector de cada píxel produce regiones más compactas.",
+            "Los superpíxeles SLIC agrupan píxeles vecinos y similares en regiones de tamaño controlado que sirven como unidad de análisis.",
+            "Limitación: el agrupamiento no sabe qué es un objeto; agrupa por apariencia y requiere interpretación posterior."
+          ],
+          "notes": "Conecte con Aprendizaje Automático II, que en paralelo estudia k-medias, y muestre aquí su uso sobre píxeles en lugar de clientes o transacciones. Una imagen de 1 000 × 1 000 genera un millón de vectores; conviene submuestrear para estimar los centroides y luego asignar todos los píxeles. Demuestre con una imagen de cafetal afectado por roya: con K = 4 en Lab se separan hojas sanas, lesiones anaranjadas, suelo y sombra, y la proporción de píxeles de lesión ofrece un indicador de severidad. Explique SLIC, propuesto por Achanta y colaboradores en 2012, como un k-medias local en el espacio de color y posición. Advierta que los resultados dependen de la inicialización y de la escala relativa entre color y posición. Pregunte: ¿cómo sabríamos qué grupo corresponde a la lesión en imágenes nuevas sin intervención humana? La pregunta abre el paso hacia los métodos supervisados."
+        },
+        {
+          "title": "Evaluación de segmentación, conteo y medición",
+          "bullets": [
+            "IoU = |A ∩ B| / |A ∪ B| y Dice = 2|A ∩ B| / (|A| + |B|); el Dice siempre es mayor o igual que el IoU.",
+            "Para conteo se reportan el error absoluto medio y el error porcentual; para medición, el sesgo y la dispersión en milímetros.",
+            "El desempeño se desagrega por condición: iluminación, densidad de objetos, tipo de lote o cámara.",
+            "Los parámetros se ajustan en validación y se reportan una sola vez en prueba para evitar resultados optimistas."
+          ],
+          "notes": "Muestre la relación entre las métricas: Dice = 2·IoU / (1 + IoU); un IoU de 0,8 equivale a un Dice de 0,89, por lo que conviene declarar siempre cuál se reporta. Explique que una buena segmentación promedio puede ocultar fallas en condiciones específicas: por eso el caso de la unidad 1 desagregaba por estado de la faja. Para conteo, distinga el error absoluto medio por imagen del error total agregado: si en una imagen se cuentan dos frutos de más y en otra dos de menos, el total coincide, pero el sistema no es preciso. Para medición de calibre, reporte el sesgo, que indica error sistemático, y la desviación estándar del error, que indica dispersión, y compárelos con la tolerancia comercial. Insista en la disciplina experimental: cada vez que se mira el conjunto de prueba para ajustar un parámetro, se contamina. Pregunte qué tamaño mínimo de muestra de prueba consideran razonable."
+        }
+      ],
+      "reading": {
+        "title": "Del filtro a la medición: un flujo clásico de inspección visual",
+        "minutes": 35,
+        "content": "## La convolución, operación fundacional\n\nUn filtro lineal reemplaza cada píxel por una combinación ponderada de su vecindad:\n\n```\ng(x, y) = Σₛ Σₜ h(s, t) · f(x − s, y − t)\n```\n\nEl núcleo h define el efecto: promediar suaviza, diferenciar resalta bordes. Esta misma operación, con núcleos aprendidos en lugar de diseñados, es la base de las redes convolucionales de la unidad 4. Su costo crece con el cuadrado del tamaño del núcleo, por lo que los núcleos separables, como el gaussiano, se aplican en dos pasadas unidimensionales.\n\n## Ruido y suavizado\n\nElegir el filtro exige diagnosticar el ruido. El gaussiano, aditivo y de media cero, se atenúa con un filtro gaussiano de desviación σ; el impulsivo, con píxeles aislados en 0 o 255, se elimina con la mediana, que no promedia los valores extremos, sino que los descarta. El filtro bilateral pondera a la vez la distancia espacial y la diferencia de intensidad, por lo que suaviza superficies sin borrar contornos. La calidad puede cuantificarse con PSNR = 10·log₁₀(255²/MSE), aunque la métrica que realmente importa es el desempeño de la tarea posterior.\n\n## Bordes: del gradiente a Canny\n\nEl gradiente ∇f = (Gx, Gy) mide la variación de intensidad; Sobel lo estima combinando una derivada central con suavizado. Canny (1986) formuló el detector a partir de tres criterios —buena detección, buena localización y respuesta única— y lo implementó en cuatro pasos: suavizado gaussiano, gradiente, supresión de no máximos e histéresis con dos umbrales. La histéresis es la clave: un píxel débil se conserva solo si está conectado a uno fuerte.\n\n## Morfología: dar forma a la máscara\n\nLa morfología matemática, desarrollada por Matheron y Serra para analizar minerales, opera sobre máscaras binarias con un elemento estructurante. La **apertura** (erosión y luego dilatación) elimina motas menores que el elemento sin reducir los objetos grandes; el **cierre** (dilatación y luego erosión) rellena huecos, como los brillos especulares dentro de un fruto. Encadenadas tras una umbralización, convierten una máscara ruidosa en regiones limpias que pueden contarse.\n\n## Separar, contar y medir\n\nLas componentes conexas cuentan objetos separados, pero los objetos en contacto forman una sola región. La transformada de distancia asigna a cada píxel su distancia al fondo; sus máximos marcan los centros de los objetos y sirven de marcadores para watershed, que traza las fronteras. El siguiente flujo cuenta granos de café sobre una bandeja clara:\n\n```python\nimport cv2\nimport numpy as np\n\ngris = cv2.imread(\"cafe_bandeja_031.png\", cv2.IMREAD_GRAYSCALE)\n\n# 1. Suavizado y umbral (granos oscuros sobre bandeja clara)\nsuave = cv2.GaussianBlur(gris, (5, 5), sigmaX=1.2)\n_, mask = cv2.threshold(suave, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)\n\n# 2. Limpieza morfológica\nk = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))\nmask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, k, iterations=1)    # elimina motas\nmask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, k, iterations=2)   # rellena brillos\n\n# 3. Marcadores a partir de la transformada de distancia\ndist = cv2.distanceTransform(mask, cv2.DIST_L2, 5)\n_, picos = cv2.threshold(dist, 0.5 * dist.max(), 255, cv2.THRESH_BINARY)\npicos = picos.astype(np.uint8)\nn, marcadores = cv2.connectedComponents(picos)\nfondo_seguro = cv2.dilate(mask, k, iterations=3)\ndesconocido = cv2.subtract(fondo_seguro, picos)\nmarcadores = marcadores + 1              # el fondo pasa a la etiqueta 1\nmarcadores[desconocido == 255] = 0       # región por decidir\n\n# 4. Watershed y conteo\ncolor = cv2.cvtColor(gris, cv2.COLOR_GRAY2BGR)\nmarcadores = cv2.watershed(color, marcadores)\ngranos = len(np.unique(marcadores)) - 2  # descuenta fondo (1) y fronteras (-1)\nprint(\"Granos detectados:\", granos)\n```\n\nUna vez separados, cada objeto se describe con su área A, su perímetro P y medidas derivadas: diámetro equivalente √(4A/π), circularidad 4πA/P² y solidez. Con un patrón de calibración en el mismo plano —por ejemplo, 0,18 mm por píxel— estas medidas se expresan en milímetros y pueden compararse con las tolerancias comerciales.\n\n## Evaluar con honestidad\n\nLa segmentación se evalúa contra máscaras de referencia con IoU = |A ∩ B| / |A ∪ B| o Dice = 2|A ∩ B| / (|A| + |B|); el conteo, con el error absoluto medio por imagen; la medición, con el sesgo y la dispersión del error. Los resultados deben desagregarse por condición —iluminación, densidad de objetos, lote— porque un promedio alto puede ocultar fallas sistemáticas. En la fragmentación de roca, por ejemplo, la sobresegmentación de watershed sesga la distribución de tamaños hacia valores pequeños y, con ella, el P80 que usa la planta para decidir.\n\n## ¿Cuándo basta el enfoque clásico?\n\nEl enfoque clásico es suficiente cuando la adquisición está controlada —iluminación, fondo y distancia constantes—, los objetos tienen apariencia regular y se requiere explicabilidad o bajo costo de cómputo. Se vuelve frágil cuando la variabilidad es alta: fondos cambiantes, oclusiones o categorías definidas por conceptos complejos. Reconocer esa frontera es una competencia profesional: muchas soluciones exitosas en plantas peruanas combinan un preprocesamiento clásico robusto con un modelo aprendido solo donde hace falta."
+      },
+      "case": {
+        "title": "Caso: Fragmentación de roca por imágenes en una mina a tajo abierto de Moquegua",
+        "content": "**Minera Pucará del Sur S. A. A.** —empresa ficticia— opera un yacimiento de cobre a tajo abierto en Moquegua y envía unas 95 000 toneladas diarias de mineral a su planta concentradora. Después de cada voladura, el material se carga en camiones de 220 toneladas y se descarga en la chancadora primaria. La superintendencia de perforación y voladura sabe que la fragmentación determina la productividad aguas abajo: los bolones atascan la chancadora y elevan el consumo de energía, mientras un exceso de finos indica que se usa más explosivo del necesario. La métrica de referencia es el **P80**, el tamaño de malla por el que pasa el 80 % del material.\n\nHoy el P80 se estima dos veces por semana tamizando muestras manuales de tres frentes, un proceso que tarda un día y no detecta variaciones entre voladuras. El ingeniero Rodrigo Mamani propone instalar una cámara sobre la tolva de la chancadora para fotografiar cada descarga y estimar la granulometría con procesamiento clásico: suavizado, detección de bordes, morfología y watershed para separar fragmentos, y ajuste de una curva de distribución de tamaños.\n\nUna practicante del área de innovación preparó un piloto con 1 200 imágenes de 15 días. Sus hallazgos:\n\n- En 22 descargas con tamizado de contraste, el P80 estimado por imágenes subestima el valor real en 18 % en promedio, con una desviación estándar de 5 puntos porcentuales.\n- Watershed divide las rocas grandes con caras fracturadas en varios fragmentos: en 40 imágenes revisadas, el número de fragmentos detectados es 35 % mayor al contado manualmente.\n- Los finos menores de 2 cm no se resuelven con la cámara a 12 m de altura y aparecen como textura.\n- El polvo en suspensión reduce el contraste: el 14 % de las imágenes tiene una varianza del Laplaciano inferior al umbral de nitidez definido.\n- Las sombras de la mañana generan bordes falsos en el lado este de la tolva.\n\nEl superintendente necesita un indicador diario para ajustar el diseño de voladura —espaciamiento, burden y carga— y la planta pide alertas en tiempo real cuando llega material con bolones. La jefa de seguridad recuerda que cualquier equipo instalado sobre la tolva requiere un procedimiento de trabajo seguro conforme al D. S. 024-2016-EM. Un proveedor de software comercial de fragmentación ofrece su solución por una licencia anual de US$ 60 000, con calibración incluida.\n\nRodrigo sostiene que, aunque el sistema clásico tenga sesgo, este podría corregirse si es estable. El gerente de planta duda de usar una cifra que se sabe errónea. La reunión de decisión es el lunes.",
+        "questions": [
+          "¿Es aceptable un estimador sesgado del P80 si su sesgo es estable? Proponga cómo verificar esa estabilidad y cómo corregirlo con los tamizados disponibles.",
+          "Diseñe ajustes concretos al flujo de watershed para reducir la sobresegmentación de rocas grandes, indicando qué parámetros modificaría y con qué métrica los evaluaría.",
+          "¿Cómo trataría los finos no resueltos y las imágenes con polvo para que no distorsionen el indicador diario?",
+          "Compare la opción interna con la licencia comercial considerando costo, riesgo técnico, conocimiento institucional y seguridad.",
+          "¿Qué métrica y qué umbral propondría para la alerta de bolones y qué costo tendría cada tipo de error para la planta?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Sistema de conteo y medición de objetos con procesamiento clásico",
+        "instructions": "**Objetivo:** construir y evaluar un flujo clásico que cuente y mida objetos en imágenes reales, separando objetos en contacto.\n\n**Insumos:** el docente publica tres conjuntos de 60 imágenes con conteo manual y 15 máscaras de referencia: granos de café pergamino, monedas peruanas y arándanos sobre faja. Cada imagen incluye un patrón de calibración de 50 mm. Use 40 imágenes para desarrollo y 20 para prueba, sin mezclar fechas de captura entre ambos subconjuntos.\n\n**Qué entregar:**\n\n1. Cuaderno ejecutable con el flujo completo: diagnóstico de ruido, filtrado, umbralización, morfología, separación de objetos con watershed y medición en milímetros mediante el patrón de calibración.\n2. Comparación de al menos dos configuraciones —por ejemplo, con y sin watershed, o dos tamaños de elemento estructurante— reportando error absoluto medio de conteo, Dice sobre las máscaras de prueba y sesgo y dispersión de la medición en milímetros.\n3. Galería de los cinco peores casos con el diagnóstico de su causa.\n4. Informe de dos páginas dirigido al jefe de planta: resultados, límites del método y propuesta de mejora de adquisición o de algoritmo.\n\n**Formato:** trabajo en parejas; cuaderno .ipynb y PDF nombrados Apellido1_Apellido2_Tarea2.\n\n**Criterios:** cada parámetro debe justificarse con evidencia del conjunto de desarrollo; el conjunto de prueba se usa una sola vez. Se valorará la honestidad al reportar limitaciones y la claridad para un lector no especialista.",
+        "rubric": [
+          {
+            "name": "Diseño y justificación del flujo de procesamiento",
+            "points": 5
+          },
+          {
+            "name": "Implementación y calidad del código",
+            "points": 5
+          },
+          {
+            "name": "Evaluación cuantitativa en el conjunto de prueba",
+            "points": 6
+          },
+          {
+            "name": "Análisis de errores y comunicación al usuario",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Filtrado, bordes, morfología y segmentación",
+        "questions": [
+          {
+            "prompt": "Una cámara con fallas de transmisión produce píxeles aislados blancos y negros. ¿Qué filtro elimina mejor este ruido conservando los bordes?",
+            "options": [
+              "Filtro de media de 7 × 7",
+              "Filtro gaussiano con σ = 3",
+              "Filtro de mediana de 3 × 3",
+              "Filtro Laplaciano"
+            ],
+            "correct": 2,
+            "explanation": "El ruido impulsivo produce valores extremos minoritarios que nunca quedan en el centro de la lista ordenada; la mediana los descarta sin difuminar los bordes."
+          },
+          {
+            "prompt": "Al reemplazar un filtro gaussiano de 15 × 15 por su versión separable, ¿cuántas multiplicaciones por píxel se requieren aproximadamente?",
+            "options": [
+              "225",
+              "15",
+              "30",
+              "450"
+            ],
+            "correct": 2,
+            "explanation": "Dos pasadas unidimensionales de 15 coeficientes suman 30 multiplicaciones por píxel, frente a 225 del núcleo bidimensional completo."
+          },
+          {
+            "prompt": "En la histéresis de Canny, ¿cuándo se conserva como borde un píxel cuya magnitud está entre el umbral bajo y el alto?",
+            "options": [
+              "Cuando está conectado a un píxel cuya magnitud supera el umbral alto",
+              "Cuando su dirección de gradiente es horizontal",
+              "Cuando su magnitud supera el promedio de la imagen",
+              "Cuando pertenece a una región con varianza alta del Laplaciano"
+            ],
+            "correct": 0,
+            "explanation": "Los bordes débiles se aceptan solo si se conectan con bordes fuertes, lo que permite seguir contornos continuos y descartar respuestas aisladas debidas al ruido."
+          },
+          {
+            "prompt": "Una máscara de fruta presenta motas blancas pequeñas en el fondo. Se desea eliminarlas sin reducir el área de los frutos. ¿Qué operación conviene?",
+            "options": [
+              "Erosión con un elemento grande",
+              "Cierre con un elemento pequeño",
+              "Dilatación seguida de un umbral de Otsu",
+              "Apertura con un elemento mayor que las motas"
+            ],
+            "correct": 3,
+            "explanation": "La apertura erosiona y luego dilata: elimina objetos menores que el elemento y restituye el tamaño de los que sobreviven. La erosión sola reduciría los frutos."
+          },
+          {
+            "prompt": "Dos arándanos que se tocan se cuentan como uno solo. ¿Qué estrategia es la más adecuada para separarlos?",
+            "options": [
+              "Aumentar el umbral de Otsu en diez niveles",
+              "Watershed con marcadores obtenidos de la transformada de distancia",
+              "Aplicar un cierre morfológico de mayor tamaño",
+              "Usar conectividad 8 en lugar de conectividad 4"
+            ],
+            "correct": 1,
+            "explanation": "Los máximos de la transformada de distancia marcan el centro de cada fruto y watershed traza la frontera entre ellos. El cierre y la conectividad 8 unirían aún más los objetos."
+          },
+          {
+            "prompt": "Una máscara predicha tiene 100 píxeles, la referencia tiene 80 y su intersección es de 60 píxeles. ¿Cuánto vale el coeficiente Dice?",
+            "options": [
+              "0,50",
+              "0,67",
+              "0,75",
+              "0,60"
+            ],
+            "correct": 1,
+            "explanation": "Dice = 2·60 / (100 + 80) = 120/180 ≈ 0,67. El IoU sería 60/120 = 0,50; por eso conviene declarar siempre qué métrica se reporta."
+          },
+          {
+            "prompt": "Un fruto segmentado tiene una circularidad 4πA/P² igual a 0,55. ¿Qué interpretación es la más razonable?",
+            "options": [
+              "Es un círculo casi perfecto",
+              "Su área equivale al 55 % de la del fruto promedio",
+              "El 55 % de su superficie presenta defectos de color",
+              "Su contorno es alargado o irregular, lo que sugiere deformación o un fruto partido"
+            ],
+            "correct": 3,
+            "explanation": "La circularidad vale 1 en un círculo y disminuye con formas alargadas o contornos irregulares; 0,55 indica una forma anómala que merece revisión."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Geometría de la imagen, características locales y clasificación con descriptores",
+      "description": "Al finalizar la unidad, el estudiante aplica transformaciones geométricas, detecta y empareja características locales, estima homografías robustas con RANSAC y construye clasificadores de imágenes con descriptores y aprendizaje automático, evaluados con protocolos libres de fuga de información y análisis de errores.",
+      "topics": [
+        "Transformaciones geométricas en coordenadas homogéneas, remuestreo e interpolación",
+        "Homografía y transformación lineal directa: rectificación de documentos y vistas cenitales",
+        "Puntos de interés y descriptores: Harris, SIFT y ORB; emparejamiento y prueba de razón",
+        "Estimación robusta con RANSAC y verificación geométrica",
+        "Descriptores HOG, clasificación con SVM y bolsa de palabras visuales",
+        "Protocolo experimental sin fuga de información y análisis de errores"
+      ],
+      "slides": [
+        {
+          "title": "Transformaciones geométricas en coordenadas homogéneas",
+          "bullets": [
+            "Un punto (x, y) se representa como (x, y, 1) y toda transformación plana se expresa como una matriz de 3 × 3.",
+            "Jerarquía por grados de libertad: traslación 2, euclidiana 3, similitud 4, afín 6 y proyectiva 8.",
+            "La afín conserva el paralelismo; la proyectiva solo conserva la colinealidad y produce puntos de fuga.",
+            "Las transformaciones se componen multiplicando matrices; el orden importa porque el producto no es conmutativo."
+          ],
+          "notes": "Recupere lo visto en Álgebra Lineal Aplicada sobre rotación, escalamiento y cizalla, y muestre por qué las coordenadas homogéneas son necesarias: la traslación no es lineal en dos dimensiones, pero sí lo es en tres. Dibuje un cuadrado y aplique cada tipo de transformación para que los estudiantes vean qué propiedades se conservan: longitudes, ángulos, paralelismo o solo rectas. Explique que una foto de un documento tomada en ángulo sufre una transformación proyectiva; por eso los bordes paralelos de la hoja convergen. Muestre que la cantidad de grados de libertad determina cuántas correspondencias se necesitan para estimar la transformación: dos puntos para una similitud, tres para una afín y cuatro para una proyectiva. Pregunte qué tipo de transformación modela adecuadamente el desplazamiento de un producto en una faja vista desde arriba y cuál modela una cámara de tránsito inclinada."
+        },
+        {
+          "title": "Remuestreo e interpolación",
+          "bullets": [
+            "Se usa el mapeo inverso: para cada píxel destino se calcula su origen, lo que evita huecos en la imagen resultante.",
+            "Vecino más cercano es rápido pero escalonado; bilineal promedia cuatro vecinos; bicúbica usa dieciséis y conserva nitidez.",
+            "Para reducir tamaño conviene INTER_AREA, que promedia y evita aliasing; las máscaras se redimensionan con vecino más cercano.",
+            "cv2.warpAffine y cv2.warpPerspective aplican las matrices; cv2.remap admite mapas arbitrarios, como la corrección de distorsión."
+          ],
+          "notes": "Explique por qué el mapeo directo deja huecos: al ampliar una imagen, varios píxeles destino no reciben ningún valor. El mapeo inverso resuelve el problema, pero genera coordenadas no enteras que deben interpolarse. Resuelva un ejemplo de interpolación bilineal con cuatro valores vecinos y una posición fraccionaria. Insista en un error frecuente al preparar datos para entrenar modelos: redimensionar máscaras de segmentación con interpolación bilineal crea valores intermedios que no corresponden a ninguna clase; las máscaras deben redimensionarse con vecino más cercano. Muestre también que reducir texto fino con vecino más cercano genera letras irreconocibles, mientras INTER_AREA conserva su legibilidad. Pregunte cuál sería la interpolación adecuada para rectificar una boleta antes de aplicar reconocimiento óptico de caracteres y por qué la elección afecta la exactitud de la lectura."
+        },
+        {
+          "title": "Homografía: un plano visto desde dos cámaras",
+          "bullets": [
+            "Una homografía H de 3 × 3 con 8 grados de libertad relaciona los puntos de un plano en dos imágenes.",
+            "Cada correspondencia aporta dos ecuaciones; cuatro puntos, sin tres colineales, determinan H.",
+            "La transformación lineal directa plantea A·h = 0 y la resuelve con el vector singular asociado al menor valor singular.",
+            "Aplicaciones: rectificar documentos, vista cenital de una vía, mosaicos panorámicos y realidad aumentada."
+          ],
+          "notes": "Esta diapositiva es un puente directo con la descomposición en valores singulares estudiada en Álgebra Lineal Aplicada. Explique que, como H está definida salvo un factor de escala, tiene 8 grados de libertad y no 9; por eso se resuelve un sistema homogéneo y se toma el vector singular asociado al menor valor singular, que minimiza el error algebraico con norma unitaria. Recomiende normalizar las coordenadas, como proponen Hartley y Zisserman, para mejorar la estabilidad numérica. Muestre una aplicación concreta: una cámara de tránsito en la Vía Expresa observa la pista en perspectiva; con cuatro marcas viales de posición conocida se calcula H y se obtiene una vista cenital donde es posible medir distancias y estimar velocidades. Pregunte por qué una homografía no sirve para alinear dos fotos de una escena con mucha profundidad, como una calle con edificios de distinta altura."
+        },
+        {
+          "title": "¿Qué hace buena a una característica local?",
+          "bullets": [
+            "Repetibilidad: se detecta en el mismo punto físico pese a cambios de punto de vista, escala o iluminación.",
+            "Distintividad: su descriptor permite distinguirla de miles de otras características candidatas.",
+            "Localidad y eficiencia: ocupa una región pequeña, resiste oclusiones parciales y se calcula con rapidez.",
+            "Problema de apertura: en zonas planas no hay información y en bordes solo hay una dirección; las esquinas son ideales."
+          ],
+          "notes": "Use la analogía de un rompecabezas: las piezas con esquinas o texturas únicas se ubican fácilmente, mientras las piezas de cielo uniforme son ambiguas. Explique el problema de apertura con una ventana pequeña que se desplaza: sobre una zona plana nada cambia; sobre un borde, solo cambia al moverse perpendicularmente; sobre una esquina, cambia en cualquier dirección. Esa intuición es la que formaliza el detector de Harris. Discuta la diferencia entre detector, que encuentra dónde, y descriptor, que describe cómo se ve la vecindad. Mencione aplicaciones industriales: alinear la imagen de una etiqueta con su plantilla para verificar la impresión, reconocer un producto en anaquel o estimar el movimiento de un dron sobre una plantación. Pregunte en qué tipo de imágenes fallarán las características locales: superficies sin textura, patrones repetitivos como baldosas y reflejos que cambian con el punto de vista."
+        },
+        {
+          "title": "Detector de esquinas de Harris",
+          "bullets": [
+            "El tensor de estructura M = Σ w(x, y)·[[Ix², IxIy], [IxIy, Iy²]] resume los gradientes de una ventana.",
+            "Si ambos valores propios de M son grandes hay una esquina; si uno domina, un borde; si ambos son pequeños, una zona plana.",
+            "La respuesta R = det(M) − k·tr(M)², con k entre 0,04 y 0,06, evita calcular los valores propios explícitamente.",
+            "Es invariante a la rotación, pero no a la escala: una esquina vista de lejos puede parecer un borde de cerca."
+          ],
+          "notes": "Vuelva a conectar con los valores propios estudiados en Álgebra Lineal Aplicada: la matriz M es simétrica y semidefinida positiva, y sus valores propios describen cuánto cambia la intensidad en las dos direcciones principales. Recuerde que el determinante es el producto de los valores propios y la traza su suma; por eso R es grande solo cuando ambos son grandes. Muestre el mapa de respuesta de Harris sobre la foto de un tablero de ajedrez y sobre una fachada, y aplique supresión de no máximos para quedarse con puntos aislados. Explique la variante de Shi y Tomasi, que usa el menor valor propio y es la base de cv2.goodFeaturesToTrack, empleada en el seguimiento de puntos en video. Pregunte: si se acerca la cámara a la esquina de una caja, ¿seguirá siendo esquina? La respuesta motiva la necesidad de un análisis en múltiples escalas."
+        },
+        {
+          "title": "Invariancia a escala: espacio de escalas y SIFT",
+          "bullets": [
+            "Se construye una pirámide gaussiana por octavas y se calcula la diferencia de gaussianas entre niveles consecutivos.",
+            "Los puntos clave son extremos locales en posición y escala; se descartan los de bajo contraste y los ubicados sobre bordes.",
+            "Se asigna una orientación dominante con el histograma de gradientes locales, lo que aporta invariancia a la rotación.",
+            "Descriptor de 128 dimensiones: rejilla de 4 × 4 celdas con histogramas de 8 orientaciones cada una."
+          ],
+          "notes": "Presente SIFT, publicado por David Lowe en 2004, como uno de los trabajos más citados de la visión por computadora clásica. Explique la idea de espacio de escalas: suavizar progresivamente la imagen equivale a mirarla desde más lejos, y buscar extremos en ese espacio permite detectar el mismo punto a diferentes tamaños. La diferencia de gaussianas aproxima de forma eficiente al Laplaciano normalizado. Recalque que el descriptor no usa intensidades directas sino orientaciones de gradiente, lo que le da robustez frente a cambios de iluminación, y que se normaliza para reducir el efecto del contraste. Mencione que su patente expiró en 2020 y que hoy está disponible directamente en OpenCV mediante cv2.SIFT_create. Pregunte a la clase por qué un descriptor de 128 números de punto flotante puede ser costoso en un teléfono que procesa video en tiempo real, para introducir ORB."
+        },
+        {
+          "title": "ORB y descriptores binarios para tiempo real",
+          "bullets": [
+            "ORB combina el detector FAST, que compara 16 píxeles de un círculo, con descriptores BRIEF orientados.",
+            "Cada descriptor tiene 256 bits obtenidos de comparaciones de intensidad entre pares de píxeles.",
+            "La distancia de Hamming se calcula con XOR y conteo de bits, mucho más rápido que la distancia euclidiana.",
+            "Es libre de patentes, rápido en procesadores modestos y adecuado para alineamiento y seguimiento en video."
+          ],
+          "notes": "Explique que ORB, propuesto por Rublee y colaboradores en 2011, nació precisamente como alternativa eficiente y libre a SIFT y SURF. FAST examina un círculo de 16 píxeles alrededor de un candidato y lo declara esquina si un arco contiguo es mucho más claro o más oscuro; luego se ordenan los candidatos con la respuesta de Harris. BRIEF compara intensidades de pares de puntos predefinidos y genera bits; ORB lo hace robusto a la rotación orientándolo según el centroide de intensidad del parche. Realice una comparación en clase: en una imagen de 1 280 × 720, ORB suele procesar en milisegundos lo que SIFT tarda varias veces más, a costa de menor robustez ante grandes cambios de escala. Pida a los estudiantes que midan tiempos y número de emparejamientos válidos con ambos métodos sobre sus propias fotos y que discutan cuál elegirían para una aplicación móvil de captura de documentos."
+        },
+        {
+          "title": "Emparejamiento de descriptores y prueba de razón",
+          "bullets": [
+            "La fuerza bruta compara cada descriptor con todos; FLANN usa búsqueda aproximada para grandes volúmenes.",
+            "Prueba de razón de Lowe: se acepta el par si d₁ / d₂ < 0,75, siendo d₁ y d₂ las distancias a los dos vecinos más cercanos.",
+            "La verificación cruzada exige que A elija a B y que B elija a A como mejor pareja.",
+            "Aun con filtros quedan pares erróneos en patrones repetitivos; la verificación geométrica es indispensable."
+          ],
+          "notes": "Explique la lógica de la prueba de razón: si el mejor candidato es mucho mejor que el segundo, el emparejamiento es distintivo; si ambos están casi a la misma distancia, la correspondencia es ambigua y conviene descartarla. Lowe reportó que con un umbral de 0,8 se eliminaba alrededor del 90 % de los pares falsos y se perdía menos del 5 % de los correctos; en la práctica se usan valores entre 0,7 y 0,8. Muestre con cv2.BFMatcher y knnMatch con k igual a 2 cómo implementarla en pocas líneas. Use el ejemplo de una factura con un logotipo repetido o una tabla de celdas idénticas para ilustrar que incluso los filtros fallan con patrones repetitivos. Pregunte: ¿por qué con descriptores ORB se usa NORM_HAMMING y con SIFT NORM_L2? La respuesta refuerza la relación entre el tipo de descriptor y la métrica de distancia adecuada."
+        },
+        {
+          "title": "RANSAC: estimación robusta ante valores atípicos",
+          "bullets": [
+            "Repetir: tomar 4 pares al azar, estimar H y contar los inliers cuyo error de reproyección sea menor a un umbral, por ejemplo 3 píxeles.",
+            "Conservar la hipótesis con más inliers y reestimar H con todos ellos por mínimos cuadrados.",
+            "Iteraciones necesarias: N = log(1 − p) / log(1 − wˢ), con w proporción de inliers, s tamaño de muestra y p confianza.",
+            "Con w = 0,5, s = 4 y p = 0,99 se requieren unas 72 iteraciones; con w = 0,3, más de 560."
+          ],
+          "notes": "Presente RANSAC, de Fischler y Bolles (1981), como una idea general que trasciende la visión: ajustar un modelo cuando una fracción grande de los datos es basura. Contraste con mínimos cuadrados, que se deja arrastrar por un solo valor atípico extremo. Realice el cálculo en clase y muestre cómo crece el número de iteraciones cuando cae la proporción de inliers, lo que explica por qué filtrar con la prueba de razón antes de RANSAC acelera todo el proceso. En OpenCV basta cv2.findHomography con el método cv2.RANSAC y un umbral de reproyección; la función devuelve también la máscara de inliers, que debe reportarse como indicador de calidad del alineamiento. Proponga un criterio operativo: si hay menos de 15 inliers o menos del 30 % de los pares, la imagen se envía a revisión humana. Pregunte qué ocurre si el umbral de reproyección es demasiado amplio."
+        },
+        {
+          "title": "Aplicación: alineamiento y lectura de documentos",
+          "bullets": [
+            "Se emparejan características entre la foto y una plantilla del formato, como una factura electrónica impresa.",
+            "Con la homografía estimada se rectifica la imagen y cada campo queda en coordenadas fijas de la plantilla.",
+            "Se recorta cada campo y se aplica reconocimiento óptico de caracteres con un motor como Tesseract.",
+            "Los campos leídos se validan con reglas de negocio: dígito verificador del RUC, formato de serie y suma de importes."
+          ],
+          "notes": "Integre en un solo flujo todo lo visto: control de nitidez de la unidad 2, emparejamiento ORB, RANSAC y rectificación con cv2.warpPerspective. Explique que con la imagen alineada no hace falta detectar dónde está cada campo, porque la plantilla lo indica, lo que simplifica mucho el problema. Muestre que el RUC tiene once dígitos y un dígito verificador calculado con módulo 11, de modo que la mayoría de lecturas erróneas se detectan automáticamente; también puede verificarse que el total sea igual a la base imponible más el IGV. Advierta sobre la privacidad: un DNI fotografiado contiene datos personales y la imagen del rostro del titular; su almacenamiento debe limitarse a la finalidad declarada y protegerse conforme a la Ley 29733. Pregunte qué ocurre cuando llega un formato que no está en el banco de plantillas, para motivar la clasificación de documentos."
+        },
+        {
+          "title": "Histograma de gradientes orientados (HOG)",
+          "bullets": [
+            "Propuesto por Dalal y Triggs (2005) para detectar peatones con una ventana de 64 × 128 píxeles.",
+            "La ventana se divide en celdas de 8 × 8 y cada una acumula un histograma de 9 orientaciones entre 0° y 180°.",
+            "Los bloques de 2 × 2 celdas se normalizan para ganar robustez a la iluminación; el vector final tiene 3 780 dimensiones.",
+            "Captura la forma mediante la distribución de bordes y tolera pequeños desplazamientos dentro de cada celda."
+          ],
+          "notes": "Muestre el cálculo de la dimensión: con una ventana de 64 × 128 y celdas de 8 × 8 hay 8 × 16 celdas; los bloques de 2 × 2 celdas con paso de una celda dan 7 × 15 = 105 bloques; cada bloque tiene 4 × 9 = 36 valores, y 105 × 36 = 3 780. Visualice el HOG de una persona y de un auto con skimage.feature.hog: se reconoce la silueta en la distribución de orientaciones. Explique que el voto de cada píxel se pondera por la magnitud del gradiente y se interpola entre celdas y orientaciones vecinas. Recalque que HOG describe una ventana completa, no un punto como SIFT, y por eso sirve para decidir si una ventana contiene o no el objeto. Pregunte qué parámetros cambiarían para describir los caracteres de una placa vehicular, mucho más pequeños que una persona, o el formato completo de un documento."
+        },
+        {
+          "title": "Clasificación con SVM y detección por ventana deslizante",
+          "bullets": [
+            "Vector de descriptores, escalado estándar y SVM lineal o con núcleo RBF integrados en un Pipeline de scikit-learn.",
+            "Detección clásica: deslizar una ventana por la imagen en varias escalas y clasificar cada posición.",
+            "La supresión de no máximos fusiona detecciones solapadas y conserva la de mayor puntaje.",
+            "Referente histórico: las cascadas de Viola y Jones con características de Haar llevaron la detección facial a las cámaras de consumo."
+          ],
+          "notes": "Aproveche que Aprendizaje Automático II estudia en paralelo las máquinas de vectores de soporte y muestre su uso sobre descriptores visuales. Explique que HOG con SVM lineal fue el estándar de detección de peatones durante casi una década. Calcule con la clase el costo de la ventana deslizante: en una imagen de 640 × 480 con paso de 8 píxeles y seis escalas se evalúan decenas de miles de ventanas, lo que explica la búsqueda de detectores más eficientes. La supresión de no máximos, que reaparecerá en los detectores modernos de la unidad 4, ordena las detecciones por puntaje y elimina las que se solapan demasiado con una ya aceptada. Mencione que Viola y Jones (2001) lograron detección facial en tiempo real con imágenes integrales y una cascada de clasificadores. Pregunte qué ventajas mantiene este enfoque frente a una red profunda en un microcontrolador sin acelerador."
+        },
+        {
+          "title": "Bolsa de palabras visuales",
+          "bullets": [
+            "Se extraen descriptores locales de las imágenes de entrenamiento y se agrupan con k-medias en un vocabulario de K palabras.",
+            "Cada imagen se representa como el histograma de frecuencias de sus palabras visuales, opcionalmente ponderado con TF-IDF.",
+            "Un clasificador como SVM aprende sobre esos histogramas de dimensión fija, sin importar el número de puntos por imagen.",
+            "Pierde la disposición espacial; la pirámide espacial de Lazebnik y colaboradores (2006) la recupera parcialmente."
+          ],
+          "notes": "Establezca el paralelo con Procesamiento de Lenguaje Natural, que los estudiantes cursan en paralelo: así como un documento se representa por la frecuencia de sus palabras, una imagen se representa por la frecuencia de sus parches típicos. Muestre el flujo con descriptores ORB o SIFT y un vocabulario de 300 a 1 000 palabras. Advierta una fuente de fuga de información: el vocabulario debe construirse solo con imágenes de entrenamiento, porque usar todas las imágenes filtra información del conjunto de prueba. Este enfoque dominó el reconocimiento de categorías antes de 2012 y ayuda a entender por qué las redes convolucionales lo superaron: aprenden simultáneamente el vocabulario y el clasificador. Pida a los estudiantes que propongan un problema peruano donde la bolsa de palabras visuales sea suficiente, como identificar el tipo de documento o la marca de un producto en anaquel."
+        },
+        {
+          "title": "Protocolo experimental sin fuga de información",
+          "bullets": [
+            "Particionar por unidad independiente —documento, fruto, lote, paciente, cámara o día—, no por imagen individual.",
+            "Los cuadros consecutivos de un video son casi duplicados; cada secuencia debe ir completa al mismo subconjunto.",
+            "Usar GroupKFold o StratifiedGroupKFold y dejar un conjunto de prueba intocado hasta el final.",
+            "Todo ajuste aprendido, como vocabulario, escalado o umbral, se estima solo con datos de entrenamiento."
+          ],
+          "notes": "Esta es una de las diapositivas más importantes del curso, porque la fuga de información en visión produce resultados espectacularmente falsos. Cuente un caso típico: un clasificador de documentos alcanza 97 % de exactitud con partición aleatoria, pero cuando se separa por cliente cae a 85 %, porque el mismo cliente enviaba varias fotos de un documento y el modelo memorizaba el fondo de su mesa. Explique la diferencia entre validación cruzada estratificada y agrupada, y muestre cómo pasar los grupos en scikit-learn. Mencione la detección de casi duplicados mediante hashing perceptual para depurar el conjunto. Recuerde lo visto en Aprendizaje Automático I sobre validación cruzada y extiéndalo a imágenes. Pregunte cuál es la unidad independiente en tres escenarios: radiografías con varios estudios por paciente, frutos fotografiados por dos cámaras y una semana de video de tránsito."
+        },
+        {
+          "title": "Análisis de errores en clasificación de imágenes",
+          "bullets": [
+            "Matriz de confusión, F1 por clase y F1 macro revelan qué clases se confunden y cuáles dominan la métrica global.",
+            "Revisar visualmente los errores agrupados por causa: desenfoque, oclusión, iluminación, etiqueta incorrecta o clase ambigua.",
+            "Aprendizaje por atajos: el modelo aprende el fondo, una marca de agua o el tipo de cámara en lugar del objeto.",
+            "Priorizar mejoras según el costo de cada confusión y no solo según su frecuencia."
+          ],
+          "notes": "Proponga un protocolo concreto: tomar todos los errores del conjunto de validación, revisarlos en una galería, asignar a cada uno una causa y contar. Con frecuencia, una fracción no despreciable de los supuestos errores son etiquetas incorrectas, lo que obliga a revisar el proceso de anotación. Explique el aprendizaje por atajos con un ejemplo documentado en la literatura médica: modelos de radiografías que aprendían marcas del equipo o del hospital asociadas a la prevalencia de la enfermedad. En un caso peruano, un clasificador de calidad de café podría asociar la clase con la bandeja usada por cada cooperativa. Introduzca la idea de evaluar por subgrupos, que la unidad 4 retomará con criterios de equidad. Pregunte qué confusión es más costosa en una entidad financiera: clasificar una factura como boleta o aceptar como válido un documento ilegible."
+        }
+      ],
+      "reading": {
+        "title": "Geometría y características locales: alinear antes de entender",
+        "minutes": 40,
+        "content": "## El problema: la misma escena, otra mirada\n\nDos fotos de una misma factura tomadas con celular difieren por rotación, escala, perspectiva e iluminación. Antes de leer un campo o comparar con una plantilla hay que **alinear**. Si el objeto es plano, la relación entre ambas imágenes es una homografía H de 3 × 3 con 8 grados de libertad:\n\n```\n[x', y', 1]ᵀ ∼ H · [x, y, 1]ᵀ\n```\n\nCuatro correspondencias bastan para estimarla mediante la transformación lineal directa, que resuelve A·h = 0 con la descomposición en valores singulares (Hartley y Zisserman, 2004). El reto es obtener esas correspondencias de forma automática y confiable.\n\n## De la esquina al descriptor\n\nUna buena característica local es repetible y distintiva. Harris la detecta con el tensor de estructura M, cuya respuesta R = det(M) − k·tr(M)² es alta cuando la intensidad cambia en dos direcciones. SIFT (Lowe, 2004) añade invariancia a la escala buscando extremos en una pirámide de diferencias de gaussianas y describe cada punto con 128 valores: histogramas de 8 orientaciones en una rejilla de 4 × 4. ORB (Rublee et al., 2011) sacrifica algo de robustez a cambio de velocidad: descriptores binarios de 256 bits comparados con la distancia de Hamming, ideales para teléfonos y dispositivos embebidos.\n\n## Emparejar y verificar\n\nEmparejar por el vecino más cercano produce muchos errores. La prueba de razón de Lowe acepta un par solo si la distancia al mejor candidato es claramente menor que la distancia al segundo (d₁/d₂ < 0,75). Aun así quedan atípicos, que RANSAC (Fischler y Bolles, 1981) neutraliza: toma muestras mínimas al azar, estima H, cuenta los inliers y conserva la mejor hipótesis. El número de iteraciones para una confianza p es:\n\n```\nN = log(1 − p) / log(1 − wˢ)\n```\n\ndonde w es la proporción de inliers y s = 4 para una homografía. Con w = 0,5 y p = 0,99, N ≈ 72; con w = 0,3, N supera 560. Filtrar bien antes de RANSAC ahorra tiempo y mejora el resultado.\n\n```python\nimport cv2\nimport numpy as np\n\nplantilla = cv2.imread(\"plantilla_factura.png\", cv2.IMREAD_GRAYSCALE)\nfoto = cv2.imread(\"foto_factura_0142.jpg\", cv2.IMREAD_GRAYSCALE)\n\norb = cv2.ORB_create(nfeatures=3000)\nkp1, d1 = orb.detectAndCompute(plantilla, None)\nkp2, d2 = orb.detectAndCompute(foto, None)\n\nbf = cv2.BFMatcher(cv2.NORM_HAMMING)\npares = bf.knnMatch(d2, d1, k=2)\nbuenos = [p[0] for p in pares\n          if len(p) == 2 and p[0].distance < 0.75 * p[1].distance]  # prueba de razón\n\nsrc = np.float32([kp2[m.queryIdx].pt for m in buenos]).reshape(-1, 1, 2)\ndst = np.float32([kp1[m.trainIdx].pt for m in buenos]).reshape(-1, 1, 2)\nH, inliers = cv2.findHomography(src, dst, cv2.RANSAC, ransacReprojThreshold=3.0)\n\nn_in = int(inliers.sum())\nprint(f\"{len(buenos)} pares, {n_in} inliers ({n_in / len(buenos):.0%})\")\nif n_in < 15:\n    print(\"Alineamiento no confiable: enviar a revisión humana\")\nelse:\n    alto, ancho = plantilla.shape\n    rectificada = cv2.warpPerspective(foto, H, (ancho, alto))\n```\n\nEl número y el porcentaje de inliers son indicadores de confianza que permiten decidir automáticamente qué imágenes pasan y cuáles requieren revisión humana, una práctica clave en procesos financieros donde un error de lectura del RUC o del importe tiene consecuencias.\n\n## Del descriptor al clasificador\n\nPara decidir qué tipo de documento contiene una imagen se necesita un descriptor global. HOG (Dalal y Triggs, 2005) divide la imagen en celdas, acumula histogramas de orientaciones del gradiente ponderados por su magnitud y los normaliza por bloques. Combinado con una SVM, ofrece un clasificador sólido y explicable:\n\n```python\nfrom skimage.feature import hog\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.svm import SVC\nfrom sklearn.model_selection import StratifiedGroupKFold, cross_val_score\n\ndef describir(img_gris):\n    img = cv2.resize(img_gris, (256, 128), interpolation=cv2.INTER_AREA)\n    return hog(img, orientations=9, pixels_per_cell=(16, 16),\n               cells_per_block=(2, 2), block_norm=\"L2-Hys\")\n\nX = np.array([describir(i) for i in imagenes])\nmodelo = make_pipeline(StandardScaler(), SVC(kernel=\"rbf\", C=10, gamma=\"scale\"))\ncv = StratifiedGroupKFold(n_splits=5)\nf1 = cross_val_score(modelo, X, y, groups=id_socio, cv=cv, scoring=\"f1_macro\")\nprint(f\"F1 macro: {f1.mean():.3f} ± {f1.std():.3f}\")\n```\n\nObserve el argumento `groups`: las imágenes de un mismo socio comparten fondo, iluminación y, a veces, el mismo documento fotografiado dos veces. Si se particiona al azar, el modelo memoriza esos rasgos y la métrica se infla. Agrupar por socio, lote, paciente o cámara es la única forma honesta de estimar el desempeño ante usuarios nuevos.\n\n## Lecciones\n\nLa geometría aporta lo que el aprendizaje no siempre garantiza: verificación explícita. Un emparejamiento validado por RANSAC con 200 inliers es evidencia auditable de que la imagen corresponde a la plantilla. Por eso, incluso en sistemas modernos basados en redes, la verificación geométrica sigue presente en la lectura de documentos, la realidad aumentada, la fotogrametría con drones y la navegación de robots."
+      },
+      "case": {
+        "title": "Caso: Digitalización de solicitudes de crédito en una cooperativa de Huancayo",
+        "content": "La **Cooperativa de Ahorro y Crédito Valle del Mantaro** —entidad ficticia— atiende a 85 000 socios en Junín, Huancavelica y Pasco, en su mayoría pequeños productores y comerciantes. Desde 2023 recibe solicitudes de crédito mediante una aplicación móvil: el socio fotografía su DNI, sus últimos comprobantes de venta —boletas o facturas electrónicas impresas—, recibos de servicios y, en algunos casos, recibos por honorarios. Cada mes llegan unas 18 000 imágenes que seis analistas clasifican, verifican y digitan manualmente; el tiempo promedio entre solicitud y desembolso es de cuatro días hábiles, frente a las 24 horas que ofrecen dos competidores.\n\nEl área de innovación, liderada por Mariela Huamán, desarrolló un prototipo de tres módulos: (1) control de nitidez con la varianza del Laplaciano; (2) clasificación del tipo de documento con HOG y SVM en cinco clases; y (3) rectificación con ORB y RANSAC frente a plantillas de los formatos más frecuentes, seguida de lectura óptica de campos.\n\nResultados del piloto con 6 000 imágenes etiquetadas:\n\n| Módulo | Indicador | Resultado |\n|---|---|---|\n| Nitidez | Imágenes rechazadas por borrosas | 9 % |\n| Clasificación, partición aleatoria | Exactitud | 96,8 % |\n| Clasificación, partición por socio | Exactitud / F1 macro | 88,1 % / 0,79 |\n| Rectificación | Imágenes con menos de 15 inliers | 17 % |\n| Lectura del RUC | Exactitud tras validar el dígito verificador | 93 % |\n\nLa clase con peor desempeño es recibo por honorarios (F1 de 0,58), con solo 310 ejemplos. Los recibos de luz de dos empresas distribuidoras se confunden entre sí y con boletas. Además, la mayor parte de las fallas de rectificación se concentra en comprobantes de pequeños negocios que usan formatos impresos propios, no incluidos en el banco de plantillas.\n\nEl gerente general quiere anunciar al consejo de administración que el sistema tiene «97 % de precisión» y desplegarlo el próximo mes. La oficial de cumplimiento advierte que las fotos del DNI contienen datos personales y la imagen del rostro, que las imágenes se almacenan sin plazo de conservación definido y que el consentimiento de la aplicación no menciona su uso para entrenar modelos. Los analistas, por su parte, temen que el sistema reduzca puestos de trabajo.\n\nMariela debe preparar un informe técnico para la sesión del consejo. Necesita explicar qué cifra es la correcta, qué módulos están listos, qué riesgos existen y qué plan de despliegue gradual propone, de modo que la cooperativa reduzca sus tiempos sin comprometer la calidad de la evaluación crediticia ni la confianza de sus socios.",
+        "questions": [
+          "Explique por qué la exactitud cae de 96,8 % a 88,1 % al particionar por socio y cuál de las dos cifras debe comunicarse al consejo.",
+          "Proponga dos acciones para mejorar la clase recibo por honorarios y evalúe los riesgos de cada una.",
+          "¿Cómo rediseñaría el módulo de rectificación para atender formatos no incluidos en el banco de plantillas?",
+          "Diseñe un flujo con revisión humana basado en los indicadores de confianza de cada módulo y estime su impacto en la carga de los analistas.",
+          "¿Qué medidas exige la Ley 29733 antes de usar las imágenes de los socios para entrenar y desplegar el sistema?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Alineamiento de documentos y clasificador con descriptores",
+        "instructions": "**Objetivo:** integrar geometría, características locales y aprendizaje automático en un flujo de procesamiento documental evaluado sin fuga de información.\n\n**Insumos:** conjunto de 1 500 imágenes de cinco tipos de documentos ficticios, sin datos reales de personas, con identificador de remitente, y tres plantillas de formato.\n\n**Parte A – Alineamiento (individual):**\n\n1. Rectifique 30 fotos contra su plantilla con ORB, prueba de razón y RANSAC.\n2. Reporte por imagen el número de pares, inliers, porcentaje de inliers y error medio de reproyección.\n3. Proponga y justifique un criterio de aceptación automática o de revisión humana.\n\n**Parte B – Clasificación (en parejas):**\n\n1. Construya un clasificador HOG con SVM y una alternativa con bolsa de palabras visuales.\n2. Evalúe con StratifiedGroupKFold agrupando por remitente; compare con una partición aleatoria y explique la diferencia.\n3. Presente matriz de confusión, F1 por clase y una galería de errores clasificados por causa.\n\n**Qué entregar:** cuaderno ejecutable, tabla de resultados e informe de tres páginas con recomendaciones y una sección que explique cómo trataría documentos reales conforme a la Ley 29733.\n\n**Criterios:** rigor del protocolo experimental, calidad del alineamiento, profundidad del análisis de errores y claridad de la comunicación.",
+        "rubric": [
+          {
+            "name": "Alineamiento geométrico y criterio de aceptación",
+            "points": 6
+          },
+          {
+            "name": "Clasificador y protocolo sin fuga de información",
+            "points": 6
+          },
+          {
+            "name": "Análisis de errores por causa",
+            "points": 4
+          },
+          {
+            "name": "Recomendaciones y tratamiento de datos personales",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Geometría, características locales y descriptores",
+        "questions": [
+          {
+            "prompt": "¿Cuál es el número mínimo de correspondencias de puntos, sin tres colineales, necesario para estimar una homografía entre dos imágenes?",
+            "options": [
+              "3",
+              "2",
+              "8",
+              "4"
+            ],
+            "correct": 3,
+            "explanation": "La homografía tiene 8 grados de libertad y cada correspondencia aporta dos ecuaciones; por tanto se requieren cuatro puntos. Tres bastan para una transformación afín."
+          },
+          {
+            "prompt": "Si la proporción de emparejamientos correctos cae de 50 % a 30 %, ¿qué ocurre con el número de iteraciones de RANSAC necesario para una confianza de 99 %?",
+            "options": [
+              "Disminuye porque hay menos pares que evaluar",
+              "Aumenta de unas 72 a más de 560",
+              "Se mantiene, porque depende solo de la confianza deseada",
+              "Aumenta ligeramente, de 72 a unas 80"
+            ],
+            "correct": 1,
+            "explanation": "N = log(1 − p) / log(1 − wˢ); con s = 4, al bajar w de 0,5 a 0,3 el término wˢ cae de 0,0625 a 0,0081 y N crece cerca de ocho veces."
+          },
+          {
+            "prompt": "¿Cuál es el propósito de la prueba de razón de Lowe al emparejar descriptores?",
+            "options": [
+              "Normalizar los descriptores para que sean invariantes a la iluminación",
+              "Descartar correspondencias ambiguas cuyo mejor candidato no supera claramente al segundo",
+              "Estimar la escala de cada punto clave",
+              "Reducir la dimensión del descriptor de 128 a 64 valores"
+            ],
+            "correct": 1,
+            "explanation": "Si d₁/d₂ es cercano a 1, dos candidatos son casi igual de parecidos y el par es poco confiable; descartarlo elimina la mayoría de falsos emparejamientos."
+          },
+          {
+            "prompt": "Una aplicación móvil debe alinear documentos en video en tiempo real con un procesador modesto. ¿Qué combinación es la más adecuada?",
+            "options": [
+              "SIFT con distancia euclidiana y fuerza bruta",
+              "HOG con SVM de núcleo RBF",
+              "Bolsa de palabras visuales con k-medias",
+              "ORB con distancia de Hamming y RANSAC"
+            ],
+            "correct": 3,
+            "explanation": "ORB genera descriptores binarios que se comparan con XOR y conteo de bits, mucho más rápido que SIFT; RANSAC aporta la verificación geométrica necesaria."
+          },
+          {
+            "prompt": "En el detector de Harris, ¿qué indica que ambos valores propios del tensor de estructura sean grandes?",
+            "options": [
+              "La ventana contiene una esquina",
+              "La ventana contiene un borde recto",
+              "La ventana es una región plana",
+              "La ventana tiene ruido impulsivo"
+            ],
+            "correct": 0,
+            "explanation": "Dos valores propios grandes significan que la intensidad cambia fuertemente en dos direcciones; si solo uno es grande hay un borde y si ambos son pequeños, una zona plana."
+          },
+          {
+            "prompt": "Un equipo reparte al azar cuadros de video de tránsito entre entrenamiento y prueba y obtiene 99 % de exactitud. ¿Cuál es el principal problema?",
+            "options": [
+              "El video tiene demasiadas clases para una SVM",
+              "La exactitud no puede calcularse sobre video",
+              "Cuadros casi idénticos quedan en ambos conjuntos e inflan la métrica",
+              "La partición aleatoria reduce demasiado el conjunto de entrenamiento"
+            ],
+            "correct": 2,
+            "explanation": "Los cuadros consecutivos son casi duplicados; deben agruparse por secuencia, cámara o día para medir la capacidad real de generalización del modelo."
+          },
+          {
+            "prompt": "Con una ventana de 64 × 128, celdas de 8 × 8, bloques de 2 × 2 celdas con paso de una celda y 9 orientaciones, ¿cuál es la dimensión del descriptor HOG?",
+            "options": [
+              "1 152",
+              "4 608",
+              "3 780",
+              "9 216"
+            ],
+            "correct": 2,
+            "explanation": "Hay 7 × 15 = 105 bloques; cada uno contiene 4 celdas × 9 orientaciones = 36 valores; 105 × 36 = 3 780."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Redes convolucionales, detección de objetos y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante adapta redes convolucionales preentrenadas y detectores de objetos a un problema real mediante transferencia de aprendizaje, los evalúa con métricas de clasificación y detección, analiza sus sesgos, costos y riesgos, y sustenta un sistema de visión documentado con tarjeta de modelo.",
+      "topics": [
+        "De la convolución diseñada a la aprendida: capas, campo receptivo y parámetros",
+        "Arquitecturas de referencia: LeNet, AlexNet, VGG, ResNet y EfficientNet",
+        "Transferencia de aprendizaje y aumento de datos con PyTorch y torchvision",
+        "Detección de objetos: IoU, supresión de no máximos, mAP y familia YOLO",
+        "Segmentación, interpretabilidad con Grad-CAM y despliegue en el borde",
+        "Ética, privacidad, marco normativo peruano y proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "De descriptores diseñados a características aprendidas",
+          "bullets": [
+            "HOG o SIFT fijan de antemano qué medir; no se adaptan a la tarea ni capturan conceptos semánticos complejos.",
+            "Las redes convolucionales aprenden una jerarquía: bordes y colores, texturas, partes y finalmente objetos completos.",
+            "ImageNet, con 1,2 millones de imágenes de entrenamiento en 1 000 clases, permitió entrenar redes profundas a gran escala.",
+            "El precio del aprendizaje: muchos datos etiquetados, cómputo con GPU y menor interpretabilidad directa."
+          ],
+          "notes": "Comience recordando la bolsa de palabras visuales: un vocabulario construido sin supervisión y un clasificador separado. Las redes convolucionales unifican ambas etapas y optimizan todo en función del objetivo. Muestre las visualizaciones de Zeiler y Fergus (2014), que revelaron que las primeras capas aprenden detectores de bordes muy parecidos a los filtros de Gabor y de Sobel estudiados en la unidad 2, mientras que las capas profundas responden a partes como ruedas, ojos o texturas de tela. Esto ayuda a los estudiantes a ver continuidad, y no ruptura, con lo aprendido. Precise el alcance: en este curso se usan redes preentrenadas y se adaptan; el estudio detallado de la retropropagación, la optimización y la regularización de redes profundas corresponde a Aprendizaje Profundo, en el quinto ciclo. Pregunte: ¿qué organización peruana tiene suficientes datos para entrenar una red desde cero?"
+        },
+        {
+          "title": "La capa convolucional",
+          "bullets": [
+            "Cada filtro aprendido mide k × k × C_entrada y produce un mapa de características; la capa apila C_salida mapas.",
+            "Parámetros = (k·k·C_entrada + 1)·C_salida; una capa 3 × 3 de 64 a 128 canales tiene 73 856 parámetros.",
+            "Tamaño de salida = ⌊(W − K + 2P) / S⌋ + 1, con relleno P y paso S.",
+            "Compartir pesos y conectividad local reduce drásticamente los parámetros frente a una capa densa equivalente."
+          ],
+          "notes": "Relacione explícitamente con la unidad 2: la operación es la misma convolución, pero ahora hay muchos filtros, cada uno con profundidad igual al número de canales de entrada, y sus coeficientes se ajustan durante el entrenamiento. Resuelva el cálculo de parámetros paso a paso y compare con una capa densa: conectar una imagen de 224 × 224 × 3 con solo 1 000 neuronas exigiría unos 150 millones de pesos. Explique el tamaño de salida con un ejemplo: una entrada de 224, núcleo 7, paso 2 y relleno 3 produce 112, que es exactamente la primera capa de ResNet. Señale que compartir pesos introduce un sesgo inductivo útil, la equivariancia a la traslación: un borde se detecta igual en cualquier lugar de la imagen. Proponga a los estudiantes calcular los parámetros de las tres primeras capas de una red pequeña y verificarlos contando los elementos de model.parameters() en PyTorch."
+        },
+        {
+          "title": "Activaciones, agrupamiento y campo receptivo",
+          "bullets": [
+            "ReLU, f(x) = max(0, x), introduce no linealidad y facilita el entrenamiento frente a la sigmoide y la tangente hiperbólica.",
+            "El agrupamiento máximo de 2 × 2 con paso 2 reduce a la mitad la resolución y aporta tolerancia a pequeños desplazamientos.",
+            "Dos capas 3 × 3 apiladas ven un campo receptivo de 5 × 5 y tres capas, de 7 × 7, con menos parámetros: 27C² frente a 49C².",
+            "La normalización por lotes estabiliza la distribución de las activaciones y permite tasas de aprendizaje mayores."
+          ],
+          "notes": "Explique el campo receptivo como la región de la imagen original que influye en una neurona: crece con la profundidad y por eso las capas finales pueden reconocer objetos completos. Este fue el argumento central de la arquitectura VGG: sustituir filtros grandes por pilas de filtros 3 × 3, con más no linealidades y menos parámetros. Con C canales de entrada y salida, tres capas 3 × 3 suman 27C² pesos, frente a 49C² de una capa 7 × 7. Precise que el agrupamiento descarta información de posición exacta, lo que es útil para clasificar pero problemático para segmentar; por eso las arquitecturas de segmentación recuperan resolución. Mencione que la normalización por lotes, propuesta por Ioffe y Szegedy en 2015, cambia su comportamiento entre entrenamiento y evaluación: olvidar model.eval() en PyTorch produce predicciones erráticas, un error muy frecuente. Pregunte qué campo receptivo necesitaría un modelo para reconocer un casco en una imagen de 640 píxeles."
+        },
+        {
+          "title": "Arquitecturas que marcaron época",
+          "bullets": [
+            "LeNet-5 (1998): reconocimiento de dígitos manuscritos en cheques bancarios con unos 60 000 parámetros.",
+            "AlexNet (2012): ReLU, abandono aleatorio, aumento de datos y entrenamiento en GPU; unos 60 millones de parámetros.",
+            "VGG-16 (2014): bloques homogéneos de convoluciones 3 × 3; unos 138 millones de parámetros.",
+            "ResNet (2016): conexiones residuales y = F(x) + x que permiten entrenar 152 capas; EfficientNet (2019) escala ancho, profundidad y resolución."
+          ],
+          "notes": "Recorra la evolución como una serie de soluciones a problemas concretos. LeNet, de LeCun y colaboradores, ya se usaba comercialmente en la lectura de cheques en los años noventa. AlexNet demostró que la combinación de datos masivos y GPU superaba a los métodos clásicos. VGG mostró la potencia de la profundidad con un diseño simple, pero su tamaño la hace costosa. El problema siguiente fue la degradación: redes más profundas entrenaban peor, no por sobreajuste sino por dificultades de optimización. He y colaboradores lo resolvieron con conexiones residuales, que permiten que cada bloque aprenda solo una corrección sobre su entrada; su ensamble alcanzó un error top-5 de 3,57 % en ImageNet. EfficientNet propuso escalar de forma equilibrada. Pregunte cuál elegirían como base para un sistema que debe correr en un teléfono de gama media, y oriente hacia familias eficientes como MobileNet o EfficientNet-B0."
+        },
+        {
+          "title": "Cómo se entrena una red, en una diapositiva",
+          "bullets": [
+            "Pérdida de entropía cruzada: L = −Σ yᵢ·log(pᵢ), con probabilidades obtenidas mediante softmax.",
+            "Optimización por descenso de gradiente estocástico en minilotes, con momento o con Adam; la retropropagación calcula los gradientes.",
+            "Hiperparámetros clave: tasa de aprendizaje, tamaño de lote, número de épocas y decaimiento de pesos.",
+            "Las curvas de pérdida de entrenamiento y validación diagnostican subajuste, sobreajuste y el momento de la parada temprana."
+          ],
+          "notes": "Mantenga esta diapositiva conceptual y práctica: el objetivo es que los estudiantes puedan leer y modificar un bucle de entrenamiento, no derivar la retropropagación, que se estudiará formalmente en Aprendizaje Profundo. Recuerde la entropía cruzada y el descenso de gradiente vistos en Aprendizaje Automático I con la regresión logística: una red convolucional es, en su última capa, una regresión logística multinomial sobre características aprendidas. Muestre el bucle típico de PyTorch: poner el modelo en modo de entrenamiento, iterar por lotes, calcular la pérdida, llamar a backward, actualizar con el optimizador y limpiar los gradientes. Luego explique cómo interpretar las curvas: si la pérdida de validación sube mientras la de entrenamiento baja, hay sobreajuste. La tasa de aprendizaje es el hiperparámetro más sensible. Pregunte qué harían si ambas pérdidas se estancan en valores altos desde la primera época."
+        },
+        {
+          "title": "Transferencia de aprendizaje: extracción de características y ajuste fino",
+          "bullets": [
+            "Se reutiliza una red preentrenada en ImageNet y se reemplaza su capa final por otra con el número de clases propio.",
+            "Pocos datos y dominio similar: congelar el extractor y entrenar solo la cabeza clasificadora.",
+            "Más datos o dominio distinto: descongelar los últimos bloques con una tasa de aprendizaje unas diez veces menor.",
+            "Las imágenes se normalizan con la media y la desviación de ImageNet y se redimensionan al tamaño esperado por la red."
+          ],
+          "notes": "Explique por qué la transferencia funciona: las primeras capas aprenden bordes y texturas genéricas útiles en casi cualquier dominio, mientras las últimas son específicas de las clases de ImageNet. Con 800 imágenes de hojas de café sanas y con roya, entrenar desde cero sobreajustaría; congelar el extractor y entrenar la cabeza suele dar buenos resultados en minutos con una GPU gratuita de Colab. Presente la matriz de decisión según el tamaño del conjunto y la similitud con ImageNet: para radiografías o imágenes satelitales multiespectrales, que difieren mucho de las fotos naturales, conviene ajustar más capas o partir de modelos preentrenados en ese dominio. Muestre el error clásico de olvidar la normalización con los valores de ImageNet, que degrada el desempeño sin generar ningún mensaje de error. Pida a los estudiantes que, para su proyecto integrador, justifiquen por escrito qué capas congelarán y por qué."
+        },
+        {
+          "title": "Aumento de datos con criterio de dominio",
+          "bullets": [
+            "Transformaciones comunes: recortes y escalados aleatorios, giros, rotaciones leves, variaciones de brillo y contraste, desenfoque.",
+            "Solo se aplican transformaciones que preservan la etiqueta: girar horizontalmente un texto o una placa la invalida.",
+            "Variar mucho el tono destruye la señal en problemas de madurez o enfermedad, donde el color es la evidencia.",
+            "El aumento se aplica solo al entrenamiento; validación y prueba usan únicamente redimensionado y normalización."
+          ],
+          "notes": "Presente el aumento de datos como una forma de inyectar conocimiento del dominio: le decimos al modelo qué variaciones no deben cambiar su respuesta. Por eso no existe un conjunto universal de aumentos. En la detección de cascos en mina tiene sentido simular polvo, desenfoque por movimiento y cambios de iluminación; en la clasificación de madurez de mango, alterar el tono destruiría justamente la información diagnóstica. Para detección y segmentación, recuerde que las cajas y las máscaras deben transformarse junto con la imagen, lo que facilitan bibliotecas como Albumentations o la versión 2 de las transformaciones de torchvision. Advierta el error de aplicar aumento aleatorio en validación, que introduce variabilidad en la métrica y la vuelve no reproducible. Proponga una actividad: cada equipo lista las variaciones reales esperadas en producción para su proyecto y las traduce en transformaciones concretas con sus rangos, justificando por qué cada una preserva la etiqueta."
+        },
+        {
+          "title": "De la clasificación a la detección: cajas, IoU y NMS",
+          "bullets": [
+            "Un detector devuelve, por cada objeto, una clase, un puntaje de confianza y una caja con coordenadas (x₁, y₁, x₂, y₂).",
+            "Intersección sobre unión: IoU = área de intersección / área de unión entre la caja predicha y la de referencia.",
+            "La supresión de no máximos ordena por confianza y descarta cajas de la misma clase con IoU mayor a un umbral, por ejemplo 0,5.",
+            "El umbral de confianza define el punto de operación entre falsas alarmas y objetos omitidos."
+          ],
+          "notes": "Muestre que la detección combina clasificación y regresión: además de decir qué hay, el modelo debe decir dónde. Calcule el IoU de dos cajas en la pizarra; por ejemplo, dos cajas de 10 × 10 desplazadas cinco píxeles horizontalmente tienen un IoU de un tercio, valor que la mayoría de protocolos consideraría una detección fallida. Explique paso a paso la supresión de no máximos, ya vista en la detección clásica de la unidad 3, y advierta su limitación en escenas densas: dos trabajadores muy juntos pueden fusionarse en una sola detección. Resalte que el umbral de confianza no es un detalle técnico sino una decisión de negocio: en seguridad minera se prefiere un umbral bajo para no omitir trabajadores sin casco, aceptando más alarmas que un supervisor revisará. Pida que los estudiantes implementen la función IoU en NumPy y la prueben con casos límite: cajas idénticas, disjuntas y contenidas una en otra."
+        },
+        {
+          "title": "Detectores de dos etapas y de una etapa",
+          "bullets": [
+            "Dos etapas: R-CNN, Fast R-CNN y Faster R-CNN proponen regiones y luego las clasifican; son precisos, pero más lentos.",
+            "Una etapa: YOLO (Redmon et al., 2016) y SSD predicen clases y cajas en una sola pasada sobre una rejilla.",
+            "Las versiones recientes de YOLO alcanzan decenas o cientos de cuadros por segundo en GPU con alta precisión.",
+            "La elección depende de los requisitos: latencia, hardware disponible, tamaño mínimo del objeto y costo de cada error."
+          ],
+          "notes": "Presente la evolución iniciada por Girshick y colaboradores: R-CNN clasificaba miles de regiones candidatas por separado y era muy lento; Fast R-CNN compartió el cálculo de características; Faster R-CNN incorporó una red de propuesta de regiones. YOLO reformuló la detección como un único problema de regresión: la imagen se divide en una rejilla y cada celda predice cajas y clases, lo que permitió la detección en tiempo real. Hoy existen muchas versiones de YOLO mantenidas por grupos académicos y empresas, con implementaciones abiertas que permiten ajustar un detector preentrenado en COCO con pocas líneas de código. Insista en que el ranking de un modelo en COCO no garantiza su desempeño en una mina a 4 500 m de altitud, con polvo y luz rasante. Pregunte qué detector elegirían para contar vehículos en 40 cámaras de una municipalidad con un único servidor, y por qué."
+        },
+        {
+          "title": "Métricas de detección: precisión media y mAP",
+          "bullets": [
+            "Una predicción es verdadero positivo si su clase coincide y su IoU con una caja de referencia aún no asignada supera 0,5.",
+            "Ordenando por confianza se construye la curva de precisión y exhaustividad; su área es la precisión media (AP) de la clase.",
+            "mAP@0,5 promedia la AP entre clases; mAP@[0,5:0,95] de COCO promedia además diez umbrales de IoU y exige mejor localización.",
+            "Se complementa con la exhaustividad en el umbral operativo, las falsas alarmas por hora y la latencia por cuadro."
+          ],
+          "notes": "Construya en la pizarra una pequeña curva de precisión y exhaustividad con diez detecciones ordenadas por confianza, marcando cuáles son verdaderos positivos, para que los estudiantes comprendan de dónde sale el número. Explique que el mAP resume el desempeño en todos los umbrales de confianza, pero el sistema en producción opera en uno solo; por eso se deben reportar también la precisión y la exhaustividad en el punto elegido. Para un gerente, «tres falsas alarmas por cámara por hora» o «uno de cada diez trabajadores sin casco no es detectado» son más comprensibles que un mAP de 0,78. Muestre la diferencia entre mAP@0,5 y mAP@[0,5:0,95]: un modelo puede encontrar bien los objetos pero delimitarlos con imprecisión, lo que importa si se mide su tamaño. Pregunte cómo cambiaría la métrica relevante si el objetivo fuera medir el calibre de los frutos detectados en lugar de solo contarlos."
+        },
+        {
+          "title": "Segmentación semántica, de instancias y panóptica",
+          "bullets": [
+            "Semántica: asigna una clase a cada píxel; de instancias: separa cada objeto individual; panóptica: integra ambas.",
+            "U-Net (Ronneberger et al., 2015): codificador-decodificador con conexiones de salto, eficaz con pocos datos biomédicos.",
+            "Mask R-CNN añade una rama de máscaras a Faster R-CNN; SAM segmenta objetos a partir de puntos o cajas sin reentrenar.",
+            "Aplicaciones: deforestación en imágenes satelitales, lesiones en hojas, grietas en concreto y estimación de áreas de cultivo."
+          ],
+          "notes": "Muestre las diferencias con una misma imagen de un campo de cultivo: la segmentación semántica pinta todos los árboles de verde, la de instancias distingue cada árbol y la panóptica además etiqueta suelo, caminos y cielo. Explique la intuición de U-Net: el codificador reduce la resolución y captura contexto, el decodificador la recupera y las conexiones de salto devuelven el detalle espacial perdido por el agrupamiento, lo que se vincula con la diapositiva de campo receptivo. Comente la aplicación ambiental: el Estado peruano y diversas organizaciones monitorean la pérdida de bosque amazónico, y la segmentación de imágenes satelitales permite estimar las hectáreas afectadas por minería ilegal en Madre de Dios. Señale que modelos fundacionales como SAM aceleran el etiquetado, porque el anotador solo hace clic y corrige. Pregunte qué métrica usarían para comparar el área deforestada estimada con la de referencia."
+        },
+        {
+          "title": "Interpretabilidad y depuración con Grad-CAM",
+          "bullets": [
+            "Grad-CAM (Selvaraju et al., 2017) pondera los mapas de la última capa convolucional por el gradiente de la clase.",
+            "El mapa de calor indica qué regiones influyeron en la predicción, no si el razonamiento del modelo es correcto.",
+            "Sirve para detectar atajos: un modelo que identifica cascos mirando el cielo o el color del uniforme.",
+            "Se complementa con evaluación por condición: noche, polvo, distancia, ángulo, tipo de cámara y grupo de personas."
+          ],
+          "notes": "Presente Grad-CAM como herramienta de depuración, no de justificación ante el usuario final. Muestre un ejemplo didáctico: un clasificador de hojas enfermas que obtiene alta exactitud porque las fotos de hojas enfermas se tomaron sobre un fondo de tierra y las sanas sobre papel blanco; Grad-CAM revela que el modelo mira el fondo. La solución no es ajustar el modelo sino corregir los datos. Explique que la técnica usa los gradientes de la puntuación de la clase respecto de los mapas de activación de la última capa convolucional, promediados para obtener un peso por canal. Advierta sus límites: la resolución del mapa es baja y distintos métodos de atribución pueden discrepar. Conecte con la evaluación por subgrupos: un detector de equipos de protección podría funcionar peor con uniformes de contratistas o con ciertos tonos de piel. Pida a los estudiantes que incluyan al menos tres mapas Grad-CAM comentados en su proyecto."
+        },
+        {
+          "title": "Despliegue en el borde y eficiencia",
+          "bullets": [
+            "Restricciones del borde: latencia por cuadro, memoria, consumo eléctrico, temperatura y conectividad intermitente.",
+            "La cuantización a INT8 reduce el tamaño del modelo unas cuatro veces y acelera la inferencia con una pérdida pequeña de exactitud.",
+            "Exportar a ONNX permite ejecutar el modelo en distintos motores y dispositivos, desde servidores hasta tarjetas embebidas.",
+            "Se mide de extremo a extremo: captura, preprocesamiento, inferencia, posprocesamiento y transmisión de alertas."
+          ],
+          "notes": "Explique por qué muchos sistemas de visión se ejecutan en el borde: en una mina o un fundo agrícola la conectividad puede ser limitada y enviar video continuo a la nube es costoso; además, procesar localmente reduce la exposición de datos personales. Calcule con la clase el presupuesto de tiempo: para analizar 15 cuadros por segundo, el ciclo completo debe tomar menos de 67 milisegundos. Muestre que la cuantización pasa de pesos de 32 bits a enteros de 8 bits, y que la pérdida de exactitud debe verificarse sobre el conjunto de prueba, no suponerse. Señale que, con frecuencia, el preprocesamiento en Python consume más tiempo que la propia red, por lo que conviene medir cada etapa. Esta diapositiva conecta con Despliegue de Modelos (MLOps), del quinto ciclo, donde se tratarán contenedores, monitoreo y actualización. Pregunte qué indicador de deriva vigilarían en una cámara instalada al aire libre durante todo un año."
+        },
+        {
+          "title": "Ética, privacidad y marco normativo",
+          "bullets": [
+            "Ley 29733: las imágenes que identifican a una persona son datos personales y los datos biométricos son datos sensibles.",
+            "Principios aplicables: finalidad, proporcionalidad, calidad, seguridad y consentimiento informado, con plazos de conservación definidos.",
+            "La Ley 31814 promueve el uso de la inteligencia artificial en el Perú con estándares de seguridad basados en riesgos.",
+            "Buolamwini y Gebru (2018) hallaron errores de hasta 34,7 % en mujeres de piel oscura frente a 0,8 % en hombres de piel clara."
+          ],
+          "notes": "Plantee la ética como requisito de diseño, no como anexo. Explique que un sistema de conteo de personas que no identifica rostros tiene un riesgo muy distinto al de un sistema de reconocimiento facial que vincula imágenes con identidades, y que el principio de proporcionalidad exige elegir la opción menos invasiva que cumpla el objetivo. Comente el estudio Gender Shades, que evaluó sistemas comerciales de clasificación de género y evidenció disparidades graves según tono de piel y sexo, y discuta su relevancia en un país diverso como el Perú. Mencione que el Reglamento de Inteligencia Artificial de la Unión Europea, de 2024, prohíbe, salvo excepciones estrictas, la identificación biométrica remota en tiempo real en espacios públicos con fines policiales, un referente para la discusión regional. Pida a los equipos que identifiquen, para su proyecto, quiénes son los afectados, qué daño podría producir un error y qué medidas de mitigación adoptarán."
+        },
+        {
+          "title": "Proyecto integrador: entregables y criterios",
+          "bullets": [
+            "Formulación: decisión que apoya el sistema, usuarios, métrica de negocio y costo de cada tipo de error.",
+            "Datos: protocolo de captura y etiquetado, partición por unidad independiente y ficha de datos.",
+            "Modelado: línea base clásica o simple, modelo con transferencia de aprendizaje y justificación de las decisiones.",
+            "Evaluación: métricas en prueba, análisis de errores, Grad-CAM, desempeño por condición y latencia.",
+            "Comunicación: tarjeta de modelo, video demostrativo de cinco minutos y sustentación de quince minutos."
+          ],
+          "notes": "Presente el proyecto como la síntesis del curso: debe integrar al menos una técnica clásica, ya sea como preprocesamiento, línea base o verificación geométrica, y un modelo con transferencia de aprendizaje. Explique que la línea base es obligatoria, porque sin ella no se puede afirmar que la red aporta valor. La tarjeta de modelo, propuesta por Mitchell y colaboradores en 2019, debe incluir uso previsto, usos no recomendados, datos, métricas desagregadas, limitaciones y consideraciones éticas, incluido el tratamiento de datos personales. Muestre ejemplos de temas viables: clasificación de granos de café por defectos, detección de equipos de protección, conteo vehicular, detección de tizón tardío en hojas de papa y lectura de medidores analógicos. Aclare los criterios de la rúbrica y el calendario de avances de las semanas 13 a 16. Cierre preguntando a cada equipo cuál es el mayor riesgo de su proyecto y cómo lo mitigará esta misma semana."
+        }
+      ],
+      "reading": {
+        "title": "Transferencia de aprendizaje y detección de objetos: del cuaderno al sistema",
+        "minutes": 40,
+        "content": "## Por qué no entrenar desde cero\n\nEntrenar una red convolucional desde cero requiere cientos de miles de imágenes etiquetadas y días de cómputo. La mayoría de organizaciones peruanas dispone de cientos o de pocos miles. La **transferencia de aprendizaje** cierra esa brecha: las primeras capas de una red entrenada en ImageNet ya detectan bordes, texturas y partes útiles en casi cualquier dominio, y solo hay que adaptar las últimas. Con 800 a 3 000 imágenes bien etiquetadas, una ResNet-18 o una EfficientNet-B0 ajustadas suelen superar con amplitud a HOG con SVM, siempre que la evaluación sea honesta.\n\n## Ajuste fino de una ResNet en PyTorch\n\nEl ejemplo clasifica granos de café verde en cuatro categorías de calidad, un problema relevante para las cooperativas de Cajamarca, Junín y San Martín que exportan café de especialidad:\n\n```python\nimport torch\nfrom torch import nn\nfrom torchvision import models, transforms, datasets\n\npesos = models.ResNet18_Weights.IMAGENET1K_V1\nmodelo = models.resnet18(weights=pesos)\nfor p in modelo.parameters():\n    p.requires_grad = False                        # 1. congelar el extractor\nmodelo.fc = nn.Linear(modelo.fc.in_features, 4)    # 2. nueva cabeza: 4 calidades\n\nnormalizar = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])\naumento = transforms.Compose([\n    transforms.RandomResizedCrop(224, scale=(0.7, 1.0)),\n    transforms.RandomHorizontalFlip(),\n    transforms.ColorJitter(brightness=0.2, contrast=0.2),   # sin alterar el tono\n    transforms.ToTensor(), normalizar])\n\ndatos = datasets.ImageFolder(\"cafe/entrenamiento\", transform=aumento)\ncargador = torch.utils.data.DataLoader(datos, batch_size=32, shuffle=True)\noptimizador = torch.optim.AdamW(modelo.fc.parameters(), lr=1e-3, weight_decay=1e-4)\ncriterio = nn.CrossEntropyLoss()\n\nfor epoca in range(10):\n    modelo.train()\n    for x, y in cargador:\n        optimizador.zero_grad()\n        perdida = criterio(modelo(x), y)\n        perdida.backward()\n        optimizador.step()\n```\n\nTres decisiones merecen atención. La normalización usa la media y la desviación de ImageNet, porque la red fue entrenada así. El aumento de color modifica brillo y contraste, pero no el tono, que es evidencia de defectos como el grano fermentado. Y solo se optimizan los parámetros de la nueva capa; en una segunda fase puede descongelarse el último bloque (`modelo.layer4`) con una tasa de aprendizaje diez veces menor.\n\n## Detección: medir bien\n\nUn detector devuelve cajas con clase y confianza. La coincidencia entre predicción y referencia se mide con la intersección sobre unión:\n\n```python\ndef iou(a, b):\n    # cajas en formato (x1, y1, x2, y2)\n    ix1, iy1 = max(a[0], b[0]), max(a[1], b[1])\n    ix2, iy2 = min(a[2], b[2]), min(a[3], b[3])\n    inter = max(0, ix2 - ix1) * max(0, iy2 - iy1)\n    area_a = (a[2] - a[0]) * (a[3] - a[1])\n    area_b = (b[2] - b[0]) * (b[3] - b[1])\n    return inter / (area_a + area_b - inter)\n\nprint(iou((0, 0, 10, 10), (5, 0, 15, 10)))   # 0.333...\n```\n\nUna predicción es verdadero positivo si su IoU con una caja de referencia no asignada supera 0,5. Ordenando las predicciones por confianza se construye la curva de precisión y exhaustividad de cada clase; su área es la precisión media (AP) y el promedio entre clases, el mAP. La supresión de no máximos elimina duplicados conservando la caja de mayor confianza.\n\n## Elegir el punto de operación\n\nEl mAP resume todos los umbrales, pero el sistema opera en uno solo. La elección es una decisión de negocio basada en costos: en seguridad minera, omitir a un trabajador sin casco puede costar una vida, mientras una falsa alarma cuesta segundos de revisión. Si un supervisor puede revisar como máximo tres alertas por hora por cámara, ese límite y la exhaustividad mínima aceptable definen el umbral, que debe fijarse en validación y confirmarse en prueba. A ello se suma la latencia: para analizar 15 cuadros por segundo, todo el ciclo debe completarse en menos de 67 ms.\n\n## Responsabilidad desde el diseño\n\nLos sistemas de visión suelen capturar personas. Según la Ley 29733, una imagen que permite identificar a alguien es un dato personal y los datos biométricos son datos sensibles; su tratamiento exige finalidad explícita, proporcionalidad, seguridad y, como regla general, consentimiento. La Ley 31814 orienta el uso de la inteligencia artificial en el país con estándares de seguridad basados en riesgos. En la práctica, esto se traduce en decisiones técnicas: detectar el casco sin identificar el rostro, procesar en el borde y conservar solo eventos, difuminar rostros en las imágenes almacenadas y fijar plazos de eliminación. La **tarjeta de modelo** (Mitchell et al., 2019) documenta el uso previsto, los datos, el desempeño desagregado por condición y grupo, las limitaciones y las salvaguardas. Un sistema que funciona bien en promedio, pero falla de noche, con polvo o con ciertos grupos de personas, no está listo para producción, aunque su mAP sea alto."
+      },
+      "case": {
+        "title": "Caso: Detección de equipos de protección personal en una unidad minera de Áncash",
+        "content": "**Compañía Minera Cordillera Negra S. A. A.** —empresa ficticia— opera una unidad polimetálica en Áncash, a 4 200 m de altitud, con 1 450 trabajadores propios y de contratistas distribuidos en tres turnos. En los últimos dos años registró 11 accidentes incapacitantes; en cuatro de ellos la investigación concluyó que el trabajador no usaba correctamente su equipo de protección personal. El Reglamento de Seguridad y Salud Ocupacional en Minería (D. S. 024-2016-EM) y la Ley 29783, de Seguridad y Salud en el Trabajo, exigen al titular minero proveer esos equipos y supervisar su uso.\n\nLa gerencia de seguridad encargó a un equipo interno un piloto de detección automática de casco, chaleco reflectivo y lentes de seguridad con 12 cámaras en accesos, taller de mantenimiento y zona de chancado. El equipo ajustó un detector YOLO preentrenado en COCO con 6 400 imágenes propias etiquetadas durante dos meses. Resultados en un conjunto de prueba de 900 imágenes de semanas distintas a las de entrenamiento:\n\n| Clase | AP@0,5 | Exhaustividad (umbral 0,4) | Precisión (umbral 0,4) |\n|---|---|---|---|\n| Persona | 0,93 | 0,95 | 0,92 |\n| Casco | 0,88 | 0,90 | 0,89 |\n| Chaleco | 0,81 | 0,84 (noche: 0,62) | 0,86 |\n| Lentes | 0,64 | 0,58 | 0,71 |\n\nCada cámara genera en promedio 4,2 alertas por hora, de las cuales el 61 % son falsas, sobre todo por polvo en el lente y por trabajadores lejanos de menos de 25 píxeles de alto. La latencia en el servidor local es de 45 ms por cuadro. Grad-CAM mostró que, de noche, el modelo detecta chalecos por el reflejo de las luminarias y no por la prenda.\n\nEl sindicato expresó su preocupación de que el sistema se use para sancionar y pidió conocer qué datos se guardan y por cuánto tiempo. Un proveedor sugiere añadir reconocimiento facial para identificar automáticamente a quien incumple y enviarle la amonestación por correo. El área legal recuerda que el rostro usado para identificar a una persona es un dato biométrico sensible según la Ley 29733.\n\nEl gerente de seguridad, Julio Cárdenas, debe decidir en la próxima sesión del comité de seguridad y salud en el trabajo si despliega el sistema en toda la unidad, si lo limita a ciertas zonas y clases o si extiende el piloto. También debe responder al sindicato y fijar una posición sobre la propuesta de reconocimiento facial.",
+        "questions": [
+          "¿Qué clases y zonas están listas para el despliegue y cuáles no? Fundamente con las métricas, considerando el costo de omitir a un trabajador sin equipo.",
+          "Proponga tres acciones técnicas para reducir las falsas alarmas y mejorar la detección nocturna de chalecos, e indique cómo mediría su efecto.",
+          "¿Es proporcional incorporar reconocimiento facial? Analice la propuesta a la luz de la Ley 29733, la Ley 29783 y la relación laboral.",
+          "Redacte los compromisos de uso del sistema que presentaría al sindicato en el comité de seguridad y salud en el trabajo.",
+          "¿Qué indicadores monitorearía durante los primeros seis meses para saber si el sistema realmente reduce los accidentes?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: sistema de visión con transferencia de aprendizaje",
+        "instructions": "**Objetivo:** diseñar, construir, evaluar y sustentar un sistema de visión por computadora que resuelva un problema real de una organización peruana, integrando técnicas clásicas y una red preentrenada.\n\n**Modalidad:** equipos de dos o tres estudiantes. Temas sugeridos: clasificación de defectos en granos de café, detección de equipos de protección personal, conteo vehicular, detección de tizón tardío en hojas de papa, lectura de medidores analógicos o una propuesta aprobada en la semana 12.\n\n**Qué entregar:**\n\n1. Repositorio o cuaderno ejecutable con línea base clásica o simple, modelo con transferencia de aprendizaje (clasificador, detector o segmentador), partición por unidad independiente y semillas fijas.\n2. Informe técnico de seis a ocho páginas: problema y métrica de negocio, datos y etiquetado, decisiones de modelado, resultados en prueba, análisis de errores por causa y por condición, al menos tres mapas Grad-CAM comentados y latencia medida.\n3. Tarjeta de modelo de dos páginas con uso previsto, limitaciones, desempeño desagregado y tratamiento de datos personales conforme a la Ley 29733.\n4. Video demostrativo de cinco minutos.\n5. Sustentación oral de quince minutos en la semana 16, con preguntas del jurado.\n\n**Criterios:** se evalúa la calidad de las decisiones y su justificación con evidencia, no solo la métrica final. Un modelo con desempeño moderado y un análisis honesto puede obtener la nota máxima; resultados excelentes sin un protocolo confiable, no.",
+        "rubric": [
+          {
+            "name": "Formulación del problema y protocolo de datos",
+            "points": 4
+          },
+          {
+            "name": "Modelado con transferencia de aprendizaje y línea base",
+            "points": 5
+          },
+          {
+            "name": "Evaluación rigurosa y análisis de errores",
+            "points": 5
+          },
+          {
+            "name": "Tarjeta de modelo, ética y privacidad",
+            "points": 3
+          },
+          {
+            "name": "Comunicación y sustentación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Redes convolucionales, detección y responsabilidad",
+        "questions": [
+          {
+            "prompt": "¿Cuántos parámetros tiene una capa convolucional con núcleos de 3 × 3, 32 canales de entrada, 64 de salida y término de sesgo?",
+            "options": [
+              "18 432",
+              "2 112",
+              "589 824",
+              "18 496"
+            ],
+            "correct": 3,
+            "explanation": "(3·3·32 + 1)·64 = 289·64 = 18 496. Sin sesgo serían 18 432 y con núcleos de 1 × 1, solo 2 112."
+          },
+          {
+            "prompt": "Una entrada de 224 × 224 pasa por una convolución con núcleo 7, paso 2 y relleno 3. ¿Cuál es el tamaño espacial de la salida?",
+            "options": [
+              "112 × 112",
+              "109 × 109",
+              "224 × 224",
+              "56 × 56"
+            ],
+            "correct": 0,
+            "explanation": "⌊(224 − 7 + 2·3) / 2⌋ + 1 = 111 + 1 = 112. Es precisamente la primera capa convolucional de ResNet."
+          },
+          {
+            "prompt": "Una cooperativa tiene 800 fotos etiquetadas de hojas de café sanas y con roya. ¿Qué estrategia es la más adecuada como punto de partida?",
+            "options": [
+              "Entrenar una ResNet-152 desde cero con inicialización aleatoria",
+              "Descartar las redes porque requieren millones de imágenes propias",
+              "Congelar una red preentrenada en ImageNet y entrenar solo una nueva cabeza clasificadora",
+              "Ajustar todas las capas con una tasa de aprendizaje alta"
+            ],
+            "correct": 2,
+            "explanation": "Con pocos datos y fotos naturales, extraer características con una red preentrenada evita el sobreajuste y converge rápido; luego puede descongelarse el último bloque con tasa baja."
+          },
+          {
+            "prompt": "¿Cuál es el IoU entre las cajas (0, 0, 10, 10) y (5, 0, 15, 10)?",
+            "options": [
+              "0,50",
+              "0,25",
+              "0,33",
+              "0,67"
+            ],
+            "correct": 2,
+            "explanation": "Intersección: 5 × 10 = 50. Unión: 100 + 100 − 50 = 150. IoU = 50/150 ≈ 0,33, por debajo del umbral habitual de 0,5."
+          },
+          {
+            "prompt": "¿Para qué se aplica la supresión de no máximos en un detector de objetos?",
+            "options": [
+              "Para eliminar detecciones duplicadas del mismo objeto que se solapan con otra de mayor confianza",
+              "Para descartar las clases con menor precisión media",
+              "Para reducir la resolución de los mapas de características",
+              "Para aumentar la exhaustividad en objetos pequeños"
+            ],
+            "correct": 0,
+            "explanation": "El detector suele producir varias cajas sobre un mismo objeto; NMS conserva la de mayor confianza y elimina las que la solapan por encima de un umbral de IoU."
+          },
+          {
+            "prompt": "Un equipo clasifica la madurez de mangos según el color de la cáscara. ¿Qué aumento de datos debe evitar o limitar?",
+            "options": [
+              "Recortes aleatorios moderados",
+              "Giros horizontales",
+              "Rotaciones pequeñas",
+              "Variaciones fuertes de tono"
+            ],
+            "correct": 3,
+            "explanation": "El tono es la evidencia de la clase; alterarlo puede convertir un mango maduro en uno verde sin cambiar su etiqueta, enseñando al modelo una relación falsa."
+          },
+          {
+            "prompt": "Grad-CAM muestra que un detector de cascos se activa sobre el cielo y no sobre la cabeza del trabajador. ¿Cuál es la acción más adecuada?",
+            "options": [
+              "Aumentar el número de épocas de entrenamiento",
+              "Revisar y diversificar los datos, porque el modelo aprendió un atajo del fondo",
+              "Subir el umbral de confianza para reducir alertas",
+              "Reemplazar Grad-CAM por otro método que resalte la cabeza"
+            ],
+            "correct": 1,
+            "explanation": "El mapa revela aprendizaje por atajos: en los datos, el fondo se correlaciona con la clase. Se corrige con datos más variados y equilibrados, no ocultando el síntoma."
+          },
+          {
+            "prompt": "Una empresa quiere identificar con reconocimiento facial a los trabajadores que no usan casco. Según la Ley 29733, ¿qué consideración es central?",
+            "options": [
+              "Las imágenes de trabajadores no son datos personales dentro de la empresa",
+              "El rostro usado para identificar es un dato biométrico sensible que exige consentimiento y proporcionalidad",
+              "Basta con un letrero de videovigilancia para cualquier finalidad",
+              "Solo se requiere la autorización del sindicato"
+            ],
+            "correct": 1,
+            "explanation": "La Ley 29733 califica los datos biométricos como sensibles; su tratamiento exige, como regla general, consentimiento expreso y por escrito, y debe ser proporcional, prefiriendo alternativas menos invasivas."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Visión por computadora: tareas canónicas, historia y aplicaciones en el Perú",
+      "activity": "Clase síncrona introductoria; configuración de Google Colab, OpenCV y NumPy; foro de diagnóstico sobre aplicaciones de visión en organizaciones peruanas y su costo de error.",
+      "evidence": "Cuaderno de entorno verificado y aporte en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Formación de la imagen, modelo de cámara estenopeica, muestreo y cuantización",
+      "activity": "Aula invertida con la lectura de la unidad 1; ejercicios de proyección perspectiva y dimensionamiento de resolución; laboratorio de carga, recorte y conversión BGR a RGB.",
+      "evidence": "Cuaderno de laboratorio 1 con cálculos resueltos"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Espacios de color, balance de blancos, histogramas y transformaciones de intensidad",
+      "activity": "Discusión en equipos del caso de la empacadora de arándanos de Chao y plenaria; laboratorio de HSV, Lab, mundo gris, corrección gamma y CLAHE.",
+      "evidence": "Respuestas al caso y cuaderno de laboratorio 2"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Umbralización global, de Otsu y adaptativa; evaluación con IoU y Dice",
+      "activity": "Laboratorio de segmentación por umbral con máscaras de referencia; entrega de la tarea 1 de diagnóstico y preparación de imágenes; cuestionario 1 de la unidad.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Convolución, núcleos separables, modelos de ruido y filtros de suavizado",
+      "activity": "Implementación manual de la convolución en NumPy y comparación de tiempos con OpenCV; medición de PSNR con filtros de media, gaussiano, mediana y bilateral.",
+      "evidence": "Cuaderno de convolución y tabla de PSNR"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Gradiente, operador de Sobel, detector de Canny y control de nitidez",
+      "activity": "Aula invertida con la lectura de la unidad 2; laboratorio de detección de bordes y ajuste de umbrales de histéresis; filtro automático de fotos borrosas con la varianza del Laplaciano.",
+      "evidence": "Cuaderno de bordes y umbral de nitidez calibrado"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Morfología matemática, componentes conexas, contornos y descriptores de forma",
+      "activity": "Discusión del caso de fragmentación de roca en Moquegua; laboratorio de apertura, cierre, etiquetado y medición calibrada en milímetros.",
+      "evidence": "Respuestas al caso y mediciones calibradas"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Transformada de Hough, watershed, agrupamiento de color y evaluación de conteo",
+      "activity": "Separación de objetos en contacto con watershed y segmentación con k-medias en Lab; entrega de la tarea 2 de conteo y medición; cuestionario 2 de la unidad.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Transformaciones geométricas, remuestreo, interpolación y homografía",
+      "activity": "Ejercicios con matrices homogéneas y rectificación de documentos con cuatro puntos; conformación de equipos del proyecto integrador y elección preliminar del problema.",
+      "evidence": "Documento rectificado y ficha inicial del proyecto"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Puntos de interés y descriptores: Harris, SIFT y ORB; emparejamiento y prueba de razón",
+      "activity": "Aula invertida con la lectura de la unidad 3; laboratorio de detección y emparejamiento; comparación de tiempos y emparejamientos válidos entre ORB y SIFT.",
+      "evidence": "Cuaderno comparativo de descriptores"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "RANSAC, alineamiento robusto, HOG y clasificación con SVM",
+      "activity": "Discusión del caso de la cooperativa de Huancayo; laboratorio de homografía robusta con criterio de revisión humana y clasificador HOG con SVM.",
+      "evidence": "Respuestas al caso y alineamientos verificados"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Bolsa de palabras visuales, validación cruzada agrupada y análisis de errores",
+      "activity": "Comparación de particiones aleatoria y agrupada; entrega de la tarea 3 de alineamiento y clasificación; cuestionario 3; aprobación de la propuesta del proyecto integrador.",
+      "evidence": "Tarea 3, cuestionario 3 y propuesta aprobada"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Capas convolucionales, arquitecturas de referencia y transferencia de aprendizaje",
+      "activity": "Aula invertida con la lectura de la unidad 4; laboratorio de ajuste fino de ResNet-18 en PyTorch con aumento de datos; avance 1 del proyecto: datos etiquetados y línea base.",
+      "evidence": "Avance 1 del proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Detección de objetos: IoU, supresión de no máximos, mAP y familia YOLO",
+      "activity": "Discusión del caso de equipos de protección en Áncash; ajuste de un detector preentrenado y evaluación con mAP y umbral operativo; revisión de código entre pares.",
+      "evidence": "Respuestas al caso y avance 2 del proyecto"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Segmentación, Grad-CAM, despliegue en el borde, ética y marco normativo",
+      "activity": "Taller de interpretabilidad con Grad-CAM y medición de latencia; redacción de la tarjeta de modelo con análisis de privacidad; cuestionario 4 de la unidad.",
+      "evidence": "Tarjeta de modelo preliminar y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador: sustentación, evaluación final y cierre del curso",
+      "activity": "Presentación de videos demostrativos y sustentación oral de quince minutos ante jurado docente; coevaluación entre equipos y reflexión final sobre el aprendizaje.",
+      "evidence": "Proyecto integrador, tarjeta de modelo y sustentación"
+    }
+  ]
+}

@@ -1,0 +1,1263 @@
+{
+  "name": "Análisis y Visualización de Datos",
+  "slug": "analisis-y-visualizacion-de-datos",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Análisis y Visualización de Datos es un curso de formación específica, de naturaleza teórico-práctica, del tercer ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante transforme datos crudos en evidencia visual confiable para la toma de decisiones, construyendo sobre Fundamentos de Programación en Python, Estadística y Probabilidad y Base de Datos, y preparando el terreno para Aprendizaje Automático I. Comprende cuatro unidades: preparación y transformación de datos con pandas (calidad, datos faltantes, datos ordenados, integración y agregación); análisis exploratorio visual y fundamentos de la percepción gráfica (Cleveland y McGill, Bertin, Tufte, gramática de los gráficos, matplotlib y seaborn); visualización avanzada de series de tiempo, color accesible, mapas coropléticos con geopandas, interactividad con Plotly y ética de la visualización; y diseño de tableros con narrativa de datos en Streamlit. Se trabaja con fuentes abiertas peruanas como el INEI, el BCRP y la Plataforma Nacional de Datos Abiertos, en el marco de la Ley 29733. El curso aporta al perfil del analista de datos la capacidad de preparar, explorar y comunicar datos con rigor técnico, integridad y orientación a la decisión.",
+  "competency": "Prepara, analiza y visualiza conjuntos de datos de fuentes organizacionales y públicas con Python, aplicando criterios de calidad de datos, principios de percepción gráfica y ética de la información, para construir tableros y narrativas de datos reproducibles que sustenten decisiones en contextos empresariales y públicos del Perú, conforme a la normativa de protección de datos personales.",
+  "capacities": [
+    "Prepara y transforma datos de fuentes heterogéneas con pandas, diagnosticando su calidad, tratando faltantes y duplicados, y obteniendo tablas ordenadas, integradas y documentadas mediante pipelines reproducibles.",
+    "Explora conjuntos de datos multivariados con gráficos estadísticos en matplotlib y seaborn, seleccionando codificaciones visuales fundamentadas en la percepción humana y en la gramática de los gráficos.",
+    "Visualiza series de tiempo, datos geoespaciales e incertidumbre con color accesible e interactividad pertinente, identificando y corrigiendo gráficos engañosos con criterios éticos.",
+    "Diseña, construye y sustenta tableros interactivos con narrativa de datos, indicadores pertinentes, gobernanza de la información y reproducibilidad técnica."
+  ],
+  "indicators": [
+    "Ingesta y limpia conjuntos de datos peruanos con parámetros explícitos, y entrega un perfil de calidad antes y después de la limpieza junto con un diario de decisiones.",
+    "Integra tablas con merge validado y reporta conteos y totales antes y después de cada unión, sin pérdida ni duplicación injustificada de registros.",
+    "Selecciona y justifica el tipo de gráfico según la tarea analítica, aplicando el ranking de Cleveland y McGill y los canales de Munzner.",
+    "Rediseña gráficos con problemas de integridad, calculando el factor de mentira y aplicando título-mensaje, color de acento, anotación y fuente.",
+    "Elabora mapas coropléticos con tasas, paletas adecuadas al tipo de variable y tratamiento explícito de datos faltantes y bases pequeñas.",
+    "Verifica la accesibilidad de sus visualizaciones mediante simulación de daltonismo, contraste suficiente y codificación redundante.",
+    "Construye un tablero funcional con filtros, indicadores con ficha técnica y vistas coherentes, validado con al menos dos usuarios externos.",
+    "Sustenta ante un directorio simulado una recomendación basada en datos, con gran idea, estructura SCQA y respuestas fundamentadas a las preguntas."
+  ],
+  "methodology": "El curso aplica metodologías activas en modalidad 100 % virtual. Con aula invertida, el estudiante revisa la lectura y un video breve antes de cada sesión síncrona, que se dedica a laboratorios guiados en Jupyter o Google Colab con datos abiertos peruanos. Cada unidad incluye un caso al estilo del método de casos, discutido en equipos y en plenaria para tomar decisiones sobre calidad de datos, diseño visual y ética. El aprendizaje basado en proyectos articula las tareas de las unidades 1 a 3 como insumos del proyecto integrador: un tablero con narrativa sustentado ante un directorio simulado. La evaluación formativa se realiza mediante cuestionarios con retroalimentación inmediata, revisión por pares con listas de verificación y comentarios del docente sobre los cuadernos. El aula virtual concentra foros, repositorios de código y tutorías asíncronas.",
+  "bibliography": [
+    "McKinney, W. (2022). Python for data analysis: Data wrangling with pandas, NumPy, and Jupyter (3.ª ed.). O'Reilly Media.",
+    "Wickham, H. (2014). Tidy data. Journal of Statistical Software, 59(10), 1-23.",
+    "Tufte, E. R. (2001). The visual display of quantitative information (2.ª ed.). Graphics Press.",
+    "Cleveland, W. S. y McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79(387), 531-554.",
+    "Wilkinson, L. (2005). The grammar of graphics (2.ª ed.). Springer.",
+    "Munzner, T. (2014). Visualization analysis and design. CRC Press.",
+    "Wilke, C. O. (2019). Fundamentals of data visualization: A primer on making informative and compelling figures. O'Reilly Media.",
+    "Cairo, A. (2016). The truthful art: Data, charts, and maps for communication. New Riders.",
+    "Knaflic, C. N. (2015). Storytelling with data: A data visualization guide for business professionals. Wiley.",
+    "Few, S. (2013). Information dashboard design: Displaying data for at-a-glance monitoring (2.ª ed.). Analytics Press."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 20,
+      "description": "Cuatro cuestionarios de unidad con retroalimentación, participación argumentada en el análisis de casos y laboratorios semanales en Python."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1, 2 y 3: pipeline de preparación, informe exploratorio con rediseño y visualización temporal, geoespacial e interactiva."
+    },
+    {
+      "name": "Proyecto integrador",
+      "weight": 30,
+      "description": "Tablero interactivo con documento de diseño, repositorio reproducible e informe de usabilidad y gobernanza, calificado con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 20,
+      "description": "Sustentación ejecutiva del proyecto integrador ante un directorio simulado, con defensa individual de las decisiones técnicas y éticas."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Preparación y transformación de datos con pandas: del dato crudo al dato ordenado",
+      "description": "Al finalizar la unidad, el estudiante ingesta, diagnostica, limpia, reestructura e integra conjuntos de datos abiertos peruanos con pandas mediante flujos reproducibles y documentados, obteniendo datos ordenados y confiables, listos para el análisis exploratorio y la visualización.",
+      "topics": [
+        "Ciclo del análisis de datos y fuentes abiertas del Perú (INEI, BCRP, datos abiertos)",
+        "Ingestión robusta, tipos de datos y diagnóstico de calidad",
+        "Datos faltantes, duplicados y estandarización de valores",
+        "Datos ordenados (tidy data) y reestructuración con melt y pivot",
+        "Integración con merge y agregación con groupby",
+        "Fechas, series de tiempo y pipelines reproducibles"
+      ],
+      "slides": [
+        {
+          "title": "El ciclo del análisis de datos: de la pregunta a la decisión",
+          "bullets": [
+            "Wickham y Grolemund proponen un ciclo de seis etapas: importar, ordenar, transformar, visualizar, modelar y comunicar; las tres centrales se repiten iterativamente.",
+            "CRISP-DM (Chapman et al., 2000) antepone la comprensión del negocio y de los datos al modelado: sin una pregunta clara no hay análisis útil.",
+            "Una buena pregunta analítica es específica, medible y vinculada a una decisión: «¿en qué provincias conviene abrir dos centros de distribución en 2027?».",
+            "Este curso conecta Estadística y Probabilidad y Base de Datos con Aprendizaje Automático I: los modelos heredan la calidad de la preparación."
+          ],
+          "notes": "Inicie preguntando qué decisión real se tomó recientemente en sus centros de trabajo con datos y qué datos faltaron. Presente el ciclo de Wickham y Grolemund de R for Data Science y explique que, aunque nació en el ecosistema R, es independiente del lenguaje: en Python lo implementaremos con pandas, matplotlib, seaborn y plotly. Contraste con CRISP-DM, el estándar industrial cuyas fases son comprensión del negocio, comprensión de los datos, preparación, modelado, evaluación y despliegue. Insista en que la visualización no es el adorno final del análisis, sino una herramienta de pensamiento que aparece en todas las etapas. Pida a cada estudiante reformular una pregunta vaga, como «¿cómo van las ventas?», en una pregunta analítica vinculada a una decisión, y comente dos o tres ejemplos en vivo. Cierre anunciando el producto final del curso: un tablero con narrativa de datos sustentado ante un directorio simulado."
+        },
+        {
+          "title": "Fuentes de datos abiertos del Perú para el analista",
+          "bullets": [
+            "INEI: microdatos de ENAHO, ENDES y Censos Nacionales 2017, con diccionarios de variables y factores de expansión obligatorios para estimar.",
+            "BCRP: series estadísticas mensuales, trimestrales y anuales de inflación, tipo de cambio, PBI y tasas de interés, descargables en formatos tabulares.",
+            "Plataforma Nacional de Datos Abiertos: conjuntos de MINSA, municipalidades, SUNAT, OSIPTEL y otras entidades, con licencias y metadatos de calidad variable.",
+            "MEF Consulta Amigable: ejecución presupuestal por nivel de gobierno, pliego y genérica de gasto, útil para analizar la gestión pública.",
+            "Antes de usar una fuente, revise sus metadatos: unidad de análisis, periodicidad, cobertura, fecha de corte, licencia y cambios metodológicos."
+          ],
+          "notes": "Muestre en pantalla compartida cómo está organizada cada fuente, sin descargar aún. Explique que los microdatos del INEI vienen por módulos, por ejemplo el módulo Sumaria de la ENAHO con ingresos y gastos del hogar, y que cada registro tiene un factor de expansión: un hogar de la muestra representa a cientos de hogares de la población. Recuerde que en Estadística y Probabilidad vieron por qué ignorar ese factor sesga las estimaciones. En el BCRP destaque que cada serie tiene un código único y notas metodológicas; un cambio de año base del índice de precios rompe la comparabilidad si no se empalma. Pregunte: ¿qué riesgo hay en usar un conjunto de datos abiertos de una municipalidad sin revisar su fecha de corte? Concluya que la primera competencia del analista es leer los metadatos con la misma atención que los datos."
+        },
+        {
+          "title": "Ingestión robusta con pandas: read_csv sin sorpresas",
+          "bullets": [
+            "Codificación: muchos archivos del Estado vienen en latin-1 o cp1252; declare encoding explícito para no corromper tildes ni la letra ñ.",
+            "Separador y decimales: sep=';', decimal=',' y thousands='.' cuando el archivo se exportó desde una hoja de cálculo con configuración regional hispana.",
+            "Claves como texto: dtype={'ubigeo': 'string', 'ruc': 'string'} evita perder ceros iniciales, como en el ubigeo 010101 de Chachapoyas.",
+            "Faltantes y fechas: na_values=['-', 'S/D', ''] y fechas con formato explícito; en archivos grandes, usecols y chunksize controlan la memoria."
+          ],
+          "notes": "Haga una demostración en vivo con un CSV mal leído: cargue un archivo con ubigeos sin especificar dtype y muestre cómo 010101 se convierte en el entero 10101, lo que rompe cualquier cruce posterior con la tabla de límites del INEI. Luego repita la lectura con los parámetros correctos. Explique que el ubigeo tiene seis dígitos, dos para departamento, dos para provincia y dos para distrito, y que el RUC tiene once dígitos con un dígito verificador. Muestre que la opción decimal=',' es necesaria cuando las cifras vienen como 1.234,56. Pida a los estudiantes que identifiquen, en un archivo de muestra, tres problemas de ingestión antes de ejecutar cualquier análisis. Subraye la regla de oro de la unidad: nunca se modifica el archivo crudo a mano; toda corrección debe quedar escrita en código para que pueda auditarse y repetirse."
+        },
+        {
+          "title": "Tipos de datos en pandas y uso eficiente de memoria",
+          "bullets": [
+            "object almacena referencias a objetos Python y es lento; prefiera 'string', 'category', 'Int64' y 'boolean', que admiten el valor pd.NA.",
+            "category reduce drásticamente la memoria en columnas repetitivas, como departamento: 25 valores distintos repetidos en millones de filas.",
+            "Verifique con df.info() y df.memory_usage(deep=True); convierta con astype, pd.to_numeric(errors='coerce') y pd.to_datetime.",
+            "Un tipo incorrecto es un error silencioso: montos leídos como texto se concatenan en lugar de sumarse."
+          ],
+          "notes": "Explique que pandas se apoya en arreglos de NumPy y que el tipo object es un contenedor genérico que guarda punteros, por lo que ocupa más memoria y se procesa más lento. Demuestre con un conjunto de un millón de filas cómo la columna departamento pasa de decenas de megabytes a menos de uno al convertirla en category. Presente los tipos con soporte para valores nulos, como Int64 con mayúscula, que evitan que una columna entera se convierta en float solo porque tiene un faltante. Muestre el uso de pd.to_numeric con errors='coerce' para detectar valores no numéricos y pida contar cuántos se convirtieron en NA: ese número es en sí mismo un hallazgo de calidad. Pregunte a la clase: si una columna de montos aparece como object, ¿qué causas podrían explicarlo? Respuestas esperadas: separador de miles, símbolo de moneda o celdas con texto como «anulado»."
+        },
+        {
+          "title": "Dimensiones de la calidad de datos y su medición",
+          "bullets": [
+            "Completitud: porcentaje de valores no nulos por variable y por registro; documente umbrales de aceptación para cada campo crítico.",
+            "Unicidad y validez: duplicados por clave natural y cumplimiento de reglas, como DNI de 8 dígitos o RUC de 11 con dígito verificador.",
+            "Consistencia y exactitud: coherencia entre campos (la fecha de entrega es posterior a la del pedido) y contraste con fuentes de referencia.",
+            "Oportunidad: antigüedad del dato respecto de la decisión; un padrón de hace dos años puede ser inválido para una campaña actual.",
+            "El resultado se resume en un perfil de calidad reproducible que acompaña a todo conjunto de datos entregado."
+          ],
+          "notes": "Presente las dimensiones de calidad difundidas por la comunidad de gestión de datos de DAMA International y enfatice que la calidad no es absoluta, sino relativa al uso: un dato con 5 % de faltantes puede ser aceptable para un tablero de tendencias y crítico para la facturación. Muestre una función que, para cada columna, calcule tipo, porcentaje de nulos, número de valores distintos y ejemplos. Ilustre la regla de validez del RUC: los dos primeros dígitos indican el tipo de contribuyente, 10 para personas naturales y 20 para personas jurídicas, y el último es un dígito verificador calculado con pesos. Pida que propongan dos reglas de consistencia para un conjunto de ventas, como montos positivos o fechas dentro del periodo analizado. Cierre indicando que el perfil de calidad antes y después de la limpieza será un entregable obligatorio de la tarea de la unidad."
+        },
+        {
+          "title": "Datos faltantes: mecanismos de Rubin y estrategias de tratamiento",
+          "bullets": [
+            "MCAR: la ausencia no depende de ningún dato; eliminar filas reduce la precisión, pero no introduce sesgo.",
+            "MAR: depende de variables observadas, como edad o región; la imputación condicionada a esas variables corrige buena parte del sesgo.",
+            "MNAR: depende del propio valor faltante, como ingresos altos no declarados; ninguna imputación simple lo resuelve sin supuestos explícitos.",
+            "Estrategias: eliminación, imputación por grupo, indicador de faltante e imputación múltiple; documente siempre proporción, patrón y decisión."
+          ],
+          "notes": "Introduzca la tipología de Donald Rubin, publicada en 1976 y base de la literatura moderna sobre datos faltantes. Use un ejemplo peruano: en las encuestas de hogares, los ingresos más altos tienden a subdeclararse o no reportarse, un mecanismo no aleatorio que sesga hacia abajo el ingreso promedio. Contraste con una falla de sensor que pierde lecturas al azar, ejemplo típico de MCAR. Muestre en código cómo explorar patrones: df.isna().mean() para las proporciones y una tabla cruzada entre la ausencia de una variable y la región para sospechar un mecanismo MAR. Advierta que imputar con la media reduce artificialmente la varianza y distorsiona las correlaciones, algo que afectará a los modelos de Aprendizaje Automático I. Pregunte: si el 30 % de los registros de un hospital no tiene el peso del paciente, ¿qué haría antes de imputar? Oriente hacia la investigación del proceso que genera el dato."
+        },
+        {
+          "title": "Duplicados, valores inválidos y estandarización de categorías",
+          "bullets": [
+            "drop_duplicates(subset=['ruc', 'serie', 'numero'], keep='first') elimina duplicados por clave natural, no por fila completa.",
+            "Normalice texto en cadena: str.strip(), str.upper(), eliminación de tildes con unicodedata y colapso de espacios múltiples.",
+            "Mapee variantes a un catálogo controlado: 'LIMA METROP.', 'Lima Metropolitana' y 'LIMA MET' deben converger en una sola categoría.",
+            "Valide con expresiones regulares, como r'^\\d{8}$' para el DNI, y aísle los registros inválidos en una tabla de cuarentena."
+          ],
+          "notes": "Explique que los duplicados exactos son la excepción: en la práctica aparecen duplicados lógicos, como el mismo cliente registrado con y sin tilde, o el mismo comprobante cargado dos veces por una reintegración del sistema. Demuestre con un pequeño DataFrame cómo la normalización de texto reduce de doce a cuatro las variantes de un departamento. Recomiende mantener el diccionario de mapeo en un archivo CSV versionado, en lugar de reglas dispersas en el código, para que el equipo pueda auditarlo. Presente la idea de tabla de cuarentena: en lugar de borrar registros inválidos, se separan con el motivo del rechazo para revisarlos con el área de negocio. Pregunte a la clase: ¿qué peligro hay en eliminar duplicados considerando solo el nombre del cliente? Respuesta esperada: los homónimos legítimos serían borrados y las ventas quedarían subestimadas."
+        },
+        {
+          "title": "Datos ordenados (tidy data): la estructura que facilita el análisis",
+          "bullets": [
+            "Wickham (2014) define tres reglas: cada variable es una columna, cada observación es una fila y cada unidad observacional forma una tabla.",
+            "Desorden frecuente: encabezados que son valores, como cuadros estadísticos con los años 2015 a 2024 dispuestos como columnas.",
+            "Otros desórdenes: varias variables en una columna ('LIMA_2023'), variables en filas y columnas a la vez o unidades mezcladas en una tabla.",
+            "El formato largo facilita agrupar, filtrar y graficar; el formato ancho se reserva para presentar tablas a personas."
+          ],
+          "notes": "Presente el artículo de Hadley Wickham en el Journal of Statistical Software como uno de los textos más influyentes de la ciencia de datos aplicada. Relacione las tres reglas con la tercera forma normal vista en Base de Datos: los datos ordenados son, en esencia, la normalización expresada en el lenguaje del analista. Proyecte un cuadro típico de un anuario estadístico, con departamentos en filas y años en columnas, y pregunte cuántas variables contiene. La respuesta es tres: departamento, año y población; sin embargo, la tabla tiene once columnas. Explique que seaborn y plotly esperan datos en formato largo, por lo que ordenar los datos no es un capricho estético, sino un requisito técnico de las herramientas de visualización. Proponga un ejercicio breve: cada estudiante diagnostica el desorden de una tabla real y propone su versión ordenada."
+        },
+        {
+          "title": "Reestructurar tablas con melt, pivot y pivot_table",
+          "bullets": [
+            "Paso 1: df.melt(id_vars=['ubigeo', 'departamento'], var_name='anio', value_name='poblacion') convierte el formato ancho en largo.",
+            "Paso 2: convierta la nueva columna con astype(int) y verifique que filas finales = filas iniciales × columnas fundidas.",
+            "pivot exige pares índice-columna únicos; pivot_table agrega duplicados con aggfunc ('sum', 'mean') y completa vacíos con fill_value.",
+            "str.split(expand=True) separa variables combinadas; stack y unstack operan sobre índices jerárquicos (MultiIndex)."
+          ],
+          "notes": "Realice la transformación en vivo con un cuadro de población por departamento y año. Antes de ejecutar melt, pida a los estudiantes predecir cuántas filas tendrá el resultado: 25 departamentos por 10 años dan 250 filas. Esta verificación aritmética es un hábito de control de calidad que deben adoptar en cada transformación. Explique la diferencia entre pivot, que falla si encuentra duplicados y por eso actúa como validación, y pivot_table, que agrega en silencio: si no se esperaba agregación, pivot_table puede ocultar un error de duplicidad. Muestre un caso con una columna combinada, como 'LIMA_2023', y su separación con str.split. Pregunte: ¿cuándo conviene volver al formato ancho? Respuesta: para un reporte destinado a lectura humana o para calcular diferencias entre años ubicados en columnas contiguas."
+        },
+        {
+          "title": "Integrar tablas con merge: claves, cardinalidad y auditoría",
+          "bullets": [
+            "Tipos de unión: inner conserva coincidencias, left conserva todas las filas de la tabla principal y outer conserva todo.",
+            "validate='m:1' lanza un error si la tabla de dimensión tiene claves duplicadas y evita la explosión silenciosa de filas.",
+            "indicator=True agrega la columna _merge para auditar qué registros quedaron sin pareja (left_only, right_only).",
+            "Normalice las claves antes de unir: str.zfill(6) para el ubigeo, eliminación de espacios y tipos idénticos en ambas tablas."
+          ],
+          "notes": "Conecte con las reuniones INNER y LEFT de SQL vistas en Base de Datos: merge es su equivalente en pandas, pero aquí el foco es la auditoría. Muestre un caso en el que la tabla de distritos tiene un ubigeo repetido por error y, tras el merge, las ventas totales aumentan un 3 %: nadie lo nota si no compara los totales antes y después. Introduzca el patrón de control: contar filas y sumar montos antes y después de cada unión, y usar validate para que pandas falle de forma explícita. Con indicator=True calcule cuántos registros quedaron como left_only y analice por qué; con frecuencia son distritos creados después de la versión de la tabla de referencia. Pregunte: si el 2 % de las ventas no encuentra su distrito, ¿las descarta, las agrupa como «sin ubicar» o corrige la tabla? Discuta los criterios con la clase."
+        },
+        {
+          "title": "Dividir-aplicar-combinar: agregaciones con groupby",
+          "bullets": [
+            "Wickham (2011) formaliza la estrategia: dividir los datos por grupos, aplicar una función a cada grupo y combinar los resultados.",
+            "Agregaciones nombradas: df.groupby('region').agg(ventas=('monto', 'sum'), tickets=('id', 'nunique')).",
+            "transform devuelve un resultado alineado con cada fila: útil para participaciones, como monto / total del grupo.",
+            "Promedio ponderado con factores de expansión: Σ(wᵢ·xᵢ) / Σwᵢ; el promedio simple de microdatos de encuestas está sesgado."
+          ],
+          "notes": "Explique que groupby es una de las operaciones más usadas del análisis de datos y que equivale a GROUP BY de SQL, con más flexibilidad. Distinga tres métodos: agg reduce cada grupo a una fila, transform conserva la forma original y filter descarta grupos completos según una condición, por ejemplo, regiones con menos de 30 observaciones. Muestre el cálculo del ingreso promedio por departamento con microdatos de una encuesta, primero sin ponderar y luego ponderando con el factor de expansión, y compare los resultados. La diferencia puede cambiar el orden de los departamentos y, por tanto, una decisión de política pública. Pregunte a la clase qué método usarían para calcular la participación de cada tienda en las ventas de su región y por qué no sirve agg directamente. Respuesta: transform, porque mantiene una fila por tienda."
+        },
+        {
+          "title": "Fechas y series de tiempo en pandas",
+          "bullets": [
+            "pd.to_datetime(col, format='%d/%m/%Y') evita la ambigüedad de 03/04 como 3 de abril o 4 de marzo; no confíe en la inferencia automática.",
+            "Con un DatetimeIndex: resample('ME').sum() agrega por mes, rolling(3).mean() suaviza y dt.dayofweek extrae patrones semanales.",
+            "Variación interanual: serie.pct_change(12) en datos mensuales compara con el mismo mes del año anterior y neutraliza la estacionalidad.",
+            "Cuide la zona horaria (America/Lima, UTC−5) al combinar registros de sistemas en la nube que almacenan en UTC."
+          ],
+          "notes": "Muestre un ejemplo con transacciones diarias de un comercio electrónico. Primero, el error clásico: un archivo con fechas en formato día/mes leído como mes/día, que produce ventas desplazadas o en fechas inexistentes. Luego use resample para pasar de diario a mensual y rolling para una media móvil de tres meses. Explique la lógica de la variación interanual, que el BCRP y el INEI usan para reportar la inflación: comparar diciembre con diciembre elimina el efecto estacional de campañas como Navidad o el inicio del año escolar. Mencione que el alias 'ME' corresponde a fin de mes en las versiones recientes de pandas. Pregunte: ¿por qué un crecimiento mensual de ventas de 40 % en diciembre no indica necesariamente una buena gestión? Respuesta: por la estacionalidad; la comparación pertinente es con diciembre del año anterior."
+        },
+        {
+          "title": "Pipelines reproducibles: encadenamiento de métodos y funciones",
+          "bullets": [
+            "Encadene operaciones con assign, query y pipe para que cada paso sea legible y no dependa de variables intermedias modificadas.",
+            "Encapsule pasos en funciones puras con docstring: limpiar_ubigeo(df), estandarizar_texto(df, cols), validar_montos(df).",
+            "Separe carpetas raw, interim y processed: los datos crudos son inmutables y todo resultado se regenera ejecutando el código.",
+            "Registre supuestos y decisiones en un diario de limpieza: qué se cambió, cuántas filas afectó y por qué."
+          ],
+          "notes": "Contraste dos cuadernos: uno con celdas ejecutadas en desorden y variables sobrescritas, y otro con un pipeline encadenado. Pregunte cuál podrían auditar seis meses después. Explique que el estado oculto de Jupyter es una de las principales fuentes de resultados irreproducibles; la regla práctica es reiniciar el kernel y ejecutar todo antes de entregar. Muestre el patrón df.pipe(limpiar_ubigeo).pipe(estandarizar_texto, cols=['distrito']) y cómo facilita escribir pruebas con assert para cada función, algo que practicaron en Fundamentos de Programación en Python. Presente la estructura de carpetas inspirada en las plantillas de proyectos de ciencia de datos y su lógica: lo crudo no se toca, lo intermedio se regenera y lo procesado es lo que se analiza. Pida que cada estudiante convierta tres celdas sueltas de un cuaderno propio en funciones reutilizables durante el laboratorio."
+        },
+        {
+          "title": "Ética y protección de datos personales durante la preparación",
+          "bullets": [
+            "La Ley 29733 exige finalidad, proporcionalidad y seguridad; los datos de salud son sensibles y requieren protección reforzada.",
+            "Minimización: conserve solo las columnas necesarias para la pregunta; elimine DNI, nombres y teléfonos al inicio del pipeline.",
+            "Seudonimizar con un hash no equivale a anonimizar: la combinación de edad, sexo y distrito puede reidentificar a una persona.",
+            "Suprima o agrupe celdas con menos de cinco casos antes de publicar tablas o gráficos desagregados por territorio."
+          ],
+          "notes": "Recuerde que la Ley 29733 de Protección de Datos Personales ya fue estudiada en cursos previos; aquí se aplica al trabajo cotidiano del analista. Explique la diferencia entre seudonimización, en la que existe una llave o tabla que permite revertir el proceso, y anonimización, que debe hacer irreversible la identificación. Cite el trabajo de Latanya Sweeney, que mostró que una alta proporción de la población estadounidense podía identificarse únicamente con código postal, fecha de nacimiento y sexo. Trasládelo al Perú: en un distrito pequeño de la sierra, un registro con edad, sexo y diagnóstico puede identificar a una persona concreta. Proponga una discusión: un hospital comparte con usted una base de atenciones para un tablero; ¿qué columnas eliminaría o agregaría antes de empezar? Cierre con el principio de que la ética es un requisito técnico más del pipeline."
+        }
+      ],
+      "reading": {
+        "title": "Del dato crudo al dato ordenado: preparación reproducible con pandas",
+        "minutes": 35,
+        "content": "## La preparación como fase analítica, no como trámite\n\nEn la práctica profesional, la mayor parte de los errores que terminan en un tablero o en un modelo no provienen de algoritmos sofisticados, sino de decisiones pequeñas tomadas al leer, limpiar y combinar datos. El ciclo propuesto por Wickham y Grolemund —importar, ordenar, transformar, visualizar, modelar y comunicar— coloca la preparación al inicio porque condiciona todo lo que sigue. CRISP-DM, el estándar industrial descrito por Chapman y colaboradores en 2000, insiste en lo mismo: la comprensión y la preparación de los datos preceden al modelado y suelen consumir la mayor parte del esfuerzo de un proyecto.\n\n## Ingestión: los detalles que arruinan un análisis\n\nLos archivos publicados por entidades peruanas presentan problemas recurrentes: codificación latin-1, separador punto y coma, decimales con coma y códigos con ceros iniciales. El ubigeo del INEI tiene seis dígitos (departamento, provincia y distrito); si pandas lo interpreta como número, el distrito de Chachapoyas, 010101, se convierte en 10101 y deja de coincidir con cualquier tabla de referencia.\n\n```python\nimport pandas as pd\n\nventas = pd.read_csv(\n    \"data/raw/ventas_2025.csv\",\n    sep=\";\", encoding=\"latin-1\", decimal=\",\", thousands=\".\",\n    dtype={\"ubigeo\": \"string\", \"ruc\": \"string\"},\n    na_values=[\"-\", \"S/D\", \"\"],\n)\nventas[\"fecha\"] = pd.to_datetime(ventas[\"fecha\"], format=\"%d/%m/%Y\", errors=\"coerce\")\nprint(ventas[\"fecha\"].isna().sum(), \"fechas no interpretables\")\n```\n\nEl argumento `errors=\"coerce\"` no oculta el problema: lo convierte en un faltante contable. Ese conteo es el primer hallazgo del perfil de calidad.\n\n## Diagnóstico de calidad\n\nLa calidad de datos se evalúa por dimensiones: completitud, unicidad, validez, consistencia, exactitud y oportunidad. Una función de perfilado aplica el mismo diagnóstico a cualquier tabla:\n\n```python\ndef perfil(df: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"Resume tipo, porcentaje de nulos y cardinalidad de cada columna.\"\"\"\n    return pd.DataFrame({\n        \"tipo\": df.dtypes.astype(str),\n        \"pct_nulos\": (df.isna().mean() * 100).round(2),\n        \"distintos\": df.nunique(),\n    }).sort_values(\"pct_nulos\", ascending=False)\n\nduplicados = ventas.duplicated(subset=[\"ruc\", \"serie\", \"numero\"]).sum()\n# regla simplificada: personas naturales (10) y jurídicas (20)\nruc_invalidos = (~ventas[\"ruc\"].str.fullmatch(r\"(10|20)\\d{9}\", na=False)).sum()\n```\n\nLas reglas de validez se derivan del negocio: un RUC tiene once dígitos; una fecha de entrega no puede preceder a la del pedido.\n\n## Datos faltantes: primero el mecanismo, después la técnica\n\nRubin (1976) distingue tres mecanismos. Si la ausencia es completamente aleatoria (MCAR), eliminar registros solo reduce precisión. Si depende de variables observadas (MAR), por ejemplo la región, conviene imputar dentro de grupos. Si depende del propio valor (MNAR), como ingresos altos no declarados, cualquier imputación simple sesga los resultados y el analista debe declarar sus supuestos. Imputar con la media global es una mala opción por defecto: reduce la varianza y atenúa las correlaciones.\n\n```python\nventas[\"monto_imputado\"] = ventas[\"monto\"].isna()     # se conserva la huella\nventas[\"monto\"] = ventas.groupby(\"canal\")[\"monto\"].transform(\n    lambda s: s.fillna(s.median())\n)\n```\n\n## Datos ordenados y reestructuración\n\nWickham (2014) define los datos ordenados con tres reglas: cada variable en una columna, cada observación en una fila y cada unidad observacional en una tabla. Los anuarios estadísticos suelen violar la primera al colocar los años como columnas. La función `melt` corrige el problema:\n\n```python\nlarga = poblacion.melt(id_vars=[\"ubigeo\", \"departamento\"],\n                       var_name=\"anio\", value_name=\"poblacion\").astype({\"anio\": int})\nassert len(larga) == len(poblacion) * 10    # diez años fundidos\n```\n\n## Integración y agregación auditadas\n\nAl unir tablas, el riesgo principal es la explosión silenciosa de filas cuando la tabla de referencia tiene claves duplicadas. El parámetro `validate` convierte ese riesgo en un error explícito, e `indicator` cuantifica los registros huérfanos:\n\n```python\nbase = ventas.merge(distritos, on=\"ubigeo\", how=\"left\", validate=\"m:1\", indicator=True)\nprint(base[\"_merge\"].value_counts(normalize=True))\n```\n\nPara agregar se aplica la estrategia dividir-aplicar-combinar (Wickham, 2011). Con microdatos de encuestas como la ENAHO, el promedio debe ponderarse con el factor de expansión $w_i$:\n\n$$\\bar{x}_w = \\frac{\\sum_i w_i x_i}{\\sum_i w_i}$$\n\n```python\nenaho[\"ing_pond\"] = enaho[\"ingreso\"] * enaho[\"factor\"]\nres = enaho.groupby(\"departamento\")[[\"ing_pond\", \"factor\"]].sum()\nres[\"ingreso_medio\"] = res[\"ing_pond\"] / res[\"factor\"]\n```\n\n## Cierre: reproducibilidad como garantía\n\nUn análisis es reproducible cuando otra persona obtiene los mismos resultados ejecutando el código sobre los datos crudos. Para lograrlo, los archivos originales se mantienen inmutables, cada transformación vive en una función documentada y las decisiones —qué se imputó, qué se descartó y por qué— se registran en un diario de limpieza. Esta disciplina, junto con la minimización de datos personales que exige la Ley 29733, distingue a un analista confiable de uno que solo produce gráficos."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Misti y el reporte que no cuadraba",
+        "content": "**Distribuidora Misti S.A.C.** es una empresa arequipeña de distribución de productos de consumo masivo con 18 años en el mercado, 2 400 bodegas clientes en el sur del país y una tienda virtual lanzada en 2024 (los nombres y cifras de la organización son ficticios con fines pedagógicos). En agosto de 2026, la gerencia general encargó a Lucía Quispe, analista de datos recién incorporada, un reporte de ventas del primer semestre por provincia y canal para la sesión de directorio del 15 de setiembre, en la que se decidirá en qué provincias abrir dos nuevos centros de distribución.\n\nLucía recibió tres archivos:\n\n| Fuente | Registros | Observaciones |\n|---|---|---|\n| ERP de ventas a bodegas (CSV, latin-1) | 1 180 000 | Fechas día/mes/año; montos con coma decimal |\n| Tienda virtual (JSON) | 214 000 | Fechas en UTC; montos en soles y en dólares |\n| Maestro de clientes (Excel) | 2 610 | Ubigeo numérico; 210 clientes duplicados con y sin tilde |\n\nEn su primer diagnóstico encontró que el 7,4 % de las ventas del ERP no tenía ubigeo, que el 3,1 % de los comprobantes aparecía dos veces por una reintegración del sistema ocurrida en marzo y que 38 000 registros de la tienda virtual tenían montos en dólares sin el tipo de cambio de la fecha. Además, al unir ventas con el maestro de clientes, el total del semestre subía de S/ 96,2 millones a S/ 99,8 millones, sin que nadie pudiera explicar la diferencia.\n\nEl gerente comercial, Raúl Cáceres, le pidió «no complicarse»: borrar los registros sin ubigeo, convertir los dólares con un tipo de cambio promedio de 3,75 y entregar el reporte en tres días. La jefa de finanzas, en cambio, advirtió que el directorio compararía las cifras con los estados financieros auditados y que cualquier diferencia mayor al 1 % pondría en duda todo el análisis.\n\nLucía sospecha que los registros sin ubigeo no son aleatorios: la mayoría proviene de bodegas captadas en 2025 en Juliaca y Puno por un vendedor que no registraba la dirección completa. Si los elimina, esas provincias aparecerán con menos ventas de las reales, justamente donde se evalúa abrir un centro de distribución. Imputar la provincia a partir de la ruta del vendedor parece viable, pero requiere dos días adicionales y la validación del área comercial.\n\nCon el plazo encima, Lucía debe decidir qué limpiar, qué imputar, qué documentar y cómo comunicar las limitaciones sin perder la confianza del directorio.",
+        "questions": [
+          "¿Qué explica el aumento de S/ 96,2 a S/ 99,8 millones tras la unión con el maestro de clientes y cómo lo detectaría y corregiría con pandas?",
+          "Según la tipología de Rubin, ¿qué mecanismo de faltantes presenta el ubigeo y qué sesgo produciría eliminar esos registros en la decisión del directorio?",
+          "¿Es aceptable convertir los dólares con un tipo de cambio promedio? Proponga una alternativa con series del BCRP y estime su impacto en el total.",
+          "Diseñe un plan de limpieza priorizado para los tres días disponibles e indique qué decisiones registraría en el diario de limpieza.",
+          "¿Cómo comunicaría al directorio las limitaciones del reporte sin restarle utilidad para decidir la ubicación de los centros de distribución?"
+        ]
+      },
+      "assignment": {
+        "title": "Pipeline de preparación y perfil de calidad de un conjunto de datos abiertos peruano",
+        "instructions": "**Objetivo:** construir un pipeline reproducible en pandas que transforme un conjunto de datos abiertos peruano en una tabla ordenada, validada e integrada con una tabla de referencia.\n\n**Qué hacer:**\n1. Elija un conjunto de la Plataforma Nacional de Datos Abiertos, del INEI o del BCRP con al menos 10 000 filas y una clave geográfica o temporal (ubigeo o fecha).\n2. Ingeste el archivo con parámetros explícitos (codificación, separador, tipos y faltantes) y justifique cada uno.\n3. Elabore un perfil de calidad antes y después de la limpieza que cubra completitud, unicidad, validez y consistencia, con al menos tres reglas de negocio propias.\n4. Trate faltantes y duplicados argumentando el mecanismo probable según Rubin; conserve indicadores de imputación.\n5. Reestructure los datos al formato ordenado e intégrelos con una tabla de referencia (por ejemplo, población por distrito) usando `merge` con `validate` e `indicator`; reporte filas y totales antes y después.\n6. Produzca dos agregaciones con `groupby` que respondan una pregunta analítica formulada por usted.\n\n**Qué entregar:** un cuaderno Jupyter que se ejecute de principio a fin tras reiniciar el kernel, con funciones documentadas; un diario de limpieza de una página en PDF; y la tabla final en CSV o Parquet.\n\n**Formato:** carpetas `raw`, `interim` y `processed`; el código y los datos entregados no deben contener datos personales identificables.\n\n**Criterios:** rigor del diagnóstico, pertinencia de las decisiones de limpieza, corrección y auditoría de la integración, reproducibilidad y documentación.",
+        "rubric": [
+          {
+            "name": "Ingestión explícita y perfil de calidad antes y después",
+            "points": 5
+          },
+          {
+            "name": "Tratamiento justificado de faltantes, duplicados e inválidos",
+            "points": 5
+          },
+          {
+            "name": "Reestructuración e integración auditada con validate e indicator",
+            "points": 5
+          },
+          {
+            "name": "Reproducibilidad, funciones documentadas y diario de limpieza",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: preparación y transformación de datos",
+        "questions": [
+          {
+            "prompt": "Al leer un CSV del INEI, el ubigeo 010101 aparece como 10101 y el cruce con la tabla de distritos pierde todos los registros de Amazonas. ¿Cuál es la corrección más adecuada?",
+            "options": [
+              "Leer la columna con dtype='string' y, si el cero ya se perdió, aplicar str.zfill(6)",
+              "Convertir también a entero el ubigeo de la tabla de distritos",
+              "Eliminar los registros de Amazonas porque no tienen pareja válida",
+              "Usar how='outer' en el merge para conservar todos los registros"
+            ],
+            "correct": 0,
+            "explanation": "El ubigeo es un código, no una cantidad: debe tratarse como texto de seis dígitos. Convertir ambas tablas a entero perpetúa un tipo incorrecto que fallará con otras fuentes, y outer no corrige la clave."
+          },
+          {
+            "prompt": "En una encuesta, los hogares de mayores ingresos tienden a no declarar su ingreso. ¿Qué mecanismo de datos faltantes describe esta situación y cuál es su implicancia?",
+            "options": [
+              "MCAR: la ausencia es aleatoria y basta con eliminar los registros incompletos",
+              "MAR: depende solo de la región, por lo que imputar por región elimina todo el sesgo",
+              "MNAR: la ausencia depende del propio valor y la imputación simple subestimará el ingreso promedio",
+              "No es un problema de faltantes, sino de valores atípicos que deben eliminarse"
+            ],
+            "correct": 2,
+            "explanation": "Cuando la probabilidad de faltar depende del valor no observado, el mecanismo es MNAR. Eliminar o imputar con los promedios de quienes sí responden sesga a la baja, porque quienes faltan tienen ingresos sistemáticamente mayores."
+          },
+          {
+            "prompt": "Tras unir ventas (1 200 000 filas) con un maestro de clientes usando how='left', el resultado tiene 1 236 000 filas. ¿Qué indica y qué parámetro lo habría detectado?",
+            "options": [
+              "Registros sin pareja en el maestro; indicator=True los habría eliminado",
+              "Claves duplicadas en el maestro; validate='m:1' habría lanzado un error",
+              "Un error de codificación; encoding='latin-1' lo habría evitado",
+              "Un comportamiento normal de la unión izquierda que no requiere revisión"
+            ],
+            "correct": 1,
+            "explanation": "Una unión izquierda solo aumenta filas si una clave de la tabla derecha aparece varias veces. validate='m:1' exige unicidad en la tabla de dimensión y falla explícitamente; indicator solo marca el origen de cada fila, no elimina nada."
+          },
+          {
+            "prompt": "Un cuadro tiene departamentos en filas y columnas de 2015 a 2024 con la población. ¿Qué operación lo convierte en datos ordenados y cuántas filas tendrá con 25 departamentos?",
+            "options": [
+              "pivot con columns='anio'; 25 filas",
+              "pivot_table con aggfunc='sum'; 10 filas",
+              "stack sobre las filas; 35 filas",
+              "melt con var_name='anio'; 250 filas"
+            ],
+            "correct": 3,
+            "explanation": "Los años son valores de una variable, no variables. melt funde las diez columnas en dos (anio y poblacion), y el resultado tiene 25 × 10 = 250 observaciones: una por departamento y año."
+          },
+          {
+            "prompt": "Necesita una columna con la participación de cada tienda en las ventas totales de su región, conservando una fila por tienda. ¿Qué expresión es correcta?",
+            "options": [
+              "df['monto'] / df.groupby('region')['monto'].transform('sum')",
+              "df.groupby('region')['monto'].agg('sum')",
+              "df.groupby('region').filter(lambda g: g['monto'].sum() > 0)",
+              "df.pivot_table(index='region', values='monto', aggfunc='mean')"
+            ],
+            "correct": 0,
+            "explanation": "transform devuelve el total regional alineado con cada fila original, lo que permite dividir elemento a elemento. agg reduce a una fila por región y filter conserva o descarta grupos completos sin calcular participaciones."
+          },
+          {
+            "prompt": "Con ventas mensuales de una tienda, diciembre muestra un crecimiento de 45 % respecto de noviembre. ¿Qué cálculo permite evaluar mejor el desempeño de diciembre?",
+            "options": [
+              "La media móvil de tres meses con rolling(3)",
+              "La suma acumulada del año con cumsum()",
+              "La variación interanual con pct_change(12) frente a diciembre del año anterior",
+              "La variación mensual con pct_change(1), que ya es suficiente"
+            ],
+            "correct": 2,
+            "explanation": "Diciembre tiene estacionalidad por las campañas navideñas; compararlo con noviembre confunde estacionalidad con desempeño. La variación interanual compara meses equivalentes, como hacen el INEI y el BCRP con sus indicadores mensuales."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Análisis exploratorio visual y fundamentos de la percepción gráfica",
+      "description": "Al finalizar la unidad, el estudiante explora conjuntos de datos multivariados con gráficos estadísticos construidos en matplotlib y seaborn, y selecciona codificaciones visuales fundamentadas en la percepción humana y en la gramática de los gráficos para revelar patrones, anomalías y relaciones.",
+      "topics": [
+        "Análisis exploratorio visual de distribuciones y relaciones multivariadas",
+        "Percepción gráfica: Cleveland y McGill, Bertin, atributos preatentivos y Gestalt",
+        "Principios de Tufte: proporción datos-tinta, chartjunk y factor de mentira",
+        "Gramática de los gráficos, matplotlib orientado a objetos y seaborn",
+        "Selección del gráfico según la tarea analítica y rediseño explicativo"
+      ],
+      "slides": [
+        {
+          "title": "Graficar para pensar: del resumen numérico al análisis visual",
+          "bullets": [
+            "Tukey (1977): el análisis exploratorio busca lo inesperado; los gráficos generan hipótesis que luego se contrastan formalmente.",
+            "Matejka y Fitzmaurice (2017) crearon el Datasaurus Dozen: trece conjuntos con medias, desviaciones y correlación casi idénticas y formas radicalmente distintas.",
+            "Lo aprendido con Anscombe en Estadística se generaliza: ninguna tabla de resúmenes sustituye la inspección visual de los datos.",
+            "Distinga la visualización exploratoria, para descubrir y dirigida al analista, de la explicativa, para comunicar y dirigida a quien decide."
+          ],
+          "notes": "Retome brevemente el cuarteto de Anscombe, que los estudiantes conocieron en Estadística y Probabilidad, y avance hacia el Datasaurus Dozen presentado en la conferencia CHI de 2017: mediante un algoritmo de recocido simulado, los autores transformaron una nube de puntos con forma de dinosaurio en estrellas, círculos y líneas paralelas manteniendo las estadísticas idénticas hasta el segundo decimal. Muestre las trece figuras y pregunte qué habrían concluido viendo solo la tabla de resúmenes. Presente luego la distinción de Cole Nussbaumer Knaflic entre exploración y explicación: en la exploración se hacen cien gráficos para encontrar dos hallazgos; en la explicación se muestran esos dos hallazgos con el mejor diseño posible. Indique que esta unidad trabaja ambas caras y que la tarea exigirá un informe exploratorio y un rediseño explicativo de un gráfico publicado."
+        },
+        {
+          "title": "Distribuciones: histogramas, densidades, ECDF, cajas y violines",
+          "bullets": [
+            "El histograma depende del ancho de clase: pocos intervalos ocultan la multimodalidad y demasiados generan ruido; pruebe varios anchos.",
+            "La densidad por núcleo (KDE) suaviza, pero su ancho de banda puede inventar valores imposibles, como tiempos o ingresos negativos.",
+            "La ECDF no requiere intervalos y permite leer percentiles directamente; es ideal para comparar varios grupos sin superposiciones confusas.",
+            "Cajas y violines comparan muchos grupos; añada los puntos (strip o enjambre) cuando n es pequeño para no ocultar datos."
+          ],
+          "notes": "Use un conjunto de tiempos de entrega de un aplicativo de reparto en Lima. Muestre el mismo histograma con 5, 30 y 200 intervalos y pida a los estudiantes que describan la distribución en cada caso: con pocos intervalos parece unimodal; con un ancho adecuado aparecen dos picos que pueden corresponder a zonas distintas o a pedidos en hora punta. Luego muestre una KDE que se extiende por debajo de cero minutos, un artefacto del suavizado. Introduzca la función de distribución acumulada empírica: para responder cuántos pedidos tardan menos de 40 minutos basta leer el eje vertical. Presente los gráficos de nube de lluvia de Allen y colaboradores, de 2019, que combinan densidad, caja y puntos. Pregunte: para comparar tiempos de entrega en 43 distritos de Lima, ¿qué gráfico elegiría y cómo lo ordenaría? Respuesta esperada: cajas horizontales ordenadas por la mediana."
+        },
+        {
+          "title": "Relaciones entre dos variables y el problema del sobretrazado",
+          "bullets": [
+            "El diagrama de dispersión es la herramienta básica para relaciones; con miles de puntos, la superposición oculta dónde se concentran.",
+            "Soluciones: transparencia (alpha=0.1), puntos pequeños, desplazamiento aleatorio (jitter) en variables discretas y muestreo estratificado.",
+            "Para grandes volúmenes, use hexbin o densidad bidimensional: codifican con color la cantidad de observaciones por celda.",
+            "Añada una curva de suavizado (LOWESS) para ver la forma de la relación antes de suponer linealidad en un modelo."
+          ],
+          "notes": "Proyecte un diagrama de dispersión de 200 000 transacciones con monto y antigüedad del cliente: aparece una mancha uniforme. Pregunte qué se puede concluir; la respuesta honesta es casi nada. Aplique sucesivamente transparencia, hexbin y una densidad bidimensional, y muestre que la mayoría de transacciones se concentra en montos bajos de clientes nuevos, un patrón invisible al inicio. Explique el suavizado LOWESS propuesto por William Cleveland como una regresión local que revela no linealidades, lo que será relevante en Aprendizaje Automático I para elegir transformaciones de variables. Mencione que con variables discretas, como el número de hijos, los puntos se apilan en una misma posición y un desplazamiento aleatorio leve resuelve el problema sin alterar el análisis. Ejercicio: cada estudiante aplica dos técnicas al mismo conjunto y comenta en el foro qué patrón emergió y qué pregunta nueva le sugiere."
+        },
+        {
+          "title": "Exploración multivariada: facetas, matrices de dispersión y mapas de calor",
+          "bullets": [
+            "Las facetas repiten el mismo gráfico por subgrupo; revelan interacciones y protegen contra la paradoja de Simpson.",
+            "sns.pairplot muestra todas las relaciones bivariadas y las distribuciones marginales; es útil hasta unas ocho variables.",
+            "El mapa de calor de correlaciones con orden jerárquico (sns.clustermap) agrupa variables redundantes antes del modelado.",
+            "Codifique una tercera variable con color o tamaño solo si la tarea lo exige; cada canal adicional aumenta la carga cognitiva."
+          ],
+          "notes": "Recuerde la paradoja de Simpson estudiada en Estadística: una tendencia global puede invertirse dentro de los grupos. Las facetas son la defensa visual: mostrar la relación entre precio y demanda por separado para cada región evita conclusiones engañosas. Demuestre sns.pairplot con un conjunto de indicadores distritales, como pobreza, acceso a internet, años de educación y anemia, coloreando por región natural. Luego presente un mapa de calor de correlaciones reordenado jerárquicamente y explique que los bloques de correlación alta sugieren multicolinealidad, un problema que verán al construir modelos de regresión. Advierta los límites: un pairplot con veinte variables tiene cuatrocientos paneles ilegibles. Pregunte: si tuviera cuarenta variables, ¿cómo decidiría cuáles explorar visualmente primero? Oriente la discusión hacia la pregunta de negocio y hacia las variables con mayor relación con la variable objetivo."
+        },
+        {
+          "title": "Percepción gráfica: el ranking de Cleveland y McGill",
+          "bullets": [
+            "Cleveland y McGill (1984) midieron experimentalmente la precisión con que las personas decodifican distintas codificaciones visuales.",
+            "Orden de precisión: posición en escala común, posición en escalas no alineadas, longitud, ángulo y pendiente, área, volumen y color.",
+            "Implicancia: barras y puntos superan a los gráficos circulares, y estos a las burbujas y a los mapas de saturación.",
+            "Heer y Bostock (2010) replicaron los resultados con experimentos en línea a gran escala, reforzando su validez."
+          ],
+          "notes": "Presente el experimento original: los participantes estimaban qué porcentaje representaba un valor respecto de otro en distintos tipos de gráfico, y se medía el error de estimación. Los resultados establecieron una jerarquía empírica de tareas perceptivas, que convierte el diseño de gráficos en una decisión basada en evidencia y no en gusto personal. Haga un ejercicio en vivo: muestre cinco porcentajes en un gráfico circular y luego en barras, y pida a los estudiantes estimar el orden y la diferencia entre la segunda y la tercera categoría. Compare las respuestas: con barras el error suele ser mucho menor. Explique que la replicación de Heer y Bostock con participantes reclutados en línea reforzó la validez del ranking. Concluya con la regla práctica: codifique la variable más importante con posición sobre una escala común y reserve el color para categorías o para destacar."
+        },
+        {
+          "title": "Variables visuales de Bertin y canales de Munzner",
+          "bullets": [
+            "Bertin (1967) identificó las variables visuales: posición, tamaño, valor (luminosidad), textura, color (tono), orientación y forma.",
+            "Munzner distingue canales de magnitud, para datos ordenados (posición, longitud, luminosidad), y de identidad, para categorías (tono, forma).",
+            "Principio de expresividad: la codificación debe expresar toda la información y solo esa; no use tonos arbitrarios para una variable ordinal.",
+            "Principio de efectividad: asigne los canales más precisos a los atributos más importantes para la tarea."
+          ],
+          "notes": "Explique que Jacques Bertin, cartógrafo francés, publicó en 1967 Sémiologie graphique, la primera teoría sistemática de los signos gráficos. Tamara Munzner, en Visualization Analysis and Design, actualizó esa teoría con el marco qué-por qué-cómo: qué datos se muestran, por qué el usuario los mira y cómo se codifican. Muestre un error frecuente: un mapa de nivel educativo con colores del arcoíris, donde el verde no parece mayor ni menor que el morado; la variable es ordinal y exige un canal de magnitud, como un gradiente de luminosidad. Contraste con las regiones naturales, costa, sierra y selva, que son categorías nominales y admiten tonos distintos. Pida a los estudiantes clasificar cinco variables de un conjunto real como nominales, ordinales o cuantitativas, y proponer el canal adecuado para cada una justificando con los dos principios."
+        },
+        {
+          "title": "Atributos preatentivos y principios de la Gestalt",
+          "bullets": [
+            "Atributos preatentivos (Ware): color, tamaño, orientación, forma y posición se detectan en menos de un cuarto de segundo, sin esfuerzo consciente.",
+            "Úselos para dirigir la atención: un solo color de acento sobre una base gris destaca el dato clave del mensaje.",
+            "Gestalt: proximidad, similitud, cerramiento, continuidad y conexión explican cómo agrupamos los elementos visuales.",
+            "Aplicación: etiquetas junto a las líneas, en lugar de leyendas lejanas, aprovechan la proximidad y evitan idas y vueltas visuales."
+          ],
+          "notes": "Haga el clásico ejercicio de contar los números 3 en una matriz de dígitos: primero todos en negro y luego con los 3 resaltados en color. La diferencia de tiempo demuestra el procesamiento preatentivo descrito por Colin Ware en Information Visualization: Perception for Design. Explique que si todo está resaltado nada está resaltado: el color de acento funciona porque es escaso. Pase a los principios de la Gestalt, desarrollados por la psicología alemana de inicios del siglo XX, y muestre tableros donde la proximidad agrupa indicadores relacionados y el cerramiento, mediante un fondo sutil, separa secciones. Muestre un gráfico de líneas con una leyenda de siete colores al costado y su versión con etiquetas directas al final de cada línea; pregunte cuál se lee más rápido. Proponga que en la tarea apliquen al menos dos principios de forma explícita y los mencionen en el informe."
+        },
+        {
+          "title": "Tufte: datos-tinta, chartjunk y factor de mentira",
+          "bullets": [
+            "Proporción datos-tinta = tinta que representa datos / tinta total del gráfico; elimine bordes, rejillas densas y efectos 3D.",
+            "Chartjunk: decoración que no informa, como texturas, sombras o ilustraciones que compiten con los datos.",
+            "Factor de mentira = tamaño del efecto mostrado / tamaño del efecto en los datos; debería estar entre 0,95 y 1,05.",
+            "Matiz crítico: Bateman et al. (2010) hallaron que ciertos adornos mejoran el recuerdo; el objetivo es la claridad, no el minimalismo extremo."
+          ],
+          "notes": "Presente a Edward Tufte y su libro The Visual Display of Quantitative Information, cuya segunda edición es de 2001. Muestre un gráfico de barras en tres dimensiones con sombras y fondo degradado, y elimine paso a paso los elementos que no aportan: el resultado comunica lo mismo con menos esfuerzo de lectura. Calcule en clase un factor de mentira: si un indicador pasó de 100 a 120, un aumento de 20 %, pero el gráfico usa íconos cuyo alto y ancho crecen 1,2 veces, el área se multiplica por 1,44 y el efecto mostrado es de 44 %, por lo que el factor de mentira es 2,2. Introduzca la crítica empírica de Bateman y colaboradores, quienes encontraron que gráficos ilustrados no reducen la comprensión y mejoran el recuerdo a largo plazo. Concluya que el principio rector es la función: toda tinta debe justificar su presencia por la tarea del lector."
+        },
+        {
+          "title": "La gramática de los gráficos: componer en lugar de elegir plantillas",
+          "bullets": [
+            "Wilkinson (2005) describe un gráfico como composición de datos, transformaciones, escalas, coordenadas, elementos geométricos y guías.",
+            "Wickham (2010) la implementó en capas en ggplot2: estéticas que mapean variables, geometrías, facetas, escalas y temas.",
+            "En Python, seaborn.objects y plotnine aplican esta lógica: so.Plot(df, x='mes', y='ventas', color='canal').add(so.Line()).",
+            "Pensar en gramática permite crear gráficos nuevos y diagnosticar errores: casi siempre fallan el mapeo o la escala."
+          ],
+          "notes": "Explique que la gramática de los gráficos de Leland Wilkinson cambió la forma de pensar la visualización: en lugar de elegir un tipo de gráfico de un menú, se declara cómo los datos se mapean a propiedades visuales. Un gráfico de barras apiladas y uno circular comparten datos y geometría, pero difieren en el sistema de coordenadas: cartesiano frente a polar. Muestre el código con seaborn.objects para un gráfico de ventas por mes y canal, y luego modifique una sola pieza cada vez: agregue facetas por región, cambie la escala a logarítmica o sustituya la geometría de líneas por puntos. Los estudiantes verán que el gráfico se construye por capas. Pregunte: ¿qué componente de la gramática cambia cuando pasamos de un gráfico de barras agrupadas a uno de barras apiladas? Respuesta: el ajuste de posición, no los datos ni las coordenadas."
+        },
+        {
+          "title": "Anatomía de matplotlib: la interfaz orientada a objetos",
+          "bullets": [
+            "Jerarquía: Figure contiene uno o varios Axes; cada Axes contiene ejes, líneas, textos y demás objetos Artist.",
+            "Patrón recomendado: fig, ax = plt.subplots(figsize=(8, 4.5), layout='constrained') y luego métodos sobre ax.",
+            "Configure con ax.set(title=..., xlabel=...), oculte bordes con ax.spines[['top', 'right']].set_visible(False) y destaque con ax.annotate.",
+            "Exporte con fig.savefig('figura.svg') o en PNG a 300 dpi; fije estilos con plt.rcParams para lograr coherencia entre figuras."
+          ],
+          "notes": "Recuerde que matplotlib, creado por John Hunter en 2003, es la base sobre la que se construyen seaborn y los gráficos de pandas. Muchos estudiantes copian código con plt.plot y se pierden cuando necesitan varias figuras; la interfaz orientada a objetos evita ese estado global implícito. Programe en vivo una figura con dos paneles: a la izquierda, ventas mensuales en línea; a la derecha, barras horizontales ordenadas por región. Muestre cómo eliminar los bordes superior y derecho, cómo poner etiquetas directas y cómo añadir una anotación con flecha que destaque un evento. Explique que el formato SVG es vectorial y no pierde calidad al ampliarse, mientras que PNG es adecuado para presentaciones. Cierre pidiendo que cada estudiante cree un archivo de estilo con rcParams que usará en todas las figuras de su proyecto, para asegurar consistencia visual."
+        },
+        {
+          "title": "Seaborn: gráficos estadísticos con datos ordenados",
+          "bullets": [
+            "Funciones de ejes (histplot, boxplot, scatterplot) dibujan en un Axes existente; funciones de figura (displot, relplot, catplot) crean facetas.",
+            "Los parámetros hue, size, style, col y row mapean variables de un DataFrame en formato largo a canales visuales.",
+            "Incluye estimación estadística: barplot calcula medias con intervalos de confianza por bootstrap y regplot ajusta regresiones.",
+            "Cuidado: la barra con intervalo oculta la distribución; para comparar grupos prefiera puntos, cajas o violines."
+          ],
+          "notes": "Explique que seaborn, desarrollado por Michael Waskom, se apoya en matplotlib y espera datos ordenados, lo que conecta directamente con la primera unidad: si los datos no están en formato largo, seaborn obliga a reestructurarlos. Muestre la diferencia entre sns.histplot dentro de un panel creado por el analista y sns.displot, que genera una cuadrícula completa por región. Destaque que barplot no muestra datos, sino una estimación: por defecto la media con un intervalo de confianza al 95 % calculado por bootstrap, concepto que vieron en Estadística. Advierta sobre el gráfico de barras con bigotes, criticado por ocultar distribuciones bimodales o muestras pequeñas. Ejercicio: con un conjunto de calificaciones por sección, pida a los estudiantes comparar el barplot con un stripplot superpuesto a un boxplot y discutir qué información aparece solo en la segunda versión."
+        },
+        {
+          "title": "Elegir el gráfico según la tarea analítica",
+          "bullets": [
+            "Comparar magnitudes: barras horizontales ordenadas, con eje en cero; o gráficos de puntos cuando el cero no es significativo.",
+            "Ver distribución: histograma, ECDF o cajas; ver relación: dispersión con suavizado; ver tendencia: líneas con el tiempo en el eje x.",
+            "Mostrar composición: barras apiladas al 100 % o barras simples; el gráfico circular solo con dos o tres partes muy distintas.",
+            "Pregunta guía: ¿qué comparación exacta debe hacer el lector? Ubique esos elementos en posiciones contiguas sobre una escala común."
+          ],
+          "notes": "Organice la sesión alrededor de tareas, no de tipos de gráfico, siguiendo la idea de Munzner de que el diseño parte del por qué. Presente una matriz de tareas y gráficos adecuados y explique la regla del eje en cero: en barras la longitud codifica el valor, por lo que truncar el eje distorsiona la proporción; en líneas y puntos, que codifican posición, un eje que no parte de cero es aceptable si se indica claramente. Muestre un gráfico circular de participación de mercado de once marcas y su alternativa en barras ordenadas; pregunte cuál permite identificar la quinta marca más rápido. Analice también por qué los gráficos de anillo y de radar suelen dificultar la comparación. Para cerrar, entregue cinco preguntas de negocio y pida a los equipos que elijan y justifiquen el gráfico con base en el ranking de Cleveland y McGill."
+        },
+        {
+          "title": "Del gráfico exploratorio al explicativo: depurar y enfocar",
+          "bullets": [
+            "Knaflic propone eliminar el desorden visual: bordes, rejillas, marcadores, leyendas innecesarias y decimales excesivos.",
+            "Use títulos-mensaje que enuncien el hallazgo: «La morosidad en Puno duplica el promedio de la cartera», no «Morosidad por región».",
+            "Enfoque con un color de acento y anotaciones que expliquen el porqué del dato atípico o del cambio de tendencia.",
+            "Incluya siempre fuente, fecha de corte y unidades: un gráfico sin fuente no es verificable."
+          ],
+          "notes": "Muestre un gráfico exploratorio real, tal como sale de seaborn con los valores por defecto, y transfórmelo en vivo en un gráfico explicativo siguiendo los pasos de Storytelling with Data: eliminar el desorden, atenuar en gris los elementos de contexto, destacar en un color el dato que sustenta el mensaje, cambiar el título descriptivo por un título-mensaje y añadir una anotación breve. Insista en que el título-mensaje obliga al analista a saber qué quiere decir: si no puede escribirlo en una oración, aún no ha terminado de analizar. Muestre cómo agregar en el pie la fuente, por ejemplo BCRP o INEI, y la fecha de corte. Pregunte a la clase cuál de los dos gráficos presentarían a un directorio y por qué. Recuerde que la tarea de la unidad incluye un rediseño antes y después que debe aplicar explícitamente estos pasos."
+        },
+        {
+          "title": "Errores frecuentes del análisis visual y cómo evitarlos",
+          "bullets": [
+            "Confundir correlación visual con causalidad: dos series con tendencia creciente parecen relacionadas aunque no lo estén.",
+            "Comparar grupos de distinto tamaño sin normalizar: los conteos absolutos favorecen a Lima frente a regiones menos pobladas.",
+            "Usar ejes no comparables entre paneles o escalas distintas en gráficos colocados lado a lado para compararse.",
+            "Ignorar la incertidumbre: diferencias pequeñas entre promedios muestrales pueden deberse al azar del muestreo."
+          ],
+          "notes": "Esta diapositiva funciona como lista de verificación antes de entregar cualquier análisis visual. Muestre ejemplos de correlaciones espurias entre series de tiempo con tendencia, como la venta de helados y el número de conexiones a internet, y recuerde que una tendencia común produce correlaciones altas sin relación causal. Ilustre la falta de normalización con un gráfico de casos de dengue por departamento frente a la tasa por cada 100 000 habitantes: el orden cambia por completo. Explique que en facetas conviene compartir ejes para comparar magnitudes y que, si se liberan, debe advertirse al lector. Sobre la incertidumbre, recuerde los intervalos de confianza vistos en Estadística: dos barras que difieren en un punto porcentual pueden no ser estadísticamente distintas. Pida que, en parejas, revisen un gráfico propio con esta lista y corrijan al menos un problema antes de la siguiente sesión."
+        }
+      ],
+      "reading": {
+        "title": "Ver para entender: percepción, gramática y práctica del gráfico estadístico",
+        "minutes": 35,
+        "content": "## Por qué los gráficos son instrumentos de análisis\n\nJohn Tukey (1977) sostuvo que el análisis exploratorio consiste en mirar los datos para descubrir lo que no se esperaba. Décadas después, Matejka y Fitzmaurice (2017) llevaron la advertencia de Anscombe al extremo con el *Datasaurus Dozen*: trece conjuntos de datos con medias, desviaciones estándar y correlación de Pearson prácticamente idénticas cuyas nubes de puntos dibujan un dinosaurio, una estrella o líneas paralelas. La lección es metodológica: los estadísticos resumen, pero también esconden. El analista que no grafica decide a ciegas.\n\n## La ciencia de la percepción gráfica\n\nLa elección de un gráfico no es una cuestión de gusto. Cleveland y McGill (1984) midieron experimentalmente la precisión con que las personas estiman proporciones a partir de distintas codificaciones y establecieron un orden: posición sobre una escala común, posición sobre escalas no alineadas, longitud, ángulo y pendiente, área, volumen y, al final, color y saturación. Heer y Bostock (2010) replicaron esos resultados con experimentos en línea. La consecuencia práctica es directa: un gráfico de barras o de puntos permite comparaciones más exactas que uno circular, y este, más que uno de burbujas.\n\nJacques Bertin (1967) había sistematizado antes las variables visuales —posición, tamaño, valor, textura, color, orientación y forma—, y Tamara Munzner (2014) las reorganizó en dos familias. Los **canales de magnitud** (posición, longitud, luminosidad) sirven para datos cuantitativos y ordinales; los **canales de identidad** (tono, forma) sirven para categorías. De ahí surgen dos principios: *expresividad*, la codificación debe mostrar toda la información del dato y nada más, y *efectividad*, los atributos más importantes deben ir en los canales más precisos.\n\n## Atención y agrupamiento\n\nColin Ware describe los atributos preatentivos —color, tamaño, orientación, forma— como aquellos que el sistema visual detecta antes de la atención consciente. Un único color de acento sobre una base gris guía la mirada hacia el dato que sostiene el mensaje. Los principios de la Gestalt complementan este conocimiento: los elementos próximos, similares o encerrados se perciben como grupo. Etiquetar directamente cada línea, en lugar de usar una leyenda distante, aprovecha la proximidad y reduce el esfuerzo de lectura.\n\n## Integridad gráfica según Tufte\n\nEdward Tufte propuso dos métricas para evaluar la integridad de un gráfico:\n\n$$\\text{datos-tinta} = \\frac{\\text{tinta que representa datos}}{\\text{tinta total}} \\qquad \\text{factor de mentira} = \\frac{\\text{efecto mostrado}}{\\text{efecto en los datos}}$$\n\nSi las exportaciones crecen 20 % y se representan con íconos escalados en alto y en ancho, el área crece 44 % y el factor de mentira es 2,2. Tufte considera aceptables valores entre 0,95 y 1,05. Sin embargo, Bateman y colaboradores (2010) mostraron que algunos adornos mejoran el recuerdo sin afectar la comprensión; el criterio rector es que toda tinta responda a la tarea del lector.\n\n## La gramática de los gráficos\n\nWilkinson (2005) describió los gráficos como composición de componentes independientes: datos, transformaciones estadísticas, escalas, sistema de coordenadas, elementos geométricos y guías. Wickham (2010) la implementó en capas en ggplot2, y en Python `seaborn.objects` sigue la misma lógica:\n\n```python\nimport seaborn.objects as so\n\n(\n    so.Plot(ventas, x=\"mes\", y=\"monto\", color=\"canal\")\n    .add(so.Line(), so.Agg(\"sum\"))      # geometría + agregación\n    .facet(col=\"region\", wrap=3)         # múltiplos pequeños\n    .scale(y=\"log\")                      # escala\n    .label(title=\"Ventas mensuales por canal y región\", y=\"Soles\")\n)\n```\n\nPensar en gramática permite diagnosticar errores: un gráfico engañoso casi siempre falla en el mapeo (una variable ordinal codificada con tonos arbitrarios) o en la escala (un eje truncado en barras).\n\n## Matplotlib orientado a objetos\n\nPara el control fino de la presentación, matplotlib ofrece una interfaz orientada a objetos. El siguiente ejemplo convierte una comparación regional en un gráfico explicativo:\n\n```python\nimport matplotlib.pyplot as plt\n\ndatos = morosidad.sort_values(\"tasa\")                # orden por valor\ncolores = [\"#B23A48\" if r == \"Puno\" else \"#BBBBBB\" for r in datos[\"region\"]]\n\nfig, ax = plt.subplots(figsize=(8, 6), layout=\"constrained\")\nax.barh(datos[\"region\"], datos[\"tasa\"], color=colores)\nax.axvline(datos[\"tasa\"].mean(), color=\"black\", lw=1, ls=\"--\")\nax.spines[[\"top\", \"right\"]].set_visible(False)\nax.set(xlabel=\"Morosidad (%)\", title=\"Puno registra la mayor morosidad de la cartera\")\nfig.text(0.01, 0.01, \"Fuente: cartera interna, junio de 2026\", fontsize=8)\nfig.savefig(\"morosidad.svg\")\n```\n\nEn pocas líneas se aplican el orden por valor, el color de acento, la eliminación de bordes, una línea de referencia y un título-mensaje.\n\n## Cierre\n\nUn buen gráfico exploratorio responde preguntas del analista; uno explicativo responde preguntas de quien decide. Ambos exigen elegir codificaciones según la percepción humana, verificar la integridad gráfica y construir con una gramática explícita. En la siguiente unidad estos principios se extenderán al tiempo, al espacio, al color y a la interactividad."
+      },
+      "case": {
+        "title": "Caso: Financiera Qhapaq y el tablero que confundió al directorio",
+        "content": "**Financiera Qhapaq** es una entidad microfinanciera supervisada por la SBS, con 46 agencias en nueve regiones del sur y centro del país, una cartera de S/ 1 850 millones y 210 000 clientes, en su mayoría micro y pequeñas empresas (los nombres y cifras de la organización son ficticios con fines pedagógicos). En la sesión de directorio de mayo de 2026, el gerente de riesgos presentó un tablero mensual elaborado en una hoja de cálculo que generó más confusión que decisiones.\n\nEl tablero incluía cuatro gráficos:\n\n1. Barras en tres dimensiones con la morosidad de las nueve regiones, con el eje vertical iniciando en 4,5 %. La región con 5,4 % parecía triplicar a la de 4,8 %.\n2. Un gráfico circular con la composición de la cartera en once sectores económicos, con colores similares y una leyenda lateral.\n3. Un gráfico de doble eje con desembolsos (barras) y morosidad (línea) de los últimos 24 meses; las escalas se ajustaron de modo que ambas series parecían cruzarse en marzo de 2026.\n4. Un diagrama de dispersión de 210 000 puntos que relacionaba el uso del aplicativo móvil con los días de atraso, donde solo se veía una mancha uniforme.\n\nUn director preguntó si la morosidad de Ayacucho realmente se había disparado; otro concluyó, a partir del doble eje, que más desembolsos causaban más mora y propuso frenar la colocación en el segundo semestre. El presidente pidió un nuevo tablero para la siguiente sesión.\n\nLa tarea recayó en Andrea Mamani, analista de inteligencia de negocios. Al revisar los datos encontró que la morosidad global había subido de 4,9 % a 5,2 % en un año y que el aumento se concentraba en créditos agrícolas afectados por un evento climático. Además, al segmentar por antigüedad del cliente, los usuarios del aplicativo tenían menor mora en todos los segmentos, aunque en el agregado parecían tener mayor mora porque la mayoría eran clientes nuevos, con mayor riesgo intrínseco.\n\nEl gerente de riesgos le pidió mantener el estilo «llamativo» porque, según él, «al directorio hay que impactarlo». El área de cumplimiento, en cambio, recordó que las decisiones sobre apetito de riesgo deben sustentarse en información fiel y verificable.\n\nAndrea tiene diez días para rediseñar el tablero con Python y debe decidir qué gráficos conservar, cuáles reemplazar y cómo explicar al directorio que algunas conclusiones de la sesión anterior eran erróneas sin desautorizar públicamente a su gerente.",
+        "questions": [
+          "Calcule el factor de mentira aproximado del gráfico de barras con eje en 4,5 % y explique qué principio perceptivo se vulnera.",
+          "¿Qué gráficos propondría en reemplazo de los cuatro originales? Justifique cada elección con el ranking de Cleveland y McGill y los canales de Munzner.",
+          "¿Cómo mostraría visualmente la paradoja entre el uso del aplicativo y la mora para evitar una decisión equivocada del directorio?",
+          "¿Por qué es riesgoso el gráfico de doble eje para inferir que los desembolsos causan mora? Proponga una alternativa honesta.",
+          "¿Cómo respondería al pedido de un estilo «llamativo» manteniendo la integridad gráfica y una buena relación con la gerencia?"
+        ]
+      },
+      "assignment": {
+        "title": "Informe exploratorio visual y rediseño de un gráfico publicado",
+        "instructions": "**Objetivo:** explorar visualmente un conjunto de datos multivariado y aplicar los principios de percepción e integridad gráfica en el rediseño de un gráfico real.\n\n**Parte A – Exploración (cuaderno):**\n1. Use el conjunto preparado en la tarea 1 u otro con al menos cinco variables.\n2. Formule tres preguntas analíticas y construya al menos ocho gráficos con matplotlib orientado a objetos y seaborn: dos de distribución, dos de relación (con manejo del sobretrazado si aplica), dos multivariados con facetas o matrices y dos de comparación entre grupos.\n3. Acompañe cada gráfico con dos o tres líneas: qué muestra, qué hallazgo o duda genera y qué haría a continuación.\n\n**Parte B – Rediseño explicativo:**\n4. Seleccione un gráfico publicado por un medio, entidad pública o empresa peruana que presente problemas de diseño e inclúyalo con su fuente.\n5. Diagnostique sus problemas con al menos tres conceptos de la unidad (Cleveland y McGill, Bertin o Munzner, Gestalt, Tufte) y, si corresponde, calcule el factor de mentira.\n6. Reconstruya los datos y elabore la versión corregida con título-mensaje, color de acento, anotación y fuente.\n\n**Qué entregar:** el cuaderno ejecutable y un PDF de máximo cuatro páginas con la parte A resumida y la comparación antes y después.\n\n**Criterios:** pertinencia de los gráficos para cada pregunta, interpretación crítica de los hallazgos, profundidad del diagnóstico, efectividad del rediseño y calidad técnica del código.",
+        "rubric": [
+          {
+            "name": "Pertinencia de los gráficos exploratorios para las preguntas",
+            "points": 6
+          },
+          {
+            "name": "Interpretación crítica de los hallazgos",
+            "points": 4
+          },
+          {
+            "name": "Diagnóstico fundamentado del gráfico publicado",
+            "points": 5
+          },
+          {
+            "name": "Calidad del rediseño explicativo y del código",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: análisis exploratorio visual y percepción gráfica",
+        "questions": [
+          {
+            "prompt": "Debe mostrar a un comité la participación de once productos en las ventas para que identifiquen el quinto más vendido. Según Cleveland y McGill, ¿qué codificación es la más adecuada?",
+            "options": [
+              "Gráfico circular con etiquetas de porcentaje en cada sector",
+              "Gráfico de burbujas con área proporcional a las ventas",
+              "Barras horizontales ordenadas por valor sobre una escala común",
+              "Mapa de calor con saturación proporcional a las ventas"
+            ],
+            "correct": 2,
+            "explanation": "La posición sobre una escala común es la codificación más precisa para ordenar; el ángulo, el área y la saturación producen errores de estimación mayores, sobre todo con muchas categorías de tamaño parecido."
+          },
+          {
+            "prompt": "Un gráfico de barras compara 120 y 150 unidades, pero el eje inicia en 100, por lo que la segunda barra parece 2,5 veces la primera. ¿Cuál es aproximadamente el factor de mentira?",
+            "options": [
+              "1,25",
+              "6",
+              "2,5",
+              "0,4"
+            ],
+            "correct": 1,
+            "explanation": "El efecto real es 25 % (150 frente a 120); el mostrado es 150 % (barras visibles de 50 y 20 unidades). El factor de mentira es 150 / 25 = 6, muy lejos del rango aceptable de 0,95 a 1,05."
+          },
+          {
+            "prompt": "Un analista codifica el nivel educativo (primaria, secundaria, técnica, universitaria) con cuatro tonos arbitrarios: verde, rojo, morado y amarillo. ¿Qué principio vulnera?",
+            "options": [
+              "Efectividad: el tono es el canal más preciso y debe reservarse para cantidades",
+              "Proporción datos-tinta: los colores añaden tinta que no representa datos",
+              "Proximidad de la Gestalt: los colores deben estar más cercanos en la leyenda",
+              "Expresividad: una variable ordinal requiere un canal de magnitud, como la luminosidad"
+            ],
+            "correct": 3,
+            "explanation": "El tono es un canal de identidad que no comunica orden: el lector no percibe que el morado sea mayor que el verde. Para variables ordinales corresponde un gradiente de luminosidad o saturación."
+          },
+          {
+            "prompt": "Con 300 000 transacciones, un diagrama de dispersión de monto contra antigüedad del cliente muestra una mancha uniforme. ¿Qué acción revela mejor la concentración de los datos?",
+            "options": [
+              "Usar hexbin o densidad bidimensional para codificar la cantidad de observaciones por celda",
+              "Aumentar el tamaño de los puntos para que se distingan mejor",
+              "Cambiar a un gráfico circular con rangos de montos",
+              "Agregar una tercera variable con colores para dar más contexto"
+            ],
+            "correct": 0,
+            "explanation": "El problema es el sobretrazado. Hexbin y la densidad bidimensional agregan los puntos en celdas y codifican la frecuencia con color, mostrando dónde se concentran; agrandar puntos o añadir variables empeora la saturación."
+          },
+          {
+            "prompt": "En un tablero, la relación global entre uso del aplicativo y mora es positiva, pero dentro de cada segmento de antigüedad es negativa. ¿Qué recurso visual evita la conclusión equivocada?",
+            "options": [
+              "Un gráfico de doble eje con ambas variables en el tiempo",
+              "Facetas por segmento de antigüedad con ejes compartidos",
+              "Una línea de tendencia global sobre todos los puntos",
+              "Un gráfico circular de clientes por segmento"
+            ],
+            "correct": 1,
+            "explanation": "Es una paradoja de Simpson. Mostrar la relación por separado en cada segmento, con ejes comparables, revela la dirección real de la asociación; una tendencia global reproduce el error del agregado."
+          },
+          {
+            "prompt": "Con seaborn.objects, un gráfico de barras agrupadas por canal debe convertirse en barras apiladas. Según la gramática de los gráficos, ¿qué componente cambia?",
+            "options": [
+              "Los datos, que deben reestructurarse a formato ancho",
+              "El sistema de coordenadas, de cartesiano a polar",
+              "El ajuste de posición de la geometría, de esquivar a apilar",
+              "La escala del eje y, de lineal a logarítmica"
+            ],
+            "correct": 2,
+            "explanation": "En la gramática, agrupar o apilar es un ajuste de posición (so.Dodge o so.Stack en seaborn.objects); los datos, las coordenadas y las escalas permanecen iguales. Pasar a coordenadas polares produciría un gráfico circular."
+          },
+          {
+            "prompt": "¿Qué gráfico es preferible para comparar la distribución de tiempos de entrega en tres zonas de reparto sin depender de la elección de un ancho de intervalo?",
+            "options": [
+              "Histogramas superpuestos con diez intervalos",
+              "Barras con la media y su intervalo de confianza",
+              "Gráfico circular de pedidos por zona",
+              "ECDF superpuestas, una por zona"
+            ],
+            "correct": 3,
+            "explanation": "La función de distribución acumulada empírica no depende de intervalos, permite leer percentiles directamente y compara grupos sin la confusión de histogramas superpuestos; las barras de medias ocultan la forma de la distribución."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Visualización avanzada: series de tiempo, color, mapas e interactividad",
+      "description": "Al finalizar la unidad, el estudiante visualiza series de tiempo, datos geoespaciales e incertidumbre con color accesible e interactividad pertinente, detecta y corrige gráficos engañosos y aplica criterios éticos de veracidad al comunicar datos peruanos de interés público.",
+      "topics": [
+        "Visualización de series de tiempo, transformaciones y múltiplos pequeños",
+        "Teoría del color, accesibilidad y visualización de la incertidumbre",
+        "Datos geoespaciales y mapas coropléticos con geopandas",
+        "Visualización interactiva con Plotly",
+        "Gráficos engañosos y ética de la visualización"
+      ],
+      "slides": [
+        {
+          "title": "Visualizar series de tiempo: principios de diseño",
+          "bullets": [
+            "El tiempo va en el eje horizontal con intervalos regulares; las líneas conectan observaciones y sugieren continuidad entre ellas.",
+            "Relación de aspecto: Cleveland propuso inclinar las pendientes cerca de 45° para maximizar la discriminación de los cambios.",
+            "Use barras para cantidades discretas por periodo (ventas mensuales) y líneas para niveles o tasas que evolucionan (inflación).",
+            "Marque cambios metodológicos, quiebres estructurales y eventos relevantes con anotaciones o bandas sombreadas."
+          ],
+          "notes": "Comience con una serie mensual del tipo de cambio o de la inflación publicada por el BCRP y muéstrela con tres relaciones de aspecto: muy ancha, muy alta y equilibrada. Los estudiantes notarán que la misma serie parece estable o explosiva según la proporción del gráfico. Explique la técnica de inclinación a 45 grados de William Cleveland como una guía y no como una ley. Discuta cuándo usar barras y cuándo líneas: una línea entre dos meses sugiere valores intermedios, lo cual es razonable para una tasa, pero no para el número de pedidos de un día festivo. Muestre cómo una banda sombreada puede marcar el periodo de emergencia sanitaria de 2020 y una línea vertical, un cambio de año base. Pregunte: ¿qué evento anotaría en una serie de ventas de su empresa de los últimos cinco años y por qué ese evento ayuda a interpretar la serie?"
+        },
+        {
+          "title": "Transformar series para compararlas con justicia",
+          "bullets": [
+            "Índice base 100: Iₜ = 100 · xₜ / x₀ permite comparar series de distinta magnitud, como exportaciones mineras y agropecuarias.",
+            "Variación porcentual interanual: (xₜ / xₜ₋₁₂ − 1) · 100 en datos mensuales elimina la estacionalidad regular.",
+            "Escala logarítmica: pendientes iguales representan tasas de crecimiento iguales; indíquela siempre de forma visible en el eje.",
+            "Medias móviles y series desestacionalizadas (por ejemplo, con X-13ARIMA-SEATS) revelan la tendencia subyacente."
+          ],
+          "notes": "Muestre las exportaciones de cobre y de productos agropecuarios en valores absolutos: la serie agropecuaria parece plana porque su magnitud es menor. Al convertir ambas en índices con base 2015 igual a 100, se aprecia que las agroexportaciones crecieron proporcionalmente más en varios periodos. Explique la variación interanual como la medida estándar de inflación usada por el BCRP y el INEI. Luego discuta la escala logarítmica con un ejemplo de casos acumulados de una epidemia: en escala lineal todo parece explosivo; en escala logarítmica se ve si la tasa de crecimiento se desacelera. Advierta que el público no especializado suele malinterpretar la escala logarítmica, por lo que debe rotularse y explicarse. Mencione que X-13ARIMA-SEATS es un método de desestacionalización desarrollado por la Oficina del Censo de los Estados Unidos y empleado por numerosos institutos de estadística y bancos centrales."
+        },
+        {
+          "title": "Ejemplo aplicado: la inflación peruana frente al rango meta del BCRP",
+          "bullets": [
+            "El BCRP aplica metas explícitas de inflación con un rango de 1 % a 3 %; la banda se dibuja con ax.axhspan(1, 3, alpha=0.15).",
+            "La inflación interanual de Lima Metropolitana cerró 2022 en 8,46 %, el nivel más alto en más de dos décadas, y retornó al rango en 2024.",
+            "Anote las causas, como choques internacionales de alimentos y combustibles, y separe la inflación total de la inflación sin alimentos y energía.",
+            "Cite fuente y fecha de corte en el pie: Banco Central de Reserva del Perú, series estadísticas mensuales."
+          ],
+          "notes": "Construya el gráfico en vivo a partir de la serie mensual del índice de precios al consumidor de Lima Metropolitana. Calcule la variación interanual con pct_change(12) y grafíquela con matplotlib. Añada la banda del rango meta y explique su significado: desde 2002 el BCRP opera un esquema de metas explícitas de inflación y, desde 2007, la meta es 2 % con una tolerancia de un punto porcentual. Destaque el periodo 2021-2023, cuando la inflación superó el rango por choques externos, y su retorno posterior. Pregunte a la clase qué agregaría para que un lector no especializado entienda el gráfico: título-mensaje, anotaciones de causas y una segunda línea con la inflación sin alimentos y energía, que el BCRP usa como indicador de tendencia. Este ejemplo servirá como plantilla para la tarea de la unidad y para el tablero final, donde los indicadores macroeconómicos suelen aportar contexto."
+        },
+        {
+          "title": "Múltiplos pequeños: comparar muchas series sin espagueti",
+          "bullets": [
+            "Tufte popularizó los múltiplos pequeños: la misma estructura gráfica repetida para cada categoría, con escalas idénticas.",
+            "Evite el gráfico espagueti de 25 líneas superpuestas; use una cuadrícula de 25 paneles con la serie nacional en gris como referencia.",
+            "Ordene los paneles por un criterio significativo (nivel, crecimiento, región natural), no alfabéticamente por defecto.",
+            "En seaborn: sns.relplot(data=df, x='mes', y='valor', col='departamento', col_wrap=5, kind='line')."
+          ],
+          "notes": "Muestre primero un gráfico con la evolución de un indicador para los 25 departamentos superpuestos: es imposible seguir una línea. Luego presente la alternativa en múltiplos pequeños, cada panel con su departamento destacado en color y la serie nacional en gris como referencia; esta técnica permite comparar cada región con el promedio sin perder el contexto. Explique la importancia de compartir escalas: si cada panel tiene su propio eje, Lima y Madre de Dios parecerán comparables aunque sus magnitudes difieran en un orden de magnitud. Discuta el orden de los paneles: el alfabético es cómodo para buscar, pero el orden por valor o por región natural revela patrones. Ejercicio: los estudiantes reproducen la cuadrícula con los datos de su tarea y deciden un criterio de orden justificado, que explicarán brevemente en el foro de la semana."
+        },
+        {
+          "title": "Teoría del color aplicada a datos",
+          "bullets": [
+            "Paletas secuenciales para cantidades ordenadas, divergentes para desviaciones respecto de un punto medio significativo y cualitativas para categorías.",
+            "Las paletas de ColorBrewer, diseñadas por Cynthia Brewer para cartografía temática, y viridis o cividis son opciones probadas y perceptualmente ordenadas.",
+            "Evite el arcoíris (jet): crea fronteras artificiales y su luminosidad no crece de forma monótona (Borland y Taylor, 2007).",
+            "Limite las categorías cualitativas a seis u ocho; agrupe el resto en «Otros» o use facetas."
+          ],
+          "notes": "Explique que el color tiene tres dimensiones perceptivas, tono, saturación y luminosidad, y que solo la luminosidad se percibe naturalmente como orden. Por eso las paletas secuenciales varían principalmente en luminosidad. Muestre un mapa de temperatura con la paleta jet y señale las bandas amarillas brillantes que sugieren cambios bruscos inexistentes; luego el mismo mapa con viridis, desarrollada para matplotlib por Stéfan van der Walt y Nathaniel Smith. Presente las paletas divergentes con un ejemplo de variación del presupuesto respecto del año anterior: el punto medio, cero, debe tener un color neutro. Mencione que las paletas de ColorBrewer están disponibles en matplotlib y seaborn con nombres como Blues, RdBu o Set2. Pida a los estudiantes elegir la paleta adecuada para tres variables: población, variación del empleo y región natural, y justificar cada elección."
+        },
+        {
+          "title": "Accesibilidad: daltonismo, contraste y codificación redundante",
+          "bullets": [
+            "Alrededor del 8 % de los hombres y del 0,5 % de las mujeres de ascendencia norte-europea presentan deficiencia de visión rojo-verde.",
+            "No use rojo contra verde como única diferencia; prefiera azul-naranja o paletas aptas, como cividis o la de Okabe e Ito.",
+            "Las pautas WCAG 2.1 exigen un contraste mínimo de 4,5:1 para texto normal; aplíquelo a etiquetas, ejes y anotaciones.",
+            "Codifique de forma redundante (color más forma o etiqueta directa) y añada un texto alternativo que resuma el mensaje del gráfico."
+          ],
+          "notes": "Comience mostrando un semáforo rojo-amarillo-verde de un tablero de indicadores y luego su simulación para deuteranopía: el rojo y el verde se vuelven casi indistinguibles. Explique que las cifras de prevalencia varían por población, pero que en cualquier audiencia de veinte o treinta personas es probable que alguien tenga alguna deficiencia de visión del color. Presente la paleta de Okabe e Ito, diseñada para ser distinguible por personas con las formas más comunes de daltonismo, y las pautas de accesibilidad para el contenido web del W3C. Muestre cómo un texto alternativo bien redactado no describe el gráfico, sino que resume su mensaje: «La inflación superó el rango meta entre 2021 y 2023». Pregunte: ¿cómo rediseñaría un semáforo de indicadores para que funcione también impreso en blanco y negro? Respuesta esperada: íconos, posición o etiquetas además del color."
+        },
+        {
+          "title": "Visualizar la incertidumbre",
+          "bullets": [
+            "Toda estimación muestral tiene error; muestre intervalos de confianza con barras de error, bandas sombreadas o gradientes.",
+            "El INEI considera referenciales las estimaciones con coeficiente de variación mayor a 15 %; señálelas con transparencia o tramas.",
+            "Los pronósticos deben mostrar abanicos de probabilidad, como los gráficos de abanico que el BCRP publica en su Reporte de Inflación.",
+            "Los formatos de frecuencia (3 de cada 10) y los gráficos de resultados hipotéticos mejoran la comprensión del riesgo."
+          ],
+          "notes": "Recuerde la noción de intervalo de confianza de Estadística y Probabilidad y explique que omitir la incertidumbre en un gráfico equivale a afirmar una precisión que no existe. Muestre una comparación de tasas de pobreza por departamento con y sin intervalos: dos departamentos que parecían distintos tienen intervalos superpuestos. Explique la regla práctica del INEI sobre el coeficiente de variación y propóngala como criterio de diseño: atenuar las barras de las estimaciones poco precisas. Presente el gráfico de abanico, popularizado por el Banco de Inglaterra y usado por el BCRP para comunicar la incertidumbre de sus proyecciones. Mencione la investigación de Jessica Hullman y colaboradores sobre gráficos de resultados hipotéticos, que muestran posibles realizaciones en lugar de un único promedio. Pregunte: ¿qué riesgo hay en presentar a un gerente un pronóstico de ventas como una sola línea sin rango?"
+        },
+        {
+          "title": "Datos geoespaciales: modelos, formatos y sistemas de referencia",
+          "bullets": [
+            "Modelo vectorial: puntos (agencias), líneas (vías) y polígonos (distritos); modelo ráster: celdas, como en las imágenes satelitales.",
+            "Formatos: shapefile (varios archivos), GeoJSON (texto) y GeoPackage (base SQLite), preferido por su integridad.",
+            "CRS: EPSG:4326 (WGS 84, en grados) para almacenar; para medir áreas en el Perú, proyecte a UTM zonas 17S, 18S o 19S.",
+            "El ubigeo de seis dígitos es la clave que une los datos estadísticos del INEI con los polígonos de límites político-administrativos."
+          ],
+          "notes": "Explique que un dato geoespacial combina geometría y atributos. Muestre los tres tipos de geometría vectorial con ejemplos peruanos: puntos para agencias bancarias o establecimientos de salud, líneas para la red vial nacional y polígonos para los más de 1 800 distritos. Introduzca el concepto de sistema de referencia de coordenadas: la Tierra no es plana, y proyectarla implica distorsiones de área, forma o distancia. WGS 84 en grados es adecuado para almacenar y para la web, pero para calcular áreas en kilómetros cuadrados conviene proyectar a coordenadas UTM; el territorio peruano abarca las zonas 17, 18 y 19 del hemisferio sur. Advierta que unir dos capas con sistemas distintos produce mapas desplazados. Pregunte: ¿qué columna permitiría unir la tabla de pobreza distrital con el mapa de distritos? Respuesta: el ubigeo como texto de seis dígitos."
+        },
+        {
+          "title": "Mapas coropléticos con geopandas paso a paso",
+          "bullets": [
+            "Paso 1: gdf = gpd.read_file('distritos.gpkg'); verifique gdf.crs y que el ubigeo sea texto de seis dígitos.",
+            "Paso 2: gdf.merge(indicadores, on='ubigeo', how='left', validate='1:1') y revise los polígonos sin dato.",
+            "Paso 3: calcule tasas, no conteos: casos por cada 100 000 habitantes o porcentaje de hogares.",
+            "Paso 4: gdf.plot(column='tasa', cmap='viridis', scheme='quantiles', k=5, legend=True) con mapclassify; añada fuente y nota sobre faltantes."
+          ],
+          "notes": "Realice el flujo completo en vivo con los límites departamentales. Recuerde que la integración por ubigeo replica lo aprendido en la primera unidad: tipos de texto, zfill y validate. Destaque la importancia de distinguir los polígonos sin dato, que deben aparecer en gris claro con una entrada en la leyenda, de los polígonos con valor cero. Explique que un mapa coroplético colorea áreas según el valor de una variable y, por ello, solo es adecuado para tasas, proporciones o densidades: un mapa de conteos refleja principalmente dónde vive más gente. Presente los esquemas de clasificación de la biblioteca mapclassify: cuantiles, intervalos iguales y cortes naturales de Jenks, y muestre cómo el mismo dato produce mapas distintos según el esquema elegido. Pida a los estudiantes justificar por escrito el esquema seleccionado para su tarea y mostrar al menos una alternativa descartada."
+        },
+        {
+          "title": "Trampas de los mapas: área, agregación y clasificación",
+          "bullets": [
+            "Sesgo de área: Loreto ocupa casi el 29 % del territorio nacional y domina visualmente, aunque concentre una fracción pequeña de la población.",
+            "Problema de la unidad de área modificable (Openshaw, 1984): los patrones cambian según se agregue por distrito, provincia o departamento.",
+            "Tasas inestables: distritos con poca población producen valores extremos por azar; muestre el tamaño de la base o suavice.",
+            "Alternativas: símbolos proporcionales, cartogramas, cuadrículas hexagonales o simplemente barras ordenadas."
+          ],
+          "notes": "Muestre un mapa coroplético departamental en el que Loreto, Ucayali y Madre de Dios ocupan gran parte de la superficie: el color asignado a ellos domina la impresión del lector, aunque en conjunto concentren una pequeña proporción de la población nacional. Presente el problema de la unidad de área modificable, descrito por Stan Openshaw, con un ejemplo: la pobreza puede parecer homogénea a nivel departamental y muy heterogénea a nivel distrital. Explique la inestabilidad de las tasas en distritos pequeños: con 300 habitantes, dos casos adicionales cambian drásticamente la tasa, por lo que esos distritos aparecen como extremos por simple variación aleatoria. Proponga alternativas según la tarea: si lo importante es comparar magnitudes, unas barras ordenadas pueden superar al mapa. Pregunte: ¿cuándo un mapa añade valor y no solo atractivo? Respuesta: cuando la ubicación y la vecindad forman parte del hallazgo."
+        },
+        {
+          "title": "Visualización interactiva con Plotly",
+          "bullets": [
+            "plotly.express crea gráficos interactivos con una línea: px.line, px.scatter(hover_data=[...]) o px.choropleth(geojson=..., locations='ubigeo').",
+            "La interactividad sirve para explorar: información emergente, zoom, filtros por leyenda y animaciones con animation_frame.",
+            "Exporte a HTML autocontenido con fig.write_html() o integre la figura en tableros de Streamlit o Dash.",
+            "No oculte el mensaje tras la interacción: el hallazgo principal debe verse sin hacer clic, especialmente en informes."
+          ],
+          "notes": "Muestre cómo el mismo diagrama de dispersión de indicadores distritales se vuelve explorable al añadir hover_data con el nombre del distrito, la población y la región. Demuestre un mapa coroplético interactivo con px.choropleth usando un GeoJSON de departamentos y explique el parámetro featureidkey, que indica qué propiedad del GeoJSON coincide con la columna de ubicaciones. Presente la animación por año con animation_frame y discuta su limitación: la memoria de trabajo humana compara mal estados que no ve simultáneamente, por lo que los múltiplos pequeños suelen ser superiores para comparar. Comente que equipos de periodismo de datos han reportado que solo una minoría de lectores interactúa con los gráficos, de modo que el mensaje debe ser visible en el estado inicial. Pregunte: ¿en qué situaciones la interactividad es indispensable? Respuesta esperada: exploración por usuarios con preguntas diversas y tableros de seguimiento."
+        },
+        {
+          "title": "Anatomía de los gráficos engañosos",
+          "bullets": [
+            "Ejes truncados en barras, dobles ejes ajustados para fabricar cruces y escalas invertidas o no lineales sin aviso.",
+            "Selección conveniente del periodo: elegir la ventana temporal que favorece una conclusión e ignorar el contexto histórico.",
+            "Distorsiones de área y volumen: íconos escalados en dos dimensiones, gráficos 3D y gráficos circulares en perspectiva.",
+            "Cairo (2019) añade los engaños por datos dudosos, cantidad insuficiente de datos e incertidumbre ocultada."
+          ],
+          "notes": "Presente How Charts Lie de Alberto Cairo, periodista y profesor de visualización, y organice los engaños en dos familias: los de codificación, que distorsionan la representación, y los de datos, que muestran información incompleta o de mala calidad. Proyecte ejemplos de gráficos con eje truncado, con doble eje en el que la elección de escalas sugiere una correlación y con periodos elegidos para mostrar crecimiento o caída. Para cada uno, pida a los estudiantes identificar el engaño y proponer la corrección. Insista en que muchos gráficos engañosos no son malintencionados, sino el resultado de valores por defecto de las herramientas. Comente que el doble eje casi siempre puede reemplazarse por dos paneles alineados o por índices base 100. Pregunte: ¿cuál de estos engaños considera más frecuente en los reportes de su organización y por qué cree que persiste?"
+        },
+        {
+          "title": "Ética y veracidad en la visualización de datos",
+          "bullets": [
+            "Cairo propone cinco cualidades: veraz, funcional, bella, reveladora e iluminadora; la veracidad es condición previa de todas.",
+            "Contexto obligatorio: fuente, fecha de corte, definición de indicadores, denominadores y limitaciones conocidas.",
+            "Evite estigmatizar territorios o grupos: un mapa de delitos por distrito sin contexto socioeconómico puede reforzar prejuicios.",
+            "Transparencia: publique datos y código cuando sea posible para que otros puedan verificar y reproducir el gráfico."
+          ],
+          "notes": "Presente las cinco cualidades que Alberto Cairo desarrolla en The Truthful Art y discuta por qué un gráfico bello pero falso es peor que uno feo y veraz. Plantee un dilema de la práctica peruana: una municipalidad quiere publicar un mapa de denuncias por delitos a nivel de manzana; ¿qué riesgos implica para los vecinos y para la privacidad de las víctimas? Relacione con la Ley 29733 y con la supresión de celdas pequeñas vista en la unidad 1. Explique que el denominador es una decisión ética: las tasas por población residente pueden ser engañosas en distritos comerciales con mucha población flotante, como el Cercado de Lima. Promueva la transparencia: compartir código y datos permite la verificación por pares. Pida a los equipos redactar un breve código de conducta de cinco puntos para sus visualizaciones, que incluirán en la tarea de la unidad."
+        },
+        {
+          "title": "Lista de verificación para una figura publicable",
+          "bullets": [
+            "Mensaje: ¿la figura responde una pregunta concreta y su título enuncia el hallazgo?",
+            "Codificación: ¿posición y longitud para lo importante, escalas honestas y paletas acordes al tipo de variable?",
+            "Accesibilidad: ¿funciona en escala de grises y para daltonismo, con contraste suficiente y texto alternativo?",
+            "Contexto e integridad: ¿incluye fuente, fecha de corte, unidades, incertidumbre y notas sobre datos faltantes?",
+            "Técnica: ¿se exporta en formato vectorial o a 300 dpi y el código la regenera desde los datos crudos?"
+          ],
+          "notes": "Cierre la unidad integrando lo aprendido en una lista de verificación que los estudiantes aplicarán a cada figura de la tarea y del proyecto final. Haga una revisión por pares en vivo: cada estudiante comparte una figura propia y un compañero aplica la lista, señalando al menos un aspecto por mejorar. Explique que esta práctica imita la revisión editorial de los equipos de gráficos de los medios y de las áreas de estudios económicos de organismos como el BCRP, donde ninguna figura se publica sin una segunda mirada. Destaque que la lista no es burocracia: cada pregunta corresponde a un error documentado en la unidad. Recuerde que la tarea combina series de tiempo, un mapa y un gráfico interactivo, y que la rúbrica evalúa explícitamente la accesibilidad y la veracidad. Pregunte qué ítem consideran más difícil de cumplir y discuta estrategias concretas para lograrlo."
+        }
+      ],
+      "reading": {
+        "title": "Tiempo, espacio y color: visualización avanzada y responsable",
+        "minutes": 40,
+        "content": "## Tres dimensiones que exigen decisiones especiales\n\nLas series de tiempo, los mapas y el color comparten una característica: sus valores por defecto suelen producir gráficos engañosos. Una relación de aspecto mal elegida exagera la volatilidad, un mapa de conteos premia a los territorios más poblados y una paleta arcoíris inventa fronteras donde no las hay. Esta lectura presenta los criterios técnicos para tomar esas decisiones con rigor.\n\n## Series de tiempo: transformar antes de graficar\n\nComparar series de magnitudes diferentes exige transformarlas. El índice base 100 y la variación interanual son las herramientas más usadas:\n\n$$I_t = 100 \\cdot \\frac{x_t}{x_0} \\qquad \\Delta_{12}\\% = \\left(\\frac{x_t}{x_{t-12}} - 1\\right) \\cdot 100$$\n\nEl Banco Central de Reserva del Perú opera desde 2002 un esquema de metas explícitas de inflación y, desde 2007, su meta es 2 % con un rango de tolerancia entre 1 % y 3 %. La inflación interanual de Lima Metropolitana cerró 2022 en 8,46 % por choques internacionales en alimentos y energía, y volvió al rango meta en 2024. El siguiente código construye el gráfico con la banda meta:\n\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nipc = pd.read_csv(\"data/raw/ipc_lima.csv\", parse_dates=[\"fecha\"], index_col=\"fecha\")\ninfl = ipc[\"indice\"].pct_change(12).mul(100).dropna()\n\nfig, ax = plt.subplots(figsize=(9, 4), layout=\"constrained\")\nax.axhspan(1, 3, color=\"#4C78A8\", alpha=0.15, label=\"Rango meta del BCRP\")\nax.plot(infl.index, infl, color=\"#1F2937\", lw=1.8)\nax.annotate(\"8,46 % (dic. 2022)\", xy=(pd.Timestamp(\"2022-12-01\"), 8.46),\n            xytext=(pd.Timestamp(\"2018-06-01\"), 7.5), arrowprops={\"arrowstyle\": \"->\"})\nax.set(ylabel=\"Variación % interanual\",\n       title=\"La inflación superó el rango meta entre 2021 y 2023\")\nax.spines[[\"top\", \"right\"]].set_visible(False)\n```\n\nPara comparar muchas series, los **múltiplos pequeños** de Tufte superan al gráfico espagueti: cada panel destaca una región y muestra la serie nacional en gris, con escalas compartidas para que las magnitudes sean comparables.\n\n## Color con fundamento perceptivo\n\nEl color tiene tono, saturación y luminosidad, pero solo la luminosidad se percibe espontáneamente como orden. Por eso las paletas **secuenciales** varían en luminosidad, las **divergentes** combinan dos tonos alrededor de un punto medio significativo, como el cero de una variación, y las **cualitativas** usan tonos distintos de luminosidad similar para categorías. Viridis y cividis son perceptualmente uniformes; la paleta arcoíris (jet) no lo es y crea fronteras artificiales, como documentaron Borland y Taylor (2007). La accesibilidad no es opcional: alrededor del 8 % de los hombres de ascendencia norte-europea tiene deficiencia de visión rojo-verde, de modo que un semáforo rojo-verde como única codificación excluye a parte de la audiencia. La codificación redundante —color más forma o etiqueta— resuelve el problema.\n\n## Mapas coropléticos: tasas, clasificación y unidad de área\n\nUn mapa coroplético colorea áreas según el valor de una variable y debe usarse solo con tasas, proporciones o densidades. El ubigeo es la clave que une los datos del INEI con los límites político-administrativos:\n\n```python\nimport geopandas as gpd\n\ndist = gpd.read_file(\"data/raw/distritos.gpkg\").to_crs(epsg=32718)   # UTM 18S\ndist[\"ubigeo\"] = dist[\"ubigeo\"].astype(str).str.zfill(6)\nmapa = dist.merge(indicadores, on=\"ubigeo\", how=\"left\", validate=\"1:1\")\nmapa[\"tasa\"] = mapa[\"casos\"] / mapa[\"poblacion\"] * 100_000\n\nax = mapa.plot(column=\"tasa\", cmap=\"viridis\", scheme=\"quantiles\", k=5, legend=True,\n               missing_kwds={\"color\": \"lightgrey\", \"label\": \"Sin dato\"})\nax.set_axis_off()\n```\n\nTres trampas acechan. Primero, el **sesgo de área**: Loreto ocupa casi el 29 % del territorio y domina visualmente aunque su población sea pequeña. Segundo, el **problema de la unidad de área modificable** (Openshaw, 1984): los patrones cambian según se agregue por distrito, provincia o departamento. Tercero, la **inestabilidad de las tasas** en distritos poco poblados, donde unos pocos casos producen valores extremos. Las alternativas incluyen símbolos proporcionales, cartogramas, cuadrículas hexagonales o, cuando la ubicación no forma parte del hallazgo, barras ordenadas.\n\n## Interactividad con propósito\n\nPlotly permite crear gráficos con información emergente, zoom y filtros con poco código. La interactividad es valiosa para explorar y para tableros de seguimiento, pero el mensaje principal debe ser visible sin interacción, porque muchos lectores nunca hacen clic.\n\n```python\nimport plotly.express as px\n\nfig = px.scatter(distritos, x=\"pobreza\", y=\"anemia\", size=\"poblacion\",\n                 color=\"region_natural\", hover_name=\"distrito\")\nfig.write_html(\"exploracion_distrital.html\")\n```\n\n## Veracidad como criterio rector\n\nAlberto Cairo (2016) propone que una buena visualización sea veraz, funcional, bella, reveladora e iluminadora, y en *How Charts Lie* (2019) documenta engaños de codificación —ejes truncados, dobles ejes, áreas escaladas— y de datos: periodos seleccionados a conveniencia, muestras insuficientes e incertidumbre oculta. Mostrar intervalos, declarar denominadores y señalar las estimaciones referenciales —el INEI considera así a las que tienen un coeficiente de variación superior al 15 %— forma parte del oficio. Un gráfico es una afirmación pública sobre la realidad y debe sostenerse ante la verificación."
+      },
+      "case": {
+        "title": "Caso: Un mapa para priorizar la lucha contra la anemia infantil",
+        "content": "El Gobierno Regional de una región altoandina del sur del país debe distribuir S/ 12 millones de un programa de lucha contra la anemia infantil entre sus 11 provincias y 110 distritos (los nombres y cifras de este caso son ficticios con fines pedagógicos, aunque se inspiran en la estructura de la Encuesta Demográfica y de Salud Familiar, ENDES). A nivel nacional, la ENDES reporta desde hace años que más del 40 % de niñas y niños de 6 a 35 meses presenta anemia, con prevalencias mayores en zonas rurales altoandinas.\n\nLa Gerencia Regional de Desarrollo Social encargó a Javier Huamán, analista de la Oficina de Planeamiento, un mapa para la sesión del Consejo Regional. Javier dispone de tres fuentes: registros administrativos de tamizaje de hemoglobina de los establecimientos de salud de 2025, proyecciones de población por distrito y los límites distritales con ubigeo.\n\nSu primer borrador fue un mapa coroplético con el **número de niños con anemia** por distrito, con la paleta arcoíris que traía por defecto su programa. El distrito capital aparecía en rojo intenso con 4 300 casos, y los consejeros de las provincias altas reclamaron que «el mapa favorece a la ciudad». Al calcular la **tasa de anemia** sobre niños tamizados, el panorama cambió: la capital tenía 31 %, mientras que doce distritos de altura superaban el 60 %.\n\nSin embargo, surgieron nuevos problemas:\n\n- En 19 distritos se tamizó a menos de 50 niños; uno de ellos, con 14 tamizados y 11 casos, mostraba la tasa más alta de la región (79 %).\n- La cobertura de tamizaje variaba entre 35 % y 92 % de la población objetivo, y los distritos con menor cobertura eran los más alejados.\n- Dos distritos de creación reciente no figuraban en el archivo de límites, por lo que aparecían en blanco.\n- La provincia más extensa, de selva alta y escasa población, dominaba visualmente el mapa.\n\nAdemás, el presidente del Consejo pidió un mapa «que se entienda en diez segundos» para difundirlo en redes sociales, mientras que la Dirección Regional de Salud advirtió que publicar tasas de distritos muy pequeños podría estigmatizar a comunidades concretas y que los datos de salud de menores son sensibles.\n\nJavier tiene una semana para entregar una propuesta de visualización que oriente la asignación del presupuesto y que resista el escrutinio de consejeros, técnicos de salud y prensa.",
+        "questions": [
+          "¿Por qué el mapa de conteos era inadecuado para decidir la asignación y qué indicador y denominador propondría en su lugar?",
+          "¿Cómo trataría visualmente los distritos con menos de 50 tamizados y la cobertura desigual de tamizaje para no inducir decisiones erróneas?",
+          "¿Qué paleta y esquema de clasificación elegiría y cómo resolvería el sesgo de área de la provincia más extensa?",
+          "¿Qué versiones distintas entregaría al Consejo Regional y a redes sociales, y qué precauciones éticas y de protección de datos aplicaría en cada una?"
+        ]
+      },
+      "assignment": {
+        "title": "Visualización temporal, geoespacial e interactiva de un indicador peruano",
+        "instructions": "**Objetivo:** comunicar con rigor la evolución temporal y la distribución territorial de un indicador de interés público, aplicando principios de color, accesibilidad, incertidumbre y veracidad.\n\n**Qué hacer:**\n1. Elija un indicador con dimensión temporal y territorial (por ejemplo, inflación por ciudad, ejecución presupuestal por región, tasas de dengue, acceso a internet o pobreza). Cite fuentes y fechas de corte.\n2. Elabore una figura de series de tiempo con una transformación justificada (índice base 100, variación interanual o escala logarítmica), anotaciones de eventos y, si corresponde, una banda de referencia.\n3. Construya múltiplos pequeños para al menos ocho territorios, con escalas compartidas y un orden justificado.\n4. Elabore un mapa coroplético con geopandas usando tasas, una paleta adecuada al tipo de variable, un esquema de clasificación argumentado y un tratamiento explícito de faltantes y bases pequeñas.\n5. Construya un gráfico interactivo con Plotly exportado a HTML cuyo mensaje sea visible sin interacción.\n6. Aplique la lista de verificación de la unidad y documente la prueba de accesibilidad (simulación de daltonismo y escala de grises).\n\n**Qué entregar:** cuaderno ejecutable, archivo HTML interactivo y un informe PDF de hasta cinco páginas que incluya un párrafo de reflexión ética sobre posibles lecturas erróneas o estigmatizantes.\n\n**Criterios:** pertinencia de las transformaciones, calidad técnica del mapa, accesibilidad y veracidad, utilidad de la interactividad y reproducibilidad del código.",
+        "rubric": [
+          {
+            "name": "Serie de tiempo transformada y múltiplos pequeños",
+            "points": 5
+          },
+          {
+            "name": "Mapa coroplético con tasas, paleta y clasificación justificadas",
+            "points": 6
+          },
+          {
+            "name": "Accesibilidad, incertidumbre y reflexión ética",
+            "points": 5
+          },
+          {
+            "name": "Gráfico interactivo pertinente y código reproducible",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: series de tiempo, color, mapas e interactividad",
+        "questions": [
+          {
+            "prompt": "Desea comparar la evolución de las exportaciones de cobre (miles de millones) y de arándanos (cientos de millones) entre 2015 y 2025. ¿Qué transformación permite una comparación justa en un solo gráfico?",
+            "options": [
+              "Usar un doble eje con escalas ajustadas a cada serie",
+              "Convertir ambas series en índices con base 2015 = 100",
+              "Graficar ambas en valores absolutos con el mismo eje",
+              "Mostrar la suma acumulada de ambas series"
+            ],
+            "correct": 1,
+            "explanation": "El índice base 100 expresa cada serie respecto de su propio punto de partida y hace comparables las tasas de crecimiento. El doble eje permite fabricar cruces arbitrarios y los valores absolutos aplastan la serie menor."
+          },
+          {
+            "prompt": "Un mapa muestra la variación del empleo formal por región respecto del año anterior, con valores positivos y negativos. ¿Qué paleta es la adecuada?",
+            "options": [
+              "Divergente, con color neutro en cero y dos tonos para crecimiento y caída",
+              "Secuencial de un solo tono, de claro a oscuro",
+              "Cualitativa, con un color distinto para cada región",
+              "Arcoíris (jet), para maximizar el contraste entre valores"
+            ],
+            "correct": 0,
+            "explanation": "La variable tiene un punto medio significativo, el cero, y dos direcciones. Una paleta divergente codifica ambas y deja neutro el cero; la secuencial no distingue la dirección y la arcoíris crea fronteras artificiales."
+          },
+          {
+            "prompt": "Un mapa coroplético del número de casos de dengue por distrito muestra los valores más altos en los distritos más poblados. ¿Cuál es el principal problema?",
+            "options": [
+              "La paleta debería ser cualitativa porque los distritos son categorías",
+              "Debería usarse EPSG:4326 en lugar de una proyección UTM",
+              "Refleja la distribución de la población; debe usarse una tasa por cada 100 000 habitantes",
+              "Los distritos pequeños deberían eliminarse del mapa"
+            ],
+            "correct": 2,
+            "explanation": "Los mapas coropléticos colorean áreas y deben representar tasas, proporciones o densidades. Un mapa de conteos muestra sobre todo dónde vive más gente; ni el sistema de referencia ni la paleta corrigen ese problema."
+          },
+          {
+            "prompt": "Un distrito con 14 niños tamizados y 11 casos aparece con la mayor tasa de anemia de la región. ¿Qué tratamiento visual es más responsable?",
+            "options": [
+              "Mostrar el distrito con el color más intenso porque es el dato real",
+              "Eliminar el distrito del mapa sin indicarlo",
+              "Reemplazar su tasa por el promedio regional sin advertencia",
+              "Señalar las tasas con base pequeña mediante transparencia o trama e indicar el tamaño de la base"
+            ],
+            "correct": 3,
+            "explanation": "Con bases pequeñas la tasa es inestable y puede ser extrema por azar. Señalar la imprecisión mantiene la transparencia sin inducir decisiones erróneas; eliminar o reemplazar datos sin aviso vulnera la veracidad."
+          },
+          {
+            "prompt": "Un semáforo rojo-amarillo-verde es el único medio para indicar el estado de los indicadores en un tablero. ¿Qué mejora resuelve el problema de accesibilidad?",
+            "options": [
+              "Aumentar la saturación del rojo y del verde",
+              "Añadir codificación redundante con íconos o etiquetas y usar una paleta apta para daltonismo",
+              "Usar una paleta arcoíris con más colores",
+              "Reducir el tamaño de los indicadores para que quepan más"
+            ],
+            "correct": 1,
+            "explanation": "Las personas con deuteranopía confunden el rojo y el verde aunque se saturen. La codificación redundante y paletas como la de Okabe e Ito permiten distinguir estados incluso en escala de grises."
+          },
+          {
+            "prompt": "En un informe impreso para el directorio se incluye una animación de Plotly por año como único gráfico de la evolución regional. ¿Cuál es la mejor alternativa?",
+            "options": [
+              "Múltiplos pequeños con escalas compartidas, que permiten comparar los años simultáneamente",
+              "Mantener la animación y agregar un botón de reproducción",
+              "Un gráfico circular por cada año",
+              "Un mapa en tres dimensiones con extrusión por valor"
+            ],
+            "correct": 0,
+            "explanation": "En un medio impreso la animación no funciona y, aun en pantalla, la memoria de trabajo compara mal estados no simultáneos. Los múltiplos pequeños muestran todos los periodos a la vez con escalas comparables."
+          },
+          {
+            "prompt": "Para calcular con geopandas el área en kilómetros cuadrados de distritos del centro del Perú, ¿qué debe hacer antes de usar la propiedad area?",
+            "options": [
+              "Mantener EPSG:4326, porque ya expresa las coordenadas en grados",
+              "Convertir el GeoDataFrame en un DataFrame de pandas",
+              "Proyectar la capa a un CRS métrico, como UTM zona 18S (EPSG:32718)",
+              "Aplicar el esquema de clasificación por cuantiles"
+            ],
+            "correct": 2,
+            "explanation": "En EPSG:4326 las coordenadas están en grados y las áreas resultantes no tienen sentido métrico. Proyectar a UTM 18S, que cubre buena parte del centro del país, permite obtener áreas en metros cuadrados."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Tableros y narrativa con datos: proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante diseña, construye y sustenta un tablero interactivo con narrativa de datos que responde a necesidades reales de decisión, integrando preparación, análisis visual, gobernanza de datos y comunicación ejecutiva en un proyecto reproducible.",
+      "topics": [
+        "Diseño de tableros: definición de Few, tipos, indicadores y disposición",
+        "Interacción y arquitectura de datos para tableros",
+        "Construcción de tableros con Streamlit y herramientas de inteligencia de negocios",
+        "Narrativa con datos: la gran idea, el principio de la pirámide y la anotación",
+        "Reproducibilidad, gobernanza y evaluación de tableros",
+        "Proyecto integrador y sustentación ejecutiva"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es un tablero? Definición de Few y tipos según la decisión",
+          "bullets": [
+            "Few (2013): presentación visual de la información más importante para lograr objetivos, consolidada en una sola pantalla y monitoreable de un vistazo.",
+            "Estratégico: pocos indicadores de alto nivel, con frecuencia mensual o trimestral, para la alta dirección.",
+            "Analítico: permite explorar causas con filtros y desagregaciones; está dirigido a analistas y mandos medios.",
+            "Operativo: seguimiento casi en tiempo real de procesos, como pedidos pendientes o atenciones en cola."
+          ],
+          "notes": "Inicie preguntando qué tableros usan en su trabajo y cuántos de ellos consultan realmente cada semana. Lea la definición de Stephen Few, autor de Information Dashboard Design, y destaque sus tres condiciones: lo más importante, una sola pantalla y lectura de un vistazo. Muchos productos llamados tableros son en realidad colecciones de gráficos sin propósito. Presente los tres tipos según la decisión que apoyan y su frecuencia de actualización: un tablero estratégico de una caja municipal de ahorro y crédito se revisa en el directorio mensual, mientras que un tablero operativo de un centro de llamadas se actualiza cada minuto. Pida a los estudiantes que, para el proyecto integrador, definan desde hoy el tipo de tablero, el usuario principal y la decisión que apoyará. Esa definición guiará todas las decisiones de diseño posteriores y será lo primero que evaluará el panel."
+        },
+        {
+          "title": "De los objetivos a los indicadores: el enfoque meta-pregunta-métrica",
+          "bullets": [
+            "Basili propuso el enfoque GQM: cada meta se descompone en preguntas y cada pregunta en métricas que la responden.",
+            "Un indicador clave (KPI) se vincula a una meta y tiene fórmula, fuente, frecuencia, responsable, línea base y valor objetivo.",
+            "Combine indicadores de resultado (rezagados, como ventas) con indicadores de causa (adelantados, como cotizaciones emitidas).",
+            "Elabore una ficha técnica por indicador; un tablero estratégico rara vez necesita más de siete u ocho indicadores principales."
+          ],
+          "notes": "Presente el enfoque Goal-Question-Metric de Victor Basili, nacido en la ingeniería de software y hoy usado ampliamente para diseñar sistemas de medición. Desarrolle un ejemplo en vivo: meta, reducir la morosidad de la cartera mype; preguntas, dónde se concentra el deterioro, si es reciente y qué productos lo explican; métricas, ratio de cartera atrasada, cosechas por mes de desembolso y morosidad por producto. Explique la ficha técnica del indicador, práctica habitual en el planeamiento estratégico del sector público peruano, que exige definición, fórmula, fuente, periodicidad y responsable. Distinga los indicadores rezagados, que confirman lo ocurrido, de los adelantados, que permiten actuar antes. Pregunte: en un tablero de ventas, ¿qué indicador adelantado propondrían y cómo lo medirían? Cierre pidiendo a cada equipo redactar tres fichas técnicas para su proyecto integrador."
+        },
+        {
+          "title": "Disposición visual del tablero: jerarquía, densidad y componentes",
+          "bullets": [
+            "Ubique los indicadores más importantes arriba a la izquierda: la lectura occidental sigue patrones en Z o en F.",
+            "Use tarjetas con valor, variación frente a la meta o al periodo anterior y una línea de tendencia mínima (sparkline de Tufte).",
+            "Prefiera el gráfico de bala (bullet graph) de Few a los velocímetros: muestra valor, meta y rangos en poco espacio.",
+            "Agrupe por tema con proximidad y cerramiento, alinee a una cuadrícula y mantenga escalas y colores consistentes entre vistas."
+          ],
+          "notes": "Muestre dos versiones de un mismo tablero: una con velocímetros, gráficos 3D y doce colores, y otra con tarjetas, líneas de tendencia y gráficos de bala. Pida que identifiquen en cinco segundos qué indicador está peor respecto de su meta en cada versión. Explique las sparklines, que Edward Tufte definió como gráficos intensos en datos del tamaño de una palabra, y el gráfico de bala que Stephen Few diseñó como alternativa compacta al velocímetro. Recuerde los principios de la Gestalt de la unidad 2 aplicados a la disposición: proximidad para agrupar, cerramiento para separar secciones y alineación para dar orden. Discuta la densidad: un tablero no es un informe; si algo requiere desplazarse hacia abajo, probablemente no es prioritario. Ejercicio: cada equipo dibuja un boceto de su tablero en papel o en una pizarra digital antes de escribir una sola línea de código."
+        },
+        {
+          "title": "Diseño de la interacción: el mantra de Shneiderman",
+          "bullets": [
+            "Shneiderman (1996): primero la vista general, luego zoom y filtro, y finalmente detalles a pedido.",
+            "Filtros globales (periodo, región, canal) en una barra lateral; filtros cruzados al hacer clic en un elemento de un gráfico.",
+            "Profundización jerárquica: departamento → provincia → distrito, manteniendo el contexto del nivel superior.",
+            "Rendimiento: el tablero debe responder en pocos segundos; precalcule agregados y almacene resultados en caché."
+          ],
+          "notes": "Presente el mantra de búsqueda de información visual de Ben Shneiderman, uno de los textos fundacionales de la visualización interactiva. Muéstrelo en un tablero real: la vista general presenta los indicadores nacionales; los filtros permiten acotar a una región o periodo; y el detalle a pedido aparece con información emergente o una tabla al seleccionar un elemento. Explique que demasiados filtros convierten el tablero en una herramienta de consulta y desorientan al usuario estratégico. Comente la importancia del rendimiento: la investigación en interacción humano-computadora muestra que las demoras prolongadas interrumpen el flujo del análisis, por lo que los agregados se precalculan en la etapa de preparación. Pregunte: para un gerente regional, ¿qué tres filtros serían imprescindibles y cuáles sobrarían? Cada equipo documentará su diseño de interacción en el documento de diseño del proyecto."
+        },
+        {
+          "title": "Arquitectura de datos para tableros: del origen al modelo estrella",
+          "bullets": [
+            "Flujo típico: fuentes (ERP, hojas de cálculo, API) → extracción y transformación → almacén o data mart → capa de visualización.",
+            "Modelo estrella de Kimball: una tabla de hechos con medidas y claves, rodeada de dimensiones como tiempo, producto y territorio.",
+            "Defina la granularidad de la tabla de hechos (una fila por transacción, por día o por cliente-mes) antes de construir.",
+            "Frecuencia de actualización según la decisión: diaria en lote para la estrategia, cada pocos minutos para la operación."
+          ],
+          "notes": "Conecte con Base de Datos: el modelo estrella propuesto por Ralph Kimball es un esquema desnormalizado optimizado para consultas analíticas, a diferencia del modelo normalizado de los sistemas transaccionales. Dibuje en vivo una estrella para un tablero de ventas: hechos de ventas con monto, cantidad y descuento; dimensiones de fecha, producto, tienda con su ubigeo y cliente. Explique que la granularidad es la decisión más importante: si la tabla de hechos tiene una fila por día y tienda, no podrá analizarse el ticket promedio por cliente. Relacione con pandas: el pipeline de la unidad 1 puede producir estas tablas en formato Parquet, que Streamlit o Power BI consumen directamente. Pregunte a la clase: ¿qué riesgos trae actualizar un tablero estratégico cada minuto? Respuesta: costos innecesarios, volatilidad que distrae y decisiones reactivas sin fundamento."
+        },
+        {
+          "title": "Streamlit: de un cuaderno a una aplicación web de datos",
+          "bullets": [
+            "Un archivo app.py con st.title, st.sidebar.selectbox y st.metric se ejecuta con el comando streamlit run app.py.",
+            "st.columns organiza tarjetas de indicadores; st.plotly_chart y st.pyplot integran las figuras construidas en las unidades previas.",
+            "@st.cache_data evita recargar y recalcular datos en cada interacción; cargue archivos Parquet agregados, no datos crudos.",
+            "El guion se reejecuta de arriba abajo ante cada interacción: mantenga la lógica de datos en funciones puras y probadas."
+          ],
+          "notes": "Programe en vivo una aplicación mínima en Streamlit con datos de ventas: título, filtro de región en la barra lateral, dos o tres tarjetas con st.metric que muestran valor y variación, y un gráfico de Plotly que reacciona al filtro. Explique el modelo de ejecución de Streamlit: cada interacción vuelve a ejecutar el guion completo, por lo que la caché es esencial para el rendimiento. Destaque que la lógica de transformación debe vivir en un módulo separado, por ejemplo datos.py, con las funciones de la unidad 1, para poder probarla con pytest de forma independiente de la interfaz. Comente las opciones de publicación y sus implicancias de seguridad: un tablero con datos sensibles no debe publicarse en servicios abiertos sin autenticación. Pida a cada equipo tener, al final de la semana, una versión mínima funcional de su tablero con al menos un filtro y tres indicadores."
+        },
+        {
+          "title": "Herramientas de inteligencia de negocios: criterios de elección",
+          "bullets": [
+            "Power BI y Tableau: plataformas corporativas consolidadas, con modelado de datos, seguridad a nivel de fila y amplia comunidad.",
+            "Looker Studio y Metabase: opciones de bajo costo o de código abierto para equipos pequeños y organizaciones públicas.",
+            "Streamlit y Dash: máxima flexibilidad con Python e integración directa con modelos de aprendizaje automático.",
+            "Decida según usuarios, licencias, conectores, gobierno de datos, habilidades del equipo y costo total de propiedad."
+          ],
+          "notes": "Presente el panorama de herramientas sin promover ninguna: el criterio profesional es elegir según el contexto. Muestre la misma vista construida en Power BI y en Streamlit, y compare el tiempo de desarrollo, la flexibilidad y el mantenimiento. Explique que en muchas empresas peruanas Power BI es estándar por su integración con el ecosistema de Microsoft, mientras que los equipos de ciencia de datos suelen preferir aplicaciones en Python que integran predicciones de modelos. Mencione que las herramientas de bajo código facilitan la adopción, pero pueden generar una proliferación de tableros sin gobierno. Proponga un ejercicio de decisión: una ONG con presupuesto mínimo, una cadena de retail con 3 000 usuarios y una empresa emergente de tecnología financiera; ¿qué herramienta recomendarían a cada una y por qué? Los estudiantes pueden construir su proyecto en Streamlit o en otra herramienta, justificando la elección."
+        },
+        {
+          "title": "Narrativa con datos: la gran idea y el guion de tres minutos",
+          "bullets": [
+            "Knaflic: antes de abrir el software, defina quién es la audiencia, qué necesita saber o hacer y qué datos lo respaldan.",
+            "La gran idea se escribe en una oración completa: un punto de vista único y lo que está en juego para la audiencia.",
+            "Guion de tres minutos: si tuviera solo ese tiempo, ¿qué diría? Esa síntesis ordena el tablero y la presentación.",
+            "Use un guion gráfico (storyboard) con notas adhesivas antes de producir gráficos para ordenar la secuencia lógica."
+          ],
+          "notes": "Presente Storytelling with Data de Cole Nussbaumer Knaflic como una de las referencias prácticas más usadas en las empresas para comunicar con datos. Explique que muchas presentaciones fallan antes de empezar porque el analista no sabe qué quiere que la audiencia haga. Realice el ejercicio de la gran idea con un ejemplo: «Si reasignamos el 20 % del presupuesto de anemia a los doce distritos altoandinos con tasas superiores al 60 %, podemos reducir la brecha regional antes de 2028; necesitamos la aprobación del Consejo este mes». Señale que contiene un punto de vista, lo que está en juego y una acción concreta. Pida a cada equipo escribir su gran idea y leerla en voz alta; el resto de la clase evalúa si es clara, específica y accionable. Cierre explicando que el guion gráfico con notas adhesivas evita producir gráficos innecesarios."
+        },
+        {
+          "title": "El principio de la pirámide de Minto: conclusiones primero",
+          "bullets": [
+            "Minto propone comenzar por la respuesta y luego sustentarla con argumentos agrupados lógicamente, de lo general a lo específico.",
+            "Introducción SCQA: situación, complicación, pregunta y respuesta; prepara a la audiencia para la recomendación.",
+            "Los argumentos de un mismo nivel deben ser mutuamente excluyentes y colectivamente exhaustivos (MECE).",
+            "En presentaciones ejecutivas, los títulos de las diapositivas leídos en secuencia deben contar la historia completa."
+          ],
+          "notes": "Presente The Pyramid Principle de Barbara Minto, desarrollado durante su trabajo en McKinsey y hoy estándar en la consultoría. Contraste dos estructuras: la académica, que va de los antecedentes a la conclusión, y la ejecutiva, que comienza con la recomendación porque el tiempo del directorio es escaso. Desarrolle un ejemplo de SCQA: situación, la morosidad se mantuvo estable cinco años; complicación, en el último semestre subió medio punto en créditos agrícolas; pregunta, ¿debemos restringir la colocación?; respuesta, no en general, sino ajustar la política solo para cultivos expuestos al clima. Explique MECE con un ejemplo de segmentación de causas. Proponga la prueba de los títulos: leer solo los títulos de la presentación debe transmitir el argumento completo. Cada equipo aplicará esta estructura a la sustentación de su proyecto integrador y la ensayará en la semana 15."
+        },
+        {
+          "title": "Enfocar la atención: anotación, color de acento y revelación progresiva",
+          "bullets": [
+            "Un solo color de acento para el dato que sostiene el mensaje; el resto en grises que funcionan como contexto.",
+            "Anotaciones breves sobre el gráfico explican causas y eventos y evitan que la audiencia invente su propia interpretación.",
+            "Revelación progresiva: construya el gráfico por capas durante la presentación para guiar la lectura paso a paso.",
+            "Reduzca la carga cognitiva extrínseca (Sweller): todo elemento que no apoye el mensaje compite por la memoria de trabajo."
+          ],
+          "notes": "Muestre un gráfico de líneas con seis series en colores distintos y transfórmelo: cinco series en gris y una en color con una anotación que explica el cambio. Explique la teoría de la carga cognitiva de John Sweller, desarrollada en la psicología educativa: la memoria de trabajo es limitada y los elementos irrelevantes consumen recursos que el lector necesita para comprender. Presente la revelación progresiva, útil en presentaciones en vivo: se muestra primero el eje y la referencia, luego la serie nacional y finalmente la región de interés, narrando cada paso. Advierta que la anotación no debe repetir lo que el gráfico ya muestra, sino agregar el porqué. Pida a los equipos aplicar estas técnicas a la figura principal de su tablero y compartir el antes y después en el foro de la semana para recibir comentarios de sus pares."
+        },
+        {
+          "title": "Reproducibilidad y control de calidad del proyecto",
+          "bullets": [
+            "Estructura del repositorio: data/raw, data/processed, src, notebooks, app y reports, con un README que explique cómo ejecutar.",
+            "Fije las dependencias con versiones en requirements.txt y registre los cambios con Git y mensajes descriptivos.",
+            "Diccionario de datos: nombre, tipo, definición, unidad, fuente y reglas de validación de cada variable.",
+            "Pruebas: assert o pytest sobre totales, rangos y claves; conciliación de cifras con la fuente oficial."
+          ],
+          "notes": "Explique que un tablero sin reproducibilidad es una caja negra: si el analista deja la empresa, nadie puede actualizarlo. Presente la estructura de repositorio recomendada para el proyecto y muestre un README modelo con objetivo, fuentes, instrucciones de instalación y ejecución, y limitaciones conocidas. Recuerde Git y pytest, vistos en Fundamentos de Programación en Python, y su aplicación a los datos: una prueba que verifique que la suma de ventas del tablero coincide con el total contable puede evitar una presentación desastrosa. Insista en la conciliación con fuentes oficiales: si el tablero muestra la inflación, el valor debe coincidir con lo publicado por el BCRP. Proponga una revisión cruzada entre equipos: cada equipo intentará ejecutar el proyecto de otro siguiendo solo su README y reportará los problemas encontrados en un formato estándar."
+        },
+        {
+          "title": "Gobernanza y protección de datos en tableros",
+          "bullets": [
+            "Defina dueño de datos, responsable técnico y usuarios autorizados; documente el linaje desde la fuente hasta cada indicador.",
+            "Seguridad a nivel de fila: cada usuario ve solo su región o cartera, conforme al principio de mínimo privilegio.",
+            "La Ley 29733 y su reglamento exigen medidas de seguridad; los tableros con datos de salud o financieros requieren controles reforzados.",
+            "Publique agregados, suprima celdas pequeñas y evite exportaciones masivas de datos personales desde el tablero."
+          ],
+          "notes": "Presente la gobernanza de datos como el conjunto de roles, políticas y procesos que aseguran que los datos se usen de forma correcta y segura. Explique el linaje: ante una cifra extraña, el equipo debe poder rastrear su origen hasta la fuente. Muestre cómo funciona la seguridad a nivel de fila en las herramientas de inteligencia de negocios y cómo implementarla de forma básica en Streamlit con autenticación y filtros por usuario. Retome la Ley 29733 de Protección de Datos Personales: los datos de salud son sensibles y su tratamiento requiere consentimiento y medidas de seguridad adecuadas. Discuta un riesgo frecuente: tableros que permiten descargar la tabla completa con nombres y documentos de identidad. Pregunte a la clase qué controles incluirían en un tablero de atenciones de una red de clínicas. Cada proyecto deberá incluir una sección de gobernanza con estas definiciones."
+        },
+        {
+          "title": "Evaluar un tablero: usabilidad, adopción e iteración",
+          "bullets": [
+            "Prueba de cinco segundos: ¿el usuario identifica el mensaje principal y el indicador crítico en ese tiempo?",
+            "Pruebas basadas en tareas con tres a cinco usuarios reales: observe dónde dudan y cuánto tardan en responder preguntas.",
+            "Escala SUS de Brooke (1996): diez ítems que producen un puntaje de 0 a 100; el promedio de referencia ronda los 68 puntos.",
+            "Mida la adopción: usuarios activos, frecuencia de uso y decisiones documentadas que citan el tablero."
+          ],
+          "notes": "Explique que un tablero tiene éxito solo si se usa para decidir. Presente métodos de evaluación de bajo costo: la prueba de cinco segundos, las pruebas con tareas y la escala de usabilidad del sistema, SUS, propuesta por John Brooke, cuyo puntaje promedio de referencia, según los estudios de Jeff Sauro, es aproximadamente 68. Comente la recomendación de Jakob Nielsen de probar con pocos usuarios de manera iterativa, ya que las primeras sesiones revelan la mayoría de los problemas graves. Muestre cómo registrar las observaciones en una tabla de hallazgos con gravedad y propuesta de mejora. Pida a cada equipo realizar al menos una prueba con dos usuarios externos al curso, como compañeros de trabajo o familiares, y documentar tres mejoras implementadas. Esta evidencia forma parte de la rúbrica del proyecto integrador y del informe de usabilidad."
+        },
+        {
+          "title": "Proyecto integrador: entregables, cronograma y sustentación",
+          "bullets": [
+            "Semana 13: propuesta con usuario, decisión, preguntas, fichas técnicas de indicadores y boceto del tablero.",
+            "Semana 14: versión funcional con datos preparados, filtros e indicadores; revisión cruzada de repositorios entre equipos.",
+            "Semana 15: prueba de usabilidad, mejoras, narrativa con gran idea y estructura SCQA; ensayo de la sustentación.",
+            "Semana 16: sustentación de diez minutos ante un directorio simulado y cinco minutos de preguntas; entrega del repositorio."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso: la unidad 1 aporta la preparación de datos; la unidad 2, la selección de gráficos fundamentada en la percepción; la unidad 3, el tratamiento del tiempo, el espacio, el color y la ética; y esta unidad, el diseño del tablero y la narrativa. Explique el cronograma semana a semana y la rúbrica: pertinencia de indicadores y diseño, rigor de datos, narrativa, reproducibilidad y gobernanza. Detalle el formato de la sustentación: los equipos presentan ante un panel que asume el rol de directorio y formula preguntas incómodas sobre las cifras, las limitaciones y las recomendaciones. Comparta ejemplos de temas viables: tablero de ejecución presupuestal regional, seguimiento de ventas de una mype, indicadores de salud distrital o monitoreo de precios de alimentos. Cierre resolviendo dudas y confirmando los temas y la conformación de los equipos."
+        }
+      ],
+      "reading": {
+        "title": "Del tablero a la decisión: diseño de tableros y narrativa con datos",
+        "minutes": 35,
+        "content": "## El tablero como instrumento de decisión\n\nStephen Few (2013) define el tablero como una presentación visual de la información más importante para lograr uno o más objetivos, consolidada en una sola pantalla para monitorearse de un vistazo. La definición descarta, por omisión, buena parte de lo que se llama tablero en las organizaciones: colecciones de gráficos sin usuario definido ni decisión asociada. Según su propósito, un tablero puede ser estratégico (pocos indicadores, frecuencia mensual, alta dirección), analítico (exploración de causas con filtros) u operativo (seguimiento casi en tiempo real de procesos).\n\n## De la meta al indicador\n\nEl enfoque meta-pregunta-métrica (GQM) de Victor Basili ofrece un método para no medir por medir: cada meta se descompone en preguntas y cada pregunta en métricas. Para una caja municipal que busca contener la morosidad de su cartera mype, las preguntas pueden ser dónde se concentra el deterioro, desde cuándo y en qué productos; las métricas, la ratio de cartera atrasada, el análisis por cosechas y la morosidad por producto. Cada indicador requiere una ficha técnica con definición, fórmula, fuente, periodicidad, responsable, línea base y meta:\n\n$$\\text{Ratio de cartera atrasada} = \\frac{\\text{créditos vencidos} + \\text{créditos en cobranza judicial}}{\\text{colocaciones brutas}} \\times 100$$\n\nConviene combinar indicadores **rezagados**, que confirman resultados, con indicadores **adelantados**, que permiten actuar a tiempo.\n\n## Diseño visual y de interacción\n\nLa disposición sigue la lectura en Z: los indicadores críticos van arriba a la izquierda. Las tarjetas muestran el valor, su variación frente a la meta y una *sparkline*, el gráfico del tamaño de una palabra propuesto por Tufte. Para comparar valor y meta, el gráfico de bala de Few es más eficiente que el velocímetro. La interacción sigue el mantra de Shneiderman (1996): primero la vista general, luego zoom y filtro, y detalles a pedido.\n\nDetrás de la interfaz debe existir un modelo de datos sólido. El modelo estrella de Kimball organiza una tabla de hechos con medidas —monto, cantidad— y claves hacia dimensiones de fecha, producto, territorio y cliente. La granularidad de los hechos determina qué preguntas podrá responder el tablero.\n\n## Un tablero mínimo en Streamlit\n\n```python\n# app.py — ejecutar con: streamlit run app.py\nimport pandas as pd\nimport plotly.express as px\nimport streamlit as st\n\n@st.cache_data\ndef cargar() -> pd.DataFrame:\n    return pd.read_parquet(\"data/processed/ventas_mensuales.parquet\")\n\ndf = cargar()\nregion = st.sidebar.selectbox(\"Región\", [\"Todas\", *sorted(df[\"region\"].unique())])\nvista = df if region == \"Todas\" else df[df[\"region\"] == region]\n\nmensual = vista.groupby(\"mes\", as_index=False)[\"monto\"].sum()\nactual, previo = mensual[\"monto\"].iloc[-1], mensual[\"monto\"].iloc[-13]  # requiere 13 meses\nst.title(\"Ventas: seguimiento mensual\")\nc1, c2 = st.columns(2)\nc1.metric(\"Ventas del mes (S/)\", f\"{actual:,.0f}\", f\"{actual / previo - 1:.1%} interanual\")\nc2.metric(\"Tiendas activas\", vista[\"tienda\"].nunique())\nst.plotly_chart(px.line(mensual, x=\"mes\", y=\"monto\", title=\"Evolución mensual\"))\n```\n\nEl guion se reejecuta ante cada interacción; por ello la caché y los datos agregados previamente son esenciales para el rendimiento.\n\n## Narrativa: de los datos a la acción\n\nCole Nussbaumer Knaflic (2015) recomienda definir, antes de abrir el software, la audiencia, la acción esperada y la **gran idea**: una oración que expresa un punto de vista y lo que está en juego. Barbara Minto, con el principio de la pirámide, aporta la estructura: comenzar por la respuesta y sustentarla con argumentos mutuamente excluyentes y colectivamente exhaustivos. La introducción SCQA —situación, complicación, pregunta y respuesta— prepara a la audiencia ejecutiva para la recomendación. En la práctica, los títulos de las diapositivas, leídos en secuencia, deben contar la historia completa, y cada gráfico debe usar un color de acento y anotaciones que expliquen el porqué de los datos.\n\n## Gobernanza, reproducibilidad y evaluación\n\nUn tablero confiable documenta el linaje de cada indicador, aplica seguridad a nivel de fila y el principio de mínimo privilegio, y respeta la Ley 29733 de Protección de Datos Personales, especialmente con datos de salud o financieros. Su código vive en un repositorio con dependencias fijadas, diccionario de datos y pruebas que concilian los totales con las fuentes oficiales. Finalmente, se evalúa con usuarios reales mediante pruebas de cinco segundos, tareas observadas y la escala SUS de Brooke (1996), y se mide su adopción. Un tablero que nadie usa para decidir es, simplemente, un gráfico costoso."
+      },
+      "case": {
+        "title": "Caso: Vitalia del Sur y los cuarenta indicadores",
+        "content": "**Vitalia del Sur** es una cadena de 64 boticas en Arequipa, Moquegua, Tacna y Puno, con ventas anuales de S/ 210 millones, 520 colaboradores y un programa de fidelización con 180 000 clientes registrados que guarda el historial de compras de medicamentos (los nombres y cifras de la organización son ficticios con fines pedagógicos). Tras dos años de crecimiento, la empresa enfrenta la entrada agresiva de cadenas nacionales y una caída de 2,8 puntos porcentuales en su margen bruto.\n\nEl gerente general, Mario Valdivia, pidió al nuevo equipo de analítica —dos analistas y un ingeniero de datos— un tablero «con todo» para el comité de gerencia semanal: los 40 indicadores que hoy se reportan en ocho hojas de cálculo distintas, actualizados en tiempo real y accesibles desde el celular de los 64 jefes de botica.\n\nAl levantar requerimientos, la analista Carla Ticona encontró lo siguiente:\n\n- El comité dedica 45 minutos a revisar cifras y casi nunca llega a decisiones; cada gerencia trae su propia versión de las ventas, con diferencias de hasta 4 %.\n- El ERP actualiza las ventas cada noche; el inventario se cuenta físicamente una vez al mes y los quiebres de stock se registran manualmente.\n- Las gerencias coinciden en tres preocupaciones: el margen por categoría, los quiebres de stock de medicamentos de alta rotación y la fuga de clientes del programa de fidelización.\n- El área comercial quiere ver las compras por cliente, con nombre y DNI, para campañas, incluidos productos para enfermedades crónicas.\n- El presupuesto anual para herramientas es de S/ 25 000; la empresa ya tiene licencias corporativas de ofimática, y el ingeniero de datos domina Python.\n\nMario insiste en que «si no está todo, no sirve». El jefe de operaciones, en cambio, sostiene que con cinco indicadores bien definidos el comité podría decidir en 15 minutos. Además, el asesor legal advirtió que los datos de compras de medicamentos revelan información de salud, que la Ley 29733 califica como dato sensible, y que su uso para campañas requiere consentimiento expreso y por escrito.\n\nCarla debe presentar en dos semanas una propuesta de tablero —tipo, indicadores, frecuencia, herramienta, diseño y reglas de acceso— y convencer a un gerente general que espera exactamente lo contrario.",
+        "questions": [
+          "Aplicando el enfoque meta-pregunta-métrica, ¿qué cinco a siete indicadores propondría para el comité y cuáles relegaría a tableros analíticos?",
+          "¿Qué frecuencia de actualización es coherente con las fuentes disponibles y con la decisión del comité? ¿Se justifica el tiempo real?",
+          "¿Qué herramienta recomendaría considerando presupuesto, habilidades del equipo y usuarios móviles? Compare al menos dos alternativas.",
+          "¿Cómo atendería el pedido comercial de ver compras por cliente con DNI respetando la Ley 29733?",
+          "Redacte la gran idea y la estructura SCQA con las que presentaría su propuesta al gerente general."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: tablero interactivo con narrativa de datos",
+        "instructions": "**Objetivo:** diseñar, construir y sustentar, en equipos de tres o cuatro integrantes, un tablero que apoye una decisión real o realista con datos peruanos, integrando lo aprendido en el curso.\n\n**Qué entregar:**\n1. **Documento de diseño (semana 13):** usuario, tipo de tablero, decisión que apoya, preguntas, entre cinco y ocho indicadores con ficha técnica y boceto de la disposición.\n2. **Tablero funcional (semana 15):** construido en Streamlit o en una herramienta de inteligencia de negocios justificada, con al menos un filtro global, tarjetas de indicadores, tres o más vistas coherentes con la percepción gráfica y detalles a pedido.\n3. **Repositorio reproducible:** estructura de carpetas, README, `requirements.txt`, diccionario de datos, pipeline de preparación y pruebas de conciliación de totales.\n4. **Informe de usabilidad y gobernanza:** prueba con al menos dos usuarios externos, tres mejoras implementadas, reglas de acceso y medidas de protección de datos conforme a la Ley 29733.\n5. **Sustentación (semana 16):** diez minutos ante un directorio simulado con gran idea, estructura SCQA y recomendación, más cinco minutos de preguntas.\n\n**Formato:** repositorio comprimido o compartido en el aula virtual, PDF del documento de diseño y del informe, y diapositivas de la sustentación.\n\n**Criterios:** pertinencia de indicadores y diseño, rigor de datos, narrativa y sustentación, reproducibilidad, usabilidad y gobernanza. La calificación es grupal, con un ajuste individual según la coevaluación.",
+        "rubric": [
+          {
+            "name": "Pertinencia de indicadores y diseño visual del tablero",
+            "points": 6
+          },
+          {
+            "name": "Rigor en la preparación, conciliación y tratamiento de datos",
+            "points": 5
+          },
+          {
+            "name": "Narrativa, recomendación y sustentación ejecutiva",
+            "points": 5
+          },
+          {
+            "name": "Reproducibilidad, usabilidad y gobernanza de datos",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: tableros, narrativa y gobernanza de datos",
+        "questions": [
+          {
+            "prompt": "Un gerente pide un tablero con 40 indicadores para el comité semanal. Según la definición de Few, ¿cuál es la respuesta profesional más adecuada?",
+            "options": [
+              "Incluir los 40 indicadores en varias pestañas para que no falte información",
+              "Priorizar los pocos indicadores ligados a los objetivos del comité y trasladar el resto a vistas analíticas",
+              "Mostrar los 40 indicadores en una sola pantalla con fuente pequeña",
+              "Reemplazar los indicadores por una tabla exportable a hoja de cálculo"
+            ],
+            "correct": 1,
+            "explanation": "Few define el tablero como la información más importante para lograr objetivos, en una sola pantalla y legible de un vistazo. Priorizar no elimina información: la reubica en tableros analíticos de profundización."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes es un indicador adelantado para el tablero de ventas de una empresa de servicios entre empresas?",
+            "options": [
+              "Número de cotizaciones emitidas en el mes",
+              "Ventas facturadas del trimestre",
+              "Margen bruto del año anterior",
+              "Utilidad neta acumulada"
+            ],
+            "correct": 0,
+            "explanation": "Las cotizaciones anticipan ventas futuras y permiten actuar antes de que se materialice el resultado. Las ventas facturadas, el margen y la utilidad son indicadores rezagados que confirman lo ocurrido."
+          },
+          {
+            "prompt": "Una tabla de hechos de ventas tiene una fila por día y tienda. ¿Qué pregunta NO podrá responder el tablero construido sobre ella?",
+            "options": [
+              "Las ventas mensuales por región",
+              "La variación interanual de ventas por tienda",
+              "Las tiendas con menores ventas en diciembre",
+              "El ticket promedio por cliente"
+            ],
+            "correct": 3,
+            "explanation": "La granularidad día-tienda agrega a los clientes, por lo que se pierde la información necesaria para calcular indicadores por cliente. Las demás preguntas se responden agregando días o tiendas."
+          },
+          {
+            "prompt": "En una aplicación de Streamlit, cada cambio de filtro tarda 20 segundos porque se lee un CSV crudo de dos millones de filas. ¿Qué solución es más adecuada?",
+            "options": [
+              "Agregar más filtros para reducir los datos mostrados",
+              "Mover el código de lectura al final del guion",
+              "Precalcular agregados en Parquet y cargarlos con una función decorada con @st.cache_data",
+              "Convertir todos los gráficos de Plotly a matplotlib"
+            ],
+            "correct": 2,
+            "explanation": "Streamlit reejecuta el guion en cada interacción; sin caché relee y recalcula todo. Precalcular agregados en un formato columnar y almacenarlos en caché reduce drásticamente el tiempo de respuesta."
+          },
+          {
+            "prompt": "Al iniciar una presentación ante el directorio, ¿qué estructura recomienda el principio de la pirámide de Minto?",
+            "options": [
+              "Situación, complicación, pregunta y respuesta, comunicando primero la recomendación",
+              "Antecedentes, metodología, resultados y, al final, la conclusión",
+              "Una secuencia cronológica de todos los análisis realizados",
+              "Un recorrido por cada gráfico del tablero en el orden en que aparece"
+            ],
+            "correct": 0,
+            "explanation": "Minto propone comunicar primero la respuesta, introducida por SCQA, y luego sustentarla con argumentos MECE. La estructura académica que deja la conclusión al final desperdicia la atención del público ejecutivo."
+          },
+          {
+            "prompt": "El área comercial solicita descargar desde el tablero las compras de medicamentos por cliente con nombre y DNI. ¿Qué respuesta es coherente con la Ley 29733?",
+            "options": [
+              "Permitir la descarga porque los datos pertenecen a la propia empresa",
+              "Permitir la descarga si los archivos se protegen con contraseña",
+              "Reemplazar el DNI por un hash y entregar el resto sin restricciones",
+              "Restringir el acceso, mostrar agregados y usar datos personales solo con consentimiento expreso y finalidad definida"
+            ],
+            "correct": 3,
+            "explanation": "Las compras de medicamentos revelan información de salud, considerada dato sensible. Su tratamiento exige consentimiento expreso, finalidad y medidas de seguridad; un hash es seudonimización y no elimina el riesgo de reidentificación."
+          },
+          {
+            "prompt": "Tras una prueba con usuarios, un tablero obtiene 52 puntos en la escala SUS. ¿Cómo debe interpretarse este resultado?",
+            "options": [
+              "Usabilidad excelente, porque supera la mitad de la escala",
+              "Usabilidad por debajo del promedio de referencia, cercano a 68; conviene iterar el diseño",
+              "El puntaje no es interpretable con menos de cien usuarios",
+              "Indica que el tablero tiene 52 % de adopción"
+            ],
+            "correct": 1,
+            "explanation": "La escala SUS produce puntajes de 0 a 100 con un promedio de referencia cercano a 68; 52 sugiere problemas de usabilidad. No es un porcentaje de adopción ni de aciertos, y resulta útil incluso con pocos usuarios."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Ciclo del análisis de datos, fuentes abiertas peruanas e ingestión robusta con pandas",
+      "activity": "Aula invertida con la lectura de la unidad; laboratorio de lectura de archivos del INEI y del BCRP con codificación, separadores y claves como texto.",
+      "evidence": "Cuaderno de ingestión"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Tipos de datos, dimensiones de calidad y datos faltantes según Rubin",
+      "activity": "Laboratorio de perfilado de calidad y exploración de patrones de faltantes; foro sobre mecanismos MCAR, MAR y MNAR con ejemplos laborales.",
+      "evidence": "Perfil de calidad y aporte en el foro"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Duplicados, estandarización, datos ordenados y reestructuración con melt y pivot",
+      "activity": "Discusión en equipos del caso Distribuidora Misti; laboratorio de reestructuración de cuadros estadísticos al formato ordenado.",
+      "evidence": "Respuestas al caso Distribuidora Misti"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Integración con merge, agregación con groupby, fechas y pipelines reproducibles",
+      "activity": "Laboratorio de integración auditada y agregación ponderada; entrega de la tarea 1 (pipeline de preparación) y resolución del cuestionario 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Análisis exploratorio visual de distribuciones y relaciones; Datasaurus Dozen y sobretrazado",
+      "activity": "Laboratorio con histogramas, ECDF, cajas, violines y técnicas contra el sobretrazado sobre los datos preparados en la tarea 1.",
+      "evidence": "Cuaderno exploratorio"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Percepción gráfica: Cleveland y McGill, Bertin, Munzner, atributos preatentivos y Gestalt",
+      "activity": "Experimento en clase comparando estimaciones en gráficos circulares y de barras; clasificación de variables y asignación de canales visuales.",
+      "evidence": "Ficha de codificaciones visuales"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Principios de Tufte, gramática de los gráficos, matplotlib orientado a objetos y seaborn",
+      "activity": "Discusión del caso Financiera Qhapaq; laboratorio de construcción por capas con seaborn.objects y matplotlib orientado a objetos.",
+      "evidence": "Respuestas al caso Financiera Qhapaq"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Selección del gráfico según la tarea analítica y rediseño explicativo",
+      "activity": "Taller de rediseño antes y después con revisión por pares; entrega de la tarea 2 (informe exploratorio y rediseño) y resolución del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Series de tiempo: transformaciones, inflación frente al rango meta del BCRP y múltiplos pequeños",
+      "activity": "Laboratorio de índices base 100, variación interanual y múltiplos pequeños con series del BCRP y del INEI.",
+      "evidence": "Cuaderno de series de tiempo"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Teoría del color, accesibilidad y visualización de la incertidumbre",
+      "activity": "Auditoría de accesibilidad de figuras propias con simulación de daltonismo; gráficos con intervalos y señalización de estimaciones referenciales.",
+      "evidence": "Informe de accesibilidad"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Datos geoespaciales, sistemas de referencia y mapas coropléticos con geopandas",
+      "activity": "Discusión del caso del mapa de anemia infantil; laboratorio de mapas coropléticos por ubigeo comparando esquemas de clasificación.",
+      "evidence": "Respuestas al caso y mapa preliminar"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Interactividad con Plotly, gráficos engañosos y ética de la visualización",
+      "activity": "Taller de detección de engaños en gráficos publicados; entrega de la tarea 3 (visualización temporal, geoespacial e interactiva) y resolución del cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Diseño de tableros: tipos, indicadores con enfoque meta-pregunta-métrica, disposición e interacción",
+      "activity": "Conformación de equipos, definición de usuario y decisión, fichas técnicas de indicadores y boceto; entrega del documento de diseño del proyecto integrador.",
+      "evidence": "Documento de diseño del proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Arquitectura de datos, modelo estrella, Streamlit y herramientas de inteligencia de negocios",
+      "activity": "Discusión del caso Vitalia del Sur; laboratorio de construcción del tablero y revisión cruzada de repositorios entre equipos.",
+      "evidence": "Versión funcional del tablero"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Narrativa con datos, principio de la pirámide, usabilidad y gobernanza",
+      "activity": "Pruebas de usabilidad con usuarios externos, redacción de la gran idea y la estructura SCQA; ensayo de sustentación con retroalimentación docente.",
+      "evidence": "Informe de usabilidad y gobernanza"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y cierre del curso",
+      "activity": "Sustentación ejecutiva ante un directorio simulado, resolución del cuestionario 4, autoevaluación y coevaluación del equipo.",
+      "evidence": "Sustentación, repositorio y cuestionario 4"
+    }
+  ]
+}

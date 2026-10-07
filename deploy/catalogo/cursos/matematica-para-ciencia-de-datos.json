@@ -1,0 +1,1246 @@
+{
+  "name": "Matemática para Ciencia de Datos",
+  "slug": "matematica-para-ciencia-de-datos",
+  "course_type": "especifica",
+  "module_name": "Programación y preparación de datos para inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 48,
+  "hours_practice": 32,
+  "summary": "Matemática para Ciencia de Datos es un curso de formación específica, de naturaleza teórico-práctica, del primer ciclo de la carrera de Inteligencia Artificial. Su propósito es dotar al estudiante de las herramientas matemáticas que sustentan el análisis de datos y el aprendizaje automático, con énfasis en la interpretación y la implementación computacional en Python. Comprende cuatro unidades: funciones y modelación matemática de datos; cálculo diferencial de una variable, con regla de la cadena y optimización; vectores, matrices, derivadas parciales y gradiente; y optimización de modelos mediante mínimos cuadrados y descenso de gradiente, que culmina en un proyecto integrador con datos reales del Perú. El curso construye la base sobre la que se desarrollarán Estadística y Probabilidad, Álgebra Lineal Aplicada y Aprendizaje Automático, y contribuye al perfil profesional al desarrollar el razonamiento cuantitativo necesario para preparar datos, entrenar modelos y justificar decisiones técnicas con rigor.",
+  "competency": "Modela matemáticamente problemas de datos de organizaciones peruanas mediante funciones, derivadas, vectores y matrices, y entrena modelos lineales y logísticos con técnicas de optimización implementadas en Python, interpretando sus parámetros y resultados con rigor y sentido crítico para sustentar decisiones técnicas.",
+  "capacities": [
+    "Representa fenómenos y datos reales mediante notación matemática y familias de funciones, justificando transformaciones y escalamientos de variables según la naturaleza de los datos.",
+    "Calcula e interpreta límites, derivadas y derivadas parciales, aplicando la regla de la cadena para analizar la sensibilidad de modelos y resolver problemas de optimización.",
+    "Opera con vectores y matrices para medir distancias y similitudes entre observaciones y para expresar modelos predictivos de forma vectorizada en NumPy.",
+    "Formula funciones de costo y entrena modelos de regresión lineal y logística mediante mínimos cuadrados y descenso de gradiente, evaluando su desempeño con métricas adecuadas."
+  ],
+  "indicators": [
+    "Modela un indicador económico o social del Perú con al menos dos familias de funciones, interpreta sus parámetros en unidades del problema y compara su error mediante sumatorias.",
+    "Deriva funciones compuestas aplicando correctamente la regla de la cadena y verifica los resultados con diferencias centrales en Python.",
+    "Resuelve un problema de optimización empresarial identificando y clasificando puntos críticos, y analiza la sensibilidad y los límites del modelo.",
+    "Calcula normas, distancias y similitud coseno entre observaciones y explica el efecto del escalamiento en los resultados.",
+    "Implementa operaciones matriciales vectorizadas en NumPy verificando la compatibilidad de dimensiones.",
+    "Obtiene el gradiente analítico de funciones de costo y lo implementa en un algoritmo de descenso de gradiente que converge a la solución cerrada.",
+    "Sustenta un proyecto integrador con datos reales, reportando métricas de prueba, análisis de residuos y limitaciones éticas y técnicas del modelo."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa. Se emplea el aula invertida: el estudiante revisa lecturas y videos antes de cada sesión síncrona, que se dedica a resolver problemas, derivar resultados y programar en vivo en Google Colab. Cada unidad incluye un caso basado en una organización peruana, analizado en salas pequeñas y discutido en plenaria, y una tarea aplicada evaluada con rúbrica. El aprendizaje basado en problemas articula la teoría con situaciones de negocio, y el proyecto integrador de la Unidad 4 consolida la competencia. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, foros de discusión, verificación computacional de resultados analíticos y retroalimentación personalizada del docente en cada entrega.",
+  "bibliography": [
+    "Deisenroth, M. P., Faisal, A. A. y Ong, C. S. (2020). Mathematics for machine learning. Cambridge University Press.",
+    "Stewart, J. (2018). Cálculo de una variable: trascendentes tempranas (8.ª ed.). Cengage Learning.",
+    "Larson, R. y Edwards, B. H. (2016). Cálculo (10.ª ed.). Cengage Learning.",
+    "Strang, G. (2016). Introduction to linear algebra (5th ed.). Wellesley-Cambridge Press.",
+    "Goodfellow, I., Bengio, Y. y Courville, A. (2016). Deep learning. MIT Press.",
+    "James, G., Witten, D., Hastie, T. y Tibshirani, R. (2013). An introduction to statistical learning: With applications in R. Springer.",
+    "Boyd, S. y Vandenberghe, L. (2004). Convex optimization. Cambridge University Press.",
+    "Grus, J. (2019). Data science from scratch: First principles with Python (2nd ed.). O'Reilly Media.",
+    "Harris, C. R., Millman, K. J., van der Walt, S. J. et al. (2020). Array programming with NumPy. Nature, 585, 357-362."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Promedio de los cuatro cuestionarios de unidad, la participación en el análisis de casos y las tareas aplicadas de las unidades 1, 2 y 3, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador en equipo: modelo entrenado con descenso de gradiente desde cero, cuaderno reproducible, informe técnico y sustentación oral, evaluados con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Examen individual de resolución de problemas que integra funciones, derivadas, vectores, gradiente y optimización, con procedimientos justificados y verificación computacional."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Funciones y modelación matemática de datos",
+      "description": "El estudiante traduce fenómenos observados en datos reales del Perú a notación matemática precisa, modela relaciones mediante funciones lineales, polinomiales, exponenciales, logarítmicas y sigmoides, y justifica transformaciones y escalamientos de variables implementándolos en Python con NumPy.",
+      "topics": [
+        "Notación matemática para datos: conjuntos, intervalos y sumatorias",
+        "Funciones lineales, polinomiales y tasa de cambio",
+        "Funciones exponenciales y logarítmicas",
+        "Transformación y escalamiento de variables",
+        "Función sigmoide y modelos de probabilidad"
+      ],
+      "slides": [
+        {
+          "title": "Por qué la matemática es el lenguaje de la ciencia de datos",
+          "bullets": [
+            "Todo modelo de aprendizaje automático es una función que asigna entradas x a una salida estimada ŷ = f(x).",
+            "Entrenar un modelo equivale a optimizar: buscar los parámetros que minimizan una función de costo.",
+            "Tres pilares sostienen el campo: funciones y cálculo, álgebra lineal, probabilidad y estadística.",
+            "Este curso cubre funciones, cálculo y vectores; Estadística y Álgebra Lineal Aplicada profundizan después."
+          ],
+          "notes": "Abra la sesión con una pregunta provocadora: ¿qué hace realmente un modelo que predice si un cliente de una caja municipal pagará su crédito? Muestre que, despojado de la interfaz, es una función matemática con parámetros ajustados a datos históricos. Explique la idea de Deisenroth, Faisal y Ong en Mathematics for Machine Learning: el aprendizaje automático descansa sobre representaciones vectoriales, modelos funcionales y optimización. Ubique el curso en el plan de estudios de la carrera: aquí se construye la base que usarán Estadística y Probabilidad en el segundo ciclo, Álgebra Lineal Aplicada y Aprendizaje Automático I en el tercero. Pregunte a la clase qué decisiones de su entorno cotidiano ya están mediadas por modelos, por ejemplo Yape, Plin o las recomendaciones de plataformas de video, y pida identificar entradas y salidas en cada caso."
+        },
+        {
+          "title": "Conjuntos, intervalos y tipos de números en un dataset",
+          "bullets": [
+            "Naturales ℕ para conteos, enteros ℤ para saldos, reales ℝ para mediciones continuas como ingresos o temperaturas.",
+            "Intervalos describen dominios válidos: edad en [18, 75], probabilidad en [0, 1], tasa de interés en (0, ∞).",
+            "Una columna categórica se representa como conjunto finito: {Lima, Arequipa, Piura, Cusco}.",
+            "Pertenencia, unión e intersección formalizan filtros: clientes de Lima ∩ ingreso mayor a S/ 3000."
+          ],
+          "notes": "Use una tabla de ejemplo con columnas edad, región, ingreso mensual y número de créditos activos. Pida a los estudiantes clasificar cada variable según el conjunto numérico al que pertenece y justificar por qué importa: no tiene sentido promediar un código de región ni hablar de 2,7 hijos en un registro individual, aunque sí en un promedio poblacional. Introduzca la notación de intervalos abiertos y cerrados y relacione la validación de datos con el dominio: un ingreso negativo o una edad de 230 años violan el dominio y delatan errores de captura. Conecte con las operaciones de conjuntos usando filtros de pandas que ya vieron en Fundamentos de Programación en Python. Pregunta para la clase: ¿qué intervalo describe correctamente una tasa de morosidad expresada en porcentaje y cuál una variación del PBI trimestral?"
+        },
+        {
+          "title": "Notación de sumatoria para describir datos",
+          "bullets": [
+            "Σ_{i=1}^{n} x_i suma n observaciones; el índice i recorre las filas del dataset.",
+            "Propiedades clave: Σ c·x_i = c·Σ x_i y Σ (x_i + y_i) = Σ x_i + Σ y_i.",
+            "La media se escribe x̄ = (1/n) Σ x_i; el error cuadrático medio, (1/n) Σ (y_i − ŷ_i)².",
+            "En Python, np.sum(x) o x.sum() implementan la sumatoria de forma vectorizada y eficiente."
+          ],
+          "notes": "La sumatoria es el símbolo que más verán en artículos de aprendizaje automático, por lo que conviene dominarla desde ahora. Escriba en la pizarra digital una muestra de cinco ingresos mensuales y desarrolle la sumatoria término a término antes de introducir la notación compacta. Demuestre las propiedades de linealidad con ejemplos numéricos: si todos los ingresos suben un 10 %, la suma total también sube un 10 %. Presente el error cuadrático medio como anticipo de la Unidad 4: es simplemente un promedio de errores al cuadrado. Advierta un error frecuente: Σ x_i² no es lo mismo que (Σ x_i)². Pida a los estudiantes calcular ambos con los cinco datos y comparar. Cierre mostrando que una línea de NumPy sustituye un bucle for, con ganancias de velocidad de decenas de veces en arreglos grandes."
+        },
+        {
+          "title": "Concepto de función: dominio, rango y regla",
+          "bullets": [
+            "Una función f: A → B asigna a cada elemento del dominio A exactamente un elemento del codominio B.",
+            "Prueba de la recta vertical: una gráfica representa función si ninguna vertical la corta dos veces.",
+            "Un modelo predictivo es una función: f(área, distrito) = precio estimado del departamento.",
+            "Representaciones equivalentes: fórmula, tabla, gráfica y código def f(x): return ... en Python."
+          ],
+          "notes": "Defina formalmente la función y enfatice la condición de unicidad: para cada entrada existe una sola salida. Proponga ejemplos ambiguos y pida que la clase decida si son funciones: la relación entre un DNI y la persona sí lo es; la relación entre un nombre y un DNI no, porque hay homónimos. Relacione la idea con modelos: un clasificador determinista devuelve una sola etiqueta para cada entrada. Muestre las cuatro representaciones de una misma función, por ejemplo la tarifa de un taxi por aplicativo que cobra S/ 5 de base más S/ 1,80 por kilómetro, en fórmula, tabla, gráfica con matplotlib y función de Python. Pregunte cuál es el dominio razonable de esa función y por qué no tiene sentido evaluar distancias negativas. Este hábito de verificar dominio y rango evitará errores graves al aplicar logaritmos y raíces más adelante."
+        },
+        {
+          "title": "Función lineal: pendiente e intercepto",
+          "bullets": [
+            "Forma f(x) = mx + b: m es la pendiente o tasa de cambio constante; b es el valor cuando x = 0.",
+            "Pendiente entre dos puntos: m = (y₂ − y₁)/(x₂ − x₁); expresa unidades de y por unidad de x.",
+            "La regresión lineal simple usa exactamente esta forma: ŷ = β₀ + β₁x.",
+            "El intercepto puede carecer de interpretación si x = 0 queda fuera del rango observado."
+          ],
+          "notes": "La función lineal es el modelo más usado en ciencia de datos, y entenderla a fondo es indispensable. Construya un ejemplo con datos de consumo eléctrico residencial: si una familia consume 150 kWh y paga S/ 120, y con 250 kWh paga S/ 190, calcule la pendiente de S/ 0,70 por kWh y el intercepto de S/ 15, que podría interpretarse como cargo fijo. Discuta cuándo el intercepto tiene sentido y cuándo no: en un modelo de peso según estatura, la estatura cero carece de significado físico. Anticipe que en la Unidad 4 aprenderán a encontrar la mejor pendiente para datos que no están perfectamente alineados. Pregunta para debate: si la pendiente de un modelo de ventas respecto a gasto publicitario es 3,2, ¿podemos afirmar que la publicidad causa las ventas? Introduzca la distinción entre asociación y causalidad."
+        },
+        {
+          "title": "Funciones cuadráticas y polinomiales",
+          "bullets": [
+            "Cuadrática f(x) = ax² + bx + c: vértice en x = −b/(2a); mínimo si a > 0, máximo si a < 0.",
+            "Polinomios de grado k modelan curvaturas: rendimientos decrecientes, ciclos de demanda, trayectorias.",
+            "Más grado no siempre es mejor: polinomios altos memorizan ruido y causan sobreajuste.",
+            "La cuadrática es la forma típica de una función de costo convexa con un único mínimo."
+          ],
+          "notes": "Presente la parábola como el primer ejemplo de función con un óptimo, idea central de todo el curso. Use un caso de rendimiento agrícola: la producción de papa por hectárea crece con el fertilizante hasta un punto y luego decae por saturación del suelo; una cuadrática captura ese comportamiento. Calcule el vértice con la fórmula −b/(2a) y anticipe que en la Unidad 2 lo obtendrán derivando. Luego muestre con matplotlib cómo un polinomio de grado 15 pasa por todos los puntos de una muestra pequeña pero predice de forma absurda fuera de ella: es la primera intuición del sobreajuste que estudiarán en Aprendizaje Automático I. Pregunte a la clase qué criterio usarían para escoger el grado del polinomio, y deje abierta la idea de validar con datos no vistos."
+        },
+        {
+          "title": "Funciones exponenciales: crecimiento y decaimiento",
+          "bullets": [
+            "Forma f(t) = a·bᵗ o a·e^{kt}: k > 0 crecimiento, k < 0 decaimiento; e ≈ 2,71828.",
+            "Interés compuesto: M = C(1 + i)ᵗ; con capitalización continua, M = C·e^{it}.",
+            "Tiempo de duplicación aproximado: ln(2)/k, conocido como regla del 70 en porcentajes.",
+            "Modela adopción de tecnologías, contagios, depreciación y saturación de memoria en sistemas."
+          ],
+          "notes": "Introduzca la exponencial con un ejemplo financiero cercano: un depósito a plazo de S/ 10 000 al 6 % anual compuesto durante 5 años crece a unos S/ 13 382. Compare con el crecimiento lineal del interés simple para que perciban la diferencia acumulativa. Explique el número e como límite de (1 + 1/n)ⁿ cuando n crece, con una tabla calculada en Python. Relacione con fenómenos de datos: la cantidad de datos generados crece de forma aproximadamente exponencial y la curva de contagios de COVID-19 en 2020 mostró fases exponenciales antes de las cuarentenas. Discuta el decaimiento con la depreciación de equipos o la vida media de la atención de usuarios en una aplicación. Pregunte: si una startup limeña duplica usuarios cada 3 meses, ¿cuántos tendrá en dos años partiendo de 1000? Que la clase compruebe por qué intuiciones lineales fallan."
+        },
+        {
+          "title": "Logaritmos: definición, propiedades y cálculo",
+          "bullets": [
+            "log_b(x) = y si y solo si bʸ = x; el logaritmo es la función inversa de la exponencial.",
+            "Propiedades: log(xy) = log x + log y; log(x/y) = log x − log y; log(xᵏ) = k·log x.",
+            "Dominio x > 0: aplicar log a ceros o negativos produce errores; se usa log(1 + x).",
+            "En NumPy: np.log (natural), np.log10 y np.log1p para valores cercanos a cero."
+          ],
+          "notes": "El logaritmo transforma multiplicaciones en sumas, propiedad que explica su presencia en funciones de costo y en el manejo de probabilidades muy pequeñas. Muestre que multiplicar mil probabilidades de 0,01 produce un número tan pequeño que la computadora lo redondea a cero, fenómeno llamado subdesbordamiento; sumar sus logaritmos evita el problema. Resuelva ejemplos: ¿en cuántos años se duplica un capital al 8 %? Despejando con logaritmos se obtienen unos 9 años. Insista en el dominio: un error típico en proyectos reales es aplicar np.log a una columna de ventas con ceros y obtener menos infinito, que luego rompe el entrenamiento. Presente np.log1p como solución estándar. Pida a la clase calcular a mano log₁₀(1000), log₂(1024) y ln(e³) para fijar la definición antes de pasar a aplicaciones."
+        },
+        {
+          "title": "Transformación logarítmica de variables sesgadas",
+          "bullets": [
+            "Ingresos, ventas y precios suelen tener asimetría a la derecha: pocos valores muy altos dominan.",
+            "Aplicar log comprime la cola, acerca la distribución a la simetría y estabiliza la varianza.",
+            "En un modelo log-lineal, un coeficiente β se interpreta aproximadamente como cambio porcentual.",
+            "Las escalas logarítmicas en gráficos revelan patrones ocultos en datos de varios órdenes de magnitud."
+          ],
+          "notes": "Proyecte un histograma de ingresos mensuales simulados con forma similar a la que reporta la Encuesta Nacional de Hogares del INEI: la mayoría de hogares se concentra en valores bajos y una minoría tiene ingresos muy superiores. Luego muestre el histograma del logaritmo y pida describir el cambio. Explique por qué muchos modelos funcionan mejor con variables simétricas y por qué la desigualdad de ingresos se analiza en términos relativos. Introduzca la interpretación porcentual: si log(salario) = 6,5 + 0,08·años de educación, cada año adicional se asocia con alrededor de 8 % más de salario, lectura clásica de la ecuación de Mincer. Muestre también un gráfico de exportaciones peruanas por producto en escala logarítmica, donde cobre y arándanos pueden compararse en la misma figura. Pregunta: ¿qué perderíamos al transformar si el negocio necesita predicciones en soles?"
+        },
+        {
+          "title": "Escalamiento de variables: min-max y estandarización",
+          "bullets": [
+            "Min-max: x' = (x − min)/(max − min) lleva los valores al intervalo [0, 1].",
+            "Estandarización: z = (x − μ)/σ produce media 0 y desviación estándar 1.",
+            "Variables en escalas distintas distorsionan distancias y frenan el descenso de gradiente.",
+            "Los parámetros de escala se calculan solo con datos de entrenamiento para evitar fuga de información."
+          ],
+          "notes": "Presente el escalamiento como composición de funciones lineales: restar y dividir son transformaciones afines que no cambian el orden de los datos. Use un dataset de viviendas con área en metros cuadrados, del orden de cien, y precio en soles, del orden de cientos de miles: si se calcula una distancia sin escalar, el precio domina totalmente. Calcule a mano el z-score de un departamento de 120 m² en un distrito donde la media es 90 y la desviación 20: z = 1,5, lo que significa una desviación y media por encima del promedio. Advierta sobre la fuga de información: si se escala con todo el dataset antes de separar entrenamiento y prueba, el modelo ve indirectamente los datos de prueba. Esta idea será crítica en Aprendizaje Automático I. Pida que identifiquen qué método conviene ante valores atípicos extremos."
+        },
+        {
+          "title": "Composición de funciones y funciones inversas",
+          "bullets": [
+            "Composición (g ∘ f)(x) = g(f(x)): una red neuronal es una larga composición de funciones.",
+            "Inversa f⁻¹ deshace f: exp y ln son inversas; permite volver de log-ventas a soles.",
+            "Solo las funciones biyectivas tienen inversa; las cuadráticas requieren restringir el dominio.",
+            "Flujos de preprocesamiento encadenan funciones: imputar, transformar, escalar y luego predecir."
+          ],
+          "notes": "La composición es el concepto que convierte funciones simples en modelos poderosos. Muestre un ejemplo explícito: f(x) = 2x + 1 y g(u) = u², de modo que g(f(3)) = 49, mientras que f(g(3)) = 19; la composición no es conmutativa. Relacione con la arquitectura de una red neuronal, que estudiarán en Aprendizaje Profundo: cada capa aplica una transformación lineal seguida de una función de activación, y la red completa es la composición de todas. Explique la inversa con la transformación logarítmica: si el modelo predice log-precio igual a 12,9, el precio estimado es e^{12,9}, aproximadamente S/ 400 000. Conecte con los pipelines de scikit-learn que verán más adelante. Pregunte a la clase por qué es importante aplicar las transformaciones en el mismo orden al entrenar y al predecir en producción."
+        },
+        {
+          "title": "Función sigmoide: de puntajes a probabilidades",
+          "bullets": [
+            "σ(z) = 1/(1 + e^{−z}) transforma cualquier número real en un valor en el intervalo (0, 1).",
+            "σ(0) = 0,5; σ(z) se acerca a 1 cuando z crece y a 0 cuando z decrece.",
+            "La regresión logística compone una función lineal con la sigmoide: p = σ(β₀ + β₁x).",
+            "El umbral de decisión, por defecto 0,5, se ajusta según el costo de los errores del negocio."
+          ],
+          "notes": "La sigmoide integra todo lo visto: exponenciales, composición y dominio. Grafíquela y pida describir su forma de S, sus asíntotas y su punto de simetría. Presente un modelo de riesgo crediticio: z = −4 + 0,9·(número de atrasos en los últimos 12 meses). Calcule la probabilidad de impago para clientes con 0, 3 y 6 atrasos: aproximadamente 0,02, 0,21 y 0,80. Discuta cómo el umbral afecta decisiones reales: una entidad microfinanciera regulada por la SBS puede preferir rechazar más solicitudes para limitar la morosidad, mientras que una fintech en expansión puede aceptar más riesgo. Anticipe que en la Unidad 2 calcularán su derivada, σ'(z) = σ(z)(1 − σ(z)), clave del entrenamiento. Pregunta: ¿qué significa que un coeficiente sea negativo en este modelo y cómo se interpretaría?"
+        },
+        {
+          "title": "Implementación de funciones en Python con NumPy",
+          "bullets": [
+            "Paso 1: crear un dominio con x = np.linspace(-6, 6, 200) para evaluar la función.",
+            "Paso 2: definir funciones vectorizadas, por ejemplo def sigmoide(z): return 1/(1 + np.exp(-z)).",
+            "Paso 3: graficar con plt.plot(x, sigmoide(x)) y rotular ejes, título y unidades.",
+            "Paso 4: verificar valores críticos con asserts, como abs(sigmoide(0) - 0.5) < 1e-12."
+          ],
+          "notes": "Realice una demostración en vivo en Google Colab. Explique que NumPy aplica la función a todos los elementos del arreglo sin bucles, lo que se denomina vectorización y es la base del rendimiento de bibliotecas como scikit-learn y PyTorch, tal como documentan Harris y colaboradores en su artículo de 2020 en Nature. Grafique en una misma figura una lineal, una exponencial, un logaritmo y la sigmoide, y pida comentar dominios y rangos. Introduzca la verificación con asserts como práctica profesional para detectar errores numéricos. Muestre un problema real: np.exp(1000) desborda y devuelve infinito; explique por qué las bibliotecas implementan la sigmoide de forma numéricamente estable. Asigne como práctica guiada reproducir el gráfico con datos de tipo de cambio o inflación publicados por el BCRP descargados previamente en CSV."
+        }
+      ],
+      "reading": {
+        "title": "Funciones como modelos: del dato a la fórmula",
+        "minutes": 35,
+        "content": "## La función como unidad básica de un modelo\n\nEn ciencia de datos, un **modelo** es una función que asigna a cada entrada un resultado estimado. Formalmente, una función f: A → B asocia a cada elemento x del dominio A exactamente un elemento f(x) del codominio B. Cuando un banco estima la probabilidad de que un cliente pague su crédito, cuando una empresa de energía proyecta la demanda de mañana o cuando un aplicativo de reparto calcula el tiempo de entrega, detrás existe una función con parámetros ajustados a datos. Deisenroth, Faisal y Ong (2020) resumen el aprendizaje automático en tres ideas: representar datos como vectores, elegir una familia de funciones y optimizar sus parámetros. Esta lectura se ocupa de la segunda idea.\n\n## Notación indispensable: la sumatoria\n\nUn dataset de n observaciones se describe con índices. Si x₁, x₂, ..., xₙ son los ingresos de n hogares, su suma es Σ_{i=1}^{n} x_i y su media es:\n\n```\nx̄ = (1/n) · Σ x_i\n```\n\nLa sumatoria es lineal: Σ (a·x_i + b) = a·Σ x_i + n·b. Esta propiedad explica, por ejemplo, que si convertimos ingresos de soles a dólares dividiendo entre un tipo de cambio de 3,75, la media también se divide entre 3,75. Más adelante, el **error cuadrático medio** (1/n)·Σ (y_i − ŷ_i)² será la función que mediremos y minimizaremos.\n\n## Familias de funciones y su interpretación\n\n**Lineal.** f(x) = mx + b. La pendiente m mide el cambio de y por unidad de x y es constante. Si el costo de enviar un paquete crece S/ 2,50 por kilogramo con un cargo fijo de S/ 8, el modelo es c(x) = 2,5x + 8.\n\n**Polinomial.** f(x) = a₀ + a₁x + ... + a_kx^k. Captura curvaturas, como rendimientos decrecientes del fertilizante en cultivos de la costa. Su riesgo es el **sobreajuste**: un polinomio de grado alto puede pasar por todos los puntos de entrenamiento y fallar estrepitosamente con datos nuevos.\n\n**Exponencial.** f(t) = a·e^{kt}. Describe procesos cuyo cambio es proporcional a su tamaño: interés compuesto, crecimiento de usuarios de una billetera digital o propagación de una epidemia. El tiempo de duplicación es ln(2)/k.\n\n**Logarítmica.** La inversa de la exponencial: y = ln(x) si y solo si eʸ = x. Sus propiedades, ln(xy) = ln x + ln y y ln(x^k) = k·ln x, convierten productos en sumas. Su dominio exige x > 0.\n\n**Sigmoide.** σ(z) = 1/(1 + e^{−z}) lleva cualquier número real al intervalo (0, 1) y por eso se usa para expresar probabilidades.\n\n## Transformar para entender: el logaritmo en datos peruanos\n\nLas distribuciones de ingresos que reporta la Encuesta Nacional de Hogares (ENAHO) del INEI son asimétricas: muchos hogares con ingresos modestos y pocos con ingresos muy altos. En esa situación la media se ve arrastrada por la cola y muchos modelos lineales se ajustan mal. La transformación logarítmica comprime los valores grandes y acerca la distribución a la simetría. Además ofrece una interpretación económica: en la ecuación de ingresos de Mincer, ln(salario) = β₀ + β₁·educación, el coeficiente β₁ representa aproximadamente el cambio porcentual del salario por año adicional de estudios.\n\n```python\nimport numpy as np\n\ningresos = np.array([930, 1200, 1500, 2100, 3400, 15000])  # soles mensuales\nprint(ingresos.mean())            # 4021.67, arrastrada por el valor extremo\nlog_ing = np.log(ingresos)\nprint(np.exp(log_ing.mean()))     # 2374.6, media geométrica, más representativa\n```\n\nObserve que el valor 930 coincide con un ingreso cercano a la remuneración mínima vital vigente en años recientes. La media aritmética supera los S/ 4000 por un único valor alto, mientras que la media geométrica, obtenida al volver de la escala logarítmica, describe mejor al hogar típico.\n\n## Escalamiento: comparar lo incomparable\n\nCuando un modelo combina variables con unidades distintas, conviene escalarlas. La **estandarización** z = (x − μ)/σ expresa cada valor en desviaciones estándar respecto de la media; el **min-max** x' = (x − min)/(max − min) lo lleva a [0, 1]. Ambos son composiciones de funciones lineales y preservan el orden de los datos. La regla profesional es calcular μ, σ, mínimo y máximo **solo con los datos de entrenamiento** para no filtrar información del conjunto de prueba.\n\n## La sigmoide y la decisión\n\nLa regresión logística compone una función lineal con la sigmoide: p = σ(β₀ + β₁x₁ + ... + β_px_p). Si un modelo de riesgo produce z = −4 + 0,9·atrasos, un cliente sin atrasos tiene p ≈ 0,018 y uno con seis atrasos, p ≈ 0,80. La decisión final requiere un umbral, y su elección no es matemática sino de negocio: depende del costo de aprobar a un mal pagador frente al de rechazar a un buen cliente.\n\n```python\ndef sigmoide(z):\n    return 1 / (1 + np.exp(-z))\n\natrasos = np.array([0, 3, 6])\nprint(sigmoide(-4 + 0.9 * atrasos))   # [0.018 0.214 0.802]\n```\n\n## Ideas para recordar\n\nUn buen analista no elige funciones por costumbre: examina el dominio, la forma de los datos y la interpretación de los parámetros. Las familias vistas aquí reaparecerán al derivar en la Unidad 2, al trabajar con varias variables en la Unidad 3 y al optimizar modelos en la Unidad 4."
+      },
+      "case": {
+        "title": "Caso: Puntaje de riesgo en Microcrédito Sur, Arequipa",
+        "content": "**Microcrédito Sur** es una entidad financiera ficticia con sede en Arequipa que otorga préstamos de capital de trabajo a bodegas, talleres y comerciantes de mercados de Arequipa, Puno y Moquegua. Tiene unos 38 000 clientes activos y un ticket promedio de S/ 4800. Hasta 2024, la aprobación dependía del criterio de los asesores de negocio, quienes visitaban al cliente y llenaban una ficha. La gerencia de riesgos, presionada por un aumento de la morosidad tras el periodo de tasas altas en que la tasa de referencia del BCRP llegó a 7,75 %, decidió construir un puntaje estadístico.\n\nLa analista junior **Rocío Huamán**, egresada de un instituto tecnológico, recibió una base de 12 000 créditos cancelados o vencidos con estas variables: ingreso mensual declarado, antigüedad del negocio en meses, número de atrasos mayores a 8 días en los últimos 12 meses, monto solicitado y región. Al explorar los datos encontró que el ingreso declarado va desde S/ 600 hasta S/ 85 000, con una mediana de S/ 2300 y una media de S/ 3900; el 3 % de registros tiene ingreso cero porque el asesor no completó el campo.\n\nSu jefe, **Martín Quispe**, propuso un modelo directo: puntaje = 0,002·ingreso − 0,8·atrasos + 0,01·antigüedad, aprobando si el puntaje es mayor que cero. Rocío detectó dos problemas. Primero, el ingreso en soles domina el puntaje: un cliente con S/ 20 000 de ingreso declarado y cinco atrasos aparece como excelente. Segundo, el puntaje no es una probabilidad, por lo que el comité de créditos no puede comparar el riesgo con la tasa de interés cobrada.\n\nRocío propone tres cambios: transformar el ingreso con ln(1 + ingreso), estandarizar las variables continuas y convertir el puntaje lineal en la probabilidad de pagar a tiempo mediante la sigmoide, p = σ(z). Con un ajuste preliminar obtuvo z = 2,1 + 0,6·z_lningreso − 0,95·atrasos + 0,3·z_antigüedad, donde z_ indica variable estandarizada.\n\nEl comité debe decidir esta semana si adopta el nuevo esquema. La gerenta comercial teme que el modelo rechace a emprendedores con ingresos informales difíciles de documentar, segmento estratégico para la entidad. El área de riesgos advierte que, según la experiencia del sector, cada punto porcentual adicional de morosidad erosiona significativamente la rentabilidad. Además, Rocío debe explicar el modelo a asesores que no tienen formación matemática y justificar el umbral de aprobación.",
+        "questions": [
+          "¿Por qué el modelo de Martín produce decisiones absurdas? Explíquelo usando el concepto de escala y la interpretación de los coeficientes lineales.",
+          "Calcule la probabilidad de pago puntual, según el modelo de Rocío, de un cliente con valores estandarizados promedio y dos atrasos. Interprete el resultado.",
+          "¿Qué tratamiento recomienda para los ingresos iguales a cero antes de aplicar el logaritmo? Justifique matemáticamente y desde el negocio.",
+          "¿Qué umbral de aprobación propondría y cómo argumentaría su elección ante la gerencia comercial y el área de riesgos?"
+        ]
+      },
+      "assignment": {
+        "title": "Modelación funcional de un indicador económico peruano",
+        "instructions": "## Objetivo\nModelar matemáticamente la evolución de un indicador real del Perú, comparando familias de funciones y justificando transformaciones.\n\n## Qué entregar\n1. Elija una serie anual o mensual de al menos 15 observaciones publicada por el BCRP o el INEI, por ejemplo exportaciones de arándanos, número de usuarios de internet, índice de precios al consumidor o recaudación.\n2. En un cuaderno de Google Colab grafique la serie original y en escala logarítmica.\n3. Proponga al menos dos modelos funcionales (lineal y exponencial, o polinomial) y estime sus parámetros con dos puntos representativos o con np.polyfit, explicando el procedimiento.\n4. Calcule el error cuadrático medio de cada modelo usando la notación de sumatoria y su implementación en NumPy.\n5. Interprete los parámetros en unidades del problema, por ejemplo tasa de crecimiento anual o tiempo de duplicación.\n6. Redacte una conclusión de 250 palabras sobre qué modelo recomienda y sus limitaciones para proyectar.\n\n## Formato\nCuaderno .ipynb con celdas de texto en Markdown y un PDF exportado. Cite la fuente oficial de los datos y la fecha de descarga.\n\n## Criterios\nSe valorará el rigor en la notación, la corrección del código, la justificación de las transformaciones y la claridad de la interpretación.",
+        "rubric": [
+          {
+            "name": "Selección y preparación de datos oficiales",
+            "points": 4
+          },
+          {
+            "name": "Modelación funcional y estimación de parámetros",
+            "points": 6
+          },
+          {
+            "name": "Cálculo e implementación del error con sumatorias",
+            "points": 5
+          },
+          {
+            "name": "Interpretación y conclusión crítica",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: funciones, logaritmos y sigmoide",
+        "questions": [
+          {
+            "prompt": "Una columna de ventas diarias contiene ceros. ¿Qué transformación permite comprimir su asimetría sin producir valores indefinidos?",
+            "options": [
+              "Aplicar np.log1p a la columna",
+              "Aplicar np.log directamente",
+              "Elevar los valores al cuadrado",
+              "Restar la media y dividir entre la media"
+            ],
+            "correct": 0,
+            "explanation": "log(1 + x) está definido para x = 0 y comprime los valores altos; log(0) no está definido y elevar al cuadrado aumenta la asimetría."
+          },
+          {
+            "prompt": "En el modelo ŷ = 15 + 0,70x, donde x es el consumo en kWh e ŷ el pago en soles, ¿qué significa 0,70?",
+            "options": [
+              "Cada kWh adicional incrementa el pago en S/ 0,70",
+              "El pago mínimo es S/ 0,70",
+              "El 70 % del pago es cargo fijo",
+              "El consumo promedio es 0,70 kWh"
+            ],
+            "correct": 0,
+            "explanation": "La pendiente representa la tasa de cambio constante de la salida por unidad de entrada, en soles por kWh."
+          },
+          {
+            "prompt": "Si log(salario) = 6,5 + 0,08·educación, ¿cómo se interpreta aproximadamente el coeficiente 0,08?",
+            "options": [
+              "Cada año de educación se asocia con 8 % más de salario",
+              "Cada año de educación suma S/ 0,08",
+              "El salario base es 8 % del promedio",
+              "La educación explica el 8 % del salario"
+            ],
+            "correct": 0,
+            "explanation": "En un modelo log-lineal, el coeficiente multiplicado por cien aproxima el cambio porcentual de la variable dependiente por unidad de la explicativa."
+          },
+          {
+            "prompt": "Para el modelo p = σ(−4 + 0,9·atrasos), ¿qué ocurre con la probabilidad cuando los atrasos aumentan de 0 a 6?",
+            "options": [
+              "Aumenta de cerca de 0,02 a cerca de 0,80",
+              "Disminuye de 0,80 a 0,02",
+              "Se mantiene en 0,5",
+              "Aumenta linealmente 0,9 por cada atraso"
+            ],
+            "correct": 0,
+            "explanation": "z pasa de −4 a 1,4; la sigmoide de −4 es aproximadamente 0,018 y la de 1,4 aproximadamente 0,80. La relación no es lineal."
+          },
+          {
+            "prompt": "¿Por qué se calculan la media y la desviación estándar de estandarización solo con los datos de entrenamiento?",
+            "options": [
+              "Para evitar fuga de información del conjunto de prueba",
+              "Porque los datos de prueba no tienen media",
+              "Para que la desviación sea siempre uno",
+              "Porque NumPy no permite otra opción"
+            ],
+            "correct": 0,
+            "explanation": "Usar estadísticos del conjunto de prueba introduce información que el modelo no tendría en producción y produce evaluaciones optimistas."
+          },
+          {
+            "prompt": "Dados f(x) = 2x + 1 y g(u) = u², ¿cuál es el valor de (g ∘ f)(3)?",
+            "options": [
+              "49",
+              "19",
+              "36",
+              "13"
+            ],
+            "correct": 0,
+            "explanation": "Primero se evalúa f(3) = 7 y luego g(7) = 49. El valor 19 corresponde a f(g(3)), lo que muestra que la composición no es conmutativa."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Cálculo diferencial para el aprendizaje automático",
+      "description": "El estudiante calcula e interpreta límites y derivadas de funciones de una variable, aplica la regla de la cadena a funciones compuestas como la sigmoide y resuelve problemas de optimización de precios, costos y errores, verificando sus resultados analíticos con derivación numérica en Python.",
+      "topics": [
+        "Tasa de cambio promedio e instantánea",
+        "Límites y continuidad",
+        "La derivada y sus reglas de cálculo",
+        "Regla de la cadena y derivada de la sigmoide",
+        "Optimización de funciones de una variable"
+      ],
+      "slides": [
+        {
+          "title": "Tasa de cambio promedio: la pendiente de la secante",
+          "bullets": [
+            "Tasa promedio entre a y b: [f(b) − f(a)]/(b − a); unidades de salida por unidad de entrada.",
+            "Ejemplo: usuarios de una app pasan de 20 000 a 56 000 entre los meses 2 y 8: 6000 usuarios por mes.",
+            "Geométricamente es la pendiente de la recta secante que une dos puntos de la gráfica.",
+            "Oculta lo que ocurre dentro del intervalo: crecimientos acelerados o caídas temporales."
+          ],
+          "notes": "Comience recordando la pendiente de la función lineal vista en la Unidad 1 y plantee el problema: ¿qué pendiente tiene una curva, si cambia en cada punto? La tasa de cambio promedio es la primera aproximación. Trabaje con el ejemplo de una aplicación de delivery en Trujillo cuya base de usuarios crece de 20 000 a 56 000 entre el segundo y el octavo mes: el crecimiento promedio es de 6000 usuarios mensuales. Luego muestre la gráfica real, que es exponencial, y evidencie que en los primeros meses el crecimiento fue mucho menor y en los últimos mucho mayor. Pregunte a la clase qué decisiones de negocio podrían equivocarse si solo se reporta la tasa promedio, por ejemplo dimensionar servidores o contratar repartidores. Esta tensión motiva el concepto de tasa instantánea, que formalizaremos mediante límites."
+        },
+        {
+          "title": "De la secante a la tangente: la idea de límite",
+          "bullets": [
+            "Acercar b hacia a hace que la secante se aproxime a la recta tangente en el punto a.",
+            "lim_{x→a} f(x) = L significa que f(x) se acerca a L tanto como queramos al acercar x a a.",
+            "Los límites laterales deben coincidir para que exista el límite en un punto.",
+            "Cálculo numérico: evaluar con h = 0,1; 0,01; 0,001 y observar a qué valor converge."
+          ],
+          "notes": "Use una animación o una tabla generada en Python que muestre la pendiente de la secante de f(x) = x² entre x = 3 y x = 3 + h para valores de h cada vez menores: 7, 6,1, 6,01, 6,001. Pregunte hacia qué número se dirigen esas pendientes y deje que la clase descubra el 6. Formalice la noción intuitiva de límite sin entrar en la definición épsilon-delta, que corresponde a cursos de análisis matemático; Stewart presenta un tratamiento accesible en su capítulo de límites. Explique los límites laterales con la función signo o con una tarifa escalonada de envío: a la izquierda y a la derecha del punto de corte los valores difieren y el límite no existe. Cierre señalando que la derivada será precisamente el límite de las pendientes de secantes."
+        },
+        {
+          "title": "Límites en funciones de interés para datos",
+          "bullets": [
+            "lim_{z→∞} σ(z) = 1 y lim_{z→−∞} σ(z) = 0: la sigmoide se satura en los extremos.",
+            "lim_{x→0⁺} ln(x) = −∞: por eso log(0) produce −inf en NumPy.",
+            "lim_{n→∞} (1 + 1/n)ⁿ = e: origen del interés compuesto continuo.",
+            "Las asíntotas explican la saturación de gradientes en redes neuronales profundas."
+          ],
+          "notes": "Este bloque conecta la teoría de límites con fenómenos que los estudiantes verán en código. Calcule con Python σ(10), σ(20) y σ(40) y muestre que la salida se pega a 1; luego calcule np.log(1e-300) y np.log(0) para ilustrar el límite que tiende a menos infinito y el aviso que emite NumPy. Explique el límite que define e con una tabla de capitalizaciones anual, mensual, diaria y continua de S/ 1000 al 100 %: 2000, 2613, 2714,6 y 2718,3. Introduzca la idea de saturación: cuando la sigmoide está en una zona plana, su pendiente es casi cero y el aprendizaje se detiene; este es el problema del desvanecimiento del gradiente que Goodfellow, Bengio y Courville discuten en Deep Learning. Pregunte por qué la función ReLU, que no se satura para valores positivos, se popularizó en redes profundas."
+        },
+        {
+          "title": "Continuidad y puntos no diferenciables",
+          "bullets": [
+            "f es continua en a si f(a) existe, el límite existe y ambos coinciden.",
+            "Saltos, huecos y asíntotas verticales rompen la continuidad y complican la optimización.",
+            "|x| y ReLU(x) = máx(0, x) son continuas pero no derivables en x = 0: tienen un pico.",
+            "En la práctica se usan subgradientes: se asigna una pendiente convencional en el punto anguloso."
+          ],
+          "notes": "Presente las tres condiciones de continuidad con gráficas de casos que fallan cada una. Use ejemplos de datos: una tarifa de impuesto por tramos genera saltos; un cociente con denominador que se anula genera una asíntota. Luego introduzca la distinción clave entre continuidad y derivabilidad: el valor absoluto es continuo en cero pero su gráfica tiene un pico, porque la pendiente salta de −1 a +1. Muestre que ReLU, la activación más usada en redes neuronales, tiene exactamente ese comportamiento, y que las bibliotecas como PyTorch asignan derivada cero en el origen por convención. Anticipe que el error absoluto medio, que veremos en la Unidad 4, hereda este pico y por eso se optimiza de forma distinta al error cuadrático. Pregunte qué función de pérdida preferirían si su optimizador requiere derivadas suaves."
+        },
+        {
+          "title": "Definición formal de la derivada",
+          "bullets": [
+            "f'(a) = lim_{h→0} [f(a + h) − f(a)]/h, siempre que el límite exista.",
+            "Interpretación geométrica: pendiente de la recta tangente en el punto (a, f(a)).",
+            "Interpretación física: tasa de cambio instantánea de f respecto de x.",
+            "Notaciones equivalentes: f'(x), dy/dx, df/dx; Leibniz facilita la regla de la cadena."
+          ],
+          "notes": "Derive con la definición dos funciones sencillas en la pizarra digital: f(x) = x², cuyo cociente incremental se simplifica a 2x + h y tiende a 2x, y f(x) = 3x + 5, cuya derivada es constante e igual a 3. Subraye que la derivada es a su vez una función que asigna a cada x la pendiente de la tangente. Recupere el ejemplo de la tabla de secantes de f(x) = x² en x = 3 y confirme el valor 6. Explique las dos notaciones: Newton y Lagrange usan primas, mientras Leibniz escribe dy/dx, notación que hace casi mecánica la regla de la cadena. Pida a los estudiantes calcular con la definición la derivada de f(x) = x² − 4x y, a partir de ella, encontrar dónde la pendiente es cero. Ese punto será el mínimo, anticipando la optimización."
+        },
+        {
+          "title": "Reglas básicas de derivación",
+          "bullets": [
+            "Potencia: d/dx xⁿ = n·xⁿ⁻¹; constante: d/dx c = 0; múltiplo: (c·f)' = c·f'.",
+            "Suma: (f + g)' = f' + g'; esta linealidad permite derivar sumatorias término a término.",
+            "Producto: (f·g)' = f'g + fg'; cociente: (f/g)' = (f'g − fg')/g².",
+            "Ejemplo: d/dx (4x³ − 2x + 7) = 12x² − 2."
+          ],
+          "notes": "Después de sufrir con la definición, las reglas resultan liberadoras. Demuestre brevemente la regla de la potencia para n = 2 y n = 3 con el binomio, y luego aplíquela de forma sistemática. Insista en la linealidad: la derivada de una suma es la suma de derivadas, propiedad que justificará en la Unidad 4 derivar el error cuadrático medio, que es una sumatoria, sumando las derivadas de cada término. Resuelva un ejemplo con la regla del producto aplicada al ingreso: R(p) = p·q(p), cuya derivada es q(p) + p·q'(p), expresión que los economistas llaman ingreso marginal. Proponga ejercicios graduados en una actividad colaborativa en salas pequeñas de la videoconferencia y pida que cada equipo verifique un resultado numéricamente en Python antes de exponerlo al resto."
+        },
+        {
+          "title": "Derivadas de funciones exponenciales y logarítmicas",
+          "bullets": [
+            "d/dx eˣ = eˣ: la exponencial natural es su propia derivada.",
+            "d/dx ln(x) = 1/x para x > 0; d/dx a^x = a^x·ln(a).",
+            "Si f(t) = C·e^{kt}, entonces f'(t) = k·f(t): el cambio es proporcional al tamaño.",
+            "La derivada de ln aparece en la pérdida logística y en la verosimilitud de modelos."
+          ],
+          "notes": "La propiedad de que eˣ sea su propia derivada explica por qué el número e aparece en todas partes: los procesos cuyo crecimiento es proporcional a su tamaño, como intereses, poblaciones o usuarios, son exponenciales. Muestre la ecuación f'(t) = k·f(t) e interprétela con una cartera de depósitos que crece al 5 % continuo. Para el logaritmo, explique la intuición de 1/x: la misma variación absoluta pesa menos cuando x es grande, que es justamente la idea de cambio relativo. Anticipe que en la Unidad 4 derivarán −ln(p), base de la entropía cruzada usada para entrenar clasificadores. Proponga a la clase derivar g(x) = x·ln(x) usando la regla del producto y comprobar el resultado ln(x) + 1 con un cálculo numérico en Python."
+        },
+        {
+          "title": "Regla de la cadena: derivar funciones compuestas",
+          "bullets": [
+            "Si y = g(f(x)), entonces dy/dx = g'(f(x))·f'(x): derivada externa por derivada interna.",
+            "En notación de Leibniz: dy/dx = (dy/du)·(du/dx) con u = f(x).",
+            "Ejemplo: d/dx (3x + 1)⁴ = 4(3x + 1)³·3 = 12(3x + 1)³.",
+            "Es el fundamento matemático de la retropropagación en redes neuronales."
+          ],
+          "notes": "La regla de la cadena es probablemente la herramienta de cálculo más importante para la inteligencia artificial. Recuerde que en la Unidad 1 vieron que una red neuronal es una composición de muchas funciones; para entrenarla se necesita la derivada de la pérdida respecto de cada parámetro, y eso exige encadenar derivadas capa por capa. Ese procedimiento, popularizado por Rumelhart, Hinton y Williams en 1986, se llama retropropagación. Resuelva varios ejemplos paso a paso, identificando explícitamente la función externa y la interna: e^{−2x}, ln(1 + x²) y (x² − 5)³. Use una analogía: si el tipo de cambio sube S/ 0,10 por cada punto del índice del dólar y las importaciones de una empresa cuestan 2000 dólares, la sensibilidad del costo al índice es el producto de ambas tasas. Pida a la clase construir un ejemplo propio."
+        },
+        {
+          "title": "Derivada de la sigmoide y su importancia",
+          "bullets": [
+            "Con σ(z) = (1 + e^{−z})^{−1}, la cadena da σ'(z) = e^{−z}/(1 + e^{−z})².",
+            "Simplificación elegante: σ'(z) = σ(z)·(1 − σ(z)).",
+            "Su valor máximo es 0,25 en z = 0 y tiende a cero en los extremos.",
+            "Pendientes pequeñas en capas apiladas multiplican y desvanecen el gradiente."
+          ],
+          "notes": "Desarrolle la derivada completa en vivo, porque es un ejercicio de integración de todo lo aprendido: regla de la potencia con exponente negativo, regla de la cadena y derivada de la exponencial. Luego muestre algebraicamente que e^{−z}/(1 + e^{−z})² es igual a σ(z)(1 − σ(z)); esta forma es computacionalmente barata porque reutiliza el valor de σ ya calculado. Grafique σ y σ' juntas y destaque que la pendiente máxima es 0,25. Explique la consecuencia: si una red tiene diez capas sigmoides, el gradiente puede multiplicarse por factores menores que 0,25 diez veces, lo que da valores del orden de una millonésima, y el aprendizaje se paraliza. Esta observación motivó el uso de ReLU. Pregunte a la clase cuánto vale σ'(z) cuando el modelo está muy seguro de su predicción y qué implica para el aprendizaje."
+        },
+        {
+          "title": "Interpretación marginal en economía y negocios",
+          "bullets": [
+            "Costo marginal C'(q): costo adicional aproximado de producir una unidad más.",
+            "Ingreso marginal R'(q) y utilidad marginal; la utilidad se maximiza donde R'(q) = C'(q).",
+            "Aproximación lineal: f(a + Δx) ≈ f(a) + f'(a)·Δx para cambios pequeños.",
+            "Elasticidad precio: E = (dq/dp)·(p/q) mide la sensibilidad porcentual de la demanda."
+          ],
+          "notes": "Este bloque conecta el cálculo con el razonamiento empresarial que exigirán los proyectos de ciencia de datos en empresas peruanas. Si el costo de producir q cajas de mango para exportación es C(q) = 5000 + 18q + 0,01q², el costo marginal en q = 1000 es 18 + 0,02·1000 = 38 soles por caja: producir la caja número 1001 cuesta aproximadamente S/ 38. Muestre la aproximación lineal como herramienta para estimar efectos sin recalcular todo el modelo. Introduzca la elasticidad, concepto que el INDECOPI y los reguladores usan al analizar mercados, y calcule la de una demanda exponencial q = 1200e^{−0,02p}: E = −0,02p, de modo que la demanda es elástica cuando p supera 50. Pregunte en qué situaciones de negocio la aproximación lineal sería peligrosa y por qué."
+        },
+        {
+          "title": "Puntos críticos y criterios de optimización",
+          "bullets": [
+            "Puntos críticos: valores donde f'(x) = 0 o f'(x) no existe.",
+            "Primera derivada: si f' cambia de negativo a positivo, hay un mínimo local.",
+            "Segunda derivada: f''(c) > 0 implica mínimo local; f''(c) < 0, máximo local.",
+            "En intervalos cerrados se comparan también los extremos del dominio."
+          ],
+          "notes": "Sistematice el procedimiento para optimizar funciones de una variable, que los estudiantes aplicarán en la tarea y el caso. Paso uno: derivar. Paso dos: igualar a cero y resolver. Paso tres: clasificar con la primera o la segunda derivada. Paso cuatro: verificar en los extremos del dominio y interpretar en unidades del problema. Resuelva f(x) = x³ − 6x² + 9x + 1: los puntos críticos son 1 y 3; la segunda derivada 6x − 12 es negativa en 1, máximo local, y positiva en 3, mínimo local. Advierta que un punto con derivada cero no siempre es óptimo, como ocurre con x³ en el origen, un punto de inflexión. Pregunte qué pasaría si el dominio relevante fuese solo [0, 2]: el mínimo absoluto estaría en un extremo del intervalo, no en un punto crítico."
+        },
+        {
+          "title": "Problema aplicado: precio que maximiza la utilidad",
+          "bullets": [
+            "Demanda estimada q(p) = 1200·e^{−0,02p} unidades mensuales; costo unitario S/ 20.",
+            "Utilidad π(p) = (p − 20)·1200·e^{−0,02p}.",
+            "π'(p) = 1200e^{−0,02p}[1 − 0,02(p − 20)] = 0 implica p* = 70 soles.",
+            "Comparación: a S/ 45 la utilidad es unos S/ 12 200; a S/ 70, unos S/ 14 800."
+          ],
+          "notes": "Resuelva el problema completo con la clase, porque integra regla del producto, regla de la cadena y criterios de optimización. Explique de dónde podría venir la función de demanda: de un experimento de precios en una tienda en línea o de un modelo ajustado a datos históricos, tema de la Unidad 4. Derive paso a paso, factorice la exponencial, que nunca es cero, y despeje p = 70. Verifique con la segunda derivada o evaluando valores cercanos. Calcule la utilidad a S/ 45 y a S/ 70 para cuantificar el beneficio de la decisión, cerca de 21 % más. Luego problematice: ¿la función de demanda seguirá siendo válida si el precio sube tanto respecto al histórico? Introduzca el riesgo de extrapolar un modelo fuera del rango de datos observados, idea que aparecerá en el caso de la unidad."
+        },
+        {
+          "title": "Derivación numérica y verificación en Python",
+          "bullets": [
+            "Diferencia hacia adelante: f'(x) ≈ [f(x + h) − f(x)]/h, error proporcional a h.",
+            "Diferencia central: f'(x) ≈ [f(x + h) − f(x − h)]/(2h), error proporcional a h².",
+            "Valores típicos de h entre 1e-5 y 1e-6; h demasiado pequeño amplifica errores de redondeo.",
+            "La verificación de gradientes compara derivadas analíticas y numéricas antes de entrenar."
+          ],
+          "notes": "Programe en vivo una función derivada_central(f, x, h=1e-5) y úsela para verificar resultados obtenidos a mano: la derivada de x² en 3, de la sigmoide en 0 y de la utilidad del problema anterior en p = 70, que debe ser prácticamente cero. Muestre experimentalmente el compromiso en la elección de h: con h = 0,1 el error de truncamiento es visible; con h = 1e-15 el error de redondeo de la aritmética de punto flotante domina. Explique que los profesionales usan esta técnica, llamada comprobación de gradientes, para depurar implementaciones de modelos, y que bibliotecas como PyTorch calculan derivadas exactas mediante diferenciación automática, que aplica sistemáticamente la regla de la cadena. Pida a cada estudiante verificar numéricamente tres derivadas de su lista de ejercicios."
+        },
+        {
+          "title": "Convexidad: la garantía de un único mínimo",
+          "bullets": [
+            "f es convexa si f''(x) ≥ 0 en todo su dominio: su gráfica tiene forma de cuenco.",
+            "En una función convexa, todo mínimo local es también mínimo global.",
+            "El error cuadrático de la regresión lineal es convexo; la pérdida de una red profunda no lo es.",
+            "La convexidad determina si un algoritmo de optimización encontrará la mejor solución."
+          ],
+          "notes": "Cierre la unidad con un concepto que guiará la Unidad 4. Defina la convexidad mediante la segunda derivada y con la imagen geométrica de que el segmento entre dos puntos de la gráfica queda por encima de ella. Muestre ejemplos: x², eˣ y −ln(x) son convexas; x³ y sen(x) no lo son. Explique, citando a Boyd y Vandenberghe en Convex Optimization, que los problemas convexos son los que sabemos resolver de forma confiable y eficiente, mientras que las redes neuronales profundas tienen paisajes de pérdida con muchos mínimos locales y puntos de silla. Pregunte a la clase cómo podrían saber si un algoritmo quedó atrapado en un mínimo local y qué estrategias propondrían, como reiniciar desde varios puntos. Concluya enlazando con la Unidad 3, donde extenderán las derivadas a varias variables."
+        }
+      ],
+      "reading": {
+        "title": "La derivada como motor del aprendizaje",
+        "minutes": 40,
+        "content": "## Del cambio promedio al cambio instantáneo\n\nToda decisión basada en datos pregunta, de una u otra forma, **cuánto cambia algo cuando cambia otra cosa**. La tasa de cambio promedio de una función f entre a y b es [f(b) − f(a)]/(b − a), la pendiente de la recta secante. Si hacemos que b se acerque a a, obtenemos la **derivada**:\n\n```\nf'(a) = lim_{h→0} [f(a + h) − f(a)] / h\n```\n\nLa derivada es la pendiente de la recta tangente y mide la sensibilidad instantánea de la salida ante la entrada. Stewart (2018) la presenta como el concepto que unifica velocidad, costo marginal y crecimiento poblacional. En aprendizaje automático cumple un papel más concreto: **indica hacia dónde mover los parámetros de un modelo para reducir su error**.\n\n## Reglas que conviene dominar\n\n| Función | Derivada |\n|---|---|\n| xⁿ | n·xⁿ⁻¹ |\n| eˣ | eˣ |\n| ln(x) | 1/x |\n| f·g | f'g + fg' |\n| g(f(x)) | g'(f(x))·f'(x) |\n\nLa última fila, la **regla de la cadena**, merece especial atención. Un modelo moderno es una composición de funciones: una capa lineal, una activación, otra capa lineal y así sucesivamente. Para saber cómo afecta un parámetro interno a la pérdida final, se multiplican las derivadas de cada eslabón. Ese procedimiento, aplicado de forma sistemática desde la salida hacia la entrada, es la **retropropagación** descrita por Rumelhart, Hinton y Williams en 1986, y es la razón por la que este curso se ocupa del cálculo.\n\n## Un ejemplo completo: la sigmoide\n\nSea σ(z) = (1 + e^{−z})^{−1}. Aplicando la regla de la cadena:\n\n```\nσ'(z) = −1·(1 + e^{−z})^{−2} · (−e^{−z}) = e^{−z} / (1 + e^{−z})²\n```\n\nCon un poco de álgebra se demuestra que σ'(z) = σ(z)·(1 − σ(z)). El máximo es 0,25 en z = 0. Cuando el modelo está muy seguro, z es grande en valor absoluto, σ'(z) es casi cero y el parámetro apenas se corrige. Goodfellow, Bengio y Courville (2016) explican que esta saturación, repetida en muchas capas, produce el **desvanecimiento del gradiente**.\n\n## Optimización: donde la pendiente se anula\n\nSi una función derivable alcanza un máximo o mínimo en un punto interior, allí la derivada vale cero. El procedimiento es: derivar, igualar a cero, resolver y clasificar con la segunda derivada (f'' > 0 mínimo; f'' < 0 máximo). Considere una tienda en línea de Lima que estimó, con un experimento de precios, la demanda q(p) = 1200·e^{−0,02p} de un producto con costo unitario de S/ 20. La utilidad es:\n\n```\nπ(p)  = (p − 20) · 1200 · e^{−0,02p}\nπ'(p) = 1200·e^{−0,02p} · [1 − 0,02·(p − 20)]\nπ'(p) = 0  ⟹  p − 20 = 50  ⟹  p* = 70\n```\n\nA S/ 45 la utilidad mensual ronda los S/ 12 200 y a S/ 70 alcanza unos S/ 14 800. La matemática es inequívoca, pero la recomendación exige prudencia: si los datos del experimento solo cubrieron precios entre S/ 35 y S/ 55, la demanda estimada podría no ser válida a S/ 70. El analista debe distinguir entre **interpolar** y **extrapolar**.\n\n## La elasticidad como lectura económica\n\nLa elasticidad precio de la demanda es E = (dq/dp)·(p/q). Para la demanda exponencial anterior, dq/dp = −0,02·q y por tanto E = −0,02p. A S/ 50 la elasticidad es −1: es el precio que maximiza el ingreso. Este tipo de análisis es habitual en estudios de competencia y en la fijación de tarifas en mercados regulados del Perú.\n\n## Verificar antes de confiar: derivación numérica\n\nLas derivadas obtenidas a mano deben comprobarse. La diferencia central ofrece una aproximación precisa:\n\n```python\nimport numpy as np\n\ndef derivada_central(f, x, h=1e-5):\n    return (f(x + h) - f(x - h)) / (2 * h)\n\nutilidad = lambda p: (p - 20) * 1200 * np.exp(-0.02 * p)\nsigmoide = lambda z: 1 / (1 + np.exp(-z))\n\nprint(derivada_central(utilidad, 70))   # ≈ 0: confirma el óptimo\nprint(derivada_central(sigmoide, 0))    # ≈ 0.25\n```\n\nEsta práctica, conocida como **comprobación de gradientes**, permite detectar errores de implementación antes de entrenar un modelo durante horas.\n\n## Convexidad: cuándo el mínimo es único\n\nUna función es convexa si su segunda derivada es no negativa. En ese caso, cualquier mínimo local es global y los algoritmos de optimización convergen a la mejor solución. Boyd y Vandenberghe (2004) muestran que gran parte de los problemas prácticos pueden formularse de manera convexa. El error cuadrático de la regresión lineal es convexo; la pérdida de una red neuronal profunda no lo es. En la Unidad 4 este hecho explicará por qué algunos modelos se entrenan con total confianza y otros requieren estrategias adicionales."
+      },
+      "case": {
+        "title": "Caso: El precio óptimo de Café de Altura",
+        "content": "**Café de Altura SAC** es una empresa ficticia de Villa Rica, Pasco, que tuesta y vende café especial a través de su tienda virtual. En 2025 vendía unas 490 bolsas de 250 g al mes a S/ 45, con un costo variable de S/ 20 por bolsa entre grano, tostado, empaque y envío subsidiado. Sus costos fijos mensuales de plataforma, marketing digital y personal suman S/ 7500.\n\nLa gerenta, **Lucía Ríos**, contrató a un practicante de la carrera de Inteligencia Artificial, **Diego Salazar**, para revisar la estrategia de precios. Durante diez semanas Diego realizó un experimento: mostró aleatoriamente precios de S/ 38, 42, 45, 50 y 55 a visitantes distintos de la tienda y registró las compras. Con esos datos ajustó una curva de demanda mensual equivalente:\n\n**q(p) = 1200·e^{−0,02p}**\n\nEl ajuste es razonable dentro del rango probado. Diego derivó la utilidad y concluyó que el precio óptimo es S/ 70, con una utilidad de contribución cercana a S/ 14 800 frente a S/ 12 200 actuales.\n\nLucía tiene dudas. El precio de S/ 70 está muy por encima del rango experimentado y la competencia directa, otras marcas de café especial de Junín, Cajamarca y Cusco, vende entre S/ 40 y S/ 60. El jefe comercial, **Renzo Paredes**, sostiene que subir el precio reduciría el número de clientes, lo que afecta la recompra y las reseñas, activos que no aparecen en la fórmula. Además, el operador logístico ofrece una tarifa con descuento si la empresa supera 450 envíos mensuales, lo que cambiaría el costo variable a S/ 18 por bolsa por encima de ese volumen.\n\nDiego también observó que la elasticidad estimada, E = −0,02p, indica que a precios mayores a S/ 50 la demanda es elástica, de modo que el ingreso total cae al subir el precio, aunque la utilidad pueda seguir aumentando porque se reducen los costos variables.\n\nLucía debe presentar al directorio una recomendación de precio para el próximo trimestre. Necesita un análisis que combine el resultado matemático con los límites del modelo, el riesgo de extrapolar y la estrategia de la marca. El directorio ha pedido explícitamente un plan que permita revertir la decisión si los resultados no son los esperados.",
+        "questions": [
+          "Verifique analíticamente que p = 70 maximiza la utilidad de contribución y que p = 50 maximiza el ingreso. Explique por qué difieren.",
+          "¿Qué riesgos implica recomendar un precio fuera del rango experimentado? ¿Cómo diseñaría un nuevo experimento para reducirlos?",
+          "Reformule la función de utilidad incorporando el descuento logístico por encima de 450 envíos. ¿Sigue siendo derivable en todo su dominio?",
+          "¿Qué precio recomendaría al directorio y qué indicadores monitorearía mensualmente para revertir la decisión si fuera necesario?"
+        ]
+      },
+      "assignment": {
+        "title": "Optimización de una decisión empresarial con derivadas",
+        "instructions": "## Objetivo\nFormular y resolver un problema de optimización de una variable a partir de un contexto empresarial peruano, verificando el resultado analítico con métodos numéricos.\n\n## Qué entregar\n1. Plantee un contexto realista: precio de un servicio, tamaño de lote de producción, nivel de inventario o presupuesto publicitario. Justifique la forma funcional elegida (cuadrática, exponencial o logarítmica) y sus parámetros, citando su origen: datos propios, experimento o supuesto razonado.\n2. Escriba la función objetivo, derívela a mano mostrando cada regla utilizada, incluida al menos una aplicación de la regla de la cadena.\n3. Encuentre los puntos críticos y clasifíquelos con el criterio de la segunda derivada.\n4. En Python, verifique la derivada con diferencias centrales y grafique la función objetivo marcando el óptimo.\n5. Analice la sensibilidad: ¿cómo cambia el óptimo si un parámetro varía ±10 %?\n6. Redacte una recomendación ejecutiva de media página que incluya los límites del modelo.\n\n## Formato\nUn PDF con el desarrollo matemático (puede ser manuscrito escaneado con letra legible) y un cuaderno .ipynb con la verificación numérica.\n\n## Criterios\nPlanteamiento, corrección del cálculo, verificación computacional y calidad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Planteamiento y justificación del modelo",
+            "points": 4
+          },
+          {
+            "name": "Derivación y clasificación de puntos críticos",
+            "points": 6
+          },
+          {
+            "name": "Verificación numérica y gráfica en Python",
+            "points": 5
+          },
+          {
+            "name": "Análisis de sensibilidad y recomendación",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: límites, derivadas y optimización",
+        "questions": [
+          {
+            "prompt": "¿Cuál es la derivada de f(x) = (3x + 1)⁴?",
+            "options": [
+              "12(3x + 1)³",
+              "4(3x + 1)³",
+              "(3x + 1)³",
+              "12x³"
+            ],
+            "correct": 0,
+            "explanation": "Por la regla de la cadena: derivada externa 4(3x + 1)³ multiplicada por la derivada interna 3."
+          },
+          {
+            "prompt": "Si σ(z) = 0,9 para un cliente, ¿cuánto vale σ'(z) y qué implica para el aprendizaje?",
+            "options": [
+              "0,09; el parámetro se corrige poco",
+              "0,9; el parámetro se corrige mucho",
+              "0,25; corrección máxima posible",
+              "0; el modelo deja de funcionar"
+            ],
+            "correct": 0,
+            "explanation": "σ'(z) = σ(z)(1 − σ(z)) = 0,9·0,1 = 0,09, menor que el máximo 0,25; con predicciones seguras el gradiente es pequeño."
+          },
+          {
+            "prompt": "Para f(x) = x³ − 6x² + 9x + 1, ¿qué ocurre en x = 3?",
+            "options": [
+              "Hay un mínimo local porque f''(3) = 6 > 0",
+              "Hay un máximo local porque f'(3) = 0",
+              "Hay un punto de inflexión",
+              "La función no es derivable"
+            ],
+            "correct": 0,
+            "explanation": "f'(x) = 3x² − 12x + 9 se anula en 1 y 3; f''(x) = 6x − 12 vale 6 en x = 3, positiva, por lo que es mínimo local."
+          },
+          {
+            "prompt": "¿Por qué se prefiere la diferencia central a la diferencia hacia adelante para aproximar derivadas?",
+            "options": [
+              "Su error disminuye proporcionalmente a h²",
+              "No requiere evaluar la función",
+              "Funciona con h = 0",
+              "Elimina todo error de redondeo"
+            ],
+            "correct": 0,
+            "explanation": "La diferencia central tiene error de truncamiento de orden h², frente al orden h de la diferencia hacia adelante, aunque sigue sujeta a redondeo."
+          },
+          {
+            "prompt": "Una función de pérdida es convexa en todo su dominio. ¿Qué garantiza esa propiedad?",
+            "options": [
+              "Que todo mínimo local es también global",
+              "Que la pérdida mínima es cero",
+              "Que la derivada nunca se anula",
+              "Que el modelo no sobreajusta"
+            ],
+            "correct": 0,
+            "explanation": "La convexidad asegura que no existen mínimos locales subóptimos; no garantiza pérdida cero ni ausencia de sobreajuste."
+          },
+          {
+            "prompt": "Con la demanda q = 1200e^{−0,02p}, ¿qué precio maximiza el ingreso R = p·q?",
+            "options": [
+              "S/ 50",
+              "S/ 70",
+              "S/ 20",
+              "S/ 100"
+            ],
+            "correct": 0,
+            "explanation": "R'(p) = 1200e^{−0,02p}(1 − 0,02p) = 0 da p = 50, donde la elasticidad es −1. S/ 70 maximiza la utilidad con costo unitario de S/ 20."
+          },
+          {
+            "prompt": "¿Por qué ReLU(x) = máx(0, x) requiere una convención especial al derivar en x = 0?",
+            "options": [
+              "Es continua pero tiene un pico donde la pendiente salta",
+              "No es continua en x = 0",
+              "Su derivada es infinita en cero",
+              "Es una función exponencial"
+            ],
+            "correct": 0,
+            "explanation": "Las pendientes laterales son 0 y 1, por lo que el límite del cociente incremental no existe; se usa un subgradiente convencional."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Vectores, matrices y funciones de varias variables",
+      "description": "El estudiante representa observaciones como vectores y datasets como matrices, calcula normas, distancias, productos punto y similitud coseno para comparar clientes, productos o textos, y obtiene derivadas parciales y gradientes de funciones de varias variables, implementando los cálculos de forma vectorizada con NumPy.",
+      "topics": [
+        "Vectores como representación de observaciones",
+        "Norma, distancia y producto punto",
+        "Similitud coseno y comparación de perfiles",
+        "Matrices como datasets y producto matriz-vector",
+        "Derivadas parciales y gradiente"
+      ],
+      "slides": [
+        {
+          "title": "Del número al vector: una fila de datos",
+          "bullets": [
+            "Un vector x ∈ ℝᵖ agrupa p características de una observación: x = (edad, ingreso, compras).",
+            "Cada cliente, vivienda o documento se convierte en un punto en un espacio de p dimensiones.",
+            "Los textos e imágenes también se vectorizan: conteos de palabras, píxeles o embeddings.",
+            "Notación: vectores en negrita o con flecha, componentes x₁, x₂, ..., x_p."
+          ],
+          "notes": "Abra la unidad mostrando una tabla de clientes de una tienda virtual con tres columnas y pida a la clase que imagine cada fila como un punto en el espacio tridimensional. Grafique en Python con matplotlib unos veinte clientes en tres dimensiones y pregunte qué patrones ven: grupos, valores atípicos, tendencias. Explique que la geometría es la herramienta para razonar sobre datos de muchas dimensiones, aunque solo podamos visualizar tres. Mencione que los grandes modelos de lenguaje representan cada palabra o fragmento como un vector de cientos o miles de dimensiones, llamado embedding, tema que estudiarán en Procesamiento de Lenguaje Natural e IA Generativa. Aclare el alcance: aquí se trabajan las herramientas básicas; Álgebra Lineal Aplicada, en el tercer ciclo, abordará sistemas, bases, autovalores y descomposiciones. Pregunte qué características usarían para vectorizar un distrito de Lima."
+        },
+        {
+          "title": "Operaciones con vectores: suma y escalamiento",
+          "bullets": [
+            "Suma componente a componente: (1, 4) + (3, −2) = (4, 2); exige igual dimensión.",
+            "Multiplicación por escalar: 2·(1, 4) = (2, 8); estira o invierte el vector.",
+            "Combinación lineal: a·u + b·v, base de todos los modelos lineales.",
+            "El vector promedio de un grupo de clientes es su centroide, usado en k-medias."
+          ],
+          "notes": "Explique las operaciones con interpretación geométrica, dibujando flechas en el plano: sumar vectores equivale a encadenar desplazamientos y escalar equivale a estirar. Luego dé significado de datos a cada operación: el vector de ventas de enero más el de febrero da las ventas acumuladas por producto; multiplicar por 1,18 agrega el IGV a todos los precios de una vez. Presente la combinación lineal como la idea central de la regresión: la predicción es una combinación ponderada de características. Calcule a mano el centroide de tres clientes y explique que el algoritmo k-medias, que verán en Aprendizaje Automático I, consiste en asignar puntos al centroide más cercano y recalcularlos. Pida a la clase que calcule en NumPy el vector de precios con IGV de una lista de diez productos sin usar bucles."
+        },
+        {
+          "title": "Norma de un vector: medir su tamaño",
+          "bullets": [
+            "Norma euclidiana L2: ‖x‖₂ = √(x₁² + x₂² + ... + x_p²); para (3, 4) vale 5.",
+            "Norma Manhattan L1: ‖x‖₁ = |x₁| + |x₂| + ... + |x_p|; para (3, 4) vale 7.",
+            "Vector unitario: x/‖x‖ conserva la dirección con longitud 1.",
+            "Las normas L1 y L2 reaparecen como penalizaciones Lasso y Ridge en regularización."
+          ],
+          "notes": "Introduzca la norma euclidiana como la generalización del teorema de Pitágoras a p dimensiones. Calcule la norma de (3, 4) y de (1, 2, 2) a mano y con np.linalg.norm. Luego presente la norma Manhattan con la imagen de las calles en cuadrícula de un distrito como Miraflores o el centro de Trujillo: para ir de una esquina a otra no se puede cruzar en diagonal, se suman los desplazamientos en cada eje. Explique la normalización a vector unitario, que permite comparar direcciones sin que importe el tamaño, idea clave para la similitud coseno. Anticipe que la regularización, técnica para evitar sobreajuste, penaliza la norma de los coeficientes del modelo: Ridge usa L2 y Lasso usa L1, y James y colaboradores lo explican con claridad en An Introduction to Statistical Learning. Pregunte qué norma es más sensible a un valor extremo."
+        },
+        {
+          "title": "Distancias entre observaciones",
+          "bullets": [
+            "Distancia euclidiana: d(x, y) = ‖x − y‖₂; entre (1, 2) y (4, 6) es 5.",
+            "Distancia Manhattan: ‖x − y‖₁; entre los mismos puntos es 7.",
+            "k vecinos más cercanos clasifica una observación según la mayoría de sus k puntos más próximos.",
+            "Una distancia es válida si es no negativa, simétrica y cumple la desigualdad triangular."
+          ],
+          "notes": "Defina la distancia como la norma de la diferencia y calcule ambos ejemplos en la pizarra. Presente el algoritmo de k vecinos más cercanos como aplicación directa: para estimar si un nuevo solicitante de crédito será buen pagador, se buscan los k clientes históricos más parecidos y se observa su comportamiento. Haga un ejercicio en vivo con cinco clientes y k = 3. Explique las propiedades de una métrica y por qué importan para algoritmos de búsqueda eficientes. Plantee la maldición de la dimensionalidad: en espacios de cientos de dimensiones, las distancias entre puntos tienden a parecerse, lo que reduce la utilidad de la noción de vecino cercano; Bellman acuñó el término en los años sesenta. Pregunte a la clase qué pasaría si una de las características fuese el ingreso en soles y otra la edad en años."
+        },
+        {
+          "title": "Producto punto: definición e interpretación",
+          "bullets": [
+            "x · y = x₁y₁ + x₂y₂ + ... + x_py_p = Σ x_i·y_i; produce un escalar.",
+            "Geometría: x · y = ‖x‖·‖y‖·cos(θ), donde θ es el ángulo entre los vectores.",
+            "Producto punto cero indica vectores ortogonales: perpendiculares, sin relación lineal.",
+            "Predicción lineal: ŷ = w · x + b, con w como vector de pesos del modelo."
+          ],
+          "notes": "El producto punto es la operación más ejecutada en la inteligencia artificial moderna: cada neurona, cada capa de atención y cada predicción lineal lo calculan millones de veces. Defínalo algebraicamente con un ejemplo de una boleta de compra: si x = (3, 2, 5) son cantidades de arroz, aceite y leche y p = (4,20; 9,50; 4,10) son precios unitarios, el total pagado es x · p = 12,60 + 19 + 20,50 = S/ 52,10. Luego presente la interpretación geométrica con el coseno y muestre que el signo indica si los vectores apuntan en direcciones parecidas, opuestas o perpendiculares. Conecte con el modelo lineal ŷ = w · x + b, generalización multivariada de la recta de la Unidad 1. Pida a la clase calcular manualmente un producto punto de dimensión cuatro y verificarlo con np.dot y con el operador @."
+        },
+        {
+          "title": "Similitud coseno para comparar perfiles",
+          "bullets": [
+            "cos(θ) = (x · y)/(‖x‖·‖y‖) toma valores entre −1 y 1.",
+            "Ignora la magnitud y compara solo la dirección: proporciones, no totales.",
+            "Ejemplo: (3, 0, 1) y (2, 1, 0) tienen similitud 6/√50 ≈ 0,85.",
+            "Se usa en sistemas de recomendación, búsqueda semántica y detección de documentos similares."
+          ],
+          "notes": "Muestre por qué la similitud coseno resuelve un problema que la distancia euclidiana no resuelve bien. Considere dos clientes de un supermercado: uno compra 2 kg de arroz y 1 litro de aceite al mes, y otro, un restaurante, compra 200 kg de arroz y 100 litros de aceite. Sus distancias son enormes, pero su patrón de consumo es idéntico, y su similitud coseno es exactamente 1. Explique que en recomendación interesa con frecuencia el patrón y no el volumen. Desarrolle el ejemplo de la diapositiva paso a paso: producto punto 6, normas √10 y √5, cociente cercano a 0,85. Mencione que los motores de búsqueda semántica y los sistemas de recuperación aumentada de los modelos de lenguaje comparan embeddings precisamente con similitud coseno. Pregunte cuándo preferirían la distancia euclidiana."
+        },
+        {
+          "title": "El efecto de la escala en distancias y similitudes",
+          "bullets": [
+            "Sin escalar, la variable de mayor magnitud domina la distancia: soles frente a número de compras.",
+            "Estandarizar con z = (x − μ)/σ iguala la influencia de cada característica.",
+            "La elección de variables y su escala es una decisión de modelación, no solo técnica.",
+            "Verificación práctica: comparar vecinos más cercanos antes y después de escalar."
+          ],
+          "notes": "Retome el escalamiento visto en la Unidad 1, ahora con evidencia geométrica. Construya en Python un ejemplo con tres clientes: A con gasto mensual de S/ 800 y 12 compras, B con S/ 820 y 1 compra, y C con S/ 650 y 11 compras. Sin escalar, el vecino más cercano de A es B, porque la diferencia de 150 soles con C pesa mucho más que la diferencia de 11 compras con B, aunque la frecuencia de compra de A se parece más a la de C. Tras estandarizar, C pasa a ser el vecino más cercano. Explique que esto no es un detalle técnico: decide qué clientes recibirán una oferta o qué solicitudes se aprobarán. Insista en que la escala debe ser coherente con la pregunta de negocio y documentada. Pida a la clase replicar el ejemplo y explicar el cambio con sus propias palabras en el foro."
+        },
+        {
+          "title": "Matrices: el dataset como objeto matemático",
+          "bullets": [
+            "Una matriz X de tamaño n × p tiene n filas (observaciones) y p columnas (características).",
+            "El elemento x_ij es el valor de la característica j para la observación i.",
+            "La transpuesta Xᵀ intercambia filas por columnas: de n × p pasa a p × n.",
+            "En NumPy: X.shape devuelve (n, p); X[i, :] es una fila y X[:, j] una columna."
+          ],
+          "notes": "Presente la matriz como el formato natural de un DataFrame de pandas sin etiquetas. Muestre una matriz de 5 × 3 con datos de viviendas: área, número de dormitorios y antigüedad. Explique la notación de índices y practique la extracción de filas y columnas en NumPy, enfatizando que Python indexa desde cero mientras que la notación matemática suele indexar desde uno, fuente frecuente de errores. Introduzca la transpuesta y su utilidad para cambiar de perspectiva entre observaciones y variables. Mencione que una imagen en escala de grises es una matriz de intensidades y que una imagen a color es un arreglo de tres matrices, tema de Visión por Computadora. Pregunte a la clase cuál sería el tamaño de la matriz de un dataset de la ENAHO con 34 000 hogares y 120 variables."
+        },
+        {
+          "title": "Producto matriz-vector: predecir para todos a la vez",
+          "bullets": [
+            "Si X es n × p y w es p × 1, entonces Xw es un vector n × 1 de predicciones.",
+            "Cada componente es el producto punto de una fila de X con w: ŷ_i = x_i · w.",
+            "Truco del intercepto: agregar una columna de unos a X para incluir b en w.",
+            "Ejemplo: filas (1, 60), (1, 85), (1, 120) y w = (50 000; 3000) dan 230 000, 305 000 y 410 000."
+          ],
+          "notes": "Este es el momento en que los estudiantes ven el poder de la notación matricial. Desarrolle el ejemplo de la diapositiva: un modelo de precio de departamentos en soles con intercepto de 50 000 y 3000 soles por metro cuadrado. Calcule cada fila como producto punto y luego muestre que X @ w en NumPy hace todo en una sola operación. Explique el truco de la columna de unos, que permite tratar el intercepto como un peso más y simplifica todas las fórmulas de la Unidad 4. Compare el tiempo de ejecución entre un bucle de Python y la operación vectorizada para un millón de filas: la diferencia suele ser de dos órdenes de magnitud. Recalque la verificación de dimensiones como hábito: antes de multiplicar, escriba las formas y compruebe que las internas coincidan. Pida a la clase predecir el error si w tuviera tres componentes."
+        },
+        {
+          "title": "Producto de matrices y sus reglas",
+          "bullets": [
+            "Si A es m × n y B es n × k, el producto AB es m × k; las dimensiones internas deben coincidir.",
+            "El elemento (i, j) de AB es el producto punto de la fila i de A con la columna j de B.",
+            "No es conmutativo: en general AB ≠ BA, y a veces BA ni siquiera está definido.",
+            "XᵀX, de tamaño p × p, resume las relaciones entre características y aparece en mínimos cuadrados."
+          ],
+          "notes": "Introduzca el producto de matrices como una colección de productos punto organizados. Haga un ejemplo de 2 × 3 por 3 × 2 a mano. Muestre con un contraejemplo que el orden importa y relaciónelo con la composición de funciones de la Unidad 1, que tampoco es conmutativa: de hecho, multiplicar matrices equivale a componer transformaciones lineales. Presente XᵀX como un objeto que reaparecerá en la Unidad 4 al resolver la regresión por mínimos cuadrados, y comente que en Álgebra Lineal Aplicada estudiarán su inversa y sus autovalores con detalle. Mencione que las tarjetas gráficas aceleran el entrenamiento de redes neuronales precisamente porque multiplican matrices en paralelo con enorme eficiencia. Pida a los estudiantes calcular XᵀX para la matriz de viviendas de la diapositiva anterior e interpretar sus elementos."
+        },
+        {
+          "title": "Funciones de varias variables y curvas de nivel",
+          "bullets": [
+            "f: ℝᵖ → ℝ asigna un número a cada vector: costo, utilidad o error del modelo.",
+            "Ejemplo: f(x, y) = x² + y² es un paraboloide con mínimo en el origen.",
+            "Curvas de nivel: puntos con el mismo valor de f, como en un mapa topográfico.",
+            "La función de pérdida de un modelo depende de todos sus parámetros simultáneamente."
+          ],
+          "notes": "Extienda la idea de función a varias entradas. Use la metáfora del mapa topográfico de una zona andina: la altitud depende de la latitud y la longitud, y las curvas de nivel unen puntos de igual altura. Grafique el paraboloide x² + y² en 3D y sus curvas de nivel con plt.contour, y pida identificar el mínimo. Explique que la pérdida de un modelo con dos parámetros, pendiente e intercepto, es exactamente una superficie como esta, y que entrenar el modelo es descender hasta su punto más bajo. Introduzca un ejemplo con forma alargada, f(x, y) = x² + 10y², y muestre que las curvas de nivel son elipses estiradas: anticipe que esa forma, causada por variables mal escaladas, dificulta el descenso de gradiente. Pregunte qué representaría cada eje si la función fuera el error de un modelo."
+        },
+        {
+          "title": "Derivadas parciales",
+          "bullets": [
+            "∂f/∂x mide cómo cambia f al variar x manteniendo constantes las demás variables.",
+            "Se calculan con las reglas de una variable, tratando las otras como constantes.",
+            "Ejemplo: f(x, y) = x² + 3xy + y² da ∂f/∂x = 2x + 3y y ∂f/∂y = 3x + 2y.",
+            "Interpretación ceteris paribus, habitual en economía y en la lectura de coeficientes."
+          ],
+          "notes": "Defina la derivada parcial como un corte de la superficie: si fijamos y, la función se vuelve de una sola variable y podemos derivarla como en la Unidad 2. Resuelva el ejemplo de la diapositiva y evalúelo en el punto (1, 2): las parciales valen 8 y 7. Explique la lectura ceteris paribus, frecuente en informes económicos del BCRP: el efecto de una variable manteniendo constantes las demás. Proponga un ejemplo de negocio: la utilidad de una campaña depende del presupuesto en redes sociales y del presupuesto en radio, y las parciales indican el retorno marginal de cada canal. Haga notar el término cruzado 3xy, que crea interacción: el efecto de x depende del nivel de y. Pida a la clase calcular las parciales de g(w, b) = (5 − (2w + b))², que es el error cuadrático de un solo dato."
+        },
+        {
+          "title": "El gradiente: dirección de máximo ascenso",
+          "bullets": [
+            "∇f = (∂f/∂x₁, ..., ∂f/∂x_p) agrupa todas las derivadas parciales en un vector.",
+            "Apunta hacia donde f crece más rápido; −∇f indica el descenso más pronunciado.",
+            "Es perpendicular a las curvas de nivel en cada punto.",
+            "En un mínimo interior de una función diferenciable, el gradiente es el vector cero."
+          ],
+          "notes": "Presente el gradiente como la síntesis de la unidad: es un vector, construido con derivadas, que vive en el mismo espacio que los parámetros. Grafique el campo de gradientes de x² + y² con plt.quiver y muestre que todas las flechas apuntan hacia afuera, alejándose del mínimo; las flechas opuestas apuntan hacia el centro. Explique intuitivamente por qué es la dirección de máximo ascenso: el cambio en una dirección unitaria u es ∇f · u, y el producto punto es máximo cuando u apunta en la misma dirección que el gradiente. Enlace con la Unidad 4: el descenso de gradiente simplemente da pasos en la dirección −∇f. Use la metáfora de un excursionista en la neblina en el Cañón del Colca que, sin ver el fondo, siente con los pies la pendiente y baja por donde es más empinado. Pregunte qué limitaciones tiene esa estrategia."
+        },
+        {
+          "title": "Vectorización con NumPy: buenas prácticas",
+          "bullets": [
+            "Paso 1: representar datos como arreglos X de forma (n, p) y parámetros w de forma (p,).",
+            "Paso 2: calcular predicciones con X @ w + b en lugar de bucles anidados.",
+            "Paso 3: calcular distancias con np.linalg.norm(X - x0, axis=1) usando difusión.",
+            "Paso 4: verificar formas con assert X.shape[1] == w.shape[0] antes de operar."
+          ],
+          "notes": "Cierre la unidad con un taller de programación en vivo que consolide la traducción de la notación matemática al código. Implemente con la clase una función vecinos_mas_cercanos(X, x0, k) que estandarice, calcule distancias con difusión, ordene con np.argsort y devuelva los índices. Luego implemente similitud_coseno(A, B) para matrices completas usando productos matriciales y normas por fila. Explique la difusión de NumPy, que permite restar un vector de cada fila de una matriz sin bucles, y sus riesgos cuando las formas no son las esperadas. Muestre un error típico de formas, como (n,) frente a (n, 1), y cómo depurarlo. Recomiende escribir junto al código la fórmula matemática en un comentario. Asigne como práctica implementar el gradiente numérico de una función de dos variables y compararlo con el analítico."
+        }
+      ],
+      "reading": {
+        "title": "Geometría de los datos: vectores, matrices y gradientes",
+        "minutes": 40,
+        "content": "## Los datos como puntos en el espacio\n\nLa primera decisión de cualquier proyecto de ciencia de datos es cómo **representar** la realidad. Un cliente con 34 años, ingreso de S/ 2800 y 6 compras en el último trimestre se representa como el vector x = (34, 2800, 6) ∈ ℝ³. Un dataset con n clientes y p características es una **matriz** X de tamaño n × p. Strang (2016) insiste en que pensar en vectores y matrices permite razonar geométricamente sobre problemas de cientos de dimensiones que no podemos dibujar.\n\n## Medir: normas y distancias\n\nLa norma euclidiana mide la longitud de un vector y la distancia entre dos observaciones es la norma de su diferencia:\n\n```\n‖x‖₂ = √(x₁² + x₂² + ... + x_p²)\nd(x, y) = ‖x − y‖₂\n```\n\nLa norma Manhattan suma valores absolutos: ‖x‖₁ = Σ |x_i|. Ambas aparecen en algoritmos como k vecinos más cercanos y k-medias, y como penalizaciones en la regularización Ridge (L2) y Lasso (L1).\n\nUn problema práctico es la **escala**. Si comparamos clientes por ingreso en soles y número de compras, el ingreso domina cualquier distancia. La estandarización z = (x − μ)/σ, estudiada en la Unidad 1, iguala la influencia de cada variable. No escalar no es un error de código: es una decisión implícita, casi siempre equivocada, sobre qué importa.\n\n## Comparar direcciones: producto punto y coseno\n\nEl producto punto x · y = Σ x_i·y_i tiene una lectura geométrica: x · y = ‖x‖·‖y‖·cos(θ). De ahí surge la **similitud coseno**:\n\n```\nsim(x, y) = (x · y) / (‖x‖ · ‖y‖)\n```\n\nToma valores entre −1 y 1 y compara patrones sin importar magnitudes. Una bodega de Comas y un mayorista de La Parada pueden comprar los mismos productos en proporciones similares, aunque en volúmenes muy distintos; su similitud coseno será alta. Los motores de búsqueda semántica y los sistemas que conectan modelos de lenguaje con documentos comparan vectores de embeddings exactamente de esta manera.\n\n```python\nimport numpy as np\n\ndef similitud_coseno(x, y):\n    return x @ y / (np.linalg.norm(x) * np.linalg.norm(y))\n\na = np.array([3, 0, 1])\nb = np.array([2, 1, 0])\nprint(round(similitud_coseno(a, b), 3))   # 0.849\n```\n\n## Predecir para todos a la vez: producto matriz-vector\n\nUn modelo lineal con pesos w y sesgo b predice ŷ_i = w · x_i + b. Si agregamos una columna de unos a X e incorporamos b en w, todas las predicciones se obtienen con una sola operación:\n\n```python\nX = np.array([[1,  60],\n              [1,  85],\n              [1, 120]])          # columna de unos y área en m²\nw = np.array([50_000, 3_000])     # intercepto y soles por m²\nprint(X @ w)                      # [230000 305000 410000]\n```\n\nLa regla de dimensiones es simple pero implacable: una matriz n × p solo puede multiplicar un vector de p componentes. El producto de matrices AB, definido cuando las dimensiones internas coinciden, no es conmutativo y equivale a componer transformaciones lineales. La matriz XᵀX, de tamaño p × p, resume cómo se relacionan las características y será protagonista en la solución de mínimos cuadrados.\n\n## Funciones de varias variables y gradiente\n\nLa pérdida de un modelo depende simultáneamente de todos sus parámetros. Para una función f(x₁, ..., x_p), la **derivada parcial** ∂f/∂x_j mide el cambio de f cuando solo x_j varía. Por ejemplo, para f(x, y) = x² + 3xy + y²:\n\n```\n∂f/∂x = 2x + 3y        ∂f/∂y = 3x + 2y\n∇f(1, 2) = (8, 7)\n```\n\nEl **gradiente** ∇f reúne todas las parciales en un vector. Deisenroth, Faisal y Ong (2020) destacan su propiedad fundamental: apunta en la dirección de máximo crecimiento de la función, y su opuesto, −∇f, en la de máximo descenso. En un mínimo interior, el gradiente es el vector cero.\n\n## Ejemplo integrador: el gradiente del error de un dato\n\nSuponga un modelo ŷ = w·x + b y un dato con x = 2 e y = 5. El error cuadrático es L(w, b) = (5 − 2w − b)². Por la regla de la cadena:\n\n```\n∂L/∂w = 2·(5 − 2w − b)·(−2) = −4·(5 − 2w − b)\n∂L/∂b = 2·(5 − 2w − b)·(−1) = −2·(5 − 2w − b)\n```\n\nEn el punto w = 1, b = 0, el residuo es 3 y el gradiente vale (−12, −6). Ambos componentes son negativos: aumentar w y b reduce el error. Este cálculo, repetido para miles de datos y promediado, es exactamente lo que hará el algoritmo de descenso de gradiente en la Unidad 4.\n\n## Alcance y continuidad\n\nEsta unidad ofrece las herramientas geométricas mínimas para comprender modelos de datos. En el tercer ciclo, Álgebra Lineal Aplicada profundizará en sistemas de ecuaciones, espacios vectoriales, autovalores y la descomposición en valores singulares, base de técnicas como el análisis de componentes principales."
+      },
+      "case": {
+        "title": "Caso: Recomendaciones personalizadas en Mercado Vecino",
+        "content": "**Mercado Vecino** es un marketplace ficticio que conecta bodegas y minimarkets de Lima Norte con distribuidores mayoristas. Opera desde 2022 y tiene unos 6200 negocios compradores activos en Comas, Los Olivos, San Martín de Porres e Independencia. Cada negocio realiza pedidos semanales desde una aplicación móvil y paga con transferencia o billetera digital.\n\nLa empresa quiere lanzar un módulo de **recomendaciones**: cuando un bodeguero abra la aplicación, debe ver productos que negocios similares compran y él todavía no. El equipo de datos, formado por la ingeniera **Valeria Chumpitaz** y el practicante **Kevin Rojas**, representó a cada negocio con un vector de 40 componentes: el gasto mensual en soles en cada una de 40 categorías, como arroz, aceites, gaseosas, lácteos, detergentes y snacks.\n\nKevin implementó una primera versión con distancia euclidiana y k = 10 vecinos. Los resultados desconcertaron al área comercial: a una bodega pequeña de Independencia, con gasto mensual de S/ 3500, el sistema le recomendaba productos de un minimarket de Los Olivos con perfil totalmente distinto, mientras que no la comparaba con otras bodegas pequeñas de patrón casi idéntico. Al revisar, Valeria notó que los negocios grandes, con gastos de hasta S/ 60 000 mensuales, quedaban lejos de todos y los pequeños se agrupaban por volumen y no por tipo de compra.\n\nValeria propuso dos alternativas. La primera, normalizar cada vector para que sus componentes representen **proporciones del gasto** y luego usar similitud coseno. La segunda, estandarizar cada categoría con su media y desviación estándar y mantener la distancia euclidiana. Kevin señaló que la segunda alternativa podría exagerar categorías raras, como productos de limpieza industrial, que casi nadie compra pero tienen alta variabilidad relativa.\n\nHay, además, una restricción operativa: la aplicación debe responder en menos de 300 milisegundos y el servidor actual calcula las distancias con un bucle de Python que tarda casi dos segundos para los 6200 negocios. El jefe de tecnología, **Óscar Villanueva**, pidió una solución vectorizada con NumPy antes de considerar más infraestructura.\n\nPor último, la gerencia comercial quiere que las recomendaciones favorezcan a los distribuidores que pagan por visibilidad. Valeria teme que ello degrade la calidad percibida y la confianza de los bodegueros, y debe argumentar su posición con evidencia en la próxima reunión de producto.",
+        "questions": [
+          "Explique matemáticamente por qué la distancia euclidiana sobre gastos absolutos agrupa a los negocios por volumen y no por patrón de compra.",
+          "Compare las dos alternativas de Valeria. ¿Cuál recomendaría y qué experimento diseñaría para validar su elección con datos?",
+          "Proponga la implementación vectorizada del cálculo de similitudes con operaciones matriciales y estime su complejidad frente al bucle actual.",
+          "¿Cómo incorporaría la visibilidad pagada sin perder la confianza de los usuarios? Analice las implicancias éticas y comerciales."
+        ]
+      },
+      "assignment": {
+        "title": "Sistema de similitud de perfiles con vectores y gradientes",
+        "instructions": "## Objetivo\nAplicar normas, distancias, similitud coseno y gradientes a un problema real de comparación de perfiles, implementando los cálculos de forma vectorizada.\n\n## Qué entregar\n1. Construya un dataset de al menos 30 observaciones y 5 características numéricas. Puede usar indicadores por departamento del Perú publicados por el INEI, como pobreza monetaria, acceso a internet, años de escolaridad y tasa de anemia, o datos simulados con justificación.\n2. Calcule a mano, para dos observaciones, la distancia euclidiana, la distancia Manhattan y la similitud coseno, mostrando cada paso.\n3. Implemente en NumPy, sin bucles explícitos, la matriz de distancias y la de similitudes coseno entre todas las observaciones.\n4. Identifique los tres vecinos más cercanos de una observación elegida, antes y después de estandarizar, e interprete las diferencias.\n5. Defina una función de dos variables relacionada con su problema, calcule su gradiente analítico y verifíquelo numéricamente en dos puntos.\n\n## Formato\nCuaderno .ipynb con explicación en Markdown y un informe PDF de máximo cuatro páginas.\n\n## Criterios\nCorrección matemática, calidad de la implementación vectorizada, profundidad de la interpretación y claridad de la comunicación.",
+        "rubric": [
+          {
+            "name": "Construcción y descripción del dataset",
+            "points": 3
+          },
+          {
+            "name": "Cálculos manuales de normas, distancias y similitud",
+            "points": 5
+          },
+          {
+            "name": "Implementación vectorizada en NumPy",
+            "points": 6
+          },
+          {
+            "name": "Gradiente analítico y numérico",
+            "points": 3
+          },
+          {
+            "name": "Interpretación del efecto del escalamiento",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: vectores, matrices y gradiente",
+        "questions": [
+          {
+            "prompt": "¿Cuál es la similitud coseno entre los vectores (2, 1) y (200, 100)?",
+            "options": [
+              "1, porque tienen la misma dirección",
+              "0, porque son muy distantes",
+              "0,5, por la diferencia de escala",
+              "No se puede calcular"
+            ],
+            "correct": 0,
+            "explanation": "El segundo vector es 100 veces el primero; el ángulo entre ambos es cero y el coseno vale 1, aunque su distancia euclidiana sea grande."
+          },
+          {
+            "prompt": "Si X tiene forma (500, 4) y w tiene forma (4,), ¿qué forma tiene X @ w?",
+            "options": [
+              "(500,)",
+              "(4,)",
+              "(500, 4)",
+              "La operación no está definida"
+            ],
+            "correct": 0,
+            "explanation": "El producto matriz-vector devuelve una predicción por cada fila: 500 valores, cada uno producto punto de una fila con w."
+          },
+          {
+            "prompt": "Para f(x, y) = x² + 3xy + y², ¿cuánto vale el gradiente en el punto (1, 2)?",
+            "options": [
+              "(8, 7)",
+              "(7, 8)",
+              "(2, 2)",
+              "(5, 7)"
+            ],
+            "correct": 0,
+            "explanation": "∂f/∂x = 2x + 3y = 2 + 6 = 8 y ∂f/∂y = 3x + 2y = 3 + 4 = 7."
+          },
+          {
+            "prompt": "Un analista calcula distancias entre clientes usando ingreso en soles y número de compras sin escalar. ¿Qué ocurrirá probablemente?",
+            "options": [
+              "El ingreso dominará la distancia y las compras casi no influirán",
+              "Ambas variables influirán por igual",
+              "La distancia será siempre cero",
+              "Las compras dominarán la distancia"
+            ],
+            "correct": 0,
+            "explanation": "Las diferencias de ingreso, de cientos o miles de soles, son mucho mayores que las de compras, por lo que determinan la distancia."
+          },
+          {
+            "prompt": "¿Qué dirección debe seguir un algoritmo para disminuir más rápidamente el valor de una función diferenciable?",
+            "options": [
+              "La dirección de −∇f",
+              "La dirección de ∇f",
+              "Cualquier dirección perpendicular al gradiente",
+              "La dirección del eje x"
+            ],
+            "correct": 0,
+            "explanation": "El gradiente indica el máximo ascenso; su opuesto es la dirección de máximo descenso. Moverse perpendicularmente no cambia f localmente."
+          },
+          {
+            "prompt": "¿Cuál es la distancia Manhattan entre los puntos (1, 2) y (4, 6)?",
+            "options": [
+              "7",
+              "5",
+              "25",
+              "3"
+            ],
+            "correct": 0,
+            "explanation": "Se suman las diferencias absolutas por componente: |4 − 1| + |6 − 2| = 3 + 4 = 7. La euclidiana sería 5."
+          },
+          {
+            "prompt": "Si A es una matriz 3 × 2 y B es 2 × 4, ¿cuál afirmación es correcta?",
+            "options": [
+              "AB es 3 × 4 y BA no está definido",
+              "AB y BA son 3 × 4",
+              "AB es 2 × 2",
+              "AB no está definido"
+            ],
+            "correct": 0,
+            "explanation": "Las dimensiones internas de AB coinciden (2 y 2) y el resultado es 3 × 4; en BA las internas son 4 y 3, que no coinciden."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Optimización y ajuste de modelos: proyecto integrador",
+      "description": "El estudiante formula funciones de costo, deduce la solución de mínimos cuadrados para la regresión lineal simple, implementa el descenso de gradiente para modelos lineales y logísticos, y desarrolla un proyecto integrador que ajusta, evalúa y comunica un modelo con datos reales del Perú.",
+      "topics": [
+        "Funciones de costo: error cuadrático y error absoluto",
+        "Mínimos cuadrados en la regresión lineal simple",
+        "Descenso de gradiente y tasa de aprendizaje",
+        "Pérdida logística y clasificación binaria",
+        "Proyecto integrador: ajuste y evaluación de un modelo"
+      ],
+      "slides": [
+        {
+          "title": "Aprender es optimizar: el marco general",
+          "bullets": [
+            "Elementos: datos (x_i, y_i), modelo ŷ = f(x; θ), función de costo J(θ) y algoritmo de optimización.",
+            "Entrenar es encontrar θ* = argmin J(θ), los parámetros que minimizan el error promedio.",
+            "Todo lo visto converge aquí: funciones, derivadas, regla de la cadena, vectores y gradiente.",
+            "El mismo esquema sirve para una recta, una regresión logística o una red con millones de parámetros."
+          ],
+          "notes": "Abra la unidad con una síntesis visual del curso: en un diagrama, ubique los datos, el modelo como función de la Unidad 1, el costo como sumatoria, la derivada de la Unidad 2 y el gradiente de la Unidad 3. Explique que la notación argmin significa el argumento que minimiza, no el valor mínimo. Cite la formulación de Goodfellow, Bengio y Courville: la mayoría de algoritmos de aprendizaje profundo combinan una especificación de datos, una función de costo, un procedimiento de optimización y un modelo. Subraye que cambiar cualquiera de esos componentes produce un algoritmo distinto. Pregunte a la clase qué modelo, qué costo y qué datos usaría un banco peruano para predecir la demanda de efectivo en sus cajeros durante una gratificación de julio o diciembre, y qué consecuencias tendría equivocarse por exceso o por defecto."
+        },
+        {
+          "title": "Funciones de costo: MSE frente a MAE",
+          "bullets": [
+            "Error cuadrático medio: MSE = (1/n) Σ (y_i − ŷ_i)²; derivable y convexo en modelos lineales.",
+            "Error absoluto medio: MAE = (1/n) Σ |y_i − ŷ_i|; más robusto ante valores atípicos.",
+            "El MSE penaliza mucho los errores grandes: un error de 10 pesa 100 veces más que uno de 1.",
+            "El minimizador del MSE de una constante es la media; el del MAE, la mediana."
+          ],
+          "notes": "Compare ambas funciones con un ejemplo de pronóstico de ventas diarias de una botica en Chiclayo, donde un día de campaña de vacunación produjo ventas atípicas cinco veces mayores. Calcule el MSE y el MAE con y sin ese día y muestre cuánto cambia cada uno. Explique la propiedad elegante: si el modelo es una constante c, el MSE se minimiza en la media y el MAE en la mediana; derive el primer resultado en la pizarra igualando a cero la derivada de (1/n) Σ (y_i − c)². Recuerde que el MAE tiene un pico en cero, como el valor absoluto de la Unidad 2, lo que complica el uso directo de gradientes. Discuta la elección como decisión de negocio: si los errores grandes son muy costosos, como un quiebre de stock de oxígeno medicinal, el MSE es preferible. Pregunte qué métrica reportarían a la gerencia y por qué."
+        },
+        {
+          "title": "Mínimos cuadrados: planteamiento del problema",
+          "bullets": [
+            "Modelo: ŷ_i = β₀ + β₁x_i; residuo e_i = y_i − ŷ_i.",
+            "Criterio de Legendre y Gauss: minimizar S(β₀, β₁) = Σ (y_i − β₀ − β₁x_i)².",
+            "Condiciones de primer orden: ∂S/∂β₀ = 0 y ∂S/∂β₁ = 0.",
+            "S es una función convexa de dos variables: el punto crítico es el mínimo global."
+          ],
+          "notes": "Presente el método de mínimos cuadrados con su historia: Legendre lo publicó en 1805 y Gauss lo usó para predecir la órbita del asteroide Ceres, un caso temprano y célebre de ciencia de datos. Grafique una nube de puntos y varias rectas candidatas, dibujando los residuos como segmentos verticales, y pregunte cuál recta es mejor y con qué criterio. Explique por qué se elevan los residuos al cuadrado: evita que los errores positivos y negativos se cancelen, hace la función derivable y conduce a una solución cerrada. Conecte con las derivadas parciales de la Unidad 3: S depende de dos parámetros y su mínimo se encuentra donde el gradiente es cero. Anuncie que en la siguiente diapositiva resolverán ese sistema, y pida a la clase escribir las dos derivadas parciales aplicando la regla de la cadena antes de verlas."
+        },
+        {
+          "title": "Solución cerrada de la regresión lineal simple",
+          "bullets": [
+            "β₁ = Σ (x_i − x̄)(y_i − ȳ) / Σ (x_i − x̄)².",
+            "β₀ = ȳ − β₁·x̄: la recta pasa siempre por el punto de medias (x̄, ȳ).",
+            "Ejemplo con x = (1, 2, 3, 4, 5) e y = (2, 4, 5, 4, 5): β₁ = 6/10 = 0,6 y β₀ = 2,2.",
+            "Forma matricial general: β = (XᵀX)⁻¹Xᵀy, las ecuaciones normales."
+          ],
+          "notes": "Desarrolle la derivación completa con la clase. De ∂S/∂β₀ = −2 Σ (y_i − β₀ − β₁x_i) = 0 se obtiene β₀ = ȳ − β₁x̄; sustituyendo en la segunda condición se despeja β₁. Resuelva el ejemplo numérico en una tabla con columnas x, y, desviaciones, productos y cuadrados: la suma de productos es 6 y la de cuadrados 10. Interprete: por cada unidad adicional de x, y aumenta en promedio 0,6. Muestre que el resultado coincide con np.polyfit(x, y, 1). Presente las ecuaciones normales en forma matricial sin demostrarlas, conectando con XᵀX de la Unidad 3, e indique que Álgebra Lineal Aplicada abordará la inversión de matrices y sus problemas numéricos. Pregunte por qué la solución cerrada podría ser impráctica cuando hay millones de observaciones o miles de características."
+        },
+        {
+          "title": "Descenso de gradiente: el algoritmo",
+          "bullets": [
+            "Inicializar θ con valores pequeños o ceros.",
+            "Repetir: calcular ∇J(θ) y actualizar θ ← θ − α·∇J(θ), con α la tasa de aprendizaje.",
+            "Detener cuando la mejora de J sea menor que una tolerancia o se alcance un máximo de iteraciones.",
+            "Variante estocástica y por minilotes: estimar el gradiente con subconjuntos de datos."
+          ],
+          "notes": "Presente el algoritmo como la versión formal del excursionista en la neblina de la Unidad 3. Escriba el pseudocódigo y recórralo manualmente con una función de una variable, J(θ) = (θ − 3)², empezando en θ = 0 con α = 0,1: el gradiente es 2(θ − 3), el primer paso lleva a θ = 0,6, luego a 1,08, y así hasta acercarse a 3. Pida a la clase calcular dos iteraciones más. Explique que el descenso de gradiente, atribuido a Cauchy en 1847, es el algoritmo que entrena prácticamente todas las redes neuronales actuales, en sus variantes estocástica, por minilotes y con momento, como Adam. Mencione que con millones de datos calcular el gradiente completo en cada paso es costoso y por eso se usan muestras. Pregunte qué ocurre si el gradiente se calcula con un error de signo."
+        },
+        {
+          "title": "La tasa de aprendizaje y la convergencia",
+          "bullets": [
+            "α muy pequeña: convergencia lenta, miles de iteraciones innecesarias.",
+            "α muy grande: el algoritmo oscila o diverge y el costo crece sin control.",
+            "En J(θ) = (θ − 3)², cualquier α entre 0 y 1 converge; α mayor que 1 diverge.",
+            "Diagnóstico visual: graficar J en función de las iteraciones, la curva de aprendizaje."
+          ],
+          "notes": "Realice una demostración interactiva en Colab con un deslizador de ipywidgets que cambie α y muestre la trayectoria sobre la parábola y la curva de costo. Con α = 0,01 el avance es lentísimo; con α = 0,5 llega en un solo paso porque la actualización resulta θ − 0,5·2(θ − 3) = 3; con α = 0,9 oscila alrededor del mínimo pero converge; con α = 1,1 diverge. Explique analíticamente: cada paso multiplica la distancia al óptimo por (1 − 2α), que debe tener valor absoluto menor que uno. Muestre que la curvatura de la función, medida por la segunda derivada, determina la tasa máxima estable, idea que conecta con la convexidad de la Unidad 2. Concluya con la práctica profesional: probar valores en escala logarítmica, como 0,001; 0,01 y 0,1, y observar la curva de aprendizaje."
+        },
+        {
+          "title": "Gradiente del MSE para el modelo lineal",
+          "bullets": [
+            "J(w, b) = (1/n) Σ (y_i − (w·x_i + b))².",
+            "∂J/∂w = −(2/n) Σ x_i·(y_i − ŷ_i) y ∂J/∂b = −(2/n) Σ (y_i − ŷ_i).",
+            "Forma vectorial: ∇_w J = −(2/n) Xᵀ(y − ŷ), una sola operación matricial.",
+            "Lectura intuitiva: cada dato empuja los parámetros en proporción a su residuo."
+          ],
+          "notes": "Derive el gradiente con la regla de la cadena: la función externa es el cuadrado y la interna es el residuo, cuya derivada respecto a w es −x_i y respecto a b es −1. Insista en que la linealidad de la derivada permite derivar la sumatoria término a término, como se anticipó en la Unidad 2. Luego muestre la forma matricial, que generaliza a cualquier número de características y se implementa con X.T @ (y - y_hat). Explique la intuición: si el modelo subestima un dato con x grande, el residuo es positivo y el gradiente empuja w hacia arriba con fuerza proporcional a x. Retome el ejemplo de un solo dato de la lectura de la Unidad 3, con gradiente (−12, −6), y verifique que la fórmula general produce el mismo resultado con n = 1. Pida a la clase escribir el gradiente para un modelo sin intercepto."
+        },
+        {
+          "title": "Implementación del descenso de gradiente en Python",
+          "bullets": [
+            "Paso 1: escalar X con media y desviación del entrenamiento.",
+            "Paso 2: inicializar w = np.zeros(p), b = 0 y fijar α y número de épocas.",
+            "Paso 3: en cada época calcular y_hat, residuo, gradientes y actualizar parámetros.",
+            "Paso 4: registrar J en una lista y comparar el resultado final con la solución cerrada."
+          ],
+          "notes": "Programe el algoritmo completo en vivo con el dataset de cinco puntos del ejemplo de mínimos cuadrados y luego con un dataset real. Muestre que tras unas cientos de iteraciones los parámetros coinciden con β₀ = 2,2 y β₁ = 0,6 obtenidos analíticamente, lo que demuestra que ambos caminos llevan al mismo mínimo de una función convexa. Explique por qué se escala X antes de entrenar, retomando las curvas de nivel alargadas de la Unidad 3: sin escalar, el gradiente zigzaguea y obliga a usar tasas de aprendizaje muy pequeñas. Recuerde que, si se escala, los coeficientes deben transformarse de vuelta para interpretarlos en unidades originales. Destaque las buenas prácticas de ingeniería: fijar semillas aleatorias, registrar la curva de costo y escribir pruebas que verifiquen que el costo disminuye. Grus ofrece implementaciones desde cero muy didácticas en Data Science from Scratch."
+        },
+        {
+          "title": "Criterios de parada y diagnóstico del entrenamiento",
+          "bullets": [
+            "Tolerancia: detener si |J_t − J_{t−1}| < 1e-8 o si la norma del gradiente es muy pequeña.",
+            "Máximo de iteraciones como salvaguarda ante divergencia o convergencia lenta.",
+            "Costo creciente o valores NaN indican tasa excesiva, datos sin escalar o errores de signo.",
+            "Validación: separar datos de entrenamiento y prueba para medir el error fuera de muestra."
+          ],
+          "notes": "Presente una tabla de diagnóstico que los estudiantes puedan usar en sus proyectos. Si el costo crece, revise la tasa de aprendizaje y el signo del gradiente. Si aparecen valores NaN, busque desbordamientos, logaritmos de cero o datos faltantes. Si el costo baja muy despacio, escale las variables o aumente la tasa. Si el costo de entrenamiento baja pero el de prueba sube, hay sobreajuste, tema central de Aprendizaje Automático I. Explique la norma del gradiente como criterio natural, conectando con la Unidad 3: en el mínimo, el gradiente es el vector cero. Muestre ejemplos reales de curvas de aprendizaje defectuosas y pida a la clase diagnosticarlas en grupos. Insista en separar los datos antes de cualquier transformación y en reportar siempre el error de prueba, no solo el de entrenamiento, al presentar resultados."
+        },
+        {
+          "title": "Pérdida logística: entrenar un clasificador",
+          "bullets": [
+            "Modelo: p_i = σ(w·x_i + b) es la probabilidad estimada de que y_i = 1.",
+            "Entropía cruzada: L = −[y·ln(p) + (1 − y)·ln(1 − p)], promediada sobre los datos.",
+            "Si y = 1: con p = 0,9 la pérdida es 0,105; con p = 0,1 es 2,303.",
+            "Es convexa en w y b, a diferencia del MSE aplicado a la sigmoide."
+          ],
+          "notes": "Retome la sigmoide de las Unidades 1 y 2 y plantee el problema: ¿cómo medir el error de una probabilidad? Explique la entropía cruzada caso por caso: cuando el dato es positivo solo cuenta −ln(p), que es cercano a cero si p es alta y enorme si p es baja; cuando es negativo cuenta −ln(1 − p). Calcule los valores de la diapositiva con la calculadora. Mencione que esta pérdida proviene del principio de máxima verosimilitud, que estudiarán con detalle en Estadística y Probabilidad, y que su nombre se vincula con la teoría de la información de Shannon. Explique por qué no se usa el MSE con la sigmoide: la función resultante no es convexa y los gradientes se saturan. Pregunte a la clase qué ocurre con la pérdida si el modelo predice p = 0 exactamente para un dato positivo y por qué las bibliotecas recortan las probabilidades."
+        },
+        {
+          "title": "Gradiente de la regresión logística",
+          "bullets": [
+            "Por la regla de la cadena y σ' = σ(1 − σ): ∂L/∂w = (p − y)·x y ∂L/∂b = p − y.",
+            "Misma forma que la regresión lineal: error de predicción multiplicado por la entrada.",
+            "Forma vectorial: ∇_w J = (1/n) Xᵀ(p − y).",
+            "Decisión final: clasificar como positivo si p supera un umbral elegido según costos."
+          ],
+          "notes": "Desarrolle la derivación completa, porque es el ejemplo más bello de la regla de la cadena del curso: la derivada del logaritmo aporta 1/p, la de la sigmoide aporta p(1 − p) y la del argumento lineal aporta x; al simplificar, todo se reduce a (p − y)·x. Destaque que la forma coincide con la del modelo lineal, lo que no es casualidad sino consecuencia de que ambos pertenecen a la familia de modelos lineales generalizados. Implemente el entrenamiento modificando apenas dos líneas del código de la regresión lineal. Vuelva al tema del umbral de la Unidad 1 con datos de un problema de detección de fraude en pagos con billetera digital: un falso negativo puede costar cientos de soles y un falso positivo, la molestia de un cliente. Pida a la clase proponer un umbral razonado."
+        },
+        {
+          "title": "Calidad del ajuste: R² y error fuera de muestra",
+          "bullets": [
+            "R² = 1 − SSE/SST: proporción de la variabilidad de y explicada por el modelo.",
+            "En el ejemplo de cinco puntos, SSE = 2,4 y SST = 6, de modo que R² = 0,6.",
+            "La raíz del MSE (RMSE) expresa el error típico en las unidades de y.",
+            "Un buen ajuste en entrenamiento no garantiza buenas predicciones en datos nuevos."
+          ],
+          "notes": "Calcule con la clase las predicciones de la recta ŷ = 2,2 + 0,6x en los cinco puntos, los residuos y sus cuadrados, y obtenga SSE = 2,4; luego calcule SST respecto a la media 4, que da 6. Interprete R² = 0,6: el modelo explica el 60 % de la variabilidad. Advierta sobre lecturas incorrectas: un R² alto no implica causalidad ni que el modelo sea útil para extrapolar, y uno bajo puede ser valioso en fenómenos ruidosos como el comportamiento de consumidores. Presente el RMSE como métrica comunicable a la gerencia: decir que el error típico es de S/ 1200 por pedido es más claro que reportar un MSE en soles al cuadrado. Recuerde que las métricas deben calcularse en datos de prueba. Estadística y Probabilidad formalizará luego intervalos de confianza para estos coeficientes."
+        },
+        {
+          "title": "Escalamiento, convexidad y mínimos locales",
+          "bullets": [
+            "Variables en escalas distintas producen curvas de nivel alargadas y trayectorias en zigzag.",
+            "Estandarizar las características vuelve las curvas más circulares y acelera la convergencia.",
+            "Modelos lineales con MSE o entropía cruzada: problemas convexos con mínimo global único.",
+            "Redes neuronales: paisajes no convexos, inicialización aleatoria y optimizadores adaptativos."
+          ],
+          "notes": "Muestre en Colab dos trayectorias del descenso de gradiente sobre la misma regresión: una con área en metros cuadrados y precio en soles sin escalar, que requiere una tasa diminuta y miles de iteraciones, y otra con variables estandarizadas, que converge en decenas. Relacione la forma alargada de las curvas de nivel con la diferencia de curvaturas en cada dirección. Luego amplíe la mirada: los modelos de este curso son convexos y por eso el resultado es confiable, pero en Aprendizaje Profundo enfrentarán funciones con muchos mínimos locales y puntos de silla. Mencione que, paradójicamente, en redes muy grandes muchos mínimos locales tienen pérdidas similares, observación discutida en la literatura reciente. Pregunte a la clase qué estrategias usarían para reducir la dependencia del punto de inicio en un problema no convexo."
+        },
+        {
+          "title": "Proyecto integrador: estructura y entregables",
+          "bullets": [
+            "Problema: pregunta de negocio o social del Perú con datos reales de INEI, BCRP, SUNAT u otra fuente.",
+            "Modelo: regresión lineal o logística entrenada con descenso de gradiente implementado desde cero.",
+            "Validación: comparación con solución cerrada o scikit-learn, métricas de prueba y análisis de residuos.",
+            "Comunicación: informe técnico, cuaderno reproducible y sustentación oral de diez minutos."
+          ],
+          "notes": "Presente el proyecto integrador como evidencia central de la competencia del curso. Explique cada entregable y su peso en la rúbrica, y muestre ejemplos de preguntas viables: relación entre acceso a internet y logro educativo por región con datos del INEI, probabilidad de que una empresa reporte ventas sobre cierto umbral, o pronóstico de demanda eléctrica con datos públicos del sector. Advierta sobre preguntas inviables por falta de datos o por ser demasiado amplias. Explique el estándar de reproducibilidad: otra persona debe poder ejecutar el cuaderno y obtener los mismos resultados. Indique que deberán reflexionar sobre la protección de datos personales conforme a la Ley 29733 si usan información de personas. Organice los equipos y fije la fecha de entrega del avance en la semana 14 y de la sustentación en la semana 16."
+        }
+      ],
+      "reading": {
+        "title": "Optimización: cómo aprende un modelo",
+        "minutes": 45,
+        "content": "## El problema de aprendizaje como optimización\n\nEntrenar un modelo consiste en resolver un problema de optimización: encontrar los parámetros θ que minimizan una función de costo J(θ) calculada sobre los datos. Esta formulación unifica la regresión lineal, la regresión logística y las redes neuronales profundas. Lo que cambia entre ellas es la familia de funciones y la forma del costo; el principio es el mismo.\n\n## Mínimos cuadrados: la solución exacta\n\nPara el modelo ŷ = β₀ + β₁x, el criterio de mínimos cuadrados, propuesto por Legendre en 1805 y desarrollado por Gauss, minimiza la suma de residuos al cuadrado S = Σ (y_i − β₀ − β₁x_i)². Igualando a cero las derivadas parciales se obtiene:\n\n```\nβ₁ = Σ (x_i − x̄)(y_i − ȳ) / Σ (x_i − x̄)²\nβ₀ = ȳ − β₁ · x̄\n```\n\nCon x = (1, 2, 3, 4, 5) e y = (2, 4, 5, 4, 5): x̄ = 3, ȳ = 4, la suma de productos de desviaciones es 6 y la de cuadrados es 10. Entonces β₁ = 0,6 y β₀ = 2,2. Como S es convexa, este punto es el mínimo global. James, Witten, Hastie y Tibshirani (2013) explican que esta solución es la base de todo el aprendizaje supervisado clásico.\n\n## Descenso de gradiente: la solución iterativa\n\nCuando no hay fórmula cerrada, o cuando los datos son demasiado grandes, se usa el **descenso de gradiente**:\n\n```\nθ ← θ − α · ∇J(θ)\n```\n\ndonde α es la tasa de aprendizaje. Para el error cuadrático medio del modelo lineal, las derivadas son:\n\n```\n∂J/∂w = −(2/n) · Σ x_i · (y_i − ŷ_i)\n∂J/∂b = −(2/n) · Σ (y_i − ŷ_i)\n```\n\nLa implementación en NumPy es breve:\n\n```python\nimport numpy as np\n\nx = np.array([1, 2, 3, 4, 5], dtype=float)\ny = np.array([2, 4, 5, 4, 5], dtype=float)\n\nw, b, alfa = 0.0, 0.0, 0.05\nhistorial = []\nfor epoca in range(2000):\n    y_hat = w * x + b\n    residuo = y - y_hat\n    grad_w = -2 * np.mean(x * residuo)\n    grad_b = -2 * np.mean(residuo)\n    w -= alfa * grad_w\n    b -= alfa * grad_b\n    historial.append(np.mean(residuo ** 2))\n\nprint(round(w, 3), round(b, 3))   # 0.6 2.2, igual que la solución cerrada\n```\n\n## La tasa de aprendizaje y la escala\n\nEn la función J(θ) = (θ − 3)², una actualización multiplica la distancia al óptimo por (1 − 2α). Si α está entre 0 y 1, el algoritmo converge; si supera 1, diverge. En problemas reales, la tasa máxima estable depende de la curvatura de la función en su dirección más empinada. Por eso las variables en escalas muy distintas, como área en metros cuadrados y precio en soles, producen curvas de nivel alargadas y obligan a usar tasas minúsculas. Estandarizar las características es la solución práctica más efectiva.\n\n## Clasificación: la pérdida logística\n\nPara predecir una variable binaria, como pago o impago, se usa p = σ(w·x + b) y la **entropía cruzada**:\n\n```\nL = −[ y · ln(p) + (1 − y) · ln(1 − p) ]\n```\n\nSi y = 1 y el modelo predice p = 0,9, la pérdida es 0,105; si predice p = 0,1, es 2,303. La pérdida castiga con dureza las predicciones seguras y equivocadas. Aplicando la regla de la cadena y la identidad σ' = σ(1 − σ), el gradiente resulta notablemente simple:\n\n```\n∂L/∂w = (p − y) · x        ∂L/∂b = p − y\n```\n\n## Evaluar el ajuste\n\nEl coeficiente de determinación R² = 1 − SSE/SST mide la proporción de variabilidad explicada. En el ejemplo, las predicciones 2,8; 3,4; 4,0; 4,6 y 5,2 dejan SSE = 2,4 frente a SST = 6, por lo que R² = 0,6. Sin embargo, la métrica decisiva es el error en datos no usados para entrenar. Un modelo puede ajustar muy bien el pasado y fallar con datos nuevos, especialmente si se extrapola fuera del rango observado.\n\n## Responsabilidad en el uso de modelos\n\nUn modelo optimizado no es automáticamente justo ni adecuado. Si se entrena con datos personales, su tratamiento debe respetar la Ley 29733 de Protección de Datos Personales y su reglamento. Además, un costo que solo mide el error promedio puede ocultar errores sistemáticos en grupos específicos, como regiones con menos datos. Evaluar el desempeño por subgrupos es una práctica mínima de rigor profesional que profundizará el curso de Ética y Gobernanza de la IA."
+      },
+      "case": {
+        "title": "Caso: Pronóstico de rendimiento de arándanos en Agrícola Virú Norte",
+        "content": "**Agrícola Virú Norte** es una empresa agroexportadora ficticia ubicada en La Libertad, con 420 hectáreas de arándanos destinadas principalmente a Estados Unidos, Europa y China. El Perú se ha consolidado en los últimos años como uno de los principales exportadores mundiales de arándanos, y la competencia por cumplir contratos con supermercados internacionales es intensa: comprometer volúmenes que luego no se cosechan implica penalidades y pérdida de clientes.\n\nLa jefa de planeamiento, **Andrea Zavaleta**, necesita estimar el rendimiento en kilogramos por hectárea de cada lote para la campaña que empieza en agosto. El equipo de datos, liderado por **Jhon Mendoza**, reunió información de 180 lotes durante tres campañas: volumen de agua aplicado en metros cúbicos por hectárea, entre 6000 y 11 000; horas de frío acumuladas, entre 80 y 260; edad de la plantación en años; y rendimiento obtenido, entre 9000 y 21 000 kg/ha.\n\nJhon implementó una regresión lineal con descenso de gradiente desde cero, como parte de una política de la empresa de entender sus modelos. El primer intento fracasó: con α = 0,01 el costo creció hasta producir valores NaN en pocas iteraciones; con α = 1e-9 el costo bajaba tan despacio que tras 50 000 iteraciones el modelo seguía lejos de la solución de scikit-learn. El practicante **Luis Cárdenas** propuso estandarizar las variables, lo que resolvió el problema en 300 iteraciones.\n\nEl modelo final tiene un R² de 0,62 en datos de prueba y un RMSE de 1900 kg/ha. El coeficiente estandarizado del agua es el mayor, seguido de la edad de la plantación. Sin embargo, al revisar los residuos, Andrea notó que el modelo subestima sistemáticamente los lotes jóvenes de una variedad nueva incorporada en 2024, de la que solo hay 15 observaciones.\n\nAhora la gerencia quiere usar el modelo para dos decisiones. Primero, comprometer volúmenes de exportación para la campaña: el área comercial propone usar la predicción puntual. Segundo, evaluar la compra de un fundo en Olmos, Lambayeque, donde las horas de frío son menores que las del rango observado y el agua proviene de otra fuente. El gerente general, **Fernando Ugaz**, pregunta si puede confiar en el modelo para ambas decisiones y qué haría falta para mejorarlo antes de la reunión con el directorio.",
+        "questions": [
+          "Explique matemáticamente por qué el descenso de gradiente fracasó sin escalar las variables y por qué la estandarización lo resolvió.",
+          "¿Es prudente comprometer volúmenes con la predicción puntual? Proponga cómo usar el RMSE para definir un compromiso con menor riesgo.",
+          "¿Qué problemas plantea usar el modelo para evaluar el fundo de Olmos? Relacione su respuesta con la extrapolación y la representatividad de los datos.",
+          "¿Cómo abordaría la subestimación sistemática de la nueva variedad? Proponga cambios en el modelo, en la función de costo o en los datos."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: modelo predictivo entrenado desde cero",
+        "instructions": "## Objetivo\nFormular, entrenar, evaluar y comunicar un modelo de regresión lineal o logística con datos reales del Perú, implementando el descenso de gradiente desde cero.\n\n## Qué entregar\n1. **Pregunta y datos:** una pregunta relevante para una organización o política pública peruana y un dataset de fuentes oficiales o abiertas (INEI, BCRP, SUNAT, MINSA, MINEDU u otra), con al menos 100 observaciones. Si contiene datos personales, explique cómo cumple la Ley 29733.\n2. **Fundamentación matemática:** función del modelo, función de costo y derivación del gradiente con la regla de la cadena.\n3. **Implementación:** cuaderno en Python con preprocesamiento, separación entrenamiento y prueba, escalamiento, descenso de gradiente vectorizado y curva de aprendizaje.\n4. **Validación:** comparación de coeficientes con la solución cerrada o con scikit-learn; métricas de prueba (RMSE y R², o exactitud y matriz de confusión); análisis de residuos o errores por subgrupo.\n5. **Informe y sustentación:** informe técnico de 6 a 8 páginas y presentación oral de diez minutos en la semana 16.\n\n## Formato\nTrabajo en equipos de dos o tres integrantes. Cuaderno .ipynb reproducible, informe PDF y diapositivas.\n\n## Criterios\nPertinencia del problema, rigor matemático, calidad del código, validación crítica y comunicación profesional.",
+        "rubric": [
+          {
+            "name": "Pertinencia del problema y calidad de los datos",
+            "points": 3
+          },
+          {
+            "name": "Fundamentación matemática y derivación del gradiente",
+            "points": 5
+          },
+          {
+            "name": "Implementación vectorizada y reproducible",
+            "points": 5
+          },
+          {
+            "name": "Validación, métricas y análisis crítico",
+            "points": 4
+          },
+          {
+            "name": "Informe y sustentación oral",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: funciones de costo y descenso de gradiente",
+        "questions": [
+          {
+            "prompt": "Con x = (1, 2, 3, 4, 5) e y = (2, 4, 5, 4, 5), ¿cuál es la recta de mínimos cuadrados?",
+            "options": [
+              "ŷ = 2,2 + 0,6x",
+              "ŷ = 0,6 + 2,2x",
+              "ŷ = 4 + 0,6x",
+              "ŷ = 2 + 0,8x"
+            ],
+            "correct": 0,
+            "explanation": "β₁ = 6/10 = 0,6 y β₀ = ȳ − β₁x̄ = 4 − 0,6·3 = 2,2. La recta pasa por el punto de medias (3, 4)."
+          },
+          {
+            "prompt": "Al entrenar con descenso de gradiente, el costo aumenta en cada iteración hasta volverse NaN. ¿Cuál es la causa más probable?",
+            "options": [
+              "La tasa de aprendizaje es demasiado grande",
+              "La tasa de aprendizaje es demasiado pequeña",
+              "El modelo ya convergió",
+              "Hay demasiadas observaciones"
+            ],
+            "correct": 0,
+            "explanation": "Una tasa excesiva hace que cada paso sobrepase el mínimo y amplifique la distancia, lo que produce divergencia y desbordamiento numérico."
+          },
+          {
+            "prompt": "En J(θ) = (θ − 3)² con θ₀ = 0 y α = 0,1, ¿cuánto vale θ tras la primera actualización?",
+            "options": [
+              "0,6",
+              "0,3",
+              "3",
+              "−0,6"
+            ],
+            "correct": 0,
+            "explanation": "El gradiente en 0 es 2(0 − 3) = −6; la actualización es θ = 0 − 0,1·(−6) = 0,6."
+          },
+          {
+            "prompt": "Un pronóstico de ventas contiene algunos días atípicos que no se quieren sobreponderar. ¿Qué función de costo es más adecuada?",
+            "options": [
+              "Error absoluto medio",
+              "Error cuadrático medio",
+              "Entropía cruzada",
+              "Coeficiente R²"
+            ],
+            "correct": 0,
+            "explanation": "El MAE crece linealmente con el error, por lo que es más robusto ante atípicos; el MSE los penaliza cuadráticamente."
+          },
+          {
+            "prompt": "En regresión logística, un dato positivo (y = 1) recibe p = 0,1. ¿Qué indica el gradiente ∂L/∂b = p − y?",
+            "options": [
+              "Vale −0,9 y el algoritmo aumentará b",
+              "Vale 0,9 y el algoritmo reducirá b",
+              "Vale 0 y no hay corrección",
+              "Vale −0,1 y la corrección es mínima"
+            ],
+            "correct": 0,
+            "explanation": "p − y = 0,1 − 1 = −0,9; al restar α veces un gradiente negativo, b aumenta y la probabilidad predicha sube."
+          },
+          {
+            "prompt": "Un modelo obtiene R² = 0,95 en entrenamiento y 0,40 en prueba. ¿Cuál es la interpretación más adecuada?",
+            "options": [
+              "El modelo sobreajusta y generaliza mal",
+              "El modelo es excelente para producción",
+              "Los datos de prueba están mal escalados necesariamente",
+              "El descenso de gradiente no convergió"
+            ],
+            "correct": 0,
+            "explanation": "La gran diferencia entre el desempeño dentro y fuera de muestra es el síntoma típico del sobreajuste."
+          },
+          {
+            "prompt": "¿Por qué conviene estandarizar las características antes de aplicar descenso de gradiente?",
+            "options": [
+              "Hace más circulares las curvas de nivel y permite converger más rápido",
+              "Cambia el mínimo global del problema",
+              "Elimina la necesidad de una tasa de aprendizaje",
+              "Convierte un problema no convexo en convexo"
+            ],
+            "correct": 0,
+            "explanation": "Con escalas similares, la curvatura es parecida en todas las direcciones; se puede usar una tasa mayor y la trayectoria no zigzaguea."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Notación matemática para datos: conjuntos, intervalos y sumatorias",
+      "activity": "Clase síncrona introductoria, diagnóstico de saberes previos y taller de sumatorias en NumPy con datos de ingresos de la ENAHO.",
+      "evidence": "Ejercicios de sumatorias resueltos"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Funciones lineales, cuadráticas y polinomiales; interpretación de pendiente e intercepto",
+      "activity": "Aula invertida: lectura previa y resolución colaborativa de problemas de tarifas y rendimientos; discusión del riesgo de sobreajuste.",
+      "evidence": "Hoja de problemas y participación en foro"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Funciones exponenciales, logarítmicas y transformación de variables sesgadas",
+      "activity": "Laboratorio en Colab con series del BCRP en escala logarítmica; análisis del caso Microcrédito Sur en salas pequeñas.",
+      "evidence": "Informe breve del análisis de caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Escalamiento, composición de funciones y función sigmoide",
+      "activity": "Taller de implementación de funciones vectorizadas; entrega de la tarea de modelación funcional y Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Tasa de cambio, límites y continuidad",
+      "activity": "Exploración numérica de límites con tablas en Python; discusión sobre saturación de la sigmoide y funciones no derivables como ReLU.",
+      "evidence": "Ejercicios de límites y continuidad"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Definición de derivada y reglas de derivación",
+      "activity": "Resolución guiada de derivadas con la definición y con reglas; verificación numérica por equipos con diferencias centrales.",
+      "evidence": "Lista de derivadas verificadas"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Regla de la cadena, derivada de la sigmoide e interpretación marginal",
+      "activity": "Taller de regla de la cadena y análisis del caso Café de Altura sobre precio óptimo y elasticidad de la demanda.",
+      "evidence": "Análisis escrito del caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Optimización de una variable, criterios de segunda derivada y convexidad",
+      "activity": "Problemas aplicados de optimización empresarial; entrega de la tarea de optimización y Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Vectores, operaciones, normas y distancias",
+      "activity": "Clase práctica de geometría de datos: cálculo manual y en NumPy de normas, distancias y vecinos más cercanos.",
+      "evidence": "Ejercicios de vectores y distancias"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Producto punto, similitud coseno y efecto de la escala",
+      "activity": "Laboratorio de similitud entre perfiles de consumo; análisis del caso Mercado Vecino sobre recomendaciones personalizadas.",
+      "evidence": "Informe del caso y código"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Matrices, producto matriz-vector y producto de matrices",
+      "activity": "Taller de vectorización: predicciones lineales con X @ w, verificación de dimensiones y comparación de tiempos frente a bucles.",
+      "evidence": "Cuaderno de vectorización"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Funciones de varias variables, derivadas parciales y gradiente",
+      "activity": "Visualización de curvas de nivel y campos de gradiente; entrega de la tarea de similitud de perfiles y Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Funciones de costo y mínimos cuadrados en regresión lineal simple",
+      "activity": "Derivación colaborativa de la solución cerrada; presentación del proyecto integrador y conformación de equipos con selección de datos.",
+      "evidence": "Propuesta de proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Descenso de gradiente, tasa de aprendizaje y criterios de parada",
+      "activity": "Implementación desde cero del descenso de gradiente y diagnóstico de curvas de aprendizaje; análisis del caso Agrícola Virú Norte.",
+      "evidence": "Avance del proyecto y análisis de caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Pérdida logística, gradiente de la regresión logística y métricas de evaluación",
+      "activity": "Taller de clasificación binaria y cálculo de R² y RMSE en datos de prueba; asesoría de proyectos y Cuestionario 4.",
+      "evidence": "Cuestionario 4 y cuaderno validado"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Integración del curso: sustentación del proyecto y evaluación final",
+      "activity": "Sustentación oral del proyecto integrador, retroalimentación entre pares y examen final individual de resolución de problemas.",
+      "evidence": "Proyecto integrador y examen final"
+    }
+  ]
+}

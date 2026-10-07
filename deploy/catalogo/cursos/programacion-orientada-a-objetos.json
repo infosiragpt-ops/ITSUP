@@ -1,0 +1,1287 @@
+{
+  "name": "Programación Orientada a Objetos",
+  "slug": "programacion-orientada-a-objetos",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Curso de formación específica del segundo ciclo de la carrera de Computación e Informática, de naturaleza teórico-práctica. Tiene como propósito que el estudiante transite del pensamiento estructurado aprendido en Fundamentos de Programación (Python) al paradigma orientado a objetos, usando Java como lenguaje de referencia por su peso en el desarrollo empresarial peruano. Comprende cuatro unidades: clases, objetos y encapsulamiento; relaciones entre clases, herencia, polimorfismo e interfaces; diseño robusto con colecciones genéricas, excepciones, pruebas unitarias con JUnit, principios SOLID y patrones de diseño; y un proyecto integrador con arquitectura en capas, persistencia en archivos y refactorización. Mediante el método de casos con organizaciones peruanas (boticas, cooperativas, transporte, comercio electrónico) y el aprendizaje basado en proyectos, el estudiante modela dominios reales en UML y los implementa con código limpio. El curso prepara Algoritmos y Estructuras de Datos, Base de Datos, Desarrollo de Aplicaciones Móviles y Desarrollo de Software Empresarial, y aporta al perfil del profesional técnico que desarrolla software mantenible, probado y seguro.",
+  "competency": "Desarrolla aplicaciones de escritorio y consola en Java aplicando el paradigma orientado a objetos: modela el dominio con diagramas de clases UML, implementa encapsulamiento, herencia, polimorfismo e interfaces, gestiona colecciones y excepciones, y verifica su código con pruebas unitarias, respetando principios SOLID, buenas prácticas de código limpio y la protección de datos personales.",
+  "capacities": [
+    "Modela entidades de un dominio de negocio como clases con atributos, métodos y constructores, garantizando la integridad de su estado mediante encapsulamiento y validaciones.",
+    "Diseña jerarquías y relaciones entre clases (asociación, agregación, composición, herencia e interfaces) y aprovecha el polimorfismo para construir soluciones extensibles.",
+    "Construye componentes robustos con colecciones genéricas, manejo de excepciones y pruebas unitarias automatizadas, aplicando principios SOLID y patrones de diseño clásicos.",
+    "Integra una aplicación orientada a objetos en capas con persistencia en archivos, control de versiones y documentación técnica, y la sustenta ante un usuario o cliente."
+  ],
+  "indicators": [
+    "Traduce un requerimiento descrito en lenguaje natural a un diagrama de clases UML con atributos, métodos, visibilidades y multiplicidades correctas.",
+    "Implementa clases Java con atributos privados, constructores que validan invariantes y métodos equals, hashCode y toString coherentes.",
+    "Aplica herencia, clases abstractas e interfaces para eliminar condicionales repetitivos, demostrando polimorfismo con al menos tres implementaciones intercambiables.",
+    "Selecciona la colección adecuada (List, Set, Map) justificando su complejidad y usa genéricos, Comparator y streams para procesar datos del dominio.",
+    "Define excepciones propias y las gestiona sin ocultar errores, registrando mensajes útiles y manteniendo el programa en un estado consistente.",
+    "Escribe pruebas unitarias con JUnit 5 que cubren casos normales, límite y de error, alcanzando la cobertura acordada en el proyecto.",
+    "Identifica olores de código y los corrige mediante refactorizaciones y patrones de diseño, explicando qué principio SOLID se respeta.",
+    "Entrega y sustenta un proyecto en capas versionado con Git, con README, diagramas actualizados y tratamiento adecuado de datos personales."
+  ],
+  "methodology": "El curso aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y un video breve, y resuelve un reto de código autocorregido. En la sesión se trabaja el método de casos con organizaciones peruanas, discutiendo decisiones de diseño antes de programar. Los laboratorios virtuales usan programación en pares con repositorios Git compartidos y revisión de código entre pares. El aprendizaje basado en proyectos articula las cuatro unidades en un sistema que crece cada semana. La evaluación formativa se apoya en cuestionarios con retroalimentación inmediata, rúbricas públicas y pruebas automatizadas que el estudiante ejecuta antes de entregar.",
+  "bibliography": [
+    "Deitel, P. y Deitel, H. (2016). Cómo programar en Java (10.ª ed.). Pearson Educación.",
+    "Bloch, J. (2018). Effective Java (3.ª ed.). Addison-Wesley.",
+    "Sierra, K., Bates, B. y Gee, T. (2022). Head First Java (3.ª ed.). O'Reilly Media.",
+    "Gamma, E., Helm, R., Johnson, R. y Vlissides, J. (1994). Design patterns: Elements of reusable object-oriented software. Addison-Wesley.",
+    "Freeman, E. y Robson, E. (2020). Head First design patterns (2.ª ed.). O'Reilly Media.",
+    "Martin, R. C. (2008). Clean code: A handbook of agile software craftsmanship. Prentice Hall.",
+    "Fowler, M. (2018). Refactoring: Improving the design of existing code (2.ª ed.). Addison-Wesley.",
+    "Booch, G., Maksimchuk, R., Engle, M., Young, B., Conallen, J. y Houston, K. (2007). Object-oriented analysis and design with applications (3.ª ed.). Addison-Wesley.",
+    "Meyer, B. (1997). Object-oriented software construction (2.ª ed.). Prentice Hall."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuatro cuestionarios de unidad, laboratorios semanales de código con pruebas automatizadas y participación argumentada en el análisis de casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Tareas de las unidades 1, 2 y 3: modelo de clases encapsulado, jerarquía polimórfica y componente probado con patrones, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 35,
+      "description": "Proyecto integrador en capas versionado con Git, con pruebas, documentación y sustentación técnica con demostración en vivo y preguntas sobre el diseño."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Clases, objetos y encapsulamiento en Java",
+      "description": "Al finalizar la unidad, el estudiante modela entidades de un dominio de negocio como clases Java con estado protegido, constructores que validan invariantes y comportamiento propio, y las representa en diagramas de clases UML.",
+      "topics": [
+        "Del paradigma estructurado al orientado a objetos",
+        "Entorno Java: JDK, compilación, bytecode y JVM",
+        "Clases, objetos, atributos, métodos y constructores",
+        "Encapsulamiento, invariantes y modificadores de acceso",
+        "Miembros estáticos, inmutabilidad y métodos de Object",
+        "Diagramas de clases UML básicos"
+      ],
+      "slides": [
+        {
+          "title": "Por qué otro paradigma después de Python estructurado",
+          "bullets": [
+            "Programación estructurada: datos en diccionarios y funciones sueltas que los modifican; cualquier función puede romper los datos.",
+            "Orientación a objetos: datos y comportamiento viven juntos en una unidad que protege sus propias reglas.",
+            "Alan Kay acuñó el término en los años setenta con Smalltalk; Simula 67 (Dahl y Nygaard) introdujo clases y objetos.",
+            "Beneficio central: gestionar la complejidad de sistemas grandes, que cambian y son mantenidos por equipos."
+          ],
+          "notes": "Abra recordando el proyecto final de Fundamentos de Programación: un inventario en Python con listas de diccionarios y funciones como registrar_venta(inventario, codigo, cantidad). Pregunte: ¿qué impide que otra función ponga stock negativo directamente en el diccionario? Nada. Ese es el problema que la orientación a objetos ataca: las reglas del negocio quedan dispersas y cualquiera puede violarlas. Explique brevemente la historia: Simula 67 en Noruega para simulaciones, Smalltalk con Alan Kay en Xerox PARC, luego C++, Java (1995) y C#. Subraye que no es una moda, sino la forma dominante de organizar software empresarial: los sistemas de bancos, de SUNAT o de cadenas de retail peruanas están escritos mayoritariamente en Java o C#. Cierre preguntando qué otros ejemplos de reglas que nunca deben romperse conocen en un negocio real."
+        },
+        {
+          "title": "Los cuatro pilares y el concepto de abstracción",
+          "bullets": [
+            "Abstracción: representar solo lo relevante para el problema; un cliente de botica no necesita su color de ojos.",
+            "Encapsulamiento: ocultar el estado interno y exponer operaciones que preservan las reglas.",
+            "Herencia: reutilizar y especializar comportamiento mediante relaciones es-un.",
+            "Polimorfismo: un mismo mensaje produce respuestas distintas según el objeto que lo recibe."
+          ],
+          "notes": "Presente los cuatro pilares como herramientas de diseño, no como definiciones para memorizar. Use un ejemplo único que recorrerá el curso: una cadena de boticas en Arequipa que vende productos, atiende clientes y emite boletas. Abstracción: ¿qué atributos del producto importan? Código, nombre, precio, stock, registro sanitario DIGEMID; no el color de la caja. Encapsulamiento: el stock solo cambia mediante vender() o reponer(). Herencia: un medicamento controlado es un producto con reglas adicionales. Polimorfismo: calcular el descuento según el tipo de cliente. Advierta que en esta unidad trabajaremos los dos primeros pilares a fondo y que herencia y polimorfismo llegan en la unidad 2. Pregunte a la clase: ¿qué atributos modelarían para un pasajero de una empresa de transporte interprovincial y cuáles descartarían?"
+        },
+        {
+          "title": "Entorno Java: del código fuente a la JVM",
+          "bullets": [
+            "Instalar JDK 21 LTS (Temurin u OpenJDK); verificar con java -version y javac -version.",
+            "javac Producto.java genera Producto.class con bytecode independiente de la plataforma.",
+            "La JVM interpreta y compila en caliente (JIT) el bytecode: escribir una vez, ejecutar en cualquier lugar.",
+            "IDE recomendado: IntelliJ IDEA Community o VS Code con Extension Pack for Java.",
+            "Java es de tipado estático: los errores de tipo se detectan al compilar, no en producción."
+          ],
+          "notes": "Haga la demostración en vivo compartiendo pantalla. Cree una carpeta, escriba Hola.java con la clase pública y el método main, compile con javac y ejecute con java. Muestre el archivo .class y explique que es bytecode, no código máquina; la JVM lo traduce y, con el compilador JIT, optimiza los métodos más usados. Compare con Python: allí el intérprete descubre errores de tipo en tiempo de ejecución; en Java, si escriben int stock = \"diez\", el compilador lo rechaza. Explique por qué usamos la versión 21: es LTS, con soporte de largo plazo, y es lo que encontrarán en empresas. Pida a cada estudiante que envíe por el chat la salida de java -version para verificar que todos tienen el entorno listo antes de pasar a clases."
+        },
+        {
+          "title": "Anatomía de una clase Java",
+          "bullets": [
+            "Clase: plantilla que define atributos (estado) y métodos (comportamiento); objeto: instancia concreta en memoria.",
+            "Convenciones: clases en PascalCase, métodos y atributos en camelCase, constantes en MAYUSCULAS_CON_GUION.",
+            "Un archivo .java por clase pública, con el mismo nombre que la clase.",
+            "new Producto(...) reserva memoria en el heap y devuelve una referencia que se guarda en la pila."
+          ],
+          "notes": "Escriba la clase Producto con atributos codigo, nombre, precio y stock, y un método vender(int cantidad). Luego cree dos objetos en main y muestre que comparten la estructura pero tienen estado independiente. Dibuje en la pizarra virtual la pila y el heap: la variable p1 en la pila guarda una referencia; el objeto vive en el heap. Explique qué pasa con Producto p3 = p1: no se copia el objeto, se copia la referencia, por lo que modificar p3 afecta a p1. Este es un error clásico de principiantes. Relacione con Python, donde las variables también son referencias. Pregunte: si paso un objeto a un método y el método cambia su stock, ¿el cambio se ve afuera? Deje que discutan y luego demuéstrelo ejecutando el código."
+        },
+        {
+          "title": "Constructores e invariantes de clase",
+          "bullets": [
+            "Constructor: método especial sin tipo de retorno que deja al objeto en un estado válido desde su creación.",
+            "Invariante: condición que siempre debe cumplirse, por ejemplo precio mayor que cero y stock no negativo.",
+            "Validar en el constructor y lanzar IllegalArgumentException si los datos violan el invariante.",
+            "Sobrecarga de constructores y encadenamiento con this(...) evitan duplicar validaciones."
+          ],
+          "notes": "Bertrand Meyer, en Object-Oriented Software Construction, formaliza la idea de invariante de clase dentro del diseño por contrato: precondiciones, postcondiciones e invariantes. Explique que un objeto inválido es una bomba de tiempo: si se permite crear un Producto con precio negativo, el error aparecerá días después en una boleta mal calculada. Muestre el constructor que valida con if y lanza IllegalArgumentException con un mensaje claro. Luego agregue un segundo constructor que asume stock cero y lo encadena con this(codigo, nombre, precio, 0). Pregunte qué invariantes tendría una cuenta de ahorro de una cooperativa: saldo no negativo, número de cuenta con formato válido, titular no nulo. Pida que propongan tres invariantes para la clase Pasajero de una empresa de buses y discútalos."
+        },
+        {
+          "title": "Encapsulamiento y modificadores de acceso",
+          "bullets": [
+            "private: solo la propia clase; ausencia de modificador: el paquete; protected: paquete y subclases; public: todos.",
+            "Regla práctica: atributos private y métodos public solo cuando forman parte del contrato.",
+            "Getters solo si el exterior realmente necesita el dato; setters únicamente si el cambio tiene sentido de negocio.",
+            "Preferir métodos con intención (vender, reponer) frente a setStock genérico."
+          ],
+          "notes": "Este es el punto más importante de la unidad. Muchos estudiantes creen que encapsular es poner private y generar getters y setters automáticos con el IDE. Muestre por qué eso no protege nada: un setStock(-50) público deja el invariante igual de expuesto. Explique la alternativa: métodos que expresan operaciones del negocio y validan, como vender(cantidad) que verifica stock suficiente y reponer(cantidad) que exige cantidad positiva. Cite el principio Tell, Don't Ask: en lugar de preguntar el stock y decidir afuera, se le dice al objeto qué hacer. Haga un ejercicio rápido: proyecte una clase CuentaAhorro con setSaldo público y pida a los estudiantes que propongan en el chat los métodos que la reemplazarían. Compare las respuestas y destaque depositar, retirar y transferir con sus validaciones."
+        },
+        {
+          "title": "Métodos de instancia, this y paso de parámetros",
+          "bullets": [
+            "this referencia al objeto actual; desambigua atributos y parámetros con el mismo nombre.",
+            "Java pasa todo por valor: los primitivos se copian y las referencias también se copian.",
+            "Un método puede modificar el objeto referenciado, pero no reasignar la variable del llamador.",
+            "Métodos consultores no cambian estado; métodos modificadores sí: separar ambos facilita las pruebas."
+          ],
+          "notes": "Muchos tutoriales afirman erróneamente que Java pasa objetos por referencia. Demuéstrelo con dos métodos: uno que llama p.reponer(10), cuyo efecto se ve afuera, y otro que hace p = new Producto(...) dentro del método, cuyo efecto no se ve afuera. La explicación es que se copia el valor de la referencia. Introduzca la separación entre comandos y consultas propuesta por Meyer: un método que devuelve información no debería cambiar el estado. Por ejemplo, calcularSubtotal() no debe descontar stock. Esta disciplina hace que el código sea predecible y fácil de probar en la unidad 3. Pregunte: ¿un método obtenerSiguienteNumeroBoleta() que incrementa un contador viola esa separación? Discuta que a veces se justifica, pero debe ser explícito en el nombre."
+        },
+        {
+          "title": "Tipos primitivos, envoltorios y BigDecimal para dinero",
+          "bullets": [
+            "Primitivos: int, long, double, boolean, char; envoltorios: Integer, Long, Double, con autoboxing.",
+            "double no representa exactamente 0,1: 0.1 + 0.2 da 0.30000000000000004.",
+            "Para soles y céntimos usar BigDecimal con setScale(2, RoundingMode.HALF_UP).",
+            "Ejemplo IGV: base 84,75 por 0,18 da 15,26 redondeado; total de la boleta S/ 100,01."
+          ],
+          "notes": "Este tema evita errores reales en sistemas de facturación. Ejecute en vivo System.out.println(0.1 + 0.2) y deje que la clase reaccione. Explique que double usa representación binaria de punto flotante IEEE 754 y que fracciones decimales como 0,1 no tienen representación exacta. En comprobantes electrónicos de SUNAT, una diferencia de un céntimo entre la suma de líneas y el total puede provocar observaciones o rechazos del comprobante. Muestre cómo calcular el IGV de 18 % con BigDecimal: new BigDecimal(\"84.75\").multiply(new BigDecimal(\"0.18\")).setScale(2, RoundingMode.HALF_UP). Insista en usar el constructor con String, no con double. Pregunte: ¿qué atributos de la clase Producto deberían cambiar de double a BigDecimal? Precio, sí; peso para envío quizá no requiere la misma exactitud."
+        },
+        {
+          "title": "Miembros estáticos y constantes",
+          "bullets": [
+            "static pertenece a la clase, no a cada objeto: contadores globales, constantes y métodos utilitarios.",
+            "public static final BigDecimal TASA_IGV = new BigDecimal(\"0.18\") centraliza la regla tributaria.",
+            "Abusar de static vuelve el código procedural y difícil de probar: estado global oculto.",
+            "Los métodos fábrica estáticos (Producto.de(...)) pueden tener nombres expresivos, como sugiere Bloch."
+          ],
+          "notes": "Explique que static significa compartido por todas las instancias. Un ejemplo útil es la constante de IGV: si la tasa cambiara, se modifica en un solo lugar. Comente que en el Perú la tasa del IGV es 16 % más 2 % de Impuesto de Promoción Municipal, que suman 18 %; en ciertas actividades, como restaurantes de micro y pequeñas empresas, se han aplicado tasas reducidas temporales, lo que refuerza la necesidad de no repetir el número 0.18 por todo el código. Luego advierta contra el abuso: un estudiante que pone todo como static vuelve a programar como en Python estructurado, con funciones globales. Joshua Bloch, en el ítem 1 de Effective Java, recomienda considerar métodos fábrica estáticos en lugar de constructores; muestre Producto.conStockInicial(...). Pregunte cuándo un contador de boletas debería ser estático y qué riesgo tendría con varios usuarios simultáneos."
+        },
+        {
+          "title": "Igualdad de objetos: equals, hashCode y toString",
+          "bullets": [
+            "== compara referencias; equals compara contenido según la regla que defina la clase.",
+            "Contrato: si a.equals(b) entonces a.hashCode() == b.hashCode(); romperlo corrompe HashSet y HashMap.",
+            "Igualdad por identidad de negocio: dos productos son iguales si tienen el mismo código.",
+            "toString legible facilita depuración y bitácoras, pero nunca debe exponer datos sensibles."
+          ],
+          "notes": "Muestre el error clásico: comparar dos String con == y obtener false aunque el texto sea idéntico. Luego cree dos productos con el mismo código y muestre que equals devuelve false hasta que se sobrescribe. Implemente equals con la plantilla recomendada por Bloch en los ítems 10 y 11: verificar referencia, tipo y campos significativos, y usar Objects.hash para hashCode. Explique con un ejemplo por qué el contrato importa: si se agrega un producto a un HashSet y hashCode no es coherente, contains devolverá false para un producto igual. Sobre toString, enlace con la Ley 29733 de Protección de Datos Personales: un toString de Cliente que imprime DNI y teléfono completos en los logs puede constituir una exposición indebida. Proponga enmascarar el DNI mostrando solo los últimos tres dígitos."
+        },
+        {
+          "title": "Inmutabilidad y records en Java moderno",
+          "bullets": [
+            "Objeto inmutable: estado fijo tras su creación; seguro para compartir entre hilos y como clave de Map.",
+            "Receta: clase final, atributos private final, sin setters, copias defensivas de colecciones.",
+            "record Ruc(String numero) genera constructor, accesores, equals, hashCode y toString automáticamente.",
+            "Objetos valor típicos: Dinero, Ruc, Dni, Direccion, RangoFechas."
+          ],
+          "notes": "Introduzca la distinción de Eric Evans entre entidades, que tienen identidad y cambian en el tiempo, como un Cliente, y objetos valor, que se definen por sus atributos y conviene que sean inmutables, como un monto en soles o un RUC. Muestre un record Ruc con constructor compacto que valida que tenga 11 dígitos y que empiece con 10, 15, 17 o 20, prefijos usados por SUNAT para personas naturales y jurídicas. Explique que la validación completa incluye un dígito verificador con módulo 11, que pueden implementar como reto. Comente que String y BigDecimal ya son inmutables: por eso add devuelve un nuevo BigDecimal en lugar de modificar el actual, error frecuente de quienes escriben total.add(x) sin asignar. Pregunte qué objetos de su proyecto deberían ser inmutables."
+        },
+        {
+          "title": "Diagramas de clases UML: notación esencial",
+          "bullets": [
+            "Rectángulo en tres compartimentos: nombre, atributos y operaciones.",
+            "Visibilidad: + público, - privado, # protegido, ~ paquete; tipos después de dos puntos.",
+            "Atributos y métodos estáticos se subrayan; clases abstractas en cursiva.",
+            "UML fue unificado por Booch, Rumbaugh y Jacobson y es estándar del OMG."
+          ],
+          "notes": "Explique que UML es un lenguaje de modelado, no una metodología, y que fue unificado por Grady Booch, James Rumbaugh e Ivar Jacobson en los noventa y luego estandarizado por el Object Management Group. En el curso usaremos sobre todo el diagrama de clases, con herramientas como draw.io, PlantUML o StarUML. Dibuje la clase Producto con - codigo: String, - precio: BigDecimal, + vender(cantidad: int): void. Recalque que el diagrama sirve para conversar y decidir antes de programar; Martin Fowler propone usar UML como boceto, no como documentación exhaustiva. Pida a los estudiantes que, en cinco minutos, dibujen la clase Cliente de la botica con atributos y métodos y la compartan en la pizarra colaborativa. Revise visibilidades y tipos en voz alta."
+        },
+        {
+          "title": "Del requerimiento al modelo: técnica de sustantivos y verbos",
+          "bullets": [
+            "Paso 1: leer el requerimiento y subrayar sustantivos (candidatos a clases o atributos) y verbos (métodos).",
+            "Paso 2: descartar sinónimos, actores externos y conceptos fuera del alcance.",
+            "Paso 3: asignar responsabilidades con el experto en información de Craig Larman (GRASP).",
+            "Paso 4: definir invariantes y escribir el esqueleto en Java antes de la lógica."
+          ],
+          "notes": "Proyecte un requerimiento breve: una cooperativa de ahorro de Huancayo necesita registrar socios con DNI, abrir cuentas de ahorro, aceptar depósitos y retiros, e impedir retiros mayores al saldo. Pida a la clase subrayar sustantivos: cooperativa, socio, DNI, cuenta, depósito, retiro, saldo. Discutan cuáles son clases (Socio, CuentaAhorro), cuáles son atributos (DNI, saldo) y cuáles podrían ser clases más adelante (Movimiento). Luego los verbos: registrar, abrir, depositar, retirar. Introduzca el patrón experto en información de Craig Larman: la responsabilidad de validar el retiro corresponde a la clase que tiene el dato del saldo, es decir, CuentaAhorro. Advierta que la técnica es un punto de partida, no un algoritmo infalible; el juicio del diseñador sigue siendo esencial."
+        },
+        {
+          "title": "Errores frecuentes del principiante en POO",
+          "bullets": [
+            "Clases anémicas: solo atributos con getters y setters, toda la lógica en el main.",
+            "Clases Dios: una clase Sistema con cuarenta métodos que hace de todo.",
+            "Comparar String o BigDecimal con == o con equals sin considerar la escala.",
+            "Imprimir con System.out dentro de las clases de dominio en lugar de devolver resultados."
+          ],
+          "notes": "Cierre la unidad con un análisis crítico. Martin Fowler llama modelo de dominio anémico al antipatrón en el que las clases son simples contenedores de datos y la lógica vive en procedimientos externos: es Python estructurado disfrazado de Java. La clase Dios es el extremo opuesto, una clase que concentra todas las responsabilidades. Muestre un caso sutil: new BigDecimal(\"10.0\").equals(new BigDecimal(\"10.00\")) devuelve false porque la escala difiere; para comparar montos se usa compareTo. Finalmente, explique por qué una clase de dominio no debe imprimir en consola: impide reutilizarla en una aplicación web o móvil y dificulta las pruebas. Pida a los estudiantes que revisen su código del laboratorio y encuentren al menos uno de estos errores, y que lo comenten en el foro."
+        }
+      ],
+      "reading": {
+        "title": "Encapsulamiento e invariantes: diseñar objetos que no se pueden romper",
+        "minutes": 35,
+        "content": "## Del dato suelto al objeto responsable\n\nEn la programación estructurada que practicamos en Python, los datos y las funciones viven separados. Un inventario puede ser una lista de diccionarios y cualquier función puede escribir `producto[\"stock\"] = -5`. El programa no se queja; el error aparece semanas después, cuando una botica vende un medicamento que no tiene. La programación orientada a objetos propone un cambio de responsabilidad: **el objeto es dueño de su estado y de las reglas que lo gobiernan**. Bertrand Meyer llamó a estas reglas *invariantes de clase*: condiciones que deben ser verdaderas desde que el objeto nace hasta que desaparece.\n\n## Un objeto que protege sus reglas\n\nConsideremos una cadena de boticas de Arequipa. Sus reglas: todo producto tiene código, nombre y precio positivo; el stock nunca es negativo; no se vende más de lo disponible. En Java:\n\n```java\nimport java.math.BigDecimal;\nimport java.math.RoundingMode;\nimport java.util.Objects;\n\npublic class Producto {\n    private final String codigo;          // identidad: no cambia\n    private final String nombre;\n    private BigDecimal precio;            // soles, siempre 2 decimales\n    private int stock;                    // invariante: stock >= 0\n\n    public Producto(String codigo, String nombre, BigDecimal precio, int stock) {\n        if (codigo == null || codigo.isBlank())\n            throw new IllegalArgumentException(\"El código es obligatorio\");\n        if (precio == null || precio.signum() <= 0)\n            throw new IllegalArgumentException(\"El precio debe ser positivo\");\n        if (stock < 0)\n            throw new IllegalArgumentException(\"El stock no puede ser negativo\");\n        this.codigo = codigo;\n        this.nombre = Objects.requireNonNull(nombre);\n        this.precio = precio.setScale(2, RoundingMode.HALF_UP);\n        this.stock = stock;\n    }\n\n    public void vender(int cantidad) {\n        if (cantidad <= 0) throw new IllegalArgumentException(\"Cantidad inválida\");\n        if (cantidad > stock) throw new IllegalStateException(\"Stock insuficiente\");\n        stock -= cantidad;                // el invariante se conserva\n    }\n\n    public void reponer(int cantidad) {\n        if (cantidad <= 0) throw new IllegalArgumentException(\"Cantidad inválida\");\n        stock += cantidad;\n    }\n\n    public int getStock() { return stock; }\n    public String getCodigo() { return codigo; }\n}\n```\n\nObserve tres decisiones. Primero, los atributos son `private`: ninguna clase externa puede asignar un stock arbitrario. Segundo, no existe `setStock`; existen `vender` y `reponer`, que expresan operaciones del negocio y verifican sus precondiciones. Tercero, el constructor rechaza datos inválidos: es imposible obtener un `Producto` roto. Si un desarrollador intenta `new Producto(\"A1\", \"Paracetamol\", new BigDecimal(\"-2\"), 10)`, el programa falla de inmediato con un mensaje claro, en lugar de propagar el error silenciosamente.\n\n## Getters y setters no son encapsulamiento\n\nUn error difundido es creer que encapsular consiste en generar getters y setters para todos los atributos. Si existe `setStock(int)` público sin validación, el atributo privado es solo una formalidad. El principio *Tell, Don't Ask* resume la alternativa: en lugar de pedirle al objeto sus datos y decidir afuera, se le ordena una acción y él decide si es válida. Esto concentra la regla en un único lugar; si mañana la botica decide reservar dos unidades de seguridad para recetas urgentes, solo cambia `vender`.\n\n## Dinero: por qué BigDecimal\n\nEl tipo `double` usa representación binaria y no almacena exactamente valores como 0,1. En comprobantes electrónicos, la suma de líneas debe coincidir con el total al céntimo. Para calcular el IGV del 18 % sobre una base imponible:\n\n```java\nBigDecimal base = new BigDecimal(\"84.75\");\nBigDecimal igv  = base.multiply(new BigDecimal(\"0.18\"))\n                      .setScale(2, RoundingMode.HALF_UP);   // 15.26\nBigDecimal total = base.add(igv);                            // 100.01\n```\n\nRecuerde que `BigDecimal` es inmutable: `base.add(igv)` no modifica `base`, devuelve un nuevo objeto que debe asignarse.\n\n## Entidades y objetos valor\n\nEric Evans distingue **entidades**, con identidad que persiste aunque cambien sus atributos (un socio de una cooperativa sigue siendo el mismo aunque cambie de dirección), y **objetos valor**, definidos solo por sus atributos (S/ 50,00 es igual a cualquier otro S/ 50,00). Los objetos valor conviene hacerlos inmutables; Java moderno ofrece `record`:\n\n```java\npublic record Ruc(String numero) {\n    public Ruc {\n        if (numero == null || !numero.matches(\"(10|15|17|20)\\\\d{9}\"))\n            throw new IllegalArgumentException(\"RUC inválido: \" + numero);\n    }\n}\n```\n\nUn `record` genera constructor, accesores, `equals`, `hashCode` y `toString`. Su constructor compacto permite validar sin repetir código.\n\n## Datos personales y responsabilidad\n\nLas clases que representan personas manejan datos protegidos por la Ley 29733. Un `toString` que imprime el DNI y el teléfono completos termina en archivos de bitácora a los que acceden muchas personas. Un buen diseño enmascara esos datos (por ejemplo, `DNI ****567`) y expone solo lo necesario.\n\n## Preguntas para la reflexión\n\n1. ¿Qué invariantes tendría una clase `Pasaje` de una empresa de transporte interprovincial?\n2. ¿Qué atributos de su proyecto de Fundamentos de Programación deberían ser objetos valor inmutables?\n3. ¿En qué casos un setter público sí está justificado?"
+      },
+      "case": {
+        "title": "Caso: El stock fantasma de Boticas Misti",
+        "content": "**Boticas Misti** es una cadena familiar con 9 locales en Arequipa y 2 en Moquegua, con 64 trabajadores y ventas anuales cercanas a S/ 14 millones. En 2023 contrató a un desarrollador independiente para reemplazar sus hojas de cálculo por una aplicación de escritorio en Java que registra ventas, reposiciones y transferencias entre locales.\n\nDieciocho meses después, la gerente de operaciones, **Rosa Quispe**, detecta un problema grave: el sistema reporta stock de productos que no existen físicamente. En el último inventario de diciembre se encontraron 412 diferencias, la mayoría en medicamentos de alta rotación como paracetamol, amoxicilina y sales de rehidratación. En 37 casos el sistema mostraba **stock negativo** (por ejemplo, −14 unidades de amoxicilina de 500 mg), lo que en teoría es imposible. Además, un cliente presentó un reclamo en el libro de reclamaciones porque se le cobró S/ 0,01 más en una boleta de S/ 100,01 y el sistema de facturación electrónica del proveedor rechazó dos comprobantes por diferencias de redondeo.\n\nRosa contrata a **Diego Mamani**, egresado técnico en Computación e Informática, para auditar el código. Diego encuentra lo siguiente:\n\n- La clase `Producto` tiene atributos públicos: `public int stock; public double precio;`.\n- Existen 23 lugares del código donde se escribe `producto.stock = producto.stock - cantidad;`, algunos sin verificar disponibilidad. En las transferencias entre locales el stock se descuenta en el origen, pero si falla la red, no se suma en el destino.\n- El precio se calcula con `double`, y el IGV con `precio * 0.18` repetido en 11 clases.\n- La clase `Cliente` imprime en la bitácora el DNI, el teléfono y el diagnóstico asociado a recetas especiales.\n- No hay pruebas automatizadas; el desarrollador original ya no está disponible.\n\nEl dueño, **Julio Misti**, propone dos alternativas: (a) contratar a una empresa para reescribir todo el sistema en seis meses por S/ 180 000, o (b) que Diego refactorice el módulo de inventario en ocho semanas, sin detener las ventas. Julio también pregunta si no sería más rápido \"agregar un if antes de cada resta\".\n\nDiego debe presentar el lunes un informe con un diagnóstico de las causas raíz desde la perspectiva de diseño orientado a objetos, una propuesta de nueva clase `Producto` y un plan de migración de riesgo controlado.",
+        "questions": [
+          "¿Qué principios de diseño orientado a objetos se violan en el sistema actual y cómo explica cada uno de los síntomas observados?",
+          "¿Por qué agregar un if antes de cada resta no resuelve el problema de fondo? Argumente en términos de invariantes y responsabilidad.",
+          "Diseñe en UML la nueva clase Producto y los objetos valor necesarios para precio e IGV, justificando visibilidades y métodos.",
+          "¿Qué riesgos legales y reputacionales genera la bitácora actual de la clase Cliente según la Ley 29733 y cómo los mitigaría en el diseño?",
+          "¿Recomendaría la alternativa (a) o la (b)? Proponga criterios de decisión y un plan de migración incremental."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Modelo de clases encapsulado para una cooperativa de ahorro",
+        "instructions": "**Objetivo:** modelar e implementar en Java el núcleo de una cooperativa de ahorro y crédito de la región, aplicando encapsulamiento, invariantes y objetos valor.\n\n**Requerimiento:** la cooperativa registra socios (DNI, nombres, fecha de afiliación), abre cuentas de ahorro en soles, acepta depósitos y retiros, impide retiros mayores al saldo y registra cada movimiento con fecha, tipo y monto. Una cuenta no puede quedar con saldo negativo y todo monto debe ser positivo con dos decimales.\n\n**Qué entregar:**\n\n1. Diagrama de clases UML (PlantUML o draw.io) con al menos `Socio`, `CuentaAhorro`, `Movimiento` y un objeto valor `Dinero` o `Dni`.\n2. Proyecto Java 21 que compile sin advertencias, con atributos privados, constructores que validan invariantes, `BigDecimal` para montos y `equals`/`hashCode`/`toString` coherentes (sin exponer el DNI completo).\n3. Una clase `Main` que demuestre tres escenarios válidos y tres inválidos, capturando las excepciones con mensajes claros.\n4. Un informe breve (máximo dos páginas en PDF) que liste los invariantes y justifique por qué no se incluyeron ciertos setters.\n\n**Formato:** repositorio Git con al menos cinco commits descriptivos; entregar el enlace o el archivo comprimido en el aula virtual hasta el domingo de la semana 4, 23:59.\n\n**Criterios:** se evaluarán la calidad del modelo, el encapsulamiento real, el manejo correcto de dinero y la claridad de la justificación según la rúbrica.",
+        "rubric": [
+          {
+            "name": "Diagrama UML correcto y coherente con el código",
+            "points": 4
+          },
+          {
+            "name": "Encapsulamiento e invariantes protegidos en constructores y métodos",
+            "points": 6
+          },
+          {
+            "name": "Uso correcto de BigDecimal, objetos valor y métodos de Object",
+            "points": 5
+          },
+          {
+            "name": "Escenarios de prueba, protección de datos e informe de justificación",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Clases, objetos y encapsulamiento",
+        "questions": [
+          {
+            "prompt": "Una clase CuentaAhorro tiene el atributo saldo privado y un método público setSaldo(BigDecimal) sin validación. ¿Cuál es el diagnóstico correcto?",
+            "options": [
+              "El encapsulamiento es solo nominal, porque cualquier cliente puede dejar el saldo en un estado inválido",
+              "El encapsulamiento es correcto, porque el atributo es privado",
+              "El diseño es correcto si el setter se documenta con Javadoc",
+              "El problema se resuelve declarando el atributo como static"
+            ],
+            "correct": 0,
+            "explanation": "Encapsular es proteger invariantes, no solo ocultar atributos. Un setter público sin validación permite saldos negativos; deben existir métodos como depositar y retirar que verifiquen las reglas."
+          },
+          {
+            "prompt": "¿Qué imprime el siguiente código? Producto a = new Producto(\"P1\", ...); Producto b = a; b.reponer(5); y luego se muestra el stock de a, inicialmente 10.",
+            "options": [
+              "15, porque a y b referencian el mismo objeto",
+              "10, porque b es una copia independiente de a",
+              "5, porque reponer reemplaza el stock",
+              "Error de compilación por asignar objetos"
+            ],
+            "correct": 0,
+            "explanation": "La asignación copia la referencia, no el objeto. Ambas variables apuntan al mismo objeto del heap, por lo que el cambio realizado mediante b se observa desde a."
+          },
+          {
+            "prompt": "Para calcular el IGV de una boleta electrónica, ¿qué implementación es la más adecuada?",
+            "options": [
+              "base.multiply(new BigDecimal(\"0.18\")).setScale(2, RoundingMode.HALF_UP)",
+              "base * 0.18 usando double",
+              "Math.round(base * 18) / 100 usando float",
+              "new BigDecimal(0.18).multiply(base) sin redondeo"
+            ],
+            "correct": 0,
+            "explanation": "BigDecimal construido desde String representa exactamente 0,18 y el redondeo explícito a dos decimales garantiza montos en céntimos coherentes; double y new BigDecimal(0.18) arrastran errores binarios."
+          },
+          {
+            "prompt": "Se sobrescribe equals en Producto para comparar por código, pero no se sobrescribe hashCode. ¿Qué consecuencia es la más probable?",
+            "options": [
+              "Un HashSet puede contener dos productos iguales y contains puede fallar",
+              "El programa no compila",
+              "equals deja de funcionar en listas",
+              "No hay ninguna consecuencia práctica"
+            ],
+            "correct": 0,
+            "explanation": "El contrato exige que objetos iguales tengan el mismo hashCode. Si no se cumple, las colecciones basadas en hash ubican los objetos en cubetas distintas y no detectan duplicados."
+          },
+          {
+            "prompt": "Según la distinción de Eric Evans, ¿cuál de estos conceptos se modela mejor como objeto valor inmutable?",
+            "options": [
+              "Un monto de S/ 250,00",
+              "Un socio de la cooperativa",
+              "Una cuenta de ahorro con movimientos",
+              "Un pedido cuyo estado cambia"
+            ],
+            "correct": 0,
+            "explanation": "Un monto se define solo por su valor y moneda; dos montos iguales son intercambiables. Socio, cuenta y pedido tienen identidad propia que persiste mientras cambian sus atributos."
+          },
+          {
+            "prompt": "Al aplicar el patrón experto en información de Larman, ¿qué clase debe validar que un retiro no exceda el saldo disponible?",
+            "options": [
+              "CuentaAhorro, porque posee el dato del saldo",
+              "Main, porque coordina el programa",
+              "Socio, porque es el titular",
+              "Una clase Validador global y estática"
+            ],
+            "correct": 0,
+            "explanation": "El experto en información asigna la responsabilidad a la clase que tiene los datos necesarios para cumplirla; centralizar la regla en CuentaAhorro preserva su invariante."
+          },
+          {
+            "prompt": "¿Cuál es el principal problema de que la clase de dominio Producto use System.out.println dentro del método vender?",
+            "options": [
+              "Acopla el dominio a la consola e impide reutilizarlo y probarlo en otros contextos",
+              "Hace que el programa sea más lento",
+              "Viola la sintaxis de Java",
+              "Impide la herencia de Producto"
+            ],
+            "correct": 0,
+            "explanation": "El dominio debe expresar reglas, no decidir cómo se presentan. Imprimir dentro de vender impide usar la clase en una interfaz web o móvil y complica las pruebas automatizadas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Relaciones entre clases, herencia, polimorfismo e interfaces",
+      "description": "Al finalizar la unidad, el estudiante diseña e implementa relaciones de asociación, agregación y composición, jerarquías con clases abstractas e interfaces, y aprovecha el polimorfismo para reemplazar condicionales por soluciones extensibles.",
+      "topics": [
+        "Asociación, agregación, composición y dependencia",
+        "Herencia, super, sobrescritura y el principio de sustitución de Liskov",
+        "Clases abstractas y métodos plantilla",
+        "Interfaces, métodos por defecto y contratos",
+        "Polimorfismo, enlace dinámico y composición frente a herencia",
+        "Enumeraciones con comportamiento y paquetes"
+      ],
+      "slides": [
+        {
+          "title": "Los objetos colaboran: tipos de relaciones",
+          "bullets": [
+            "Dependencia: una clase usa a otra temporalmente, por ejemplo como parámetro de un método.",
+            "Asociación: vínculo estructural duradero; un Pasaje conoce a su Pasajero.",
+            "Agregación: todo-parte débil; un Bus agrupa Asientos pero un Conductor existe sin el Bus.",
+            "Composición: todo-parte fuerte; las LineaVenta nacen y mueren con su Boleta."
+          ],
+          "notes": "Abra la unidad mostrando que ningún objeto útil vive aislado: una boleta tiene líneas, un cliente, un vendedor y un local. Dibuje en UML los cuatro tipos de relación con su notación: flecha discontinua para dependencia, línea sólida para asociación, rombo vacío para agregación y rombo lleno para composición. Use como dominio una empresa de transporte interprovincial que vende pasajes Lima–Cusco. Pregunte: si se anula una venta, ¿deben desaparecer sus líneas? Sí, es composición. Si se retira un bus de la flota, ¿desaparece el conductor? No; a lo sumo es asociación. Explique que la diferencia entre agregación y composición se traduce en código: en la composición la clase contenedora crea y controla el ciclo de vida de sus partes y no las expone directamente."
+        },
+        {
+          "title": "Multiplicidad y navegabilidad en el diagrama",
+          "bullets": [
+            "Multiplicidades: 1, 0..1, * o 1..*; se leen desde cada extremo de la relación.",
+            "Navegabilidad: la flecha indica qué clase conoce a la otra; preferir relaciones unidireccionales.",
+            "Una relación 1..* se implementa con List<LineaVenta>; 0..1 con Optional o referencia que admite nulo.",
+            "Relaciones bidireccionales exigen mantener ambos extremos sincronizados: más acoplamiento y errores."
+          ],
+          "notes": "Muestre el diagrama Boleta 1 —— 1..* LineaVenta y pregunte cómo se lee: una boleta tiene al menos una línea y cada línea pertenece a exactamente una boleta. Traduzca a Java: la boleta tiene una lista privada de líneas y un método agregarLinea(producto, cantidad) que crea la línea internamente, sin aceptar líneas construidas afuera. Luego discuta la navegabilidad: ¿necesita la línea conocer su boleta? En la mayoría de los casos no; una relación bidireccional obliga a mantener ambos lados coherentes y genera errores de sincronización. Recomiende empezar con relaciones unidireccionales y agregar la inversa solo si un caso de uso lo exige. Ejercicio: pida a los estudiantes que modelen en cinco minutos Viaje, Bus, Asiento y Pasaje con multiplicidades, y comparta dos soluciones para discutir sus diferencias."
+        },
+        {
+          "title": "Composición en código: proteger las partes",
+          "bullets": [
+            "La boleta crea sus líneas: agregarLinea(producto, cantidad) en lugar de recibir LineaVenta externas.",
+            "Exponer colecciones con List.copyOf o Collections.unmodifiableList evita modificaciones externas.",
+            "El total se calcula desde las partes, no se guarda como dato que pueda desincronizarse.",
+            "Invariante compuesto: una boleta emitida no admite nuevas líneas."
+          ],
+          "notes": "Implemente en vivo la clase Boleta con estado BORRADOR o EMITIDA. Muestre el error clásico: un getLineas() que devuelve la lista interna permite que cualquiera haga boleta.getLineas().clear() y deje la boleta vacía después de emitida. La solución es devolver una vista inmodificable o una copia, lo que Joshua Bloch llama copia defensiva en el ítem 50 de Effective Java. Luego explique por qué el total no debe ser un atributo con setter: debe calcularse sumando subtotales con BigDecimal, o recalcularse cada vez que cambian las líneas. Finalmente, el invariante del estado: emitir() cambia el estado y, a partir de ahí, agregarLinea lanza IllegalStateException. Pregunte cómo se relaciona esto con la normativa de comprobantes electrónicos, donde un comprobante emitido no se modifica: se anula o se emite una nota de crédito."
+        },
+        {
+          "title": "Herencia: especializar sin duplicar",
+          "bullets": [
+            "extends crea una relación es-un: MedicamentoControlado es un Producto con reglas adicionales.",
+            "La subclase hereda miembros public y protected; los private existen pero no son accesibles.",
+            "super(...) invoca el constructor padre y debe ser la primera instrucción del constructor.",
+            "Java admite herencia simple de clases; toda clase desciende de Object."
+          ],
+          "notes": "Presente la herencia como mecanismo de especialización. En la botica, un medicamento controlado requiere receta médica retenida y registro del número de colegiatura del médico; sigue siendo un producto con código, precio y stock. Implemente MedicamentoControlado extends Producto, con el constructor que llama a super y agrega el atributo requiereRecetaRetenida. Explique que los atributos privados del padre siguen existiendo en el objeto, pero la subclase solo los manipula mediante métodos heredados, lo cual es bueno porque preserva los invariantes del padre. Mencione que Java prohíbe herencia múltiple de clases para evitar el problema del diamante, pero permite implementar varias interfaces. Pregunte: ¿un producto refrigerado, como una vacuna, debería ser subclase de Producto o tener un atributo de condición de almacenamiento? Deje la pregunta abierta para retomarla más adelante."
+        },
+        {
+          "title": "Sobrescritura, @Override y enlace dinámico",
+          "bullets": [
+            "Sobrescribir: redefinir en la subclase un método heredado con la misma firma.",
+            "@Override hace que el compilador verifique la firma y evita errores silenciosos.",
+            "Enlace dinámico: la JVM decide en ejecución qué versión llamar según el tipo real del objeto.",
+            "Sobrecarga es distinta: mismo nombre, distintos parámetros, se resuelve al compilar."
+          ],
+          "notes": "Muestre el método vender(int cantidad) sobrescrito en MedicamentoControlado para exigir que se haya registrado una receta antes de llamar a super.vender(cantidad). Luego cree una lista List<Producto> con productos comunes y controlados y recorra vendiendo: cada objeto responde según su tipo real. Ese es el enlace dinámico, base del polimorfismo. Haga una demostración del error que @Override previene: escriba equals(Producto otro) en lugar de equals(Object otro); sin la anotación compila, pero no sobrescribe, y las colecciones siguen usando la versión de Object. Distinga sobrecarga de sobrescritura con una tabla en la pizarra: momento de resolución, firma, relación con la herencia. Pregunte a la clase qué versión se ejecuta si la variable es de tipo Producto pero el objeto es MedicamentoControlado."
+        },
+        {
+          "title": "Principio de sustitución de Liskov",
+          "bullets": [
+            "Barbara Liskov (1987): los objetos de una subclase deben poder reemplazar a los de su superclase sin alterar la corrección.",
+            "La subclase no puede exigir precondiciones más fuertes ni ofrecer postcondiciones más débiles.",
+            "Ejemplo clásico: Cuadrado extends Rectangulo rompe el contrato de setAncho independiente de setAlto.",
+            "Señal de alerta: subclases que lanzan UnsupportedOperationException en métodos heredados."
+          ],
+          "notes": "Barbara Liskov presentó esta idea en 1987 y la formalizó con Jeannette Wing en 1994; además recibió el premio Turing en 2008. Explique el ejemplo del rectángulo y el cuadrado: geométricamente un cuadrado es un rectángulo, pero si el contrato de Rectangulo permite cambiar ancho y alto por separado, un Cuadrado que modifica ambos sorprende al código cliente. Lleve el principio al negocio: una CuentaPlazoFijo que hereda de CuentaAhorro y lanza excepción en retirar() viola Liskov, porque el código que procesa cuentas de ahorro asume que se puede retirar. La lección es que la relación es-un debe evaluarse por comportamiento, no por lenguaje natural. Pida que analicen si MedicamentoControlado viola Liskov al exigir receta: discuta que sí refuerza una precondición, y que conviene modelar la autorización de otra forma."
+        },
+        {
+          "title": "Clases abstractas y el patrón método plantilla",
+          "bullets": [
+            "abstract class define estructura común y deja métodos abstract para que las subclases los completen.",
+            "No se puede instanciar: Comprobante es abstracto; Boleta y Factura son concretas.",
+            "Método plantilla: un algoritmo final en el padre invoca pasos abstractos implementados por cada hija.",
+            "Útil cuando las subclases comparten estado y una secuencia de pasos estable."
+          ],
+          "notes": "Modele los comprobantes de pago: boleta de venta y factura comparten serie, número, fecha, líneas y total, pero difieren en el receptor (DNI opcional en boletas de menor monto frente a RUC obligatorio en facturas) y en la validación. Cree la clase abstracta Comprobante con un método final emitir() que ejecuta validarReceptor(), calcularTotales(), asignarNumero() y cambiarEstado(). validarReceptor es abstracto y cada subclase lo implementa. Este es el patrón método plantilla del catálogo de Gamma y colaboradores. Explique la decisión de marcar emitir como final: evita que una subclase altere el orden del algoritmo. Pregunte: ¿qué otros procesos tienen pasos fijos con variaciones, por ejemplo el cálculo de una planilla para trabajadores en régimen general frente a régimen MYPE?"
+        },
+        {
+          "title": "Interfaces: contratos sin implementación obligada",
+          "bullets": [
+            "interface declara qué se puede hacer, no cómo; una clase puede implementar varias.",
+            "Ejemplos del JDK: Comparable, Iterable, AutoCloseable, Runnable.",
+            "Desde Java 8: métodos default y static; desde Java 9: métodos private auxiliares.",
+            "Programar contra la interfaz: declarar List<Producto> lista = new ArrayList<>()."
+          ],
+          "notes": "Explique que la interfaz es un contrato: cualquier clase que la implemente garantiza ciertos métodos. El ejemplo del dominio es MedioPago con el método procesar(Dinero monto). Implementaciones: PagoEfectivo, PagoTarjeta, PagoYape, PagoPlin. La botica puede aceptar un nuevo medio de pago sin modificar la clase Caja, que solo conoce la interfaz. Recalque la máxima de Gamma y colaboradores: programar para una interfaz, no para una implementación. Muestre también Comparable<Producto> para ordenar por precio y explique que Collections.sort funciona con cualquier clase que cumpla el contrato. Comente los métodos default: permiten evolucionar interfaces sin romper implementaciones existentes, lo que hizo posible agregar stream() a Collection en Java 8. Pregunte qué interfaces definirían para un sistema de delivery."
+        },
+        {
+          "title": "Clase abstracta o interfaz: criterios de decisión",
+          "bullets": [
+            "Interfaz: capacidad que pueden tener clases no relacionadas (Imprimible, Notificable).",
+            "Clase abstracta: familia con estado compartido y comportamiento parcial común.",
+            "Si hay duda, empezar con interfaz; agregar una clase abstracta base solo si hay código repetido.",
+            "Combinación frecuente: interfaz pública más clase abstracta esqueleto, como List y AbstractList."
+          ],
+          "notes": "Presente una tabla comparativa: instanciación, estado, herencia múltiple, constructores y evolución. Joshua Bloch, en el ítem 20 de Effective Java, recomienda preferir interfaces sobre clases abstractas y, cuando convenga, ofrecer una implementación esqueleto, como hace el JDK con List y AbstractList. Plantee tres situaciones para votar en el chat: primero, notificar a clientes por SMS, correo o WhatsApp; segundo, tipos de empleados que comparten DNI, sueldo base y cálculo de gratificación; tercero, objetos que pueden exportarse a CSV, como productos, clientes y ventas. Respuestas esperadas: interfaz, clase abstracta, interfaz. Discuta los argumentos de quienes votaron distinto: no hay una única respuesta correcta, sino compromisos entre flexibilidad y reutilización."
+        },
+        {
+          "title": "Polimorfismo para eliminar condicionales",
+          "bullets": [
+            "Olor de código: switch o if-else sobre tipoCliente repetido en varios métodos.",
+            "Refactorización de Fowler: reemplazar condicional por polimorfismo.",
+            "Cada tipo encapsula su regla: ClienteRegular, ClienteFrecuente, ClienteCorporativo.",
+            "Agregar un tipo nuevo no obliga a modificar el código existente: extensión sin modificación."
+          ],
+          "notes": "Muestre un método calcularDescuento con un switch sobre un String tipoCliente: regular 0 %, frecuente 5 %, corporativo 10 % con tope de S/ 500. Luego muestre que el mismo switch aparece en calcularPuntos y en generarMensaje. Pregunte: si la botica crea el tipo adulto mayor con 8 % de descuento, ¿cuántos lugares hay que modificar? Ese es el riesgo. Aplique la refactorización Replace Conditional with Polymorphism descrita por Martin Fowler: una interfaz TipoCliente con los métodos descuento, puntos y mensaje, y una clase por cada tipo. Ahora agregar adulto mayor significa crear una clase nueva. Anticipe que esto se formaliza como principio abierto/cerrado en la unidad 3. Advierta que no todo if debe convertirse en polimorfismo: solo los que discriminan por tipo y se repiten."
+        },
+        {
+          "title": "Composición sobre herencia",
+          "bullets": [
+            "La herencia acopla fuertemente: cambios en el padre rompen a los hijos (clase base frágil).",
+            "Composición: la clase tiene un colaborador al que delega comportamiento intercambiable.",
+            "Ejemplo: Producto tiene una PoliticaPrecio en lugar de subclases ProductoConOferta y ProductoSinOferta.",
+            "Heredar solo cuando existe una relación es-un estable y se cumple Liskov."
+          ],
+          "notes": "Retome la pregunta de la vacuna refrigerada. Si se crean subclases para cada combinación de características (refrigerado, controlado, con oferta), la jerarquía explota: ProductoRefrigeradoControladoConOferta. La composición resuelve el problema: un Producto tiene una CondicionAlmacenamiento y una PoliticaPrecio, que se pueden combinar libremente e incluso cambiar en tiempo de ejecución. Esta recomendación aparece en el libro de Gamma, Helm, Johnson y Vlissides: favorecer la composición de objetos sobre la herencia de clases. Explique el problema de la clase base frágil con un ejemplo de Bloch en el ítem 18: una subclase de HashSet que cuenta inserciones sobrescribiendo add y addAll obtiene el doble del conteo, porque addAll llama internamente a add. Pida a los estudiantes que rediseñen una jerarquía de tres niveles usando composición."
+        },
+        {
+          "title": "Enumeraciones con comportamiento",
+          "bullets": [
+            "enum define un conjunto cerrado y tipado de valores: EstadoPedido, TipoDocumento, Moneda.",
+            "Los enum pueden tener atributos, constructores y métodos propios.",
+            "Métodos abstractos por constante permiten reglas distintas sin switch.",
+            "Sustituyen a las constantes String, que admiten errores tipográficos como 'EMITDO'."
+          ],
+          "notes": "Muestre cómo un estado guardado como String permite errores: alguien escribe EMITDO y el sistema nunca reconoce la boleta como emitida. Con un enum EstadoComprobante { BORRADOR, EMITIDO, ANULADO }, el compilador valida cada uso. Luego enseñe un enum con atributos: TipoDocumentoIdentidad con DNI de longitud 8, carné de extranjería, RUC de longitud 11 y pasaporte, cada uno con su método validar(String numero). Explique la técnica de métodos específicos por constante, recomendada por Bloch en el ítem 34, como alternativa a un switch sobre el enum. Un caso práctico es una máquina de estados: EstadoPedido con el método puedeTransicionarA(EstadoPedido otro) que impide pasar de ENTREGADO a EN_PREPARACION. Pida que modelen los estados de un pedido de delivery."
+        },
+        {
+          "title": "Paquetes, visibilidad y organización del proyecto",
+          "bullets": [
+            "Paquetes como pe.empresa.botica.dominio agrupan clases relacionadas y evitan colisiones de nombres.",
+            "Convención: dominio de Internet invertido, en minúsculas.",
+            "La visibilidad de paquete oculta clases auxiliares que no forman parte de la API.",
+            "Organizar por funcionalidad (ventas, inventario) escala mejor que por tipo técnico."
+          ],
+          "notes": "A medida que el proyecto crece, decenas de clases en una sola carpeta se vuelven inmanejables. Explique la convención de nombres de paquetes con el dominio invertido, por ejemplo pe.edu.tepsup.botica, y muestre cómo la estructura de carpetas debe coincidir con el paquete. Comente la visibilidad de paquete, que se obtiene al omitir el modificador: una clase auxiliar como CalculadoraRedondeo puede quedar oculta para el resto del sistema. Compare dos organizaciones: por capa técnica (modelos, servicios, utilidades) y por funcionalidad (ventas, inventario, clientes). La segunda reduce dependencias cruzadas y anticipa la arquitectura modular de la unidad 4. Pida a los estudiantes que reorganicen su proyecto de la tarea 1 en paquetes y que expliquen qué clases dejaron con visibilidad de paquete."
+        },
+        {
+          "title": "Lectura crítica de una jerarquía: lista de verificación",
+          "bullets": [
+            "¿La relación es-un se mantiene por comportamiento y no solo por vocabulario?",
+            "¿Hay métodos heredados que la subclase no puede cumplir?",
+            "¿Existen switch sobre tipos que podrían ser polimorfismo?",
+            "¿La jerarquía tiene más de tres niveles o combinaciones que sugieren composición?",
+            "¿Las colecciones internas están protegidas con copias defensivas?"
+          ],
+          "notes": "Cierre con una herramienta práctica que usarán en el caso y en la tarea. Proyecte una jerarquía con problemas: Empleado, EmpleadoPlanilla, EmpleadoPlanillaPartTime, EmpleadoPlanillaPartTimeConMovilidad, y un método calcularSueldo con un switch sobre el tipo. Pida a los equipos que la evalúen con la lista de verificación durante diez minutos en salas separadas y que propongan un rediseño en UML. Al volver, cada equipo presenta en dos minutos. Destaque las soluciones que separan el tipo de contrato y los beneficios en objetos componibles, por ejemplo un Empleado con un RegimenLaboral y una lista de Beneficio. Relacione con la legislación peruana: regímenes general, MYPE y agrario tienen reglas distintas de gratificación y CTS, lo que justifica el polimorfismo en el cálculo."
+        }
+      ],
+      "reading": {
+        "title": "Herencia, interfaces y polimorfismo: diseñar para el cambio",
+        "minutes": 40,
+        "content": "## El problema: el switch que crece\n\nUn sistema de ventas de una botica empieza con un solo medio de pago: efectivo. Luego se agregan tarjeta, Yape, Plin y transferencia. Si el código de la caja tiene un `switch (medioPago)` en cada método que cobra, registra o anula, cada medio nuevo obliga a modificar varios lugares y a volver a probar todo. Martin Fowler identifica este patrón como un olor de código y propone **reemplazar el condicional por polimorfismo**.\n\n## Interfaces como contratos\n\nUna interfaz declara qué operaciones existen sin decir cómo se realizan:\n\n```java\npublic interface MedioPago {\n    ResultadoPago procesar(BigDecimal monto);\n    String nombre();\n    default boolean requiereVuelto() { return false; }\n}\n\npublic class PagoEfectivo implements MedioPago {\n    private final BigDecimal recibido;\n    public PagoEfectivo(BigDecimal recibido) { this.recibido = recibido; }\n    public ResultadoPago procesar(BigDecimal monto) {\n        if (recibido.compareTo(monto) < 0)\n            return ResultadoPago.rechazado(\"Monto insuficiente\");\n        return ResultadoPago.aprobado(recibido.subtract(monto));  // vuelto\n    }\n    public String nombre() { return \"Efectivo\"; }\n    @Override public boolean requiereVuelto() { return true; }\n}\n\npublic class PagoBilleteraDigital implements MedioPago {\n    private final String celular;   // dato personal: no se imprime completo\n    public PagoBilleteraDigital(String celular) { this.celular = celular; }\n    public ResultadoPago procesar(BigDecimal monto) {\n        // aquí se integraría la API del proveedor\n        return ResultadoPago.aprobado(BigDecimal.ZERO);\n    }\n    public String nombre() { return \"Billetera digital\"; }\n}\n```\n\nLa clase `Caja` solo conoce la interfaz:\n\n```java\npublic ResultadoPago cobrar(Boleta boleta, MedioPago medio) {\n    return medio.procesar(boleta.total());   // enlace dinámico\n}\n```\n\nCuando la JVM ejecuta `medio.procesar(...)`, decide en tiempo de ejecución qué versión llamar según el tipo real del objeto. Agregar un medio nuevo significa escribir una clase; `Caja` no cambia. Este es el núcleo del principio abierto/cerrado formulado por Meyer: módulos abiertos a la extensión y cerrados a la modificación.\n\n## Herencia y clases abstractas\n\nLa herencia permite que una subclase reutilice y especialice a su superclase. Los comprobantes de pago son un buen ejemplo: boleta y factura comparten serie, número, líneas y cálculo de totales, pero validan al receptor de forma distinta.\n\n```java\npublic abstract class Comprobante {\n    protected final List<LineaVenta> lineas = new ArrayList<>();\n    private EstadoComprobante estado = EstadoComprobante.BORRADOR;\n\n    public final void emitir() {             // método plantilla\n        if (lineas.isEmpty()) throw new IllegalStateException(\"Sin líneas\");\n        validarReceptor();                     // paso variable\n        estado = EstadoComprobante.EMITIDO;\n    }\n    protected abstract void validarReceptor();\n}\n\npublic class Factura extends Comprobante {\n    private final Ruc rucCliente;\n    public Factura(Ruc rucCliente) { this.rucCliente = Objects.requireNonNull(rucCliente); }\n    @Override protected void validarReceptor() {\n        if (!rucCliente.numero().startsWith(\"20\") && !rucCliente.numero().startsWith(\"10\"))\n            throw new IllegalStateException(\"RUC no habilitado para factura\");\n    }\n}\n```\n\n`emitir` es `final` para que ninguna subclase altere el orden del algoritmo; solo completan el paso `validarReceptor`. Gamma, Helm, Johnson y Vlissides catalogaron esta estructura como el patrón **método plantilla**.\n\n## El límite de la herencia: Liskov\n\nBarbara Liskov estableció que una subclase debe poder sustituir a su superclase sin que los clientes noten diferencias en la corrección. Si `CuentaPlazoFijo extends CuentaAhorro` y su `retirar` lanza siempre una excepción, todo código que procese cuentas de ahorro se rompe. La relación \"es-un\" del lenguaje natural no basta: debe sostenerse en el **comportamiento**. Señales de alerta son las subclases que lanzan `UnsupportedOperationException`, refuerzan precondiciones o ignoran métodos heredados.\n\n## Composición sobre herencia\n\nLa herencia crea un acoplamiento fuerte: un cambio en la superclase puede romper a todas sus hijas, el problema de la clase base frágil. Además, combinar características por herencia genera explosión de clases. La composición ofrece flexibilidad:\n\n```java\npublic class Producto {\n    private PoliticaPrecio politica;          // interfaz\n    public BigDecimal precioFinal(BigDecimal base) { return politica.aplicar(base); }\n    public void cambiarPolitica(PoliticaPrecio nueva) { this.politica = nueva; }\n}\n```\n\nUna botica puede activar una política de oferta durante una campaña y volver a la normal sin crear subclases.\n\n## Criterios para decidir\n\n- Use **interfaces** para capacidades que pueden tener clases no relacionadas.\n- Use **clases abstractas** cuando una familia comparte estado y un algoritmo estable.\n- Use **herencia** solo con relaciones es-un estables y respetando Liskov.\n- Prefiera **composición** cuando el comportamiento varía o se combina.\n\n## Preguntas para la reflexión\n\n1. ¿Qué condicionales de su proyecto discriminan por tipo y podrían reemplazarse por polimorfismo?\n2. ¿Una jerarquía de empleados por régimen laboral debería usar herencia o composición?"
+      },
+      "case": {
+        "title": "Caso: Rutas Andinas y la tarifa que nadie se atreve a tocar",
+        "content": "**Rutas Andinas S.A.C.** es una empresa de transporte interprovincial de pasajeros con sede en Huancayo, 38 buses y rutas hacia Lima, Ayacucho, Huancavelica y Cusco. Vende alrededor de 42 000 pasajes al mes; el 55 % se vende por su página web y el resto en ventanilla. Su sistema de ventas, escrito en Java hace seis años, tiene una clase `ServicioVenta` de 3 800 líneas.\n\nEl jefe de sistemas, **Marco Huamán**, enfrenta tres pedidos del área comercial para la temporada alta de julio:\n\n1. Un nuevo tipo de servicio **\"Suite\"** con asientos cama de 180 grados, además de los actuales Económico, Ejecutivo y VIP.\n2. Una tarifa dinámica: precio más alto cuando la ocupación del viaje supera el 80 % y descuentos para compras con más de 15 días de anticipación.\n3. Aceptar pagos con dos billeteras digitales y con cuotas sin intereses para un banco aliado.\n\nAl revisar el código, Marco encuentra que el tipo de servicio es un `String` y que el método `calcularPrecio` contiene un `switch` con cuatro casos que se repite, con pequeñas variaciones, en `calcularPrecio`, `asignarAsiento`, `calcularEquipajePermitido`, `generarTicket` y `calcularComision`. Un error de 2024 todavía preocupa a la gerencia: alguien escribió `\"Ejecutvo\"` en un caso del `switch`, y durante tres semanas los pasajes ejecutivos vendidos en ventanilla se cobraron con tarifa económica, con una pérdida estimada de S/ 46 000.\n\nAdemás, existe una jerarquía `Pasajero` → `PasajeroAdulto` → `PasajeroAdultoMayor` → `PasajeroAdultoMayorConDiscapacidad`, con métodos que lanzan `UnsupportedOperationException` cuando un tipo no admite un descuento. La normativa nacional establece beneficios para personas adultas mayores y personas con discapacidad que el sistema debe aplicar de forma verificable ante una fiscalización de INDECOPI.\n\nLa desarrolladora **Lucía Rojas** propone crear una interfaz `TipoServicio` con implementaciones por servicio, una interfaz `ReglaTarifa` para componer los ajustes de precio y reemplazar la jerarquía de pasajeros por una lista de beneficios aplicables. **Ernesto Paredes**, el desarrollador más antiguo, se opone: \"Funciona desde hace seis años; agregar el caso Suite en cada switch toma una tarde. Refactorizar es un riesgo innecesario a dos meses de la temporada alta\".\n\nEl gerente general pide a Marco una recomendación por escrito en una semana.",
+        "questions": [
+          "¿Qué olores de código y violaciones de principios orientados a objetos explican el error de 2024 y la dificultad actual para agregar el servicio Suite?",
+          "Evalúe la jerarquía de pasajeros a la luz del principio de sustitución de Liskov. ¿Qué rediseño propone y por qué?",
+          "Diseñe en UML la solución de Lucía con TipoServicio, ReglaTarifa y MedioPago, mostrando cómo se agregaría Suite sin modificar código existente.",
+          "¿Qué argumentos válidos tiene Ernesto? Proponga una estrategia de migración que reduzca el riesgo antes de la temporada alta."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Jerarquía polimórfica para comprobantes y medios de pago",
+        "instructions": "**Objetivo:** diseñar e implementar en Java un módulo de ventas extensible que use composición, clases abstractas, interfaces y polimorfismo.\n\n**Requerimiento:** una tienda emite boletas y facturas. Ambas comparten serie, número correlativo, fecha, líneas de venta y cálculo de subtotal, IGV (18 %) y total con `BigDecimal`. La factura exige RUC válido del cliente; la boleta solo exige DNI cuando el total supera S/ 700. Un comprobante emitido no admite cambios. La tienda acepta al menos tres medios de pago y aplica descuentos según el tipo de cliente.\n\n**Qué entregar:**\n\n1. Diagrama de clases UML con relaciones de composición (comprobante–líneas), una clase abstracta `Comprobante` con método plantilla, la interfaz `MedioPago` con tres implementaciones y una estrategia de descuento por tipo de cliente sin `switch`.\n2. Código Java 21 organizado en paquetes, con enumeraciones para estados y tipos de documento, copias defensivas y `@Override` en todas las sobrescrituras.\n3. Una clase de demostración que emita una boleta y una factura con distintos medios de pago y que muestre dos errores controlados.\n4. Un documento de una página que explique por qué la solución respeta Liskov y cómo se agregaría un cuarto medio de pago sin modificar clases existentes.\n\n**Formato:** repositorio Git actualizado sobre la tarea 1; entrega hasta el domingo de la semana 8, 23:59.",
+        "rubric": [
+          {
+            "name": "Modelo UML con relaciones, multiplicidades y jerarquías correctas",
+            "points": 4
+          },
+          {
+            "name": "Clase abstracta, método plantilla e invariantes del comprobante",
+            "points": 5
+          },
+          {
+            "name": "Polimorfismo mediante interfaces y eliminación de condicionales por tipo",
+            "points": 6
+          },
+          {
+            "name": "Organización en paquetes, enumeraciones y justificación escrita de Liskov",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Relaciones, herencia, polimorfismo e interfaces",
+        "questions": [
+          {
+            "prompt": "Al anular una boleta, sus líneas de venta dejan de tener sentido y se eliminan con ella. ¿Qué relación UML corresponde entre Boleta y LineaVenta?",
+            "options": [
+              "Composición",
+              "Agregación",
+              "Dependencia",
+              "Herencia"
+            ],
+            "correct": 0,
+            "explanation": "En la composición la parte no existe sin el todo y el todo controla su ciclo de vida. La agregación implica que las partes pueden existir de forma independiente."
+          },
+          {
+            "prompt": "Una variable de tipo Producto referencia un objeto MedicamentoControlado que sobrescribe vender(int). ¿Qué versión se ejecuta al invocar vender(3)?",
+            "options": [
+              "La de MedicamentoControlado, por enlace dinámico",
+              "La de Producto, por el tipo declarado de la variable",
+              "Ambas, primero la del padre",
+              "Ninguna; ocurre un error de compilación"
+            ],
+            "correct": 0,
+            "explanation": "En Java los métodos de instancia se resuelven en tiempo de ejecución según el tipo real del objeto; el tipo declarado solo determina qué métodos pueden invocarse."
+          },
+          {
+            "prompt": "CuentaPlazoFijo extiende CuentaAhorro y su método retirar() lanza siempre UnsupportedOperationException. ¿Qué principio se viola?",
+            "options": [
+              "Sustitución de Liskov",
+              "Responsabilidad única",
+              "Segregación de interfaces exclusivamente",
+              "Ninguno, es un uso válido de la herencia"
+            ],
+            "correct": 0,
+            "explanation": "El código que trabaja con CuentaAhorro espera poder retirar; la subclase no puede sustituir a la superclase sin romper la corrección del programa."
+          },
+          {
+            "prompt": "Un sistema necesita que productos, clientes y ventas puedan exportarse a CSV, aunque no comparten atributos ni comportamiento. ¿Qué mecanismo es el más adecuado?",
+            "options": [
+              "Una interfaz ExportableCsv implementada por cada clase",
+              "Una superclase abstracta Exportable de la que hereden las tres",
+              "Un switch sobre el tipo de objeto en una clase utilitaria",
+              "Hacer que Cliente y Venta hereden de Producto"
+            ],
+            "correct": 0,
+            "explanation": "Las interfaces modelan capacidades que pueden tener clases no relacionadas; forzar una superclase común consumiría la única herencia disponible sin compartir estado real."
+          },
+          {
+            "prompt": "El método calcularDescuento contiene un switch sobre tipoCliente que se repite en otros tres métodos. ¿Qué refactorización es la más apropiada?",
+            "options": [
+              "Reemplazar el condicional por polimorfismo con una interfaz TipoCliente",
+              "Convertir los String en constantes static final",
+              "Mover el switch a una clase utilitaria estática",
+              "Agregar comentarios que expliquen cada caso"
+            ],
+            "correct": 0,
+            "explanation": "Con polimorfismo cada tipo encapsula sus reglas y agregar un tipo nuevo no exige tocar los métodos existentes; las demás opciones mantienen la duplicación."
+          },
+          {
+            "prompt": "Un desarrollador crea ProductoRefrigeradoControladoConOferta para combinar características. ¿Qué alternativa de diseño reduce la explosión de subclases?",
+            "options": [
+              "Composición: Producto con colaboradores CondicionAlmacenamiento y PoliticaPrecio",
+              "Herencia múltiple de clases",
+              "Agregar más niveles a la jerarquía",
+              "Declarar todos los atributos como protected"
+            ],
+            "correct": 0,
+            "explanation": "La composición permite combinar comportamientos independientes e incluso cambiarlos en ejecución; Java no admite herencia múltiple de clases y más niveles agravan el problema."
+          },
+          {
+            "prompt": "¿Qué ventaja ofrece modelar el estado de un comprobante como enum EstadoComprobante en lugar de un String?",
+            "options": [
+              "El compilador impide valores inválidos y el enum puede encapsular reglas de transición",
+              "Ocupa menos memoria que cualquier otra opción",
+              "Permite cambiar el estado sin métodos",
+              "Hace innecesarias las validaciones de negocio"
+            ],
+            "correct": 0,
+            "explanation": "Un enum define un conjunto cerrado y tipado; errores como EMITDO no compilan y se pueden agregar métodos que validen transiciones permitidas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Diseño robusto: colecciones, excepciones, pruebas, SOLID y patrones",
+      "description": "Al finalizar la unidad, el estudiante construye componentes orientados a objetos robustos usando colecciones genéricas, excepciones propias y pruebas unitarias con JUnit 5, y mejora su diseño aplicando principios SOLID y patrones de diseño clásicos.",
+      "topics": [
+        "Genéricos y el marco de colecciones: List, Set, Map",
+        "Comparator, expresiones lambda y streams",
+        "Excepciones verificadas, no verificadas y propias",
+        "Pruebas unitarias con JUnit 5 y desarrollo guiado por pruebas",
+        "Principios SOLID",
+        "Patrones Strategy, Factory, Singleton, Observer y Repository"
+      ],
+      "slides": [
+        {
+          "title": "Genéricos: seguridad de tipos en tiempo de compilación",
+          "bullets": [
+            "List<Producto> garantiza que la lista solo contiene productos; se eliminan los casts manuales.",
+            "Clases genéricas propias: Resultado<T>, Par<A, B>, Repositorio<T, ID>.",
+            "Comodines: List<? extends Producto> para leer, List<? super Producto> para escribir (regla PECS).",
+            "El borrado de tipos elimina la información genérica en ejecución por compatibilidad."
+          ],
+          "notes": "Muestre primero código antiguo con List sin tipo, donde se agrega un String por error a una lista de productos y el fallo aparece como ClassCastException en ejecución. Luego muestre List<Producto>, donde el compilador rechaza el String. Esa es la promesa de los genéricos introducidos en Java 5: mover errores de ejecución a compilación. Construya en vivo una clase Resultado<T> que encapsula un valor o un mensaje de error, útil para operaciones de negocio. Explique la regla PECS de Bloch, del ítem 31: Producer Extends, Consumer Super; por ejemplo, un método que suma precios de una lista de cualquier subtipo de Producto recibe List<? extends Producto>. Mencione el borrado de tipos como limitación: no se puede hacer new T(). Pregunte en qué parte de su proyecto sería útil una clase genérica."
+        },
+        {
+          "title": "Elegir la colección correcta",
+          "bullets": [
+            "ArrayList: acceso por índice O(1), inserción al final amortizada O(1); opción por defecto para listas.",
+            "HashSet: elementos únicos con búsqueda promedio O(1); requiere equals y hashCode coherentes.",
+            "HashMap<K,V>: búsqueda por clave O(1) promedio; TreeMap mantiene claves ordenadas en O(log n).",
+            "LinkedHashMap conserva el orden de inserción; útil para reportes reproducibles."
+          ],
+          "notes": "Plantee un escenario: la botica tiene 12 000 productos y el cajero busca por código de barras más de 3 000 veces al día. Si se usa una lista y se recorre secuencialmente, cada búsqueda revisa en promedio 6 000 elementos; con un HashMap<String, Producto> la búsqueda es casi inmediata. Presente la tabla de complejidades sin profundizar en la implementación interna, que estudiarán en Algoritmos y Estructuras de Datos el próximo ciclo. Recalque la dependencia con la unidad 1: un HashSet o HashMap con equals y hashCode mal implementados produce duplicados o búsquedas fallidas. Haga un ejercicio rápido: para cada necesidad, elegir colección. Por ejemplo, socios sin repetir por DNI, historial de movimientos en orden cronológico, ranking de productos más vendidos ordenado por nombre."
+        },
+        {
+          "title": "Comparator, lambdas y referencias a métodos",
+          "bullets": [
+            "Comparable define el orden natural; Comparator define órdenes alternativos sin modificar la clase.",
+            "Orden compuesto: Comparator.comparing(Producto::getPrecio).reversed() y luego thenComparing(Producto::getNombre) para desempatar.",
+            "Una lambda implementa una interfaz funcional: Predicate, Function, Consumer, Supplier.",
+            "Las lambdas permiten pasar comportamiento como parámetro, base del patrón Strategy moderno."
+          ],
+          "notes": "Explique que una interfaz funcional tiene un único método abstracto y que una lambda es una forma concisa de implementarla. Muestre primero una clase anónima que implementa Comparator y luego la misma lógica con lambda y con referencia a método, para que vean la reducción. Construya un ordenamiento compuesto: productos por precio descendente y, a igual precio, por nombre. Presente las interfaces funcionales del paquete java.util.function con ejemplos del dominio: Predicate<Producto> para stock bajo, Function<Producto, BigDecimal> para obtener precio con IGV. Señale que esto no reemplaza la orientación a objetos, sino que la complementa: una lambda es un objeto que implementa una interfaz. Pida a los estudiantes que escriban un Predicate que identifique medicamentos próximos a vencer en treinta días."
+        },
+        {
+          "title": "Streams para procesar colecciones",
+          "bullets": [
+            "Pipeline: fuente, operaciones intermedias (filter, map, sorted) y operación terminal (collect, sum).",
+            "Ejemplo: ventas del mes por local con Collectors.groupingBy y reducción de BigDecimal.",
+            "Los streams son perezosos y no modifican la colección original.",
+            "Evitar efectos secundarios dentro de map o filter; preferir legibilidad a cadenas extensas."
+          ],
+          "notes": "Muestre un reporte que la gerencia pide con frecuencia: total vendido por local en el mes. Primero con bucles y un HashMap acumulador, luego con stream, groupingBy y reducing con BigDecimal::add. Analice ventajas: el código expresa qué se quiere, no cómo iterar. Luego advierta sobre los abusos: cadenas de quince operaciones son difíciles de depurar, y modificar una lista externa dentro de forEach rompe el modelo funcional. Bloch, en los ítems 45 y 46, recomienda usar streams con criterio y preferir funciones sin efectos secundarios. Proponga un ejercicio en parejas: obtener los cinco productos con más unidades vendidas en la semana, con su nombre y cantidad, a partir de una lista de LineaVenta. Revise dos soluciones en pantalla y discuta su legibilidad."
+        },
+        {
+          "title": "Excepciones: jerarquía y tipos",
+          "bullets": [
+            "Throwable se divide en Error (fallas de la JVM) y Exception.",
+            "Verificadas (IOException): el compilador obliga a capturarlas o declararlas con throws.",
+            "No verificadas (RuntimeException): errores de programación o de reglas de negocio.",
+            "Regla de Bloch: excepciones verificadas para condiciones recuperables; no verificadas para errores de programación."
+          ],
+          "notes": "Dibuje la jerarquía de Throwable. Explique que las excepciones verificadas representan situaciones externas que el programa puede y debe anticipar, como un archivo inexistente o una red caída, y que las no verificadas indican errores de uso, como un argumento nulo o un índice fuera de rango. Comente el debate sobre las excepciones verificadas: lenguajes posteriores como C# y Kotlin decidieron no incluirlas, y muchos marcos modernos prefieren las no verificadas. Para el dominio, una regla de negocio violada, como un retiro mayor al saldo, suele modelarse con una excepción no verificada propia. Pregunte: si falla la lectura del archivo de precios al iniciar la caja, ¿qué tipo de excepción es y qué debería hacer el programa? Discuta reintentar, usar una copia o detenerse con un mensaje claro."
+        },
+        {
+          "title": "Excepciones propias y buenas prácticas",
+          "bullets": [
+            "Crear StockInsuficienteException extends RuntimeException con datos útiles: código, solicitado, disponible.",
+            "Nunca capturar Exception para ignorarla: un catch vacío oculta errores críticos.",
+            "try-with-resources cierra automáticamente archivos y conexiones que implementan AutoCloseable.",
+            "Lanzar temprano, capturar tarde: validar en el origen y manejar donde se puede decidir."
+          ],
+          "notes": "Muestre un catch vacío encontrado en código real: try { venta.procesar(); } catch (Exception e) { }. La venta falla, nadie se entera y el inventario queda inconsistente. Luego implemente StockInsuficienteException con atributos que permiten al llamador mostrar un mensaje preciso o sugerir otro local con stock. Explique try-with-resources con la lectura de un archivo CSV de precios: el archivo se cierra aunque ocurra una excepción. Presente el principio de lanzar temprano y capturar tarde: el dominio lanza la excepción en cuanto detecta la violación; la capa de presentación la captura y decide cómo informar al usuario. Advierta sobre no exponer detalles técnicos ni datos personales en los mensajes al usuario final. Pida que revisen sus tareas y reemplacen IllegalStateException genéricas por excepciones de dominio cuando aporten información."
+        },
+        {
+          "title": "Pruebas unitarias con JUnit 5",
+          "bullets": [
+            "Prueba unitaria: verifica una unidad pequeña de comportamiento de forma aislada, rápida y repetible.",
+            "Estructura AAA: Arrange (preparar), Act (ejecutar), Assert (verificar).",
+            "Anotaciones: @Test, @BeforeEach, @DisplayName, @ParameterizedTest con @CsvSource.",
+            "assertThrows verifica que una regla de negocio rechaza datos inválidos."
+          ],
+          "notes": "Recuerde que en Fundamentos de Programación usaron pytest en Python; ahora el equivalente es JUnit 5. Configure en vivo un proyecto Maven con la dependencia junit-jupiter y escriba la primera prueba: vender cinco unidades de un producto con stock diez deja stock cinco. Luego la prueba de error con assertThrows: vender veinte unidades lanza StockInsuficienteException. Introduzca las pruebas parametrizadas para el cálculo del IGV con varios montos y resultados esperados en una tabla CsvSource, cubriendo valores límite como S/ 0,01 y montos que obligan a redondear. Explique por qué las pruebas son posibles gracias al buen diseño: una clase de dominio sin dependencias de consola ni archivos se prueba en milisegundos. Pregunte: ¿qué casos límite tendría el método retirar de una cuenta de ahorro?"
+        },
+        {
+          "title": "Desarrollo guiado por pruebas y cobertura",
+          "bullets": [
+            "Ciclo TDD de Kent Beck: rojo (prueba que falla), verde (código mínimo), refactorizar.",
+            "Las pruebas documentan el comportamiento esperado y permiten refactorizar sin miedo.",
+            "Cobertura con JaCoCo: útil como indicador, no como objetivo; 80 % de líneas es una meta razonable.",
+            "Una prueba debe fallar por una sola razón y tener un nombre que describa el escenario."
+          ],
+          "notes": "Kent Beck popularizó el desarrollo guiado por pruebas a inicios de los años 2000. Haga una demostración breve: requerimiento de validar un DNI peruano de ocho dígitos. Escriba primero la prueba que falla porque la clase no existe; luego el código mínimo; luego una prueba con letras que falla; luego la corrección; finalmente refactorice. Explique que el beneficio no es solo detectar errores, sino diseñar desde el punto de vista del usuario de la clase. Sobre la cobertura, advierta que un 100 % de líneas cubiertas con aserciones débiles no garantiza calidad; es un indicador de qué partes no se prueban. Muestre el reporte de JaCoCo y pida que identifiquen qué ramas de su clase CuentaAhorro no están cubiertas. Relacione con Auditoría y Calidad de Sistemas en el sexto ciclo."
+        },
+        {
+          "title": "SOLID: responsabilidad única y abierto/cerrado",
+          "bullets": [
+            "SRP: una clase debe tener una sola razón para cambiar, es decir, responder a un solo actor.",
+            "Señal de alerta: clase VentaService que calcula, imprime, guarda en archivo y envía correos.",
+            "OCP (Meyer, 1988): abierto a la extensión, cerrado a la modificación.",
+            "OCP se logra con abstracciones: interfaces y polimorfismo, como en la unidad 2."
+          ],
+          "notes": "Robert C. Martin agrupó cinco principios de diseño bajo el acrónimo SOLID a inicios de los años 2000. Empiece por el principio de responsabilidad única: muestre una clase VentaService con métodos calcularTotal, imprimirTicket, guardarEnCsv y enviarCorreo. Pregunte qué áreas de la empresa podrían pedir cambios: finanzas en el cálculo, operaciones en el ticket, sistemas en el almacenamiento, marketing en el correo. Son cuatro razones para cambiar, por lo tanto cuatro responsabilidades. Divida la clase y muestre cómo cada parte se prueba por separado. Luego retome el abierto/cerrado, ya trabajado con MedioPago, y muestre su origen en Bertrand Meyer. Advierta que los principios son guías, no leyes; aplicarlos sin necesidad genera exceso de clases. Pida que identifiquen una violación de SRP en su tarea 2."
+        },
+        {
+          "title": "SOLID: Liskov, segregación de interfaces e inversión de dependencias",
+          "bullets": [
+            "LSP: los subtipos deben ser sustituibles; retomado de la unidad 2.",
+            "ISP: muchas interfaces específicas son mejores que una interfaz general obesa.",
+            "DIP: los módulos de alto nivel dependen de abstracciones, no de detalles concretos.",
+            "Inyección de dependencias por constructor: new ServicioVenta(repositorio, notificador)."
+          ],
+          "notes": "Explique la segregación de interfaces con un ejemplo: una interfaz Dispositivo con imprimir, escanear y enviarFax obliga a una impresora térmica de tickets a implementar métodos que no puede cumplir; conviene separar Imprimible y Escaneable. Luego la inversión de dependencias, la más importante para la unidad 4: un ServicioVenta que crea internamente new ArchivoCsvVentas() queda atado a archivos; si mañana se usa una base de datos, hay que modificarlo. Si en cambio recibe por constructor una interfaz RepositorioVentas, se le puede pasar una implementación en archivo, en memoria para pruebas o en base de datos el próximo ciclo. Muestre cómo esto facilita las pruebas con un repositorio en memoria. Mencione que marcos como Spring, que verán en Desarrollo de Software Empresarial, automatizan esta inyección."
+        },
+        {
+          "title": "Patrón Strategy: algoritmos intercambiables",
+          "bullets": [
+            "Intención (Gamma y otros, 1994): definir una familia de algoritmos, encapsularlos y hacerlos intercambiables.",
+            "Ejemplo: CalculoEnvio con estrategias por distancia, tarifa plana Lima Metropolitana o envío gratuito.",
+            "El contexto delega en la estrategia; la estrategia se elige en ejecución.",
+            "Con lambdas, estrategias simples se implementan sin crear clases nuevas."
+          ],
+          "notes": "Presente el catálogo de 23 patrones del libro de Gamma, Helm, Johnson y Vlissides, conocidos como la Banda de los Cuatro, y aclare que en el curso veremos cinco de los más usados. Strategy ya apareció de forma implícita con MedioPago y PoliticaPrecio. Formalícelo con un caso de comercio electrónico: una tienda en línea de Trujillo calcula el costo de envío según la zona: tarifa plana de S/ 10 en la ciudad, tarifa por kilómetro a provincias y envío gratuito para compras mayores a S/ 200. Dibuje el diagrama: contexto Pedido, interfaz EstrategiaEnvio y tres implementaciones concretas. Muestre que las estrategias simples pueden pasarse como lambdas. Pregunte cuál sería la diferencia entre Strategy y el método plantilla: composición frente a herencia."
+        },
+        {
+          "title": "Patrones creacionales: Factory y Singleton",
+          "bullets": [
+            "Método fábrica: centraliza la creación y oculta qué clase concreta se instancia.",
+            "Ejemplo: FabricaComprobante.crear(tipo, cliente) devuelve Boleta o Factura según el documento.",
+            "Singleton garantiza una única instancia global; en Java la forma más segura es un enum.",
+            "El Singleton dificulta pruebas y oculta dependencias: preferir inyección cuando sea posible."
+          ],
+          "notes": "Explique que crear objetos también es una responsabilidad. Si la lógica para decidir entre boleta y factura está repetida en la caja, en la venta web y en la venta telefónica, conviene centralizarla en una fábrica. Implemente un método estático que recibe el tipo de documento del cliente y devuelve un Comprobante: si es RUC, factura; si es DNI o no hay documento, boleta. Luego presente Singleton con su implementación como enum recomendada por Bloch en el ítem 3, por ejemplo para un generador de números correlativos de serie. Sea crítico: el Singleton es estado global disfrazado; dos pruebas que usan el mismo correlativo interfieren entre sí. Muchos equipos lo consideran un antipatrón cuando se usa en exceso. Pregunte qué alternativas existen y conecte con la inyección de dependencias."
+        },
+        {
+          "title": "Patrones Observer y Repository",
+          "bullets": [
+            "Observer: un sujeto notifica a múltiples observadores sin conocer sus clases concretas.",
+            "Ejemplo: al quedar un producto bajo el stock mínimo se notifica a compras, al local y al tablero.",
+            "Repository (Fowler, Evans): colección abstracta de objetos de dominio que oculta la persistencia.",
+            "Interfaz RepositorioProducto con guardar, buscarPorCodigo y listar; implementación en memoria o archivo."
+          ],
+          "notes": "Implemente Observer con una interfaz ObservadorStock con el método stockBajo(Producto p). El inventario mantiene una lista de observadores y los notifica cuando un producto cruza el stock mínimo. Hoy se registran un notificador por correo y un registro en bitácora; mañana se puede agregar una alerta por WhatsApp sin modificar el inventario. Relacione con los eventos de interfaces gráficas, donde un botón notifica a sus escuchadores. Luego presente Repository, descrito por Martin Fowler en Patterns of Enterprise Application Architecture y popularizado por Eric Evans: el dominio trabaja con algo que parece una colección y desconoce si los datos están en memoria, en archivos o en una base de datos. Este patrón será la columna vertebral del proyecto de la unidad 4 y conectará con JDBC en Base de Datos. Pida que diseñen la interfaz RepositorioSocio."
+        },
+        {
+          "title": "Olores de código y refactorización segura",
+          "bullets": [
+            "Olores de Fowler: método largo, clase grande, duplicación, obsesión por primitivos, envidia de funcionalidades.",
+            "Refactorizar: cambiar la estructura interna sin alterar el comportamiento observable.",
+            "Condición previa: pruebas automatizadas en verde antes y después de cada paso pequeño.",
+            "Refactorizaciones del IDE: extraer método, renombrar, extraer interfaz, mover método."
+          ],
+          "notes": "Martin Fowler define refactorizar como cambiar la estructura interna del software para hacerlo más fácil de entender y modificar, sin cambiar su comportamiento observable. Presente cinco olores frecuentes con ejemplos del curso: un método procesarVenta de ochenta líneas; una clase Sistema de mil líneas; el cálculo del IGV repetido; usar String para DNI, RUC y montos, que es la obsesión por primitivos; y un método de Boleta que solo manipula datos de Cliente, que es envidia de funcionalidades. Haga una demostración con IntelliJ: extraer método, renombrar y extraer interfaz, ejecutando las pruebas después de cada paso. Insista en los pasos pequeños: si una prueba falla, se deshace solo el último cambio. Pida a los estudiantes que lleven un fragmento de su código con un olor para refactorizarlo en la sesión de laboratorio."
+        }
+      ],
+      "reading": {
+        "title": "Código que se puede cambiar: pruebas, SOLID y patrones en la práctica",
+        "minutes": 40,
+        "content": "## Robustez no es ausencia de errores\n\nUn sistema robusto no es el que nunca falla, sino el que **falla de forma controlada, se puede verificar y se puede cambiar sin miedo**. Tres herramientas sostienen esta propiedad: excepciones bien diseñadas, pruebas automatizadas y principios de diseño que reducen el acoplamiento.\n\n## Excepciones que informan\n\nUna excepción de dominio debe llevar la información que necesita quien la maneja:\n\n```java\npublic class StockInsuficienteException extends RuntimeException {\n    private final String codigo;\n    private final int solicitado, disponible;\n    public StockInsuficienteException(String codigo, int solicitado, int disponible) {\n        super(\"Stock insuficiente de \" + codigo + \": solicitado \" + solicitado\n              + \", disponible \" + disponible);\n        this.codigo = codigo; this.solicitado = solicitado; this.disponible = disponible;\n    }\n    public int faltante() { return solicitado - disponible; }\n}\n```\n\nEl principio *lanzar temprano, capturar tarde* indica que el dominio detecta la violación en el origen y que la capa de presentación decide cómo informar. Un `catch (Exception e) {}` vacío es uno de los defectos más dañinos: la operación falla y nadie lo sabe.\n\n## Pruebas unitarias con JUnit 5\n\n```java\nclass ProductoTest {\n    private Producto paracetamol;\n\n    @BeforeEach\n    void preparar() {\n        paracetamol = new Producto(\"P001\", \"Paracetamol 500 mg\", new BigDecimal(\"0.50\"), 10);\n    }\n\n    @Test\n    @DisplayName(\"Vender reduce el stock\")\n    void venderReduceStock() {\n        paracetamol.vender(4);                       // Act\n        assertEquals(6, paracetamol.getStock());     // Assert\n    }\n\n    @Test\n    void noPermiteVenderMasDelStock() {\n        var ex = assertThrows(StockInsuficienteException.class,\n                              () -> paracetamol.vender(15));\n        assertEquals(5, ex.faltante());\n    }\n\n    @ParameterizedTest\n    @CsvSource({\"100.00, 18.00\", \"84.75, 15.26\", \"0.05, 0.01\"})\n    void calculaIgv(String base, String esperado) {\n        assertEquals(new BigDecimal(esperado), Igv.calcular(new BigDecimal(base)));\n    }\n}\n```\n\nLas pruebas siguen la estructura **preparar, ejecutar, verificar**. Kent Beck propuso el ciclo del desarrollo guiado por pruebas: escribir una prueba que falla (rojo), el código mínimo que la hace pasar (verde) y luego mejorar el diseño (refactorizar). Las pruebas son la red de seguridad que permite aplicar los principios siguientes.\n\n## SOLID en cinco ideas\n\nRobert C. Martin agrupó cinco principios:\n\n- **S, responsabilidad única:** una clase responde a un solo actor del negocio. Separar cálculo, persistencia y notificación.\n- **O, abierto/cerrado:** extender comportamiento agregando clases, no modificando las existentes (Meyer).\n- **L, sustitución de Liskov:** los subtipos cumplen el contrato de su supertipo.\n- **I, segregación de interfaces:** interfaces pequeñas y específicas.\n- **D, inversión de dependencias:** depender de abstracciones e inyectarlas.\n\nLa inversión de dependencias es la que más transforma el código:\n\n```java\npublic interface RepositorioProducto {\n    Optional<Producto> buscarPorCodigo(String codigo);\n    void guardar(Producto producto);\n}\n\npublic class ServicioVenta {\n    private final RepositorioProducto productos;\n    private final List<ObservadorStock> observadores;\n\n    public ServicioVenta(RepositorioProducto productos, List<ObservadorStock> observadores) {\n        this.productos = productos;            // inyección por constructor\n        this.observadores = List.copyOf(observadores);\n    }\n\n    public void vender(String codigo, int cantidad) {\n        Producto p = productos.buscarPorCodigo(codigo)\n            .orElseThrow(() -> new ProductoNoEncontradoException(codigo));\n        p.vender(cantidad);\n        productos.guardar(p);\n        if (p.getStock() < p.getStockMinimo())\n            observadores.forEach(o -> o.stockBajo(p));   // patrón Observer\n    }\n}\n```\n\n`ServicioVenta` no sabe si los productos están en memoria, en un archivo CSV o en una base de datos. En las pruebas se le pasa un repositorio en memoria; en producción, uno real.\n\n## Patrones como vocabulario compartido\n\nEl catálogo de Gamma, Helm, Johnson y Vlissides (1994) describe 23 soluciones probadas. Su valor principal es el **vocabulario**: decir \"usemos una estrategia de envío\" comunica una estructura completa. En este curso trabajamos:\n\n| Patrón | Problema que resuelve | Ejemplo |\n|---|---|---|\n| Strategy | Algoritmos intercambiables | Cálculo de envío por zona |\n| Factory | Ocultar qué clase se crea | Boleta o factura según documento |\n| Singleton | Una sola instancia | Correlativo de serie (con cautela) |\n| Observer | Notificar cambios sin acoplar | Alerta de stock bajo |\n| Repository | Ocultar la persistencia | Productos en archivo o memoria |\n\nUn patrón mal aplicado añade complejidad sin beneficio. La regla práctica es introducirlos cuando el código muestra el problema que resuelven, no antes.\n\n## Preguntas para la reflexión\n\n1. ¿Qué clase de su proyecto tiene más de una razón para cambiar?\n2. ¿Dónde crea objetos con `new` que convendría inyectar por constructor?"
+      },
+      "case": {
+        "title": "Caso: MercaLocal y la noche del Cyber Wow",
+        "content": "**MercaLocal** es una startup limeña de comercio electrónico fundada en 2021 que conecta a 640 bodegas y minimarkets de Lima Metropolitana y Callao con clientes que compran por una aplicación móvil. Su backend está escrito en Java y lo mantiene un equipo de cinco desarrolladores. En 2025 procesó en promedio 9 500 pedidos diarios, con picos de 31 000 durante campañas de descuentos masivos como el Cyber Wow.\n\nEn la última campaña ocurrieron tres incidentes:\n\n1. **Pedidos con stock inexistente:** 1 870 pedidos se confirmaron para productos agotados. El código de `PedidoService` tenía un bloque `try { inventario.descontar(...); } catch (Exception e) { log.debug(\"error\"); }` que ignoraba la excepción y continuaba con la confirmación. Las cancelaciones posteriores generaron 214 reclamos y una caída de la calificación de la aplicación de 4,6 a 3,9.\n2. **Costos de envío erróneos:** una regla nueva de envío gratuito para compras mayores a S/ 79 se agregó como un `if` adicional en un método `calcularEnvio` de 260 líneas, que ya tenía casos por distrito, por peso y por convenio con bodegas. El nuevo `if` quedó en una posición en la que nunca se evaluaba para pedidos del Callao.\n3. **Notificaciones duplicadas:** la clase `NotificadorGlobal`, implementada como Singleton con un contador estático, enviaba dos veces los mensajes cuando dos hilos procesaban pedidos al mismo tiempo.\n\nEl código de `PedidoService` tiene 2 300 líneas: valida el pedido, calcula precios y envío, descuenta inventario, registra el pago, guarda en la base de datos, envía SMS y correo, y genera el comprobante. Tiene 12 pruebas unitarias, de las cuales 4 están deshabilitadas con `@Disabled` porque \"fallaban sin motivo\". La cobertura es del 9 %.\n\nLa CTO, **Valeria Chávez**, debe decidir antes de la próxima campaña, en diez semanas. Opciones:\n\n- **A:** dedicar dos desarrolladores durante seis semanas a refactorizar `PedidoService`, aplicando SOLID, Strategy para el envío, Observer para las notificaciones y Repository para el inventario, escribiendo primero pruebas de caracterización.\n- **B:** congelar el código, corregir solo los tres errores puntuales y contratar más personal de atención al cliente para la campaña.\n- **C:** reescribir el backend completo con una arquitectura de microservicios.\n\nEl inversionista principal pregunta qué opción reduce más el riesgo de repetir los incidentes.",
+        "questions": [
+          "Para cada incidente, identifique la causa raíz en términos de diseño (principio violado, olor de código o patrón mal aplicado).",
+          "Proponga el rediseño de calcularEnvio con el patrón Strategy y explique cómo evitaría el error del Callao.",
+          "¿Qué son las pruebas de caracterización y por qué deberían escribirse antes de refactorizar PedidoService?",
+          "Compare las opciones A, B y C según riesgo, costo y plazo, y recomiende una con un plan semanal."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Componente de inventario probado, con SOLID y patrones",
+        "instructions": "**Objetivo:** construir un componente de inventario robusto que combine colecciones genéricas, excepciones propias, pruebas unitarias y patrones de diseño.\n\n**Requerimiento:** el componente gestiona productos de una botica o minimarket: registrar, buscar por código, vender, reponer, listar productos con stock bajo y calcular el valor total del inventario. Al cruzar el stock mínimo se debe notificar a uno o más observadores. El costo de envío de los pedidos a domicilio debe calcularse con estrategias intercambiables.\n\n**Qué entregar:**\n\n1. Interfaz `RepositorioProducto` con una implementación en memoria basada en `HashMap` y justificación de la colección elegida.\n2. `ServicioInventario` que reciba sus dependencias por constructor (inversión de dependencias) y lance excepciones de dominio propias (`StockInsuficienteException`, `ProductoNoEncontradoException`).\n3. Patrón Observer para stock bajo con dos observadores y patrón Strategy para envío con tres estrategias.\n4. Al menos 15 pruebas JUnit 5, incluidas pruebas parametrizadas y de excepciones, con reporte de cobertura JaCoCo igual o mayor al 80 % en el paquete de dominio.\n5. Un reporte con streams: los cinco productos de mayor valor inmovilizado.\n6. README con diagrama de clases y una tabla que relacione cada principio SOLID con una decisión de su código.\n\n**Formato:** proyecto Maven en el repositorio Git del curso; entrega hasta el domingo de la semana 12, 23:59.",
+        "rubric": [
+          {
+            "name": "Colecciones, genéricos y streams usados con criterio",
+            "points": 4
+          },
+          {
+            "name": "Excepciones de dominio e inversión de dependencias",
+            "points": 4
+          },
+          {
+            "name": "Patrones Observer y Strategy correctamente implementados",
+            "points": 5
+          },
+          {
+            "name": "Pruebas JUnit 5 significativas y cobertura alcanzada",
+            "points": 5
+          },
+          {
+            "name": "README con diagrama y justificación SOLID",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Colecciones, excepciones, pruebas, SOLID y patrones",
+        "questions": [
+          {
+            "prompt": "Un cajero busca productos por código de barras más de 3 000 veces al día entre 12 000 productos. ¿Qué estructura es la más adecuada?",
+            "options": [
+              "HashMap<String, Producto> indexado por código",
+              "ArrayList<Producto> recorrida secuencialmente",
+              "LinkedList<Producto> ordenada por nombre",
+              "Un arreglo de String con los códigos"
+            ],
+            "correct": 0,
+            "explanation": "HashMap ofrece búsqueda por clave en tiempo promedio constante; recorrer una lista implica revisar en promedio miles de elementos en cada búsqueda."
+          },
+          {
+            "prompt": "¿Cuál es el problema principal del bloque try { inventario.descontar(p, 3); } catch (Exception e) { } en un servicio de pedidos?",
+            "options": [
+              "Oculta fallos y deja el sistema en estado inconsistente sin que nadie se entere",
+              "Hace que el método sea más lento",
+              "Impide compilar si descontar no declara throws",
+              "Obliga a usar excepciones verificadas"
+            ],
+            "correct": 0,
+            "explanation": "Un catch vacío traga la excepción: el pedido continúa como si el inventario se hubiera descontado. Se debe manejar donde se pueda decidir o propagar."
+          },
+          {
+            "prompt": "En una prueba JUnit 5, ¿qué aserción verifica correctamente que vender 15 unidades con stock 10 viola la regla de negocio?",
+            "options": [
+              "assertThrows(StockInsuficienteException.class, () -> p.vender(15))",
+              "assertEquals(-5, p.getStock()) después de vender",
+              "assertTrue(p.vender(15))",
+              "assertNull(p.vender(15))"
+            ],
+            "correct": 0,
+            "explanation": "assertThrows ejecuta la lambda y comprueba que se lance la excepción esperada; las otras opciones asumen comportamientos que violan el invariante o no compilan."
+          },
+          {
+            "prompt": "La clase VentaService calcula totales, imprime tickets, guarda en CSV y envía correos. ¿Qué principio SOLID se viola de forma más directa?",
+            "options": [
+              "Responsabilidad única",
+              "Sustitución de Liskov",
+              "Segregación de interfaces",
+              "Ninguno, mientras el código funcione"
+            ],
+            "correct": 0,
+            "explanation": "La clase tiene varias razones para cambiar, cada una asociada a un actor distinto: finanzas, operaciones, sistemas y marketing. Conviene separarla en colaboradores."
+          },
+          {
+            "prompt": "ServicioVenta crea internamente new ArchivoCsvVentas(). ¿Qué cambio aplica la inversión de dependencias?",
+            "options": [
+              "Recibir una interfaz RepositorioVentas por el constructor",
+              "Convertir ArchivoCsvVentas en Singleton",
+              "Heredar ServicioVenta de ArchivoCsvVentas",
+              "Declarar el método de guardado como static"
+            ],
+            "correct": 0,
+            "explanation": "Depender de una abstracción inyectada permite usar un repositorio en memoria para pruebas y otro real en producción sin modificar el servicio."
+          },
+          {
+            "prompt": "Una tienda calcula el envío con tarifa plana en la ciudad, por kilómetro a provincias o gratis sobre cierto monto, y las reglas cambian por campaña. ¿Qué patrón conviene?",
+            "options": [
+              "Strategy",
+              "Singleton",
+              "Observer",
+              "Método plantilla con herencia de Pedido"
+            ],
+            "correct": 0,
+            "explanation": "Strategy encapsula algoritmos intercambiables que se eligen en ejecución; agregar una regla nueva significa crear una estrategia sin modificar el pedido."
+          },
+          {
+            "prompt": "Cuando un producto baja de su stock mínimo, se debe avisar a compras, al jefe de local y a un tablero, y en el futuro a más destinatarios. ¿Qué patrón es el más adecuado?",
+            "options": [
+              "Observer",
+              "Factory",
+              "Repository",
+              "Singleton"
+            ],
+            "correct": 0,
+            "explanation": "Observer permite que el inventario notifique a una lista de observadores sin conocer sus clases concretas; se agregan destinatarios sin modificar el sujeto."
+          },
+          {
+            "prompt": "¿Cuál es la condición previa indispensable para refactorizar un método largo sin alterar su comportamiento?",
+            "options": [
+              "Contar con pruebas automatizadas que pasen antes y después de cada paso",
+              "Reescribir el método completo de una sola vez",
+              "Desactivar las pruebas que fallan",
+              "Aumentar los comentarios del método"
+            ],
+            "correct": 0,
+            "explanation": "Según Fowler, la refactorización se apoya en pruebas que verifican que el comportamiento observable no cambia, avanzando en pasos pequeños y reversibles."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Proyecto integrador: aplicación orientada a objetos en capas",
+      "description": "Al finalizar la unidad, el estudiante integra una aplicación Java en capas con persistencia en archivos, pruebas, registro de eventos y documentación, versionada con Git, y la sustenta justificando sus decisiones de diseño ante un cliente.",
+      "topics": [
+        "Arquitectura en capas y separación de responsabilidades",
+        "Persistencia en archivos CSV y JSON con java.nio",
+        "Gestión del proyecto con Maven y flujo de trabajo con Git",
+        "Interfaz de usuario de consola desacoplada del dominio",
+        "Calidad: registro de eventos, Javadoc, revisión de código y datos personales",
+        "Sustentación técnica del proyecto"
+      ],
+      "slides": [
+        {
+          "title": "Del ejercicio al producto: alcance del proyecto integrador",
+          "bullets": [
+            "Producto mínimo viable para una organización peruana real o verosímil: botica, cooperativa, taller, colegio o transporte.",
+            "Requisitos mínimos: 6 clases de dominio, 2 jerarquías o interfaces polimórficas, 2 patrones y 25 pruebas.",
+            "Entregables: repositorio Git, diagramas UML, README, manual breve y sustentación de 15 minutos.",
+            "Trabajo en equipos de dos o tres con roles rotativos de líder técnico y revisor."
+          ],
+          "notes": "Presente el proyecto como la síntesis del curso. Insista en que el valor no está en la cantidad de pantallas, sino en un diseño orientado a objetos sólido, probado y documentado. Muestre ejemplos de proyectos de ciclos anteriores con alcance adecuado: un sistema de citas para un consultorio odontológico, un control de préstamos de una cooperativa, un inventario de un taller de mecánica. Explique cómo se delimita el alcance con historias de usuario priorizadas: primero lo indispensable y después lo deseable. Recomiende escoger un dominio que conozcan, idealmente un negocio de su familia o de su comunidad, para validar requisitos con un usuario real. Pida a cada equipo que, al final de la sesión, publique en el foro su dominio, tres historias de usuario y los roles de los integrantes."
+        },
+        {
+          "title": "Historias de usuario y criterios de aceptación",
+          "bullets": [
+            "Formato: Como [rol] quiero [acción] para [beneficio].",
+            "Criterios de aceptación en estilo Dado-Cuando-Entonces, traducibles a pruebas.",
+            "Priorización MoSCoW: debe, debería, podría y no tendrá en esta versión.",
+            "Ejemplo: Como cajero quiero anular una boleta del día para corregir errores de cobro."
+          ],
+          "notes": "Las historias de usuario provienen de la programación extrema y fueron popularizadas por Mike Cohn. Explique que no son especificaciones exhaustivas, sino recordatorios de una conversación con el usuario. Lo que las hace verificables son los criterios de aceptación: dado una boleta emitida hoy, cuando el cajero la anula con motivo, entonces su estado pasa a ANULADO y el stock se restituye. Muestre cómo ese criterio se convierte directamente en una prueba JUnit. Introduzca la priorización MoSCoW para controlar el alcance en ocho semanas. Advierta sobre historias demasiado grandes, como gestionar el inventario, que deben dividirse. Pida a los equipos que escriban cinco historias con criterios de aceptación y que intercambien con otro equipo para revisar si son verificables y si el beneficio está claro."
+        },
+        {
+          "title": "Arquitectura en capas",
+          "bullets": [
+            "Presentación: interactúa con el usuario (consola, escritorio o web) y no contiene reglas de negocio.",
+            "Aplicación o servicios: coordina casos de uso como registrar venta o anular boleta.",
+            "Dominio: entidades, objetos valor y reglas; no depende de ninguna otra capa.",
+            "Infraestructura: persistencia en archivos, envío de correos y servicios externos, implementando interfaces del dominio."
+          ],
+          "notes": "Dibuje las cuatro capas como círculos concéntricos con el dominio al centro, en la línea de la arquitectura hexagonal de Alistair Cockburn y la arquitectura limpia de Robert C. Martin, aclarando que usaremos una versión simplificada. La regla de dependencia es que las capas externas conocen a las internas, nunca al revés. El dominio no sabe que existe un archivo CSV ni una consola. Muestre cómo la inversión de dependencias de la unidad 3 lo hace posible: el dominio define RepositorioProducto y la infraestructura lo implementa. Explique el beneficio estratégico: cuando en Desarrollo Web o Desarrollo de Aplicaciones Móviles quieran reutilizar su lógica, solo cambiarán la capa de presentación. Pida a cada equipo que clasifique las clases de su tarea 3 en las cuatro capas y detecte dependencias que apuntan en la dirección equivocada."
+        },
+        {
+          "title": "Estructura del proyecto con Maven",
+          "bullets": [
+            "Convención: src/main/java para código, src/test/java para pruebas, pom.xml para configuración.",
+            "Dependencias declaradas: junit-jupiter, jackson-databind para JSON, slf4j para registro.",
+            "Ciclo de vida: mvn compile, mvn test, mvn package genera el archivo jar ejecutable.",
+            "Paquetes por capa o funcionalidad: dominio, aplicacion, infraestructura, presentacion."
+          ],
+          "notes": "Explique que Maven estandariza la estructura y la construcción de proyectos Java, de modo que cualquier desarrollador puede clonar el repositorio y ejecutar mvn test sin configurar nada a mano. Muestre un pom.xml mínimo con la versión de Java 21, las dependencias y el plugin de JaCoCo. Comente que Gradle es una alternativa muy usada, especialmente en Android, que verán en Desarrollo de Aplicaciones Móviles. Ejecute el ciclo completo en vivo y muestre el jar generado en la carpeta target. Señale la importancia de no subir la carpeta target al repositorio y de tener un archivo gitignore adecuado. Pida a los equipos que configuren el esqueleto del proyecto con Maven, lo suban a un repositorio y verifiquen que un compañero de otro equipo puede clonarlo y ejecutar mvn test con éxito."
+        },
+        {
+          "title": "Persistencia en archivos con java.nio",
+          "bullets": [
+            "Files.readAllLines y Files.write con Path y StandardCharsets.UTF_8 para tildes y eñes.",
+            "CSV: simple y legible en Excel; cuidado con comas dentro de campos y separador decimal.",
+            "JSON con Jackson: ObjectMapper convierte objetos en texto y viceversa.",
+            "Escritura atómica: escribir en un archivo temporal y luego mover para no corromper datos."
+          ],
+          "notes": "Recuerde que en Fundamentos de Programación trabajaron archivos CSV y JSON en Python; ahora lo harán en Java respetando la arquitectura. Implemente RepositorioProductoCsv con un método cargar que lee líneas, ignora el encabezado y convierte cada línea en un Producto usando su constructor, de modo que las validaciones del dominio se apliquen también a los datos leídos. Muestre el problema de la codificación: sin UTF-8, nombres como Ñuñoa o Piña aparecen corruptos. Explique el riesgo de escribir directamente sobre el archivo: si el programa se interrumpe a mitad, los datos se pierden. La técnica de escribir en un temporal y luego usar Files.move con ATOMIC_MOVE reduce ese riesgo. Aclare que en el siguiente ciclo, en Base de Datos, reemplazarán esta implementación por una con JDBC sin tocar el dominio."
+        },
+        {
+          "title": "Mapeo entre objetos y archivos",
+          "bullets": [
+            "Separar el formato de almacenamiento del modelo: clases ProductoDto o métodos de conversión.",
+            "Reconstruir objetos mediante constructores que validan, no asignando atributos por reflexión.",
+            "Versionar el formato del archivo para poder migrar datos antiguos.",
+            "Manejar líneas corruptas: registrar el error, omitir la línea y reportar el total al usuario."
+          ],
+          "notes": "Explique que el formato del archivo y el modelo de dominio cambian por razones distintas, así que conviene no acoplarlos. Una clase de conversión, o un objeto de transferencia de datos, traduce entre la línea CSV y el Producto. Muestre por qué es peligroso que una biblioteca construya objetos asignando atributos privados directamente: se saltan las validaciones del constructor y pueden aparecer productos con precio negativo leídos de un archivo editado a mano. Proponga incluir una primera línea con la versión del formato. Luego discuta qué hacer ante una línea inválida: detener todo el sistema, ignorarla en silencio o registrarla y continuar. La respuesta depende del contexto, pero ignorar en silencio casi nunca es aceptable. Pida que implementen la carga con un informe de líneas rechazadas y su motivo."
+        },
+        {
+          "title": "Interfaz de consola desacoplada",
+          "bullets": [
+            "La consola solo lee entradas, invoca servicios y muestra resultados; no calcula ni valida reglas.",
+            "Patrón comando para menús: cada opción es un objeto con ejecutar(), registrado en un Map.",
+            "Validar el formato de la entrada en la presentación y las reglas de negocio en el dominio.",
+            "Capturar excepciones de dominio y traducirlas a mensajes comprensibles para el usuario."
+          ],
+          "notes": "Muestre un antipatrón frecuente: un main de trescientas líneas con un switch gigante donde se mezclan Scanner, cálculos y escritura de archivos. Proponga la alternativa: una clase MenuPrincipal que mantiene un Map<Integer, Comando> y cada comando invoca un servicio de aplicación. Así agregar una opción no requiere modificar el menú, aplicando una vez más el principio abierto/cerrado. Explique la división de validaciones: la consola verifica que el usuario escribió un número; el dominio verifica que la cantidad no exceda el stock. Muestre cómo capturar StockInsuficienteException en la presentación y mostrar un mensaje como solo quedan tres unidades en este local. Comente que JavaFX permitiría una interfaz gráfica, pero que la prioridad del curso es la arquitectura; un equipo que la domine podrá cambiar de interfaz fácilmente."
+        },
+        {
+          "title": "Flujo de trabajo con Git en equipo",
+          "bullets": [
+            "Rama principal protegida; ramas por funcionalidad: feature/anular-boleta.",
+            "Commits pequeños con mensajes en imperativo: Agrega validación de RUC en Factura.",
+            "Solicitudes de integración con revisión obligatoria de al menos un compañero.",
+            "Resolver conflictos localmente y ejecutar mvn test antes de integrar."
+          ],
+          "notes": "En Fundamentos de Programación usaron Git de forma individual; ahora lo usarán en equipo. Explique el flujo basado en ramas de funcionalidad: cada historia de usuario se desarrolla en su rama, se abre una solicitud de integración y un compañero revisa antes de fusionar. Muestre cómo se ve un buen historial frente a uno con mensajes como cambios o final2. Haga una demostración de un conflicto: dos integrantes modifican el mismo método; muestre cómo resolverlo y volver a ejecutar las pruebas. Recalque que el historial de Git será evidencia en la evaluación: permite ver la contribución de cada integrante. Advierta que nunca se deben subir archivos con datos personales reales ni contraseñas al repositorio, y que deben usar datos ficticios generados para las pruebas."
+        },
+        {
+          "title": "Revisión de código entre pares",
+          "bullets": [
+            "Objetivo: encontrar defectos, compartir conocimiento y mantener un estilo consistente.",
+            "Lista de verificación: invariantes, nombres, duplicación, excepciones, pruebas y datos personales.",
+            "Comentarios sobre el código, no sobre la persona; proponer alternativas concretas.",
+            "Revisiones cortas, de menos de 400 líneas, son más efectivas que las extensas."
+          ],
+          "notes": "Explique que la revisión de código es una práctica estándar en la industria y una de las técnicas más efectivas para encontrar defectos antes de producción. Estudios industriales, como los realizados en SmartBear y Cisco, sugieren que la efectividad disminuye cuando se revisan más de cuatrocientas líneas a la vez. Presente la lista de verificación del curso, que integra lo aprendido en las cuatro unidades. Modele cómo escribir un comentario útil: en lugar de esto está mal, escribir este método modifica el stock sin validar que la cantidad sea positiva; sugiero mover la validación a Producto.vender. Organice una actividad: cada equipo revisa una solicitud de integración de otro equipo y deja al menos cinco comentarios. Luego discutan qué comentarios fueron más útiles y por qué."
+        },
+        {
+          "title": "Registro de eventos y documentación con Javadoc",
+          "bullets": [
+            "Usar SLF4J con niveles: ERROR, WARN, INFO, DEBUG; nunca System.out en producción.",
+            "Registrar contexto útil (operación, código de producto) sin datos personales completos.",
+            "Javadoc en la API pública: propósito, parámetros, retorno y excepciones lanzadas.",
+            "README: propósito, requisitos, cómo ejecutar, cómo probar, diagrama y decisiones de diseño."
+          ],
+          "notes": "Explique que el registro de eventos es la caja negra del sistema: cuando algo falla en producción, es la única forma de reconstruir lo ocurrido. Muestre la diferencia entre un mensaje inútil como error y uno útil como no se pudo anular la boleta B001-000245: estado EMITIDO con más de siete días. Recuerde el incidente del caso MercaLocal, donde un registro en nivel debug ocultó miles de fallos. Enlace con la Ley 29733: no se deben registrar DNI completos, teléfonos ni datos de salud; se enmascaran o se usan identificadores internos. Luego muestre Javadoc en un método de servicio, con las etiquetas param, return y throws, y genere la documentación con Maven. Finalmente presente la plantilla de README que exigirá la rúbrica del proyecto."
+        },
+        {
+          "title": "Protección de datos personales desde el diseño",
+          "bullets": [
+            "Ley 29733 y su reglamento: principios de finalidad, proporcionalidad, calidad y seguridad.",
+            "Minimizar datos: almacenar solo lo necesario para el caso de uso.",
+            "Enmascarar en pantallas y registros; separar datos sensibles en clases con acceso restringido.",
+            "Datos de prueba ficticios; nunca copiar bases reales de clientes al repositorio."
+          ],
+          "notes": "La Ley 29733, Ley de Protección de Datos Personales, y su reglamento establecen principios que el software debe respetar. Explique cómo cada principio se traduce en decisiones orientadas a objetos. Finalidad y proporcionalidad: si el caso de uso es emitir una boleta, no se necesita la fecha de nacimiento del cliente. Seguridad: una clase DatosSensibles separada, con acceso solo desde ciertos servicios. Calidad: validaciones en los objetos valor Dni y Telefono. Mencione que la Autoridad Nacional de Protección de Datos Personales, adscrita al Ministerio de Justicia, puede imponer sanciones. Comente el concepto de privacidad desde el diseño propuesto por Ann Cavoukian. Pida a los equipos que identifiquen todos los datos personales de su proyecto, clasifiquen cuáles son sensibles y documenten en el README las medidas aplicadas."
+        },
+        {
+          "title": "Deuda técnica y refactorización final",
+          "bullets": [
+            "Deuda técnica (Ward Cunningham): atajos que aceleran hoy y encarecen los cambios futuros.",
+            "Registrar la deuda conocida en el README o en issues, con impacto y propuesta.",
+            "Antes de entregar: eliminar código muerto, duplicación y advertencias del compilador.",
+            "Medir: cobertura, número de clases con más de 300 líneas y métodos con más de 30 líneas."
+          ],
+          "notes": "Ward Cunningham introdujo la metáfora de la deuda técnica en 1992: como una deuda financiera, permite avanzar más rápido, pero genera intereses en forma de mayor esfuerzo para cada cambio futuro. Explique que no toda deuda es mala; a veces es una decisión consciente para cumplir un plazo. Lo grave es la deuda no reconocida. Pida que cada equipo dedique la semana 15 a una revisión de deuda: listar atajos tomados, decidir cuáles pagar antes de la entrega y documentar los demás. Muestre cómo usar las inspecciones del IDE para encontrar código no usado, variables sin leer y advertencias. Proponga métricas simples para autoevaluarse, aclarando que no son reglas absolutas. Pregunte: ¿qué atajos tomaron en la tarea 3 que hoy les cuesta mantener?"
+        },
+        {
+          "title": "Preparar la sustentación técnica",
+          "bullets": [
+            "Estructura en 15 minutos: problema y usuario, diseño UML, demostración, pruebas, decisiones y lecciones.",
+            "Demostración en vivo de dos historias completas, incluido un caso de error controlado.",
+            "Justificar al menos tres decisiones de diseño con principios y alternativas descartadas.",
+            "Cada integrante debe poder explicar cualquier clase del sistema."
+          ],
+          "notes": "Explique que la sustentación evalúa la comprensión, no solo el producto. Un jurado o un cliente quiere saber por qué se diseñó así y qué pasaría si cambian los requisitos. Muestre una estructura recomendada con tiempos: dos minutos de contexto, tres de diseño, cinco de demostración, dos de pruebas y cobertura, y tres de decisiones y lecciones aprendidas. Prepare a los estudiantes para preguntas típicas: qué cambiarían para usar una base de datos, cómo agregarían un nuevo tipo de cliente, dónde se valida tal regla, por qué eligieron composición en lugar de herencia. Recomiende ensayar con cronómetro y tener un plan alternativo, como un video grabado, ante fallas de conexión. Recalque que el docente preguntará a cualquier integrante sobre cualquier clase, lo que refuerza el trabajo colaborativo real."
+        },
+        {
+          "title": "Del curso al perfil profesional",
+          "bullets": [
+            "Lo aprendido sostiene Base de Datos (repositorios JDBC), Desarrollo Web y Aplicaciones Móviles.",
+            "Java y C# concentran gran parte de la demanda de desarrollo empresarial en banca, retail y Estado.",
+            "Portafolio: el proyecto integrador publicado en un repositorio es evidencia para empleadores.",
+            "Siguiente paso de aprendizaje: certificaciones Java SE y lectura de Effective Java."
+          ],
+          "notes": "Cierre el curso conectando con la trayectoria del estudiante. Explique cómo cada tema reaparece: el patrón Repository se implementará con JDBC en Base de Datos; la arquitectura en capas se aplicará en Desarrollo Web; Kotlin, en Aplicaciones Móviles, es orientado a objetos y comparte la JVM; Spring, en Desarrollo de Software Empresarial, se basa en inyección de dependencias. Comente que los portales de empleo del país publican con frecuencia ofertas para analistas programadores Java en banca, seguros, retail y entidades públicas, y que conocer POO, pruebas y Git es requisito habitual. Recomiende publicar el proyecto en un repositorio público con datos ficticios y un README cuidado como parte del portafolio. Pida a cada estudiante que escriba en el foro una reflexión final sobre el concepto que más cambió su forma de programar."
+        }
+      ],
+      "reading": {
+        "title": "Arquitectura en capas y persistencia: el dominio en el centro",
+        "minutes": 40,
+        "content": "## Por qué importa la arquitectura en un proyecto pequeño\n\nUn programa de mil líneas puede funcionar con todo mezclado en el `main`. El problema aparece cuando cambia algo: el cliente pide una versión web, los datos pasan de archivos a una base de datos o se agrega un medio de pago. Si las reglas de negocio están mezcladas con la consola y los archivos, cada cambio obliga a tocar todo. Alistair Cockburn, con la arquitectura hexagonal, y Robert C. Martin, con la arquitectura limpia, propusieron la misma idea central: **el dominio en el centro, sin depender de detalles técnicos**.\n\n## Las capas y la regla de dependencia\n\n- **Dominio:** entidades (`Producto`, `Boleta`), objetos valor (`Dinero`, `Ruc`), reglas e interfaces de repositorio.\n- **Aplicación:** servicios que orquestan casos de uso (`ServicioVenta.registrar`).\n- **Infraestructura:** implementaciones técnicas (`RepositorioProductoCsv`, `NotificadorCorreo`).\n- **Presentación:** consola, escritorio o web.\n\nLa regla: las dependencias apuntan hacia el dominio. El dominio define `RepositorioProducto`; la infraestructura lo implementa. Esta es la inversión de dependencias vista en la unidad 3 aplicada a toda la aplicación.\n\n```\npe.edu.tepsup.botica\n├── dominio        Producto, Boleta, Dinero, RepositorioProducto\n├── aplicacion     ServicioVenta, ServicioInventario\n├── infraestructura RepositorioProductoCsv, RepositorioProductoMemoria\n└── presentacion   MenuPrincipal, comandos\n```\n\n## Un repositorio en archivo CSV\n\n```java\npublic class RepositorioProductoCsv implements RepositorioProducto {\n    private static final Logger log = LoggerFactory.getLogger(RepositorioProductoCsv.class);\n    private final Path archivo;\n    private final Map<String, Producto> cache = new LinkedHashMap<>();\n\n    public RepositorioProductoCsv(Path archivo) throws IOException {\n        this.archivo = archivo;\n        if (Files.exists(archivo)) cargar();\n    }\n\n    private void cargar() throws IOException {\n        List<String> lineas = Files.readAllLines(archivo, StandardCharsets.UTF_8);\n        for (int i = 1; i < lineas.size(); i++) {          // salta encabezado\n            String[] c = lineas.get(i).split(\";\");\n            try {\n                Producto p = new Producto(c[0], c[1], new BigDecimal(c[2]),\n                                          Integer.parseInt(c[3]));   // valida invariantes\n                cache.put(p.getCodigo(), p);\n            } catch (RuntimeException e) {\n                log.warn(\"Línea {} rechazada: {}\", i + 1, e.getMessage());\n            }\n        }\n    }\n\n    @Override public Optional<Producto> buscarPorCodigo(String codigo) {\n        return Optional.ofNullable(cache.get(codigo));\n    }\n\n    @Override public void guardar(Producto p) {\n        cache.put(p.getCodigo(), p);\n        persistir();\n    }\n\n    private void persistir() {\n        Path tmp = archivo.resolveSibling(archivo.getFileName() + \".tmp\");\n        List<String> out = new ArrayList<>(List.of(\"codigo;nombre;precio;stock\"));\n        cache.values().forEach(p -> out.add(String.join(\";\", p.getCodigo(),\n            p.getNombre(), p.getPrecio().toPlainString(), String.valueOf(p.getStock()))));\n        try {\n            Files.write(tmp, out, StandardCharsets.UTF_8);\n            Files.move(tmp, archivo, StandardCopyOption.REPLACE_EXISTING,\n                       StandardCopyOption.ATOMIC_MOVE);           // evita archivos corruptos\n        } catch (IOException e) {\n            throw new PersistenciaException(\"No se pudo guardar el inventario\", e);\n        }\n    }\n}\n```\n\nCuatro decisiones merecen atención. El separador es punto y coma, porque en configuraciones regionales de habla hispana Excel usa la coma como separador decimal. Los objetos se reconstruyen con su constructor, de modo que un archivo editado a mano no introduce productos inválidos. Las líneas corruptas se registran y no se ignoran en silencio. La escritura usa un archivo temporal y un movimiento atómico para no dejar datos a medias si el programa se interrumpe. La `IOException` verificada se convierte en una excepción propia no verificada, para que la capa de aplicación no dependa de detalles de entrada y salida.\n\n## Probar con un repositorio en memoria\n\nComo el servicio depende de la interfaz, las pruebas usan una implementación en memoria, rápida y sin archivos:\n\n```java\n@Test\nvoid registrarVentaDescuentaStock() {\n    var repo = new RepositorioProductoMemoria();\n    repo.guardar(new Producto(\"P1\", \"Alcohol 70°\", new BigDecimal(\"6.50\"), 20));\n    var servicio = new ServicioVenta(repo, List.of());\n    servicio.vender(\"P1\", 5);\n    assertEquals(15, repo.buscarPorCodigo(\"P1\").orElseThrow().getStock());\n}\n```\n\nEn el ciclo siguiente, en Base de Datos, se agregará `RepositorioProductoJdbc` y el dominio y los servicios no cambiarán.\n\n## Calidad que se ve: datos personales y documentación\n\nUn proyecto profesional documenta cómo se ejecuta y por qué se diseñó así. Además, aplica la Ley 29733: los datos de prueba son ficticios, los registros enmascaran DNI y teléfonos, y se almacena solo lo necesario. Estas decisiones también se sustentan.\n\n## Preguntas para la reflexión\n\n1. ¿Qué clases de su proyecto dependen hoy de la consola o de archivos y deberían moverse de capa?\n2. ¿Qué cambiaría en su diseño si mañana el cliente pidiera una aplicación móvil?"
+      },
+      "case": {
+        "title": "Caso: Taller Hermanos Ccori y la migración que no podía fallar",
+        "content": "**Taller Hermanos Ccori** es un taller de mecánica automotriz de Cusco con 14 trabajadores, que atiende unas 380 órdenes de servicio al mes, principalmente mantenimientos de mototaxis, autos particulares y camionetas de agencias de turismo. Desde 2019 registra órdenes, repuestos y pagos en un cuaderno y en una hoja de cálculo compartida.\n\nEn 2026, la administradora **Nélida Ccori** contrata a un equipo de dos estudiantes de Computación e Informática, **Kevin Apaza** y **Milagros Huallpa**, para desarrollar una aplicación de escritorio en Java. El objetivo es controlar órdenes de servicio, inventario de repuestos, historial por vehículo (identificado por placa) y pagos, incluidos adelantos.\n\nA seis semanas de iniciado, el equipo enfrenta decisiones críticas:\n\n- **Persistencia:** el taller no tiene servidor ni personal de TI. Kevin propone archivos JSON con Jackson; Milagros prefiere CSV porque Nélida quiere abrir los datos en Excel. Ambos saben que el próximo año el taller quiere una versión web con base de datos.\n- **Datos heredados:** la hoja de cálculo tiene 6 200 filas con placas en formatos distintos (ABC-123, abc123, A1B-234), montos escritos como \"S/ 150\", \"150 soles\" o \"150.00\", y 312 filas sin teléfono. Nélida quiere todo migrado.\n- **Datos personales:** la hoja incluye DNI, teléfonos y, en algunos casos, comentarios como \"cliente moroso, no fiar\". Las agencias de turismo piden que sus datos de flota no sean visibles para otros clientes.\n- **Arquitectura:** el prototipo actual tiene una clase `VentanaPrincipal` de 1 900 líneas con la lógica de cálculo de órdenes, los descuentos para agencias con convenio y la lectura del archivo, todo dentro de los manejadores de botones.\n- **Plazo:** la entrega debe hacerse en dos semanas, antes del inicio de la temporada alta de turismo de junio, cuando el taller duplica sus órdenes.\n\nNélida exige que el sistema no pierda datos: en 2024 un corte de luz dañó la hoja de cálculo y se perdieron dos semanas de registros. El hermano mayor, **Wilber Ccori**, duda: \"¿No es mejor seguir con Excel una temporada más?\".\n\nKevin y Milagros deben presentar el viernes un plan técnico y una recomendación.",
+        "questions": [
+          "¿Cómo reorganizaría el prototipo en capas? Identifique las clases de dominio, servicios, infraestructura y presentación necesarias.",
+          "Compare JSON y CSV para este caso y proponga un diseño que permita migrar a base de datos el próximo año sin reescribir el dominio.",
+          "Diseñe una estrategia de migración de los datos heredados que use objetos valor para normalizar placas y montos y que reporte los registros rechazados.",
+          "¿Qué medidas de protección de datos personales y de integridad ante cortes de energía incorporaría en el diseño?",
+          "Responda a Wilber: ¿conviene entregar en dos semanas o postergar? Justifique con riesgos y alcance mínimo viable."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: aplicación Java en capas para una organización peruana",
+        "instructions": "**Objetivo:** integrar los aprendizajes del curso en una aplicación orientada a objetos funcional, probada y documentada, que resuelva un problema real de una organización peruana.\n\n**Requisitos mínimos:**\n\n1. Al menos seis clases de dominio con invariantes, dos objetos valor inmutables y una relación de composición.\n2. Al menos una jerarquía o familia de interfaces polimórficas que elimine condicionales por tipo.\n3. Dos patrones de diseño justificados (por ejemplo, Strategy, Observer, Factory o Repository).\n4. Arquitectura en cuatro capas con inversión de dependencias y persistencia en archivos CSV o JSON con escritura segura.\n5. Interfaz de consola con menú basado en comandos, desacoplada del dominio.\n6. Al menos 25 pruebas JUnit 5 y cobertura igual o mayor al 80 % en dominio y aplicación.\n7. Registro de eventos con SLF4J, Javadoc en la API pública y tratamiento de datos personales conforme a la Ley 29733 (datos ficticios y enmascarados).\n\n**Qué entregar:** repositorio Git con historial de ramas y revisiones; README con propósito, instrucciones, diagrama de clases y de capas, decisiones de diseño y deuda técnica conocida; jar ejecutable; presentación de 15 minutos.\n\n**Fechas:** avance con historias y diagrama en la semana 13, versión candidata en la semana 15 y sustentación en la semana 16.",
+        "rubric": [
+          {
+            "name": "Modelo de dominio orientado a objetos y patrones justificados",
+            "points": 6
+          },
+          {
+            "name": "Arquitectura en capas, persistencia segura e interfaz desacoplada",
+            "points": 4
+          },
+          {
+            "name": "Pruebas automatizadas y cobertura",
+            "points": 4
+          },
+          {
+            "name": "Documentación, Git colaborativo y protección de datos",
+            "points": 3
+          },
+          {
+            "name": "Sustentación técnica y respuesta a preguntas",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Arquitectura, persistencia y calidad del proyecto",
+        "questions": [
+          {
+            "prompt": "En una arquitectura en capas bien diseñada, ¿hacia dónde deben apuntar las dependencias del código?",
+            "options": [
+              "Hacia el dominio: presentación e infraestructura conocen al dominio, no al revés",
+              "Hacia la infraestructura, porque guarda los datos",
+              "Hacia la presentación, porque es lo que ve el usuario",
+              "Todas las capas deben conocerse entre sí"
+            ],
+            "correct": 0,
+            "explanation": "La regla de dependencia protege las reglas de negocio de los detalles técnicos; el dominio define interfaces que la infraestructura implementa."
+          },
+          {
+            "prompt": "Al cargar productos desde un CSV, ¿por qué conviene reconstruir cada objeto con su constructor en lugar de asignar atributos por reflexión?",
+            "options": [
+              "Porque así se aplican las validaciones y no ingresan objetos inválidos editados a mano",
+              "Porque la reflexión no existe en Java",
+              "Porque el constructor es más rápido en todos los casos",
+              "Porque los atributos privados no se pueden leer"
+            ],
+            "correct": 0,
+            "explanation": "El constructor garantiza los invariantes; saltarlo permitiría que datos corruptos del archivo generen productos con precios o stock inválidos."
+          },
+          {
+            "prompt": "¿Qué técnica reduce el riesgo de corromper el archivo de inventario si el programa se interrumpe mientras guarda?",
+            "options": [
+              "Escribir en un archivo temporal y luego reemplazar con un movimiento atómico",
+              "Guardar directamente sobre el archivo original línea por línea",
+              "Guardar solo cuando se cierra el programa",
+              "Desactivar el registro de eventos durante la escritura"
+            ],
+            "correct": 0,
+            "explanation": "El archivo original permanece intacto hasta que el temporal está completo; el movimiento atómico sustituye uno por otro en una sola operación."
+          },
+          {
+            "prompt": "El equipo quiere probar ServicioVenta sin depender de archivos. ¿Qué diseño lo permite?",
+            "options": [
+              "Inyectar una implementación en memoria de la interfaz RepositorioProducto",
+              "Crear el archivo CSV dentro de cada prueba manualmente",
+              "Hacer estáticos todos los métodos del servicio",
+              "Probar únicamente desde la consola"
+            ],
+            "correct": 0,
+            "explanation": "Gracias a la inversión de dependencias, el servicio acepta cualquier implementación del repositorio, y una versión en memoria hace las pruebas rápidas y aisladas."
+          },
+          {
+            "prompt": "¿Cuál de estos mensajes de registro es el más adecuado para un sistema que debe cumplir la Ley 29733?",
+            "options": [
+              "Venta rechazada para cliente id=4521: stock insuficiente de P001",
+              "Venta rechazada para Juan Pérez, DNI 45879632, celular 987654321",
+              "error",
+              "Excepción: java.lang.RuntimeException en línea 245"
+            ],
+            "correct": 0,
+            "explanation": "El mensaje aporta contexto útil usando un identificador interno, sin exponer nombre, DNI ni teléfono; los demás son inútiles o exponen datos personales."
+          },
+          {
+            "prompt": "En la interfaz de consola, ¿dónde debe validarse que la cantidad vendida no supere el stock disponible?",
+            "options": [
+              "En el dominio, dentro de Producto o del servicio; la consola solo traduce la excepción",
+              "En la consola, antes de llamar al servicio, y en ningún otro lugar",
+              "En el archivo CSV mediante una fórmula",
+              "No es necesario validarlo si el usuario es cuidadoso"
+            ],
+            "correct": 0,
+            "explanation": "Las reglas de negocio pertenecen al dominio para que se cumplan en cualquier interfaz; la presentación valida formato y muestra mensajes comprensibles."
+          },
+          {
+            "prompt": "Un equipo decidió no escribir pruebas para el módulo de reportes por falta de tiempo y lo documentó en el README. ¿Cómo se denomina esta situación?",
+            "options": [
+              "Deuda técnica reconocida",
+              "Refactorización",
+              "Polimorfismo",
+              "Inversión de dependencias"
+            ],
+            "correct": 0,
+            "explanation": "Según la metáfora de Ward Cunningham, es un atajo que acelera hoy y encarece los cambios futuros; documentarlo permite planificar su pago."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Paradigma orientado a objetos, abstracción y entorno Java 21",
+      "activity": "Aula invertida sobre la evolución de los paradigmas; instalación del JDK y del IDE; primer programa compilado y comparación con Python.",
+      "evidence": "Captura del entorno y reto de código autocorregido"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Clases, objetos, constructores e invariantes",
+      "activity": "Laboratorio en pares: clase Producto con validaciones; análisis del caso Boticas Misti en sesión síncrona.",
+      "evidence": "Clase Producto validada y participación en el caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Encapsulamiento, BigDecimal, miembros estáticos y métodos de Object",
+      "activity": "Refactorización de una clase con setters públicos; cálculo del IGV con BigDecimal; implementación de equals y hashCode.",
+      "evidence": "Ejercicios de laboratorio con pruebas de igualdad"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Objetos valor, records y diagramas de clases UML",
+      "activity": "Modelado de una cooperativa con técnica de sustantivos y verbos; entrega de la Tarea 1 y Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Asociación, agregación, composición y multiplicidades",
+      "activity": "Modelado UML de un sistema de pasajes; implementación de Boleta con LineaVenta y copias defensivas.",
+      "evidence": "Diagrama de relaciones y clase Boleta"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Herencia, sobrescritura, enlace dinámico y principio de Liskov",
+      "activity": "Laboratorio de jerarquías de productos; debate sobre violaciones de Liskov en casos de cuentas y pasajeros.",
+      "evidence": "Jerarquía implementada y foro de análisis"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Clases abstractas, método plantilla, interfaces y enumeraciones",
+      "activity": "Implementación de Comprobante abstracto y de la interfaz MedioPago; análisis del caso Rutas Andinas.",
+      "evidence": "Informe grupal del caso Rutas Andinas"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Polimorfismo, composición sobre herencia y paquetes",
+      "activity": "Reemplazo de condicionales por polimorfismo; organización en paquetes; entrega de la Tarea 2 y Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Genéricos, colecciones, Comparator, lambdas y streams",
+      "activity": "Selección justificada de colecciones; reportes de ventas con streams y groupingBy sobre datos de una botica.",
+      "evidence": "Reto de colecciones y streams"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Excepciones propias y pruebas unitarias con JUnit 5",
+      "activity": "Diseño de excepciones de dominio; ciclo de desarrollo guiado por pruebas para validar DNI y RUC; reporte de cobertura con JaCoCo.",
+      "evidence": "Suite de pruebas y reporte de cobertura"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Principios SOLID y patrones Strategy, Factory y Singleton",
+      "activity": "Taller de refactorización de una clase con múltiples responsabilidades; análisis del caso MercaLocal en equipos.",
+      "evidence": "Propuesta de rediseño del caso MercaLocal"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Patrones Observer y Repository, olores de código y refactorización",
+      "activity": "Implementación de alertas de stock bajo y repositorio en memoria; entrega de la Tarea 3 y Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Alcance del proyecto, historias de usuario y arquitectura en capas",
+      "activity": "Definición del dominio y de historias con criterios de aceptación; esqueleto Maven y diagrama de capas; análisis del caso Taller Hermanos Ccori.",
+      "evidence": "Avance 1: historias, diagrama y repositorio"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Persistencia en archivos CSV y JSON e interfaz de consola desacoplada",
+      "activity": "Implementación de repositorios en archivo con escritura atómica y menú basado en comandos; flujo de ramas en Git.",
+      "evidence": "Repositorio con persistencia funcional"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Calidad: revisión de código, registro de eventos, Javadoc y datos personales",
+      "activity": "Revisión cruzada entre equipos con lista de verificación; pago de deuda técnica; Cuestionario 4.",
+      "evidence": "Versión candidata, revisiones y Cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y cierre del curso",
+      "activity": "Sustentación técnica de 15 minutos con demostración en vivo y preguntas; retroalimentación y reflexión final.",
+      "evidence": "Proyecto integrador y sustentación"
+    }
+  ]
+}

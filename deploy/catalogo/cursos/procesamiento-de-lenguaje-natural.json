@@ -1,0 +1,1280 @@
+{
+  "name": "Procesamiento de Lenguaje Natural",
+  "slug": "procesamiento-de-lenguaje-natural",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Procesamiento de Lenguaje Natural (IAR-402) es un curso de formación específica, de naturaleza teórico-práctica, del cuarto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante construya, evalúe y documente soluciones que extraen valor de textos en español peruano, como reclamos, consultas ciudadanas, resoluciones y normas legales, con Python, scikit-learn, spaCy y Hugging Face. Comprende cuatro unidades: fundamentos lingüísticos y preprocesamiento (expresiones regulares, normalización, anonimización conforme a la Ley 29733, tokenización por subpalabras y modelos de n-gramas); representación vectorial y clasificación de textos con TF-IDF, BM25 y modelos lineales; semántica distribucional, modelado de temas y extracción de entidades; y transformadores preentrenados en español, búsqueda semántica y un proyecto integrador. Construye sobre Aprendizaje Automático I, Álgebra Lineal Aplicada y Estadística y Probabilidad, se articula con Aprendizaje Automático II, que se cursa en paralelo, y prepara para Aprendizaje Profundo e IA Generativa y Modelos de Lenguaje. Aporta al perfil de egreso la capacidad de desarrollar soluciones de lenguaje rigurosas, eficientes y respetuosas de la diversidad lingüística del país.",
+  "competency": "Desarrolla soluciones de procesamiento de lenguaje natural para textos en español peruano, desde el preprocesamiento y la anonimización hasta la clasificación, la extracción de información y la búsqueda semántica con modelos clásicos y transformadores preentrenados, evaluándolas con métricas pertinentes, comparándolas por desempeño y costo, y documentándolas con criterios éticos y de protección de datos personales.",
+  "capacities": [
+    "Procesa corpus textuales en español con variación peruana mediante expresiones regulares, normalización Unicode, anonimización conforme a la Ley 29733 y tokenización por palabras y subpalabras, y los caracteriza con estadísticas de corpus y modelos de lenguaje de n-gramas.",
+    "Representa documentos con bolsa de palabras, TF-IDF y BM25, y construye clasificadores lineales de texto evaluados con métricas adecuadas al desbalance de clases, al costo del error y a políticas de revisión humana.",
+    "Aplica embeddings de palabras, modelado de temas y etiquetado de secuencias para extraer información estructurada de documentos, con protocolos de anotación, acuerdo entre anotadores y evaluación a nivel de entidad.",
+    "Ajusta modelos transformadores preentrenados en español y embeddings de oraciones para clasificación, reconocimiento de entidades y búsqueda semántica, y justifica su adopción frente a líneas base clásicas con evidencia de desempeño, eficiencia y riesgo."
+  ],
+  "indicators": [
+    "Implementa un pipeline reproducible de normalización y tokenización que trata Unicode, signos y jerga peruana, y enmascara DNI, RUC, celulares y correos con exhaustividad verificada en una muestra revisada.",
+    "Calcula e interpreta la perplejidad de modelos de bigramas suavizados y explica las condiciones bajo las cuales dos perplejidades son comparables.",
+    "Construye y compara al menos tres clasificadores de texto con validación cruzada estratificada sin fuga de información, reportando macro-F1, matriz de confusión y análisis de errores por categoría.",
+    "Propone una política de umbrales y revisión humana a partir de la curva cobertura-exactitud y del costo de los errores.",
+    "Entrena un reconocedor de entidades con tipos propios del dominio y lo evalúa con F1 por entidad frente a una línea base de reglas, reportando el kappa de la anotación.",
+    "Interpreta temas y vecindarios semánticos, identifica sesgos sociales en los embeddings y propone medidas de mitigación.",
+    "Ajusta un modelo transformador en español con particiones de validación y prueba separadas, y sustenta su elección con intervalos de confianza, pruebas de significancia, latencia, costo y desempeño por subgrupos.",
+    "Documenta la solución con tarjeta de modelo, hoja de datos y medidas de privacidad, y la sustenta oralmente ante un panel."
+  ],
+  "methodology": "El curso aplica una metodología activa en modalidad 100 % virtual. Cada semana combina aula invertida, con lecturas y videos breves previos a la sesión; una clase síncrona de 90 minutos con demostraciones de código en vivo; y un laboratorio guiado en Google Colab con textos de organizaciones peruanas. En cada unidad se analiza un caso con el método de casos: preparación individual, discusión en equipos con roles asignados y decisión argumentada en plenaria. El aprendizaje basado en proyectos articula las tareas de las unidades 1 a 3 con el proyecto integrador de la unidad 4. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión de código entre pares y asesorías por equipo. El foro técnico y un repositorio Git compartido sostienen el trabajo colaborativo asíncrono y la reproducibilidad de los resultados.",
+  "bibliography": [
+    "Jurafsky, D. y Martin, J. H. (2009). Speech and language processing: An introduction to natural language processing, computational linguistics, and speech recognition (2.ª ed.). Pearson Prentice Hall.",
+    "Manning, C. D., Raghavan, P. y Schütze, H. (2008). Introduction to information retrieval. Cambridge University Press.",
+    "Bird, S., Klein, E. y Loper, E. (2009). Natural language processing with Python. O'Reilly Media.",
+    "Eisenstein, J. (2019). Introduction to natural language processing. MIT Press.",
+    "Goldberg, Y. (2017). Neural network methods for natural language processing. Morgan & Claypool.",
+    "Vajjala, S., Majumder, B., Gupta, A. y Surana, H. (2020). Practical natural language processing: A comprehensive guide to building real-world NLP systems. O'Reilly Media.",
+    "Tunstall, L., von Werra, L. y Wolf, T. (2022). Natural language processing with transformers: Building language applications with Hugging Face (ed. rev.). O'Reilly Media.",
+    "Mikolov, T., Sutskever, I., Chen, K., Corrado, G. y Dean, J. (2013). Distributed representations of words and phrases and their compositionality. Advances in Neural Information Processing Systems, 26, 3111-3119.",
+    "Devlin, J., Chang, M.-W., Lee, K. y Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. En Proceedings of NAACL-HLT 2019 (pp. 4171-4186). Association for Computational Linguistics.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, tareas aplicadas 1 a 3, laboratorios semanales y participación argumentada en el análisis de casos, con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador de PLN (unidad 4): repositorio reproducible, comparación con línea base, tarjeta de modelo y demostración funcional, evaluados con rúbrica analítica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Examen práctico individual en Colab con un corpus nuevo y sustentación oral del proyecto integrador, con preguntas sobre decisiones técnicas, éticas y de privacidad."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos del PLN y procesamiento de texto en español",
+      "description": "Al finalizar la unidad, el estudiante construye un pipeline reproducible de limpieza, normalización, anonimización y tokenización de textos en español peruano, caracteriza el corpus con las leyes de Zipf y Heaps, y estima modelos de lenguaje de n-gramas evaluados con perplejidad.",
+      "topics": [
+        "Niveles lingüísticos, ambigüedad y paradigmas del procesamiento de lenguaje natural",
+        "Diversidad lingüística del Perú, corpus y anotación",
+        "Expresiones regulares, Unicode, normalización y anonimización según la Ley 29733",
+        "Tokenización por palabras y subpalabras, lematización y estadísticas de corpus",
+        "Modelos de lenguaje de n-gramas, suavizado y perplejidad"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué es el procesamiento de lenguaje natural?",
+          "bullets": [
+            "Disciplina que combina lingüística, estadística y computación para que las máquinas analicen, comprendan y generen lenguaje humano escrito u oral.",
+            "Tareas de análisis: clasificación, extracción de entidades, análisis sintáctico y búsqueda; tareas de generación: traducción, resumen y respuesta a preguntas.",
+            "Tres paradigmas históricos: reglas escritas por expertos (1950-1990), métodos estadísticos (1990-2012) y redes neuronales preentrenadas (2013 a la fecha).",
+            "En este curso recorremos los tres: cada paradigma sigue vigente cuando los datos, el presupuesto o la explicabilidad lo exigen."
+          ],
+          "notes": "Abra la sesión preguntando qué aplicaciones de lenguaje usaron hoy: el corrector del celular, el filtro de correo no deseado, el autocompletado del buscador o el asistente de voz. Todas son procesamiento de lenguaje natural. Explique la evolución histórica con hitos concretos: ELIZA, de Joseph Weizenbaum (1966), simulaba a un terapeuta con reglas de patrones; en los noventa, los modelos estadísticos de traducción de IBM aprendieron de textos paralelos del Parlamento canadiense; en 2013 word2vec popularizó los embeddings y en 2018 BERT inauguró la era de los modelos preentrenados. Insista en que el paradigma más nuevo no siempre es el mejor: una entidad pública con poco presupuesto y obligación de explicar sus decisiones puede preferir reglas o un modelo lineal. Pregunta para la clase: ¿qué organización peruana recibe miles de textos al día y qué decisión podría mejorar con PLN? Anote las respuestas en el foro; se retomarán como insumo del proyecto integrador de la unidad 4."
+        },
+        {
+          "title": "Niveles del análisis lingüístico",
+          "bullets": [
+            "Morfología: estructura interna de las palabras; un verbo regular español tiene más de cincuenta formas conjugadas («cobrábamos», «cobraríais»).",
+            "Sintaxis: relaciones entre palabras; los árboles de dependencias identifican sujeto, objeto y modificadores de cada verbo.",
+            "Semántica: significado de palabras y oraciones; sinonimia, polisemia, antonimia e implicación entre enunciados.",
+            "Pragmática y discurso: intención comunicativa, ironía, correferencia y contexto de la conversación."
+          ],
+          "notes": "Use una misma oración para recorrer los niveles: «El banco me cobró dos veces la comisión». En morfología, «cobró» contiene la raíz cobr-, tiempo pretérito, tercera persona y número singular; recuerde que la riqueza flexiva del español multiplica el vocabulario frente al inglés, donde un verbo tiene apenas cuatro o cinco formas. En sintaxis, «el banco» es el sujeto y «la comisión» el objeto directo; un árbol de dependencias lo hace explícito. En semántica, «banco» se refiere a una entidad financiera y no a un asiento. En pragmática, el cliente no informa: reclama, y espera una devolución. Pida a los estudiantes que identifiquen en qué nivel fallaría un sistema que clasifica «Qué buen servicio, tres horas en cola» como elogio. La respuesta es pragmática, pues hay ironía. Cierre señalando que cada nivel corresponde a tareas que veremos: lematización en esta unidad, clasificación en la unidad 2, análisis sintáctico y entidades en la unidad 3 y representaciones contextuales en la unidad 4."
+        },
+        {
+          "title": "La ambigüedad: el problema central del PLN",
+          "bullets": [
+            "Léxica: «banco» (entidad financiera o asiento), «cola» (fila o gaseosa), «palta» (fruto o vergüenza en el habla peruana).",
+            "Sintáctica: «Vi al gerente con el telescopio» admite dos árboles; quién tiene el telescopio cambia el significado.",
+            "Referencial: en «La SUNAT notificó a la empresa porque no declaró», ¿quién no declaró? Exige resolver correferencia.",
+            "Los modelos resuelven la ambigüedad con contexto y probabilidades, nunca con certeza absoluta; por eso se evalúan con métricas."
+          ],
+          "notes": "La ambigüedad es la razón por la cual el lenguaje no se procesa con un diccionario. Muestre los tres tipos con ejemplos peruanos: «palta» puede ser un fruto o una situación embarazosa; «cola» puede ser una fila en el banco o una gaseosa. La ambigüedad sintáctica del telescopio es un clásico de los manuales de Jurafsky y Martin: dibuje ambos árboles en la pizarra virtual y pida a los estudiantes que voten cuál es el correcto, para que noten que sin contexto no hay respuesta única. La ambigüedad referencial obliga a resolver la correferencia: el conocimiento del mundo indica que quien no declaró fue la empresa, no la SUNAT. Explique que los sistemas modernos no eliminan la ambigüedad, sino que estiman la interpretación más probable dado el contexto. Pregunta para la clase: ¿cómo debería comportarse un sistema de atención al cliente cuando su confianza en la interpretación es baja? Guíe hacia la idea de derivar el caso a una persona, que formalizaremos con umbrales en la unidad 2."
+        },
+        {
+          "title": "Diversidad lingüística del Perú e implicancias técnicas",
+          "bullets": [
+            "Censo 2017 (INEI): 82,6 % aprendió castellano como lengua materna, 13,9 % quechua y 1,7 % aimara.",
+            "El Ministerio de Cultura reconoce 48 lenguas originarias, 44 amazónicas y 4 andinas, en su mayoría con escasos recursos digitales.",
+            "El español peruano incorpora préstamos del quechua («yapa», «choclo», «cancha»), jerga («chamba», «jato», «al toque») y alternancia de código.",
+            "Modelos entrenados con prensa o español peninsular pierden exactitud en mensajes ciudadanos, redes sociales y zonas andinas o amazónicas."
+          ],
+          "notes": "Presente las cifras del Censo Nacional 2017 del INEI sobre lengua materna y recuerde que el artículo 48 de la Constitución reconoce como idiomas oficiales al castellano y, en las zonas donde predominen, al quechua, el aimara y las demás lenguas originarias. Para un técnico en inteligencia artificial esto no es cultura general: define quién queda fuera de un servicio automatizado. Mencione la tarea compartida AmericasNLP 2021, que evaluó traducción automática para lenguas como quechua, aimara, asháninka y shipibo-konibo, con resultados muy inferiores a los obtenidos en idiomas con abundantes datos. Muestre ejemplos anonimizados con jerga («la chamba está al toque»), préstamos quechuas y mezcla de idiomas. Conecte con la Ley 29735, que reconoce el derecho de las personas a ser atendidas por el Estado en su lengua originaria. Pregunta para la clase: si una entidad pública despliega un asistente que solo entiende español estándar, ¿qué sesgo introduce y con qué métrica desagregada lo detectaría?"
+        },
+        {
+          "title": "Corpus, documentación y anotación",
+          "bullets": [
+            "Corpus: colección de textos con un propósito definido; documentar fuente, periodo, dominio, variedad lingüística, autores y licencia.",
+            "Recursos de referencia en español: AnCora (anotación morfosintáctica y semántica), CoNLL-2002 (entidades nombradas) y Universal Dependencies.",
+            "Fuentes peruanas abiertas: normas legales del diario oficial El Peruano, Plataforma Nacional de Datos Abiertos y resoluciones publicadas por entidades reguladoras.",
+            "Anotar exige guía escrita, doble anotación de una muestra y acuerdo medido con kappa de Cohen antes de entrenar modelos."
+          ],
+          "notes": "Defina corpus con precisión: no es cualquier carpeta de textos, sino una colección construida con un propósito y documentada. Muestre los elementos de una declaración de datos según Bender y Friedman (2018): procedencia, periodo, variedad lingüística, demografía de los autores, proceso de anotación y licencia. Presente los recursos de referencia: AnCora, desarrollado en la Universidad de Barcelona, con unas 500 000 palabras del español anotadas; el corpus CoNLL-2002 de noticias de la agencia EFE para entidades nombradas; y los bancos de árboles del español de Universal Dependencies. Luego señale fuentes peruanas: El Peruano publica diariamente normas legales y la Plataforma Nacional de Datos Abiertos ofrece conjuntos del Estado. Explique el kappa de Cohen, κ = (pₒ − pₑ) / (1 − pₑ), que descuenta del acuerdo observado el acuerdo esperado por azar. Pregunta para la clase: si dos anotadores coinciden en el 90 % de los casos, pero una clase representa el 85 % de los datos, ¿es un buen acuerdo? Calculen juntos pₑ para mostrar que el kappa puede ser modesto."
+        },
+        {
+          "title": "Expresiones regulares: patrones para extraer y limpiar",
+          "bullets": [
+            "Metacaracteres esenciales: \\d dígito, \\w carácter de palabra, \\s espacio, \\b frontera y cuantificadores *, +, ? y {n,m}.",
+            "DNI: \\b\\d{8}\\b; RUC: \\b(10|15|17|20)\\d{9}\\b; celular: \\b9\\d{8}\\b; correo: [\\w.+-]+@[\\w-]+\\.[\\w.]+",
+            "Grupos de captura y re.sub permiten reemplazar datos personales por etiquetas como <DNI> o <RUC>.",
+            "Riesgo: un patrón demasiado amplio genera falsos positivos, pues un monto de ocho dígitos no es un DNI; validar siempre con muestras."
+          ],
+          "notes": "Las expresiones regulares, formalizadas por Stephen Kleene en la década de 1950, siguen siendo la herramienta más eficiente para patrones bien definidos. Muestre en vivo el módulo re de Python, siempre con cadenas crudas, que llevan el prefijo r, para que la barra invertida no se interprete como secuencia de escape. Trabaje los patrones peruanos: el DNI tiene ocho dígitos; el RUC tiene once y comienza con 10 para personas naturales o 20 para personas jurídicas; los celulares tienen nueve dígitos y comienzan con 9. Luego provoque el error: aplique el patrón de DNI a «Monto adeudado: 12345678 soles» y observe el falso positivo. Discuta cómo el contexto mejora la precisión, por ejemplo exigiendo que el número esté precedido por «DNI», «D.N.I.» o «documento». Pregunta para la clase: en anonimización, ¿es preferible un patrón amplio con falsos positivos o uno estricto que deje pasar algunos DNI? Conduzca a la conclusión de que la exhaustividad es prioritaria cuando existe riesgo legal y reputacional."
+        },
+        {
+          "title": "Unicode y decisiones de normalización",
+          "bullets": [
+            "Una «é» puede codificarse como un carácter (U+00E9) o como «e» más tilde combinante (U+0301); normalizar a NFC evita duplicados.",
+            "Decisiones típicas: minúsculas, tildes, signos, números y espacios repetidos; cada transformación descarta información.",
+            "Eliminar tildes confunde «papa» y «papá» o «esta» y «está»; en español conviene conservarlas salvo evidencia contraria.",
+            "Normalizar jerga y abreviaturas («xq» → «porque», «q» → «que») con diccionarios derivados del propio corpus, no de listas genéricas."
+          ],
+          "notes": "Demuestre el problema de Unicode con Python: compare la longitud de «é» escrita con el carácter precompuesto y con la tilde combinante; la primera mide 1 y la segunda 2, y la comparación de igualdad devuelve False. Textos copiados de PDF, de procesadores de texto o de teclados móviles mezclan ambas formas, y un modelo las trataría como palabras distintas. La solución es aplicar unicodedata.normalize con la forma NFC como primer paso del pipeline. Muestre también el mojibake típico, como «cobrÃ³», producido al leer UTF-8 como Latin-1, y cómo se corrige antes de cualquier análisis. Luego discuta cada decisión de normalización como un intercambio: pasar a minúsculas une «Lima» y «lima», pero confunde la ciudad con el verbo limar; eliminar tildes reduce variantes informales, pero fusiona «papa» y «papá». Proponga construir el diccionario de jerga a partir de las palabras fuera de vocabulario más frecuentes del corpus. Pregunta: ¿qué normalización aplicaría a mensajes de WhatsApp y cuál a resoluciones legales?"
+        },
+        {
+          "title": "Anonimización de textos y Ley 29733",
+          "bullets": [
+            "La Ley 29733 y su reglamento protegen los datos personales; salud, origen étnico o creencias son datos sensibles con protección reforzada.",
+            "Principios aplicables: consentimiento, finalidad, proporcionalidad, calidad y seguridad; el texto libre suele contener datos no previstos.",
+            "Estrategia en capas: expresiones regulares para identificadores, reconocimiento de entidades para nombres y direcciones, y revisión humana de una muestra.",
+            "Medir la anonimización priorizando la exhaustividad: un DNI no detectado es una fuga de datos personales."
+          ],
+          "notes": "Explique que la Ley 29733, Ley de Protección de Datos Personales, y su reglamento se aplican a todo tratamiento de datos de personas naturales en el Perú, y que la Autoridad Nacional de Protección de Datos Personales, del Ministerio de Justicia y Derechos Humanos, puede fiscalizar y sancionar. El texto libre es especialmente riesgoso: un cliente puede escribir su diagnóstico médico en un reclamo y convertir el corpus en uno con datos sensibles. Diferencie la seudonimización, que reemplaza identificadores, pero permite reidentificar con una clave, de la anonimización, que lo impide de forma irreversible. Cite el estudio de Latanya Sweeney (2000), que mostró que el 87 % de la población estadounidense podía identificarse solo con código postal, sexo y fecha de nacimiento: los cuasiidentificadores también importan. Pregunta para la clase: ¿el nombre de un caserío pequeño junto con una profesión poco común constituye un dato personal? Concluya que el análisis de riesgo debe hacerse sobre combinaciones de atributos, no sobre campos aislados."
+        },
+        {
+          "title": "Tokenización por palabras",
+          "bullets": [
+            "Tokenizar es segmentar el texto en unidades; en español se decide sobre contracciones («al», «del»), clíticos («dámelo») y signos de apertura.",
+            "Casos difíciles: «S/ 1 250,50», «D. Leg. 1057», correos electrónicos, emoticonos, menciones y etiquetas de redes sociales.",
+            "Herramientas: tokenizador de spaCy con reglas y excepciones por idioma, NLTK y expresiones regulares propias del dominio.",
+            "Un error de tokenización se propaga a todas las etapas siguientes: auditar el tokenizador con ejemplos reales del dominio."
+          ],
+          "notes": "Muestre que tokenizar no es simplemente separar por espacios. Ejecute split sobre «¿Me cobraron S/ 1 250,50 por el D. Leg. 1057?» y luego el tokenizador de spaCy para español: el primero deja «¿Me» y «1057?» pegados a los signos; el segundo separa los signos, pero puede fragmentar el monto en varias piezas. En español, los signos de apertura ¿ y ¡ no existen en inglés y muchas herramientas importadas los manejan mal. Discuta los clíticos: «dámelo» contiene tres unidades gramaticales, y separarlas o no depende de la tarea. En redes sociales aparecen etiquetas, menciones y emoticonos que llevan información de sentimiento y no deberían descartarse sin análisis. Proponga una práctica profesional: reunir cincuenta oraciones difíciles del dominio y verificar el tokenizador con pruebas automatizadas, como se hizo con pytest en Fundamentos de Programación en Python. Pregunta para la clase: ¿cómo debería tokenizarse un número de expediente judicial como 00123-2024-0-1801-JR-CI-01 y por qué importa en la unidad 3?"
+        },
+        {
+          "title": "Tokenización por subpalabras: BPE, WordPiece y SentencePiece",
+          "bullets": [
+            "Los vocabularios de palabras completas crecen sin límite y dejan palabras fuera de vocabulario en producción.",
+            "BPE (Sennrich, Haddow y Birch, 2016) parte de caracteres y fusiona iterativamente el par adyacente más frecuente hasta el tamaño deseado.",
+            "Palabras frecuentes quedan enteras y las raras se componen de fragmentos: ninguna palabra queda sin representación.",
+            "WordPiece (BERT) y SentencePiece (Kudo y Richardson, 2018) son las variantes usadas por los modelos preentrenados de la unidad 4."
+          ],
+          "notes": "Explique BPE con un ejemplo pequeño en la pizarra: un corpus con «cobro» diez veces, «cobros» seis veces y «cobrado» cuatro veces. Se parte de caracteres más un símbolo de fin de palabra; el par más frecuente, «c» y «o», se fusiona en «co», luego «co» y «b» en «cob», y así sucesivamente. Tras suficientes fusiones, las palabras frecuentes quedan como un solo token y las raras se componen de subpalabras. El tamaño del vocabulario es un hiperparámetro: el BERT original usa unas 30 000 unidades WordPiece y BETO, alrededor de 31 000. SentencePiece trata el texto como un flujo de caracteres que incluye el espacio, lo que lo hace independiente del idioma y útil para lenguas aglutinantes. Muestre que una palabra quechua como «wasikunapi», que significa «en las casas» y combina raíz, plural y locativo, se segmenta mejor con subpalabras. Pregunta para la clase: ¿qué ocurre con la longitud en tokens de un texto escrito en una lengua poco representada en el entrenamiento del tokenizador, y cómo afecta al costo?"
+        },
+        {
+          "title": "Lematización, stemming y palabras vacías",
+          "bullets": [
+            "Stemming (Porter, Snowball) recorta sufijos con reglas: «cobraron» y «cobrando» → «cobr»; es rápido, pero produce raíces que no son palabras.",
+            "Lematización usa morfología y categoría gramatical: «fuimos» → «ir» o «ser» según el contexto; spaCy la incluye en es_core_news.",
+            "Palabras vacías («de», «la», «que») reducen dimensionalidad, pero eliminar «no» o «sin» invierte la polaridad de un reclamo.",
+            "Regla práctica: decidir cada paso según la tarea y validarlo con el desempeño final, no por costumbre."
+          ],
+          "notes": "Compare con spaCy y con el SnowballStemmer de NLTK la misma lista de formas: «cobraron», «cobrando», «cobro», «cobros». El stemmer devuelve raíces truncadas que no son palabras, pero es rápido y no requiere modelo; el lematizador devuelve formas de diccionario, aunque se equivoca con formas ambiguas como «fuimos», que puede provenir de ir o de ser. Luego haga el experimento clave de palabras vacías: cargue la lista de NLTK para español y verifique que incluye «no», «sin» y «muy». Eliminarlas convierte «no me devolvieron el dinero» en «devolvieron dinero», lo que invierte el sentido del reclamo. Explique que con TF-IDF y modelos lineales eliminar palabras vacías suele aportar poco, y que con transformadores casi nunca se hace, porque el modelo necesita la oración completa. Pregunta para la clase: diseñe una lista de palabras vacías para clasificar reclamos bancarios y justifique tres palabras de la lista estándar que no eliminaría. Recoja las respuestas para contrastarlas con los resultados de la unidad 2."
+        },
+        {
+          "title": "Estadísticas de corpus: leyes de Zipf y de Heaps",
+          "bullets": [
+            "Zipf: la frecuencia de una palabra es aproximadamente inversamente proporcional a su rango, f(r) ≈ C / r^α, con α cercano a 1.",
+            "Pocas palabras concentran gran parte del texto y una fracción importante del vocabulario aparece una sola vez (hapax legomena).",
+            "Heaps: el vocabulario crece como V(N) = K·N^β, con β típicamente entre 0,4 y 0,6; siempre aparece vocabulario nuevo.",
+            "Implicancia: en producción habrá palabras nunca vistas; de ahí la necesidad de suavizado, subpalabras y n-gramas de caracteres."
+          ],
+          "notes": "Calcule en vivo la distribución de frecuencias de un corpus de normas legales de El Peruano con collections.Counter y grafíquela en escala doble logarítmica: la recta descendente es la firma de la ley de Zipf. Explique que en casi cualquier corpus las cien palabras más frecuentes cubren cerca de la mitad de los tokens, mientras que muchas palabras aparecen una sola vez. La ley de Heaps complementa esta observación: al duplicar el tamaño del corpus, el vocabulario no se duplica, pero sigue creciendo. Ajuste los parámetros K y β con una regresión lineal sobre logaritmos, conectando con lo aprendido en Aprendizaje Automático I. Haga el cálculo rápido: si con 500 000 tokens hay 18 000 tipos y con un millón hay 27 000, entonces β = log 1,5 / log 2 ≈ 0,58. La consecuencia práctica es fundamental: en producción siempre aparecerán palabras nuevas, como nombres de programas sociales, distritos o normas recién publicadas. Pregunta para la clase: ¿qué estrategias del curso permiten manejar esas palabras desconocidas?"
+        },
+        {
+          "title": "Modelos de lenguaje de n-gramas",
+          "bullets": [
+            "Un modelo de lenguaje asigna probabilidad a secuencias: P(w₁…wₙ) = Π P(wᵢ | w₁…wᵢ₋₁), por la regla de la cadena.",
+            "Supuesto de Markov: el bigrama aproxima P(wᵢ | wᵢ₋₁) = C(wᵢ₋₁ wᵢ) / C(wᵢ₋₁) por máxima verosimilitud.",
+            "Aplicaciones: autocompletado, corrección ortográfica, reconocimiento de voz y detección de textos anómalos o fraudulentos.",
+            "Limitación: un n-grama no visto recibe probabilidad cero y anula la probabilidad de toda la oración."
+          ],
+          "notes": "Formalice el modelo de lenguaje como una distribución de probabilidad sobre secuencias. Con la regla de la cadena, la probabilidad de una oración es el producto de probabilidades condicionales; como el historial completo casi nunca se repite, el supuesto de Markov limita el contexto a una o dos palabras previas. Calcule a mano con un corpus de juguete de tres oraciones: «el pago fue rechazado», «el pago fue aprobado» y «el cobro fue indebido». Estime P(fue | pago) = 2/2 = 1 y P(rechazado | fue) = 1/3. Pida calcular la probabilidad de «el cobro fue rechazado» y luego la de «el pago fue anulado»: la segunda es cero, porque el bigrama «fue anulado» nunca se observó. Recomiende trabajar con sumas de logaritmos para evitar el subdesbordamiento numérico en oraciones largas. Cierre señalando que los grandes modelos de lenguaje que estudiarán en el quinto ciclo resuelven exactamente la misma tarea, predecir la siguiente unidad, pero con redes neuronales y contextos de miles de tokens."
+        },
+        {
+          "title": "Suavizado y evaluación con perplejidad",
+          "bullets": [
+            "Laplace: P(wᵢ | wᵢ₋₁) = (C(wᵢ₋₁ wᵢ) + 1) / (C(wᵢ₋₁) + V); es simple, pero resta demasiada probabilidad a lo observado.",
+            "Interpolación y Kneser-Ney combinan órdenes de n-grama y premian palabras que aparecen en contextos diversos.",
+            "Perplejidad: PP(W) = P(w₁…w_N)^(−1/N); un valor menor indica mejor modelo sobre el mismo vocabulario y conjunto de prueba.",
+            "Comparar perplejidades solo es válido con igual tokenización y vocabulario; de lo contrario, la comparación engaña."
+          ],
+          "notes": "Muestre el suavizado de Laplace sobre el ejemplo anterior: sumar uno a todos los conteos elimina los ceros, pero con vocabularios grandes reparte demasiada probabilidad entre eventos nunca vistos. Explique intuitivamente Kneser-Ney con un ejemplo local: «Lurigancho» es frecuente en un corpus limeño, pero casi siempre aparece después de «San Juan de»; por eso no debería ser una buena predicción en un contexto nuevo, y Kneser-Ney lo penaliza porque aparece en pocos contextos distintos. Luego defina la perplejidad como la inversa de la probabilidad del conjunto de prueba normalizada por el número de palabras; se interpreta como el número efectivo de opciones equiprobables que el modelo considera en cada paso. Calcule un ejemplo: si un modelo asigna probabilidad 1/8 a cada palabra, su perplejidad es 8. Pregunta para la clase: un compañero reporta perplejidad 45 con un tokenizador por palabras y otro reporta 60 con subpalabras; ¿quién tiene el mejor modelo? La respuesta correcta es que no puede afirmarse sin igualar las condiciones."
+        }
+      ],
+      "reading": {
+        "title": "Del texto crudo al modelo de lenguaje: preprocesamiento y n-gramas en español peruano",
+        "minutes": 40,
+        "content": "## 1. El preprocesamiento es una decisión de modelado\n\nTodo sistema de PLN comienza con una cadena de caracteres y termina con una decisión: derivar un reclamo, detectar una entidad o responder una consulta. Entre ambos extremos, el preprocesamiento define qué información conserva el modelo y cuál descarta. Jurafsky y Martin insisten en que normalizar, tokenizar y segmentar no son pasos neutros: cada uno incorpora supuestos sobre el idioma y la tarea. En el Perú, donde el castellano convive con el quechua, el aimara y 44 lenguas amazónicas, y donde el español de los canales digitales está lleno de jerga y abreviaturas, esos supuestos importan todavía más.\n\n## 2. Un pipeline mínimo, ordenado y auditable\n\nUn pipeline profesional se compone de funciones pequeñas, probadas y ejecutadas en un orden explícito: normalización Unicode, anonimización, limpieza de forma, tokenización y, solo si la tarea lo justifica, lematización y filtrado.\n\n```python\nimport re, unicodedata\n\nPATRONES = {\n    \"<DNI>\": re.compile(r\"(?i)\\b(?:dni|d\\.n\\.i\\.)\\s*:?\\s*\\d{8}\\b\"),\n    \"<RUC>\": re.compile(r\"\\b(?:10|15|17|20)\\d{9}\\b\"),\n    \"<CELULAR>\": re.compile(r\"\\b9\\d{8}\\b\"),\n    \"<CORREO>\": re.compile(r\"[\\w.+-]+@[\\w-]+\\.[\\w.]+\"),\n}\n\ndef normalizar(texto: str) -> str:\n    texto = unicodedata.normalize(\"NFC\", texto)   # una sola forma para «é»\n    for etiqueta, patron in PATRONES.items():     # anonimizar ANTES de limpiar\n        texto = patron.sub(etiqueta, texto)\n    return re.sub(r\"\\s+\", \" \", texto).strip()      # espacios repetidos\n\nprint(normalizar(\"Mi DNI: 45678912, cel 987654321, me cobraron dos veces\"))\n# Mi <DNI>, cel <CELULAR>, me cobraron dos veces\n```\n\nObserve dos decisiones. La primera: la anonimización ocurre antes que cualquier otra limpieza, porque un paso posterior, por ejemplo eliminar signos, podría romper el patrón y dejar el dato expuesto. La Ley 29733 exige medidas de seguridad proporcionales al riesgo, y un corpus de texto libre puede contener datos sensibles, como diagnósticos médicos, que nadie previó al diseñar el formulario. La segunda: el patrón de DNI exige el contexto «DNI», lo que reduce falsos positivos con montos; a cambio, un DNI escrito sin esa palabra quedaría expuesto. Por eso la anonimización se evalúa con una muestra revisada manualmente y se reporta la exhaustividad por tipo de dato.\n\n## 3. Tokenización: palabras y subpalabras\n\nPara modelos clásicos, la tokenización por palabras con reglas del idioma suele bastar. spaCy separa los signos de apertura y cierre, reconoce abreviaturas y entrega lema y categoría gramatical:\n\n```python\nimport spacy\nnlp = spacy.load(\"es_core_news_sm\")\ndoc = nlp(\"¿Por qué me cobraron S/ 50 si pagué al toque?\")\nprint([(t.text, t.lemma_, t.pos_) for t in doc][:6])\n```\n\nPara modelos neuronales se usa tokenización por subpalabras. BPE (Sennrich, Haddow y Birch, 2016) inicia con caracteres y fusiona de manera iterativa el par adyacente más frecuente. Con vocabularios de 30 000 a 50 000 unidades, las palabras frecuentes quedan enteras y las raras se descomponen, de modo que no existen palabras fuera de vocabulario. Esto es valioso en lenguas aglutinantes como el quechua, donde «wasikunapi» (en las casas) une raíz, plural y locativo.\n\n## 4. Las leyes estadísticas del lenguaje\n\nLa ley de Zipf establece que la frecuencia de una palabra es aproximadamente inversamente proporcional a su rango, f(r) ≈ C / r^α, con α cercano a 1. La ley de Heaps describe el crecimiento del vocabulario, V(N) = K·N^β, con β entre 0,4 y 0,6. Juntas explican por qué ningún corpus es suficiente: siempre aparecerán palabras nuevas, como el nombre de un programa social recién creado o una norma publicada ayer.\n\n## 5. Modelos de lenguaje de n-gramas\n\nUn modelo de lenguaje estima la probabilidad de una secuencia. Con la regla de la cadena y el supuesto de Markov de primer orden:\n\n```text\nP(w1, ..., wN) ≈ Π P(wi | wi-1)          P_MV(wi | wi-1) = C(wi-1 wi) / C(wi-1)\nP_Laplace(wi | wi-1) = (C(wi-1 wi) + 1) / (C(wi-1) + V)\nPP(W) = exp( -(1/N) · Σ log P(wi | wi-1) )\n```\n\nLa estimación por máxima verosimilitud asigna cero a los bigramas no observados; el suavizado de Laplace lo corrige sumando uno a cada conteo, donde V es el tamaño del vocabulario. La perplejidad PP mide cuán sorprendido queda el modelo ante el conjunto de prueba.\n\n```python\nimport math\nfrom collections import Counter\n\ndef entrenar(oraciones):\n    uni, bi = Counter(), Counter()\n    for o in oraciones:\n        toks = [\"<s>\"] + o.split() + [\"</s>\"]\n        uni.update(toks[:-1])                     # conteo de contextos\n        bi.update(zip(toks[:-1], toks[1:]))\n    V = len({w for o in oraciones for w in o.split()} | {\"</s>\"})\n    return uni, bi, V\n\ndef perplejidad(oraciones, uni, bi, V):\n    log_p, N = 0.0, 0\n    for o in oraciones:\n        toks = [\"<s>\"] + o.split() + [\"</s>\"]\n        for a, b in zip(toks[:-1], toks[1:]):\n            log_p += math.log((bi[(a, b)] + 1) / (uni[a] + V))\n            N += 1\n    return math.exp(-log_p / N)\n```\n\nComparar perplejidades solo es legítimo si ambos modelos comparten tokenización, vocabulario y conjunto de prueba. Una perplejidad menor obtenida con un vocabulario más pequeño puede ser engañosa, porque el modelo elige entre menos opciones.\n\n## 6. Preguntas para la reflexión\n\n1. ¿Qué pasos del pipeline cambiaría si el corpus fueran actas notariales en lugar de mensajes de WhatsApp?\n2. ¿Por qué la anonimización debe evaluarse con exhaustividad y no con exactitud global?\n3. ¿Qué limitaciones de los n-gramas resuelven las representaciones de las unidades 3 y 4?"
+      },
+      "case": {
+        "title": "Caso: Caja Altiplano y los mensajes que nadie leía",
+        "content": "**Caja Altiplano** es una caja municipal de ahorro y crédito ficticia con sede en Puno y 38 agencias en Puno, Cusco, Arequipa y Tacna. Desde 2023 atiende consultas por WhatsApp, formulario web y Libro de Reclamaciones virtual. En los últimos doce meses acumuló 186 000 mensajes; el equipo de atención, de once personas, solo logra leer a tiempo el 60 %, y el resto recibe respuestas tardías o plantillas genéricas.\n\nLa gerente de Experiencia del Cliente, Rosa Mamani, encargó a Daniel Quispe, técnico en IA recién incorporado, preparar el corpus para un futuro clasificador. Un muestreo de 2 000 mensajes reveló lo siguiente:\n\n- 31 % contiene abreviaturas o jerga («xq», «q tal», «m cobraron», «al toke»).\n- 14 % incluye números de DNI, celulares o cuentas; 2 % menciona diagnósticos médicos para justificar reprogramaciones de deuda.\n- 7 % contiene palabras quechuas o aimaras («tayta», «allillanchu», «kamisaraki») y 1,5 % está escrito íntegramente en quechua.\n- 9 % llega con caracteres mal codificados («cobrÃ³») por un error de exportación del sistema anterior.\n- El vocabulario crece sin estabilizarse: 18 000 tipos con 500 000 tokens y 27 000 tipos con un millón de tokens.\n\nDaniel propone un pipeline «estándar» que encontró en un tutorial: pasar todo a minúsculas, eliminar tildes, signos, números y palabras vacías de NLTK, y aplicar stemming. Argumenta que así reduce el vocabulario a la mitad y acelera el entrenamiento.\n\nEl jefe de Riesgos, Hugo Condori, objeta que eliminar números borraría los montos en disputa, que la lista de palabras vacías incluye «no» y que no ve ningún control de datos personales. La oficial de Cumplimiento recuerda que la Ley 29733 exige proporcionalidad y medidas de seguridad, y que los diagnósticos médicos son datos sensibles. Además, el gerente regional de Puno pregunta si el sistema dejará de lado a los clientes que escriben en quechua, un segmento rural que la caja considera prioritario en su plan estratégico.\n\nRosa debe decidir en dos semanas qué pipeline aprobar, con qué controles de privacidad y si invertirá en recursos para el quechua, considerando que el presupuesto del proyecto es de S/ 120 000 para el primer año y que el directorio pidió resultados medibles antes del cierre del trimestre.",
+        "questions": [
+          "¿Qué pasos del pipeline propuesto por Daniel conservaría, modificaría o eliminaría, y qué evidencia del muestreo justifica cada decisión?",
+          "¿En qué orden deben ejecutarse la corrección de codificación, la anonimización y la normalización? Argumente con un mensaje de ejemplo.",
+          "Estime el exponente β de la ley de Heaps con los datos del caso. ¿Qué implica para la elección entre vocabulario de palabras y subpalabras?",
+          "¿Cómo atendería a los clientes que escriben en quechua o aimara sin excluirlos ni exceder el presupuesto? Proponga una alternativa con un indicador medible."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Pipeline de preprocesamiento y modelo de bigramas para un corpus peruano",
+        "instructions": "**Objetivo:** construir y evaluar un pipeline reproducible de preprocesamiento para textos en español peruano y un modelo de lenguaje de bigramas con suavizado.\n\n**Insumos:** corpus de 5 000 mensajes de atención al cliente seudonimizados, disponible en el aula virtual, o un corpus público de al menos 300 000 tokens aprobado por el docente, por ejemplo normas legales de El Peruano.\n\n**Qué entregar:**\n\n1. Cuaderno de Colab ejecutable de principio a fin, con funciones de normalización Unicode, anonimización (DNI, RUC, celular y correo) y tokenización, más al menos diez pruebas con assert o pytest.\n2. Evaluación de la anonimización sobre 200 mensajes revisados manualmente: precisión y exhaustividad por tipo de dato, con ejemplos de errores.\n3. Gráfico rango-frecuencia en escala logarítmica, estimación de los parámetros de Zipf y de Heaps, y porcentaje de hapax.\n4. Modelo de bigramas con suavizado de Laplace entrenado con el 80 % del corpus; perplejidad sobre el 20 % restante con dos configuraciones de preprocesamiento (por ejemplo, con y sin minúsculas) y discusión de la validez de la comparación.\n5. Informe de tres páginas en PDF con las decisiones justificadas y una hoja de datos breve del corpus.\n\n**Formato:** archivo comprimido con cuaderno, informe y requirements.txt, nombrado Apellido_Tarea1, subido al aula virtual hasta el domingo de la semana 4 a las 23:59. Trabajo individual; se verificará la reproducibilidad ejecutando el cuaderno completo.",
+        "rubric": [
+          {
+            "name": "Pipeline de normalización y anonimización con pruebas",
+            "points": 6
+          },
+          {
+            "name": "Evaluación de la anonimización por tipo de dato",
+            "points": 4
+          },
+          {
+            "name": "Estadísticas del corpus: Zipf, Heaps y hapax interpretados",
+            "points": 4
+          },
+          {
+            "name": "Modelo de bigramas, perplejidad y comparación válida",
+            "points": 6
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Preprocesamiento, tokenización y modelos de n-gramas",
+        "questions": [
+          {
+            "prompt": "Un equipo elimina las palabras vacías de NLTK antes de clasificar la polaridad de reclamos. ¿Cuál es el riesgo principal de esa decisión?",
+            "options": [
+              "Se eliminan negaciones como «no» y «sin», lo que puede invertir la polaridad del reclamo",
+              "Aumenta el tamaño del vocabulario y el tiempo de entrenamiento",
+              "Se pierden las tildes y se confunden palabras como «papa» y «papá»",
+              "El modelo deja de reconocer los signos de apertura ¿ y ¡"
+            ],
+            "correct": 0,
+            "explanation": "Las listas estándar de palabras vacías en español incluyen «no», «sin» y «muy»; eliminarlas borra justamente las palabras que determinan la polaridad. Filtrar palabras vacías reduce el vocabulario y no afecta tildes ni signos."
+          },
+          {
+            "prompt": "El patrón \\b\\d{8}\\b para DNI, aplicado a facturas, detecta también montos de ocho dígitos. ¿Qué cambio aumenta la precisión sin abandonar las expresiones regulares?",
+            "options": [
+              "Reemplazar \\d por \\w para admitir letras",
+              "Eliminar la frontera de palabra \\b para capturar más casos",
+              "Exigir un contexto previo como «DNI» o «documento» antes de los ocho dígitos",
+              "Convertir todo el texto a minúsculas antes de aplicar el patrón"
+            ],
+            "correct": 2,
+            "explanation": "El contexto léxico distingue un documento de identidad de un monto. Las otras opciones amplían el patrón o no influyen en los dígitos, por lo que no reducen los falsos positivos."
+          },
+          {
+            "prompt": "Un corpus tiene 18 000 tipos con 500 000 tokens y 27 000 tipos con 1 000 000 de tokens. Según la ley de Heaps, ¿cuál es el valor aproximado de β?",
+            "options": [
+              "0,26",
+              "0,58",
+              "1,50",
+              "0,90"
+            ],
+            "correct": 1,
+            "explanation": "Al duplicar N, V se multiplica por 2^β; entonces β = log(27 000/18 000) / log 2 = log 1,5 / log 2 ≈ 0,58, dentro del rango típico de 0,4 a 0,6."
+          },
+          {
+            "prompt": "En un corpus, C(fue) = 3, C(fue rechazado) = 1 y el vocabulario tiene V = 9 tipos. ¿Cuál es P(rechazado | fue) con suavizado de Laplace?",
+            "options": [
+              "1/3",
+              "1/12",
+              "2/9",
+              "2/12"
+            ],
+            "correct": 3,
+            "explanation": "Con Laplace: (C(fue rechazado) + 1) / (C(fue) + V) = (1 + 1) / (3 + 9) = 2/12. La estimación sin suavizado sería 1/3."
+          },
+          {
+            "prompt": "El modelo A obtiene perplejidad 45 con tokenización por palabras y el modelo B, 60 con subpalabras, sobre el mismo texto. ¿Qué conclusión es correcta?",
+            "options": [
+              "A es mejor porque su perplejidad es menor",
+              "B es mejor porque las subpalabras siempre generalizan más",
+              "No pueden compararse directamente porque difieren el vocabulario y el número de tokens",
+              "Son equivalentes porque la diferencia es menor al 50 %"
+            ],
+            "correct": 2,
+            "explanation": "La perplejidad se normaliza por el número de tokens y depende del vocabulario; con tokenizaciones distintas, los valores no son comparables sin una normalización común, por ejemplo por carácter."
+          },
+          {
+            "prompt": "¿Por qué la normalización Unicode NFC debe ser uno de los primeros pasos del pipeline?",
+            "options": [
+              "Porque elimina las tildes y reduce el vocabulario",
+              "Porque unifica caracteres visualmente idénticos con codificaciones distintas, que de otro modo se tratarían como palabras diferentes",
+              "Porque convierte el texto a ASCII, compatible con todos los modelos",
+              "Porque separa automáticamente los signos de puntuación de las palabras"
+            ],
+            "correct": 1,
+            "explanation": "Una «é» precompuesta y una «e» con tilde combinante se ven iguales, pero son cadenas distintas. NFC las unifica sin eliminar tildes ni convertir a ASCII."
+          },
+          {
+            "prompt": "¿Qué ventaja ofrece la tokenización BPE frente a un vocabulario de palabras completas en una lengua aglutinante como el quechua?",
+            "options": [
+              "Garantiza que cada token corresponda a un morfema lingüísticamente correcto",
+              "Reduce a la mitad la longitud de las secuencias en todos los idiomas",
+              "Elimina la necesidad de contar con datos de entrenamiento",
+              "Representa cualquier palabra nueva como combinación de subpalabras conocidas, sin tokens fuera de vocabulario"
+            ],
+            "correct": 3,
+            "explanation": "BPE compone palabras raras o nuevas con fragmentos frecuentes. Sus fragmentos son estadísticos, no necesariamente morfemas, y su entrenamiento sí requiere un corpus."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Representación vectorial y clasificación de textos",
+      "description": "Al finalizar la unidad, el estudiante representa documentos con bolsa de palabras, TF-IDF y BM25, y construye, evalúa e interpreta clasificadores lineales de texto para categorizar reclamos y analizar sentimiento, eligiendo métricas y umbrales según el desbalance de clases y el costo del error.",
+      "topics": [
+        "Bolsa de palabras, n-gramas y ponderación TF-IDF",
+        "Similitud coseno, recuperación de información y BM25",
+        "Naive Bayes multinomial, regresión logística y SVM lineal para texto",
+        "Evaluación con macro-F1, desbalance de clases y análisis de errores",
+        "Análisis de sentimiento en español, interpretabilidad y revisión humana"
+      ],
+      "slides": [
+        {
+          "title": "Del texto al vector: el modelo de espacio vectorial",
+          "bullets": [
+            "Gerard Salton propuso en los años setenta representar cada documento como un vector cuyas dimensiones son los términos del vocabulario.",
+            "La matriz documento-término tiene una columna por término: con 40 000 términos, cada reclamo activa menos del 0,1 % de ellas.",
+            "Las matrices dispersas (formato CSR de SciPy) guardan solo los valores distintos de cero y hacen viable el cálculo en memoria.",
+            "La representación fija el techo del modelo: ningún clasificador recupera información que el vector ya perdió."
+          ],
+          "notes": "Conecte con Álgebra Lineal Aplicada: cada documento es un punto en un espacio de alta dimensión y las operaciones de similitud son productos internos. Escriba en la pizarra una matriz documento-término con tres reclamos cortos y cinco términos, y pregunte qué información se perdió: el orden de las palabras, la puntuación y la relación entre «no» y el verbo que niega. Explique la dispersión con números: 100 000 reclamos por 40 000 términos generarían una matriz densa de 4000 millones de celdas, unos 32 GB en float64, mientras que en formato disperso ocupa unas decenas de megabytes, porque cada reclamo contiene unas treinta palabras distintas. Indique que los vectorizadores de scikit-learn devuelven precisamente matrices CSR. Pregunta para la clase: si dos reclamos usan palabras distintas para lo mismo, como «cobro indebido» y «me descontaron sin razón», ¿qué tan similares serán sus vectores? Deje la pregunta abierta: esta limitación motivará los embeddings de la unidad 3 y las representaciones contextuales de la unidad 4."
+        },
+        {
+          "title": "Bolsa de palabras y n-gramas",
+          "bullets": [
+            "CountVectorizer cuenta ocurrencias de cada término; pierde el orden, pero captura bien el tema del documento.",
+            "Los bigramas recuperan orden local: «no funciona», «cobro indebido» y «sin señal» se convierten en atributos propios.",
+            "Los n-gramas de caracteres (3 a 5) toleran errores y jerga: «devolución», «devolucion» y «debolucion» comparten fragmentos.",
+            "Hiperparámetros clave: ngram_range, min_df para descartar términos raros, max_df para términos omnipresentes y max_features."
+          ],
+          "notes": "Muestre en vivo cómo cambia el número de columnas al pasar de unigramas a bigramas en un corpus de 10 000 reclamos: típicamente se multiplica varias veces, y la mayoría de bigramas aparece una sola vez, por lo que min_df es indispensable. Explique por qué los bigramas importan en español: la negación precede al verbo («no funciona», «no llegó»), y un modelo de unigramas ve «funciona» como señal positiva. Luego presente los n-gramas de caracteres con el analizador char_wb, que respeta los límites de palabra; son la forma más barata de tolerar faltas ortográficas y variantes informales frecuentes en mensajes de WhatsApp. Advierta que combinar palabras y caracteres con FeatureUnion suele mejorar el desempeño a cambio de más memoria. Pregunta para la clase: en un corpus de resoluciones legales, redactadas con cuidado, ¿aportarían tanto los n-gramas de caracteres como en mensajes de clientes? Que argumenten en función del tipo de ruido presente en cada fuente."
+        },
+        {
+          "title": "Ponderación TF-IDF",
+          "bullets": [
+            "TF-IDF(t, d) = tf(t, d) × idf(t), con idf(t) = log(N / df(t)): premia términos frecuentes en el documento, pero raros en el corpus.",
+            "scikit-learn usa idf suavizado, ln((1 + N) / (1 + df)) + 1, y normaliza cada vector para que su norma L2 sea 1.",
+            "sublinear_tf=True reemplaza tf por 1 + log(tf) y evita que una palabra repetida diez veces domine el vector.",
+            "Un término presente en todos los documentos, como «cliente», recibe el peso mínimo y casi no discrimina entre clases."
+          ],
+          "notes": "Desarrolle un cálculo a mano con la fórmula suavizada de scikit-learn en un corpus de 1000 reclamos. Si «portabilidad» aparece en 20 documentos, su idf es ln(1001/21) + 1 ≈ 4,86; si «servicio» aparece en 600, su idf es ln(1001/601) + 1 ≈ 1,51. Así, una sola mención de «portabilidad» pesa más de tres veces que una de «servicio». Explique la intuición de Karen Spärck Jones (1972), quien propuso la frecuencia inversa de documentos: un término es informativo en la medida en que es específico. Luego muestre el efecto de la normalización L2: sin ella, los documentos largos tendrían vectores más grandes y parecerían más similares a todo. El parámetro sublinear_tf suele mejorar la clasificación de textos con repeticiones enfáticas, como «nunca nunca nunca me atendieron». Pregunta para la clase: ¿qué ocurre con el idf de un término nuevo que aparece en producción, pero que no existía en el entrenamiento? Respuesta: el vectorizador lo ignora, porque no forma parte del vocabulario ajustado."
+        },
+        {
+          "title": "Similitud coseno y búsqueda de documentos",
+          "bullets": [
+            "cos(a, b) = (a · b) / (‖a‖ ‖b‖); con vectores TF-IDF no negativos varía entre 0 (sin términos comunes) y 1.",
+            "Con vectores normalizados en L2, el coseno equivale al producto punto: buscar es multiplicar la consulta por la matriz.",
+            "Aplicaciones: detectar reclamos duplicados, sugerir respuestas de una base de conocimiento y agrupar documentos similares.",
+            "Limitación: sinónimos sin términos compartidos obtienen similitud cero, aunque signifiquen lo mismo."
+          ],
+          "notes": "Implemente en vivo un buscador mínimo de preguntas frecuentes de una municipalidad: vectorice cincuenta preguntas con TF-IDF, transforme la consulta del usuario con el mismo vectorizador y ordene por producto punto. Muestre que una búsqueda sobre 100 000 documentos se resuelve en milisegundos con una multiplicación de matriz dispersa por vector. Explique por qué se prefiere el coseno a la distancia euclidiana en texto: dos documentos sobre el mismo tema, uno corto y otro largo, tienen direcciones similares, aunque magnitudes distintas. Luego exponga la limitación con un ejemplo concreto: la consulta «no pasa el camión de basura» y la pregunta frecuente «¿cómo reporto la falta de recojo de residuos?» comparten casi ninguna palabra relevante y su similitud será muy baja. Pregunta para la clase: ¿qué técnicas de la unidad 1 podrían aumentar la coincidencia léxica entre ambas frases? Discutan la lematización y los diccionarios de sinónimos, y anticipe que la solución robusta llegará con los embeddings de oraciones de la unidad 4."
+        },
+        {
+          "title": "BM25: el estándar de la recuperación clásica",
+          "bullets": [
+            "BM25 (Robertson y Zaragoza, 2009) suma, por término, idf(t) · tf · (k₁ + 1) / (tf + k₁ · (1 − b + b · |d| / avgdl)).",
+            "k₁, entre 1,2 y 2,0, satura el efecto de la frecuencia: la décima repetición aporta mucho menos que la primera.",
+            "b, típicamente 0,75, penaliza los documentos largos que contienen el término solo por su extensión.",
+            "Es la similitud predeterminada de Lucene y Elasticsearch, y sigue siendo una línea base difícil de superar."
+          ],
+          "notes": "Presente BM25 como la evolución probabilística de TF-IDF desarrollada por Stephen Robertson y colaboradores a partir del modelo de independencia binaria. Explique la saturación con una gráfica: con k₁ = 1,2, pasar de una a dos menciones aumenta mucho el puntaje, pero pasar de diez a once casi no lo cambia; esto refleja que un documento no se vuelve diez veces más relevante por repetir diez veces una palabra. Luego explique la normalización por longitud con b: una resolución de cuarenta páginas contiene casi cualquier término, por lo que debe penalizarse frente a una ficha breve que lo menciona. Muestre la librería rank_bm25 en Python y compare su ranking con el de TF-IDF y coseno sobre las mismas preguntas frecuentes. Señale que en buscadores de normas o jurisprudencia, donde los usuarios escriben códigos exactos como «D. Leg. 728», BM25 suele ganar a métodos más sofisticados. Pregunta para la clase: ¿qué valor de b elegiría para un corpus de documentos de longitud muy homogénea, como tuits?"
+        },
+        {
+          "title": "Formulación de una tarea de clasificación de textos",
+          "bullets": [
+            "Tipos de tarea: binaria (fraude o no), multiclase (una categoría por reclamo) y multietiqueta (varios temas a la vez).",
+            "La taxonomía es una decisión de negocio: categorías exhaustivas, mutuamente excluyentes y asignables a un área responsable.",
+            "Definir la unidad de análisis: mensaje, conversación completa o expediente; cambia el tamaño y la naturaleza del dato.",
+            "Construir primero el conjunto de prueba con etiquetas revisadas y no tocarlo hasta la evaluación final."
+          ],
+          "notes": "Insista en que la mayor parte del éxito de un clasificador se decide antes de escribir código. Presente un ejemplo de taxonomía mal diseñada: «facturación», «cobros» y «reclamos de pago» se solapan, por lo que los analistas etiquetan de forma inconsistente y el modelo hereda esa confusión. Una buena taxonomía tiene categorías que se corresponden con un área que actuará sobre el caso, porque el objetivo de negocio es enrutar, no describir. Discuta la elección entre multiclase y multietiqueta: un reclamo puede mencionar a la vez un cobro indebido y una mala atención; si se fuerza una sola etiqueta, se pierde información y se generan desacuerdos. Explique también la unidad de análisis: clasificar mensajes sueltos de una conversación de WhatsApp produce fragmentos sin contexto. Finalmente, recalque la disciplina de reservar el conjunto de prueba desde el inicio. Pregunta para la clase: proponga una taxonomía de seis categorías para las consultas que recibe la mesa de partes digital de una universidad y defienda por qué son mutuamente excluyentes."
+        },
+        {
+          "title": "Naive Bayes multinomial",
+          "bullets": [
+            "Elige ĉ = argmax_c [log P(c) + Σᵢ log P(wᵢ | c)], suponiendo independencia condicional de las palabras dada la clase.",
+            "Con suavizado de Laplace: P(w | c) = (conteo(w, c) + 1) / (Σ conteos de c + |V|).",
+            "Se entrena en una sola pasada sobre los datos y funciona bien con pocos ejemplos y textos cortos.",
+            "Wang y Manning (2012) mostraron que Naive Bayes con bigramas compite con modelos más complejos en sentimiento de textos breves."
+          ],
+          "notes": "Recupere el teorema de Bayes visto en Estadística y Probabilidad y el clasificador Naive Bayes de Aprendizaje Automático I, y muestre su versión multinomial para texto. Calcule un ejemplo con dos clases, «facturación» y «señal», y cuatro palabras; pida a los estudiantes que obtengan la clase más probable para «no tengo señal en casa». Subraye que el supuesto de independencia es falso, porque «cobro» e «indebido» aparecen juntas, pero el clasificador funciona bien porque solo necesita ordenar correctamente las clases, no estimar probabilidades exactas. Por esa misma razón, sus probabilidades suelen estar mal calibradas y tienden a valores extremos cercanos a 0 o 1, lo que es un problema si se usarán umbrales. Explique por qué se suman logaritmos: el producto de cientos de probabilidades pequeñas produce subdesbordamiento numérico. Pregunta para la clase: ¿por qué Naive Bayes es una excelente primera línea base cuando una cooperativa solo tiene 800 reclamos etiquetados? Guíe hacia su bajo número de parámetros efectivos y su rapidez."
+        },
+        {
+          "title": "Regresión logística y SVM lineal para texto",
+          "bullets": [
+            "En espacios dispersos de alta dimensión, los textos suelen ser casi linealmente separables y los modelos lineales rinden muy bien.",
+            "La regresión logística entrega probabilidades útiles para umbrales; LinearSVC maximiza el margen y a menudo gana en exactitud.",
+            "Regularización L2 con el hiperparámetro C: valores pequeños simplifican el modelo y reducen el sobreajuste a palabras raras.",
+            "class_weight='balanced' pondera los errores en proporción inversa a la frecuencia de cada clase y mejora las clases minoritarias."
+          ],
+          "notes": "Conecte con Aprendizaje Automático I, donde estudiaron la regresión logística, y con Aprendizaje Automático II, que en paralelo desarrolla las máquinas de vectores de soporte. Explique por qué en texto no suelen necesitarse kernels: con decenas de miles de dimensiones, un hiperplano ya tiene capacidad suficiente, y los kernels no lineales serían costosos sobre cientos de miles de documentos. Muestre que la SVM lineal no produce probabilidades de forma nativa; si se requieren, se calibra con CalibratedClassifierCV. Discuta la regularización con un experimento: con C muy grande, el modelo memoriza palabras raras, como nombres de asesores, y su desempeño en prueba cae. Explique class_weight con números: si «contratación no reconocida» representa el 2 % de los casos, cada error en esa clase pesará unas cincuenta veces más que en una clase equilibrada. Pregunta para la clase: si el área de Cumplimiento necesita un umbral de probabilidad para decidir qué casos revisar manualmente, ¿qué modelo preferiría y por qué? Respuesta esperada: la regresión logística o una SVM calibrada."
+        },
+        {
+          "title": "Pipeline reproducible con scikit-learn",
+          "bullets": [
+            "Pipeline([('tfidf', TfidfVectorizer()), ('clf', LogisticRegression())]) encapsula representación y modelo como un solo estimador.",
+            "El vectorizador se ajusta solo con datos de entrenamiento; ajustarlo con todo el corpus filtra información del conjunto de prueba.",
+            "GridSearchCV con StratifiedKFold busca de forma conjunta ngram_range, min_df y C, evitando decisiones manuales sesgadas.",
+            "Fijar random_state, versiones de librerías y la partición de datos permite que otro analista reproduzca los resultados."
+          ],
+          "notes": "Muestre el error más frecuente de los principiantes: vectorizar todo el corpus con fit_transform y luego dividir en entrenamiento y prueba. El idf y el vocabulario incorporan información de la prueba y las métricas resultan optimistas; en corpus pequeños la diferencia puede ser de varios puntos. El Pipeline resuelve el problema porque, dentro de la validación cruzada, el vectorizador se reajusta en cada pliegue solo con los datos de entrenamiento de ese pliegue. Explique la notación de doble guion bajo para los hiperparámetros, como tfidf__ngram_range y clf__C, y por qué conviene optimizar con scoring igual a f1_macro cuando hay desbalance. Recomiende guardar el pipeline completo con joblib, de modo que en producción se aplique exactamente la misma transformación. Mencione que si hay reclamos repetidos o del mismo cliente, debe usarse GroupKFold para que no aparezcan en entrenamiento y prueba a la vez. Pregunta para la clase: ¿qué otra fuente de fuga existe si un mismo reclamo fue registrado dos veces por canales distintos?"
+        },
+        {
+          "title": "Métricas para clasificación de textos con clases desbalanceadas",
+          "bullets": [
+            "Si el 70 % de los reclamos son de facturación, un modelo que siempre predice esa clase logra 70 % de exactitud y es inútil.",
+            "Macro-F1 promedia el F1 de cada clase con igual peso; micro-F1 equivale a la exactitud en problemas multiclase de etiqueta única.",
+            "classification_report y la matriz de confusión revelan qué categorías se confunden entre sí y en qué dirección.",
+            "Elegir la métrica según el costo: un reclamo de cobro indebido mal enrutado puede vencer plazos y terminar en sanción."
+          ],
+          "notes": "Recupere precisión, exhaustividad y F1 de Aprendizaje Automático I y extiéndalos al caso multiclase. Calcule en clase un ejemplo con tres clases y una matriz de confusión de 3 × 3, obteniendo F1 por clase, macro-F1 y micro-F1. Muestre que micro-F1 y exactitud coinciden cuando cada documento tiene exactamente una etiqueta, y que el promedio ponderado tiende a ocultar el mal desempeño de las clases pequeñas. Luego relacione las métricas con el negocio: en una operadora de telecomunicaciones, los reclamos deben resolverse dentro de los plazos fijados por OSIPTEL, y un reclamo mal derivado rebota entre áreas y consume ese plazo. No todos los errores cuestan lo mismo: confundir «calidad de señal» con «internet fijo» es menos grave que enviar un posible fraude de identidad a la cola general. Pregunta para la clase: construyan una matriz de costos de tres por tres para un caso de su elección y discutan si maximizar macro-F1 es coherente con minimizar ese costo esperado."
+        },
+        {
+          "title": "Análisis de errores: aprender de lo que el modelo falla",
+          "bullets": [
+            "Revisar una muestra de 100 errores y clasificarlos: etiqueta incorrecta, texto ambiguo, varios temas, jerga o categoría mal definida.",
+            "Si una parte importante de los errores son etiquetas incorrectas, mejorar los datos rinde más que cambiar de algoritmo.",
+            "Las confusiones sistemáticas entre dos clases pueden indicar que la taxonomía debe fusionarlas o redefinirlas.",
+            "Documentar los hallazgos en una tabla de errores priorizada por frecuencia e impacto en el negocio."
+          ],
+          "notes": "Presente el análisis de errores como la actividad de mayor retorno en un proyecto aplicado. Organice un ejercicio en vivo: muestre veinte errores reales anonimizados del clasificador y pida a los estudiantes que los categoricen en una hoja compartida. Típicamente aparecen cuatro grupos: errores de etiquetado humano, textos genuinamente ambiguos, mensajes con varios temas y expresiones que el modelo no conoce, como jerga o nombres de productos recientes. Cada grupo sugiere una acción distinta: depurar etiquetas, revisar la guía de anotación, pasar a clasificación multietiqueta o ampliar los datos. Explique la técnica de ordenar los errores por la confianza del modelo: los errores con probabilidad muy alta suelen revelar etiquetas incorrectas en los datos. Conecte con el kappa de Cohen de la unidad 1: si los analistas humanos discrepan en una categoría, el modelo difícilmente superará ese techo. Pregunta para la clase: con dos semanas de trabajo disponibles, ¿invertirían en probar un modelo más complejo o en corregir etiquetas? Exijan evidencia de la tabla de errores para responder."
+        },
+        {
+          "title": "Análisis de sentimiento en español",
+          "bullets": [
+            "Los enfoques léxicos usan diccionarios de polaridad; son explicables, pero fallan con negación, ironía y jerga («está bacán», «qué roche»).",
+            "Los enfoques supervisados aprenden de ejemplos etiquetados y requieren datos del dominio para no degradarse.",
+            "pysentimiento ofrece modelos para español basados en RoBERTuito, preentrenado con tuits; es útil como punto de partida.",
+            "La polaridad no equivale a la gravedad: un mensaje cortés puede describir un fraude y uno airado, un problema menor."
+          ],
+          "notes": "Defina el análisis de sentimiento como la clasificación de la actitud del autor hacia un objeto, y distinga polaridad, emoción e intensidad. Muestre las limitaciones de los léxicos con ejemplos peruanos: «está bacán» es positivo, aunque «bacán» no figura en diccionarios peninsulares; «qué roche» expresa vergüenza; «no está nada mal» es positivo pese a contener dos negaciones. Luego compare con un clasificador supervisado entrenado con reseñas de restaurantes limeños y aplíquelo a reclamos de una aseguradora: el cambio de dominio reduce el desempeño, porque palabras como «rápido» o «caro» cambian de peso según el contexto. Presente pysentimiento, desarrollado en Argentina sobre RoBERTuito, como herramienta de partida para redes sociales, y advierta que debe validarse en el dominio propio antes de usarse. Insista en una distinción de negocio: priorizar por sentimiento negativo puede postergar fraudes descritos con cortesía. Pregunta para la clase: diseñen dos variables, polaridad y gravedad, y discutan cuál debería guiar la priorización de un banco."
+        },
+        {
+          "title": "Interpretabilidad de clasificadores lineales",
+          "bullets": [
+            "Los coeficientes de la regresión logística muestran qué términos empujan hacia cada clase; revisar los veinte principales por categoría.",
+            "Atributos espurios delatan fuga o sesgo: el nombre de un asesor o el código de una agencia no deberían predecir el tema.",
+            "LIME (Ribeiro et al., 2016) explica predicciones individuales perturbando el texto y ajustando un modelo local simple.",
+            "Las explicaciones sirven para auditar, depurar y justificar decisiones ante usuarios internos o el regulador."
+          ],
+          "notes": "Muestre cómo extraer de un pipeline los nombres de atributos con get_feature_names_out y los coeficientes del clasificador, y cómo ordenarlos por clase. Presente un hallazgo típico: entre los términos más asociados a «cobro indebido» aparece el código de una agencia, porque en ese periodo un supervisor etiquetaba de forma particular; el modelo aprendió quién etiquetó, no qué ocurrió. Ese descubrimiento justifica retirar el atributo, corregir etiquetas o separar los datos por periodo. Luego explique LIME: elimina aleatoriamente palabras del texto, observa cómo cambia la predicción y ajusta un modelo lineal local que indica qué palabras sostienen la decisión en ese caso concreto. Advierta que las explicaciones locales pueden ser inestables y que dos ejecuciones pueden diferir, por lo que no reemplazan una auditoría global. Relacione con la rendición de cuentas: una entidad supervisada puede tener que explicar por qué un reclamo se derivó tarde. Pregunta para la clase: ¿qué atributos considerarían inaceptables en un clasificador de solicitudes de crédito, aunque mejoren la exactitud?"
+        },
+        {
+          "title": "Del cuaderno a la operación: umbrales y revisión humana",
+          "bullets": [
+            "Enrutar automáticamente solo si la probabilidad máxima supera un umbral; el resto pasa a revisión humana.",
+            "Curva cobertura-exactitud: al subir el umbral se automatiza menos, pero con menos errores; elegir según la capacidad del equipo.",
+            "Monitorear la distribución de categorías y el vocabulario nuevo: un producto recién lanzado genera reclamos que el modelo no conoce.",
+            "Reentrenar con las correcciones de los analistas cierra el ciclo y convierte la operación en fuente de datos etiquetados."
+          ],
+          "notes": "Explique que un clasificador en producción rara vez decide solo: el diseño profesional combina automatización y supervisión humana. Construya en vivo la curva cobertura-exactitud con predict_proba: para cada umbral, calcule qué porcentaje de casos se automatiza y qué exactitud tienen esos casos. Muestre, por ejemplo, que con umbral 0,8 se automatiza el 70 % con 95 % de exactitud, mientras que el 30 % restante requiere analistas. Traduzca a capacidad: si cada caso manual toma cuatro minutos, calcule cuántas horas-persona se necesitan al mes. Añada reglas de negocio que anulan el umbral, por ejemplo, revisar siempre manualmente cualquier posible fraude de identidad. Luego introduzca el monitoreo: comparar semanalmente la proporción de cada categoría y el porcentaje de términos fuera del vocabulario; un aumento brusco anticipa deriva, tema que profundizarán en Despliegue de Modelos (MLOps). Pregunta para la clase: ¿qué riesgos aparecen si los analistas, por presión de tiempo, aceptan sin revisar la sugerencia del modelo? Discutan el sesgo de automatización y cómo medirlo."
+        }
+      ],
+      "reading": {
+        "title": "TF-IDF y modelos lineales: la línea base que hay que superar",
+        "minutes": 40,
+        "content": "## 1. El valor de una buena línea base\n\nAntes de ajustar un transformador con cientos de millones de parámetros, un equipo profesional construye una línea base sólida. Joulin, Grave, Bojanowski y Mikolov (2017) mostraron que clasificadores lineales con n-gramas rinden a la par de redes profundas en varias tareas de clasificación de textos, con una fracción del costo. En organizaciones peruanas con presupuestos de cómputo limitados, la combinación de TF-IDF con un modelo lineal suele ser la solución que se despliega; y cuando no lo es, es la referencia que justifica la inversión en algo más complejo.\n\n## 2. De los conteos a TF-IDF\n\nSea N el número de documentos y df(t) el número de documentos que contienen el término t. La ponderación clásica y la variante suavizada de scikit-learn son:\n\n```text\ntfidf(t, d) = tf(t, d) · log( N / df(t) )\nidf_sklearn(t) = ln( (1 + N) / (1 + df(t)) ) + 1        luego  v = v / ‖v‖₂\n```\n\nCon N = 1000, un término presente en 20 reclamos recibe idf ≈ 4,86, y uno presente en 600, idf ≈ 1,51. La normalización L2 hace que el producto punto entre dos vectores sea su similitud coseno. Para recuperación de documentos, BM25 añade saturación de la frecuencia (k₁) y normalización por longitud (b).\n\n## 3. Tres clasificadores lineales\n\n**Naive Bayes multinomial** elige la clase que maximiza log P(c) + Σ log P(wᵢ | c), con probabilidades suavizadas por Laplace. Es rápido y robusto con pocos datos, aunque sus probabilidades están mal calibradas. **La regresión logística** modela P(c | x) con la función softmax y regularización L2; sus coeficientes son interpretables y sus probabilidades, útiles para umbrales. **La SVM lineal** maximiza el margen con pérdida bisagra y suele obtener la mayor exactitud en texto disperso, pero requiere calibración para producir probabilidades.\n\n## 4. Un pipeline completo y sin fuga\n\n```python\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold\nfrom sklearn.metrics import classification_report\n\ndf = pd.read_csv(\"reclamos_seudonimizados.csv\")      # columnas: texto, categoria\nX_tr, X_te, y_tr, y_te = train_test_split(\n    df.texto, df.categoria, test_size=0.2, stratify=df.categoria, random_state=42)\n\npipe = Pipeline([\n    (\"tfidf\", TfidfVectorizer(sublinear_tf=True, min_df=3)),\n    (\"clf\", LogisticRegression(max_iter=2000, class_weight=\"balanced\")),\n])\ngrid = {\"tfidf__ngram_range\": [(1, 1), (1, 2)], \"clf__C\": [0.5, 2, 8]}\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)\nbusqueda = GridSearchCV(pipe, grid, cv=cv, scoring=\"f1_macro\", n_jobs=-1)\nbusqueda.fit(X_tr, y_tr)           # el idf se ajusta dentro de cada pliegue\nprint(busqueda.best_params_, round(busqueda.best_score_, 3))\nprint(classification_report(y_te, busqueda.predict(X_te), digits=3))\n```\n\nEl vectorizador vive dentro del pipeline; por eso, en cada pliegue de la validación cruzada se ajusta solo con los datos de entrenamiento de ese pliegue. El conjunto de prueba se usa una única vez, al final.\n\n## 5. Leer los resultados\n\nSupongamos que el reporte muestra exactitud de 0,86 y macro-F1 de 0,79, con F1 de 0,92 en «facturación» y 0,61 en «cobro indebido». La brecha indica que el desempeño global está sostenido por la clase mayoritaria. La matriz de confusión revela además la dirección del error: si la mayoría de reclamos de «cobro indebido» se predicen como «facturación», el problema puede estar en la taxonomía o en el etiquetado, no en el algoritmo. El análisis de una muestra de errores decidirá entre corregir etiquetas, redefinir categorías o añadir atributos como bigramas de negación.\n\n## 6. Del modelo a la decisión: umbrales\n\n```python\nproba = busqueda.predict_proba(X_te)\nconfianza = proba.max(axis=1)\npred = busqueda.classes_[proba.argmax(axis=1)]\nfor u in [0.5, 0.7, 0.9]:\n    auto = confianza >= u\n    exactitud = (pred[auto] == y_te.values[auto]).mean()\n    print(f\"umbral {u}: cobertura {auto.mean():.0%}, exactitud {exactitud:.1%}\")\n```\n\nLa política resultante, por ejemplo «automatizar con confianza de 0,8 o más y revisar siempre los posibles fraudes», es una decisión de negocio que combina capacidad del equipo, costo del error y obligaciones regulatorias.\n\n## 7. Preguntas para la reflexión\n\n1. ¿En qué condiciones Naive Bayes superaría a la regresión logística?\n2. ¿Por qué optimizar con f1_macro y no con exactitud en este problema?\n3. ¿Qué información de negocio necesita para fijar el umbral de automatización?"
+      },
+      "case": {
+        "title": "Caso: TelcoAndina y los 40 000 reclamos mensuales",
+        "content": "**TelcoAndina** es una operadora ficticia de telefonía móvil e internet fijo con 3,2 millones de líneas. Recibe unos 40 000 reclamos al mes por aplicación, web, centro de llamadas (con transcripción automática) y Libro de Reclamaciones. Un equipo de 45 analistas los clasifica manualmente en ocho categorías; cada clasificación toma en promedio cuatro minutos y el 12 % de los reclamos se deriva al área equivocada, lo que consume días del plazo de atención establecido por OSIPTEL.\n\nLa distribución de categorías es: facturación 34 %, calidad de señal 21 %, internet fijo 15 %, atención 11 %, equipos 8 %, cobro indebido 5 %, portabilidad 4 % y contratación no reconocida 2 %. Esta última suele estar vinculada a suplantación de identidad: líneas contratadas con DNI de terceros, un tema prioritario para el regulador y para la Policía.\n\nEl equipo de datos entrenó tres modelos con 60 000 reclamos etiquetados entre 2024 y 2025 y los evaluó sobre 12 000 reclamos reservados:\n\n| Modelo | Exactitud | Macro-F1 | F1 «contratación no reconocida» | Latencia |\n|---|---|---|---|---|\n| Naive Bayes (unigramas) | 0,81 | 0,68 | 0,41 | 1 ms |\n| Regresión logística (1-2 gramas, balanced) | 0,86 | 0,79 | 0,72 | 2 ms |\n| LinearSVC (palabras + caracteres) | 0,88 | 0,80 | 0,63 | 2 ms |\n\nUna doble anotación de 1 000 reclamos arrojó un kappa de 0,74 entre analistas; la mayor parte del desacuerdo se concentra entre «facturación» y «cobro indebido».\n\nEl gerente de Operaciones quiere desplegar LinearSVC, «el de mayor exactitud», con automatización total y una reducción de 30 analistas. La jefa de Cumplimiento prefiere la regresión logística con umbral: derivar automáticamente solo si la probabilidad es al menos 0,80, lo que cubre el 71 % de los casos con 95 % de exactitud, y revisar siempre manualmente los casos de contratación no reconocida. A la discusión se suma un hecho nuevo: hace un mes se lanzó un plan de fibra óptica cuyos reclamos usan términos inexistentes en los datos de entrenamiento («ONT», «instalación de fibra», «velocidad simétrica»).\n\nEl comité de gerencia decidirá la próxima semana.",
+        "questions": [
+          "¿Qué modelo recomendaría y con qué criterio de selección? Justifique con las métricas por clase y el costo de cada tipo de error.",
+          "¿Qué implica un kappa de 0,74 para el techo de desempeño del modelo y para la confusión entre facturación y cobro indebido?",
+          "Si se automatiza el 71 % y cada caso manual toma cuatro minutos, ¿cuántas horas-persona mensuales se requieren? ¿Es viable reducir 30 analistas?",
+          "¿Cómo detectaría y gestionaría la deriva causada por el nuevo plan de fibra óptica antes de que afecte los plazos de atención?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Clasificador de reclamos con TF-IDF y modelos lineales",
+        "instructions": "**Objetivo:** construir, comparar e interpretar clasificadores lineales de texto para enrutar reclamos y proponer una política operativa de automatización con revisión humana.\n\n**Datos:** corpus de 15 000 reclamos seudonimizados con ocho categorías, disponible en el aula virtual, o un corpus público equivalente aprobado por el docente.\n\n**Qué entregar:**\n\n1. Exploración inicial: distribución de clases, longitud de los textos y diez ejemplos representativos por categoría.\n2. Pipeline de scikit-learn sin fuga de información, con búsqueda de hiperparámetros (ngram_range, min_df, C) mediante validación cruzada estratificada de cinco pliegues y scoring f1_macro.\n3. Comparación de Naive Bayes multinomial, regresión logística y LinearSVC, reportando media y desviación estándar de macro-F1.\n4. Evaluación final en el conjunto de prueba: classification_report, matriz de confusión normalizada y análisis de 50 errores clasificados por tipo.\n5. Los quince términos de mayor peso por clase, con identificación y tratamiento de al menos un atributo espurio.\n6. Curva cobertura-exactitud y política de umbrales justificada con la capacidad del equipo y el costo de los errores.\n7. Memorando ejecutivo de dos páginas dirigido a la gerencia de operaciones.\n\n**Formato:** cuaderno de Colab y PDF subidos al aula virtual hasta el domingo de la semana 8 a las 23:59. Trabajo individual; el cuaderno debe ejecutarse completo sin errores.",
+        "rubric": [
+          {
+            "name": "Pipeline sin fuga y búsqueda de hiperparámetros",
+            "points": 5
+          },
+          {
+            "name": "Comparación rigurosa de los tres clasificadores",
+            "points": 4
+          },
+          {
+            "name": "Evaluación por clase y análisis de errores",
+            "points": 5
+          },
+          {
+            "name": "Interpretabilidad y política de umbrales",
+            "points": 4
+          },
+          {
+            "name": "Memorando ejecutivo claro y fundamentado",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Representación vectorial y clasificación de textos",
+        "questions": [
+          {
+            "prompt": "Con la fórmula clásica idf = log₁₀(N/df), en un corpus de 1000 reclamos el término «portabilidad» aparece en 10 documentos y «cliente» en los 1000. ¿Qué valores idf reciben?",
+            "options": [
+              "2 y 0",
+              "100 y 1",
+              "0,01 y 1",
+              "1 y 0,5"
+            ],
+            "correct": 0,
+            "explanation": "log₁₀(1000/10) = log₁₀ 100 = 2 y log₁₀(1000/1000) = 0. Un término presente en todos los documentos no discrimina y recibe peso nulo en la versión clásica."
+          },
+          {
+            "prompt": "Un analista ajusta TfidfVectorizer con todo el corpus y luego separa entrenamiento y prueba. ¿Cuál es el problema metodológico?",
+            "options": [
+              "El modelo no podrá procesar palabras nuevas en producción",
+              "La matriz resultante deja de ser dispersa",
+              "Los vectores ya no estarán normalizados en L2",
+              "El vocabulario y los pesos idf incorporan información del conjunto de prueba, lo que infla las métricas"
+            ],
+            "correct": 3,
+            "explanation": "Es una fuga de información: el vectorizador conoce la prueba antes de evaluar. Debe ajustarse solo con entrenamiento, idealmente dentro de un Pipeline para que la validación cruzada lo reajuste en cada pliegue."
+          },
+          {
+            "prompt": "Un clasificador obtiene 92 % de exactitud, pero F1 de 0,10 en «contratación no reconocida», que representa el 2 % de los casos. ¿Qué métrica agregada refleja mejor el problema?",
+            "options": [
+              "Exactitud global",
+              "Micro-F1",
+              "Macro-F1",
+              "Precisión de la clase mayoritaria"
+            ],
+            "correct": 2,
+            "explanation": "Macro-F1 da el mismo peso a cada clase, por lo que el mal desempeño en la clase minoritaria la reduce visiblemente. La exactitud y el micro-F1 quedan dominados por las clases grandes."
+          },
+          {
+            "prompt": "En Naive Bayes multinomial, ¿por qué se suman logaritmos de probabilidades en lugar de multiplicar las probabilidades?",
+            "options": [
+              "Porque los logaritmos eliminan el supuesto de independencia condicional",
+              "Porque el producto de muchas probabilidades pequeñas produce subdesbordamiento numérico",
+              "Porque así se obtienen probabilidades bien calibradas",
+              "Porque la suma es requisito del suavizado de Laplace"
+            ],
+            "correct": 1,
+            "explanation": "Multiplicar cientos de valores menores que uno lleva a números que la computadora redondea a cero. El logaritmo convierte el producto en suma y preserva el orden entre clases."
+          },
+          {
+            "prompt": "En BM25, ¿qué efecto tiene aumentar el parámetro b de 0,3 a 0,9?",
+            "options": [
+              "Aumenta la penalización de los documentos más largos que el promedio",
+              "Elimina la saturación de la frecuencia de términos",
+              "Aumenta el peso idf de los términos raros",
+              "Convierte el puntaje BM25 en similitud coseno"
+            ],
+            "correct": 0,
+            "explanation": "b controla la normalización por longitud: con b cercano a 1, el puntaje se ajusta más fuertemente según |d| / avgdl. La saturación depende de k₁ y el idf no cambia con b."
+          },
+          {
+            "prompt": "El término con mayor peso para «cobro indebido» resulta ser el código de una agencia de Arequipa. ¿Qué acción es más adecuada?",
+            "options": [
+              "Mantenerlo, porque mejora la exactitud en validación",
+              "Investigar fuga o sesgo de etiquetado en esa agencia y retirar el atributo si no es causal",
+              "Aumentar C para reducir la regularización",
+              "Cambiar a SVM lineal, que no utiliza coeficientes"
+            ],
+            "correct": 1,
+            "explanation": "Un código de agencia sugiere que el modelo aprendió cómo se etiquetó, no qué ocurrió. Debe auditarse el proceso de etiquetado; reducir la regularización empeoraría el sobreajuste y la SVM lineal también usa coeficientes."
+          },
+          {
+            "prompt": "Al subir el umbral de confianza para el enrutamiento automático de 0,6 a 0,9, ¿qué ocurre típicamente?",
+            "options": [
+              "Aumentan la cobertura y la exactitud",
+              "Aumenta la cobertura y disminuye la exactitud",
+              "No cambia nada, porque el modelo es el mismo",
+              "Disminuye la cobertura y aumenta la exactitud de los casos automatizados"
+            ],
+            "correct": 3,
+            "explanation": "Un umbral más alto automatiza solo los casos en que el modelo está más seguro: se procesan menos casos, pero con menos errores. El resto pasa a revisión humana."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Semántica distribucional, modelado de temas y extracción de información",
+      "description": "Al finalizar la unidad, el estudiante aplica embeddings de palabras, modelado de temas y etiquetado de secuencias para descubrir temas y extraer entidades de documentos peruanos, con protocolos de anotación, evaluación a nivel de entidad y auditoría de sesgos.",
+      "topics": [
+        "Hipótesis distribucional y embeddings: word2vec, GloVe y fastText",
+        "Analogías, vecindarios semánticos y sesgos en los embeddings",
+        "Modelado de temas con LDA y NMF y su evaluación",
+        "Etiquetado morfosintáctico, dependencias y reconocimiento de entidades nombradas",
+        "Anotación, campos aleatorios condicionales y evaluación a nivel de entidad"
+      ],
+      "slides": [
+        {
+          "title": "La hipótesis distribucional",
+          "bullets": [
+            "Harris (1954) y Firth (1957): el significado de una palabra puede inferirse de los contextos en que aparece.",
+            "Matriz palabra-contexto: cuenta las coocurrencias dentro de una ventana de ±k palabras alrededor de cada término.",
+            "PPMI(w, c) = max(0, log₂ [P(w, c) / (P(w)·P(c))]) resalta coocurrencias más frecuentes que lo esperado por azar.",
+            "La SVD truncada de esa matriz produce vectores densos de 100 a 300 dimensiones: el puente con Álgebra Lineal Aplicada."
+          ],
+          "notes": "Inicie con un experimento mental: escriba en la pizarra «Me sirvieron un plato de ___ con arroz y yuca frita» y pida completar el espacio. Aunque no conozcan la palabra exacta, saben que es un alimento: el contexto revela el significado. Esa es la intuición de Zellig Harris y de John Firth, cuya frase «conocerás una palabra por la compañía que mantiene» resume la hipótesis distribucional. Construya en clase una pequeña matriz palabra-contexto con cuatro oraciones sobre reclamos y muestre que «cobro» y «descuento» tienen filas parecidas. Explique por qué los conteos brutos engañan: «de» y «la» coocurren con todo; la información mutua puntual positiva corrige esa distorsión. Luego conecte con la descomposición en valores singulares vista en Álgebra Lineal Aplicada: truncar a las k componentes principales comprime la matriz y agrupa palabras con contextos similares, lo que se conoce como análisis semántico latente. Pregunta para la clase: ¿qué palabras de un corpus de reclamos bancarios esperarían que compartan contextos con «Yape»? Discutan si esa cercanía refleja sinonimia o solo relación temática."
+        },
+        {
+          "title": "word2vec: skip-gram con muestreo negativo",
+          "bullets": [
+            "Mikolov et al. (2013) entrenan una red poco profunda para predecir las palabras de contexto a partir de la palabra central.",
+            "Muestreo negativo: distinguir pares reales (palabra, contexto) de k pares aleatorios, con k entre 5 y 20 en corpus pequeños.",
+            "Objetivo por par: log σ(v_c · v_w) + Σ log σ(−v_n · v_w), sumando sobre las k palabras negativas muestreadas.",
+            "Hiperparámetros: dimensión (100 a 300), ventana (2 a 10), frecuencia mínima y submuestreo de palabras muy frecuentes."
+          ],
+          "notes": "Presente word2vec como una tarea de predicción falsa cuyo verdadero producto son los pesos aprendidos. En skip-gram, la palabra central «reconexión» debe predecir palabras vecinas como «servicio», «corte» o «pago». Calcular una softmax sobre todo el vocabulario sería costoso, por lo que el muestreo negativo convierte el problema en clasificación binaria: ¿este par proviene del corpus o fue generado al azar? Explique que las palabras negativas se muestrean con probabilidad proporcional a la frecuencia elevada a 3/4, lo que da más oportunidades a las palabras raras. Comente el efecto de la ventana: ventanas pequeñas capturan similitud funcional y sintáctica, mientras que ventanas grandes capturan relación temática. Mencione que los vectores originales de Google se entrenaron con unos 100 000 millones de palabras de noticias y tienen 300 dimensiones para tres millones de palabras y frases. Pregunta para la clase: ¿qué ventana usarían si quieren que «Arequipa» quede cerca de «Cusco» y no de «rocoto relleno»? Pida justificar la respuesta con la definición de contexto."
+        },
+        {
+          "title": "GloVe y fastText",
+          "bullets": [
+            "GloVe (Pennington, Socher y Manning, 2014) ajusta vectores para que su producto aproxime el logaritmo de la coocurrencia global.",
+            "fastText (Bojanowski et al., 2017) representa cada palabra como la suma de sus n-gramas de caracteres de 3 a 6.",
+            "En español, fastText comparte información entre «cobrar», «cobraron» y «cobrador», y genera vectores para palabras nunca vistas.",
+            "Existen vectores preentrenados de fastText para 157 idiomas, entrenados con Wikipedia y Common Crawl (Grave et al., 2018)."
+          ],
+          "notes": "Compare los dos enfoques. GloVe, de Stanford, parte de la matriz global de coocurrencias y busca vectores cuyo producto punto aproxime el logaritmo del conteo, ponderando para que los pares muy frecuentes no dominen; combina así las ventajas de los métodos de conteo y de predicción. fastText, de Facebook AI Research, resuelve otro problema: las palabras raras y las nuevas. Al descomponer «reconexión» en fragmentos como «rec», «eco», «con» y «xión», cualquier variante, incluso mal escrita, obtiene un vector razonable. Esto es especialmente valioso para el español, con su rica morfología verbal, y para textos informales con faltas ortográficas. Muestre en vivo que un modelo fastText produce un vector para «reconexiooon», mientras que word2vec lanza un error de palabra desconocida. Advierta que los vectores preentrenados de Common Crawl reflejan el español de internet, con predominio de ciertos países, y conviene verificar su cobertura de peruanismos. Pregunta para la clase: ¿qué palabras de la jerga peruana creen que estarán mal representadas y cómo lo comprobarían?"
+        },
+        {
+          "title": "Geometría de los embeddings: similitud y analogías",
+          "bullets": [
+            "Palabras con contextos similares quedan cerca: los vecinos de «reclamo» suelen incluir «queja», «denuncia» y «solicitud».",
+            "Analogías por aritmética vectorial: rey − hombre + mujer ≈ reina; Lima − Perú + Chile ≈ Santiago.",
+            "Evaluación intrínseca con pruebas de similitud y analogías; evaluación extrínseca por la mejora en una tarea real.",
+            "Las analogías funcionan peor de lo que sugieren los ejemplos famosos: excluir las palabras de la consulta infla los resultados."
+          ],
+          "notes": "Muestre en vivo los vecinos más cercanos de varias palabras de dominio usando vectores preentrenados en español y comente los aciertos y las sorpresas. Explique que la similitud distribucional mezcla sinonimia y relación temática: «subida» y «bajada» pueden ser vecinas porque aparecen en los mismos contextos, aunque sean antónimas, lo que es crítico en análisis de sentimiento. Presente las analogías como desplazamientos constantes en el espacio vectorial y luego matice: Nissim, van Noord y van der Goot (2020) mostraron que las implementaciones habituales excluyen de la respuesta las palabras de la consulta, lo que maquilla resultados; sin esa exclusión, la respuesta a muchas analogías es simplemente una de las palabras de entrada. Insista en que la evaluación que importa es la extrínseca: ¿los embeddings mejoran el clasificador de reclamos o el reconocedor de entidades? Pregunta para la clase: propongan tres analogías propias del contexto peruano, pruébenlas en el laboratorio y reporten cuántas funcionan con y sin exclusión de las palabras de consulta."
+        },
+        {
+          "title": "Sesgos sociales en los embeddings",
+          "bullets": [
+            "Bolukbasi et al. (2016) hallaron analogías como hombre : programador :: mujer : ama de casa en vectores entrenados con noticias.",
+            "Caliskan, Bryson y Narayanan (2017) midieron con la prueba WEAT asociaciones análogas a las del test de asociación implícita humano.",
+            "En español, el género gramatical complica la medición: «enfermera» e «ingeniero» mezclan sesgo social y concordancia.",
+            "Mitigar: auditar asociaciones, equilibrar datos, evaluar el impacto por subgrupos en la tarea final y documentar límites."
+          ],
+          "notes": "Presente el sesgo como una propiedad esperable: los embeddings aprenden regularidades del corpus, incluidas las desigualdades sociales que contiene. Explique la prueba WEAT: compara la similitud media entre dos conjuntos de palabras objetivo, por ejemplo nombres masculinos y femeninos, y dos conjuntos de atributos, como carreras y tareas del hogar, y calcula un tamaño de efecto. En el contexto peruano, proponga auditar asociaciones relacionadas con género, origen geográfico o apellidos de origen andino, con mucho cuidado metodológico y ético. Señale que en español el género gramatical obliga a separar la concordancia de la asociación social: comparar «enfermero» con «enfermera» no mide lo mismo que en inglés. Explique por qué la mitigación geométrica, como eliminar una dirección de género, es insuficiente: Gonen y Goldberg (2019) mostraron que el sesgo permanece recuperable. Pregunta para la clase: si un sistema de preselección de currículos usa estos vectores, ¿qué prueba harían antes de desplegarlo? Conecte con el curso de Ética y Gobernanza de la IA del sexto ciclo."
+        },
+        {
+          "title": "Embeddings en la práctica: entrenar o reutilizar",
+          "bullets": [
+            "Con menos de diez millones de palabras de dominio conviene partir de vectores preentrenados y compararlos con un modelo propio.",
+            "Promediar los vectores de las palabras de un documento es una línea base rápida, aunque pierde el orden y el énfasis.",
+            "gensim permite entrenar Word2Vec y FastText en minutos sobre corpus de normas legales o reclamos.",
+            "Limitación central: un único vector por palabra mezcla los sentidos de «banco» o «palta»; la unidad 4 lo resuelve con contexto."
+          ],
+          "notes": "Oriente la decisión con criterios prácticos. Entrenar embeddings propios tiene sentido cuando el dominio usa vocabulario muy especializado, como siglas de entidades públicas o jerga de un sector, y se dispone de un corpus grande; en caso contrario, los vectores preentrenados capturan mejor el idioma general. Muestre un experimento comparativo: clasificador de reclamos con TF-IDF, con promedio de vectores preentrenados y con la concatenación de ambos. Es frecuente que TF-IDF gane en temas con palabras clave claras, mientras que los embeddings ayudan cuando hay pocos datos etiquetados y mucha sinonimia. Muestre también el promedio ponderado por idf, una mejora sencilla y eficaz. Cierre con la limitación que motiva la unidad 4: el vector de «banco» es un promedio de sus sentidos financiero y de asiento, y el de «palta», de fruto y vergüenza; cualquier oración recibe el mismo vector para esas palabras. Pregunta para la clase: ¿en qué tareas de su interés esta mezcla de sentidos sería tolerable y en cuáles resultaría inaceptable?"
+        },
+        {
+          "title": "Modelado de temas con LDA",
+          "bullets": [
+            "LDA (Blei, Ng y Jordan, 2003) supone que cada documento es una mezcla de temas y cada tema, una distribución sobre palabras.",
+            "Hiperparámetros de Dirichlet: α controla cuántos temas mezcla un documento; η, cuántas palabras concentra un tema.",
+            "Salidas: matriz documento-tema θ y matriz tema-palabra φ; los temas se nombran revisando palabras y documentos representativos.",
+            "Trabaja sobre bolsa de palabras: requiere filtrar palabras vacías y términos omnipresentes para obtener temas legibles."
+          ],
+          "notes": "Explique LDA mediante su historia generativa: para escribir un documento, se elige una mezcla de temas, por ejemplo 70 % laboral y 30 % tributario; luego, para cada palabra, se elige un tema según esa mezcla y una palabra según la distribución del tema. El algoritmo invierte ese proceso con inferencia variacional o muestreo de Gibbs para descubrir los temas que mejor explican el corpus. Conecte con Aprendizaje Automático II, donde estudian agrupamiento: a diferencia de k-medias, LDA asigna a cada documento una mezcla y no un único grupo. Muestre un ejemplo con resoluciones administrativas: aparecen temas como fiscalización laboral, sanciones ambientales y protección al consumidor. Insista en que nombrar los temas es una interpretación humana que debe sustentarse leyendo los documentos con mayor peso en cada tema, no solo sus palabras. Pregunta para la clase: si un tema contiene «artículo», «numeral», «inciso» y «conforme», ¿qué nos dice sobre el preprocesamiento? Discutan las listas de palabras vacías específicas del dominio legal."
+        },
+        {
+          "title": "NMF y evaluación de temas",
+          "bullets": [
+            "NMF factoriza la matriz TF-IDF como X ≈ W·H con entradas no negativas; suele dar temas más nítidos en textos cortos.",
+            "La coherencia (C_v, NPMI) mide si las palabras principales de un tema coocurren en el corpus; permite comparar valores de k.",
+            "Prueba de intrusión de palabras (Chang et al., 2009): si una persona no detecta la palabra intrusa, el tema no es interpretable.",
+            "Elegir k combinando coherencia, estabilidad entre semillas y utilidad para la decisión de negocio."
+          ],
+          "notes": "Presente la factorización matricial no negativa como alternativa determinista y rápida a LDA, conectando de nuevo con Álgebra Lineal Aplicada: W indica cuánto de cada tema tiene cada documento y H, qué palabras definen cada tema. La restricción de no negatividad produce representaciones aditivas, por partes, fáciles de interpretar. Luego aborde la evaluación, que es el punto débil del modelado de temas. Chang y colaboradores, en su artículo de 2009 «Reading tea leaves», mostraron que los modelos con mejor verosimilitud no siempre producen temas que las personas consideren interpretables. Por eso se combinan medidas automáticas de coherencia con pruebas humanas: se muestran cinco palabras de un tema más una intrusa, y si los evaluadores la identifican con facilidad, el tema es coherente. Recomiende entrenar con varias semillas y verificar que los temas se mantengan. Pregunta para la clase: una municipalidad quiere un mapa de temas de sus consultas ciudadanas para reorganizar áreas; ¿qué criterio pesaría más al elegir k: la coherencia máxima o la correspondencia con áreas existentes?"
+        },
+        {
+          "title": "Etiquetado morfosintáctico y análisis de dependencias",
+          "bullets": [
+            "Universal Dependencies define 17 categorías gramaticales universales (NOUN, VERB, ADJ, PROPN, entre otras) comparables entre idiomas.",
+            "El análisis de dependencias enlaza cada palabra con su núcleo mediante relaciones como nsubj (sujeto) y obj (objeto).",
+            "spaCy encadena tokenizador, etiquetador, analizador, lematizador y reconocedor de entidades en un solo objeto nlp.",
+            "Uso práctico: extraer qué se reclama recorriendo el objeto del verbo principal («me cobraron la reconexión»)."
+          ],
+          "notes": "Muestre en vivo el resultado de spaCy sobre «Me cobraron la reconexión aunque pagué a tiempo» e imprima, para cada token, su categoría, su núcleo y su relación de dependencia; luego visualice el árbol con displacy. Explique que Universal Dependencies es un proyecto internacional que unifica las convenciones de anotación para más de cien idiomas, lo que permite comparar herramientas y transferir conocimiento de lenguas con muchos recursos hacia lenguas con pocos. Desarrolle un ejemplo de extracción basada en reglas sintácticas: buscar verbos como «cobrar», «descontar» o «cortar» y recuperar su objeto directo para saber qué concepto se reclama, sin entrenar ningún modelo. Advierta que los modelos de spaCy se entrenaron principalmente con noticias y que su exactitud baja en mensajes informales. Pregunta para la clase: diseñen una regla basada en dependencias que extraiga el monto reclamado en oraciones como «me descontaron 45 soles de mi sueldo» y discutan en qué oraciones fallaría."
+        },
+        {
+          "title": "Reconocimiento de entidades nombradas (NER)",
+          "bullets": [
+            "Identifica y clasifica segmentos: personas (PER), organizaciones (ORG), lugares (LOC) y misceláneos (MISC), según CoNLL-2002.",
+            "Esquema BIO: «Resolución/B-NORMA N.°/I-NORMA 045-2024/I-NORMA emitida/O por/O SUNAFIL/B-ORG».",
+            "Los dominios reales exigen entidades propias: NORMA, MONTO, FECHA, RUC, EXPEDIENTE o DISTRITO.",
+            "Desafíos peruanos: siglas institucionales (SUNAT, OSIPTEL), nombres compuestos y topónimos de origen quechua o amazónico."
+          ],
+          "notes": "Defina el reconocimiento de entidades nombradas como una tarea de etiquetado de secuencias: cada token recibe una etiqueta y las entidades se reconstruyen a partir de ellas. Explique el esquema BIO: B marca el inicio de una entidad, I su continuación y O los tokens externos; esto permite distinguir dos entidades contiguas del mismo tipo. Muestre el corpus CoNLL-2002, basado en noticias de la agencia EFE, que fijó el estándar de cuatro tipos para el español. Luego explique por qué los proyectos reales necesitan tipos propios: un estudio jurídico necesita normas citadas, montos de multas y números de expediente, que ningún modelo genérico reconoce. Analice desafíos locales: «Tribunal de Fiscalización Laboral» es una organización de cuatro palabras; «San Juan de Lurigancho» es un lugar que contiene un nombre de persona; «Ucayali» puede ser región o río. Pregunta para la clase: definan con precisión el tipo NORMA para resoluciones peruanas, indicando si incluye la sigla de la entidad emisora y el año, y argumenten las consecuencias de cada decisión."
+        },
+        {
+          "title": "Campos aleatorios condicionales (CRF)",
+          "bullets": [
+            "Un CRF lineal (Lafferty, McCallum y Pereira, 2001) modela P(y | x) para la secuencia completa de etiquetas, no palabra por palabra.",
+            "Atributos típicos: palabra en minúsculas, sufijos, forma (Xxxx, dddd), mayúsculas, palabras vecinas y pertenencia a diccionarios.",
+            "Aprende transiciones: después de B-ORG es probable I-ORG y casi nunca aparece I-PER.",
+            "El algoritmo de Viterbi encuentra la secuencia de etiquetas más probable en tiempo lineal respecto de la longitud."
+          ],
+          "notes": "Presente el CRF como el modelo que dominó el reconocimiento de entidades antes de las redes neuronales y que sigue siendo una línea base excelente con pocos datos anotados. Compárelo con un clasificador independiente por palabra: este podría producir secuencias inválidas, como una etiqueta I-PER después de O, mientras que el CRF aprende pesos de transición entre etiquetas y evalúa la secuencia completa. Muestre una función de atributos en Python con la palabra en minúsculas, sus últimos tres caracteres, su forma gráfica, si es título o número, y las palabras vecinas, y explique por qué la forma «dddd-dddd» es tan informativa para normas y expedientes. Explique el algoritmo de Viterbi como programación dinámica, vista en Estructuras de Datos y Algoritmos: en lugar de evaluar todas las secuencias posibles, conserva en cada posición el mejor camino hacia cada etiqueta. Presente sklearn-crfsuite con regularización c1 y c2. Pregunta para la clase: ¿qué atributo añadirían para reconocer mejor organizaciones públicas peruanas? Una respuesta valiosa es un diccionario de siglas oficiales del Estado."
+        },
+        {
+          "title": "NER con spaCy: reglas y modelos estadísticos",
+          "bullets": [
+            "EntityRuler agrega patrones de tokens o frases: ideal para RUC, números de expediente y nombres de entidades públicas.",
+            "El modelo estadístico generaliza a nombres nuevos; se reentrena con ejemplos anotados almacenados en formato DocBin.",
+            "Combinar ambos: reglas para patrones regulares y modelo para entidades variables, definiendo qué componente tiene prioridad.",
+            "Evitar el olvido catastrófico: al agregar etiquetas nuevas, mezclar ejemplos de las entidades originales en el entrenamiento."
+          ],
+          "notes": "Muestre la arquitectura de componentes de spaCy y cómo insertar un EntityRuler antes o después del reconocedor estadístico. Construya en vivo patrones para RUC, montos en soles y siglas de entidades públicas, y explique que, si el ruler va antes, sus entidades se respetan y el modelo no las sobrescribe. Luego presente el entrenamiento de un reconocedor propio: se convierten las anotaciones a DocBin, se genera un archivo de configuración con el comando init config y se entrena con spacy train, usando un conjunto de desarrollo para la parada temprana. Advierta sobre el olvido catastrófico: si se ajusta un modelo existente solo con ejemplos de NORMA y MONTO, puede olvidar cómo reconocer personas y organizaciones; se mitiga incluyendo ejemplos anotados de las entidades originales. Comente el costo de mantenimiento: las reglas son transparentes, pero se multiplican; los modelos generalizan, pero requieren anotación. Pregunta para la clase: para un producto que debe lanzarse en seis semanas, ¿qué proporción de reglas y de modelo propondrían, y qué métrica usarían para decidir?"
+        },
+        {
+          "title": "Protocolo de anotación y acuerdo entre anotadores",
+          "bullets": [
+            "Guía de anotación con definiciones, ejemplos positivos y negativos, y reglas explícitas para los casos límite.",
+            "Piloto con 50 documentos, revisión de desacuerdos, ajuste de la guía y recién entonces anotación a escala.",
+            "Doble anotación de al menos el 10 % del corpus; un kappa de 0,61 a 0,80 indica acuerdo sustancial (Landis y Koch, 1977).",
+            "Herramientas de código abierto como Doccano o Label Studio registran anotadores, versiones y adjudicaciones."
+          ],
+          "notes": "Explique que los datos anotados son el activo más costoso de un proyecto de PLN y que su calidad determina el techo del modelo. Describa el ciclo profesional: redactar una guía, anotar un piloto con dos o tres personas, medir el acuerdo, discutir los desacuerdos, actualizar la guía y repetir hasta estabilizar. Calcule en clase un kappa con una tabla de contingencia de dos anotadores y dos categorías, y comente la escala de Landis y Koch: de 0,41 a 0,60 es moderado, de 0,61 a 0,80 es sustancial y por encima de 0,80 es casi perfecto, con la advertencia de que esos cortes son convenciones, no leyes. Para entidades, explique que el acuerdo suele medirse también con F1 entre anotadores, tratando a uno como referencia. Aborde la dimensión laboral y ética: los anotadores deben recibir capacitación, pago justo y protección frente a contenidos sensibles. Pregunta para la clase: si el kappa para NORMA es 0,48 y para MONTO es 0,90, ¿qué cambiarían en la guía antes de seguir anotando?"
+        },
+        {
+          "title": "Evaluación a nivel de entidad",
+          "bullets": [
+            "Una entidad es correcta solo si coinciden límites y tipo: acertar «Resolución N.°» sin el número cuenta como error.",
+            "Precisión, exhaustividad y F1 por tipo de entidad con seqeval; reportar también los promedios micro y macro.",
+            "Clasificar los errores: límite incorrecto, tipo incorrecto, entidad omitida o entidad inexistente detectada.",
+            "Comparar con una línea base de reglas: si el modelo no la supera con claridad, no justifica su costo de mantenimiento."
+          ],
+          "notes": "Muestre por qué la exactitud por token es engañosa en el reconocimiento de entidades: como la mayoría de tokens tiene la etiqueta O, un modelo que nunca detecta nada puede alcanzar 90 % de exactitud por token. La evaluación estándar desde CoNLL es por entidad completa con coincidencia exacta. Desarrolle un ejemplo: la referencia contiene «Decreto Legislativo N.° 1057» como NORMA y el modelo predice solo «Decreto Legislativo»; esto cuenta como un falso positivo, porque la entidad predicha no existe en la referencia, y como un falso negativo, porque la entidad real no se encontró. Presente seqeval, que implementa este criterio, y muestre su reporte por tipo. Complemente con un análisis de errores por categoría: los errores de límite sugieren revisar la tokenización o la guía, mientras que los de tipo sugieren ambigüedad entre categorías. Pregunta para la clase: para un servicio de alertas que notifica a una empresa cuando aparece su RUC en una resolución, ¿priorizarían precisión o exhaustividad? Pida argumentar con el costo de cada error."
+        }
+      ],
+      "reading": {
+        "title": "Del significado distribucional a la extracción de información en documentos peruanos",
+        "minutes": 45,
+        "content": "## 1. Del conteo al significado\n\nLa hipótesis distribucional, formulada por Harris (1954) y popularizada por Firth (1957), sostiene que las palabras que aparecen en contextos similares tienen significados similares. Su versión cuantitativa más simple es una matriz palabra-contexto ponderada con información mutua puntual positiva:\n\n```text\nPPMI(w, c) = max( 0, log2 [ P(w, c) / ( P(w) · P(c) ) ] )\n```\n\nAl reducir esa matriz con descomposición en valores singulares se obtienen vectores densos. word2vec (Mikolov et al., 2013) llega a un resultado comparable por otra vía: entrena una red poco profunda para distinguir pares reales (palabra, contexto) de pares aleatorios. fastText (Bojanowski et al., 2017) añade n-gramas de caracteres, lo que permite representar palabras nuevas o mal escritas, algo frecuente en mensajes de clientes peruanos.\n\n## 2. Embeddings en la práctica\n\n```python\nfrom gensim.models import FastText\n\noraciones = [doc.split() for doc in corpus_normalizado]   # listas de tokens\nmodelo = FastText(sentences=oraciones, vector_size=200, window=5,\n                  min_count=3, sg=1, negative=10, epochs=10, seed=42)\n\nprint(modelo.wv.most_similar(\"reconexión\", topn=5))\nprint(modelo.wv.similarity(\"cobro\", \"descuento\"))\nprint(modelo.wv[\"reconexiooon\"][:3])    # vector construido con subpalabras\n```\n\nLos embeddings deben evaluarse en la tarea final y auditarse. Bolukbasi et al. (2016) y Caliskan, Bryson y Narayanan (2017) demostraron que reproducen estereotipos de género y origen presentes en los textos. En español, el género gramatical obliga a diseñar con cuidado las pruebas, para no confundir concordancia con sesgo.\n\n## 3. Temas latentes: LDA y NMF\n\nLDA (Blei, Ng y Jordan, 2003) modela cada documento como una mezcla de temas. NMF factoriza la matriz TF-IDF en dos matrices no negativas, X ≈ W·H, donde W indica la presencia de cada tema en cada documento y H las palabras que definen cada tema.\n\n```python\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.decomposition import NMF\n\nvec = TfidfVectorizer(max_df=0.5, min_df=5, stop_words=vacias_dominio)\nX = vec.fit_transform(resoluciones)\nnmf = NMF(n_components=12, init=\"nndsvd\", random_state=42)\nW = nmf.fit_transform(X)                       # documento-tema\nterminos = vec.get_feature_names_out()\nfor k, fila in enumerate(nmf.components_):     # tema-palabra\n    print(k, [terminos[i] for i in fila.argsort()[-8:][::-1]])\n```\n\nLa lista vacias_dominio debe incluir términos omnipresentes del género textual, como «artículo», «numeral» o «inciso» en resoluciones. El número de temas se elige combinando coherencia, estabilidad entre semillas y la prueba de intrusión de palabras de Chang et al. (2009).\n\n## 4. Etiquetado de secuencias y entidades nombradas\n\nEl reconocimiento de entidades asigna a cada token una etiqueta BIO. Para la oración «Multa de S/ 4500 impuesta por SUNAFIL en Arequipa», una anotación con tipos propios sería: Multa (O), de (O), S/ (B-MONTO), 4500 (I-MONTO), impuesta (O), por (O), SUNAFIL (B-ORG), en (O), Arequipa (B-LOC). Un CRF lineal (Lafferty, McCallum y Pereira, 2001) aprende a la vez atributos de cada token y transiciones entre etiquetas:\n\n```python\ndef forma(w):\n    return \"\".join(\"X\" if c.isupper() else \"x\" if c.islower()\n                   else \"d\" if c.isdigit() else c for c in w)\n\ndef atributos(tokens, i):\n    w = tokens[i]\n    return {\"w\": w.lower(), \"suf3\": w[-3:], \"forma\": forma(w),\n            \"titulo\": w.istitle(), \"digito\": w.isdigit(),\n            \"w-1\": tokens[i - 1].lower() if i > 0 else \"<INICIO>\",\n            \"w+1\": tokens[i + 1].lower() if i < len(tokens) - 1 else \"<FIN>\"}\n\nimport sklearn_crfsuite\ncrf = sklearn_crfsuite.CRF(algorithm=\"lbfgs\", c1=0.1, c2=0.1, max_iterations=200)\ncrf.fit(X_train, y_train)    # X: listas de diccionarios; y: listas de etiquetas BIO\n```\n\n## 5. Evaluar como se usa: nivel de entidad\n\nUna entidad solo es correcta si coinciden su tipo y sus límites exactos. La librería seqeval implementa este criterio y reporta precisión, exhaustividad y F1 por tipo:\n\n```python\nfrom seqeval.metrics import classification_report\nprint(classification_report(y_test, crf.predict(X_test), digits=3))\n```\n\nSi un modelo obtiene F1 de 0,93 en RUC y 0,55 en NORMA, la decisión de producto puede ser usar reglas para el RUC y concentrar la anotación en las normas.\n\n## 6. Datos, personas y responsabilidad\n\nLas resoluciones administrativas son públicas, pero contienen nombres de personas naturales. La Ley 29733 exige que el tratamiento respete la finalidad para la que los datos fueron publicados; un tablero comercial que perfila a trabajadores sancionados puede excederla. La extracción de información es poderosa precisamente porque convierte texto disperso en bases de datos consultables, y por eso exige evaluar riesgos antes de desplegar."
+      },
+      "case": {
+        "title": "Caso: LexDato y las 25 000 resoluciones administrativas",
+        "content": "**LexDato** es un emprendimiento ficticio de tecnología legal con sede en Lima y catorce colaboradores. Ofrece a estudios de abogados y áreas legales de empresas un servicio de vigilancia regulatoria que procesa resoluciones administrativas publicadas por entidades fiscalizadoras. Sus clientes quieren tres funciones: alertas cuando una resolución menciona su RUC o razón social; extracción estructurada de entidad emisora, normas citadas, monto de la multa y fechas; y un mapa temático de sanciones por sector.\n\nEl corpus reúne 25 000 resoluciones en PDF emitidas entre 2019 y 2025; el 18 % son documentos escaneados que requieren reconocimiento óptico de caracteres, con una tasa de error de 4 % por carácter.\n\nUn piloto de seis semanas produjo estos resultados sobre 60 documentos de prueba:\n\n| Enfoque | ORG | NORMA | MONTO | RUC |\n|---|---|---|---|---|\n| spaCy es_core_news_md sin ajuste (F1) | 0,58 | — | — | — |\n| Reglas y expresiones regulares (F1) | 0,49 | 0,41 | 0,93 | 0,97 |\n| CRF entrenado con 250 documentos (F1) | 0,77 | 0,71 | 0,88 | 0,95 |\n\nLas reglas fallan en NORMA por la variedad de escrituras: «D. Leg. 1057», «Decreto Legislativo N.° 1057» y «DL 1057». Dos estudiantes de Derecho anotaron 300 documentos con un kappa global de 0,66, pero de solo 0,48 en NORMA, porque la guía no precisa si se anota el artículo citado junto con la norma.\n\nEn el modelado de temas, LDA con 15 temas generó cuatro temas incoherentes dominados por «artículo», «numeral» e «inciso»; NMF con 12 temas obtuvo una coherencia C_v de 0,52 frente a 0,44 de LDA.\n\nLa directora general, Carla Benavides, quiere lanzar en seis semanas para una empresa minera que pagaría S/ 18 000 mensuales. El director técnico propone anotar 1 200 documentos adicionales (S/ 28 000 y cinco semanas) y entrenar un reconocedor de spaCy. El jefe comercial sugiere lanzar ya con reglas y revisión humana. Además, la asesora legal advierte que las resoluciones incluyen nombres de trabajadores y personas naturales sancionadas; aunque son fuentes públicas, la Ley 29733 y el principio de finalidad podrían limitar su exhibición en tableros comerciales.",
+        "questions": [
+          "¿Qué revela el kappa de 0,48 en NORMA sobre la guía de anotación y qué cambios haría antes de anotar 1 200 documentos más?",
+          "Compare reglas, CRF y spaCy reentrenado por tipo de entidad. ¿Qué combinación lanzaría en seis semanas y con qué controles de calidad?",
+          "¿Cómo mejoraría la interpretabilidad de los temas y qué evidencia presentaría al cliente para preferir NMF o LDA?",
+          "¿Qué medidas aplicaría a los nombres de personas naturales sancionadas, aunque provengan de resoluciones públicas? Justifique con el principio de finalidad."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Extracción de entidades y mapa temático de documentos públicos",
+        "instructions": "**Objetivo:** construir un sistema de extracción de entidades y un mapa temático para un corpus de documentos públicos peruanos, evaluados con rigor y documentados con sus limitaciones.\n\n**Corpus:** entre 150 y 300 documentos públicos (resoluciones administrativas, normas legales de El Peruano o noticias regionales) aprobados por el docente en la semana 9.\n\n**Qué entregar:**\n\n1. Guía de anotación para al menos cuatro tipos de entidad, de los cuales al menos uno debe ser propio del dominio (por ejemplo NORMA, MONTO o EXPEDIENTE), con ejemplos y reglas para casos límite.\n2. Doble anotación de 30 documentos con un compañero y kappa por tipo de entidad, con análisis de los desacuerdos.\n3. Línea base de reglas (EntityRuler o expresiones regulares) y un modelo estadístico (CRF con sklearn-crfsuite o spaCy reentrenado), evaluados con seqeval a nivel de entidad sobre al menos 40 documentos de prueba.\n4. Modelado de temas con NMF y LDA, selección de k con coherencia y una prueba de intrusión de palabras aplicada a tres personas.\n5. Exploración de embeddings (fastText propio o preentrenado): vecinos de diez términos del dominio y una auditoría breve de sesgo.\n6. Informe técnico de cuatro páginas con resultados, errores típicos, riesgos de datos personales y recomendaciones.\n\n**Formato:** repositorio o carpeta comprimida con cuadernos, anotaciones en formato JSONL e informe en PDF, subido hasta el domingo de la semana 12 a las 23:59.",
+        "rubric": [
+          {
+            "name": "Guía de anotación y acuerdo entre anotadores",
+            "points": 5
+          },
+          {
+            "name": "Modelo de entidades evaluado frente a la línea base de reglas",
+            "points": 6
+          },
+          {
+            "name": "Modelado de temas: selección de k e interpretación",
+            "points": 5
+          },
+          {
+            "name": "Embeddings, sesgos, privacidad y reproducibilidad",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Embeddings, temas y extracción de entidades",
+        "questions": [
+          {
+            "prompt": "¿Qué ventaja tiene fastText sobre word2vec para mensajes de clientes con errores ortográficos como «reconexion» o «rekonexión»?",
+            "options": [
+              "Usa la matriz de coocurrencia global en lugar de ventanas locales",
+              "Asigna un vector distinto a cada sentido de la palabra",
+              "Construye vectores a partir de n-gramas de caracteres y genera representaciones para palabras no vistas",
+              "No requiere ningún corpus de entrenamiento"
+            ],
+            "correct": 2,
+            "explanation": "fastText suma los vectores de los n-gramas de caracteres, por lo que las variantes ortográficas comparten fragmentos con la forma correcta. La coocurrencia global caracteriza a GloVe y los vectores por sentido requieren modelos contextuales."
+          },
+          {
+            "prompt": "La referencia contiene «Decreto Legislativo N.° 1057» como NORMA y el modelo predice solo «Decreto Legislativo» como NORMA. ¿Cómo se contabiliza en una evaluación estricta a nivel de entidad?",
+            "options": [
+              "Como acierto parcial con la mitad del puntaje",
+              "Como un falso positivo y un falso negativo",
+              "Como un verdadero positivo, porque el tipo es correcto",
+              "No se contabiliza, porque los límites no afectan el F1"
+            ],
+            "correct": 1,
+            "explanation": "Con coincidencia exacta, la entidad predicha no existe en la referencia (falso positivo) y la entidad real no fue encontrada (falso negativo). Algunos esquemas parciales otorgan crédito, pero no el estándar de CoNLL."
+          },
+          {
+            "prompt": "Un tema de LDA sobre resoluciones muestra «artículo, numeral, inciso, conforme, mediante». ¿Qué acción es más adecuada?",
+            "options": [
+              "Excluir esos términos con una lista propia del dominio o con max_df y volver a entrenar",
+              "Aumentar el número de temas hasta que desaparezca",
+              "Aceptarlo, porque LDA siempre genera un tema de palabras vacías",
+              "Cambiar a word2vec, que no produce temas"
+            ],
+            "correct": 0,
+            "explanation": "Son términos omnipresentes del género legal que no distinguen contenidos. Filtrarlos mejora la coherencia; aumentar k solo dispersa el problema y word2vec no resuelve la tarea de descubrir temas."
+          },
+          {
+            "prompt": "Dos anotadores coinciden en el 90 % de las etiquetas y el acuerdo esperado por azar es 0,75. ¿Cuál es el kappa de Cohen?",
+            "options": [
+              "0,90",
+              "0,15",
+              "0,60",
+              "0,75"
+            ],
+            "correct": 2,
+            "explanation": "κ = (pₒ − pₑ) / (1 − pₑ) = (0,90 − 0,75) / (1 − 0,75) = 0,15 / 0,25 = 0,60, un acuerdo moderado en el límite con sustancial según Landis y Koch."
+          },
+          {
+            "prompt": "Al auditar embeddings entrenados con avisos de empleo, «ingeniero» queda más cerca de nombres masculinos y «secretaria» de femeninos. ¿Cuál es la interpretación más rigurosa?",
+            "options": [
+              "Es un error de word2vec que se corrige aumentando la dimensión",
+              "Es irrelevante porque el español tiene género gramatical",
+              "Se elimina por completo quitando las palabras con género del vocabulario",
+              "Los vectores reflejan asociaciones de los datos; debe medirse su efecto en la tarea final y mitigarse antes de usarlos en selección de personal"
+            ],
+            "correct": 3,
+            "explanation": "Los embeddings aprenden regularidades del corpus, incluidos los estereotipos. El género gramatical complica la medición, pero no anula el sesgo, y las soluciones geométricas simples no lo eliminan por completo."
+          },
+          {
+            "prompt": "¿Por qué un CRF lineal suele superar en NER a un clasificador que etiqueta cada palabra de forma independiente?",
+            "options": [
+              "Porque modela las dependencias entre etiquetas vecinas y evita secuencias inválidas, como O seguida de I-PER",
+              "Porque no necesita atributos ni datos anotados",
+              "Porque utiliza embeddings contextuales preentrenados",
+              "Porque procesa el texto de derecha a izquierda"
+            ],
+            "correct": 0,
+            "explanation": "El CRF optimiza la secuencia completa con pesos de transición entre etiquetas y la decodifica con Viterbi. Requiere atributos y datos anotados y no usa embeddings contextuales de forma nativa."
+          },
+          {
+            "prompt": "¿Qué indica un valor alto de PPMI entre «portabilidad» y «número» en un corpus de reclamos?",
+            "options": [
+              "Que ambas palabras son sinónimas",
+              "Que coocurren con más frecuencia de la esperada si fueran independientes",
+              "Que ambas son palabras vacías",
+              "Que tienen la misma frecuencia en el corpus"
+            ],
+            "correct": 1,
+            "explanation": "La PPMI compara la probabilidad conjunta observada con el producto de las probabilidades marginales. Un valor alto indica asociación, no sinonimia ni igualdad de frecuencias."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Transformadores preentrenados, búsqueda semántica y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante ajusta modelos transformadores preentrenados en español y construye búsqueda semántica con embeddings de oraciones, compara su desempeño, latencia y costo con líneas base clásicas, y sustenta una solución de PLN documentada con tarjeta de modelo.",
+      "topics": [
+        "Mecanismo de atención y arquitectura transformadora",
+        "BERT y modelos preentrenados en español: BETO y RoBERTa-BNE",
+        "Ajuste fino para clasificación y reconocimiento de entidades con Hugging Face",
+        "Embeddings de oraciones, búsqueda semántica y recuperación híbrida",
+        "Evaluación rigurosa, eficiencia, sesgos, privacidad y tarjeta de modelo",
+        "Proyecto integrador y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Límites de las representaciones estáticas",
+          "bullets": [
+            "word2vec asigna el mismo vector a «banco» en «el banco me cobró» y en «me senté en el banco».",
+            "TF-IDF y el promedio de embeddings ignoran el orden: «el cliente demandó a la empresa» y «la empresa demandó al cliente» casi coinciden.",
+            "Las redes recurrentes procesan la secuencia paso a paso y degradan las dependencias largas; se estudian en Aprendizaje Profundo.",
+            "Se necesitan representaciones contextuales: el vector de cada palabra debe depender de toda la oración."
+          ],
+          "notes": "Recupere los resultados de las unidades anteriores para motivar el cambio de paradigma. Muestre dos oraciones con «banco» en sentidos distintos y verifique que word2vec les asigna exactamente el mismo vector. Luego muestre que con bolsa de palabras «el cliente demandó a la empresa» y «la empresa demandó al cliente» comparten casi todos sus términos, aunque describen situaciones opuestas, y pregunte qué consecuencias tendría esa confusión en un sistema de clasificación de expedientes judiciales. Explique brevemente que las redes recurrentes, como las LSTM de Hochreiter y Schmidhuber (1997), introdujeron el orden al procesar la secuencia palabra por palabra, pero son difíciles de paralelizar y pierden información en dependencias largas; su estudio detallado corresponde al curso de Aprendizaje Profundo del quinto ciclo. Aquí nos concentraremos en usar modelos preentrenados con criterio profesional. Pregunta para la clase: ¿qué tareas de las unidades 2 y 3 creen que mejorarían más con representaciones contextuales y cuáles casi no cambiarían? Registre las hipótesis para contrastarlas en el proyecto."
+        },
+        {
+          "title": "El mecanismo de atención",
+          "bullets": [
+            "Cada token produce tres vectores mediante matrices aprendidas: consulta (Q), clave (K) y valor (V).",
+            "Atención(Q, K, V) = softmax(QKᵀ / √d_k) · V: cada token combina los valores de todos según su relevancia.",
+            "Dividir entre √d_k evita que productos punto grandes saturen la softmax y anulen los gradientes.",
+            "En «el banco me cobró la comisión», la representación de «banco» atiende con fuerza a «cobró» y «comisión»."
+          ],
+          "notes": "Explique la atención con una analogía de búsqueda: cada palabra formula una consulta, las demás ofrecen claves que describen qué información tienen y valores que contienen esa información. El producto punto entre consulta y clave mide la afinidad; la softmax convierte las afinidades en pesos que suman uno; y el resultado es un promedio ponderado de los valores. Implemente la fórmula en NumPy con matrices pequeñas de cuatro tokens y dos dimensiones, mostrando la matriz de pesos resultante. Recuerde que Bahdanau, Cho y Bengio (2015) introdujeron la atención para traducción automática y que Vaswani y colaboradores la convirtieron en el componente central. Justifique la división entre la raíz de d_k: si las componentes tienen varianza uno, el producto punto tiene varianza d_k y crece con la dimensión, lo que empuja la softmax a valores extremos con gradientes casi nulos. Pregunta para la clase: en la oración «La SUNAT notificó a la empresa porque no declaró», ¿a qué palabras debería atender «declaró» para resolver la correferencia vista en la unidad 1?"
+        },
+        {
+          "title": "La arquitectura transformadora",
+          "bullets": [
+            "Vaswani et al. (2017) eliminaron la recurrencia: todos los tokens se procesan en paralelo con autoatención.",
+            "La atención multicabeza ejecuta varias atenciones en paralelo que capturan relaciones distintas: sintácticas, de correferencia o semánticas.",
+            "Las codificaciones posicionales añaden el orden; las conexiones residuales y la normalización por capas estabilizan el entrenamiento.",
+            "Codificadores como BERT sirven para comprender y clasificar; decodificadores como GPT generan texto, tema de IA Generativa y Modelos de Lenguaje."
+          ],
+          "notes": "Presente el artículo «Attention is all you need» como el punto de quiebre que permitió entrenar modelos con cantidades de texto antes impensables, porque la autoatención se paraleliza en GPU mucho mejor que las redes recurrentes. Dibuje un bloque codificador: autoatención multicabeza, suma residual y normalización, red de avance por posición, y nuevamente suma y normalización; un modelo base apila doce de estos bloques. Explique que la atención por sí sola es invariante al orden y que por eso se suman vectores de posición a los embeddings de entrada. Distinga con claridad las tres familias: solo codificador, como BERT, ideal para clasificación, entidades y búsqueda; solo decodificador, como GPT, para generación; y codificador-decodificador, como T5, para traducción y resumen. Aclare el alcance del curso: aquí trabajamos con codificadores, mientras que la generación, la ingeniería de instrucciones y la recuperación aumentada se estudiarán en IA Generativa y Modelos de Lenguaje. Pregunta para la clase: ¿por qué un codificador bidireccional es más adecuado que un decodificador para etiquetar entidades en una resolución?"
+        },
+        {
+          "title": "BERT: preentrenamiento y ajuste fino",
+          "bullets": [
+            "Devlin et al. (2019) preentrenaron con modelado de lenguaje enmascarado: predecir el 15 % de los tokens ocultos con contexto bidireccional.",
+            "BERT-base: 12 capas, 768 dimensiones ocultas, 12 cabezas de atención y unos 110 millones de parámetros.",
+            "El token [CLS] resume la secuencia para clasificar y [SEP] separa pares de oraciones.",
+            "Aprendizaje por transferencia: el costoso preentrenamiento se hace una vez y el ajuste fino con miles de ejemplos toma minutos u horas."
+          ],
+          "notes": "Explique el preentrenamiento de BERT como un ejercicio de completar espacios a escala masiva: se ocultan tokens al azar y el modelo aprende a predecirlos usando el contexto a ambos lados, lo que lo obliga a aprender sintaxis, semántica y conocimiento del mundo. Precise el detalle: del 15 % seleccionado, el 80 % se reemplaza por [MASK], el 10 % por un token aleatorio y el 10 % se deja igual, para que el modelo no dependa de ver siempre la máscara. El BERT original se entrenó con BooksCorpus y la Wikipedia en inglés, unos 3300 millones de palabras. Luego presente el paradigma de transferencia: se reutilizan los pesos preentrenados y se añade una pequeña capa para la tarea; con pocos miles de ejemplos se obtienen resultados que antes requerían cientos de miles. Muestre en vivo el pipeline fill-mask con un modelo en español completando «La SUNAT cobra el [MASK] a la renta». Pregunta para la clase: ¿qué sesgos o conocimientos desactualizados podría heredar un modelo preentrenado con textos de hace varios años?"
+        },
+        {
+          "title": "Modelos preentrenados en español y multilingües",
+          "bullets": [
+            "BETO (Cañete et al., 2020, Universidad de Chile): BERT-base entrenado con unos 3000 millones de palabras en español.",
+            "RoBERTa-BNE (familia MarIA), del Barcelona Supercomputing Center, entrenado con 570 GB de texto recopilado por la Biblioteca Nacional de España.",
+            "Modelos multilingües como mBERT y XLM-RoBERTa cubren alrededor de cien idiomas, con menor rendimiento por idioma.",
+            "Elegir por dominio y registro: RoBERTuito para redes sociales y modelos destilados cuando la latencia es crítica."
+          ],
+          "notes": "Presente el ecosistema de modelos para el español con sus fortalezas y límites. BETO, desarrollado por el Departamento de Ciencias de la Computación de la Universidad de Chile, fue uno de los primeros modelos monolingües y sigue siendo una referencia; RoBERTa-BNE, del Barcelona Supercomputing Center, se entrenó con un corpus muy grande del español, aunque con predominio de fuentes peninsulares. Los modelos multilingües son útiles cuando hay textos en varios idiomas o cuando se necesita transferencia hacia lenguas con pocos recursos, pero suelen rendir menos que los monolingües en español. Señale que ningún modelo masivo fue entrenado específicamente con español peruano y que la brecha aparece en jerga, siglas institucionales y textos de regiones andinas o amazónicas. Muestre cómo leer la ficha de un modelo en el repositorio de Hugging Face: datos de entrenamiento, licencia, tamaño y evaluaciones. Pregunta para la clase: para clasificar mensajes de WhatsApp de clientes de una caja municipal de Puno, ¿qué modelo probarían primero y qué experimento diseñarían para confirmar la elección?"
+        },
+        {
+          "title": "Tokenización y entradas del modelo",
+          "bullets": [
+            "AutoTokenizer carga el tokenizador exacto del modelo; usar uno distinto destruye el rendimiento.",
+            "Salidas: input_ids (índices de subpalabras), attention_mask (1 para tokens reales, 0 para relleno) y, en pares, token_type_ids.",
+            "BERT admite como máximo 512 tokens; los documentos largos requieren truncar, dividir en ventanas o seleccionar fragmentos.",
+            "Medir la distribución de longitudes en tokens del corpus antes de fijar max_length, porque define memoria y velocidad."
+          ],
+          "notes": "Muestre en vivo la tokenización de un reclamo con el tokenizador de BETO: imprima los tokens, los identificadores y la máscara de atención. Haga notar que palabras peruanas como «chamba» o siglas como «OSIPTEL» se dividen en varias subpalabras, lo que alarga la secuencia y puede diluir su representación. Explique la máscara de atención: al agrupar textos de distinta longitud en un lote, los más cortos se rellenan y la máscara impide que el modelo atienda a ese relleno. Luego trate el límite de 512 tokens: un reclamo suele ocupar menos de cien, pero una resolución administrativa puede superar varios miles. Presente las estrategias: truncar conservando el inicio, que suele contener lo esencial; dividir en ventanas superpuestas y agregar las predicciones; o seleccionar primero los párrafos relevantes. Recomiende calcular percentiles de longitud y fijar max_length en el percentil 95, porque el costo de la atención crece con el cuadrado de la longitud. Pregunta para la clase: ¿qué estrategia aplicarían para clasificar resoluciones de veinte páginas por tipo de infracción?"
+        },
+        {
+          "title": "Ajuste fino para clasificación de textos",
+          "bullets": [
+            "AutoModelForSequenceClassification añade una capa lineal sobre [CLS] con tantas salidas como clases.",
+            "Valores de partida: tasa de aprendizaje de 2e-5 a 5e-5, de 2 a 4 épocas, lotes de 16 o 32 y calentamiento del 10 %.",
+            "Seleccionar el mejor punto de control con macro-F1 en un conjunto de validación, nunca con el de prueba.",
+            "En Colab con una GPU T4, ajustar BETO con 20 000 textos cortos toma del orden de decenas de minutos."
+          ],
+          "notes": "Desarrolle el flujo completo con la librería transformers: cargar datos con datasets, tokenizar con map en lotes, instanciar el modelo con el número de etiquetas, definir TrainingArguments y ejecutar Trainer con una función de métricas que calcule macro-F1. Explique por qué la tasa de aprendizaje es mucho menor que en otros modelos: los pesos preentrenados ya son buenos y un paso grande los destruiría, fenómeno conocido como olvido catastrófico. El calentamiento aumenta la tasa gradualmente durante los primeros pasos para estabilizar el entrenamiento. Insista en el error metodológico más frecuente en tutoriales: usar el conjunto de prueba como conjunto de evaluación durante el entrenamiento y seleccionar con él el mejor punto de control; las métricas reportadas quedan sesgadas al alza. Se necesitan tres particiones: entrenamiento, validación y prueba. Mencione que con clases desbalanceadas puede usarse una pérdida ponderada personalizando el Trainer. Pregunta para la clase: si después de una época la pérdida de validación sube mientras la de entrenamiento baja, ¿qué está ocurriendo y qué ajustarían?"
+        },
+        {
+          "title": "Ajuste fino para NER: alineación de etiquetas",
+          "bullets": [
+            "AutoModelForTokenClassification predice una etiqueta por subpalabra, pero las etiquetas BIO están definidas por palabra.",
+            "word_ids() indica a qué palabra pertenece cada subpalabra: se etiqueta la primera y las demás reciben −100.",
+            "El valor −100 hace que la función de pérdida ignore esas posiciones, al igual que los tokens especiales [CLS] y [SEP].",
+            "Evaluar a nivel de entidad con seqeval, reconstruyendo las etiquetas por palabra como en la unidad 3."
+          ],
+          "notes": "Muestre el problema con un ejemplo concreto: «SUNAFIL» puede dividirse en tres subpalabras, pero en la anotación es una sola palabra con etiqueta B-ORG. Si se asigna la etiqueta a todas las subpalabras, el modelo cuenta la entidad varias veces y la evaluación se distorsiona. La solución estándar usa el método word_ids del tokenizador rápido: para cada subpalabra devuelve el índice de la palabra original o None para los tokens especiales; se asigna la etiqueta real a la primera subpalabra de cada palabra y −100 a las demás. En PyTorch, la entropía cruzada ignora por defecto las posiciones con ese valor. Escriba la función de alineación en vivo y verifique visualmente el resultado con una oración de una resolución. Luego explique la evaluación: se descartan las posiciones con −100, se reconstruyen las secuencias por palabra y se aplica seqeval, de modo que los resultados sean comparables con el CRF de la unidad 3. Pregunta para la clase: ¿qué esperan que ocurra con la ventaja del transformador sobre el CRF si solo hay 150 documentos anotados?"
+        },
+        {
+          "title": "Embeddings de oraciones con Sentence-BERT",
+          "bullets": [
+            "El vector [CLS] de BERT sin ajuste produce malas similitudes; Sentence-BERT (Reimers y Gurevych, 2019) entrena redes siamesas para ello.",
+            "Cada oración se codifica una vez en un vector denso de 384 o 768 dimensiones y se compara con similitud coseno.",
+            "Modelos multilingües de paráfrasis, como paraphrase-multilingual-MiniLM-L12-v2, funcionan bien en español sin ajuste.",
+            "Aplicaciones: búsqueda semántica en preguntas frecuentes, detección de duplicados y agrupamiento de consultas."
+          ],
+          "notes": "Explique por qué no basta con tomar el vector de BERT: comparar dos oraciones con un modelo de clasificación de pares exige pasarlas juntas por la red, y encontrar el par más similar entre diez mil oraciones requeriría unos cincuenta millones de inferencias, según el cálculo de Reimers y Gurevych. Sentence-BERT resuelve el problema entrenando dos copias de la misma red con pares de oraciones similares y distintas, de modo que cada oración se codifica de manera independiente y la comparación se reduce a un coseno. Muestre en vivo la librería sentence-transformers: codifique cinco preguntas frecuentes de una municipalidad y una consulta escrita con otras palabras, y observe que la respuesta correcta queda primera aunque no compartan términos. Retome el ejemplo de la unidad 2 sobre el recojo de basura. Comente que los modelos multilingües de paráfrasis se entrenaron por destilación a partir de un modelo en inglés. Pregunta para la clase: ¿qué ocurrirá si la consulta incluye un código exacto, como el número de una ordenanza, que el modelo denso no distingue bien?"
+        },
+        {
+          "title": "Búsqueda semántica y recuperación híbrida",
+          "bullets": [
+            "Indexar: codificar el corpus una vez y guardar los vectores; consultar: codificar la pregunta y recuperar los k más cercanos.",
+            "FAISS y otros índices vectoriales aceleran la búsqueda aproximada en millones de documentos.",
+            "Recuperación híbrida: combinar puntajes de BM25, que capta códigos y nombres exactos, con puntajes densos, que captan paráfrasis.",
+            "Métricas: Recall@k, MRR y nDCG sobre un conjunto de consultas con documentos relevantes anotados."
+          ],
+          "notes": "Construya un buscador completo en tres pasos: codificar 380 respuestas de una base de conocimiento, almacenar la matriz normalizada y, para cada consulta, calcular el producto punto y devolver las tres mejores. Para millones de documentos, presente FAISS, desarrollado por Meta, que organiza los vectores en estructuras de búsqueda aproximada y reduce el tiempo de respuesta a milisegundos. Luego explique la recuperación híbrida con la fusión por rangos recíprocos: cada documento recibe la suma de 1/(k + rango) en ambas listas, una técnica simple y robusta que no requiere calibrar puntajes de distinta escala. Insista en la evaluación: se necesita un conjunto de consultas reales con sus respuestas correctas, y se reportan Recall@k, que indica si la respuesta está entre las k primeras, y MRR, que premia que aparezca arriba. Anticipe que este componente de recuperación es la base de los sistemas de generación aumentada que estudiarán en el quinto ciclo. Pregunta para la clase: ¿cómo construirían un conjunto de evaluación de 200 consultas sin gastar en anotación externa?"
+        },
+        {
+          "title": "Evaluación rigurosa frente a la línea base",
+          "bullets": [
+            "Misma partición, mismas métricas y mismo conjunto de prueba para TF-IDF y para el transformador.",
+            "Repetir con tres a cinco semillas: el ajuste fino es inestable con pocos datos y una sola corrida puede engañar.",
+            "Intervalos de confianza por remuestreo bootstrap y prueba de McNemar para comparar dos clasificadores sobre los mismos casos.",
+            "Pruebas de comportamiento (CheckList, Ribeiro et al., 2020): negación, cambio de nombres, errores ortográficos y jerga."
+          ],
+          "notes": "Plantee la pregunta que todo comité hará: ¿la mejora del transformador es real o es ruido? Muestre que el ajuste fino de BERT con pocos miles de ejemplos puede variar dos o tres puntos de macro-F1 entre semillas, por lo que una sola corrida no basta. Explique el bootstrap: remuestrear con reemplazo el conjunto de prueba mil veces, recalcular la métrica y tomar los percentiles 2,5 y 97,5 como intervalo. Presente la prueba de McNemar, que solo considera los casos en que los modelos discrepan: con b casos que acierta solo el primero y c que acierta solo el segundo, el estadístico es (|b − c| − 1)² / (b + c), con distribución chi-cuadrado de un grado de libertad. Luego introduzca CheckList: pruebas unitarias para modelos, como verificar que agregar «no» cambie la predicción o que cambiar «Juan» por «Huamán» no la altere. Pregunta para la clase: con b = 60 y c = 35, ¿la diferencia es significativa al 5 %? Calculen juntos: el estadístico es 24²/95 ≈ 6,06, mayor que 3,84, por lo que sí lo es."
+        },
+        {
+          "title": "Eficiencia: latencia, costo y compresión",
+          "bullets": [
+            "DistilBERT (Sanh et al., 2019) conserva cerca del 97 % del desempeño de BERT con 40 % menos parámetros y 60 % más velocidad.",
+            "La cuantización a enteros de 8 bits y la exportación a ONNX reducen la latencia en CPU sin necesidad de GPU.",
+            "Medir el costo por cada mil predicciones y la latencia del percentil 95, no solo el promedio.",
+            "Si TF-IDF logra 0,79 y el transformador 0,82 con veinte veces más costo, la decisión depende del valor del error evitado."
+          ],
+          "notes": "Traslade la discusión técnica al lenguaje de una gerencia. Explique la destilación de conocimiento: un modelo pequeño, el estudiante, aprende a imitar las salidas del grande, el maestro, conservando gran parte de su desempeño. Presente la cuantización: representar pesos en enteros de 8 bits en lugar de flotantes de 32 reduce memoria y acelera la inferencia en CPU, a veces con una pérdida mínima de exactitud que siempre debe medirse. Muestre cómo medir la latencia correctamente: precalentar el modelo, medir cientos de predicciones y reportar percentiles, porque los usuarios perciben las peores esperas, no el promedio. Construya con los estudiantes una estimación de costo: volumen mensual de textos, tiempo por predicción, costo por hora de la instancia en la nube y número de instancias necesarias para el pico de demanda. Luego compare con el valor del error evitado: si cada reclamo mal enrutado cuesta S/ 25 en reprocesos, tres puntos de mejora sobre 40 000 reclamos mensuales equivalen a unos S/ 30 000. Pregunta para la clase: ¿cuándo sería racional quedarse con TF-IDF?"
+        },
+        {
+          "title": "Sesgos, privacidad y uso responsable",
+          "bullets": [
+            "Evaluar el desempeño por subgrupos: región, variedad dialectal, canal y longitud del mensaje, y reportar las brechas.",
+            "Ley 29733: minimizar datos, seudonimizar antes de entrenar y controlar el acceso; los datos de salud exigen protección reforzada.",
+            "Los modelos pueden memorizar fragmentos del entrenamiento: nunca ajustar con identificadores personales sin enmascarar.",
+            "La Ley 31814 promueve el uso de la inteligencia artificial en el Perú con enfoque de riesgos, transparencia y supervisión humana."
+          ],
+          "notes": "Presente la evaluación por subgrupos como una práctica técnica obligatoria y no como un añadido ético. Muestre un ejemplo: un clasificador con macro-F1 global de 0,87 puede caer a 0,71 en mensajes escritos con influencia del quechua o a 0,65 en mensajes muy cortos; ese promedio oculta a quiénes falla el sistema. Explique cómo construir esos subgrupos de forma responsable, sin inferir atributos sensibles de las personas, por ejemplo usando el canal, la agencia o la región declarada. En privacidad, recuerde las capas de anonimización de la unidad 1 y explique que los modelos grandes pueden reproducir fragmentos memorizados del entrenamiento, como demostraron Carlini y colaboradores en 2021 con modelos generativos. Presente la Ley 31814, que promueve el uso de la inteligencia artificial en favor del desarrollo económico y social del país, y su enfoque basado en riesgos. Pregunta para la clase: ¿qué decisiones de un sistema de PLN municipal deberían quedar siempre en manos de una persona y cómo lo garantizarían en el diseño?"
+        },
+        {
+          "title": "Documentación: tarjeta de modelo y hoja de datos",
+          "bullets": [
+            "Tarjeta de modelo (Mitchell et al., 2019): uso previsto, usos fuera de alcance, datos, métricas por subgrupo y limitaciones.",
+            "Hoja de datos (Gebru et al., 2021): motivación, composición, recolección, preprocesamiento, usos y mantenimiento del corpus.",
+            "Registrar versiones del modelo, del tokenizador, de las librerías y de los datos para garantizar la trazabilidad.",
+            "La documentación es un entregable técnico que permite auditar, mantener y desplegar el modelo en el curso de MLOps."
+          ],
+          "notes": "Muestre una tarjeta de modelo real publicada en el repositorio de Hugging Face y analice qué secciones están completas y cuáles faltan; es común que las limitaciones y las métricas por subgrupo estén vacías. Explique la propuesta original de Margaret Mitchell y colaboradores: así como un medicamento trae un prospecto con indicaciones y contraindicaciones, un modelo debe declarar para qué sirve, para qué no y con qué evidencia. La hoja de datos de Timnit Gebru y colaboradores cumple la misma función para los corpus, y en PLN se complementa con la declaración de datos de Bender y Friedman vista en la unidad 1. Insista en la trazabilidad: si dentro de seis meses alguien pregunta por qué el modelo derivó mal un reclamo, debe poder reconstruirse qué versión del modelo y de los datos estaba en producción. Entregue una plantilla en español para el proyecto integrador. Pregunta para la clase: redacten en equipos tres usos fuera de alcance para un clasificador de consultas municipales y expliquen el daño que cada uno podría causar."
+        },
+        {
+          "title": "Proyecto integrador: del problema a la sustentación",
+          "bullets": [
+            "Fase 1: problema, datos y métricas de negocio; fase 2: línea base clásica; fase 3: transformador o búsqueda semántica.",
+            "Fase 4: evaluación comparativa con intervalos de confianza, análisis de errores, subgrupos y pruebas de comportamiento.",
+            "Fase 5: demostración funcional (cuaderno o aplicación Gradio), tarjeta de modelo, hoja de datos y plan de monitoreo.",
+            "Sustentación de diez minutos ante un panel que actúa como comité de inversión: defender cada decisión con evidencia."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso y como una pieza de portafolio profesional. Recorra las fases con su calendario: la propuesta se aprueba en la semana 13, el modelo ajustado se presenta en la semana 14, el avance completo con evaluación en la semana 15 y la sustentación final en la semana 16. Explique los criterios de la rúbrica y muestre ejemplos de buenas y malas decisiones de proyectos anteriores: un equipo que solo reporta exactitud global, otro que no compara con una línea base y otro que usa la prueba para seleccionar hiperparámetros. Describa la dinámica de la sustentación: el panel asumirá roles de gerente general, responsable de cumplimiento y jefe de tecnología, y hará preguntas sobre costo, riesgo y mantenimiento. Recomiende ensayar la demostración y tener un plan alternativo si falla la conexión. Pregunta para la clase: en una oración, ¿qué decisión de negocio cambiará gracias a su proyecto y cómo sabrán si funcionó? Pida que esa oración encabece la propuesta del proyecto."
+        }
+      ],
+      "reading": {
+        "title": "Transformadores en español: ajuste fino y búsqueda semántica con evidencia",
+        "minutes": 45,
+        "content": "## 1. De vectores estáticos a vectores contextuales\n\nLos embeddings de la unidad 3 asignan un único vector a cada palabra. Los transformadores, introducidos por Vaswani et al. (2017), calculan en cambio una representación de cada token que depende de toda la oración. Su componente central es la autoatención:\n\n```text\nAtención(Q, K, V) = softmax( Q·Kᵀ / √d_k ) · V\n```\n\nQ, K y V son proyecciones lineales de los embeddings de entrada. Cada fila de la matriz de pesos indica cuánto atiende un token a los demás; el resultado es un promedio ponderado de los valores.\n\n```python\nimport numpy as np\n\ndef atencion(Q, K, V):\n    d_k = Q.shape[-1]\n    puntajes = Q @ K.T / np.sqrt(d_k)                      # afinidad consulta-clave\n    pesos = np.exp(puntajes - puntajes.max(axis=-1, keepdims=True))\n    pesos /= pesos.sum(axis=-1, keepdims=True)               # softmax por fila\n    return pesos @ V, pesos\n```\n\nBERT (Devlin et al., 2019) apila doce bloques de este tipo y se preentrena prediciendo tokens enmascarados. Para el español existen modelos monolingües como BETO (Cañete et al., 2020) y RoBERTa-BNE, además de modelos multilingües.\n\n## 2. Ajuste fino de BETO para clasificar consultas\n\nEl siguiente esquema usa tres particiones: entrenamiento, validación para seleccionar el mejor punto de control y prueba para el informe final. Los archivos CSV tienen las columnas texto y label, con etiquetas enteras.\n\n```python\nimport numpy as np\nfrom datasets import load_dataset\nfrom sklearn.metrics import f1_score\nfrom transformers import (AutoTokenizer, AutoModelForSequenceClassification,\n                          TrainingArguments, Trainer)\n\nckpt = \"dccuchile/bert-base-spanish-wwm-cased\"           # BETO\nds = load_dataset(\"csv\", data_files={\"train\": \"train.csv\",\n                                     \"validacion\": \"val.csv\", \"prueba\": \"test.csv\"})\ntok = AutoTokenizer.from_pretrained(ckpt)\nds = ds.map(lambda b: tok(b[\"texto\"], truncation=True, max_length=128), batched=True)\nmodelo = AutoModelForSequenceClassification.from_pretrained(ckpt, num_labels=9)\n\ndef metricas(p):\n    return {\"f1_macro\": f1_score(p.label_ids, np.argmax(p.predictions, -1), average=\"macro\")}\n\nargs = TrainingArguments(output_dir=\"beto-consultas\", learning_rate=3e-5,\n    num_train_epochs=3, per_device_train_batch_size=16, warmup_ratio=0.1,\n    eval_strategy=\"epoch\", save_strategy=\"epoch\", load_best_model_at_end=True,\n    metric_for_best_model=\"f1_macro\", seed=42)\ntrainer = Trainer(model=modelo, args=args, train_dataset=ds[\"train\"],\n                  eval_dataset=ds[\"validacion\"], processing_class=tok,\n                  compute_metrics=metricas)\ntrainer.train()\nprint(trainer.evaluate(ds[\"prueba\"]))                     # una sola vez, al final\n```\n\nRepita el entrenamiento con al menos tres semillas y reporte media y desviación estándar. En versiones antiguas de transformers, el argumento processing_class se llamaba tokenizer.\n\n## 3. Búsqueda semántica con embeddings de oraciones\n\nSentence-BERT (Reimers y Gurevych, 2019) produce vectores de oración comparables con coseno. Un modelo multilingüe de paráfrasis resuelve consultas que no comparten palabras con la respuesta:\n\n```python\nfrom sentence_transformers import SentenceTransformer, util\n\nm = SentenceTransformer(\"sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2\")\nfaq = [\"¿Cómo obtengo mi licencia de funcionamiento?\",\n       \"¿Dónde pago el impuesto predial?\",\n       \"¿Cómo reporto la falta de recojo de basura?\"]\nE = m.encode(faq, normalize_embeddings=True)\nq = m.encode(\"no pasa el camión de residuos por mi calle\", normalize_embeddings=True)\nprint(faq[int(util.cos_sim(q, E).argmax())])\n```\n\nEn producción conviene una recuperación híbrida: BM25 capta códigos exactos, como el número de una ordenanza, y el modelo denso capta paráfrasis. Ambas listas se combinan, por ejemplo, con fusión por rangos recíprocos.\n\n## 4. Decidir con evidencia\n\nUn transformador no se justifica por ser moderno, sino por una mejora significativa que compense su costo. Para comparar dos clasificadores sobre los mismos casos se usa la prueba de McNemar, donde b son los casos que solo acierta el primero y c los que solo acierta el segundo:\n\n```text\nχ² = ( |b − c| − 1 )² / ( b + c )        significativo al 5 % si χ² > 3,84\n```\n\nLa decisión integra además la latencia del percentil 95, el costo mensual de inferencia, el desempeño por subgrupos y los riesgos de privacidad bajo la Ley 29733. Si el modelo falla sistemáticamente con quienes escriben con influencia del quechua, la mejora promedio no basta.\n\n## 5. Documentar para desplegar\n\nLa tarjeta de modelo (Mitchell et al., 2019) declara uso previsto, usos fuera de alcance, datos, métricas por subgrupo y limitaciones; la hoja de datos (Gebru et al., 2021) describe el corpus. Ambas, junto con las versiones del modelo y del tokenizador, son el puente hacia el curso de Despliegue de Modelos (MLOps)."
+      },
+      "case": {
+        "title": "Caso: La ventanilla digital de la Municipalidad de San Gabriel",
+        "content": "La **Municipalidad Distrital de San Gabriel**, una municipalidad ficticia de Lima Metropolitana con 420 000 habitantes, recibe unas 22 000 consultas mensuales por WhatsApp, formulario web y mesa de partes digital. Seis operadores las clasifican en nueve categorías: licencias, tributos, limpieza pública, seguridad ciudadana, obras, transporte, programas sociales, registro civil y otros. El tiempo promedio de primera respuesta es de 3,8 días y el alcalde quiere anunciar un «asistente con inteligencia artificial» en el aniversario del distrito, dentro de dos meses. El presupuesto anual para servicios en la nube es de S/ 60 000 y la municipalidad no tiene GPU propias.\n\nEl equipo de la subgerencia de Tecnologías de la Información, apoyado por practicantes de un instituto, evaluó tres clasificadores con 3 000 consultas de prueba:\n\n| Solución | Macro-F1 (IC 95 %) | Latencia p95 en CPU | Costo mensual estimado |\n|---|---|---|---|\n| TF-IDF + regresión logística | 0,79 (0,77-0,81) | 4 ms | S/ 150 |\n| DistilBERT multilingüe ajustado | 0,84 (0,82-0,86) | 45 ms | S/ 900 |\n| BETO ajustado | 0,87 (0,85-0,89) | 140 ms | S/ 2 300 |\n\nPara responder preguntas frecuentes con una base de 380 respuestas aprobadas, BM25 alcanzó un Recall@3 de 0,68; un modelo denso multilingüe, 0,81; y la búsqueda híbrida, 0,88.\n\nEl análisis por subgrupos mostró un problema: en las consultas escritas con influencia del quechua o íntegramente en quechua, cerca del 4 % del total y concentradas en asentamientos humanos de las zonas altas, el macro-F1 de BETO cae a 0,71 y el de TF-IDF a 0,58. Además, algunas consultas de seguridad ciudadana describen hechos de violencia familiar con nombres y direcciones de las víctimas.\n\nEl gerente municipal pide la opción más barata; el subgerente de TI prefiere BETO «porque es el mejor»; y la Oficina de Participación Vecinal exige que ninguna consulta se cierre sin intervención humana. La Ley 29735 obliga a las entidades públicas a atender en lenguas originarias donde estas predominan, y el comité debe presentar su propuesta al concejo en tres semanas.",
+        "questions": [
+          "¿Qué clasificador recomendaría? Use los intervalos de confianza, la latencia y el costo. ¿Es concluyente la diferencia entre DistilBERT y BETO?",
+          "Diseñe la búsqueda híbrida y la política de respuesta: ¿qué umbral de similitud usaría para responder automáticamente y cuándo derivaría a un operador?",
+          "¿Qué acciones concretas tomaría ante la brecha de desempeño en consultas con influencia del quechua, considerando la Ley 29735?",
+          "¿Qué secciones mínimas tendría la tarjeta de modelo y qué medidas de la Ley 29733 aplicaría a las consultas de seguridad ciudadana?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: solución de PLN de extremo a extremo para una organización peruana",
+        "instructions": "**Objetivo:** diseñar, construir, evaluar y sustentar una solución de procesamiento de lenguaje natural que resuelva un problema real o realista de una organización peruana, comparando una línea base clásica con un modelo transformador o de búsqueda semántica.\n\n**Modalidad:** equipos de dos o tres estudiantes. La propuesta se aprueba en la semana 13.\n\n**Requisitos de datos:** al menos 3 000 textos etiquetados para clasificación o reconocimiento de entidades, o al menos 300 consultas con respuestas relevantes para búsqueda, de fuentes públicas o proporcionadas por el docente, seudonimizadas conforme a la Ley 29733.\n\n**Qué entregar:**\n\n1. Repositorio Git con cuadernos o scripts, requirements.txt y README de ejecución.\n2. Línea base clásica (TF-IDF con modelo lineal, CRF o BM25) correctamente validada.\n3. Modelo transformador ajustado (BETO, RoBERTa-BNE o DistilBERT) o búsqueda semántica con embeddings de oraciones, con particiones de entrenamiento, validación y prueba.\n4. Evaluación comparativa con tres semillas, intervalos bootstrap, prueba de McNemar o equivalente, métricas por subgrupo y al menos tres pruebas de comportamiento.\n5. Medición de latencia del percentil 95 y estimación del costo mensual de operación.\n6. Tarjeta de modelo, hoja de datos y medidas de privacidad.\n7. Demostración funcional en Gradio o en un cuaderno interactivo.\n8. Sustentación de diez minutos y cinco de preguntas en la semana 16.\n\n**Formato:** enlace al repositorio e informe técnico de seis páginas en PDF, entregados hasta el viernes de la semana 15 a las 23:59.",
+        "rubric": [
+          {
+            "name": "Formulación del problema, datos y privacidad",
+            "points": 4
+          },
+          {
+            "name": "Línea base y modelo transformador correctamente implementados",
+            "points": 5
+          },
+          {
+            "name": "Evaluación comparativa, robustez y eficiencia",
+            "points": 5
+          },
+          {
+            "name": "Tarjeta de modelo y hoja de datos",
+            "points": 3
+          },
+          {
+            "name": "Demostración y sustentación oral",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Transformadores, búsqueda semántica y evaluación responsable",
+        "questions": [
+          {
+            "prompt": "En la fórmula de atención softmax(QKᵀ/√d_k)·V, ¿cuál es la función de dividir entre √d_k?",
+            "options": [
+              "Normalizar los vectores de valor a norma uno",
+              "Evitar que productos punto grandes saturen la softmax y produzcan gradientes muy pequeños",
+              "Reducir el número de cabezas de atención necesarias",
+              "Convertir la atención en una operación causal"
+            ],
+            "correct": 1,
+            "explanation": "El producto punto crece con la dimensión; sin escalar, la softmax se concentra en un solo token y sus gradientes se anulan. La causalidad se logra con máscaras, no con el escalamiento."
+          },
+          {
+            "prompt": "Al ajustar BERT para NER, las subpalabras posteriores a la primera de cada palabra reciben la etiqueta −100. ¿Por qué?",
+            "options": [
+              "Para que la función de pérdida las ignore y cada palabra se evalúe una sola vez",
+              "Para indicar que pertenecen a la clase O",
+              "Porque el modelo no puede procesar más de una subpalabra por palabra",
+              "Para marcar el final de la oración"
+            ],
+            "correct": 0,
+            "explanation": "La entropía cruzada de PyTorch ignora por defecto el índice −100. Así se evita contar varias veces una misma palabra y la evaluación se mantiene a nivel de palabra, comparable con la anotación BIO."
+          },
+          {
+            "prompt": "Un equipo selecciona el mejor punto de control usando el conjunto de prueba como eval_dataset y reporta ese macro-F1. ¿Cuál es el problema?",
+            "options": [
+              "Ninguno, porque Trainer evita automáticamente la fuga de información",
+              "El tokenizador se ajusta con los datos de prueba",
+              "La métrica reportada está sesgada al alza, porque la prueba se usó para seleccionar el modelo",
+              "El modelo ya no podrá ejecutarse en CPU"
+            ],
+            "correct": 2,
+            "explanation": "Seleccionar con la prueba convierte esa partición en datos de validación. Se requieren tres particiones: entrenamiento, validación para seleccionar y prueba para informar una sola vez."
+          },
+          {
+            "prompt": "TF-IDF con regresión logística logra macro-F1 de 0,79 (IC 95 %: 0,77-0,81) y un transformador 0,80 (IC 95 %: 0,78-0,82) con treinta veces más costo de inferencia. ¿Qué decisión es más razonable?",
+            "options": [
+              "Desplegar el transformador porque su promedio es mayor",
+              "Promediar las predicciones de ambos modelos sin evaluar la combinación",
+              "Descartar ambos modelos hasta reunir un corpus diez veces mayor",
+              "Desplegar la línea base y documentar que la mejora del transformador no es concluyente ni justifica su costo"
+            ],
+            "correct": 3,
+            "explanation": "Los intervalos se solapan casi por completo y la diferencia no es concluyente; con un costo treinta veces mayor, la línea base es la opción defendible, salvo que el análisis por subgrupos muestre lo contrario."
+          },
+          {
+            "prompt": "¿Por qué la búsqueda con embeddings de oraciones encuentra «¿Cómo reporto la falta de recojo de basura?» ante la consulta «no pasa el camión de residuos»?",
+            "options": [
+              "Porque ambas frases comparten muchas palabras clave",
+              "Porque el modelo fue entrenado para acercar paráfrasis en el espacio vectorial, aunque no compartan términos",
+              "Porque BM25 asigna un idf alto a «camión»",
+              "Porque el modelo traduce la consulta al inglés antes de buscar"
+            ],
+            "correct": 1,
+            "explanation": "Sentence-BERT se entrena con pares de oraciones de significado similar, de modo que las paráfrasis quedan cerca. Las frases casi no comparten términos, por lo que BM25 no las relacionaría."
+          },
+          {
+            "prompt": "Un usuario busca «D. Leg. 1057» en un buscador de normas. ¿Por qué conviene una recuperación híbrida en lugar de solo densa?",
+            "options": [
+              "Porque BM25 capta coincidencias exactas de códigos y números que los embeddings densos pueden diluir",
+              "Porque los modelos densos no aceptan números en la entrada",
+              "Porque la recuperación híbrida no requiere ningún índice",
+              "Porque BM25 reconoce sinónimos mejor que los embeddings"
+            ],
+            "correct": 0,
+            "explanation": "Los modelos densos representan el significado general y pueden confundir números cercanos; BM25 premia la coincidencia literal del código. Combinar ambos aprovecha sus fortalezas complementarias."
+          },
+          {
+            "prompt": "Según Mitchell et al. (2019), ¿qué elemento es indispensable en una tarjeta de modelo?",
+            "options": [
+              "El código fuente completo del entrenamiento",
+              "La lista de todos los usuarios del sistema",
+              "Las métricas desagregadas por subgrupos relevantes y los usos fuera de alcance",
+              "El costo de la GPU utilizada en el preentrenamiento"
+            ],
+            "correct": 2,
+            "explanation": "La tarjeta de modelo documenta uso previsto, usos fuera de alcance, datos de evaluación, métricas por subgrupo, consideraciones éticas y limitaciones, para que terceros juzguen si el modelo es apto para su contexto."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Qué es el PLN: niveles lingüísticos, ambigüedad, paradigmas y diversidad lingüística del Perú",
+      "activity": "Clase síncrona introductoria, foro de diagnóstico sobre aplicaciones de PLN en organizaciones peruanas y laboratorio de configuración del entorno con Colab, spaCy y NLTK.",
+      "evidence": "Participación en el foro y cuaderno de entorno verificado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Corpus, anotación, expresiones regulares, Unicode y anonimización conforme a la Ley 29733",
+      "activity": "Aula invertida con la lectura de la unidad 1; laboratorio de expresiones regulares para enmascarar DNI, RUC, celulares y correos, con pruebas automatizadas.",
+      "evidence": "Funciones de anonimización con pruebas"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Tokenización por palabras y subpalabras, lematización y leyes de Zipf y Heaps",
+      "activity": "Discusión del caso Caja Altiplano en equipos y plenaria; laboratorio de tokenización BPE y estadísticas de corpus con normas legales de El Peruano.",
+      "evidence": "Respuestas al caso y gráfico rango-frecuencia"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Modelos de lenguaje de n-gramas, suavizado de Laplace y perplejidad",
+      "activity": "Taller de cálculo de bigramas y perplejidad a mano y en Python; entrega de la Tarea 1 y desarrollo del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Bolsa de palabras, n-gramas, TF-IDF, similitud coseno y BM25",
+      "activity": "Clase síncrona con ejercicios de cálculo de TF-IDF; laboratorio de búsqueda en preguntas frecuentes municipales comparando coseno y BM25.",
+      "evidence": "Cuaderno de búsqueda con TF-IDF y BM25"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Naive Bayes multinomial, regresión logística y SVM lineal en pipelines de scikit-learn",
+      "activity": "Laboratorio guiado de pipelines con validación cruzada estratificada y búsqueda de hiperparámetros sin fuga de información; revisión de código entre pares.",
+      "evidence": "Pipeline comparativo de tres clasificadores"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Métricas para clases desbalanceadas, análisis de errores y análisis de sentimiento en español",
+      "activity": "Discusión del caso TelcoAndina con debate de roles entre operaciones, cumplimiento y datos; laboratorio de análisis de errores y sentimiento con pysentimiento.",
+      "evidence": "Matriz de decisión del caso TelcoAndina"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Interpretabilidad de clasificadores lineales, umbrales y revisión humana",
+      "activity": "Taller de curva cobertura-exactitud y explicaciones con LIME; entrega de la Tarea 2 y desarrollo del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Hipótesis distribucional, PPMI, word2vec, GloVe y fastText; analogías y sesgos",
+      "activity": "Laboratorio de entrenamiento de fastText con gensim sobre un corpus peruano y auditoría de sesgos con pruebas de asociación; aprobación del corpus de la Tarea 3.",
+      "evidence": "Cuaderno de embeddings y auditoría de sesgos"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Modelado de temas con LDA y NMF; coherencia e intrusión de palabras",
+      "activity": "Laboratorio de modelado de temas sobre resoluciones públicas y prueba de intrusión de palabras entre pares.",
+      "evidence": "Mapa temático comentado"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Etiquetado morfosintáctico, dependencias, NER con esquema BIO, CRF y protocolo de anotación",
+      "activity": "Discusión del caso LexDato; taller de doble anotación con cálculo de kappa y entrenamiento de un CRF con sklearn-crfsuite.",
+      "evidence": "Guía de anotación y kappa calculado"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "NER con spaCy, combinación de reglas y modelos, evaluación a nivel de entidad",
+      "activity": "Laboratorio de EntityRuler y reconocedor estadístico evaluados con seqeval; entrega de la Tarea 3 y desarrollo del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Atención, arquitectura transformadora, BERT y modelos en español",
+      "activity": "Clase síncrona con implementación de la atención en NumPy y exploración de BETO; formación de equipos y aprobación de la propuesta del proyecto integrador.",
+      "evidence": "Propuesta aprobada del proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Ajuste fino con Hugging Face, alineación de etiquetas y búsqueda semántica híbrida",
+      "activity": "Laboratorio de ajuste fino de BETO en Colab y de búsqueda híbrida con BM25 y Sentence-BERT; discusión del caso de la Municipalidad de San Gabriel.",
+      "evidence": "Modelo ajustado y respuestas al caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Evaluación rigurosa, eficiencia, sesgos, privacidad y tarjeta de modelo",
+      "activity": "Asesoría por equipos, pruebas de comportamiento, intervalos bootstrap y prueba de McNemar; entrega del informe del proyecto y desarrollo del Cuestionario 4.",
+      "evidence": "Informe del proyecto y Cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentaciones de diez minutos ante un panel con roles de comité de inversión, examen práctico individual en Colab y retroalimentación final.",
+      "evidence": "Sustentación del proyecto y examen final"
+    }
+  ]
+}

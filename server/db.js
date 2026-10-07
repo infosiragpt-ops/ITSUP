@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.resolve(__dirname, '..');
-export const DATA_DIR = path.join(ROOT, 'data');
+export const DATA_DIR = process.env.DATA_DIR ? path.resolve(process.env.DATA_DIR) : path.join(ROOT, 'data');
 export const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
 fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 
@@ -27,6 +27,11 @@ CREATE TABLE IF NOT EXISTS programs (
   area TEXT,
   image TEXT,
   curriculum TEXT DEFAULT '[]',
+  level TEXT DEFAULT 'Profesional Técnico',
+  degree TEXT,
+  total_credits INTEGER DEFAULT 120,
+  total_hours INTEGER DEFAULT 2550,
+  resolution TEXT,
   active INTEGER DEFAULT 1
 );
 
@@ -46,6 +51,11 @@ CREATE TABLE IF NOT EXISTS users (
   avatar_color TEXT,
   active INTEGER DEFAULT 1,
   onboarding TEXT DEFAULT '{}',
+  dni TEXT,
+  consent_at TEXT,
+  consent_version TEXT,
+  failed_logins INTEGER DEFAULT 0,
+  locked_until TEXT,
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
   last_login TEXT
 );
@@ -55,7 +65,9 @@ CREATE TABLE IF NOT EXISTS terms (
   name TEXT NOT NULL,
   start_date TEXT,
   end_date TEXT,
-  is_active INTEGER DEFAULT 0
+  weeks INTEGER DEFAULT 16,
+  is_active INTEGER DEFAULT 0,
+  closed_at TEXT
 );
 
 CREATE TABLE IF NOT EXISTS courses (
@@ -71,7 +83,25 @@ CREATE TABLE IF NOT EXISTS courses (
   color TEXT,
   schedule TEXT,
   syllabus TEXT,
+  module_name TEXT,
+  course_type TEXT DEFAULT 'especifica' CHECK (course_type IN ('especifica','empleabilidad','efsrt')),
+  hours_theory INTEGER DEFAULT 32,
+  hours_practice INTEGER DEFAULT 32,
+  syllabus_json TEXT DEFAULT '{}',
+  min_grade REAL DEFAULT 13,
+  max_absence_pct REAL DEFAULT 30,
+  status TEXT DEFAULT 'open' CHECK (status IN ('open','closed')),
+  closed_at TEXT,
+  closed_by INTEGER REFERENCES users(id),
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+
+CREATE TABLE IF NOT EXISTS grade_categories (
+  id INTEGER PRIMARY KEY,
+  course_id INTEGER NOT NULL REFERENCES courses(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  weight REAL NOT NULL DEFAULT 0,
+  position INTEGER DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS enrollments (
@@ -79,6 +109,9 @@ CREATE TABLE IF NOT EXISTS enrollments (
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
   last_access TEXT,
+  status TEXT DEFAULT 'matriculado' CHECK (status IN ('matriculado','retirado')),
+  withdrawn_at TEXT,
+  source TEXT DEFAULT 'manual',
   PRIMARY KEY (course_id, user_id)
 );
 
@@ -132,6 +165,8 @@ CREATE TABLE IF NOT EXISTS assignments (
   due_at TEXT,
   points REAL DEFAULT 20,
   allow_late INTEGER DEFAULT 1,
+  category_id INTEGER REFERENCES grade_categories(id) ON DELETE SET NULL,
+  rubric TEXT DEFAULT '[]',
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
 );
 
@@ -146,6 +181,8 @@ CREATE TABLE IF NOT EXISTS submissions (
   grade REAL,
   feedback TEXT,
   graded_at TEXT,
+  rubric_scores TEXT,
+  graded_by INTEGER REFERENCES users(id),
   UNIQUE (assignment_id, user_id)
 );
 
@@ -160,6 +197,7 @@ CREATE TABLE IF NOT EXISTS quizzes (
   time_limit_min INTEGER DEFAULT 20,
   max_attempts INTEGER DEFAULT 2,
   points REAL DEFAULT 20,
+  category_id INTEGER REFERENCES grade_categories(id) ON DELETE SET NULL,
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
 );
 
@@ -266,6 +304,59 @@ CREATE TABLE IF NOT EXISTS applicants (
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
 );
 
+CREATE TABLE IF NOT EXISTS attendance (
+  session_id INTEGER NOT NULL REFERENCES live_sessions(id) ON DELETE CASCADE,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  status TEXT NOT NULL CHECK (status IN ('presente','tardanza','falta','justificada')),
+  note TEXT,
+  recorded_by INTEGER REFERENCES users(id),
+  recorded_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+  PRIMARY KEY (session_id, user_id)
+);
+
+CREATE TABLE IF NOT EXISTS final_grades (
+  course_id INTEGER NOT NULL REFERENCES courses(id) ON DELETE CASCADE,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  weighted REAL,
+  final REAL,
+  recovery REAL,
+  attendance_pct REAL,
+  absence_pct REAL,
+  condition TEXT,
+  observations TEXT,
+  closed_at TEXT,
+  closed_by INTEGER REFERENCES users(id),
+  PRIMARY KEY (course_id, user_id)
+);
+
+CREATE TABLE IF NOT EXISTS audit_log (
+  id INTEGER PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
+  action TEXT NOT NULL,
+  entity TEXT,
+  entity_id INTEGER,
+  details TEXT,
+  ip TEXT,
+  created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+
+CREATE TABLE IF NOT EXISTS documents (
+  id INTEGER PRIMARY KEY,
+  code TEXT UNIQUE NOT NULL,
+  type TEXT NOT NULL,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  term_id INTEGER REFERENCES terms(id),
+  payload TEXT NOT NULL,
+  hash TEXT NOT NULL,
+  issued_by INTEGER REFERENCES users(id),
+  created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY,
+  value TEXT
+);
+
 CREATE INDEX IF NOT EXISTS idx_items_module ON items(module_id);
 CREATE INDEX IF NOT EXISTS idx_modules_course ON modules(course_id);
 CREATE INDEX IF NOT EXISTS idx_assign_course ON assignments(course_id);
@@ -275,16 +366,42 @@ CREATE INDEX IF NOT EXISTS idx_enroll_user ON enrollments(user_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_course ON live_sessions(course_id, starts_at);
 CREATE INDEX IF NOT EXISTS idx_threads_forum ON threads(forum_id);
 CREATE INDEX IF NOT EXISTS idx_posts_thread ON posts(thread_id);
+CREATE INDEX IF NOT EXISTS idx_attendance_user ON attendance(user_id);
+CREATE INDEX IF NOT EXISTS idx_audit_created ON audit_log(created_at);
+CREATE INDEX IF NOT EXISTS idx_audit_user ON audit_log(user_id);
+CREATE INDEX IF NOT EXISTS idx_documents_user ON documents(user_id);
+CREATE INDEX IF NOT EXISTS idx_categories_course ON grade_categories(course_id);
 `;
 
 export const db = new DatabaseSync(DB_PATH);
 db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 3000;');
 db.exec(SCHEMA);
 
-// Migraciones ligeras para bases creadas con una versión anterior del esquema
-const programColumns = db.prepare('PRAGMA table_info(programs)').all().map((c) => c.name);
-for (const col of ['area', 'image']) {
-  if (!programColumns.includes(col)) db.exec(`ALTER TABLE programs ADD COLUMN ${col} TEXT`);
+// Migraciones ligeras para bases creadas con una versión anterior del esquema.
+// Cada entrada: [tabla, columna, definición SQL]. Solo se agregan las columnas que falten.
+const MIGRATIONS = [
+  ['programs', 'area', 'TEXT'], ['programs', 'image', 'TEXT'],
+  ['programs', 'level', "TEXT DEFAULT 'Profesional Técnico'"], ['programs', 'degree', 'TEXT'],
+  ['programs', 'total_credits', 'INTEGER DEFAULT 120'], ['programs', 'total_hours', 'INTEGER DEFAULT 2550'], ['programs', 'resolution', 'TEXT'],
+  ['users', 'dni', 'TEXT'], ['users', 'consent_at', 'TEXT'], ['users', 'consent_version', 'TEXT'],
+  ['users', 'failed_logins', 'INTEGER DEFAULT 0'], ['users', 'locked_until', 'TEXT'], ['users', 'password_changed_at', 'TEXT'],
+  ['terms', 'weeks', 'INTEGER DEFAULT 16'], ['terms', 'closed_at', 'TEXT'],
+  ['courses', 'module_name', 'TEXT'], ['courses', 'course_type', "TEXT DEFAULT 'especifica'"],
+  ['courses', 'hours_theory', 'INTEGER DEFAULT 32'], ['courses', 'hours_practice', 'INTEGER DEFAULT 32'],
+  ['courses', 'syllabus_json', "TEXT DEFAULT '{}'"], ['courses', 'min_grade', 'REAL DEFAULT 13'], ['courses', 'max_absence_pct', 'REAL DEFAULT 30'],
+  ['courses', 'status', "TEXT DEFAULT 'open'"], ['courses', 'closed_at', 'TEXT'], ['courses', 'closed_by', 'INTEGER'],
+  ['enrollments', 'status', "TEXT DEFAULT 'matriculado'"], ['enrollments', 'withdrawn_at', 'TEXT'], ['enrollments', 'source', "TEXT DEFAULT 'manual'"],
+  ['assignments', 'category_id', 'INTEGER'], ['assignments', 'rubric', "TEXT DEFAULT '[]'"],
+  ['submissions', 'rubric_scores', 'TEXT'], ['submissions', 'graded_by', 'INTEGER'],
+  ['quizzes', 'category_id', 'INTEGER'],
+];
+const columnCache = {};
+for (const [table, col, def] of MIGRATIONS) {
+  columnCache[table] ||= db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);
+  if (!columnCache[table].includes(col)) {
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${col} ${def}`);
+    columnCache[table].push(col);
+  }
 }
 
 const cache = new Map();
@@ -327,4 +444,40 @@ export function notify(userIds, { type, title, body = null, link = null }) {
   for (const uid of userIds) {
     run('INSERT INTO notifications (user_id, type, title, body, link) VALUES (?,?,?,?,?)', uid, type, title, body, link);
   }
+}
+
+/* ---------------- Auditoría y configuración institucional ---------------- */
+
+/** Registra una acción relevante (trazabilidad exigida para registros académicos y datos personales). */
+export function audit(req, action, { entity = null, entityId = null, details = null } = {}) {
+  // req.ip ya aplica la política 'trust proxy' de Express (no se confía en X-Forwarded-For de clientes cualesquiera)
+  const ip = req?.ip ?? req?.socket?.remoteAddress ?? null;
+  run('INSERT INTO audit_log (user_id, action, entity, entity_id, details, ip) VALUES (?,?,?,?,?,?)',
+    req?.user?.id ?? null, action, entity, entityId, details == null ? null : JSON.stringify(details), ip);
+}
+
+/** Configuración institucional por defecto (editable desde Administración → Gestión académica). */
+export const DEFAULT_SETTINGS = {
+  institution_name: 'Instituto Superior Universitario Privado',
+  institution_short: 'ISUP',
+  institution_code: '0000000',
+  institution_resolution: 'R.M. N.° 000-2026-MINEDU',
+  institution_address: 'Lima, Perú',
+  institution_director: 'Dirección General',
+  academic_secretary: 'Secretaría Académica',
+  min_grade: '13',
+  max_absence_pct: '30',
+  recovery_min: '10',
+  recovery_max: '12',
+  consent_version: '2026-1',
+  privacy_contact: 'datospersonales@isup.edu.pe',
+};
+
+export function settings() {
+  const rows = Object.fromEntries(all('SELECT key, value FROM settings').map((r) => [r.key, r.value]));
+  return { ...DEFAULT_SETTINGS, ...rows };
+}
+
+export function setSetting(key, value) {
+  run('INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value', key, String(value ?? ''));
 }

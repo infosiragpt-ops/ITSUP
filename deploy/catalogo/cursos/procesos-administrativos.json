@@ -1,0 +1,1226 @@
+{
+  "name": "Procesos Administrativos",
+  "slug": "procesos-administrativos",
+  "course_type": "especifica",
+  "module_name": "Gestión administrativa de la organización",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Curso de formación específica, de naturaleza teórico-práctica, que se dicta en el segundo ciclo de la carrera de Administración. Partiendo del proceso administrativo estudiado en Fundamentos de Administración, traslada la mirada de la función a la cadena de actividades que crea valor para el cliente. Su propósito es que el estudiante identifique, modele, analice, rediseñe y controle procesos administrativos reales de una organización peruana. Comprende cuatro unidades: fundamentos de la gestión por procesos y arquitectura de procesos; modelado con BPMN 2.0 y documentación (fichas, procedimientos, RACI, MOF y MAPRO); análisis cuantitativo y cualitativo y mejora con herramientas Lean; e indicadores, control interno, digitalización y gobierno de procesos. Mediante el método de casos y un proyecto integrador de rediseño de un proceso de una mype o entidad pública, aporta al perfil de egreso la capacidad de organizar y controlar operaciones con eficiencia, prepara el terreno para Logística y Operaciones, Gestión de Proyectos y Gestión de la Calidad, y usa herramientas digitales de modelado y automatización.",
+  "competency": "Gestiona procesos administrativos de una organización peruana identificándolos, modelándolos en BPMN 2.0, documentándolos según estándares técnicos, analizando su desempeño con indicadores de tiempo, costo y calidad, y proponiendo rediseños viables, controlados y digitalizados que agreguen valor al cliente y cumplan la normativa vigente.",
+  "capacities": [
+    "Identifica y clasifica los procesos de una organización en estratégicos, misionales y de soporte, construyendo su mapa de procesos y la caracterización SIPOC de los procesos clave.",
+    "Modela procesos administrativos con la notación BPMN 2.0 y los documenta mediante fichas de proceso, procedimientos, matrices RACI y manuales organizacionales.",
+    "Analiza el desempeño de un proceso con técnicas cuantitativas (tiempo de ciclo, eficiencia, capacidad, Ley de Little) y cualitativas (valor agregado, causa raíz, desperdicios Lean).",
+    "Rediseña y controla procesos mediante indicadores, controles internos, automatización y gestión del cambio, sustentando la propuesta con evidencia y análisis costo-beneficio."
+  ],
+  "indicators": [
+    "Elabora el mapa de procesos de una organización real, distinguiendo correctamente procesos estratégicos, misionales y de soporte y sus interrelaciones.",
+    "Caracteriza un proceso clave con SIPOC, identificando proveedores, entradas, actividades, salidas, clientes, dueño y límites del proceso.",
+    "Modela un proceso de extremo a extremo en BPMN 2.0 con carriles, eventos, compuertas y flujos de mensajes sintácticamente correctos.",
+    "Redacta la ficha de proceso, el procedimiento y la matriz RACI de un proceso administrativo con lenguaje claro y verificable.",
+    "Calcula tiempo de ciclo, eficiencia del ciclo, trabajo en proceso y utilización de recursos, e interpreta los resultados para localizar cuellos de botella.",
+    "Identifica causas raíz y desperdicios de un proceso aplicando Ishikawa, cinco porqués, Pareto y clasificación de actividades por valor agregado.",
+    "Diseña un tablero de indicadores y una matriz de riesgos y controles alineados con COSO 2013 para el proceso rediseñado.",
+    "Sustenta una propuesta de rediseño y digitalización del proceso con proyección de beneficios, costos, plan de implementación y gestión del cambio."
+  ],
+  "methodology": "El curso aplica metodología activa en el aula virtual. Cada unidad se abre con aula invertida: el estudiante revisa la lectura y un video breve antes de la sesión sincrónica, donde se discute un caso peruano mediante el método de casos (preparación individual, debate guiado y decisión). Las sesiones prácticas usan aprendizaje basado en problemas con herramientas digitales de modelado BPMN (Bizagi Modeler, draw.io) y hojas de cálculo para medir procesos. A lo largo del ciclo, en equipos, se desarrolla un proyecto integrador de rediseño de un proceso real de una mype o entidad pública, con entregas parciales por unidad. La evaluación formativa se apoya en cuestionarios con retroalimentación inmediata, revisión entre pares con rúbricas y tutorías asincrónicas en el foro.",
+  "bibliography": [
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). Fundamentals of business process management (2.ª ed.). Springer.",
+    "Pérez Fernández de Velasco, J. A. (2012). Gestión por procesos (5.ª ed.). ESIC Editorial.",
+    "Bravo, J. (2011). Gestión de procesos: alineados con la estrategia. Editorial Evolución.",
+    "Hammer, M. y Champy, J. (1994). Reingeniería: olvide lo que usted sabe sobre cómo debe funcionar una empresa. Norma.",
+    "Womack, J. P. y Jones, D. T. (2003). Lean thinking: Banish waste and create wealth in your corporation (2.ª ed.). Free Press.",
+    "Koontz, H., Weihrich, H. y Cannice, M. (2012). Administración: una perspectiva global y empresarial (14.ª ed.). McGraw-Hill.",
+    "Object Management Group. (2011). Business Process Model and Notation (BPMN), version 2.0. OMG.",
+    "Committee of Sponsoring Organizations of the Treadway Commission. (2013). Internal control: Integrated framework. COSO.",
+    "Presidencia del Consejo de Ministros, Secretaría de Gestión Pública. (2018). Norma Técnica N.° 001-2018-SGP: Implementación de la gestión por procesos en las entidades de la administración pública. PCM."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Promedio de los cuatro cuestionarios de unidad, la participación argumentada en los foros de casos y las tareas aplicadas de las unidades 1 a 3."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Entregas parciales del proyecto integrador: mapa y SIPOC, modelo BPMN documentado y diagnóstico cuantitativo del proceso seleccionado."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Propuesta final de rediseño con tablero de indicadores, matriz de controles y plan de implementación, sustentada en una exposición virtual ante el docente."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de la gestión por procesos",
+      "description": "Al finalizar la unidad, el estudiante explica el enfoque de gestión por procesos, distingue proceso, procedimiento y actividad, y construye el mapa de procesos y la caracterización SIPOC de una organización peruana real.",
+      "topics": [
+        "De la organización funcional a la gestión por procesos",
+        "Proceso, procedimiento, actividad y tarea: conceptos y jerarquía",
+        "Cadena de valor de Porter y arquitectura de procesos",
+        "Mapa de procesos: estratégicos, misionales y de soporte",
+        "Caracterización de procesos con SIPOC y dueño del proceso",
+        "Ciclo PHVA y marco normativo: ISO 9001 y NT 001-2018-SGP"
+      ],
+      "slides": [
+        {
+          "title": "Por qué gestionar procesos y no solo áreas",
+          "bullets": [
+            "El organigrama muestra quién manda; el proceso muestra cómo se crea valor para el cliente de extremo a extremo.",
+            "Los problemas más costosos ocurren en las fronteras entre áreas: traspasos, esperas, reprocesos y responsabilidades difusas.",
+            "Hammer y Champy (1993) definieron el proceso como conjunto de actividades que recibe entradas y produce una salida de valor para el cliente.",
+            "La gestión por procesos complementa, no reemplaza, la estructura funcional: añade una dimensión horizontal de coordinación."
+          ],
+          "notes": "Inicie con una experiencia cotidiana: tramitar la reposición de un DNI o solicitar un reembolso a una aseguradora. Pregunte cuántas áreas intervinieron y quién era responsable del resultado completo. Casi siempre la respuesta es nadie. Ese vacío es el objeto de este curso. Recuerde que en Fundamentos de Administración estudiaron el proceso administrativo (planificar, organizar, dirigir y controlar) como funciones del gerente; aquí cambiamos de lente: miramos el flujo de trabajo que atraviesa la organización horizontalmente. Explique que una empresa con áreas eficientes puede ser lenta para el cliente porque cada área optimiza su indicador local. Cierre con la pregunta: ¿qué indicador mide el tiempo total que espera el cliente y quién responde por él?"
+        },
+        {
+          "title": "Proceso, procedimiento, actividad y tarea",
+          "bullets": [
+            "Proceso: secuencia de actividades interrelacionadas que transforma entradas en salidas con valor para un cliente identificable.",
+            "Procedimiento: forma especificada y documentada de llevar a cabo una actividad o un proceso (ISO 9000:2015).",
+            "Actividad: conjunto de tareas que ejecuta un rol para lograr un resultado parcial dentro del proceso.",
+            "Tarea: unidad mínima de trabajo, como registrar una factura en el sistema o firmar una orden de compra."
+          ],
+          "notes": "Esta distinción evita confusiones frecuentes en la práctica peruana, donde se usa 'proceso' para todo. Use el ejemplo de compras: el proceso es 'adquisición de bienes y servicios', desde la necesidad hasta el pago al proveedor; una actividad es 'evaluar cotizaciones'; una tarea es 'registrar las tres cotizaciones en el cuadro comparativo'; el procedimiento es el documento que describe paso a paso cómo se evalúan las cotizaciones, con responsables y formatos. Subraye que el proceso es lo que ocurre y el procedimiento es cómo debe ocurrir según la norma interna. Pida a los estudiantes que propongan un proceso de su entorno laboral y lo descompongan en tres niveles en el chat."
+        },
+        {
+          "title": "Elementos de todo proceso",
+          "bullets": [
+            "Entradas y proveedores: insumos, información o solicitudes que inician el proceso y quién los entrega.",
+            "Recursos: personas, sistemas, infraestructura y presupuesto que se consumen o utilizan en la transformación.",
+            "Salidas y clientes: producto o servicio que se entrega y quién lo recibe, interno o externo.",
+            "Límites, dueño del proceso e indicadores: dónde empieza y termina, quién responde por el resultado y cómo se mide."
+          ],
+          "notes": "Explique que un proceso sin límites claros se vuelve inmanejable: si 'ventas' empieza en la prospección y termina en la cobranza, abarca media empresa. Defina el dueño del proceso como la persona con autoridad para cambiar el proceso y responsabilidad por su desempeño, aunque no dirija a todos los que participan. Ejemplo: en una clínica de Arequipa, el dueño del proceso de admisión puede ser la jefa de atención al paciente, aunque los cajeros dependan de Finanzas. Pregunte: ¿qué pasa si el dueño no tiene autoridad sobre los recursos? Aparece la necesidad de gobierno de procesos, tema de la unidad 4. Insista en que los indicadores se definen desde el diseño, no al final."
+        },
+        {
+          "title": "Tipos de procesos según su aporte al valor",
+          "bullets": [
+            "Estratégicos o de dirección: definen orientación y control, como planeamiento, gestión de riesgos y revisión por la dirección.",
+            "Misionales u operativos: crean directamente el producto o servicio que paga el cliente, como ventas, producción o atención.",
+            "De soporte o apoyo: proveen recursos a los demás, como compras, talento humano, contabilidad, TI y logística interna.",
+            "La clasificación depende del modelo de negocio: la logística es misional en un operador logístico y de soporte en un colegio."
+          ],
+          "notes": "Este es el lenguaje de la NT 001-2018-SGP de la PCM, que en el sector público peruano usa 'estratégicos, misionales y de soporte'. En el sector privado verá también 'operativos' o 'clave'. Haga un ejercicio rápido: Rappi, una notaría y una municipalidad distrital. Para cada una, ¿el proceso de cobranza es misional o de soporte? En Rappi el pago es parte de la experiencia del cliente; en la municipalidad la recaudación del impuesto predial es misional para el financiamiento local. Concluya que no hay listas universales; el criterio es la relación directa con la propuesta de valor. Advierta contra el error común de clasificar como estratégico todo lo que hace la gerencia."
+        },
+        {
+          "title": "La cadena de valor de Porter como punto de partida",
+          "bullets": [
+            "Porter (1985) separa actividades primarias (logística de entrada, operaciones, logística de salida, marketing y ventas, servicio) y de apoyo.",
+            "Las actividades de apoyo son infraestructura, gestión de recursos humanos, desarrollo tecnológico y abastecimiento.",
+            "El margen surge de realizar las actividades a menor costo o con mayor diferenciación que los competidores.",
+            "La cadena de valor ofrece una primera lista de procesos de nivel 0 que luego se descomponen."
+          ],
+          "notes": "Conecte con lo visto en el primer ciclo sobre ventaja competitiva. Muestre cómo la cadena de valor sirve como plantilla para no olvidar procesos. Ejemplo peruano: una agroexportadora de arándanos de La Libertad tiene logística de entrada (plantones, fertilizantes), operaciones (cosecha, selección, empaque con cadena de frío), logística de salida (contenedores refrigerados por el puerto de Salaverry o Paita), marketing (ferias, certificaciones GlobalG.A.P.) y servicio (reclamos de importadores). Pregunte: ¿dónde está su ventaja? Probablemente en operaciones y logística de salida, porque una ruptura de frío destruye el producto. Concluya que los procesos donde reside la ventaja merecen mayor inversión en diseño y control."
+        },
+        {
+          "title": "Arquitectura de procesos por niveles",
+          "bullets": [
+            "Nivel 0: macroprocesos o mapa general, entre ocho y quince grandes procesos de la organización.",
+            "Nivel 1: procesos que componen cada macroproceso, con dueño, objetivo e indicadores propios.",
+            "Nivel 2: subprocesos o actividades, modelados con diagramas detallados en BPMN.",
+            "Regla práctica: descomponer hasta que cada elemento tenga un responsable único y un resultado verificable."
+          ],
+          "notes": "La NT 001-2018-SGP pide a las entidades públicas un inventario de procesos con niveles 0, 1, 2 y hasta N. Esta lógica jerárquica facilita gestionar la complejidad: la alta dirección mira el nivel 0, los jefes el nivel 1 y los equipos operativos el nivel 2. Ejemplo: macroproceso 'Gestión comercial'; proceso nivel 1 'Gestión de pedidos'; subproceso nivel 2 'Validación de crédito del cliente'. Advierta dos errores: un mapa nivel 0 con cuarenta cajas que nadie entiende, y modelos de detalle sin vínculo con el mapa general. Pida que propongan la descomposición de 'Gestión del talento humano', curso que llevan en paralelo, en tres procesos nivel 1."
+        },
+        {
+          "title": "Cómo construir un mapa de procesos",
+          "bullets": [
+            "Paso 1: revisar misión, propuesta de valor, clientes y requisitos legales aplicables a la organización.",
+            "Paso 2: listar procesos con la cadena de valor y entrevistas a responsables; agrupar duplicados.",
+            "Paso 3: ubicar estratégicos arriba, misionales al centro de izquierda a derecha y de soporte abajo.",
+            "Paso 4: dibujar al cliente con sus necesidades al inicio y su satisfacción al final; validar con la dirección."
+          ],
+          "notes": "Muestre un mapa típico en pantalla y recorra cada zona. Insista en que el mapa comunica la estrategia: si una empresa dice competir por servicio pero no tiene un proceso de posventa, el mapa revela la incoherencia. Recomiende usar verbos sustantivados ('Gestión de compras', 'Atención de reclamos') y evitar nombres de áreas ('Logística', 'Contabilidad'), porque un proceso no es un departamento. En la validación con la dirección suelen aparecer discusiones valiosas sobre qué es realmente misional. Pregunte: ¿dónde ubicarían el libro de reclamaciones exigido por el Código de Protección y Defensa del Consumidor (Ley 29571)? Es un requisito legal, pero su gestión es parte del servicio al cliente, por lo tanto misional."
+        },
+        {
+          "title": "SIPOC: caracterización rápida de un proceso",
+          "bullets": [
+            "Suppliers, Inputs, Process, Outputs, Customers: proveedores, entradas, proceso, salidas y clientes en una sola tabla.",
+            "El proceso se describe en cinco a siete pasos de alto nivel, con verbo en infinitivo.",
+            "Se completa en orden práctico: proceso, salidas, clientes, entradas y proveedores; luego requisitos del cliente.",
+            "Sirve para acordar límites y alcance antes de modelar en detalle o de iniciar un proyecto de mejora."
+          ],
+          "notes": "El SIPOC proviene de la tradición de calidad y Seis Sigma, y es la herramienta de entrada más útil para un técnico. Haga uno en vivo con el proceso 'Emisión de comprobantes de pago electrónicos' de una ferretería: proveedores (cliente, vendedor, OSE o SUNAT), entradas (pedido, RUC o DNI del cliente, precios), proceso (registrar venta, validar datos, generar XML, enviar a validación, entregar comprobante), salidas (factura o boleta electrónica validada, constancia de recepción), clientes (comprador, Contabilidad, SUNAT). Pregunte por qué SUNAT aparece como proveedor y cliente a la vez. Muestre que esa doble condición es frecuente con reguladores. Cierre indicando que el SIPOC será la primera entrega del proyecto integrador."
+        },
+        {
+          "title": "Requisitos del cliente y salidas críticas",
+          "bullets": [
+            "Cada salida debe tener requisitos medibles del cliente: plazo, exactitud, completitud, costo y trato.",
+            "La voz del cliente se traduce en características críticas para la calidad (CTQ) del proceso.",
+            "Ejemplo: 'factura rápida' se traduce en 'comprobante validado entregado en menos de dos minutos'.",
+            "Clientes internos también tienen requisitos: Contabilidad necesita comprobantes completos al cierre de mes."
+          ],
+          "notes": "Explique que un proceso eficiente en costo pero que entrega salidas que el cliente no necesita sigue siendo un mal proceso. El concepto de CTQ ayuda a convertir expresiones vagas en criterios verificables. Ejercicio: el cliente de una agencia bancaria dice 'quiero que me atiendan rápido'. ¿Cómo lo medimos? Tiempo de espera en cola, tiempo de atención, porcentaje de clientes atendidos en menos de diez minutos. Comente que INDECOPI publica estadísticas de reclamos por sector, útiles para identificar requisitos incumplidos en banca, telecomunicaciones o transporte aéreo. Pida a los estudiantes que redacten tres CTQ para el proceso de matrícula de TEPSUP desde la perspectiva del estudiante."
+        },
+        {
+          "title": "El ciclo PHVA aplicado a procesos",
+          "bullets": [
+            "Planificar: definir objetivos, requisitos, recursos y riesgos del proceso.",
+            "Hacer: ejecutar el proceso según lo planificado y registrar datos de desempeño.",
+            "Verificar: comparar resultados con metas mediante indicadores y auditorías.",
+            "Actuar: estandarizar lo que funciona o corregir causas; reiniciar el ciclo con nuevas metas."
+          ],
+          "notes": "Atribuya correctamente el ciclo: Shewhart lo formuló en los años treinta y Deming lo difundió en Japón desde 1950, por eso se conoce como ciclo de Deming. Muestre que el PHVA es el motor de la mejora continua y que ISO 9001:2015 lo usa como estructura de toda la norma. Relacione con el proceso administrativo visto en el ciclo anterior: planificar y controlar reaparecen, pero aplicados a un proceso concreto, no a la empresa en abstracto. Ejemplo: una pollería con delivery planifica entregar en treinta minutos, ejecuta, verifica que solo el 62 % llega a tiempo, analiza y actúa reorganizando zonas de reparto. Pregunte cuál es la fase que más se omite en las mypes: casi siempre Verificar."
+        },
+        {
+          "title": "Enfoque basado en procesos en ISO 9001:2015",
+          "bullets": [
+            "El apartado 4.4 exige determinar procesos, entradas, salidas, secuencia, criterios, recursos, responsables, riesgos e indicadores.",
+            "Combina el ciclo PHVA con el pensamiento basado en riesgos para prevenir resultados no deseados.",
+            "La organización decide el grado de documentación necesaria; no exige un manual de calidad.",
+            "En el Perú, INACAL publica la versión NTP-ISO 9001:2015 como norma técnica peruana."
+          ],
+          "notes": "No profundice en certificación, que corresponde a Gestión de la Calidad en el quinto ciclo; aquí interesa el principio. Lea en voz alta los elementos del apartado 4.4 y muestre que son exactamente los elementos de la ficha de proceso que construiremos en la unidad 2. Esto demuestra que lo aprendido sirve para una futura certificación. Mencione que muchas empresas peruanas proveedoras de mineras o de exportadoras se certifican porque sus clientes lo exigen en sus homologaciones. Pregunte: si la norma no exige un manual, ¿por qué tantas pymes producen manuales extensos que nadie lee? Use la discusión para introducir la idea de documentación útil y proporcional al riesgo."
+        },
+        {
+          "title": "Gestión por procesos en el Estado peruano",
+          "bullets": [
+            "La Política Nacional de Modernización de la Gestión Pública (D. S. 004-2013-PCM) incluye la gestión por procesos como pilar.",
+            "La NT 001-2018-SGP establece tres etapas: determinación, seguimiento y medición, y mejora de procesos.",
+            "Las entidades elaboran mapa de procesos, inventario de procesos y fichas de caracterización oficiales.",
+            "El enfoque busca orientar la entidad al ciudadano y reducir trámites, plazos y costos de cumplimiento."
+          ],
+          "notes": "Muchos egresados trabajarán como técnicos administrativos en municipalidades, gobiernos regionales u organismos públicos, por lo que conviene conocer este marco. Explique las tres etapas de la norma y que la entidad designa responsables de procesos. Relacione con el TUPA, el Texto Único de Procedimientos Administrativos, que fija requisitos, plazos y derechos de trámite para el ciudadano según la Ley 27444, y con el análisis de calidad regulatoria que ha eliminado o simplificado miles de procedimientos. Pregunte: ¿por qué un procedimiento del TUPA no es lo mismo que un proceso de la NT? Porque el procedimiento administrativo es la relación jurídica con el ciudadano; el proceso es el flujo interno que lo hace posible."
+        },
+        {
+          "title": "Errores frecuentes al iniciar la gestión por procesos",
+          "bullets": [
+            "Confundir procesos con áreas y copiar el organigrama en el mapa de procesos.",
+            "Documentar en exceso antes de medir: manuales voluminosos sin indicadores ni dueños reales.",
+            "Modelar el proceso ideal en lugar del real, ocultando atajos, esperas y excepciones.",
+            "Lanzar la iniciativa sin patrocinio de la dirección ni vínculo con objetivos estratégicos."
+          ],
+          "notes": "Cierre la unidad con una mirada crítica, propia de un programa exigente. Comparte la evidencia de Dumas y colaboradores: los proyectos de gestión por procesos fracasan menos por la técnica que por la falta de patrocinio y de foco. Pida a los estudiantes que identifiquen cuál de estos errores han visto en organizaciones donde trabajaron o hicieron trámites. Destaque el tercer error: la diferencia entre el modelo 'como debería ser' y el 'como es' realmente. Siempre se modela primero el estado actual, con sus problemas, porque solo así se puede medir la mejora. Anuncie el caso de la unidad y la tarea, que piden un mapa de procesos y un SIPOC de una organización real."
+        }
+      ],
+      "reading": {
+        "title": "La organización vista como sistema de procesos",
+        "minutes": 30,
+        "content": "## Del organigrama al flujo de valor\n\nDurante buena parte del siglo XX, las organizaciones se diseñaron según el principio de especialización que Adam Smith describió y que Taylor y Fayol llevaron a la empresa industrial: dividir el trabajo en funciones y agrupar a las personas en departamentos. Esta lógica funcional produce eficiencia local, pero tiene un costo oculto. El cliente no compra el trabajo de un departamento; compra un resultado que exige la colaboración de varios. Cuando un pedido pasa de Ventas a Créditos, luego a Almacén, a Facturación y finalmente a Despacho, cada traspaso añade espera, riesgo de error y pérdida de responsabilidad.\n\nMichael Hammer y James Champy popularizaron en 1993 la idea de que las empresas debían organizarse alrededor de procesos y no de tareas. Su propuesta radical, la reingeniería, tuvo resultados dispares, pero dejó un legado duradero: la gestión por procesos, entendida como la disciplina de identificar, diseñar, ejecutar, medir y mejorar continuamente los procesos que crean valor. Dumas, La Rosa, Mendling y Reijers sistematizaron esta disciplina en el ciclo de vida de la gestión de procesos de negocio: identificación, descubrimiento, análisis, rediseño, implementación, y seguimiento y control.\n\n## Conceptos clave\n\nUn **proceso** es un conjunto de actividades interrelacionadas que transforma entradas en salidas de valor para un cliente. Tiene un evento que lo inicia (una solicitud, una fecha, un mensaje), un resultado que lo cierra y un cliente identificable. El **procedimiento** es la forma especificada de llevarlo a cabo; es un documento, no el flujo en sí. Las **actividades** y **tareas** son los niveles de detalle que permiten asignar responsables y medir.\n\nTodo proceso puede describirse con una expresión simple:\n\n```\nProceso = f(entradas, recursos, controles) -> salidas para el cliente\nDesempeño = {tiempo, costo, calidad, flexibilidad}\n```\n\nDumas y colaboradores llaman a estas cuatro dimensiones el *diamante del desempeño*: mejorar una suele afectar a otra. Reducir el tiempo de atención contratando más personal sube el costo; automatizar baja el costo pero puede reducir la flexibilidad ante casos excepcionales.\n\n## Arquitectura y mapa de procesos\n\nLa arquitectura de procesos organiza el inventario en niveles. El nivel 0 es el mapa general, con estratégicos arriba, misionales al centro y de soporte abajo. La cadena de valor de Porter ofrece una primera lista, pero cada organización debe adaptarla a su modelo de negocio. Una cooperativa de ahorro y crédito de Junín tendrá como misionales la captación de ahorros, la colocación de créditos y la recuperación de cartera; como soporte, tesorería, contabilidad, talento humano y tecnología; y como estratégicos, planeamiento, gestión integral de riesgos exigida por la SBS y auditoría interna.\n\nEn el Estado peruano, la Norma Técnica N.° 001-2018-SGP de la Presidencia del Consejo de Ministros ordena que las entidades determinen sus procesos, los midan y los mejoren, con foco en el ciudadano. Esta norma se enmarca en la Política Nacional de Modernización de la Gestión Pública aprobada por el Decreto Supremo 004-2013-PCM. Para un técnico en administración, esto significa que las habilidades de este curso son exigidas tanto en la empresa privada como en el sector público.\n\n## Caracterización con SIPOC\n\nAntes de modelar al detalle conviene acordar el alcance. La herramienta SIPOC organiza en una tabla los proveedores, las entradas, los pasos principales, las salidas y los clientes. Por ejemplo, para el proceso de *pago a proveedores* de una distribuidora limeña:\n\n| Proveedores | Entradas | Proceso | Salidas | Clientes |\n|---|---|---|---|---|\n| Proveedor, Almacén, Compras | Factura electrónica, guía de remisión, orden de compra | Recibir factura, conciliar con OC y guía, aprobar, programar pago, pagar y detraer si corresponde | Transferencia, constancia de detracción, asiento contable | Proveedor, Contabilidad, SUNAT |\n\nLa conciliación de tres vías (orden de compra, guía y factura) es un control clásico que veremos en la unidad 4. El SIPOC también obliga a preguntar qué requisitos tiene cada cliente: el proveedor espera puntualidad, Contabilidad espera registros completos y SUNAT espera el depósito de detracciones en el Banco de la Nación dentro del plazo legal.\n\n## El dueño del proceso y el ciclo PHVA\n\nUn proceso transversal necesita un **dueño**: alguien con autoridad para cambiarlo y responsabilidad por sus resultados. Sin dueño, cada área defiende su parte y nadie mira el conjunto. El dueño aplica el ciclo PHVA de Shewhart y Deming: planifica metas, ejecuta, verifica con indicadores y actúa para estandarizar o corregir. La norma ISO 9001:2015 adopta este ciclo y, en su apartado 4.4, enumera los elementos que toda organización debe determinar para cada proceso.\n\n## Ideas para recordar\n\nLa gestión por procesos no elimina las áreas; añade una lógica horizontal que conecta el trabajo con el cliente. Su punto de partida es siempre el proceso real, no el ideal. Y su valor depende de tres condiciones: patrocinio de la dirección, dueños con autoridad e indicadores que midan lo que el cliente valora."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Andina del Sur y los pedidos que nadie terminaba",
+        "content": "**Distribuidora Andina del Sur S.A.C.** es una empresa arequipeña fundada en 2009 que distribuye productos de consumo masivo (abarrotes, limpieza y cuidado personal) a 1 400 bodegas y minimarkets de Arequipa, Moquegua y Tacna. Tiene 86 trabajadores, ventas anuales cercanas a S/ 38 millones y está organizada en cinco gerencias: Comercial, Créditos y Cobranzas, Operaciones (almacén y reparto), Administración y Finanzas, y Sistemas.\n\nEn 2025, la empresa perdió dos clientes mayoristas de Tacna que representaban el 6 % de sus ventas. Ambos argumentaron lo mismo: los pedidos llegaban incompletos o tarde y, cuando reclamaban, cada área culpaba a otra. Una encuesta a 220 bodegueros mostró que solo el 58 % recibía su pedido completo en la fecha comprometida (48 horas) y que el 23 % había recibido al menos una factura con errores de precio en el último trimestre.\n\nLa gerente general, Rosa Quispe, pidió a cada gerente un informe. El gerente comercial sostuvo que sus vendedores cumplían: registraban el pedido en la aplicación móvil el mismo día. Créditos indicó que tardaba en aprobar porque muchos clientes tenían deudas vencidas y los vendedores no lo advertían. Operaciones explicó que recibía los pedidos aprobados de forma tardía, a veces después del corte de las 4 p. m., y que el inventario del sistema no coincidía con el físico en un 9 % de los códigos. Administración señaló que emitía las facturas electrónicas con la lista de precios vigente, pero que Comercial otorgaba descuentos por WhatsApp sin registrarlos.\n\nCada área cumplía sus propios indicadores: Comercial superaba su cuota de ventas, Créditos mantenía la morosidad bajo el 4 %, Almacén despachaba el 97 % de lo que recibía antes del corte y Facturación emitía todos los comprobantes dentro del día. Sin embargo, nadie medía el tiempo total desde que el bodeguero hacía el pedido hasta que lo recibía completo y bien facturado.\n\nRosa contrató a un practicante de Administración, Diego, para que propusiera una solución. Diego sugirió construir el mapa de procesos de la empresa y caracterizar el proceso 'Gestión de pedidos' de extremo a extremo, nombrar un dueño del proceso y crear un indicador de pedido perfecto (completo, a tiempo y bien facturado). El gerente comercial se opuso: 'Esto es burocracia; lo que falta es más camiones'. El gerente de Operaciones apoyó la idea, pero exigió que el dueño del proceso no fuera de Comercial.\n\nRosa debe decidir en la próxima reunión de gerencia si adopta el enfoque por procesos, quién será el dueño del proceso de pedidos y qué indicador reemplazará o complementará los indicadores actuales de cada área.",
+        "questions": [
+          "¿Por qué cada área cumple sus indicadores mientras el cliente recibe un mal servicio? Explíquelo con los conceptos de organización funcional y proceso transversal.",
+          "Elabore el SIPOC del proceso 'Gestión de pedidos' de la distribuidora, incluyendo al menos tres requisitos medibles del cliente.",
+          "¿Quién debería ser el dueño del proceso y con qué autoridad? Evalúe al menos dos alternativas y sus riesgos.",
+          "Proponga la fórmula del indicador de pedido perfecto y estime su valor actual con los datos del caso.",
+          "¿Tiene razón el gerente comercial al afirmar que el problema se resuelve con más camiones? Argumente con evidencia del caso."
+        ]
+      },
+      "assignment": {
+        "title": "Mapa de procesos y SIPOC de una organización real",
+        "instructions": "**Objetivo:** aplicar los fundamentos de la gestión por procesos a una organización peruana real (mype, empresa mediana o entidad pública) que será la base del proyecto integrador del curso.\n\n**Qué entregar (en equipos de 3 a 4 integrantes):**\n\n1. **Ficha de la organización** (media página): actividad, tamaño, clientes, propuesta de valor y fuentes de información usadas (entrevista, visita virtual, documentos públicos).\n2. **Mapa de procesos nivel 0** con procesos estratégicos, misionales y de soporte, la entrada de necesidades del cliente y la salida de satisfacción. Use nombres de procesos, no de áreas.\n3. **Justificación** (una página): por qué cada proceso misional lo es en este modelo de negocio, con referencia a la cadena de valor de Porter.\n4. **SIPOC de un proceso misional** seleccionado para el proyecto, con cinco a siete pasos, límites claros, dueño propuesto y tres requisitos medibles del cliente (CTQ).\n\n**Formato:** documento PDF de máximo cinco páginas, más el mapa elaborado en draw.io, Bizagi o PowerPoint. Cite las fuentes en formato APA. Si la organización lo solicita, omita datos confidenciales conforme a la Ley 29733 de protección de datos personales.\n\n**Criterios:** coherencia del mapa con el modelo de negocio, correcta clasificación, calidad del SIPOC y claridad de la redacción.",
+        "rubric": [
+          {
+            "name": "Coherencia del mapa con el modelo de negocio",
+            "points": 6
+          },
+          {
+            "name": "Clasificación y justificación de procesos",
+            "points": 4
+          },
+          {
+            "name": "Calidad del SIPOC, límites y CTQ",
+            "points": 6
+          },
+          {
+            "name": "Redacción, formato y citas APA",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: fundamentos de la gestión por procesos",
+        "questions": [
+          {
+            "prompt": "Una empresa documenta paso a paso, con formatos y responsables, cómo se evalúan las cotizaciones de proveedores. ¿Qué ha elaborado?",
+            "options": [
+              "Un procedimiento",
+              "Una arquitectura de procesos nivel 0",
+              "Un proceso",
+              "Un mapa de procesos"
+            ],
+            "correct": 0,
+            "explanation": "El procedimiento es la forma especificada y documentada de realizar una actividad o proceso; el proceso es el flujo real de actividades que transforma entradas en salidas."
+          },
+          {
+            "prompt": "En un operador logístico que almacena y distribuye mercadería de terceros, ¿cómo se clasifica el proceso de transporte y distribución?",
+            "options": [
+              "Misional, porque es el servicio por el que paga el cliente",
+              "De soporte, porque la logística siempre apoya a otras áreas",
+              "Estratégico, porque requiere grandes inversiones",
+              "No es un proceso, sino un área funcional"
+            ],
+            "correct": 0,
+            "explanation": "La clasificación depende del modelo de negocio: cuando el transporte es la propuesta de valor por la que paga el cliente, es un proceso misional."
+          },
+          {
+            "prompt": "Cada área de una distribuidora cumple sus indicadores, pero solo el 58 % de los pedidos llega completo y a tiempo. ¿Cuál es el diagnóstico más preciso?",
+            "options": [
+              "Los indicadores de cada área están mal calculados",
+              "Falta una medición del proceso transversal de extremo a extremo y un dueño responsable",
+              "El problema es exclusivamente de capacidad de reparto",
+              "La empresa debe eliminar su estructura funcional"
+            ],
+            "correct": 1,
+            "explanation": "Los indicadores locales no capturan esperas y errores en los traspasos; se necesita un indicador de extremo a extremo con dueño, sin eliminar las áreas."
+          },
+          {
+            "prompt": "¿En qué orden práctico se recomienda completar una tabla SIPOC?",
+            "options": [
+              "Clientes, proveedores, proceso, entradas y salidas",
+              "Entradas, salidas, proceso, clientes y proveedores",
+              "Proceso, salidas, clientes, entradas y proveedores",
+              "Proveedores, entradas, proceso, salidas y clientes"
+            ],
+            "correct": 2,
+            "explanation": "Se empieza por el proceso de alto nivel y sus salidas, porque definen a los clientes; luego se identifica qué entradas se requieren y quién las provee."
+          },
+          {
+            "prompt": "Un cliente bancario dice 'quiero que me atiendan rápido'. ¿Cuál es la mejor traducción a característica crítica para la calidad (CTQ)?",
+            "options": [
+              "Al menos 90 % de clientes atendidos en menos de diez minutos desde su llegada",
+              "Reducir el número de reclamos ante INDECOPI",
+              "Atención amable y eficiente en todo momento",
+              "Contratar dos cajeros adicionales en horas punta"
+            ],
+            "correct": 0,
+            "explanation": "Una CTQ debe ser medible y referirse a la salida del proceso desde la perspectiva del cliente; las otras opciones son vagas, son soluciones o miden otro resultado."
+          },
+          {
+            "prompt": "Según la NT 001-2018-SGP, ¿cuáles son las etapas de la implementación de la gestión por procesos en entidades públicas?",
+            "options": [
+              "Elaboración del TUPA, del ROF y del MOF",
+              "Diagnóstico, reingeniería y certificación ISO",
+              "Determinación, seguimiento y medición, y mejora de procesos",
+              "Planificación, organización, dirección y control"
+            ],
+            "correct": 2,
+            "explanation": "La norma técnica de la PCM organiza la implementación en tres etapas: determinación de procesos, seguimiento y medición, y mejora."
+          },
+          {
+            "prompt": "¿Qué afirmación describe mejor la relación entre el ciclo PHVA y la norma ISO 9001:2015?",
+            "options": [
+              "La norma usa el PHVA como estructura y lo combina con el pensamiento basado en riesgos",
+              "La norma exige un manual de calidad que describa el PHVA",
+              "El PHVA solo se aplica en procesos productivos, no administrativos",
+              "La norma reemplazó el PHVA por la reingeniería de procesos"
+            ],
+            "correct": 0,
+            "explanation": "ISO 9001:2015 se estructura sobre el ciclo PHVA y el pensamiento basado en riesgos; no exige manual de calidad y aplica a cualquier tipo de proceso."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Modelado y documentación de procesos",
+      "description": "Al finalizar la unidad, el estudiante descubre un proceso real mediante entrevistas y observación, lo modela en BPMN 2.0 con corrección sintáctica y lo documenta con ficha de proceso, procedimiento, matriz RACI y referencias al MOF y al MAPRO.",
+      "topics": [
+        "Descubrimiento del proceso: entrevistas, observación y análisis documental",
+        "Notación BPMN 2.0: eventos, actividades, compuertas, carriles y mensajes",
+        "Buenas prácticas y errores frecuentes de modelado",
+        "Ficha de proceso y redacción de procedimientos",
+        "Matriz RACI, MOF y MAPRO en la organización peruana"
+      ],
+      "slides": [
+        {
+          "title": "Descubrir el proceso antes de dibujarlo",
+          "bullets": [
+            "Entrevistas a quienes ejecutan el trabajo, no solo a jefes: ellos conocen atajos, esperas y excepciones.",
+            "Observación directa o recorrido del caso real, siguiendo un expediente o pedido de inicio a fin.",
+            "Análisis documental: procedimientos, formatos, correos, reportes del ERP y registros de eventos del sistema.",
+            "Talleres de validación donde los participantes corrigen el modelo borrador en tiempo real."
+          ],
+          "notes": "Dumas y colaboradores llaman a esta fase descubrimiento del proceso y advierten la paradoja del conocimiento: quienes ejecutan conocen su parte pero no el todo, y quienes modelan conocen la notación pero no el negocio. Por eso se combinan técnicas. Recomiende la técnica de 'seguir al objeto': tomar un pedido o expediente real y rastrear por dónde pasó, con fechas. Esto revela esperas que nadie menciona en entrevistas. Mencione la minería de procesos, que reconstruye el flujo a partir de los registros de eventos del ERP; no la aplicaremos, pero es una tendencia relevante en bancos peruanos. Pregunte: ¿qué sesgos aparecen cuando el jefe describe el proceso? Normalmente describe el proceso ideal y omite los reprocesos."
+        },
+        {
+          "title": "Guía para la entrevista de descubrimiento",
+          "bullets": [
+            "¿Qué evento inicia su trabajo y de quién recibe la información o el material?",
+            "¿Qué hace exactamente, con qué sistema o formato, y cuánto tiempo le toma en promedio?",
+            "¿A quién entrega el resultado y qué pasa cuando falta información o hay un error?",
+            "¿Qué excepciones ocurren con frecuencia y cómo las resuelve en la práctica?"
+          ],
+          "notes": "Explique que una buena entrevista se prepara con un SIPOC previo y se registra con permiso del entrevistado. Pida que siempre pregunten por las excepciones: el camino feliz suele representar solo una parte de los casos, y las excepciones concentran el tiempo y el costo. Practique un juego de roles de cinco minutos: un estudiante es la asistente de compras de una constructora y otro la entrevista. Al final, analicen qué preguntas obtuvieron información útil. Recuerde las obligaciones de la Ley 29733: si el registro incluye datos personales, debe informarse su finalidad y obtener consentimiento. Indique que la plantilla de entrevista estará en el aula virtual para el proyecto."
+        },
+        {
+          "title": "BPMN 2.0: el estándar internacional de modelado",
+          "bullets": [
+            "Business Process Model and Notation, publicado por el Object Management Group; versión 2.0 de 2011, también norma ISO/IEC 19510.",
+            "Comprensible para usuarios de negocio y suficientemente precisa para automatizar en motores de flujo de trabajo.",
+            "Cuatro categorías: objetos de flujo, objetos de conexión, carriles y artefactos.",
+            "Herramientas gratuitas: Bizagi Modeler, draw.io, Camunda Modeler y bpmn.io."
+          ],
+          "notes": "Contraste BPMN con el diagrama de flujo ANSI que algunos conocieron en el colegio: el flujograma clásico no distingue bien participantes, mensajes ni eventos temporales, y cada empresa lo usa a su manera. BPMN es un lenguaje común: un modelo hecho en Lima lo entiende un analista en Bogotá o en Madrid. Explique que su doble utilidad es su fortaleza: el mismo diagrama sirve para conversar con la gerencia y para configurar un sistema de flujo de trabajo. Haga la demostración en vivo en Bizagi Modeler o draw.io, creando un diagrama vacío con un pool. Indique que en el curso usaremos un subconjunto de elementos, suficiente para el noventa por ciento de los procesos administrativos."
+        },
+        {
+          "title": "Eventos: lo que ocurre e inicia, interrumpe o termina",
+          "bullets": [
+            "Evento de inicio (círculo delgado): solicitud recibida, fecha programada o mensaje entrante.",
+            "Evento intermedio (círculo doble): esperar un mensaje, un plazo de tiempo o capturar un error.",
+            "Evento de fin (círculo grueso): resultado del proceso; puede haber varios fines, por ejemplo aprobado o rechazado.",
+            "Los marcadores internos indican el tipo: sobre para mensaje, reloj para temporizador, rayo para error."
+          ],
+          "notes": "Dibuje los tres tipos y explique que un evento es algo que sucede, no algo que alguien hace. Ejemplo: 'factura recibida' es un evento; 'registrar factura' es una actividad. El temporizador es muy útil en procesos administrativos peruanos: 'día 10 del mes' inicia la declaración mensual del PDT 621 o la PLAME según el cronograma de SUNAT; 'cinco días hábiles sin respuesta' dispara un recordatorio. Recomiende nombrar los eventos con sustantivo y participio: 'pedido recibido', 'pago confirmado'. Pregunte cómo modelarían el plazo de quince días hábiles que tiene un proveedor para subsanar observaciones; la respuesta es un evento intermedio de temporizador adjunto o en el flujo."
+        },
+        {
+          "title": "Actividades, tareas y subprocesos",
+          "bullets": [
+            "Tarea: rectángulo redondeado, nombrada con verbo en infinitivo más objeto, como 'Validar datos del cliente'.",
+            "Tipos de tarea: de usuario (con sistema), manual, de servicio (automática), de envío y de recepción.",
+            "Subproceso colapsado (signo +): agrupa actividades que se detallan en otro diagrama.",
+            "Una actividad debe tener un único responsable, ubicado en su carril."
+          ],
+          "notes": "La regla verbo más objeto evita nombres ambiguos como 'Factura' o 'Revisión'. Muestre la diferencia entre tarea de usuario (la asistente registra en el ERP) y tarea de servicio (el sistema calcula la detracción automáticamente): esta distinción será clave cuando analicemos automatización en la unidad 4. Explique que los subprocesos permiten mantener la jerarquía de niveles vista en la unidad 1: el diagrama nivel 1 muestra 'Evaluar crédito' colapsado y el nivel 2 lo detalla. Ejercicio: reescribir correctamente cinco nombres mal formulados, como 'Gerente', 'OK de jefatura', 'Proceso de pago', 'Envío' y 'Factura SUNAT'. Corrija en vivo destacando el verbo y el objeto."
+        },
+        {
+          "title": "Compuertas: decisiones y paralelismo",
+          "bullets": [
+            "Exclusiva (rombo con X): solo un camino según una condición, como monto mayor o menor a S/ 5 000.",
+            "Paralela (rombo con +): todos los caminos se ejecutan a la vez y luego se sincronizan.",
+            "Inclusiva (rombo con O): uno o varios caminos según condiciones no excluyentes.",
+            "La compuerta no decide: la decisión es una actividad previa; la compuerta solo enruta según el resultado."
+          ],
+          "notes": "Este es el punto donde más errores se cometen. Insista en que antes de una compuerta exclusiva debe haber una tarea que produzca la decisión, por ejemplo 'Evaluar solicitud', y que la compuerta se nombra como pregunta: '¿Solicitud aprobada?', con salidas etiquetadas 'Sí' y 'No'. Explique que la compuerta paralela permite modelar trabajo simultáneo: mientras Almacén prepara el pedido, Facturación emite el comprobante; luego otra compuerta paralela sincroniza antes del despacho. Muestre cómo el paralelismo reduce el tiempo de ciclo, idea que cuantificaremos en la unidad 3. Pregunte qué pasa si usan una compuerta exclusiva para unir caminos paralelos: el proceso puede continuar sin esperar a que ambos terminen."
+        },
+        {
+          "title": "Pools, carriles y flujos de mensaje",
+          "bullets": [
+            "Pool: representa un participante independiente, como la empresa, el cliente o SUNAT.",
+            "Carril: subdivide el pool en roles o áreas responsables, como Ventas, Créditos o Almacén.",
+            "Flujo de secuencia (línea continua): orden de actividades dentro de un mismo pool.",
+            "Flujo de mensaje (línea discontinua): comunicación entre pools distintos; nunca une actividades del mismo pool."
+          ],
+          "notes": "Use el ejemplo de la facturación electrónica: el pool de la empresa con carriles Ventas y Facturación, un pool del cliente y un pool del operador de servicios electrónicos (OSE) o SUNAT. La empresa envía el XML como mensaje al OSE y recibe la constancia de recepción. Explique que los pools externos pueden dibujarse como cajas negras, colapsados, cuando no conocemos su proceso interno. Advierta el error clásico: unir dos carriles del mismo pool con un flujo de mensaje; dentro de la empresa el traspaso es flujo de secuencia. Pida que identifiquen los participantes del proceso de importación de una mercadería: importador, agente de aduanas, SUNAT Aduanas, naviera y almacén extraportuario."
+        },
+        {
+          "title": "Artefactos y datos en el modelo",
+          "bullets": [
+            "Objeto de datos: documento que una actividad usa o produce, como orden de compra o guía de remisión.",
+            "Almacén de datos: sistema o repositorio persistente, como el ERP o la base de clientes.",
+            "Anotaciones de texto: aclaraciones de reglas de negocio, plazos o normas aplicables.",
+            "Grupos: encierran visualmente actividades relacionadas sin alterar el flujo."
+          ],
+          "notes": "Los artefactos convierten un diagrama de flujo en un modelo útil para la auditoría y para la digitalización. Cuando el modelo muestra que la tarea 'Aprobar orden de compra' usa el documento 'Cuadro comparativo de cotizaciones' y escribe en el almacén 'ERP', el auditor sabe dónde buscar evidencia y el analista de sistemas sabe qué integrar. Recomiende usar anotaciones para citar reglas: 'Se aplica detracción del 12 % a servicios gravados según el Anexo 3 de la R. S. 183-2004/SUNAT cuando el importe supera S/ 700'. Advierta no saturar el diagrama: si hay más anotaciones que actividades, la regla debe ir en el procedimiento escrito."
+        },
+        {
+          "title": "Buenas prácticas de modelado",
+          "bullets": [
+            "Siete más o menos dos actividades por diagrama; si hay más, crear subprocesos.",
+            "Flujo de izquierda a derecha, un solo evento de inicio por diagrama y fines con nombre del resultado.",
+            "Etiquetar todas las salidas de compuertas exclusivas e inclusivas.",
+            "Modelar primero el camino feliz, luego las excepciones más frecuentes; validar con quienes ejecutan."
+          ],
+          "notes": "Mendling, Reijers y Van der Aalst propusieron las Siete Pautas de Modelado de Procesos (7PMG), basadas en investigación empírica sobre comprensibilidad y errores: usar el menor número de elementos, minimizar los caminos por elemento, un solo inicio y un solo fin, estructurar el modelo, evitar compuertas inclusivas, usar etiquetas verbo-objeto y descomponer modelos con más de cincuenta elementos. Comente que estos criterios no son estéticos: los modelos grandes y mal estructurados tienen más errores y menos lectores. Muestre un modelo 'espagueti' de una entidad pública y pregunte qué cambiarían. Proponga una lista de verificación que usarán para revisar el trabajo de otro equipo en la revisión entre pares."
+        },
+        {
+          "title": "La ficha de proceso",
+          "bullets": [
+            "Identificación: código, nombre, nivel, tipo, dueño y versión.",
+            "Objetivo y alcance: para qué existe, dónde empieza y dónde termina.",
+            "Proveedores, entradas, salidas, clientes y requisitos, retomados del SIPOC.",
+            "Recursos, documentos relacionados, riesgos principales, controles e indicadores con meta y frecuencia."
+          ],
+          "notes": "La ficha de proceso o ficha de caracterización es el documento resumen que acompaña al diagrama. La NT 001-2018-SGP incluye un modelo oficial para entidades públicas y su estructura coincide con el apartado 4.4 de ISO 9001 que vimos en la unidad 1. Muestre una ficha completa del proceso 'Atención de reclamos' de una empresa de telecomunicaciones, con indicador 'porcentaje de reclamos resueltos dentro del plazo de OSIPTEL'. Pida atención al objetivo: debe expresar el resultado para el cliente, no la actividad. 'Registrar reclamos' es una actividad; 'resolver los reclamos de los usuarios dentro del plazo normativo con respuesta fundamentada' es un objetivo. Indique que la ficha será parte de la tarea."
+        },
+        {
+          "title": "Redactar procedimientos claros y verificables",
+          "bullets": [
+            "Estructura: objetivo, alcance, base legal, definiciones, responsabilidades, descripción de actividades, registros y anexos.",
+            "Cada paso indica quién, qué, cómo, cuándo y con qué registro, en voz activa y tiempo presente.",
+            "Evitar ambigüedades como 'oportunamente' o 'cuando corresponda'; precisar plazos y criterios.",
+            "Control de versiones y aprobación formal; publicación accesible para quienes lo aplican."
+          ],
+          "notes": "Lea un fragmento mal redactado: 'Se procederá oportunamente a la revisión de los documentos por el área correspondiente'. Pregunte quién, cuándo y qué documentos. Luego muestre la versión corregida: 'El asistente de tesorería verifica, dentro de las 24 horas de recibida, que la factura electrónica coincida en RUC, importe y descripción con la orden de compra y la guía de remisión; registra el resultado en el ERP'. La diferencia es verificable: un auditor puede comprobar si se cumplió. Explique que la base legal incluye normas aplicables, como el Reglamento de Comprobantes de Pago. Recomiende formatos de tabla de tres columnas: responsable, actividad y registro, que facilitan la lectura en pantalla."
+        },
+        {
+          "title": "Matriz RACI: responsabilidades sin ambigüedad",
+          "bullets": [
+            "R (Responsible): ejecuta la actividad; puede haber varios.",
+            "A (Accountable): rinde cuentas y aprueba; debe haber exactamente uno por actividad.",
+            "C (Consulted): aporta opinión antes de la decisión; comunicación de ida y vuelta.",
+            "I (Informed): recibe información del resultado; comunicación en un solo sentido."
+          ],
+          "notes": "La matriz RACI cruza actividades del proceso (filas) con roles (columnas). Construya una en vivo para cuatro actividades del proceso de compras: requerir, cotizar, aprobar y recibir. Muestre las reglas de verificación: una fila sin A significa que nadie responde; una fila con dos A genera conflicto; una columna llena de R indica sobrecarga; demasiadas C hacen lento el proceso. Relacione con el caso de la unidad 1, donde nadie respondía por el pedido completo. Pregunte: en una mype familiar donde el dueño aprueba todo, ¿qué muestra la RACI? Una A concentrada en una sola persona, cuello de botella que analizaremos cuantitativamente en la siguiente unidad."
+        },
+        {
+          "title": "MOF, MAPRO y documentos de gestión en el Perú",
+          "bullets": [
+            "MOF (Manual de Organización y Funciones): describe cargos, funciones, línea de autoridad y requisitos.",
+            "MAPRO (Manual de Procedimientos): reúne los procedimientos de la organización con sus flujogramas.",
+            "En el sector público, el ROF y el Manual de Perfiles de Puestos de SERVIR han ido reemplazando al antiguo MOF.",
+            "Coherencia obligatoria: las funciones del MOF deben coincidir con los roles de la RACI y los carriles BPMN."
+          ],
+          "notes": "Estos documentos son muy comunes en el ámbito peruano, y los empleadores esperan que un técnico en administración los conozca. Explique que el MOF mira el puesto y el MAPRO mira el flujo: son complementarios. En el sector público, la Ley del Servicio Civil (Ley 30057) y las directivas de SERVIR introdujeron el Manual de Perfiles de Puestos, y el Reglamento de Organización y Funciones define la estructura de la entidad. Muestre un caso típico de incoherencia: el MOF asigna a Logística la conformidad del servicio, pero en la práctica la da el área usuaria. Pregunte qué riesgo genera esa diferencia: pagos sin conformidad válida y observaciones de auditoría o de la Contraloría."
+        }
+      ],
+      "reading": {
+        "title": "Modelar para entender: BPMN y documentación útil",
+        "minutes": 35,
+        "content": "## Por qué modelar\n\nUn modelo es una simplificación deliberada de la realidad que permite entenderla, comunicarla y cambiarla. En la gestión por procesos, el modelo cumple tres funciones: crea un lenguaje común entre áreas que nunca se habían sentado juntas, revela problemas invisibles en el día a día y sirve de base para medir, rediseñar y automatizar. El modelo del estado actual (*as-is*) describe cómo se trabaja hoy; el del estado futuro (*to-be*) describe cómo se trabajará después del rediseño.\n\n## El descubrimiento del proceso\n\nDumas y colaboradores identifican tres familias de técnicas de descubrimiento: basadas en evidencia (análisis documental, observación y minería de procesos), basadas en entrevistas y basadas en talleres. Cada una tiene sesgos. Los documentos describen el proceso oficial, que a menudo no coincide con el real. Las entrevistas dependen de la memoria y de la posición del entrevistado. Los talleres son ricos pero costosos de coordinar. Un buen analista triangula: contrasta lo que dicen las personas con lo que muestran los registros.\n\n## Elementos esenciales de BPMN 2.0\n\nLa notación del Object Management Group, adoptada también como norma ISO/IEC 19510, tiene más de cien elementos, pero un subconjunto reducido basta para la mayoría de procesos administrativos:\n\n| Elemento | Símbolo | Uso |\n|---|---|---|\n| Evento de inicio, intermedio, fin | Círculo delgado, doble, grueso | Lo que sucede: solicitud recibida, plazo vencido, pago realizado |\n| Tarea | Rectángulo redondeado | Trabajo de un rol: 'Validar factura' |\n| Subproceso | Rectángulo con + | Actividad detallada en otro diagrama |\n| Compuerta exclusiva | Rombo con X | Un solo camino según condición |\n| Compuerta paralela | Rombo con + | Caminos simultáneos que luego se sincronizan |\n| Pool y carril | Rectángulo horizontal | Participante y rol responsable |\n| Flujo de secuencia | Línea continua con flecha | Orden dentro de un pool |\n| Flujo de mensaje | Línea discontinua | Comunicación entre pools |\n\nConsidere el proceso de aprobación de órdenes de compra de una constructora mediana de Lima. Puede describirse en pseudonotación textual así:\n\n```\n[Inicio: requerimiento recibido] -> (Cotizar con tres proveedores) [Compras]\n  -> (Elaborar cuadro comparativo) [Compras]\n  -> <X ¿Monto > S/ 20 000?>\n       Sí -> (Aprobar orden de compra) [Gerencia de Operaciones]\n       No -> (Aprobar orden de compra) [Jefatura de Logística]\n  -> <X unión> -> (Emitir orden de compra en ERP) [Compras]\n  -> mensaje al pool Proveedor -> [Fin: orden de compra emitida]\n```\n\nLa compuerta no 'decide' por sí misma; enruta según el dato producido por la actividad anterior (el monto del cuadro comparativo). El umbral de S/ 20 000 es una regla de negocio que debe figurar también en el procedimiento escrito y en la política de delegación de facultades.\n\n## Calidad del modelo\n\nUn modelo puede ser sintácticamente correcto y aun así inútil. Mendling, Reijers y Van der Aalst formularon siete pautas basadas en evidencia empírica: usar el menor número posible de elementos, minimizar los caminos de entrada y salida por elemento, usar un solo evento de inicio y uno de fin por resultado, estructurar el modelo emparejando compuertas de apertura y cierre, evitar compuertas inclusivas, nombrar actividades con verbo y objeto, y descomponer los modelos con más de cincuenta elementos. A estas pautas se suma la calidad semántica: el modelo debe representar fielmente lo que ocurre, lo que solo se logra validando con quienes ejecutan el trabajo.\n\n## De la notación a la documentación\n\nEl diagrama no basta. La **ficha de proceso** resume objetivo, alcance, dueño, entradas, salidas, recursos, riesgos, controles e indicadores. El **procedimiento** detalla cada actividad respondiendo quién, qué, cómo, cuándo y con qué registro. La **matriz RACI** distribuye responsabilidades: cada actividad debe tener exactamente un responsable final (*A*), aunque varios la ejecuten (*R*).\n\nEn la práctica peruana, estos documentos conviven con el **MOF**, que describe los puestos, y el **MAPRO**, que agrupa los procedimientos. En el sector público, la Ley 30057 del Servicio Civil y las disposiciones de SERVIR promovieron los perfiles de puestos, mientras que el ROF define la estructura de cada entidad. El error más frecuente es la incoherencia: funciones del MOF que no corresponden a ningún carril del modelo o actividades del modelo que no figuran en ninguna función. Revisar esa coherencia es una tarea concreta que un técnico en administración puede aportar desde su primer empleo.\n\n## Ideas para recordar\n\nModele primero el estado actual, con sus excepciones. Use BPMN con disciplina y pocos elementos. Documente lo necesario para que el proceso se ejecute igual con cualquier persona capacitada y para que un auditor pueda verificarlo, y nada más."
+      },
+      "case": {
+        "title": "Caso: Constructora Pachacámac y la orden de compra de las 14 firmas",
+        "content": "**Constructora Pachacámac S.A.C.** es una empresa limeña con 210 trabajadores que ejecuta obras de edificación multifamiliar y pequeñas obras públicas. En 2025 facturó S/ 96 millones y tenía seis obras en simultáneo. Su gerente de Administración, Carlos Huamán, recibió una queja formal del residente de la obra de San Miguel: el fierro corrugado llegó once días después del requerimiento, lo que paralizó el vaciado de una losa y generó una penalidad contractual de S/ 48 000.\n\nCarlos pidió a Lucía, asistente administrativa egresada de un instituto, que reconstruyera el recorrido del requerimiento. Lucía revisó el expediente y entrevistó a siete personas. Encontró lo siguiente:\n\n- El requerimiento salió de obra en un formato Excel enviado por correo al almacenero central, que lo reenvió a Compras dos días después porque 'no era su función'.\n- Compras pidió tres cotizaciones, como exige la política interna, aunque el fierro tiene precio casi idéntico entre proveedores homologados. Las cotizaciones tardaron tres días.\n- El cuadro comparativo requirió la firma de nueve personas: comprador, jefe de Compras, jefe de Logística, residente, supervisor de obra, gerente de Proyectos, contador, gerente de Administración y gerente general. En total, la orden de compra reunió catorce firmas y visto buenos, incluidos los de su emisión y registro.\n- Cuatro de esas personas estaban en obra y firmaban solo los martes y viernes, cuando pasaba un mensajero.\n- El MOF vigente, de 2017, asigna la aprobación de compras menores a S/ 50 000 al jefe de Logística, pero nadie lo aplicaba 'por costumbre'.\n- No existía un diagrama del proceso ni un indicador de tiempo de atención de requerimientos.\n\nLucía estimó que el tiempo de trabajo efectivo sobre el expediente era de aproximadamente seis horas, mientras que el tiempo total fue de once días calendario. Carlos debe presentar al comité de gerencia una propuesta para el proceso de compras. El gerente general teme perder control si reduce firmas: 'En 2022 tuvimos un fraude de un comprador y por eso pusimos tantas firmas'. El contador sostiene que su visto bueno es necesario para verificar el presupuesto de obra. El gerente de Proyectos propone que los residentes compren directamente hasta S/ 10 000.\n\nCarlos necesita, antes de proponer cambios, un modelo BPMN del estado actual, una matriz RACI que muestre la acumulación de aprobaciones y una propuesta de documentación coherente con el MOF que no debilite los controles.",
+        "questions": [
+          "Modele en BPMN el estado actual del proceso con pools, carriles y compuertas. ¿Qué evidencia del modelo explica los once días?",
+          "Construya la matriz RACI actual de las actividades de aprobación. ¿Qué reglas de la RACI se incumplen?",
+          "¿Cómo respondería al temor del gerente general sobre el fraude sin mantener catorce firmas? Proponga controles alternativos.",
+          "Evalúe la propuesta del gerente de Proyectos de que los residentes compren hasta S/ 10 000: beneficios, riesgos y condiciones.",
+          "¿Qué documentos debería actualizar Carlos (MOF, procedimiento, ficha, política de delegación) y en qué orden?"
+        ]
+      },
+      "assignment": {
+        "title": "Modelo BPMN y documentación del proceso del proyecto",
+        "instructions": "**Objetivo:** descubrir, modelar y documentar el estado actual del proceso misional seleccionado en la unidad 1 para el proyecto integrador.\n\n**Qué entregar (en equipos):**\n\n1. **Evidencia de descubrimiento:** guía de entrevista aplicada a al menos dos personas que ejecutan el proceso y resumen de hallazgos, con su consentimiento informado.\n2. **Modelo BPMN 2.0 del estado actual** elaborado en Bizagi Modeler, draw.io o Camunda, con pools, carriles, eventos, compuertas etiquetadas, objetos de datos y al menos una excepción frecuente. Exporte en imagen y en archivo fuente.\n3. **Ficha de proceso** con objetivo, alcance, dueño, SIPOC actualizado, recursos, riesgos principales y dos indicadores propuestos con meta.\n4. **Procedimiento escrito** de las actividades principales en tabla de responsable, actividad y registro, sin términos ambiguos.\n5. **Matriz RACI** con análisis de al menos dos problemas detectados.\n\n**Formato:** PDF de máximo ocho páginas más los archivos del modelo. Antes de entregar, cada equipo revisa el modelo de otro equipo con la lista de verificación de las siete pautas de modelado y adjunta la retroalimentación recibida.\n\n**Criterios:** corrección sintáctica y fidelidad del modelo, calidad de la documentación, coherencia entre modelo, procedimiento y RACI, y calidad del análisis.",
+        "rubric": [
+          {
+            "name": "Descubrimiento y fidelidad del modelo",
+            "points": 5
+          },
+          {
+            "name": "Corrección sintáctica BPMN y buenas prácticas",
+            "points": 5
+          },
+          {
+            "name": "Ficha y procedimiento verificables",
+            "points": 5
+          },
+          {
+            "name": "Matriz RACI y análisis de problemas",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: modelado BPMN y documentación",
+        "questions": [
+          {
+            "prompt": "En un modelo BPMN, después de la tarea 'Evaluar solicitud de crédito' se necesita seguir caminos distintos si se aprueba o se rechaza. ¿Qué elemento corresponde?",
+            "options": [
+              "Compuerta paralela con dos salidas",
+              "Flujo de mensaje hacia el carril de Créditos",
+              "Compuerta exclusiva nombrada '¿Solicitud aprobada?' con salidas etiquetadas",
+              "Evento intermedio de mensaje"
+            ],
+            "correct": 2,
+            "explanation": "Solo uno de los dos caminos debe ejecutarse según el resultado de la evaluación; eso se modela con una compuerta exclusiva cuyas salidas se etiquetan."
+          },
+          {
+            "prompt": "Mientras Almacén prepara un pedido, Facturación emite el comprobante, y el despacho solo ocurre cuando ambas tareas terminan. ¿Cómo se modela correctamente?",
+            "options": [
+              "Dos eventos de inicio independientes",
+              "Compuerta exclusiva de apertura y paralela de cierre",
+              "Compuerta paralela de apertura y compuerta paralela de cierre antes del despacho",
+              "Compuerta inclusiva sin compuerta de cierre"
+            ],
+            "correct": 2,
+            "explanation": "Las tareas simultáneas se abren con una compuerta paralela y se sincronizan con otra compuerta paralela, que espera a que ambas terminen antes de continuar."
+          },
+          {
+            "prompt": "Un analista unió con un flujo de mensaje (línea discontinua) el carril de Ventas con el carril de Créditos dentro del pool de la misma empresa. ¿Qué error cometió?",
+            "options": [
+              "Los flujos de mensaje solo conectan pools distintos; dentro del pool se usa flujo de secuencia",
+              "Debió usar una anotación de texto en lugar de flujo",
+              "Los carriles de una empresa no pueden comunicarse",
+              "Debió usar una compuerta inclusiva entre carriles"
+            ],
+            "correct": 0,
+            "explanation": "En BPMN, el flujo de mensaje representa comunicación entre participantes independientes; los traspasos entre carriles del mismo pool son flujos de secuencia."
+          },
+          {
+            "prompt": "En una matriz RACI, la actividad 'Aprobar orden de compra' tiene asignada la letra A a tres gerentes distintos. ¿Cuál es la consecuencia más probable?",
+            "options": [
+              "Reducción de la carga del comprador",
+              "Mayor control sin efectos en el tiempo del proceso",
+              "Cumplimiento automático de la segregación de funciones",
+              "Dilución de la responsabilidad final y demoras por aprobaciones redundantes"
+            ],
+            "correct": 3,
+            "explanation": "Cada actividad debe tener exactamente un responsable final; varias A generan conflictos, esperas y nadie responde realmente por el resultado."
+          },
+          {
+            "prompt": "¿Cuál de las siguientes instrucciones de un procedimiento es verificable por un auditor?",
+            "options": [
+              "Cuando corresponda, se coordinará con las áreas involucradas",
+              "Tesorería procurará pagar a los proveedores a tiempo",
+              "El asistente de tesorería concilia la factura con la orden de compra y la guía dentro de 24 horas y registra el resultado en el ERP",
+              "Se revisarán oportunamente los documentos por el área correspondiente"
+            ],
+            "correct": 2,
+            "explanation": "Una instrucción verificable precisa quién, qué, cuándo y con qué registro; las demás usan términos ambiguos que impiden comprobar el cumplimiento."
+          },
+          {
+            "prompt": "El MOF asigna la conformidad de servicios a Logística, pero el modelo BPMN muestra que la otorga el área usuaria. ¿Qué debe hacer el analista?",
+            "options": [
+              "Modificar el modelo para que coincida con el MOF, aunque no refleje la realidad",
+              "Señalar la incoherencia y proponer alinear MOF, procedimiento y modelo según el diseño que mejor controle el riesgo",
+              "Eliminar la actividad de conformidad para simplificar",
+              "Ignorar el MOF porque es un documento antiguo"
+            ],
+            "correct": 1,
+            "explanation": "El modelo actual debe reflejar la realidad; la incoherencia documental es un hallazgo que se resuelve rediseñando y alineando los documentos, no ocultándola."
+          },
+          {
+            "prompt": "Según las pautas de modelado 7PMG, un diagrama con 70 elementos y compuertas sin cerrar debería...",
+            "options": [
+              "Mantenerse así porque refleja toda la complejidad real",
+              "Reducirse eliminando las excepciones aunque sean frecuentes",
+              "Descomponerse en subprocesos y estructurarse emparejando compuertas de apertura y cierre",
+              "Convertirse en un flujograma ANSI"
+            ],
+            "correct": 2,
+            "explanation": "Las pautas recomiendan descomponer modelos de más de cincuenta elementos y estructurarlos; eliminar excepciones frecuentes afectaría la fidelidad del modelo."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Análisis y mejora de procesos",
+      "description": "Al finalizar la unidad, el estudiante mide el desempeño de un proceso con indicadores de tiempo, capacidad y costo, identifica desperdicios y causas raíz con herramientas cualitativas y propone un rediseño sustentado en heurísticas y principios Lean.",
+      "topics": [
+        "Análisis de valor agregado y los ocho desperdicios Lean",
+        "Medición del tiempo: tiempo de ciclo, eficiencia del ciclo y Ley de Little",
+        "Capacidad, utilización y cuellos de botella",
+        "Análisis de causa raíz: Ishikawa, cinco porqués y Pareto",
+        "Heurísticas de rediseño y mejora continua (kaizen y DMAIC)",
+        "Costeo de actividades y caso de negocio de la mejora"
+      ],
+      "slides": [
+        {
+          "title": "Del modelo al diagnóstico",
+          "bullets": [
+            "El modelo describe; el análisis explica por qué el proceso rinde como rinde y dónde intervenir.",
+            "Análisis cualitativo: valor agregado, desperdicios, causas raíz y registro de problemas.",
+            "Análisis cuantitativo: tiempos, capacidad, colas, costos y variabilidad.",
+            "Regla de oro: no rediseñar sin una línea base medida del estado actual."
+          ],
+          "notes": "Abra recordando el caso de la constructora: seis horas de trabajo y once días de duración. Ese dato, por sí solo, ya es un diagnóstico poderoso. Explique que esta unidad da herramientas para producir ese tipo de evidencia en cualquier proceso. Recalque la regla de oro con un ejemplo: una municipalidad que digitaliza un trámite sin medir antes no podrá demostrar ante la ciudadanía ni ante la Contraloría que mejoró. Mencione el registro de problemas (issue register) de Dumas y colaboradores: una tabla con cada problema, su descripción, causa, impacto cuantificado y prioridad. Será la columna vertebral de la tarea. Pregunte qué datos tendrían disponibles en su proceso del proyecto y cuáles tendrían que recolectar con muestreo."
+        },
+        {
+          "title": "Análisis de valor agregado",
+          "bullets": [
+            "Valor agregado para el cliente (VAC): transforma la salida y el cliente estaría dispuesto a pagar por ello.",
+            "Valor agregado para el negocio (VAN): no lo valora el cliente, pero es necesario por ley, control o riesgo.",
+            "Sin valor agregado (SVA): esperas, traslados, revisiones repetidas y reprocesos; candidatos a eliminar.",
+            "Procedimiento: listar actividades del modelo, clasificarlas, medir su tiempo y calcular la proporción de cada grupo."
+          ],
+          "notes": "Haga la clasificación con el proceso de la constructora. 'Cotizar con proveedores' es VAN; 'emitir orden de compra' es VAN; las firmas repetidas y las esperas del mensajero son SVA; la entrega del fierro en obra es VAC. Lleve la discusión a las actividades VAN: no se eliminan porque responden a obligaciones, como emitir comprobantes electrónicos o depositar detracciones, pero se buscan formas más eficientes de cumplirlas, por ejemplo automatizarlas. Advierta que clasificar exige criterio y suele generar debate: la verificación del presupuesto por el contador, ¿es VAN o SVA? Depende de si previene un riesgo real o duplica un control ya existente. Pida que argumenten ambas posiciones."
+        },
+        {
+          "title": "Los ocho desperdicios Lean en procesos administrativos",
+          "bullets": [
+            "Sobreproducción y sobreprocesamiento: reportes que nadie lee, firmas redundantes, datos capturados dos veces.",
+            "Esperas, transporte y movimientos: expedientes en bandejas, traslados físicos, búsquedas en carpetas.",
+            "Inventario: solicitudes acumuladas en cola; defectos: errores que obligan a rehacer.",
+            "Talento no aprovechado: personas calificadas haciendo tareas mecánicas o sin poder proponer mejoras."
+          ],
+          "notes": "Atribuya el origen: Taiichi Ohno identificó siete desperdicios en el Sistema de Producción Toyota y la literatura posterior, incluido Lean Thinking de Womack y Jones, agregó el talento no utilizado. Use el acrónimo inglés TIMWOODS como ayuda de memoria si lo desean. Insista en traducirlos a la oficina: el inventario administrativo son los expedientes en espera; el transporte, los correos reenviados entre cinco personas. Ejercicio rápido: identificar desperdicios en el proceso de reembolso de gastos de viaje de una empresa, donde el trabajador imprime, firma, escanea y vuelve a enviar sus comprobantes. Pregunte qué desperdicio es el más caro; casi siempre los defectos, porque se multiplican aguas abajo."
+        },
+        {
+          "title": "Tiempo de ciclo y eficiencia del ciclo",
+          "bullets": [
+            "Tiempo de ciclo: tiempo total desde el inicio hasta el fin del caso, incluyendo esperas.",
+            "Tiempo de procesamiento: tiempo en que alguien trabaja realmente sobre el caso.",
+            "Eficiencia del ciclo = tiempo de valor agregado / tiempo de ciclo total.",
+            "En procesos administrativos la eficiencia del ciclo suele estar por debajo del 10 %; la espera domina."
+          ],
+          "notes": "Calcule con el caso de la constructora: seis horas de trabajo frente a once días calendario. Si consideramos jornadas de ocho horas y días laborables, la eficiencia es menor al 10 %; si se usa tiempo calendario, cerca del 2 %. Explique que conviene acordar la unidad de tiempo y mantenerla en todo el análisis. Muestre que, si solo se reduce el tiempo de procesamiento, la mejora es marginal: aunque la tarea más lenta tome la mitad, el expediente sigue esperando días en bandejas. Por eso el primer objetivo de rediseño suele ser eliminar esperas y traspasos. Pida a los estudiantes que estimen la eficiencia del ciclo del trámite más reciente que hicieron en una entidad pública."
+        },
+        {
+          "title": "Tiempo de ciclo con caminos alternativos y paralelos",
+          "bullets": [
+            "Secuencia: el tiempo de ciclo es la suma de los tiempos de las actividades.",
+            "Compuerta exclusiva: promedio ponderado por la probabilidad de cada camino.",
+            "Compuerta paralela: se toma el máximo de los caminos simultáneos.",
+            "Reproceso con probabilidad r: el tiempo del bloque se divide entre (1 − r)."
+          ],
+          "notes": "Desarrolle un ejemplo numérico en la pizarra virtual. Proceso: registrar solicitud (1 h), evaluar (4 h); con probabilidad 0,3 se requiere visita (8 h), con 0,7 no; luego, en paralelo, emitir contrato (2 h) y verificar garantías (5 h); finalmente desembolsar (1 h). Cálculo: 1 + 4 + 0,3 × 8 + máx(2, 5) + 1 = 13,4 horas. Si además el 20 % de las evaluaciones vuelve por información incompleta, el bloque de evaluación pasa a 4 / 0,8 = 5 horas. Estas fórmulas provienen del análisis de flujo de Dumas y colaboradores. Pregunte qué ocurre si las dos tareas paralelas se hicieran en secuencia: el tiempo sube en dos horas, y eso cuantifica el beneficio del paralelismo."
+        },
+        {
+          "title": "Ley de Little: trabajo en proceso, flujo y tiempo",
+          "bullets": [
+            "WIP = λ × CT: trabajo en proceso igual a tasa de llegada por tiempo de ciclo promedio.",
+            "Se cumple en sistemas estables, sin importar la distribución de llegadas ni el orden de atención.",
+            "Permite estimar el tiempo de ciclo contando expedientes pendientes: CT = WIP / λ.",
+            "Reducir el inventario de casos en cola reduce el tiempo de ciclo si el flujo se mantiene."
+          ],
+          "notes": "John Little demostró formalmente esta relación en 1961 y es una de las herramientas más útiles para un administrador porque requiere pocos datos. Ejemplo: el área de reembolsos de una EPS recibe 120 solicitudes diarias y tiene 1 800 expedientes pendientes. Tiempo de ciclo promedio: 1 800 / 120 = 15 días. Si la meta es diez días, el inventario debe bajar a 1 200 expedientes. Enfatice la condición de estabilidad: si llegan más casos de los que se atienden, la cola crece sin límite y la ley se aplica solo a periodos estables. Pida que apliquen la fórmula a una cola que conozcan, por ejemplo las solicitudes de constancias en la secretaría académica del instituto."
+        },
+        {
+          "title": "Capacidad, utilización y cuellos de botella",
+          "bullets": [
+            "Capacidad de un recurso = casos que puede atender por unidad de tiempo; utilización ρ = λ / capacidad.",
+            "El cuello de botella es el recurso con mayor utilización; determina el rendimiento de todo el proceso.",
+            "Con utilizaciones superiores al 85 %, las colas y los tiempos de espera crecen de forma no lineal.",
+            "Una hora perdida en el cuello de botella es una hora perdida para todo el sistema (Goldratt)."
+          ],
+          "notes": "Ejemplo: un gerente aprueba documentos en seis minutos y puede dedicar dos horas diarias a esa tarea, es decir veinte aprobaciones por día. Si llegan dieciocho, su utilización es del 90 % y las esperas se disparan ante cualquier variación, como un día de viaje. Explique con la teoría de colas, sin fórmulas complejas, que el tiempo de espera crece aproximadamente con ρ / (1 − ρ): con 50 % de utilización el factor es 1; con 90 %, es 9. Cite a Eliyahu Goldratt y su libro La meta: mejorar recursos que no son cuello de botella no mejora el sistema. Pregunte cómo se relaciona con la RACI: concentrar las A en una persona la convierte en cuello de botella."
+        },
+        {
+          "title": "Diagrama de Ishikawa: causas organizadas",
+          "bullets": [
+            "Creado por Kaoru Ishikawa; también llamado diagrama de espina de pescado o de causa y efecto.",
+            "El efecto se escribe en la cabeza como problema medible: '23 % de facturas con error de precio'.",
+            "Categorías para servicios: métodos, personas, sistemas, materiales e información, medición y entorno.",
+            "Se construye en equipo y luego se priorizan causas con datos, no por votación de opiniones."
+          ],
+          "notes": "Construya un Ishikawa en vivo con el caso de la distribuidora de la unidad 1, efecto 'facturas con error de precio'. Métodos: descuentos negociados por WhatsApp sin registro. Personas: vendedores sin capacitación en la política de precios. Sistemas: el ERP no permite registrar descuentos desde la aplicación móvil. Información: lista de precios actualizada con retraso. Medición: no se mide el error por vendedor. Recalque que el Ishikawa genera hipótesis, no conclusiones; cada causa debe verificarse con datos. Advierta el error de escribir soluciones ('falta capacitación') en lugar de causas; reformule como 'vendedores desconocen la política'. Pida que identifiquen la causa que, si se elimina, desactiva más espinas."
+        },
+        {
+          "title": "Cinco porqués y análisis de Pareto",
+          "bullets": [
+            "Cinco porqués: preguntar por qué de manera sucesiva hasta llegar a una causa controlable por la organización.",
+            "Evitar detenerse en culpables individuales; buscar fallas del sistema, el método o la regla.",
+            "Pareto: ordenar causas por frecuencia o impacto; pocas causas explican la mayoría de los problemas.",
+            "Graficar barras descendentes con porcentaje acumulado y priorizar hasta cerca del 80 %."
+          ],
+          "notes": "Ejemplo de cinco porqués en la clínica del caso: la aseguradora rechazó el expediente. ¿Por qué? Faltaba la orden médica firmada. ¿Por qué? El médico no la firmó al alta. ¿Por qué? El sistema permite cerrar la atención sin firma. ¿Por qué? Nadie configuró esa validación. ¿Por qué? No hay dueño del proceso de facturación a aseguradoras. La causa raíz es organizacional y tiene solución de diseño. Luego muestre un Pareto de 400 observaciones: documentos incompletos 46 %, códigos de procedimiento errados 22 %, fuera de plazo 14 %, montos que exceden cobertura 10 %, otros 8 %. Dos causas explican el 68 %. Atribuya el principio a Juran, que lo llamó de los pocos vitales y los muchos triviales."
+        },
+        {
+          "title": "Heurísticas de rediseño de procesos",
+          "bullets": [
+            "Eliminar actividades sin valor y revisiones duplicadas; reducir traspasos entre áreas.",
+            "Paralelizar actividades independientes y reordenar para detectar errores al inicio.",
+            "Triaje: separar casos simples y complejos en flujos distintos con reglas diferentes.",
+            "Empoderar al ejecutor con criterios claros y llevar el control al punto donde se genera la información."
+          ],
+          "notes": "Reijers y Mansar compilaron unas treinta heurísticas de rediseño a partir de proyectos reales; Dumas y colaboradores las organizan en el diamante del desempeño de tiempo, costo, calidad y flexibilidad. Aplique el triaje a la constructora: requerimientos de materiales homologados con precio de lista y menores a cierto monto siguen un flujo rápido con una sola aprobación; compras atípicas siguen el flujo completo. Muestre cómo el triaje mantiene el control donde el riesgo es alto y libera capacidad donde es bajo. Advierta el efecto en el diamante: empoderar reduce tiempo pero puede elevar el riesgo de fraude, que se compensa con controles posteriores y muestreos, tema de la unidad 4."
+        },
+        {
+          "title": "Kaizen, DMAIC y reingeniería: escalas de mejora",
+          "bullets": [
+            "Kaizen: mejoras pequeñas y continuas lideradas por quienes ejecutan, con ciclos PHVA cortos.",
+            "DMAIC de Seis Sigma: definir, medir, analizar, mejorar y controlar, con fuerte uso de datos.",
+            "Reingeniería: rediseño radical de un proceso completo, con alto riesgo y alto potencial.",
+            "La elección depende de la brecha de desempeño, la urgencia, los recursos y la cultura organizacional."
+          ],
+          "notes": "Presente las tres como un continuo de intensidad. El kaizen es adecuado cuando el proceso funciona razonablemente y se busca afinarlo: por ejemplo, reducir de tres a dos los clics para registrar una boleta. DMAIC sirve para problemas crónicos con datos disponibles, como la tasa de rechazo de expedientes a aseguradoras. La reingeniería se reserva para procesos que no pueden alcanzar la meta con su diseño actual, como pasar de facturación manual a electrónica obligatoria. Comente que la propia literatura reconoce que muchos proyectos de reingeniería de los noventa fracasaron por ignorar a las personas. No profundice en herramientas estadísticas de Seis Sigma, que se abordan en Gestión de la Calidad y en Estadística para la Gestión."
+        },
+        {
+          "title": "Costo del proceso y caso de negocio de la mejora",
+          "bullets": [
+            "Costo por caso = suma de (tiempo de cada actividad × costo por minuto del recurso) más costos directos.",
+            "Costo por minuto = costo laboral mensual total del puesto / minutos productivos del mes.",
+            "Incluir el costo de la no calidad: reprocesos, penalidades, intereses y clientes perdidos.",
+            "Comparar beneficio anual estimado con inversión y costos de implementación; calcular periodo de recuperación."
+          ],
+          "notes": "Desarrolle el ejemplo: una asistente con remuneración de S/ 2 200 cuesta a la empresa cerca de S/ 3 000 mensuales con cargas sociales, gratificaciones y CTS prorrateadas; con 9 600 minutos productivos, el costo es S/ 0,31 por minuto. Si registrar una factura toma doce minutos y se registran 2 500 al mes, el costo es S/ 9 300 mensuales. Automatizar la lectura del XML que reduce el tiempo a tres minutos ahorra cerca de S/ 7 000 al mes. Recuerde que el costeo detallado se verá en Costos y Presupuestos del tercer ciclo; aquí basta una estimación razonable. Insista en incluir la no calidad: la penalidad de S/ 48 000 de la constructora pagaba varios años de un sistema de requerimientos."
+        },
+        {
+          "title": "Registro de problemas y priorización",
+          "bullets": [
+            "Cada problema se registra con descripción, causa raíz, evidencia, impacto cuantificado y propuesta.",
+            "Matriz impacto-esfuerzo: priorizar alto impacto y bajo esfuerzo como ganancias rápidas.",
+            "Validar con el dueño del proceso y las áreas afectadas antes de comprometer cambios.",
+            "Diseñar el estado futuro en BPMN y estimar sus indicadores para comparar con la línea base."
+          ],
+          "notes": "Cierre integrando todas las herramientas en una secuencia de trabajo que replicarán en el proyecto: modelo actual, medición, análisis de valor, causas raíz, registro de problemas, priorización y modelo futuro. Muestre un registro de problemas de ejemplo con cuatro filas y pida a los estudiantes que prioricen con la matriz impacto-esfuerzo. Comente que en organizaciones peruanas las ganancias rápidas, como eliminar una firma o crear una plantilla, generan credibilidad para cambios mayores. Advierta sobre el sesgo de solución: llegar a la reunión con 'necesitamos un ERP' antes de entender las causas. La tecnología se discutirá en la unidad 4, siempre después del análisis. Anuncie la tarea y el cuestionario de la semana 12."
+        }
+      ],
+      "reading": {
+        "title": "Medir para mejorar: análisis cuantitativo y cualitativo de procesos",
+        "minutes": 40,
+        "content": "## El problema de la intuición\n\nLos directivos suelen tener una opinión firme sobre por qué un proceso es lento: falta personal, el sistema es malo o la gente no se compromete. Con frecuencia se equivocan. El análisis de procesos reemplaza la intuición por evidencia, combinando métodos cualitativos, que explican el porqué, con métodos cuantitativos, que dimensionan el cuánto.\n\n## Análisis de valor agregado y desperdicios\n\nEl primer paso consiste en clasificar cada actividad del modelo actual en tres categorías: valor agregado para el cliente, valor agregado para el negocio (necesaria por ley o control) y sin valor agregado. Las esperas, los traslados, las revisiones repetidas y los reprocesos pertenecen casi siempre al último grupo. La tradición Lean, iniciada por Taiichi Ohno en Toyota y difundida por Womack y Jones, denomina *muda* a estos desperdicios y ofrece una lista de ocho categorías que, en la oficina, se manifiestan como bandejas llenas, correos reenviados, datos digitados dos veces y profesionales dedicados a tareas mecánicas.\n\n## Fórmulas esenciales del análisis de flujo\n\n```\nEficiencia del ciclo (PCE) = Tiempo de valor agregado / Tiempo de ciclo total\nLey de Little:               WIP = λ × CT     ->     CT = WIP / λ\nUtilización de un recurso:   ρ = λ / μ        (μ = capacidad por unidad de tiempo)\nBloque con reproceso:        CT_bloque = T / (1 − r)\nCompuerta exclusiva:         CT = Σ p_i × T_i\nCompuerta paralela:          CT = máx(T_1, T_2, ..., T_n)\n```\n\n**Ejemplo aplicado.** La unidad de reembolsos de una empresa prestadora de salud de Lima recibe 120 solicitudes por día hábil (λ) y mantiene 1 800 expedientes pendientes (WIP). Por la Ley de Little, el tiempo de ciclo promedio es 1 800 / 120 = 15 días hábiles. Cada analista revisa 20 expedientes diarios (μ) y hay siete analistas: capacidad de 140 por día y utilización ρ = 120 / 140 = 0,86. La utilización alta explica por qué cualquier ausencia dispara la cola. Si el 25 % de expedientes se devuelve al asegurado por documentos incompletos (r = 0,25), la revisión efectiva equivale a 1 / 0,75 = 1,33 veces la carga nominal. Eliminar la mitad de esas devoluciones con una lista de verificación en el formulario digital reduce la carga efectiva y libera capacidad sin contratar a nadie.\n\nLa relación ρ / (1 − ρ), derivada de la teoría de colas, ayuda a intuir el efecto: con ρ = 0,5 el factor de espera es 1; con 0,86 es 6,1; con 0,95 llega a 19. Los procesos administrativos diseñados para que las personas estén 'siempre ocupadas' son, paradójicamente, procesos lentos.\n\n## Análisis de causa raíz\n\nMedir indica dónde duele; el análisis de causa raíz explica por qué. El **diagrama de Ishikawa** organiza hipótesis por categorías (métodos, personas, sistemas, información, medición y entorno). Los **cinco porqués** profundizan en una cadena causal hasta llegar a una falla del sistema que la organización pueda controlar. El **diagrama de Pareto**, inspirado en el principio de los pocos vitales de Joseph Juran, ordena las causas por frecuencia o costo para concentrar los esfuerzos donde rinden más.\n\nUna advertencia: el análisis de causa raíz busca fallas de diseño, no culpables. Si la conclusión es 'el trabajador se equivocó', el análisis se detuvo demasiado pronto. La pregunta correcta es qué en el diseño permitió que el error ocurriera y no fuera detectado.\n\n## Del diagnóstico al rediseño\n\nCon el registro de problemas priorizado, el analista aplica heurísticas de rediseño: eliminar, paralelizar, reordenar, triar, integrar, empoderar y automatizar. Cada heurística mueve el proceso en el diamante del desempeño: tiempo, costo, calidad y flexibilidad. La mejora se dimensiona con un caso de negocio sencillo que compara el costo actual por caso, incluido el costo de la no calidad, con el costo futuro y con la inversión requerida.\n\nLa escala de la intervención depende de la brecha. Para ajustes cotidianos sirve el kaizen; para problemas crónicos con datos, la secuencia DMAIC; para procesos que no pueden alcanzar la meta con su diseño actual, la reingeniería, cuyos fracasos históricos recuerdan que ninguna mejora se sostiene sin las personas que ejecutan el proceso.\n\n## Ideas para recordar\n\nEn la mayoría de procesos administrativos, la espera supera ampliamente al trabajo efectivo. Tres datos bastan para un diagnóstico inicial poderoso: casos que llegan, casos pendientes y tiempo de trabajo efectivo por caso."
+      },
+      "case": {
+        "title": "Caso: Clínica San Gabriel y los S/ 4,2 millones por cobrar",
+        "content": "**Clínica San Gabriel** es una clínica privada de Trujillo con 85 camas, 340 trabajadores y una facturación anual de S/ 72 millones. El 64 % de sus ingresos proviene de pacientes asegurados por compañías de seguros y entidades prestadoras de salud (EPS). Para cobrar, la clínica debe enviar a cada aseguradora un expediente por atención con factura electrónica, orden médica, informe, detalle de procedimientos codificados, resultados y la carta de garantía o autorización.\n\nEn marzo de 2026, la gerente de Finanzas, Patricia Vela, alertó que las cuentas por cobrar a aseguradoras sumaban S/ 4,2 millones y que el plazo promedio de cobro había subido de 48 a 71 días en un año. La clínica tuvo que usar una línea de crédito bancaria con una tasa efectiva anual del 14 % para pagar planillas y proveedores.\n\nEl área de Facturación a Aseguradoras tiene seis analistas. Recibe en promedio 150 expedientes por día hábil desde hospitalización, emergencia y consulta externa. Cada analista arma y revisa unos 28 expedientes diarios. Al cierre de marzo había 2 700 expedientes pendientes de envío. Además, las aseguradoras observaron el 31 % de los expedientes enviados; cada observación obliga a corregir y reenviar, lo que agrega en promedio 18 días al cobro.\n\nUn muestreo de 400 observaciones mostró: documentos incompletos o sin firma, 46 %; códigos de procedimiento errados, 22 %; envío fuera del plazo contractual, 14 %; montos superiores a la cobertura autorizada, 10 %; otras causas, 8 %.\n\nLas entrevistas revelaron que los médicos firman las órdenes en papel y las enfermeras las escanean al final del turno; que el sistema clínico permite dar de alta sin adjuntar la orden firmada; que la codificación de procedimientos la hacen los analistas de facturación sin formación clínica; y que la autorización de cobertura se solicita al ingreso, pero no se actualiza cuando el tratamiento cambia.\n\nEl jefe de Facturación pide contratar cuatro analistas adicionales con un costo laboral de S/ 3 400 mensuales cada uno. El gerente de Sistemas propone un nuevo módulo de facturación a aseguradoras con un costo de S/ 380 000. La directora médica sostiene que el problema es administrativo y que los médicos no deben asumir más carga.\n\nPatricia debe presentar al directorio un diagnóstico cuantitativo y una propuesta priorizada.",
+        "questions": [
+          "Aplique la Ley de Little para estimar el tiempo de espera de los expedientes antes del envío. ¿Qué utilización tiene el equipo de facturación?",
+          "Con los datos del Pareto, ¿qué causas priorizaría? Desarrolle los cinco porqués para la causa principal.",
+          "Estime el costo financiero anual de las cuentas por cobrar atribuible al aumento del plazo de 48 a 71 días.",
+          "Evalúe las tres propuestas (más analistas, nuevo módulo, mantener carga médica) con el diamante del desempeño y proponga una alternativa.",
+          "¿Qué heurísticas de rediseño aplicaría y qué indicadores usaría para demostrar la mejora en seis meses?"
+        ]
+      },
+      "assignment": {
+        "title": "Diagnóstico cuantitativo y propuesta de rediseño",
+        "instructions": "**Objetivo:** analizar con evidencia el proceso del proyecto integrador y proponer un estado futuro sustentado.\n\n**Qué entregar (en equipos):**\n\n1. **Línea base:** datos de al menos 20 casos reales o una muestra justificada; calcule tiempo de ciclo, tiempo de procesamiento, eficiencia del ciclo, trabajo en proceso (con verificación por Ley de Little) y utilización del recurso más cargado. Adjunte la hoja de cálculo con fórmulas visibles.\n2. **Análisis de valor agregado** de todas las actividades del modelo actual, con tiempos y porcentajes por categoría.\n3. **Análisis de causa raíz:** un diagrama de Ishikawa, un análisis de cinco porqués y un Pareto del problema principal.\n4. **Registro de problemas** priorizado con matriz impacto-esfuerzo.\n5. **Modelo BPMN del estado futuro** con las heurísticas aplicadas y estimación de sus nuevos indicadores.\n6. **Caso de negocio** simple: costo actual por caso, costo futuro, inversión y periodo de recuperación.\n\n**Formato:** informe PDF de máximo diez páginas, hoja de cálculo y archivos de modelos. Si no consiguen datos reales, declaren supuestos explícitos y justifíquenlos.\n\n**Criterios:** rigor y corrección de los cálculos, profundidad del análisis causal, coherencia entre diagnóstico y rediseño, y solidez del caso de negocio.",
+        "rubric": [
+          {
+            "name": "Rigor de la línea base y cálculos",
+            "points": 6
+          },
+          {
+            "name": "Análisis de valor y causa raíz",
+            "points": 5
+          },
+          {
+            "name": "Coherencia del rediseño con el diagnóstico",
+            "points": 5
+          },
+          {
+            "name": "Caso de negocio y presentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: análisis y mejora de procesos",
+        "questions": [
+          {
+            "prompt": "Un área recibe 40 solicitudes por día y tiene 600 pendientes. Suponiendo un sistema estable, ¿cuál es el tiempo de ciclo promedio?",
+            "options": [
+              "15 días",
+              "24 días",
+              "640 días",
+              "0,07 días"
+            ],
+            "correct": 0,
+            "explanation": "Por la Ley de Little, CT = WIP / λ = 600 / 40 = 15 días. Las otras opciones invierten la fórmula o suman los valores."
+          },
+          {
+            "prompt": "Un proceso tiene dos actividades en paralelo de 3 y 7 horas, precedidas por una de 2 horas y seguidas por otra de 1 hora. ¿Cuál es su tiempo de ciclo?",
+            "options": [
+              "13 horas",
+              "6 horas",
+              "10 horas",
+              "8 horas"
+            ],
+            "correct": 2,
+            "explanation": "En paralelo se toma el máximo: 2 + máx(3, 7) + 1 = 10 horas. Sumar todo daría 13 horas, lo que correspondería a ejecutar todo en secuencia."
+          },
+          {
+            "prompt": "Un expediente acumula 5 horas de trabajo efectivo y 10 días hábiles de 8 horas desde su ingreso hasta su cierre. ¿Cuál es aproximadamente la eficiencia del ciclo?",
+            "options": [
+              "50 %",
+              "6 %",
+              "16 %",
+              "0,6 %"
+            ],
+            "correct": 1,
+            "explanation": "Eficiencia = 5 / (10 × 8) = 5 / 80 = 6,25 %. Es un valor típico en procesos administrativos, donde predominan las esperas."
+          },
+          {
+            "prompt": "Un gerente aprueba 20 documentos al día como máximo y recibe 19. ¿Qué es lo más probable?",
+            "options": [
+              "Esperas iguales a las de un recurso con 50 % de utilización",
+              "Colas y esperas largas ante cualquier variación, porque su utilización es del 95 %",
+              "Ninguna espera, porque la capacidad supera la demanda",
+              "Que el cuello de botella esté en otro recurso del proceso"
+            ],
+            "correct": 1,
+            "explanation": "Con utilización cercana al 100 %, el tiempo de espera crece de forma no lineal (factor ρ / (1 − ρ) ≈ 19), aunque la capacidad nominal alcance."
+          },
+          {
+            "prompt": "En el análisis de valor agregado, el depósito de la detracción en el Banco de la Nación en una compra de servicios gravada se clasifica como...",
+            "options": [
+              "Sin valor agregado, por lo que debe eliminarse",
+              "Valor agregado para el negocio, porque es obligatorio por norma tributaria",
+              "Desperdicio de sobreproducción",
+              "Valor agregado para el cliente, porque el proveedor lo valora"
+            ],
+            "correct": 1,
+            "explanation": "Es una actividad exigida por la regulación tributaria: no se puede eliminar, pero sí ejecutar de forma más eficiente, por ejemplo automatizándola."
+          },
+          {
+            "prompt": "Tras un análisis de cinco porqués se concluye: 'el analista se equivocó al codificar'. ¿Qué juicio merece este análisis?",
+            "options": [
+              "Es correcto solo si se complementa con un Pareto",
+              "Es correcto, porque identifica al responsable directo",
+              "Se detuvo demasiado pronto; debe buscar qué falla del diseño permitió y no detectó el error",
+              "Es suficiente si se sanciona al analista"
+            ],
+            "correct": 2,
+            "explanation": "El análisis de causa raíz busca fallas del sistema, como falta de formación, validaciones o reglas, no culpables individuales."
+          },
+          {
+            "prompt": "Una empresa separa las compras de materiales homologados menores a S/ 5 000 en un flujo rápido con una sola aprobación y mantiene el flujo completo para el resto. ¿Qué heurística aplica?",
+            "options": [
+              "Integración de clientes",
+              "Triaje de casos",
+              "Reingeniería total",
+              "Paralelización"
+            ],
+            "correct": 1,
+            "explanation": "El triaje separa casos por complejidad o riesgo para tratarlos en flujos distintos, manteniendo el control donde el riesgo es mayor."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Control, digitalización y gobierno de procesos",
+      "description": "Al finalizar la unidad, el estudiante diseña indicadores y controles internos para el proceso rediseñado, evalúa opciones de digitalización y automatización, y sustenta un plan de implementación con gestión del cambio y gobierno del proceso.",
+      "topics": [
+        "Indicadores de proceso y tablero de control",
+        "Control interno con COSO 2013: riesgos y controles del proceso",
+        "Digitalización: flujo de trabajo, ERP, RPA y comprobantes electrónicos",
+        "Marco legal peruano: firma digital, protección de datos y facturación electrónica",
+        "Gobierno de procesos, gestión del cambio y plan de implementación"
+      ],
+      "slides": [
+        {
+          "title": "Indicadores de proceso: qué medir y por qué",
+          "bullets": [
+            "Indicadores de eficacia: cumplimiento de requisitos del cliente, como pedido perfecto o reclamos resueltos en plazo.",
+            "Indicadores de eficiencia: tiempo de ciclo, costo por caso, productividad por persona.",
+            "Indicadores de calidad: porcentaje de errores, reprocesos o expedientes observados.",
+            "Indicadores de resultado frente a indicadores de actividad: priorizar los que reflejan valor para el cliente."
+          ],
+          "notes": "Recuerde el caso de la distribuidora: cada área medía actividad, no resultado. Explique que los indicadores de proceso se ubican entre los de área y los estratégicos; Kaplan y Norton, en su cuadro de mando integral, los ubicaron en la perspectiva de procesos internos, vinculada con la del cliente y la financiera. No repetiremos el cuadro de mando completo, que corresponde a Planeamiento Estratégico, pero sí su lógica de causa y efecto: si mejora el pedido perfecto, debería mejorar la retención de clientes y luego las ventas. Pregunte qué indicador elegirían como principal para su proceso del proyecto y por qué. Pida que eviten indicadores que el equipo no puede influir."
+        },
+        {
+          "title": "Ficha técnica de un indicador",
+          "bullets": [
+            "Nombre, objetivo y fórmula exacta con numerador y denominador definidos sin ambigüedad.",
+            "Fuente de datos, responsable de medición, frecuencia y fecha de corte.",
+            "Línea base, meta y umbrales de semáforo: verde, ámbar y rojo.",
+            "Acción prevista cuando el indicador cae en rojo y responsable de ejecutarla."
+          ],
+          "notes": "Muestre un ejemplo completo: 'Pedido perfecto = pedidos entregados completos, dentro de 48 horas y con factura sin errores / total de pedidos entregados en el mes × 100'. Fuente: ERP y registro de reclamos. Frecuencia semanal. Línea base 58 %, meta 85 % a seis meses; verde mayor o igual a 85 %, ámbar entre 75 % y 85 %, rojo menor a 75 %. Discuta por qué un indicador sin acción asociada es decorativo. Recuerde la ley de Goodhart: cuando una medida se convierte en objetivo, deja de ser una buena medida, porque las personas aprenden a manipularla. Ejemplo: si se mide solo el tiempo de respuesta de reclamos, se responden rápido pero sin resolver. Por eso se combinan indicadores de tiempo y calidad."
+        },
+        {
+          "title": "Tablero de control del proceso",
+          "bullets": [
+            "Entre cinco y siete indicadores clave por proceso, visibles para el dueño y el equipo.",
+            "Mostrar tendencia en el tiempo, no solo el valor del mes, para distinguir variación normal de cambios reales.",
+            "Herramientas accesibles: hojas de cálculo con gráficos dinámicos, Power BI o Looker Studio.",
+            "Reunión breve y periódica de revisión con decisiones registradas: el tablero es para actuar."
+          ],
+          "notes": "Conecte con Ofimática Empresarial, que llevan en paralelo: los gráficos dinámicos y la validación de datos son la base técnica de un tablero sencillo. Advierta que el error frecuente es construir tableros con veinte indicadores y colores llamativos que nadie usa. Muestre un tablero mínimo para el proceso de cuentas por pagar: pagos a tiempo, tiempo promedio de aprobación, facturas con discrepancia, costo por factura y detracciones depositadas en plazo. Explique que la tendencia permite ver si una caída es puntual o sostenida; sin profundizar en gráficos de control estadístico, que se verán en Estadística para la Gestión. Pregunte cada cuánto debería revisarse cada indicador según la velocidad del proceso."
+        },
+        {
+          "title": "Control interno: el marco COSO 2013",
+          "bullets": [
+            "Cinco componentes: entorno de control, evaluación de riesgos, actividades de control, información y comunicación, y supervisión.",
+            "Diecisiete principios que concretan los componentes, como segregar funciones o evaluar el riesgo de fraude.",
+            "Objetivos: operaciones eficaces y eficientes, información confiable y cumplimiento normativo.",
+            "En el sector público peruano, la Contraloría exige implementar el Sistema de Control Interno."
+          ],
+          "notes": "Presente el marco del Committee of Sponsoring Organizations, actualizado en 2013, como la referencia internacional que también inspira la normativa peruana de control interno en entidades del Estado. Explique que el control interno no es solo responsabilidad de auditoría, sino de cada dueño de proceso. Relacione con el caso de la constructora: el fraude de 2022 generó una respuesta de controles redundantes en lugar de un análisis de riesgo. El principio 8 de COSO pide considerar el riesgo de fraude de manera explícita. Pregunte: ¿una mype necesita COSO? No en su versión completa, pero sí su lógica: identificar qué puede salir mal, cuán grave sería y qué control lo previene o detecta."
+        },
+        {
+          "title": "Matriz de riesgos y controles del proceso",
+          "bullets": [
+            "Identificar riesgos por actividad: error, fraude, incumplimiento legal, interrupción o fuga de información.",
+            "Valorar probabilidad e impacto en escala de 1 a 5; priorizar riesgos con mayor producto.",
+            "Asignar controles preventivos (evitan) y detectivos (descubren), manuales o automáticos.",
+            "Documentar responsable, frecuencia y evidencia del control para que sea auditable."
+          ],
+          "notes": "Construya una matriz en vivo para el proceso de pago a proveedores. Riesgo: pago a un proveedor ficticio. Probabilidad 2, impacto 5. Controles: alta de proveedores con validación del RUC en la consulta de SUNAT y aprobación por alguien distinto del comprador (preventivo); revisión mensual de proveedores nuevos con pagos altos (detectivo). Riesgo: pago duplicado de una factura. Control automático: el ERP bloquea el registro de la misma serie y número de comprobante para un mismo RUC. Explique que los controles automáticos son más confiables y baratos de operar que los manuales, y que su diseño es una oportunidad de la digitalización. Pida que identifiquen dos riesgos de su proceso del proyecto."
+        },
+        {
+          "title": "Controles clave en procesos administrativos",
+          "bullets": [
+            "Segregación de funciones: quien solicita no aprueba; quien aprueba no paga; quien paga no concilia.",
+            "Conciliación de tres vías: orden de compra, guía o conformidad y factura antes de pagar.",
+            "Niveles de autorización por monto, definidos en una política de delegación de facultades.",
+            "Conciliaciones bancarias periódicas, arqueos de caja y control de accesos a sistemas."
+          ],
+          "notes": "Estos controles responden directamente al temor del gerente general de la constructora. Muestre que la segregación de funciones y la conciliación de tres vías previenen el fraude del comprador con mucha mayor eficacia que catorce firmas, porque cada firma adicional se vuelve rutinaria y nadie revisa realmente. Este fenómeno se conoce como difusión de la responsabilidad. Explique cómo en una mype con pocas personas, donde la segregación completa es imposible, se usan controles compensatorios: revisión del dueño de los estados de cuenta bancarios, doble firma electrónica en la banca por internet o arqueos sorpresa. Pregunte qué control compensatorio usarían en un negocio con solo dos trabajadores administrativos."
+        },
+        {
+          "title": "Niveles de digitalización de un proceso",
+          "bullets": [
+            "Digitización: pasar de papel a archivo digital, como escanear documentos o usar formularios en línea.",
+            "Digitalización: rediseñar el flujo aprovechando datos digitales, alertas y trazabilidad.",
+            "Transformación digital: cambiar el modelo de negocio o de servicio a partir de las capacidades digitales.",
+            "Automatizar un mal proceso solo produce errores más rápidos: primero rediseñar, luego digitalizar."
+          ],
+          "notes": "Use la frase atribuida a Bill Gates: la automatización aplicada a una operación eficiente magnifica la eficiencia; aplicada a una ineficiente, magnifica la ineficiencia. Ejemplo: una entidad que escanea expedientes y los envía por correo para las mismas catorce firmas solo ha digitizado; si el flujo se rediseña con una aprobación electrónica según monto y trazabilidad de plazos, ha digitalizado. Mencione la plataforma Gob.pe y la Mesa de Partes Digital de muchas entidades como ejemplos peruanos con distintos grados de avance. Pregunte en qué nivel se encuentra el proceso de su proyecto y qué impediría pasar al siguiente: datos, presupuesto, competencias o normativa."
+        },
+        {
+          "title": "Tecnologías para procesos: flujo de trabajo, ERP y RPA",
+          "bullets": [
+            "Sistemas de flujo de trabajo o BPMS: ejecutan el modelo BPMN, asignan tareas, controlan plazos y registran eventos.",
+            "ERP: integra transacciones de compras, ventas, inventarios, contabilidad y planillas en una base de datos única.",
+            "RPA (automatización robótica de procesos): programas que imitan acciones humanas repetitivas en pantallas y sistemas.",
+            "Criterio de selección: volumen, estandarización, frecuencia de cambios, costo total y capacidad interna."
+          ],
+          "notes": "Explique cada tecnología con un ejemplo. BPMS: Bizagi, Camunda o soluciones de bajo código como Power Automate ejecutan flujos de aprobación. ERP: SAP Business One, Odoo o soluciones peruanas para pymes integran la información y evitan digitar dos veces. RPA: un robot que descarga diariamente los comprobantes electrónicos recibidos, valida su estado y los registra en el ERP. Advierta que la RPA es frágil ante cambios de pantalla y conviene para tareas estables y de alto volumen. Mencione que la inteligencia artificial generativa ya se usa para clasificar documentos y extraer datos, pero que requiere controles de calidad y protección de datos. Pregunte qué tecnología conviene a una mype con veinte facturas diarias."
+        },
+        {
+          "title": "Comprobantes de pago electrónicos y SUNAT",
+          "bullets": [
+            "El Sistema de Emisión Electrónica es obligatorio para la gran mayoría de contribuyentes desde su ampliación progresiva.",
+            "Cada comprobante es un archivo XML firmado digitalmente y validado por SUNAT o por un operador de servicios electrónicos (OSE).",
+            "Ventajas para el proceso: datos estructurados, validación inmediata de estado y lectura automática por el receptor.",
+            "Libros electrónicos y SIRE permiten conciliar registros de compras y ventas con la información de SUNAT."
+          ],
+          "notes": "Este es el ejemplo más relevante de digitalización obligatoria en el Perú y transformó los procesos de facturación y cuentas por pagar. Explique que, al ser el comprobante un dato estructurado, el receptor puede automatizar su registro y la conciliación con la orden de compra, eliminando digitación y errores. Mencione que el Sistema Integrado de Registros Electrónicos (SIRE) de SUNAT pone a disposición propuestas de registros de ventas y compras que el contribuyente revisa y complementa. No entre en detalle tributario, que se estudia en otros cursos; el foco es el impacto en el proceso. Pregunte qué actividades del proceso de cuentas por pagar desaparecen o cambian cuando todas las facturas llegan en XML."
+        },
+        {
+          "title": "Marco legal para procesos digitales en el Perú",
+          "bullets": [
+            "Ley 27269 de Firmas y Certificados Digitales: la firma digital tiene la misma validez que la manuscrita.",
+            "Ley 29733 de Protección de Datos Personales y su reglamento: consentimiento, finalidad, seguridad y derechos ARCO.",
+            "Decreto Legislativo 1412, Ley de Gobierno Digital: marco para servicios digitales del Estado.",
+            "Ley 27444 del Procedimiento Administrativo General: notificación electrónica y simplificación de trámites."
+          ],
+          "notes": "Un rediseño digital que no respeta el marco legal genera riesgos mayores que los beneficios. Explique que la firma digital, basada en certificados emitidos por entidades acreditadas ante INDECOPI, otorga validez jurídica a aprobaciones electrónicas; una imagen escaneada de la firma no tiene el mismo valor. Sobre la Ley 29733, recuerde que todo proceso que capture datos de clientes o trabajadores debe informar la finalidad, obtener consentimiento cuando corresponda, aplicar medidas de seguridad y atender los derechos de acceso, rectificación, cancelación y oposición; la Autoridad Nacional de Protección de Datos Personales puede imponer multas. Pregunte qué datos personales maneja el proceso de su proyecto y qué medidas aplicarían."
+        },
+        {
+          "title": "Gobierno de procesos y madurez",
+          "bullets": [
+            "Roles: patrocinador ejecutivo, dueño del proceso, equipo del proceso y oficina o responsable de procesos.",
+            "Reglas: quién aprueba cambios, cómo se versionan los documentos y cada cuánto se revisa el desempeño.",
+            "Los modelos de madurez evalúan el avance desde procesos informales hasta procesos gestionados y optimizados.",
+            "La gestión por procesos se sostiene con revisiones periódicas, no con un proyecto único."
+          ],
+          "notes": "Explique que muchas iniciativas mueren después de entregar los manuales porque nadie quedó a cargo. El gobierno de procesos define responsabilidades permanentes. Mencione el modelo de madurez de procesos PEMM de Hammer, que evalúa facilitadores del proceso (diseño, ejecutores, dueño, infraestructura, indicadores) y capacidades de la organización (liderazgo, cultura, experiencia, gobierno). En la NT 001-2018-SGP, la etapa de mejora exige seguimiento continuo. Para una mype, el gobierno puede ser tan simple como una reunión mensual de treinta minutos con el tablero y una carpeta compartida con documentos versionados. Pregunte qué estructura mínima de gobierno propondrían para la organización de su proyecto."
+        },
+        {
+          "title": "Gestión del cambio: las personas detrás del proceso",
+          "bullets": [
+            "Kotter propone ocho pasos: urgencia, coalición, visión, comunicación, eliminar obstáculos, logros rápidos, consolidar y anclar en la cultura.",
+            "El modelo ADKAR de Hiatt sigue el cambio individual: conciencia, deseo, conocimiento, habilidad y refuerzo.",
+            "La resistencia es información: revela pérdidas percibidas de poder, seguridad o competencia.",
+            "Involucrar desde el diagnóstico a quienes ejecutan el proceso reduce la resistencia y mejora el diseño."
+          ],
+          "notes": "Relacione con los casos del curso: el gerente comercial que veía burocracia, el gerente general que temía perder control, la directora médica que protegía a los médicos. Cada uno percibía una pérdida. Explique que la resistencia no se vence con órdenes sino con comprensión y participación. Use los pasos de Kotter para la clínica: crear urgencia con el costo financiero de las cuentas por cobrar, formar una coalición con Finanzas y la dirección médica, mostrar logros rápidos con una lista de verificación al alta. Mencione que Gestión del Talento Humano complementa esta mirada con la capacitación y el clima laboral. Pregunte cuál paso de Kotter suele omitirse: anclar en la cultura, por eso los procesos vuelven al estado anterior."
+        },
+        {
+          "title": "Plan de implementación y sustentación del rediseño",
+          "bullets": [
+            "Fases: piloto acotado, ajuste, despliegue gradual y estabilización con seguimiento de indicadores.",
+            "Cronograma con hitos, responsables, recursos, presupuesto y riesgos de implementación.",
+            "Plan de capacitación y comunicación diferenciado por grupo de interés.",
+            "Sustentación ejecutiva: problema, evidencia, propuesta, beneficios, costos, riesgos y decisión solicitada."
+          ],
+          "notes": "Cierre el curso integrando todo en el producto final. Recomiende siempre un piloto: probar el nuevo proceso en una sede, una línea de producto o un tipo de caso permite corregir antes de desplegar y genera evidencia para convencer. Conecte con Gestión de Proyectos del cuarto ciclo, donde profundizarán en cronogramas y control de proyectos. Para la sustentación, recomiende la estructura de la pirámide de Minto: empezar por la recomendación y luego los argumentos. Insista en terminar con una decisión concreta solicitada a la dirección. Explique los criterios de la evaluación final y la exposición virtual de quince minutos por equipo, con preguntas del docente. Anime a ofrecer el informe a la organización estudiada como aporte real."
+        }
+      ],
+      "reading": {
+        "title": "Controlar y digitalizar sin perder el control",
+        "minutes": 35,
+        "content": "## El proceso rediseñado necesita instrumentos de control\n\nUn rediseño bien analizado puede fracasar si no se mide ni se controla después de implantarse. La experiencia muestra que los procesos tienden a volver a su estado anterior cuando desaparece la atención de la dirección. Para evitarlo, el dueño del proceso necesita tres instrumentos: indicadores con metas y acciones asociadas, controles internos proporcionales al riesgo y una estructura de gobierno que revise el desempeño de manera periódica.\n\n## Indicadores y tablero\n\nUn buen indicador de proceso refleja lo que valora el cliente y lo que el equipo puede influir. Su ficha técnica debe precisar la fórmula, la fuente, la frecuencia, la línea base, la meta y la acción ante desviaciones. Por ejemplo, para cuentas por pagar:\n\n```\nPagos a tiempo (%) = Facturas pagadas en o antes de su vencimiento / Facturas vencidas en el periodo × 100\nCosto por factura (S/) = (Horas del equipo × costo por hora + costo de sistemas) / Facturas procesadas\nDiscrepancias (%) = Facturas con diferencia frente a OC o conformidad / Facturas recibidas × 100\n```\n\nCombinar indicadores de tiempo, costo y calidad evita el efecto descrito por la ley de Goodhart: cuando un indicador aislado se convierte en meta, las personas optimizan el número en lugar del resultado.\n\n## Control interno con lógica de riesgo\n\nEl marco integrado de control interno de COSO (2013) organiza el control en cinco componentes: entorno de control, evaluación de riesgos, actividades de control, información y comunicación, y supervisión. En un proceso concreto, esto se traduce en una matriz que identifica, para cada actividad, qué puede salir mal, con qué probabilidad e impacto, y qué control lo previene o detecta.\n\nLos controles clave de los procesos administrativos son conocidos: segregación de funciones, conciliación de tres vías, niveles de autorización por monto, conciliaciones bancarias y control de accesos. El registro contable que resulta de un pago correctamente controlado a un proveedor de servicios sujeto a detracción ilustra la trazabilidad que el proceso debe garantizar:\n\n```\n-- Provisión de la factura de servicio por S/ 10 000 + IGV\n63  Gastos de servicios prestados por terceros       10 000\n40111 IGV - Cuenta propia                              1 800\n    4212 Facturas emitidas por pagar                         11 800\n-- Depósito de detracción (12 %) en el Banco de la Nación\n4212 Facturas emitidas por pagar                       1 416\n    1041 Cuentas corrientes operativas                        1 416\n-- Pago del saldo al proveedor\n4212 Facturas emitidas por pagar                      10 384\n    1041 Cuentas corrientes operativas                       10 384\n```\n\nCada asiento debe estar respaldado por evidencia del proceso: orden de compra aprobada, conformidad del área usuaria, comprobante electrónico válido, constancia de depósito y autorización de pago por una persona distinta de quien registró la factura.\n\n## Digitalización con criterio\n\nConviene distinguir tres niveles. La digitización convierte el papel en archivos; la digitalización rediseña el flujo aprovechando datos, alertas y trazabilidad; la transformación digital cambia el modelo de servicio. En el Perú, la obligatoriedad de los comprobantes electrónicos de SUNAT impulsó un salto en la digitalización: al recibir facturas como archivos XML estructurados, las empresas pueden validarlas y registrarlas automáticamente, y conciliar sus registros con el SIRE.\n\nLas tecnologías disponibles se complementan. Un ERP integra las transacciones; un sistema de flujo de trabajo ejecuta el modelo BPMN, asigna tareas y controla plazos; la automatización robótica de procesos (RPA) resuelve tareas repetitivas entre sistemas que no se comunican. La selección depende del volumen, la estabilidad del proceso, el costo total y la capacidad de la organización para mantener la solución.\n\nEl marco legal acompaña: la Ley 27269 otorga validez a la firma digital; la Ley 29733 exige proteger los datos personales que el proceso captura; la Ley de Gobierno Digital (Decreto Legislativo 1412) orienta la digitalización del Estado; y la Ley 27444 permite la notificación electrónica en procedimientos administrativos.\n\n## Gobierno y cambio\n\nLa sostenibilidad depende del gobierno del proceso: un dueño con autoridad, un patrocinador en la dirección, reglas para aprobar cambios y una revisión periódica del tablero. Y depende, sobre todo, de las personas. Los modelos de Kotter y de Hiatt (ADKAR) recuerdan que el cambio organizacional requiere urgencia compartida, participación, capacitación y refuerzo. Un proceso nuevo que las personas no comprenden ni aceptan terminará rodeado de atajos informales, y el ciclo de la gestión por procesos deberá empezar de nuevo.\n\n## Ideas para recordar\n\nMida pocos indicadores bien definidos, controle según el riesgo y no según el miedo, rediseñe antes de automatizar y no implemente sin piloto, capacitación y un dueño que dé seguimiento."
+      },
+      "case": {
+        "title": "Caso: Agroexportadora Valle Verde y el robot de cuentas por pagar",
+        "content": "**Agroexportadora Valle Verde S.A.C.** produce y exporta uva de mesa y palta desde Ica. Tiene 1 900 trabajadores en campaña, 120 administrativos y exportaciones por US$ 85 millones anuales. Su área de Cuentas por Pagar procesa unas 3 200 facturas electrónicas mensuales de 640 proveedores, entre transportistas, proveedores de fertilizantes, empaque y servicios de cosecha.\n\nTras el rediseño del proceso realizado en 2025, el tiempo promedio de pago bajó de 52 a 34 días y las discrepancias se redujeron del 14 % al 6 %. Sin embargo, persisten problemas: cinco asistentes descargan cada día los XML de la bandeja de correo, verifican el estado del comprobante en la consulta de SUNAT y digitan los datos en el ERP. Cada factura toma en promedio diez minutos. En campaña alta, el volumen sube a 5 000 facturas y el área acumula retrasos que generan reclamos de pequeños transportistas que dependen de cobrar a tiempo.\n\nEn noviembre de 2025, la auditoría externa detectó que un asistente registró y pagó dos facturas duplicadas por S/ 86 000 a un proveedor de servicios, y que ese mismo asistente tenía permisos para crear proveedores, registrar facturas y preparar los lotes de pago en la banca por internet. El dinero se recuperó, pero el directorio exigió reforzar los controles.\n\nEl gerente de Administración y Finanzas, Jorge Salazar, evalúa tres opciones:\n\n1. **Robot RPA** que descargue los XML, valide su estado ante SUNAT, verifique duplicados y registre la factura en el ERP. Costo de implementación: S/ 95 000 y S/ 2 500 mensuales de licencia y mantenimiento. El proveedor estima que el robot procesaría el 80 % de las facturas sin intervención humana.\n2. **Módulo de recepción de comprobantes** del ERP, con integración directa de los XML y conciliación automática con órdenes de compra. Costo: S/ 210 000 y seis meses de implementación; requiere que el 90 % de las compras tenga orden de compra, cuando hoy solo la tiene el 65 %.\n3. **Contratar tres asistentes temporales** en campaña alta con un costo laboral de S/ 3 200 mensuales cada uno durante cinco meses al año, y reforzar la revisión manual.\n\nEl costo laboral de cada asistente permanente es de S/ 3 600 mensuales. El jefe de Cuentas por Pagar teme que el robot genere despidos y que su equipo se resista. El auditor interno insiste en que, cualquiera sea la opción, debe resolverse primero la segregación de funciones. El gerente de Operaciones pide que no se exija orden de compra a los servicios de cosecha porque 'en campo no hay tiempo'.\n\nJorge debe presentar al directorio una recomendación con indicadores, controles y plan de implementación.",
+        "questions": [
+          "Estime el costo actual mensual de registrar facturas y el ahorro potencial de la opción RPA. ¿En cuánto tiempo recuperaría la inversión?",
+          "Diseñe la matriz de riesgos y controles para el proceso, incluyendo la segregación de funciones que reclama el auditor.",
+          "Compare las tres opciones con criterios de costo, tiempo, control, escalabilidad y riesgo de implementación. ¿Cuál recomienda y por qué?",
+          "¿Cómo gestionaría el temor del jefe de Cuentas por Pagar y de su equipo aplicando los modelos de Kotter o ADKAR?",
+          "Proponga cinco indicadores para el tablero del proceso con su fórmula y meta."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: propuesta final de rediseño, control e implementación",
+        "instructions": "**Objetivo:** integrar los productos de las unidades anteriores en una propuesta ejecutiva de rediseño del proceso, lista para presentarse a la dirección de la organización estudiada.\n\n**Qué entregar (en equipos):**\n\n1. **Resumen ejecutivo** de una página con problema, evidencia, propuesta, beneficios, inversión y decisión solicitada.\n2. **Modelo BPMN del estado futuro** definitivo, con ficha de proceso y RACI actualizadas.\n3. **Tablero de indicadores** de cinco a siete indicadores con ficha técnica (fórmula, fuente, frecuencia, línea base, meta, semáforo y acción).\n4. **Matriz de riesgos y controles** basada en COSO 2013, con al menos seis riesgos, controles preventivos y detectivos, y evaluación de la segregación de funciones.\n5. **Propuesta de digitalización** con la tecnología elegida, alternativas descartadas, costo y cumplimiento de las leyes 27269 y 29733 cuando corresponda.\n6. **Plan de implementación** con piloto, cronograma, responsables, presupuesto, plan de capacitación y estrategia de gestión del cambio.\n\n**Sustentación:** exposición virtual de quince minutos por equipo y diez minutos de preguntas.\n\n**Formato:** informe PDF de máximo quince páginas más anexos y presentación de diez diapositivas como máximo.\n\n**Criterios:** integración y coherencia de la propuesta, calidad técnica de indicadores y controles, viabilidad de la digitalización y del plan, y calidad de la sustentación.",
+        "rubric": [
+          {
+            "name": "Integración y coherencia de la propuesta",
+            "points": 5
+          },
+          {
+            "name": "Indicadores y matriz de controles",
+            "points": 5
+          },
+          {
+            "name": "Viabilidad de la digitalización y del plan",
+            "points": 5
+          },
+          {
+            "name": "Sustentación ejecutiva",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: control, digitalización y gobierno de procesos",
+        "questions": [
+          {
+            "prompt": "Un área mide solo el tiempo de respuesta a reclamos y, tras fijar una meta exigente, responde rápido pero sin resolver el problema del cliente. ¿Qué fenómeno ilustra?",
+            "options": [
+              "La Ley de Little aplicada a reclamos",
+              "Un problema de segregación de funciones",
+              "Un efecto de la digitización del proceso",
+              "La ley de Goodhart: el indicador convertido en meta deja de medir bien el resultado"
+            ],
+            "correct": 3,
+            "explanation": "Cuando un indicador aislado se convierte en objetivo, las personas optimizan el número; por eso se combinan indicadores de tiempo y calidad."
+          },
+          {
+            "prompt": "Un mismo asistente crea proveedores, registra facturas y prepara los pagos. ¿Qué control es el más pertinente para prevenir pagos fraudulentos?",
+            "options": [
+              "Agregar cinco firmas adicionales a cada pago",
+              "Segregar funciones entre alta de proveedores, registro de facturas y autorización de pagos",
+              "Revisar anualmente los estados financieros",
+              "Capacitar al asistente en ética profesional"
+            ],
+            "correct": 1,
+            "explanation": "La segregación de funciones impide que una sola persona controle todo el ciclo; las firmas adicionales tienden a volverse rutinarias y la revisión anual es tardía."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes es un control detectivo en el proceso de pagos?",
+            "options": [
+              "Revisión mensual de pagos a proveedores creados en los últimos 90 días",
+              "Bloqueo automático del registro de una factura con serie y número ya registrados",
+              "Validación del RUC antes de crear un proveedor",
+              "Política de autorización de pagos por niveles de monto"
+            ],
+            "correct": 0,
+            "explanation": "El control detectivo descubre problemas después de ocurridos; las demás opciones son controles preventivos que evitan que el error o fraude se produzca."
+          },
+          {
+            "prompt": "Una entidad escanea sus expedientes en papel y los envía por correo para que sigan pasando por las mismas catorce firmas. ¿En qué nivel de digitalización se encuentra?",
+            "options": [
+              "Digitización, porque solo cambió el soporte sin rediseñar el flujo",
+              "Automatización robótica del proceso",
+              "Transformación digital, porque usa correo electrónico",
+              "Digitalización completa del proceso"
+            ],
+            "correct": 0,
+            "explanation": "Pasar de papel a archivo digital sin cambiar el flujo es digitización; la digitalización exige rediseñar el proceso aprovechando datos y trazabilidad."
+          },
+          {
+            "prompt": "¿Para qué tipo de tarea es más adecuada la automatización robótica de procesos (RPA)?",
+            "options": [
+              "Negociaciones con proveedores estratégicos",
+              "Decisiones complejas que requieren juicio profesional caso por caso",
+              "Tareas repetitivas, de alto volumen, con reglas claras y pantallas estables",
+              "Procesos que cambian de diseño cada semana"
+            ],
+            "correct": 2,
+            "explanation": "La RPA imita acciones humanas en sistemas y es frágil ante cambios; rinde mejor en tareas estables, estandarizadas y de alto volumen."
+          },
+          {
+            "prompt": "Una empresa reemplaza la firma manuscrita de las órdenes de compra por la imagen escaneada de la firma del gerente pegada en un PDF. ¿Qué observación corresponde según el marco peruano?",
+            "options": [
+              "Solo es válida si la aprueba SUNAT",
+              "Está prohibida por la Ley 29733 de protección de datos",
+              "Es plenamente equivalente a la firma digital",
+              "Una imagen escaneada no equivale a la firma digital con certificado reconocida por la Ley 27269"
+            ],
+            "correct": 3,
+            "explanation": "La Ley 27269 reconoce la firma digital basada en certificados digitales emitidos por entidades acreditadas; una imagen de firma no ofrece la misma seguridad ni validez."
+          },
+          {
+            "prompt": "Según Kotter, ¿qué paso explica que muchos procesos rediseñados vuelvan a su estado anterior meses después de implantarse?",
+            "options": [
+              "Comunicar la visión con frecuencia",
+              "No anclar los cambios en la cultura organizacional",
+              "Crear demasiada urgencia al inicio",
+              "Formar una coalición con la dirección"
+            ],
+            "correct": 1,
+            "explanation": "El último paso de Kotter, anclar el cambio en la cultura, consolida los nuevos comportamientos; omitirlo favorece el retorno a las prácticas anteriores."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "De la organización funcional a la gestión por procesos; proceso, procedimiento, actividad y tarea",
+      "activity": "Sesión sincrónica de presentación del curso y del proyecto integrador; lectura previa de la unidad y foro diagnóstico sobre trámites vividos.",
+      "evidence": "Participación en foro diagnóstico"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Tipos de procesos, cadena de valor de Porter y arquitectura por niveles",
+      "activity": "Taller virtual de clasificación de procesos de tres organizaciones peruanas; conformación de equipos y elección de la organización del proyecto.",
+      "evidence": "Ficha de la organización del proyecto"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Mapa de procesos, SIPOC y requisitos del cliente",
+      "activity": "Discusión del caso Distribuidora Andina del Sur con método de casos; práctica guiada de SIPOC y CTQ en Bizagi o draw.io.",
+      "evidence": "Análisis del caso en foro"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Ciclo PHVA, ISO 9001:2015 y NT 001-2018-SGP",
+      "activity": "Entrega de la tarea de mapa de procesos y SIPOC; resolución del cuestionario 1 con retroalimentación.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Descubrimiento del proceso: entrevistas, observación y análisis documental",
+      "activity": "Juego de roles de entrevista de descubrimiento; diseño de la guía de entrevista para el proceso del proyecto.",
+      "evidence": "Guía de entrevista del equipo"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "BPMN 2.0: eventos, actividades, compuertas, pools, carriles y artefactos",
+      "activity": "Laboratorio virtual de modelado BPMN en Bizagi Modeler con ejercicios de compuertas exclusivas y paralelas.",
+      "evidence": "Ejercicios BPMN resueltos"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Buenas prácticas de modelado, ficha de proceso, procedimientos y RACI",
+      "activity": "Discusión del caso Constructora Pachacámac; construcción de la matriz RACI actual y revisión entre pares con las pautas 7PMG.",
+      "evidence": "Análisis del caso y RACI"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "MOF, MAPRO y coherencia documental del proceso",
+      "activity": "Entrega de la tarea de modelo BPMN y documentación; resolución del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Análisis de valor agregado y los ocho desperdicios Lean",
+      "activity": "Taller de clasificación de actividades del proceso del proyecto; plan de recolección de datos de la línea base.",
+      "evidence": "Matriz de valor agregado"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Tiempo de ciclo, eficiencia del ciclo, Ley de Little, capacidad y cuellos de botella",
+      "activity": "Práctica de cálculo en hoja de cálculo con datos reales del proyecto; resolución de ejercicios de flujo con caminos paralelos y reprocesos.",
+      "evidence": "Hoja de cálculo de la línea base"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Ishikawa, cinco porqués, Pareto y heurísticas de rediseño",
+      "activity": "Discusión del caso Clínica San Gabriel; construcción del Ishikawa y del Pareto del problema principal del proyecto.",
+      "evidence": "Análisis del caso y diagramas causales"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Kaizen, DMAIC, costo del proceso y caso de negocio",
+      "activity": "Entrega de la tarea de diagnóstico cuantitativo y rediseño; resolución del cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Indicadores de proceso, ficha técnica y tablero de control",
+      "activity": "Taller de diseño del tablero del proceso rediseñado en hoja de cálculo o Power BI.",
+      "evidence": "Borrador del tablero de indicadores"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Control interno COSO 2013, matriz de riesgos y controles clave",
+      "activity": "Discusión del caso Agroexportadora Valle Verde; elaboración de la matriz de riesgos y controles del proyecto.",
+      "evidence": "Análisis del caso y matriz de controles"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Digitalización, marco legal peruano, gobierno de procesos y gestión del cambio",
+      "activity": "Asesoría por equipos sobre la propuesta de digitalización y el plan de implementación; ensayo de la sustentación.",
+      "evidence": "Avance de la propuesta final"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Sustentación virtual de la propuesta final de rediseño; resolución del cuestionario 4 y cierre reflexivo del curso.",
+      "evidence": "Proyecto final, sustentación y cuestionario 4"
+    }
+  ]
+}

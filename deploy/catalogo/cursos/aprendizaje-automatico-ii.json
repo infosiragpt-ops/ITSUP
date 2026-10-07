@@ -1,0 +1,1304 @@
+{
+  "name": "Aprendizaje Automático II",
+  "slug": "aprendizaje-automatico-ii",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Aprendizaje Automático II es un curso de formación específica, de naturaleza teórico-práctica, del cuarto ciclo de la carrera de Inteligencia Artificial. Profundiza el aprendizaje supervisado iniciado en Aprendizaje Automático I e incorpora el aprendizaje no supervisado, con el propósito de que el estudiante seleccione, ajuste, combine y valide algoritmos avanzados sobre datos de organizaciones peruanas. Comprende cuatro unidades: máquinas de vectores de soporte y ensambles por agregación (bagging y bosques aleatorios); boosting de gradiente con XGBoost, LightGBM y CatBoost, optimización bayesiana de hiperparámetros, apilamiento e interpretación con TreeSHAP; agrupamiento (k-medias, jerárquico, DBSCAN, HDBSCAN y mezclas gaussianas) y reducción de dimensionalidad (PCA, t-SNE y UMAP); y detección de anomalías, sistemas de recomendación y un proyecto integrador. Se articula con Procesamiento de Lenguaje Natural y Visión por Computadora, que se cursan en paralelo, y prepara para Aprendizaje Profundo y Despliegue de Modelos (MLOps). Aporta al perfil de egreso la capacidad de entrenar y sustentar modelos robustos, interpretables y responsables.",
+  "competency": "Construye soluciones de aprendizaje automático avanzado para problemas de organizaciones peruanas, seleccionando, ajustando y combinando métodos de kernel, ensambles de árboles y técnicas no supervisadas de agrupamiento, reducción de dimensionalidad, detección de anomalías y recomendación; las valida con esquemas libres de fuga de información y métricas alineadas al valor de negocio, y documenta sus decisiones conforme a la Ley 29733 y a principios de inteligencia artificial responsable.",
+  "capacities": [
+    "Entrena y ajusta máquinas de vectores de soporte y ensambles por agregación (bagging, bosques aleatorios y árboles extremadamente aleatorizados), justificando kernel e hiperparámetros con validación cruzada y error fuera de bolsa.",
+    "Desarrolla modelos de boosting de gradiente con XGBoost, LightGBM y CatBoost, aplicando parada temprana, optimización bayesiana de hiperparámetros, apilamiento, restricciones monotónicas e interpretación con TreeSHAP.",
+    "Descubre estructura en datos no etiquetados mediante algoritmos de agrupamiento y reducción de dimensionalidad, validando la calidad, la estabilidad y la utilidad de los segmentos obtenidos.",
+    "Integra detección de anomalías, sistemas de recomendación y modelos supervisados en una solución reproducible, evaluada con métricas acordes a la operación y documentada con criterios de equidad, privacidad y monitoreo."
+  ],
+  "indicators": [
+    "Compara una SVM con kernel RBF y ensambles de árboles mediante las mismas particiones de validación cruzada, reportando media, desviación estándar y la justificación de C, gamma y max_features.",
+    "Implementa modelos de boosting con parada temprana en un conjunto de validación independiente y demuestra su mejora frente a una línea base en una métrica de negocio.",
+    "Optimiza hiperparámetros con Optuna dentro de validación cruzada, sin usar el conjunto de prueba en ninguna decisión de ajuste.",
+    "Selecciona el número de grupos combinando silueta, Davies-Bouldin, BIC y estabilidad por submuestreo, y perfila cada segmento con acciones concretas.",
+    "Interpreta componentes principales mediante varianza explicada y cargas, y emplea t-SNE o UMAP solo con fines exploratorios y de comunicación.",
+    "Evalúa detectores de anomalías con precisión en las k primeras alertas según la capacidad de revisión, y recomendadores con NDCG@k en una partición temporal.",
+    "Sustenta un proyecto integrador reproducible con tarjeta de modelo, análisis de equidad por subgrupos, plan de monitoreo de deriva y cumplimiento de la Ley 29733."
+  ],
+  "methodology": "El curso emplea aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, un cuaderno guiado de Google Colab y un microvideo, y la sesión se dedica a resolver problemas, depurar código y discutir decisiones. Cada unidad se articula en torno a un caso de una organización peruana, trabajado con el método de casos (preparación individual, debate en grupos pequeños y plenaria), y a una tarea aplicada con datos reales o realistas evaluada con rúbrica analítica. Desde la semana 9 los equipos desarrollan un proyecto integrador con hitos de propuesta, avance y sustentación, siguiendo el aprendizaje basado en proyectos. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión de código entre pares en repositorios Git y foros técnicos. Los laboratorios usan Python, scikit-learn, XGBoost, LightGBM, CatBoost, Optuna y UMAP.",
+  "bibliography": [
+    "Hastie, T., Tibshirani, R. y Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction (2.ª ed.). Springer.",
+    "James, G., Witten, D., Hastie, T., Tibshirani, R. y Taylor, J. (2023). An introduction to statistical learning: With applications in Python. Springer.",
+    "Géron, A. (2022). Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow (3.ª ed.). O'Reilly Media.",
+    "Zhou, Z.-H. (2012). Ensemble methods: Foundations and algorithms. CRC Press.",
+    "Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5-32.",
+    "Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. The Annals of Statistics, 29(5), 1189-1232.",
+    "Chen, T. y Guestrin, C. (2016). XGBoost: A scalable tree boosting system. En Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785-794). ACM.",
+    "Kaufman, L. y Rousseeuw, P. J. (1990). Finding groups in data: An introduction to cluster analysis. John Wiley & Sons.",
+    "Aggarwal, C. C. (2017). Outlier analysis (2.ª ed.). Springer.",
+    "Aggarwal, C. C. (2016). Recommender systems: The textbook. Springer."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, tareas aplicadas 1 a 3, laboratorios semanales y participación argumentada en el análisis de casos, con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Proyecto integrador (Tarea 4): repositorio reproducible, informe técnico, tarjeta de modelo y plan de monitoreo, evaluados con rúbrica analítica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Examen práctico individual en Colab con datos nuevos y sustentación oral del proyecto integrador, con preguntas sobre decisiones técnicas y éticas."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Máquinas de vectores de soporte y ensambles por agregación",
+      "description": "Al finalizar la unidad, el estudiante entrena, ajusta y compara máquinas de vectores de soporte con kernel y ensambles por agregación (bagging, bosques aleatorios y árboles extremadamente aleatorizados), justificando hiperparámetros con validación cruzada y error fuera de bolsa, e interpretando la importancia de variables sin confundir predicción con causalidad.",
+      "topics": [
+        "Margen máximo, vectores de soporte y SVM de margen blando con pérdida bisagra",
+        "Truco del kernel: kernels lineal, polinomial y RBF; ajuste conjunto de C y gamma",
+        "Fundamentos de los ensambles: jurado de Condorcet, sesgo, varianza y correlación",
+        "Bootstrap, bagging y error fuera de bolsa (OOB)",
+        "Bosques aleatorios y árboles extremadamente aleatorizados: hiperparámetros e importancia de variables"
+      ],
+      "slides": [
+        {
+          "title": "Del modelo único al comité de modelos",
+          "bullets": [
+            "Aprendizaje Automático I dejó modelos individuales: regresión lineal y logística, Naive Bayes, k-NN y árboles CART.",
+            "Este curso añade métodos de kernel, ensambles de árboles, aprendizaje no supervisado, detección de anomalías y recomendación.",
+            "Pregunta guía: ¿cuándo un modelo más complejo justifica su costo de cómputo, mantenimiento y explicación?",
+            "Herramientas del curso: Python, scikit-learn, XGBoost, LightGBM, CatBoost, Optuna y UMAP sobre Google Colab."
+          ],
+          "notes": "Inicie recuperando saberes previos: pida a tres estudiantes que nombren el último modelo que entrenaron en Aprendizaje Automático I y la métrica con que lo evaluaron. A partir de ello, explique que un árbol de decisión aislado es inestable, pues pequeñas variaciones en los datos cambian su estructura, y que la regresión logística no captura interacciones sin ingeniería manual de variables. Los métodos de este curso responden a esas limitaciones de dos maneras: transformando el espacio de representación mediante kernels o combinando muchos modelos mediante ensambles. Presente el mapa de las cuatro unidades y el proyecto integrador que se inicia en la semana 9. Subraye que la complejidad no es un fin en sí mismo: en el Perú muchas organizaciones tienen equipos pequeños y presupuestos de cómputo limitados, por lo que cada mejora de métrica debe traducirse en valor y ser mantenible. Pregunta para la clase: ¿qué perderíamos si sustituimos un árbol de cinco niveles, fácil de explicar a un gerente, por un bosque de quinientos árboles?"
+        },
+        {
+          "title": "La idea del margen máximo",
+          "bullets": [
+            "Un hiperplano separa clases: f(x) = wᵀx + b; la clase predicha es el signo de f(x).",
+            "Entre infinitos hiperplanos separadores, la SVM elige el que maximiza el margen 2/‖w‖ hacia los puntos más cercanos.",
+            "Formulación de margen duro: minimizar ½‖w‖² sujeto a yᵢ(wᵀxᵢ + b) ≥ 1 para toda observación.",
+            "Solo los vectores de soporte, situados sobre el margen, definen la frontera; el resto podría eliminarse sin cambiarla."
+          ],
+          "notes": "Dibuje en la pizarra virtual dos nubes de puntos linealmente separables y tres rectas que las separan. Pregunte cuál generalizaría mejor ante datos nuevos: la intuición de los estudiantes suele elegir la recta más alejada de ambos grupos, y esa es precisamente la idea de Vapnik. Explique que el margen geométrico es la distancia del hiperplano a los puntos más cercanos y que maximizarlo equivale a minimizar la norma de w, lo que conduce a un problema de optimización cuadrática convexa con solución única, a diferencia de los árboles o de las redes neuronales. Destaque la noción de vectores de soporte: la solución depende solo de unas pocas observaciones críticas, lo que da a la SVM una representación compacta. Conecte con la teoría del aprendizaje estadístico: un margen amplio limita la capacidad efectiva del clasificador y, por tanto, el riesgo de sobreajuste. Pregunta para la clase: ¿qué ocurre con esta formulación si un solo punto mal etiquetado invade la región de la otra clase?"
+        },
+        {
+          "title": "SVM de margen blando y el parámetro C",
+          "bullets": [
+            "Las variables de holgura ξᵢ ≥ 0 permiten violar el margen: se minimiza ½‖w‖² + C Σ ξᵢ.",
+            "C alto penaliza fuertemente los errores: margen estrecho, menor sesgo y mayor riesgo de sobreajuste.",
+            "C bajo tolera violaciones: margen amplio, más vectores de soporte y un modelo más regularizado.",
+            "C se ajusta por validación cruzada en escala logarítmica, por ejemplo entre 0,01 y 1000."
+          ],
+          "notes": "Retome la pregunta anterior: los datos reales casi nunca son separables, por ruido de medición o por etiquetas erróneas. Cortes y Vapnik (1995) introdujeron la versión de margen blando, que es la que realmente se usa en la práctica. Explique C como el precio que el modelo paga por cada unidad de violación del margen: es un hiperparámetro de regularización, pero en sentido inverso al alfa de Ridge que vieron en Aprendizaje Automático I, pues un C grande equivale a poca regularización. Muestre en Colab un ejemplo con make_moons o con datos de morosidad, ajustando C en 0,01, 1 y 100, y pida a los estudiantes que cuenten los vectores de soporte con el atributo n_support_. Observarán que un C pequeño produce muchos vectores de soporte. Enfatice que la búsqueda debe hacerse en escala logarítmica, porque el efecto de C es multiplicativo. Pregunta para la clase: si su conjunto tiene etiquetas ruidosas, por ejemplo reclamos registrados manualmente por distintos operadores, ¿preferirían un C alto o bajo, y por qué?"
+        },
+        {
+          "title": "Pérdida bisagra frente a la pérdida logarítmica",
+          "bullets": [
+            "La SVM equivale a minimizar la pérdida bisagra max(0, 1 − y·f(x)) más una penalización L2 sobre w.",
+            "Observaciones bien clasificadas fuera del margen no aportan pérdida; la regresión logística siempre las penaliza un poco.",
+            "Consecuencia práctica: la SVM produce puntajes de decisión, no probabilidades calibradas.",
+            "Para obtener probabilidades se aplica el escalamiento de Platt o CalibratedClassifierCV con validación cruzada."
+          ],
+          "notes": "Esta diapositiva conecta la SVM con lo que los estudiantes ya conocen. Grafique ambas funciones de pérdida en función del margen y·f(x): la bisagra vale cero a partir de 1 y crece linealmente hacia la izquierda; la logarítmica decrece suavemente sin llegar nunca a cero. Así, ambos modelos son clasificadores lineales regularizados que difieren en cómo tratan a los puntos fáciles. Esa diferencia explica la esparsidad de la SVM y también su principal desventaja práctica: decision_function devuelve distancias con signo, no probabilidades. En scikit-learn, SVC(probability=True) ajusta internamente un escalamiento de Platt con validación cruzada de cinco particiones, lo que multiplica el tiempo de entrenamiento y puede producir probabilidades inconsistentes con la predicción por signo. Recomiende calibrar explícitamente con CalibratedClassifierCV y verificar con la curva de confiabilidad vista en el curso anterior. Pregunta para la clase: en un modelo de aprobación de créditos que alimenta un cálculo de pérdida esperada, ¿por qué no basta con un puntaje de decisión?"
+        },
+        {
+          "title": "El truco del kernel",
+          "bullets": [
+            "En la forma dual, la SVM solo usa productos internos: f(x) = Σ αᵢ yᵢ K(xᵢ, x) + b.",
+            "Un kernel calcula productos internos en un espacio de mayor dimensión sin construirlo explícitamente.",
+            "Kernels usuales: lineal xᵀz, polinomial (γxᵀz + r)ᵈ y de base radial RBF exp(−γ‖x − z‖²).",
+            "Una función es un kernel válido si su matriz de Gram es simétrica y semidefinida positiva (teorema de Mercer)."
+          ],
+          "notes": "Use un ejemplo visual: puntos de una clase en un círculo interior y de otra en un anillo exterior. Ninguna recta los separa en dos dimensiones, pero si añadimos la variable x₁² + x₂², un plano los separa perfectamente. El kernel realiza esa proyección de forma implícita: para un kernel polinomial de grado 2 sobre 100 variables, el espacio expandido tendría más de 5000 dimensiones, pero el kernel solo requiere un producto interno y una potencia. El kernel RBF corresponde incluso a un espacio de dimensión infinita. Explique que la forma dual expresa la solución como una combinación de similitudes con los vectores de soporte, de modo que una SVM con RBF se parece a un k-NN ponderado cuyos pesos se aprenden. Mencione que los kernels también permiten trabajar con textos o secuencias mediante funciones de similitud especializadas, idea que retomarán en Procesamiento de Lenguaje Natural. Pregunta para la clase: ¿qué relación ven entre el kernel RBF y la distancia euclidiana que usaban en k-NN, y qué implica eso para el escalado de variables?"
+        },
+        {
+          "title": "Kernel RBF: el papel conjunto de gamma y C",
+          "bullets": [
+            "Gamma controla el alcance de cada vector de soporte: gamma alto produce fronteras locales y sinuosas.",
+            "Gamma bajo genera fronteras suaves, cercanas a un modelo lineal; junto con C fija el balance sesgo-varianza.",
+            "Valor por defecto en scikit-learn (gamma='scale'): 1 / (número de variables × varianza de X).",
+            "Buscar C y gamma en una rejilla logarítmica conjunta, por ejemplo de 10⁻³ a 10³, con validación cruzada estratificada."
+          ],
+          "notes": "Muestre un mapa de calor de la exactitud de validación cruzada sobre la rejilla de C y gamma, como el que presenta la documentación de scikit-learn: la región óptima suele formar una diagonal, porque un gamma alto puede compensarse con un C bajo y viceversa. Por eso no conviene ajustar un hiperparámetro y luego el otro; deben buscarse conjuntamente. Explique gamma como el inverso del radio de influencia de cada punto: con gamma muy alto, cada vector de soporte solo influye en su entorno inmediato y el modelo memoriza; con gamma muy bajo, todos influyen sobre todo el espacio y el modelo se vuelve casi lineal. Conecte con la curva de validación de Aprendizaje Automático I y pida a los estudiantes que identifiquen la zona de sobreajuste. Recomiende primero una búsqueda gruesa y luego una fina alrededor del mejor punto, siempre dentro de un Pipeline con StandardScaler para evitar fuga de información. Pregunta para la clase: si el mejor resultado aparece en el borde de la rejilla, ¿qué deberían hacer antes de reportarlo?"
+        },
+        {
+          "title": "SVM en la práctica: escalado, costo y alternativas",
+          "bullets": [
+            "Escalar siempre con StandardScaler dentro del Pipeline, porque el kernel RBF depende de distancias euclidianas.",
+            "El entrenamiento de SVC crece al menos cuadráticamente con n; se vuelve impráctico desde decenas de miles de filas.",
+            "Para muchos datos o textos dispersos, LinearSVC o SGDClassifier con pérdida bisagra escalan casi linealmente.",
+            "class_weight='balanced' ajusta C por clase cuando la clase positiva es minoritaria.",
+            "SVR aplica la misma lógica a la regresión con un tubo de ancho épsilon insensible al error."
+          ],
+          "notes": "Esta diapositiva es operativa. Comente que la propia documentación de scikit-learn advierte que el tiempo de ajuste de SVC escala al menos cuadráticamente con el número de muestras. Con 20 000 registros de un padrón de clientes el entrenamiento es razonable; con dos millones de transacciones de una billetera digital, no lo es. En esos casos existen tres salidas: modelos lineales con LinearSVC, aproximaciones del kernel como Nystroem o RBFSampler seguidas de un modelo lineal, o cambiar de familia hacia ensambles de árboles. Explique class_weight: multiplica C por el peso de cada clase, de modo que los errores en la clase minoritaria cuestan más, alternativa más limpia que el sobremuestreo. Presente brevemente SVR para pronosticar, por ejemplo, la demanda de energía de un distribuidor regional: los errores menores que épsilon no se penalizan. Pregunta para la clase: ¿por qué una SVM es buena candidata para 3000 muestras de laboratorio con 200 variables espectrales, y mala candidata para el historial de transacciones de un banco?"
+        },
+        {
+          "title": "Por qué funcionan los ensambles: el jurado de Condorcet",
+          "bullets": [
+            "Condorcet (1785): si cada votante acierta con p > 0,5 de forma independiente, la mayoría acierta con probabilidad creciente.",
+            "Ejemplo: 25 clasificadores independientes con 65 % de exactitud logran cerca de 94 % por votación mayoritaria.",
+            "La condición crítica es la independencia: errores correlacionados anulan gran parte de la ganancia.",
+            "Diseñar ensambles consiste en producir modelos individualmente buenos y diversos en sus errores."
+          ],
+          "notes": "Haga el cálculo en vivo con la distribución binomial: con 25 votantes independientes de 65 % de exactitud, la probabilidad de que al menos 13 acierten es aproximadamente 0,94; con 101 votantes supera 0,999. Luego desafíe a la clase: si entrenamos 25 árboles idénticos sobre los mismos datos, todos cometerán los mismos errores y la votación no mejora nada. La lección es que el ensamble necesita diversidad, y toda la unidad puede leerse como un catálogo de estrategias para inducirla: remuestrear observaciones (bagging), muestrear variables (bosques aleatorios), aleatorizar los cortes (árboles extremadamente aleatorizados) o entrenar secuencialmente sobre los errores (boosting, unidad 2). Cite a Zhou (2012) como referencia sistemática. Relacione con la vida organizacional: un comité de créditos de una caja municipal decide mejor cuando sus miembros aportan información distinta, no cuando todos leen el mismo reporte. Pregunta para la clase: ¿qué fuentes de diversidad podrían introducir en un problema de predicción de rechazos de exportación?"
+        },
+        {
+          "title": "Sesgo, varianza y correlación en ensambles",
+          "bullets": [
+            "Promedio de B modelos con varianza σ² y correlación ρ: varianza = ρσ² + (1 − ρ)σ²/B.",
+            "Al crecer B, el segundo término desaparece; el piso de la varianza lo fija la correlación ρ.",
+            "Promediar reduce varianza, no sesgo: conviene promediar modelos de bajo sesgo y alta varianza, como árboles profundos.",
+            "Boosting, en cambio, reduce principalmente el sesgo combinando modelos débiles de forma secuencial."
+          ],
+          "notes": "Esta fórmula, presentada por Hastie, Tibshirani y Friedman (2009, cap. 15), es la clave conceptual de la unidad. Haga un ejemplo numérico: con ρ = 0,3 y 500 árboles, la varianza del promedio es 0,3σ² más 0,7σ²/500, es decir, aproximadamente 0,30σ²; añadir otros 500 árboles casi no cambia nada, pero reducir ρ a 0,1 baja la varianza a un tercio. Esto explica por qué el bosque aleatorio introduce aleatoriedad en las variables: su objetivo es decorrelacionar los árboles. Recuerde la descomposición sesgo-varianza de Aprendizaje Automático I y pregunte qué tipo de modelo base conviene promediar: un árbol profundo sin poda tiene sesgo bajo y varianza alta, el candidato ideal; un modelo lineal estable gana poco con bagging. Anticipe el contraste con boosting, que parte de modelos de alto sesgo, como árboles poco profundos, y los combina para reducir el sesgo. Pregunta para la clase: ¿por qué hacer bagging de una regresión logística regularizada casi no mejora sus resultados?"
+        },
+        {
+          "title": "Bootstrap y bagging paso a paso",
+          "bullets": [
+            "Bootstrap (Efron, 1979): muestrear n observaciones con reemplazo a partir de los n datos de entrenamiento.",
+            "Cada muestra contiene en promedio 63,2 % de observaciones distintas, pues (1 − 1/n)ⁿ tiende a e⁻¹ ≈ 0,368.",
+            "Bagging (Breiman, 1996): entrenar un modelo por muestra y agregar por voto mayoritario o promedio.",
+            "En scikit-learn: BaggingClassifier(estimator=DecisionTreeClassifier(), n_estimators=200, n_jobs=-1)."
+          ],
+          "notes": "Explique el procedimiento con una tabla pequeña de diez observaciones y genere en vivo tres muestras bootstrap con numpy.random.choice; los estudiantes verán repeticiones y ausencias. Demuestre el 63,2 %: la probabilidad de que una observación no sea elegida en un sorteo es 1 − 1/n; en n sorteos independientes es (1 − 1/n)ⁿ, que converge a 1/e. Bagging, acrónimo de bootstrap aggregating, fue propuesto por Leo Breiman en 1996 y es la base de los bosques aleatorios. Subraye que el entrenamiento es paralelizable, pues cada modelo es independiente, lo que lo hace eficiente en máquinas multinúcleo con n_jobs=-1. Indique que BaggingClassifier admite cualquier estimador base, incluso una SVM, y que también puede muestrear variables con max_features, esquema conocido como subespacios aleatorios. Pregunta para la clase: si las observaciones están agrupadas, por ejemplo varios lotes de un mismo fundo agrícola, ¿qué problema genera el bootstrap simple y cómo se relaciona con la validación agrupada que estudiaron el ciclo anterior?"
+        },
+        {
+          "title": "Error fuera de bolsa: validación incorporada",
+          "bullets": [
+            "Cada observación queda fuera de aproximadamente 36,8 % de las muestras bootstrap.",
+            "Predicción fuera de bolsa: agregar solo los modelos que no vieron esa observación durante el entrenamiento.",
+            "El error OOB aproxima el error de validación cruzada sin costo adicional: oob_score=True.",
+            "Limitación: asume observaciones independientes; con datos temporales o agrupados resulta optimista."
+          ],
+          "notes": "El error fuera de bolsa es una ventaja práctica muy valorada: permite estimar el desempeño de un bosque mientras se entrena, sin reservar datos adicionales. Muestre en Colab el atributo oob_score_ y compárelo con el resultado de una validación cruzada de cinco particiones: suelen diferir en uno o dos puntos porcentuales. Explique también oob_decision_function_, que entrega probabilidades fuera de bolsa útiles para elegir umbrales sin tocar el conjunto de prueba. Luego problematice: si los datos tienen estructura temporal, como ventas mensuales, o agrupada, como varias transacciones del mismo cliente, el error OOB se calcula con observaciones muy parecidas a las de entrenamiento y sobreestima el desempeño, igual que la validación cruzada aleatoria. En esos casos la referencia debe ser TimeSeriesSplit o GroupKFold, como vieron en Aprendizaje Automático I. Pregunta para la clase: un analista reporta un AUC fuera de bolsa de 0,93 en un modelo de demanda diaria de una cadena de boticas; ¿qué le preguntarían antes de aceptar ese número?"
+        },
+        {
+          "title": "Bosques aleatorios: decorrelacionar los árboles",
+          "bullets": [
+            "Breiman (2001): bagging de árboles profundos más selección aleatoria de max_features variables en cada división.",
+            "Valores de referencia propuestos por Breiman: √p variables para clasificación y p/3 para regresión.",
+            "En scikit-learn, RandomForestRegressor usa por defecto todas las variables; conviene ajustar max_features.",
+            "Ventajas: pocas suposiciones, robustez ante variables irrelevantes y buen desempeño sin ajuste fino."
+          ],
+          "notes": "Explique que en bagging puro, si existe una variable muy predictiva, todos los árboles la eligen en la primera división y terminan siendo parecidos, es decir, correlacionados. El bosque aleatorio restringe cada división a un subconjunto aleatorio de variables, de modo que otras variables tienen oportunidad de aportar y los árboles se vuelven más diversos. Vincule con la fórmula de varianza: se sacrifica un poco de precisión individual a cambio de reducir ρ. Aclare un detalle que suele generar confusión: desde la versión 1.1 de scikit-learn, RandomForestRegressor usa max_features=1.0, es decir, todas las variables, lo que lo convierte en bagging de árboles; por eso conviene probar valores como 0,33 o 'sqrt'. El bosque aleatorio es una excelente línea base avanzada: con hiperparámetros por defecto suele superar a los modelos de Aprendizaje Automático I. Pregunta para la clase: en un conjunto con 300 variables donde solo 10 son informativas, ¿qué riesgo trae un max_features muy pequeño?"
+        },
+        {
+          "title": "Hiperparámetros clave del bosque aleatorio",
+          "bullets": [
+            "n_estimators: más árboles no sobreajustan; el error se estabiliza y solo crece el costo de cómputo.",
+            "max_features: principal palanca de diversidad; probar 'sqrt', 'log2', 0,3 y 0,5.",
+            "min_samples_leaf y max_depth controlan la profundidad; hojas de 5 a 20 observaciones suavizan las probabilidades.",
+            "max_samples: tamaño de cada muestra bootstrap; útil para acelerar el entrenamiento con millones de filas.",
+            "class_weight='balanced_subsample' recalcula los pesos por clase dentro de cada muestra bootstrap."
+          ],
+          "notes": "Organice la explicación por impacto. Primero, n_estimators no es un hiperparámetro a optimizar en sentido estricto: se elige lo bastante grande para que el error fuera de bolsa se estabilice, típicamente entre 300 y 1000; muestre la curva de error OOB contra número de árboles. Segundo, max_features es el que más influye en el desempeño. Tercero, los controles de profundidad: árboles completamente desarrollados producen probabilidades extremas y mal calibradas; un min_samples_leaf moderado mejora la calibración y reduce el tamaño del modelo, algo importante si se va a guardar con joblib y servir después, tema que profundizarán en Despliegue de Modelos. Explique balanced_subsample frente a balanced en problemas desbalanceados. Recomiende RandomizedSearchCV con 30 a 60 combinaciones en lugar de rejillas exhaustivas, como practicaron en el curso anterior. Comente que un bosque de 500 árboles profundos sobre un millón de filas puede ocupar varios gigabytes. Pregunta para la clase: si el modelo final debe ejecutarse en un servidor modesto de una cooperativa, ¿qué hiperparámetros ajustarían primero?"
+        },
+        {
+          "title": "Árboles extremadamente aleatorizados y comparación de modelos",
+          "bullets": [
+            "Extra Trees (Geurts, Ernst y Wehenkel, 2006): umbrales de corte aleatorios y, por defecto, sin bootstrap.",
+            "Más aleatoriedad implica menor varianza y entrenamiento más rápido, a cambio de algo más de sesgo.",
+            "Comparar SVM, bosque y Extra Trees con las mismas particiones de validación cruzada y la misma métrica.",
+            "Reportar media y desviación estándar; diferencias menores que la variabilidad entre particiones no son concluyentes."
+          ],
+          "notes": "Presente Extra Trees como el extremo del espectro de aleatorización: en lugar de buscar el mejor umbral para cada variable candidata, sortea uno al azar y elige la mejor entre esas divisiones aleatorias. Suele rendir parecido al bosque aleatorio, entrena más rápido y a veces gana con datos ruidosos. Luego dedique tiempo a la metodología de comparación, que retoma Aprendizaje Automático I: usar el mismo objeto StratifiedKFold con semilla fija para todos los modelos, de modo que las diferencias no se deban a particiones distintas. Muestre una tabla con la media y la desviación del AUC y discuta cuándo una diferencia de 0,005 es irrelevante. Recuerde la validación cruzada anidada cuando además se ajustan hiperparámetros. Agregue criterios no estadísticos: tiempo de entrenamiento, tiempo de inferencia, tamaño en disco y facilidad de explicación. Pregunta para la clase: si la SVM obtiene 0,861 ± 0,012 y el bosque 0,866 ± 0,015, ¿cuál elegirían para un sistema que debe reentrenarse cada semana?"
+        },
+        {
+          "title": "Importancia de variables en bosques: impureza frente a permutación",
+          "bullets": [
+            "feature_importances_ mide la reducción media de impureza (MDI) y se calcula sobre los datos de entrenamiento.",
+            "MDI favorece variables continuas y categóricas de alta cardinalidad, como códigos o identificadores.",
+            "La importancia por permutación sobre validación mide la caída real de la métrica al desordenar una variable.",
+            "Variables correlacionadas se reparten la importancia; conviene agrupar o eliminar redundancias antes de interpretar."
+          ],
+          "notes": "Cierre la unidad con una advertencia que tiene consecuencias organizacionales. Muestre un experimento clásico: añada al conjunto una columna de números aleatorios con muchos valores distintos y observe que la importancia por impureza le asigna un valor no despreciable, mientras que la importancia por permutación en validación la deja cerca de cero. Explique la razón: con muchos valores posibles, una variable ofrece más oportunidades de corte y el árbol la aprovecha para memorizar ruido de entrenamiento. Vincule con la importancia por permutación y los valores SHAP vistos en Aprendizaje Automático I, y precise que ninguna de estas medidas es causal: una variable útil para predecir no es necesariamente causa del resultado. Esto es crucial cuando se pretende usar el modelo para evaluar personas, como cuadrillas de cosecha o asesores de venta. Mencione la utilidad de agrupar variables correlacionadas mediante agrupamiento jerárquico sobre la correlación de Spearman antes de permutar. Pregunta para la clase: ¿qué decisión gerencial podría resultar injusta si se interpreta la importancia por impureza como causalidad?"
+        }
+      ],
+      "reading": {
+        "title": "Márgenes y comités: máquinas de vectores de soporte y bosques aleatorios",
+        "minutes": 35,
+        "content": "## Dos respuestas a los límites de un solo modelo\n\nEn Aprendizaje Automático I se construyeron modelos individuales: regresión logística, Naive Bayes, k vecinos y árboles CART. Todos comparten una limitación: o son demasiado rígidos para capturar relaciones no lineales sin ingeniería manual de variables, o, como el árbol profundo, son tan flexibles que cambian drásticamente ante pequeñas variaciones de los datos. Esta lectura presenta dos respuestas históricas. La primera, de Vladimir Vapnik y colaboradores, transforma el espacio de representación mediante **kernels** y busca la frontera con **margen máximo**. La segunda, sistematizada por Leo Breiman, renuncia a encontrar el mejor modelo y **promedia muchos modelos inestables** para obtener uno estable.\n\n## Máquinas de vectores de soporte\n\nPara etiquetas yᵢ ∈ {−1, +1}, la SVM de margen blando (Cortes y Vapnik, 1995) resuelve:\n\n```text\nminimizar    ½‖w‖² + C · Σᵢ ξᵢ\nsujeto a     yᵢ (wᵀxᵢ + b) ≥ 1 − ξᵢ ,   ξᵢ ≥ 0\n```\n\nEl primer término maximiza el margen (2/‖w‖); el segundo penaliza las violaciones con un precio C. El problema es equivalente a minimizar la **pérdida bisagra** max(0, 1 − yᵢ f(xᵢ)) con regularización L2: las observaciones correctamente clasificadas y alejadas del margen no influyen en la solución. Por eso el modelo depende solo de los **vectores de soporte**.\n\nLa forma dual expresa la predicción como f(x) = Σ αᵢ yᵢ K(xᵢ, x) + b, donde solo intervienen productos internos. Reemplazarlos por un kernel, como el RBF K(x, z) = exp(−γ‖x − z‖²), equivale a trabajar en un espacio de dimensión muy alta sin construirlo. Gamma define el radio de influencia de cada vector de soporte y C la tolerancia al error; ambos se ajustan conjuntamente en escala logarítmica.\n\nTres advertencias prácticas: el kernel RBF depende de distancias, por lo que **escalar es obligatorio**; el entrenamiento crece al menos cuadráticamente con el número de filas; y la salida es un puntaje, no una probabilidad, por lo que debe calibrarse si alimenta cálculos de pérdida esperada.\n\n## Por qué promediar reduce el error\n\nSi se promedian B modelos con varianza σ² y correlación ρ entre sus predicciones, la varianza del promedio es (Hastie, Tibshirani y Friedman, 2009):\n\n```text\nVar(promedio) = ρ·σ² + (1 − ρ)·σ² / B\n```\n\nAumentar B elimina el segundo término, pero el primero permanece. Con ρ = 0,3, ni infinitos árboles bajan la varianza de 0,3σ². La estrategia efectiva es **reducir la correlación** entre los modelos sin degradar demasiado su calidad individual.\n\n## Del bagging al bosque aleatorio\n\nEl **bagging** (Breiman, 1996) entrena cada árbol sobre una muestra bootstrap: n extracciones con reemplazo, que incluyen en promedio 63,2 % de observaciones distintas, pues (1 − 1/n)ⁿ → e⁻¹ ≈ 0,368. Las observaciones excluidas permiten calcular el **error fuera de bolsa (OOB)**, una estimación del error de generalización sin datos adicionales, válida solo si las observaciones son independientes.\n\nEl **bosque aleatorio** (Breiman, 2001) añade una segunda fuente de diversidad: en cada división solo se evalúa un subconjunto aleatorio de max_features variables (referencia: √p en clasificación y p/3 en regresión). Así, una variable dominante no aparece en la raíz de todos los árboles y estos se decorrelacionan. Los **árboles extremadamente aleatorizados** (Geurts, Ernst y Wehenkel, 2006) llevan la idea más lejos sorteando también los umbrales de corte.\n\n## Un flujo comparativo en scikit-learn\n\n```python\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.svm import SVC\nfrom sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier\nfrom sklearn.model_selection import StratifiedKFold, cross_validate\n\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)  # mismas particiones para todos\nmodelos = {\n    \"SVM-RBF\": make_pipeline(StandardScaler(),\n                             SVC(C=10, gamma=\"scale\", class_weight=\"balanced\")),\n    \"Bosque\": RandomForestClassifier(n_estimators=500, max_features=\"sqrt\",\n                                     min_samples_leaf=5, n_jobs=-1, random_state=42),\n    \"ExtraTrees\": ExtraTreesClassifier(n_estimators=500, min_samples_leaf=5,\n                                       n_jobs=-1, random_state=42),\n}\nfor nombre, modelo in modelos.items():\n    r = cross_validate(modelo, X, y, cv=cv, scoring=\"roc_auc\")\n    print(f\"{nombre}: AUC {r['test_score'].mean():.3f} ± {r['test_score'].std():.3f}, \"\n          f\"ajuste {r['fit_time'].mean():.1f} s\")\n```\n\nLa comparación es justa porque los tres modelos usan las mismas particiones y la misma métrica. Si además se ajustan hiperparámetros, la estimación honesta exige validación cruzada anidada.\n\n## Interpretar con cautela\n\nEl atributo feature_importances_ mide la reducción media de impureza en entrenamiento y favorece a las variables con muchos valores posibles, como códigos de vendedor o de cuadrilla. La importancia por permutación sobre datos de validación es más fiable, aunque reparte el crédito entre variables correlacionadas. Ninguna de las dos es causal.\n\n## Aplicación en el contexto peruano\n\nEn la agroexportación, cuyos envíos de arándano y palta recorren entre dos y cinco semanas por vía marítima, predecir qué lotes llegarán con pudrición permite redirigirlos a mercados cercanos. Con unos pocos miles de lotes y variables continuas de laboratorio (grados Brix, firmeza, temperatura de pulpa), una SVM bien escalada es competitiva. Con cientos de miles de registros mixtos de campo, planta y cadena de frío, el bosque aleatorio suele imponerse por escalabilidad y tolerancia a variables heterogéneas. La elección depende de los datos, del costo del error y de la capacidad del equipo para mantener el modelo."
+      },
+      "case": {
+        "title": "Caso: AgroVerde Export y los lotes de arándano que no llegaron firmes",
+        "content": "**AgroVerde Export S.A.C.** es una agroexportadora mediana de La Libertad que cultiva 620 hectáreas de arándano en fundos de Virú y Chao y exporta a Estados Unidos, Países Bajos y China. En la campaña 2024-2025 despachó 1480 contenedores; el 4,1 % generó reclamos del importador por ablandamiento o pudrición al arribo. Cada reclamo costó en promedio US$ 21 000 entre descuentos, fletes perdidos y penalidades, y los reclamos se concentraron en los envíos a China, cuyo tránsito marítimo supera los 30 días.\n\nLa gerenta de operaciones, **Lucía Benavides**, encargó al área de analítica un modelo que, al cierre del empaque, estime la probabilidad de reclamo de cada pallet. Si el riesgo es alto, el pallet se redirige a Estados Unidos (tránsito de unos 15 días) con un menor precio, lo que cuesta en promedio US$ 1100 por pallet frente a un reclamo esperado de US$ 2600 por pallet afectado.\n\nLa analista **Rosa Quispe** reunió 86 400 registros de pallets de tres campañas y 36 variables: variedad (Biloxi, Ventura, Sekoya Pop y otras), fundo, cuadrilla de cosecha (148 códigos), hora de cosecha, temperatura de pulpa al ingreso, minutos hasta el preenfriamiento, grados Brix, firmeza, humedad relativa del campo, horas de cadena de frío y destino. La tasa de pallets con reclamo fue 2,6 %.\n\nRosa entrenó dos modelos con validación cruzada estratificada aleatoria de cinco particiones:\n\n| Modelo | AUC validación cruzada | AUC fuera de bolsa | Tiempo de ajuste |\n|---|---|---|---|\n| SVM-RBF (C = 30, gamma = 0,05), 12 000 filas muestreadas | 0,842 | — | 14 min |\n| Bosque aleatorio, 500 árboles | 0,887 | 0,881 | 3 min |\n\nSin embargo, al evaluar ambos modelos sobre los primeros 9000 pallets de la campaña 2025-2026, el AUC del bosque cayó a 0,791 y el de la SVM a 0,806. Rosa descubrió además que los pallets de una misma fecha de cosecha y fundo compartían condiciones climáticas y aparecían tanto en entrenamiento como en validación.\n\nAl presentar resultados, el gráfico de feature_importances_ del bosque ubicó a la **cuadrilla de cosecha** como la variable más importante, seguida de los minutos hasta el preenfriamiento. El jefe de campo propuso usar el modelo para identificar las cuadrillas «problemáticas» y reducir su bono de productividad. El sindicato de trabajadores ya había expresado preocupación por la evaluación automatizada del personal.\n\nLucía debe decidir esta semana qué modelo pasará a piloto en la planta de empaque, cómo fijar el umbral de redirección y si autoriza el uso del modelo para evaluar a las cuadrillas. Su presupuesto de analítica no permite contratar más personal, y el sistema de la planta solo dispone de un servidor con 16 GB de memoria.",
+        "questions": [
+          "¿Qué explica la diferencia entre el AUC de validación cruzada o fuera de bolsa y el obtenido en la campaña 2025-2026? ¿Qué esquema de validación debió emplear Rosa?",
+          "¿Es válido concluir que la cuadrilla de cosecha es la principal causa de los reclamos? Propón un análisis de importancia alternativo y explica sus límites.",
+          "Con los costos del caso, ¿qué umbral de probabilidad minimiza el costo esperado de redirigir o no un pallet? Muestra el razonamiento.",
+          "¿Qué modelo recomendarías para el piloto considerando desempeño temporal, costo de cómputo y mantenimiento? Justifica tu elección.",
+          "¿Qué riesgos éticos y laborales implica usar el modelo para reducir bonos de cuadrillas y cómo los mitigarías?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: SVM frente a ensambles por agregación en un problema peruano",
+        "instructions": "**Objetivo:** comparar con rigor una SVM con kernel RBF, un bosque aleatorio y un modelo de árboles extremadamente aleatorizados en un problema de clasificación de una organización peruana, y recomendar uno con argumentos técnicos y de negocio.\n\n**Datos:** elige uno de los conjuntos proporcionados por el docente (morosidad de una cooperativa de ahorro y crédito, reclamos de lotes agroexportadores o deserción estudiantil) o un conjunto de la Plataforma Nacional de Datos Abiertos con al menos 3000 filas y una variable objetivo binaria.\n\n**Qué entregar:**\n\n1. Cuaderno de Colab reproducible (semilla fija) con Pipeline que integre preprocesamiento y modelo.\n2. Esquema de validación justificado (estratificado, agrupado o temporal) y aplicado por igual a los tres modelos.\n3. Búsqueda de C y gamma en rejilla logarítmica; búsqueda aleatoria de max_features y min_samples_leaf para los ensambles.\n4. Tabla comparativa con la métrica principal (media ± desviación), error fuera de bolsa, tiempo de ajuste e inferencia y tamaño del modelo en disco.\n5. Importancia por impureza y por permutación en validación, con discusión de discrepancias.\n6. Informe ejecutivo de máximo dos páginas con la recomendación y un umbral derivado de una matriz de costos explícita.\n\n**Formato:** archivo .ipynb y PDF subidos al aula virtual hasta el domingo de la semana 4 a las 23:59. Trabajo individual; se verificará la reproducibilidad ejecutando el cuaderno completo.",
+        "rubric": [
+          {
+            "name": "Diseño de validación sin fuga y pipeline reproducible",
+            "points": 6
+          },
+          {
+            "name": "Ajuste de hiperparámetros y comparación justa de modelos",
+            "points": 6
+          },
+          {
+            "name": "Interpretación crítica de la importancia de variables",
+            "points": 4
+          },
+          {
+            "name": "Recomendación de negocio, umbral y comunicación ejecutiva",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: SVM, bagging y bosques aleatorios",
+        "questions": [
+          {
+            "prompt": "Una SVM con kernel RBF obtiene 99 % de exactitud en entrenamiento y 71 % en validación. ¿Cuál es el ajuste más razonable?",
+            "options": [
+              "Reducir gamma y C para suavizar la frontera de decisión",
+              "Aumentar gamma para ampliar el alcance de cada vector de soporte",
+              "Eliminar el escalado para preservar las unidades originales",
+              "Aumentar C para penalizar más los errores de entrenamiento"
+            ],
+            "correct": 0,
+            "explanation": "La brecha indica sobreajuste. Un gamma alto vuelve local la frontera y un C alto castiga cada error; reducir ambos regulariza. Aumentar gamma reduce, no amplía, el alcance de cada vector de soporte."
+          },
+          {
+            "prompt": "¿Por qué el bosque aleatorio evalúa solo un subconjunto aleatorio de variables en cada división?",
+            "options": [
+              "Para reducir el sesgo de cada árbol individual",
+              "Para evitar la necesidad de usar muestras bootstrap",
+              "Para disminuir la correlación entre árboles y así la varianza del promedio",
+              "Para que todas las variables reciban la misma importancia"
+            ],
+            "correct": 2,
+            "explanation": "La varianza del promedio es ρσ² + (1 − ρ)σ²/B. Restringir variables decorrelaciona los árboles y reduce ρ, aun a costa de un ligero aumento del sesgo individual."
+          },
+          {
+            "prompt": "Un bosque reporta un AUC fuera de bolsa de 0,93 con transacciones de 8000 clientes, cada uno con unas 40 transacciones. ¿Cuál es la principal preocupación?",
+            "options": [
+              "Quinientos árboles son insuficientes para que el error fuera de bolsa sea válido",
+              "El error fuera de bolsa solo es válido en problemas de regresión",
+              "El AUC no puede calcularse con predicciones fuera de bolsa",
+              "Transacciones del mismo cliente quedan dentro y fuera de cada muestra, y el AUC resulta optimista"
+            ],
+            "correct": 3,
+            "explanation": "El bootstrap supone observaciones independientes. Si un cliente aporta muchas filas parecidas, el árbol las ha visto casi iguales en entrenamiento; se requiere validación agrupada por cliente."
+          },
+          {
+            "prompt": "El promedio de 200 árboles con correlación ρ = 0,4 tiene una varianza cercana a 0,4σ². ¿Qué estrategia la reduce más?",
+            "options": [
+              "Duplicar el número de árboles a 400",
+              "Reducir la correlación entre árboles, por ejemplo con un max_features menor",
+              "Aumentar la profundidad máxima de cada árbol",
+              "Cambiar el criterio de división de Gini a entropía"
+            ],
+            "correct": 1,
+            "explanation": "Con B = 200 el término (1 − ρ)σ²/B ya es mínimo; el piso es ρσ². Solo reducir la correlación entre árboles baja sustancialmente la varianza del ensamble."
+          },
+          {
+            "prompt": "En un bosque que predice incidentes, el código del vigilante (900 valores) es la variable más importante según feature_importances_. ¿Qué debería hacerse antes de concluir?",
+            "options": [
+              "Aumentar n_estimators hasta que la importancia se estabilice",
+              "Sancionar a los vigilantes con más incidentes registrados",
+              "Calcular la importancia por permutación en validación, pues la impureza favorece la alta cardinalidad",
+              "Convertir el código en número continuo para reducir su importancia"
+            ],
+            "correct": 2,
+            "explanation": "La importancia por impureza se calcula en entrenamiento y premia variables con muchos cortes posibles. La permutación en validación mide la contribución real, y aun así no prueba causalidad."
+          },
+          {
+            "prompt": "¿En qué situación es más recomendable una SVM con kernel RBF que un bosque aleatorio?",
+            "options": [
+              "Dos millones de transacciones con 30 variables mixtas y valores faltantes",
+              "Unos 2000 espectros de laboratorio con 150 variables numéricas continuas escaladas",
+              "Datos con muchas variables categóricas de alta cardinalidad sin codificar",
+              "Un problema que exige probabilidades calibradas sin pasos adicionales"
+            ],
+            "correct": 1,
+            "explanation": "La SVM rinde bien con pocas filas y variables continuas homogéneas y escaladas. Escala mal a millones de filas, no maneja categorías ni faltantes de forma nativa y no entrega probabilidades calibradas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Boosting de gradiente y combinación de modelos para datos tabulares",
+      "description": "Al finalizar la unidad, el estudiante desarrolla modelos de boosting con XGBoost, LightGBM y CatBoost, aplicando parada temprana sin fuga, optimización bayesiana de hiperparámetros, apilamiento y restricciones monotónicas, y los interpreta con TreeSHAP para sustentar decisiones de negocio frente a una línea base.",
+      "topics": [
+        "AdaBoost y la lógica del aprendizaje secuencial con aprendices débiles",
+        "Gradient boosting: pseudo-residuos, funciones de pérdida, contracción y submuestreo",
+        "XGBoost, LightGBM y CatBoost: regularización, histogramas y variables categóricas",
+        "Parada temprana y optimización bayesiana de hiperparámetros con Optuna",
+        "Votación, apilamiento y restricciones monotónicas",
+        "Interpretación de modelos de boosting con TreeSHAP"
+      ],
+      "slides": [
+        {
+          "title": "Boosting: aprender secuencialmente de los errores",
+          "bullets": [
+            "Pregunta de Kearns y Valiant (1988): ¿pueden aprendices débiles, apenas mejores que el azar, combinarse en uno fuerte?",
+            "Schapire (1990) lo demostró; Freund y Schapire crearon AdaBoost, premiado con el Premio Gödel en 2003.",
+            "A diferencia del bagging, los modelos se entrenan en secuencia y cada uno corrige a los anteriores.",
+            "Se usan modelos base de alto sesgo, como árboles poco profundos; añadir demasiados sí puede sobreajustar."
+          ],
+          "notes": "Abra con la historia: Michael Kearns y Leslie Valiant plantearon si un conjunto de aprendices débiles podía convertirse en un aprendiz fuerte; Robert Schapire lo demostró en 1990 y, con Yoav Freund, creó AdaBoost a mediados de esa década. Contraste con la unidad 1: en bagging cada árbol se entrena en paralelo y de forma independiente; en boosting cada modelo depende del anterior, por lo que no se paraleliza entre árboles, aunque sí dentro de cada árbol. Explique que los modelos base son deliberadamente simples y que la combinación reduce su sesgo. Advierta que, a diferencia del bosque aleatorio, en boosting añadir árboles sí puede sobreajustar, por lo que el número de iteraciones es un hiperparámetro crítico. Mencione que muchas soluciones ganadoras de competencias con datos tabulares en la última década usaron variantes de gradient boosting. Pregunta para la clase: si un modelo base comete siempre el mismo error sistemático con cierto tipo de cliente, ¿cómo podría el siguiente modelo de la secuencia corregirlo?"
+        },
+        {
+          "title": "AdaBoost paso a paso",
+          "bullets": [
+            "Inicializar pesos uniformes wᵢ = 1/n sobre las observaciones de entrenamiento.",
+            "En cada ronda m, entrenar un clasificador débil hₘ con esos pesos y calcular su error ponderado εₘ.",
+            "Peso del clasificador: αₘ = ½ ln((1 − εₘ)/εₘ); aumentar el peso de las observaciones mal clasificadas.",
+            "Predicción final: signo de Σ αₘ hₘ(x); equivale a minimizar la pérdida exponencial por etapas."
+          ],
+          "notes": "Desarrolle un ejemplo numérico con diez observaciones y tocones de decisión. En la primera ronda todos los pesos valen 0,1; si el tocón falla en tres observaciones, su error ponderado es 0,3 y su peso es α = ½ ln(0,7/0,3) ≈ 0,42. Luego los pesos de las observaciones mal clasificadas se multiplican por e elevado a 0,42, aproximadamente 1,53, y los de las bien clasificadas por 0,66, y se renormalizan: la siguiente ronda se concentra en los casos difíciles. Explique que un clasificador con error 0,5 recibe peso cero, pues no aporta información. Friedman, Hastie y Tibshirani (2000) mostraron que AdaBoost equivale a ajustar un modelo aditivo por etapas minimizando la pérdida exponencial, puente conceptual hacia el gradient boosting. Advierta su sensibilidad al ruido: las observaciones mal etiquetadas reciben pesos crecientes y distorsionan el modelo. Pregunta para la clase: en un registro de reclamos donde el 5 % de las etiquetas es erróneo, ¿qué le pasaría a AdaBoost después de muchas rondas?"
+        },
+        {
+          "title": "Gradient boosting: descenso de gradiente en el espacio de funciones",
+          "bullets": [
+            "Friedman (2001): modelo aditivo Fₘ(x) = Fₘ₋₁(x) + ν·hₘ(x), donde hₘ es un árbol de regresión.",
+            "Cada árbol se ajusta a los pseudo-residuos: el gradiente negativo de la pérdida respecto de la predicción actual.",
+            "Sirve cualquier pérdida diferenciable: cuadrática, absoluta, Huber, logarítmica, Poisson o cuantil.",
+            "Analogía: en vez de mover parámetros, se mueve la función de predicción en la dirección que más reduce la pérdida."
+          ],
+          "notes": "Este es el corazón de la unidad. Recuerde el descenso de gradiente visto en Aprendizaje Automático I para la regresión lineal: se actualizaban los parámetros en la dirección contraria al gradiente de la pérdida. Friedman (2001) propone hacer lo mismo, pero sobre las predicciones: para cada observación se calcula cuánto y en qué dirección debería moverse su predicción para reducir la pérdida, y se entrena un árbol que aprenda a aproximar esos movimientos en función de x. Como el árbol generaliza, la corrección se extiende a observaciones nuevas. El algoritmo comienza con una constante, como la media de y o el logaritmo de la razón de probabilidades de la clase positiva, y suma árboles atenuados por una tasa de aprendizaje. La gran ventaja es la modularidad: cambiar la función de pérdida permite pasar de regresión a clasificación, conteos o cuantiles sin cambiar el algoritmo. Pregunta para la clase: ¿qué ventaja tiene poder elegir la función de pérdida al pronosticar ventas de una cadena de ferreterías con días de ventas extraordinarias?"
+        },
+        {
+          "title": "Pseudo-residuos según la función de pérdida",
+          "bullets": [
+            "Pérdida cuadrática ½(y − F)²: el pseudo-residuo es el residuo ordinario y − F(x).",
+            "Pérdida logarítmica binaria: el pseudo-residuo es y − p, con p = 1/(1 + e^(−F)) y F en escala log-odds.",
+            "Pérdida absoluta: signo(y − F); más robusta ante valores extremos, como montos de facturas atípicos.",
+            "Pérdida cuantil: pronostica percentiles, por ejemplo la demanda P90 para fijar inventario de seguridad."
+          ],
+          "notes": "Pida a los estudiantes que deriven en la pizarra el pseudo-residuo de la pérdida cuadrática: la derivada de ½(y − F)² respecto de F es −(y − F), y su negativo es el residuo ordinario; así, con pérdida cuadrática el gradient boosting ajusta árboles a los residuos, idea muy intuitiva. Luego muestre el caso logístico: con F en escala de log-odds, la derivada de la pérdida logarítmica produce y − p, la diferencia entre la etiqueta y la probabilidad actual. Un cliente que abandonó (y = 1) con probabilidad predicha 0,2 tiene pseudo-residuo 0,8, y el siguiente árbol tratará de subir su puntaje. Explique la pérdida cuantil con un ejemplo de inventarios: una distribuidora farmacéutica no quiere pronosticar la demanda media, sino un nivel que solo se supere el 10 % de los días; con GradientBoostingRegressor(loss='quantile', alpha=0.9) o con objective='quantile' en LightGBM se obtiene directamente. Pregunta para la clase: ¿qué pérdida usarían para pronosticar el número de atenciones diarias en un centro de salud, y por qué?"
+        },
+        {
+          "title": "Tasa de aprendizaje, número de árboles y submuestreo",
+          "bullets": [
+            "La contracción ν (learning_rate), entre 0,01 y 0,1, reduce el aporte de cada árbol y mejora la generalización.",
+            "Compromiso: un ν menor requiere más árboles; se fija ν y se encuentra el número de árboles con parada temprana.",
+            "Profundidad de 3 a 8 niveles o de 15 a 255 hojas: controla el orden de las interacciones capturadas.",
+            "Boosting estocástico (Friedman, 2002): submuestrear filas (0,5 a 0,9) y columnas reduce varianza y tiempo."
+          ],
+          "notes": "Explique la contracción como un acto de prudencia del algoritmo: cada árbol solo aporta una fracción de su corrección, lo que deja espacio para que los árboles posteriores ajusten mejor y reduce el sobreajuste. Friedman mostró empíricamente que tasas pequeñas, del orden de 0,1 o menos, generalizan mejor a cambio de más iteraciones. La práctica estándar es fijar una tasa moderada, por ejemplo 0,05, y dejar que la parada temprana determine el número de árboles. Sobre la profundidad: un árbol de profundidad 1 solo captura efectos principales; uno de profundidad 2, interacciones entre dos variables, y así sucesivamente; en la mayoría de problemas tabulares bastan profundidades de 4 a 8. Presente el boosting estocástico: entrenar cada árbol con una submuestra de filas añade aleatoriedad, como en bagging, y suele mejorar la generalización. Muestre en Colab la curva de pérdida de validación para tasas de 0,3, 0,1 y 0,03. Pregunta para la clase: si el modelo se reentrena cada noche y el tiempo es crítico, ¿qué compromiso propondrían entre tasa y número de árboles?"
+        },
+        {
+          "title": "XGBoost: regularización y aproximación de segundo orden",
+          "bullets": [
+            "Chen y Guestrin (2016): objetivo Σ l(yᵢ, ŷᵢ) + Σ Ω(fₖ), con Ω(f) = γT + ½λ‖w‖².",
+            "Usa gradientes gᵢ y hessianos hᵢ; el peso óptimo de cada hoja es w* = −G/(H + λ).",
+            "La ganancia de cada división se penaliza con γ: si la mejora no compensa la nueva hoja, no se divide.",
+            "Manejo nativo de faltantes: cada división aprende la dirección por defecto de los valores ausentes.",
+            "Hiperparámetros clave: eta, max_depth, min_child_weight, subsample, colsample_bytree, lambda y alpha."
+          ],
+          "notes": "XGBoost popularizó el boosting en la industria a mediados de la década pasada por su velocidad y su regularización explícita. Explique la idea de segundo orden: en lugar de usar solo la pendiente de la pérdida, usa también su curvatura, como el método de Newton, lo que permite calcular directamente el peso óptimo de cada hoja: menos la suma de gradientes dividida entre la suma de hessianos más lambda. La ganancia de una división compara la calidad de las hojas hijas con la de la hoja madre, y gamma actúa como un costo fijo por crear una hoja: si la ganancia no lo supera, la división no se realiza. Así, el modelo incorpora en su objetivo la complejidad del árbol, algo ausente en el gradient boosting original. Destaque el tratamiento de faltantes: durante el entrenamiento, cada división aprende hacia qué rama enviar los valores ausentes. Comente min_child_weight como la suma mínima de hessianos en una hoja, análoga a un tamaño mínimo de hoja. Pregunta para la clase: ¿por qué aumentar lambda produce pesos de hoja más pequeños y un modelo más conservador?"
+        },
+        {
+          "title": "LightGBM: histogramas y crecimiento por hojas",
+          "bullets": [
+            "Ke et al. (2017): discretiza las variables en histogramas de hasta 255 intervalos y acelera la búsqueda de cortes.",
+            "Crece por la hoja de mayor ganancia (leaf-wise), no nivel por nivel: árboles asimétricos y más profundos.",
+            "GOSS conserva observaciones de gradiente grande y muestrea las de gradiente pequeño; EFB agrupa variables dispersas excluyentes.",
+            "Controlar la complejidad con num_leaves, min_child_samples y max_depth; con pocos datos sobreajusta fácilmente."
+          ],
+          "notes": "LightGBM, desarrollado por Microsoft, fue diseñado para grandes volúmenes de datos. Explique la discretización en histogramas: en vez de evaluar cada valor único de una variable como posible corte, agrupa los valores en hasta 255 intervalos, lo que reduce drásticamente el costo de cálculo y la memoria. El crecimiento por hojas elige en cada paso la hoja cuya división reduce más la pérdida; produce árboles asimétricos y suele alcanzar menor error con el mismo número de hojas, pero también sobreajusta más rápido en conjuntos pequeños. Por eso el hiperparámetro principal es num_leaves, no la profundidad; una regla práctica es mantener num_leaves por debajo de 2 elevado a max_depth. GOSS y EFB son optimizaciones para acelerar con millones de filas y variables dispersas. Recuerde que HistGradientBoostingClassifier de scikit-learn se inspira en LightGBM y es una buena opción sin dependencias externas. Pregunta para la clase: con 4000 filas de datos de una pyme, ¿qué valores de num_leaves y min_child_samples serían prudentes como punto de partida?"
+        },
+        {
+          "title": "CatBoost: variables categóricas y boosting ordenado",
+          "bullets": [
+            "Prokhorenkova et al. (2018): codificación por estadísticos de objetivo ordenados, sin fuga de la etiqueta del propio registro.",
+            "Boosting ordenado: evita el desplazamiento de predicción causado por reutilizar los mismos datos en cada paso.",
+            "Árboles simétricos (oblivious): la misma condición en todo un nivel, inferencia muy rápida y regularización implícita.",
+            "Útil para variables como distrito, ocupación, plan tarifario o código CIIU sin codificación one-hot manual."
+          ],
+          "notes": "CatBoost, desarrollado por Yandex, resuelve un problema que los estudiantes enfrentaron en Aprendizaje Automático I: codificar variables categóricas con muchos niveles. La codificación por objetivo ingenua, que reemplaza cada categoría por la media de y, filtra información del propio registro y sobreajusta, sobre todo en categorías con pocas observaciones. CatBoost ordena aleatoriamente los datos y codifica cada registro usando solo los registros anteriores en esa permutación, de modo que su propia etiqueta nunca interviene. El boosting ordenado aplica la misma lógica a los residuos para evitar el desplazamiento de predicción. Los árboles simétricos aplican la misma condición a todos los nodos de un nivel, lo que acelera mucho la inferencia y actúa como regularizador. En la práctica peruana, variables como ubigeo, distrito, código CIIU de actividad económica o tipo de plan tarifario se benefician de este tratamiento. Muestre el parámetro cat_features en Colab. Pregunta para la clase: ¿por qué codificar el distrito con la morosidad promedio calculada sobre todo el entrenamiento produce una estimación optimista del desempeño?"
+        },
+        {
+          "title": "Parada temprana sin fuga de información",
+          "bullets": [
+            "Entrenar con muchos árboles y detener cuando la métrica de validación no mejora durante k rondas consecutivas.",
+            "El conjunto de parada debe ser distinto del de prueba; usar el mismo para ambos sobreestima el desempeño.",
+            "En validación cruzada, cada partición aplica su propia parada temprana; registrar best_iteration por partición.",
+            "Al reentrenar con todos los datos, fijar el número de árboles con la mejor iteración promedio, ligeramente aumentada."
+          ],
+          "notes": "Insista en este punto, porque es la fuente de error más frecuente en proyectos de boosting. La parada temprana es una forma de ajuste de hiperparámetros: elige el número de árboles mirando una métrica. Si esa métrica se calcula sobre el conjunto de prueba, la prueba deja de ser independiente y el desempeño reportado es optimista. El esquema correcto separa tres conjuntos: entrenamiento, validación para la parada temprana y prueba intocable; o bien usa validación cruzada donde cada partición tiene su propia parada temprana. En LightGBM se implementa con el callback early_stopping y en XGBoost con early_stopping_rounds. Recomiende una paciencia de 50 a 200 rondas según la tasa de aprendizaje. Al reentrenar con todos los datos de desarrollo ya no hay conjunto para detenerse, por lo que se fija el número de árboles con la mejor iteración promedio de las particiones, a veces incrementada en proporción al mayor tamaño de muestra. Pregunta para la clase: en datos temporales, ¿qué periodo usarían como conjunto de parada temprana?"
+        },
+        {
+          "title": "Optimización bayesiana de hiperparámetros con Optuna",
+          "bullets": [
+            "La búsqueda bayesiana modela qué regiones del espacio prometen mejores resultados y prioriza explorarlas.",
+            "Optuna (Akiba et al., 2019) usa por defecto el estimador TPE y permite podar ensayos poco prometedores.",
+            "Espacios sugeridos: learning_rate logarítmico 0,01-0,2; num_leaves 15-255; min_child_samples 20-300; regularización L2.",
+            "Fijar presupuesto (50 a 200 ensayos), semilla y métrica de validación cruzada; la prueba nunca participa."
+          ],
+          "notes": "Recuerde que en Aprendizaje Automático I usaron búsqueda en rejilla, búsqueda aleatoria y reducción sucesiva a la mitad. La optimización bayesiana añade memoria: usa los resultados de los ensayos anteriores para construir un modelo probabilístico de qué combinaciones prometen, y equilibra explorar regiones desconocidas con explotar las regiones buenas. Optuna implementa el estimador de Parzen estructurado en árbol (TPE), propuesto por Bergstra y colaboradores, y permite podar ensayos que a mitad del entrenamiento ya lucen peores que la mediana, lo que ahorra cómputo. Muestre la definición de una función objetivo que reciba un trial, sugiera hiperparámetros y devuelva el AUC promedio de validación cruzada. Enfatice dos disciplinas: definir el presupuesto de antemano y nunca consultar el conjunto de prueba durante la búsqueda. Comente que los gráficos de importancia de hiperparámetros de Optuna ayudan a entender qué perillas importan realmente. Pregunta para la clase: si después de 200 ensayos la mejora respecto de la configuración por defecto es de 0,003 en AUC, ¿vale la pena el costo de cómputo y de tiempo?"
+        },
+        {
+          "title": "Votación y apilamiento (stacking)",
+          "bullets": [
+            "Votación suave: promedia probabilidades de modelos diversos; funciona mejor si están calibrados.",
+            "Apilamiento (Wolpert, 1992): un metamodelo aprende a combinar las predicciones fuera de partición de los modelos base.",
+            "StackingClassifier genera esas predicciones con validación cruzada interna para evitar fuga de información.",
+            "Conviene un metamodelo simple, como regresión logística; las ganancias suelen ser pequeñas y el mantenimiento, costoso."
+          ],
+          "notes": "Distinga tres formas de combinar modelos heterogéneos. La votación dura cuenta votos de clases; la suave promedia probabilidades y suele funcionar mejor si los modelos están calibrados. El apilamiento entrena un metamodelo que aprende cuánto confiar en cada modelo base. El punto técnico clave es que el metamodelo debe aprender de predicciones que los modelos base hicieron sobre datos que no vieron; de lo contrario, aprendería a confiar en el modelo que más sobreajustó. StackingClassifier de scikit-learn resuelve esto internamente con predicciones de validación cruzada. Recomiende un metamodelo simple y regularizado. Sea honesto con los estudiantes: en la industria, las ganancias del apilamiento sobre un buen modelo de boosting suelen ser de milésimas, mientras que el costo de mantener cinco modelos en producción es real. Se justifica en competencias o cuando los modelos base aportan señales realmente distintas, por ejemplo uno tabular y otro de texto de reclamos. Pregunta para la clase: ¿cuándo justificarían un apilamiento en un banco peruano y cuándo no?"
+        },
+        {
+          "title": "Restricciones monotónicas y modelos aceptables para el negocio",
+          "bullets": [
+            "Obligan a que la predicción solo aumente, o solo disminuya, con una variable cuando las demás se mantienen constantes.",
+            "Ejemplo crediticio: a mayor número de días de atraso histórico, el riesgo estimado no puede disminuir.",
+            "Disponibles en XGBoost y LightGBM (monotone_constraints) y en HistGradientBoosting (monotonic_cst).",
+            "Suelen costar poco desempeño y mejoran la estabilidad, la confianza del usuario y la defensa ante auditorías."
+          ],
+          "notes": "Plantee el problema con un ejemplo de crédito: un modelo de boosting puede aprender, por ruido o por sesgos de selección, que clientes con 45 días de atraso tienen menos riesgo que clientes con 30 días. Aunque la métrica global sea buena, un analista de riesgos o un auditor no aceptará un modelo que contradice la lógica del negocio, y los clientes podrían recibir un trato incoherente. Las restricciones monotónicas obligan al modelo a respetar la dirección esperada: en LightGBM se pasa una lista con 1, −1 o 0 por variable. Muestre un gráfico de dependencia parcial antes y después de la restricción: la curva pasa de un serrucho irregular a una escalera monótona. Explique que la pérdida de AUC suele ser pequeña y a veces la generalización mejora, porque la restricción actúa como regularización basada en conocimiento experto. Vincule con la gestión del riesgo de crédito que supervisa la SBS y con la necesidad de explicar decisiones a los usuarios. Pregunta para la clase: ¿qué variables de un modelo de fuga de clientes de telecomunicaciones deberían llevar restricciones monotónicas?"
+        },
+        {
+          "title": "Interpretar modelos de boosting con TreeSHAP",
+          "bullets": [
+            "TreeSHAP (Lundberg et al., 2020) calcula valores de Shapley exactos para ensambles de árboles en tiempo polinomial.",
+            "Aditividad: valor base más la suma de contribuciones es igual a la salida del modelo, en log-odds para clasificación.",
+            "Gráficos: resumen (beeswarm) para la visión global, dependencia para interacciones y cascada para un caso individual.",
+            "Las explicaciones describen el modelo, no la realidad causal; variables correlacionadas se reparten el crédito."
+          ],
+          "notes": "Retome los valores SHAP vistos en Aprendizaje Automático I. Para modelos genéricos, calcular valores de Shapley exactos es computacionalmente costoso, pero Lundberg y colaboradores desarrollaron TreeSHAP, que aprovecha la estructura de los árboles para calcularlos de forma exacta y rápida. Explique la aditividad con un caso concreto: para un cliente, el valor base del modelo es −2,1 en log-odds, los reclamos recientes suman 0,8, la antigüedad resta 0,3 y el resto de variables suma 0,4; la salida final es −1,2, es decir, una probabilidad cercana a 23 %. Recuerde que en clasificación la explicación está en log-odds, no en probabilidades. Advierta dos trampas: con variables muy correlacionadas el crédito se reparte de forma arbitraria, y una contribución alta no significa que intervenir esa variable cambie el resultado. Muestre el gráfico de dependencia SHAP para descubrir interacciones. Pregunta para la clase: ¿cómo usarían un gráfico de cascada para explicar a un asesor comercial por qué un cliente específico fue priorizado para una acción de retención?"
+        },
+        {
+          "title": "¿Por qué los árboles siguen dominando en datos tabulares?",
+          "bullets": [
+            "Grinsztajn, Oyallon y Varoquaux (2022): en 45 conjuntos tabulares medianos, los ensambles de árboles superan a las redes profundas.",
+            "Razones: robustez ante variables irrelevantes, funciones objetivo irregulares y ausencia de invariancia a rotaciones.",
+            "Modelos fundacionales tabulares recientes, como TabPFN, compiten con el boosting en conjuntos pequeños.",
+            "Regla práctica: empezar con boosting bien validado y exigir evidencia sólida para adoptar modelos más complejos."
+          ],
+          "notes": "Comparta la evidencia: Grinsztajn, Oyallon y Varoquaux (2022) compararon sistemáticamente modelos basados en árboles y redes profundas sobre un banco de 45 conjuntos tabulares de tamaño medio, del orden de diez mil observaciones, y los árboles ganaron de forma consistente. Explique sus hallazgos: las redes son más sensibles a variables irrelevantes, tienden a aprender funciones demasiado suaves cuando la relación real es irregular, y su invariancia a rotaciones mezcla variables con significados distintos. Esto no descalifica el aprendizaje profundo, que estudiarán el próximo ciclo y que domina en imágenes, texto y audio, pero sí orienta la práctica: para datos de negocio estructurados, el boosting bien validado es el punto de partida. Mencione que modelos fundacionales tabulares recientes, como TabPFN, publicado por Hollmann y colaboradores en 2025, muestran resultados competitivos en conjuntos pequeños, un área en rápida evolución. Pregunta para la clase: si un proveedor propone una red neuronal para predecir morosidad con 15 000 registros, ¿qué evidencia le exigirían antes de aceptarla?"
+        },
+        {
+          "title": "Lista de verificación antes de entregar un modelo de boosting",
+          "bullets": [
+            "Línea base documentada, como regresión logística o bosque aleatorio, evaluada con la misma validación.",
+            "Validación acorde a la estructura de los datos y parada temprana separada del conjunto de prueba.",
+            "Métrica de negocio, umbral derivado de una matriz de costos y probabilidades verificadas con curva de confiabilidad.",
+            "Explicaciones TreeSHAP revisadas con expertos del dominio y restricciones monotónicas donde corresponda.",
+            "Análisis por subgrupos, versiones de librerías, semillas y tamaño del modelo registrados."
+          ],
+          "notes": "Use esta lista como cierre y como instrumento de autoevaluación para la Tarea 2. Explique cada punto con un error frecuente en proyectos reales: modelos sin línea base de los que no se sabe si mejoran algo; parada temprana sobre la prueba; AUC excelente pero umbral elegido al azar; probabilidades sin calibrar que alimentan un cálculo de rentabilidad; explicaciones nunca revisadas por expertos del negocio que esconden fugas de información; diferencias de desempeño entre regiones o grupos que nadie midió. Recuerde que el boosting con pérdida logarítmica suele producir probabilidades razonables, pero el submuestreo de clases o los pesos alteran esa calibración, por lo que debe verificarse con la curva de confiabilidad. Pida registrar versiones de librerías y semillas: el mismo código con otra versión de LightGBM puede producir resultados distintos. Anticipe que el monitoreo y el despliegue se profundizarán en Despliegue de Modelos (MLOps). Pregunta para la clase: ¿cuál de estos puntos creen que se omite con más frecuencia en la práctica profesional y por qué ocurre?"
+        }
+      ],
+      "reading": {
+        "title": "Boosting de gradiente: teoría y práctica con XGBoost, LightGBM y CatBoost",
+        "minutes": 40,
+        "content": "## Del voto ponderado al gradiente\n\nAdaBoost (Freund y Schapire, 1997) mostró que una secuencia de clasificadores débiles, cada uno entrenado con más peso en los errores del anterior, produce un clasificador fuerte. Friedman, Hastie y Tibshirani (2000) reinterpretaron AdaBoost como un modelo aditivo que minimiza por etapas la pérdida exponencial. Esa lectura abrió la puerta a la generalización de Friedman (2001): si el boosting es optimización, puede minimizar **cualquier** pérdida diferenciable mediante descenso de gradiente en el espacio de funciones.\n\n## El algoritmo general\n\n```text\n1. F₀(x) = argmin_c Σᵢ L(yᵢ, c)                     # constante inicial\n2. Para m = 1, …, M:\n   a. rᵢₘ = −∂L(yᵢ, F(xᵢ)) / ∂F(xᵢ), con F = Fₘ₋₁   # pseudo-residuos\n   b. Ajustar un árbol de regresión hₘ a los pares (xᵢ, rᵢₘ)\n   c. Calcular el valor óptimo de cada hoja\n   d. Fₘ(x) = Fₘ₋₁(x) + ν · hₘ(x)                   # contracción ν\n3. Predicción final: F_M(x)\n```\n\nCon pérdida cuadrática, el pseudo-residuo es el residuo ordinario y − F. Con pérdida logarítmica binaria y F en escala de log-odds, es y − p. Con pérdida cuantil se pronostican percentiles, útiles para inventarios de seguridad. Tres perillas gobiernan la generalización: la tasa ν, la complejidad de cada árbol y el número de árboles M, que se determina con parada temprana. El submuestreo de filas y columnas (boosting estocástico) añade diversidad y reduce el tiempo de cálculo.\n\n## Regularización de segundo orden en XGBoost\n\nChen y Guestrin (2016) incorporaron la complejidad del árbol al objetivo y usaron una expansión de Taylor de segundo orden con gradientes gᵢ y hessianos hᵢ. Si G y H son sus sumas en una hoja:\n\n```text\nObjetivo = Σᵢ l(yᵢ, ŷᵢ) + Σₖ [ γ·Tₖ + ½·λ·‖wₖ‖² ]\nw*ⱼ      = − Gⱼ / (Hⱼ + λ)\nGanancia = ½ [ G_L²/(H_L+λ) + G_R²/(H_R+λ) − (G_L+G_R)²/(H_L+H_R+λ) ] − γ\n```\n\nLambda encoge los pesos de las hojas y gamma exige una ganancia mínima para dividir. El algoritmo aprende además la dirección por defecto de los valores faltantes en cada división.\n\n## Tres implementaciones, tres énfasis\n\n- **XGBoost:** regularización explícita, crecimiento por niveles y gran madurez en la industria.\n- **LightGBM** (Ke et al., 2017): histogramas de hasta 255 intervalos, crecimiento por hojas y muestreo por gradiente (GOSS). Muy rápido con millones de filas; el control principal es num_leaves.\n- **CatBoost** (Prokhorenkova et al., 2018): estadísticos de objetivo ordenados para variables categóricas y árboles simétricos de inferencia rápida. Destaca con variables como distrito, CIIU o plan tarifario.\n\nEn scikit-learn, HistGradientBoostingClassifier ofrece una alternativa similar a LightGBM, con soporte de faltantes, categorías y restricciones monotónicas.\n\n## Flujo recomendado: parada temprana dentro de Optuna\n\n```python\nimport numpy as np, optuna, lightgbm as lgb\nfrom sklearn.model_selection import StratifiedKFold\nfrom sklearn.metrics import roc_auc_score\n\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=7)\n\ndef objetivo(trial):\n    params = dict(\n        learning_rate=trial.suggest_float(\"learning_rate\", 0.01, 0.2, log=True),\n        num_leaves=trial.suggest_int(\"num_leaves\", 15, 255, log=True),\n        min_child_samples=trial.suggest_int(\"min_child_samples\", 20, 300, log=True),\n        colsample_bytree=trial.suggest_float(\"colsample_bytree\", 0.5, 1.0),\n        reg_lambda=trial.suggest_float(\"reg_lambda\", 1e-3, 10, log=True),\n        n_estimators=5000, verbose=-1)\n    aucs = []\n    for tr, va in cv.split(X_dev, y_dev):          # X_dev excluye la prueba\n        m = lgb.LGBMClassifier(**params)\n        m.fit(X_dev.iloc[tr], y_dev.iloc[tr],\n              eval_set=[(X_dev.iloc[va], y_dev.iloc[va])], eval_metric=\"auc\",\n              callbacks=[lgb.early_stopping(200, verbose=False)])\n        aucs.append(roc_auc_score(y_dev.iloc[va], m.predict_proba(X_dev.iloc[va])[:, 1]))\n    return np.mean(aucs)\n\nestudio = optuna.create_study(direction=\"maximize\",\n                              sampler=optuna.samplers.TPESampler(seed=7))\nestudio.optimize(objetivo, n_trials=80)\n```\n\nAquí cada partición se usa para detener y para medir, lo que introduce un optimismo pequeño; por eso el conjunto de prueba, separado desde el inicio, da la palabra final. Con datos temporales, StratifiedKFold debe sustituirse por TimeSeriesSplit.\n\n## Aplicaciones en el Perú\n\nEn telecomunicaciones, la portabilidad numérica permite cambiar de operador conservando el número, y los modelos de fuga priorizan acciones de retención. En microfinanzas, los modelos de riesgo crediticio deben ser coherentes con la lógica del negocio y explicables ante auditores y ante la supervisión de la SBS; las restricciones monotónicas y TreeSHAP (Lundberg et al., 2020) atienden esa exigencia. En ambos casos rige la Ley 29733: los datos personales solo pueden tratarse para finalidades determinadas y legítimas.\n\n## Errores frecuentes\n\n1. Usar la prueba para la parada temprana o para elegir hiperparámetros.\n2. Particiones aleatorias en datos temporales o con varios registros por cliente.\n3. Codificar categorías con la media del objetivo calculada sobre todo el conjunto.\n4. Reportar AUC sin traducirlo a una decisión con presupuesto o matriz de costos."
+      },
+      "case": {
+        "title": "Caso: Conecta Móvil y el modelo de fuga que parecía perfecto",
+        "content": "**Conecta Móvil S.A.** es un operador de telefonía móvil con 2,4 millones de líneas en el Perú, de las cuales 610 000 son pospago. En un mercado donde la portabilidad numérica permite cambiar de operador en pocas horas conservando el número, la gerencia comercial estima que pierde cada mes 2,2 % de sus líneas pospago, unas 13 400, con un valor de vida promedio de S/ 960 por línea.\n\nEl equipo de analítica, liderado por **Martín Huamán**, entrenó en tres semanas un modelo XGBoost para predecir qué líneas pospago solicitarán la portabilidad en los siguientes 30 días. Usó cortes mensuales de 18 meses de historia, 112 variables de consumo, facturación, reclamos, equipo, cobertura de red y navegación, y reportó un AUC de 0,962 en el conjunto de prueba. La gerencia celebró el resultado y lanzó una campaña: los 40 000 clientes con mayor puntaje recibieron una llamada con un descuento de 25 % durante seis meses, con un costo promedio de S/ 48 por cliente contactado.\n\nTres meses después, los resultados decepcionaron. Entre los contactados, la tasa de portabilidad fue 6,1 %; en un grupo de perfil similar que por un error operativo no fue llamado, 6,4 %. Una revisión independiente encontró tres problemas:\n\n1. La variable «consultas sobre portabilidad en la central telefónica» se registraba hasta el cierre del mes, a veces después de que el cliente ya había iniciado el trámite.\n2. La parada temprana se había hecho sobre el mismo conjunto de prueba usado para reportar el AUC.\n3. La partición era aleatoria por fila, y una misma línea aparecía en meses distintos en entrenamiento y en prueba.\n\nTras corregir los problemas con una partición temporal (entrenamiento hasta diciembre de 2024, validación de enero a marzo de 2025 y prueba de abril a junio de 2025), el equipo obtuvo:\n\n| Modelo | AUC prueba | Fugados capturados en los 40 000 puntajes más altos | Tiempo de entrenamiento |\n|---|---|---|---|\n| Regresión logística (línea base) | 0,781 | 31 % | 2 min |\n| XGBoost | 0,826 | 39 % | 18 min |\n| LightGBM | 0,829 | 40 % | 6 min |\n| CatBoost (plan, distrito y equipo como categóricas) | 0,834 | 41 % | 35 min |\n\nLa gerenta comercial, **Patricia Salas**, quiere «el modelo más preciso». El jefe de TI prefiere la regresión logística porque la entiende y puede mantenerla con su equipo actual. El área legal pregunta si es correcto usar datos de navegación para este fin. Y Patricia se pregunta, por primera vez, si llamar a los clientes con mayor riesgo de irse es lo mismo que llamar a los clientes que pueden ser retenidos.",
+        "questions": [
+          "Explica cómo cada uno de los tres problemas detectados infló el AUC de 0,962 y cómo debió diseñarse la validación desde el inicio.",
+          "Con 40 000 contactos, ¿por qué la proporción de fugados capturados importa más que el AUC? Estima el beneficio neto suponiendo que la oferta retiene al 25 % de los fugados contactados.",
+          "¿Qué modelo recomendarías considerando desempeño, costo de entrenamiento, mantenimiento y explicabilidad? Argumenta frente a la gerencia comercial y frente a TI.",
+          "¿Por qué un buen modelo de propensión a la fuga no garantiza el éxito de la campaña? ¿Qué diseño experimental propondrías para medir su efecto real?",
+          "¿Qué principios de la Ley 29733 deben revisarse antes de usar datos de navegación en el modelo y qué medidas propondrías?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Modelo de boosting optimizado, calibrado y explicado",
+        "instructions": "**Objetivo:** desarrollar un modelo de boosting de gradiente que supere a una línea base en un problema de fuga de clientes o de riesgo crediticio, con validación honesta, optimización bayesiana y explicaciones verificables.\n\n**Datos:** conjunto de fuga de clientes de telecomunicaciones o de riesgo crediticio de microfinanzas proporcionado por el docente, ambos con marca temporal.\n\n**Qué entregar:**\n\n1. Partición temporal en desarrollo y prueba; la prueba se usa una sola vez, al final, y debe declararse así en el cuaderno.\n2. Línea base (regresión logística regularizada o bosque aleatorio) y al menos dos implementaciones de boosting (XGBoost, LightGBM, CatBoost o HistGradientBoosting).\n3. Estudio de Optuna con al menos 50 ensayos, parada temprana dentro de cada partición y gráfico de la historia de optimización.\n4. Curva de confiabilidad, calibración si corresponde, y umbral o tamaño de campaña elegido con una matriz de costos o un presupuesto de contactos.\n5. Restricciones monotónicas en al menos dos variables justificadas con lógica de negocio, y análisis TreeSHAP global y de tres casos individuales.\n6. Informe técnico de máximo cuatro páginas con tabla comparativa, beneficio esperado y recomendación.\n\n**Formato:** cuaderno .ipynb ejecutable de principio a fin y PDF, subidos al aula virtual hasta el domingo de la semana 8 a las 23:59. Trabajo en parejas; cada integrante sustentará una sección en la sesión de retroalimentación.",
+        "rubric": [
+          {
+            "name": "Validación temporal y parada temprana sin fuga",
+            "points": 5
+          },
+          {
+            "name": "Optimización bayesiana y comparación con la línea base",
+            "points": 5
+          },
+          {
+            "name": "Calibración, umbral y métrica de negocio",
+            "points": 5
+          },
+          {
+            "name": "Interpretación con TreeSHAP y restricciones monotónicas",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: boosting de gradiente y combinación de modelos",
+        "questions": [
+          {
+            "prompt": "En gradient boosting con pérdida logarítmica binaria, ¿a qué se ajusta cada nuevo árbol?",
+            "options": [
+              "A las etiquetas originales y de cada observación",
+              "A los pseudo-residuos y − p, con p la probabilidad predicha actual",
+              "A los pesos de AdaBoost calculados en la ronda anterior",
+              "A los residuos del primer árbol del ensamble"
+            ],
+            "correct": 1,
+            "explanation": "El gradiente negativo de la pérdida logarítmica respecto de la predicción en log-odds es y − p. Cada árbol aprende a corregir esa diferencia entre la etiqueta y la probabilidad vigente."
+          },
+          {
+            "prompt": "Un equipo usa el conjunto de prueba como eval_set para la parada temprana y reporta ese mismo AUC. ¿Cuál es el problema?",
+            "options": [
+              "El número de árboles se eligió mirando la prueba, por lo que el AUC reportado es optimista",
+              "La parada temprana solo funciona con la pérdida logarítmica como métrica",
+              "LightGBM y XGBoost no permiten parada temprana con AUC",
+              "El conjunto de prueba debe ser siempre mayor que el de entrenamiento"
+            ],
+            "correct": 0,
+            "explanation": "La parada temprana es un ajuste de hiperparámetros. Si se hace con la prueba, esta deja de ser independiente y la estimación del desempeño queda sesgada al alza."
+          },
+          {
+            "prompt": "Si se reduce learning_rate de 0,1 a 0,02 manteniendo los demás hiperparámetros, ¿qué es esperable?",
+            "options": [
+              "Se necesitarán menos árboles para alcanzar el mismo error",
+              "El modelo pasará a comportarse como un bosque aleatorio",
+              "La profundidad de los árboles se reducirá automáticamente",
+              "Se necesitarán más árboles, con una posible mejora leve de la generalización"
+            ],
+            "correct": 3,
+            "explanation": "Con menor contracción cada árbol aporta menos, por lo que se requieren más iteraciones; a cambio, el ajuste es más gradual y suele generalizar algo mejor."
+          },
+          {
+            "prompt": "Un modelo LightGBM de riesgo crediticio asigna menor riesgo a algunos clientes con más días de atraso, contra la lógica del negocio. ¿Qué técnica aborda directamente el problema?",
+            "options": [
+              "Aumentar num_leaves para capturar más interacciones",
+              "Aplicar votación suave con un bosque aleatorio",
+              "Imponer una restricción monotónica creciente sobre los días de atraso",
+              "Eliminar la parada temprana para entrenar más árboles"
+            ],
+            "correct": 2,
+            "explanation": "La restricción monotónica obliga a que el riesgo no disminuya cuando aumentan los días de atraso, manteniendo constantes las demás variables, y suele costar poco desempeño."
+          },
+          {
+            "prompt": "Para un conjunto con distrito (1800 valores), código CIIU y plan tarifario, ¿qué ventaja ofrece CatBoost?",
+            "options": [
+              "Codifica categorías con estadísticos de objetivo ordenados, reduciendo la fuga y evitando un one-hot masivo",
+              "Convierte las categorías en texto para procesarlas con modelos de lenguaje",
+              "Elimina automáticamente las variables de alta cardinalidad antes de entrenar",
+              "Usa árboles asimétricos que crecen hoja por hoja"
+            ],
+            "correct": 0,
+            "explanation": "CatBoost codifica cada registro solo con los registros previos de una permutación aleatoria, de modo que su etiqueta no interviene. Sus árboles son simétricos, no de crecimiento por hojas."
+          },
+          {
+            "prompt": "En un gráfico TreeSHAP de un modelo de fuga, la variable «reclamos en 90 días» aporta +0,8 para un cliente. ¿Cómo se interpreta?",
+            "options": [
+              "Los reclamos causan un 80 % más de probabilidad de fuga en ese cliente",
+              "Para ese cliente, la variable eleva la salida del modelo en 0,8 log-odds respecto del valor base",
+              "La variable explica el 80 % de la varianza de las predicciones",
+              "La variable es la más importante para todos los clientes"
+            ],
+            "correct": 1,
+            "explanation": "En clasificación, TreeSHAP reparte la salida en log-odds: el valor base más las contribuciones da la predicción. Es una contribución local al modelo, no un efecto causal ni global."
+          },
+          {
+            "prompt": "¿Por qué StackingClassifier entrena el metamodelo con predicciones fuera de partición de los modelos base?",
+            "options": [
+              "Para reducir el número de modelos base necesarios",
+              "Porque el metamodelo debe ser siempre un árbol de decisión",
+              "Para calibrar automáticamente cada modelo base",
+              "Para que el metamodelo no aprenda a confiar en los modelos que más sobreajustaron"
+            ],
+            "correct": 3,
+            "explanation": "Si el metamodelo viera predicciones sobre datos de entrenamiento, los modelos que memorizaron parecerían perfectos. Las predicciones fuera de partición reflejan el desempeño real de cada modelo base."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Aprendizaje no supervisado: agrupamiento y reducción de dimensionalidad",
+      "description": "Al finalizar la unidad, el estudiante descubre estructura en datos no etiquetados mediante k-medias, agrupamiento jerárquico, DBSCAN, HDBSCAN y mezclas gaussianas, reduce dimensionalidad con PCA y visualiza con t-SNE o UMAP, y valida la calidad, la estabilidad y la utilidad de los segmentos para decisiones organizacionales.",
+      "topics": [
+        "Medidas de distancia, transformación y escalado de variables para agrupar",
+        "k-medias, k-medias++ y selección del número de grupos con codo, silueta e índices internos",
+        "Agrupamiento jerárquico, DBSCAN, HDBSCAN y mezclas gaussianas con el algoritmo EM",
+        "Análisis de componentes principales: varianza explicada, cargas y reconstrucción",
+        "t-SNE y UMAP para visualización exploratoria",
+        "Estabilidad, validación externa y perfilamiento accionable de segmentos"
+      ],
+      "slides": [
+        {
+          "title": "Aprender sin etiquetas: qué preguntas responde",
+          "bullets": [
+            "Aprendizaje no supervisado: descubrir estructura en X sin una variable objetivo que guíe el ajuste.",
+            "Tareas principales: agrupamiento, reducción de dimensionalidad, estimación de densidad y detección de anomalías.",
+            "Usos típicos: segmentación de clientes, tipologías territoriales, compresión de variables y exploración visual.",
+            "Dificultad central: no existe una respuesta correcta única; la validación combina criterios estadísticos y de utilidad."
+          ],
+          "notes": "Comience con un contraste: en las unidades anteriores siempre había una etiqueta que permitía medir el error. Aquí no existe, y eso cambia la naturaleza del trabajo: el analista debe definir qué significa una buena estructura y defender esa definición. Presente ejemplos peruanos: una cadena de farmacias que agrupa sus locales según patrones de venta para planificar el surtido; el agrupamiento de distritos según indicadores censales y de la ENAHO del INEI para focalizar programas sociales; una cooperativa que segmenta a sus socios para diseñar productos de ahorro. Explique que Hastie, Tibshirani y Friedman dedican el capítulo 14 de su libro a estos métodos y advierten que, sin un criterio externo, es difícil evaluar la calidad de los resultados. Señale que los segmentos se convierten en decisiones que afectan a personas, por lo que la interpretabilidad y la equidad importan tanto como en el aprendizaje supervisado. Pregunta para la clase: si dos analistas obtienen segmentaciones distintas de los mismos clientes, ¿cómo decidirían cuál es mejor?"
+        },
+        {
+          "title": "Distancias y la importancia del escalado",
+          "bullets": [
+            "Euclidiana para variables continuas comparables; Manhattan, más robusta ante extremos; coseno para perfiles y proporciones.",
+            "Sin escalar, la variable de mayor rango domina la distancia: un monto en soles opaca a la frecuencia de compra.",
+            "Transformar montos asimétricos con logaritmo y luego estandarizar; considerar RobustScaler ante valores atípicos.",
+            "Elegir variables es elegir la definición de similitud: cada variable añadida pesa en la segmentación."
+          ],
+          "notes": "Recuerde que todos los algoritmos de esta unidad dependen de una noción de similitud, y que esa elección es una decisión de modelado, no un detalle técnico. Muestre un ejemplo con dos bodegas: una compra S/ 45 000 al mes en 12 pedidos y otra S/ 47 000 en 2 pedidos. Sin escalar, la distancia euclidiana entre ellas es cercana a 2000 y depende casi por completo de los montos, aunque su forma de comprar sea radicalmente distinta: una pide cada pocos días y la otra, dos veces al mes. Explique que los montos monetarios suelen tener distribuciones muy asimétricas, con pocos clientes que concentran gran parte del volumen, por lo que conviene aplicar logaritmo antes de estandarizar. Introduzca la distancia coseno para mezclas de compra por categoría, donde importa la proporción y no el volumen. Advierta que incluir diez variables de ventas y una de pagos equivale a dar diez veces más peso a las ventas. Pregunta para la clase: ¿qué variables incluirían para segmentar a los socios de una cooperativa y qué peso implícito tendría cada bloque de variables?"
+        },
+        {
+          "title": "k-medias: el algoritmo de Lloyd",
+          "bullets": [
+            "Objetivo: minimizar la inercia Σₖ Σ ‖x − μₖ‖², la suma de distancias cuadradas de cada punto a su centroide.",
+            "Asignación: cada punto va al centroide más cercano; actualización: cada centroide pasa a la media de su grupo.",
+            "Converge siempre, pero a un mínimo local que depende de la inicialización.",
+            "Costo aproximadamente lineal en n: escala a millones de filas, sobre todo con MiniBatchKMeans."
+          ],
+          "notes": "Haga una demostración animada en Colab con datos bidimensionales: inicialice tres centroides al azar y ejecute paso a paso la asignación y la actualización, graficando cada iteración. Los estudiantes verán cómo los centroides migran hasta estabilizarse. Explique por qué converge: cada paso reduce o mantiene la inercia y el número de particiones posibles es finito. Sin embargo, la solución puede ser un mínimo local; por eso scikit-learn ejecuta varias inicializaciones con n_init y conserva la de menor inercia. Comente la historia: Stuart Lloyd propuso el algoritmo en los laboratorios Bell en 1957, aunque se publicó recién en 1982. Destaque la escalabilidad: es uno de los pocos algoritmos de agrupamiento viables para millones de registros, y MiniBatchKMeans lo acelera aún más usando lotes pequeños. Señale que los centroides son promedios y, por tanto, interpretables como el cliente típico de cada grupo. Pregunta para la clase: ¿por qué la inercia siempre disminuye al aumentar k, y por qué eso impide usarla sola para elegir el número de grupos?"
+        },
+        {
+          "title": "k-medias++ y las limitaciones de k-medias",
+          "bullets": [
+            "k-medias++ (Arthur y Vassilvitskii, 2007): elige centroides iniciales con probabilidad proporcional a D(x)².",
+            "Supuestos implícitos: grupos convexos, de tamaño y dispersión similares, separados por fronteras lineales.",
+            "Sensible a valores atípicos, pues la media se desplaza hacia ellos; k-medoides usa observaciones reales como centros.",
+            "Asigna todo punto a algún grupo: no reconoce ruido ni observaciones que no pertenecen a ningún segmento."
+          ],
+          "notes": "Explique k-medias++: el primer centroide se elige al azar y cada siguiente se sortea con probabilidad proporcional al cuadrado de la distancia al centroide más cercano ya elegido, lo que dispersa los centros iniciales y mejora la velocidad de convergencia y la calidad esperada; es la inicialización por defecto en scikit-learn. Luego muestre los fracasos de k-medias con tres conjuntos sintéticos: grupos alargados, grupos de tamaños muy diferentes y medias lunas. En los tres casos el algoritmo traza fronteras rectas que parten grupos naturales. La razón es que minimizar la inercia favorece grupos esféricos de dispersión similar. Comente que un solo cliente corporativo con compras cien veces mayores puede arrastrar un centroide; k-medoides es más robusto porque sus centros son observaciones reales y admite cualquier distancia. Pregunta para la clase: si su base de bodegas incluye algunos minimercados con compras veinte veces mayores al promedio, ¿qué alternativas tienen antes de aplicar k-medias?"
+        },
+        {
+          "title": "Elegir k: codo, silueta y otros índices",
+          "bullets": [
+            "Método del codo: graficar la inercia contra k y buscar dónde se desacelera la mejora; suele ser ambiguo.",
+            "Silueta (Rousseeuw, 1987): s(i) = (b − a)/max(a, b), entre −1 y 1; valores altos indican grupos compactos y separados.",
+            "Calinski-Harabasz (mayor es mejor) y Davies-Bouldin (menor es mejor) complementan el diagnóstico.",
+            "Estadístico de brecha (Tibshirani, Walther y Hastie, 2001): compara la inercia con la de datos de referencia sin grupos."
+          ],
+          "notes": "Explique la silueta con cuidado, porque será la métrica más usada: para cada punto, a es la distancia media a los miembros de su propio grupo y b la distancia media a los miembros del grupo vecino más cercano. Si a es mucho menor que b, el punto está bien asignado y su silueta se acerca a 1; si es negativa, probablemente está en el grupo equivocado. Muestre el gráfico de siluetas por grupo, que revela grupos con muchos puntos mal asignados aunque el promedio sea aceptable. Como referencia, Kaufman y Rousseeuw sugieren que promedios superiores a 0,5 indican una estructura razonable y menores que 0,25, una estructura débil o artificial. Advierta que estos índices favorecen grupos convexos y pueden contradecirse; ninguno sustituye el juicio sobre la utilidad. Presente brevemente el estadístico de brecha, que responde a una pregunta clave: ¿hay más estructura que en datos sin grupos? Pregunta para la clase: si el codo sugiere k = 3, la silueta k = 2 y el negocio necesita cinco segmentos, ¿cómo procederían?"
+        },
+        {
+          "title": "Agrupamiento jerárquico y dendrogramas",
+          "bullets": [
+            "Aglomerativo: cada punto inicia como grupo y se fusionan iterativamente los dos más cercanos hasta formar uno solo.",
+            "Enlaces: simple (distancia mínima), completo (máxima), promedio y Ward, que minimiza el aumento de varianza interna.",
+            "El dendrograma muestra la jerarquía completa; cortarlo a cierta altura define el número de grupos.",
+            "Requiere memoria cuadrática en n: viable hasta decenas de miles de observaciones o sobre una muestra."
+          ],
+          "notes": "Construya en la pizarra un dendrograma con seis puntos, por ejemplo seis departamentos del Perú descritos por dos indicadores: tasa de pobreza monetaria y acceso a internet en el hogar. Fusione paso a paso los pares más cercanos y muestre cómo la altura de cada fusión refleja la distancia. Explique que el dendrograma es valioso porque muestra la estructura a varios niveles de detalle: un ministerio puede trabajar con tres macrogrupos territoriales y una dirección regional con diez subgrupos, ambos consistentes entre sí. Compare los enlaces: el simple produce cadenas alargadas, el completo grupos compactos y Ward grupos de tamaño parecido, similares a los de k-medias. Recomiende Ward con distancia euclidiana como punto de partida para variables continuas estandarizadas. Señale la limitación de memoria: con 100 000 observaciones la matriz de distancias tiene cerca de 5000 millones de pares. Pregunta para la clase: ¿en qué problemas de su entorno sería útil contar con una jerarquía de grupos en lugar de una partición única?"
+        },
+        {
+          "title": "DBSCAN: grupos por densidad y detección de ruido",
+          "bullets": [
+            "Ester et al. (1996): un punto es núcleo si tiene al menos min_samples vecinos dentro de un radio eps.",
+            "Los grupos son regiones densas conectadas; los puntos frontera se unen a un núcleo y el resto se marca como ruido (−1).",
+            "Encuentra grupos de forma arbitraria y no exige fijar k de antemano.",
+            "Elegir eps con el gráfico de distancias al k-ésimo vecino; falla cuando los grupos tienen densidades muy distintas."
+          ],
+          "notes": "DBSCAN cambia la pregunta: en lugar de cuántos grupos hay, pregunta dónde se concentran los datos. Explique los tres tipos de puntos con un ejemplo geográfico: coordenadas de entregas de un operador logístico en Lima. Las zonas densas, como el emporio comercial de Gamarra, forman grupos; los puntos dispersos en la periferia quedan como ruido. Esto lo hace muy útil para datos espaciales con la distancia haversine. Muestre cómo elegir eps: se calcula para cada punto la distancia a su vecino número min_samples, se ordenan esas distancias y se busca el codo de la curva. Para min_samples, una regla práctica es usar al menos el número de dimensiones más uno, y valores mayores en datos ruidosos. Advierta la limitación principal: un único eps no sirve si existen grupos densos y otros dispersos, como el centro y la periferia de una ciudad. Señale que el ruido no es basura: puede contener a los clientes más valiosos o a casos anómalos. Pregunta para la clase: si DBSCAN marca como ruido al 15 % de los clientes, ¿qué harían con ellos?"
+        },
+        {
+          "title": "HDBSCAN y comparación de algoritmos",
+          "bullets": [
+            "HDBSCAN (Campello, Moulavi y Sander, 2013) construye una jerarquía de densidades y conserva los grupos más persistentes.",
+            "Maneja densidades variables y su parámetro principal es min_cluster_size; está en scikit-learn desde la versión 1.3.",
+            "k-medias: grupos esféricos y escalables; jerárquico: estructura multinivel; DBSCAN y HDBSCAN: formas arbitrarias y ruido.",
+            "Aplicar al menos dos familias de algoritmos y comparar sus particiones con el índice de Rand ajustado."
+          ],
+          "notes": "Presente HDBSCAN como la evolución práctica de DBSCAN: en lugar de fijar un radio, explora todos los radios posibles, construye un árbol de grupos y conserva los que persisten en un rango amplio de densidades. Su parámetro principal, min_cluster_size, tiene una interpretación de negocio directa: el tamaño mínimo que debe tener un segmento para ser accionable. Muestre una tabla comparativa de los algoritmos según forma de los grupos, escalabilidad, manejo de ruido, necesidad de fijar el número de grupos y parámetros. Recomiende una práctica metodológica: aplicar al menos dos familias de algoritmos y comparar sus particiones con el índice de Rand ajustado, que vale 1 si coinciden plenamente y cerca de 0 si coinciden solo por azar. Si métodos con supuestos distintos coinciden, la estructura es más creíble; si discrepan, puede ser débil o depender de decisiones de preprocesamiento. Pregunta para la clase: si k-medias y HDBSCAN muestran un índice de Rand ajustado de 0,2, ¿qué hipótesis plantearían sobre los datos?"
+        },
+        {
+          "title": "Mezclas gaussianas y el algoritmo EM",
+          "bullets": [
+            "Modelo probabilístico: los datos provienen de K distribuciones normales con medias, covarianzas y proporciones propias.",
+            "Algoritmo EM (Dempster, Laird y Rubin, 1977): el paso E calcula responsabilidades y el paso M reestima parámetros.",
+            "Asignación blanda: cada observación tiene una probabilidad de pertenecer a cada grupo; admite grupos elípticos.",
+            "Elegir K y el tipo de covarianza (full, tied, diag, spherical) con BIC; un BIC menor indica mejor compromiso."
+          ],
+          "notes": "Presente las mezclas gaussianas como una generalización probabilística de k-medias: si se fuerzan covarianzas esféricas iguales y asignaciones duras, se recupera k-medias. Explique EM en lenguaje sencillo: en el paso E, dados los parámetros actuales, se calcula qué tan responsable es cada componente de cada observación; en el paso M, con esas responsabilidades como pesos, se recalculan medias, covarianzas y proporciones. Se repite hasta que la verosimilitud deja de mejorar. Destaque el valor de las asignaciones blandas: un cliente con 55 % de probabilidad en un segmento y 45 % en otro es un caso frontera, y esa incertidumbre es información útil para el área comercial. Muestre cómo el criterio de información bayesiano penaliza la complejidad y permite comparar números de componentes y tipos de covarianza. Advierta que con muchas variables la covarianza completa tiene muchos parámetros y puede sobreajustar, por lo que conviene reducir dimensionalidad antes. Pregunta para la clase: ¿en qué decisión de negocio sería útil saber que un cliente pertenece a dos segmentos con probabilidades parecidas?"
+        },
+        {
+          "title": "Variables mixtas: distancia de Gower y k-prototipos",
+          "bullets": [
+            "Los datos de negocio combinan variables numéricas, categóricas y binarias, como rubro, distrito y uso de billetera digital.",
+            "Distancia de Gower (1971): promedia disimilitudes por variable, normalizadas por rango o por coincidencia de categoría.",
+            "k-prototipos (Huang, 1998): combina medias para variables numéricas y modas para categóricas.",
+            "Alternativa: one-hot con ponderación cuidadosa, sabiendo que las variables binarias pueden dominar la distancia."
+          ],
+          "notes": "Explique que la mayoría de bases empresariales no son puramente numéricas. Una bodega se describe por sus compras, pero también por su distrito, su formato y si acepta pagos con billetera digital. Aplicar one-hot y luego distancia euclidiana es común, pero introduce problemas: cada categoría se convierte en una dimensión y las variables con muchos niveles ganan peso implícito. La distancia de Gower calcula una disimilitud entre 0 y 1 para cada variable, según su tipo, y las promedia, lo que permite tratar datos mixtos de forma equilibrada. Se combina naturalmente con agrupamiento jerárquico o con k-medoides, que aceptan matrices de distancias precalculadas. k-prototipos, disponible en la librería kmodes, extiende k-medias a datos mixtos con un parámetro que pondera la parte categórica. Advierta el costo: Gower requiere una matriz de distancias de tamaño cuadrático. Pregunta para la clase: en la segmentación de los socios de una cooperativa, ¿qué variables categóricas incluirían y qué riesgo de discriminación habría que vigilar?"
+        },
+        {
+          "title": "Análisis de componentes principales (PCA)",
+          "bullets": [
+            "Pearson (1901) y Hotelling (1933): combinaciones lineales ortogonales que capturan sucesivamente la máxima varianza.",
+            "Componentes: vectores propios de la matriz de covarianza; varianza explicada: valores propios correspondientes.",
+            "Se calcula con la descomposición en valores singulares de X centrada; estandarizar si las unidades difieren.",
+            "Usos: comprimir variables correlacionadas, reducir ruido, visualizar y preparar datos para agrupar."
+          ],
+          "notes": "Conecte con Álgebra Lineal Aplicada, que cursaron el ciclo anterior: PCA es una aplicación directa de valores y vectores propios y de la descomposición en valores singulares. Explique geométricamente: el primer componente es la dirección en la que los datos varían más; el segundo es la dirección ortogonal con la mayor varianza restante, y así sucesivamente. Muestre en Colab un ejemplo con indicadores socioeconómicos de distritos: pobreza, acceso a agua, saneamiento, internet, años de educación e informalidad están muy correlacionados, y un primer componente puede resumirlos como un índice de desarrollo. Insista en estandarizar: si una variable está en soles y otra en porcentajes, la de mayor varianza numérica domina el primer componente sin razón sustantiva. Explique que PCA es lineal y no supervisado: los componentes con más varianza no son necesariamente los más útiles para predecir. Pregunta para la clase: ¿por qué aplicar PCA antes de k-medias puede mejorar la segmentación cuando hay muchas variables redundantes?"
+        },
+        {
+          "title": "Interpretar PCA: varianza explicada y cargas",
+          "bullets": [
+            "explained_variance_ratio_ indica la proporción de varianza que captura cada componente.",
+            "Gráfico de sedimentación y varianza acumulada: retener componentes hasta 80 % o 90 %, según el propósito.",
+            "Las cargas (components_) muestran el peso de cada variable original; nombrar cada componente según sus cargas dominantes.",
+            "El biplot superpone observaciones y cargas; dos componentes pueden ocultar estructura relevante en los siguientes."
+          ],
+          "notes": "Muestre una tabla de cargas y enseñe a leerla: si el primer componente tiene cargas positivas altas en acceso a internet, educación y saneamiento, y negativa en pobreza, puede nombrarse eje de desarrollo; si el segundo contrasta altitud con temperatura, podría ser un eje geográfico. Este ejercicio de nombrar componentes convierte una técnica matemática en un insumo para la discusión con expertos. Explique los criterios de retención: el acumulado del 80 % o 90 % es habitual para compresión; el criterio de Kaiser retiene componentes con valor propio mayor que 1 en datos estandarizados, y el análisis paralelo compara con datos aleatorios. Advierta un error frecuente: proyectar en dos componentes que explican 35 % de la varianza y concluir que no hay grupos porque el gráfico no los muestra; la estructura puede estar en otras dimensiones. Pida verificar la reconstrucción con inverse_transform para entender cuánta información se pierde. Pregunta para la clase: ¿qué harían si el primer componente está dominado por una sola variable?"
+        },
+        {
+          "title": "t-SNE y UMAP: visualizar, no agrupar",
+          "bullets": [
+            "t-SNE (van der Maaten y Hinton, 2008) preserva vecindarios locales; su parámetro principal es la perplejidad, entre 5 y 50.",
+            "En un mapa t-SNE, las distancias entre grupos y los tamaños aparentes no son interpretables.",
+            "UMAP (McInnes, Healy y Melville, 2018) es más rápido, conserva algo más de estructura global y transforma datos nuevos.",
+            "Uso correcto: explorar y comunicar; agrupar en el espacio original o en PCA, no sobre el mapa bidimensional."
+          ],
+          "notes": "Muestre el mismo conjunto, por ejemplo perfiles de compra de clientes, proyectado con PCA, t-SNE y UMAP. Los estudiantes verán que t-SNE y UMAP separan grupos de forma mucho más nítida que PCA, porque son métodos no lineales que priorizan los vecindarios locales. Luego deconstruya la imagen: cambie la perplejidad y la semilla, y los grupos cambiarán de posición, tamaño y separación. Explique que t-SNE expande regiones densas y contrae regiones dispersas, de modo que la distancia entre dos manchas o su tamaño no significan nada en el espacio original. UMAP tiene parámetros análogos, n_neighbors y min_dist, y ofrece un método transform para proyectar observaciones nuevas, algo que t-SNE no permite en scikit-learn. La recomendación es usarlos para explorar y comunicar, y validar cualquier hallazgo con métodos y métricas en el espacio original. Pregunta para la clase: un consultor presenta un mapa UMAP con siete manchas y afirma que existen exactamente siete tipos de clientes; ¿qué le responderían?"
+        },
+        {
+          "title": "Estabilidad y validación externa de los segmentos",
+          "bullets": [
+            "Estabilidad: repetir el agrupamiento en submuestras y medir la coincidencia con el índice de Rand ajustado.",
+            "Índice de Jaccard por grupo (Hennig, 2007): valores menores que 0,6 indican grupos poco confiables.",
+            "Validación externa: comparar segmentos con variables no usadas en el ajuste, como rentabilidad futura o respuesta a campañas.",
+            "Validación temporal: verificar que los segmentos se mantienen razonablemente con datos de otro periodo."
+          ],
+          "notes": "Esta diapositiva aporta el rigor que suele faltar en las segmentaciones empresariales. Un segmento que aparece con una semilla y desaparece con otra no debería convertirse en una estrategia comercial. Explique el procedimiento de Hennig: se generan muchas muestras por remuestreo, se repite el agrupamiento y, para cada grupo original, se busca el grupo más parecido en cada réplica y se calcula su índice de Jaccard; los grupos con promedios altos son estables. Como regla práctica, valores superiores a 0,75 indican grupos estables y menores que 0,6, grupos dudosos. Luego explique la validación externa: si los segmentos capturan diferencias relevantes, deberían diferir en variables que no participaron del ajuste, como la morosidad de los seis meses siguientes o la respuesta a una promoción. Finalmente, la validación temporal verifica que la segmentación no sea un artefacto de un periodo atípico, como una campaña navideña. Pregunta para la clase: ¿qué variable externa usarían para validar una segmentación de bodegas de una distribuidora?"
+        },
+        {
+          "title": "De los grupos a la acción: perfilamiento de segmentos",
+          "bullets": [
+            "Describir cada grupo en unidades originales: medianas, proporciones y diferencias respecto del promedio general.",
+            "Árbol de decisión sustituto: entrenar un árbol que prediga el segmento y traducirlo a reglas comprensibles.",
+            "Nombrar los segmentos por su comportamiento, no por atributos sensibles ni con etiquetas estigmatizantes.",
+            "Asociar a cada segmento una acción, un indicador de éxito y un responsable; revisar la segmentación periódicamente."
+          ],
+          "notes": "Cierre la unidad con el paso que convierte el análisis en valor: un segmento solo es útil si alguien sabe qué hacer con él. Muestre una ficha de perfil por segmento: tamaño, compras medianas, frecuencia, mezcla de categorías, uso de crédito y diferencias porcentuales respecto del promedio. Enseñe la técnica del árbol sustituto: se entrena un árbol de decisión poco profundo para predecir la etiqueta del grupo a partir de las variables originales; si alcanza alta exactitud, sus reglas permiten que un vendedor clasifique una bodega nueva sin ejecutar el modelo. Discuta la nomenclatura: nombres como bodegas de alto potencial o clientes de compra esporádica orientan la acción, mientras que etiquetas basadas en el nivel socioeconómico de la zona pueden estigmatizar y derivar en discriminación. Vincule con la Ley 29733 y su principio de finalidad. Pregunta para la clase: para cada segmento de su tarea, ¿cuál sería la acción concreta, el indicador de éxito y el responsable de ejecutarla?"
+        }
+      ],
+      "reading": {
+        "title": "Encontrar estructura sin etiquetas: agrupamiento y reducción de dimensionalidad",
+        "minutes": 40,
+        "content": "## Cuando no hay etiqueta\n\nEn el aprendizaje supervisado, la etiqueta actúa como árbitro: permite medir el error y comparar modelos. En el aprendizaje no supervisado ese árbitro desaparece. Hastie, Tibshirani y Friedman (2009) lo resumen así: sin una medida directa de éxito, la validez de las conclusiones depende de heurísticas y del juicio del analista. Por eso el trabajo no supervisado exige más disciplina, no menos: definir con claridad la decisión que se quiere apoyar, elegir conscientemente la noción de similitud y validar los resultados desde varios ángulos.\n\n## k-medias y su función objetivo\n\nk-medias busca K grupos que minimicen la inercia, y la silueta (Rousseeuw, 1987) evalúa la calidad de cada asignación:\n\n```text\nInercia = Σₖ Σ_{x ∈ Cₖ} ‖x − μₖ‖²\ns(i)    = (b(i) − a(i)) / max{a(i), b(i)}\na(i): distancia media a su propio grupo\nb(i): distancia media al grupo vecino más cercano\n```\n\nEl algoritmo de Lloyd alterna asignación y actualización hasta converger a un mínimo local; la inicialización k-medias++ y varias corridas (n_init) mitigan ese problema. Sus supuestos implícitos son grupos convexos, de tamaño similar y sin ruido. Cuando los datos no los cumplen, conviene considerar otras familias.\n\n## Más allá de los grupos esféricos\n\n- **Jerárquico aglomerativo:** fusiona progresivamente los grupos más cercanos; con enlace de Ward produce grupos compactos y el dendrograma muestra la estructura a varios niveles.\n- **DBSCAN** (Ester et al., 1996) y **HDBSCAN:** definen grupos como regiones densas, encuentran formas arbitrarias y separan el ruido. HDBSCAN tolera densidades variables.\n- **Mezclas gaussianas:** modelo probabilístico ajustado con EM; entrega probabilidades de pertenencia y admite grupos elípticos. El BIC orienta la elección del número de componentes.\n\nCon variables mixtas, la distancia de Gower combinada con agrupamiento jerárquico o k-medoides evita los sesgos de aplicar one-hot y distancia euclidiana.\n\n## Reducción de dimensionalidad\n\nPCA encuentra direcciones ortogonales de máxima varianza. Con X centrada y estandarizada:\n\n```text\nΣ = (1/(n − 1)) · XᵀX\nΣ·vⱼ = λⱼ·vⱼ\nProporción de varianza del componente j = λⱼ / Σₖ λₖ\n```\n\nLas cargas vⱼ permiten nombrar los componentes; la varianza acumulada indica cuántos retener. t-SNE y UMAP, métodos no lineales, producen mapas bidimensionales muy expresivos, pero sus distancias globales y tamaños aparentes no son interpretables: sirven para explorar y comunicar, no para definir segmentos.\n\n## Un flujo reproducible en Python\n\n```python\nimport numpy as np\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import FunctionTransformer, StandardScaler\nfrom sklearn.decomposition import PCA\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score, adjusted_rand_score\n\n# Montos no negativos y asimétricos: logaritmo, estandarización y PCA al 85 %\nprep = make_pipeline(FunctionTransformer(np.log1p), StandardScaler(), PCA(n_components=0.85))\nZ = prep.fit_transform(X)\nprint(prep[-1].explained_variance_ratio_.round(3))\n\nfor k in range(2, 9):\n    km = KMeans(n_clusters=k, n_init=20, random_state=0).fit(Z)\n    print(k, round(silhouette_score(Z, km.labels_), 3),\n          round(davies_bouldin_score(Z, km.labels_), 3))\n\n# Estabilidad: reajustar en submuestras del 80 % y comparar con la referencia\nref = KMeans(n_clusters=5, n_init=20, random_state=0).fit(Z)\nrng = np.random.default_rng(0)\nari = []\nfor _ in range(30):\n    idx = rng.choice(len(Z), size=int(0.8 * len(Z)), replace=False)\n    km_b = KMeans(n_clusters=5, n_init=10,\n                  random_state=int(rng.integers(1_000_000))).fit(Z[idx])\n    ari.append(adjusted_rand_score(ref.labels_[idx], km_b.labels_))\nprint(\"ARI medio:\", round(float(np.mean(ari)), 3))\n```\n\nUn índice de Rand ajustado medio superior a 0,8 sugiere una solución estable; valores cercanos a 0,5 indican que los segmentos dependen demasiado de la muestra.\n\n## Aplicación: tipologías territoriales en el Perú\n\nLas políticas públicas peruanas usan cada vez más tipologías territoriales. Con indicadores distritales de los Censos Nacionales 2017 y de la Encuesta Nacional de Hogares del INEI (pobreza, acceso a agua y saneamiento, conectividad, educación, altitud), PCA resume variables muy correlacionadas en pocos ejes interpretables, y un agrupamiento jerárquico de Ward identifica tipos de distritos con necesidades parecidas. La jerarquía es útil: un nivel nacional puede trabajar con cuatro tipos y una dirección regional con doce subtipos consistentes con los anteriores. En el sector privado, la misma lógica se aplica a la segmentación de bodegas, socios de cooperativas o locales de una cadena.\n\n## Validar y comunicar\n\nUna segmentación sólida cumple cuatro condiciones: estructura interna aceptable (silueta, Davies-Bouldin, BIC), estabilidad ante remuestreo, diferencias en variables externas no usadas en el ajuste y utilidad para una decisión concreta. Finalmente, los segmentos deben describirse en unidades originales, traducirse a reglas mediante un árbol sustituto y nombrarse sin estigmatizar. Si la segmentación usa datos personales, el principio de finalidad de la Ley 29733 exige que su uso sea coherente con el propósito informado a los titulares."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Nexo y la segmentación de 22 000 bodegas",
+        "content": "**Distribuidora Nexo S.A.C.** abastece de bebidas, abarrotes, snacks y productos de limpieza a 22 000 bodegas de Lima Metropolitana y el Callao mediante 140 vendedores de preventa y una flota tercerizada. Hasta hoy, las bodegas se clasifican en A, B y C según su compra mensual, y todas las de una misma categoría reciben igual frecuencia de visita, el mismo surtido sugerido y la misma línea de crédito. El gerente comercial, **Jorge Villanueva**, sospecha que esa clasificación esconde comportamientos muy distintos y quiere una nueva segmentación antes de la planificación del próximo año.\n\nEl analista **Diego Ccama** consolidó 18 meses de pedidos y construyó 14 variables por bodega: compra mensual promedio, número de pedidos, ticket promedio, coeficiente de variación de la compra, participación de cada una de cinco categorías, porcentaje de compras a crédito, días promedio de atraso, antigüedad como cliente, uso de pago con billetera digital, distrito y nivel socioeconómico predominante de la zona según la clasificación de APEIM.\n\nSus primeros resultados fueron desconcertantes:\n\n- **k-medias** con variables estandarizadas, sin transformar los montos, dio su mejor silueta con k = 4 (0,29), pero un grupo concentró el 61 % de las bodegas.\n- **DBSCAN** marcó como ruido al 9 % de las bodegas, entre ellas casi todos los minimercados de mayor compra, y formó un solo grupo grande.\n- Una **mezcla gaussiana** sugirió 7 componentes según el BIC.\n- Tras aplicar logaritmo a los montos, el PCA mostró que los dos primeros componentes explican solo el 38 % de la varianza, y un mapa UMAP presentaba seis manchas bien definidas.\n- Al repetir k-medias en 30 submuestras, el índice de Rand ajustado medio fue 0,91 con k = 4 y 0,58 con k = 6.\n\nLa fuerza de ventas pidió un máximo de cinco segmentos con reglas sencillas, aplicables desde la tableta del vendedor. El área de créditos quiere usar la segmentación para fijar líneas de crédito y propuso incluir el nivel socioeconómico de la zona como variable principal. Una supervisora advirtió que eso podría negar crédito a bodegueros cumplidos solo por la zona donde trabajan.\n\nJorge debe presentar al directorio, en tres semanas, una segmentación defendible, junto con una propuesta de piloto en dos zonas de venta para demostrar que la nueva clasificación aumenta la venta o reduce la morosidad respecto de la clasificación A, B y C.",
+        "questions": [
+          "¿Qué preprocesamiento aplicarías a los montos asimétricos, a las participaciones por categoría y a las variables categóricas antes de agrupar? Justifica cada decisión.",
+          "Compara los resultados de k-medias, DBSCAN, la mezcla gaussiana y el mapa UMAP. ¿Qué revela cada uno sobre la estructura real de los datos?",
+          "¿Cómo combinarías índices internos, estabilidad y requisitos de la fuerza de ventas para elegir el número de segmentos?",
+          "¿Es apropiado usar el nivel socioeconómico de la zona en una segmentación que fijará líneas de crédito? Argumenta desde la ética y la Ley 29733.",
+          "Diseña el piloto en dos zonas de venta: grupos de comparación, indicadores, duración y criterio para escalar la segmentación."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Segmentación accionable con agrupamiento y reducción de dimensionalidad",
+        "instructions": "**Objetivo:** construir una segmentación de clientes o de unidades territoriales que sea estadísticamente sólida, estable y útil para una decisión concreta.\n\n**Datos:** base transaccional de bodegas de una distribuidora proporcionada por el docente, o indicadores distritales elaborados con información pública del INEI.\n\n**Qué entregar:**\n\n1. Definición de la decisión que apoyará la segmentación y justificación de las variables, transformaciones y escalado (o distancia de Gower si hay datos mixtos).\n2. PCA con varianza explicada, interpretación de cargas y biplot.\n3. Aplicación de al menos tres algoritmos (k-medias, jerárquico de Ward, DBSCAN o HDBSCAN, mezclas gaussianas) y selección del número de grupos con al menos dos índices internos y BIC cuando corresponda.\n4. Análisis de estabilidad con 30 submuestras (índice de Rand ajustado o Jaccard por grupo) y una validación externa con una variable no usada en el ajuste.\n5. Mapa UMAP o t-SNE solo con fines de comunicación, con una advertencia explícita de interpretación.\n6. Fichas de perfil por segmento, árbol sustituto con reglas y propuesta de acción, indicador y responsable para cada segmento; reflexión sobre variables sensibles.\n\n**Formato:** cuaderno .ipynb y presentación de hasta ocho diapositivas, subidos hasta el domingo de la semana 12 a las 23:59. Trabajo en equipos de tres integrantes; el equipo podrá reutilizar este trabajo como insumo de su proyecto integrador.",
+        "rubric": [
+          {
+            "name": "Preparación de datos y definición de similitud",
+            "points": 4
+          },
+          {
+            "name": "Aplicación y comparación de algoritmos de agrupamiento y PCA",
+            "points": 6
+          },
+          {
+            "name": "Validación interna, estabilidad y validación externa",
+            "points": 5
+          },
+          {
+            "name": "Perfilamiento, reglas y propuesta de acciones responsables",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: agrupamiento y reducción de dimensionalidad",
+        "questions": [
+          {
+            "prompt": "Se agrupan clientes con «compra mensual» (S/ 500 a S/ 50 000) y «número de pedidos» (1 a 30) sin escalar. ¿Qué ocurre con k-medias?",
+            "options": [
+              "La compra mensual domina la distancia y los grupos se forman casi solo por esa variable",
+              "El número de pedidos domina porque tiene menos valores distintos",
+              "k-medias escala internamente las variables, así que no hay efecto",
+              "Ambas variables influyen por igual en la forma de los grupos"
+            ],
+            "correct": 0,
+            "explanation": "La distancia euclidiana suma diferencias al cuadrado en unidades originales; diferencias de miles de soles aplastan diferencias de pocos pedidos. Se debe transformar y estandarizar antes de agrupar."
+          },
+          {
+            "prompt": "Un conjunto tiene grupos con forma de media luna y puntos de ruido dispersos. ¿Qué algoritmo es más apropiado?",
+            "options": [
+              "k-medias con k = 2 y muchas inicializaciones",
+              "DBSCAN o HDBSCAN, que detectan formas arbitrarias y marcan el ruido",
+              "PCA con dos componentes principales",
+              "Mezcla gaussiana con covarianza esférica"
+            ],
+            "correct": 1,
+            "explanation": "Los métodos por densidad conectan regiones densas sin suponer formas convexas y dejan fuera los puntos aislados. k-medias y la mezcla esférica trazarían fronteras que parten las medias lunas."
+          },
+          {
+            "prompt": "La silueta media es 0,62 con k = 2 y 0,41 con k = 5, pero el negocio necesita entre cuatro y seis segmentos. ¿Qué decisión es más defendible?",
+            "options": [
+              "Elegir k = 2 porque maximiza la silueta, sin más análisis",
+              "Evaluar k entre 4 y 6 con estabilidad y utilidad, reconociendo que la estructura natural es más gruesa",
+              "Descartar el agrupamiento porque la silueta es menor que 0,7",
+              "Agrupar sobre un mapa t-SNE para aumentar la silueta"
+            ],
+            "correct": 1,
+            "explanation": "Los índices internos orientan, pero la utilidad también cuenta. Puede segmentarse con más detalle si los grupos son estables y accionables, transparentando que subdividen dos macrogrupos naturales."
+          },
+          {
+            "prompt": "Tras aplicar PCA a 12 variables estandarizadas, los dos primeros componentes explican el 38 % de la varianza. ¿Qué afirmación es correcta?",
+            "options": [
+              "Un gráfico bidimensional muestra solo parte de la estructura; conviene revisar más componentes",
+              "Los datos no tienen estructura y no deben agruparse",
+              "PCA falló, porque dos componentes deben explicar al menos el 90 %",
+              "Deben eliminarse las variables con cargas bajas en ambos componentes"
+            ],
+            "correct": 0,
+            "explanation": "Una baja varianza acumulada indica que la información está repartida en más dimensiones. La estructura puede existir en componentes posteriores; se agrupa en un espacio con más componentes."
+          },
+          {
+            "prompt": "En un mapa t-SNE, el grupo A aparece muy lejos del grupo B y luce el doble de grande que el grupo C. ¿Qué se puede concluir?",
+            "options": [
+              "A y B son los segmentos más distintos en el espacio original",
+              "A tiene el doble de dispersión interna que C",
+              "Nada concluyente sobre distancias ni tamaños, pues t-SNE preserva sobre todo vecindarios locales",
+              "El mapa confirma que existen exactamente tres segmentos"
+            ],
+            "correct": 2,
+            "explanation": "t-SNE deforma distancias globales y densidades para preservar vecindarios. Separaciones y tamaños aparentes cambian con la perplejidad y la semilla, por lo que no deben interpretarse."
+          },
+          {
+            "prompt": "¿Qué ventaja ofrece una mezcla gaussiana frente a k-medias para segmentar clientes?",
+            "options": [
+              "Asigna probabilidades de pertenencia y admite grupos elípticos de distinto tamaño",
+              "No requiere elegir el número de componentes",
+              "Es inmune a los valores atípicos",
+              "Garantiza converger al óptimo global"
+            ],
+            "correct": 0,
+            "explanation": "La mezcla gaussiana modela cada grupo con su propia covarianza y proporción, y entrega asignaciones blandas. Aun así requiere elegir K, por ejemplo con BIC, y EM converge a óptimos locales."
+          },
+          {
+            "prompt": "Al repetir k-medias en 30 submuestras, el índice de Rand ajustado medio es 0,58 con k = 6 y 0,91 con k = 4. ¿Qué indica este resultado?",
+            "options": [
+              "Con k = 6 los segmentos son más detallados y, por tanto, preferibles",
+              "El índice de Rand ajustado solo es válido en aprendizaje supervisado",
+              "Basta aumentar n_init hasta que ambos valores coincidan",
+              "La solución con k = 4 es más estable y reproducible, por lo que es más confiable para decidir"
+            ],
+            "correct": 3,
+            "explanation": "Un índice alto entre réplicas indica que los segmentos no dependen de la muestra. Con k = 6 las asignaciones cambian mucho, señal de que algunos grupos no son reales o están mal definidos."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Detección de anomalías, sistemas de recomendación y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante detecta anomalías con métodos estadísticos robustos, Isolation Forest, LOF y One-Class SVM; construye y evalúa sistemas de recomendación con métricas de ranking; e integra técnicas supervisadas y no supervisadas en un proyecto reproducible con plan de monitoreo, análisis de equidad y cumplimiento de la Ley 29733.",
+      "topics": [
+        "Tipos de anomalías y líneas base estadísticas robustas",
+        "Isolation Forest, LOF y One-Class SVM; evaluación con capacidad de revisión limitada",
+        "Sistemas de recomendación: filtrado colaborativo, factorización matricial, contenido e híbridos",
+        "Métricas de ranking, arranque en frío, sesgo de popularidad y privacidad",
+        "Integración de técnicas, deriva de datos y monitoreo básico",
+        "Proyecto integrador: tarjeta de modelo, equidad y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Anomalías: puntuales, contextuales y colectivas",
+          "bullets": [
+            "Hawkins (1980): una anomalía es una observación tan distinta que hace sospechar un mecanismo generador diferente.",
+            "Puntual: S/ 9800 en una cuenta que nunca supera S/ 300; contextual: un valor normal en un momento o lugar inusual.",
+            "Colectiva: una secuencia de transferencias pequeñas que, en conjunto, revela un patrón de fraude o de lavado.",
+            "Aplicaciones: fraude en pagos, fallas en equipos, errores de registro, intrusiones en redes y control de calidad."
+          ],
+          "notes": "Presente la detección de anomalías como un problema con características propias: la clase de interés es rarísima, cambia con el tiempo porque los defraudadores se adaptan y casi nunca está bien etiquetada. Use la clasificación de Chandola, Banerjee y Kumar (2009) en anomalías puntuales, contextuales y colectivas, con ejemplos peruanos: un consumo eléctrico atípico en el medidor de una distribuidora, una transferencia nocturna de alto monto en una billetera digital o una serie de depósitos fraccionados para evitar umbrales de reporte, conducta que vigila la Unidad de Inteligencia Financiera de la SBS. Explique que el enfoque depende de las etiquetas disponibles: si hay muchas, es un problema supervisado desbalanceado como los de las unidades anteriores; si hay pocas o ninguna, se requieren métodos no supervisados o semisupervisados. Subraye que una anomalía no es necesariamente un fraude: puede ser un error de captura o un cliente legítimo con un comportamiento nuevo. Pregunta para la clase: ¿qué anomalías serían relevantes en los datos de su trabajo o de su entorno?"
+        },
+        {
+          "title": "Líneas base estadísticas: puntaje z robusto y rango intercuartílico",
+          "bullets": [
+            "Puntaje z robusto: 0,6745·(x − mediana)/MAD; valores absolutos mayores que 3,5 se consideran atípicos (Iglewicz y Hoaglin, 1993).",
+            "Regla de Tukey: atípico si x < Q1 − 1,5·RIC o x > Q3 + 1,5·RIC.",
+            "Calcular por entidad y contexto: comparar a cada cliente con su propio historial y su franja horaria.",
+            "Son transparentes y baratas; constituyen la línea base obligatoria antes de algoritmos más complejos."
+          ],
+          "notes": "Comience por lo simple, como en todo el curso: muchas áreas de riesgo operan con reglas estadísticas y es necesario superarlas con evidencia. Explique por qué la media y la desviación estándar no sirven para detectar atípicos: los propios atípicos las inflan y se esconden, fenómeno conocido como enmascaramiento. La mediana y la desviación absoluta mediana, en cambio, son robustas; la constante 0,6745 hace que el puntaje sea comparable con un puntaje z en datos normales. Muestre cómo la contextualización multiplica la utilidad: una transferencia de S/ 2000 es normal para un comerciante y anómala para un estudiante, por lo que conviene calcular el puntaje respecto del historial de cada cliente, de su segmento o de su franja horaria. Conecte con la unidad 3: los segmentos pueden servir como contexto. Advierta que las reglas univariadas no detectan combinaciones inusuales de valores individualmente normales, como un monto habitual hacia un beneficiario nuevo, desde un dispositivo nuevo, a las tres de la mañana. Pregunta para la clase: ¿qué variables contextualizarían para detectar consumos anómalos en una empresa prestadora de servicios de saneamiento?"
+        },
+        {
+          "title": "Isolation Forest: aislar en lugar de describir",
+          "bullets": [
+            "Liu, Ting y Zhou (2008): árboles con variables y cortes aleatorios; las anomalías se aíslan con pocas divisiones.",
+            "Puntaje s(x) = 2^(−E[h(x)]/c(n)): cercano a 1 indica anomalía; muy por debajo de 0,5, normalidad.",
+            "Submuestras pequeñas, de 256 observaciones por árbol, bastan; costo lineal y apto para millones de registros.",
+            "En scikit-learn, contamination solo fija el umbral; score_samples devuelve el puntaje con signo invertido."
+          ],
+          "notes": "Explique la intuición con un juego: si se elige una variable al azar y un corte al azar, y se repite, ¿cuántos cortes se necesitan para aislar un punto? Un punto dentro de una nube densa requiere muchos cortes; un punto alejado se aísla en dos o tres. La longitud media del camino en muchos árboles aleatorios es, por tanto, un indicador de anomalía. El denominador c(n) normaliza por la longitud media esperada de una búsqueda fallida en un árbol binario, de modo que el puntaje es comparable entre conjuntos. Destaque su eficiencia: los autores mostraron que submuestras de 256 observaciones por árbol bastan, lo que lo hace viable para grandes volúmenes transaccionales. Explique los detalles de scikit-learn: contamination no cambia el modelo, solo el umbral de decisión, y score_samples devuelve valores más bajos para observaciones más anómalas. Advierta que las variables irrelevantes diluyen la señal y que la ingeniería de variables contextuales es decisiva. Pregunta para la clase: ¿por qué un Isolation Forest podría pasar por alto un fraude que imita el comportamiento habitual del cliente?"
+        },
+        {
+          "title": "Factor de valor atípico local (LOF)",
+          "bullets": [
+            "Breunig et al. (2000): compara la densidad local de un punto con la de sus k vecinos más cercanos.",
+            "LOF cercano a 1 indica densidad similar a la de sus vecinos; valores claramente mayores que 1, atipicidad local.",
+            "Detecta puntos atípicos respecto de su vecindario aunque no lo sean respecto del conjunto global.",
+            "Con novelty=True se entrena con datos limpios y se evalúan observaciones nuevas; escalar es obligatorio."
+          ],
+          "notes": "Muestre un ejemplo con dos grupos de densidad distinta: transacciones muy concentradas en el centro comercial de una ciudad y transacciones dispersas en una zona residencial. Un punto a cierta distancia del grupo denso es claramente atípico, mientras que un punto a la misma distancia en la zona dispersa es normal. Los métodos globales no distinguen ambas situaciones; LOF sí, porque compara cada punto con su propio vecindario. Explique el cálculo en términos intuitivos: se estima la densidad local mediante la distancia de alcance a los k vecinos y se divide la densidad promedio de los vecinos entre la del punto. Indique que n_neighbors entre 20 y 50 suele ser razonable. Distinga los dos modos de uso en scikit-learn: detección de atípicos sobre el mismo conjunto, con fit_predict, y detección de novedades sobre datos nuevos, con novelty=True. Advierta su costo, que crece con el número de observaciones. Pregunta para la clase: ¿en qué problema de su entorno la atipicidad debe juzgarse respecto del vecindario y no del total?"
+        },
+        {
+          "title": "One-Class SVM y elección del método",
+          "bullets": [
+            "Schölkopf et al. (2001): aprende una frontera que envuelve a los datos normales en el espacio del kernel.",
+            "El parámetro ν acota la fracción de observaciones de entrenamiento tratadas como atípicas.",
+            "Útil con pocas observaciones y variables continuas; escala mal y es sensible a gamma y al escalado.",
+            "Regla práctica: Isolation Forest para grandes volúmenes, LOF para atipicidad local y One-Class SVM para conjuntos pequeños y limpios."
+          ],
+          "notes": "Conecte con la unidad 1: la One-Class SVM usa la misma maquinaria de kernels, pero sin etiquetas. En lugar de separar dos clases, busca una frontera que contenga a la mayoría de los datos normales, separándolos del origen en el espacio transformado. El parámetro ν tiene una interpretación útil: es una cota superior de la fracción de errores de entrenamiento y una cota inferior de la fracción de vectores de soporte. Es apropiada para escenarios con pocos datos y alta calidad, como sensores de una línea de producción en condiciones normales conocidas. Presente una tabla de decisión que combine volumen de datos, tipo de anomalía esperada, necesidad de explicación y costo de cómputo. Recomiende probar al menos dos métodos y comparar sus listas de alertas: si coinciden, la señal es más robusta. Mencione que los autocodificadores, que verán en Aprendizaje Profundo, son otra alternativa basada en el error de reconstrucción. Pregunta para la clase: para monitorear vibraciones de bombas en una planta minera, con datos normales abundantes y pocas fallas registradas, ¿qué método elegirían y por qué?"
+        },
+        {
+          "title": "Evaluar detectores con pocas etiquetas",
+          "bullets": [
+            "La capacidad de revisión manda: si el equipo revisa 600 alertas diarias, la métrica es la precisión en las 600 primeras.",
+            "Precisión@k y exhaustividad@k sobre casos confirmados; con clases muy raras, el AUC-PR informa más que el ROC-AUC.",
+            "Etiquetas sesgadas: solo se confirma lo que se revisa; reservar una muestra aleatoria de revisión para estimar lo no detectado.",
+            "Retroalimentación: las alertas confirmadas alimentan un modelo supervisado que complementa al no supervisado."
+          ],
+          "notes": "Esta diapositiva conecta la técnica con la operación. En la práctica, un detector de anomalías alimenta una cola de revisión humana con capacidad limitada; por eso la métrica relevante no es una medida global, sino la calidad de las primeras k alertas. Explique precisión@k con un ejemplo: si de las 600 alertas diarias 42 son fraudes confirmados, la precisión@600 es 7 %. Discuta el sesgo de verificación: el fraude que nadie revisa nunca se etiqueta, de modo que el modelo parece mejor de lo que es y aprende solo los patrones ya conocidos. La solución es reservar una pequeña muestra aleatoria de revisión, que permite estimar la tasa real de fraude y descubrir modalidades nuevas. Recuerde que con tasas de positivos menores que 1 % el ROC-AUC puede ser alto y engañoso, mientras que el AUC-PR refleja mejor el desempeño. Presente el ciclo de aprendizaje activo: las alertas confirmadas se convierten en etiquetas para un modelo supervisado. Pregunta para la clase: ¿qué porcentaje de la capacidad de revisión destinarían a la muestra aleatoria y por qué?"
+        },
+        {
+          "title": "Sistemas de recomendación: el problema y la matriz usuario-ítem",
+          "bullets": [
+            "Objetivo: estimar la relevancia de ítems no consumidos y ordenar los más útiles para cada usuario.",
+            "Matriz usuario-ítem extremadamente dispersa: en comercio electrónico suele tener menos del 1 % de celdas observadas.",
+            "Retroalimentación explícita (calificaciones) o implícita (compras, clics, reproducciones); la implícita no registra rechazos.",
+            "Familias: filtrado colaborativo, basado en contenido, factorización matricial y modelos híbridos."
+          ],
+          "notes": "Presente el problema con ejemplos cercanos: un supermercado en línea que sugiere productos complementarios, una plataforma educativa que recomienda cursos o una billetera digital que muestra ofertas de comercios. Explique que la recomendación es un problema de ordenamiento y no de clasificación: importa poner los ítems más relevantes arriba, porque el usuario solo mira unos pocos. Muestre una matriz pequeña de cinco usuarios y seis productos para que los estudiantes vean la dispersión: la mayoría de celdas están vacías y la tarea es estimarlas. Distinga la retroalimentación explícita de la implícita: la mayoría de empresas peruanas solo tiene datos implícitos, como compras, y una celda vacía puede significar desinterés o simple desconocimiento. Mencione el Premio Netflix (2006-2009), que ofreció un millón de dólares por mejorar en 10 % el error de su sistema y popularizó la factorización matricial. Pregunta para la clase: en una cadena de ferreterías, ¿qué datos implícitos tendrían disponibles para recomendar productos y qué limitaciones presentarían?"
+        },
+        {
+          "title": "Filtrado colaborativo basado en vecindad",
+          "bullets": [
+            "Basado en usuarios: recomendar lo que consumieron usuarios con historiales similares.",
+            "Basado en ítems (Sarwar et al., 2001): recomendar ítems similares a los ya consumidos; más estable y escalable.",
+            "Similitud coseno o correlación de Pearson calculada sobre las columnas de la matriz usuario-ítem.",
+            "Limitaciones: arranque en frío, sesgo hacia ítems populares y costo de calcular similitudes con millones de usuarios."
+          ],
+          "notes": "Explique el filtrado colaborativo como la versión algorítmica de pedir recomendaciones a personas con gustos parecidos. Calcule en vivo la similitud coseno entre dos productos a partir de sus columnas en la matriz: si los mismos clientes compran pan de molde y mantequilla, ambos productos son similares en sentido colaborativo, aunque no se parezcan físicamente. Explique por qué el enfoque basado en ítems se popularizó en el comercio electrónico: las relaciones entre productos cambian más lentamente que los gustos individuales y pueden precalcularse. Muestre el procedimiento de predicción: para un cliente, se suman las similitudes de los productos candidatos con los productos que ya compró y se ordenan de mayor a menor. Relacione con k-NN de Aprendizaje Automático I: es esencialmente una búsqueda de vecinos en el espacio del comportamiento. Advierta el sesgo de popularidad: los productos más vendidos aparecen como similares a casi todo. Pregunta para la clase: ¿cómo recomendarían productos a un cliente que acaba de registrarse y no tiene historial?"
+        },
+        {
+          "title": "Factorización matricial y retroalimentación implícita",
+          "bullets": [
+            "Koren, Bell y Volinsky (2009): r̂ᵤᵢ = μ + bᵤ + bᵢ + qᵢᵀpᵤ, con factores latentes de usuario y de ítem.",
+            "Se minimiza el error en las celdas observadas más una regularización L2, con descenso de gradiente o mínimos cuadrados alternados.",
+            "Datos implícitos (Hu, Koren y Volinsky, 2008): preferencia binaria con confianza cᵤᵢ = 1 + α·rᵤᵢ.",
+            "Los factores latentes capturan dimensiones como precio, marca o estilo sin definirlas de antemano."
+          ],
+          "notes": "Conecte con PCA y con la descomposición en valores singulares de la unidad 3: la factorización matricial también resume una matriz grande en pocas dimensiones latentes, pero se ajusta solo con las celdas observadas, porque la mayoría están vacías. Explique la fórmula: la predicción combina la media global, el sesgo del usuario, por ejemplo alguien que compra mucho de todo, el sesgo del ítem, por ejemplo un producto muy popular, y la interacción entre factores. Describa los mínimos cuadrados alternados: se fijan los factores de ítems y se resuelven los de usuarios mediante regresiones ridge, y luego al revés; el método es paralelizable y adecuado para datos implícitos. Explique el modelo de Hu, Koren y Volinsky: toda celda vacía se trata como preferencia cero con baja confianza, y las compras repetidas aumentan la confianza. Mencione la librería implicit para Python. Señale que los factores no tienen nombre, pero pueden interpretarse mirando qué ítems tienen valores extremos. Pregunta para la clase: ¿por qué una compra repetida diez veces debe pesar más que una compra única?"
+        },
+        {
+          "title": "Recomendación basada en contenido y modelos híbridos",
+          "bullets": [
+            "Basada en contenido: representar ítems por atributos o textos (TF-IDF, categoría, precio) y buscar similares a los preferidos.",
+            "Ventaja: resuelve el arranque en frío de ítems nuevos; desventaja: tiende a recomendar más de lo mismo.",
+            "Híbridos: combinar puntajes colaborativos y de contenido, o usar ambos como variables de un modelo de ordenamiento.",
+            "Arquitectura en dos etapas: generación rápida de candidatos y reordenamiento con boosting y variables de contexto."
+          ],
+          "notes": "Explique que el enfoque basado en contenido no necesita historial de otros usuarios: basta con describir los ítems. Un supermercado puede representar sus productos por categoría, marca, presentación, precio y descripción, y recomendar productos similares a los que el cliente ya compra. Su gran ventaja es el arranque en frío de ítems: un producto recién lanzado puede recomendarse desde el primer día. Su desventaja es la sobreespecialización. Los sistemas industriales suelen ser híbridos y trabajan en dos etapas: primero generan unos cientos de candidatos con métodos rápidos, como similitud de ítems, popularidad o factorización; luego un modelo de boosting como los de la unidad 2 reordena esos candidatos usando variables del usuario, del ítem y del contexto, como hora, canal o dispositivo. Esta arquitectura integra lo aprendido en todo el curso. Mencione que el procesamiento de descripciones de productos se profundiza en Procesamiento de Lenguaje Natural. Pregunta para la clase: ¿qué variables de contexto usarían para reordenar ofertas en una aplicación de reparto a domicilio en Lima?"
+        },
+        {
+          "title": "Evaluar recomendadores: métricas de ranking",
+          "bullets": [
+            "Precisión@k y exhaustividad@k: proporción de recomendaciones relevantes y de relevantes recuperados en las primeras k.",
+            "NDCG@k: DCG = Σ relᵢ / log₂(i + 1), normalizado por el orden ideal; premia acertar en las primeras posiciones.",
+            "Partición temporal: entrenar con el pasado y evaluar con las interacciones posteriores de cada usuario.",
+            "Complementar con cobertura del catálogo, diversidad, novedad y, finalmente, experimentos A/B en línea."
+          ],
+          "notes": "Explique que las métricas de error como el RMSE, usadas en el Premio Netflix, no reflejan bien la experiencia del usuario, que solo ve unas pocas recomendaciones; por eso se usan métricas de ranking. Calcule NDCG en un ejemplo: si de cinco recomendaciones son relevantes la primera y la cuarta, el DCG es 1 más 1 dividido entre el logaritmo en base 2 de 5, aproximadamente 1,43; el ideal, con ambas arriba, es 1 más 1 dividido entre el logaritmo de 3, aproximadamente 1,63; el NDCG resulta cercano a 0,88. Insista en la partición temporal: dividir al azar permite que el modelo use compras futuras para predecir compras pasadas, una fuga de información análoga a las de las unidades anteriores. Añada métricas de negocio: un recomendador que solo sugiere los diez productos más vendidos puede tener buena precisión y nulo valor incremental. Recuerde que la prueba definitiva es un experimento controlado en línea. Pregunta para la clase: ¿qué línea base simple debería superar cualquier recomendador antes de ser considerado para producción?"
+        },
+        {
+          "title": "Arranque en frío, sesgo de popularidad y burbujas de filtro",
+          "bullets": [
+            "Arranque en frío de usuarios: usar popularidad por segmento, preguntas iniciales o datos de contexto.",
+            "Sesgo de popularidad: los ítems populares acumulan exposición y datos, lo que refuerza su ventaja.",
+            "Burbujas de filtro: recomendar solo lo similar reduce la diversidad y puede limitar oportunidades.",
+            "Privacidad: la Ley 29733 exige consentimiento informado y finalidad determinada para perfilar con datos personales."
+          ],
+          "notes": "Esta diapositiva aborda los riesgos y el diseño responsable. Explique el arranque en frío con un ejemplo: un nuevo usuario de una plataforma de empleo no tiene historial; se puede usar la popularidad dentro de su segmento, conectando con la unidad 3, o pedirle preferencias explícitas al registrarse. Discuta el círculo vicioso de la popularidad: lo que se recomienda se consume, lo que se consume genera datos y lo que tiene datos se recomienda; los pequeños proveedores o los productos nuevos quedan invisibles. Las técnicas de mitigación incluyen reservar posiciones para exploración y penalizar la popularidad en el ordenamiento. Plantee el problema ético de las burbujas de filtro en plataformas educativas o de empleo: recomendar siempre lo similar puede limitar las oportunidades de las personas. Finalmente, recuerde que perfilar usuarios con datos personales requiere respetar el consentimiento y el principio de finalidad de la Ley 29733: datos recogidos para procesar pagos no pueden reutilizarse para publicidad sin una base legal adecuada. Pregunta para la clase: ¿cómo explicarían a un usuario por qué recibió una recomendación determinada?"
+        },
+        {
+          "title": "Integrar técnicas no supervisadas y supervisadas",
+          "bullets": [
+            "Segmentos como contexto o como variables: modelos por segmento o indicadores de pertenencia al grupo.",
+            "Puntajes de anomalía como variables de entrada de un modelo de boosting de fraude o de riesgo.",
+            "Componentes principales o factores latentes como representación compacta para modelos posteriores.",
+            "Ajustar toda transformación no supervisada dentro de la validación cruzada para evitar fuga de información."
+          ],
+          "notes": "Muestre cómo el curso converge en arquitecturas integradas, que es lo que se espera del proyecto. Primer patrón: un modelo de fraude supervisado con LightGBM recibe como variables adicionales el puntaje de un Isolation Forest y la distancia del cliente al centroide de su segmento; así combina patrones conocidos con señales de rareza. Segundo patrón: un recomendador en dos etapas usa factorización matricial para generar candidatos y boosting para reordenarlos. Tercer patrón: PCA comprime decenas de variables de consumo antes de un modelo de riesgo. Insista en un punto técnico que suele olvidarse: las transformaciones no supervisadas también aprenden de los datos, de modo que si el PCA o el agrupamiento se ajustan con todo el conjunto antes de la validación, se filtra información de la prueba. La solución es incluirlos dentro del Pipeline de scikit-learn, para que se reajusten en cada partición. Pregunta para la clase: en su proyecto integrador, ¿qué combinación de técnicas del curso tiene sentido y qué valor añadiría cada una?"
+        },
+        {
+          "title": "Deriva de datos y monitoreo básico",
+          "bullets": [
+            "Deriva de datos: cambia la distribución de las variables; deriva de concepto: cambia la relación entre variables y objetivo.",
+            "Índice de estabilidad poblacional: PSI = Σ (aᵢ − eᵢ)·ln(aᵢ/eᵢ) sobre intervalos del puntaje o de cada variable.",
+            "Regla práctica: PSI menor que 0,1, estable; entre 0,1 y 0,25, vigilar; mayor que 0,25, investigar y evaluar reentrenamiento.",
+            "En detección de fraude la deriva es adversarial: los defraudadores cambian de táctica cuando el modelo los detiene."
+          ],
+          "notes": "Anticipe un tema que profundizarán en Despliegue de Modelos (MLOps) y que es indispensable para documentar el proyecto. Explique la diferencia entre deriva de datos y deriva de concepto con ejemplos peruanos: tras la interoperabilidad de pagos impulsada por el BCRP, el volumen y el perfil de transferencias entre billeteras cambiaron, lo que constituye deriva de datos; si los defraudadores pasan de suplantar identidades a usar cuentas mula, cambia la relación entre las variables y el fraude, lo que constituye deriva de concepto. Calcule el índice de estabilidad poblacional con un ejemplo de diez intervalos y explique los umbrales prácticos, provenientes de la industria del riesgo crediticio. Señale que el monitoreo debe incluir también métricas de negocio, como la precisión de las alertas revisadas, y no solo las distribuciones. En detección de anomalías y recomendación, la deriva es la norma, no la excepción. Pregunta para la clase: ¿qué indicadores de deriva incluirían en el plan de monitoreo de su proyecto integrador y cada cuánto los revisarían?"
+        },
+        {
+          "title": "Proyecto integrador: estructura, entregables y sustentación",
+          "bullets": [
+            "Problema real de una organización peruana que combine al menos dos familias de técnicas del curso.",
+            "Entregables: repositorio reproducible, informe técnico, tarjeta de modelo y plan de monitoreo de deriva.",
+            "Evaluación de equidad por subgrupos y análisis de cumplimiento de la Ley 29733.",
+            "Sustentación de 15 minutos con demostración y preguntas sobre decisiones técnicas y éticas."
+          ],
+          "notes": "Presente el proyecto integrador como la evidencia principal de la competencia del curso. Revise la estructura recomendada del informe: contexto y decisión de negocio; datos y su gobierno; metodología con línea base y técnicas avanzadas; validación; resultados en métricas técnicas y de negocio; interpretación; equidad y privacidad; plan de monitoreo; limitaciones y próximos pasos. Muestre ejemplos de proyectos viables: segmentación de los socios de una cooperativa más un modelo de fuga por segmento; detección de anomalías en consumos de agua más un modelo supervisado con los casos confirmados; recomendador de cursos para una plataforma educativa con generación de candidatos y reordenamiento. Recuerde que la tarjeta de modelo, que conocieron en Aprendizaje Automático I, debe adaptarse a técnicas no supervisadas. Explique la dinámica de sustentación: cada integrante debe poder explicar cualquier parte del proyecto, y las preguntas evaluarán la comprensión de las decisiones, no la memorización. Pregunta para la clase: ¿cuál es la decisión concreta que su proyecto ayudará a tomar y quién la tomará?"
+        }
+      ],
+      "reading": {
+        "title": "Lo raro y lo relevante: detección de anomalías y sistemas de recomendación",
+        "minutes": 40,
+        "content": "## Dos problemas con etiquetas escasas\n\nLa detección de anomalías y la recomendación parecen problemas opuestos: la primera busca lo infrecuente y la segunda lo que probablemente interese. Comparten, sin embargo, una dificultad: las etiquetas son escasas, sesgadas o implícitas. El fraude que nadie reporta no aparece en los datos, y el producto que un cliente no compró puede no gustarle o simplemente serle desconocido. Por eso ambos problemas exigen métodos que aprovechen la estructura de los datos y métricas alineadas con la operación.\n\n## Detección de anomalías: de la estadística robusta al aislamiento\n\nLa primera línea base es estadística y robusta. Iglewicz y Hoaglin (1993) proponen el puntaje z modificado, basado en la mediana y la desviación absoluta mediana (MAD), que no se deja arrastrar por los propios atípicos. Isolation Forest (Liu, Ting y Zhou, 2008) cambia el enfoque: en lugar de describir lo normal, mide qué tan fácil es aislar un punto con cortes aleatorios.\n\n```text\nPuntaje z robusto:  zᵢ = 0,6745 · (xᵢ − mediana) / MAD     atípico si |zᵢ| > 3,5\nIsolation Forest:   s(x, n) = 2^( −E[h(x)] / c(n) )\n                    c(n) = 2·H(n − 1) − 2(n − 1)/n,   H(i) ≈ ln(i) + 0,5772\n```\n\nE[h(x)] es la longitud media del camino hasta aislar x; si es corta, s se acerca a 1. LOF (Breunig et al., 2000) compara la densidad de un punto con la de sus vecinos y detecta atipicidades locales; One-Class SVM (Schölkopf et al., 2001) envuelve a los datos normales con una frontera de kernel.\n\n```python\nimport numpy as np\nfrom sklearn.ensemble import IsolationForest\n\niso = IsolationForest(n_estimators=300, max_samples=256, random_state=0)\niso.fit(X_ref)                              # operaciones de un periodo de referencia\npuntaje = -iso.score_samples(X_hoy)         # mayor valor = más anómalo\nk = 600                                     # capacidad diaria de revisión\nalertas = np.argsort(puntaje)[::-1][:k]\nprecision_k = y_revisado[alertas].mean()    # tras la revisión de los analistas\n```\n\n## Evaluar con capacidad limitada\n\nUn detector alimenta una cola de revisión humana. La métrica pertinente es la **precisión en las k primeras alertas**, donde k es la capacidad diaria del equipo, y su complemento es la exhaustividad estimada. Como solo se etiqueta lo que se revisa, conviene destinar una pequeña fracción de la capacidad a una muestra aleatoria: así se estima el fraude no detectado y se descubren modalidades nuevas. Las alertas confirmadas alimentan después un modelo supervisado, por ejemplo con LightGBM, que convive con el detector no supervisado.\n\n## Sistemas de recomendación\n\nEl filtrado colaborativo basado en ítems recomienda productos que suelen consumir los mismos usuarios. La factorización matricial (Koren, Bell y Volinsky, 2009) representa usuarios e ítems con factores latentes:\n\n```text\nr̂ᵤᵢ = μ + bᵤ + bᵢ + qᵢᵀ·pᵤ\nmin  Σ_(u,i observados) (rᵤᵢ − r̂ᵤᵢ)² + λ·(‖pᵤ‖² + ‖qᵢ‖² + bᵤ² + bᵢ²)\nDCG@k = Σᵢ relᵢ / log₂(i + 1)        NDCG@k = DCG@k / IDCG@k\n```\n\nCon datos implícitos, como compras, el modelo de Hu, Koren y Volinsky (2008) trata cada celda como preferencia con una confianza que crece con la frecuencia. Una versión ítem-ítem cabe en pocas líneas:\n\n```python\nimport numpy as np\nfrom scipy.sparse import csr_matrix\nfrom sklearn.metrics.pairwise import cosine_similarity\n\nR = csr_matrix((cantidades, (fila_cliente, col_producto)))  # cliente × producto\nS = cosine_similarity(R.T, dense_output=False)              # similitud ítem-ítem\np = np.asarray((R[u] @ S).todense()).ravel()                # puntajes del cliente u\np[R[u].indices] = -np.inf                                   # excluir lo ya comprado\ntop10 = np.argsort(p)[::-1][:10]\n```\n\nLa evaluación debe ser temporal: entrenar con el pasado y medir precisión@k, exhaustividad@k y NDCG@k con las interacciones posteriores. Una línea base de productos más populares es obligatoria, y la prueba definitiva es un experimento controlado en línea.\n\n## Contexto peruano y uso responsable\n\nLa interoperabilidad de pagos impulsada por el BCRP desde 2023 multiplicó las transferencias entre billeteras y bancos y, con ellas, nuevas modalidades de fraude; las entidades supervisadas por la SBS necesitan detectores que se adapten a esa deriva. En el comercio minorista y las plataformas educativas, los recomendadores elevan la venta y la permanencia, pero pueden reforzar el sesgo de popularidad y las burbujas de filtro. En ambos casos, la Ley 29733 exige una base legal, como el consentimiento, y una finalidad determinada: datos recogidos para prevenir fraude no pueden reutilizarse para publicidad personalizada sin cumplir esas condiciones. La Ley 31814, que promueve el uso de la inteligencia artificial en el país, refuerza la expectativa de un uso transparente y responsable.\n\n## Integración\n\nLas técnicas del curso se potencian al combinarse: segmentos como contexto, puntajes de anomalía como variables de un modelo de boosting, factorización para generar candidatos y boosting para reordenarlos. Toda transformación no supervisada debe ajustarse dentro de la validación para no filtrar información, y todo sistema en operación necesita monitoreo de deriva, por ejemplo con el índice de estabilidad poblacional."
+      },
+      "case": {
+        "title": "Caso: Billetera Inti y las transferencias que nadie reportó",
+        "content": "**Inti Pagos S.A.**, empresa emisora de dinero electrónico supervisada por la SBS, opera la billetera digital Inti, con 3,2 millones de usuarios registrados y 1,1 millones de usuarios activos al mes. Desde que la interoperabilidad impulsada por el BCRP permitió transferir dinero a usuarios de otras billeteras y bancos, el volumen mensual de transferencias creció 70 % en un año, hasta 38 millones de operaciones.\n\nEl fraude creció también. Las modalidades más reportadas son la suplantación de identidad tras mensajes engañosos que roban credenciales, el uso de cuentas «mula» para recibir y dispersar dinero, y las estafas en ventas por redes sociales. En el último trimestre, los usuarios reportaron 4900 operaciones fraudulentas, alrededor del 0,004 % del total, con una pérdida reconocida de S/ 2,7 millones. El equipo de prevención estima, por casos detectados tardíamente, que el fraude real podría triplicar esa cifra.\n\nEl jefe de prevención de fraude, **Ricardo Paredes**, dispone de 12 analistas que pueden revisar 600 alertas diarias. Hoy las alertas provienen de 23 reglas fijas, como «más de cinco transferencias en una hora a beneficiarios nuevos», con una precisión de 1,8 % en las alertas revisadas.\n\nLa científica de datos **Valeria Rojas** propuso dos enfoques:\n\n1. Un **Isolation Forest** con 41 variables por operación: monto respecto de la mediana del usuario, hora, antigüedad del dispositivo, beneficiario nuevo, operaciones en la última hora y distancia respecto de la ubicación habitual, entre otras. En una prueba retrospectiva de dos semanas, las 600 alertas diarias de mayor puntaje tuvieron una precisión de 7,2 % sobre casos confirmados.\n2. Un modelo **LightGBM** entrenado con los fraudes reportados. Alcanzó 11,5 % de precisión en las 600 primeras alertas, pero no detectó ninguna operación de una nueva modalidad de cuentas mula que apareció en la segunda semana y que el Isolation Forest sí señaló parcialmente.\n\nRicardo debe decidir además qué hacer con cada alerta: bloquear la operación en tiempo real, solicitar una verificación adicional al usuario o revisarla después. Bloquear a un usuario legítimo genera reclamos ante la empresa y deteriora la confianza; según la gerencia comercial, el 8 % de los usuarios bloqueados por error deja de usar la billetera.\n\nParalelamente, la gerencia de marketing quiere aprovechar los mismos datos transaccionales para un sistema que recomiende a cada usuario ofertas de comercios afiliados. La oficial de protección de datos personales advierte que los términos aceptados por los usuarios mencionan la prevención del fraude, pero no la publicidad personalizada. El directorio espera una propuesta integral en un mes.",
+        "questions": [
+          "¿Por qué la tasa de fraude reportado subestima el fraude real y cómo afecta ello al entrenamiento y a la evaluación de ambos modelos?",
+          "Diseña un esquema híbrido que combine Isolation Forest y LightGBM. ¿Cómo distribuirías las 600 revisiones diarias, incluida una muestra aleatoria?",
+          "¿Qué acción (bloqueo, verificación adicional o revisión posterior) asociarías a cada rango de puntaje? Justifica con los costos de cada tipo de error.",
+          "¿Qué requisitos de la Ley 29733 deben cumplirse antes de reutilizar los datos transaccionales para recomendar ofertas de comercios?",
+          "¿Qué indicadores de deriva y de desempeño monitorearías cada mes y qué umbrales activarían una revisión o un reentrenamiento?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Proyecto integrador de aprendizaje automático avanzado",
+        "instructions": "**Objetivo:** resolver un problema real de una organización peruana integrando al menos dos familias de técnicas del curso (métodos de kernel o ensambles, aprendizaje no supervisado, detección de anomalías o recomendación), con validación rigurosa y criterios de uso responsable.\n\n**Hitos:** propuesta en la semana 9 (problema, datos, decisión y métrica), avance en la semana 13 (línea base y primera solución integrada) y entrega final en la semana 16.\n\n**Qué entregar:**\n\n1. Repositorio Git con cuadernos o scripts reproducibles, archivo de requisitos con versiones y README con instrucciones de ejecución.\n2. Informe técnico de 8 a 12 páginas: contexto y decisión, datos, metodología, validación, resultados técnicos y de negocio, interpretación y limitaciones.\n3. Tarjeta de modelo con evaluación por subgrupos y análisis de cumplimiento de la Ley 29733 (base legal, finalidad, minimización y seguridad).\n4. Plan de monitoreo con indicadores de deriva (PSI u otros), métricas de negocio y criterios de reentrenamiento.\n5. Sustentación de 15 minutos con demostración funcional y ronda de preguntas a cada integrante.\n\n**Formato:** equipos de tres integrantes; enlace al repositorio y PDF del informe subidos al aula virtual hasta el viernes de la semana 16; sustentaciones en la sesión síncrona de esa misma semana. Se verificará la reproducibilidad ejecutando el repositorio desde cero.",
+        "rubric": [
+          {
+            "name": "Formulación del problema y valor para la organización",
+            "points": 3
+          },
+          {
+            "name": "Integración técnica de al menos dos familias de técnicas",
+            "points": 6
+          },
+          {
+            "name": "Validación y métricas acordes a la decisión",
+            "points": 4
+          },
+          {
+            "name": "Uso responsable: equidad, privacidad y monitoreo",
+            "points": 3
+          },
+          {
+            "name": "Comunicación escrita y sustentación oral",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: anomalías, recomendación e integración",
+        "questions": [
+          {
+            "prompt": "Un usuario suele transferir entre S/ 50 y S/ 200. Hoy envió S/ 180 a las 3 a. m. a un beneficiario nuevo desde un dispositivo nuevo. ¿Qué tipo de anomalía es?",
+            "options": [
+              "Puntual, porque el monto supera su rango habitual",
+              "Colectiva, porque involucra una secuencia larga de operaciones",
+              "Contextual y multivariada: cada valor es normal, pero la combinación y el contexto son inusuales",
+              "No es una anomalía, porque el monto está dentro del rango habitual"
+            ],
+            "correct": 2,
+            "explanation": "El monto es habitual; lo inusual es la combinación de hora, beneficiario y dispositivo. Las reglas univariadas no lo detectan, pero los métodos multivariados y contextuales sí."
+          },
+          {
+            "prompt": "¿Por qué un Isolation Forest asigna puntajes altos de anomalía a ciertas observaciones?",
+            "options": [
+              "Porque se aíslan, en promedio, con pocas divisiones aleatorias",
+              "Porque están lejos del centroide de su grupo de k-medias",
+              "Porque tienen baja probabilidad bajo una mezcla gaussiana",
+              "Porque el modelo aprendió de etiquetas de fraude confirmadas"
+            ],
+            "correct": 0,
+            "explanation": "El algoritmo no modela densidades ni usa etiquetas: mide la longitud media del camino necesario para aislar un punto con cortes aleatorios. Caminos cortos indican observaciones raras."
+          },
+          {
+            "prompt": "Un equipo revisa 600 alertas diarias y la tasa de fraude es 0,004 %. ¿Qué métrica es más adecuada para comparar detectores?",
+            "options": [
+              "La exactitud global sobre todas las operaciones",
+              "El ROC-AUC calculado sobre todas las operaciones",
+              "El error cuadrático medio del puntaje de anomalía",
+              "La precisión en las 600 alertas con mayor puntaje"
+            ],
+            "correct": 3,
+            "explanation": "La operación solo revisa 600 casos, así que importa cuántos de ellos son fraude. La exactitud es trivialmente alta y el ROC-AUC puede ser engañoso con clases tan raras."
+          },
+          {
+            "prompt": "Hay transacciones muy densas en el centro de Lima y dispersas en zonas periféricas. ¿Qué método detecta mejor los atípicos relativos a su propio vecindario?",
+            "options": [
+              "Un puntaje z global sobre el monto",
+              "El factor de valor atípico local (LOF)",
+              "PCA con dos componentes principales",
+              "k-medias con k = 2"
+            ],
+            "correct": 1,
+            "explanation": "LOF compara la densidad de cada punto con la de sus vecinos, por lo que distingue un punto raro en una zona densa de uno normal en una zona dispersa, algo que un umbral global no logra."
+          },
+          {
+            "prompt": "Se evalúa un recomendador dividiendo las compras al azar entre entrenamiento y prueba. ¿Cuál es el problema principal?",
+            "options": [
+              "El modelo puede usar compras futuras para predecir compras pasadas y sobreestimar su desempeño",
+              "La partición aleatoria reduce la dispersión de la matriz usuario-ítem",
+              "Las métricas de ranking solo aceptan particiones estratificadas",
+              "La factorización matricial no admite particiones aleatorias"
+            ],
+            "correct": 0,
+            "explanation": "En producción solo se dispone del pasado. Una partición aleatoria mezcla periodos y filtra información futura; la evaluación debe ser temporal, como en las unidades anteriores."
+          },
+          {
+            "prompt": "En la factorización r̂ᵤᵢ = μ + bᵤ + bᵢ + qᵢᵀpᵤ, ¿qué representa bᵢ?",
+            "options": [
+              "El vector de factores latentes del usuario",
+              "La media global de todas las interacciones",
+              "La tendencia propia del ítem, como su popularidad, independiente del usuario",
+              "El coeficiente de regularización del modelo"
+            ],
+            "correct": 2,
+            "explanation": "bᵢ es el sesgo del ítem: cuánto se aparta su valoración media del promedio global. μ es la media global, pᵤ los factores del usuario y λ la regularización."
+          },
+          {
+            "prompt": "El PSI del puntaje de un modelo de fraude pasó de 0,04 a 0,31 en un mes. ¿Qué corresponde hacer?",
+            "options": [
+              "Ignorarlo mientras el AUC de entrenamiento siga alto",
+              "Reducir el umbral de alertas para compensar el cambio",
+              "Eliminar sin análisis las variables con mayor PSI",
+              "Investigar la causa del cambio de distribución y evaluar el reentrenamiento"
+            ],
+            "correct": 3,
+            "explanation": "Un PSI mayor que 0,25 indica un cambio importante en la población. Debe investigarse si responde a nuevos usuarios, cambios operativos o nuevas modalidades de fraude antes de decidir."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Margen máximo, vectores de soporte y SVM de margen blando",
+      "activity": "Aula invertida con la lectura de la unidad 1 y un cuaderno guiado; laboratorio síncrono ajustando C y contando vectores de soporte con datos de morosidad.",
+      "evidence": "Cuaderno de laboratorio sobre el parámetro C"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Truco del kernel, kernel RBF y ajuste conjunto de C y gamma",
+      "activity": "Laboratorio de búsqueda en rejilla logarítmica dentro de un Pipeline con validación estratificada; foro sobre el costo computacional de la SVM según el volumen de datos.",
+      "evidence": "Mapa de calor de C y gamma comentado"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Fundamentos de ensambles, bootstrap, bagging y error fuera de bolsa",
+      "activity": "Simulación del jurado de Condorcet y de la fórmula de varianza de ensambles; análisis del caso AgroVerde Export en grupos y plenaria.",
+      "evidence": "Respuestas grupales al caso AgroVerde Export"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Bosques aleatorios, árboles extremadamente aleatorizados e importancia de variables",
+      "activity": "Taller de comparación de modelos con las mismas particiones e importancia por permutación; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "AdaBoost y gradient boosting: pseudo-residuos y funciones de pérdida",
+      "activity": "Derivación guiada de pseudo-residuos e implementación de un gradient boosting sencillo con árboles de regresión de scikit-learn en Colab.",
+      "evidence": "Cuaderno con boosting implementado desde cero"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "XGBoost, LightGBM y CatBoost: regularización, histogramas y variables categóricas",
+      "activity": "Laboratorio comparativo de las tres librerías con datos de fuga de clientes; análisis del caso Conecta Móvil en grupos y plenaria.",
+      "evidence": "Tabla comparativa y respuestas al caso Conecta Móvil"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Parada temprana, optimización bayesiana con Optuna y apilamiento",
+      "activity": "Taller de Optuna con parada temprana dentro de validación cruzada; revisión de código entre pares en repositorios Git.",
+      "evidence": "Estudio de Optuna y revisión entre pares"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Restricciones monotónicas, TreeSHAP y lista de verificación del modelo",
+      "activity": "Laboratorio de restricciones monotónicas y explicaciones TreeSHAP; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Distancias, escalado, k-medias y selección del número de grupos",
+      "activity": "Demostración paso a paso del algoritmo de Lloyd y cálculo de silueta e índices internos; presentación de propuestas del proyecto integrador.",
+      "evidence": "Propuesta del proyecto integrador"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Agrupamiento jerárquico, DBSCAN, HDBSCAN, mezclas gaussianas y datos mixtos",
+      "activity": "Laboratorio comparativo de algoritmos con datos de bodegas; análisis del caso Distribuidora Nexo en grupos y plenaria.",
+      "evidence": "Comparación de algoritmos y respuestas al caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "PCA, t-SNE y UMAP para reducir dimensionalidad y visualizar",
+      "activity": "Taller con indicadores distritales del INEI: interpretación de cargas, varianza explicada y mapas exploratorios con sus advertencias.",
+      "evidence": "Informe breve de interpretación de componentes"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Estabilidad, validación externa y perfilamiento accionable de segmentos",
+      "activity": "Laboratorio de estabilidad por submuestreo y árbol sustituto; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Detección de anomalías: líneas base robustas, Isolation Forest, LOF y One-Class SVM",
+      "activity": "Laboratorio con transacciones simuladas y precisión en las k primeras alertas; análisis del caso Billetera Inti; entrega del avance del proyecto.",
+      "evidence": "Avance del proyecto integrador y respuestas al caso"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Sistemas de recomendación: filtrado colaborativo, factorización matricial y métricas de ranking",
+      "activity": "Construcción de un recomendador ítem-ítem y de uno de factorización implícita, evaluados con partición temporal y NDCG@10.",
+      "evidence": "Cuaderno del recomendador evaluado"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Integración de técnicas, deriva de datos y tarjeta de modelo",
+      "activity": "Taller de integración en Pipeline y cálculo del PSI; asesoría por equipos y ensayo de la sustentación del proyecto integrador.",
+      "evidence": "Tarjeta de modelo y plan de monitoreo"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador y evaluación final",
+      "activity": "Sustentación del proyecto integrador (Tarea 4), resolución del Cuestionario 4 y examen práctico individual en Colab con datos nuevos.",
+      "evidence": "Tarea 4, Cuestionario 4 y examen final"
+    }
+  ]
+}

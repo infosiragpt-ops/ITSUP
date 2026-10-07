@@ -1,9 +1,11 @@
 import bcrypt from 'bcryptjs';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { db, SCHEMA, insert, run, get, all, tx, UPLOADS_DIR } from './db.js';
-import { PROGRAMS, TEACHERS, STUDENTS, COURSES, APPLICANTS } from './seed-data.js';
+import { db, SCHEMA, insert, run, get, all, tx, UPLOADS_DIR, setSetting, DEFAULT_SETTINGS } from './db.js';
+import { PROGRAMS, TEACHERS, STUDENTS, COURSES, APPLICANTS, PREVIOUS_TERM, SYLLABUS_BY_CODE } from './seed-data.js';
+import { closeActa } from './academic.js';
 
 /** Contraseña común de todas las cuentas de demostración (ver DEMO_ACCESOS.md). */
 export const DEMO_PASSWORD = 'Isup2026!';
@@ -95,8 +97,9 @@ export function seed() {
     for (const p of PROGRAMS) {
       const curriculum = p.curriculum.map((courses, i) => ({ cycle: i + 1, courses }));
       programId[p.slug] = insert(
-        'INSERT INTO programs (slug, name, short, description, duration, modality, icon, color, profile, field, area, image, curriculum) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',
-        p.slug, p.name, p.short, p.description, p.duration, p.modality, p.icon, p.color, p.profile, p.field, p.area, p.image, JSON.stringify(curriculum)
+        'INSERT INTO programs (slug, name, short, description, duration, modality, icon, color, profile, field, area, image, curriculum, level, degree, total_credits, total_hours, resolution) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        p.slug, p.name, p.short, p.description, p.duration, p.modality, p.icon, p.color, p.profile, p.field, p.area, p.image, JSON.stringify(curriculum),
+        'Profesional Técnico', `Profesional Técnico en ${p.name}`, 120, 2550, p.resolution || 'R.M. N.° 000-2026-MINEDU (licenciamiento institucional)'
       );
     }
 
@@ -107,20 +110,30 @@ export function seed() {
     const startDate = limaDate(termStartOffset);
     const year = Number(startDate.slice(0, 4));
     const termName = `${year}-${Number(startDate.slice(5, 7)) < 7 ? 'I' : 'II'}`;
-    const termId = insert('INSERT INTO terms (name, start_date, end_date, is_active) VALUES (?,?,?,1)', termName, startDate, limaDate(termStartOffset + 7 * 16 - 2));
+    const termId = insert('INSERT INTO terms (name, start_date, end_date, weeks, is_active) VALUES (?,?,?,16,1)', termName, startDate, limaDate(termStartOffset + 7 * 16 - 2));
+    // Periodo anterior (cerrado) para el récord académico del estudiante de demostración
+    const prevName = termName.endsWith('-I') ? `${year - 1}-II` : `${year}-I`;
+    const prevStart = termStartOffset - 7 * 24;
+    const prevTermId = insert('INSERT INTO terms (name, start_date, end_date, weeks, is_active, closed_at) VALUES (?,?,?,16,0,?)', prevName, limaDate(prevStart), limaDate(prevStart + 7 * 16 - 2), limaAt(prevStart + 7 * 17, 12, 0));
+
+    /* Configuración institucional */
+    for (const [k, v] of Object.entries(DEFAULT_SETTINGS)) setSetting(k, v);
 
     /* Users */
+    const consentV = DEFAULT_SETTINGS.consent_version;
+    let dniSeq = 70000000 + Math.floor(rand() * 900000);
+    const nextDni = () => String(dniSeq += 137 + Math.floor(rand() * 900));
     insert(
-      "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, phone, onboarding) VALUES (?,?,?,?,?,'admin',?,?,?,?)",
-      'A00260001', 'admin@isup.edu.pe', hash, 'Lucía', 'Paredes Montoya', 'Coordinadora Académica', '#3D3929', '01 640 5000', '{"done":true}'
+      "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, phone, onboarding, dni, consent_at, consent_version) VALUES (?,?,?,?,?,'admin',?,?,?,?,?,?,?)",
+      'A00260001', 'admin@isup.edu.pe', hash, 'Lucía', 'Paredes Montoya', 'Coordinadora Académica', '#3D3929', '01 640 5000', '{"done":true}', nextDni(), limaAt(termStartOffset, 9, 0), consentV
     );
     const teacherId = {};
     let tn = 1;
     for (const [key, t] of Object.entries(TEACHERS)) {
       teacherId[key] = insert(
-        "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, bio, onboarding, last_login) VALUES (?,?,?,?,?,'teacher',?,?,?,?,?)",
+        "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, bio, onboarding, last_login, dni, consent_at, consent_version) VALUES (?,?,?,?,?,'teacher',?,?,?,?,?,?,?,?)",
         `D0026${String(tn++).padStart(4, '0')}`, t.email, hash, t.first, t.last, t.title, t.color,
-        `Docente de ISUP. ${t.title}.`, '{"done":true}', limaAt(-1, 20, 0)
+        `Docente de ISUP. ${t.title}.`, '{"done":true}', limaAt(-1, 20, 0), nextDni(), limaAt(termStartOffset, 9, 0), consentV
       );
     }
     const colors = ['#C96442', '#5B7B6F', '#6A5ACD', '#B8860B', '#2F6F8F', '#8B4C6B', '#4F6D3A', '#A0522D'];
@@ -129,12 +142,14 @@ export function seed() {
       const isAdm = i >= 19;
       const plain = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(' ')[0];
       const mail = email || `${plain(first)}.${plain(last)}@isup.edu.pe`;
+      // La estudiante de demostración aún no acepta la política de datos: verá el aviso al ingresar.
       studentId.push(insert(
-        "INSERT INTO users (code, email, password_hash, first_name, last_name, role, program_id, cycle, avatar_color, phone, onboarding, last_login) VALUES (?,?,?,?,?,'student',?,3,?,?,?,?)",
+        "INSERT INTO users (code, email, password_hash, first_name, last_name, role, program_id, cycle, avatar_color, phone, onboarding, last_login, dni, consent_at, consent_version) VALUES (?,?,?,?,?,'student',?,3,?,?,?,?,?,?,?)",
         `N0026${String(i + 1).padStart(4, '0')}`, mail, hash, first, last,
         programId[isAdm ? 'administracion-de-empresas' : 'desarrollo-de-sistemas'], colors[i % colors.length],
         `9${String(10000000 + Math.floor(rand() * 89999999)).slice(0, 8)}`,
-        i === 0 ? '{"internet":true,"chrome":true}' : '{"done":true}', limaAt(-Math.floor(rand() * 5), 19, 30)
+        i === 0 ? '{"internet":true,"chrome":true}' : '{"done":true}', limaAt(-Math.floor(rand() * 5), 19, 30),
+        nextDni(), i === 0 ? null : limaAt(termStartOffset, 10, 0), i === 0 ? null : consentV
       ));
     });
     const demoStudent = studentId[0];
@@ -145,11 +160,18 @@ export function seed() {
     const nowMs = Date.now();
     for (const c of COURSES) {
       const tId = teacherId[c.teacher];
-      const syllabus = `Curso de ${c.credits} créditos del ciclo ${c.cycle}. ${c.description}`;
+      const syllabus = `Unidad didáctica de ${c.credits} créditos del ciclo ${c.cycle}. ${c.description}`;
+      const hoursTheory = c.credits * 8;
+      const hoursPractice = c.credits * 16; // 8 h teóricas + 16 h prácticas por crédito (16 h T = 32 h P = 1 crédito)
       const courseId = insert(
-        'INSERT INTO courses (code, name, description, program_id, term_id, teacher_id, cycle, credits, color, schedule, syllabus) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
-        c.code, c.name, c.description, programId[c.program], termId, tId, c.cycle, c.credits, c.color, c.schedule, syllabus
+        `INSERT INTO courses (code, name, description, program_id, term_id, teacher_id, cycle, credits, color, schedule, syllabus, module_name, course_type, hours_theory, hours_practice, syllabus_json)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        c.code, c.name, c.description, programId[c.program], termId, tId, c.cycle, c.credits, c.color, c.schedule, syllabus,
+        c.module, c.type || 'especifica', hoursTheory, hoursPractice, JSON.stringify(SYLLABUS_BY_CODE[c.code] || {})
       );
+      // Criterios de evaluación ponderados del sílabo
+      const catId = {};
+      c.categories.forEach(([key, name, weight], i) => { catId[key] = insert('INSERT INTO grade_categories (course_id, name, weight, position) VALUES (?,?,?,?)', courseId, name, weight, i); });
       const students = c.program === 'desarrollo-de-sistemas' ? dsiStudents : admStudents;
       students.forEach((sid, i) => insert('INSERT INTO enrollments (course_id, user_id, last_access) VALUES (?,?,?)',
         courseId, sid, limaAt(-(COURSES.indexOf(c) + i % 3), 20, 0)));
@@ -161,7 +183,7 @@ export function seed() {
         ['Docente', `${TEACHERS[c.teacher].first} ${TEACHERS[c.teacher].last} - ${TEACHERS[c.teacher].title}`],
         ['Horario de sesiones en vivo', `${c.schedule} (hora de Lima). Las sesiones quedan registradas en el calendario del aula virtual.`],
         ['Unidades de aprendizaje', c.units.map((u) => `${u.title}: ${u.desc}`)],
-        ['Evaluación', 'Promedio simple de tareas y cuestionarios en escala vigesimal (0 a 20). Nota mínima aprobatoria: 13.'],
+        ['Sistema de evaluación', `${c.categories.map(([, n, w]) => `${n} ${w}%`).join(' - ')}. Escala vigesimal (0 a 20); nota mínima aprobatoria 13; la fracción 0.5 se redondea a favor del estudiante. Inasistencia injustificada mayor al 30% desaprueba la unidad didáctica (DPI).`],
         ['Normas del aula virtual', 'Ingresa con tu cámara encendida en las evaluaciones supervisadas, participa en los foros con respeto y entrega tus trabajos dentro del plazo.'],
       ]));
 
@@ -201,8 +223,8 @@ export function seed() {
       // Assignments & submissions
       for (const a of c.assignments) {
         const due = limaAt(a.due, 23, 59);
-        const aId = insert('INSERT INTO assignments (course_id, module_id, title, instructions, due_at, points, created_at) VALUES (?,?,?,?,?,20,?)',
-          courseId, moduleIds[a.unit], a.title, a.instructions, due, limaAt(a.due - 10, 9, 0));
+        const aId = insert('INSERT INTO assignments (course_id, module_id, title, instructions, due_at, points, created_at, category_id, rubric) VALUES (?,?,?,?,?,20,?,?,?)',
+          courseId, moduleIds[a.unit], a.title, a.instructions, due, limaAt(a.due - 10, 9, 0), catId[a.cat] || null, JSON.stringify(a.rubric || []));
         const past = new Date(due).getTime() < nowMs;
         const lastPast = past && !c.assignments.some((b) => b !== a && b.due < 0 && b.due > a.due);
         for (const sid of students) {
@@ -227,9 +249,9 @@ export function seed() {
       // Quizzes & attempts
       for (const q of c.quizzes) {
         const due = limaAt(q.due, 23, 59);
-        const qId = insert('INSERT INTO quizzes (course_id, module_id, title, description, available_from, due_at, time_limit_min, max_attempts, points) VALUES (?,?,?,?,?,?,?,?,20)',
+        const qId = insert('INSERT INTO quizzes (course_id, module_id, title, description, available_from, due_at, time_limit_min, max_attempts, points, category_id) VALUES (?,?,?,?,?,?,?,?,20,?)',
           courseId, moduleIds[q.unit], q.title, `Evaluación de la ${c.units[q.unit].title.split(' · ')[0]}. Tienes ${q.time} minutos y ${q.attempts} intento(s). Se considera tu mejor nota.`,
-          limaAt(q.due - 9, 8, 0), due, q.time, q.attempts);
+          limaAt(q.due - 9, 8, 0), due, q.time, q.attempts, catId[q.cat] || null);
         const qs = q.questions.map(([type, prompt, options, correct, explanation], i) => {
           const opts = type === 'truefalse' ? ['Verdadero', 'Falso'] : options;
           const id = insert('INSERT INTO quiz_questions (quiz_id, type, prompt, options, correct, explanation, points, position) VALUES (?,?,?,?,?,?,1,?)',
@@ -270,15 +292,29 @@ export function seed() {
 
       // Live sessions: weekly, from term start to +3 weeks
       let n = 1;
+      const pastSessions = [];
       for (let d = termStartOffset; d <= 21; d++) {
         const weekday = (((wd + d) % 7) + 7) % 7;
         if (!c.days.includes(weekday)) continue;
         const starts = limaAt(d, c.hour, 0);
-        insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min, meeting_url, recording_url) VALUES (?,?,?,?,?,?,?)',
+        const sid = insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min, meeting_url, recording_url) VALUES (?,?,?,?,?,?,?)',
           courseId, `Sesión ${n++} · ${c.units[Math.min(Math.floor((d - termStartOffset) / 21), c.units.length - 1)].title.split(' · ')[1]}`,
           'Clase en vivo por videoconferencia. Ingresa 5 minutos antes con audífonos.', starts, 90,
-          `https://meet.jit.si/ISUP-${c.code}-${termName}`, null);
+          `https://meet.jit.si/ISUP-${c.code}-${termName}`, d < -1 ? `https://meet.jit.si/ISUP-${c.code}-${termName}/grabacion-${n - 1}` : null);
+        if (d < 0) pastSessions.push({ id: sid, d });
       }
+      // Registro de asistencia de las sesiones ya dictadas (la última queda pendiente de registrar por el docente)
+      pastSessions.slice(0, -1).forEach((se) => {
+        for (const sid of students) {
+          const isDemo = sid === demoStudent;
+          const r = rand();
+          // Un estudiante por curso con muchas faltas para mostrar la alerta de inasistencia (> 30 %)
+          const risky = sid === students[3];
+          const status = isDemo ? (r < 0.9 ? 'presente' : 'tardanza') : risky ? (r < 0.45 ? 'falta' : 'presente') : r < 0.84 ? 'presente' : r < 0.92 ? 'tardanza' : r < 0.965 ? 'falta' : 'justificada';
+          insert('INSERT INTO attendance (session_id, user_id, status, note, recorded_by, recorded_at) VALUES (?,?,?,?,?,?)',
+            se.id, sid, status, status === 'justificada' ? 'Certificado médico presentado' : null, tId, limaAt(se.d, c.hour + 2, 0));
+        }
+      });
       if (c.code === 'DSI-301') {
         // A session happening right now so the "En vivo" experience can be tried
         const live = new Date(Math.floor((nowMs - 15 * 60e3) / 300e3) * 300e3).toISOString();
@@ -291,6 +327,51 @@ export function seed() {
         insert('INSERT INTO announcements (course_id, author_id, title, body, pinned, created_at) VALUES (?,?,?,?,?,?)',
           courseId, tId, an.title, an.body, an.pinned ? 1 : 0, an.days === 0 ? new Date(nowMs - 2 * 3600e3).toISOString() : limaAt(an.days, 10, 0));
       }
+    }
+
+    /* Periodo anterior: cursos cerrados con acta para el récord académico */
+    for (const pc of PREVIOUS_TERM) {
+      const tId = teacherId[pc.teacher];
+      const cid = insert(
+        `INSERT INTO courses (code, name, description, program_id, term_id, teacher_id, cycle, credits, color, schedule, syllabus, module_name, course_type, hours_theory, hours_practice, status, closed_at, closed_by)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'open',NULL,NULL)`,
+        pc.code, pc.name, pc.description, programId['desarrollo-de-sistemas'], prevTermId, tId, 2, pc.credits, pc.color, pc.schedule,
+        `Unidad didáctica de ${pc.credits} créditos del ciclo 2.`, pc.module, pc.type || 'especifica', pc.credits * 8, pc.credits * 16
+      );
+      const cats = [['proceso', 'Evaluación de proceso', 40], ['producto', 'Evaluación de producto', 30], ['final', 'Evaluación final', 30]]
+        .map(([k, nme, w], i) => [k, insert('INSERT INTO grade_categories (course_id, name, weight, position) VALUES (?,?,?,?)', cid, nme, w, i)]);
+      const catOf = Object.fromEntries(cats);
+      const mId = insert('INSERT INTO modules (course_id, title, description, position, start_date) VALUES (?,?,?,1,?)', cid, 'Unidad 1 · Contenidos del curso', 'Material archivado del periodo anterior.', limaAt(prevStart, 0, 0));
+      insert('INSERT INTO items (module_id, course_id, type, title, content, duration_min, position) VALUES (?,?,?,?,?,?,0)', mId, cid, 'reading', 'Resumen del curso', 'Este curso pertenece a un periodo cerrado. El material queda disponible solo para consulta.', 10);
+      insert('INSERT INTO forums (course_id, title, description) VALUES (?,?,?)', cid, 'Foro de consultas', 'Foro archivado.');
+      for (const sid of dsiStudents) insert('INSERT INTO enrollments (course_id, user_id, last_access, created_at) VALUES (?,?,?,?)', cid, sid, limaAt(prevStart + 100, 20, 0), limaAt(prevStart - 5, 10, 0));
+      // Actividades calificadas por criterio
+      const acts = [['proceso', 'Tarea 1', -95], ['proceso', 'Tarea 2', -80], ['producto', 'Proyecto de unidad', -65], ['final', 'Examen final', -50]];
+      for (const [k, title, dd] of acts) {
+        const aId = insert('INSERT INTO assignments (course_id, module_id, title, instructions, due_at, points, created_at, category_id) VALUES (?,?,?,?,?,20,?,?)',
+          cid, mId, `${title} · ${pc.name}`, 'Actividad del periodo anterior.', limaAt(prevStart + 112 + dd + 95, 23, 59), limaAt(prevStart + 100 + dd + 95, 9, 0), catOf[k]);
+        for (const sid of dsiStudents) {
+          const isDemo = sid === demoStudent;
+          const base = isDemo ? pc.demoGrade : 9 + Math.floor(rand() * 11);
+          const grade = Math.max(0, Math.min(20, base + Math.floor(rand() * 5) - 2));
+          insert('INSERT INTO submissions (assignment_id, user_id, body, submitted_at, grade, feedback, graded_at, graded_by) VALUES (?,?,?,?,?,?,?,?)',
+            aId, sid, 'Entrega del periodo anterior.', limaAt(prevStart + 110 + dd + 95, 20, 0), grade, 'Calificado.', limaAt(prevStart + 113 + dd + 95, 10, 0), tId);
+        }
+      }
+      // Sesiones y asistencia del periodo anterior
+      for (let w = 0; w < 14; w++) {
+        const sid = insert('INSERT INTO live_sessions (course_id, title, description, starts_at, duration_min, meeting_url) VALUES (?,?,?,?,?,?)',
+          cid, `Sesión ${w + 1}`, 'Clase en vivo (periodo anterior).', limaAt(prevStart + w * 7 + 1, 19, 0), 90, `https://meet.jit.si/ISUP-${pc.code}-${prevName}`);
+        for (const st of dsiStudents) {
+          const r = rand();
+          insert('INSERT INTO attendance (session_id, user_id, status, recorded_by, recorded_at) VALUES (?,?,?,?,?)', sid, st, st === demoStudent ? (r < 0.93 ? 'presente' : 'tardanza') : r < 0.8 ? 'presente' : r < 0.9 ? 'tardanza' : 'falta', tId, limaAt(prevStart + w * 7 + 1, 21, 0));
+        }
+      }
+      // Cierre del acta (nota final, condición y recuperación quedan congeladas)
+      const course = get('SELECT * FROM courses WHERE id = ?', cid);
+      closeActa(course, tId);
+      run('UPDATE courses SET closed_at = ? WHERE id = ?', limaAt(prevStart + 7 * 16 + 3, 12, 0), cid);
+      run('UPDATE final_grades SET closed_at = ? WHERE course_id = ?', limaAt(prevStart + 7 * 16 + 3, 12, 0), cid);
     }
 
     /* Global announcements */
@@ -340,7 +421,55 @@ export function seed() {
     N(teacherId.carla, 'submission', 'Tienes entregas por calificar', 'Tarea 3 · API REST de tareas', `/app/cursos/${dsi301}/tareas/${t3}`, limaAt(0, 7, 30), false);
     N(teacherId.carla, 'forum', 'Nuevo tema en Foro de consultas', 'Error CORS al conectar mi frontend con la API', `/app/cursos/${dsi301}/foros`, limaAt(-2, 18, 25), false);
     N(adminId, 'ticket', 'Nueva solicitud de soporte', 'Se cortó mi internet durante el cuestionario', '/app/admin/soporte', limaAt(-1, 22, 10), false);
+
+    /* Auditoría de muestra */
+    const A = (uid, action, entity, entityId, details, d) => insert('INSERT INTO audit_log (user_id, action, entity, entity_id, details, ip, created_at) VALUES (?,?,?,?,?,?,?)', uid, action, entity, entityId, details ? JSON.stringify(details) : null, '127.0.0.1', d);
+    A(adminId, 'term.activate', 'term', termId, { name: termName }, limaAt(termStartOffset - 3, 9, 0));
+    A(adminId, 'settings.update', 'settings', null, { changed: ['institution_name', 'min_grade'] }, limaAt(termStartOffset - 3, 9, 5));
+    A(teacherId.carla, 'syllabus.update', 'course', dsi301, null, limaAt(termStartOffset - 1, 16, 0));
+    A(teacherId.carla, 'attendance.record', 'session', null, { course_id: dsi301, records: 19 }, limaAt(-6, 21, 0));
+    A(teacherId.carla, 'grade.set', 'submission', t2, { assignment_id: t2, to: 17 }, limaAt(-3, 10, 0));
+    A(demoStudent, 'auth.login', 'user', demoStudent, null, limaAt(-1, 19, 30));
   });
+}
+
+/** Contraseña aleatoria legible (sin caracteres ambiguos) que cumple la política: letras y números. */
+export function randomPassword(length = 14) {
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+  let out;
+  do { out = Array.from({ length }, () => alphabet[crypto.randomInt(alphabet.length)]).join(''); }
+  while (!/\d/.test(out) || !/[A-Za-z]/.test(out));
+  return out;
+}
+
+/**
+ * Semilla mínima para producción: configuración institucional, el periodo académico en curso y una
+ * cuenta de administración con contraseña aleatoria, que se guarda una sola vez en data/ADMIN_INICIAL.txt.
+ */
+export function seedMinimal() {
+  const email = (process.env.ISUP_ADMIN_EMAIL || 'admin@isup.edu.pe').trim().toLowerCase();
+  const password = process.env.ISUP_ADMIN_PASSWORD || randomPassword();
+  const institution = process.env.ISUP_INSTITUTION || DEFAULT_SETTINGS.institution_name;
+  const short = process.env.ISUP_SHORT || DEFAULT_SETTINGS.institution_short;
+  const now = new Date();
+  const year = now.getFullYear();
+  const first = now.getMonth() < 6;
+  const start = first ? `${year}-03-01` : `${year}-08-01`;
+  const end = first ? `${year}-07-15` : `${year}-12-15`;
+  tx(() => {
+    for (const [k, v] of Object.entries(DEFAULT_SETTINGS)) setSetting(k, v);
+    setSetting('institution_name', institution);
+    setSetting('institution_short', short);
+    insert('INSERT INTO terms (name, start_date, end_date, weeks, is_active) VALUES (?,?,?,16,1)', `${year}-${first ? 'I' : 'II'}`, start, end);
+    insert(
+      "INSERT INTO users (code, email, password_hash, first_name, last_name, role, title, avatar_color, onboarding) VALUES (?,?,?,?,?,'admin',?,?,?)",
+      `A00${String(year).slice(2)}0001`, email, bcrypt.hashSync(password, 10), 'Administración', short, 'Secretaría Académica', '#3D3929', '{"done":true}'
+    );
+  });
+  const file = path.join(path.dirname(UPLOADS_DIR), 'ADMIN_INICIAL.txt');
+  fs.writeFileSync(file, `ISUP Aula Virtual - cuenta de administración inicial\n\nCorreo:      ${email}\nContraseña:  ${password}\n\nCambia esta contraseña en Mi perfil después del primer ingreso y elimina este archivo.\n`, { mode: 0o600 });
+  console.log(`Cuenta de administración creada: ${email} (contraseña guardada en ${file})`);
+  return { email, password, file };
 }
 
 export function resetDatabase() {

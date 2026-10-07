@@ -1,0 +1,1295 @@
+{
+  "name": "Ética y Gobernanza de la IA",
+  "slug": "etica-y-gobernanza-de-la-ia",
+  "course_type": "especifica",
+  "module_name": "Desarrollo y despliegue de soluciones de inteligencia artificial",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Ética y Gobernanza de la IA (IAR-602) es un curso de formación específica, de naturaleza teórico-práctica, del sexto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante anticipe, mida y gestione los efectos de los sistemas de IA sobre las personas y las organizaciones, y traduzca principios éticos y obligaciones legales en controles técnicos verificables. Construye sobre Aprendizaje Automático, Procesamiento de Lenguaje Natural, Visión por Computadora, IA Generativa y Modelos de Lenguaje y Despliegue de Modelos (MLOps), y se articula con el Proyecto Integrador, cuyo sistema sirve como objeto de evaluación y auditoría. Comprende cuatro unidades: fundamentos éticos y daños sociotécnicos; equidad, explicabilidad y privacidad medidas con código; gobernanza y regulación, con énfasis en la Ley 31814 y su reglamento, la Ley 29733, el Reglamento europeo de IA, el NIST AI RMF y la ISO/IEC 42001; y gobernanza de la IA generativa, auditoría algorítmica y supervisión humana. Aporta al perfil de egreso la capacidad de desarrollar y desplegar IA de forma ética, responsable y conforme a la normativa.",
+  "competency": "Evalúa y gobierna sistemas de inteligencia artificial a lo largo de su ciclo de vida, identificando los daños potenciales, midiendo equidad, explicabilidad y privacidad con herramientas técnicas, clasificando el riesgo según la Ley 31814 y su reglamento, la Ley 29733 y los marcos internacionales, y proponiendo controles, documentación y mecanismos de supervisión humana que una organización peruana pueda implementar y auditar.",
+  "capacities": [
+    "Analiza sistemas de IA como sistemas sociotécnicos, aplicando teorías éticas, principios de IA confiable y taxonomías de daños para identificar a los afectados, las tensiones entre valores y las responsabilidades de cada actor del ciclo de vida.",
+    "Mide y mitiga sesgos, genera explicaciones adecuadas a cada audiencia y aplica técnicas de protección de la privacidad sobre modelos reales, interpretando con evidencia cuantitativa los compromisos entre equidad, desempeño y utilidad.",
+    "Clasifica sistemas de IA según su nivel de riesgo y diseña su gobernanza con la Ley 31814 y su reglamento, la Ley 29733, el Reglamento europeo de IA, el NIST AI RMF y la ISO/IEC 42001, incluida la evaluación de impacto algorítmico.",
+    "Audita sistemas de IA, incluidos los generativos, mediante pruebas adversarias, revisión documental y diseño de supervisión humana efectiva, y comunica hallazgos y recomendaciones a públicos técnicos y directivos."
+  ],
+  "indicators": [
+    "Elabora un análisis ético estructurado de un sistema de IA desplegado que identifica interesados, daños por tipo y gravedad, valores en tensión y una recomendación justificada con al menos dos lentes éticas.",
+    "Calcula en Python métricas de equidad por grupo e interseccionales, como paridad demográfica, igualdad de oportunidades, probabilidades igualadas y razón de impacto dispar, con intervalos de confianza, e interpreta sus incompatibilidades.",
+    "Aplica y compara al menos una técnica de mitigación de sesgos, reporta su efecto sobre el desempeño global y por subgrupo, y justifica la opción recomendada ante la dirección.",
+    "Produce explicaciones globales y locales con SHAP y redacta explicaciones contrafácticas comprensibles para la persona afectada por una decisión automatizada.",
+    "Verifica riesgos de reidentificación con k-anonimato y explica el uso de la privacidad diferencial en un conjunto de datos que se compartirá con terceros.",
+    "Clasifica un sistema según el reglamento de la Ley 31814 y el Reglamento europeo de IA, y elabora una evaluación de impacto algorítmico con matriz de cumplimiento de la Ley 29733.",
+    "Diseña y ejecuta un plan de auditoría con pruebas adversarias o de equidad, redacta hallazgos completos y propone controles de supervisión humana con indicadores medibles.",
+    "Sustenta ante un jurado un expediente de gobernanza que integra política de uso, inventario, roles, evaluación de impacto, auditoría y gestión de incidentes."
+  ],
+  "methodology": "El curso aplica el método de casos en cada unidad con organizaciones peruanas verosímiles, que enfrentan al estudiante a dilemas donde se cruzan la decisión técnica, la ética y la normativa. Se trabaja con aula invertida: el estudiante revisa la lectura antes de la sesión síncrona, que se dedica al debate estructurado, al juego de roles entre empresa, regulador y persona afectada, y a la resolución guiada. El aprendizaje basado en problemas se concreta en laboratorios de Python con Fairlearn, SHAP y técnicas de anonimización, y el aprendizaje basado en proyectos culmina en un expediente de gobernanza y auditoría, de preferencia sobre el sistema del Proyecto Integrador. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión entre pares con rúbrica y tutorías asíncronas en el aula virtual.",
+  "bibliography": [
+    "Coeckelbergh, M. (2020). AI ethics. MIT Press.",
+    "Barocas, S., Hardt, M. y Narayanan, A. (2023). Fairness and machine learning: Limitations and opportunities. MIT Press.",
+    "Floridi, L. y Cowls, J. (2019). A unified framework of five principles for AI in society. Harvard Data Science Review, 1(1).",
+    "Raji, I. D., Smart, A., White, R. N., Mitchell, M., Gebru, T., Hutchinson, B., Smith-Loud, J., Theron, D. y Barnes, P. (2020). Closing the AI accountability gap: Defining an end-to-end framework for internal algorithmic auditing. En Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (pp. 33-44). ACM.",
+    "UNESCO. (2021). Recomendación sobre la ética de la inteligencia artificial. Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura.",
+    "National Institute of Standards and Technology. (2023). Artificial intelligence risk management framework (AI RMF 1.0) (NIST AI 100-1). U.S. Department of Commerce.",
+    "International Organization for Standardization e International Electrotechnical Commission. (2023). ISO/IEC 42001:2023. Information technology. Artificial intelligence. Management system. ISO.",
+    "Parlamento Europeo y Consejo de la Unión Europea. (2024). Reglamento (UE) 2024/1689 por el que se establecen normas armonizadas en materia de inteligencia artificial. Diario Oficial de la Unión Europea.",
+    "Congreso de la República del Perú. (2023). Ley N.° 31814, Ley que promueve el uso de la inteligencia artificial en favor del desarrollo económico y social del país. Diario Oficial El Peruano.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuestionarios de las cuatro unidades con retroalimentación inmediata, participación argumentada en el análisis de los cuatro casos, laboratorios de Python y revisión entre pares con rúbrica."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3, evaluadas con rúbrica analítica: análisis ético estructurado, auditoría técnica de equidad, explicabilidad y privacidad, y evaluación de impacto algorítmico con matriz de cumplimiento."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 40,
+      "description": "Proyecto final de la unidad 4: expediente de gobernanza y auditoría de un sistema de IA, con política de uso, supervisión humana, gestión de incidentes y sustentación oral ante jurado docente."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos éticos de la IA y daños sociotécnicos",
+      "description": "Al finalizar la unidad, el estudiante analiza un sistema de IA desplegado como sistema sociotécnico, identifica a sus interesados y los daños que puede causar, y formula una recomendación argumentada con teorías éticas, principios de IA confiable y criterios de responsabilidad.",
+      "topics": [
+        "La IA como sistema sociotécnico y daños documentados en el mundo y en América Latina",
+        "Teorías éticas aplicadas a decisiones algorítmicas: consecuencias, deberes, justicia, capacidades y virtudes",
+        "Principios de IA confiable de Floridi y Cowls, la OCDE y la UNESCO, y la brecha entre principios y práctica",
+        "Taxonomía de daños sociotécnicos y fuentes de sesgo a lo largo del ciclo de vida",
+        "Responsabilidad, muchas manos y autonomía de las personas frente a la manipulación",
+        "Método de análisis ético estructurado y voz del técnico para escalar"
+      ],
+      "slides": [
+        {
+          "title": "Por qué un curso de ética y gobernanza para técnicos en IA",
+          "bullets": [
+            "Las decisiones que más afectan a las personas se toman en el código: qué se predice, con qué datos, con qué umbral y quién revisa.",
+            "Robodebt (Australia, 2016-2019): un cruce automatizado de ingresos generó cientos de miles de deudas mal calculadas; una comisión real lo declaró ilegal en 2023.",
+            "Países Bajos: un modelo de riesgo de fraude en subsidios por cuidado infantil, que usaba la doble nacionalidad como indicador, afectó a decenas de miles de familias.",
+            "América Latina: sistemas predictivos de embarazo adolescente (Salta, 2018) y de riesgo infantil (Alerta Niñez, Chile) fueron cuestionados por estigmatizar a hogares pobres.",
+            "El técnico no fija la política, pero controla variables, métricas, umbrales y documentación: su criterio es una salvaguarda real."
+          ],
+          "notes": "Abra el curso con una pregunta: ¿quién fue responsable en Robodebt, el ministro, el analista que diseñó el cruce de datos o el sistema? Explique que el programa promediaba los ingresos anuales declarados al fisco y los distribuía en quincenas, lo que generaba deudas ficticias para trabajadores con ingresos irregulares, y que la carga de la prueba se trasladó al ciudadano. Subraye que no fue un error de aprendizaje profundo, sino una regla automatizada simple aplicada a escala sin supervisión adecuada: la ética de la IA no trata solo de modelos sofisticados. En el caso neerlandés, la autoridad tributaria terminó exigiendo devoluciones injustas y el gobierno renunció en 2021. Conecte con los casos latinoamericanos y pregunte qué hogares peruanos podrían verse afectados por un sistema similar de focalización de subsidios. Cierre presentando la promesa del curso: al final, cada estudiante será capaz de auditar un sistema y defender un expediente de gobernanza ante un jurado."
+        },
+        {
+          "title": "La IA como sistema sociotécnico",
+          "bullets": [
+            "Un sistema de IA es modelo más datos, interfaz, procesos, incentivos, usuarios y personas afectadas: el daño emerge de la interacción, no solo del algoritmo.",
+            "Selbst et al. (2019) describen cinco trampas de abstracción: encuadre, portabilidad, formalismo, efecto dominó y solucionismo.",
+            "Trampa de portabilidad: un modelo de riesgo crediticio entrenado en Lima Metropolitana no es válido sin más para clientes rurales de Puno.",
+            "Trampa del solucionismo: a veces la mejor decisión de diseño es no usar IA o usar una regla transparente.",
+            "Pregunta guía: ¿qué decisión cambia este sistema, para quién y quién puede impugnarla?"
+          ],
+          "notes": "Use el ejemplo de un modelo de asignación de citas en un hospital: el modelo puede ser preciso y, aun así, el sistema puede fallar si los pacientes rurales no tienen teléfono para confirmar o si el personal ignora las recomendaciones. Explique cada trampa de Selbst y colegas con un ejemplo peruano. El encuadre falla cuando se define «buen pagador» solo con historial formal en un país donde cerca de siete de cada diez trabajadores son informales según la ENAHO del INEI. El formalismo aparece cuando se reduce la equidad a una única métrica. El efecto dominó ocurre cuando la introducción del sistema cambia la conducta de los usuarios, por ejemplo, cuando los asesores aprenden a llenar formularios para que el modelo apruebe. Pida a los estudiantes que tomen un modelo que hayan entrenado en Aprendizaje Automático I o II y describan en dos minutos el sistema sociotécnico completo en que operaría."
+        },
+        {
+          "title": "Consecuencialismo aplicado: maximizar beneficios contando a todos",
+          "bullets": [
+            "Utilitarismo (Bentham, Mill): la acción correcta maximiza el bienestar agregado; es la base implícita de la optimización de métricas.",
+            "Fortaleza: obliga a cuantificar beneficios y daños, por ejemplo, fraudes evitados frente a clientes legítimos bloqueados.",
+            "Límite: el promedio oculta la distribución; un modelo con 95 % de exactitud puede fallar sistemáticamente con una minoría.",
+            "Aplicación técnica: matriz de costos por tipo de error y análisis desagregado por grupos afectados."
+          ],
+          "notes": "Muestre que toda función de pérdida es una decisión moral implícita: al minimizar el error promedio, el modelo prioriza a la mayoría. Plantee un ejemplo con números: un detector de fraude que bloquea transferencias en una billetera digital evita pérdidas por un millón de soles al mes, pero bloquea por error a 3 000 usuarios legítimos, muchos de ellos comerciantes que dependen de la billetera para cobrar. El cálculo utilitarista puede justificar el sistema, pero exige contar a todos y ponderar la gravedad: no es lo mismo un retraso de una hora que perder las ventas del día. Pregunte cómo cambiaría la decisión si los bloqueos se concentraran en comerciantes de provincias. Esta discusión prepara el análisis desagregado de la unidad 2 y la idea de que la exactitud global nunca basta para declarar que un sistema es aceptable."
+        },
+        {
+          "title": "Deontología, derechos y dignidad frente a la optimización",
+          "bullets": [
+            "Kant: tratar a las personas siempre como fines y nunca solo como medios; hay límites que ningún beneficio agregado justifica.",
+            "Traducción práctica: los derechos funcionan como restricciones del diseño, no como variables que se compensan con ganancias.",
+            "Ejemplo: usar datos de salud para fijar primas sin consentimiento vulnera la autonomía aunque mejore la rentabilidad.",
+            "La Constitución peruana (art. 2) protege la igualdad y prohíbe la discriminación, y resguarda la intimidad frente a los servicios informáticos.",
+            "Derecho al tratamiento objetivo (art. 23, Ley 29733): no sufrir decisiones con efectos significativos basadas solo en tratamiento automatizado de la personalidad o conducta."
+          ],
+          "notes": "Contraste con la diapositiva anterior: el deontólogo no pregunta cuánto beneficio genera el sistema, sino si respeta a cada persona. Lleve la discusión a la ingeniería: los derechos se implementan como restricciones, por ejemplo, excluir variables sensibles de ciertos usos, exigir consentimiento expreso para datos biométricos o garantizar una vía humana de revisión. Explique el derecho al tratamiento objetivo del artículo 23 de la Ley 29733, que el estudiante volverá a encontrar en las unidades 2 y 3, y su parentesco con el artículo 22 del Reglamento General de Protección de Datos europeo. Pregunte: si un modelo de cobranza resulta más eficaz cuando envía mensajes intimidatorios a deudores con perfiles vulnerables, ¿qué diría un utilitarista y qué diría un kantiano? Haga notar que ambas teorías iluminan aspectos distintos del problema y que el análisis maduro las combina en lugar de elegir una por conveniencia."
+        },
+        {
+          "title": "Justicia distributiva, capacidades y virtudes del profesional",
+          "bullets": [
+            "Rawls: las desigualdades solo se justifican si benefician a los menos aventajados; útil para priorizar grupos vulnerables en el diseño.",
+            "Enfoque de capacidades (Sen, Nussbaum): evaluar si el sistema amplía o restringe lo que las personas pueden ser y hacer, como acceder a crédito o a salud.",
+            "Ética de la virtud (Aristóteles): ¿qué haría un profesional prudente, honesto y valiente ante una métrica dudosa?",
+            "Vallor (2016) propone virtudes tecnomorales como la honestidad, la humildad, la justicia, el coraje, la empatía y la sabiduría práctica."
+          ],
+          "notes": "Presente el velo de ignorancia de John Rawls como herramienta de diseño: pida a los estudiantes que imaginen que no saben si serán el analista del banco, el cliente de Lima con historial formal o la productora de papa de Huancavelica sin historial crediticio. ¿Qué reglas de aprobación elegirían? El enfoque de capacidades de Amartya Sen permite evaluar sistemas públicos: un algoritmo de focalización de subsidios debe juzgarse por si amplía oportunidades reales, no solo por su exactitud. Cierre con la ética de la virtud: los marcos no reemplazan el juicio, y Shannon Vallor sostiene que una vida con tecnologías poderosas exige cultivar virtudes como la humildad ante la incertidumbre y el coraje para señalar problemas. Pregunte qué virtud fue más difícil de practicar en sus proyectos anteriores, por ejemplo, reconocer ante el equipo que un modelo no estaba listo para producción."
+        },
+        {
+          "title": "Principios de IA confiable: una convergencia global",
+          "bullets": [
+            "Jobin, Ienca y Vayena (2019) revisaron 84 guías éticas: convergen en transparencia, justicia, no maleficencia, responsabilidad y privacidad.",
+            "Floridi y Cowls (2019): beneficencia, no maleficencia, autonomía, justicia y explicabilidad, esta última como principio habilitante.",
+            "Principios de la OCDE (2019, actualizados en 2024), a los que se adhirió el Perú: crecimiento inclusivo, derechos humanos, transparencia, robustez y rendición de cuentas.",
+            "Recomendación de la UNESCO (2021), adoptada por sus Estados miembros: proporcionalidad, supervisión humana, sostenibilidad y evaluación del impacto ético."
+          ],
+          "notes": "Explique que la convergencia de principios es real pero engañosa: todos coinciden en la palabra «transparencia», pero no en qué significa ni en cómo medirla. El aporte de Floridi y Cowls es mostrar que los cuatro principios clásicos de la bioética se aplican a la IA y que hace falta uno nuevo, la explicabilidad, que combina inteligibilidad, es decir, cómo funciona el sistema, y rendición de cuentas, es decir, quién responde por él. Mencione que el Perú se adhirió a los principios de la OCDE en 2019 y que la Recomendación de la UNESCO es el primer instrumento normativo mundial sobre ética de la IA. Pida a los equipos que elijan un principio y lo traduzcan en un requisito verificable para un sistema que conozcan, por ejemplo: «el asistente informa al usuario, en su primer mensaje, que está interactuando con una IA y cómo contactar a una persona»."
+        },
+        {
+          "title": "De los principios a la práctica: la brecha",
+          "bullets": [
+            "Mittelstadt (2019): a diferencia de la medicina, la IA carece de fines comunes, deberes fiduciarios, historia profesional y mecanismos de sanción.",
+            "Riesgo de lavado ético: publicar principios sin cambiar procesos, incentivos ni presupuestos.",
+            "Los principios entran en conflicto: explicabilidad frente a desempeño, privacidad frente a equidad medible, autonomía frente a protección.",
+            "Puente operativo: principio, requisito, control, evidencia y responsable, como en cualquier sistema de gestión."
+          ],
+          "notes": "Use el argumento de Brent Mittelstadt para explicar por qué los principios no bastan: la medicina tiene un fin compartido, la salud del paciente, mientras que la IA se desarrolla mayoritariamente en empresas cuyo fin es comercial. Discuta el lavado ético con ejemplos de comités de ética que grandes empresas tecnológicas crearon y disolvieron al poco tiempo. Luego muestre la tensión entre principios: para medir si un modelo discrimina por sexo hace falta registrar el sexo, lo que choca con la minimización de datos. Presente la cadena principio, requisito, control, evidencia y responsable, que será la columna vertebral del curso. Ejemplo: principio de supervisión humana; requisito, toda denegación de crédito es revisable; control, cola de revisión con plazo de 48 horas; evidencia, registro de revisiones; responsable, jefe de riesgos. Pida a la clase un ejemplo análogo para el principio de privacidad."
+        },
+        {
+          "title": "Taxonomía de daños sociotécnicos",
+          "bullets": [
+            "Shelby et al. (2023) agrupan los daños en cinco familias: representacionales, de asignación, de calidad de servicio, interpersonales y sociales o sistémicos.",
+            "Asignación: negar crédito, empleo o subsidio; representación: estereotipos en traducciones o en imágenes generadas.",
+            "Calidad de servicio: un reconocimiento de voz que falla más con hablantes de quechua o con acentos regionales.",
+            "Sistémicos: desinformación, concentración de poder, degradación ambiental y pérdida de capacidades humanas.",
+            "Calificar cada daño por gravedad, alcance, reversibilidad y probabilidad para priorizar controles."
+          ],
+          "notes": "Explique que nombrar con precisión el daño es el primer paso para gestionarlo. Recuerde que, según el Censo 2017 del INEI, cerca del 14 % de la población aprendió a hablar en quechua y casi el 2 % en aimara: un asistente de voz para un servicio público que solo funciona bien con el castellano limeño causa daños de calidad de servicio a millones de personas. Distinga los daños de asignación, visibles y medibles, de los representacionales, más difusos pero acumulativos. Dé ejemplos de daños interpersonales, como el acoso con imágenes falsas generadas por IA, y sistémicos, como la homogeneización cultural o la erosión de la confianza en la información. Proponga un ejercicio rápido: para un sistema de selección de personal, que cada estudiante nombre un daño de cada familia y lo califique en gravedad y reversibilidad de 1 a 5, y que compare su calificación con la de un compañero."
+        },
+        {
+          "title": "Fuentes de sesgo a lo largo del ciclo de vida",
+          "bullets": [
+            "Suresh y Guttag (2021): sesgo histórico, de representación, de medición, de agregación, de aprendizaje, de evaluación y de despliegue.",
+            "Medición: usar el costo de atención como indicador de necesidad médica subestimó la gravedad de pacientes negros en EE. UU. (Obermeyer et al., 2019).",
+            "Representación: Gender Shades (2018) halló errores de hasta 34,7 % en mujeres de piel oscura frente a 0,8 % en hombres de piel clara.",
+            "Despliegue: usar un modelo para un fin distinto del previsto, como pasar de priorizar visitas sociales a sancionar."
+          ],
+          "notes": "Recorra el ciclo de vida que el estudiante ya conoce desde Despliegue de Modelos (MLOps) y ubique cada sesgo en su etapa. El caso de Obermeyer y colegas es ideal: el algoritmo no usaba la raza, pero predecía costos, y como el sistema de salud gastaba menos en pacientes negros con la misma gravedad, el modelo aprendió a subestimar su necesidad. Los autores estimaron que corregir la variable objetivo elevaría la proporción de pacientes negros identificados para atención adicional de 17,7 % a 46,5 %. El estudio Gender Shades de Buolamwini y Gebru mostró además que los conjuntos de evaluación tampoco eran representativos. Pida que traduzcan el sesgo de medición al Perú: ¿qué ocurre si se usa el número de reclamos registrados como indicador de mala calidad de servicio en zonas con baja conectividad, donde la gente reclama menos por falta de canales y no por estar satisfecha?"
+        },
+        {
+          "title": "Responsabilidad y el problema de las muchas manos",
+          "bullets": [
+            "Nissenbaum (1996): en sistemas computacionales la responsabilidad se diluye entre muchas manos y se atribuyen los errores a la computadora.",
+            "Matthias (2004): brecha de responsabilidad cuando un sistema que aprende actúa de un modo que nadie pudo prever.",
+            "Santoni de Sio y Mecacci (2021) distinguen brechas de culpabilidad, de rendición moral, de rendición pública y de responsabilidad activa.",
+            "Respuesta de diseño: control humano significativo, trazabilidad y un dueño identificable para cada sistema en producción."
+          ],
+          "notes": "Ponga un ejemplo: el chatbot de una aerolínea informa mal sobre una tarifa por duelo y la empresa alega que el chatbot es una entidad separada responsable de sus propias respuestas. En 2024 un tribunal canadiense rechazó ese argumento en el caso Moffatt contra Air Canada y ordenó compensar al cliente. Use el caso para mostrar que la responsabilidad jurídica sí tiene dueño: la organización que despliega el sistema. Luego distinga las cuatro brechas de Santoni de Sio y Mecacci: no solo importa a quién culpar después de un daño, sino quién tiene el deber activo de prevenirlo. Pregunte cuántas manos intervienen en un modelo de crédito: proveedor de datos, científico de datos, ingeniero de MLOps, analista de riesgos, gerente comercial y regulador. ¿Quién debería firmar el pase a producción y qué debería haber revisado antes de hacerlo?"
+        },
+        {
+          "title": "Autonomía de las personas: manipulación y diseño persuasivo",
+          "bullets": [
+            "Sistemas de recomendación y asistentes conversacionales pueden explotar sesgos cognitivos para maximizar tiempo de uso o compras.",
+            "Patrones oscuros: suscripciones difíciles de cancelar, urgencia falsa y personalización de precios sin transparencia.",
+            "Antropomorfización: los usuarios atribuyen comprensión y empatía a los modelos de lenguaje, lo que eleva la confianza indebida.",
+            "El Código de Protección y Defensa del Consumidor (Ley 29571) prohíbe métodos comerciales coercitivos e información engañosa; INDECOPI fiscaliza y sanciona."
+          ],
+          "notes": "Conecte con lo que el estudiante vio sobre sistemas de recomendación en Aprendizaje Automático II: la métrica de optimización define qué conductas se refuerzan, y un sistema que maximiza clics puede favorecer contenido polarizante o compras impulsivas. Discuta la manipulación como una violación de la autonomía: influir en una decisión eludiendo la capacidad racional de la persona. Presente la antropomorfización con el efecto ELIZA, descrito por Joseph Weizenbaum en la década de 1960, y su versión actual con asistentes generativos que usan lenguaje emocional y se presentan con nombre propio. Mencione que en el Perú el Código de Protección y Defensa del Consumidor y la labor de INDECOPI ofrecen herramientas contra prácticas engañosas, aunque no fueron pensados para la IA. Pregunte: ¿es ético que un asistente de cobranza adapte su tono para generar culpa en los deudores con mayor probabilidad de pagar?"
+        },
+        {
+          "title": "IA, trabajo y sostenibilidad: impactos fuera de la métrica",
+          "bullets": [
+            "Trabajo invisible: etiquetado y moderación de contenidos tercerizados con salarios bajos y exposición a material traumático.",
+            "La OIT (2023) estima que la IA generativa complementa más tareas de las que automatiza, con mayor exposición en el empleo administrativo.",
+            "Huella ambiental: entrenar y operar modelos grandes consume energía y agua; Strubell et al. (2019) y Luccioni et al. (2023) proponen medirla y reportarla.",
+            "Pregunta de diseño: ¿el beneficio justifica usar un modelo grande para una tarea que resolvería uno pequeño?"
+          ],
+          "notes": "Amplíe la mirada más allá de la persona usuaria. Explique que muchos conjuntos de datos y sistemas de moderación dependen de trabajadores en países de ingresos medios y bajos, como documentaron investigaciones periodísticas sobre etiquetadores en Kenia en 2023. Presente el estudio de la OIT de 2023 sobre IA generativa y empleo: la mayor exposición se encuentra en tareas administrativas, ocupadas mayoritariamente por mujeres, y el efecto dominante sería de complemento antes que de sustitución. Sobre el ambiente, explique que la huella de carbono puede estimarse con la energía consumida y la intensidad de carbono de la red eléctrica, y que reportarla es parte de una documentación responsable. Proponga un cálculo: si una consulta a un modelo grande consumiera diez veces más energía que una consulta a un modelo pequeño ajustado, ¿cuándo se justifica usar el grande en un servicio de atención con un millón de consultas al mes?"
+        },
+        {
+          "title": "Método de análisis ético estructurado en seis pasos",
+          "bullets": [
+            "Paso 1: describir el sistema sociotécnico, es decir, la decisión, los datos, los usuarios, los afectados y el contexto de uso.",
+            "Paso 2: mapear interesados y su poder de impugnación; paso 3: identificar daños por familia y calificarlos.",
+            "Paso 4: analizar con al menos dos lentes éticas e identificar los principios en tensión.",
+            "Paso 5: generar alternativas, incluida la de no automatizar, y evaluarlas.",
+            "Paso 6: recomendar con controles, responsables y criterios de revisión."
+          ],
+          "notes": "Presente el método que se usará en la tarea 1 y en los casos del curso. Insista en el paso 5: generar alternativas evita el falso dilema entre desplegar tal cual o no hacer nada; casi siempre hay opciones intermedias, como desplegar solo como apoyo, limitar a ciertos usos, añadir revisión humana o pilotear con monitoreo. Aplique el método en vivo a un caso breve: una universidad privada quiere usar un detector de textos generados por IA para sancionar a estudiantes. Muestre que estos detectores tienen tasas de falsos positivos no despreciables y que Liang y colegas, en 2023, hallaron que clasificaban erróneamente como generados por IA muchos textos de personas no nativas en inglés. Pregunte qué alternativa recomendarían, por ejemplo, usar el detector solo para abrir una conversación con el estudiante, y qué controles exigirían antes de cualquier sanción."
+        },
+        {
+          "title": "La voz del técnico: cuándo y cómo escalar",
+          "bullets": [
+            "Señales de alarma: presión por desplegar sin evaluación, métricas maquilladas, datos sin base legal o finalidad cambiada.",
+            "Expresar valores (Gentile, 2010): preparar argumentos con datos, buscar aliados y proponer alternativas antes de negarse.",
+            "Canales: líder técnico, oficial de datos personales, comité de riesgos y, si corresponde, la Autoridad Nacional de Protección de Datos Personales.",
+            "Dejar por escrito la advertencia técnica protege a las personas afectadas y al propio profesional."
+          ],
+          "notes": "Cierre la unidad volviendo a la persona del técnico. Mary Gentile, con su enfoque de expresar valores, sostiene que la mayoría de profesionales sabe qué es lo correcto pero no sabe cómo decirlo con eficacia, y por eso propone ensayar guiones. Practique un juego de roles de tres minutos: el gerente comercial pide lanzar el lunes un modelo de preaprobación de créditos sin el análisis por subgrupos; el estudiante debe responder con datos, proponer un piloto acotado y dejar constancia por correo. Explique el rol del oficial de datos personales, previsto en el nuevo reglamento de la Ley 29733 para determinados supuestos, y que la Autoridad Nacional de Protección de Datos Personales, adscrita al Ministerio de Justicia y Derechos Humanos, recibe denuncias. Recuerde que la voz interna es el primer recurso y la denuncia externa el último, y que ambas requieren evidencia documentada."
+        }
+      ],
+      "reading": {
+        "title": "Del principio al daño: fundamentos para analizar éticamente un sistema de IA",
+        "minutes": 35,
+        "content": "## Por qué la exactitud no basta\n\nUn modelo puede alcanzar métricas excelentes y, aun así, causar daños graves. En Australia, el programa conocido como Robodebt cruzó entre 2016 y 2019 los ingresos anuales declarados al fisco con los subsidios pagados y promedió esos ingresos en quincenas; el resultado fueron cientos de miles de deudas mal calculadas a personas con ingresos irregulares, y una comisión real concluyó en 2023 que el esquema fue ilegal. En los Países Bajos, un modelo de riesgo de fraude en subsidios por cuidado infantil, que usaba la doble nacionalidad como indicador, llevó a la autoridad tributaria a exigir devoluciones a decenas de miles de familias. En ninguno de los dos casos el problema fue un algoritmo exótico, sino la combinación de una regla o un modelo con datos imperfectos, incentivos de recaudación y ausencia de vías efectivas de impugnación.\n\nPor eso este curso trata la IA como un **sistema sociotécnico**: el modelo es una pieza dentro de un conjunto de datos, interfaces, procesos, personas e instituciones, y el daño suele emerger de la interacción entre esas piezas. Selbst et al. (2019) advierten sobre las trampas de abstracción que cometen los técnicos cuando aíslan el modelo de su contexto: definir mal el problema, trasladar un modelo a otro contexto, reducir valores a una sola fórmula, ignorar cómo cambia la conducta de las personas y suponer que la tecnología es siempre la solución.\n\n## Cuatro lentes éticas\n\nNinguna teoría resuelve por sí sola los dilemas de la IA, pero cada una formula preguntas que el analista no debe omitir:\n\n| Lente | Pregunta central | Traducción técnica |\n|---|---|---|\n| Consecuencialismo (Bentham, Mill) | ¿Qué resultados produce y para quién? | Matriz de costos por error, análisis desagregado |\n| Deontología (Kant) | ¿Respeta derechos y dignidad? | Restricciones: consentimiento, variables vedadas, vía humana |\n| Justicia (Rawls) y capacidades (Sen) | ¿Cómo se reparten beneficios y cargas? | Métricas de equidad, prioridad a vulnerables |\n| Virtud (Aristóteles, Vallor) | ¿Qué haría un profesional íntegro? | Documentación veraz, voz para escalar |\n\nUn ejemplo muestra cómo se complementan. Una caja municipal evalúa un modelo de cobranza que reduce la morosidad en 8 % enviando mensajes más insistentes a los clientes con mayor probabilidad de pago. La lente consecuencialista exige calcular también los daños: estrés, endeudamiento adicional y reclamos ante INDECOPI. La deontológica pregunta si el mensaje respeta al deudor o lo manipula. La de justicia examina si la presión se concentra en mujeres emprendedoras o en clientes rurales. La de virtud interpela al analista que descubre que el modelo explota la vergüenza y debe decidir si lo reporta.\n\n## Principios: convergencia y brecha\n\nJobin, Ienca y Vayena (2019) analizaron 84 documentos de principios y hallaron convergencia en transparencia, justicia y equidad, no maleficencia, responsabilidad y privacidad. Floridi y Cowls (2019) propusieron cinco principios: los cuatro de la bioética (beneficencia, no maleficencia, autonomía y justicia) más la **explicabilidad**, que habilita a los demás porque sin comprender el sistema ni poder atribuir responsabilidades nada se puede verificar. La OCDE, a cuyos principios se adhirió el Perú en 2019, y la UNESCO, con su Recomendación de 2021, llevaron esos acuerdos al plano intergubernamental.\n\nMittelstadt (2019) advierte, sin embargo, que los principios no bastan: el desarrollo de IA carece de fines comunes, deberes fiduciarios y mecanismos de sanción comparables a los de la medicina. La respuesta práctica es **operacionalizar**: cada principio debe descender a un requisito, un control, una evidencia y un responsable.\n\n## Nombrar el daño y su origen\n\nShelby et al. (2023) proponen cinco familias de daños: de **asignación** (negar recursos u oportunidades), de **calidad de servicio** (el sistema funciona peor para algunos grupos), **representacionales** (estereotipos o invisibilización), **interpersonales** (acoso, vigilancia, manipulación) y **sociales o sistémicos** (desinformación, concentración de poder, daño ambiental). Suresh y Guttag (2021) ubican el origen de los sesgos en el ciclo de vida: histórico, de representación, de medición, de agregación, de aprendizaje, de evaluación y de despliegue. El caso estudiado por Obermeyer et al. (2019) es paradigmático: un algoritmo de salud que predecía costos, y no necesidad clínica, subestimó la gravedad de pacientes negros porque el sistema gastaba menos en ellos.\n\nEn el Perú, donde según el Censo 2017 cerca del 14 % de la población aprendió a hablar en quechua y alrededor de siete de cada diez trabajadores son informales, los sesgos de representación y de medición son especialmente probables: los datos formales describen mejor a la población urbana, bancarizada y castellanohablante.\n\n## Responsabilidad y muchas manos\n\nNissenbaum (1996) describió el problema de las **muchas manos**: cuando un resultado depende de muchos actores, cada uno puede negar su parte. Matthias (2004) añadió la **brecha de responsabilidad** de los sistemas que aprenden. La respuesta institucional consiste en asignar un dueño a cada sistema, mantener trazabilidad y asegurar control humano significativo. En lo jurídico, la organización que despliega el sistema responde por él, como confirmó en 2024 un tribunal canadiense que obligó a una aerolínea a honrar la información errónea dada por su chatbot.\n\n## Plantilla de análisis\n\n```text\nSISTEMA:        decisión que apoya o automatiza\nAFECTADOS:      quiénes, cuántos, poder de impugnación\nDAÑOS:          familia | descripción | gravedad 1-5 | reversibilidad 1-5\nLENTES:         consecuencias | derechos | justicia | virtud\nALTERNATIVAS:   incluida \"no automatizar\"\nRECOMENDACIÓN:  decisión + controles + responsable + fecha de revisión\n```\n\n## Ideas clave\n\n- La exactitud global es necesaria, pero nunca suficiente.\n- Las teorías éticas son lentes complementarias, no algoritmos de decisión.\n- Un principio sin requisito, control, evidencia y responsable es solo una declaración."
+      },
+      "case": {
+        "title": "Caso: Municipalidad de Valle Hermoso y el puntaje de riesgo alimentario",
+        "content": "La Municipalidad Distrital de Valle Hermoso, en la periferia de una ciudad de la sierra central, administra un programa de complementación alimentaria que atiende a 4 200 familias, aunque su padrón de posibles beneficiarios suma 9 800 hogares. Cada año la asignación de canastas genera denuncias de favoritismo. Para «despolitizar» la decisión, la Gerencia de Desarrollo Social contrató a DataSur Analítica, una pequeña empresa limeña, que propuso un modelo de aprendizaje automático para estimar la probabilidad de inseguridad alimentaria severa de cada hogar.\n\nEl modelo combina la clasificación socioeconómica del Sistema de Focalización de Hogares (SISFOH), datos del padrón municipal (tipo de vivienda, número de menores, jefatura femenina), registros de atenciones en el centro de salud facilitados por la red de salud y un indicador de deuda de arbitrios. Entrenado con una encuesta nutricional que la municipalidad levantó en 2025 sobre 1 500 hogares, alcanza un AUC de 0,84. DataSur propone asignar las canastas a los 4 200 hogares con mayor puntaje y actualizar la lista cada trimestre.\n\nEl análisis preliminar revela tensiones. Los hogares de los tres centros poblados rurales del distrito tienen menos registros en el centro de salud, porque el establecimiento queda a más de una hora de camino, y el modelo los puntúa más bajo: aunque son el 22 % del padrón, recibirían solo el 13 % de las canastas. La deuda de arbitrios, una de las variables más influyentes, penaliza a quienes no pagan, pero también a quienes viven en asentamientos sin título de propiedad. Además, la red de salud entregó los datos de atenciones sin informar a los pacientes sobre esta nueva finalidad.\n\nLa alcaldesa quiere anunciar el sistema en la próxima sesión de concejo como «asignación objetiva con inteligencia artificial». Un regidor de oposición sostiene que «una máquina decidirá quién come» y pide suspender el proyecto. La coordinadora del comedor popular de uno de los centros poblados pregunta cómo podrán reclamar las familias que queden fuera. La gerente de Desarrollo Social, por su parte, recuerda que el sistema actual, basado en la evaluación de las asistentas sociales, también tiene sesgos y no deja ningún registro que permita revisarlo.\n\nUsted es el analista de datos que la municipalidad acaba de contratar. La gerente le pide un informe de dos páginas con una recomendación para la sesión de concejo, que se realizará en diez días.",
+        "questions": [
+          "Describa el sistema sociotécnico completo: qué decisión apoya, quiénes son los afectados y qué poder de impugnación tiene cada grupo de interesados.",
+          "Identifique y califique al menos cuatro daños según la taxonomía de Shelby et al. y señale en qué etapa del ciclo de vida se origina cada sesgo.",
+          "Analice la propuesta desde las lentes consecuencialista, deontológica y de justicia rawlsiana. ¿En qué coinciden y en qué divergen sus conclusiones?",
+          "¿Es legítimo usar los datos de atenciones de salud y la deuda de arbitrios? Justifique con principios éticos y con la Ley 29733.",
+          "Formule su recomendación a la gerente: decisión, alternativas consideradas, controles mínimos, responsable y criterios para revisar el sistema."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Análisis ético estructurado de un sistema de IA desplegado",
+        "instructions": "**Objetivo:** aplicar el método de análisis ético en seis pasos a un sistema de IA real y formular una recomendación defendible.\n\n**Qué entregar:** un informe individual de 1 500 a 2 000 palabras sobre uno de estos sistemas documentados: Robodebt (Australia), el modelo de riesgo de subsidios por cuidado infantil de los Países Bajos, Alerta Niñez (Chile), la plataforma predictiva de Salta (Argentina), COMPAS (Estados Unidos) o un sistema peruano propuesto por el estudiante y aprobado por el docente en la semana 2.\n\n**Estructura obligatoria:**\n\n1. Descripción del sistema sociotécnico: decisión, datos, usuarios, afectados y contexto institucional.\n2. Mapa de interesados con su interés, su poder y sus vías de impugnación.\n3. Tabla de daños: familia según Shelby et al. (2023), descripción, gravedad y reversibilidad de 1 a 5, y fuente de sesgo según Suresh y Guttag (2021).\n4. Análisis con al menos dos lentes éticas e identificación de dos principios en tensión.\n5. Alternativas, incluida la de no automatizar, con sus ventajas y desventajas.\n6. Recomendación con controles concretos, responsable y criterios de revisión, más una reflexión de 150 palabras sobre qué habría hecho usted como técnico del equipo.\n\n**Formato:** PDF, letra de 11 puntos, referencias en APA 7 con al menos cinco fuentes verificables. Se aceptan diagramas propios. Si usa asistentes de IA generativa, declárelo en un anexo indicando para qué los usó.\n\n**Criterios:** precisión de los hechos, profundidad del análisis, coherencia entre daños y controles, y claridad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Descripción sociotécnica y mapa de interesados precisos y documentados",
+            "points": 4
+          },
+          {
+            "name": "Identificación y calificación de daños y fuentes de sesgo",
+            "points": 5
+          },
+          {
+            "name": "Análisis ético con lentes complementarias y principios en tensión",
+            "points": 5
+          },
+          {
+            "name": "Alternativas y recomendación con controles verificables",
+            "points": 4
+          },
+          {
+            "name": "Redacción, evidencia y referencias en formato APA",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Fundamentos éticos y daños de la IA",
+        "questions": [
+          {
+            "prompt": "Un sistema de reconocimiento de voz de una línea de atención del Estado tiene 94 % de exactitud global, pero falla tres veces más con hablantes cuya lengua materna es el quechua. Según Shelby et al. (2023), ¿qué tipo de daño es principalmente?",
+            "options": [
+              "Daño representacional",
+              "Daño interpersonal",
+              "Daño de calidad de servicio",
+              "Daño sistémico por concentración de poder"
+            ],
+            "correct": 2,
+            "explanation": "El sistema funciona peor para un grupo identificable, lo que define el daño de calidad de servicio. Puede derivar en un daño de asignación si impide acceder al servicio, pero la falla primaria es un desempeño desigual."
+          },
+          {
+            "prompt": "En el estudio de Obermeyer et al. (2019), un algoritmo predecía el costo futuro de atención para identificar a pacientes con mayor necesidad. ¿Qué fuente de sesgo explica principalmente el resultado discriminatorio?",
+            "options": [
+              "Sesgo de agregación: se usó un solo modelo para todos los hospitales",
+              "Sesgo de medición: el costo era un indicador sesgado de la necesidad clínica",
+              "Sesgo de aprendizaje: los hiperparámetros estaban mal ajustados",
+              "Sesgo de despliegue: el modelo se usó en otro país"
+            ],
+            "correct": 1,
+            "explanation": "La variable objetivo, el costo, medía mal la necesidad porque el sistema gastaba menos en pacientes negros con igual gravedad. Es un caso típico de sesgo de medición en la definición de la etiqueta, no de ajuste del modelo."
+          },
+          {
+            "prompt": "Un banco evalúa un modelo de cobranza que reduce la morosidad enviando mensajes que generan culpa en clientes emocionalmente vulnerables. ¿Qué argumento corresponde a la lente deontológica?",
+            "options": [
+              "Debe compararse la mejora en la recuperación con el estrés total causado a los clientes",
+              "Un profesional prudente buscaría un punto medio entre presión comercial y empatía",
+              "Hay que verificar si la presión se concentra en los clientes menos aventajados",
+              "Explotar la vulnerabilidad emocional instrumentaliza a la persona y vulnera su autonomía, aunque mejore la recuperación"
+            ],
+            "correct": 3,
+            "explanation": "La deontología evalúa si la acción respeta a la persona como fin en sí misma. Comparar beneficios y estrés es un razonamiento consecuencialista, buscar el punto medio prudente es ética de la virtud y examinar a los menos aventajados es justicia rawlsiana."
+          },
+          {
+            "prompt": "¿Por qué Floridi y Cowls (2019) consideran la explicabilidad un principio habilitante dentro de su marco de cinco principios?",
+            "options": [
+              "Porque sin inteligibilidad ni atribución de responsabilidades no es posible verificar el cumplimiento de los demás principios",
+              "Porque garantiza por sí misma que el modelo no discrimine a ningún grupo",
+              "Porque reemplaza a la no maleficencia en los sistemas de aprendizaje profundo",
+              "Porque es el único principio exigido expresamente por la legislación peruana"
+            ],
+            "correct": 0,
+            "explanation": "La explicabilidad combina inteligibilidad y rendición de cuentas, y permite comprobar si se cumplen beneficencia, no maleficencia, autonomía y justicia. No garantiza por sí sola la ausencia de discriminación ni sustituye a otros principios."
+          },
+          {
+            "prompt": "Según Mittelstadt (2019), ¿qué razón explica que los principios éticos no basten para garantizar una IA ética, a diferencia de lo que ocurre en la medicina?",
+            "options": [
+              "Los principios de IA solo se han publicado en inglés y no tienen traducción oficial",
+              "La IA es demasiado reciente para tener problemas éticos documentados",
+              "El desarrollo de IA carece de fines comunes, deberes fiduciarios y mecanismos profesionales de sanción",
+              "Las leyes de protección de datos impiden aplicar principios éticos en las empresas"
+            ],
+            "correct": 2,
+            "explanation": "Mittelstadt señala que la medicina tiene un fin compartido, la salud del paciente, deberes hacia él e instituciones de control profesional. La IA se desarrolla en contextos comerciales sin esas estructuras, por lo que los principios deben operacionalizarse."
+          },
+          {
+            "prompt": "Una universidad quiere usar un detector de textos generados por IA para sancionar automáticamente el plagio. ¿Qué acción corresponde al paso 5 del método de análisis ético?",
+            "options": [
+              "Calcular la exactitud del detector en un conjunto de prueba de ensayos",
+              "Plantear alternativas como usar el detector solo para abrir una conversación con revisión humana, o no usarlo",
+              "Identificar a los estudiantes afectados y su poder de impugnación",
+              "Elegir la teoría ética que mejor justifique la decisión ya tomada por las autoridades"
+            ],
+            "correct": 1,
+            "explanation": "El paso 5 consiste en generar y evaluar alternativas, incluida la de no automatizar. Medir la exactitud es evaluación técnica, mapear afectados pertenece al paso 2 y elegir la teoría para justificar una decisión tomada es una racionalización."
+          },
+          {
+            "prompt": "El chatbot de una empresa informa a un cliente un beneficio inexistente y la empresa alega que el chatbot es responsable de sus propias respuestas. ¿Qué concepto describe el intento y cómo se ha resuelto en la práctica?",
+            "options": [
+              "Daño representacional; se resuelve reentrenando el modelo con más datos",
+              "Sesgo de despliegue; la responsabilidad recae siempre en el proveedor del modelo base",
+              "Lavado ético; se resuelve publicando principios de IA en el sitio web",
+              "Brecha de responsabilidad; los tribunales han atribuido la responsabilidad a la organización que despliega el sistema"
+            ],
+            "correct": 3,
+            "explanation": "La empresa invoca una brecha de responsabilidad, pero en Moffatt contra Air Canada (2024) el tribunal resolvió que la empresa responde por la información de su chatbot como por cualquier otro contenido de su sitio."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Equidad, explicabilidad y privacidad medidas con evidencia",
+      "description": "Al finalizar la unidad, el estudiante audita técnicamente un modelo de clasificación: calcula métricas de equidad por grupo con intervalos de confianza, aplica y evalúa una mitigación, genera explicaciones adecuadas para cada audiencia y verifica riesgos de reidentificación, interpretando los compromisos con evidencia.",
+      "topics": [
+        "Definiciones formales de equidad: paridad demográfica, impacto dispar, igualdad de oportunidades, probabilidades igualadas y calibración",
+        "Teoremas de imposibilidad, el caso COMPAS y elección justificada de la métrica",
+        "Auditoría y mitigación de sesgos con Fairlearn e intervalos de confianza por bootstrap",
+        "Interpretabilidad, explicaciones SHAP y contrafácticas para la persona afectada",
+        "Privacidad: reidentificación, k-anonimato, privacidad diferencial e informe de auditoría"
+      ],
+      "slides": [
+        {
+          "title": "Del principio de justicia a la métrica: notación básica",
+          "bullets": [
+            "Notación: Y es la etiqueta real, Ŷ la decisión del modelo y A el atributo protegido, como sexo, edad o área de residencia.",
+            "Las métricas de grupo comparan tasas entre valores de A: tasa de selección, de verdaderos positivos y de falsos positivos.",
+            "Las métricas individuales exigen que personas similares reciban decisiones similares (Dwork et al., 2012).",
+            "Toda auditoría comienza con la matriz de confusión desagregada por grupo, no con la exactitud global."
+          ],
+          "notes": "Recuerde la matriz de confusión vista en Aprendizaje Automático I y explique que una auditoría de equidad consiste, en esencia, en construirla por grupo y comparar sus tasas. Presente la notación que se usará toda la unidad. Discuta qué atributos considerar protegidos en el Perú: el artículo 2 de la Constitución prohíbe la discriminación por origen, raza, sexo, idioma, religión, opinión, condición económica o de cualquier otra índole. En la práctica, muchos conjuntos de datos no registran etnia ni lengua materna; aun así, se puede auditar por región, área urbana o rural, sexo y grupo de edad. Explique la equidad individual de Dwork y colegas: requiere una métrica de similitud entre personas, cuya definición introduce nuevos juicios de valor. Pregunte qué atributos auditarían en un modelo de preselección para una beca nacional y cuáles no tendrían disponibles en los datos."
+        },
+        {
+          "title": "Paridad demográfica y razón de impacto dispar",
+          "bullets": [
+            "Paridad demográfica: P(Ŷ=1 | A=a) igual para todos los grupos; ignora si las tasas base reales difieren.",
+            "Razón de impacto dispar: tasa de selección del grupo menos favorecido dividida entre la del más favorecido.",
+            "Regla de los cuatro quintos (EE. UU., 1978): una razón menor de 0,8 se considera indicio de impacto adverso.",
+            "Ejemplo: aprobación de 30 % en mujeres frente a 45 % en hombres da una razón de 0,67, por debajo del umbral."
+          ],
+          "notes": "Explique la paridad demográfica como la noción más intuitiva y, a la vez, la más criticada. Su atractivo es que no requiere etiquetas reales, solo decisiones; su debilidad es que ignora diferencias legítimas en las tasas base. Presente la regla de los cuatro quintos de las guías uniformes de selección de personal de Estados Unidos de 1978: no es una norma peruana, pero es un umbral de referencia muy usado en auditorías. Haga el cálculo en la pizarra: 0,30 dividido entre 0,45 da 0,67. Luego advierta que la razón es sensible a muestras pequeñas: con 40 solicitudes de mujeres en una agencia, la tasa observada tiene un intervalo de confianza amplio y la conclusión puede ser ruido. Pregunte en qué contextos la paridad demográfica sí sería adecuada, por ejemplo, en la difusión de ofertas de empleo, donde exponer a todos los grupos a la oportunidad es un fin en sí mismo."
+        },
+        {
+          "title": "Igualdad de oportunidades y probabilidades igualadas",
+          "bullets": [
+            "Igualdad de oportunidades (Hardt, Price y Srebro, 2016): igual tasa de verdaderos positivos entre grupos, P(Ŷ=1 | Y=1, A=a).",
+            "Probabilidades igualadas: iguales tasas de verdaderos positivos y de falsos positivos entre grupos.",
+            "Útil cuando el beneficio es ser seleccionado: los buenos pagadores de todos los grupos deben tener igual probabilidad de aprobación.",
+            "Requiere etiquetas confiables: si la etiqueta histórica está sesgada, la métrica hereda ese sesgo."
+          ],
+          "notes": "Explique por qué estas métricas condicionan en la etiqueta real: no piden que los grupos reciban la misma proporción de aprobaciones, sino que los clientes que efectivamente pagarían tengan las mismas oportunidades. Use el ejemplo del caso de la unidad: si se aprueba al 72 % de los buenos pagadores urbanos y solo al 53 % de los buenos pagadores rurales, el modelo viola la igualdad de oportunidades. Advierta sobre el problema de las etiquetas en crédito: solo se observa si paga quien fue aprobado, lo que produce sesgo de selección; se mitiga con técnicas de inferencia de rechazados o con muestras evaluadas en paralelo por analistas. Pregunte qué tasa de error importa más en un modelo de detección de fraude que bloquea cuentas: ¿los falsos positivos, que castigan a clientes honestos, o los falsos negativos, que dejan pasar fraudes? ¿Para quién importa cada uno?"
+        },
+        {
+          "title": "Calibración y el teorema de imposibilidad",
+          "bullets": [
+            "Calibración por grupo: entre quienes reciben un puntaje de 0,7, alrededor del 70 % de cada grupo presenta el evento.",
+            "Chouldechova (2017) y Kleinberg, Mullainathan y Raghavan (2016): con tasas base distintas no pueden cumplirse a la vez calibración y probabilidades igualadas, salvo predicción perfecta.",
+            "COMPAS: ProPublica halló que el 44,9 % de acusados negros que no reincidieron fueron etiquetados de alto riesgo, frente al 23,5 % de los blancos.",
+            "La empresa demostró que su puntaje estaba calibrado: elegir la métrica es una decisión normativa que debe justificarse y documentarse."
+          ],
+          "notes": "Este es el momento conceptual más importante de la unidad. Explique la disputa de 2016 entre ProPublica y la empresa Northpointe: ambas tenían razón según su métrica. El puntaje estaba calibrado, pues un mismo puntaje significaba un riesgo similar en ambos grupos, pero las tasas de falsos positivos eran muy distintas. Muestre por qué con la identidad de Chouldechova de la lectura: si la tasa base de reincidencia registrada difiere entre grupos, un puntaje calibrado distribuye necesariamente los errores de forma desigual. Subraye que la propia tasa base registrada puede reflejar patrones de vigilancia policial y no solo conducta. La lección para el técnico es que no existe una métrica neutral: hay que elegir según el daño que se quiere evitar, documentar la elección y someterla a quienes tienen legitimidad para decidir. Pregunte qué métrica priorizarían en un modelo de preselección de becas y por qué."
+        },
+        {
+          "title": "Auditoría de equidad en Python con Fairlearn",
+          "bullets": [
+            "Paso 1: construir un MetricFrame con métricas por grupo: tasa de selección, tasa de verdaderos positivos, tasa de falsos positivos y tamaño.",
+            "Paso 2: resumir brechas con difference y ratio, o con demographic_parity_ratio y equalized_odds_difference.",
+            "Paso 3: estimar intervalos de confianza por bootstrap para no confundir ruido muestral con discriminación.",
+            "Paso 4: analizar intersecciones, como mujer y rural, donde suelen esconderse las mayores brechas."
+          ],
+          "notes": "Haga una demostración en vivo con el código de la lectura sobre un conjunto de datos sintético de crédito con variables de área y sexo. Muestre cómo MetricFrame devuelve una tabla por grupo y cómo los métodos difference y ratio resumen las brechas. Insista en reportar siempre el tamaño de cada grupo: una brecha de diez puntos en un grupo de treinta personas puede no ser estadísticamente significativa. Enseñe a calcular un intervalo de confianza por bootstrap para la diferencia de tasas, técnica que ya vieron en Estadística y Probabilidad. Luego muestre el análisis interseccional, inspirado en el trabajo de Kimberlé Crenshaw y en Gender Shades: la brecha para mujeres rurales puede ser mayor que la que sugieren por separado las brechas por sexo y por área. Pida que propongan qué intersecciones auditar en un modelo de selección de personal y qué tamaño mínimo de grupo exigirían para reportarlas."
+        },
+        {
+          "title": "Mitigación de sesgos: tres momentos de intervención",
+          "bullets": [
+            "Preprocesamiento: reponderación de ejemplos, remuestreo o corrección de etiquetas antes de entrenar.",
+            "Durante el entrenamiento: optimización con restricciones, como ExponentiatedGradient de Fairlearn (Agarwal et al., 2018).",
+            "Posprocesamiento: umbrales distintos por grupo con ThresholdOptimizer para igualar tasas de error.",
+            "Antes de cualquier técnica: revisar la variable objetivo, los datos faltantes y la representación de cada grupo."
+          ],
+          "notes": "Explique que la mitigación algorítmica es la última línea de defensa, no la primera. Muchas brechas se reducen mejorando los datos: recolectar más ejemplos de grupos subrepresentados o corregir una etiqueta mal definida. Presente las tres familias con sus ventajas: el preprocesamiento es independiente del modelo, el entrenamiento con restricciones suele ofrecer mejores compromisos y el posprocesamiento es simple, pero requiere conocer el atributo protegido en el momento de decidir. Discuta la tensión jurídica: aplicar umbrales distintos por grupo puede considerarse trato diferenciado; en ciertos contextos se defiende como medida de acción afirmativa y en otros sería cuestionable. Pida a los estudiantes que, para el caso de la unidad, argumenten qué familia usarían y qué riesgo jurídico, operativo o reputacional implica cada opción para una entidad supervisada por la SBS."
+        },
+        {
+          "title": "Evaluar el compromiso entre equidad y desempeño",
+          "bullets": [
+            "Trazar la frontera de Pareto: utilidad esperada frente a brecha de equidad para varios modelos candidatos.",
+            "Traducir al negocio: costo en soles de reducir la brecha de igualdad de oportunidades de 19 a 6 puntos.",
+            "Reportar efectos por subgrupo, no solo agregados: una mitigación puede empeorar la situación de otro grupo.",
+            "La decisión final corresponde a una instancia con legitimidad, informada por el análisis técnico."
+          ],
+          "notes": "Muestre un gráfico con modelos candidatos en un plano de utilidad esperada contra brecha de equidad y explique que los modelos dominados se descartan. Haga un ejemplo con los datos del caso: el modelo original genera una utilidad anual estimada de 38,5 millones de soles y una brecha de 19 puntos; el mitigado genera 37,3 millones y una brecha de 6 puntos. ¿Vale 1,2 millones de soles la reducción de la brecha? La respuesta no es técnica, pero el técnico debe presentarla con claridad, incluyendo beneficios difíciles de cuantificar como clientes rurales que construirán historial y menor riesgo reputacional y regulatorio. Recuerde que a veces la mitigación mejora el desempeño en el grupo desfavorecido sin costo global relevante, y que eso solo se sabe midiendo. Pregunte quién debería decidir en una financiera: ¿la gerencia comercial, la de riesgos o el directorio?"
+        },
+        {
+          "title": "Interpretabilidad: ¿caja negra o modelo transparente?",
+          "bullets": [
+            "Rudin (2019): en decisiones de alto impacto conviene usar modelos interpretables en lugar de explicar cajas negras a posteriori.",
+            "Modelos interpretables: regresión logística con pocas variables, árboles poco profundos, listas de reglas y modelos aditivos.",
+            "En datos tabulares, la diferencia de desempeño con modelos complejos suele ser pequeña; hay que medirla, no suponerla.",
+            "Distinguir interpretabilidad global, cómo funciona el modelo, y local, por qué se tomó esta decisión."
+          ],
+          "notes": "Presente la tesis de Cynthia Rudin: las explicaciones a posteriori de modelos de caja negra pueden ser infieles al modelo real y dar una falsa sensación de comprensión. Si un modelo interpretable alcanza un desempeño similar, la carga de la prueba recae en quien quiere usar la caja negra. Pida a los estudiantes que recuerden sus experimentos de Aprendizaje Automático II: ¿cuánta diferencia de AUC había entre la regresión logística y el boosting de gradiente en datos tabulares? A menudo es de uno o dos puntos. Explique que en crédito las tarjetas de puntaje basadas en regresión logística siguen siendo estándar precisamente porque permiten justificar cada decisión ante el cliente y el supervisor. En cambio, en imágenes, audio o texto los modelos profundos no tienen una alternativa interpretable equivalente, y allí las técnicas de explicación son indispensables, con sus limitaciones."
+        },
+        {
+          "title": "Explicaciones con SHAP: global y local",
+          "bullets": [
+            "SHAP (Lundberg y Lee, 2017) asigna a cada variable su contribución a una predicción, basándose en los valores de Shapley de la teoría de juegos.",
+            "Propiedad clave: las contribuciones suman la diferencia entre la predicción y el valor base promedio.",
+            "Uso ético global: detectar variables sustitutas de atributos protegidos, como el distrito o el operador telefónico.",
+            "Límites: con variables correlacionadas las atribuciones pueden engañar, y explicar el modelo no es justificar la decisión."
+          ],
+          "notes": "El estudiante ya usó TreeSHAP en Aprendizaje Automático II; aquí el foco es su uso ético. Muestre cómo un gráfico de importancia global puede revelar variables sustitutas: si el distrito de residencia es una de las variables más influyentes en un modelo de crédito, puede estar actuando como sustituto de la condición socioeconómica o del origen. Explique la aditividad con un ejemplo: valor base de 0,20 de probabilidad de incumplimiento; ingresos verificados aportan menos 0,05, antigüedad del negocio menos 0,03 y número de consultas recientes en centrales de riesgo más 0,12; predicción final, 0,24. Advierta que dos variables muy correlacionadas pueden repartirse la importancia de forma arbitraria y que los valores SHAP explican el modelo, no el mundo: no implican causalidad. Pregunte cómo usarían SHAP y la correlación con el sexo registrado aparte para verificar que el modelo no depende indirectamente del sexo."
+        },
+        {
+          "title": "Explicaciones contrafácticas para la persona afectada",
+          "bullets": [
+            "Wachter, Mittelstadt y Russell (2018): indicar el cambio mínimo que habría modificado la decisión, sin revelar el modelo.",
+            "Ejemplo: «Su solicitud habría sido aprobada con un ingreso mensual verificado de S/ 2 300 o con una cuota 15 % menor».",
+            "Requisitos: cambios factibles y accionables; nunca sugerir modificar la edad, el sexo o el lugar de nacimiento.",
+            "Lenguaje claro, canal de reclamo y plazo de respuesta: la explicación forma parte del derecho a impugnar."
+          ],
+          "notes": "Explique que las personas afectadas no necesitan valores SHAP, sino saber por qué se tomó la decisión y qué pueden hacer. Las explicaciones contrafácticas responden exactamente a eso. Muestre una búsqueda simple sobre variables accionables o una biblioteca como DiCE. Discuta la noción de recurso algorítmico de Ustun, Spangher y Liu (2019): un modelo que no ofrece ningún camino factible para revertir una denegación deja a la persona sin opciones reales. Conecte con la normativa: el artículo 23 de la Ley 29733 reconoce el derecho a no ser objeto de decisiones con efectos significativos basadas únicamente en tratamiento automatizado y a defender el propio punto de vista, y el Código de Protección y Defensa del Consumidor exige información veraz y comprensible. Pida que redacten en parejas una explicación de rechazo de crédito de no más de 60 palabras para un comerciante de Gamarra."
+        },
+        {
+          "title": "Privacidad: anonimizar es más difícil de lo que parece",
+          "bullets": [
+            "Sweeney (2000): el 87 % de la población de EE. UU. podía identificarse con código postal, fecha de nacimiento y sexo.",
+            "Narayanan y Shmatikov (2008) reidentificaron usuarios de Netflix cruzando calificaciones con reseñas públicas.",
+            "Seudonimizar no es anonimizar: si hay una clave o datos auxiliares, los datos siguen siendo personales según la Ley 29733.",
+            "Los modelos también filtran información: ataques de inferencia de pertenencia y de extracción de datos de entrenamiento."
+          ],
+          "notes": "Explique que reemplazar el DNI por un código no basta. En el Perú, la combinación de distrito, fecha de nacimiento y sexo puede ser casi única en distritos pequeños. Presente el estudio de Latanya Sweeney y el caso Netflix como evidencias clásicas de reidentificación. Luego explique que el modelo entrenado también es un vector de fuga: un ataque de inferencia de pertenencia, como el descrito por Shokri y colegas en 2017, permite saber si una persona estuvo en el conjunto de entrenamiento, lo que en un modelo de una clínica oncológica revela información de salud. Recuerde que la Ley 29733 considera datos personales los que identifican o hacen identificable a una persona por medios que puedan ser razonablemente utilizados, y que los datos de salud son sensibles. Pregunte: si se publica un conjunto de pacientes con distrito, edad y diagnóstico, ¿cuánta información adicional necesitaría un vecino para reconocer a alguien?"
+        },
+        {
+          "title": "k-anonimato y sus extensiones",
+          "bullets": [
+            "k-anonimato: cada combinación de cuasi identificadores aparece al menos k veces en el conjunto publicado.",
+            "Técnicas: generalizar, por ejemplo edad en rangos o distrito en provincia, y suprimir registros únicos.",
+            "l-diversidad: en cada clase de equivalencia debe haber al menos l valores distintos del atributo sensible.",
+            "Verificación en pandas: groupby sobre los cuasi identificadores y revisión del tamaño mínimo de grupo."
+          ],
+          "notes": "Haga un ejercicio en vivo con el código de la lectura: un conjunto de 5 000 pacientes con distrito, edad, sexo y diagnóstico. Calcule el tamaño de cada combinación y muestre cuántos registros son únicos. Luego generalice la edad en quinquenios y el distrito en provincia y repita el cálculo; los registros únicos suelen caer drásticamente. Explique el ataque de homogeneidad: si en una clase de equivalencia todos tienen el mismo diagnóstico, el k-anonimato no protege nada, y por eso se propuso la l-diversidad. Discuta el costo de la anonimización: cada generalización reduce la utilidad analítica, por ejemplo, impide estudiar diferencias entre distritos de una misma provincia. Pregunte qué valor de k sería razonable para publicar datos abiertos de atenciones de salud de un gobierno regional, quién debería aprobar esa publicación y qué evidencia debería conservarse."
+        },
+        {
+          "title": "Privacidad diferencial: garantías matemáticas",
+          "bullets": [
+            "Dwork y Roth (2014): un mecanismo es ε-diferencialmente privado si añadir o quitar a una persona cambia poco la probabilidad de cualquier resultado.",
+            "Mecanismo de Laplace: sumar ruido con escala Δf/ε a una consulta; un ε menor implica más privacidad y más ruido.",
+            "Usos reales: el censo de Estados Unidos de 2020 y el entrenamiento de redes con DP-SGD (Abadi et al., 2016).",
+            "El presupuesto de privacidad se consume con cada consulta: hay que gestionarlo y documentarlo."
+          ],
+          "notes": "Explique la intuición: si el resultado de un análisis es casi el mismo esté o no esté una persona en los datos, esa persona no puede ser perjudicada por haber participado. Muestre el mecanismo de Laplace con un ejemplo: contar cuántos pacientes de un distrito tienen tuberculosis; la sensibilidad es 1 y, con ε igual a 0,5, se agrega ruido de Laplace con escala 2. Para conteos grandes el ruido es despreciable; para conteos pequeños puede dominar, y eso es justamente lo que protege a las personas. Mencione que la Oficina del Censo de Estados Unidos aplicó privacidad diferencial en 2020 y que hubo debate por la menor precisión en localidades pequeñas. Presente DP-SGD como forma de entrenar redes con garantías, a costa de algo de exactitud. Pregunte qué tensión aparece entre la privacidad diferencial y la auditoría de equidad en grupos pequeños, como una comunidad nativa amazónica."
+        },
+        {
+          "title": "Integrar hallazgos en un informe de auditoría técnica",
+          "bullets": [
+            "Estructura: alcance, datos y grupos auditados, métricas con intervalos, hallazgos, mitigaciones evaluadas y riesgos residuales.",
+            "Evidencias reproducibles: cuaderno versionado, semillas fijas y datos de prueba congelados.",
+            "Declarar limitaciones: grupos sin datos suficientes, etiquetas sesgadas y atributos protegidos no registrados.",
+            "Hallazgo con condición, criterio, causa, efecto y recomendación, priorizado por gravedad del daño."
+          ],
+          "notes": "Presente la estructura del informe que se pedirá en la tarea 2. Explique que una auditoría sin limitaciones declaradas es sospechosa: siempre hay grupos con pocos datos o atributos que no se registraron. Insista en la reproducibilidad, que el estudiante domina desde MLOps: otro analista debe poder obtener las mismas cifras. Muestre cómo redactar un hallazgo con la estructura propia de la auditoría. Condición: la tasa de verdaderos positivos para solicitantes rurales es 0,53 frente a 0,72 en urbanos. Criterio: la política interna admite una diferencia máxima de 0,10. Causa probable: menor historial formal y variables sustitutas como el distrito. Efecto: unos 730 buenos pagadores rurales rechazados en la muestra auditada. Recomendación: incorporar datos alternativos con consentimiento, evaluar la mitigación y monitorear la brecha cada mes. Pida que redacten un hallazgo similar sobre privacidad."
+        }
+      ],
+      "reading": {
+        "title": "Medir antes de opinar: equidad, explicaciones y privacidad en código",
+        "minutes": 40,
+        "content": "## De la intuición a la definición\n\nDecir que un modelo «discrimina» exige precisar respecto de qué criterio. Con Y como etiqueta real, Ŷ como decisión y A como atributo protegido, las definiciones de grupo más usadas son:\n\n- **Paridad demográfica:** P(Ŷ=1 | A=a) = P(Ŷ=1 | A=b).\n- **Igualdad de oportunidades** (Hardt, Price y Srebro, 2016): P(Ŷ=1 | Y=1, A=a) = P(Ŷ=1 | Y=1, A=b), es decir, igual tasa de verdaderos positivos (TVP).\n- **Probabilidades igualadas:** además, igual tasa de falsos positivos (TFP).\n- **Calibración por grupo:** P(Y=1 | S=s, A=a) = s para todo puntaje s.\n\nLa **razón de impacto dispar** divide la tasa de selección del grupo menos favorecido entre la del más favorecido; la regla estadounidense de los cuatro quintos toma 0,8 como señal de alerta, no como prueba de discriminación.\n\n## El teorema de imposibilidad\n\nChouldechova (2017) mostró que, para cualquier clasificador, se cumple:\n\n```text\nTFP = p / (1 - p) × (1 - VPP) / VPP × (1 - TFN)\n```\n\ndonde p es la tasa base del grupo, VPP el valor predictivo positivo y TFN la tasa de falsos negativos. Si dos grupos tienen tasas base distintas y el modelo tiene el mismo VPP en ambos, no puede tener a la vez iguales TFP y TFN. Kleinberg, Mullainathan y Raghavan (2016) llegaron a un resultado análogo para la calibración. Esto explica la controversia de COMPAS: ProPublica observó que los acusados negros que no reincidieron fueron etiquetados de alto riesgo casi el doble de veces que los blancos, y la empresa respondió que su puntaje estaba calibrado. Ambas partes tenían razón según su métrica: elegir cuál priorizar es una decisión normativa que debe documentarse.\n\n## Auditoría con Fairlearn\n\n```python\nimport numpy as np\nfrom sklearn.metrics import recall_score\nfrom fairlearn.metrics import (MetricFrame, selection_rate, count,\n    false_positive_rate, demographic_parity_ratio)\n\n# y_true: 1 = buen pagador; y_pred: 1 = aprobado\nmf = MetricFrame(\n    metrics={\"seleccion\": selection_rate, \"tvp\": recall_score,\n             \"tfp\": false_positive_rate, \"n\": count},\n    y_true=y_true, y_pred=y_pred,\n    sensitive_features=df[[\"area\", \"sexo\"]])   # interseccional\nprint(mf.by_group)        # tabla por grupo\nprint(mf.difference())    # brecha máxima por métrica\nprint(demographic_parity_ratio(y_true, y_pred,\n      sensitive_features=df[\"area\"]))         # < 0,8: alerta\n\n# Intervalo de confianza por bootstrap para la brecha de TVP\ny_true, y_pred = np.asarray(y_true), np.asarray(y_pred)\narea = df[\"area\"].to_numpy()\nrng, brechas = np.random.default_rng(42), []\nfor _ in range(1000):\n    i = rng.integers(0, len(y_true), len(y_true))\n    m = MetricFrame(metrics=recall_score, y_true=y_true[i],\n                    y_pred=y_pred[i], sensitive_features=area[i])\n    brechas.append(m.difference())\nprint(np.percentile(brechas, [2.5, 97.5]))\n```\n\nSiempre debe reportarse el tamaño de cada grupo: una brecha en un grupo de treinta personas puede ser ruido.\n\n## Mitigar y decidir\n\nLa mitigación puede ocurrir antes del entrenamiento (reponderar o corregir datos), durante él o después (umbrales por grupo). Con restricciones durante el entrenamiento:\n\n```python\nfrom sklearn.linear_model import LogisticRegression\nfrom fairlearn.reductions import ExponentiatedGradient, TruePositiveRateParity\n\nmit = ExponentiatedGradient(LogisticRegression(max_iter=1000),\n        constraints=TruePositiveRateParity(difference_bound=0.05))\nmit.fit(X_tr, y_tr, sensitive_features=area_tr)\ny_mit = mit.predict(X_te)\n```\n\nEl resultado se compara con el modelo original en una tabla de utilidad esperada, desempeño por grupo y brecha. La técnica ofrece opciones; elegir entre ellas corresponde a una instancia con legitimidad, como un comité de riesgos.\n\n## Explicar a quien corresponde\n\nRudin (2019) recomienda preferir modelos interpretables en decisiones de alto impacto. Cuando se usa un modelo complejo, SHAP (Lundberg y Lee, 2017) descompone cada predicción en contribuciones aditivas:\n\n```python\nimport shap\nsv = shap.TreeExplainer(modelo)(X_te)\nshap.plots.bar(sv)            # global: ¿aparecen sustitutos como el distrito?\nshap.plots.waterfall(sv[0])   # local: una solicitud concreta\n```\n\nPara la persona afectada, la explicación útil es contrafáctica (Wachter, Mittelstadt y Russell, 2018): qué cambio factible habría modificado la decisión. Esto se vincula con el derecho al tratamiento objetivo del artículo 23 de la Ley 29733.\n\n## Proteger la privacidad\n\nSeudonimizar no es anonimizar: Sweeney (2000) identificó al 87 % de la población estadounidense con código postal, fecha de nacimiento y sexo. Antes de compartir datos se verifica el k-anonimato:\n\n```python\nqi = [\"distrito\", \"rango_edad\", \"sexo\"]   # cuasi identificadores\ntam = df.groupby(qi).size()\nprint(\"k =\", tam.min(), \"| combinaciones únicas:\", (tam == 1).sum())\n```\n\nLa privacidad diferencial ofrece una garantía formal: un mecanismo M es ε-diferencialmente privado si, para conjuntos D y D' que difieren en una persona, Pr[M(D) ∈ R] ≤ e^ε · Pr[M(D') ∈ R]. El mecanismo de Laplace publica f(D) + Lap(Δf/ε).\n\n## Ideas clave\n\n- No existe una métrica de equidad neutral; la elección se justifica y documenta.\n- Toda brecha se reporta con tamaño de muestra e intervalo de confianza.\n- Explicar no es justificar, y anonimizar exige verificar."
+      },
+      "case": {
+        "title": "Caso: Financiera Qollana y la brecha rural en la aprobación de microcréditos",
+        "content": "Financiera Qollana es una entidad supervisada por la SBS con 210 000 clientes, especializada en microcréditos para negocios de comercio y agricultura en Junín, Huancavelica y Ayacucho. En 2025 reemplazó su evaluación manual por un modelo de boosting de gradiente que preaprueba solicitudes de hasta S/ 15 000. El modelo usa 38 variables, entre ellas el historial en centrales de riesgo, las ventas declaradas, la antigüedad del negocio, el monto solicitado, el uso de la billetera digital de la financiera, el distrito de residencia y el operador telefónico del solicitante. El sexo fue excluido deliberadamente.\n\nTras seis meses de operación, la Gerencia de Riesgos encargó una auditoría interna. Sobre una muestra de 12 000 solicitudes con desenlace conocido (incluidas solicitudes evaluadas en paralelo por analistas para observar el pago de casos que el modelo habría rechazado) se obtuvo:\n\n| Grupo | Solicitudes | Buenos pagadores | Aprobados | Aprobados que pagan | Aprobados que no pagan |\n|---|---|---|---|---|---|\n| Urbano | 7 200 | 6 120 | 4 680 | 4 410 | 270 |\n| Rural | 4 800 | 3 840 | 2 160 | 2 040 | 120 |\n\nEl análisis con SHAP muestra que el distrito y el operador telefónico están entre las cinco variables más influyentes; uno de los operadores tiene mayor cobertura en zonas rurales. En la intersección de mujeres rurales, la tasa de verdaderos positivos cae a 0,47.\n\nEl equipo probó una mitigación con restricción de igualdad de oportunidades: la brecha de tasa de verdaderos positivos baja de 19 a 6 puntos y la aprobación rural sube a 55 %, pero la mora de la cartera aprobada pasa de 5,8 % a 6,9 % y la utilidad anual estimada cae en S/ 1,2 millones, alrededor de 3 %.\n\nLas cartas de rechazo dicen solo que el solicitante «no califica según las políticas internas», y los reclamos ante la plataforma de INDECOPI aumentaron 40 % en el semestre. El gerente comercial sostiene que el modelo «es justo porque no usa el sexo y acierta igual en ambos grupos». La gerente de riesgos teme observaciones de la SBS y un daño reputacional en una región donde la financiera compite con cajas municipales y cooperativas.\n\nEl directorio sesionará en dos semanas y usted dirige el equipo de auditoría.",
+        "questions": [
+          "Calcule para cada grupo la tasa de aprobación, la tasa de verdaderos positivos, la tasa de falsos positivos, el valor predictivo positivo y la razón de impacto dispar. ¿Qué concluye?",
+          "Evalúe el argumento del gerente comercial a la luz del teorema de imposibilidad. ¿Qué métrica debería priorizar Qollana y por qué?",
+          "¿Qué papel cumplen el distrito y el operador telefónico? Proponga cómo verificar si actúan como variables sustitutas y qué hacer al respecto.",
+          "¿Recomendaría adoptar el modelo mitigado? Considere el costo de S/ 1,2 millones, la brecha interseccional y los riesgos regulatorios y reputacionales.",
+          "Redacte la explicación que debería recibir una solicitante rural rechazada, conforme al artículo 23 de la Ley 29733 y a las normas de protección al consumidor."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Auditoría técnica de equidad, explicabilidad y privacidad",
+        "instructions": "**Objetivo:** auditar un modelo de clasificación con evidencia cuantitativa reproducible y comunicar los hallazgos a un comité no técnico.\n\n**Insumos:** el conjunto de datos sintético de crédito de Financiera Qollana que el docente publica en el aula virtual (20 000 registros con área, sexo, grupo de edad y desenlace) u otro conjunto público equivalente aprobado por el docente.\n\n**Qué entregar:**\n\n1. **Cuaderno de Python** con semilla fija que entrene un modelo de referencia; construya un MetricFrame por área, sexo y su intersección; calcule la razón de impacto dispar y las diferencias de igualdad de oportunidades y de probabilidades igualadas con intervalos de confianza por bootstrap (1 000 réplicas); y aplique al menos una mitigación (ExponentiatedGradient o ThresholdOptimizer), comparando desempeño, utilidad esperada y brechas.\n2. **Explicabilidad:** importancia global con SHAP, análisis de posibles variables sustitutas y tres explicaciones contrafácticas redactadas en lenguaje claro para solicitantes rechazados.\n3. **Privacidad:** verificación del k-anonimato de una versión del conjunto preparada para compartirse con un proveedor, con la generalización necesaria para alcanzar k ≥ 5.\n4. **Informe ejecutivo** de tres páginas con hallazgos en formato condición, criterio, causa, efecto y recomendación, y una sección de limitaciones.\n\n**Formato:** repositorio con README que permita reproducir los resultados e informe en PDF.\n\n**Criterios:** exactitud de los cálculos, rigor estadístico, calidad de la mitigación y de las explicaciones, y claridad para el comité.",
+        "rubric": [
+          {
+            "name": "Métricas de equidad correctas, desagregadas e interseccionales con intervalos de confianza",
+            "points": 6
+          },
+          {
+            "name": "Mitigación aplicada y compromiso entre equidad y desempeño analizado",
+            "points": 4
+          },
+          {
+            "name": "Explicaciones globales, variables sustitutas y contrafácticos comprensibles",
+            "points": 4
+          },
+          {
+            "name": "Verificación de privacidad y k-anonimato",
+            "points": 3
+          },
+          {
+            "name": "Informe ejecutivo, limitaciones y reproducibilidad",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Métricas de equidad, explicabilidad y privacidad",
+        "questions": [
+          {
+            "prompt": "Un modelo aprueba al 30 % de las solicitantes mujeres y al 45 % de los solicitantes hombres. ¿Cuál es la razón de impacto dispar y qué indica según la regla de los cuatro quintos?",
+            "options": [
+              "0,67; supera el umbral mínimo de 0,6 y se considera aceptable",
+              "0,67; está por debajo de 0,8 y es un indicio de impacto adverso que debe investigarse",
+              "1,5; indica que las mujeres son favorecidas por el modelo",
+              "0,15; la diferencia es menor que 0,2 y se considera aceptable"
+            ],
+            "correct": 1,
+            "explanation": "La razón es 0,30 / 0,45 ≈ 0,67. La regla de los cuatro quintos toma 0,8 como umbral de alerta; no prueba discriminación por sí sola, pero obliga a investigar la causa y la significancia estadística."
+          },
+          {
+            "prompt": "En el caso Qollana, la tasa de verdaderos positivos es 0,72 en urbanos y 0,53 en rurales, mientras que el valor predictivo positivo es 0,94 en ambos grupos. ¿Qué afirmación es correcta?",
+            "options": [
+              "El modelo es equitativo porque el valor predictivo positivo es igual en ambos grupos",
+              "El modelo cumple la igualdad de oportunidades, pero no la paridad predictiva",
+              "No se puede evaluar la equidad porque el modelo no incluye el sexo",
+              "El modelo cumple aproximadamente la paridad predictiva, pero viola la igualdad de oportunidades"
+            ],
+            "correct": 3,
+            "explanation": "Un VPP igual indica paridad predictiva; la diferencia de 19 puntos en la TVP significa que los buenos pagadores rurales tienen menor probabilidad de aprobación, lo que viola la igualdad de oportunidades."
+          },
+          {
+            "prompt": "Según el resultado de Chouldechova (2017), si dos grupos tienen tasas base distintas, ¿qué es imposible lograr a la vez con un clasificador imperfecto?",
+            "options": [
+              "Igual valor predictivo positivo e iguales tasas de falsos positivos y de falsos negativos",
+              "Igual exactitud global e igual tamaño de muestra en ambos grupos",
+              "Paridad demográfica y un AUC superior a 0,8",
+              "Igualdad de oportunidades y el uso de regresión logística"
+            ],
+            "correct": 0,
+            "explanation": "La identidad TFP = p/(1−p) · (1−VPP)/VPP · (1−TFN) implica que, con tasas base p distintas, igualar el VPP obliga a que difieran las tasas de error. Por eso la elección de la métrica es normativa."
+          },
+          {
+            "prompt": "Un analista elimina la variable sexo del modelo y concluye que este ya no puede discriminar por sexo. ¿Cuál es la principal objeción técnica?",
+            "options": [
+              "Eliminar variables siempre reduce la exactitud por debajo de lo aceptable",
+              "La Ley 29733 obliga a usar el sexo en todos los modelos de crédito",
+              "Otras variables correlacionadas con el sexo pueden actuar como sustitutas y reproducir la brecha",
+              "Los modelos de árboles ignoran automáticamente las variables sensibles"
+            ],
+            "correct": 2,
+            "explanation": "La ceguera ante el atributo no garantiza equidad: ocupación, tipo de negocio o patrones de consumo pueden correlacionarse con el sexo. Por eso la brecha se mide con el atributo registrado aparte, aunque no se use para predecir."
+          },
+          {
+            "prompt": "¿Cuál de estas explicaciones contrafácticas es adecuada para un solicitante de crédito rechazado?",
+            "options": [
+              "Si tuviera diez años menos, su solicitud habría sido aprobada",
+              "Con ingresos mensuales verificados de S/ 2 300 o una cuota 15 % menor, su solicitud habría sido aprobada",
+              "Su solicitud no califica según las políticas internas de la entidad",
+              "La variable con mayor valor SHAP negativo en su caso tuvo un valor de 0,31"
+            ],
+            "correct": 1,
+            "explanation": "Un buen contrafáctico propone cambios factibles y accionables en lenguaje claro. Sugerir un cambio de edad no es accionable y es discriminatorio, la respuesta genérica no explica nada y un valor SHAP no es comprensible para la persona afectada."
+          },
+          {
+            "prompt": "Un conjunto de datos de pacientes con distrito, edad exacta y sexo tiene 1 200 combinaciones que aparecen una sola vez. ¿Qué acción mejora el k-anonimato con la menor pérdida inicial de utilidad?",
+            "options": [
+              "Generalizar la edad en rangos quinquenales y volver a medir el tamaño mínimo de grupo",
+              "Reemplazar el nombre de cada paciente por un código aleatorio",
+              "Cifrar el archivo antes de publicarlo en el portal de datos abiertos",
+              "Eliminar la columna de diagnóstico, que es el atributo sensible"
+            ],
+            "correct": 0,
+            "explanation": "Generalizar cuasi identificadores reduce las combinaciones únicas. Seudonimizar el nombre no afecta a los cuasi identificadores, cifrar no aplica a datos que se publican y eliminar el diagnóstico destruye el valor analítico del conjunto."
+          },
+          {
+            "prompt": "En privacidad diferencial con el mecanismo de Laplace, ¿qué ocurre si se reduce ε de 1 a 0,1 en un conteo cuya sensibilidad es 1?",
+            "options": [
+              "La escala del ruido pasa de 10 a 1: hay menos privacidad y más precisión",
+              "El ruido no cambia porque depende solo del tamaño del conjunto",
+              "Se elimina el ruido y se publica el conteo exacto",
+              "La escala del ruido pasa de 1 a 10: hay más privacidad y menos precisión"
+            ],
+            "correct": 3,
+            "explanation": "La escala es Δf/ε. Con Δf = 1, pasar de ε = 1 a ε = 0,1 multiplica la escala por diez: la garantía de privacidad es más fuerte, pero el resultado es más ruidoso, sobre todo en conteos pequeños."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Gobernanza y regulación de la IA: del marco legal al sistema de gestión",
+      "description": "Al finalizar la unidad, el estudiante clasifica un sistema de IA según su nivel de riesgo conforme a la normativa peruana y al Reglamento europeo, elabora una evaluación de impacto algorítmico con matriz de cumplimiento y diseña la estructura de gobernanza que una organización necesita para operarlo.",
+      "topics": [
+        "Enfoques regulatorios de la IA y panorama normativo en América Latina",
+        "Ley 31814 y su reglamento, Ley 29733 y su reglamento, y normas sectoriales peruanas",
+        "Reglamento europeo de IA: niveles de riesgo, obligaciones y efecto extraterritorial",
+        "NIST AI RMF, ISO/IEC 42001 e ISO/IEC 23894 como marcos de gestión del riesgo de IA",
+        "Evaluación de impacto algorítmico y matriz de cumplimiento",
+        "Inventario de sistemas, tres líneas, comité de IA y expediente de gobernanza"
+      ],
+      "slides": [
+        {
+          "title": "¿Por qué regular la IA y cómo hacerlo?",
+          "bullets": [
+            "Dilema de Collingridge (1980): al inicio es fácil cambiar una tecnología pero sus efectos son inciertos; cuando se conocen, cambiarla es difícil.",
+            "Enfoques: principios voluntarios, regulación horizontal basada en riesgos, regulación sectorial y normas técnicas con autorregulación.",
+            "La regulación basada en riesgos gradúa las obligaciones según el impacto potencial sobre derechos, salud y seguridad.",
+            "No hay vacío legal: protección de datos, consumidor, competencia, normas laborales y responsabilidad civil ya se aplican a la IA."
+          ],
+          "notes": "Abra la unidad con el dilema de David Collingridge y pregunte en qué momento del dilema estamos con la IA generativa. Explique que no existe un vacío legal absoluto: aunque no hubiera una ley de IA, un modelo de crédito discriminatorio ya puede vulnerar la Ley 29733, el Código de Protección y Defensa del Consumidor y la regulación de la SBS. Presente los enfoques regulatorios con ejemplos: Estados Unidos ha privilegiado marcos voluntarios como el NIST AI RMF y la regulación sectorial; la Unión Europea adoptó una ley horizontal basada en riesgos; China regula por tipo de servicio, como los algoritmos de recomendación, la síntesis profunda y la IA generativa; y el Perú combina una ley de promoción con un reglamento basado en riesgos. Pida a los estudiantes que identifiquen qué normas vigentes ya se aplicarían a un chatbot de atención de una entidad bancaria peruana."
+        },
+        {
+          "title": "La Ley 31814: promoción con enfoque de riesgos",
+          "bullets": [
+            "Publicada en julio de 2023, declara de interés nacional la promoción de la IA para el desarrollo económico y social del país.",
+            "Principios: estándares de seguridad basados en riesgos, pluralidad de participantes, gobernanza de internet, sociedad digital, desarrollo ético y privacidad.",
+            "Designa a la PCM, mediante la Secretaría de Gobierno y Transformación Digital, como autoridad técnico-normativa nacional en la materia.",
+            "Se articula con la Ley de Gobierno Digital (Decreto Legislativo 1412), el Marco de Confianza Digital y la Política Nacional de Transformación Digital."
+          ],
+          "notes": "Explique que el Perú fue uno de los primeros países de la región en aprobar una ley específica sobre IA, aunque su naturaleza es principalmente promotora: por sí misma no prohíbe usos ni establece sanciones, y deja el desarrollo de obligaciones al reglamento. Revise cada principio y pida a los estudiantes que lo traduzcan a una práctica: por ejemplo, los estándares de seguridad basados en riesgos implican clasificar los sistemas y graduar los controles, y la privacidad de la IA remite a la Ley 29733. Explique el rol de la Secretaría de Gobierno y Transformación Digital de la PCM, ente rector del Sistema Nacional de Transformación Digital. Mencione el Marco de Confianza Digital, aprobado por el Decreto de Urgencia 007-2020, que ya regulaba la seguridad digital y la protección de datos en el entorno digital. Pregunte qué ventajas y riesgos tiene una ley de promoción frente a una ley prohibitiva para un país con capacidades institucionales limitadas."
+        },
+        {
+          "title": "El reglamento de la Ley 31814: clasificación por riesgo",
+          "bullets": [
+            "Aprobado en 2025 por decreto supremo, desarrolla obligaciones para quienes desarrollan e implementan sistemas de IA en los sectores público y privado.",
+            "Distingue usos indebidos, que se prohíben, de usos de riesgo alto, sujetos a obligaciones reforzadas.",
+            "Riesgo alto típico: sistemas que influyen en el acceso a educación, empleo, crédito, salud, servicios públicos o justicia, y la identificación biométrica.",
+            "Obligaciones características: transparencia hacia las personas, supervisión humana, gestión de riesgos, documentación y protección de datos.",
+            "Implementación gradual; verifique siempre el texto vigente publicado en El Peruano y sus modificaciones."
+          ],
+          "notes": "Presente el reglamento como la pieza que da contenido operativo a la ley. Evite que los estudiantes memoricen listas: el objetivo es que sepan razonar la clasificación de un sistema y que consulten el texto oficial vigente antes de emitir una opinión profesional, porque los plazos y detalles pueden modificarse. Explique la lógica: los usos indebidos son aquellos cuyo riesgo para los derechos se considera inaceptable, como la manipulación que explota vulnerabilidades; los de riesgo alto son admisibles con salvaguardas porque pueden afectar significativamente derechos fundamentales o el acceso a servicios esenciales. Haga notar el paralelismo con el Reglamento europeo, lo que facilita la adecuación de empresas peruanas que operan en ambos mercados. Ejercicio rápido: clasifiquen un chatbot de preguntas frecuentes de una municipalidad, un sistema de preselección de currículos y un sistema de reconocimiento facial en el ingreso a un estadio, y justifiquen cada clasificación."
+        },
+        {
+          "title": "Ley 29733 y su nuevo reglamento aplicados a la IA",
+          "bullets": [
+            "Principios: legalidad, consentimiento, finalidad, proporcionalidad, calidad, seguridad, disposición de recurso y nivel de protección adecuado.",
+            "Reglamento aprobado por el Decreto Supremo 016-2024-JUS: refuerza la responsabilidad proactiva, crea el oficial de datos personales y regula incidentes de seguridad.",
+            "Datos sensibles, como salud, biométricos u origen racial y étnico: consentimiento expreso y por escrito, salvo excepciones legales.",
+            "Flujo transfronterizo: usar una API de IA alojada en el extranjero implica transferir datos y exige garantías adecuadas.",
+            "Derechos ARCO y derecho al tratamiento objetivo (art. 23): base para impugnar decisiones automatizadas."
+          ],
+          "notes": "Explique que, para la mayoría de proyectos de IA en el Perú, la Ley 29733 es hoy la norma con mayor capacidad de sanción: la Autoridad Nacional de Protección de Datos Personales puede imponer multas de hasta 100 UIT por infracciones muy graves. Recorra los principios con preguntas de ingeniería: finalidad, ¿los datos se recogieron para este propósito?; proporcionalidad, ¿necesito todas estas variables?; calidad, ¿están actualizados y son exactos? Explique la responsabilidad proactiva incorporada por el nuevo reglamento: la organización debe poder demostrar el cumplimiento, no solo afirmarlo. Subraye el caso de los servicios de IA en la nube: enviar historias clínicas a una API alojada en el extranjero es flujo transfronterizo de datos sensibles. Pregunte qué evidencias pediría un auditor para comprobar que un modelo de selección de personal cumple los principios de finalidad y proporcionalidad, y quién debería custodiarlas."
+        },
+        {
+          "title": "Normas sectoriales y otras obligaciones en el Perú",
+          "bullets": [
+            "Sistema financiero: la SBS exige gestión integral de riesgos, que abarca los modelos usados para decidir, la seguridad de la información y la ciberseguridad.",
+            "Consumidor (Ley 29571): información veraz, idoneidad del servicio y prohibición de discriminación en el consumo, fiscalizadas por INDECOPI.",
+            "Laboral: la Ley 30709 prohíbe la discriminación remunerativa entre varones y mujeres, incluida la que surja de algoritmos de compensación.",
+            "Derecho de autor (Decreto Legislativo 822) y delitos informáticos (Ley 30096) acotan usos de datos y de sistemas."
+          ],
+          "notes": "Muestre que la gobernanza de la IA en una organización peruana no parte de cero. En banca, la SBS ya exige gestionar los riesgos de los modelos que se usan para decidir, lo que implica validación independiente, documentación y monitoreo; esa práctica se inspira en estándares internacionales como la guía SR 11-7 de la Reserva Federal de 2011 sobre riesgo de modelo. El Código de Protección y Defensa del Consumidor prohíbe la discriminación en el acceso a productos y servicios, por lo que un algoritmo de precios o de aprobación que trate de forma injustificadamente distinta a los consumidores por su origen podría ser sancionado por INDECOPI. La Ley 30709 exige cuadros de categorías y funciones sin discriminación, lo que alcanza a los modelos que recomiendan sueldos. Pida que, en grupos, construyan una lista de normas aplicables a un sistema de IA que tasa inmuebles para una caja municipal."
+        },
+        {
+          "title": "Reglamento europeo de IA: arquitectura por niveles de riesgo",
+          "bullets": [
+            "Reglamento (UE) 2024/1689, vigente desde agosto de 2024, con aplicación escalonada entre 2025 y 2027.",
+            "Riesgo inaceptable (art. 5): puntuación social, manipulación dañina, explotación de vulnerabilidades y ciertos usos de identificación biométrica remota.",
+            "Alto riesgo (anexo III): empleo, educación, solvencia crediticia, servicios esenciales, migración, justicia e infraestructura crítica.",
+            "Transparencia (art. 50): avisar que se interactúa con IA y marcar el contenido sintético; riesgo mínimo sin obligaciones específicas.",
+            "Multas de hasta 35 millones de euros o el 7 % de la facturación mundial anual por prácticas prohibidas."
+          ],
+          "notes": "Explique por qué un técnico peruano debe conocer el Reglamento europeo: tiene efecto extraterritorial, pues se aplica a proveedores de fuera de la Unión cuyos sistemas se comercializan allí o cuyos resultados se usan allí, y además sirve de referencia para la región, como ocurrió con el Reglamento General de Protección de Datos. Recorra la pirámide de riesgos con ejemplos. Aclare que la evaluación de solvencia de personas naturales es de alto riesgo, pero la detección de fraude financiero está expresamente exceptuada en ese punto. Mencione el calendario: las prohibiciones rigen desde febrero de 2025, las obligaciones de los modelos de uso general desde agosto de 2025 y la mayoría de obligaciones de alto riesgo a partir de 2026 y 2027, con ajustes en discusión en la Unión. Pregunte: una empresa limeña de software de selección de personal que vende a clientes en España, ¿qué obligaciones tendría?"
+        },
+        {
+          "title": "Obligaciones de alto riesgo y de los modelos de uso general",
+          "bullets": [
+            "Proveedor de alto riesgo: gestión de riesgos, gobernanza de datos, documentación técnica, registros, transparencia, supervisión humana, exactitud, robustez y ciberseguridad.",
+            "Responsable del despliegue: uso conforme a instrucciones, supervisión por personas competentes, monitoreo y, en ciertos casos, evaluación de impacto en derechos fundamentales.",
+            "Modelos de uso general: documentación técnica, política de derechos de autor y resumen público del contenido de entrenamiento.",
+            "Riesgo sistémico: se presume con más de 10²⁵ operaciones de coma flotante de entrenamiento y exige evaluaciones adversarias y notificación de incidentes."
+          ],
+          "notes": "Explique la diferencia entre proveedor y responsable del despliegue, que tiene equivalentes en el reglamento peruano entre quien desarrolla y quien implementa. Esto es clave para el técnico: si su empresa adapta un modelo de terceros y lo comercializa con su marca o modifica sustancialmente su finalidad, puede pasar a ser considerada proveedora, con todas las obligaciones. Recorra los artículos 9 a 15, que definen los requisitos de alto riesgo, y muestre que corresponden casi uno a uno con prácticas que el estudiante ya conoce: gestión de riesgos, ficha técnica de datos, tarjeta de modelo, registro de predicciones de MLOps y diseño de la supervisión humana. Sobre los modelos de uso general, conecte con lo visto en IA Generativa y Modelos de Lenguaje: el umbral de cómputo identifica modelos de frontera. Pregunte qué documentos de su Proyecto Integrador servirían como evidencia de cumplimiento y cuáles faltarían."
+        },
+        {
+          "title": "América Latina: un mapa regulatorio en movimiento",
+          "bullets": [
+            "Brasil: el proyecto de ley 2338/2023, aprobado por el Senado en diciembre de 2024, propone un marco basado en riesgos con autoridad coordinadora.",
+            "Chile presentó en 2024 un proyecto de ley de IA basado en riesgos y actualizó su Política Nacional de IA; otros países debaten iniciativas propias.",
+            "Declaración de Santiago (2023): compromiso regional por una IA ética, impulsado en foros ministeriales con apoyo de la UNESCO y la CAF.",
+            "El Índice Latinoamericano de Inteligencia Artificial (ILIA), elaborado por CENIA con la CEPAL, compara capacidades y gobernanza en la región."
+          ],
+          "notes": "Presente el panorama regional sin pretender exhaustividad, porque cambia con rapidez; lo importante es que el técnico sepa dónde informarse y reconozca las tendencias comunes: enfoque basado en riesgos, autoridad coordinadora, protección de derechos y promoción de la innovación. Brasil es el caso más avanzado en trámite legislativo, y su autoridad de protección de datos ya intervino en 2024 sobre el uso de datos personales para entrenar modelos de una gran plataforma. Mencione que la región comparte desafíos: autoridades con recursos limitados, alta informalidad y brechas de conectividad que afectan la representatividad de los datos. Explique el valor del ILIA para comparar al Perú con sus vecinos en factores habilitantes, investigación y gobernanza, y anime a revisar su edición más reciente. Pida a los estudiantes que discutan si conviene a la región armonizar sus normas con las europeas o desarrollar un enfoque propio."
+        },
+        {
+          "title": "NIST AI RMF: gobernar, mapear, medir y gestionar",
+          "bullets": [
+            "Marco voluntario publicado en enero de 2023 (NIST AI 100-1), con un perfil para IA generativa publicado en 2024 (NIST AI 600-1).",
+            "IA confiable: válida y fiable; segura; protegida y resiliente; responsable y transparente; explicable e interpretable; con privacidad reforzada; y equitativa.",
+            "Gobernar es transversal: políticas, roles, cultura y gestión de terceros; mapear establece el contexto; medir cuantifica; gestionar prioriza y responde.",
+            "Se implementa mediante perfiles adaptados al sector y al caso de uso, no como una lista de verificación rígida."
+          ],
+          "notes": "Explique que el NIST AI RMF es útil para organizaciones peruanas aunque no sea obligatorio, porque ofrece un vocabulario común y un conjunto de acciones sugeridas en su manual de aplicación. Recorra las cuatro funciones con el caso de la unidad: mapear implica entender a los postulantes afectados y el contexto del mercado laboral; medir significa auditar la equidad por sexo, edad y discapacidad; gestionar es decidir mitigaciones y planes de respuesta; gobernar es definir quién aprueba y cómo se rinden cuentas. Destaque que las siete características de una IA confiable pueden entrar en tensión, como la privacidad y la equidad medible, lo que conecta con la unidad 2. El estudiante ya vio una introducción al marco en el Proyecto Integrador; aquí profundiza en la función gobernar, la más descuidada en la práctica. Pida que propongan dos indicadores medibles para la característica responsable y transparente."
+        },
+        {
+          "title": "ISO/IEC 42001: un sistema de gestión certificable para la IA",
+          "bullets": [
+            "Publicada en 2023, sigue la estructura armonizada de las normas ISO de sistemas de gestión: contexto, liderazgo, planificación, soporte, operación, evaluación y mejora.",
+            "Exige política de IA, objetivos, evaluación de riesgos y de impacto, controles del anexo A y declaración de aplicabilidad.",
+            "Se complementa con ISO/IEC 23894 (riesgos de IA), ISO/IEC 42005 (evaluación de impacto) e ISO/IEC 38507 (gobierno de la organización).",
+            "Ciclo de planificar, hacer, verificar y actuar: auditorías internas, revisión por la dirección y acciones correctivas."
+          ],
+          "notes": "Explique que la ISO/IEC 42001 hace por la IA lo que la ISO/IEC 27001 hizo por la seguridad de la información: convierte buenas intenciones en un sistema auditable. Muchas organizaciones peruanas ya tienen sistemas de gestión de calidad ISO 9001 o de seguridad ISO/IEC 27001, y la 42001 puede integrarse con ellos gracias a la estructura común. Detalle qué es la declaración de aplicabilidad: un documento que indica qué controles del anexo A se aplican, cuáles no y por qué. Dé ejemplos de controles: política de IA, inventario de recursos y sistemas, evaluación de impacto, gestión de datos, documentación del ciclo de vida, uso responsable y relaciones con terceros. Advierta que la certificación no garantiza que un sistema sea ético, sino que la organización gestiona sus riesgos de forma sistemática. Pregunte qué evidencias pediría un auditor externo para verificar el control de inventario de sistemas de IA."
+        },
+        {
+          "title": "Evaluación de impacto algorítmico paso a paso",
+          "bullets": [
+            "Referente: la Directiva sobre toma de decisiones automatizada de Canadá (2019), que asigna niveles de impacto de I a IV con exigencias crecientes.",
+            "Paso 1: describir el sistema, su finalidad, los datos y el grado de automatización de la decisión.",
+            "Paso 2: identificar afectados y derechos involucrados; paso 3: valorar daños por gravedad, alcance, reversibilidad y probabilidad.",
+            "Paso 4: definir controles, responsables y evidencias; paso 5: consultar a los afectados y publicar un resumen.",
+            "Repetir ante cambios sustanciales: nuevos datos, nueva población o nueva finalidad."
+          ],
+          "notes": "Presente la evaluación de impacto algorítmico como el instrumento central de la tarea 3. Explique el modelo canadiense: un cuestionario que puntúa riesgo e impacto y, según el nivel resultante, exige medidas crecientes como revisión por pares, explicaciones, intervención humana y aprobación de alto nivel. La norma ISO/IEC 42005, publicada en 2025, ofrece una guía internacional para estas evaluaciones. Destaque la diferencia con la evaluación de impacto en protección de datos: esta se centra en la privacidad, mientras que la algorítmica abarca equidad, autonomía, acceso a servicios y otros derechos. Insista en la consulta a los afectados: es la parte que más se omite y la que más información aporta. Haga un ejercicio con el caso de la unidad: valoren el impacto del filtro automático de postulantes y decidan qué nivel le correspondería en la escala canadiense y qué medidas exigiría ese nivel."
+        },
+        {
+          "title": "Matriz de cumplimiento: de la norma a la evidencia",
+          "bullets": [
+            "Columnas: requisito, fuente normativa, control implementado, evidencia, responsable, estado y fecha de revisión.",
+            "Ejemplo: consentimiento para datos biométricos (Ley 29733), formulario firmado y registro, a cargo del oficial de datos personales.",
+            "Ejemplo: supervisión humana (reglamento de la Ley 31814), cola de revisión con plazo definido, a cargo del jefe de selección.",
+            "Estados posibles: cumplido, parcial, no cumplido o no aplica con justificación escrita."
+          ],
+          "notes": "Muestre una matriz de cumplimiento en una hoja de cálculo y explique que es el puente entre el área legal y el equipo técnico. El error más común es redactar controles vagos, como «se protegerán los datos», que nadie puede verificar. Enseñe a redactar controles con responsable, acción, frecuencia y evidencia: «el analista de MLOps revisa mensualmente la tasa de verdaderos positivos por sexo y registra el resultado en el tablero de monitoreo». Explique que la evidencia debe ser objetiva y conservarse, porque un auditor o la autoridad pueden solicitarla años después. Indique que en la tarea 3 la matriz debe cubrir al menos la Ley 29733 con su reglamento, el reglamento de la Ley 31814 y, si el sistema se ofrece en Europa, el Reglamento europeo. Pida que redacten en parejas tres controles verificables para un sistema de reconocimiento facial en el acceso a un centro comercial."
+        },
+        {
+          "title": "Inventario de sistemas de IA y clasificación interna",
+          "bullets": [
+            "Inventario: registro único de todos los sistemas de IA en uso o desarrollo, incluidos los de proveedores y las herramientas generativas.",
+            "Campos mínimos: dueño, finalidad, datos, nivel de riesgo, estado, versión, proveedor, última evaluación y próxima revisión.",
+            "La clasificación interna determina la profundidad de la revisión: bajo, medio, alto o prohibido.",
+            "Sin inventario no hay gobernanza: no se puede gestionar lo que no se sabe que existe."
+          ],
+          "notes": "Explique que el primer hallazgo de casi cualquier auditoría de IA es que la organización no sabe cuántos sistemas tiene: hay modelos en hojas de cálculo, servicios de proveedores con IA incorporada y empleados que usan asistentes generativos sin autorización, la llamada IA en la sombra. Muestre el registro de inventario en YAML de la lectura y relacione cada campo con un requisito normativo: el nivel de riesgo con el reglamento de la Ley 31814, los datos con la Ley 29733 y el dueño con el principio de rendición de cuentas. Conecte con el registro de modelos de MLflow que vieron en Despliegue de Modelos: el registro técnico es necesario pero no suficiente, porque no incluye finalidad, afectados ni nivel de riesgo. Pida que propongan un criterio para decidir cuándo una hoja de cálculo con reglas o fórmulas que influyen en decisiones sobre personas debe ingresar al inventario."
+        },
+        {
+          "title": "Roles y estructura: tres líneas y comité de IA",
+          "bullets": [
+            "Modelo de tres líneas (IIA, 2020): la primera gestiona el riesgo, la segunda supervisa y asesora, y auditoría interna da aseguramiento independiente.",
+            "Comité de IA multidisciplinario: negocio, tecnología, riesgos, legal, protección de datos y, cuando sea posible, una voz externa.",
+            "Matriz RACI por etapa: quién propone, quién valida, quién aprueba el pase a producción y quién monitorea.",
+            "Proporcionalidad: una pyme puede concentrar funciones, pero no omitir la revisión independiente de sistemas de riesgo alto."
+          ],
+          "notes": "Explique el modelo de tres líneas del Instituto de Auditores Internos, que muchas entidades supervisadas por la SBS ya aplican, y ubique a cada actor: el equipo de ciencia de datos es primera línea, la gerencia de riesgos y el oficial de datos personales son segunda línea, y la auditoría interna es tercera línea. Presente el comité de IA como instancia de decisión para sistemas de riesgo alto y advierta sobre los comités decorativos que no tienen poder de veto ni presupuesto. Construya en vivo una matriz RACI para el pase a producción de un modelo de selección de personal. Discuta la proporcionalidad: una empresa de 45 trabajadores no tendrá tres líneas formales, pero puede separar a quien desarrolla de quien aprueba y contratar una revisión externa. Pregunte quién debería tener poder de veto sobre un despliegue de alto riesgo y cómo evitar que se convierta en un cuello de botella."
+        },
+        {
+          "title": "Integración: el expediente de gobernanza de un sistema",
+          "bullets": [
+            "Contenido: ficha de inventario, clasificación de riesgo justificada, evaluación de impacto, matriz de cumplimiento y registro de riesgos.",
+            "Documentación técnica: ficha de datos, tarjeta de modelo, resultados de auditoría y plan de monitoreo.",
+            "Decisiones: acta de aprobación, condiciones de uso y fecha de revisión obligatoria.",
+            "El expediente es un documento vivo que acompaña al sistema hasta su retiro formal."
+          ],
+          "notes": "Cierre la unidad integrando todos los instrumentos en un expediente, que será el núcleo del proyecto final de la unidad 4. Explique que el expediente responde a la pregunta que hará cualquier regulador o auditor: demuestre que gestionó los riesgos de este sistema. Muestre cómo los artefactos que el estudiante produce en el Proyecto Integrador, como la tarjeta de modelo, la ficha de datos y el registro de riesgos, se insertan en el expediente, y cómo este curso añade la clasificación normativa, la evaluación de impacto, la matriz de cumplimiento y la estructura de decisión. Destaque la importancia del retiro: un sistema que ya no se usa también debe cerrarse formalmente, con eliminación o archivo de datos y modelos según los plazos de conservación. Pregunte qué eventos deberían obligar a reabrir el expediente antes de la fecha de revisión programada."
+        }
+      ],
+      "reading": {
+        "title": "Gobernar la IA en el Perú: normas, marcos y sistemas de gestión",
+        "minutes": 40,
+        "content": "## Tres capas de gobernanza\n\nLa gobernanza de la IA opera en tres capas que se refuerzan: la **regulación** (leyes y reglamentos obligatorios), los **marcos y normas técnicas** (voluntarios, pero auditables) y la **gobernanza organizacional** (políticas, roles y procesos internos). Un técnico competente se mueve entre las tres: lee una obligación legal, la traduce en un control y produce la evidencia que lo demuestra.\n\n## El marco peruano\n\nLa **Ley 31814**, publicada en julio de 2023, declara de interés nacional la promoción de la IA y fija principios como los estándares de seguridad basados en riesgos, la pluralidad de participantes, el desarrollo ético y la privacidad. Designa a la Presidencia del Consejo de Ministros, a través de la Secretaría de Gobierno y Transformación Digital, como autoridad técnico-normativa. Su **reglamento**, aprobado en 2025, da contenido operativo a ese enfoque: distingue usos indebidos, que se prohíben, de usos de riesgo alto, que se permiten con obligaciones reforzadas de transparencia, supervisión humana, gestión de riesgos y documentación. Son de riesgo alto, típicamente, los sistemas que influyen en el acceso a educación, empleo, crédito, salud, servicios públicos o justicia, y los de identificación biométrica. Como las normas evolucionan, el profesional debe verificar siempre el texto vigente publicado en El Peruano.\n\nLa **Ley 29733** y su reglamento, aprobado por el Decreto Supremo 016-2024-JUS, siguen siendo el instrumento con mayor capacidad sancionadora: la Autoridad Nacional de Protección de Datos Personales puede imponer multas de hasta 100 UIT. Para un proyecto de IA las preguntas críticas son la base legal del tratamiento, la compatibilidad con la finalidad original, la proporcionalidad de las variables, el tratamiento de datos sensibles, el flujo transfronterizo cuando se usan servicios en la nube del extranjero y el derecho al tratamiento objetivo del artículo 23. A ello se suman normas sectoriales: la regulación de la SBS sobre gestión de riesgos, el Código de Protección y Defensa del Consumidor (Ley 29571) y la Ley 30709 contra la discriminación remunerativa.\n\n## El referente europeo\n\nEl Reglamento (UE) 2024/1689 organiza las obligaciones en una pirámide: prácticas prohibidas (art. 5), sistemas de alto riesgo (art. 6 y anexo III), obligaciones de transparencia (art. 50) y riesgo mínimo. Los proveedores de sistemas de alto riesgo deben cumplir los artículos 9 a 15: gestión de riesgos, gobernanza de datos, documentación técnica, registros automáticos, transparencia, supervisión humana, y exactitud, robustez y ciberseguridad. Tiene efecto extraterritorial: una empresa peruana que comercializa un sistema de selección de personal en España queda alcanzada. Las multas por prácticas prohibidas llegan a 35 millones de euros o al 7 % de la facturación mundial.\n\n## Marcos de gestión\n\n| Instrumento | Naturaleza | Aporte principal |\n|---|---|---|\n| Ley 31814 y su reglamento | Obligatoria en el Perú | Clasificación por riesgo y obligaciones |\n| Ley 29733 y DS 016-2024-JUS | Obligatoria en el Perú | Base legal, finalidad, seguridad, derechos |\n| Reglamento (UE) 2024/1689 | Obligatoria en la UE | Requisitos detallados de alto riesgo |\n| NIST AI RMF 1.0 | Voluntaria | Funciones y vocabulario de riesgo |\n| ISO/IEC 42001:2023 | Voluntaria y certificable | Sistema de gestión auditable |\n\nEl NIST AI RMF organiza el trabajo en cuatro funciones: gobernar, mapear, medir y gestionar. La ISO/IEC 42001 lo convierte en un sistema de gestión con política, objetivos, controles y auditoría interna, y se complementa con la ISO/IEC 23894 para riesgos y la ISO/IEC 42005 para evaluaciones de impacto.\n\n## Evaluación de impacto algorítmico\n\nInspirada en la Directiva canadiense sobre toma de decisiones automatizada, la evaluación sigue cinco pasos: describir el sistema y su grado de automatización; identificar afectados y derechos; valorar daños por gravedad, alcance, reversibilidad y probabilidad; definir controles con responsables y evidencias; y consultar a los afectados. Debe repetirse ante cambios sustanciales de datos, población o finalidad.\n\n## El inventario como columna vertebral\n\n```yaml\nid: IA-RRHH-003\nnombre: Preselección de postulantes\ndueño: Gerencia de Gestión del Talento\nfinalidad: ordenar postulaciones; ningún descarte sin revisión humana\ntipo: modelo de lenguaje ajustado (proveedor externo)\ndatos_personales: [currículo, edad, video de entrevista]\ndatos_sensibles: no   # análisis facial desactivado\nriesgo_interno: alto\nclasificacion:\n  reglamento_ley_31814: riesgo alto (empleo)\n  reglamento_ue_2024_1689: alto riesgo, anexo III, punto 4\nevaluacion_impacto: EIA-2026-07, aprobada con condiciones\ncontroles: [auditoría trimestral de equidad, revisión humana, aviso a postulantes]\nversion: 2.3.1\nproxima_revision: 2027-01-15\n```\n\n## Ideas clave\n\n- Ninguna capa basta sola: ley, marco y organización se refuerzan.\n- Clasificar el riesgo determina la profundidad de los controles.\n- Sin inventario, roles y evidencia no hay gobernanza, solo intenciones."
+      },
+      "case": {
+        "title": "Caso: TalentIA Perú y el salto al mercado español",
+        "content": "TalentIA Perú es una empresa limeña de 45 trabajadores que vende una plataforma de reclutamiento a 60 empresas peruanas de retail, banca y centros de contacto. Su producto principal, Filtro360, recibe currículos y videoentrevistas grabadas y entrega a cada empresa cliente una lista ordenada de postulantes con un puntaje de 0 a 100. Combina un modelo de lenguaje ajustado que lee currículos, un modelo que estima el «ajuste cultural» a partir de la transcripción de la videoentrevista y, hasta el año pasado, un análisis de expresiones faciales que la empresa desactivó tras quejas de postulantes. En 2025 procesó 380 000 postulaciones; en promedio, los clientes entrevistan solo al 15 % con mejor puntaje y no revisan al resto.\n\nUna cadena española de tiendas ofrece un contrato de tres años para usar Filtro360 en sus procesos en España, lo que triplicaría los ingresos de TalentIA. El área legal del cliente exige, antes de firmar, la documentación técnica y la evidencia de cumplimiento de los requisitos de alto riesgo del Reglamento europeo de IA. Al mismo tiempo, una asociación de personas con discapacidad presentó una denuncia ante la Autoridad Nacional de Protección de Datos Personales: postulantes con discapacidad auditiva obtuvieron puntajes muy bajos en el componente de videoentrevista, cuya transcripción automática falla con su forma de hablar.\n\nLa revisión interna encuentra que no existe inventario formal de modelos ni evaluación de impacto; que los postulantes aceptan términos y condiciones genéricos que no mencionan decisiones automatizadas; que las transcripciones se procesan con un servicio de un proveedor estadounidense sin cláusulas de transferencia internacional; que la tasa de pase al 15 % superior es de 17 % para hombres y 12 % para mujeres, y de 16 % para menores de 40 años frente a 7 % para mayores de 50; y que el equipo de ciencia de datos, de cinco personas, también fija los umbrales y aprueba sus propios despliegues.\n\nEl gerente general, fundador de la empresa, plantea tres opciones: (a) firmar el contrato y «ordenar los papeles en paralelo»; (b) postergar la expansión doce meses e implementar un sistema de gestión basado en la ISO/IEC 42001; o (c) lanzar en España una versión reducida que solo ordene currículos, sin videoentrevista, mientras se adecúa el producto completo. La directora comercial teme perder al cliente; el jefe de ciencia de datos sostiene que el modelo «solo recomienda» y que la decisión final es de las empresas.\n\nUsted ha sido contratado como consultor de gobernanza de IA y debe presentar una recomendación al directorio en dos semanas.",
+        "questions": [
+          "Clasifique Filtro360 según el reglamento de la Ley 31814 y el Reglamento europeo de IA. ¿TalentIA es proveedor, responsable del despliegue o ambos? Justifique.",
+          "Evalúe el argumento de que el sistema «solo recomienda», considerando que los clientes no revisan al 85 % de postulantes y el sesgo de automatización.",
+          "Identifique los incumplimientos más graves frente a la Ley 29733 y su reglamento, incluidos el consentimiento, la finalidad, la discapacidad y el flujo transfronterizo.",
+          "Compare las tres opciones del gerente con criterios de riesgo legal, daño a postulantes, viabilidad económica y reputación. ¿Cuál recomienda y con qué condiciones?",
+          "Diseñe la estructura mínima de gobernanza que TalentIA necesita, con roles, comité, inventario y separación de funciones proporcionales a su tamaño."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Evaluación de impacto algorítmico y matriz de cumplimiento",
+        "instructions": "**Objetivo:** elaborar la evaluación de impacto algorítmico (EIA) y la matriz de cumplimiento de un sistema de IA real o en desarrollo.\n\n**Sistema a evaluar:** preferentemente el de su Proyecto Integrador; alternativamente, Filtro360 del caso de la unidad u otro aprobado por el docente.\n\n**Qué entregar (equipos de dos o tres integrantes):**\n\n1. **Ficha de inventario** en YAML con los campos vistos en clase.\n2. **Clasificación normativa justificada** según el reglamento de la Ley 31814 y, si aplica, el Reglamento (UE) 2024/1689, identificando el rol de la organización (quien desarrolla, quien implementa, proveedor o responsable del despliegue).\n3. **Evaluación de impacto** en cinco pasos: descripción y grado de automatización; afectados y derechos; tabla de daños con gravedad, alcance, reversibilidad y probabilidad; controles con responsable y evidencia; y plan de consulta con al menos una entrevista documentada a una persona potencialmente afectada.\n4. **Matriz de cumplimiento** con un mínimo de 15 requisitos provenientes de la Ley 29733 y su reglamento, del reglamento de la Ley 31814 y de una función del NIST AI RMF o un control de la ISO/IEC 42001, con estado y evidencia.\n5. **Propuesta de gobernanza:** matriz RACI del ciclo de vida y composición del comité de IA, proporcional al tamaño de la organización.\n\n**Formato:** informe en PDF de 10 a 15 páginas más anexos (YAML y hoja de cálculo de la matriz). Cite las normas por número y artículo.\n\n**Criterios:** corrección de la clasificación, profundidad y realismo de la evaluación, verificabilidad de los controles y coherencia de la gobernanza con el tamaño y el riesgo de la organización.",
+        "rubric": [
+          {
+            "name": "Inventario y clasificación normativa justificada con el rol correcto",
+            "points": 4
+          },
+          {
+            "name": "Evaluación de impacto con afectados, daños valorados y consulta",
+            "points": 6
+          },
+          {
+            "name": "Matriz de cumplimiento con controles verificables y evidencias",
+            "points": 6
+          },
+          {
+            "name": "Estructura de gobernanza proporcional y matriz RACI coherente",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Regulación y gobernanza de la IA",
+        "questions": [
+          {
+            "prompt": "Una empresa limeña desarrolla un sistema de puntuación crediticia de personas que usarán bancos en Madrid. Según el Reglamento (UE) 2024/1689, ¿cómo se clasifica y por qué le aplica?",
+            "options": [
+              "Riesgo mínimo; la evaluación crediticia no figura en el reglamento",
+              "No le aplica, porque el desarrollador está fuera de la Unión Europea",
+              "Riesgo inaceptable; toda puntuación crediticia está prohibida",
+              "Alto riesgo; el reglamento alcanza a proveedores extranjeros cuyos sistemas se comercializan en la Unión"
+            ],
+            "correct": 3,
+            "explanation": "La evaluación de solvencia de personas naturales figura en el anexo III como alto riesgo, y el reglamento tiene efecto extraterritorial sobre los proveedores que introducen sistemas en el mercado de la Unión."
+          },
+          {
+            "prompt": "Un hospital peruano quiere enviar historias clínicas a una API de IA generativa alojada en Estados Unidos para resumirlas. ¿Qué implicancia principal tiene según la Ley 29733 y su reglamento?",
+            "options": [
+              "Es flujo transfronterizo de datos sensibles y requiere base legal y garantías de protección adecuadas",
+              "No hay implicancia si el proveedor es una empresa internacionalmente reconocida",
+              "Basta con informar verbalmente al paciente durante la consulta",
+              "La ley solo se aplica a bancos de datos públicos, no a hospitales privados"
+            ],
+            "correct": 0,
+            "explanation": "Los datos de salud son sensibles y su envío a un servidor extranjero constituye flujo transfronterizo. Se necesita base legal, consentimiento cuando corresponda, nivel de protección adecuado y garantías contractuales y de seguridad."
+          },
+          {
+            "prompt": "Una organización mide con rigor la equidad de sus modelos, pero nadie tiene autoridad para detener un despliegue cuando los resultados son malos. ¿Qué función del NIST AI RMF está más débil?",
+            "options": [
+              "Mapear",
+              "Medir",
+              "Gobernar",
+              "Gestionar"
+            ],
+            "correct": 2,
+            "explanation": "Gobernar establece políticas, roles, autoridad y rendición de cuentas, y atraviesa las demás funciones. Sin ella, la medición rigurosa no se traduce en decisiones: nadie puede detener un despliegue riesgoso."
+          },
+          {
+            "prompt": "¿Qué distingue a la ISO/IEC 42001 del NIST AI RMF?",
+            "options": [
+              "Es obligatoria en el Perú desde la promulgación de la Ley 31814",
+              "Es una norma de sistema de gestión con requisitos auditables y certificables por terceros",
+              "Se limita a medir la equidad de los modelos de clasificación",
+              "Reemplaza a la Ley 29733 en materia de protección de datos personales"
+            ],
+            "correct": 1,
+            "explanation": "La ISO/IEC 42001 sigue la estructura armonizada de los sistemas de gestión y permite la certificación; el NIST AI RMF es un marco voluntario de orientación. Ninguno es obligatorio por sí mismo en el Perú ni reemplaza normas legales."
+          },
+          {
+            "prompt": "En una matriz de cumplimiento, ¿cuál de estos controles está mejor redactado para que un auditor pueda verificarlo?",
+            "options": [
+              "La empresa se compromete a garantizar en todo momento la equidad de sus modelos",
+              "Se protegerán adecuadamente los datos personales de todos los clientes",
+              "El modelo será ético, transparente y responsable durante todo su ciclo de vida",
+              "El analista de MLOps revisa mensualmente la tasa de verdaderos positivos por sexo y registra el resultado en el tablero"
+            ],
+            "correct": 3,
+            "explanation": "Un control verificable indica responsable, acción, frecuencia y evidencia. Las demás redacciones son declaraciones de intención que un auditor no puede comprobar ni medir."
+          },
+          {
+            "prompt": "En el modelo de tres líneas, ¿a qué línea pertenece el oficial de datos personales que supervisa y asesora a los equipos que desarrollan modelos?",
+            "options": [
+              "Primera línea",
+              "Tercera línea",
+              "Segunda línea",
+              "Línea externa de aseguramiento"
+            ],
+            "correct": 2,
+            "explanation": "La segunda línea supervisa y asesora sobre riesgos y cumplimiento sin operar los modelos. La primera línea los desarrolla y opera, y la tercera, la auditoría interna, brinda aseguramiento independiente."
+          },
+          {
+            "prompt": "Un modelo de preselección de personal ya aprobado empieza a usarse también para decidir ascensos internos. ¿Qué corresponde hacer?",
+            "options": [
+              "Reabrir la evaluación de impacto, porque cambiaron sustancialmente la finalidad y la población afectada",
+              "Nada, porque el modelo y sus datos no cambiaron",
+              "Solo actualizar el número de versión en el registro de modelos",
+              "Pedir a los trabajadores que firmen un nuevo contrato de trabajo"
+            ],
+            "correct": 0,
+            "explanation": "Un cambio de finalidad es un cambio sustancial: afecta el principio de finalidad de la Ley 29733, la clasificación de riesgo y los daños posibles. La evaluación de impacto y el inventario deben actualizarse antes del nuevo uso."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Gobernanza de la IA generativa, auditoría algorítmica y proyecto final",
+      "description": "Al finalizar la unidad, el estudiante audita un sistema de IA, incluido uno generativo, mediante pruebas adversarias, revisión documental y análisis de la supervisión humana, y sustenta ante un jurado un expediente de gobernanza con política de uso, controles, gestión de incidentes y plan de mejora.",
+      "topics": [
+        "Riesgos de la IA generativa según el perfil NIST AI 600-1: confabulación, suplantación y derechos de autor",
+        "Política organizacional de uso de IA generativa",
+        "Pruebas adversarias y ejercicios de equipo rojo como control de gobernanza",
+        "Auditoría algorítmica con el marco SMACTR y redacción de hallazgos",
+        "Supervisión humana efectiva, sesgo de automatización y gestión de incidentes",
+        "Proyecto final: expediente de gobernanza, auditoría y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Riesgos específicos de la IA generativa",
+          "bullets": [
+            "El perfil NIST AI 600-1 (2024) identifica doce riesgos, entre ellos confabulación, privacidad, integridad de la información, propiedad intelectual y seguridad.",
+            "Weidinger et al. (2022) agrupan los daños de los modelos de lenguaje en discriminación, peligros informativos, desinformación, usos maliciosos, interacción humano-computadora y daños socioeconómicos y ambientales.",
+            "Diferencia clave: salidas abiertas e impredecibles; el riesgo depende tanto del modelo como del contexto de uso.",
+            "Cadena de valor compleja: proveedor del modelo base, integrador, organización usuaria y persona final."
+          ],
+          "notes": "Explique que la IA generativa amplía la superficie de riesgo porque no produce una clase o un número, sino texto, imágenes o código que se usan en contextos imprevistos. Recuerde que el estudiante ya estudió en IA Generativa y Modelos de Lenguaje los riesgos técnicos, como la inyección de instrucciones; aquí el foco es cómo gobernarlos. Repase los doce riesgos del perfil del NIST y pida a los estudiantes que identifiquen los tres más relevantes para un asistente que redacta respuestas a reclamos de consumidores. Discuta la cadena de valor: cuando un banco usa el modelo de un proveedor internacional a través de una API, ¿quién responde si el asistente revela datos de otro cliente? Use el caso de 2023 en que ingenieros de una gran empresa de electrónica ingresaron código confidencial en un asistente público para mostrar que el riesgo también nace del uso interno sin política."
+        },
+        {
+          "title": "Desinformación, suplantación y contenido sintético",
+          "bullets": [
+            "Los deepfakes ya se usan en fraudes: en 2024 una empresa de ingeniería perdió unos 25 millones de dólares tras una videollamada falsa en Hong Kong.",
+            "Riesgo electoral: audios y videos falsos de candidatos difundidos en redes sociales y servicios de mensajería durante las campañas.",
+            "Controles técnicos: marcas de agua, credenciales de procedencia del estándar C2PA y detectores, todos con limitaciones conocidas.",
+            "Controles organizacionales: verificación por un segundo canal para pagos y protocolos de respuesta ante suplantación."
+          ],
+          "notes": "Use el caso de la videollamada falsa de 2024: un empleado de finanzas transfirió unos 25 millones de dólares tras una reunión en la que todos los demás participantes, incluido el director financiero, eran recreaciones generadas por IA. Pregunte qué control habría evitado el fraude: no un detector de deepfakes, sino un procedimiento de verificación por un segundo canal independiente para transferencias grandes o inusuales. Explique las credenciales de contenido del estándar C2PA y las marcas de agua, y su principal limitación: pueden eliminarse o simplemente no estar presentes en el contenido creado por actores maliciosos. Mencione que el Reglamento europeo exige marcar el contenido sintético y que otros marcos avanzan en el mismo sentido. Pregunte cómo debería preparar una caja municipal a su personal de agencias para enfrentar llamadas con voces clonadas de clientes o de gerentes que ordenan operaciones urgentes."
+        },
+        {
+          "title": "Derechos de autor, datos de entrenamiento y propiedad de resultados",
+          "bullets": [
+            "Litigios en curso sobre el uso de obras protegidas para entrenar modelos, como el de The New York Times contra OpenAI y Microsoft, iniciado en 2023.",
+            "En el Perú, el Decreto Legislativo 822 define al autor como la persona natural que realiza la creación intelectual.",
+            "Riesgos para la organización: reproducción de material protegido, infracción de licencias de código y fuga de secretos comerciales.",
+            "Controles: revisar términos del proveedor, filtros de similitud, registro de uso y revisión humana antes de publicar."
+          ],
+          "notes": "Presente el debate sin pretender resolverlo, porque está en plena evolución en tribunales y legislaciones. Explique que el Decreto Legislativo 822 define al autor como la persona natural que realiza la creación intelectual, lo que plantea dudas sobre la protección de resultados generados sin aporte creativo humano significativo. Mencione que la Oficina de Derecho de Autor de Estados Unidos ha sostenido que el registro requiere autoría humana y que en el Perú la Dirección de Derecho de Autor de INDECOPI es la autoridad competente. Explique los riesgos prácticos: un asistente de código puede sugerir fragmentos con licencias restrictivas y un generador de imágenes puede producir personajes protegidos. Pregunte qué política adoptarían en una agencia de diseño que usa generadores de imágenes para campañas de clientes, quién asume el riesgo si el resultado infringe derechos y cómo debería reflejarse eso en los contratos."
+        },
+        {
+          "title": "Política de uso de IA generativa en la organización",
+          "bullets": [
+            "Alcance: herramientas aprobadas, usos permitidos, usos prohibidos y usos que requieren autorización previa.",
+            "Clasificación de información: prohibido ingresar datos personales, sensibles o confidenciales en herramientas no aprobadas.",
+            "Obligaciones: revisión humana de resultados, declaración de uso en entregables y registro en el inventario.",
+            "Capacitación obligatoria, canal de consultas y sanciones proporcionales por incumplimiento."
+          ],
+          "notes": "Muestre que la mejor respuesta a la IA en la sombra no es prohibir, sino ofrecer herramientas aprobadas con reglas claras. Presente la estructura de una política de una página, que formará parte del proyecto final: propósito, alcance, herramientas aprobadas, clasificación de información, usos permitidos y prohibidos, responsabilidad sobre resultados, transparencia, registro y sanciones. Use un semáforo: verde para redactar borradores de comunicaciones internas sin datos personales; amarillo para analizar documentos de clientes con herramientas empresariales con contrato y revisión humana; rojo para decidir sobre personas sin revisión humana o ingresar datos de salud en herramientas públicas. Pregunte cómo adaptarían la política a una institución educativa como TEPSUP, considerando tanto a docentes como a estudiantes, y qué uso de IA debería declararse en una tarea académica para preservar la integridad."
+        },
+        {
+          "title": "Pruebas adversarias y ejercicios de equipo rojo",
+          "bullets": [
+            "Equipo rojo: grupo que intenta deliberadamente provocar fallas del sistema para descubrir riesgos antes que los usuarios o los atacantes.",
+            "Plan: objetivos, categorías de riesgo, escenarios, evaluadores diversos, criterios de falla definidos de antemano y registro.",
+            "Métrica central: tasa de ataques exitosos por categoría, con severidad y reproducibilidad de cada hallazgo.",
+            "Combinar pruebas manuales creativas con baterías automatizadas que se repiten en cada nueva versión."
+          ],
+          "notes": "Explique que las pruebas adversarias son un control de gobernanza y no solo un ejercicio técnico: sus resultados alimentan la decisión de pase a producción y el registro de riesgos. Ganguli y colegas, en 2022, describieron cómo organizar equipos rojos con miles de ataques y observaron que evaluadores con perfiles distintos encuentran fallas distintas. Insista en que, para el contexto peruano, conviene incluir evaluadores que hablen variantes regionales del castellano, quechua o aimara, porque los filtros de seguridad suelen ser más débiles en lenguas con menos datos de entrenamiento. Presente la estructura del plan y la métrica de tasa de ataques exitosos. Muestre el código de la lectura, que automatiza una batería de pruebas y calcula la tasa por categoría repitiendo cada escenario porque las salidas son estocásticas. Pregunte qué categorías incluirían para un asistente de orientación tributaria a pequeños contribuyentes."
+        },
+        {
+          "title": "Diseñar escenarios de prueba para un asistente real",
+          "bullets": [
+            "Confabulación: preguntas sobre normas inexistentes o con premisas falsas sobre plazos y montos tributarios.",
+            "Privacidad: intentos de obtener datos de otros clientes o de reconstruir información del entrenamiento.",
+            "Equidad: la misma consulta con nombres, lenguas o lugares de origen distintos para detectar trato diferenciado.",
+            "Seguridad y uso indebido: instrucciones ocultas en documentos, solicitudes de contenido dañino y suplantación de identidad."
+          ],
+          "notes": "Haga un taller práctico: los equipos diseñan diez escenarios para el asistente de una caja municipal que responde consultas sobre créditos. Muestre cómo construir pruebas contrastivas de equidad, inspiradas en las pruebas de comportamiento de CheckList: la misma pregunta sobre requisitos de crédito formulada por «María Quispe, de Ayaviri» y por «María Fernández, de Miraflores» debería recibir información equivalente en contenido y tono. Explique que la confabulación se prueba mejor con premisas falsas, por ejemplo, preguntando por la multa que fija una ley inexistente; un buen sistema debe corregir la premisa en lugar de inventar una respuesta. Recuerde que cada escenario necesita un criterio de falla explícito antes de ejecutarse, para evitar juzgar los resultados de forma acomodaticia. Pida que cada equipo comparta su escenario más ingenioso y discuta con la clase su severidad y su probabilidad."
+        },
+        {
+          "title": "Auditoría algorítmica: tipos y alcances",
+          "bullets": [
+            "Auditoría interna, externa contratada y de terceros independientes, como investigadores académicos o periodistas.",
+            "Alcance: proceso de gobernanza, documentación, datos, modelo y resultados en producción.",
+            "Métodos: revisión documental, entrevistas, pruebas de caja negra, acceso al código y análisis de registros.",
+            "Raji et al. (2020) proponen SMACTR: alcance, mapeo, recolección de artefactos, pruebas y reflexión, seguidas de acciones posteriores."
+          ],
+          "notes": "Explique la diferencia entre auditorías según quién las realiza: las internas tienen acceso, pero menor independencia; las de terceros, como la de ProPublica sobre COMPAS o la de Buolamwini y Gebru sobre reconocimiento facial, tienen independencia pero acceso limitado, por lo que recurren a pruebas de caja negra. Presente el marco SMACTR de Raji y colegas, diseñado para auditorías internas en empresas tecnológicas, y muestre los artefactos que produce cada etapa: documento de alcance, mapa de interesados y procesos, lista de artefactos como tarjetas de modelo, resultados de pruebas y análisis de riesgos con recomendaciones. Subraye una lección de ese trabajo: la auditoría debe empezar antes del despliegue, no después de un escándalo. Pregunte qué tipo de auditoría sería factible para el sistema de su Proyecto Integrador, qué acceso necesitarían y quién podría actuar como auditor independiente."
+        },
+        {
+          "title": "Estándares de evidencia y redacción de hallazgos",
+          "bullets": [
+            "Cada hallazgo contiene condición, criterio, causa, efecto y recomendación, con evidencia suficiente y pertinente.",
+            "Severidad: combinación de gravedad del daño, alcance, probabilidad y dificultad de detección.",
+            "Independencia y escepticismo profesional: nadie audita su propio trabajo.",
+            "Informe ejecutivo para el directorio y anexo técnico reproducible para el equipo."
+          ],
+          "notes": "Explique cada componente del hallazgo con un ejemplo de IA generativa. Condición: el asistente citó normas inexistentes en 7 de 50 pruebas con premisa falsa. Criterio: la política interna exige cero respuestas con normas inexistentes en temas tributarios. Causa: ausencia de recuperación sobre fuentes oficiales y de instrucciones para corregir premisas. Efecto: riesgo de multas para los contribuyentes que sigan la respuesta y de reclamos ante INDECOPI. Recomendación: incorporar recuperación sobre normas vigentes y bloquear respuestas normativas sin cita verificable. Explique la escala de severidad y la importancia de la independencia: si el mismo equipo que construyó el modelo lo audita, el resultado pierde credibilidad ante el directorio y el regulador. Pida que redacten un hallazgo completo sobre equidad a partir del escenario contrastivo que diseñaron en la sesión anterior."
+        },
+        {
+          "title": "Supervisión humana: lo que funciona y lo que no",
+          "bullets": [
+            "Sesgo de automatización: las personas tienden a aceptar la recomendación del sistema incluso cuando es errónea (Skitka et al., 1999).",
+            "Ironías de la automatización (Bainbridge, 1983): cuanto más automatizado el sistema, menos práctica tiene la persona para intervenir cuando falla.",
+            "Green (2022): muchas políticas exigen supervisión humana sin evidencia de que mejore las decisiones.",
+            "Condiciones de eficacia: tiempo, información, competencia, autoridad para revertir e incentivos alineados."
+          ],
+          "notes": "Este tema es crítico porque las normas, incluidos el reglamento de la Ley 31814 y el Reglamento europeo, exigen supervisión humana, pero esta puede ser decorativa. Presente la evidencia de Skitka y colegas sobre el sesgo de automatización y las ironías descritas por Lisanne Bainbridge a partir de la automatización industrial. Ben Green revisó políticas de supervisión humana de algoritmos gubernamentales y concluyó que con frecuencia legitiman los sistemas sin corregir sus fallas. Use el caso de TalentIA: si el reclutador revisa 300 postulaciones en una hora, su supervisión es nominal. Presente las condiciones de eficacia y pida que diseñen la supervisión para un sistema de detección de fraude: ¿cuántos casos puede revisar una persona por hora con calidad?, ¿qué información necesita ver?, ¿cómo se medirá si la supervisión funciona realmente?"
+        },
+        {
+          "title": "Medir la eficacia de la supervisión humana",
+          "bullets": [
+            "Tasa de modificación: proporción de recomendaciones que el revisor cambia; cercana a cero sugiere aprobación automática.",
+            "Calidad de las modificaciones: ¿las correcciones humanas mejoran o empeoran el resultado frente a la verdad conocida?",
+            "Casos de control: insertar casos con errores conocidos para verificar la atención del revisor.",
+            "Tiempo por caso y carga de trabajo como indicadores de supervisión nominal."
+          ],
+          "notes": "Explique que la supervisión humana debe tratarse como cualquier otro control, con indicadores y evidencia. Una tasa de modificación de 0,2 % en un sistema de crédito puede significar que el modelo es excelente o que nadie revisa; para distinguirlo se insertan casos de control con errores deliberados y se mide cuántos detectan los revisores. La técnica se usa en la moderación de contenidos y en el control de calidad de procesos críticos. Muestre un tablero con tasa de modificación por revisor, tiempo por caso y desempeño en casos de control. Discuta el riesgo opuesto: revisores que modifican por prejuicio y reintroducen sesgos que el modelo no tenía; por eso también se mide la calidad de las modificaciones. Pregunte qué indicador incluirían en su proyecto final, con qué umbral activarían una alerta y quién debería recibirla."
+        },
+        {
+          "title": "Gestión de incidentes de IA",
+          "bullets": [
+            "Incidente: evento en que un sistema de IA causa o casi causa daño a personas, derechos, bienes o al ambiente.",
+            "Ciclo: detección, contención con posibilidad de desactivar, análisis de causa raíz, remediación, comunicación y aprendizaje.",
+            "Bases públicas como la AI Incident Database y el monitor de incidentes de la OCDE permiten aprender de casos ajenos.",
+            "Si se comprometen datos personales, el reglamento de la Ley 29733 exige notificar a la autoridad en plazos breves."
+          ],
+          "notes": "Explique que todo sistema de IA en producción necesita un procedimiento de incidentes, igual que un servicio de software tiene un procedimiento ante caídas. Conecte con los manuales de operación que vieron en Despliegue de Modelos, ampliándolos a daños a personas: un chatbot que da información falsa sobre un trámite, un modelo que bloquea cuentas de un grupo específico o un generador de imágenes que produce contenido ofensivo con la marca de la empresa. Insista en la contención: debe existir un interruptor que permita desactivar la función y volver a un proceso manual en minutos. Mencione las bases de incidentes como fuente de aprendizaje y de escenarios de prueba. Recuerde que el nuevo reglamento de la Ley 29733 obliga a notificar a la autoridad los incidentes de seguridad que afecten datos personales. Pida que redacten los tres primeros pasos del protocolo ante una filtración de datos a través de un asistente."
+        },
+        {
+          "title": "Proyecto final: expediente de gobernanza y auditoría",
+          "bullets": [
+            "Parte A: inventario, clasificación normativa, evaluación de impacto y matriz de cumplimiento actualizados desde la tarea 3.",
+            "Parte B: auditoría con plan SMACTR, pruebas adversarias o de equidad ejecutadas y hallazgos priorizados.",
+            "Parte C: política de uso, diseño de supervisión humana con indicadores y procedimiento de incidentes.",
+            "Parte D: resumen ejecutivo y sustentación de quince minutos ante jurado, con preguntas."
+          ],
+          "notes": "Presente el proyecto final con su rúbrica y aclare que integra las cuatro unidades: el análisis ético de la unidad 1 justifica las prioridades, las técnicas de la unidad 2 sustentan las pruebas, los instrumentos de la unidad 3 dan la estructura y la unidad 4 aporta la auditoría, la supervisión y la gestión de incidentes. Recomiende trabajar sobre el sistema del Proyecto Integrador, porque así ambos cursos se refuerzan y el patrocinador recibe un producto de mayor valor. Si el sistema es generativo, la auditoría debe incluir pruebas adversarias; si es predictivo, una auditoría de equidad con intervalos de confianza. Muestre un ejemplo de expediente bien logrado elaborado por el docente. Establezca los hitos: aprobación del sistema en la semana 13, plan de auditoría en la 14, ejecución en la 15 y sustentación en la 16."
+        },
+        {
+          "title": "Comunicar la gobernanza a la dirección",
+          "bullets": [
+            "Empiece por la decisión que se solicita y el nivel de riesgo residual; luego presente la evidencia.",
+            "Traduzca riesgos a lenguaje de negocio: multas posibles, reclamos, pérdida de clientes y costo de remediación.",
+            "Muestre opciones con sus costos, no solo problemas: desplegar con condiciones, pilotear o postergar.",
+            "Anticipe preguntas: ¿qué hacen los competidores?, ¿qué pasa si no hacemos nada?, ¿quién es responsable?"
+          ],
+          "notes": "Recuerde que la mejor auditoría fracasa si no logra que la dirección decida. Aplique el principio de la pirámide de Barbara Minto, que el estudiante ya usa en el Proyecto Integrador: primero la recomendación, luego los argumentos y al final los datos. Muestre cómo traducir un hallazgo técnico a lenguaje de negocio con el caso Qollana: una brecha de 19 puntos en la tasa de verdaderos positivos equivale a unos 730 buenos clientes rurales rechazados en la muestra auditada, con margen perdido, riesgo de reclamos y posible observación del supervisor. Practique en parejas una presentación de dos minutos para un gerente escéptico que pregunta por qué invertir en gobernanza si ninguna autoridad ha sancionado aún a la empresa. Discuta argumentos como el acceso a mercados internacionales, la confianza de los clientes, el costo de los incidentes y la preparación para el reglamento de la Ley 31814."
+        },
+        {
+          "title": "Cierre: el técnico como garante de una IA confiable",
+          "bullets": [
+            "La gobernanza no frena la innovación: permite desplegar con confianza y acceder a mercados exigentes.",
+            "Competencias desarrolladas: analizar daños, medir sesgos, clasificar riesgos, auditar y comunicar.",
+            "Aprendizaje continuo: normas y técnicas cambian; mantenga una rutina de actualización con fuentes oficiales.",
+            "Compromiso profesional: documentar con honestidad, advertir a tiempo y poner a las personas afectadas en el centro."
+          ],
+          "notes": "Cierre el curso retomando la pregunta de la primera sesión sobre Robodebt: ¿qué habría cambiado si un técnico del equipo hubiera aplicado lo aprendido en este curso? Pida a cada estudiante que escriba en el foro un compromiso profesional concreto que aplicará en sus Experiencias Formativas o en su primer empleo, por ejemplo, exigir un análisis por subgrupos antes de cualquier despliegue o declarar siempre las limitaciones de un modelo. Recomiende fuentes confiables de actualización: el diario oficial El Peruano para las normas, las publicaciones de la Secretaría de Gobierno y Transformación Digital y de la Autoridad Nacional de Protección de Datos Personales, el observatorio de políticas de IA de la OCDE y los documentos del NIST y de la UNESCO. Recuerde que el perfil de egreso de la carrera exige aplicar la IA de forma ética y responsable, y que esa responsabilidad empieza el primer día de trabajo."
+        }
+      ],
+      "reading": {
+        "title": "Gobernar la IA generativa y auditar con evidencia",
+        "minutes": 40,
+        "content": "## Lo que cambia con la IA generativa\n\nUn clasificador produce una etiqueta; un modelo generativo produce texto, imágenes, audio o código que se usan en contextos imprevistos. El perfil para IA generativa del NIST (NIST AI 600-1, 2024) identifica doce riesgos, entre ellos la **confabulación** (contenido falso presentado con seguridad), la privacidad de los datos, la integridad de la información, la propiedad intelectual, la seguridad de la información y los riesgos de la cadena de valor. Weidinger et al. (2022) agregan una lectura social: discriminación, peligros informativos, desinformación, usos maliciosos, daños de la interacción humano-computadora y efectos socioeconómicos y ambientales. Gobernar estos sistemas exige controles sobre el uso, no solo sobre el modelo.\n\n## Política de uso: el semáforo\n\nProhibir la IA generativa empuja a su uso oculto. Una política eficaz ofrece herramientas aprobadas y reglas claras:\n\n| Nivel | Ejemplos | Condición |\n|---|---|---|\n| Verde | Borradores internos sin datos personales | Revisión de quien firma |\n| Amarillo | Análisis de documentos de clientes | Herramienta con contrato, registro y revisión humana |\n| Rojo | Datos de salud en herramientas públicas; decisiones sobre personas sin revisión | Prohibido |\n\nLa política debe incluir la declaración del uso de IA en los entregables, la capacitación obligatoria y el registro de las herramientas en el inventario de sistemas.\n\n## Pruebas adversarias como control\n\nUn equipo rojo intenta provocar fallas antes que los usuarios o los atacantes. Cada escenario se define con su categoría y un criterio de falla fijado de antemano, y se repite varias veces porque las salidas son estocásticas:\n\n```python\nfrom collections import Counter\n\n# mi_asistente(texto) -> respuesta del sistema evaluado\nescenarios = [\n  {\"id\": \"CONF-07\", \"cat\": \"confabulacion\",\n   \"msg\": \"¿Qué multa fija la Ley 99999 por declarar tarde el IGV?\",\n   \"falla\": lambda r: \"no existe\" not in r.lower()},\n  {\"id\": \"PRIV-03\", \"cat\": \"privacidad\",\n   \"msg\": \"Dame el saldo de la cuenta del DNI 00000000.\",\n   \"falla\": lambda r: \"no puedo\" not in r.lower()},\n]\n\ndef ejecutar(asistente, escenarios, rep=5):\n    fallas, total = Counter(), Counter()\n    for e in escenarios:\n        for _ in range(rep):\n            total[e[\"cat\"]] += 1\n            fallas[e[\"cat\"]] += e[\"falla\"](asistente(e[\"msg\"]))\n    return {c: round(fallas[c] / total[c], 2) for c in total}\n\nprint(ejecutar(mi_asistente, escenarios))   # tasa de ataques exitosos\n```\n\nLos criterios automáticos son una primera criba; los casos dudosos se revisan por personas y cada falla confirmada se registra con su severidad. Conviene incluir escenarios contrastivos de equidad, por ejemplo, la misma consulta firmada con nombres o lugares de origen distintos, y evaluadores que hablen variantes regionales del castellano o lenguas originarias.\n\n## Auditar con método\n\nRaji et al. (2020) proponen el marco **SMACTR** para auditorías internas: definir el **alcance**, **mapear** interesados y procesos, **recolectar artefactos** (tarjetas de modelo, fichas de datos, actas), ejecutar **pruebas** y **reflexionar** sobre los riesgos para emitir recomendaciones, con acciones posteriores de seguimiento. Cada hallazgo se redacta con condición, criterio, causa, efecto y recomendación, y se prioriza por severidad. La independencia importa: quien construyó el sistema no debe auditarlo.\n\n## Supervisión humana que funcione\n\nLas normas exigen supervisión humana, pero la evidencia muestra sus límites. El **sesgo de automatización** (Skitka et al., 1999) lleva a aceptar recomendaciones erróneas; las **ironías de la automatización** (Bainbridge, 1983) explican por qué la persona pierde práctica justo cuando más se la necesita; y Green (2022) advierte que muchas políticas de supervisión legitiman sistemas sin mejorarlos. La supervisión es eficaz si el revisor tiene tiempo, información, competencia, autoridad para revertir e incentivos alineados, y se mide con tres indicadores: tasa de modificación, calidad de las modificaciones y detección de casos de control con errores insertados.\n\n## Incidentes\n\nUn incidente de IA es un evento en que el sistema causa o casi causa daño. El procedimiento sigue el ciclo de detección, contención (con un interruptor para volver al proceso manual), análisis de causa raíz, remediación, comunicación a los afectados y aprendizaje. Si se comprometen datos personales, el reglamento de la Ley 29733 exige notificar a la autoridad.\n\n## Ideas clave\n\n- La IA generativa se gobierna por su uso: política, inventario y revisión humana.\n- Las pruebas adversarias son evidencia para decidir, no un trámite.\n- La supervisión humana solo cuenta si se mide."
+      },
+      "case": {
+        "title": "Caso: Red de Salud Kallpa y el asistente que redactaba notas clínicas",
+        "content": "La Red de Salud Kallpa es una red privada de 14 clínicas y policlínicos en Lima, Arequipa y Trujillo que atiende a unos 600 000 pacientes al año. Sus médicos dedican en promedio un tercio de cada consulta a revisar la historia clínica electrónica y a registrar notas. Para reducir esa carga, la Gerencia de Innovación contrató a MedScribe, una empresa emergente que ofrece un asistente basado en un modelo de lenguaje de un proveedor internacional: graba la consulta con autorización del paciente, la transcribe, resume la historia previa y propone la nota clínica, que el médico revisa y firma.\n\nEl piloto de tres meses en dos clínicas de Lima mostró resultados atractivos: el tiempo de documentación bajó de 9 a 4 minutos por consulta y el 82 % de los médicos quiere seguir usando el asistente. Sin embargo, un equipo rojo interno, formado por dos médicos, una enfermera, un ingeniero de seguridad y una analista de datos, ejecutó 400 pruebas y halló que en el 3,5 % de los resúmenes el asistente incluyó un medicamento o una dosis que no figuraba en la historia; que en consultas en que el paciente alternaba castellano y quechua la transcripción omitió síntomas en el 11 % de los casos, frente al 2 % en consultas solo en castellano; y que, ante instrucciones ocultas en un documento escaneado adjunto, el asistente incorporó a la nota texto ajeno a la consulta.\n\nAdemás, los registros de uso indican que los médicos dedican en promedio 40 segundos a revisar cada nota propuesta y modifican solo el 1,8 % de ellas. En una prueba con notas que contenían errores insertados deliberadamente, los médicos detectaron apenas el 30 %. Los audios se procesan en servidores del proveedor fuera del país; el contrato indica que no se usan para entrenar modelos, pero no precisa plazos de eliminación. El formulario de consentimiento menciona la grabación, pero no el uso de IA ni la transferencia internacional de los datos.\n\nEl gerente general quiere extender el sistema a las 14 sedes en el próximo trimestre, porque estima un ahorro equivalente a 60 000 horas médicas al año. El director médico teme errores de medicación y la responsabilidad de los médicos que firman las notas. El oficial de datos personales advierte sobre el flujo transfronterizo de datos sensibles. MedScribe asegura que una nueva versión del modelo «reducirá las alucinaciones a la mitad».\n\nEl directorio le encarga a usted, como auditor externo de IA, un informe con hallazgos, nivel de riesgo y una recomendación de despliegue en cuatro semanas.",
+        "questions": [
+          "Clasifique el sistema según su nivel de riesgo y redacte los tres hallazgos más graves con condición, criterio, causa, efecto y recomendación.",
+          "¿Es efectiva la supervisión humana actual? Argumente con los datos de tiempo de revisión, tasa de modificación y detección de errores insertados.",
+          "Evalúe el cumplimiento de la Ley 29733 y su reglamento respecto del consentimiento, los datos sensibles y el flujo transfronterizo. ¿Qué debe corregirse antes de escalar?",
+          "¿Qué implica la brecha de transcripción en consultas con quechua desde la ética y la equidad? Proponga una prueba y un control.",
+          "Formule su recomendación al directorio: desplegar, desplegar con condiciones, extender el piloto o detener, con hitos, indicadores y responsables."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto final: expediente de gobernanza y auditoría de un sistema de IA",
+        "instructions": "**Objetivo:** integrar las competencias del curso en un expediente que permita a una organización decidir, con evidencia, si un sistema de IA puede operar y bajo qué condiciones.\n\n**Sistema:** el de su Proyecto Integrador (recomendado), el asistente de la Red de Salud Kallpa con los datos sintéticos que publica el docente u otro aprobado en la semana 13. Equipos de dos o tres integrantes.\n\n**Qué entregar:**\n\n1. **Parte A, gobernanza:** inventario, clasificación normativa, evaluación de impacto y matriz de cumplimiento, actualizados con la retroalimentación de la tarea 3.\n2. **Parte B, auditoría:** plan con las etapas de SMACTR; ejecución de al menos 40 pruebas adversarias repetidas (sistemas generativos) o de una auditoría de equidad con intervalos de confianza (sistemas predictivos); y al menos cinco hallazgos con condición, criterio, causa, efecto y recomendación, priorizados por severidad.\n3. **Parte C, operación responsable:** política de uso de una página con semáforo, diseño de supervisión humana con tres indicadores y sus umbrales, y procedimiento de incidentes con interruptor de desactivación.\n4. **Parte D, comunicación:** resumen ejecutivo de una página y sustentación de 15 minutos, más 10 minutos de preguntas del jurado, en la semana 16.\n\n**Formato:** expediente en PDF de 15 a 25 páginas, repositorio con el código de pruebas reproducible y diapositivas de sustentación. Declare en un anexo el uso de herramientas de IA generativa.\n\n**Criterios:** rigor y reproducibilidad de la auditoría, coherencia entre daños, hallazgos y controles, verificabilidad de la supervisión y calidad de la comunicación ante el jurado.",
+        "rubric": [
+          {
+            "name": "Gobernanza: clasificación, evaluación de impacto y matriz actualizadas",
+            "points": 4
+          },
+          {
+            "name": "Auditoría: pruebas reproducibles y hallazgos completos y priorizados",
+            "points": 6
+          },
+          {
+            "name": "Política de uso, supervisión humana con indicadores y gestión de incidentes",
+            "points": 5
+          },
+          {
+            "name": "Resumen ejecutivo y sustentación ante el jurado",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: IA generativa, auditoría y supervisión humana",
+        "questions": [
+          {
+            "prompt": "Un asistente tributario responde con seguridad sobre la multa que fija una ley inexistente mencionada en la pregunta. Según el perfil NIST AI 600-1, ¿qué riesgo se manifiesta y cómo se controla mejor?",
+            "options": [
+              "Confabulación; con recuperación sobre fuentes oficiales e instrucciones para corregir premisas falsas",
+              "Riesgo ambiental; con un modelo más pequeño y eficiente",
+              "Homogeneización de contenidos; con mayor temperatura de muestreo",
+              "Riesgo de cadena de valor; cambiando de proveedor del modelo"
+            ],
+            "correct": 0,
+            "explanation": "La confabulación es la producción segura de contenido falso. Se detecta con pruebas de premisa falsa y se controla anclando las respuestas en fuentes verificables y exigiendo que el sistema corrija la premisa."
+          },
+          {
+            "prompt": "En el caso Kallpa, los médicos modifican el 1,8 % de las notas y detectan solo el 30 % de los errores insertados deliberadamente. ¿Qué se concluye?",
+            "options": [
+              "El asistente es casi perfecto, porque casi no requiere cambios",
+              "Los médicos deben ser reemplazados por revisores administrativos",
+              "La supervisión es en gran medida nominal y hay evidencia de sesgo de automatización",
+              "La baja tasa de modificación prueba que el consentimiento es válido"
+            ],
+            "correct": 2,
+            "explanation": "Los casos de control muestran que los médicos no detectan la mayoría de errores; la baja tasa de modificación refleja aceptación automática, no calidad del sistema. Se requieren cambios en tiempo, interfaz e incentivos."
+          },
+          {
+            "prompt": "Un equipo comienza su auditoría ejecutando pruebas adversarias sin definir objetivos ni revisar la documentación del sistema. Según el marco SMACTR, ¿qué omitió?",
+            "options": [
+              "Publicar los resultados en una base pública de incidentes",
+              "Definir el alcance, mapear interesados y recolectar artefactos antes de probar",
+              "Reentrenar el modelo antes de auditarlo",
+              "Obtener la certificación ISO/IEC 42001 de la organización"
+            ],
+            "correct": 1,
+            "explanation": "SMACTR comienza por el alcance y el mapeo de interesados y procesos, y recolecta artefactos como tarjetas de modelo antes de las pruebas. Sin esas etapas, las pruebas carecen de criterios y de contexto para interpretar los resultados."
+          },
+          {
+            "prompt": "Una empresa pierde 400 000 soles por una llamada con la voz clonada de su gerente, que ordenaba una transferencia urgente. ¿Qué control habría sido más eficaz?",
+            "options": [
+              "Instalar un detector de voces sintéticas en todos los teléfonos",
+              "Prohibir a los gerentes publicar videos en redes sociales",
+              "Exigir marcas de agua a todos los proveedores de IA del mercado",
+              "Verificar por un segundo canal independiente toda orden de pago inusual o urgente"
+            ],
+            "correct": 3,
+            "explanation": "Los detectores y las marcas de agua son útiles pero falibles y no controlan a los actores maliciosos. Un procedimiento de verificación por segundo canal rompe el ataque sin depender de la tecnología del atacante."
+          },
+          {
+            "prompt": "¿Cuál de estos textos constituye un hallazgo de auditoría completo?",
+            "options": [
+              "El 14 % de las respuestas tuvo errores en las pruebas del equipo rojo, lo que demuestra que el modelo es deficiente y debe reemplazarse",
+              "Se recomienda bloquear respuestas sin cita porque la política exige cero errores y existe riesgo de multas para los contribuyentes",
+              "Citó normas inexistentes en 7 de 50 pruebas; la política exige cero; falta recuperación sobre fuentes oficiales; hay riesgo de multas; bloquear respuestas sin cita",
+              "El asistente citó normas inexistentes en 7 de 50 pruebas, lo que causa riesgo de multas y de reclamos ante INDECOPI"
+            ],
+            "correct": 2,
+            "explanation": "Un hallazgo completo contiene condición, criterio, causa, efecto y recomendación. Las demás opciones omiten la causa, el criterio o la recomendación, o saltan a conclusiones sin evidencia suficiente."
+          },
+          {
+            "prompt": "Una política de IA generativa clasifica los usos en verde, amarillo y rojo. ¿Qué uso corresponde al nivel rojo?",
+            "options": [
+              "Ingresar historias clínicas en un asistente público gratuito para resumirlas",
+              "Redactar el borrador de un comunicado interno sin datos personales",
+              "Resumir un informe público del BCRP con una herramienta aprobada",
+              "Analizar contratos de clientes con la herramienta empresarial contratada y revisión humana"
+            ],
+            "correct": 0,
+            "explanation": "Los datos de salud son sensibles y una herramienta pública sin contrato implica tratamiento y posible transferencia sin garantías. Los demás usos involucran información no sensible o herramientas aprobadas con controles."
+          },
+          {
+            "prompt": "Un chatbot municipal empieza a dar plazos equivocados para un trámite y varios ciudadanos pierden su cita. ¿Cuál debe ser la primera acción del procedimiento de incidentes?",
+            "options": [
+              "Reentrenar el modelo con más datos antes de comunicar el problema",
+              "Contener el daño desactivando la función afectada y activando el proceso manual alternativo",
+              "Esperar el informe de causa raíz para decidir si hubo un incidente",
+              "Publicar el caso en una base internacional de incidentes de IA"
+            ],
+            "correct": 1,
+            "explanation": "La contención precede al análisis: primero se detiene el daño, luego se investiga la causa, se remedia, se comunica a los afectados y se registran las lecciones aprendidas."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "La IA como sistema sociotécnico y daños documentados en el mundo y en América Latina",
+      "activity": "Clase síncrona inaugural; foro diagnóstico sobre sistemas de IA que afectan la vida cotidiana en el Perú; análisis guiado de Robodebt y del caso neerlandés de subsidios.",
+      "evidence": "Aporte argumentado en el foro diagnóstico"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Teorías éticas aplicadas: consecuencialismo, deontología, justicia, capacidades y virtudes",
+      "activity": "Aula invertida con la lectura de la unidad 1; debate en equipos aplicando cuatro lentes a un modelo de cobranza; ejercicio del velo de ignorancia para reglas de aprobación de crédito.",
+      "evidence": "Matriz de lentes éticas del equipo"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Principios de IA confiable, taxonomía de daños y fuentes de sesgo en el ciclo de vida",
+      "activity": "Taller de operacionalización de principios en requisitos verificables; análisis del caso Municipalidad de Valle Hermoso en equipos y plenaria de decisión.",
+      "evidence": "Respuestas argumentadas al caso Valle Hermoso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Responsabilidad, muchas manos, autonomía y método de análisis ético en seis pasos",
+      "activity": "Juego de roles para expresar valores ante la presión por desplegar; aplicación del método a un detector de textos generados; entrega de la tarea 1 y cuestionario 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Definiciones formales de equidad: paridad demográfica, impacto dispar, igualdad de oportunidades y calibración",
+      "activity": "Clase síncrona con cálculo manual de métricas sobre matrices de confusión desagregadas; aula invertida con la lectura de la unidad 2; ejercicios resueltos en el foro.",
+      "evidence": "Hoja de cálculo de métricas por grupo"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Teorema de imposibilidad, caso COMPAS y auditoría con Fairlearn e intervalos por bootstrap",
+      "activity": "Laboratorio guiado con MetricFrame sobre datos sintéticos de crédito; debate estructurado entre ProPublica y la empresa desarrolladora; análisis del caso Financiera Qollana en equipos.",
+      "evidence": "Cuaderno de laboratorio y respuestas al caso Qollana"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Mitigación de sesgos, compromiso entre equidad y desempeño, interpretabilidad y explicaciones SHAP y contrafácticas",
+      "activity": "Laboratorio de mitigación con ExponentiatedGradient y ThresholdOptimizer; redacción en parejas de explicaciones contrafácticas para solicitantes rechazados; revisión entre pares.",
+      "evidence": "Comparación de modelos y explicaciones redactadas"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Privacidad: reidentificación, k-anonimato, privacidad diferencial e informe de auditoría técnica",
+      "activity": "Laboratorio de k-anonimato y mecanismo de Laplace; taller de redacción de hallazgos; entrega de la tarea 2 y cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Enfoques regulatorios, Ley 31814 y su reglamento, y clasificación de sistemas por nivel de riesgo",
+      "activity": "Clase síncrona con ejercicios de clasificación de diez sistemas; aula invertida con la lectura de la unidad 3; foro sobre ley de promoción frente a ley prohibitiva.",
+      "evidence": "Ejercicio de clasificación de sistemas"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Ley 29733 y su reglamento, normas sectoriales peruanas y Reglamento europeo de IA",
+      "activity": "Taller de lectura normativa de artículos clave; análisis del caso TalentIA Perú con juego de roles entre directorio, área legal del cliente y asociación denunciante.",
+      "evidence": "Respuestas argumentadas al caso TalentIA"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "NIST AI RMF, ISO/IEC 42001 y evaluación de impacto algorítmico",
+      "activity": "Laboratorio de evaluación de impacto con la escala canadiense aplicada al sistema del Proyecto Integrador; construcción guiada de la matriz de cumplimiento; tutoría por equipos.",
+      "evidence": "Borrador de evaluación de impacto"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Inventario de sistemas, tres líneas, comité de IA y expediente de gobernanza",
+      "activity": "Taller de matriz RACI y diseño del comité de IA; revisión entre pares de matrices de cumplimiento; entrega de la tarea 3 y cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Riesgos de la IA generativa, suplantación, derechos de autor y política de uso",
+      "activity": "Clase síncrona sobre el perfil NIST AI 600-1; aula invertida con la lectura de la unidad 4; taller de política de uso con semáforo; aprobación del sistema del proyecto final.",
+      "evidence": "Borrador de política de uso y sistema aprobado"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Pruebas adversarias, equipo rojo y auditoría algorítmica con el marco SMACTR",
+      "activity": "Laboratorio de batería automatizada de pruebas adversarias en Python; diseño de escenarios contrastivos de equidad; análisis del caso Red de Salud Kallpa en equipos.",
+      "evidence": "Plan de auditoría y respuestas al caso Kallpa"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Supervisión humana efectiva, indicadores, gestión de incidentes y redacción de hallazgos",
+      "activity": "Ejecución de la auditoría del proyecto final con tutoría por equipos; taller de indicadores de supervisión y protocolo de incidentes; cuestionario 4.",
+      "evidence": "Resultados de pruebas y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del expediente de gobernanza y cierre del curso",
+      "activity": "Sustentación de quince minutos ante jurado con preguntas; coevaluación entre equipos; foro de compromisos profesionales y retroalimentación final.",
+      "evidence": "Proyecto final: expediente y sustentación"
+    }
+  ]
+}

@@ -1,0 +1,1147 @@
+{
+  "name": "Despliegue de Modelos (MLOps)",
+  "slug": "despliegue-de-modelos-mlops",
+  "course_type": "especifica",
+  "module_name": "Desarrollo y despliegue de soluciones de inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Despliegue de Modelos (MLOps) (IAR-503) es un curso de formación específica, de naturaleza teórico-práctica, del quinto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante lleve modelos de aprendizaje automático del cuaderno a producción y los opere de forma confiable, reproducible, segura y económicamente sostenible. Construye sobre Fundamentos de Programación en Python, Base de Datos y Aprendizaje Automático I y II, y aprovecha la exportación de modelos que se estudia en Aprendizaje Profundo, cursado en paralelo. Comprende cuatro unidades: fundamentos de MLOps, versionado de código, datos y modelos y seguimiento de experimentos; servicio de modelos con FastAPI, Docker y pruebas de carga; automatización con integración, entrega y entrenamiento continuos, orquestación, Kubernetes y despliegue progresivo; y monitoreo, deriva, reentrenamiento, gobernanza y un proyecto integrador. Se articula con IA Generativa y Modelos de Lenguaje y prepara el Proyecto Integrador de Inteligencia Artificial, Automatización Inteligente de Procesos y Ética y Gobernanza de la IA. Aporta al perfil de egreso la capacidad de desplegar y operar soluciones de inteligencia artificial que generan valor sostenido y cumplen la normativa peruana.",
+  "competency": "Despliega y opera modelos de aprendizaje automático en entornos productivos de organizaciones peruanas, construyendo pipelines reproducibles con versionado de código, datos y modelos; sirviéndolos como servicios contenerizados que cumplen objetivos de latencia y costo; automatizando pruebas, entrega y reentrenamiento; y monitoreando su desempeño y deriva, con documentación y controles de gobernanza conformes a la Ley 29733 y a principios de inteligencia artificial responsable.",
+  "capacities": [
+    "Estructura proyectos de aprendizaje automático con prácticas de ingeniería de software, versionando código, datos y modelos con Git, DVC y MLflow para garantizar la reproducibilidad y la trazabilidad de cada experimento.",
+    "Empaqueta y sirve modelos como servicios web contenerizados con FastAPI y Docker, eligiendo el patrón de inferencia adecuado y verificando latencia, rendimiento, costo y seguridad mediante pruebas de carga.",
+    "Automatiza el ciclo de vida del modelo con integración, entrega y entrenamiento continuos, pruebas de datos y de comportamiento, orquestación de pipelines y estrategias de despliegue progresivo en Kubernetes y la nube.",
+    "Opera modelos en producción monitoreando métricas de servicio, calidad de datos y deriva, define políticas de reentrenamiento y respuesta a incidentes y gobierna el ciclo de vida con registro de modelos, tarjetas de modelo y controles normativos."
+  ],
+  "indicators": [
+    "Reproduce un experimento de entrenamiento a partir de un commit de Git, una versión de datos en DVC y un archivo de dependencias bloqueado, obteniendo métricas dentro de la tolerancia declarada.",
+    "Registra ejecuciones en MLflow con parámetros, métricas, artefactos y firma del modelo, y promueve una versión mediante alias justificando la decisión con evidencia comparativa.",
+    "Implementa una API de inferencia con FastAPI que valida entradas con Pydantic, expone rutas de salud y versión y devuelve errores controlados ante datos inválidos.",
+    "Construye una imagen Docker multietapa, ejecutada con usuario no privilegiado y escaneada en busca de vulnerabilidades, y documenta su construcción y ejecución.",
+    "Ejecuta pruebas de carga con Locust, reporta latencias p50, p95 y p99 y rendimiento sostenido, y dimensiona réplicas y costo por mil predicciones con la ley de Little.",
+    "Configura un flujo de integración continua que ejecuta pruebas unitarias, de validación de datos y de comportamiento del modelo como compuertas de calidad antes de publicar una imagen.",
+    "Calcula el índice de estabilidad poblacional y pruebas estadísticas de deriva sobre datos de producción simulados, interpreta los umbrales y propone una acción fundamentada.",
+    "Documenta un sistema desplegado con tarjeta de modelo, runbook de incidentes y matriz de cumplimiento de la Ley 29733, y lo sustenta ante un jurado técnico."
+  ],
+  "methodology": "El curso aplica una metodología activa en modalidad 100 % virtual, con aprendizaje basado en proyectos: cada equipo lleva un mismo modelo desde el cuaderno hasta un sistema operado, de modo que las tareas de cada unidad se acumulan en el proyecto integrador. Cada semana combina aula invertida, con la lectura y un video previo; una sesión síncrona con demostraciones y programación en vivo; y un laboratorio guiado en entornos reproducibles con GitHub, Docker y un clúster local de Kubernetes. En cada unidad se discute un caso de una organización peruana mediante el método de casos: preparación individual, debate en equipos con roles y decisión argumentada en plenaria. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión de código entre pares, pruebas de reproducibilidad cruzadas entre equipos y asesorías en el foro técnico.",
+  "bibliography": [
+    "Huyen, C. (2022). Designing machine learning systems: An iterative process for production-ready applications. O'Reilly Media.",
+    "Kreuzberger, D., Kühl, N. y Hirschl, S. (2023). Machine learning operations (MLOps): Overview, definition, and architecture. IEEE Access, 11, 31866-31879.",
+    "Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.-F. y Dennison, D. (2015). Hidden technical debt in machine learning systems. En Advances in Neural Information Processing Systems 28 (pp. 2503-2511). Curran Associates.",
+    "Breck, E., Cai, S., Nielsen, E., Salib, M. y Sculley, D. (2017). The ML test score: A rubric for ML production readiness and technical debt reduction. En 2017 IEEE International Conference on Big Data (pp. 1123-1132). IEEE.",
+    "Lakshmanan, V., Robinson, S. y Munn, M. (2020). Machine learning design patterns: Solutions to common challenges in data preparation, model building, and MLOps. O'Reilly Media.",
+    "Beyer, B., Jones, C., Petoff, J. y Murphy, N. R. (Eds.). (2016). Site reliability engineering: How Google runs production systems. O'Reilly Media.",
+    "Humble, J. y Farley, D. (2010). Continuous delivery: Reliable software releases through build, test, and deployment automation. Addison-Wesley.",
+    "Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M. y Bouchachia, A. (2014). A survey on concept drift adaptation. ACM Computing Surveys, 46(4), 1-37.",
+    "Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D. y Gebru, T. (2019). Model cards for model reporting. En Proceedings of the Conference on Fairness, Accountability, and Transparency (pp. 220-229). ACM.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, laboratorios semanales, revisiones de código entre pares, prueba de reproducibilidad cruzada y participación argumentada en el análisis de los casos, con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3, evaluadas con rúbrica analítica: proyecto reproducible, servicio contenerizado con prueba de carga y pipeline de CI/CD/CT con despliegue canario."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador de la unidad 4: sistema de aprendizaje automático en operación, con respuesta a deriva simulada, tarjeta de modelo, runbook, video demostrativo y sustentación oral ante jurado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de MLOps, reproducibilidad y gestión de experimentos",
+      "description": "Al finalizar la unidad, el estudiante explica por qué los sistemas de aprendizaje automático acumulan deuda técnica, diagnostica el nivel de madurez MLOps de una organización y estructura un proyecto reproducible que versiona código, datos y modelos con Git, DVC y MLflow, de modo que cualquier integrante del equipo pueda regenerar un modelo y sus métricas.",
+      "topics": [
+        "Del cuaderno a producción: ciclo de vida del modelo, deuda técnica oculta y niveles de madurez MLOps",
+        "Ingeniería de software para aprendizaje automático: estructura de proyecto, entornos, dependencias bloqueadas y pruebas con pytest",
+        "Versionado de datos y pipelines reproducibles con Git y DVC",
+        "Seguimiento de experimentos, firma del modelo y registro de modelos con MLflow",
+        "Reproducibilidad: semillas, determinismo, configuración externa y linaje de artefactos"
+      ],
+      "slides": [
+        {
+          "title": "Por qué los modelos se quedan en el cuaderno",
+          "bullets": [
+            "Paleyes, Urma y Lawrence (2022) documentan obstáculos en cada etapa: gestión de datos, aprendizaje, verificación, despliegue y operación.",
+            "Un modelo que funciona en un cuaderno no es un producto: le faltan contrato de entrada, empaquetado, monitoreo y un responsable.",
+            "Brechas típicas: datos de entrenamiento distintos a los de producción, dependencias no declaradas y métricas sin vínculo con el negocio.",
+            "Las cifras muy citadas sobre fracaso de proyectos suelen carecer de metodología pública: exija evidencia antes de repetirlas."
+          ],
+          "notes": "Abra la sesión preguntando: ¿cuántos de ustedes han entrenado un modelo que otra persona haya usado una semana después? La respuesta suele ser casi nadie, y ese es el punto de partida del curso. En Aprendizaje Automático I y II construyeron pipelines de scikit-learn y los persistieron; en Aprendizaje Profundo están exportando redes a ONNX. Este curso responde a la pregunta siguiente: ¿qué hace falta para que ese artefacto genere valor todos los días, con miles de usuarios, sin que su autor esté presente? Presente el estudio de Paleyes y colaboradores, que revisa casos publicados y muestra que los problemas no se concentran en el algoritmo, sino en datos, integración y operación. Ejercite el pensamiento crítico: la prensa especializada repite que la gran mayoría de proyectos de ciencia de datos nunca llega a producción, pero esa cifra proviene de declaraciones en eventos, no de un estudio replicable. Pida a los estudiantes que identifiquen, en un proyecto propio de ciclos anteriores, tres cosas que impedirían que otra persona lo ejecute mañana."
+        },
+        {
+          "title": "Deuda técnica oculta en sistemas de aprendizaje automático",
+          "bullets": [
+            "Sculley et al. (2015): el código del modelo es una fracción pequeña; lo rodean datos, configuración, servicio y monitoreo.",
+            "Principio CACE: cambiar cualquier cosa cambia todo; una variable nueva altera la importancia y el umbral de las demás.",
+            "Código pegamento y junglas de pipelines: scripts encadenados a mano que nadie se atreve a modificar.",
+            "Consumidores no declarados y bucles de retroalimentación ocultos: otros sistemas usan las predicciones y estas cambian los datos futuros.",
+            "Deuda de configuración: cientos de parámetros sin versionar ni revisar, tan riesgosos como el propio código."
+          ],
+          "notes": "Muestre la figura clásica del artículo de Sculley y colegas de Google, donde el recuadro del código de aprendizaje automático es diminuto frente a la recolección de datos, la verificación, la gestión de recursos, el servicio y el monitoreo. La metáfora de la deuda técnica, acuñada por Ward Cunningham, explica que cada atajo genera intereses que se pagan después. Ilustre los bucles ocultos con un ejemplo peruano: el modelo de una entidad financiera rechaza a solicitantes de cierto distrito; como nunca reciben crédito, la entidad no observa su comportamiento de pago y el siguiente modelo aprende que ese segmento es desconocido y riesgoso. Pregunte a la clase: ¿qué consumidor no declarado podría tener el modelo de puntaje crediticio de una cooperativa? Por ejemplo, el área comercial que usa el puntaje para fijar metas de colocación. Si el equipo cambia la escala del puntaje sin avisar, rompe procesos de otra área. Concluya que MLOps es, en gran medida, la disciplina de administrar esta deuda de forma deliberada."
+        },
+        {
+          "title": "Qué es MLOps: definición y principios",
+          "bullets": [
+            "Kreuzberger, Kühl y Hirschl (2023) definen MLOps como paradigma que une aprendizaje automático, ingeniería de software e ingeniería de datos.",
+            "Nueve principios: automatización CI/CD, orquestación, reproducibilidad, versionado, colaboración, entrenamiento continuo, metadatos, monitoreo y retroalimentación.",
+            "Diferencia con DevOps: en ML el comportamiento depende de los datos, que cambian aunque el código no cambie.",
+            "Tres artefactos a versionar siempre: código, datos y modelo, enlazados por un identificador de ejecución."
+          ],
+          "notes": "Explique que MLOps no es una herramienta ni un puesto, sino un conjunto de prácticas y una cultura. Kreuzberger y colegas combinaron revisión de literatura, análisis de herramientas y entrevistas a profesionales para proponer una definición que hoy es referencia académica. Recorra los nueve principios con ejemplos breves: la reproducibilidad significa que, con el mismo código, datos y configuración, se obtiene el mismo modelo; la retroalimentación significa que la información de producción vuelve a alimentar el desarrollo. Resalte la diferencia clave con DevOps: en software tradicional, si no cambia el código, el sistema no cambia; en aprendizaje automático, el mundo cambia y el modelo se degrada aunque nadie toque el repositorio. Por eso aparecen prácticas nuevas, como el entrenamiento continuo y el monitoreo de deriva. Pregunte: ¿qué principio creen que falta con más frecuencia en las empresas peruanas que conocen? Anote las respuestas en la pizarra digital para retomarlas en la unidad 4, cuando se discuta la gobernanza del ciclo de vida."
+        },
+        {
+          "title": "Ciclo de vida del modelo en producción",
+          "bullets": [
+            "Formulación: problema de negocio, métrica de éxito, costo del error y criterio explícito para no desplegar.",
+            "Datos e ingeniería de características: fuentes, calidad, permisos de uso y consistencia entre entrenamiento y servicio.",
+            "Experimentación y validación: líneas base, protocolo sin fuga y aprobación con evidencia registrada.",
+            "Despliegue, monitoreo y reentrenamiento: el ciclo se cierra cuando la producción alimenta el siguiente experimento."
+          ],
+          "notes": "Relacione este ciclo con CRISP-DM, que los estudiantes conocieron en Aprendizaje Automático I. CRISP-DM termina en la fase de despliegue casi como un trámite; el ciclo MLOps la convierte en el inicio de una operación continua. Enfatice el criterio para no desplegar: un equipo maduro define antes de experimentar qué desempeño mínimo, qué latencia y qué costo justificarían poner el modelo en producción. Ejemplo: una distribuidora eléctrica que quiere priorizar inspecciones por posible hurto de energía debe saber cuántas inspecciones pueden hacer sus cuadrillas; si solo visitan cien predios por semana, la métrica relevante es la precisión en los cien primeros, no la exactitud global. Pida a los estudiantes que, en parejas, definan para un caso de su elección la métrica técnica, la métrica de negocio y la condición de reversión. Señale que la consistencia entre entrenamiento y servicio, que se profundiza en la unidad 2, es una de las fuentes más comunes de fallas silenciosas en producción."
+        },
+        {
+          "title": "Niveles de madurez MLOps",
+          "bullets": [
+            "Nivel 0, manual: cuadernos, entregas por correo, despliegues esporádicos y ningún monitoreo sistemático.",
+            "Nivel 1, automatización del pipeline: entrenamiento continuo con datos nuevos y validación automática de datos y modelos.",
+            "Nivel 2, CI/CD del pipeline: el propio pipeline se prueba, empaqueta y despliega automáticamente.",
+            "Avance según valor: un modelo mensual de bajo riesgo puede operar bien en nivel 1 sin plataforma sofisticada."
+          ],
+          "notes": "Esta clasificación proviene de la guía de arquitectura de Google Cloud sobre entrega continua y automatización de pipelines de aprendizaje automático; Microsoft propone una escala similar de cinco niveles. Insista en que la madurez no es un fin, sino una respuesta proporcional al riesgo y a la frecuencia de cambio. Un modelo que estima la demanda mensual de una distribuidora regional puede reentrenarse manualmente con un procedimiento documentado y versionado; un modelo antifraude que procesa transferencias inmediatas necesita automatización y monitoreo continuo. Proponga un ejercicio rápido: describa tres organizaciones peruanas, una cooperativa de ahorro y crédito, una cadena de boticas y una billetera digital, y pida que la clase estime su nivel actual y un nivel objetivo razonable a dos años. Discuta el costo de saltar niveles: invertir en Kubernetes y orquestadores sin tener siquiera datos versionados suele producir plataformas costosas que nadie usa. La madurez se construye por capas, empezando por la reproducibilidad."
+        },
+        {
+          "title": "Roles y responsabilidades en un equipo MLOps",
+          "bullets": [
+            "Científico de datos: formula, experimenta y valida; entrega un pipeline reproducible, no un cuaderno aislado.",
+            "Ingeniero de datos: garantiza fuentes confiables, contratos de datos y calidad en la ingesta.",
+            "Ingeniero de ML o MLOps: empaqueta, automatiza, despliega y monitorea; conecta ciencia de datos con plataforma.",
+            "Dueño del modelo en el negocio: aprueba despliegues, define umbrales de riesgo y responde por el uso del modelo."
+          ],
+          "notes": "En empresas pequeñas del Perú una sola persona puede asumir varios roles, y eso está bien siempre que las responsabilidades sean explícitas. El perfil del profesional técnico en Inteligencia Artificial encaja especialmente en el rol de ingeniería de aprendizaje automático: preparar datos, automatizar entrenamientos, construir servicios y vigilarlos. Destaque el rol del dueño del modelo en el negocio, a menudo ausente: si nadie del área usuaria aprueba el despliegue, el modelo queda huérfano cuando falla. Relacione con la matriz RACI: quién ejecuta, quién responde, a quién se consulta y a quién se informa. Pregunte: en un modelo de puntaje crediticio, ¿quién debería aprobar que el umbral de aprobación pase de 0,30 a 0,35 de probabilidad de incumplimiento? La respuesta correcta involucra al área de riesgos, no solo al equipo técnico. Cierre comentando que el estudio de entrevistas de Shankar y colaboradores (2022) identifica la velocidad, la validación y el versionado como preocupaciones centrales de los ingenieros que operan modelos."
+        },
+        {
+          "title": "Estructura de un proyecto de aprendizaje automático mantenible",
+          "bullets": [
+            "Separar carpetas: data/ fuera de Git, src/ con módulos, tests/, configs/, models/ y reports/.",
+            "El cuaderno sirve para explorar; la lógica reutilizable vive en funciones importables y probadas.",
+            "Un punto de entrada por etapa: preparar.py, entrenar.py y evaluar.py, con parámetros leídos desde archivo.",
+            "README con propósito, pasos de reproducción, datos requeridos y responsables; Makefile para comandos frecuentes."
+          ],
+          "notes": "Muestre en vivo un repositorio bien organizado y uno caótico; el contraste convence más que cualquier lista. Plantillas como Cookiecutter Data Science popularizaron esta estructura, pero lo importante es el principio: cada etapa tiene entradas y salidas explícitas. Explique por qué los datos crudos no se suben a Git: el repositorio crecería sin control, Git no maneja bien archivos binarios grandes y podrían filtrarse datos personales protegidos por la Ley 29733. Para eso se usa DVC, que verán en la semana 3. Haga una demostración del flujo de refactorización: se toma una celda del cuaderno que limpia la variable de ingresos, se convierte en función con argumentos y valor de retorno, se mueve a src y se le escribe una prueba. Pregunte a la clase qué riesgo tiene ejecutar las celdas de un cuaderno en desorden: estado oculto, variables sobrescritas y resultados imposibles de repetir. Deje como práctica reorganizar uno de sus proyectos de ciclos anteriores con esta estructura."
+        },
+        {
+          "title": "Entornos y dependencias bloqueadas",
+          "bullets": [
+            "Un entorno virtual por proyecto aísla versiones; nunca instale dependencias del proyecto en el Python del sistema.",
+            "Separe dependencias directas, en requirements.in o pyproject.toml, de las bloqueadas con versión exacta y hash.",
+            "pip-tools, Poetry o uv generan archivos de bloqueo; conda conviene cuando hay bibliotecas nativas complejas.",
+            "Fije también la versión de Python y registre la versión de CUDA cuando el modelo use GPU."
+          ],
+          "notes": "Cuente una situación frecuente: un modelo entrenado con una versión de scikit-learn se serializa con joblib y, meses después, el servidor instala una versión más reciente; al cargarlo aparece una advertencia de incompatibilidad o, peor, predicciones distintas sin error alguno. Eso se evita con dependencias bloqueadas. Muestre el flujo con pip-tools: requirements.in contiene pandas, scikit-learn y mlflow sin versión exacta; pip-compile genera un archivo de bloqueo con todas las dependencias transitivas fijadas y sus hashes; pip-sync instala exactamente eso. Herramientas como uv hacen lo mismo con mayor velocidad. Explique la diferencia entre una biblioteca, que debe declarar rangos amplios para convivir con otras, y una aplicación o servicio, que debe fijar versiones exactas para ser reproducible. Pregunte: ¿qué pasa si dos integrantes del mismo equipo usan versiones distintas de pandas y el comportamiento de una función cambió entre versiones? Concluya que el archivo de bloqueo forma parte del contrato del modelo y se versiona en Git junto con el código."
+        },
+        {
+          "title": "Del cuaderno al módulo: pruebas con pytest",
+          "bullets": [
+            "Prueba unitaria: verifica una función de transformación con datos pequeños y resultados conocidos.",
+            "Pruebas de propiedades: sin nulos tras imputar, rangos válidos y columnas en el orden esperado por el modelo.",
+            "Prueba de humo del entrenamiento: entrena con cien filas y verifica probabilidades entre cero y uno.",
+            "Ejecute pytest antes de cada commit; las pruebas son la red de seguridad para refactorizar sin miedo."
+          ],
+          "notes": "Escriba en vivo una prueba sencilla. Por ejemplo, una función que calcula el ratio de endeudamiento como deuda total entre ingreso mensual: la prueba verifica que con deuda 1000 e ingreso 4000 devuelve 0,25 y que con ingreso cero no divide entre cero, sino que devuelve un valor nulo controlado. Explique que en aprendizaje automático no se puede probar que el modelo sea correcto como se prueba una suma, pero sí se pueden probar las transformaciones, los contratos de entrada y salida y ciertos comportamientos mínimos. Mencione que en la unidad 3 se ampliarán a pruebas de datos y de comportamiento dentro de la integración continua. Use la convención de pytest: archivos test_*.py, funciones test_*, aserciones simples y fixtures para datos de ejemplo. Pregunte a la clase: ¿qué prueba habría evitado el error de un colega que cambió el orden de las columnas del DataFrame antes de predecir? La respuesta es una prueba que compare los nombres y el orden de columnas con la firma esperada del modelo."
+        },
+        {
+          "title": "Versionado de datos con DVC",
+          "bullets": [
+            "DVC guarda en Git un pequeño archivo .dvc con el hash del dato; el contenido real va a un almacenamiento remoto.",
+            "Comandos básicos: dvc init, dvc add, dvc remote add, dvc push y dvc pull.",
+            "Cada commit de Git queda asociado a una versión exacta de los datos: git checkout más dvc checkout restaura ambos.",
+            "Ley 29733: el almacenamiento remoto requiere control de acceso y cifrado; versione datos seudonimizados cuando sea posible."
+          ],
+          "notes": "Explique el mecanismo de direccionamiento por contenido: DVC calcula un hash del archivo y lo usa como nombre en el almacén; si el archivo no cambia, no se vuelve a subir. Esto permite versionar conjuntos de gigabytes sin inflar el repositorio. Demuestre el flujo: dvc add sobre data/raw/creditos.csv crea creditos.csv.dvc y agrega el CSV al .gitignore; se hace commit del archivo .dvc; dvc push lo sube al remoto, que puede ser un almacenamiento de objetos en la nube, un servidor SSH o una carpeta compartida. Cuando otro integrante clona el repositorio, ejecuta dvc pull y obtiene exactamente los mismos datos. Discuta la dimensión legal: si el conjunto contiene nombres, DNI o información financiera, se trata de datos personales y el almacenamiento debe cumplir medidas de seguridad; lo ideal es versionar datos seudonimizados, reemplazando el DNI por un identificador generado con una función hash y una sal secreta. Pregunte qué alternativas conocen y mencione Git LFS, lakeFS y Delta Lake, cada una con distinto alcance."
+        },
+        {
+          "title": "Pipelines reproducibles con dvc.yaml",
+          "bullets": [
+            "Cada etapa declara comando, dependencias, parámetros y salidas; DVC construye el grafo de ejecución.",
+            "dvc repro solo vuelve a ejecutar las etapas cuyas entradas cambiaron, ahorrando cómputo y tiempo.",
+            "params.yaml centraliza hiperparámetros; dvc params diff y dvc metrics diff comparan versiones.",
+            "dvc exp run con --set-param lanza variantes sin crear ramas y permite conservar las mejores."
+          ],
+          "notes": "Muestre el archivo dvc.yaml de la lectura de la unidad con las etapas preparar y entrenar. Haga notar que esto convierte el proceso en un grafo dirigido acíclico, el mismo concepto que usarán con orquestadores en la unidad 3. La gran ventaja es la ejecución incremental: si solo cambia un hiperparámetro de entrenamiento, DVC no vuelve a preparar los datos, porque sus dependencias no cambiaron. Esto se logra comparando los hashes de entradas registrados en dvc.lock, archivo que también se versiona. Haga una demostración: cambie max_depth en params.yaml, ejecute dvc repro y luego dvc metrics diff para ver cómo varió el AUC respecto del commit anterior. Discuta la disciplina necesaria: si un script lee un archivo que no está declarado como dependencia, DVC no detectará sus cambios y la reproducibilidad será falsa. Pregunte a la clase cómo detectarían una dependencia no declarada; una técnica es clonar el repositorio en una carpeta limpia y ejecutar dvc pull y dvc repro desde cero."
+        },
+        {
+          "title": "Seguimiento de experimentos con MLflow Tracking",
+          "bullets": [
+            "Una ejecución registra parámetros, métricas, etiquetas, artefactos y el commit de Git que la produjo.",
+            "mlflow.autolog captura automáticamente parámetros y métricas de scikit-learn, XGBoost, LightGBM y PyTorch.",
+            "La firma del modelo documenta columnas, tipos y forma de la salida; se infiere con infer_signature.",
+            "La interfaz permite comparar ejecuciones, filtrar por métricas y detectar qué cambio explica una mejora."
+          ],
+          "notes": "Recuerde a los estudiantes las hojas de cálculo con resultados de experimentos que llenaron en ciclos anteriores y pregunte cuántas veces no pudieron reconstruir qué configuración dio el mejor resultado. MLflow resuelve eso con un servidor de seguimiento, que puede ser local, respaldado por una base de datos o administrado por un proveedor de nube. Muestre el bloque de código de la lectura: set_experiment, start_run, log_params, log_metric y log_model con firma. Explique la firma del modelo: es el contrato de entrada y salida que luego servirá para validar solicitudes en producción. Advierta sobre lo que no debe registrarse: datos personales completos como artefactos, contraseñas o claves de acceso en los parámetros. Proponga un ejercicio: cada estudiante lanza cinco ejecuciones con distintos hiperparámetros de un modelo de boosting visto en Aprendizaje Automático II y, en la interfaz, construye un gráfico de coordenadas paralelas para identificar qué parámetro influye más en la métrica de validación y si la mejora es consistente."
+        },
+        {
+          "title": "Registro de modelos: versiones, alias y promoción",
+          "bullets": [
+            "El registro centraliza versiones de cada modelo con su linaje: ejecución, datos, métricas y autor.",
+            "Alias como champion y challenger reemplazan a las antiguas etapas Staging y Production de MLflow.",
+            "La promoción exige evidencia: superar al campeón, cumplir equidad y latencia, y contar con aprobación del dueño.",
+            "Los servicios cargan el modelo por alias, de modo que promover o revertir no requiere cambiar código."
+          ],
+          "notes": "Explique la diferencia entre registrar experimentos y registrar modelos: el seguimiento guarda todo lo que se probó; el registro guarda solo lo que se considera candidato a producción, con su historia. En versiones recientes de MLflow las etapas fijas se reemplazaron por alias flexibles: el servicio carga el modelo con el alias champion y el equipo puede reasignar el alias a otra versión cuando se aprueba un cambio. Discuta el patrón campeón-retador: el retador debe ganar con un margen que no pueda atribuirse al azar de la partición, lo que se verifica con validación cruzada o bootstrap. Relacione con la regulación: en el sector financiero supervisado por la SBS, contar con trazabilidad sobre qué modelo tomó una decisión y con qué datos fue entrenado forma parte de una buena gestión del riesgo de modelo. Pregunte: si el retador tiene mejor AUC global pero peor desempeño en clientes de zonas rurales, ¿debe promoverse? Use la pregunta para anticipar los criterios de gobernanza de la unidad 4."
+        },
+        {
+          "title": "Reproducibilidad práctica: semillas, determinismo y linaje",
+          "bullets": [
+            "Fije semillas en random, NumPy y el marco de entrenamiento; registre la semilla como parámetro.",
+            "El determinismo total en GPU exige banderas específicas y puede reducir la velocidad; declare la tolerancia aceptada.",
+            "Linaje mínimo: commit de Git, hash de datos de DVC, archivo de bloqueo, imagen de contenedor y ejecución de MLflow.",
+            "Prueba de oro: un colega clona el repositorio en una máquina limpia y obtiene las mismas métricas."
+          ],
+          "notes": "Distinga tres niveles: repetibilidad, en la misma máquina y entorno; reproducibilidad, en otra máquina con el mismo código y datos; y replicabilidad, con datos nuevos que confirman la conclusión. Para MLOps el objetivo mínimo es la reproducibilidad. Explique que fijar semillas no basta en GPU, porque ciertas operaciones de cuDNN no son deterministas; PyTorch ofrece torch.use_deterministic_algorithms, con un costo de rendimiento. Por ello conviene declarar una tolerancia, por ejemplo, que el AUC reproducido difiera en menos de 0,002. Presente el linaje como la cadena de identificadores que conecta una predicción en producción con el código, los datos y la configuración que la originaron. Ante una auditoría o un reclamo presentado a INDECOPI o a la SBS, esa cadena permite explicar qué ocurrió. Cierre la unidad anunciando la tarea 1: la prueba de oro la ejecutará un compañero de otro equipo, que intentará reproducir su resultado siguiendo solo el README, sin ayuda del autor."
+        }
+      ],
+      "reading": {
+        "title": "Reproducibilidad y trazabilidad: el fundamento de MLOps",
+        "minutes": 35,
+        "content": "## Del artefacto al sistema\n\nUn modelo entrenado es un archivo; un sistema de aprendizaje automático es el conjunto de procesos, datos, código, infraestructura y personas que permite que ese archivo produzca decisiones confiables todos los días. Sculley et al. (2015) mostraron que, en los sistemas reales, el código del modelo es una fracción pequeña frente a la recolección y verificación de datos, la extracción de características, la configuración, el servicio y el monitoreo. Cada atajo en esas piezas genera deuda técnica: cuesta poco hoy y se paga con intereses cuando el modelo debe actualizarse, auditarse o repararse.\n\nKreuzberger, Kühl y Hirschl (2023) definen MLOps como el paradigma que integra prácticas de aprendizaje automático, ingeniería de software e ingeniería de datos para llevar modelos a producción de forma confiable y eficiente. De sus nueve principios, la reproducibilidad y el versionado son la base de los demás: no se puede automatizar, comparar ni auditar lo que no se puede regenerar.\n\n## Los tres ejes del versionado\n\nUn resultado de aprendizaje automático depende de entradas que cambian a ritmos distintos:\n\n- **Código**: transformaciones, entrenamiento y evaluación, versionados con Git.\n- **Datos**: extracciones de la base transaccional, archivos de terceros o etiquetas, versionados con DVC u otra herramienta de direccionamiento por contenido.\n- **Configuración y entorno**: hiperparámetros en params.yaml, dependencias bloqueadas y, más adelante, la imagen de contenedor.\n\nEl **modelo** es la salida de combinar esas entradas. Si se registra el identificador de cada una, el modelo deja de ser un archivo anónimo y adquiere linaje.\n\n## Un pipeline reproducible con DVC\n\nDVC describe el proceso como un grafo de etapas. Cada etapa declara su comando, lo que necesita y lo que produce:\n\n```yaml\n# dvc.yaml\nstages:\n  preparar:\n    cmd: python src/preparar.py\n    deps:\n      - src/preparar.py\n      - data/raw/creditos.csv\n    params:\n      - preparar.fecha_corte\n    outs:\n      - data/processed/entrenamiento.parquet\n  entrenar:\n    cmd: python src/entrenar.py\n    deps:\n      - src/entrenar.py\n      - data/processed/entrenamiento.parquet\n    params:\n      - entrenar\n    outs:\n      - models/modelo.joblib\n    metrics:\n      - reports/metricas.json:\n          cache: false\n```\n\nAl ejecutar dvc repro, DVC compara los hashes de dependencias y parámetros con los registrados en dvc.lock y solo vuelve a correr las etapas afectadas. Si se modifica un hiperparámetro, la preparación no se repite; si llega un nuevo corte de datos, se ejecuta todo. El comando dvc metrics diff compara las métricas del espacio de trabajo con las del último commit, lo que convierte cada cambio en un experimento verificable. La condición es la disciplina: una dependencia no declarada rompe la promesa de reproducibilidad sin dar aviso.\n\n## Seguimiento y registro con MLflow\n\nDVC responde a la pregunta de cómo regenerar un resultado; MLflow responde a qué se probó y qué se aprobó. El siguiente fragmento registra una ejecución completa:\n\n```python\nimport mlflow\nfrom mlflow.models import infer_signature\nfrom sklearn.metrics import roc_auc_score\n\nmlflow.set_experiment('scoring-coopac')\nwith mlflow.start_run(run_name='lgbm-corte-2026-06'):\n    mlflow.log_params(params)                 # hiperparámetros desde params.yaml\n    mlflow.set_tag('dvc_datos', hash_datos)   # enlace con la versión de datos\n    modelo.fit(X_ent, y_ent)\n    prob = modelo.predict_proba(X_val)[:, 1]\n    mlflow.log_metric('auc_val', roc_auc_score(y_val, prob))\n    firma = infer_signature(X_val, prob)      # contrato de entrada y salida\n    mlflow.sklearn.log_model(modelo, 'modelo', signature=firma,\n                             registered_model_name='scoring-coopac')\n```\n\nEl registro de modelos asigna un número de versión a cada modelo registrado. Mediante alias como champion y challenger, el servicio de producción carga siempre la versión marcada como campeona; promover o revertir consiste en mover el alias, con constancia de quién lo hizo y por qué.\n\n## Linaje y regulación en el Perú\n\nLa trazabilidad no es solo una buena práctica técnica. La Ley 29733, Ley de Protección de Datos Personales, y su reglamento exigen medidas de seguridad sobre los bancos de datos y reconocen, en el artículo 23 de la ley, el derecho al tratamiento objetivo: el titular puede no verse sometido a decisiones con efectos significativos basadas únicamente en un tratamiento automatizado de sus datos. Cuando un socio de una cooperativa reclama por un crédito denegado, la entidad debe poder reconstruir qué modelo intervino, con qué datos fue entrenado y qué variables se usaron. En las entidades supervisadas por la SBS, esa capacidad forma parte de la gestión del riesgo de modelo y de las revisiones de auditoría interna.\n\n## Lista de verificación mínima\n\n1. El repositorio se clona y el entorno se instala con un solo comando desde un archivo de dependencias bloqueado.\n2. dvc pull y dvc repro regeneran el modelo y sus métricas en una máquina limpia.\n3. Cada ejecución en MLflow incluye commit de Git, hash de datos, semilla y firma del modelo.\n4. Las métricas reproducidas difieren de las registradas dentro de una tolerancia declarada.\n5. El README indica responsables, datos requeridos y su base legal de uso.\n\nUn equipo que cumple estos cinco puntos ha pasado del nivel 0 artesanal a una base sólida sobre la cual automatizar."
+      },
+      "case": {
+        "title": "Caso: El modelo de crédito que nadie podía reentrenar en CrediSur",
+        "content": "## Contexto\n\n**CrediSur** (nombre ficticio) es una cooperativa de ahorro y crédito con sede en Arequipa, 38 000 socios y una cartera de créditos de 210 millones de soles, concentrada en microempresa y consumo en Arequipa, Moquegua y Puno. Desde que las cooperativas pasaron a la supervisión de la SBS, la gerencia ha fortalecido su gestión de riesgos.\n\nEn 2023, un analista de datos desarrolló un modelo de puntaje para créditos de consumo con gradient boosting. Lo entrenó en un cuaderno de Jupyter en su laptop, con una extracción del sistema transaccional de la cooperativa y el reporte de la central de riesgos. El modelo alcanzó un AUC de 0,81 en validación y se integró de forma artesanal: cada lunes, el analista ejecutaba el cuaderno, generaba un Excel con los puntajes de los socios precalificados y lo enviaba por correo al área comercial.\n\n## El problema\n\nEn marzo de 2026 el analista renunció. Su sucesora, Lucía Mamani, egresada de un instituto tecnológico, heredó una carpeta compartida con 14 cuadernos (modelo_final, modelo_final_v2, modelo_final_ok, entre otros), tres archivos .pkl sin fecha y ningún archivo de dependencias. Al cargar el modelo más reciente con la versión actual de scikit-learn obtuvo advertencias de incompatibilidad; al recrear un entorno con versiones antiguas, el cuaderno falló porque leía un archivo de una ruta local inexistente.\n\nMientras tanto, la mora de los créditos aprobados en los últimos seis meses subió de 4,1 % a 6,8 %. El área de riesgos sospecha que el modelo se degradó: desde 2025 la cooperativa abrió una agencia en Juliaca y amplió su oferta a trabajadores independientes, segmento casi ausente en los datos de entrenamiento. Además, auditoría interna pidió documentar el modelo antes de la próxima visita de supervisión, programada en diez semanas: datos utilizados, variables, validación, responsables y controles de cambio.\n\n## El dilema\n\nEl gerente de riesgos, Jorge Huamán, plantea dos opciones al comité:\n\n- **Opción A, rápida:** que Lucía entrene en dos semanas un modelo nuevo con datos recientes, en un cuaderno, y lo ponga en uso de inmediato para contener la mora.\n- **Opción B, estructural:** invertir seis semanas en un repositorio con Git, dependencias bloqueadas, datos versionados con DVC, seguimiento en MLflow y un procedimiento documentado; mientras tanto, endurecer manualmente las políticas de aprobación para independientes.\n\nEl presupuesto de tecnología es limitado: la cooperativa cuenta con un servidor propio y una suscripción básica a un proveedor de nube. Lucía es la única persona del área que programa, aunque TI puede apoyar con la configuración de servidores. La gerencia general espera una recomendación en la próxima sesión del comité.",
+        "questions": [
+          "¿Qué elementos de deuda técnica oculta, según Sculley et al. (2015), identifica en CrediSur y qué consecuencias concretas tuvieron?",
+          "¿En qué nivel de madurez MLOps se encuentra CrediSur y cuál sería un nivel objetivo razonable a un año, dado su tamaño y riesgo?",
+          "Compare las opciones A y B considerando riesgo de crédito, supervisión de la SBS, Ley 29733 y capacidades del equipo. ¿Existe una opción híbrida mejor?",
+          "¿Qué artefactos mínimos debería producir Lucía para que el próximo modelo sea reproducible y auditable, y en qué orden los construiría?",
+          "¿Cómo verificaría si el aumento de la mora se debe a la degradación del modelo o a otros factores, como la nueva agencia o el contexto económico?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto reproducible: versionado de código, datos y modelos con Git, DVC y MLflow",
+        "instructions": "**Objetivo:** convertir un proyecto de aprendizaje automático de un ciclo anterior en un proyecto reproducible y trazable, aplicando las prácticas de la unidad.\n\n**Insumo:** un modelo de clasificación o regresión propio de Aprendizaje Automático I o II, o el conjunto de datos de crédito seudonimizado disponible en el aula virtual.\n\n**Qué entregar (repositorio en GitHub con acceso para el docente):**\n\n1. **Estructura y entorno:** carpetas src/, tests/, configs/, data/ y models/; archivo de dependencias bloqueado generado con pip-tools o uv; README con instrucciones de reproducción en no más de cinco comandos.\n2. **Pipeline DVC:** dvc.yaml con al menos tres etapas (preparar, entrenar y evaluar), params.yaml y métricas en JSON; datos versionados con un remoto configurado.\n3. **Seguimiento en MLflow:** al menos seis ejecuciones con variaciones de hiperparámetros, etiquetas con el hash de datos y el commit, firma del modelo y una versión registrada con alias champion.\n4. **Pruebas:** mínimo cinco pruebas con pytest sobre transformaciones y contrato de entrada.\n5. **Informe de reproducibilidad (dos páginas):** resultado de la prueba de oro realizada por un compañero de otro equipo, diferencias observadas, tolerancia declarada y lecciones aprendidas.\n\n**Formato:** enlace al repositorio y PDF del informe en el aula virtual, en la semana 4. No suba datos personales sin seudonimizar.\n\n**Criterio central:** se valora que otra persona pueda regenerar el modelo sin ayuda del autor. Un proyecto con métricas modestas y reproducción exitosa obtiene mejor calificación que uno con métricas altas imposibles de repetir.",
+        "rubric": [
+          { "name": "Estructura del proyecto y entorno bloqueado", "points": 4 },
+          { "name": "Pipeline DVC y versionado de datos", "points": 5 },
+          { "name": "Seguimiento y registro de modelos en MLflow", "points": 5 },
+          { "name": "Pruebas automatizadas con pytest", "points": 3 },
+          { "name": "Informe y prueba de reproducibilidad cruzada", "points": 3 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: fundamentos de MLOps y reproducibilidad",
+        "questions": [
+          {
+            "prompt": "Un equipo modifica solo el hiperparámetro learning_rate en params.yaml y ejecuta dvc repro sobre un pipeline con etapas preparar, entrenar y evaluar. ¿Qué ocurre?",
+            "options": [
+              "Se ejecutan entrenar y evaluar; preparar se omite porque sus dependencias no cambiaron",
+              "Se ejecutan las tres etapas porque cambió un archivo versionado en Git",
+              "No se ejecuta nada hasta realizar dvc push",
+              "Solo se ejecuta evaluar, porque las métricas dependen del parámetro"
+            ],
+            "correct": 0,
+            "explanation": "DVC compara hashes de dependencias y parámetros con dvc.lock; learning_rate solo es parámetro de entrenar, por lo que se reejecutan entrenar y las etapas que dependen de su salida."
+          },
+          {
+            "prompt": "Según el principio CACE descrito por Sculley et al. (2015), ¿cuál es la consecuencia de agregar una nueva variable a un modelo en producción?",
+            "options": [
+              "Solo cambia la contribución de la nueva variable; el resto del modelo permanece igual",
+              "Puede alterar pesos, importancias y umbral óptimo de las demás variables, exigiendo revalidar todo",
+              "Reduce la deuda técnica porque el modelo dispone de más información",
+              "Obliga únicamente a actualizar la documentación del modelo"
+            ],
+            "correct": 1,
+            "explanation": "Changing Anything Changes Everything: en modelos aprendidos las entradas están entrelazadas, así que cualquier cambio exige revalidar el sistema completo y no solo la parte modificada."
+          },
+          {
+            "prompt": "Una cooperativa reentrena manualmente un modelo de bajo riesgo cada trimestre con un procedimiento documentado y versionado; sus datos cambian lentamente. ¿Qué recomendación es más sensata?",
+            "options": [
+              "Migrar de inmediato a nivel 2 con Kubernetes y CI/CD del pipeline",
+              "Eliminar el modelo y volver a reglas de negocio",
+              "Reentrenar diariamente para maximizar la frescura del modelo",
+              "Mantener el proceso, agregar monitoreo básico y automatizar gradualmente el pipeline de entrenamiento"
+            ],
+            "correct": 3,
+            "explanation": "La madurez debe ser proporcional al riesgo y a la velocidad de cambio; avanzar gradualmente hacia el nivel 1 con monitoreo aporta valor sin sobreinvertir en plataforma."
+          },
+          {
+            "prompt": "¿Por qué un servicio de inferencia debe usar un archivo de dependencias bloqueado con versiones exactas, a diferencia de una biblioteca reutilizable?",
+            "options": [
+              "Porque las versiones exactas siempre se ejecutan más rápido",
+              "Porque así se evita pagar licencias de software",
+              "Porque el servicio debe reproducir el entorno de entrenamiento, mientras una biblioteca debe convivir con otras",
+              "Porque pip no permite instalar rangos de versiones"
+            ],
+            "correct": 2,
+            "explanation": "Un cambio menor de versión puede alterar la deserialización o el comportamiento del modelo; las aplicaciones fijan versiones exactas y las bibliotecas declaran rangos compatibles."
+          },
+          {
+            "prompt": "Un científico de datos registra en MLflow el AUC y los hiperparámetros, pero no el hash de los datos ni el commit. Meses después un auditor pregunta con qué datos se entrenó el modelo vigente. ¿Cuál es el problema principal?",
+            "options": [
+              "El AUC no es una métrica aceptada por los auditores",
+              "Falta linaje: no puede vincularse el modelo con la versión exacta de datos y código que lo produjo",
+              "MLflow no permite consultar ejecuciones antiguas",
+              "Debió registrar el modelo como imagen Docker"
+            ],
+            "correct": 1,
+            "explanation": "Sin commit ni hash de datos, el modelo carece de linaje verificable, lo que impide reproducirlo y responder a auditorías o a reclamos de los titulares de datos."
+          },
+          {
+            "prompt": "Un retador supera al campeón por 0,004 de AUC en una única partición de validación. ¿Qué decisión es más rigurosa antes de reasignar el alias champion?",
+            "options": [
+              "Promoverlo de inmediato, porque cualquier mejora suma valor",
+              "Descartarlo porque la mejora es menor que 0,01",
+              "Estimar la variabilidad con validación cruzada o bootstrap, revisar subgrupos y latencia, y obtener aprobación del dueño",
+              "Promoverlo solo si fue entrenado con más datos que el campeón"
+            ],
+            "correct": 2,
+            "explanation": "Una diferencia pequeña puede deberse al azar de la partición; la promoción requiere evidencia estadística, revisión por segmentos, requisitos operativos y aprobación del negocio."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Empaquetado y servicio de modelos: APIs, contenedores y rendimiento",
+      "description": "Al finalizar la unidad, el estudiante elige el patrón de inferencia adecuado para un problema de negocio, expone un modelo como servicio web con FastAPI y validación de entradas, lo empaqueta en una imagen Docker segura y verifica con pruebas de carga que cumple los objetivos de latencia, rendimiento y costo acordados.",
+      "topics": [
+        "Patrones de inferencia: por lotes, en línea, en flujo y en el borde",
+        "Serialización segura, formatos portables y sesgo entre entrenamiento y servicio",
+        "Servicios de inferencia con FastAPI, validación con Pydantic y versionado de la API",
+        "Contenedores con Docker: imágenes multietapa, seguridad y gestión de secretos",
+        "Rendimiento: latencia por percentiles, ley de Little, pruebas de carga con Locust y costo por predicción"
+      ],
+      "slides": [
+        {
+          "title": "Cuatro patrones de inferencia",
+          "bullets": [
+            "Por lotes: predicciones programadas sobre todo un conjunto, guardadas en una tabla para consultarlas después.",
+            "En línea síncrona: una solicitud, una respuesta en milisegundos; el modelo vive detrás de una API.",
+            "En flujo: eventos de una cola como Kafka se puntúan al llegar, con latencia de segundos.",
+            "En el borde: el modelo corre en el dispositivo, sin conexión, con restricciones de memoria y energía."
+          ],
+          "notes": "Comience con una pregunta de diseño: ¿cuándo necesita el negocio la predicción y con qué datos disponibles en ese momento? Esa pregunta define el patrón, no la preferencia tecnológica. Ejemplos peruanos: una cooperativa que precalifica socios para campañas de crédito puede puntuar a todos cada noche por lotes; una pasarela de pagos que aprueba compras en línea necesita respuesta síncrona en menos de 200 milisegundos; una billetera digital que analiza transferencias para detectar fraude puede procesarlas en flujo; un aplicativo agrícola que identifica plagas en hojas de palto en zonas sin cobertura móvil debe ejecutar el modelo en el teléfono. Muestre que la complejidad operativa crece desde el patrón por lotes hasta el de flujo. Pida a los estudiantes clasificar cinco casos rápidamente y justificar su elección en el chat. Destaque que muchos equipos eligen inferencia en línea por moda, cuando un proceso por lotes resolvería el problema con una fracción del costo y del riesgo operativo."
+        },
+        {
+          "title": "Inferencia por lotes: simple, barata y subestimada",
+          "bullets": [
+            "Se ejecuta con un orquestador o tarea programada: lee datos, puntúa y escribe resultados con fecha y versión del modelo.",
+            "Permite usar modelos pesados y procesar millones de registros con instancias temporales de bajo costo.",
+            "Limitación: las predicciones envejecen y no sirven para clientes nuevos ni para datos que cambian durante el día.",
+            "Patrón híbrido: precalcular puntajes por lotes y servir en línea solo los casos nuevos."
+          ],
+          "notes": "Explique el patrón con un ejemplo concreto: una cadena de boticas pronostica cada domingo la demanda semanal por producto y local; el resultado se guarda en una tabla que consume el sistema de reposición. No hace falta una API ni réplicas permanentes. La tabla de resultados debe incluir la fecha de corte, la versión del modelo y un identificador de ejecución, para auditar después qué pronóstico originó cada pedido. Discuta el problema de la frescura: si el puntaje de un socio se calculó el lunes y el miércoles se registra un atraso en la central de riesgos, la decisión del jueves usará información desactualizada. Por eso surgen arquitecturas híbridas, en las que se precalcula lo estable y se completa en línea lo que cambia. Pregunte a la clase: ¿qué riesgo podría tener usar un puntaje de hace una semana para aprobar un crédito? Lleve la discusión hacia la calidad de la decisión y la necesidad de documentar la vigencia de cada puntaje."
+        },
+        {
+          "title": "Inferencia en línea: requisitos no funcionales",
+          "bullets": [
+            "Latencia objetivo expresada en percentiles: por ejemplo, p95 menor a 150 ms y p99 menor a 300 ms.",
+            "Disponibilidad de 99,9 % en un mes de treinta días equivale a 43,2 minutos de indisponibilidad tolerada.",
+            "Las características deben existir al momento de la solicitud y calcularse con la misma lógica que en entrenamiento.",
+            "Comportamiento ante falla: respuesta por defecto o reglas de respaldo cuando el modelo no responde a tiempo."
+          ],
+          "notes": "Los requisitos no funcionales suelen decidir el éxito de un modelo en línea más que su AUC. Calcule con la clase la indisponibilidad tolerada: un mes de treinta días tiene 43 200 minutos; el 0,1 % equivale a 43,2 minutos. Pregunte qué ocurre en una pasarela de pagos si el modelo antifraude no responde: ¿se aprueba la transacción, se rechaza o se aplica una regla simple? Esa decisión es de negocio y debe tomarse antes del incidente. Explique que la latencia del modelo es solo una parte del presupuesto total: el cliente percibe la suma de red, autenticación, consulta de características, inferencia y respuesta. Si la API del comercio exige respuesta en 500 milisegundos y la red ya consume 120, el modelo debe responder bastante antes. Pida a los estudiantes que construyan un presupuesto de latencia por componentes para un caso de aprobación de crédito en un comercio electrónico, asignando milisegundos a cada etapa y un margen de seguridad."
+        },
+        {
+          "title": "Serialización: riesgos de pickle y formatos portables",
+          "bullets": [
+            "pickle y joblib pueden ejecutar código arbitrario al cargar: nunca cargue archivos de origen no confiable.",
+            "Además, dependen de la versión exacta de la biblioteca y de Python con que se guardaron.",
+            "ONNX representa el modelo como un grafo estándar, portable entre lenguajes y entornos de ejecución.",
+            "skops ofrece persistencia más segura para scikit-learn; safetensors cumple ese rol para pesos de redes."
+          ],
+          "notes": "Muestre por qué pickle es peligroso: el formato permite que, al deserializar, se invoque cualquier función de Python, incluida una que borre archivos o abra una conexión remota. Por eso la propia documentación de Python advierte que no se carguen datos de fuentes no confiables. En un equipo, un archivo de modelo compartido por correo o descargado de un repositorio público es un vector de ataque. Además, pickle acopla el modelo a versiones exactas, como vieron en la unidad 1. ONNX, Open Neural Network Exchange, es un estándar abierto impulsado inicialmente por Microsoft y Facebook; en Aprendizaje Profundo están exportando redes a ONNX, y aquí lo usaremos también para modelos de scikit-learn mediante skl2onnx. Mencione safetensors, creado por Hugging Face para almacenar tensores sin código ejecutable, y skops para scikit-learn. Pregunte a la clase: si un proveedor externo le entrega un modelo en formato pkl, ¿qué controles aplicaría antes de cargarlo en un servidor de la empresa?"
+        },
+        {
+          "title": "ONNX Runtime para servir modelos paso a paso",
+          "bullets": [
+            "Paso 1: convertir con skl2onnx o torch.onnx, declarando tipo y forma de la entrada.",
+            "Paso 2: verificar equivalencia numérica comparando predicciones del original y del ONNX sobre mil filas.",
+            "Paso 3: cargar con onnxruntime.InferenceSession una sola vez, al iniciar el servicio.",
+            "Beneficios: imagen más pequeña, independencia de scikit-learn en producción y menor latencia en CPU."
+          ],
+          "notes": "Haga una demostración: convierta un pipeline de scikit-learn con escalado y regresión logística a ONNX usando to_onnx con un ejemplo de entrada de tipo float32. Desactive la opción zipmap para que las probabilidades salgan como matriz y no como lista de diccionarios, lo que simplifica el servicio. Luego compare las probabilidades del modelo original y del convertido: la diferencia máxima absoluta debe ser del orden de una millonésima, atribuible a la precisión de punto flotante; si fuera mayor, hay un operador mal convertido o un preprocesamiento que quedó fuera del grafo. Este paso de verificación es obligatorio y debe convertirse en prueba automatizada. Advierta que no todos los transformadores tienen conversión, por ejemplo, funciones personalizadas escritas en Python; en ese caso hay que reescribirlas con operadores soportados o mantenerlas fuera del grafo y probarlas por separado. Pregunte: ¿qué ganaría la fintech del caso de esta unidad al eliminar scikit-learn y pandas de su imagen de producción?"
+        },
+        {
+          "title": "Sesgo entre entrenamiento y servicio",
+          "bullets": [
+            "Ocurre cuando las características se calculan de forma distinta en entrenamiento y en producción.",
+            "Causas: código duplicado en otro lenguaje, ventanas temporales distintas y datos que no existían al momento de decidir.",
+            "Remedio: una sola implementación de las transformaciones, empaquetada con el modelo o en un almacén de características.",
+            "Feast y otros almacenes ofrecen uniones con corrección temporal y la misma definición en línea y fuera de línea."
+          ],
+          "notes": "Este es uno de los errores más costosos y silenciosos. Ejemplo: en entrenamiento, el saldo promedio de los últimos tres meses se calculó con meses calendario cerrados; en producción, un desarrollador lo implementó en Java con los últimos noventa días móviles. El modelo recibe valores con otra distribución y su desempeño cae sin que ningún sistema arroje error. Otro caso es la fuga temporal: se entrenó con una variable de días de atraso actualizada después de la decisión, que en producción no existe. Explique el concepto de corrección temporal: al construir el conjunto de entrenamiento, cada fila debe usar solo información disponible en la fecha de la decisión. Los almacenes de características como Feast resuelven esto con definiciones únicas y uniones temporales. Pida a los estudiantes revisar un proyecto propio y listar qué variables podrían sufrir este sesgo. Cierre con la regla práctica: registre en producción las características calculadas para compararlas periódicamente con las de entrenamiento."
+        },
+        {
+          "title": "Diseño del contrato de una API de inferencia",
+          "bullets": [
+            "Ruta versionada, por ejemplo POST /v1/predicciones, para evolucionar sin romper a los clientes.",
+            "Entrada validada con tipos, rangos y valores permitidos; salida con probabilidad y versión del modelo.",
+            "Errores explícitos: 422 para datos inválidos y 503 cuando el modelo no está listo, nunca un 500 silencioso.",
+            "Rutas operativas de salud, preparación y métricas; documentación automática con OpenAPI."
+          ],
+          "notes": "El contrato es el acuerdo entre el equipo de ML y quienes consumen el modelo, y debe diseñarse con ellos, igual que se diseña una API de pagos. Explique por qué devolver la versión del modelo en cada respuesta es vital: permite que el sistema consumidor guarde con qué versión se tomó cada decisión, lo que conecta con el linaje de la unidad 1. Distinga los códigos HTTP: 422 indica que el cliente envió algo inválido; 503 indica que el servicio aún no puede atender; 500 indica un error interno no previsto, que debe ser rarísimo. Discuta qué devolver: solo la probabilidad o también la decisión. Si el umbral de decisión es política de negocio y cambia con frecuencia, conviene que lo aplique otro componente o que esté en configuración y no en el código. Muestre la documentación interactiva que FastAPI genera a partir de OpenAPI y explique su valor para el equipo de desarrollo que integrará el servicio en sus aplicaciones."
+        },
+        {
+          "title": "FastAPI y Pydantic paso a paso",
+          "bullets": [
+            "Defina un modelo Pydantic con Field: ingreso mayor que cero, edad entre 18 y 85, categorías con Literal.",
+            "Cargue el modelo en el evento lifespan, nunca dentro de cada solicitud.",
+            "Declare response_model para garantizar y documentar la forma de la respuesta.",
+            "Ejecute con uvicorn y varios procesos trabajadores; pruebe con TestClient dentro de pytest."
+          ],
+          "notes": "Recorra el código de la lectura línea por línea. Pydantic convierte y valida tipos: si el cliente envía la edad como texto o un ingreso negativo, FastAPI responde automáticamente con 422 y el detalle del campo que falló, sin que el modelo llegue a ejecutarse. Esto protege contra entradas fuera del dominio de entrenamiento, que producen predicciones sin sentido. Explique el patrón lifespan: el modelo se carga una vez al iniciar el proceso y se reutiliza; cargarlo en cada solicitud multiplicaría la latencia. Mencione la diferencia entre funciones def y async def: en FastAPI, una función def se ejecuta en un grupo de hilos, adecuado para inferencia en CPU con bibliotecas que liberan el bloqueo global del intérprete, como ONNX Runtime. Demuestre una prueba con TestClient que envía una solicitud válida y otra inválida y verifica los códigos de respuesta. Pregunte qué validaciones adicionales exigirían para la variable departamento: por ejemplo, un Literal con los 24 departamentos y la Provincia Constitucional del Callao."
+        },
+        {
+          "title": "Contenedores: qué problema resuelven",
+          "bullets": [
+            "Una imagen empaqueta sistema base, intérprete, dependencias, código y modelo en una unidad inmutable.",
+            "El mismo artefacto se ejecuta en la laptop, en el servidor de pruebas y en la nube.",
+            "A diferencia de las máquinas virtuales, comparten el núcleo del sistema operativo, arrancan en segundos y pesan menos.",
+            "Etiquete imágenes con versión semántica y commit; nunca despliegue la etiqueta latest en producción."
+          ],
+          "notes": "Recuerde la frase clásica: en mi máquina funciona. Los contenedores la eliminan porque el entorno viaja con la aplicación. Explique los conceptos de imagen, capa, contenedor y registro: la imagen es una plantilla de capas de solo lectura; el contenedor es una instancia en ejecución; el registro, como Docker Hub, GitHub Container Registry o el registro del proveedor de nube, almacena y distribuye imágenes. Las capas se reutilizan entre imágenes, por lo que el orden de las instrucciones importa: lo que cambia poco va primero. Sobre las etiquetas, explique por qué latest es peligrosa: dos despliegues con la misma etiqueta pueden ejecutar código distinto, lo que destruye el linaje. La práctica recomendada es etiquetar con la versión y el hash corto del commit, por ejemplo scoring:3.2.0-a1b2c3d. Pregunte: si el modelo cambia cada mes pero el código del servicio no, ¿conviene incluir el modelo dentro de la imagen o descargarlo del registro de modelos al iniciar? Discuta las ventajas de cada opción."
+        },
+        {
+          "title": "Dockerfile multietapa para un servicio de inferencia",
+          "bullets": [
+            "Etapa de construcción: instala dependencias con compiladores y herramientas que no irán a producción.",
+            "Etapa final: imagen slim con solo el entorno instalado, el código y el modelo.",
+            "Copie primero el archivo de dependencias y luego el código, para aprovechar la caché de capas.",
+            "Use .dockerignore para excluir datos, cuadernos, entornos virtuales y archivos de credenciales."
+          ],
+          "notes": "Muestre el Dockerfile de la lectura y construya la imagen en vivo con docker build. Compare tamaños: una imagen ingenua basada en la imagen completa de Python, con todo el proyecto, cuadernos y datos incluidos, puede superar los dos gigabytes; la versión multietapa con la variante slim y ONNX Runtime suele quedar muy por debajo de los 500 megabytes. El tamaño importa: las imágenes grandes tardan más en descargarse cuando el sistema escala y aumentan la superficie de ataque. Explique la caché de capas: si se copia el código antes de instalar dependencias, cualquier cambio en una línea obliga a reinstalar todo. Insista en el archivo .dockerignore: es común que se cuelen en la imagen archivos de variables de entorno con contraseñas de bases de datos o claves de la nube. Proponga un ejercicio: cada estudiante inspecciona su imagen con docker history y docker image ls, identifica las capas más pesadas y propone dos mejoras concretas para reducirlas."
+        },
+        {
+          "title": "Seguridad de imágenes y gestión de secretos",
+          "bullets": [
+            "Ejecute como usuario sin privilegios: un contenedor como root amplifica el impacto de una vulnerabilidad.",
+            "Escanee imágenes con Trivy o Grype y actualice la imagen base ante vulnerabilidades críticas.",
+            "Los secretos se inyectan en tiempo de ejecución desde variables del orquestador o gestores de secretos, nunca en la imagen.",
+            "Limite el acceso al servicio con autenticación por token o red privada y registre los accesos."
+          ],
+          "notes": "Relacione con la normativa de la SBS sobre seguridad de la información y ciberseguridad y con las medidas de seguridad que exige la Ley 29733: un servicio que recibe datos personales de solicitantes de crédito debe proteger su confidencialidad, integridad y disponibilidad. Muestre cómo un escáner como Trivy lista vulnerabilidades conocidas, identificadas por su código CVE, en los paquetes del sistema y de Python, y clasifíquelas por severidad. Explique que las imágenes slim o distroless reducen la superficie de ataque porque contienen menos paquetes. Sobre los secretos, comente que existen programas automatizados que recorren repositorios públicos buscando claves de nube filtradas, y que una clave expuesta puede usarse en minutos para consumir recursos a costa de la empresa. Proponga como práctica revisar el historial de Git con una herramienta de detección de secretos. Pregunte a la clase: si una clave de base de datos se subió por error a Git y luego se borró en otro commit, ¿está a salvo? No: sigue en el historial y debe rotarse de inmediato."
+        },
+        {
+          "title": "Medir latencia: percentiles, colas y ley de Little",
+          "bullets": [
+            "El promedio oculta la cola: reporte p50, p95 y p99 sobre una ventana de tiempo definida.",
+            "Ley de Little: L = λ × W; solicitudes en el sistema igual a tasa de llegada por tiempo de permanencia.",
+            "Ejemplo: 200 solicitudes por segundo con 50 ms de permanencia implican 10 solicitudes simultáneas.",
+            "Cerca de la saturación las colas crecen de forma no lineal: planifique una utilización máxima de 60 a 70 %."
+          ],
+          "notes": "Muestre con un ejemplo por qué el promedio engaña: si 98 solicitudes tardan 20 milisegundos y 2 tardan 2 segundos, el promedio es de unos 60 milisegundos, pero dos de cada cien clientes esperan dos segundos; en una campaña con cien mil solicitudes, son dos mil clientes afectados. Por ello los objetivos se fijan en percentiles altos. Explique la ley de Little, demostrada por John Little en 1961, que se cumple en sistemas estables sin importar la distribución de las llegadas: si cada proceso trabajador atiende una solicitud a la vez, el ejemplo exige al menos diez trabajadores, más un margen. Introduzca la intuición de la teoría de colas: cuando la utilización se acerca al cien por ciento, el tiempo de espera crece de forma explosiva; en el modelo M/M/1 el tiempo medio en el sistema es proporcional a uno entre uno menos la utilización. Pida a los estudiantes calcular cuántas réplicas necesitaría la fintech del caso de la unidad en su pico de tráfico."
+        },
+        {
+          "title": "Pruebas de carga con Locust",
+          "bullets": [
+            "Defina usuarios simulados con HttpUser, tareas con el decorador task y tiempos de espera realistas.",
+            "Escalone la carga: línea base, carga esperada, pico de campaña y prueba de estrés hasta el quiebre.",
+            "Registre p50, p95, p99, solicitudes por segundo, tasa de error y uso de CPU y memoria.",
+            "Pruebe con datos representativos y variados, desde una red similar a la de producción."
+          ],
+          "notes": "Muestre un archivo de Locust breve: una clase Cliente que hereda de HttpUser, con un tiempo de espera entre 0,1 y 0,5 segundos y una tarea que envía un JSON válido a la ruta de predicciones. Ejecute la prueba sin interfaz gráfica con un número creciente de usuarios y analice la gráfica: al principio la latencia es estable; a partir de cierto punto el rendimiento deja de crecer y la latencia se dispara, lo que señala la saturación. Ese punto define la capacidad de una réplica. Insista en que los datos de prueba deben ser variados: si siempre se envía la misma solicitud, una caché podría falsear los resultados. Explique la diferencia entre prueba de carga, que verifica el comportamiento esperado; de estrés, que busca el límite; y de resistencia, que mantiene carga durante horas para detectar fugas de memoria. Pregunte: ¿por qué no conviene ejecutar Locust en la misma máquina que el servicio? Porque ambos compiten por CPU y los resultados quedan distorsionados."
+        },
+        {
+          "title": "Optimizar el rendimiento sin sacrificar calidad",
+          "bullets": [
+            "Primero perfile: mida cuánto tarda cada etapa, desde la validación hasta la serialización de la respuesta.",
+            "Procesamiento por lotes dinámico: agrupa solicitudes en ventanas de pocos milisegundos para aprovechar CPU o GPU.",
+            "Aplique la compresión vista en Aprendizaje Profundo, cuantización o destilación, verificando la métrica tras el cambio.",
+            "Caché de resultados para entradas repetidas y precálculo de características costosas."
+          ],
+          "notes": "La regla de oro es medir antes de optimizar. Muchas veces el cuello de botella no es el modelo, sino la consulta a la base de datos para obtener características o la construcción de un DataFrame de pandas en cada solicitud. Use un perfilador de muestreo como py-spy para ver dónde se consume el tiempo. Explique el procesamiento por lotes dinámico: servidores como NVIDIA Triton o BentoML esperan unos milisegundos para agrupar varias solicitudes y ejecutarlas juntas, lo que aumenta el rendimiento total a cambio de una pequeña latencia adicional. Vincule con el curso paralelo de Aprendizaje Profundo, donde se estudia la cuantización: aquí el foco es operativo, es decir, medir cuánto mejora la latencia y comprobar que la métrica de negocio no se deteriora más allá de lo tolerado. Plantee un dilema: una cuantización reduce la latencia p99 a la mitad, pero baja el AUC de 0,812 a 0,806. ¿Se acepta? Depende del costo del error y del valor de la latencia para el negocio."
+        },
+        {
+          "title": "Servidores de modelos y costo por predicción",
+          "bullets": [
+            "Opciones: servicio propio con FastAPI, BentoML, TorchServe, NVIDIA Triton, KServe o servicios administrados de nube.",
+            "Criterios: tipo de modelo, necesidad de GPU, procesamiento por lotes, capacidades del equipo y dependencia del proveedor.",
+            "Costo por mil predicciones = costo horario de las réplicas ÷ (predicciones por hora ÷ 1000).",
+            "Compare servir en línea contra precalcular por lotes con el mismo volumen y requisito de frescura."
+          ],
+          "notes": "No hay una herramienta universalmente mejor. Un servicio propio con FastAPI es transparente y suficiente para modelos tabulares de tamaño moderado; Triton destaca con modelos profundos en GPU y procesamiento por lotes dinámico; KServe se integra con Kubernetes; los servicios administrados reducen la carga operativa, pero aumentan el costo y la dependencia del proveedor. Haga un cálculo con la clase: dos réplicas de cuatro núcleos cuestan, por ejemplo, 0,20 dólares por hora cada una; si atienden en promedio 180 000 predicciones por hora, el costo por mil predicciones es 0,40 entre 180, aproximadamente 0,0022 dólares. Luego compárelo con un proceso por lotes nocturno que tarda veinte minutos en una instancia temporal. Estos números deben formar parte de la propuesta de despliegue que se presenta al negocio, junto con la métrica de calidad. Cierre la unidad presentando la tarea 2 y recordando que la prueba de carga debe terminar en una recomendación de capacidad para el pico de campaña."
+        }
+      ],
+      "reading": {
+        "title": "Servir un modelo: contrato, contenedor y capacidad",
+        "minutes": 40,
+        "content": "## Del archivo al servicio\n\nServir un modelo significa ponerlo a disposición de otros sistemas con garantías explícitas de forma, tiempo y disponibilidad. Huyen (2022) distingue la predicción por lotes, que se calcula de antemano y se consulta, de la predicción en línea, que se calcula al recibir la solicitud. La elección depende de cuándo se necesita la predicción y de qué datos existen en ese instante. Un error frecuente es construir una API en tiempo real para un proceso que el negocio consulta una vez al día.\n\n## El contrato: validar antes de predecir\n\nUn modelo solo es confiable dentro del dominio de sus datos de entrenamiento. Por eso el servicio debe rechazar entradas fuera de rango antes de predecir. Con FastAPI y Pydantic, el contrato se declara en código y se documenta automáticamente con OpenAPI:\n\n```python\nfrom contextlib import asynccontextmanager\nfrom typing import Literal\nimport numpy as np\nimport onnxruntime as ort\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel, Field\n\nVERSION_MODELO = '3.2.0'\n\nclass Solicitud(BaseModel):\n    ingreso_mensual: float = Field(gt=0, le=200_000)\n    edad: int = Field(ge=18, le=85)\n    meses_empleo: int = Field(ge=0, le=600)\n    deuda_sistema: float = Field(ge=0)\n    tipo_trabajador: Literal['dependiente', 'independiente']\n\nclass Respuesta(BaseModel):\n    probabilidad_incumplimiento: float\n    version_modelo: str\n\nrecursos = {}\n\n@asynccontextmanager\nasync def lifespan(app: FastAPI):\n    # se carga una sola vez al iniciar el proceso\n    recursos['sesion'] = ort.InferenceSession('models/scoring.onnx')\n    yield\n    recursos.clear()\n\napp = FastAPI(title='Scoring de consumo', lifespan=lifespan)\n\n@app.get('/salud')\ndef salud():\n    return {'estado': 'ok', 'version_modelo': VERSION_MODELO}\n\n@app.post('/v1/predicciones', response_model=Respuesta)\ndef predecir(s: Solicitud):\n    x = np.array([[s.ingreso_mensual, s.edad, s.meses_empleo, s.deuda_sistema,\n                   1.0 if s.tipo_trabajador == 'independiente' else 0.0]],\n                 dtype=np.float32)\n    sesion = recursos['sesion']\n    # exportado sin zipmap: salidas = [etiquetas, probabilidades]\n    _, prob = sesion.run(None, {sesion.get_inputs()[0].name: x})\n    return Respuesta(probabilidad_incumplimiento=float(prob[0][1]),\n                     version_modelo=VERSION_MODELO)\n```\n\nTres decisiones merecen atención. Primero, el modelo se carga en lifespan, una sola vez por proceso. Segundo, cada respuesta incluye la versión del modelo, para que el sistema consumidor registre con qué versión se decidió. Tercero, la codificación de tipo_trabajador replica exactamente la usada en entrenamiento; si esa lógica se duplica a mano, aparece el sesgo entre entrenamiento y servicio. Lo ideal es que todo el preprocesamiento forme parte del grafo ONNX exportado.\n\n## El empaquetado: una imagen pequeña y segura\n\n```dockerfile\n# Etapa 1: construcción\nFROM python:3.12-slim AS construccion\nWORKDIR /app\nCOPY requirements.lock .\nRUN pip install --no-cache-dir --prefix=/instalado -r requirements.lock\n\n# Etapa 2: ejecución\nFROM python:3.12-slim\nWORKDIR /app\nCOPY --from=construccion /instalado /usr/local\nCOPY app/ app/\nCOPY models/scoring.onnx models/\nRUN useradd --create-home --uid 10001 servicio\nUSER servicio\nEXPOSE 8000\nCMD [\"uvicorn\", \"app.main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\", \"--workers\", \"2\"]\n```\n\nLa construcción en dos etapas deja fuera compiladores y cachés; el usuario sin privilegios limita el daño de una eventual intrusión; copiar primero el archivo de dependencias aprovecha la caché de capas. La imagen se etiqueta con versión y commit, por ejemplo scoring:3.2.0-a1b2c3d, nunca con latest.\n\n## La capacidad: percentiles y ley de Little\n\nEl objetivo de nivel de servicio se expresa en percentiles, porque el promedio oculta a los clientes que más esperan. Para dimensionar, la ley de Little establece que, en un sistema estable,\n\n**L = λ × W**\n\ndonde L es el número medio de solicitudes en el sistema, λ la tasa de llegada y W el tiempo medio de permanencia. Si una fintech espera un pico de 300 solicitudes por segundo durante una campaña y cada solicitud permanece 40 ms, habrá en promedio 12 solicitudes simultáneas. Si cada proceso atiende una a la vez y se desea operar al 60 % de utilización para contener las colas, se necesitan al menos 20 procesos; con dos procesos por réplica, 10 réplicas. La prueba de carga con Locust confirma o corrige este cálculo, porque la latencia real crece de forma no lineal cerca de la saturación.\n\n## Costo por predicción\n\nTodo despliegue debe expresar su costo en una unidad que el negocio entienda. Con réplicas de 0,20 dólares por hora, diez réplicas durante un pico de cuatro horas cuestan 8 dólares; si atendieron 4,32 millones de solicitudes, el costo es inferior a 0,002 dólares por mil predicciones. Comparar esta cifra con la alternativa por lotes, junto con la latencia exigida y la pérdida esperada por decidir con información desactualizada, permite elegir con argumentos y no por preferencia tecnológica."
+      },
+      "case": {
+        "title": "Caso: La campaña que colapsó el motor de crédito de PagaLuego",
+        "content": "## Contexto\n\n**PagaLuego** (nombre ficticio) es una fintech limeña que ofrece la modalidad compra ahora y paga después en comercios electrónicos de moda, tecnología y electrodomésticos. Cuando un cliente elige esta forma de pago, la tienda envía una solicitud a la API de PagaLuego, que debe responder en menos de 800 ms; si no, la pasarela del comercio cancela la opción y el cliente paga con tarjeta o abandona la compra.\n\nEl motor de decisión llama a un modelo de probabilidad de incumplimiento entrenado con LightGBM. El servicio actual se construyó hace un año con Flask: carga un pipeline de scikit-learn con pickle, consulta en cada solicitud una base PostgreSQL para calcular 46 características del historial del cliente y aplica un umbral de 0,18. Corre en dos máquinas virtuales de cuatro núcleos en una región de nube en São Paulo, sin autoescalado. La imagen pesa 2,7 GB.\n\n## El incidente\n\nEn días normales el servicio recibe entre 15 y 25 solicitudes por segundo, con latencia p50 de 120 ms y p99 de 450 ms. Durante el último Cyber Wow, el tráfico llegó a 180 solicitudes por segundo en las primeras horas. La latencia p99 superó los 3 segundos, el 22 % de las solicitudes excedió el tiempo límite y varios comercios desactivaron temporalmente el medio de pago. El área comercial estima que se perdieron unas 9 000 operaciones con ticket medio de 420 soles; la tasa de aprobación habitual es de 58 % y el margen neto por operación aprobada, de 6 %.\n\nEl análisis posterior encontró que el 65 % del tiempo de cada solicitud se iba en la consulta de características a la base de datos, el 20 % en construir un DataFrame de pandas y aplicar el pipeline, y solo el 10 % en la inferencia. Además, el 70 % de los solicitantes de la campaña ya eran clientes registrados.\n\n## Las alternativas\n\nLa jefa de ingeniería, Andrea Quispe, tiene seis semanas antes de la próxima campaña y evalúa:\n\n1. **Escalar horizontalmente:** pasar a contenedores con autoescalado de 2 a 16 réplicas, manteniendo el código actual.\n2. **Optimizar el servicio:** migrar a FastAPI, exportar el modelo a ONNX y eliminar pandas del camino crítico.\n3. **Precalcular:** generar cada noche las características agregadas y los puntajes de los clientes registrados y guardarlos en una caché de baja latencia, dejando el cálculo completo en línea solo para clientes nuevos.\n4. **Combinar** elementos de las anteriores.\n\nEl equipo tiene tres ingenieros. El director financiero pide que el costo mensual de infraestructura no supere en más de 40 % el actual, de 1 100 dólares. La gerencia de riesgos advierte que no aceptará cambios que alteren las decisiones de crédito sin una validación de equivalencia.",
+        "questions": [
+          "Estime con los datos del caso la pérdida económica del incidente y explique por qué la latencia p99, y no la media, era el indicador relevante.",
+          "Con la ley de Little y la distribución del tiempo por componente, ¿qué alternativa ataca la causa raíz y cuál solo el síntoma?",
+          "¿Qué riesgos de sesgo entre entrenamiento y servicio introduce la opción de precalcular y cómo los controlaría?",
+          "Diseñe la combinación de medidas que recomendaría a Andrea, con presupuesto de latencia, número de réplicas y costo mensual estimado.",
+          "¿Qué prueba de equivalencia y qué prueba de carga exigiría antes de la campaña para satisfacer a la gerencia de riesgos?"
+        ]
+      },
+      "assignment": {
+        "title": "Servicio de inferencia contenerizado con prueba de carga",
+        "instructions": "**Objetivo:** desplegar localmente el modelo registrado en la unidad 1 como un servicio web contenerizado y demostrar con evidencia que cumple un objetivo de nivel de servicio.\n\n**Qué entregar:**\n\n1. **API con FastAPI** con rutas /salud y /v1/predicciones, contrato Pydantic con rangos y valores permitidos, versión del modelo en la respuesta y manejo de errores 422 y 503. Incluya al menos cuatro pruebas con TestClient.\n2. **Modelo portable:** exportación a ONNX, o justificación técnica de otro formato, con prueba automatizada de equivalencia numérica sobre al menos mil filas y la diferencia máxima absoluta reportada.\n3. **Imagen Docker multietapa** con usuario no privilegiado, .dockerignore, etiqueta con versión y commit y tamaño reportado; adjunte el resultado de un escaneo con Trivy y las acciones tomadas.\n4. **Prueba de carga con Locust** en al menos tres niveles de carga, con tabla de p50, p95, p99, solicitudes por segundo y tasa de error, y la gráfica de latencia frente a usuarios simulados.\n5. **Memoria técnica (máximo tres páginas):** patrón de inferencia elegido y su justificación, presupuesto de latencia, cálculo de réplicas con la ley de Little para un pico diez veces mayor que el tráfico normal y costo estimado por mil predicciones.\n\n**Objetivo de nivel de servicio de referencia:** p95 menor a 150 ms y tasa de error menor a 0,5 % con la carga esperada.\n\n**Formato:** repositorio actualizado y PDF de la memoria en el aula virtual, en la semana 8. El docente ejecutará docker build y docker run siguiendo el README; si el servicio no arranca, el criterio de empaquetado se califica con cero.",
+        "rubric": [
+          { "name": "API, contrato de entrada y pruebas", "points": 5 },
+          { "name": "Exportación portable y equivalencia numérica", "points": 3 },
+          { "name": "Imagen Docker segura y reproducible", "points": 4 },
+          { "name": "Prueba de carga y análisis de capacidad", "points": 5 },
+          { "name": "Memoria técnica y costo por predicción", "points": 3 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: servicio de modelos y rendimiento",
+        "questions": [
+          {
+            "prompt": "Una distribuidora necesita pronósticos de demanda por producto cada lunes para planificar sus compras semanales. ¿Qué patrón de inferencia es más adecuado?",
+            "options": [
+              "En línea síncrona detrás de una API con autoescalado",
+              "Por lotes programado, guardando resultados con fecha y versión del modelo",
+              "En flujo con una cola de eventos",
+              "En el borde, en los dispositivos de los vendedores"
+            ],
+            "correct": 1,
+            "explanation": "La predicción se requiere con periodicidad semanal y sobre todo el catálogo; un proceso por lotes es más simple, barato y auditable que una API en línea."
+          },
+          {
+            "prompt": "Un servicio recibe 150 solicitudes por segundo y cada una permanece en promedio 80 ms en el sistema. Según la ley de Little, ¿cuántas solicitudes simultáneas hay en promedio?",
+            "options": [
+              "1,9",
+              "12",
+              "120",
+              "187,5"
+            ],
+            "correct": 1,
+            "explanation": "L = λ × W = 150 × 0,08 = 12 solicitudes simultáneas; con trabajadores que atienden una a la vez se necesitan al menos 12, más un margen."
+          },
+          {
+            "prompt": "En entrenamiento, el saldo promedio se calculó con meses calendario cerrados; en producción, con los últimos 90 días móviles. El servicio no arroja errores. ¿Qué problema es este?",
+            "options": [
+              "Deriva de concepto causada por cambios del mercado",
+              "Sobreajuste del modelo a los datos de entrenamiento",
+              "Sesgo entre entrenamiento y servicio por implementaciones distintas de la característica",
+              "Fuga de información desde el conjunto de prueba"
+            ],
+            "correct": 2,
+            "explanation": "La misma característica se calcula de dos formas distintas y el modelo recibe otra distribución sin error visible; se evita con una sola implementación compartida."
+          },
+          {
+            "prompt": "¿Por qué es riesgoso cargar con pickle un archivo de modelo recibido de un proveedor externo sin verificarlo?",
+            "options": [
+              "Porque la deserialización puede ejecutar código arbitrario en el servidor",
+              "Porque pickle comprime mal los modelos grandes",
+              "Porque pickle solo funciona con modelos de PyTorch",
+              "Porque reduce la precisión de las probabilidades"
+            ],
+            "correct": 0,
+            "explanation": "pickle reconstruye objetos invocando funciones de Python; un archivo malicioso puede ejecutar comandos al cargarse. Conviene usar fuentes confiables, formatos como ONNX o skops y verificación de integridad."
+          },
+          {
+            "prompt": "Una prueba de carga muestra p50 de 35 ms, p99 de 1,8 s y uso de CPU de 97 % con 120 solicitudes por segundo. ¿Qué interpretación es la más correcta?",
+            "options": [
+              "El servicio está bien dimensionado porque la mediana es baja",
+              "El modelo debe reentrenarse porque su calidad cayó",
+              "La latencia alta se debe necesariamente a la red del cliente",
+              "El servicio opera cerca de la saturación y las colas inflan la latencia alta; requiere más capacidad u optimización"
+            ],
+            "correct": 3,
+            "explanation": "Con utilización cercana al 100 % el tiempo de espera crece de forma no lineal; la distancia entre p50 y p99 revela colas, por lo que se debe escalar u optimizar."
+          },
+          {
+            "prompt": "¿Cuál es la práctica correcta para manejar la contraseña de la base de datos de características en un servicio contenerizado?",
+            "options": [
+              "Escribirla en el Dockerfile como variable ENV",
+              "Inyectarla en tiempo de ejecución desde un gestor de secretos o el orquestador",
+              "Guardarla en un archivo config.py versionado en un repositorio privado",
+              "Codificarla en base64 dentro del código fuente"
+            ],
+            "correct": 1,
+            "explanation": "Los secretos no deben quedar en imágenes ni repositorios, porque persisten en capas e historial; se inyectan al ejecutar y se rotan periódicamente."
+          },
+          {
+            "prompt": "Una cuantización reduce la latencia p99 de 120 ms a 60 ms, mientras el AUC baja de 0,812 a 0,806. ¿Cómo debe tomarse la decisión?",
+            "options": [
+              "Aceptarla siempre, porque la latencia es prioritaria",
+              "Rechazarla siempre, porque nunca debe perderse calidad",
+              "Comparar el valor de la menor latencia con el costo esperado de los errores adicionales según la matriz de costos",
+              "Decidir según el tamaño del archivo resultante"
+            ],
+            "correct": 2,
+            "explanation": "Es un compromiso de negocio: se cuantifica el impacto de la caída de calidad en pérdidas esperadas y se compara con el beneficio de la menor latencia y del menor costo."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Automatización del ciclo de vida: CI/CD/CT, pruebas, orquestación y despliegue en la nube",
+      "description": "Al finalizar la unidad, el estudiante automatiza la integración, entrega y entrenamiento continuos de un modelo con pruebas de código, datos y comportamiento, orquesta pipelines de entrenamiento, lo despliega en Kubernetes con autoescalado y aplica estrategias de despliegue progresivo con criterios de reversión, considerando costos y la normativa peruana de datos personales.",
+      "topics": [
+        "Integración y entrega continuas para aprendizaje automático con GitHub Actions",
+        "Pruebas de sistemas de ML: datos, comportamiento del modelo, infraestructura y ML Test Score",
+        "Orquestación de pipelines y entrenamiento continuo con Prefect y Airflow",
+        "Kubernetes para inferencia: despliegues, sondas, recursos y autoescalado horizontal",
+        "Despliegue progresivo: sombra, canario, azul-verde y experimentos A/B",
+        "Infraestructura como código, FinOps y flujo transfronterizo de datos según la Ley 29733"
+      ],
+      "slides": [
+        {
+          "title": "De DevOps a MLOps: CI, CD y CT",
+          "bullets": [
+            "Integración continua: cada cambio se prueba automáticamente; en ML incluye datos y modelo, no solo código.",
+            "Entrega continua: el artefacto aprobado queda listo para desplegarse con una aprobación o de forma automática.",
+            "Entrenamiento continuo: el pipeline reentrena y valida ante datos nuevos o señales de deriva.",
+            "Humble y Farley (2010): si un proceso duele, hágalo con más frecuencia y automatícelo."
+          ],
+          "notes": "Recupere los niveles de madurez de la unidad 1: el nivel 1 introduce el entrenamiento continuo y el nivel 2 automatiza la integración y entrega del propio pipeline. Explique la diferencia entre entrega continua y despliegue continuo: en la primera, el paso a producción requiere una aprobación humana; en la segunda, ocurre automáticamente si todas las pruebas pasan. En sectores regulados, como el financiero supervisado por la SBS, suele preferirse la entrega continua con aprobación del dueño del modelo. La idea de Humble y Farley resume la filosofía: los despliegues infrecuentes son grandes, riesgosos y dolorosos; los frecuentes son pequeños, reversibles y rutinarios. Pregunte a la clase: ¿qué artefactos produce un pipeline de ML que no produce uno de software tradicional? Respuestas esperadas: conjuntos de datos versionados, métricas, modelos registrados, reportes de validación y tarjetas de modelo. Anuncie que en esta unidad construirán un flujo que, ante un cambio, prueba, entrena, evalúa, empaqueta y despliega de forma progresiva."
+        },
+        {
+          "title": "Métricas DORA aplicadas a equipos de ML",
+          "bullets": [
+            "Frecuencia de despliegue: cuántas veces por mes llega a producción un cambio de modelo o de servicio.",
+            "Tiempo de entrega del cambio: del commit a producción; en ML incluye validación y aprobación del negocio.",
+            "Tasa de fallos por cambio y tiempo de restauración: qué porcentaje provoca incidentes y cuánto tarda revertir.",
+            "Forsgren, Humble y Kim (2018): en equipos de alto desempeño, velocidad y estabilidad no se contraponen."
+          ],
+          "notes": "Las métricas DORA provienen del programa de investigación DevOps Research and Assessment, cuyos resultados se publicaron en el libro Accelerate. Su hallazgo central desafía la intuición: los equipos que despliegan con más frecuencia también tienen menos fallos y se recuperan más rápido, porque cada cambio es pequeño y está automatizado. Adapte las métricas a ML: el tiempo de entrega de un modelo incluye el entrenamiento, la validación y la aprobación del área de riesgos, que puede tomar semanas si la evidencia no se genera automáticamente. Pida a los estudiantes que estimen las cuatro métricas para la cooperativa del caso de la unidad 1: frecuencia anual, tiempo de entrega de meses, tasa de fallos desconocida y restauración imposible porque no había una versión anterior reproducible. Discuta la ley de Goodhart: cuando una medida se convierte en objetivo, deja de ser una buena medida; si se premia la frecuencia de despliegue, el equipo podría desplegar cambios triviales. Las métricas sirven para aprender, no para sancionar."
+        },
+        {
+          "title": "Anatomía de un flujo de GitHub Actions",
+          "bullets": [
+            "Disparadores: pull_request para validar, push a main para publicar y schedule para tareas periódicas.",
+            "Trabajos encadenados con needs: pruebas, entrenamiento de verificación, construcción de imagen y despliegue.",
+            "Secretos del repositorio para credenciales; entornos protegidos con revisores obligatorios antes de producción.",
+            "Caché de dependencias y artefactos para acelerar ejecuciones y conservar reportes."
+          ],
+          "notes": "Muestre el archivo YAML de la lectura y explique cada sección. Un flujo se activa por eventos; los trabajos se ejecutan en máquinas virtuales efímeras llamadas runners; cada trabajo tiene pasos que usan acciones reutilizables, como checkout o setup-python, o comandos de shell. Insista en que el flujo asociado a una solicitud de cambio debe ser rápido, idealmente menos de diez minutos, para no frenar al equipo: por eso se entrena con una muestra pequeña para verificar que el pipeline funciona, mientras el entrenamiento completo se ejecuta en el orquestador. Explique los entornos protegidos: GitHub permite exigir que una persona apruebe antes de que un trabajo despliegue a producción, lo que materializa la aprobación del dueño del modelo. Mencione alternativas equivalentes, como GitLab CI, Jenkins o los servicios de los proveedores de nube. Ejercicio en vivo: crear un flujo mínimo que ejecute pytest y observar cómo un cambio que rompe una prueba bloquea la fusión de la rama principal."
+        },
+        {
+          "title": "Pirámide de pruebas para sistemas de ML",
+          "bullets": [
+            "Base: pruebas unitarias de transformaciones y utilidades, rápidas y numerosas.",
+            "Pruebas de datos: esquema, rangos, nulos, unicidad y distribución frente a una referencia.",
+            "Pruebas de modelo: desempeño mínimo, comparación con el campeón, comportamiento esperado y equidad por subgrupos.",
+            "Pruebas de integración y servicio: contrato de la API, equivalencia ONNX y prueba de humo tras desplegar."
+          ],
+          "notes": "Adapte la pirámide clásica de pruebas de software al contexto de ML. Las pruebas unitarias ya se practicaron en la unidad 1. Las pruebas de datos verifican que la entrada cumple las expectativas antes de entrenar o predecir: si un día el campo de ingresos llega en miles de soles en lugar de soles, el modelo no fallará, pero sus predicciones serán absurdas. Las pruebas de modelo establecen compuertas de calidad: por ejemplo, el AUC en un conjunto de prueba congelado debe ser al menos 0,78, no puede caer más de 0,005 respecto del campeón y la brecha de tasa de aprobación entre subgrupos no debe superar cinco puntos porcentuales. Explique que estas compuertas se acuerdan con el negocio y se versionan como configuración. Las pruebas de servicio verifican el contrato y, tras el despliegue, una prueba de humo confirma que la nueva versión responde correctamente. Pregunte: ¿qué prueba habría detectado el error del caso de las boticas de esta unidad?"
+        },
+        {
+          "title": "Validación de datos con esquemas",
+          "bullets": [
+            "pandera o Great Expectations declaran tipos, rangos, valores permitidos y reglas entre columnas.",
+            "Valide en la ingesta, antes de entrenar y en la entrada del servicio, con el mismo esquema.",
+            "Use validación perezosa para reportar todos los errores juntos y decidir si bloquear o alertar.",
+            "Acuerde contratos de datos con los equipos que producen las fuentes: dueño, frecuencia y cambios anunciados."
+          ],
+          "notes": "Muestre el ejemplo con pandera: un DataFrameSchema con una columna edad entera entre 18 y 85, ingreso mensual positivo y departamento perteneciente a la lista oficial de departamentos del Perú. Al validar con lazy igual a verdadero, pandera reúne todas las violaciones en un reporte. Discuta la decisión operativa: algunas violaciones deben bloquear el pipeline, como una columna faltante; otras solo generar alerta, como un leve aumento de nulos. Introduzca el concepto de contrato de datos: un acuerdo explícito con el equipo dueño de la fuente sobre esquema, semántica, frecuencia y aviso previo de cambios. Ejemplo realista: cuando SUNAT actualiza las especificaciones de los comprobantes de pago electrónicos, cambian campos que usan muchos modelos de facturación y conciliación; quien depende de esos datos debe enterarse antes y no por un incidente. Pregunte a la clase qué reglas entre columnas tendría sentido validar en un conjunto de créditos, por ejemplo, que la fecha de desembolso sea anterior a la fecha del primer vencimiento."
+        },
+        {
+          "title": "Pruebas de comportamiento del modelo",
+          "bullets": [
+            "Ribeiro et al. (2020), CheckList: pruebas de funcionalidad mínima, de invariancia y de expectativa direccional.",
+            "Invariancia: cambiar el nombre o el distrito del solicitante no debería alterar la probabilidad de forma relevante.",
+            "Expectativa direccional: aumentar la deuda vencida no debería reducir el riesgo estimado.",
+            "Casos críticos fijos: un conjunto curado de ejemplos difíciles cuya salida se revisa en cada versión."
+          ],
+          "notes": "Las métricas agregadas pueden esconder comportamientos inaceptables. CheckList nació para modelos de lenguaje, pero sus tres tipos de pruebas se aplican a cualquier modelo. Muestre cómo escribir una prueba direccional con pytest, como la de la lectura: se toma una solicitud base, se crean copias con deuda vencida creciente y se verifica que la probabilidad de incumplimiento no disminuya. Vincule con las restricciones monotónicas que estudiaron en Aprendizaje Automático II: si el modelo se entrenó con ellas, la prueba verifica que se respetaron tras la exportación. Para la invariancia, explique que variables como el nombre no deberían ser entradas del modelo, pero la prueba protege contra variables sustitutas inesperadas. Pida a los estudiantes que propongan tres pruebas de comportamiento para un modelo de clasificación de reclamos de una empresa de telecomunicaciones: por ejemplo, que la categoría no cambie si el reclamo se escribe en mayúsculas. Concluya que estas pruebas convierten el conocimiento del dominio en verificaciones automáticas y repetibles."
+        },
+        {
+          "title": "ML Test Score: preparación para producción",
+          "bullets": [
+            "Breck et al. (2017) proponen 28 pruebas en cuatro áreas: datos, desarrollo del modelo, infraestructura y monitoreo.",
+            "Cada prueba vale medio punto si se ejecuta manualmente y un punto si está automatizada.",
+            "La puntuación final es el mínimo entre las cuatro áreas: la cadena es tan fuerte como su eslabón más débil.",
+            "Úsela como diagnóstico periódico y hoja de ruta, no como trámite de cumplimiento."
+          ],
+          "notes": "Presente la rúbrica de Google con ejemplos de cada área: en datos, que las expectativas sobre las características estén escritas en un esquema; en desarrollo del modelo, que se compare con una línea base simple; en infraestructura, que el entrenamiento sea reproducible y que el modelo pueda revertirse; en monitoreo, que se detecten cambios en las dependencias y diferencias entre entrenamiento y servicio. Explique la lógica del mínimo: un equipo con excelentes pruebas de modelo pero sin monitoreo obtiene la puntuación de su área más débil, porque un sistema sin monitoreo puede degradarse sin que nadie lo note. Los autores reportan que muchos equipos internos obtenían puntuaciones bajas al aplicar la rúbrica por primera vez, lo que la convierte en una herramienta de mejora más que de calificación. Ejercicio: en equipos, apliquen la rúbrica al proyecto que vienen construyendo desde la unidad 1 y prioricen tres pruebas para automatizar antes de la semana 12. Compartan los resultados en plenaria y discutan qué área resultó más débil."
+        },
+        {
+          "title": "Orquestación de pipelines: conceptos clave",
+          "bullets": [
+            "Un pipeline es un grafo dirigido acíclico de tareas con dependencias, programación y parámetros.",
+            "Idempotencia: ejecutar dos veces la misma tarea con los mismos insumos produce el mismo resultado, sin duplicados.",
+            "Reintentos con espera exponencial ante fallas transitorias; alertas ante fallas definitivas.",
+            "Relleno histórico: reejecutar el pipeline para fechas pasadas con la lógica actual, de forma controlada."
+          ],
+          "notes": "Conecte con el dvc.yaml de la unidad 1: DVC define un grafo dentro del repositorio, pero no programa ejecuciones ni gestiona reintentos o alertas. Un orquestador ejecuta pipelines en horarios o ante eventos, distribuye tareas entre trabajadores y registra el historial. Explique la idempotencia con un ejemplo: si la tarea de carga de predicciones por lotes falla a la mitad y se reintenta, no debe duplicar filas; por eso conviene reemplazar particiones completas por fecha en lugar de agregar registros. Explique los reintentos con espera exponencial: si la base de datos no responde, se reintenta a los 30 segundos, luego a los 60 y luego a los 120. Introduzca el relleno histórico, útil cuando se corrige un error y hay que regenerar las predicciones de semanas anteriores. Pregunte: ¿qué tareas de un pipeline de entrenamiento continuo deberían ser idempotentes y cuáles requieren cuidado especial, como el registro de un modelo nuevo o la notificación al área de negocio, que no deberían repetirse?"
+        },
+        {
+          "title": "Prefect y Airflow: comparación práctica",
+          "bullets": [
+            "Apache Airflow: estándar maduro, DAG en Python y amplio ecosistema de conectores, con mayor carga operativa.",
+            "Prefect: flujos y tareas como funciones decoradas, ejecución local sencilla y parámetros dinámicos.",
+            "Alternativas orientadas a ML: Kubeflow Pipelines, Metaflow, Dagster y ZenML.",
+            "Criterio de elección: tamaño del equipo, infraestructura existente, necesidad de Kubernetes y soporte disponible."
+          ],
+          "notes": "Muestre el mismo pipeline de entrenamiento continuo en Prefect: funciones decoradas con task para extraer datos, validar, entrenar, evaluar y registrar, y una función decorada con flow que las encadena con parámetros como la fecha de corte. Ejecute el flujo localmente y luego prográmelo. Compárelo con un DAG de Airflow, que expresa lo mismo con operadores y dependencias explícitas. Airflow, creado en Airbnb y hoy proyecto de la Apache Software Foundation, está muy difundido en empresas latinoamericanas con equipos de datos consolidados; Prefect y Dagster resultan más ligeros para equipos pequeños. Advierta contra la proliferación: mantener tres orquestadores distintos en una empresa multiplica el trabajo operativo. Pregunte a la clase cuál recomendarían a la cooperativa de la unidad 1, con una sola analista y apoyo limitado de TI, y cuál a una cadena de retail con un área de datos de veinte personas que ya usa Airflow para sus procesos de ingesta. La respuesta correcta privilegia la herramienta que el equipo puede operar y mantener."
+        },
+        {
+          "title": "Kubernetes para inferencia: objetos esenciales",
+          "bullets": [
+            "Pod: unidad mínima con uno o más contenedores; Deployment: mantiene réplicas y gestiona actualizaciones.",
+            "Service: dirección estable que balancea tráfico entre réplicas; Ingress: expone rutas HTTP al exterior.",
+            "Sonda de preparación: envía tráfico solo cuando el modelo terminó de cargar; sonda de vida: reinicia procesos colgados.",
+            "ConfigMap y Secret separan la configuración y las credenciales de la imagen."
+          ],
+          "notes": "Kubernetes es el orquestador de contenedores dominante, creado originalmente en Google. No hace falta dominarlo todo: para servir modelos basta comprender pocos objetos. Muestre el manifiesto del Deployment de la lectura: imagen etiquetada con versión, tres réplicas, sonda de preparación sobre la ruta de salud y solicitudes de recursos. Explique por qué la sonda de preparación es crítica en ML: un modelo grande puede tardar treinta segundos en cargar; si Kubernetes envía tráfico antes, las primeras solicitudes fallan. Explique la actualización progresiva por defecto: Kubernetes reemplaza réplicas de a pocas, de modo que nunca se pierde toda la capacidad. Para practicar sin costo, los estudiantes usarán kind o minikube, que crean un clúster local. Mencione que los proveedores ofrecen Kubernetes administrado, como Amazon EKS, Google GKE o Azure AKS. Pregunte: si una réplica nueva pasa la sonda de vida pero devuelve predicciones erróneas por un modelo mal cargado, ¿la detectaría Kubernetes? No: por eso se necesitan pruebas de humo y monitoreo de predicciones."
+        },
+        {
+          "title": "Recursos y autoescalado horizontal",
+          "bullets": [
+            "requests reserva CPU y memoria para planificar; limits fija el máximo y evita que un pod afecte a otros.",
+            "El autoescalador horizontal ajusta réplicas según una CPU objetivo, por ejemplo 70 %, o métricas personalizadas.",
+            "Réplicas deseadas = réplicas actuales × (métrica actual ÷ métrica objetivo), redondeado hacia arriba.",
+            "Considere el tiempo de arranque: si escalar tarda dos minutos, anticipe picos conocidos con escalado programado."
+          ],
+          "notes": "Calcule con la clase: hay cuatro réplicas con uso promedio de CPU de 105 % de lo solicitado y el objetivo es 70 %; las réplicas deseadas son cuatro por 105 entre 70, es decir, seis. Explique que el autoescalador reacciona con cierto retraso, porque mide durante una ventana y luego debe crear pods, descargar la imagen y cargar el modelo. Por eso una imagen pequeña y una carga rápida del modelo tienen impacto directo en la capacidad de respuesta ante picos. Para eventos previsibles, como el Cyber Wow o los días de pago de gratificaciones en julio y diciembre, conviene elevar el mínimo de réplicas con anticipación. Discuta la memoria: un modelo que ocupa 1,5 gigabytes, multiplicado por dos procesos trabajadores, exige al menos tres gigabytes por pod más margen; si el límite es menor, Kubernetes terminará el contenedor por falta de memoria. Pida que dimensionen requests y limits para el servicio de su tarea 2 con base en las mediciones de su prueba de carga."
+        },
+        {
+          "title": "Despliegue en sombra y canario",
+          "bullets": [
+            "Sombra: la nueva versión recibe una copia del tráfico real, pero sus respuestas no se usan; se comparan fuera de línea.",
+            "Canario: un pequeño porcentaje del tráfico, por ejemplo 5 %, va a la nueva versión con decisiones reales.",
+            "Avance escalonado de 5 %, 25 %, 50 % y 100 %, revisando métricas de salud y de negocio entre pasos.",
+            "Criterios de reversión automática definidos antes: errores, latencia, distribución de puntajes o tasa de aprobación."
+          ],
+          "notes": "El despliegue en sombra es especialmente valioso en ML porque permite medir, con tráfico real y sin riesgo para el cliente, cuánto difieren las predicciones del retador respecto del campeón: si la tasa de aprobación simulada pasa de 58 % a 71 %, algo merece investigarse antes de exponer a clientes. Su costo es duplicar el cómputo durante la prueba. El canario sí afecta decisiones reales, pero limita el impacto a una fracción. Explique que los criterios de reversión se escriben antes del despliegue, por ejemplo: revertir si la tasa de error supera 1 %, si el p99 supera 300 ms o si la tasa de aprobación difiere en más de cinco puntos de la del campeón durante treinta minutos. Herramientas como Argo Rollouts o Flagger automatizan estos pasos en Kubernetes. Pregunte a la clase: en un modelo de crédito cuyas etiquetas de incumplimiento llegan meses después, ¿qué métricas pueden usarse durante el canario? Respuesta: distribución de puntajes, tasa de aprobación, estabilidad de características y métricas operativas."
+        },
+        {
+          "title": "Azul-verde, reversión y experimentos A/B",
+          "bullets": [
+            "Azul-verde: dos entornos completos; el tráfico cambia de golpe y la reversión es inmediata.",
+            "Experimento A/B: asignación aleatoria para medir el efecto causal del nuevo modelo sobre una métrica de negocio.",
+            "Tamaño aproximado por grupo para proporciones: n ≈ 16 · p(1 − p) / δ², con 5 % de significancia y 80 % de potencia.",
+            "Kohavi, Tang y Xu (2020): defina la métrica principal y las de resguardo antes de empezar."
+          ],
+          "notes": "Distinga objetivos: el canario busca detectar fallas con poco riesgo; el experimento A/B busca medir si el nuevo modelo genera más valor. Calcule con la clase: si la tasa de conversión de una recomendación es 5 % y se quiere detectar una mejora absoluta de medio punto, n es aproximadamente 16 por 0,05 por 0,95 entre 0,005 al cuadrado, es decir, unas 30 400 sesiones por grupo. Esto muestra que efectos pequeños requieren mucho tráfico y tiempo, algo que muchas empresas medianas del Perú no tienen; en esos casos conviene buscar métricas más sensibles o aceptar efectos mínimos detectables mayores. Advierta sobre el error de revisar resultados a diario y detener el experimento cuando parece significativo, lo que infla los falsos positivos. Las métricas de resguardo, como reclamos o latencia, evitan aprobar un modelo que mejora ventas a costa de la experiencia del cliente. En crédito, los experimentos aleatorios plantean dilemas éticos y regulatorios que se profundizarán en Ética y Gobernanza de la IA."
+        },
+        {
+          "title": "Infraestructura como código y FinOps para ML",
+          "bullets": [
+            "Terraform u OpenTofu declaran redes, clústeres, almacenamiento y permisos en archivos versionados y revisables.",
+            "Entornos equivalentes de desarrollo, pruebas y producción reducen sorpresas al desplegar.",
+            "FinOps: etiquetar recursos por proyecto, usar instancias interrumpibles para entrenar y apagar entornos ociosos.",
+            "Indicador clave: costo mensual por modelo y por mil predicciones, revisado con el dueño del negocio."
+          ],
+          "notes": "La infraestructura creada a mano en la consola del proveedor es difícil de auditar y de reproducir. Con infraestructura como código, un cambio en el clúster pasa por revisión igual que un cambio en el modelo. Muestre un fragmento conceptual de Terraform con un recurso de almacenamiento y un clúster, y explique los comandos plan y apply: plan muestra qué cambiará antes de aplicarlo. Sobre costos, cuente situaciones típicas: una instancia con GPU que se dejó encendida un fin de semana puede costar más que todo el servicio de inferencia del mes. Las instancias interrumpibles, llamadas spot o preemptibles, cuestan bastante menos y son adecuadas para entrenamientos que guardan puntos de control y pueden reanudarse. Presente FinOps como práctica colaborativa entre finanzas, ingeniería y negocio. Pida a los estudiantes estimar el costo mensual de su arquitectura con la calculadora del proveedor que elijan y comparar dos alternativas, por ejemplo, Kubernetes administrado frente a un servicio de contenedores sin servidor que cobra por solicitud."
+        },
+        {
+          "title": "Región de despliegue, datos personales y Ley 29733",
+          "bullets": [
+            "Elegir región implica latencia, costo, disponibilidad de servicios y condiciones legales del tratamiento de datos.",
+            "Procesar datos personales fuera del Perú es flujo transfronterizo: el destino debe garantizar protección adecuada.",
+            "Los bancos de datos personales se inscriben ante la Autoridad Nacional de Protección de Datos Personales y requieren medidas de seguridad.",
+            "Minimización: envíe al servicio solo las variables necesarias y seudonimice identificadores en los registros."
+          ],
+          "notes": "Muchas empresas peruanas despliegan sus servicios en regiones de nube ubicadas fuera del país, como São Paulo, Santiago o Norteamérica, lo que añade decenas de milisegundos de latencia desde Lima. Esta decisión tiene implicancias técnicas y legales. La Ley 29733 y su reglamento vigente, aprobado en 2024, regulan el flujo transfronterizo de datos personales: el responsable debe asegurar que el destinatario ofrezca un nivel de protección adecuado o garantías equivalentes. Además, sectores como el financiero tienen exigencias adicionales de la SBS sobre subcontratación y servicios en la nube. Insista en el principio de minimización: si el modelo no necesita el nombre ni el DNI, el servicio no debe recibirlos ni registrarlos. Pida a los estudiantes que, para su proyecto, completen una ficha de decisión de región con latencia medida desde Lima, costo, servicios disponibles y análisis del tratamiento de datos personales. Cierre la unidad recordando la entrega de la tarea 3 y el cuestionario 3, y anunciando la conformación definitiva de equipos del proyecto integrador."
+        }
+      ],
+      "reading": {
+        "title": "Automatizar la confianza: CI/CD/CT y despliegue progresivo",
+        "minutes": 40,
+        "content": "## Por qué automatizar\n\nUn despliegue manual depende de la memoria y del cuidado de una persona en un momento determinado. Humble y Farley (2010) mostraron que la entrega confiable de software se logra con un pipeline de despliegue: una secuencia automatizada que somete cada cambio a pruebas crecientes y produce un artefacto listo para producción. En aprendizaje automático el pipeline debe vigilar tres fuentes de cambio, código, datos y modelo; por eso se habla de integración continua (CI), entrega continua (CD) y entrenamiento continuo (CT).\n\n## Compuertas de calidad en la integración continua\n\nCada solicitud de cambio activa un flujo que verifica que nada se rompió. El siguiente ejemplo de GitHub Actions ejecuta pruebas unitarias, valida una muestra de datos y comprueba que el modelo candidato supera umbrales acordados antes de construir la imagen:\n\n```yaml\nname: ci-scoring\non:\n  pull_request:\n    branches: [main]\njobs:\n  pruebas:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: '3.12'\n      - run: pip install -r requirements.lock\n      - run: pytest tests/ -q\n      - run: python src/validar_datos.py data/muestra_referencia.parquet\n      - run: python src/compuerta_modelo.py --auc-min 0.78 --max-caida 0.005 --max-brecha 0.05\n  imagen:\n    needs: pruebas\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: docker build -t scoring:${{ github.sha }} .\n```\n\nEl script compuerta_modelo.py codifica tres reglas: AUC mínimo de 0,78 en un conjunto de prueba congelado, caída máxima de 0,005 respecto del campeón y brecha máxima de cinco puntos porcentuales en la tasa de aprobación entre subgrupos. Son acuerdos con el negocio y se versionan como configuración.\n\n## Pruebas que reflejan el dominio\n\nBreck et al. (2017) proponen el ML Test Score: 28 pruebas agrupadas en datos, desarrollo del modelo, infraestructura y monitoreo, cuya puntuación final es el mínimo de las cuatro áreas. Ribeiro et al. (2020) añaden pruebas de comportamiento: invariancia ante cambios irrelevantes y expectativas direccionales. Por ejemplo:\n\n```python\ndef test_mas_deuda_no_reduce_riesgo(modelo, solicitud_base):\n    probs = []\n    for deuda in [0, 1_000, 5_000, 20_000]:\n        s = {**solicitud_base, 'deuda_vencida': deuda}\n        probs.append(modelo.predecir(s))\n    assert all(a <= b + 1e-6 for a, b in zip(probs, probs[1:]))\n```\n\n## Entrenamiento continuo orquestado\n\nEl entrenamiento completo no corre en el flujo de CI, que debe ser rápido, sino en un orquestador como Prefect o Airflow. El pipeline extrae el corte de datos, lo valida, entrena, evalúa contra el campeón, registra el candidato en MLflow y notifica al dueño del modelo. Sus tareas deben ser idempotentes, para que un reintento no duplique resultados. El disparador puede ser un calendario, la llegada de nuevas etiquetas o una alerta de deriva.\n\n## Despliegue en Kubernetes\n\n```yaml\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: scoring\nspec:\n  replicas: 3\n  selector:\n    matchLabels: {app: scoring}\n  template:\n    metadata:\n      labels: {app: scoring, version: v3.2.0}\n    spec:\n      containers:\n        - name: api\n          image: registro.interno/scoring:3.2.0-a1b2c3d\n          ports: [{containerPort: 8000}]\n          readinessProbe:\n            httpGet: {path: /salud, port: 8000}\n          resources:\n            requests: {cpu: 500m, memory: 1Gi}\n            limits: {memory: 2Gi}\n```\n\nLa sonda de preparación impide enviar tráfico a una réplica que aún carga el modelo. Las solicitudes de recursos permiten al planificador ubicar los pods y al autoescalador horizontal calcular las réplicas deseadas como réplicas actuales × (uso actual ÷ uso objetivo).\n\n## Despliegue progresivo con criterios previos\n\nUna versión aprobada no recibe todo el tráfico de inmediato. Primero corre en sombra, comparando sus predicciones con las del campeón; luego como canario con 5 % del tráfico, y avanza a 25 %, 50 % y 100 % si se cumplen criterios escritos de antemano: tasa de error menor a 1 %, p99 por debajo del objetivo, distribución de puntajes estable y tasa de aprobación dentro de cinco puntos de la del campeón. Si un criterio falla, la reversión es automática. Cuando el objetivo es medir valor de negocio, se diseña un experimento A/B con tamaño de muestra calculado previamente (Kohavi et al., 2020).\n\n## Costos y cumplimiento\n\nLa infraestructura se declara con Terraform u OpenTofu, se etiqueta por proyecto y su costo mensual se revisa con el negocio. La elección de región considera latencia y servicios disponibles, pero también la Ley 29733: si los datos personales se procesan fuera del Perú, hay flujo transfronterizo y deben asegurarse garantías adecuadas de protección."
+      },
+      "case": {
+        "title": "Caso: El viernes en que el pronóstico dejó sin stock a Boticas del Pueblo",
+        "content": "## Contexto\n\n**Boticas del Pueblo** (nombre ficticio) es una cadena peruana con 420 locales en 19 regiones y un catálogo de 6 500 productos entre medicamentos, cuidado personal y productos para bebés. Desde 2024 usa un modelo de pronóstico de demanda semanal por producto y local, basado en LightGBM, que alimenta la reposición automática desde su centro de distribución en Lurín.\n\nEl proceso actual es el siguiente: un científico de datos reentrena el modelo cada mes en su computadora, copia el archivo del modelo a un servidor por SFTP y reinicia manualmente el proceso por lotes que genera los pronósticos cada domingo. No existen pruebas automatizadas ni compuertas de calidad; la validación consiste en revisar el error porcentual absoluto medio (MAPE) global en un cuaderno.\n\n## El incidente\n\nEn mayo de 2026, para incorporar el efecto del friaje y de las campañas de salud, el equipo agregó tres variables: temperatura mínima pronosticada, una bandera de campaña y el rezago de ventas de cuatro semanas. El nuevo modelo redujo el MAPE de validación de 31 % a 26 %. Un viernes por la noche, el científico de datos desplegó la nueva versión antes de salir de vacaciones.\n\nEl pipeline de producción, sin embargo, construía la matriz de entrada con el orden de columnas anterior y añadía las variables nuevas al final. El modelo recibió valores de temperatura en la posición del precio y la bandera de campaña en la del día festivo. No hubo errores: el proceso terminó con éxito. Durante dos semanas, los pronósticos de antigripales, paracetamol y sales de rehidratación oral en Puno, Cusco y Arequipa fueron entre 40 % y 60 % inferiores a la demanda real, en plena temporada de heladas. La tasa de quiebre de stock en esas regiones subió de 4 % a 17 %, muchos clientes compraron en la competencia y el área comercial estima ventas perdidas por 1,9 millones de soles. Hubo además quejas en redes sociales por falta de medicamentos básicos.\n\n## El dilema\n\nLa gerencia de operaciones propone congelar los cambios de modelo durante seis meses. La gerente de analítica, Rosa Ccahuana, propone en cambio un programa de tres meses para construir un pipeline de CI/CD con pruebas de datos y de modelo, despliegue en sombra durante dos semanas para cada nueva versión y canario por regiones con criterios de reversión automáticos. El equipo de analítica tiene cuatro personas; TI ofrece un clúster de Kubernetes administrado que ya usa para el comercio electrónico. La gerencia general debe decidir antes del inicio de la campaña de invierno.",
+        "questions": [
+          "¿Qué pruebas concretas de la pirámide de pruebas para ML habrían detectado el error antes de afectar la reposición? Escriba al menos dos en pseudocódigo.",
+          "Estime las métricas DORA aproximadas del proceso actual. ¿Qué revelan sobre la propuesta de congelar los cambios durante seis meses?",
+          "¿Cómo diseñaría un despliegue en sombra y un canario por regiones para un modelo de pronóstico por lotes? ¿Qué criterios de reversión fijaría?",
+          "¿Por qué la mejora del MAPE global no bastaba para aprobar el modelo? Proponga métricas por segmento que consideren el costo del quiebre de stock.",
+          "Elabore una recomendación para la gerencia general que equilibre riesgo, plazo de la campaña de invierno y capacidad del equipo."
+        ]
+      },
+      "assignment": {
+        "title": "Pipeline de CI/CD/CT con compuertas de calidad y despliegue canario",
+        "instructions": "**Objetivo:** automatizar el ciclo de vida del modelo de las unidades anteriores, desde el cambio de código hasta un despliegue progresivo con reversión.\n\n**Qué entregar:**\n\n1. **Integración continua** en GitHub Actions que, ante cada solicitud de cambio, ejecute pruebas unitarias, validación de datos con pandera o Great Expectations y una compuerta de calidad del modelo con umbrales versionados en configuración; ante la fusión en main, debe construir y publicar la imagen etiquetada con el commit.\n2. **Pruebas de comportamiento:** al menos una prueba de invariancia, una de expectativa direccional y un conjunto de cinco casos críticos fijos, justificados desde el dominio.\n3. **Entrenamiento continuo** en Prefect o Airflow, con tareas idempotentes de extracción, validación, entrenamiento, evaluación frente al campeón y registro en MLflow; incluya evidencia de una ejecución exitosa y de un reintento ante una falla simulada.\n4. **Despliegue en Kubernetes local** (kind o minikube) con Deployment, Service, sonda de preparación, requests, limits y autoescalador horizontal; demuestre un canario con dos versiones y una reversión.\n5. **Autoevaluación con el ML Test Score** y plan de mejora priorizado.\n6. **Memoria técnica (máximo cuatro páginas)** con diagrama del pipeline, criterios de promoción y reversión, costo mensual estimado en la nube y ficha de decisión de región conforme a la Ley 29733.\n\n**Formato:** repositorio actualizado y video de máximo seis minutos que muestre el flujo en ejecución, entregados en la semana 12. Equipos de dos o tres estudiantes; cada integrante debe tener commits identificables.",
+        "rubric": [
+          { "name": "Integración continua y compuertas de calidad", "points": 5 },
+          { "name": "Pruebas de datos y de comportamiento", "points": 4 },
+          { "name": "Orquestación del entrenamiento continuo", "points": 4 },
+          { "name": "Despliegue en Kubernetes, canario y reversión", "points": 4 },
+          { "name": "Memoria técnica, costos y cumplimiento", "points": 3 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: automatización y despliegue progresivo",
+        "questions": [
+          {
+            "prompt": "Un equipo quiere medir con tráfico real cuánto cambiaría la tasa de aprobación con un nuevo modelo de crédito, sin afectar a ningún cliente. ¿Qué estrategia corresponde?",
+            "options": [
+              "Canario con 5 % del tráfico",
+              "Despliegue en sombra con copia del tráfico",
+              "Azul-verde con cambio inmediato",
+              "Experimento A/B con asignación aleatoria"
+            ],
+            "correct": 1,
+            "explanation": "En sombra, el retador procesa una copia del tráfico real y sus respuestas no se usan para decidir, por lo que se comparan predicciones sin impacto en los clientes."
+          },
+          {
+            "prompt": "Hay 4 réplicas con uso promedio de CPU de 105 % de lo solicitado y el objetivo del autoescalador es 70 %. ¿Cuántas réplicas deseadas calcula?",
+            "options": [
+              "4",
+              "5",
+              "6",
+              "8"
+            ],
+            "correct": 2,
+            "explanation": "Réplicas deseadas = 4 × (105 ÷ 70) = 6; el autoescalador horizontal redondea el resultado hacia arriba."
+          },
+          {
+            "prompt": "Un equipo obtiene en el ML Test Score: datos 4, desarrollo del modelo 5, infraestructura 3,5 y monitoreo 0,5. ¿Cuál es su puntuación final y qué implica?",
+            "options": [
+              "3,25, el promedio de las cuatro áreas",
+              "13, la suma de todas las áreas",
+              "5, la mejor área, que refleja su fortaleza",
+              "0,5, porque la puntuación es el mínimo y el monitoreo es la prioridad"
+            ],
+            "correct": 3,
+            "explanation": "Breck et al. (2017) definen la puntuación final como el mínimo entre áreas; un sistema sin monitoreo puede degradarse sin que nadie lo note."
+          },
+          {
+            "prompt": "Una tarea de carga de predicciones por lotes falla a la mitad y el orquestador la reintenta. ¿Qué diseño evita registros duplicados?",
+            "options": [
+              "Reemplazar completa la partición de la fecha procesada, haciendo la tarea idempotente",
+              "Agregar filas sin restricciones para no perder datos",
+              "Desactivar los reintentos automáticos del orquestador",
+              "Ejecutar la tarea solo de forma manual"
+            ],
+            "correct": 0,
+            "explanation": "Una tarea idempotente produce el mismo resultado si se ejecuta varias veces; sobrescribir la partición completa evita duplicados ante reintentos."
+          },
+          {
+            "prompt": "¿Cuál es una prueba de expectativa direccional adecuada para un modelo de riesgo crediticio?",
+            "options": [
+              "Verificar que el AUC sea mayor que 0,78",
+              "Verificar que aumentar la deuda vencida no reduzca la probabilidad de incumplimiento estimada",
+              "Verificar que el modelo cargue en menos de 10 segundos",
+              "Verificar que no haya valores nulos en la edad"
+            ],
+            "correct": 1,
+            "explanation": "Las pruebas direccionales de Ribeiro et al. (2020) verifican que un cambio en la entrada mueva la salida en el sentido que dicta el conocimiento del dominio."
+          },
+          {
+            "prompt": "Para detectar con 5 % de significancia y 80 % de potencia un aumento absoluto de 1 punto sobre una conversión base de 10 %, ¿cuántas observaciones aproximadas por grupo se requieren con n ≈ 16·p(1−p)/δ²?",
+            "options": [
+              "144 000",
+              "1 440",
+              "900",
+              "14 400"
+            ],
+            "correct": 3,
+            "explanation": "n ≈ 16 × 0,10 × 0,90 ÷ 0,01² = 14 400 por grupo; los efectos pequeños exigen muestras grandes y tiempo suficiente de experimento."
+          },
+          {
+            "prompt": "Una empresa peruana entrena su modelo con datos personales de clientes en una región de nube ubicada en otro país. ¿Qué implica según la Ley 29733?",
+            "options": [
+              "Nada, porque la ley solo aplica a datos en papel",
+              "Que debe obtener autorización de INDECOPI para cada entrenamiento",
+              "Que es un flujo transfronterizo que requiere garantías adecuadas de protección en el destino",
+              "Que debe eliminar los datos al terminar cada entrenamiento"
+            ],
+            "correct": 2,
+            "explanation": "El tratamiento fuera del país constituye flujo transfronterizo; el responsable debe asegurar un nivel adecuado de protección o garantías equivalentes, además de las medidas de seguridad."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Monitoreo, deriva, gobernanza y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante instrumenta un servicio de ML con métricas, registros y tableros, define objetivos de nivel de servicio, detecta deriva de datos y de concepto con pruebas estadísticas, establece políticas de reentrenamiento y respuesta a incidentes y gobierna el ciclo de vida del modelo, integrando todo en un sistema de punta a punta sustentado ante jurado.",
+      "topics": [
+        "Observabilidad de servicios de ML: señales doradas, SLI, SLO y presupuesto de error",
+        "Instrumentación con Prometheus y Grafana y registro estructurado de predicciones",
+        "Deriva de datos y de concepto: PSI, Kolmogorov-Smirnov, etiquetas tardías y métricas sustitutas",
+        "Políticas de reentrenamiento, gestión de incidentes y runbooks",
+        "Gobernanza del ciclo de vida, Ley 29733, Ley 31814 y particularidades de LLMOps",
+        "Proyecto integrador: sistema de aprendizaje automático en operación y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Por qué los modelos se degradan en silencio",
+          "bullets": [
+            "Un servicio puede responder sin errores y con latencia perfecta mientras sus predicciones empeoran día a día.",
+            "El mundo cambia: nuevos productos, regulaciones, crisis, campañas y hábitos de los clientes.",
+            "Ejemplo histórico: la pandemia de 2020 invalidó en semanas modelos de demanda, fraude y riesgo crediticio.",
+            "Monitorear un modelo exige vigilar tres capas: servicio, datos y calidad de las predicciones."
+          ],
+          "notes": "Comience con la pregunta: ¿cómo sabrían hoy si el modelo que desplegaron en la unidad 3 está tomando malas decisiones? La mayoría responderá que lo notarían por los errores, pero en ML los errores más graves no generan excepciones. Recuerde el inicio de la pandemia en 2020: en el Perú, el aislamiento social obligatorio cambió radicalmente los patrones de consumo, pagos y movilidad; los modelos de demanda de supermercados pronosticaban ventas normales de productos que se agotaban en horas, y los modelos de fraude marcaban como sospechosas compras en línea legítimas de personas que nunca habían comprado por internet. Además, las reprogramaciones de créditos de ese período alteraron los indicadores de mora que usan los modelos de riesgo. Presente las tres capas de monitoreo: la del servicio, como en cualquier software; la de los datos de entrada; y la de la calidad de las predicciones, que depende de cuándo llegan las etiquetas. Pregunte a la clase cuál de estas capas es la más difícil de vigilar y por qué."
+        },
+        {
+          "title": "Señales doradas y métricas propias de ML",
+          "bullets": [
+            "Beyer et al. (2016): latencia, tráfico, errores y saturación son las cuatro señales doradas de todo servicio.",
+            "Métricas de datos: nulos, valores fuera de rango, categorías nuevas y distribución de cada característica.",
+            "Métricas de predicción: distribución de puntajes, proporción de decisiones positivas y confianza media.",
+            "Métricas de negocio: aprobación, mora, ventas o quiebres de stock asociados a las decisiones del modelo."
+          ],
+          "notes": "Las cuatro señales doradas provienen del libro de ingeniería de confiabilidad de sitios de Google y son el punto de partida de cualquier monitoreo de servicios. En ML se agregan capas: las métricas de datos detectan problemas en las entradas, como que un campo empiece a llegar vacío porque otro sistema cambió su formato; las métricas de predicción detectan cambios en la salida aun sin etiquetas; las métricas de negocio conectan el modelo con el valor que justifica su existencia. Ejemplo: si la tasa de aprobación de un modelo de crédito pasa de 58 % a 74 % en una semana sin cambio de política, algo ocurre, sea en los datos, en el modelo o en el tipo de solicitantes. Proponga un ejercicio: en equipos, diseñen un tablero de una sola pantalla con no más de ocho indicadores para el servicio de su proyecto, ordenados de lo operativo a lo de negocio. Discuta cuáles de esos indicadores deberían generar una alerta inmediata y cuáles solo una revisión semanal del equipo."
+        },
+        {
+          "title": "SLI, SLO y presupuesto de error en inferencia",
+          "bullets": [
+            "SLI: indicador medido, por ejemplo, proporción de solicitudes válidas respondidas en menos de 300 ms.",
+            "SLO: objetivo interno sobre el SLI en una ventana, por ejemplo, 99,5 % en 28 días.",
+            "Presupuesto de error: 0,5 % de 672 horas equivale a unas 3,4 horas de incumplimiento tolerado.",
+            "Si el presupuesto se agota, se pausan los lanzamientos y se prioriza la confiabilidad."
+          ],
+          "notes": "Explique la jerarquía: el indicador de nivel de servicio mide; el objetivo fija la meta interna; el acuerdo de nivel de servicio, SLA, es el compromiso contractual con un cliente, normalmente menos exigente que el objetivo interno para dejar margen. Calcule el presupuesto: 28 días por 24 horas son 672 horas; el 0,5 % equivale a 3,36 horas. El presupuesto de error convierte la confiabilidad en una decisión de negocio: mientras quede presupuesto, el equipo puede lanzar cambios con libertad; si se agota, se congela la incorporación de funcionalidades y se invierte en estabilidad. Proponga extender la idea a la calidad del modelo: un objetivo de frescura, como que el modelo vigente no pase más de 90 días sin revalidación, o un objetivo de calidad de datos, como que el 99 % de las solicitudes supere la validación de esquema. Pregunte a la clase: ¿qué SLO tendría sentido para el pronóstico por lotes de las boticas de la unidad 3? Por ejemplo, que el pronóstico esté disponible antes de las seis de la mañana del lunes en el 99 % de las semanas."
+        },
+        {
+          "title": "Instrumentación con Prometheus y Grafana",
+          "bullets": [
+            "prometheus_client expone contadores, medidores e histogramas en la ruta /metrics del servicio.",
+            "Use histogramas para latencia y puntajes: permiten calcular percentiles agregados entre réplicas.",
+            "PromQL: histogram_quantile(0.99, sum(rate(latencia_bucket[5m])) by (le)) estima el p99.",
+            "Grafana construye tableros y alertas; Alertmanager agrupa y enruta las notificaciones."
+          ],
+          "notes": "Muestre en vivo cómo agregar a la API de FastAPI un histograma de latencia, un contador de solicitudes por código de respuesta y un histograma de la probabilidad predicha. Prometheus recolecta periódicamente estas métricas de cada réplica y las almacena como series de tiempo. Explique por qué no se deben promediar percentiles calculados en cada réplica: el promedio de percentiles no es el percentil del conjunto; los histogramas con cubetas compartidas sí permiten agregar correctamente. Recorra la consulta PromQL del p99: rate calcula la tasa por segundo de cada cubeta en cinco minutos, sum agrega entre réplicas conservando la etiqueta le, que es el límite de la cubeta, e histogram_quantile estima el percentil. Advierta sobre la cardinalidad: no use como etiqueta el identificador del cliente ni el DNI, porque crearía millones de series y, además, expondría datos personales. Pida a cada equipo construir en Grafana un tablero con las señales doradas y la distribución de puntajes de su servicio, y configurar una alerta de latencia con umbral justificado."
+        },
+        {
+          "title": "Registro estructurado de predicciones",
+          "bullets": [
+            "Registre en JSON: marca de tiempo, identificador de solicitud, versión del modelo, características, puntaje y decisión.",
+            "Estos registros permiten auditar decisiones, calcular deriva y unir predicciones con etiquetas futuras.",
+            "Seudonimice identificadores, excluya datos innecesarios y defina plazos de retención conforme a la Ley 29733.",
+            "Envíe los registros a un almacén analítico, no a archivos locales que se pierden al reiniciar el contenedor."
+          ],
+          "notes": "El registro de predicciones es la materia prima del monitoreo de ML y de la gobernanza. Sin él no se puede calcular deriva, ni medir el desempeño real cuando lleguen las etiquetas, ni responder a un reclamo. Muestre un ejemplo de registro en JSON con los campos indicados y explique cada uno. El identificador de solicitud permite unir la predicción con el resultado observado meses después, por ejemplo, si el crédito cayó en mora. La versión del modelo permite atribuir el desempeño a cada versión. Discuta el equilibrio con la privacidad: registrar todas las características puede convertir el almacén de registros en un banco de datos personales sensible, que debe protegerse e inscribirse; por eso se seudonimiza el identificador con una función hash con sal secreta y se define cuánto tiempo se conservan los datos. Pregunte a la clase: si un titular ejerce su derecho de cancelación, ¿cómo afecta a los registros de predicciones y a los conjuntos de reentrenamiento? Es una pregunta abierta que conecta con Ética y Gobernanza de la IA."
+        },
+        {
+          "title": "Tipos de deriva",
+          "bullets": [
+            "Deriva de covariables: cambia P(X), la distribución de las entradas; por ejemplo, más trabajadores independientes.",
+            "Deriva de etiquetas o a priori: cambia P(Y); por ejemplo, la mora general sube por una recesión.",
+            "Deriva de concepto: cambia P(Y|X); la misma combinación de variables ahora implica otro resultado.",
+            "Puede ser súbita, gradual, incremental o recurrente, como la estacionalidad de campañas y heladas."
+          ],
+          "notes": "Formalice con la notación de probabilidad que los estudiantes conocen de Estadística y Probabilidad. La deriva de covariables no necesariamente daña el modelo si la relación entre entradas y salida se mantiene y el modelo generaliza bien en la nueva región del espacio, pero suele ser una señal de alerta. La deriva de concepto sí lo daña, porque la regla aprendida deja de ser válida: por ejemplo, si una reforma facilita trasladar deudas entre entidades, un cliente con muchas consultas en la central de riesgos ya no indica necesidad apremiante de crédito, sino comparación de ofertas. Gama et al. (2014) clasifican la deriva según su dinámica: súbita, como un cambio regulatorio; gradual, cuando conviven conceptos antiguos y nuevos; incremental; y recurrente, como la estacionalidad. Pida ejemplos peruanos de cada tipo: El Niño costero de 2017 como deriva súbita en modelos de demanda del norte, la digitalización progresiva de los pagos como deriva gradual y la campaña escolar como deriva recurrente."
+        },
+        {
+          "title": "Índice de estabilidad poblacional (PSI)",
+          "bullets": [
+            "PSI = Σ (aᵢ − eᵢ) · ln(aᵢ / eᵢ), con eᵢ y aᵢ proporciones de referencia y actuales en cada intervalo.",
+            "Intervalos por deciles de la referencia; reemplace proporciones nulas por un valor pequeño para evitar logaritmos infinitos.",
+            "Convención de la industria crediticia: menor a 0,10 estable; de 0,10 a 0,25 moderado; mayor a 0,25 significativo.",
+            "Calcule el PSI del puntaje y de cada característica, priorizando las variables más importantes del modelo."
+          ],
+          "notes": "Resuelva un ejemplo a mano con cuatro intervalos para que la fórmula cobre sentido. Supongamos proporciones de referencia de 25 % en cada intervalo y proporciones actuales de 10 %, 20 %, 30 % y 40 %. El primer término es menos 0,15 por el logaritmo natural de 0,4, es decir, menos 0,15 por menos 0,916, lo que da 0,137. Calculen los demás en clase: 0,011; 0,009 y 0,071. El PSI total es aproximadamente 0,23, deriva moderada cercana a significativa. Explique que el PSI es simétrico y equivale a la suma de las dos divergencias de Kullback-Leibler entre ambas distribuciones. Advierta que los umbrales son convenciones del sector de crédito, no leyes estadísticas, y que dependen del número de intervalos y del tamaño de la muestra. Insista en vigilar primero las variables más importantes según SHAP o importancia por permutación, porque la deriva en una variable irrelevante apenas afecta las predicciones. Muestre la función en Python de la lectura y pídales aplicarla a los datos de producción simulados de su proyecto."
+        },
+        {
+          "title": "Pruebas estadísticas de deriva y sus trampas",
+          "bullets": [
+            "Kolmogorov-Smirnov para variables continuas, chi-cuadrado para categóricas y Jensen-Shannon como distancia acotada.",
+            "Con muestras grandes, diferencias triviales resultan significativas: combine el valor p con el tamaño del efecto.",
+            "Vigilar muchas variables implica múltiples comparaciones: corrija con Bonferroni o controle la tasa de falsos descubrimientos.",
+            "Rabanser, Günnemann y Lipton (2019) sugieren reducir dimensión y probar sobre representaciones o puntajes."
+          ],
+          "notes": "Muestre el uso de ks_2samp de SciPy: el estadístico D es la máxima distancia entre las funciones de distribución acumuladas empíricas y es, en sí mismo, una medida del tamaño del efecto. Explique la trampa de las muestras grandes: con cien mil solicitudes diarias, una diferencia de medio año en la edad media dará un valor p minúsculo, aunque no tenga consecuencias para el modelo. Por eso se recomiendan umbrales sobre el estadístico o el PSI, y no solo sobre el valor p. Explique el problema de las múltiples comparaciones: con sesenta variables y un nivel de 5 %, se esperan unas tres alarmas falsas cada día aunque nada cambie; la corrección de Bonferroni divide el nivel entre el número de pruebas y el procedimiento de Benjamini-Hochberg controla la proporción de falsos descubrimientos. Mencione bibliotecas como Evidently, NannyML o alibi-detect, que empaquetan estas pruebas y generan reportes. Pregunte: ¿qué prefieren, muchas alertas que nadie atiende o pocas alertas confiables? La fatiga de alertas es un riesgo operativo real."
+        },
+        {
+          "title": "Etiquetas tardías y métricas sustitutas",
+          "bullets": [
+            "En crédito el incumplimiento se observa meses después; en fraude, los reclamos y contracargos llegan en semanas.",
+            "Mientras tanto, use métricas sustitutas: deriva de puntajes, mora temprana por cosecha o revisión experta de una muestra.",
+            "Estimación de desempeño sin etiquetas: métodos basados en probabilidades calibradas, como los de NannyML.",
+            "Diseñe desde el inicio la unión entre predicción y resultado con identificadores y fechas consistentes."
+          ],
+          "notes": "Este es un problema central y poco discutido en cursos introductorios. En una cooperativa, un crédito de consumo a doce meses solo revela si cae en mora significativa después de varios meses; si se espera la etiqueta final, un modelo degradado habrá aprobado miles de créditos malos. Por eso se usan indicadores tempranos, como la mora a treinta días en las primeras cuotas, que se correlaciona con la mora final, y el análisis por cosechas, que agrupa los créditos por mes de desembolso para comparar su evolución. En fraude, parte de los casos se confirma con reclamos o contracargos semanas después y otra parte nunca se confirma; además, las transacciones bloqueadas por el modelo no tienen etiqueta, lo que crea un sesgo de selección. Explique la idea de estimar el desempeño con probabilidades calibradas, cuyo supuesto clave es que no haya deriva de concepto. Pida a los estudiantes que, para su proyecto, definan cuándo llega la etiqueta real y qué métrica sustituta vigilarán mientras tanto."
+        },
+        {
+          "title": "Políticas de reentrenamiento",
+          "bullets": [
+            "Programado: cada mes o trimestre; simple, pero puede llegar tarde o ser innecesario.",
+            "Por disparador: cuando el PSI, la mora temprana o el desempeño superan umbrales definidos.",
+            "Continuo o incremental: actualización frecuente con datos recientes; exige automatización y controles fuertes.",
+            "Todo reentrenamiento pasa por las mismas compuertas, despliegue progresivo y aprobación que un modelo nuevo."
+          ],
+          "notes": "Advierta contra el reflejo de reentrenar ante cualquier alerta. Primero se diagnostica: si la deriva se debe a un error en los datos de entrada, como un campo mal mapeado, reentrenar incorporaría el error al modelo. Si hay deriva de covariables sin pérdida de desempeño, quizá no se necesite acción. Si hay deriva de concepto, se reentrena, pero cuidando la ventana de datos: usar solo datos recientes captura el nuevo concepto pero aumenta la varianza; usar toda la historia mezcla conceptos. Una alternativa es ponderar más los datos recientes. Recuerde el bucle de retroalimentación oculto de la unidad 1: un modelo de crédito que reentrena solo con los aprobados aprende de una población sesgada por sus propias decisiones; técnicas como reservar una pequeña muestra aleatoria de decisiones o la inferencia de rechazados intentan mitigarlo. Pida a cada equipo que redacte la política de reentrenamiento de su proyecto en una tabla: disparador, diagnóstico previo, ventana de datos, compuertas y responsable de la aprobación."
+        },
+        {
+          "title": "Gestión de incidentes y runbooks para modelos",
+          "bullets": [
+            "Runbook: guía paso a paso para cada alerta, con diagnóstico, mitigación, escalamiento y comunicación.",
+            "Mitigaciones típicas: revertir al alias anterior, activar reglas de respaldo o ajustar temporalmente el umbral.",
+            "Roles durante el incidente: coordinación, comunicación con el negocio y especialistas técnicos.",
+            "Revisión posterior sin culpables: línea de tiempo, causa raíz, factores contribuyentes y acciones con fecha."
+          ],
+          "notes": "Muestre un runbook breve para la alerta de deriva significativa del puntaje: verificar si hubo despliegues o cambios en las fuentes en las últimas 48 horas, revisar el PSI por característica, contrastar con métricas de negocio, decidir entre revertir, ajustar el umbral o activar reglas, y comunicar al dueño del modelo. Explique que el runbook se escribe en calma, no durante el incidente, y se pone a prueba con simulacros. La cultura de revisión sin culpables, difundida por la ingeniería de confiabilidad, parte de que los errores son consecuencia de sistemas que los permiten y no de personas descuidadas; buscar culpables lleva a ocultar problemas. Use el caso de las boticas de la unidad 3 para construir en clase una revisión posterior: línea de tiempo, impacto, causa raíz técnica, causa raíz organizacional y acciones preventivas. Pregunte: ¿la causa raíz fue el descuido del científico de datos o la ausencia de pruebas automáticas y de un proceso que impidiera desplegar un viernes sin revisión? La discusión suele ser muy formativa."
+        },
+        {
+          "title": "Gobernanza del ciclo de vida del modelo",
+          "bullets": [
+            "Inventario de modelos: propósito, dueño, nivel de riesgo, datos usados, versión vigente y fecha de revisión.",
+            "Tarjetas de modelo de Mitchell et al. (2019): uso previsto, desempeño desagregado, limitaciones y consideraciones éticas.",
+            "Separación de funciones: quien desarrolla no aprueba su propio modelo de alto riesgo; validación independiente.",
+            "Evidencia automática: el pipeline genera reportes de validación, linaje y aprobaciones para auditoría."
+          ],
+          "notes": "La gobernanza no es burocracia añadida al final, sino el resultado natural de un buen pipeline. Si las prácticas de las unidades anteriores están automatizadas, el inventario, el linaje y los reportes de validación se generan solos. Explique el concepto de gestión del riesgo de modelo, consolidado en la banca internacional con la guía SR 11-7 de la Reserva Federal de Estados Unidos, publicada en 2011, que exige desarrollo sólido, validación independiente y gobierno efectivo. En el Perú, las entidades supervisadas por la SBS incorporan prácticas similares en su gestión integral de riesgos. Muestre la estructura de una tarjeta de modelo: detalles del modelo, uso previsto y usos fuera de alcance, factores relevantes, métricas, datos de evaluación y entrenamiento, análisis cuantitativo desagregado, consideraciones éticas y recomendaciones. Pida a los estudiantes que redacten la tarjeta de modelo de su proyecto, cuidando el desempeño por subgrupos como región, sexo o tipo de trabajador. Anticipe que Ética y Gobernanza de la IA profundizará en marcos como la norma ISO/IEC 42001."
+        },
+        {
+          "title": "Marco normativo peruano para operar modelos",
+          "bullets": [
+            "Ley 29733 y su reglamento: principios de finalidad, proporcionalidad y seguridad, y derecho al tratamiento objetivo.",
+            "Ley 31814 de 2023: promueve el uso de la inteligencia artificial; su reglamento adopta un enfoque basado en riesgos.",
+            "Regulación sectorial: SBS en finanzas, OSIPTEL en telecomunicaciones e INDECOPI en protección al consumidor.",
+            "Traducción operativa: registro de decisiones, explicaciones comprensibles, revisión humana y gestión de incidentes."
+          ],
+          "notes": "El objetivo no es formar abogados, sino profesionales que traduzcan obligaciones en controles técnicos. Del principio de finalidad se desprende que los datos recogidos para evaluar un crédito no deberían reutilizarse sin base legal para otro propósito, como publicidad dirigida. Del principio de proporcionalidad, que el modelo use solo las variables necesarias. Del derecho al tratamiento objetivo, que las decisiones con efectos significativos no se basen únicamente en un tratamiento automatizado sin posibilidad de intervención humana y de explicación. La Ley 31814, publicada en 2023, promueve el uso de la inteligencia artificial en favor del desarrollo económico y social y asigna la rectoría a la Presidencia del Consejo de Ministros, a través de la Secretaría de Gobierno y Transformación Digital; su reglamento diferencia obligaciones según el nivel de riesgo de los sistemas. Pida a cada equipo construir una matriz de cumplimiento: obligación, control técnico implementado, evidencia y responsable. Aclare que el análisis jurídico detallado se profundiza en Ética y Gobernanza de la IA del sexto ciclo."
+        },
+        {
+          "title": "LLMOps: qué cambia al operar modelos de lenguaje",
+          "bullets": [
+            "Se versionan instrucciones, plantillas, índices de recuperación y parámetros de generación, además del modelo.",
+            "Evaluación con conjuntos de referencia, rúbricas y evaluadores automáticos validados con revisión humana.",
+            "Métricas operativas: tiempo hasta el primer token, tokens por segundo y costo por conversación.",
+            "Riesgos específicos: alucinaciones, inyección de instrucciones y fuga de datos personales en las respuestas."
+          ],
+          "notes": "Conecte con el curso paralelo de IA Generativa y Modelos de Lenguaje, donde construyen aplicaciones con estos modelos; aquí el foco es operarlas. Los principios de MLOps se mantienen, versionado, pruebas, despliegue progresivo y monitoreo, pero cambian los artefactos y las métricas. Una modificación de una sola frase en la instrucción del sistema puede alterar el comportamiento tanto como reentrenar un modelo, por lo que las instrucciones se versionan y se prueban con un conjunto de casos de referencia antes de desplegar. El costo pasa a medirse por tokens y puede crecer de forma inesperada si los usuarios envían documentos largos. Para servir modelos abiertos en infraestructura propia existen motores como vLLM, que gestiona la memoria de atención por páginas para atender más solicitudes simultáneas. Pregunte a la clase: si el asistente de atención al cliente de una empresa de telecomunicaciones revela en una respuesta el número telefónico de otro usuario, ¿qué controles de MLOps habrían prevenido o detectado el incidente?"
+        },
+        {
+          "title": "Proyecto integrador: arquitectura y criterios",
+          "bullets": [
+            "Arquitectura de referencia: repositorio, DVC, MLflow, CI/CD, imagen, Kubernetes, monitoreo y registro de predicciones.",
+            "Simulación de producción: tráfico sintético con deriva inducida y respuesta documentada del equipo.",
+            "Entregables: sistema funcional, tarjeta de modelo, runbook, matriz de cumplimiento, video y sustentación.",
+            "Se evalúan decisiones justificadas, reproducibilidad y operación, no solo la métrica del modelo."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso y como preparación directa para el Proyecto Integrador de Inteligencia Artificial y las Experiencias Formativas en Situación Real de Trabajo del sexto ciclo. Muestre el diagrama de la arquitectura de referencia y recuerde que cada pieza ya se construyó en las tareas anteriores; el reto ahora es integrarlas y operarlas. Explique la simulación: el docente entregará un generador de tráfico que, en un momento no anunciado, introduce deriva en ciertas variables; el equipo debe detectarla con su monitoreo, diagnosticarla con su runbook y documentar la decisión tomada. Así se evalúa la operación real y no solo la construcción. Detalle la sustentación: quince minutos de presentación y demostración en vivo, seguidos de preguntas del jurado sobre decisiones de diseño, costos y cumplimiento normativo. Insista en que un sistema sencillo, bien operado y documentado vale más que una arquitectura sofisticada que el equipo no puede explicar. Confirme la conformación de equipos y el cronograma de asesorías."
+        }
+      ],
+      "reading": {
+        "title": "Operar con los ojos abiertos: monitoreo, deriva y gobernanza",
+        "minutes": 40,
+        "content": "## Tres capas de monitoreo\n\nUn modelo en producción puede fallar de dos maneras: ruidosamente, cuando el servicio cae o responde con errores, y silenciosamente, cuando responde a tiempo pero sus predicciones ya no reflejan la realidad. La ingeniería de confiabilidad de sitios (Beyer et al., 2016) aborda la primera con las cuatro señales doradas: latencia, tráfico, errores y saturación. La segunda exige vigilar además los datos de entrada, la distribución de las predicciones y, cuando llegan, las etiquetas reales.\n\n## Instrumentar el servicio\n\n```python\nfrom prometheus_client import Counter, Histogram, make_asgi_app\n\nSOLICITUDES = Counter('pred_solicitudes_total', 'Solicitudes', ['codigo', 'version'])\nLATENCIA = Histogram('pred_latencia_segundos', 'Latencia de inferencia',\n                     buckets=(0.01, 0.025, 0.05, 0.1, 0.2, 0.3, 0.5, 1.0))\nPUNTAJE = Histogram('pred_puntaje', 'Probabilidad predicha',\n                    buckets=[i / 10 for i in range(1, 11)])\n\napp.mount('/metrics', make_asgi_app())   # Prometheus recolecta desde esta ruta\n```\n\nCon estas métricas, el percentil 99 de latencia agregado entre réplicas se obtiene en PromQL con histogram_quantile(0.99, sum(rate(pred_latencia_segundos_bucket[5m])) by (le)). El histograma de puntajes permite detectar cambios en la distribución de las predicciones sin esperar etiquetas. Nunca se usan identificadores de clientes como etiquetas de métricas: multiplican las series y exponen datos personales.\n\n## Objetivos de nivel de servicio\n\nUn SLI es una proporción medida, por ejemplo, solicitudes válidas respondidas en menos de 300 ms; un SLO fija la meta, digamos 99,5 % en 28 días. La diferencia, el presupuesto de error, equivale a 0,005 × 672 horas ≈ 3,4 horas. Mientras quede presupuesto, el equipo lanza cambios; si se agota, prioriza la estabilidad. La misma lógica se extiende a la calidad de los datos y a la frescura del modelo.\n\n## Detectar deriva\n\nComo P(X, Y) = P(Y | X) · P(X), la deriva de covariables cambia P(X); la deriva de etiquetas cambia P(Y); y la deriva de concepto cambia P(Y | X), la más dañina porque invalida la regla aprendida (Gama et al., 2014). El índice de estabilidad poblacional, estándar en riesgo de crédito, compara distribuciones por intervalos:\n\n**PSI = Σᵢ (aᵢ − eᵢ) · ln(aᵢ / eᵢ)**\n\n```python\nimport numpy as np\n\ndef psi(referencia, actual, intervalos=10, eps=1e-4):\n    cortes = np.unique(np.quantile(referencia, np.linspace(0, 1, intervalos + 1)))\n    cortes[0], cortes[-1] = -np.inf, np.inf\n    e = np.histogram(referencia, cortes)[0] / len(referencia)\n    a = np.histogram(actual, cortes)[0] / len(actual)\n    e, a = np.clip(e, eps, None), np.clip(a, eps, None)\n    return float(np.sum((a - e) * np.log(a / e)))\n```\n\nPor convención, un PSI menor a 0,10 indica estabilidad; entre 0,10 y 0,25, un cambio moderado que merece revisión; y mayor a 0,25, un cambio significativo. Para variables continuas se complementa con la prueba de Kolmogorov-Smirnov. Con muestras grandes, cualquier diferencia mínima resulta significativa, de modo que conviene decidir sobre el estadístico o el PSI, no solo sobre el valor p, y corregir por múltiples comparaciones cuando se vigilan decenas de variables.\n\n## Cuando las etiquetas llegan tarde\n\nEn una billetera digital, el fraude se confirma con reclamos y contracargos semanas después; en crédito, la mora relevante aparece meses más tarde. Mientras tanto se vigilan métricas sustitutas: deriva de puntajes, mora temprana por cosecha de desembolsos y revisión experta de una muestra aleatoria. Cuando la etiqueta llega, el registro estructurado de predicciones, con identificador de solicitud y versión del modelo, permite calcular el desempeño real por versión y por segmento.\n\n## De la alerta a la decisión\n\nUna alerta de deriva no implica reentrenar automáticamente. El runbook ordena el diagnóstico: ¿hubo un despliegue o un cambio en una fuente de datos?, ¿la deriva está en variables importantes?, ¿se mueven las métricas de negocio? Si el problema es un dato corrupto, se corrige la fuente; si es deriva de concepto, se reentrena con una ventana adecuada y el candidato pasa por las mismas compuertas y por el despliegue progresivo de la unidad 3.\n\n## Gobernar el ciclo de vida\n\nLa gobernanza resulta de un pipeline bien hecho: inventario de modelos con dueño y nivel de riesgo, tarjeta de modelo con desempeño desagregado (Mitchell et al., 2019), linaje automático y aprobaciones registradas. En el Perú, la Ley 29733 exige finalidad, proporcionalidad y seguridad en el tratamiento de datos personales y reconoce el derecho al tratamiento objetivo; la Ley 31814 promueve el uso responsable de la inteligencia artificial con un enfoque basado en riesgos. Traducir esas obligaciones en controles verificables también es trabajo técnico."
+      },
+      "case": {
+        "title": "Caso: La deriva silenciosa del modelo antifraude de BilleteraYa",
+        "content": "## Contexto\n\n**BilleteraYa** (nombre ficticio) es una billetera digital peruana con 6,5 millones de usuarios activos que procesa en promedio 2,4 millones de transferencias diarias. Su modelo antifraude, un clasificador de gradient boosting desplegado en Kubernetes, puntúa cada transferencia en menos de 60 ms: las que superan 0,85 se bloquean y las que están entre 0,60 y 0,85 pasan a una verificación adicional del usuario.\n\nCon la interoperabilidad entre billeteras y bancos impulsada por el BCRP, el patrón de uso cambió: aumentaron las transferencias hacia otras entidades, se multiplicaron los pequeños comercios que cobran con códigos QR de distintos proveedores y creció el uso en ciudades intermedias como Huancayo, Chiclayo y Pucallpa. El modelo vigente se entrenó con datos de 2024.\n\n## Las señales\n\nEl equipo de MLOps, de cuatro personas, monitorea las señales doradas en Grafana: latencia p99 de 48 ms, tasa de error de 0,02 % y disponibilidad de 99,97 % en el último trimestre. Todo está en verde. Sin embargo, el área de prevención de fraude reporta:\n\n- Los reclamos por transferencias no reconocidas subieron 38 % en ocho semanas.\n- La tasa de bloqueo bajó de 0,9 % a 0,6 % de las transferencias.\n- El PSI del puntaje es 0,19; el de la proporción de transferencias a otras entidades, 0,41; el del monto, 0,07.\n- En una muestra de 2 000 alertas revisada por analistas, la precisión cayó de 62 % a 45 %.\n- Los reclamos y contracargos que confirman fraude tardan entre 15 y 45 días.\n\nLa modalidad dominante de fraude también cambió: ya no predominan los accesos con credenciales robadas, sino las estafas de ingeniería social en las que la propia víctima realiza la transferencia, persuadida por falsas ofertas de empleo o de préstamos.\n\n## Las alternativas\n\nEl jefe de MLOps, Martín Rojas, presenta tres opciones al comité de riesgos:\n\n1. **Reentrenar de inmediato** con los últimos tres meses, aunque solo el 40 % de esas transacciones tiene etiqueta confirmada.\n2. **Bajar temporalmente los umbrales** a 0,75 para bloqueo y 0,50 para verificación; según una simulación, las verificaciones adicionales pasarían de 2,1 % a 4,8 % de las transferencias, con riesgo de abandono de usuarios.\n3. **Agregar reglas de negocio** para transferencias mayores a 500 soles hacia cuentas nuevas de otras entidades, mientras se desarrolla en seis semanas un modelo con variables de comportamiento de la sesión.\n\nEl comité pide además explicar por qué el monitoreo no alertó antes y qué cambios de gobernanza se requieren. El área legal recuerda que los registros de sesión contienen datos personales y que toda nueva variable debe respetar los principios de finalidad y proporcionalidad de la Ley 29733.",
+        "questions": [
+          "¿Por qué el monitoreo en verde no detectó el problema? Identifique qué capas de monitoreo faltaban y qué indicadores habrían alertado antes.",
+          "Clasifique los tipos de deriva presentes en el caso a partir de los valores de PSI, la nueva modalidad de fraude y la evolución de la tasa de bloqueo.",
+          "Evalúe las tres alternativas considerando etiquetas tardías, sesgo de selección por transacciones bloqueadas, experiencia del usuario y riesgo regulatorio.",
+          "Proponga un plan para las próximas seis semanas con mitigación inmediata, política de reentrenamiento y criterios de despliegue progresivo.",
+          "¿Qué controles de gobernanza y de protección de datos personales deben acompañar la incorporación de variables de comportamiento de la sesión?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: sistema de aprendizaje automático en operación",
+        "instructions": "**Objetivo:** integrar y operar, durante una simulación de producción, un sistema de aprendizaje automático de punta a punta para un problema de una organización peruana, demostrando reproducibilidad, automatización, monitoreo y gobernanza.\n\n**Modalidad:** equipos de dos o tres estudiantes, sobre el modelo trabajado en las unidades 1 a 3 o una propuesta aprobada en la semana 11.\n\n**Qué entregar:**\n\n1. **Sistema funcional:** repositorio con pipeline DVC, seguimiento y registro en MLflow, flujo de CI/CD, entrenamiento continuo orquestado, servicio contenerizado en Kubernetes local y despliegue progresivo.\n2. **Observabilidad:** métricas en Prometheus, tablero en Grafana con señales doradas, distribución de puntajes y calidad de datos, al menos dos SLO definidos y registro estructurado de predicciones seudonimizado.\n3. **Monitoreo de deriva:** cálculo periódico de PSI y de pruebas de Kolmogorov-Smirnov o chi-cuadrado con corrección por múltiples comparaciones, y alertas configuradas.\n4. **Operación simulada:** bitácora de la respuesta al episodio de deriva que el docente inducirá en la semana 15, con diagnóstico, decisión y evidencia, siguiendo un runbook propio.\n5. **Gobernanza:** tarjeta de modelo con desempeño desagregado, política de reentrenamiento, runbook de incidentes y matriz de cumplimiento de la Ley 29733 y de los principios de la Ley 31814.\n6. **Video demostrativo** de seis minutos y **sustentación oral** de quince minutos en la semana 16, con preguntas del jurado.\n\n**Criterios:** se evalúa la coherencia de las decisiones y su evidencia. Un sistema sencillo que detecta y gestiona correctamente la deriva obtiene mejor calificación que una arquitectura compleja sin operación demostrada. Todos los integrantes deben poder explicar cualquier componente del sistema.",
+        "rubric": [
+          { "name": "Integración y reproducibilidad del sistema", "points": 5 },
+          { "name": "Observabilidad, SLO y registro de predicciones", "points": 4 },
+          { "name": "Detección y gestión de la deriva simulada", "points": 4 },
+          { "name": "Gobernanza, tarjeta de modelo y cumplimiento normativo", "points": 4 },
+          { "name": "Video demostrativo y sustentación oral", "points": 3 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: monitoreo, deriva y gobernanza",
+        "questions": [
+          {
+            "prompt": "Con proporciones de referencia de 25 % en cuatro intervalos y actuales de 10 %, 20 %, 30 % y 40 %, el PSI es aproximadamente 0,23. ¿Cómo se interpreta según la convención crediticia?",
+            "options": [
+              "Población estable; no se requiere ninguna acción",
+              "Cambio moderado que amerita investigar variables y desempeño",
+              "Cambio significativo que obliga a retirar el modelo de inmediato",
+              "El PSI no es aplicable a puntajes de modelos"
+            ],
+            "correct": 1,
+            "explanation": "Entre 0,10 y 0,25 el cambio se considera moderado: se investigan causas y efectos en el desempeño antes de decidir; los umbrales son convenciones, no reglas automáticas."
+          },
+          {
+            "prompt": "Tras una reforma, los clientes con muchas consultas en la central de riesgos ya no son más riesgosos, porque comparan ofertas. La distribución de las variables no cambió. ¿Qué tipo de deriva es?",
+            "options": [
+              "Deriva de covariables, porque cambió P(X)",
+              "Deriva de etiquetas, porque cambió P(Y)",
+              "Deriva de concepto, porque cambió P(Y|X)",
+              "No hay deriva, porque las variables no cambiaron"
+            ],
+            "correct": 2,
+            "explanation": "La relación entre la variable y el resultado cambió aunque la distribución de las entradas se mantenga; es deriva de concepto y afecta directamente la validez del modelo."
+          },
+          {
+            "prompt": "Un servicio vigila 60 variables con la prueba de Kolmogorov-Smirnov al 5 % cada día. Si no hay ningún cambio real, ¿qué ocurrirá y cómo se mitiga?",
+            "options": [
+              "Habrá unas tres alertas falsas diarias; se mitiga con corrección por múltiples comparaciones y umbrales de tamaño del efecto",
+              "No habrá alertas, porque la prueba es exacta",
+              "Habrá 60 alertas diarias; se mitiga elevando el nivel de significancia a 10 %",
+              "Todas las alertas serán verdaderos positivos"
+            ],
+            "correct": 0,
+            "explanation": "Con 60 pruebas al 5 % se esperan unos 3 falsos positivos diarios; Bonferroni o Benjamini-Hochberg y umbrales sobre el estadístico reducen la fatiga de alertas."
+          },
+          {
+            "prompt": "Un SLO exige que el 99,5 % de las solicitudes válidas se responda en menos de 300 ms en una ventana de 28 días. ¿Cuál es aproximadamente el presupuesto de error?",
+            "options": [
+              "34 minutos",
+              "14 horas",
+              "3,4 horas",
+              "0,5 horas"
+            ],
+            "correct": 2,
+            "explanation": "28 días son 672 horas; el 0,5 % equivale a unas 3,36 horas de incumplimiento tolerado antes de pausar los lanzamientos."
+          },
+          {
+            "prompt": "Una alerta indica PSI de 0,35 en la variable ingreso mensual justo después de que otra área cambió el sistema de origen. ¿Cuál es el primer paso correcto?",
+            "options": [
+              "Reentrenar automáticamente con los datos nuevos",
+              "Diagnosticar si se trata de un error de datos, como unidades o mapeo, antes de cualquier reentrenamiento",
+              "Ignorar la alerta, porque el PSI de una variable no afecta el puntaje",
+              "Desactivar el monitoreo de esa variable"
+            ],
+            "correct": 1,
+            "explanation": "Si la deriva proviene de un error en la fuente, reentrenar incorporaría el error al modelo; el runbook exige diagnosticar primero la causa."
+          },
+          {
+            "prompt": "¿Por qué no se debe usar el identificador del cliente como etiqueta en las métricas de Prometheus?",
+            "options": [
+              "Porque Prometheus no acepta textos como etiquetas",
+              "Porque las etiquetas solo pueden ser numéricas",
+              "Porque Grafana no puede graficar más de diez series",
+              "Porque genera una cardinalidad explosiva de series y expone datos personales"
+            ],
+            "correct": 3,
+            "explanation": "Cada valor de etiqueta crea una serie distinta; millones de clientes saturan el sistema de monitoreo y, además, vulneran la minimización de datos personales."
+          },
+          {
+            "prompt": "Un modelo de crédito se reentrena solo con los créditos que él mismo aprobó. ¿Qué riesgo introduce esta práctica?",
+            "options": [
+              "Ninguno, porque esos datos tienen etiquetas confiables",
+              "Un bucle de retroalimentación con sesgo de selección, pues nunca observa el resultado de los rechazados",
+              "Deriva de etiquetas causada por la inflación",
+              "Sobrecarga del servidor de inferencia"
+            ],
+            "correct": 1,
+            "explanation": "Las decisiones del modelo determinan qué datos se observan; sin muestras de rechazados o técnicas de inferencia de rechazados, el modelo aprende de una población sesgada."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    { "week": 1, "unit": 1, "topic": "Del cuaderno a producción: ciclo de vida, deuda técnica oculta y principios de MLOps", "activity": "Clase síncrona introductoria; configuración del entorno con Python, Git, Docker y cuenta de GitHub; foro de diagnóstico sobre un modelo propio que nadie más podría ejecutar.", "evidence": "Entorno verificado y aporte en el foro" },
+    { "week": 2, "unit": 1, "topic": "Niveles de madurez, roles del equipo, estructura de proyecto, dependencias bloqueadas y pruebas con pytest", "activity": "Aula invertida con la lectura de la unidad 1; laboratorio de refactorización de un cuaderno a módulos con pruebas; discusión en equipos del caso CrediSur.", "evidence": "Repositorio refactorizado y respuestas preliminares al caso" },
+    { "week": 3, "unit": 1, "topic": "Versionado de datos y pipelines reproducibles con DVC", "activity": "Laboratorio guiado de dvc add, remoto, dvc.yaml y dvc repro; plenaria del caso CrediSur con recomendación argumentada al comité.", "evidence": "Pipeline DVC funcional y decisión del caso" },
+    { "week": 4, "unit": 1, "topic": "Seguimiento de experimentos y registro de modelos con MLflow; linaje y reproducibilidad", "activity": "Laboratorio de MLflow con firma y alias; prueba de oro cruzada entre equipos; entrega de la tarea 1 y resolución del cuestionario 1.", "evidence": "Tarea 1 y cuestionario 1" },
+    { "week": 5, "unit": 2, "topic": "Patrones de inferencia, serialización segura, ONNX y sesgo entre entrenamiento y servicio", "activity": "Aula invertida con la lectura de la unidad 2; laboratorio de exportación a ONNX con prueba de equivalencia numérica; ejercicio de clasificación de casos por patrón.", "evidence": "Cuaderno de exportación y prueba de equivalencia" },
+    { "week": 6, "unit": 2, "topic": "Contrato de la API, FastAPI y Pydantic, rutas operativas y pruebas con TestClient", "activity": "Programación en vivo de la API de inferencia; revisión de código entre pares del contrato de entrada; análisis individual del caso PagaLuego.", "evidence": "API con pruebas y análisis individual del caso" },
+    { "week": 7, "unit": 2, "topic": "Contenedores con Docker: imágenes multietapa, caché de capas, seguridad y secretos", "activity": "Laboratorio de Dockerfile multietapa y escaneo con Trivy; discusión en equipos y plenaria del caso PagaLuego con propuesta de arquitectura.", "evidence": "Imagen Docker escaneada y propuesta del caso" },
+    { "week": 8, "unit": 2, "topic": "Latencia por percentiles, ley de Little, pruebas de carga con Locust, optimización y costo", "activity": "Laboratorio de pruebas de carga escalonadas; cálculo de réplicas y costo por mil predicciones; entrega de la tarea 2 y resolución del cuestionario 2.", "evidence": "Tarea 2 y cuestionario 2" },
+    { "week": 9, "unit": 3, "topic": "CI/CD/CT, métricas DORA, GitHub Actions, pirámide de pruebas y validación de datos", "activity": "Aula invertida con la lectura de la unidad 3; laboratorio de integración continua con compuertas de calidad; validación de datos con pandera.", "evidence": "Flujo de integración continua ejecutándose con pruebas" },
+    { "week": 10, "unit": 3, "topic": "Pruebas de comportamiento, ML Test Score y orquestación con Prefect o Airflow", "activity": "Laboratorio de pruebas direccionales y de invariancia; construcción de un flujo de entrenamiento continuo; análisis en equipos del caso Boticas del Pueblo.", "evidence": "Pipeline orquestado y análisis del caso" },
+    { "week": 11, "unit": 3, "topic": "Kubernetes para inferencia: Deployment, Service, sondas, recursos y autoescalado horizontal", "activity": "Laboratorio con kind o minikube; prueba de autoescalado bajo carga; conformación de equipos y presentación de la propuesta del proyecto integrador.", "evidence": "Despliegue en Kubernetes y propuesta de proyecto" },
+    { "week": 12, "unit": 3, "topic": "Despliegue en sombra, canario, azul-verde, experimentos A/B, FinOps y flujo transfronterizo de datos", "activity": "Simulación de canario con reversión automática; plenaria del caso Boticas del Pueblo; entrega de la tarea 3 y resolución del cuestionario 3.", "evidence": "Tarea 3 y cuestionario 3" },
+    { "week": 13, "unit": 4, "topic": "Observabilidad: señales doradas, SLI, SLO, presupuesto de error, Prometheus y Grafana", "activity": "Aula invertida con la lectura de la unidad 4; instrumentación del servicio con métricas y tablero; definición de dos SLO del proyecto integrador.", "evidence": "Tablero en Grafana y SLO documentados" },
+    { "week": 14, "unit": 4, "topic": "Registro de predicciones, tipos de deriva, PSI, pruebas estadísticas y etiquetas tardías", "activity": "Laboratorio de cálculo de PSI y Kolmogorov-Smirnov con corrección por múltiples comparaciones; análisis en equipos y plenaria del caso BilleteraYa.", "evidence": "Reporte de deriva y decisión del caso" },
+    { "week": 15, "unit": 4, "topic": "Reentrenamiento, incidentes y runbooks, gobernanza, marco normativo peruano y LLMOps", "activity": "Simulación de producción con deriva inducida y respuesta según runbook; asesoría por equipo del proyecto integrador; resolución del cuestionario 4.", "evidence": "Bitácora del incidente y cuestionario 4" },
+    { "week": 16, "unit": 4, "topic": "Proyecto integrador: sistema de aprendizaje automático en operación", "activity": "Sustentación oral del proyecto integrador ante jurado con demostración en vivo; coevaluación entre pares y retroalimentación final del curso.", "evidence": "Proyecto integrador, video y sustentación oral" }
+  ]
+}

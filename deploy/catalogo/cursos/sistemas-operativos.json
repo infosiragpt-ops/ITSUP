@@ -1,0 +1,1348 @@
+{
+ "name": "Sistemas Operativos",
+ "slug": "sistemas-operativos",
+ "course_type": "especifica",
+ "module_name": "Soporte y mantenimiento de infraestructura tecnológica",
+ "credits": 4,
+ "hours_theory": 32,
+ "hours_practice": 64,
+ "summary": "Curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo de Computación e Informática. Su propósito es que el estudiante comprenda cómo un sistema operativo administra la CPU, la memoria, el almacenamiento y los dispositivos, y que aplique ese conocimiento para instalar, configurar, asegurar y automatizar equipos con GNU/Linux y Windows en contextos empresariales. Construye sobre Arquitectura de Computadoras y Fundamentos de Programación, y prepara el terreno para Redes de Computadoras, Administración de Servidores y Nube y Seguridad Informática. Contenidos: estructura y arranque del sistema operativo, llamadas al sistema, procesos e hilos, planificación de la CPU, concurrencia e interbloqueo, memoria virtual y paginación, sistemas de archivos y particionado, usuarios y permisos, servicios, registros, programación en Bash y PowerShell, y endurecimiento básico. Aporta al perfil la capacidad de diagnosticar problemas de rendimiento y de operar plataformas con criterio técnico, seguridad y evidencia.",
+ "competency": "Administra sistemas operativos GNU/Linux y Windows en entornos virtualizados y de producción de pequeña y mediana escala, aplicando los principios de gestión de procesos, memoria y almacenamiento para instalar, configurar, diagnosticar el rendimiento, automatizar tareas y asegurar los equipos según buenas prácticas y la normativa peruana de protección de datos.",
+ "capacities": [
+  "Explica la estructura, los modos de ejecución y la secuencia de arranque de un sistema operativo moderno, y lo instala en máquinas virtuales documentando decisiones de particionado y configuración.",
+  "Analiza la gestión de procesos, hilos y planificación de la CPU, calculando métricas de desempeño y diagnosticando problemas de concurrencia, sincronización e interbloqueo con herramientas del sistema.",
+  "Gestiona la memoria virtual y el almacenamiento, interpretando paginación, reemplazo de páginas, sistemas de archivos, particiones y volúmenes lógicos para resolver problemas de capacidad y rendimiento.",
+  "Configura usuarios, permisos, servicios y registros, y automatiza tareas administrativas con scripts en Bash y PowerShell aplicando criterios de seguridad, respaldo y endurecimiento."
+ ],
+ "indicators": [
+  "Instala una distribución GNU/Linux y Windows en máquinas virtuales con esquema GPT documentado, verificando el arranque UEFI y la configuración básica de red.",
+  "Calcula tiempos de espera y de retorno para FCFS, SJF, prioridades y Round Robin, y justifica el algoritmo más adecuado para una carga de trabajo dada.",
+  "Diagnostica procesos que saturan CPU o memoria usando ps, top, vmstat y el Administrador de tareas, y propone acciones correctivas fundamentadas.",
+  "Identifica condiciones de carrera e interbloqueos en código concurrente y los corrige mediante mutex, semáforos u orden global de recursos.",
+  "Crea particiones, sistemas de archivos y volúmenes LVM, monta dispositivos de forma persistente y calcula fallos de página con FIFO, LRU y óptimo.",
+  "Asigna usuarios, grupos y permisos con chmod, chown, sudo y ACL aplicando el principio de mínimo privilegio sin romper la operación.",
+  "Desarrolla scripts de Bash o PowerShell con validación de entradas, registro y programación con cron o el Programador de tareas.",
+  "Presenta un proyecto integrador de configuración segura de un servidor para una pyme, con evidencias verificables y lista de control de endurecimiento."
+ ],
+ "methodology": "El curso aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y un video corto, y resuelve una autoevaluación. En la sesión se discute un caso de una organización peruana con el método de casos (análisis, alternativas, decisión) y se trabaja en laboratorios virtuales con máquinas VirtualBox o en la nube, siguiendo guías paso a paso que exigen capturas y salidas de comandos como evidencia. Se usa aprendizaje basado en problemas para el diagnóstico de rendimiento y aprendizaje basado en proyectos para el proyecto integrador de la unidad 4, desarrollado en equipos. La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, revisión entre pares de scripts y comentarios del docente en cada entrega.",
+ "bibliography": [
+  "Silberschatz, A., Galvin, P. B. y Gagne, G. (2018). Operating system concepts (10th ed.). Wiley.",
+  "Tanenbaum, A. S. y Bos, H. (2015). Modern operating systems (4th ed.). Pearson.",
+  "Stallings, W. (2018). Operating systems: Internals and design principles (9th ed.). Pearson.",
+  "Arpaci-Dusseau, R. H. y Arpaci-Dusseau, A. C. (2018). Operating systems: Three easy pieces. Arpaci-Dusseau Books.",
+  "Nemeth, E., Snyder, G., Hein, T. R., Whaley, B. y Mackin, D. (2017). UNIX and Linux system administration handbook (5th ed.). Addison-Wesley.",
+  "Kerrisk, M. (2010). The Linux programming interface. No Starch Press.",
+  "Shotts, W. (2019). The Linux command line (2nd ed.). No Starch Press.",
+  "Love, R. (2010). Linux kernel development (3rd ed.). Addison-Wesley.",
+  "Yosifovich, P., Ionescu, A., Russinovich, M. E. y Solomon, D. A. (2017). Windows internals, part 1 (7th ed.). Microsoft Press.",
+  "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+ ],
+ "evaluation": [
+  {
+   "name": "Evaluación de proceso",
+   "weight": 30,
+   "description": "Cuestionarios de cada unidad y laboratorios semanales con evidencias de comandos, capturas y bitácora técnica."
+  },
+  {
+   "name": "Evaluación de producto",
+   "weight": 30,
+   "description": "Tareas aplicadas de las unidades 1 a 3, calificadas con rúbrica: instalación documentada, análisis de planificación y diagnóstico de memoria y almacenamiento."
+  },
+  {
+   "name": "Proyecto integrador",
+   "weight": 25,
+   "description": "Configuración segura y automatizada de un servidor Linux para una pyme, con informe técnico, scripts y lista de control de endurecimiento."
+  },
+  {
+   "name": "Evaluación final",
+   "weight": 15,
+   "description": "Prueba práctica individual en máquina virtual: resolver incidencias reales de procesos, permisos, almacenamiento y servicios en tiempo limitado."
+  }
+ ],
+ "units": [
+  {
+   "title": "Unidad 1 · Fundamentos, estructura y arranque del sistema operativo",
+   "description": "Al finalizar la unidad, el estudiante explica las funciones y la estructura de un sistema operativo, distingue modo usuario y modo núcleo, interpreta la secuencia de arranque UEFI y deja instalados GNU/Linux y Windows en máquinas virtuales con documentación técnica verificable.",
+   "topics": [
+    "Funciones del sistema operativo como gestor de recursos y máquina extendida",
+    "Modo usuario, modo núcleo, interrupciones y llamadas al sistema",
+    "Estructuras del núcleo: monolítico, microkernel, híbrido y modular",
+    "Arranque: UEFI, GPT, GRUB, núcleo y systemd",
+    "Virtualización e instalación de GNU/Linux y Windows",
+    "Uso inicial de la shell de Linux"
+   ],
+   "slides": [
+    {
+     "title": "¿Qué es un sistema operativo y por qué importa?",
+     "bullets": [
+      "Programa que administra el hardware y ofrece servicios a las aplicaciones: CPU, memoria, almacenamiento, red y dispositivos.",
+      "Dos visiones clásicas de Tanenbaum: máquina extendida (abstracción) y administrador de recursos (multiplexación en tiempo y espacio).",
+      "Ejemplos actuales: Linux en servidores y Android, Windows en escritorio corporativo, macOS e iOS en el ecosistema Apple.",
+      "Un error de configuración del sistema operativo puede detener una planilla, un punto de venta o una facturación electrónica."
+     ],
+     "notes": "Abra la clase preguntando: ¿qué pasaría si cada aplicación tuviera que controlar directamente el disco o la tarjeta de red? Guíe a la conclusión de que el sistema operativo existe para dar abstracciones (archivos, procesos, sockets) y para repartir recursos escasos de forma justa y segura. Explique la multiplexación en el tiempo (la CPU se turna entre procesos) y en el espacio (la memoria se divide entre ellos). Conecte con Arquitectura de Computadoras: allí vieron registros, buses y jerarquía de memoria; aquí veremos quién decide cómo se usan. Mencione que en el Perú gran parte de los servidores de comercio electrónico, bancos y entidades públicas corren Linux, mientras que el escritorio de oficina sigue dominado por Windows; por eso el curso trabaja ambos. Pregunte a los estudiantes qué sistemas operativos usan en su trabajo o en casa y anote las respuestas para retomarlas al hablar de estructuras de núcleo."
+    },
+    {
+     "title": "Servicios que ofrece el sistema operativo",
+     "bullets": [
+      "Ejecución de programas: cargar, ejecutar, terminar y reportar errores de cada proceso.",
+      "Operaciones de entrada y salida y manipulación del sistema de archivos con permisos.",
+      "Comunicación entre procesos: tuberías, memoria compartida, señales y sockets.",
+      "Detección de errores, contabilidad de recursos y protección o seguridad entre usuarios.",
+      "Interfaces: línea de comandos (Bash, PowerShell), interfaz gráfica y APIs como POSIX o Win32."
+     ],
+     "notes": "Silberschatz organiza los servicios del sistema operativo en dos grupos: los que ayudan al usuario (interfaz, ejecución, E/S, archivos, comunicación, errores) y los que aseguran la operación eficiente del sistema (asignación de recursos, contabilidad, protección). Pida a los estudiantes que identifiquen cada servicio en una acción cotidiana: abrir una hoja de cálculo en red implica ejecución del programa, lectura de archivos, comunicación por sockets con el servidor, verificación de permisos y registro de errores si la red falla. Destaque que POSIX es un estándar que permite que un mismo programa compile en Linux, macOS o BSD, mientras que Windows expone la API Win32. Esta diferencia explica por qué algunas aplicaciones empresariales solo funcionan en una plataforma. Pregunte: ¿qué servicio falla cuando un usuario recibe el mensaje permiso denegado?"
+    },
+    {
+     "title": "Modo usuario y modo núcleo",
+     "bullets": [
+      "La CPU tiene un bit de modo: el núcleo ejecuta instrucciones privilegiadas; las aplicaciones no.",
+      "En x86 se habla de anillos: anillo 0 para el núcleo y anillo 3 para las aplicaciones.",
+      "Instrucciones privilegiadas: acceso a E/S, cambio de tablas de páginas, desactivar interrupciones, detener la CPU.",
+      "Si una aplicación intenta una instrucción privilegiada, la CPU genera una excepción y el núcleo la termina.",
+      "La separación protege la estabilidad: un programa defectuoso no debería colgar todo el equipo."
+     ],
+     "notes": "Este es el concepto que sostiene toda la seguridad del sistema. Explique con una analogía bancaria: el cliente (aplicación) no entra a la bóveda; pide una operación en ventanilla y el cajero (núcleo) la ejecuta tras verificar su identidad. El bit de modo se cambia solo mediante mecanismos controlados: interrupciones, excepciones y llamadas al sistema. Recuerde la clásica pantalla azul de Windows o el kernel panic de Linux: ocurren cuando falla código que corre en modo núcleo, típicamente un controlador defectuoso; por eso los controladores de terceros son un riesgo. Mencione que la virtualización moderna añade un modo aún más privilegiado para el hipervisor (VMX root en Intel). Pregunte a la clase: ¿por qué un antivirus necesita componentes en modo núcleo y qué riesgo implica eso? Puede comentar el incidente global de julio de 2024 con un controlador de seguridad que dejó millones de equipos Windows sin arrancar, incluidos aeropuertos y bancos."
+    },
+    {
+     "title": "Interrupciones y excepciones",
+     "bullets": [
+      "Interrupción de hardware: un dispositivo avisa a la CPU que terminó una operación o llegó un dato.",
+      "Excepción o trap: evento síncrono causado por la instrucción en curso, como división por cero o fallo de página.",
+      "El vector de interrupciones asocia cada tipo de evento con su rutina de servicio en el núcleo.",
+      "El temporizador genera interrupciones periódicas que permiten al núcleo retomar el control y planificar.",
+      "Comando de observación en Linux: cat /proc/interrupts muestra contadores por CPU y dispositivo."
+     ],
+     "notes": "Explique la diferencia entre sondeo (la CPU pregunta repetidamente al dispositivo) e interrupciones (el dispositivo avisa), y por qué las interrupciones liberan CPU para trabajo útil. Muestre en vivo la salida de cat /proc/interrupts en la máquina virtual y pida que identifiquen las líneas del temporizador, la tarjeta de red y el disco. Ejecute una descarga grande y vuelva a mirar: los contadores de la red crecen. Subraye el papel del temporizador: sin él, un proceso con un bucle infinito monopolizaría la CPU; con él, el núcleo recupera el control cada pocos milisegundos y puede aplicar la planificación que veremos en la unidad 2. Introduzca la idea de que un fallo de página también es una excepción, tema que retomaremos en la unidad 3. Pregunta para la clase: ¿qué tipo de evento es pulsar una tecla y cuál es intentar leer memoria no asignada?"
+    },
+    {
+     "title": "Llamadas al sistema: la puerta al núcleo",
+     "bullets": [
+      "Interfaz controlada para que un proceso solicite servicios: open, read, write, fork, execve, mmap.",
+      "Mecanismo: la biblioteca (glibc) coloca parámetros en registros y ejecuta la instrucción syscall.",
+      "El núcleo valida parámetros, ejecuta el servicio y devuelve un resultado o un código de error (errno).",
+      "Linux x86-64 expone más de 300 llamadas al sistema; Windows usa la API nativa de ntdll.dll.",
+      "Herramienta clave: strace -c ls resume cuántas llamadas hace un comando y cuánto tardan."
+     ],
+     "notes": "Muestre el flujo completo de printf en C: la función de biblioteca prepara un búfer y finalmente llama a write, que ejecuta la instrucción syscall; la CPU cambia a modo núcleo, el núcleo copia los datos al terminal y regresa. Haga una demostración con strace -c ls y luego con strace -e trace=openat cat /etc/hostname para que vean exactamente qué archivos abre un programa. Enfatice que cada llamada tiene un costo: cambiar de modo y validar parámetros consume cientos de nanosegundos, por eso las bibliotecas agrupan escrituras en búferes. Explique errno con un ejemplo: abrir un archivo inexistente devuelve ENOENT, y sin permisos devuelve EACCES. Esto será útil para diagnosticar incidencias en soporte. Pregunte: si una aplicación lenta hace miles de llamadas read de un byte, ¿qué mejora propondrían?"
+    },
+    {
+     "title": "Estructuras del núcleo",
+     "bullets": [
+      "Monolítico: todo el núcleo en un solo espacio de direcciones; rápido, pero un error afecta todo (Linux clásico).",
+      "Microkernel: solo lo mínimo en núcleo y el resto como servidores en modo usuario; robusto, más cambios de contexto (MINIX 3, QNX, seL4).",
+      "Híbrido: base de microkernel con servicios en núcleo por rendimiento (Windows NT, XNU de macOS).",
+      "Modular: Linux carga módulos en caliente con modprobe; lsmod lista los cargados.",
+      "Debate Tanenbaum-Torvalds de 1992: rendimiento y simplicidad frente a modularidad y fiabilidad."
+     ],
+     "notes": "Presente el famoso debate de 1992 en el grupo comp.os.minix, donde Andrew Tanenbaum afirmó que Linux era obsoleto por ser monolítico y Linus Torvalds defendió el rendimiento práctico. Treinta años después, ambos tenían parte de razón: Linux domina servidores y teléfonos, mientras que los microkernels dominan sistemas críticos embebidos, como QNX en automóviles, y seL4 tiene una prueba formal de corrección. Explique que Linux mitiga las desventajas del monolito con módulos: muestre lsmod y modinfo de un controlador de red. Windows NT, diseñado por Dave Cutler, se describe como híbrido: tiene un micronúcleo y un ejecutivo, pero muchos servicios corren en modo núcleo por rendimiento. Pregunta para debate: para el sistema de control de un tren del Metro de Lima, ¿qué estructura elegirían y por qué? Pida que argumenten con fiabilidad, tiempo real y certificación."
+    },
+    {
+     "title": "Virtualización para el laboratorio",
+     "bullets": [
+      "Hipervisor tipo 1 sobre el hardware (VMware ESXi, Hyper-V, KVM) y tipo 2 sobre un sistema anfitrión (VirtualBox).",
+      "Requisito: extensiones de virtualización activas en la BIOS o UEFI (Intel VT-x o AMD-V).",
+      "Instantáneas: guardan el estado de la máquina para volver atrás antes de un cambio riesgoso.",
+      "Contenedores (Docker) comparten el núcleo del anfitrión; las máquinas virtuales tienen núcleo propio.",
+      "Recomendación mínima del laboratorio: 2 vCPU, 2 GB de RAM y 25 GB de disco por máquina Linux."
+     ],
+     "notes": "Este tema es práctico y habilita todo el curso. Explique la clasificación de Popek y Goldberg de 1974 sobre requisitos para virtualizar una arquitectura y cómo Intel y AMD añadieron soporte por hardware en 2005-2006. Muestre cómo verificar el soporte: en Linux, grep -E 'vmx|svm' /proc/cpuinfo; en Windows, el Administrador de tareas muestra Virtualización habilitada. Insista en las instantáneas como hábito profesional: antes de tocar el gestor de arranque o el fstab, se toma una instantánea. Distinga claramente contenedor y máquina virtual, porque los estudiantes los confunden: un contenedor es un proceso aislado con espacios de nombres y cgroups, no un sistema operativo completo. Para estudiantes con equipos modestos, ofrezca la alternativa de usar una distribución ligera o una instancia gratuita en la nube. Pregunte: ¿qué ventaja tiene para una pyme consolidar tres servidores físicos antiguos en un solo host con hipervisor?"
+    },
+    {
+     "title": "Secuencia de arranque en un equipo moderno",
+     "bullets": [
+      "1. Firmware UEFI ejecuta pruebas POST e inicializa hardware básico.",
+      "2. UEFI lee la partición de sistema EFI (FAT32) y carga el gestor de arranque, por ejemplo grubx64.efi o bootmgfw.efi.",
+      "3. GRUB carga el núcleo (vmlinuz) y el sistema de archivos inicial en RAM (initramfs).",
+      "4. El núcleo monta la raíz real y lanza el proceso 1: systemd en la mayoría de distribuciones.",
+      "5. systemd alcanza el target configurado (multi-user o graphical) iniciando servicios en paralelo."
+     ],
+     "notes": "Dibuje la cadena completa y explique que cada eslabón verifica y carga al siguiente. Compare con el esquema heredado BIOS y MBR, donde solo había 446 bytes de código de arranque y un límite de cuatro particiones primarias y discos de 2 TiB. Comente Secure Boot: el firmware solo ejecuta cargadores firmados, lo que protege contra bootkits pero complica instalar controladores no firmados. Muestre en la máquina virtual el comando systemd-analyze y systemd-analyze blame para medir cuánto tarda cada servicio en arrancar; es una herramienta concreta de diagnóstico cuando un usuario se queja de que el equipo demora en encender. En Windows, el equivalente de diagnóstico es el Visor de eventos con los registros de Diagnostics-Performance. Pregunta para la clase: si el equipo muestra el menú de GRUB pero luego se detiene en una consola de emergencia, ¿en qué eslabón está el problema probablemente?"
+    },
+    {
+     "title": "Particionado: MBR frente a GPT",
+     "bullets": [
+      "MBR: máximo cuatro particiones primarias y discos de hasta 2 TiB con sectores de 512 bytes.",
+      "GPT: hasta 128 particiones por defecto, discos de hasta 9,4 ZB y copia de respaldo de la tabla al final del disco.",
+      "Esquema recomendado en Linux: partición EFI de 512 MB, raíz de 20 GB o más, y /home o datos separados.",
+      "Herramientas: lsblk, fdisk -l, parted y gdisk en Linux; diskpart y Administración de discos en Windows."
+     ],
+     "notes": "Explique que GPT usa direcciones LBA de 64 bits y GUID únicos por partición, lo que elimina las limitaciones de MBR y añade redundancia: si el encabezado principal se corrompe, existe una copia al final del disco. Muestre lsblk -f en la máquina virtual e interprete columnas: nombre del dispositivo, sistema de archivos, UUID y punto de montaje. Discuta por qué separar /home o una partición de datos facilita reinstalar el sistema sin perder información, práctica útil en soporte técnico para estaciones de trabajo. En servidores, muchos administradores prefieren LVM, que veremos en la unidad 3, porque permite redimensionar sin repartir el disco. Proponga un ejercicio rápido: un disco de 500 GB para un servidor de archivos de una pyme; ¿cómo lo particionarían y por qué? Recoja dos o tres propuestas y discuta ventajas y riesgos de cada una."
+    },
+    {
+     "title": "Instalación de Ubuntu Server paso a paso",
+     "bullets": [
+      "Descargar la imagen ISO oficial LTS y verificar su integridad con sha256sum frente al valor publicado.",
+      "Crear la máquina virtual con firmware EFI habilitado, adaptador de red NAT o puente y disco dinámico.",
+      "Elegir idioma, teclado latinoamericano, red por DHCP y esquema de almacenamiento con LVM.",
+      "Crear un usuario administrador con contraseña robusta y activar el servidor OpenSSH.",
+      "Tras el primer arranque: sudo apt update && sudo apt upgrade, y tomar una instantánea limpia."
+     ],
+     "notes": "Haga la instalación en vivo compartiendo pantalla, deteniéndose en cada decisión. La verificación del hash es un hábito de seguridad: garantiza que la imagen no fue alterada; muestre cómo comparar el resultado de sha256sum con el archivo SHA256SUMS. Explique la diferencia entre adaptador NAT, que aísla la máquina, y puente, que la expone en la red local como un equipo más. Recomiende versiones LTS porque tienen cinco años de soporte estándar, criterio clave para empresas. Advierta sobre la distribución del teclado: un error aquí impide escribir caracteres como la barra vertical, necesaria para tuberías. Concluida la instalación, verifique con hostnamectl, ip a y lsb_release -a. Pida a los estudiantes que anoten todas sus decisiones en la bitácora, porque la tarea de la unidad exige justificar cada una. Pregunte: ¿por qué un servidor no debería tener entorno gráfico instalado?"
+    },
+    {
+     "title": "Instalación y particularidades de Windows",
+     "bullets": [
+      "Windows 11 exige TPM 2.0, Secure Boot y UEFI; en VirtualBox 7 se habilita un TPM virtual.",
+      "El instalador crea particiones EFI, MSR de 16 MB, la partición del sistema y la de recuperación.",
+      "Cuenta local frente a cuenta de dominio o Microsoft: impacto en administración centralizada.",
+      "Herramientas iniciales: winver, msinfo32, Get-ComputerInfo en PowerShell y Administrador de tareas.",
+      "Licenciamiento: verificar activación con slmgr /dlv; evitar activadores ilegales que introducen malware."
+     ],
+     "notes": "Explique que Windows sigue siendo el sistema de escritorio dominante en oficinas peruanas y que el técnico de soporte debe dominar su instalación. Muestre las cuatro particiones que crea el instalador con diskpart (list disk, select disk 0, list partition) y relaciónelas con lo visto en GPT. Comente que la partición de recuperación contiene el entorno WinRE para reparar el arranque. Aborde el tema ético y legal del licenciamiento: el software sin licencia expone a la empresa a sanciones por derechos de autor que fiscaliza INDECOPI y a riesgos de malware incluido en activadores piratas. En cuanto a cuentas, adelante que en empresas medianas se usa Active Directory o Entra ID para gestión centralizada, tema de cursos posteriores. Pregunta para la clase: una oficina tiene veinte equipos con Windows 10 sin TPM 2.0; ¿qué alternativas tienen ante el fin de soporte de octubre de 2025?"
+    },
+    {
+     "title": "Primeros pasos en la shell de Linux",
+     "bullets": [
+      "Estructura de un comando: nombre, opciones y argumentos, por ejemplo ls -lh /var/log.",
+      "Navegación: pwd, cd, ls; manipulación: cp, mv, rm, mkdir; lectura: cat, less, head, tail.",
+      "Ayuda integrada: man, --help y apropos para descubrir comandos por palabra clave.",
+      "Redirección y tuberías: > guarda salida, 2> guarda errores, | encadena comandos.",
+      "Ejemplo útil: journalctl -p err -b | tail -n 20 muestra los últimos errores del arranque actual."
+     ],
+     "notes": "La shell es la herramienta principal del administrador; conviene que pierdan el miedo desde la primera semana. Explique la filosofía Unix formulada por Doug McIlroy: programas que hacen una sola cosa bien y se combinan mediante tuberías. Haga ejercicios de complejidad creciente: listar archivos, contar líneas de un registro con wc -l, filtrar con grep y ordenar con sort | uniq -c. Muestre el sistema de ayuda: man tiene secciones (1 comandos, 2 llamadas al sistema, 5 formatos de archivo, 8 administración), lo que conecta con las llamadas al sistema de la clase anterior. Advierta sobre comandos peligrosos como rm -rf con rutas variables y la importancia de verificar con pwd antes de borrar. Comente que PowerShell en Windows también usa tuberías, pero de objetos, no de texto. Reto para la clase: ¿cómo contarían cuántos usuarios tienen Bash como shell en /etc/passwd?"
+    },
+    {
+     "title": "Jerarquía de directorios de Linux (FHS)",
+     "bullets": [
+      "/etc configuración, /var datos variables y registros, /home usuarios, /usr programas y bibliotecas.",
+      "/proc y /sys son sistemas de archivos virtuales que exponen información del núcleo en tiempo real.",
+      "/dev contiene archivos de dispositivo: /dev/sda para discos, /dev/null como sumidero.",
+      "/tmp temporal, /boot núcleo e initramfs, /opt software de terceros.",
+      "En Windows: C:\\Windows, C:\\Program Files, C:\\Users y el Registro como base de configuración."
+     ],
+     "notes": "El estándar de jerarquía del sistema de archivos (FHS) permite que un administrador encuentre las cosas en cualquier distribución. Recorra los directorios en vivo y muestre ejemplos concretos: /etc/hostname, /etc/fstab, /var/log/auth.log. Subraye la idea Unix de que todo es un archivo: leer cat /proc/cpuinfo o cat /sys/class/net/eth0/address consulta datos que el núcleo genera al vuelo, no archivos en disco. Contraste con Windows, donde la configuración se centraliza en el Registro, una base de datos jerárquica con claves como HKLM y HKCU; muestre regedit con cuidado y advierta que modificarlo sin respaldo es arriesgado. Pregunta de aplicación: un usuario reporta que el disco está lleno en un servidor; ¿qué directorios revisarían primero y con qué comando? Oriente hacia /var/log y el uso de du -sh /var/* | sort -h."
+    },
+    {
+     "title": "Cierre de unidad: criterios de un buen técnico",
+     "bullets": [
+      "Documentar cada decisión: versión, particionado, red, usuarios, hash verificado y fecha.",
+      "Trabajar con instantáneas y cambios reversibles antes de cualquier modificación crítica.",
+      "Diagnosticar por capas: firmware, gestor de arranque, núcleo, servicios y aplicación.",
+      "Elegir sistema operativo por requisitos: soporte, costo total, compatibilidad y seguridad, no por preferencia."
+     ],
+     "notes": "Cierre sintetizando el recorrido de la unidad: qué es el sistema operativo, cómo se protege con los modos de ejecución, cómo las aplicaciones solicitan servicios mediante llamadas al sistema, qué estructuras de núcleo existen y cómo arranca un equipo. Insista en que el valor profesional de un técnico no está en memorizar comandos sino en su método: documentar, hacer cambios reversibles y diagnosticar por capas. Presente la tarea de la unidad, instalación documentada de dos sistemas operativos, y revise la rúbrica criterio por criterio, mostrando ejemplos de evidencias aceptables e inaceptables. Recuerde el cuestionario y su plazo. Para conectar con la unidad 2, pregunte: cuando ejecutamos ls, el sistema crea algo llamado proceso; ¿qué información creen que necesita guardar el núcleo sobre ese proceso para poder pausarlo y reanudarlo? Deje la pregunta abierta como enganche."
+    }
+   ],
+   "reading": {
+    "title": "Del firmware al proceso 1: cómo se organiza y arranca un sistema operativo",
+    "minutes": 35,
+    "content": "## El sistema operativo como árbitro de recursos\n\nUn computador moderno es un conjunto de recursos escasos y compartidos: núcleos de CPU, memoria RAM, discos, interfaces de red. El sistema operativo cumple dos funciones que Andrew Tanenbaum describe como complementarias. Por un lado, es una **máquina extendida**: oculta la complejidad del hardware tras abstracciones limpias como archivos, procesos y conexiones de red. Por otro, es un **administrador de recursos**: decide quién usa qué, durante cuánto tiempo y con qué permisos. Cuando la ventanilla virtual de una entidad pública colapsa en época de trámites masivos, el problema rara vez es solo la aplicación; con frecuencia intervienen límites del sistema operativo, como el número de archivos abiertos o la memoria disponible.\n\n## Protección mediante modos de ejecución\n\nLa CPU distingue al menos dos modos. En **modo núcleo** se pueden ejecutar instrucciones privilegiadas: programar controladores de dispositivos, modificar las tablas de páginas o desactivar interrupciones. En **modo usuario** esas instrucciones están prohibidas. El paso de un modo al otro solo ocurre por tres vías controladas: interrupciones de hardware, excepciones y llamadas al sistema. Esta regla es la base de la estabilidad: si una hoja de cálculo falla, el sistema la termina sin afectar a los demás programas.\n\n## Llamadas al sistema en la práctica\n\nUna llamada al sistema es la forma en que un programa pide un servicio al núcleo. El siguiente programa en C escribe un mensaje usando directamente la llamada `write`:\n\n```c\n#include <unistd.h>\nint main(void) {\n    const char msg[] = \"Hola desde modo usuario\\n\";\n    /* 1 = descriptor de la salida estándar */\n    ssize_t n = write(1, msg, sizeof(msg) - 1);\n    return n < 0 ? 1 : 0;  /* n < 0 indica error en errno */\n}\n```\n\nAl compilarlo con `gcc hola.c -o hola` y ejecutarlo con `strace ./hola`, veremos una línea como `write(1, \"Hola desde modo usuario\\n\", 24) = 24`. El valor devuelto es el número de bytes escritos. Si el programa intentara abrir un archivo inexistente, `strace` mostraría `= -1 ENOENT`. Esta herramienta convierte al técnico de soporte en un observador privilegiado: cuando una aplicación dice simplemente que no puede iniciar, `strace` revela qué archivo o permiso le falta.\n\n## Estructuras del núcleo\n\nEl diseño del núcleo responde a un dilema entre rendimiento y aislamiento. En un **núcleo monolítico**, como Linux, todos los subsistemas (planificador, memoria, sistemas de archivos, controladores) comparten un mismo espacio de direcciones y se invocan con simples llamadas a funciones; el resultado es rápido, pero un controlador defectuoso puede derribar todo el sistema. En un **microkernel**, como MINIX 3 o seL4, el núcleo solo gestiona la comunicación entre procesos, la planificación básica y la memoria; los controladores y sistemas de archivos son procesos de usuario que pueden reiniciarse si fallan. Windows NT y el núcleo XNU de macOS se califican como **híbridos**. Linux reduce la rigidez del monolito con **módulos cargables**:\n\n```bash\nlsmod | head            # módulos cargados\nmodinfo e1000           # información de un controlador de red\nsudo modprobe -r e1000  # descargar el módulo (cuidado en remoto)\n```\n\n## La cadena de arranque\n\nEn los equipos actuales el firmware **UEFI** sustituyó a la BIOS. Tras la prueba POST, UEFI busca la **partición de sistema EFI**, un pequeño volumen FAT32, y ejecuta el cargador configurado. En Linux suele ser GRUB, que carga el núcleo comprimido `vmlinuz` y el `initramfs`, un sistema de archivos temporal con los controladores necesarios para montar la raíz real. El núcleo inicializa sus subsistemas y lanza el **proceso con PID 1**, que en la mayoría de distribuciones es `systemd`. Este, a su vez, arranca los servicios en paralelo hasta alcanzar el objetivo configurado. Para medir el arranque se usa:\n\n```bash\nsystemd-analyze          # tiempo total: firmware, cargador, núcleo, espacio de usuario\nsystemd-analyze blame    # servicios ordenados por tiempo de inicio\n```\n\nEl esquema de particiones asociado a UEFI es **GPT**, que admite discos mayores a 2 TiB y hasta 128 particiones, y guarda una copia de la tabla al final del disco. MBR, con su límite de cuatro particiones primarias, solo sobrevive en equipos heredados.\n\n## Virtualización como laboratorio profesional\n\nLas máquinas virtuales permiten practicar sin riesgo. Un hipervisor de tipo 2, como VirtualBox, se ejecuta sobre el sistema anfitrión; uno de tipo 1, como KVM, Hyper-V o ESXi, se ejecuta directamente sobre el hardware y es el estándar en centros de datos. Las **instantáneas** son la red de seguridad del administrador: antes de modificar el gestor de arranque o el archivo `/etc/fstab`, se guarda el estado para poder volver atrás en segundos.\n\n## Ideas clave\n\nEl sistema operativo protege y reparte recursos gracias al hardware (modos de CPU, interrupciones, temporizador). Las aplicaciones solo acceden al núcleo mediante llamadas al sistema observables. El arranque es una cadena de confianza que va del firmware al PID 1, y conocerla permite diagnosticar fallas con método en lugar de reinstalar a ciegas."
+   },
+   "case": {
+    "title": "Caso: La cooperativa que no podía arrancar sus cajas",
+    "content": "**Cooperativa de Ahorro y Crédito Santa Rosa de Huancayo** (nombre ficticio) atiende a unos 18 000 socios en Junín mediante una oficina principal y cuatro agencias. Su área de TI la integran dos personas: Rocío, analista con siete años en la institución, y Diego, técnico recién egresado. Las ventanillas usan 26 computadoras con Windows 10 y un sistema de ventanilla instalado localmente que se conecta a un servidor central con Ubuntu Server 18.04, adquirido en 2018.\n\nUn lunes de quincena, tras un corte de luz durante la madrugada, el servidor no arranca: muestra el menú de GRUB, empieza a cargar y termina en una consola con el mensaje *You are in emergency mode*. Las agencias no pueden registrar depósitos ni retiros y la cola llega a la calle. La gerencia exige una solución en una hora. Diego propone reinstalar Ubuntu desde cero con un USB, ya que tiene una copia de la base de datos de hace tres días. Rocío sospecha que el problema está en el sistema de archivos o en `/etc/fstab`, porque el mes anterior se agregó un disco externo para copias de respaldo.\n\nParalelamente, la gerencia recibió una cotización de un proveedor de Lima para migrar el servidor a la nube por S/ 2 800 mensuales, y otra para un servidor físico nuevo con hipervisor por S/ 24 000. Además, Microsoft terminó el soporte de Windows 10 en octubre de 2025 y solo seis de las 26 estaciones cumplen los requisitos de Windows 11 (TPM 2.0 y CPU compatible). El auditor de la Superintendencia de Banca, Seguros y AFP ha observado que la cooperativa no tiene procedimientos documentados de continuidad operativa y que el servidor ejecuta una versión de Ubuntu cuyo soporte estándar terminó en mayo de 2023.\n\nDatos adicionales: el servidor tiene 16 GB de RAM, CPU de ocho núcleos con VT-x, dos discos de 1 TB sin RAID y firmware configurado en modo BIOS heredado con tabla MBR. No existen instantáneas porque el sistema corre directamente sobre el hardware. El disco externo de respaldo está conectado por USB y su línea en `/etc/fstab` no incluye la opción `nofail`.\n\nRocío debe decidir en minutos cómo restablecer el servicio y, luego, presentar a la gerencia una propuesta técnica para que esto no vuelva a ocurrir.",
+    "questions": [
+     "¿Qué eslabón de la cadena de arranque está fallando y qué evidencia del caso lo sugiere? Propón los pasos exactos de diagnóstico desde la consola de emergencia.",
+     "Evalúa la propuesta de Diego de reinstalar el sistema: ¿qué riesgos implica para los datos de los socios y para el tiempo de recuperación?",
+     "Compara las tres alternativas de infraestructura (nube, servidor nuevo con hipervisor, mantener el actual actualizado) con criterios de costo, continuidad, soporte y cumplimiento regulatorio.",
+     "¿Qué harías con las 20 estaciones que no cumplen requisitos de Windows 11? Justifica considerando costo, seguridad y licenciamiento.",
+     "Redacta tres medidas concretas de un procedimiento de continuidad operativa que respondan a la observación del auditor."
+    ]
+   },
+   "assignment": {
+    "title": "Tarea 1: Instalación documentada de un laboratorio con dos sistemas operativos",
+    "instructions": "**Objetivo:** demostrar que sabes instalar y verificar sistemas operativos con criterio profesional, documentando cada decisión.\n\n**Qué debes hacer:**\n\n1. Crear en VirtualBox (u otro hipervisor) dos máquinas virtuales con firmware EFI: una con Ubuntu Server LTS y otra con Windows 10 u 11 de evaluación.\n2. Verificar el hash SHA-256 de la imagen de Ubuntu y mostrar la comparación.\n3. En Ubuntu, usar un esquema GPT con LVM; registrar la salida de `lsblk -f`, `hostnamectl`, `ip a` y `systemd-analyze blame | head`.\n4. En Windows, registrar la salida de `diskpart` (lista de particiones) y de `Get-ComputerInfo | Select-Object OsName, OsVersion, BiosFirmwareType`.\n5. Usar `strace -c` sobre dos comandos de tu elección y explicar las tres llamadas al sistema más frecuentes.\n6. Tomar una instantánea limpia de cada máquina.\n\n**Qué entregar:** un informe PDF de 4 a 6 páginas con portada, tabla de decisiones (versión, recursos asignados, particionado, red, usuario) con su justificación, capturas legibles con tu nombre de usuario visible y una conclusión sobre las diferencias de arranque y particionado entre ambos sistemas.\n\n**Criterios:** se evaluará la corrección técnica, la calidad de las evidencias, la justificación de decisiones y la claridad del informe según la rúbrica.",
+    "rubric": [
+     {
+      "name": "Instalación y configuración correcta de ambos sistemas",
+      "points": 6
+     },
+     {
+      "name": "Evidencias completas y verificables de comandos",
+      "points": 5
+     },
+     {
+      "name": "Justificación técnica de decisiones de particionado y red",
+      "points": 5
+     },
+     {
+      "name": "Análisis de llamadas al sistema y redacción del informe",
+      "points": 4
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 1: Estructura y arranque del sistema operativo",
+    "questions": [
+     {
+      "prompt": "Una aplicación de usuario intenta ejecutar directamente una instrucción que desactiva las interrupciones. ¿Qué ocurre en un sistema operativo moderno?",
+      "options": [
+       "La CPU genera una excepción y el núcleo normalmente termina el proceso",
+       "El sistema operativo traduce la instrucción en una llamada al sistema automáticamente",
+       "La instrucción se ejecuta porque la aplicación tiene permisos de administrador",
+       "La instrucción se ignora sin ninguna consecuencia para el proceso"
+      ],
+      "correct": 0,
+      "explanation": "Las instrucciones privilegiadas solo se ejecutan en modo núcleo; en modo usuario provocan una excepción. Ser administrador no cambia el modo de la CPU."
+     },
+     {
+      "prompt": "Al ejecutar strace sobre un programa que falla al iniciar, aparece openat con resultado -1 EACCES sobre un archivo de configuración. ¿Cuál es la causa más probable?",
+      "options": [
+       "La memoria RAM del equipo es insuficiente",
+       "El proceso no tiene permisos para leer ese archivo",
+       "El disco está lleno y no se puede abrir",
+       "El archivo no existe en la ruta indicada"
+      ],
+      "correct": 1,
+      "explanation": "EACCES indica permiso denegado. Si el archivo no existiera el error sería ENOENT; disco lleno se reporta como ENOSPC al escribir."
+     },
+     {
+      "prompt": "¿Qué afirmación describe mejor la diferencia entre un núcleo monolítico y un microkernel?",
+      "options": [
+       "El microkernel siempre es más rápido porque tiene menos código",
+       "El monolítico ejecuta todos sus servicios en modo usuario",
+       "El microkernel ejecuta controladores y sistemas de archivos como procesos en modo usuario, ganando aislamiento a costa de más comunicación",
+       "El monolítico no puede cargar controladores después del arranque"
+      ],
+      "correct": 2,
+      "explanation": "El microkernel minimiza lo que corre en modo núcleo; esto aísla fallos pero añade mensajes y cambios de contexto. Linux, monolítico, sí carga módulos en caliente."
+     },
+     {
+      "prompt": "Un servidor muestra el menú de GRUB, carga el núcleo y luego entra en modo de emergencia indicando que no puede montar un dispositivo. ¿Dónde conviene empezar el diagnóstico?",
+      "options": [
+       "En la tabla de particiones MBR del disco de arranque",
+       "En el controlador de la tarjeta de video",
+       "En la configuración de Secure Boot del firmware",
+       "En /etc/fstab y el estado de los sistemas de archivos declarados"
+      ],
+      "correct": 3,
+      "explanation": "Si GRUB y el núcleo cargan, el firmware y el cargador funcionan; la falla ocurre al montar sistemas de archivos, definidos en /etc/fstab."
+     },
+     {
+      "prompt": "Una pyme necesita un disco de 4 TB para su servidor de archivos con arranque UEFI. ¿Qué esquema de particiones corresponde?",
+      "options": [
+       "GPT, porque admite discos mayores a 2 TiB y es el estándar para UEFI",
+       "MBR con cuatro particiones primarias de 1 TB cada una",
+       "MBR, porque es compatible con todos los sistemas operativos",
+       "Cualquiera, ya que el tamaño del disco no influye"
+      ],
+      "correct": 0,
+      "explanation": "MBR con sectores de 512 bytes solo direcciona hasta 2 TiB; GPT usa direcciones de 64 bits y es el esquema nativo de UEFI."
+     },
+     {
+      "prompt": "¿Cuál es la principal diferencia entre un contenedor Docker y una máquina virtual en VirtualBox?",
+      "options": [
+       "El contenedor necesita obligatoriamente un hipervisor de tipo 1",
+       "El contenedor comparte el núcleo del anfitrión; la máquina virtual ejecuta su propio núcleo",
+       "La máquina virtual no puede tener red propia",
+       "El contenedor emula todo el hardware de un computador"
+      ],
+      "correct": 1,
+      "explanation": "Los contenedores son procesos aislados con namespaces y cgroups sobre el mismo núcleo; las máquinas virtuales virtualizan hardware y arrancan un sistema completo."
+     },
+     {
+      "prompt": "¿Por qué el temporizador de hardware es indispensable para un sistema operativo multitarea?",
+      "options": [
+       "Porque acelera la frecuencia de la CPU cuando hay más carga",
+       "Porque mide el consumo de energía de cada proceso",
+       "Porque genera interrupciones periódicas que devuelven el control al núcleo para planificar",
+       "Porque sincroniza el reloj con servidores de hora en internet"
+      ],
+      "correct": 2,
+      "explanation": "Sin interrupciones periódicas, un proceso con un bucle infinito monopolizaría la CPU; el temporizador permite la planificación expropiativa."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 2 · Procesos, hilos, planificación y concurrencia",
+   "description": "Al finalizar la unidad, el estudiante analiza el ciclo de vida de procesos e hilos, calcula métricas de planificación de la CPU para distintos algoritmos, identifica y corrige condiciones de carrera e interbloqueos, y diagnostica la carga de un sistema con herramientas de Linux y Windows.",
+   "topics": [
+    "Procesos: PCB, estados, creación con fork y exec",
+    "Hilos y modelos de multihilo",
+    "Planificación de la CPU: FCFS, SJF, prioridades, Round Robin y CFS",
+    "Sincronización: sección crítica, mutex y semáforos",
+    "Interbloqueo: condiciones de Coffman, prevención y detección",
+    "Monitoreo y control de procesos con ps, top, nice y kill"
+   ],
+   "slides": [
+    {
+     "title": "Proceso: programa en ejecución",
+     "bullets": [
+      "Un programa es un archivo pasivo; un proceso es su instancia activa con estado y recursos propios.",
+      "Espacio de direcciones: código, datos, montículo (heap) y pila (stack).",
+      "Cada proceso tiene un identificador (PID) y un proceso padre (PPID).",
+      "Varios procesos pueden ejecutar el mismo programa: diez pestañas o diez sesiones de Bash."
+     ],
+     "notes": "Inicie retomando la pregunta de cierre de la unidad anterior. Muestre que un mismo ejecutable, por ejemplo /usr/bin/bash, puede originar muchos procesos distintos, cada uno con su propio PID, variables y archivos abiertos. Dibuje el espacio de direcciones: el código en direcciones bajas, luego datos globales, el heap que crece hacia arriba con malloc y la pila que crece hacia abajo con cada llamada a función. Explique que un desbordamiento de pila, por recursión infinita, es la colisión de estas zonas. Ejecute ps -ef --forest y pstree -p para ver la jerarquía, identificando a systemd con PID 1 como ancestro común. Pregunta para la clase: si abro el navegador con diez pestañas y veo doce procesos en el Administrador de tareas, ¿por qué los navegadores modernos separan pestañas en procesos? Oriente hacia aislamiento de fallos y seguridad."
+    },
+    {
+     "title": "Bloque de control de proceso (PCB)",
+     "bullets": [
+      "Estructura del núcleo que guarda todo lo necesario para suspender y reanudar un proceso.",
+      "Contiene: estado, contador de programa, registros de CPU, prioridad, tablas de memoria y archivos abiertos.",
+      "En Linux se implementa como task_struct; en Windows como EPROCESS y KTHREAD.",
+      "Cambio de contexto: guardar el PCB del proceso saliente y restaurar el del entrante; cuesta microsegundos.",
+      "Observación: /proc/<PID>/status y /proc/<PID>/fd muestran parte del PCB."
+     ],
+     "notes": "El PCB es la ficha completa del proceso. Use la analogía de un médico que atiende a varios pacientes por turnos: antes de pasar al siguiente, anota en la historia clínica exactamente en qué quedó, para retomarlo después. Explique que el cambio de contexto no produce trabajo útil, es costo administrativo; si ocurre con demasiada frecuencia, el sistema pierde rendimiento. Muestre en vivo cat /proc/self/status y ls -l /proc/$$/fd, que revela los descriptores 0, 1 y 2 conectados al terminal. Mencione que task_struct en Linux ocupa varios kilobytes y contiene cientos de campos. Comente que la cifra de cambios de contexto por segundo aparece en la columna cs de vmstat, un dato útil cuando un servidor se percibe lento sin uso alto de CPU. Pregunta: ¿qué información del PCB debe guardarse obligatoriamente para que el proceso continúe exactamente donde se quedó?"
+    },
+    {
+     "title": "Estados de un proceso",
+     "bullets": [
+      "Nuevo, listo, en ejecución, bloqueado (en espera) y terminado.",
+      "Listo a ejecución: lo decide el planificador; ejecución a listo: expropiación por fin de quantum.",
+      "Ejecución a bloqueado: espera de E/S o de un evento; bloqueado a listo: el evento ocurrió.",
+      "En Linux, ps muestra R (ejecutable), S (durmiendo), D (espera no interrumpible), Z (zombi) y T (detenido).",
+      "Muchos procesos en estado D suelen indicar problemas de disco o de almacenamiento en red."
+     ],
+     "notes": "Dibuje el diagrama de cinco estados y recorra las transiciones con un ejemplo concreto: un proceso que lee un archivo grande pasa a bloqueado mientras el disco responde, y vuelve a listo cuando llega la interrupción del controlador. Insista en que solo un proceso por núcleo puede estar en ejecución en un instante. Conecte con el diagnóstico real: muestre ps -eo pid,stat,cmd y explique los códigos. Un proceso zombi ya terminó pero su padre no ha recogido su código de salida con wait; unos pocos son inofensivos, miles indican un programa padre defectuoso. Los procesos en estado D no responden ni a kill -9 porque esperan al hardware; aparecen típicamente cuando un recurso compartido NFS deja de responder. Pregunta para la clase: un servidor tiene carga promedio de 20 pero la CPU está al 5 %; ¿qué estado predominará en sus procesos?"
+    },
+    {
+     "title": "Creación de procesos: fork, exec y wait",
+     "bullets": [
+      "fork() duplica el proceso: devuelve 0 al hijo y el PID del hijo al padre.",
+      "exec() reemplaza la imagen del proceso por otro programa, conservando el PID.",
+      "wait() permite al padre esperar al hijo y recoger su código de salida.",
+      "Copy-on-write: fork no copia la memoria de inmediato; solo duplica páginas al modificarlas.",
+      "Windows usa CreateProcess, que crea y carga el programa en un solo paso."
+     ],
+     "notes": "Este es el modelo que usa la shell cada vez que ejecuta un comando: hace fork, el hijo hace exec del programa, y el padre espera con wait. Muestre un ejemplo breve en Python con os.fork, os.execvp y os.waitpid, y ejecútelo para que vean dos PID distintos. Explique por qué Unix separa fork y exec: entre ambos, el hijo puede redirigir descriptores, que es exactamente como la shell implementa la redirección con > y las tuberías. El mecanismo de copy-on-write hace que fork sea barato aunque el padre ocupe gigabytes. Mencione la bomba fork, un script que crea procesos indefinidamente, y cómo se mitiga con límites de ulimit -u o en systemd con TasksMax. Contraste con CreateProcess de Windows, que recibe muchos parámetros a la vez. Pregunta: ¿por qué el PID no cambia después de exec?"
+    },
+    {
+     "title": "Hilos: concurrencia dentro de un proceso",
+     "bullets": [
+      "Un hilo es una unidad de ejecución con su propia pila y registros, que comparte memoria y archivos con su proceso.",
+      "Ventajas: menor costo de creación, comunicación rápida, aprovechamiento de varios núcleos.",
+      "Riesgo: al compartir memoria, un error en un hilo puede corromper los datos de todos.",
+      "Modelo uno a uno en Linux (NPTL) y Windows: cada hilo de usuario es un hilo del núcleo.",
+      "Ley de Amdahl: aceleración = 1 / ((1 − p) + p/n), donde p es la fracción paralelizable."
+     ],
+     "notes": "Explique la diferencia con un servidor web: atender cada cliente en un proceso aparte es seguro pero costoso; en un hilo es ligero pero exige cuidado con los datos compartidos. Muestre ps -eLf o top -H para ver hilos de un proceso, por ejemplo de un servidor de base de datos. Presente la ley de Amdahl de 1967 con un cálculo: si el 80 % de un programa es paralelizable y tenemos 8 núcleos, la aceleración máxima es 1 / (0,2 + 0,1) = 3,33, no 8. Esto desmonta la idea de que comprar más núcleos siempre resuelve la lentitud. Mencione que en Python el GIL limita el paralelismo de hilos en tareas de CPU, por lo que se usan procesos con multiprocessing, mientras que para E/S los hilos sí ayudan. Pregunta para la clase: con p = 0,5, ¿cuál es la aceleración máxima con infinitos núcleos?"
+    },
+    {
+     "title": "Criterios de planificación de la CPU",
+     "bullets": [
+      "Utilización de CPU y rendimiento (procesos completados por unidad de tiempo).",
+      "Tiempo de retorno = finalización − llegada; tiempo de espera = retorno − ráfaga de CPU.",
+      "Tiempo de respuesta: desde la llegada hasta la primera ejecución; clave en sistemas interactivos.",
+      "Planificación expropiativa (el núcleo interrumpe) frente a no expropiativa (el proceso cede).",
+      "No hay algoritmo óptimo universal: depende de si la carga es interactiva, por lotes o de tiempo real."
+     ],
+     "notes": "Antes de los algoritmos, fije las métricas, porque la tarea exigirá calcularlas sin errores. Escriba las fórmulas en la pizarra y haga un ejemplo mínimo con dos procesos. Explique que optimizar una métrica suele empeorar otra: maximizar el rendimiento puede castigar el tiempo de respuesta de usuarios interactivos. Use un ejemplo local: en un banco, la ventanilla preferencial para adultos mayores mejora la equidad y la satisfacción, pero puede alargar la espera promedio de los demás; es exactamente un dilema de planificación por prioridades. Distinga cargas limitadas por CPU, como compilar o calcular la planilla, de cargas limitadas por E/S, como un servidor de archivos. Pregunta para la clase: para el sistema de ventanilla de un banco, ¿qué métrica priorizarían, y para un proceso nocturno de cierre contable cuál?"
+    },
+    {
+     "title": "FCFS y SJF con ejemplo numérico",
+     "bullets": [
+      "Procesos: P1 ráfaga 24, P2 ráfaga 3, P3 ráfaga 3, todos llegan en t = 0.",
+      "FCFS en orden P1, P2, P3: esperas 0, 24 y 27; espera promedio 17.",
+      "SJF en orden P2, P3, P1: esperas 0, 3 y 6; espera promedio 3.",
+      "Efecto convoy: un proceso largo delante retrasa a todos los cortos.",
+      "SJF es óptimo en espera promedio, pero requiere estimar ráfagas y puede causar inanición."
+     ],
+     "notes": "Este es el ejemplo clásico de Silberschatz; resuélvalo dibujando ambos diagramas de Gantt. En FCFS, P1 ocupa de 0 a 24, P2 de 24 a 27, P3 de 27 a 30; las esperas suman 51, promedio 17. En SJF, P2 de 0 a 3, P3 de 3 a 6, P1 de 6 a 30; esperas suman 9, promedio 3. La diferencia es enorme con los mismos procesos. Explique que SJF no puede implementarse exactamente porque el sistema no conoce el futuro; se estima la próxima ráfaga con un promedio exponencial: τ(n+1) = α·t(n) + (1 − α)·τ(n), con α típicamente 0,5. Discuta la inanición: si siempre llegan procesos cortos, uno largo podría no ejecutarse nunca; la solución es el envejecimiento, que eleva la prioridad con el tiempo. Pida que resuelvan en parejas una variante con llegadas en t = 0, 1 y 2, y versión expropiativa SRTF."
+    },
+    {
+     "title": "Round Robin y la elección del quantum",
+     "bullets": [
+      "Cada proceso recibe un quantum q; si no termina, vuelve al final de la cola de listos.",
+      "Con P1 = 24, P2 = 3, P3 = 3 y q = 4: espera promedio de 5,67 y buena respuesta.",
+      "Quantum muy grande se comporta como FCFS; muy pequeño dispara el costo de cambios de contexto.",
+      "Regla práctica: el 80 % de las ráfagas debería ser menor que el quantum.",
+      "Valores típicos en sistemas actuales: entre 1 y 100 milisegundos."
+     ],
+     "notes": "Resuelva el ejemplo con q = 4: P1 de 0 a 4, P2 de 4 a 7, P3 de 7 a 10, y P1 de 10 a 30. Esperas: P1 = 10 − 4 = 6, P2 = 4, P3 = 7; promedio 17/3 = 5,67. Compare con FCFS (17) y SJF (3): Round Robin no es el mejor en espera, pero garantiza que ningún proceso espere más de (n − 1)·q para su próximo turno, lo que lo hace adecuado para sistemas interactivos y de tiempo compartido. Muestre el efecto del quantum con un cálculo: si el cambio de contexto cuesta 0,1 ms y q = 1 ms, se pierde casi el 9 % de la CPU en administración; con q = 10 ms, menos del 1 %. Pregunta para la clase: ¿qué ocurriría con la sensación de fluidez de un escritorio si el quantum fuera de un segundo? Proponga que resuelvan el mismo ejemplo con q = 2."
+    },
+    {
+     "title": "Prioridades, colas multinivel y CFS de Linux",
+     "bullets": [
+      "Planificación por prioridades: se ejecuta el proceso con mayor prioridad; riesgo de inanición, se mitiga con envejecimiento.",
+      "Colas multinivel con retroalimentación: los procesos interactivos suben y los intensivos en CPU bajan.",
+      "CFS (Completely Fair Scheduler, Linux 2.6.23, 2007): reparte CPU según tiempo virtual de ejecución en un árbol rojinegro.",
+      "Desde Linux 6.6 (2023) el planificador por defecto es EEVDF, sucesor de CFS.",
+      "Valor nice de −20 (más prioridad) a 19 (menos); Windows usa 32 niveles de prioridad."
+     ],
+     "notes": "Explique que los sistemas reales combinan ideas: Windows usa prioridades con impulsos temporales para hilos que terminan una E/S o tienen la ventana en primer plano. Linux, con CFS diseñado por Ingo Molnár, intenta que cada proceso reciba una fracción justa de CPU: mantiene para cada uno un tiempo virtual (vruntime) y siempre ejecuta al de menor vruntime, ubicado en el extremo izquierdo de un árbol rojinegro, con costo O(log n). El valor nice cambia el peso: cada nivel equivale aproximadamente a un 10 % de diferencia de CPU. Comente que en 2023 Linux adoptó EEVDF, que añade la noción de plazos para mejorar la latencia. Demuestre: lance dos procesos que consumen CPU, uno con nice 0 y otro con nice 10, y observe en top cómo se reparte. Pregunta: ¿a qué tarea de un servidor de una empresa le asignarían nice 19?"
+    },
+    {
+     "title": "Condición de carrera y sección crítica",
+     "bullets": [
+      "Condición de carrera: el resultado depende del orden impredecible en que se ejecutan los hilos.",
+      "Ejemplo: saldo = saldo + monto no es atómico; se traduce en leer, sumar y escribir.",
+      "Sección crítica: fragmento que accede a datos compartidos y no debe ejecutarse simultáneamente.",
+      "Requisitos de una solución: exclusión mutua, progreso y espera acotada.",
+      "Mecanismos de hardware: instrucciones atómicas como test-and-set y compare-and-swap."
+     ],
+     "notes": "Ilustre con un caso bancario: dos operaciones simultáneas abonan S/ 100 y S/ 50 a una cuenta de S/ 1 000. Si ambos hilos leen 1 000 antes de escribir, el resultado final será 1 100 o 1 050 en lugar de 1 150. Muestre el código en Python con dos hilos que incrementan un contador un millón de veces cada uno y obtenga resultados menores a dos millones, lo que sorprende a los estudiantes. Explique por qué la operación no es atómica descomponiéndola en instrucciones de máquina. Relacione con incidentes reales de software, como el caso del Therac-25 en los años ochenta, donde una condición de carrera causó sobredosis de radiación. Pregunta para la clase: ¿por qué estos errores son tan difíciles de reproducir en pruebas y aparecen justamente en días de alta carga, como el pago de gratificaciones?"
+    },
+    {
+     "title": "Mutex y semáforos",
+     "bullets": [
+      "Mutex: candado con operaciones adquirir y liberar; solo un hilo dentro de la sección crítica.",
+      "Semáforo de Dijkstra (1965): contador con operaciones P (wait) y V (signal).",
+      "Semáforo binario equivale a un mutex; semáforo contador limita el acceso a N recursos.",
+      "Problema productor-consumidor con búfer acotado: semáforos vacíos, llenos y un mutex.",
+      "En Python: threading.Lock y threading.Semaphore; en C: pthread_mutex_lock y sem_wait."
+     ],
+     "notes": "Presente a Edsger Dijkstra y su propuesta de semáforos en 1965. Explique P como intentar pasar: si el contador es mayor que cero lo decrementa y continúa; si no, el hilo se bloquea. V incrementa y despierta a un hilo en espera. Corrija en vivo el ejemplo del contador usando with lock: y muestre que ahora siempre da dos millones, aunque más lento, lo que ilustra el costo de la sincronización. Desarrolle el productor-consumidor: un sistema de colas de pedidos de una tienda virtual donde los productores registran pedidos y los consumidores los despachan; el búfer tiene capacidad limitada. Recalque el error frecuente de olvidar liberar el candado ante una excepción, por eso se usa with en Python o try/finally. Ejemplo de semáforo contador: un pool de 10 conexiones a la base de datos. Pregunta: ¿qué pasa si el orden de P(mutex) y P(vacíos) se invierte en el productor?"
+    },
+    {
+     "title": "Interbloqueo: condiciones de Coffman",
+     "bullets": [
+      "Interbloqueo: conjunto de procesos donde cada uno espera un recurso que retiene otro del conjunto.",
+      "Condiciones necesarias (Coffman, 1971): exclusión mutua, retención y espera, no expropiación y espera circular.",
+      "Prevención: romper una condición; la más práctica es imponer un orden global de adquisición.",
+      "Evasión: algoritmo del banquero de Dijkstra, que solo concede si el estado sigue siendo seguro.",
+      "Detección y recuperación: grafo de espera; los gestores de bases de datos abortan una transacción víctima."
+     ],
+     "notes": "Use el ejemplo de dos transferencias simultáneas: la primera bloquea la cuenta A y espera la B; la segunda bloquea la B y espera la A. Ninguna avanza. Dibuje el grafo de asignación de recursos y muestre el ciclo. Explique que basta romper una de las cuatro condiciones de Coffman: la solución habitual es ordenar los recursos, por ejemplo bloquear siempre primero la cuenta de menor número. Presente el algoritmo del banquero como idea elegante pero poco usada en sistemas generales, porque exige conocer de antemano las necesidades máximas. Comente que la mayoría de sistemas operativos aplican la estrategia del avestruz para recursos de usuario, mientras que motores como PostgreSQL o SQL Server detectan interbloqueos y abortan una transacción con un error explícito. Mencione la cena de los filósofos como ejercicio clásico. Pregunta: ¿qué condición rompe un tiempo límite de espera al adquirir un candado?"
+    },
+    {
+     "title": "Monitoreo y control de procesos",
+     "bullets": [
+      "ps aux y top o htop: uso de CPU, memoria, estado y tiempo de cada proceso.",
+      "Carga promedio (load average) a 1, 5 y 15 minutos: compararla con el número de núcleos (nproc).",
+      "Señales: kill -15 (SIGTERM) pide terminar ordenadamente; kill -9 (SIGKILL) fuerza sin limpieza.",
+      "Prioridad: nice -n 10 comando al iniciar; renice para cambiarla en ejecución.",
+      "Windows: Administrador de tareas, Monitor de recursos, Get-Process y Stop-Process en PowerShell."
+     ],
+     "notes": "Esta diapositiva convierte la teoría en procedimiento de soporte. Proponga una rutina de diagnóstico: primero uptime para ver la carga y compararla con nproc; luego top ordenado por CPU (tecla P) o memoria (tecla M); finalmente ps -o pid,ppid,stat,ni,%cpu,%mem,cmd para el proceso sospechoso. Explique que una carga de 4 en un equipo de 4 núcleos es plena utilización, pero en uno de 2 núcleos indica cola. Insista en usar SIGTERM antes que SIGKILL, porque este último impide que la aplicación cierre archivos o transacciones, con riesgo de corrupción de datos. Muestre el equivalente en PowerShell: Get-Process | Sort-Object CPU -Descending | Select-Object -First 5. Haga un ejercicio en vivo: lance un proceso que consuma CPU con yes > /dev/null, pida a los estudiantes que lo encuentren y lo terminen correctamente. Pregunta: ¿cuándo sí está justificado usar kill -9?"
+    },
+    {
+     "title": "Comunicación entre procesos (IPC)",
+     "bullets": [
+      "Tuberías anónimas (|) y con nombre (mkfifo) para flujos de bytes entre procesos.",
+      "Memoria compartida: la vía más rápida, pero exige sincronización explícita.",
+      "Paso de mensajes y colas: aislamiento mayor, útil en sistemas distribuidos.",
+      "Señales para notificaciones simples; sockets para comunicación local o en red.",
+      "Elección según volumen de datos, latencia, aislamiento y facilidad de depuración."
+     ],
+     "notes": "Cierre la parte conceptual mostrando cómo cooperan los procesos. Cada tubería de la shell, como ps aux | grep nginx | wc -l, crea tres procesos conectados por dos tuberías del núcleo; muéstrelo con strace -f si el tiempo lo permite. Cree una tubería con nombre con mkfifo canal, escriba en ella desde un terminal y lea desde otro, para que perciban que el escritor se bloquea hasta que hay un lector, lo que conecta con los estados de proceso. Compare memoria compartida, rápida y usada por bases de datos como PostgreSQL para su caché, con el paso de mensajes, más seguro y la base de arquitecturas de microservicios con colas como RabbitMQ o Kafka. Adelante que los sockets se profundizarán en Redes de Computadoras, curso que llevan en paralelo. Pregunta: ¿por qué la memoria compartida necesita los semáforos vistos antes y el paso de mensajes no tanto?"
+    }
+   ],
+   "reading": {
+    "title": "Procesos, planificación y sincronización: del diagrama de Gantt al código seguro",
+    "minutes": 40,
+    "content": "## El proceso como unidad de trabajo\n\nPara el núcleo, todo lo que se ejecuta es un **proceso** o un **hilo**. Cada proceso tiene un espacio de direcciones propio y un **bloque de control de proceso (PCB)**, que almacena su estado, registros, prioridad, mapa de memoria y archivos abiertos. En Linux el PCB se llama `task_struct`; Windows reparte esta información entre las estructuras `EPROCESS` y `KTHREAD`. El modelo Unix crea procesos en dos pasos:\n\n```python\nimport os\npid = os.fork()                  # duplica el proceso\nif pid == 0:                     # rama del hijo\n    os.execvp(\"ls\", [\"ls\", \"-l\"])  # reemplaza su imagen por ls\nelse:                            # rama del padre\n    _, estado = os.waitpid(pid, 0)\n    print(\"Hijo\", pid, \"terminó con código\", os.WEXITSTATUS(estado))\n```\n\nLa shell hace exactamente esto con cada comando. Gracias a la técnica *copy-on-write*, `fork` no copia la memoria hasta que alguno de los procesos la modifica.\n\n## Métricas y algoritmos de planificación\n\nCon más procesos listos que núcleos, el **planificador** decide quién usa la CPU. Las métricas fundamentales son:\n\n- Tiempo de retorno: `T_retorno = T_fin − T_llegada`\n- Tiempo de espera: `T_espera = T_retorno − Ráfaga`\n- Tiempo de respuesta: desde la llegada hasta la primera ejecución.\n\nConsidere cuatro procesos con llegada y ráfaga: P1 (0, 8), P2 (1, 4), P3 (2, 9), P4 (3, 5).\n\n**FCFS** ejecuta en orden de llegada: P1 de 0 a 8, P2 de 8 a 12, P3 de 12 a 21, P4 de 21 a 26. Esperas: 0, 7, 10 y 18; promedio **8,75**.\n\n**SRTF** (SJF expropiativo) siempre elige la menor ráfaga restante: P1 de 0 a 1, P2 de 1 a 5, P4 de 5 a 10, P1 de 10 a 17, P3 de 17 a 26. Esperas: P1 = 17 − 0 − 8 = 9, P2 = 0, P3 = 15, P4 = 2; promedio **6,5**. Es óptimo en espera media, pero exige estimar ráfagas futuras, normalmente con un promedio exponencial `τ(n+1) = α·t(n) + (1 − α)·τ(n)`, y puede provocar **inanición** de procesos largos.\n\n**Round Robin** asigna un *quantum* fijo y rota la cola. Su espera media suele ser mayor que la de SJF, pero ofrece buen tiempo de respuesta, por lo que es la base de los sistemas interactivos. Si el quantum es enorme, degenera en FCFS; si es diminuto, el costo de los cambios de contexto domina.\n\nLos sistemas reales combinan ideas. Linux usó desde 2007 el **Completely Fair Scheduler (CFS)** de Ingo Molnár, que asigna a cada tarea un tiempo virtual de ejecución ponderado por su valor *nice* y ejecuta siempre la de menor tiempo virtual; desde la versión 6.6 lo reemplazó **EEVDF**, que incorpora plazos virtuales para mejorar la latencia. Windows usa 32 niveles de prioridad con impulsos temporales a los hilos interactivos.\n\n## Concurrencia y condiciones de carrera\n\nLos hilos de un proceso comparten memoria. Esto acelera la comunicación, pero introduce **condiciones de carrera**: resultados que dependen del orden de ejecución. El siguiente código simula abonos concurrentes a una cuenta:\n\n```python\nimport threading\nsaldo = 0\ncandado = threading.Lock()\n\ndef abonar(veces):\n    global saldo\n    for _ in range(veces):\n        with candado:          # sección crítica protegida\n            saldo += 1         # leer, sumar, escribir\n\nhilos = [threading.Thread(target=abonar, args=(500_000,)) for _ in range(4)]\nfor h in hilos: h.start()\nfor h in hilos: h.join()\nprint(saldo)                   # siempre 2 000 000 con el candado\n```\n\nSin la línea `with candado:` el resultado puede ser menor, porque dos hilos leen el mismo valor antes de escribir. El candado (mutex) garantiza **exclusión mutua**. Los **semáforos** de Dijkstra generalizan la idea: un semáforo inicializado en 10 permite, por ejemplo, que como máximo diez hilos usen simultáneamente el pool de conexiones a una base de datos.\n\n## Interbloqueo\n\nEdward Coffman y colaboradores demostraron en 1971 que un **interbloqueo** solo ocurre si se cumplen a la vez cuatro condiciones: exclusión mutua, retención y espera, no expropiación y espera circular. La estrategia más práctica para el programador es romper la espera circular imponiendo un **orden global** de adquisición: por ejemplo, en una transferencia bancaria siempre se bloquea primero la cuenta con número menor. Los motores de bases de datos prefieren detectar el ciclo en un grafo de espera y abortar una transacción víctima, que el programa debe reintentar.\n\n## Del concepto al diagnóstico\n\nUn administrador traduce estos conceptos en observaciones concretas. `uptime` informa la carga promedio, que debe compararse con `nproc`. Muchos procesos en estado `R` revelan saturación de CPU; muchos en estado `D`, esperas de disco o red. `vmstat 1` muestra en la columna `cs` los cambios de contexto por segundo, y `top -H` los hilos de un proceso. Con `nice` y `renice` se reordenan prioridades sin detener servicios, y con `kill -15` se solicita una terminación ordenada antes de recurrir a `kill -9`. Comprender la teoría permite actuar con precisión en lugar de reiniciar el servidor a ciegas."
+   },
+   "case": {
+    "title": "Caso: La plataforma de pagos que se congelaba en quincena",
+    "content": "**PagaYa Perú S.A.C.** (empresa ficticia) es una fintech limeña de 45 colaboradores que procesa pagos de servicios y recargas para unas 3 200 bodegas en Lima, Arequipa y Trujillo. Su plataforma corre en tres servidores virtuales con Ubuntu Server 22.04, cada uno con 8 vCPU y 32 GB de RAM: dos ejecutan la aplicación de pagos escrita en Python y Java, y uno la base de datos PostgreSQL.\n\nEn días normales la plataforma procesa unas 40 000 transacciones diarias con un tiempo de respuesta promedio de 300 ms. Sin embargo, los días 15 y 30 de cada mes, entre las 6 p. m. y las 9 p. m., el volumen sube a 9 000 transacciones por hora y aparecen tres síntomas: tiempos de respuesta superiores a 8 segundos, transacciones rechazadas con el error *deadlock detected* en PostgreSQL y, en dos ocasiones, saldos de bodegas que no cuadraron por diferencias de entre S/ 20 y S/ 150.\n\nEl equipo de operaciones recogió estos datos en el pico del último 30: carga promedio de 22,4 en los servidores de aplicación; uso de CPU del 96 %; columna `cs` de `vmstat` con 85 000 cambios de contexto por segundo (frente a 6 000 en días normales); 1 200 hilos activos por proceso Java; y un proceso nocturno de conciliación, programado desde las 7 p. m., que consume el 35 % de la CPU con prioridad normal. La revisión del código mostró que la función de recarga actualiza primero el saldo de la bodega y luego el del operador telefónico, mientras que la función de reverso lo hace en orden inverso. Además, el saldo en caché de la aplicación se actualiza con una lectura y una escritura separadas sin candado.\n\nEl gerente de tecnología, Martín, tiene dos propuestas. El proveedor de nube recomienda duplicar los servidores de aplicación a 16 vCPU, con un costo adicional de US$ 1 900 mensuales. Valeria, la desarrolladora principal, sostiene que el problema es de diseño y que con cambios en la concurrencia y la planificación de tareas se resolvería sin gastar más. INDECOPI ya recibió cuatro reclamos de bodegueros por cobros duplicados y la empresa teme sanciones y pérdida de clientes frente a competidores más grandes. Martín debe presentar al directorio un plan de acción en 48 horas.",
+    "questions": [
+     "Interpreta los datos de carga promedio, uso de CPU y cambios de contexto: ¿qué indican sobre el número de hilos y la planificación?",
+     "Explica, con las condiciones de Coffman, por qué se producen los interbloqueos entre recargas y reversos, y propone una corrección concreta.",
+     "¿Qué causa probable tienen los saldos que no cuadran? Diseña la corrección con un mecanismo de sincronización y justifica tu elección.",
+     "¿Qué harías con el proceso nocturno de conciliación usando lo aprendido sobre prioridades y programación de tareas?",
+     "Evalúa la propuesta de duplicar vCPU frente a la de Valeria considerando la ley de Amdahl, el costo y el riesgo reputacional."
+    ]
+   },
+   "assignment": {
+    "title": "Tarea 2: Análisis de planificación y diagnóstico de concurrencia",
+    "instructions": "**Objetivo:** aplicar algoritmos de planificación y técnicas de sincronización a un escenario realista, y diagnosticar procesos con herramientas del sistema.\n\n**Parte A – Planificación (cálculo):** dado el conjunto de procesos P1 (llegada 0, ráfaga 10, prioridad 3), P2 (1, 2, 1), P3 (2, 6, 4), P4 (3, 4, 2) y P5 (4, 3, 5), construye los diagramas de Gantt y calcula tiempos de espera, retorno y respuesta para FCFS, SRTF, prioridades expropiativo (1 es la más alta) y Round Robin con q = 3. Presenta una tabla comparativa y recomienda un algoritmo para un sistema de atención en ventanilla, justificando con las métricas.\n\n**Parte B – Concurrencia (código):** escribe un script en Python con cuatro hilos que simulen depósitos y retiros sobre dos cuentas. Demuestra primero la condición de carrera y luego corrígela. Añade una función de transferencia entre cuentas libre de interbloqueo mediante orden global de candados y explica qué condición de Coffman rompes.\n\n**Parte C – Diagnóstico:** en tu máquina virtual, lanza una carga con `yes > /dev/null &` y otro proceso con `nice -n 15`. Registra la salida de `uptime`, `top` y `ps -eo pid,ni,stat,%cpu,cmd`, interpreta los resultados y termina los procesos correctamente.\n\n**Entrega:** PDF de 4 a 7 páginas más el archivo `.py` comentado.",
+    "rubric": [
+     {
+      "name": "Cálculos de planificación correctos y tabla comparativa",
+      "points": 6
+     },
+     {
+      "name": "Código concurrente funcional, corregido y libre de interbloqueo",
+      "points": 6
+     },
+     {
+      "name": "Diagnóstico con herramientas e interpretación",
+      "points": 4
+     },
+     {
+      "name": "Recomendación justificada y calidad del informe",
+      "points": 4
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 2: Procesos, planificación y concurrencia",
+    "questions": [
+     {
+      "prompt": "Tres procesos llegan en t = 0 con ráfagas de 6, 2 y 4 unidades, en ese orden. ¿Cuál es el tiempo de espera promedio con SJF no expropiativo?",
+      "options": [
+       "6,00",
+       "3,33",
+       "4,67",
+       "2,67"
+      ],
+      "correct": 3,
+      "explanation": "SJF ejecuta 2, 4 y 6: esperas 0, 2 y 6, que suman 8; el promedio es 8/3 = 2,67. FCFS daría (0 + 6 + 8)/3 = 4,67."
+     },
+     {
+      "prompt": "Un servidor de 4 núcleos muestra carga promedio de 18, pero la CPU está casi ociosa. La mayoría de procesos aparece en estado D. ¿Cuál es el diagnóstico más razonable?",
+      "options": [
+       "Los procesos esperan operaciones de E/S de disco o almacenamiento en red que no responden",
+       "Los procesos son zombis que el padre no recogió",
+       "El quantum del planificador es demasiado pequeño",
+       "Hay demasiados procesos compitiendo por la CPU"
+      ],
+      "correct": 0,
+      "explanation": "El estado D es espera no interrumpible, típicamente de E/S; estos procesos cuentan en la carga promedio en Linux aunque no usen CPU."
+     },
+     {
+      "prompt": "En Round Robin, ¿qué ocurre si el quantum es mucho mayor que todas las ráfagas de CPU?",
+      "options": [
+       "Aumentan drásticamente los cambios de contexto",
+       "El algoritmo se comporta como FCFS",
+       "El algoritmo se comporta como SJF",
+       "Los procesos sufren inanición permanente"
+      ],
+      "correct": 1,
+      "explanation": "Si ningún proceso agota su quantum, cada uno se ejecuta completo en orden de llegada, que es exactamente FCFS."
+     },
+     {
+      "prompt": "Si el 60 % de un programa es paralelizable, ¿cuál es la aceleración máxima teórica con 4 núcleos según la ley de Amdahl?",
+      "options": [
+       "Exactamente 4,00",
+       "Aproximadamente 2,40",
+       "Aproximadamente 1,82",
+       "Aproximadamente 1,25"
+      ],
+      "correct": 2,
+      "explanation": "Aceleración = 1 / (0,4 + 0,6/4) = 1 / 0,55 ≈ 1,82. La parte secuencial limita la mejora aunque se añadan núcleos."
+     },
+     {
+      "prompt": "Dos funciones bloquean las mismas dos cuentas, pero en orden inverso, y se producen interbloqueos. ¿Qué corrección rompe la condición de espera circular?",
+      "options": [
+       "Reemplazar los candados por variables globales sin protección",
+       "Aumentar la prioridad nice de una de las funciones",
+       "Usar kill -9 sobre el proceso cuando se detecte lentitud",
+       "Adquirir siempre los candados en un orden global, por ejemplo por número de cuenta ascendente"
+      ],
+      "correct": 3,
+      "explanation": "Con un orden total de adquisición no puede formarse un ciclo en el grafo de espera. Las demás opciones no eliminan la espera circular o introducen carreras."
+     },
+     {
+      "prompt": "¿Por qué se recomienda enviar SIGTERM antes que SIGKILL a un proceso de base de datos que no responde bien?",
+      "options": [
+       "SIGTERM permite que el proceso cierre archivos y transacciones de forma ordenada",
+       "SIGTERM es más rápido porque no pasa por el núcleo",
+       "SIGKILL solo funciona con procesos en estado zombi",
+       "SIGTERM aumenta la prioridad del proceso para que termine antes"
+      ],
+      "correct": 0,
+      "explanation": "SIGTERM puede ser capturada por la aplicación para limpiar; SIGKILL la termina inmediatamente, con riesgo de dejar datos inconsistentes."
+     },
+     {
+      "prompt": "Un pool permite como máximo 10 conexiones simultáneas a una base de datos. ¿Qué primitiva de sincronización modela mejor esta restricción?",
+      "options": [
+       "Una tubería con nombre creada con mkfifo",
+       "Un semáforo contador inicializado en 10",
+       "Una señal SIGUSR1 enviada a cada hilo",
+       "Un mutex único compartido por todos los hilos"
+      ],
+      "correct": 1,
+      "explanation": "El semáforo contador permite hasta N accesos concurrentes; un mutex solo permitiría una conexión a la vez."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 3 · Memoria virtual, sistemas de archivos y almacenamiento",
+   "description": "Al finalizar la unidad, el estudiante explica la traducción de direcciones y la memoria virtual, calcula fallos de página con distintos algoritmos, diagnostica problemas de memoria e hiperpaginación, y administra particiones, sistemas de archivos, montaje persistente y volúmenes lógicos en Linux y Windows.",
+   "topics": [
+    "Direcciones lógicas y físicas, paginación y TLB",
+    "Memoria virtual, fallos de página y algoritmos de reemplazo",
+    "Hiperpaginación, swap y diagnóstico de memoria",
+    "Sistemas de archivos: inodos, ext4, NTFS, journaling y enlaces",
+    "Particionado, montaje persistente y LVM"
+   ],
+   "slides": [
+    {
+     "title": "De la dirección lógica a la física",
+     "bullets": [
+      "El proceso usa direcciones lógicas; la MMU las traduce a direcciones físicas en tiempo de ejecución.",
+      "Beneficios: aislamiento entre procesos, reubicación y uso de más memoria que la física disponible.",
+      "Fragmentación externa en asignación contigua: huecos libres que no sirven por su tamaño.",
+      "La paginación elimina la fragmentación externa dividiendo la memoria en bloques de tamaño fijo."
+     ],
+     "notes": "Conecte con Arquitectura de Computadoras, donde vieron la jerarquía de memoria y la MMU como componente de la CPU. Explique que si cada programa usara direcciones físicas directamente, dos programas no podrían coexistir sin pisarse, y uno malicioso podría leer la memoria de otro, por ejemplo las contraseñas en un navegador. La traducción en tiempo de ejecución resuelve esto. Muestre la evolución histórica: primero particiones fijas, luego asignación contigua variable con algoritmos de primer ajuste y mejor ajuste, que sufren fragmentación externa, y finalmente la paginación. Use la analogía de un estacionamiento: si los autos ocupan espacios contiguos de tamaño variable, quedan huecos inútiles; si todos los espacios son iguales y un bus puede ocupar espacios no contiguos, se aprovecha todo. Pregunta para la clase: ¿por qué dos procesos pueden tener la misma dirección lógica 0x400000 sin conflicto?"
+    },
+    {
+     "title": "Paginación: páginas, marcos y tabla de páginas",
+     "bullets": [
+      "La memoria lógica se divide en páginas y la física en marcos del mismo tamaño, típicamente 4 KiB.",
+      "Dirección lógica = número de página (p) + desplazamiento (d).",
+      "Dirección física = marco (f) obtenido de la tabla de páginas × tamaño de página + d.",
+      "Con páginas de 4 KiB, el desplazamiento usa los 12 bits menos significativos.",
+      "Ejemplo: dirección 20 500 → página 5, desplazamiento 20; si la página 5 está en el marco 9, física = 36 884."
+     ],
+     "notes": "Resuelva el ejemplo paso a paso: 20 500 dividido entre 4 096 da cociente 5 y residuo 20 500 − 20 480 = 20. Si la tabla indica que la página 5 está en el marco 9, la dirección física es 9 × 4 096 + 20 = 36 884. Muestre también la versión binaria: los 12 bits bajos son el desplazamiento y no cambian; solo se sustituye la parte alta. Explique los bits de la entrada de la tabla de páginas: válido, presente, modificado (sucio), referenciado y permisos de lectura, escritura y ejecución. El bit NX, que impide ejecutar código en páginas de datos, es una defensa clave contra ataques de desbordamiento de búfer. Comente que en x86-64 las tablas son jerárquicas de cuatro o cinco niveles para no ocupar memoria excesiva. Ejercicio para la clase: con páginas de 4 KiB, ¿qué página y desplazamiento corresponden a la dirección 12 300?"
+    },
+    {
+     "title": "TLB: la caché de traducciones",
+     "bullets": [
+      "Consultar la tabla de páginas en memoria duplicaría cada acceso; la TLB guarda traducciones recientes.",
+      "Tasa de aciertos típica superior al 99 % gracias a la localidad temporal y espacial.",
+      "Tiempo efectivo de acceso: TEA = α·(t_TLB + t_mem) + (1 − α)·(t_TLB + 2·t_mem).",
+      "Ejemplo: α = 0,98, t_mem = 100 ns, t_TLB ≈ 0: TEA = 102 ns.",
+      "Páginas enormes (2 MiB o 1 GiB) reducen fallos de TLB en bases de datos y máquinas virtuales."
+     ],
+     "notes": "Explique que sin la TLB cada acceso a memoria requeriría al menos dos accesos: uno a la tabla y otro al dato, lo que duplicaría el tiempo; con tablas de cuatro niveles serían cinco. La TLB es una memoria asociativa pequeña, de decenas a miles de entradas, dentro de la CPU. Resuelva el cálculo: 0,98 × 100 + 0,02 × 200 = 98 + 4 = 102 ns, apenas 2 % de penalización. Si α bajara a 0,80, el TEA sería 120 ns. Introduzca el principio de localidad, que reaparecerá con el reemplazo de páginas: los programas tienden a reutilizar datos recientes y cercanos. Mencione que los administradores de bases de datos como Oracle o PostgreSQL recomiendan configurar páginas enormes (huge pages) para su caché, justamente para reducir fallos de TLB. Pregunta: ¿por qué un cambio de contexto entre procesos puede invalidar la TLB y qué efecto tiene en el rendimiento?"
+    },
+    {
+     "title": "Memoria virtual y paginación bajo demanda",
+     "bullets": [
+      "Solo se cargan en RAM las páginas que el proceso usa; el resto permanece en disco.",
+      "Fallo de página: acceso a una página no presente; el núcleo la trae del disco y reanuda la instrucción.",
+      "Fallo menor: la página ya está en RAM (caché o compartida); fallo mayor: requiere leer del disco.",
+      "Con un SSD el fallo mayor cuesta unos 100 µs; un acceso a RAM, unos 100 ns: mil veces más lento.",
+      "Tiempo efectivo: TEA = (1 − p)·t_mem + p·t_fallo; con p = 0,001 el sistema se vuelve unas 2 veces más lento."
+     ],
+     "notes": "La memoria virtual permite ejecutar programas más grandes que la RAM y cargar más procesos. Explique la secuencia de un fallo de página: la MMU detecta el bit de presencia en cero, genera una excepción, el núcleo verifica que el acceso sea válido, busca un marco libre o elige una víctima, lee la página del disco, actualiza la tabla y reinicia la instrucción. Haga el cálculo con números: t_mem = 100 ns y t_fallo = 100 000 ns en SSD; con p = 0,001, TEA = 0,999 × 100 + 0,001 × 100 000 ≈ 200 ns, el doble. Con disco mecánico, de unos 8 ms, la degradación sería de ochenta veces. Esto demuestra por qué la tasa de fallos debe ser bajísima. Muestre /usr/bin/time -v con un comando para ver fallos mayores y menores. Pregunta: ¿por qué un servidor con disco mecánico sufre mucho más cuando se queda sin RAM que uno con SSD NVMe?"
+    },
+    {
+     "title": "Algoritmos de reemplazo: FIFO, óptimo y LRU",
+     "bullets": [
+      "Cadena de referencias 7,0,1,2,0,3,0,4,2,3,0,3,2 con 3 marcos.",
+      "FIFO reemplaza la página más antigua: 10 fallos en esta cadena.",
+      "Óptimo (Belady, 1966) reemplaza la que se usará más tarde: 7 fallos; es la cota inferior teórica.",
+      "LRU reemplaza la menos usada recientemente: 9 fallos; se aproxima con bits de referencia.",
+      "Linux usa listas activas e inactivas y, desde la versión 6.1, Multi-Gen LRU."
+     ],
+     "notes": "Resuelva la cadena en la pizarra con tres columnas. Con FIFO: 7, 0, 1 son fallos; 2 reemplaza a 7; 0 acierta; 3 reemplaza a 0; 0 reemplaza a 1; 4 reemplaza a 2; 2 reemplaza a 3; 3 reemplaza a 0; 0 reemplaza a 4; 3 y 2 aciertan: diez fallos. Con el óptimo, se mira el futuro: siete fallos. Con LRU, nueve fallos. Explique que el óptimo es imposible en la práctica porque exige conocer el futuro, pero sirve de referencia para comparar algoritmos. LRU puro requeriría registrar cada acceso; el hardware solo ofrece un bit de referencia, por lo que se usa el algoritmo del reloj o de segunda oportunidad. Pida que verifiquen los resultados en parejas, porque la tarea exigirá un ejercicio similar. Pregunta: ¿qué propiedad de los programas explica que LRU funcione bien en la práctica?"
+    },
+    {
+     "title": "Anomalía de Belady y conjunto de trabajo",
+     "bullets": [
+      "Anomalía de Belady: con FIFO, más marcos pueden producir más fallos.",
+      "Cadena 1,2,3,4,1,2,5,1,2,3,4,5: 9 fallos con 3 marcos y 10 con 4 marcos.",
+      "LRU y óptimo son algoritmos de pila y no sufren esta anomalía.",
+      "Conjunto de trabajo (Denning, 1968): páginas usadas en una ventana reciente de referencias.",
+      "Si la suma de conjuntos de trabajo supera la RAM, el sistema entra en hiperpaginación."
+     ],
+     "notes": "La anomalía de Belady es contraintuitiva y sirve para desarrollar pensamiento crítico: más recursos no siempre significan mejor desempeño si el algoritmo es inadecuado. Resuelva rápidamente la cadena con tres y cuatro marcos para que comprueben 9 y 10 fallos. Explique que LRU y el óptimo cumplen la propiedad de inclusión: el conjunto de páginas en memoria con n marcos siempre está contenido en el de n + 1 marcos, por eso nunca empeoran. Presente el modelo del conjunto de trabajo de Peter Denning: cada proceso necesita mantener en memoria las páginas de su localidad actual; si no lo logra, falla constantemente. Esta idea es la base para decidir cuántos procesos pueden ejecutarse a la vez sin degradar el sistema. Pregunta para la clase: un administrador agrega RAM a un servidor y el rendimiento no mejora; ¿qué otras causas investigarían antes de concluir que el problema es otro?"
+    },
+    {
+     "title": "Hiperpaginación, swap y OOM killer",
+     "bullets": [
+      "Hiperpaginación (thrashing): el sistema pasa más tiempo paginando que ejecutando.",
+      "Síntomas: CPU baja, disco saturado, columnas si y so de vmstat altas y respuesta extremadamente lenta.",
+      "Swap: espacio en disco para páginas expulsadas; vm.swappiness ajusta la tendencia a usarlo.",
+      "OOM killer de Linux: si la memoria se agota, termina el proceso con mayor puntaje en oom_score.",
+      "Comandos: free -h, vmstat 1, cat /proc/meminfo, dmesg | grep -i oom."
+     ],
+     "notes": "Explique el círculo vicioso de la hiperpaginación: los procesos fallan, esperan disco, la CPU queda ociosa y, en sistemas antiguos, el planificador admitía más procesos para aprovecharla, empeorando todo. Muestre vmstat 1 e interprete las columnas si (swap in) y so (swap out): valores sostenidos de cientos o miles por segundo indican problema grave. Aclare un error frecuente al leer free -h: la memoria en caché no es memoria perdida; Linux usa la RAM libre como caché de disco y la libera cuando se necesita, por eso hay que mirar la columna available. Explique el OOM killer y cómo leer en dmesg qué proceso terminó; en un servidor de base de datos puede ser catastrófico, por lo que se ajusta oom_score_adj. En Windows, el equivalente es el archivo de paginación pagefile.sys y el Monitor de recursos. Pregunta: ¿por qué en un servidor de base de datos se suele bajar swappiness a 10?"
+    },
+    {
+     "title": "Sistema de archivos: conceptos e inodos",
+     "bullets": [
+      "Organiza datos en archivos y directorios sobre bloques del dispositivo.",
+      "Inodo: estructura con metadatos (permisos, dueño, tamaño, fechas, punteros a bloques), no el nombre.",
+      "El directorio es una tabla que asocia nombres con números de inodo.",
+      "Comandos: ls -i, stat archivo, df -i para ver inodos libres.",
+      "Un disco puede quedarse sin inodos aunque tenga espacio libre, por millones de archivos pequeños."
+     ],
+     "notes": "Explique la separación entre nombre y contenido: el nombre vive en el directorio y apunta a un inodo, que contiene los metadatos y la ubicación de los bloques. Muestre stat sobre un archivo e interprete tamaño, bloques, inodo, enlaces y las tres marcas de tiempo (acceso, modificación y cambio de metadatos). Cuente un caso típico de soporte: un servidor de correo o una aplicación que genera archivos de sesión diminutos agota los inodos; df -h muestra 40 % de uso, pero no se pueden crear archivos y df -i revela 100 %. Este tipo de diagnóstico diferencia a un técnico competente. Mencione que NTFS usa una estructura análoga, la Master File Table (MFT), donde cada archivo tiene un registro. Pregunta para la clase: si renombro un archivo de 10 GB dentro del mismo sistema de archivos, ¿por qué la operación es instantánea? Oriente hacia que solo cambia la entrada del directorio, no los datos."
+    },
+    {
+     "title": "Enlaces duros y simbólicos",
+     "bullets": [
+      "Enlace duro (ln origen destino): otro nombre para el mismo inodo; el contador de enlaces aumenta.",
+      "Los datos solo se liberan cuando el contador llega a cero y ningún proceso tiene el archivo abierto.",
+      "Enlace simbólico (ln -s): archivo especial que contiene una ruta; puede apuntar a otro sistema de archivos.",
+      "Si se borra el destino, el enlace simbólico queda roto; el duro sigue funcionando.",
+      "Uso real: /etc/alternatives y las versiones de bibliotecas en /usr/lib usan enlaces simbólicos."
+     ],
+     "notes": "Haga una demostración en vivo: cree un archivo, un enlace duro y uno simbólico; muestre con ls -li que el duro comparte número de inodo y el simbólico no; borre el original y verifique que el duro conserva el contenido mientras el simbólico aparece roto. Explique un incidente frecuente: se borra un archivo de registro enorme pero el espacio no se libera porque el servicio lo mantiene abierto; lsof +L1 muestra estos archivos eliminados todavía abiertos y la solución es reiniciar el servicio o truncar el archivo con su descriptor. Mencione que Windows también tiene enlaces simbólicos (mklink) y uniones de directorios, aunque se usan menos. Pregunta para la clase: ¿por qué no se permiten enlaces duros a directorios en la mayoría de sistemas? Oriente hacia el riesgo de ciclos en el árbol de directorios."
+    },
+    {
+     "title": "ext4, XFS, NTFS y el journaling",
+     "bullets": [
+      "Journaling: registra las operaciones en un diario antes de aplicarlas para recuperarse tras un corte.",
+      "ext4: estándar en muchas distribuciones; extents, volúmenes de hasta 1 EiB y archivos de hasta 16 TiB.",
+      "XFS: predeterminado en Red Hat Enterprise Linux; destaca con archivos grandes y alta concurrencia.",
+      "NTFS: sistema de Windows con permisos ACL, cifrado EFS, compresión y diario de transacciones.",
+      "FAT32 y exFAT para medios extraíbles; Btrfs y ZFS añaden instantáneas y sumas de verificación."
+     ],
+     "notes": "Explique el problema que resuelve el journaling: crear un archivo implica varias escrituras (inodo, directorio, mapa de bloques); si la luz se corta a la mitad, el sistema queda inconsistente y antes había que revisar todo el disco con fsck durante horas. Con diario, basta repetir o descartar las transacciones pendientes. Compare los modos de ext4: ordered (por defecto, diario de metadatos), journal (también datos, más seguro y lento) y writeback. Relacione con el caso de la cooperativa de la unidad 1, donde un corte de luz afectó el sistema. Discuta criterios de elección: compatibilidad con Windows y Linux para un USB (exFAT), servidor de archivos Linux (ext4 o XFS), necesidad de instantáneas e integridad (ZFS o Btrfs). Mencione que FAT32 no admite archivos mayores de 4 GiB, causa frecuente de errores al copiar videos. Pregunta: ¿qué sistema elegirían para un disco externo que se usará en Windows y en un televisor?"
+    },
+    {
+     "title": "Crear y montar un sistema de archivos",
+     "bullets": [
+      "1. Identificar el disco nuevo: lsblk y sudo fdisk -l.",
+      "2. Crear tabla GPT y partición: sudo parted /dev/sdb mklabel gpt mkpart datos ext4 0% 100%.",
+      "3. Formatear: sudo mkfs.ext4 -L datos /dev/sdb1.",
+      "4. Montar: sudo mkdir /srv/datos && sudo mount /dev/sdb1 /srv/datos.",
+      "5. Persistir en /etc/fstab con UUID y opción nofail; probar con sudo mount -a antes de reiniciar."
+     ],
+     "notes": "Haga el procedimiento completo en vivo con un disco virtual adicional agregado a la máquina. Insista en verificar dos veces el dispositivo antes de formatear: confundir /dev/sda con /dev/sdb destruye el sistema. Explique por qué usar UUID en fstab en lugar de /dev/sdb1: los nombres de dispositivo pueden cambiar al agregar discos, mientras que el UUID es estable; se obtiene con blkid. Muestre una línea correcta: UUID=... /srv/datos ext4 defaults,nofail 0 2. La opción nofail evita que el sistema entre en modo de emergencia si el disco falta, exactamente lo que faltó en el caso de la cooperativa. Recalque la regla de oro: después de editar fstab, ejecutar mount -a; si hay error, corregirlo antes de reiniciar. En Windows, el proceso equivalente se hace en Administración de discos o con diskpart y PowerShell (Initialize-Disk, New-Partition, Format-Volume). Pregunta: ¿qué significan los dos últimos números de la línea de fstab?"
+    },
+    {
+     "title": "LVM: volúmenes lógicos flexibles",
+     "bullets": [
+      "Capas: volúmenes físicos (PV), grupo de volúmenes (VG) y volúmenes lógicos (LV).",
+      "Permite ampliar un volumen en caliente agregando discos: lvextend -r -L +20G /dev/vg0/datos.",
+      "Instantáneas LVM para respaldos consistentes sin detener servicios.",
+      "Comandos de consulta: pvs, vgs, lvs; creación: pvcreate, vgcreate, lvcreate.",
+      "Equivalentes: Espacios de almacenamiento en Windows; en la nube, discos ampliables del proveedor."
+     ],
+     "notes": "Explique el problema que resuelve LVM: con particiones fijas, si /var se llena, hay que repartir el disco, con riesgo y tiempo fuera de servicio. Con LVM, se añade un disco al grupo de volúmenes y se amplía el volumen lógico y su sistema de archivos con un solo comando; la opción -r redimensiona el sistema de archivos automáticamente. Haga la demostración: pvcreate /dev/sdc, vgextend vg0 /dev/sdc, lvextend -r -L +5G /dev/vg0/datos y df -h para verificar. Advierta que LVM no es redundancia: si un disco del grupo falla sin RAID, se pueden perder datos de todo el volumen. Introduzca brevemente RAID 1 (espejo) y RAID 5 o 6 (paridad) como complemento, y recalque que RAID tampoco reemplaza el respaldo, porque replica también los borrados accidentales o el cifrado de un ransomware. Pregunta: ¿por qué la instalación de Ubuntu Server propone LVM por defecto?"
+    },
+    {
+     "title": "Diagnóstico de almacenamiento",
+     "bullets": [
+      "Espacio: df -h por sistema de archivos y du -sh /ruta/* | sort -h para ubicar lo que crece.",
+      "Rendimiento: iostat -x 1 (columnas %util y await) e iotop para ver qué proceso escribe.",
+      "Salud del disco: smartctl -a /dev/sda revisa sectores reasignados y errores.",
+      "Rotación de registros con logrotate para evitar que /var/log llene el disco.",
+      "Windows: Liberador de espacio, chkdsk, Get-PhysicalDisk y el Monitor de recursos."
+     ],
+     "notes": "Proponga un protocolo ante la alerta disco lleno: confirmar con df -h cuál sistema de archivos está lleno, descender con du por directorios hasta hallar el culpable, revisar archivos eliminados aún abiertos con lsof +L1 y verificar inodos con df -i. Muestre que los registros sin rotación son la causa más frecuente y cómo configurar logrotate con compresión y retención. Para rendimiento, explique iostat -x: %util cercano a 100 y await alto indican que el disco es el cuello de botella; combine con iotop para identificar al proceso. Explique SMART como sistema de alerta temprana: un aumento en sectores reasignados anticipa la falla del disco y justifica reemplazarlo antes de perder datos. Relacione con la Ley 29733: perder o exponer datos personales de clientes por falta de mantenimiento es una falta de las medidas de seguridad exigidas. Pregunta: ¿qué indicador revisarían primero si los usuarios dicen que el sistema es lento al guardar?"
+    },
+    {
+     "title": "Cierre: memoria y almacenamiento como decisión",
+     "bullets": [
+      "La memoria virtual intercambia velocidad por capacidad; la tasa de fallos determina el costo real.",
+      "Más RAM o más disco no resuelve problemas de diseño, como fugas de memoria o registros sin rotación.",
+      "Particionado, sistema de archivos y LVM se eligen según crecimiento, recuperación y compatibilidad.",
+      "Toda decisión de almacenamiento debe ir acompañada de una política de respaldo probada."
+     ],
+     "notes": "Sintetice la unidad conectando los conceptos con decisiones de negocio: dimensionar la RAM de un servidor según los conjuntos de trabajo de sus aplicaciones, elegir el sistema de archivos por la carga y la necesidad de instantáneas, y usar LVM para crecer sin interrupciones. Recuerde la regla 3-2-1 de respaldos: tres copias, en dos medios distintos, una fuera del sitio, y que un respaldo que no se ha restaurado en una prueba no es confiable. Presente la tarea de diagnóstico de memoria y almacenamiento y revise la rúbrica, mostrando cómo se evaluará la interpretación de las salidas de comandos, no solo las capturas. Recuerde el cuestionario. Enlace con la unidad 4: hemos visto cómo el sistema operativo gestiona recursos; ahora veremos quién puede acceder a ellos, cómo se configuran los servicios y cómo se automatiza la administración. Pregunta de cierre: ¿quién debería poder leer el directorio de respaldos de una empresa?"
+    }
+   ],
+   "reading": {
+    "title": "Memoria virtual y sistemas de archivos: cómo el sistema operativo administra lo que no cabe",
+    "minutes": 40,
+    "content": "## La ilusión de memoria abundante\n\nCada proceso cree disponer de un espacio de direcciones enorme y exclusivo. Esta ilusión la construyen juntos la **MMU** del procesador y el sistema operativo mediante la **paginación**: la memoria lógica se divide en páginas y la física en marcos del mismo tamaño, habitualmente 4 KiB. Una dirección lógica se separa en número de página y desplazamiento:\n\n```\npágina        = dirección div tamaño_página\ndesplazamiento = dirección mod tamaño_página\nfísica        = marco(página) × tamaño_página + desplazamiento\n```\n\nCon páginas de 4 096 bytes, la dirección 20 500 corresponde a la página 5 con desplazamiento 20. Si la tabla de páginas indica el marco 9, la dirección física es 9 × 4 096 + 20 = 36 884. Para no consultar la tabla en cada acceso, la CPU guarda las traducciones recientes en la **TLB**. El tiempo efectivo de acceso, despreciando el tiempo de la TLB, es:\n\n```\nTEA = α · t_mem + (1 − α) · 2 · t_mem\n```\n\nCon α = 0,98 y t_mem = 100 ns, TEA = 102 ns.\n\n## Fallos de página y su costo\n\nEn la **paginación bajo demanda**, una página solo se carga cuando se usa. Si el proceso accede a una página ausente, ocurre un **fallo de página**: el núcleo la lee del disco, actualiza la tabla y reinicia la instrucción. El impacto se estima así:\n\n```\nTEA = (1 − p) · t_mem + p · t_fallo\n```\n\nCon t_mem = 100 ns, un SSD que atiende un fallo en 100 µs y una tasa p = 0,001, el TEA sube a unos 200 ns: el sistema es el doble de lento. Con un disco mecánico de 8 ms, la degradación supera las ochenta veces. Por eso un servidor que se queda sin RAM se vuelve casi inutilizable.\n\n## Algoritmos de reemplazo\n\nCuando no hay marcos libres, el núcleo elige una víctima. Para la cadena 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2 con tres marcos:\n\n| Algoritmo | Criterio | Fallos |\n|---|---|---|\n| FIFO | La página más antigua | 10 |\n| LRU | La menos usada recientemente | 9 |\n| Óptimo (Belady) | La que se usará más tarde | 7 |\n\nEl óptimo es irrealizable porque requiere conocer el futuro, pero sirve como referencia. FIFO sufre la **anomalía de Belady**: con más marcos puede producir más fallos. Los sistemas reales aproximan LRU con bits de referencia; Linux mantiene listas de páginas activas e inactivas y desde la versión 6.1 incorpora *Multi-Gen LRU*.\n\nCuando la suma de los **conjuntos de trabajo** de los procesos (Denning, 1968) excede la RAM, aparece la **hiperpaginación**: la CPU queda ociosa mientras el disco se satura. Se diagnostica así:\n\n```bash\nfree -h                     # mirar la columna 'available', no 'free'\nvmstat 1 5                  # si/so altos y sostenidos = paginación intensa\ndmesg | grep -i \"out of memory\"   # procesos terminados por el OOM killer\n```\n\n## Sistemas de archivos\n\nUn sistema de archivos traduce nombres y directorios en bloques del dispositivo. En Unix, cada archivo tiene un **inodo** con permisos, propietario, tamaño, marcas de tiempo y punteros a bloques; el nombre reside en el directorio. Por eso existen los **enlaces duros**, varios nombres para un mismo inodo, y los **simbólicos**, que almacenan una ruta. El **journaling** de ext4, XFS o NTFS registra las operaciones antes de aplicarlas y permite recuperarse de un corte de energía en segundos, sin revisar todo el disco.\n\nLa elección depende del uso: ext4 es el estándar general en Linux; XFS rinde bien con archivos grandes y es el predeterminado de Red Hat Enterprise Linux; NTFS es nativo de Windows con listas de control de acceso; exFAT sirve para intercambiar medios extraíbles; Btrfs y ZFS ofrecen instantáneas y sumas de verificación contra la corrupción silenciosa.\n\n## Particionado, montaje y LVM\n\nEl procedimiento para incorporar un disco en Linux es:\n\n```bash\nlsblk                                         # identificar el disco nuevo\nsudo parted /dev/sdb mklabel gpt mkpart datos ext4 0% 100%\nsudo mkfs.ext4 -L datos /dev/sdb1\nsudo blkid /dev/sdb1                          # obtener el UUID\n# /etc/fstab\n# UUID=<uuid>  /srv/datos  ext4  defaults,nofail  0  2\nsudo mount -a                                 # probar antes de reiniciar\n```\n\nEl **LVM** agrega una capa entre discos y sistemas de archivos: volúmenes físicos forman un grupo, del que se crean volúmenes lógicos ampliables en caliente con `lvextend -r`. Ni LVM ni RAID sustituyen al respaldo: un borrado accidental o un ransomware se replican al instante. La regla 3-2-1 sigue vigente.\n\n## Implicancias para la organización\n\nEn el Perú, la Ley 29733 y su reglamento obligan a quien trata datos personales a adoptar medidas técnicas que garanticen su integridad y disponibilidad. Un disco sin monitoreo SMART, un registro que llena el sistema de archivos o una partición sin respaldo no son solo problemas técnicos: son riesgos legales y reputacionales."
+   },
+   "case": {
+    "title": "Caso: El centro de salud que se quedó sin espacio",
+    "content": "**Policlínico San Martín de Porres** (nombre ficticio) es una red privada de tres sedes en el norte de Lima que atiende unas 9 500 consultas mensuales. Desde 2021 utiliza un sistema de historia clínica electrónica desarrollado por un proveedor local, que corre en un servidor virtual con Ubuntu Server 20.04, 8 GB de RAM y un disco de 200 GB con particiones fijas: 30 GB para la raíz, 20 GB para `/var` y 150 GB para `/home`, casi vacía. La base de datos MySQL y las imágenes de laboratorio digitalizadas se almacenan en `/var`.\n\nUn martes a las 10 a. m., con 40 médicos atendiendo, el sistema comienza a responder con lentitud extrema y luego muestra errores al guardar recetas. El técnico de turno, Luis, reinicia el servidor; tras el reinicio el sistema funciona veinte minutos y vuelve a fallar. Al revisar encuentra estos datos:\n\n- `df -h`: `/var` al 100 %; raíz al 62 %; `/home` al 4 %.\n- `du -sh /var/*`: `/var/lib/mysql` con 11 GB, `/var/log` con 6,8 GB y `/var/www/imagenes` con 1,9 GB.\n- `ls -lh /var/log`: un archivo `app-debug.log` de 6,1 GB que el proveedor activó hace dos meses para depurar un error y nunca desactivó.\n- `free -h`: 7,6 GB usados, 180 MB disponibles; swap de 2 GB usada al 95 %.\n- `vmstat 1`: columnas `si` y `so` entre 800 y 1 500 de forma sostenida; CPU con 70 % de espera de E/S.\n- `dmesg`: el OOM killer terminó dos veces el proceso `mysqld` en la última semana.\n- Los respaldos se hacen con un script del proveedor que copia la base de datos en `/var/backups` del mismo disco; el último exitoso es de hace 19 días.\n\nLa directora médica exige que el sistema esté operativo antes de la tarde, porque hay pacientes oncológicos con citas. Luis piensa borrar el archivo de registro y seguir. El administrador de la clínica pregunta si no sería mejor comprar un servidor nuevo de S/ 18 000. El proveedor, por teléfono, sugiere ampliar `/var` borrando `/home`, pero no tiene a nadie disponible hasta el jueves. Además, el oficial de cumplimiento recuerda que las historias clínicas son datos sensibles según la Ley 29733 y que la Norma Técnica de Salud sobre historia clínica exige su conservación.\n\nLuis debe estabilizar el servicio hoy y proponer una solución estructural esta semana.",
+    "questions": [
+     "Explica por qué borrar app-debug.log con rm podría no liberar espacio de inmediato y cuál es el procedimiento correcto.",
+     "Interpreta los datos de free, vmstat y dmesg: ¿hay hiperpaginación? ¿Qué relación tiene con la caída de mysqld?",
+     "Diseña una solución estructural de almacenamiento (particionado, LVM o disco adicional) que permita crecer sin interrupciones, con los comandos clave.",
+     "Evalúa la política de respaldos actual frente a la regla 3-2-1 y a las obligaciones de la Ley 29733 para datos sensibles de salud.",
+     "¿Recomendarías comprar el servidor nuevo? Argumenta con criterios técnicos y económicos."
+    ]
+   },
+   "assignment": {
+    "title": "Tarea 3: Diagnóstico de memoria y gestión de almacenamiento",
+    "instructions": "**Objetivo:** calcular el comportamiento de la memoria virtual y administrar almacenamiento en Linux con procedimientos seguros y verificables.\n\n**Parte A – Memoria (cálculo):**\n1. Con páginas de 4 KiB y la tabla de páginas {0→3, 1→7, 2→1, 3→10, 4→2}, traduce las direcciones lógicas 4 200, 9 000 y 16 500, o indica si generan fallo.\n2. Para la cadena 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6 calcula los fallos con FIFO, LRU y óptimo para 3 y 4 marcos. Presenta las tablas y comenta los resultados.\n3. Calcula el TEA con t_mem = 100 ns, t_fallo = 8 ms y p = 0,0005, e interpreta.\n\n**Parte B – Almacenamiento (laboratorio):** agrega dos discos virtuales de 5 GB a tu máquina. Crea con LVM un grupo de volúmenes y un volumen lógico de 6 GB con ext4, móntalo en `/srv/datos` de forma persistente por UUID con `nofail`, crea un enlace duro y uno simbólico y demuestra su diferencia, y amplía el volumen en 2 GB en caliente.\n\n**Parte C – Diagnóstico:** ejecuta `free -h`, `vmstat 1 5`, `df -h`, `df -i` e `iostat -x 1 3` bajo carga e interpreta cada salida.\n\n**Entrega:** PDF de 5 a 8 páginas con cálculos, comandos, capturas y conclusiones.",
+    "rubric": [
+     {
+      "name": "Traducción de direcciones y algoritmos de reemplazo correctos",
+      "points": 6
+     },
+     {
+      "name": "Configuración LVM, montaje persistente y ampliación funcionales",
+      "points": 6
+     },
+     {
+      "name": "Interpretación técnica de las herramientas de diagnóstico",
+      "points": 5
+     },
+     {
+      "name": "Organización, claridad y conclusiones",
+      "points": 3
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 3: Memoria virtual y almacenamiento",
+    "questions": [
+     {
+      "prompt": "Con páginas de 4 KiB, la dirección lógica 8 200 se encuentra en la página 2. Si esa página está en el marco 6, ¿cuál es la dirección física?",
+      "options": [
+       "8 200",
+       "24 576",
+       "24 584",
+       "49 160"
+      ],
+      "correct": 2,
+      "explanation": "Desplazamiento = 8 200 − 8 192 = 8. Física = 6 × 4 096 + 8 = 24 576 + 8 = 24 584."
+     },
+     {
+      "prompt": "Un servidor muestra en free -h solo 300 MB en la columna free, pero 9 GB en available. ¿Cuál es la interpretación correcta?",
+      "options": [
+       "El servidor está a punto de activar el OOM killer",
+       "La memoria swap está mal configurada y debe desactivarse",
+       "Hay una fuga de memoria que debe atenderse de inmediato",
+       "Linux usa RAM libre como caché de disco y puede liberarla; no hay escasez de memoria"
+      ],
+      "correct": 3,
+      "explanation": "La caché de páginas se libera cuando hace falta; available estima la memoria realmente utilizable por nuevas aplicaciones."
+     },
+     {
+      "prompt": "¿Qué combinación de síntomas indica con mayor probabilidad hiperpaginación?",
+      "options": [
+       "CPU mayormente ociosa, columnas si y so altas en vmstat y disco saturado",
+       "Muchos procesos zombis y swap sin uso",
+       "Alto número de inodos usados y RAM libre abundante",
+       "CPU al 100 % en modo usuario y disco inactivo"
+      ],
+      "correct": 0,
+      "explanation": "En la hiperpaginación los procesos esperan constantemente al disco por fallos de página; la CPU queda ociosa y el intercambio es intenso."
+     },
+     {
+      "prompt": "Se elimina con rm un archivo de registro de 6 GB, pero df -h sigue mostrando el disco lleno. ¿Cuál es la causa más probable?",
+      "options": [
+       "df -h actualiza su información una vez al día",
+       "Un proceso mantiene el archivo abierto y el inodo aún no se libera",
+       "El journaling de ext4 guarda una copia del archivo borrado",
+       "rm solo mueve el archivo a la papelera de reciclaje"
+      ],
+      "correct": 1,
+      "explanation": "Los bloques se liberan cuando el contador de enlaces es cero y ningún proceso tiene abierto el archivo; lsof +L1 lo revela."
+     },
+     {
+      "prompt": "¿Por qué se recomienda usar UUID y la opción nofail en /etc/fstab para un disco de datos adicional?",
+      "options": [
+       "Son obligatorias para cualquier partición con ext4",
+       "Ambas opciones cifran automáticamente el contenido del disco",
+       "El UUID no cambia si se reordenan los discos y nofail evita el modo de emergencia si el disco falta",
+       "El UUID acelera la lectura del disco y nofail activa el journaling"
+      ],
+      "correct": 2,
+      "explanation": "Los nombres como /dev/sdb pueden variar entre arranques; nofail permite que el sistema arranque aunque ese disco no esté disponible."
+     },
+     {
+      "prompt": "En la anomalía de Belady, ¿qué sucede al aumentar el número de marcos con el algoritmo FIFO?",
+      "options": [
+       "El sistema operativo desactiva la memoria virtual",
+       "El algoritmo se convierte automáticamente en LRU",
+       "Los fallos siempre disminuyen proporcionalmente",
+       "Puede aumentar el número de fallos de página para ciertas cadenas de referencias"
+      ],
+      "correct": 3,
+      "explanation": "FIFO no es un algoritmo de pila; con la cadena clásica produce 9 fallos con 3 marcos y 10 con 4."
+     },
+     {
+      "prompt": "Un administrador configuró RAID 1 en el servidor y concluye que ya no necesita respaldos. ¿Por qué es un error?",
+      "options": [
+       "RAID replica también borrados accidentales, corrupción y cifrado por ransomware",
+       "RAID 1 no protege contra la falla de un disco",
+       "Los respaldos solo sirven para sistemas Windows",
+       "RAID 1 duplica la velocidad pero no copia datos"
+      ],
+      "correct": 0,
+      "explanation": "RAID ofrece disponibilidad ante fallas de hardware, pero cualquier cambio lógico se refleja en ambos discos; solo el respaldo permite volver a un estado anterior."
+     },
+     {
+      "prompt": "Con t_mem = 100 ns y t_fallo = 100 µs, ¿qué tasa de fallos de página duplica aproximadamente el tiempo efectivo de acceso?",
+      "options": [
+       "p = 0,5",
+       "p = 0,001",
+       "p = 0,00001",
+       "p = 0,1"
+      ],
+      "correct": 1,
+      "explanation": "TEA = 0,999 × 100 + 0,001 × 100 000 ≈ 200 ns, el doble de 100 ns. Tasas mayores degradan mucho más el sistema."
+     }
+    ]
+   }
+  },
+  {
+   "title": "Unidad 4 · Administración segura, automatización y proyecto integrador",
+   "description": "Al finalizar la unidad, el estudiante configura usuarios, permisos, servicios y registros con criterio de mínimo privilegio, automatiza tareas con Bash y PowerShell, aplica medidas de endurecimiento y respaldo, e integra lo aprendido en un proyecto de servidor seguro para una pyme peruana.",
+   "topics": [
+    "Usuarios, grupos, permisos, sudo y ACL en Linux y Windows",
+    "Servicios con systemd y registros del sistema",
+    "Automatización con Bash, PowerShell, cron y el Programador de tareas",
+    "Endurecimiento, actualizaciones y respaldos",
+    "Proyecto integrador: servidor seguro para una pyme"
+   ],
+   "slides": [
+    {
+     "title": "Usuarios y grupos en Linux",
+     "bullets": [
+      "Cuentas definidas en /etc/passwd; contraseñas cifradas en /etc/shadow, legible solo por root.",
+      "UID 0 es root; UID de 1 a 999 cuentas del sistema; 1000 en adelante usuarios humanos.",
+      "Comandos: useradd -m -s /bin/bash, passwd, usermod -aG grupo usuario, userdel -r.",
+      "Grupos en /etc/group: facilitan asignar permisos por área (contabilidad, ventas, ti).",
+      "Política de contraseñas con chage y el módulo pam_pwquality."
+     ],
+     "notes": "Inicie la unidad conectando con la pregunta de cierre anterior: quién puede acceder a qué. Recorra /etc/passwd campo por campo: usuario, marcador de contraseña, UID, GID, comentario, directorio personal y shell. Explique por qué las contraseñas se movieron a /etc/shadow: passwd debe ser legible por todos para que los programas traduzcan UID a nombres, pero los hashes no deben exponerse a ataques de diccionario. Muestre la creación de un usuario y su incorporación a un grupo, y advierta el error clásico de usar usermod -G sin -a, que elimina al usuario de sus otros grupos. Explique que las cuentas de servicio, como www-data o mysql, deben tener shell /usr/sbin/nologin para que no puedan iniciar sesión. Pregunta para la clase: en una empresa de veinte personas, ¿conviene crear una cuenta compartida para el área de ventas? Oriente hacia la trazabilidad y la responsabilidad individual."
+    },
+    {
+     "title": "Permisos tradicionales rwx",
+     "bullets": [
+      "Tres clases: propietario (u), grupo (g) y otros (o); tres permisos: lectura, escritura y ejecución.",
+      "Notación octal: r = 4, w = 2, x = 1; chmod 640 informe.pdf da rw- r-- ---.",
+      "En directorios, x permite entrar y w permite crear o borrar archivos dentro.",
+      "chown usuario:grupo archivo cambia propietario y grupo; umask define permisos por defecto.",
+      "Bits especiales: setuid (passwd), setgid en directorios compartidos y sticky bit en /tmp."
+     ],
+     "notes": "Explique la lectura de ls -l: el primer carácter indica tipo, luego tres tríadas. Haga ejercicios de conversión octal en ambos sentidos: 750 es rwxr-x---, 644 es rw-r--r--. Insista en la semántica en directorios, que confunde a muchos: sin x no se puede entrar aunque se tenga r; con w en el directorio se puede borrar un archivo aunque no se tenga permiso sobre el archivo. Por eso /tmp usa el sticky bit, que solo permite borrar los archivos propios. Explique el setgid en un directorio compartido: los archivos nuevos heredan el grupo del directorio, lo que evita problemas de acceso entre compañeros del área. Advierta contra chmod 777, la mala práctica más extendida en tutoriales, que abre los archivos a cualquier proceso comprometido. Ejercicio: diseñar permisos para /srv/contabilidad donde el grupo contabilidad lee y escribe, gerencia solo lee y nadie más accede."
+    },
+    {
+     "title": "ACL y sudo: control fino y privilegios delegados",
+     "bullets": [
+      "ACL POSIX: setfacl -m g:gerencia:rx /srv/contabilidad añade permisos para un grupo adicional.",
+      "getfacl muestra las entradas; un signo + al final de ls -l indica que existen ACL.",
+      "sudo permite ejecutar comandos como root con registro de auditoría en el diario del sistema.",
+      "Editar con visudo: %soporte ALL=(root) /usr/bin/systemctl restart nginx limita a un comando.",
+      "Principio de mínimo privilegio (Saltzer y Schroeder, 1975): solo los permisos necesarios."
+     ],
+     "notes": "Las ACL resuelven la limitación de tener un solo grupo por archivo: con ellas, el ejercicio anterior se resuelve elegantemente dando lectura y ejecución a gerencia sin cambiar el grupo propietario. Muestre setfacl con la opción -d para ACL por defecto, que heredan los archivos nuevos. Luego aborde sudo: explique por qué no se debe trabajar como root permanentemente ni compartir su contraseña, y cómo sudo registra quién ejecutó qué y cuándo, consultable con journalctl _COMM=sudo. Muestre una regla restringida en sudoers que permite al personal de soporte reiniciar un servicio sin otorgar control total. Presente el principio de mínimo privilegio del artículo clásico de Saltzer y Schroeder sobre protección de la información, junto con otros principios como defensa en profundidad. Pregunta para la clase: ¿qué riesgo hay en una regla que permite ejecutar vim como root mediante sudo? Oriente hacia el escape a una shell."
+    },
+    {
+     "title": "Permisos y cuentas en Windows",
+     "bullets": [
+      "Permisos NTFS: control total, modificar, lectura y ejecución, lectura y escritura, con herencia.",
+      "Permisos de recurso compartido (SMB) se combinan con NTFS: prevalece el más restrictivo.",
+      "Control de cuentas de usuario (UAC): incluso un administrador trabaja con token limitado.",
+      "Herramientas: icacls, Get-Acl y Set-Acl, lusrmgr.msc y net user.",
+      "En empresas: Active Directory y directivas de grupo para gestión centralizada."
+     ],
+     "notes": "Explique que en Windows los permisos son listas de control de acceso desde el origen, más expresivas que rwx, con entradas de permitir y denegar y herencia desde la carpeta padre. Muestre icacls C:\\Datos\\Contabilidad y explique las abreviaturas (F, M, RX, R, W) y los indicadores de herencia (OI, CI). Explique la regla de combinación con permisos de recurso compartido: si el recurso da control total pero NTFS solo lectura, el usuario remoto solo leerá. Comente que UAC fue introducido en Windows Vista para que los administradores no ejecuten todo con privilegios elevados, de forma análoga a sudo. Recalque que las denegaciones explícitas prevalecen y que abusar de ellas genera configuraciones difíciles de mantener. Adelante que Active Directory se profundiza en Administración de Servidores y Nube. Pregunta: un usuario tiene acceso por el grupo Ventas pero una denegación como miembro de Practicantes; ¿qué resultado tendrá?"
+    },
+    {
+     "title": "Servicios con systemd",
+     "bullets": [
+      "Unidad de servicio: archivo .service en /etc/systemd/system con secciones Unit, Service e Install.",
+      "Operaciones: systemctl start, stop, restart, status, enable, disable y daemon-reload.",
+      "Restart=on-failure reinicia el servicio automáticamente si falla.",
+      "Directivas de seguridad: User=, ProtectSystem=strict, NoNewPrivileges=yes, PrivateTmp=yes.",
+      "Windows: services.msc, Get-Service, Set-Service y sc.exe para configurar el inicio."
+     ],
+     "notes": "Explique que systemd, creado por Lennart Poettering y Kay Sievers en 2010, unifica el arranque, la gestión de servicios, los registros y los temporizadores en la mayoría de distribuciones. Muestre un archivo de unidad completo para un script propio: Description, After=network.target, ExecStart con ruta absoluta, User con una cuenta sin privilegios, Restart=on-failure y WantedBy=multi-user.target. Recorra el flujo: crear el archivo, daemon-reload, enable --now y status. Destaque las directivas de aislamiento, que aplican mínimo privilegio sin modificar la aplicación; systemd-analyze security nombre.service puntúa la exposición del servicio y sugiere mejoras. En Windows, explique los tipos de inicio (automático, automático retrasado, manual, deshabilitado) y la cuenta con la que corre cada servicio. Pregunta para la clase: ¿por qué es peligroso que un servicio web corra como root?"
+    },
+    {
+     "title": "Registros del sistema y auditoría",
+     "bullets": [
+      "journalctl -u nginx --since today filtra por servicio y fecha; -p err muestra solo errores.",
+      "Archivos tradicionales en /var/log: auth.log o secure, syslog, kern.log.",
+      "Intentos de acceso fallidos: journalctl _COMM=sshd | grep 'Failed password'.",
+      "Windows: Visor de eventos; ID 4625 inicio de sesión fallido, 4624 exitoso, 4720 cuenta creada.",
+      "Retención y centralización: logrotate, journald.conf y envío a un servidor central."
+     ],
+     "notes": "Los registros son la memoria forense del sistema. Muestre journalctl con varios filtros y explique la prioridad de syslog de 0 (emergencia) a 7 (depuración). Haga un ejercicio en vivo: desde otra máquina, intente ingresar por SSH con contraseña incorrecta varias veces y luego observe las entradas; cuente con un comando cuántos intentos hubo por dirección IP usando grep, awk, sort y uniq -c. Un servidor expuesto a internet recibe miles de intentos diarios de robots, lo que motiva las medidas de la diapositiva de endurecimiento. En Windows, filtre el registro de Seguridad por el ID 4625 o use Get-WinEvent con FilterHashtable. Relacione con la Ley 29733 y su reglamento, que exigen registrar accesos a bancos de datos personales, y con la Directiva de Seguridad de la Información de la Autoridad Nacional de Protección de Datos Personales. Pregunta: ¿por qué conviene enviar los registros a otro servidor?"
+    },
+    {
+     "title": "Programación en Bash: fundamentos",
+     "bullets": [
+      "Primera línea #!/usr/bin/env bash y set -euo pipefail para fallar ante errores.",
+      "Variables y sustitución: fecha=$(date +%F); siempre entre comillas: \"$fecha\".",
+      "Condicionales con [[ ]], bucles for y while, funciones y códigos de salida ($?).",
+      "Parámetros: $1, $#, \"$@\"; validar entradas antes de actuar.",
+      "Verificar calidad con shellcheck antes de poner un script en producción."
+     ],
+     "notes": "Recuerde que en Fundamentos de Programación aprendieron estructuras de control; aquí las aplican en el lenguaje del administrador. Escriba en vivo un script corto que reciba un directorio, valide que exista y cuente sus archivos. Explique set -euo pipefail: -e detiene el script ante un error, -u ante una variable no definida y pipefail hace que falle una tubería si falla cualquier comando intermedio. Muestre el clásico desastre de una variable vacía en rm -rf \"$DIR\"/ y cómo -u y la validación lo previenen. Insista en comillas alrededor de variables para soportar nombres con espacios. Presente shellcheck como revisor automático que detecta decenas de errores comunes. Compare brevemente con PowerShell, que trabaja con objetos y es más legible para tareas en Windows, y adelante que verán un ejemplo. Ejercicio: escribir una función que devuelva 1 si el uso de disco supera un umbral recibido como parámetro."
+    },
+    {
+     "title": "Script de respaldo comentado",
+     "bullets": [
+      "Objetivo: comprimir /srv/datos con fecha, conservar siete días y registrar el resultado.",
+      "tar -czf \"$DESTINO/datos-$(date +%F).tar.gz\" -C /srv datos.",
+      "Retención: find \"$DESTINO\" -name 'datos-*.tar.gz' -mtime +7 -delete.",
+      "Registro con logger -t respaldo y código de salida para el monitoreo.",
+      "Verificación: tar -tzf para listar el contenido y prueba periódica de restauración."
+     ],
+     "notes": "Construya el script completo en pantalla, explicando cada línea. Variables al inicio para origen, destino y días de retención; validación de que el origen existe; creación del destino con mkdir -p; compresión con tar; verificación de integridad listando el archivo; eliminación de respaldos antiguos con find; y registro con logger, que escribe en el diario del sistema para auditar luego con journalctl -t respaldo. Explique por qué el script debe terminar con un código distinto de cero si algo falla: así un sistema de monitoreo o un correo de alerta puede reaccionar. Insista en que copiar al mismo disco no es un respaldo real: el destino debería ser otro disco, otro servidor por rsync sobre SSH o almacenamiento en la nube, cumpliendo la regla 3-2-1. Relacione con el caso del policlínico de la unidad anterior. Pregunta para la clase: ¿cómo se aseguraría que el archivo de respaldo no sea legible por cualquier usuario del servidor?"
+    },
+    {
+     "title": "Programación de tareas: cron, timers y Windows",
+     "bullets": [
+      "Formato crontab: minuto hora día mes día_semana comando.",
+      "Ejemplo: 30 23 * * 1-6 /usr/local/bin/respaldo.sh ejecuta de lunes a sábado a las 23:30.",
+      "Usar rutas absolutas y redirigir salida: >> /var/log/respaldo.log 2>&1.",
+      "Temporizadores systemd (.timer) con Persistent=true ejecutan tareas perdidas por apagado.",
+      "Windows: Programador de tareas o Register-ScheduledTask en PowerShell."
+     ],
+     "notes": "Explique cron, creado en los primeros Unix y vigente por su simplicidad. Haga varios ejercicios de lectura de expresiones: 0 */4 * * * cada cuatro horas; 0 8 1 * * el primer día de cada mes a las 8. Comente errores habituales: cron ejecuta con un entorno mínimo, sin el PATH del usuario, por lo que los comandos sin ruta absoluta fallan en silencio; por eso hay que redirigir la salida a un registro. Presente los temporizadores de systemd como alternativa moderna, con la ventaja de Persistent=true para equipos que no están encendidos siempre, como las computadoras de una oficina, y de tener registros integrados en journalctl. Muestre el equivalente en Windows con New-ScheduledTaskTrigger y Register-ScheduledTask. Pregunta para la clase: una pyme apaga su servidor los domingos; ¿qué mecanismo elegirían para un respaldo semanal y por qué?"
+    },
+    {
+     "title": "PowerShell para administración de Windows",
+     "bullets": [
+      "Cmdlets con verbo-sustantivo: Get-Service, Get-LocalUser, Get-EventLog, Get-ChildItem.",
+      "Tubería de objetos: Get-Process | Where-Object CPU -gt 100 | Sort-Object CPU -Descending.",
+      "Exportar reportes: Export-Csv para auditorías de cuentas y servicios.",
+      "Política de ejecución (Set-ExecutionPolicy RemoteSigned) y firma de scripts.",
+      "PowerShell 7 es multiplataforma y también se ejecuta en Linux."
+     ],
+     "notes": "Muestre que PowerShell, creado por Jeffrey Snover y publicado en 2006, trabaja con objetos .NET y no con texto, lo que evita el parseo frágil con cortes de columnas. Construya en vivo un reporte de auditoría: Get-LocalUser | Select-Object Name, Enabled, LastLogon, PasswordLastSet | Export-Csv cuentas.csv, y explique cómo detectar cuentas habilitadas que no se usan hace meses, típicas de personal que ya no trabaja en la empresa. Muestre también Get-Service | Where-Object Status -eq 'Stopped' y Get-WinEvent para fallos de inicio de sesión. Explique la política de ejecución como medida contra scripts maliciosos descargados, sin que sea una barrera de seguridad infalible. Compare con el script Bash anterior para que identifiquen equivalencias. Pregunta para la clase: ¿qué ventaja tiene la tubería de objetos al filtrar por una fecha frente a la tubería de texto de Bash?"
+    },
+    {
+     "title": "Endurecimiento básico de un servidor Linux",
+     "bullets": [
+      "Actualizaciones de seguridad automáticas: paquete unattended-upgrades.",
+      "SSH: PermitRootLogin no, PasswordAuthentication no, autenticación con llaves ed25519.",
+      "Cortafuegos: ufw default deny incoming; ufw allow 22/tcp; ufw enable.",
+      "Bloqueo de ataques de fuerza bruta con fail2ban; desinstalar servicios innecesarios.",
+      "Referencias: CIS Benchmarks y NIST SP 800-123 sobre seguridad de servidores."
+     ],
+     "notes": "Presente el endurecimiento como reducción de la superficie de ataque: cada servicio, puerto o cuenta innecesaria es una puerta potencial. Recorra una lista de control mínima, mostrando cada comando. Genere un par de llaves con ssh-keygen -t ed25519, cópielo con ssh-copy-id y luego desactive la autenticación por contraseña, advirtiendo que debe probarse el acceso por llave en otra sesión antes de cerrar la actual para no quedar fuera del servidor. Configure ufw y verifique con ss -tulpn qué puertos escuchan realmente. Explique fail2ban, que lee los registros vistos antes y bloquea direcciones con demasiados intentos fallidos. Mencione los CIS Benchmarks como guías de configuración reconocidas internacionalmente y la guía NIST SP 800-123. Conecte con Seguridad Informática del quinto ciclo, donde profundizarán. Pregunta para la clase: ¿por qué desactivar el acceso directo de root por SSH si root tiene una contraseña robusta?"
+    },
+    {
+     "title": "Gestión de actualizaciones y cambios",
+     "bullets": [
+      "Linux: apt update, apt list --upgradable, apt upgrade; revisar si se requiere reinicio.",
+      "Windows: Windows Update, WSUS o Intune para controlar la distribución en la empresa.",
+      "Ciclo de vida: usar versiones con soporte (Ubuntu LTS cinco años; Windows Server con fechas publicadas).",
+      "Gestión de cambios: probar en un entorno de pruebas, instantánea previa, ventana de mantenimiento y plan de reversión.",
+      "Documentar cada cambio: qué, por qué, quién, cuándo y cómo revertirlo."
+     ],
+     "notes": "Explique que la mayoría de incidentes graves de seguridad explotan vulnerabilidades con parche disponible desde hacía meses; el caso de WannaCry en 2017, que afectó a hospitales y empresas en todo el mundo, explotó una falla de SMB corregida dos meses antes. Al mismo tiempo, actualizar sin control puede romper aplicaciones, por eso se necesita gestión de cambios. Presente un procedimiento sencillo inspirado en ITIL: solicitud, evaluación de riesgo, prueba, aprobación, ejecución en ventana de mantenimiento y revisión posterior. Recalque la importancia de no usar sistemas sin soporte, como el Ubuntu 18.04 del caso de la cooperativa o Windows 10 desde octubre de 2025, salvo con soporte extendido. Muestre el archivo /var/run/reboot-required en Ubuntu. Pregunta para la clase: ¿cómo equilibrarían aplicar un parche crítico de inmediato frente al riesgo de detener la facturación electrónica de la empresa?"
+    },
+    {
+     "title": "Proyecto integrador: servidor seguro para una pyme",
+     "bullets": [
+      "Escenario: pyme peruana con 15 colaboradores en tres áreas que necesita un servidor de archivos y respaldo.",
+      "Entregables: instalación documentada, particionado con LVM, usuarios y grupos, permisos y ACL.",
+      "Servicio propio gestionado por systemd, registros auditables y cortafuegos configurado.",
+      "Scripts de respaldo y auditoría programados, con prueba de restauración demostrada.",
+      "Informe técnico, lista de control de endurecimiento y sustentación de 15 minutos por equipo."
+     ],
+     "notes": "Presente el proyecto como la síntesis del curso: cada entregable se relaciona con una unidad. Explique el escenario base y permita que cada equipo elija un rubro real, por ejemplo una distribuidora, un estudio contable o una agencia de viajes, para personalizar áreas y datos. Detalle la evaluación: funcionalidad verificable en la máquina virtual, calidad de la documentación, seguridad aplicada y sustentación. Muestre un ejemplo de lista de control de endurecimiento con ítems verificables, como el resultado de ss -tulpn, el contenido de sshd_config y el estado de ufw. Recomiende organizar el trabajo en roles (almacenamiento, permisos, automatización, seguridad) pero exigir que todos comprendan todo, porque en la sustentación cualquier integrante puede ser consultado. Establezca hitos: semana 13 diseño, semana 14 servicios y registros, semana 15 automatización y endurecimiento, semana 16 sustentación. Pregunta: ¿qué evidencia demostraría de forma convincente que su respaldo funciona?"
+    },
+    {
+     "title": "Cierre del curso: el criterio del administrador",
+     "bullets": [
+      "Comprender los mecanismos internos permite diagnosticar en lugar de reiniciar o reinstalar a ciegas.",
+      "Seguridad por diseño: mínimo privilegio, defensa en profundidad y registros auditables.",
+      "Automatizar lo repetitivo reduce errores humanos y libera tiempo para lo importante.",
+      "Ruta formativa: Redes de Computadoras, Administración de Servidores y Nube, Seguridad Informática.",
+      "Certificaciones de referencia: LPI Linux Essentials, CompTIA Linux+ y Microsoft de administración."
+     ],
+     "notes": "Cierre el curso recordando el recorrido: estructura y arranque, procesos y concurrencia, memoria y almacenamiento, y administración segura. Pida a tres estudiantes que expliquen con sus palabras un incidente de los casos y cómo lo resolverían ahora; esto evidencia el aprendizaje mejor que una síntesis del docente. Subraye que las herramientas cambian, de SysV init a systemd, de CFS a EEVDF, pero los principios de Silberschatz, Tanenbaum y Dijkstra permanecen; quien entiende los principios aprende rápido las nuevas herramientas. Presente la ruta del programa y cómo este curso se proyecta en los ciclos siguientes y en las experiencias formativas en situación real de trabajo. Mencione certificaciones de entrada que mejoran la empleabilidad y pueden prepararse con lo aprendido. Recuerde la evaluación final práctica y sus condiciones. Pregunta final de reflexión: ¿qué práctica de este curso aplicarían mañana mismo en su trabajo o en el equipo de su familia?"
+    }
+   ],
+   "reading": {
+    "title": "Administrar con mínimo privilegio y automatizar con seguridad",
+    "minutes": 40,
+    "content": "## El problema del control de acceso\n\nUn servidor empresarial almacena información de distinto valor: planillas, contratos, datos personales de clientes. El sistema operativo debe responder continuamente a la pregunta *¿puede este sujeto realizar esta operación sobre este objeto?* Jerome Saltzer y Michael Schroeder formularon en 1975 los principios clásicos de diseño para la protección de la información, entre ellos el de **mínimo privilegio**: cada usuario y cada programa debe operar con los permisos estrictamente necesarios para su tarea. En el Perú, la Ley 29733 y su reglamento convierten este principio en obligación: quien trata datos personales debe adoptar medidas técnicas y organizativas para evitar accesos no autorizados.\n\n## Permisos en Linux\n\nEl modelo Unix asigna a cada archivo un propietario, un grupo y tres tríadas de permisos. La notación octal suma lectura (4), escritura (2) y ejecución (1):\n\n```bash\nsudo groupadd contabilidad\nsudo useradd -m -s /bin/bash -G contabilidad rquispe\nsudo mkdir -p /srv/contabilidad\nsudo chown root:contabilidad /srv/contabilidad\nsudo chmod 2770 /srv/contabilidad   # 2 = setgid: los archivos heredan el grupo\nsudo setfacl -m g:gerencia:rx /srv/contabilidad      # gerencia solo lee\nsudo setfacl -d -m g:gerencia:rx /srv/contabilidad   # también para archivos nuevos\ngetfacl /srv/contabilidad\n```\n\nEl bit **setgid** en el directorio evita el problema frecuente de archivos creados por un compañero que el resto del área no puede editar. Las **ACL** permiten conceder acceso a un segundo grupo sin abrir el directorio a todos. La tentación de usar `chmod 777` para que algo funcione rápido es la puerta de entrada de muchos incidentes.\n\nLos privilegios administrativos se delegan con `sudo`, que registra cada uso. Una regla en `/etc/sudoers`, editada siempre con `visudo`, puede limitarse a un comando concreto:\n\n```\n%soporte ALL=(root) /usr/bin/systemctl restart nginx\n```\n\nEn Windows, el modelo equivalente se basa en listas de control de acceso NTFS con herencia, el Control de cuentas de usuario y, en organizaciones medianas, directivas de grupo de Active Directory.\n\n## Servicios y registros\n\nCon `systemd`, un servicio se describe en un archivo de unidad declarativo que también aplica aislamiento:\n\n```ini\n[Unit]\nDescription=Monitor de espacio en disco\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/monitor-disco.sh\nUser=monitor\nNoNewPrivileges=yes\nProtectSystem=strict\nPrivateTmp=yes\nRestart=on-failure\n\n[Install]\nWantedBy=multi-user.target\n```\n\nTras `sudo systemctl daemon-reload` y `sudo systemctl enable --now monitor-disco`, el estado se consulta con `systemctl status` y los mensajes con `journalctl -u monitor-disco`. Los registros son evidencia: `journalctl _COMM=sshd | grep \"Failed password\"` revela intentos de fuerza bruta, y en Windows el evento 4625 del registro de Seguridad cumple la misma función.\n\n## Automatización confiable\n\nUn script de administración debe fallar de forma ruidosa, nunca silenciosa. Este respaldo aplica esa idea:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail                      # detener ante errores y variables vacías\nORIGEN=\"/srv/datos\"\nDESTINO=\"/mnt/respaldo\"\nDIAS=7\nARCHIVO=\"$DESTINO/datos-$(date +%F).tar.gz\"\n\n[[ -d \"$ORIGEN\" ]] || { logger -t respaldo \"ERROR: no existe $ORIGEN\"; exit 1; }\nmkdir -p \"$DESTINO\"\ntar -czf \"$ARCHIVO\" -C \"$(dirname \"$ORIGEN\")\" \"$(basename \"$ORIGEN\")\"\ntar -tzf \"$ARCHIVO\" > /dev/null        # verificar que el archivo es legible\nchmod 600 \"$ARCHIVO\"                   # solo el propietario puede leerlo\nfind \"$DESTINO\" -name 'datos-*.tar.gz' -mtime +\"$DIAS\" -delete\nlogger -t respaldo \"OK: $ARCHIVO ($(du -h \"$ARCHIVO\" | cut -f1))\"\n```\n\nSe programa con `cron` (`30 23 * * 1-6 /usr/local/bin/respaldo.sh`) o con un temporizador de `systemd` con `Persistent=true`. En Windows, PowerShell ofrece la misma capacidad con objetos:\n\n```powershell\nGet-LocalUser | Where-Object { $_.Enabled -and $_.LastLogon -lt (Get-Date).AddDays(-90) } |\n  Select-Object Name, LastLogon | Export-Csv cuentas-inactivas.csv -NoTypeInformation\n```\n\n## Endurecimiento como proceso\n\nEndurecer es reducir la superficie de ataque de forma verificable: aplicar actualizaciones de seguridad, autenticar SSH con llaves y desactivar el ingreso directo de root, activar un cortafuegos con política de denegación por defecto, retirar servicios innecesarios y centralizar registros. Los CIS Benchmarks y la guía NIST SP 800-123 ofrecen listas de control reconocidas. Ninguna medida es definitiva: la seguridad se sostiene con gestión de cambios, revisiones periódicas y respaldos que se prueban restaurándolos."
+   },
+   "case": {
+    "title": "Caso: La distribuidora y el practicante con permisos de más",
+    "content": "**Distribuidora Andina del Sur E.I.R.L.** (empresa ficticia) comercializa abarrotes en Arequipa, Puno y Cusco. Tiene 32 colaboradores: 6 en contabilidad, 14 en ventas, 5 en almacén, 3 en gerencia, 2 en sistemas y 2 practicantes. Desde 2022 opera un servidor con Ubuntu Server 22.04 que comparte carpetas por Samba, aloja el sistema de inventario web y guarda los respaldos de la facturación electrónica que se envía a SUNAT a través de un operador de servicios electrónicos.\n\nEn agosto, un practicante de ventas, cuya cuenta se creó copiando la de un administrador \"para que no tenga problemas de acceso\", borró por error la carpeta `/srv/compartido/contabilidad/2025`, con los registros de compras y ventas del año. El respaldo nocturno, programado con cron, no se había ejecutado desde hacía 41 días porque el script usaba `tar` sin ruta absoluta y nadie revisaba su salida. La recuperación dependió de copias parciales en las laptops de dos contadoras y tomó cinco días; la empresa presentó con retraso una declaración mensual y pagó una multa.\n\nLa auditoría interna posterior encontró además lo siguiente:\n\n- 9 cuentas de exempleados aún habilitadas, una de ellas con acceso por SSH.\n- Todos los directorios compartidos con permisos 777.\n- SSH abierto a internet con autenticación por contraseña; `journalctl` registra un promedio de 4 300 intentos fallidos diarios desde direcciones extranjeras.\n- El servicio de inventario se ejecuta como root.\n- No hay cortafuegos activo; `ss -tulpn` muestra MySQL escuchando en todas las interfaces.\n- Las actualizaciones de seguridad no se aplican desde hace siete meses.\n- La base de datos de clientes contiene DNI, direcciones y teléfonos de unos 2 600 bodegueros, sin registro de quién accede.\n\nLa gerenta general, Carmen, quiere evitar que esto se repita y ha recibido dos propuestas. El proveedor externo ofrece migrar todo a una solución en la nube con soporte por S/ 1 500 mensuales. Jorge, el jefe de sistemas, propone un plan interno de cuatro semanas para reorganizar permisos, automatizar respaldos con verificación y endurecer el servidor, apoyado por los practicantes de Computación e Informática. Carmen pide un plan concreto, priorizado y con indicadores de cumplimiento, que pueda presentar también ante una eventual fiscalización de la Autoridad Nacional de Protección de Datos Personales.",
+    "questions": [
+     "Identifica qué principios de seguridad se vulneraron en la creación de la cuenta del practicante y en los permisos 777, y diseña la estructura correcta de grupos, permisos y ACL.",
+     "Explica por qué falló el respaldo programado y reescribe los elementos clave del script y su programación para que el fallo sea detectable.",
+     "Prioriza las observaciones de la auditoría por riesgo e impacto y propone las primeras cinco acciones con sus comandos o configuraciones.",
+     "¿Qué obligaciones derivadas de la Ley 29733 se incumplen en el caso y qué evidencias técnicas presentarías ante una fiscalización?",
+     "Compara la propuesta del proveedor en la nube con el plan interno de Jorge: costos, control, capacidades del equipo y riesgos."
+    ]
+   },
+   "assignment": {
+    "title": "Proyecto integrador: servidor seguro y automatizado para una pyme",
+    "instructions": "**Objetivo:** integrar los aprendizajes del curso configurando, asegurando y automatizando un servidor Linux para una pyme peruana elegida por el equipo (3 a 4 integrantes).\n\n**Requisitos técnicos mínimos:**\n\n1. Ubuntu Server LTS con un disco adicional gestionado con LVM y montaje persistente en `/srv`.\n2. Al menos tres grupos por área y seis usuarios; directorios con setgid, permisos adecuados y una ACL justificada; una regla `sudo` restringida.\n3. Un servicio propio gestionado por systemd que corra con usuario sin privilegios y directivas de aislamiento.\n4. Script de respaldo en Bash con `set -euo pipefail`, verificación, retención y registro con `logger`, programado con cron o temporizador; demostración de una restauración.\n5. Script de auditoría (Bash o PowerShell) que reporte cuentas, puertos abiertos, uso de disco y accesos fallidos.\n6. Endurecimiento: SSH con llaves y sin root, `ufw` con denegación por defecto, actualizaciones automáticas y `fail2ban`.\n\n**Entregables:** informe técnico de 8 a 12 páginas con diagrama de la solución, matriz de permisos, evidencias de cada requisito y lista de control de endurecimiento verificada; repositorio o carpeta con los scripts comentados; video o sustentación en vivo de 15 minutos.\n\n**Criterios:** funcionalidad verificable, seguridad aplicada, calidad de la automatización, documentación y dominio individual durante la sustentación.",
+    "rubric": [
+     {
+      "name": "Almacenamiento, usuarios, permisos y ACL correctamente implementados",
+      "points": 5
+     },
+     {
+      "name": "Servicio systemd y endurecimiento verificables",
+      "points": 5
+     },
+     {
+      "name": "Scripts de respaldo y auditoría robustos con restauración demostrada",
+      "points": 5
+     },
+     {
+      "name": "Informe técnico y lista de control",
+      "points": 3
+     },
+     {
+      "name": "Sustentación y dominio individual",
+      "points": 2
+     }
+    ]
+   },
+   "quiz": {
+    "title": "Cuestionario 4: Administración segura y automatización",
+    "questions": [
+     {
+      "prompt": "Un directorio debe permitir lectura y escritura al propietario y al grupo, y ningún acceso a otros, y los archivos nuevos deben heredar el grupo. ¿Qué permiso octal corresponde?",
+      "options": [
+       "1755",
+       "0777",
+       "2770",
+       "4750"
+      ],
+      "correct": 2,
+      "explanation": "El 2 inicial activa setgid para heredar el grupo; 770 da rwx a propietario y grupo, nada a otros. 1 sería sticky y 4 setuid."
+     },
+     {
+      "prompt": "Se ejecuta usermod -G ventas jperez sobre un usuario que pertenecía a contabilidad y soporte. ¿Qué ocurre?",
+      "options": [
+       "El comando falla porque falta la opción -m",
+       "jperez se agrega a ventas manteniendo sus grupos anteriores",
+       "Se crea el grupo ventas si no existía",
+       "jperez queda solo en el grupo ventas como grupo suplementario, perdiendo los anteriores"
+      ],
+      "correct": 3,
+      "explanation": "Sin -a, la opción -G reemplaza la lista de grupos suplementarios; para agregar se usa usermod -aG ventas jperez."
+     },
+     {
+      "prompt": "Un script funciona al ejecutarlo manualmente, pero desde cron no hace nada y no deja errores visibles. ¿Cuál es la causa más probable?",
+      "options": [
+       "cron usa un entorno mínimo sin el PATH del usuario y la salida no se redirige a un registro",
+       "cron solo ejecuta scripts escritos en Python",
+       "El script necesita permisos 777 para ejecutarse desde cron",
+       "cron no puede ejecutar tareas después de medianoche"
+      ],
+      "correct": 0,
+      "explanation": "En cron conviene usar rutas absolutas y redirigir stdout y stderr a un archivo de registro para detectar fallos."
+     },
+     {
+      "prompt": "Un usuario tiene permiso NTFS de solo lectura en una carpeta compartida cuyo permiso de recurso compartido es control total. ¿Qué podrá hacer al acceder por red?",
+      "options": [
+       "Control total, porque prevalece el permiso del recurso compartido",
+       "Solo leer, porque prevalece el permiso más restrictivo",
+       "Nada, porque los permisos se contradicen",
+       "Escribir pero no leer los archivos"
+      ],
+      "correct": 1,
+      "explanation": "En acceso por red se aplica la combinación más restrictiva entre permisos de recurso compartido y permisos NTFS."
+     },
+     {
+      "prompt": "¿Por qué se recomienda que un servicio web definido en systemd use User= con una cuenta sin privilegios y NoNewPrivileges=yes?",
+      "options": [
+       "Porque systemd no permite servicios ejecutados como root",
+       "Para que el servicio arranque más rápido al inicio del sistema",
+       "Para limitar el daño si el servicio es comprometido, aplicando mínimo privilegio",
+       "Para que el servicio no escriba registros en el diario"
+      ],
+      "correct": 2,
+      "explanation": "Si un atacante explota el servicio, obtiene solo los permisos de esa cuenta y no puede escalar privilegios mediante binarios setuid."
+     },
+     {
+      "prompt": "Un administrador va a desactivar PasswordAuthentication en SSH en un servidor remoto. ¿Qué precaución es indispensable?",
+      "options": [
+       "Abrir todos los puertos del cortafuegos temporalmente",
+       "Activar PermitRootLogin yes como respaldo",
+       "Eliminar el archivo authorized_keys para regenerarlo",
+       "Verificar en otra sesión que el acceso con llave funciona antes de cerrar la sesión actual"
+      ],
+      "correct": 3,
+      "explanation": "Si la autenticación por llave no funciona y se desactivan las contraseñas, el administrador puede quedar sin acceso remoto al servidor."
+     },
+     {
+      "prompt": "¿Qué expresión de crontab ejecuta un script a las 23:30 de lunes a sábado?",
+      "options": [
+       "30 23 * * 1-6",
+       "30 23 1-6 * *",
+       "* 23 30 * 1-6",
+       "23 30 * * 1-6"
+      ],
+      "correct": 0,
+      "explanation": "El orden es minuto, hora, día del mes, mes y día de la semana; 1-6 en el último campo corresponde a lunes a sábado."
+     },
+     {
+      "prompt": "Según el principio de mínimo privilegio, ¿cuál es la mejor forma de permitir que soporte reinicie el servicio nginx?",
+      "options": [
+       "Asignar permisos 777 al binario systemctl",
+       "Una regla sudo que permita solo systemctl restart nginx al grupo soporte",
+       "Compartir la contraseña de root con el equipo de soporte",
+       "Agregar a soporte al grupo sudo con acceso total"
+      ],
+      "correct": 1,
+      "explanation": "La regla restringida delega exactamente la acción necesaria, queda auditada y no concede control total del sistema."
+     }
+    ]
+   }
+  }
+ ],
+ "weekly_plan": [
+  {
+   "week": 1,
+   "unit": 1,
+   "topic": "Funciones del sistema operativo, modo usuario y modo núcleo, interrupciones",
+   "activity": "Lectura previa, discusión inicial del caso de la cooperativa y creación del laboratorio en VirtualBox.",
+   "evidence": "Máquina virtual creada y bitácora inicial"
+  },
+  {
+   "week": 2,
+   "unit": 1,
+   "topic": "Llamadas al sistema y estructuras de núcleo: monolítico, microkernel, híbrido",
+   "activity": "Laboratorio con strace para observar llamadas al sistema de comandos comunes; foro comparativo Linux frente a Windows.",
+   "evidence": "Informe breve de trazas strace"
+  },
+  {
+   "week": 3,
+   "unit": 1,
+   "topic": "Arranque UEFI, GPT, GRUB, systemd e instalación de sistemas operativos",
+   "activity": "Instalación guiada de Ubuntu Server y Windows en máquinas virtuales con particionado documentado.",
+   "evidence": "Capturas de instalación y esquema de particiones"
+  },
+  {
+   "week": 4,
+   "unit": 1,
+   "topic": "Shell de Linux, sistema de ayuda y cierre de la unidad 1",
+   "activity": "Resolución del caso, entrega de la tarea de instalación documentada y cuestionario de la unidad 1.",
+   "evidence": "Tarea 1 y cuestionario 1"
+  },
+  {
+   "week": 5,
+   "unit": 2,
+   "topic": "Procesos: PCB, estados, fork, exec y wait",
+   "activity": "Laboratorio en C y Python creando procesos hijos; observación del árbol de procesos con pstree y ps.",
+   "evidence": "Código comentado y salida de pstree"
+  },
+  {
+   "week": 6,
+   "unit": 2,
+   "topic": "Hilos y planificación de la CPU: FCFS, SJF, prioridades, Round Robin y CFS",
+   "activity": "Taller de cálculo de diagramas de Gantt y métricas; simulación con hoja de cálculo.",
+   "evidence": "Ejercicios de planificación resueltos"
+  },
+  {
+   "week": 7,
+   "unit": 2,
+   "topic": "Concurrencia: condiciones de carrera, mutex, semáforos y productor-consumidor",
+   "activity": "Laboratorio con hilos en Python que reproduce una condición de carrera y la corrige con Lock.",
+   "evidence": "Script corregido y explicación"
+  },
+  {
+   "week": 8,
+   "unit": 2,
+   "topic": "Interbloqueo, condiciones de Coffman y diagnóstico con top, nice y kill",
+   "activity": "Análisis del caso de la plataforma de pagos, entrega de la tarea de planificación y cuestionario de la unidad 2.",
+   "evidence": "Tarea 2 y cuestionario 2"
+  },
+  {
+   "week": 9,
+   "unit": 3,
+   "topic": "Memoria: direcciones lógicas y físicas, paginación y TLB",
+   "activity": "Ejercicios de traducción de direcciones y lectura de /proc/meminfo en el laboratorio.",
+   "evidence": "Hoja de ejercicios de traducción"
+  },
+  {
+   "week": 10,
+   "unit": 3,
+   "topic": "Memoria virtual, reemplazo de páginas, hiperpaginación y swap",
+   "activity": "Simulación de FIFO, LRU y óptimo; observación de fallos de página con vmstat bajo carga.",
+   "evidence": "Tabla comparativa de fallos de página"
+  },
+  {
+   "week": 11,
+   "unit": 3,
+   "topic": "Sistemas de archivos: inodos, ext4, NTFS, journaling y enlaces",
+   "activity": "Laboratorio de creación de sistemas de archivos, enlaces duros y simbólicos, y uso de df y du.",
+   "evidence": "Evidencias de comandos con explicación"
+  },
+  {
+   "week": 12,
+   "unit": 3,
+   "topic": "Particionado, montaje persistente con fstab y LVM",
+   "activity": "Resolución del caso del centro de salud, entrega de la tarea de diagnóstico de almacenamiento y cuestionario de la unidad 3.",
+   "evidence": "Tarea 3 y cuestionario 3"
+  },
+  {
+   "week": 13,
+   "unit": 4,
+   "topic": "Usuarios, grupos, permisos, sudo y ACL; equivalentes en Windows",
+   "activity": "Laboratorio de diseño de permisos para áreas de una empresa; conformación de equipos del proyecto integrador.",
+   "evidence": "Matriz de permisos aplicada"
+  },
+  {
+   "week": 14,
+   "unit": 4,
+   "topic": "Servicios con systemd, registros con journalctl y Visor de eventos",
+   "activity": "Configuración de un servicio propio y análisis de registros de intentos de acceso fallidos.",
+   "evidence": "Archivo de unidad systemd y análisis de registros"
+  },
+  {
+   "week": 15,
+   "unit": 4,
+   "topic": "Automatización con Bash y PowerShell, cron, respaldos y endurecimiento",
+   "activity": "Desarrollo de scripts de respaldo y auditoría; revisión entre pares; avance del proyecto integrador.",
+   "evidence": "Scripts versionados y revisión de pares"
+  },
+  {
+   "week": 16,
+   "unit": 4,
+   "topic": "Proyecto integrador y evaluación final práctica",
+   "activity": "Sustentación del proyecto integrador, discusión del caso de la distribuidora, cuestionario de la unidad 4 y prueba práctica final.",
+   "evidence": "Proyecto, cuestionario 4 y prueba final"
+  }
+ ]
+}

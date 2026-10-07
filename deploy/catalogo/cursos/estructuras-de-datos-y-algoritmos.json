@@ -1,0 +1,1251 @@
+{
+  "name": "Estructuras de Datos y Algoritmos",
+  "slug": "estructuras-de-datos-y-algoritmos",
+  "course_type": "especifica",
+  "module_name": "Programación y preparación de datos para inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo de la carrera de Inteligencia Artificial (código IAR-201). Su propósito es que el estudiante diseñe, analice e implemente soluciones eficientes para procesar grandes volúmenes de datos, eligiendo con criterio las estructuras de datos y los algoritmos adecuados. Desarrolla el análisis asintótico y empírico de algoritmos, las estructuras lineales, la recursión y el paradigma de divide y vencerás, los algoritmos de ordenamiento y búsqueda, las tablas hash, los árboles balanceados, los montículos y los tries, los grafos con sus recorridos, caminos mínimos y árboles de expansión, y las técnicas voraces y de programación dinámica, junto con la noción de intratabilidad. Trabaja con casos del contexto peruano, como la conciliación de comprobantes electrónicos, el triaje hospitalario o la logística de última milla en Lima. Se apoya en Fundamentos de Programación en Python y en Lógica y Pensamiento Computacional, y prepara para Análisis y Visualización de Datos, Aprendizaje Automático y Procesamiento de Lenguaje Natural.",
+  "competency": "Diseña, implementa y evalúa soluciones algorítmicas eficientes en Python para problemas de procesamiento de datos, seleccionando estructuras de datos y técnicas de diseño según su complejidad temporal y espacial, verificando su corrección con pruebas y midiendo su rendimiento con datos de tamaño realista, en coherencia con buenas prácticas de ingeniería y protección de datos personales.",
+  "capacities": [
+    "Analiza el costo de algoritmos mediante notación asintótica, recurrencias y experimentos de rendimiento, para anticipar su comportamiento ante volúmenes crecientes de datos.",
+    "Implementa y selecciona estructuras de datos lineales, tablas hash, árboles y montículos según las operaciones dominantes de un problema y sus restricciones de memoria.",
+    "Aplica algoritmos de recursión, ordenamiento, búsqueda y grafos para resolver problemas de consulta, conciliación, priorización y rutas con datos del entorno productivo.",
+    "Diseña soluciones con técnicas voraces y de programación dinámica, reconoce problemas intratables y propone heurísticas justificadas con evidencia de calidad y eficiencia."
+  ],
+  "indicators": [
+    "Determina la complejidad temporal y espacial de un fragmento de código y la contrasta con una prueba de razón duplicada, explicando las diferencias observadas.",
+    "Justifica por escrito la elección entre list, deque, dict, set, árbol balanceado o montículo según las operaciones y su frecuencia en un caso dado.",
+    "Implementa ordenamiento por mezcla, quicksort aleatorizado y búsqueda binaria que superan pruebas automatizadas con casos borde.",
+    "Construye un sistema de priorización con heapq y un diccionario de índices que actualiza prioridades en tiempo logarítmico.",
+    "Modela un problema de redes como grafo y aplica BFS, DFS, Dijkstra o Kruskal reconstruyendo correctamente la solución.",
+    "Resuelve un problema de optimización con programación dinámica, define el estado y la recurrencia, y reconstruye la solución óptima.",
+    "Sustenta un proyecto integrador con análisis de complejidad, mediciones comparativas, perfil de rendimiento y limitaciones declaradas."
+  ],
+  "methodology": "El curso aplica metodologías activas en un entorno 100 % virtual. Con aula invertida, el estudiante revisa la lectura y el video de la semana antes de la sesión síncrona, que se dedica a programación en vivo, trazas guiadas y resolución de problemas en salas pequeñas. Cada unidad gira en torno a un caso del contexto peruano analizado con el método de casos, que exige decisiones técnicas cuantificadas. El aprendizaje basado en problemas y proyectos se concreta en laboratorios con pruebas automatizadas y mediciones de rendimiento, y culmina en un proyecto integrador sustentado. La evaluación formativa se apoya en cuestionarios con retroalimentación inmediata, revisión de pares del código y devolución con rúbricas. Se promueve el uso declarado y crítico de asistentes de inteligencia artificial.",
+  "bibliography": [
+    "Cormen, T. H., Leiserson, C. E., Rivest, R. L. y Stein, C. (2022). Introduction to algorithms (4.ª ed.). MIT Press.",
+    "Sedgewick, R. y Wayne, K. (2011). Algorithms (4.ª ed.). Addison-Wesley.",
+    "Goodrich, M. T., Tamassia, R. y Goldwasser, M. H. (2013). Data structures and algorithms in Python. Wiley.",
+    "Skiena, S. S. (2020). The algorithm design manual (3.ª ed.). Springer.",
+    "Kleinberg, J. y Tardos, É. (2006). Algorithm design. Pearson Addison-Wesley.",
+    "Knuth, D. E. (1998). The art of computer programming: Vol. 3. Sorting and searching (2.ª ed.). Addison-Wesley.",
+    "Dasgupta, S., Papadimitriou, C. y Vazirani, U. (2008). Algorithms. McGraw-Hill.",
+    "Bhargava, A. Y. (2016). Grokking algorithms: An illustrated guide for programmers and other curious people. Manning.",
+    "Miller, B. N. y Ranum, D. L. (2011). Problem solving with algorithms and data structures using Python (2.ª ed.). Franklin, Beedle & Associates."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuestionarios de las cuatro unidades, participación en el análisis de casos, laboratorios semanales de programación y revisión de pares del código."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 40,
+      "description": "Tareas aplicadas de las unidades 1, 2 y 3, evaluadas con rúbrica: laboratorio de rendimiento, conciliador de comprobantes y sistema de triaje con cola de prioridad."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador de la unidad 4: repositorio con pruebas, informe técnico con análisis de complejidad y mediciones, video demostrativo y sustentación individual."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Análisis de algoritmos y estructuras de datos lineales",
+      "description": "Al finalizar la unidad, el estudiante estima y mide el costo temporal y espacial de un algoritmo con notación asintótica y pruebas empíricas, e implementa y selecciona arreglos dinámicos, listas enlazadas, pilas y colas según las operaciones que exige un problema real de procesamiento de datos.",
+      "topics": [
+        "Tipos de datos abstractos, contratos e implementaciones",
+        "Modelo de costo y notación asintótica O, Omega y Theta",
+        "Análisis empírico: timeit y prueba de razón duplicada",
+        "Arreglos dinámicos y análisis amortizado de list en Python",
+        "Listas enlazadas simples y dobles",
+        "Pilas, colas y deque: aplicaciones en sistemas reales"
+      ],
+      "slides": [
+        {
+          "title": "Por qué estructuras de datos y algoritmos en inteligencia artificial",
+          "bullets": [
+            "Un modelo de IA es tan útil como el flujo de datos que lo alimenta: limpieza, deduplicación, búsqueda e indexación son problemas algorítmicos.",
+            "Niklaus Wirth (1976) lo resumió en una ecuación: algoritmos + estructuras de datos = programas.",
+            "Elegir mal una estructura convierte un proceso de segundos en horas cuando los datos pasan de miles a millones de registros.",
+            "Bibliotecas como NumPy, pandas, scikit-learn o FAISS son, por dentro, implementaciones cuidadosas de las estructuras que estudiaremos."
+          ],
+          "notes": "Abra la sesión con una pregunta provocadora: si Python ya trae listas y diccionarios, ¿para qué estudiar estructuras de datos? La respuesta es que el profesional técnico no solo usa herramientas, también diagnostica por qué un proceso se vuelve lento o consume toda la memoria. Mencione que el padrón de contribuyentes que publica SUNAT supera largamente los diez millones de registros: un cruce mal diseñado contra la base de clientes de una empresa puede tardar horas, mientras que uno bien diseñado tarda segundos. Cite el libro de Wirth como el origen de la idea de que los programas se construyen combinando ambos elementos. Cierre anunciando el recorrido del curso: análisis y estructuras lineales, recursión y ordenamiento, tablas hash y árboles, y finalmente grafos y técnicas de diseño, que confluyen en un proyecto integrador."
+        },
+        {
+          "title": "Tipo de dato abstracto frente a implementación concreta",
+          "bullets": [
+            "Un tipo de dato abstracto (TDA) define qué operaciones existen y qué garantizan, sin decir cómo se implementan.",
+            "Ejemplo: el TDA Pila ofrece apilar, desapilar, cima y vacía; puede implementarse con arreglo o con lista enlazada.",
+            "El contrato incluye precondiciones (no desapilar una pila vacía) y el costo esperado de cada operación.",
+            "Separar interfaz e implementación permite cambiar la estructura interna sin reescribir el código cliente."
+          ],
+          "notes": "Este concepto, formalizado por Barbara Liskov y Stephen Zilles en los años setenta, es la base del diseño modular. Conecte con lo que los estudiantes vieron en Fundamentos de Programación en Python sobre clases y encapsulamiento: una clase con métodos públicos es la forma natural de expresar un TDA. Muestre en pantalla dos clases, PilaArreglo y PilaEnlazada, con los mismos métodos, y un programa cliente que valida paréntesis y funciona con ambas sin cambiar una línea. Pregunte a la clase: ¿qué ganamos y qué perdemos con cada implementación? Guíe la discusión hacia memoria contigua frente a nodos dispersos, y hacia el costo de redimensionar. Subraye que el contrato debe documentarse en el docstring, incluyendo la complejidad de cada operación, porque es información que el usuario de la clase necesita para tomar decisiones."
+        },
+        {
+          "title": "Modelo de costo: operaciones elementales y tamaño de la entrada",
+          "bullets": [
+            "Medimos el costo como función del tamaño de entrada n, no en segundos, para independizarnos del hardware.",
+            "Operación elemental: asignación, comparación, aritmética o acceso por índice; se asume de costo constante.",
+            "Distinguimos peor caso, mejor caso y caso promedio; en ingeniería se suele garantizar el peor caso.",
+            "El costo espacial cuenta la memoria adicional que usa el algoritmo además de la entrada."
+          ],
+          "notes": "Explique el modelo RAM que usan Cormen y colaboradores: una máquina idealizada donde cada instrucción simple cuesta una unidad. Haga en la pizarra virtual el conteo de operaciones de una búsqueda lineal sobre una lista de n códigos de ubigeo: en el mejor caso el elemento está al inicio y hay una comparación; en el peor no está y hay n comparaciones; en promedio, si el elemento está y es equiprobable, hay alrededor de n/2. Pregunte: ¿por qué un banco que valida operaciones en tiempo real se preocupa por el peor caso y no por el promedio? Porque un pico de demora en hora punta afecta a miles de clientes. Recuerde que en el curso de Lógica ya contaron operaciones de manera intuitiva; ahora lo formalizamos. Advierta que en Python no todas las operaciones son constantes: x in lista es lineal."
+        },
+        {
+          "title": "Notación asintótica: O, Omega y Theta",
+          "bullets": [
+            "f(n) es O(g(n)) si existen constantes c > 0 y n0 tales que f(n) ≤ c·g(n) para todo n ≥ n0: cota superior.",
+            "f(n) es Ω(g(n)) cuando g acota a f por debajo; f(n) es Θ(g(n)) cuando se cumplen ambas cotas.",
+            "Ejemplo: 3n² + 10n + 50 es Θ(n²), porque el término dominante crece más rápido que los demás.",
+            "Se descartan constantes y términos menores, pero en la práctica las constantes importan para n pequeños."
+          ],
+          "notes": "La notación fue popularizada en computación por Donald Knuth en 1976, retomando la tradición de Bachmann y Landau. Demuestre formalmente que 3n² + 10n + 50 ≤ 4n² para n ≥ 15, eligiendo c = 4 y n0 = 15, para que los estudiantes vean que la definición se puede verificar con números concretos. Luego aclare un error frecuente: decir que un algoritmo es O(n²) solo afirma una cota superior; técnicamente la búsqueda lineal también es O(n²), aunque esa cota no sea informativa. Por eso los especialistas prefieren Theta cuando conocen el crecimiento exacto. Pregunte a la clase: si un algoritmo A cuesta 100n y otro B cuesta n², ¿cuál conviene para n = 50 y cuál para n = 10 000? Esta pregunta introduce el punto de cruce y el papel de las constantes ocultas."
+        },
+        {
+          "title": "Reglas prácticas para derivar la complejidad de un programa",
+          "bullets": [
+            "Secuencia: se suman los costos y domina el mayor; O(n) seguido de O(n²) resulta O(n²).",
+            "Bucles anidados independientes: se multiplican los recorridos; dos bucles de n iteraciones dan O(n²).",
+            "Bucle que divide el problema a la mitad en cada paso: O(log n), como la búsqueda binaria.",
+            "Llamadas a funciones de biblioteca: hay que conocer su costo; sorted es O(n log n) y x in set es O(1) promedio."
+          ],
+          "notes": "Trabaje tres fragmentos de código en vivo. Primero, un bucle que calcula el total de ventas: O(n). Segundo, un doble bucle que compara cada par de comprobantes para encontrar duplicados: n(n−1)/2 comparaciones, es decir O(n²). Tercero, un bucle while que divide un intervalo a la mitad hasta encontrar un valor: O(log n). Haga que los estudiantes cuenten cuántas iteraciones haría el tercer bucle con un millón de elementos: unas veinte, porque dos elevado a veinte supera el millón. Luego muestre la trampa más común en Python: un bucle for que en su interior ejecuta if codigo in lista_codigos parece lineal, pero es cuadrático porque la pertenencia en lista recorre todo. Reemplazarlo por un conjunto lo vuelve lineal. Esta observación será el centro del caso de la unidad."
+        },
+        {
+          "title": "Órdenes de crecimiento y su impacto real",
+          "bullets": [
+            "Con n = 1 000 000 y 10⁸ operaciones por segundo: O(log n) ≈ 20 pasos, O(n) ≈ 0,01 s.",
+            "O(n log n) ≈ 2·10⁷ operaciones, unos 0,2 s; es el costo de ordenar bien.",
+            "O(n²) ≈ 10¹² operaciones, cerca de tres horas; inviable para procesos interactivos.",
+            "O(2ⁿ) es intratable incluso con n = 60: más operaciones que segundos tiene la edad del universo."
+          ],
+          "notes": "Proyecte una tabla con n = 10, 1 000 y 1 000 000 para cada orden de crecimiento y pida a los estudiantes que la completen en grupos durante cinco minutos. La cifra de cien millones de operaciones simples por segundo es una aproximación razonable para código compilado; en Python puro conviene pensar en unos diez a cincuenta millones, lo que agrava la diferencia. Ilustre con un ejemplo local: deduplicar los registros de un programa social con un millón de beneficiarios mediante comparación de todos los pares tardaría horas, mientras que con un diccionario tarda segundos. Pregunte: ¿comprar un servidor diez veces más rápido resuelve el problema cuadrático? Solo permite procesar alrededor de tres veces más datos en el mismo tiempo, porque la raíz cuadrada de diez es aproximadamente 3,16. La mejor inversión suele ser un mejor algoritmo."
+        },
+        {
+          "title": "Análisis empírico con timeit y la prueba de razón duplicada",
+          "bullets": [
+            "Paso 1: generar entradas aleatorias de tamaño n, 2n, 4n, 8n con semilla fija para reproducibilidad.",
+            "Paso 2: medir con timeit.repeat tomando el mínimo de varias repeticiones para reducir el ruido del sistema.",
+            "Paso 3: calcular la razón T(2n)/T(n); si tiende a 2 es lineal, a 4 cuadrático, a 8 cúbico.",
+            "Paso 4: estimar el exponente b = log₂(razón) y contrastarlo con el análisis teórico."
+          ],
+          "notes": "La prueba de razón duplicada, que Sedgewick y Wayne presentan en su libro Algorithms, es una herramienta sencilla y potente para validar el análisis teórico. Explique por qué se usa el mínimo y no el promedio: las interrupciones del sistema operativo solo pueden hacer que una medición sea más lenta, nunca más rápida, así que el mínimo es el estimador más cercano al costo real. Ejecute en Colab una medición de búsqueda en lista y en conjunto con tamaños de 10 000 a 160 000. Los estudiantes verán razones cercanas a 2 para la lista y cercanas a 1 para el conjunto. Discuta las limitaciones: la caché del procesador, el recolector de basura y la optimización de CPython pueden distorsionar resultados con tamaños pequeños. Por eso se recomienda partir de tamaños en que cada medición dure al menos algunos milisegundos."
+        },
+        {
+          "title": "Arreglos dinámicos: cómo funciona list en Python",
+          "bullets": [
+            "Una list de CPython es un arreglo contiguo de referencias a objetos, con capacidad reservada mayor que su longitud.",
+            "Acceso por índice y asignación lista[i] cuestan O(1) porque la dirección se calcula aritméticamente.",
+            "Insertar o eliminar al inicio o en medio cuesta O(n): hay que desplazar todos los elementos posteriores.",
+            "Cuando la capacidad se agota, se reserva un bloque mayor y se copian todas las referencias."
+          ],
+          "notes": "Dibuje la memoria como una fila de casilleros contiguos: la lista guarda referencias, no los objetos mismos, lo que explica por qué una lista puede mezclar tipos. Muestre con sys.getsizeof cómo el tamaño en bytes de una lista crece por saltos al hacer append repetidamente: esos saltos revelan la sobreasignación de capacidad. Luego explique por qué lista.insert(0, x) y lista.pop(0) son costosos: cada uno desplaza todos los elementos. Pregunte a la clase cuánto trabajo total hace un programa que atiende una cola de 100 000 solicitudes usando pop(0): cerca de cinco mil millones de desplazamientos, una cifra que explica muchos sistemas lentos en producción. Adelante que deque resuelve este problema y que en la diapositiva siguiente demostraremos por qué append sí es eficiente pese a las copias ocasionales."
+        },
+        {
+          "title": "Análisis amortizado del append en arreglos dinámicos",
+          "bullets": [
+            "El costo amortizado promedia el costo de una secuencia de operaciones en el peor caso, no de una sola.",
+            "Si la capacidad crece por un factor constante, las copias totales para n inserciones suman menos de 2n o 3n.",
+            "Por tanto, append es O(1) amortizado aunque una inserción individual pueda costar O(n).",
+            "Crecer en una cantidad fija (por ejemplo, de 10 en 10) produciría O(n²) en total: el factor multiplicativo es clave."
+          ],
+          "notes": "Use el método contable que enseñan Cormen y colaboradores: cada append paga tres monedas, una para insertarse y dos que se guardan para financiar futuras copias. Con capacidad que se duplica, al llegar a 1, 2, 4, 8 y así sucesivamente, la suma de copias es 1 + 2 + 4 + ... + n/2, que es menor que n. Haga el cálculo con n = 1 024 para que lo vean concreto. Aclare que CPython no duplica exactamente, sino que crece aproximadamente un 12,5 % más una constante, pero el argumento es el mismo: cualquier factor mayor que uno garantiza costo amortizado constante. Pregunte: ¿qué pasaría en un sistema de tiempo real, como el control de un brazo robótico, donde una sola operación lenta es inaceptable? Ahí el amortizado no basta y se prefiere reservar capacidad de antemano o usar estructuras con peor caso constante."
+        },
+        {
+          "title": "Listas enlazadas simples y dobles",
+          "bullets": [
+            "Cada nodo almacena un dato y una referencia al siguiente; la doble agrega una referencia al anterior.",
+            "Insertar o eliminar conociendo el nodo cuesta O(1); acceder al elemento i-ésimo cuesta O(n).",
+            "Consumen más memoria por elemento y tienen mala localidad de caché frente a un arreglo contiguo.",
+            "Útiles como base de pilas, colas, cachés LRU y listas de adyacencia de grafos."
+          ],
+          "notes": "Implemente en vivo una clase Nodo con atributos dato y siguiente, y una clase ListaEnlazada con insertar_al_inicio, buscar y eliminar. Dibuje cada paso de la eliminación: localizar el nodo previo y redirigir su referencia. Los estudiantes suelen equivocarse en los casos borde, como eliminar el primer nodo o una lista vacía; pídales que escriban pruebas con pytest para esos casos antes de implementar. Luego discuta con honestidad que, en Python, una lista enlazada propia casi siempre es más lenta que list para recorridos, porque cada nodo es un objeto disperso en memoria y el intérprete añade costo por atributo. Su valor está en ciertas operaciones y en entender cómo funcionan estructuras más avanzadas. Mencione que la caché LRU, usada en servidores web, combina una lista doblemente enlazada con un diccionario para lograr O(1)."
+        },
+        {
+          "title": "Pilas: el principio LIFO y sus aplicaciones",
+          "bullets": [
+            "Operaciones apilar, desapilar y cima en O(1); en Python basta list con append y pop sin índice.",
+            "Validación de paréntesis y etiquetas: cada apertura se apila y cada cierre debe coincidir con la cima.",
+            "La pila de llamadas del intérprete implementa la recursión; su límite por defecto es de unas mil llamadas.",
+            "Funciones deshacer en editores, navegación atrás en navegadores y evaluación de expresiones en notación posfija."
+          ],
+          "notes": "Resuelva en clase el validador de expresiones balanceadas, un ejercicio clásico que aparece en entrevistas técnicas. Recorra la cadena carácter por carácter: si es apertura, se apila; si es cierre, se verifica que la pila no esté vacía y que la cima corresponda. Al final, la pila debe quedar vacía. Pida a los estudiantes que hagan la traza con la cadena ([{}]) y con ([)]. Luego conecte con la evaluación de expresiones en notación polaca inversa, que propuso Łukasiewicz y que usaban las calculadoras HP: con una pila se evalúa 3 4 + 2 * sin paréntesis ni precedencia. Finalmente, adelante que la recursión de la unidad 2 utiliza internamente una pila y que sys.getrecursionlimit devuelve el límite que protege al intérprete de desbordarse."
+        },
+        {
+          "title": "Colas y deque: FIFO, búfer circular y concurrencia",
+          "bullets": [
+            "Una cola atiende en orden de llegada: encolar al final y desencolar al frente, ambas en O(1).",
+            "collections.deque implementa una cola doble con bloques enlazados: append, appendleft, pop y popleft en O(1).",
+            "deque(maxlen=k) funciona como búfer circular: ideal para ventanas móviles de las últimas k lecturas.",
+            "queue.Queue añade sincronización para hilos; es la base de sistemas productor-consumidor."
+          ],
+          "notes": "Contraste en Colab una cola implementada con list y pop(0) frente a deque y popleft, con 100 000 elementos: la diferencia suele ser de dos o tres órdenes de magnitud. Explique que deque internamente encadena bloques de varias decenas de referencias, combinando lo mejor de arreglos y listas enlazadas. Presente el uso con maxlen para calcular un promedio móvil de las últimas diez lecturas de un sensor de calidad del aire, un ejemplo cercano a proyectos de IoT y monitoreo ambiental en Lima. Pregunte: ¿qué estructura usarían para simular la atención en una ventanilla de un banco o en una plataforma de atención ciudadana? Introduzca brevemente la teoría de colas como campo que estudia tiempos de espera, y anuncie que en la unidad 3 veremos colas de prioridad, donde el orden no es de llegada sino de urgencia."
+        },
+        {
+          "title": "Elegir la estructura lineal adecuada",
+          "bullets": [
+            "Paso 1: listar las operaciones del problema y su frecuencia esperada (acceso, búsqueda, inserción, eliminación).",
+            "Paso 2: comparar costos: list para índice y final; deque para ambos extremos; enlazada para inserciones con referencia.",
+            "Paso 3: considerar memoria, localidad de caché y simplicidad de mantenimiento.",
+            "Paso 4: validar la decisión con una medición empírica sobre datos de tamaño realista."
+          ],
+          "notes": "Cierre la unidad con una matriz de decisión en la que las filas son estructuras y las columnas operaciones, y llénela con la clase. Plantee tres escenarios para debatir en salas pequeñas: un historial de navegación con botón atrás, la cola de impresión de una oficina y el registro de las últimas cien transacciones sospechosas de una billetera digital. Cada grupo debe justificar su elección con costos asintóticos y con un argumento de mantenibilidad. Insista en que la regla de oro es optimizar con evidencia, recordando la frase de Knuth sobre la optimización prematura, que se suele citar incompleta: Knuth también dice que no debemos dejar pasar el tres por ciento crítico. Anuncie la tarea de la unidad, que pide medir y justificar exactamente este tipo de decisión, y el cuestionario de la semana cuatro."
+        }
+      ],
+      "reading": {
+        "title": "Medir antes de optimizar: análisis asintótico y estructuras lineales",
+        "minutes": 35,
+        "content": "## El costo de un algoritmo como función\n\nCuando un analista de datos dice que un proceso es lento, la pregunta profesional no es cuántos segundos tarda, sino cómo crece su tiempo cuando crecen los datos. Un script que cruza 1 000 registros en un segundo puede tardar más de dos horas con 100 000 registros si su costo es cuadrático. Por eso describimos el costo como una función T(n) del tamaño de la entrada y estudiamos su comportamiento asintótico.\n\nLa notación O formaliza esta idea. Decimos que T(n) = O(g(n)) si existen constantes positivas c y n0 tales que:\n\n```\nT(n) <= c * g(n)   para todo n >= n0\n```\n\nPor ejemplo, si T(n) = 3n² + 10n + 50, basta tomar c = 4 y n0 = 15 para comprobar que T(n) = O(n²). Si además T(n) >= n² para todo n, entonces T(n) = Θ(n²): conocemos su crecimiento exacto salvo constantes.\n\n## Del código a la complejidad\n\nTres reglas resuelven la mayoría de los casos prácticos: las secuencias se suman y domina el término mayor; los bucles anidados se multiplican; y un bucle que reduce el problema a la mitad cuesta O(log n). La trampa más frecuente en Python es olvidar el costo de las operaciones de biblioteca:\n\n```python\n# Version cuadratica: 'in' sobre una lista recorre toda la lista\ndef clientes_con_ruc_activo(clientes, rucs_activos):    # rucs_activos: list\n    return [c for c in clientes if c[\"ruc\"] in rucs_activos]   # O(n * m)\n\n# Version lineal: el conjunto ofrece pertenencia en O(1) promedio\ndef clientes_con_ruc_activo_v2(clientes, rucs_activos):\n    activos = set(rucs_activos)                           # O(m)\n    return [c for c in clientes if c[\"ruc\"] in activos]   # O(n)\n```\n\nCon 200 000 clientes y un padrón de varios millones de RUC, la primera versión es inviable; la segunda termina en segundos. El cambio es de una línea, pero solo lo ve quien razona en términos de complejidad.\n\n## Validar con experimentos: la razón duplicada\n\nEl análisis teórico debe contrastarse con mediciones. Sedgewick y Wayne proponen la prueba de razón duplicada: medir el tiempo para n, 2n, 4n y observar el cociente T(2n)/T(n).\n\n```python\nimport random, timeit, math\n\ndef razon_duplicada(func, generar, n0=10_000, pasos=5):\n    previo = None\n    n = n0\n    for _ in range(pasos):\n        datos = generar(n)\n        t = min(timeit.repeat(lambda: func(datos), number=3, repeat=5))\n        if previo:\n            r = t / previo\n            print(f\"n={n:>8}  t={t:.4f}s  razon={r:.2f}  b~{math.log2(r):.2f}\")\n        previo, n = t, 2 * n\n```\n\nSi la razón se estabiliza cerca de 2, el algoritmo es lineal (b aproximadamente 1); si se acerca a 4, es cuadrático (b aproximadamente 2). Usamos el mínimo de varias repeticiones porque el ruido del sistema operativo solo puede aumentar los tiempos.\n\n## Arreglos dinámicos y costo amortizado\n\nLa list de CPython es un arreglo contiguo de referencias con capacidad sobrante. El acceso lista[i] es O(1), pero insertar o eliminar al inicio es O(n), porque obliga a desplazar todos los elementos. El append, en cambio, es O(1) amortizado: cuando la capacidad se agota, se reserva un bloque proporcionalmente mayor y se copian las referencias. Si la capacidad se duplica, el total de copias para n inserciones es 1 + 2 + 4 + ... + n/2 < n, de modo que el costo promedio por operación es constante. Esta técnica de análisis, el análisis amortizado, fue sistematizada por Robert Tarjan en 1985.\n\n## Pilas, colas y deque\n\nUna pila (LIFO) se implementa con list usando append y pop sin índice. Una cola (FIFO) no debe implementarse con list.pop(0), porque cada extracción cuesta O(n). La opción correcta es collections.deque:\n\n```python\nfrom collections import deque\n\ncola = deque()\ncola.append(\"ticket-001\")       # encolar, O(1)\ncola.append(\"ticket-002\")\nsiguiente = cola.popleft()      # desencolar, O(1)\n\nventana = deque(maxlen=10)      # bufer circular: guarda las 10 ultimas lecturas\nfor pm25 in [38, 41, 55, 47]:\n    ventana.append(pm25)\npromedio_movil = sum(ventana) / len(ventana)\n```\n\nLas listas enlazadas completan el panorama: permiten insertar y eliminar en O(1) cuando se tiene la referencia al nodo, a cambio de acceso secuencial O(n) y peor uso de la caché del procesador. En Python rara vez superan a list en recorridos, pero son la base conceptual de deque, de las cachés LRU y de las listas de adyacencia de grafos.\n\n## Criterio profesional\n\nElegir una estructura es una decisión de ingeniería: se enumeran las operaciones del problema, se estima su frecuencia, se compara el costo asintótico y se valida con mediciones sobre datos realistas. En la unidad 2 aplicaremos este criterio a la recursión, el ordenamiento y la búsqueda."
+      },
+      "case": {
+        "title": "Caso: La cola de validaciones de PagoSur en el Cyber Wow",
+        "content": "**PagoSur** es una fintech arequipeña, con 38 colaboradores, que ofrece una billetera digital a pequeños comercios del sur del país. Cada pago que recibe un comercio pasa por un módulo de validación antifraude escrito en Python por el equipo de datos: el servicio recibe las transacciones, las coloca en una cola en memoria y un proceso trabajador las extrae una por una para aplicar reglas y un modelo de clasificación.\n\nEn un día normal, PagoSur procesa unas 40 000 transacciones, con picos de 1 500 por minuto al mediodía. El módulo funcionó sin problemas durante un año. Sin embargo, durante la última campaña del Cyber Wow, el volumen se multiplicó por seis y la cola llegó a acumular más de 120 000 transacciones pendientes. El tiempo de validación por pago subió de 80 milisegundos a casi 9 segundos; cientos de comercios reportaron que sus clientes se retiraban sin confirmar la compra y el área comercial estima pérdidas de reputación difíciles de cuantificar.\n\nLa revisión de código de Lucía Quispe, analista de datos que ingresó hace tres meses, encontró dos detalles:\n\n1. La cola se implementó con una list de Python: las transacciones nuevas se agregan con append y el trabajador extrae con pop(0).\n2. Para cada transacción, el sistema verifica si el número de celular del pagador figura en una lista negra de unos 250 000 números con la instrucción `if celular in lista_negra`, donde `lista_negra` también es una list cargada desde un archivo CSV.\n\nEl jefe de tecnología, Martín Salas, propone una solución distinta: contratar servidores con el doble de núcleos en la nube, lo que elevaría el costo mensual de infraestructura de USD 1 800 a USD 4 100. Argumenta que el código «funcionó un año» y que tocarlo a pocas semanas de la campaña navideña es riesgoso. Lucía sostiene que el problema es algorítmico y que más hardware no lo resolverá en proporción al crecimiento.\n\nLa gerenta general, Rosa Mamani, debe decidir antes del viernes. Necesita un argumento cuantitativo comprensible, una estimación del impacto de cada alternativa con un volumen seis veces mayor y un plan de prueba que reduzca el riesgo de introducir errores en producción. Además, la Superintendencia de Banca, Seguros y AFP exige a las empresas emisoras de dinero electrónico gestionar el riesgo operacional, por lo que cualquier cambio debe documentarse.",
+        "questions": [
+          "Estime cuántas operaciones elementales realiza el trabajador con 120 000 transacciones en cola y una lista negra de 250 000 números. ¿Qué parte del código domina el costo?",
+          "¿Por qué duplicar los núcleos del servidor no resolvería el problema en proporción al crecimiento del volumen? Use el razonamiento asintótico.",
+          "Proponga los cambios de estructuras de datos concretos y estime el nuevo costo por transacción.",
+          "Diseñe un plan de prueba y despliegue que reduzca el riesgo operacional antes de la campaña navideña y que pueda documentarse ante el regulador.",
+          "Si usted fuera Rosa Mamani, ¿qué decisión tomaría y cómo la comunicaría al directorio?"
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio de rendimiento: estructuras lineales con evidencia empírica",
+        "instructions": "**Objetivo:** demostrar con análisis teórico y mediciones que la elección de una estructura lineal determina la escalabilidad de un proceso.\n\n**Qué entregar:**\n\n1. Un cuaderno de Jupyter o Colab con:\n   - Una clase `PilaEnlazada` y una clase `ColaEnlazada` implementadas con nodos propios, con docstrings que indiquen la complejidad de cada método.\n   - Un conjunto de al menos ocho pruebas con `pytest` o `assert`, que incluya casos borde (estructura vacía, un solo elemento).\n   - Un validador de expresiones balanceadas que use su pila y procese un archivo de al menos 1 000 expresiones.\n2. Un experimento de razón duplicada que compare: `list.pop(0)` frente a `deque.popleft()`, y pertenencia en `list` frente a `set`, con al menos cinco tamaños de entrada y semilla fija.\n3. Un informe de dos páginas (PDF) con una tabla de resultados, un gráfico de tiempo frente a n, el exponente estimado de cada variante y una recomendación técnica justificada para el caso PagoSur.\n\n**Formato:** archivo comprimido con el cuaderno, el PDF y un README con instrucciones de ejecución. Código conforme a PEP 8.\n\n**Criterios:** corrección de las implementaciones, rigor del experimento, coherencia entre teoría y medición, y calidad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Implementación correcta y documentada de pila y cola enlazadas",
+            "points": 5
+          },
+          {
+            "name": "Pruebas automatizadas con casos borde",
+            "points": 3
+          },
+          {
+            "name": "Diseño y ejecución reproducible del experimento de razón duplicada",
+            "points": 5
+          },
+          {
+            "name": "Interpretación que contrasta complejidad teórica y empírica",
+            "points": 4
+          },
+          {
+            "name": "Recomendación técnica para el caso, clara y cuantificada",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: análisis de algoritmos y estructuras lineales",
+        "questions": [
+          {
+            "prompt": "Un proceso tarda 2 segundos con 50 000 registros y 8 segundos con 100 000. ¿Qué crecimiento sugiere esta medición?",
+            "options": [
+              "Exponencial, porque el tiempo crece muy rápido",
+              "Lineal, porque el tiempo aumenta con n",
+              "Logarítmico, porque el aumento es moderado",
+              "Cuadrático, porque duplicar n cuadruplica el tiempo"
+            ],
+            "correct": 3,
+            "explanation": "La razón T(2n)/T(n) es 4, y log₂(4) = 2, lo que indica un exponente cercano a 2, es decir, un comportamiento cuadrático."
+          },
+          {
+            "prompt": "Un bucle recorre n clientes y, para cada uno, ejecuta 'if ruc in lista_rucs', donde lista_rucs tiene m elementos. ¿Cuál es el costo y cómo se mejora?",
+            "options": [
+              "O(n log m); ordenando lista_rucs",
+              "O(n); no requiere mejora porque in es constante",
+              "O(n·m); convirtiendo lista_rucs en un set antes del bucle",
+              "O(m); usando un bucle while en lugar de for"
+            ],
+            "correct": 2,
+            "explanation": "La pertenencia en list recorre la lista completa, así que el costo es O(n·m). Con un set la pertenencia es O(1) promedio y el total queda O(n + m)."
+          },
+          {
+            "prompt": "¿Por qué append en una list de Python se considera O(1) amortizado si a veces debe copiar todo el arreglo?",
+            "options": [
+              "Porque la capacidad crece por un factor constante y el costo de las copias, repartido entre todas las inserciones, es constante por operación",
+              "Porque CPython nunca copia el arreglo al crecer",
+              "Porque el peor caso de una inserción individual es O(1)",
+              "Porque las copias se hacen en un hilo paralelo sin costo"
+            ],
+            "correct": 0,
+            "explanation": "Con crecimiento geométrico, las copias totales para n inserciones son proporcionales a n; repartidas entre n operaciones, el costo promedio en el peor caso de la secuencia es constante."
+          },
+          {
+            "prompt": "Se necesita una estructura para guardar las últimas 60 lecturas de un sensor y calcular su promedio cada minuto. ¿Cuál es la mejor opción?",
+            "options": [
+              "collections.deque con maxlen=60",
+              "Un diccionario con las lecturas como claves",
+              "Una list usando insert(0, x) y pop()",
+              "Un set con las lecturas"
+            ],
+            "correct": 0,
+            "explanation": "deque con maxlen descarta automáticamente el elemento más antiguo en O(1), funcionando como búfer circular; insert(0, x) en list cuesta O(n) y un set pierde el orden y los duplicados."
+          },
+          {
+            "prompt": "Un estudiante afirma: 'la búsqueda lineal es O(n²)'. ¿Qué evaluación es correcta?",
+            "options": [
+              "Es verdadero y es la mejor descripción posible",
+              "Es falso, porque O solo admite la cota exacta",
+              "Es técnicamente verdadero pero poco informativo; la cota ajustada es Θ(n)",
+              "Es falso, porque la búsqueda lineal es O(log n)"
+            ],
+            "correct": 2,
+            "explanation": "O expresa una cota superior: n ≤ n² se cumple, así que la afirmación es verdadera, pero la cota ajustada que describe el crecimiento real es Θ(n)."
+          },
+          {
+            "prompt": "Duplicar la velocidad del servidor, ¿cuánto aumenta el tamaño de entrada procesable en el mismo tiempo por un algoritmo Θ(n²)?",
+            "options": [
+              "Exactamente 2 veces",
+              "No cambia el tamaño procesable",
+              "Alrededor de 4 veces",
+              "Alrededor de 1,41 veces"
+            ],
+            "correct": 3,
+            "explanation": "Si c·n² = T, con el doble de velocidad se resuelve c·m² = 2T, por lo que m = n·√2 ≈ 1,41n. El hardware rinde poco frente a un mejor algoritmo."
+          },
+          {
+            "prompt": "Al validar la cadena '([)]' con una pila, ¿en qué momento se detecta el error?",
+            "options": [
+              "Nunca, porque la cadena tiene igual número de aperturas y cierres",
+              "Al leer ')', porque la cima de la pila es '['",
+              "Al final, porque la pila no queda vacía",
+              "Al leer ']', porque la pila está vacía"
+            ],
+            "correct": 1,
+            "explanation": "Tras apilar '(' y '[', el cierre ')' debería coincidir con la cima, pero la cima es '['; el desajuste se detecta en ese momento."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Recursión, ordenamiento y búsqueda eficiente",
+      "description": "Al finalizar la unidad, el estudiante diseña algoritmos recursivos y de divide y vencerás, plantea y resuelve sus recurrencias, e implementa, compara y selecciona algoritmos de ordenamiento y búsqueda binaria para procesar grandes volúmenes de registros con garantías de corrección y eficiencia.",
+      "topics": [
+        "Recursión, pila de llamadas y memoización",
+        "Recurrencias y teorema maestro",
+        "Búsqueda binaria, invariantes y variantes con bisect",
+        "Ordenamiento por inserción, mezcla y rápido",
+        "Cota inferior de los ordenamientos por comparación y ordenamientos lineales",
+        "Estabilidad, Timsort y ordenamiento multicriterio en Python"
+      ],
+      "slides": [
+        {
+          "title": "Recursión: caso base, caso recursivo y pila de llamadas",
+          "bullets": [
+            "Una función recursiva resuelve un problema invocándose sobre instancias más pequeñas del mismo problema.",
+            "Toda recursión necesita al menos un caso base que se resuelve directamente y garantiza la terminación.",
+            "Cada llamada ocupa un marco en la pila: profundidad n implica memoria O(n) adicional.",
+            "Python limita la profundidad a unas 1 000 llamadas y no optimiza la recursión de cola."
+          ],
+          "notes": "Recupere lo visto en Lógica y Pensamiento Computacional, donde la recursión se presentó como descomposición autosimilar; aquí la analizamos en costo y memoria. Trace en la pizarra la ejecución de suma_digitos(4271): cada llamada queda suspendida en la pila hasta que se alcanza el caso base. Pida a los estudiantes que dibujen la pila en el momento más profundo. Luego ejecute en Colab una función recursiva sobre una lista de 5 000 elementos para provocar RecursionError y discuta por qué ocurre. Explique que, a diferencia de lenguajes como Scheme, CPython no elimina la recursión de cola por decisión de diseño de Guido van Rossum, que priorizó trazas de error legibles. Pregunte: ¿cuándo conviene recursión y cuándo iteración? La recursión brilla en estructuras naturalmente recursivas, como árboles y divide y vencerás; para recorridos lineales, la iteración es más segura en Python."
+        },
+        {
+          "title": "Plantear recurrencias para medir algoritmos recursivos",
+          "bullets": [
+            "Una recurrencia expresa T(n) en función del costo de subproblemas más el trabajo local.",
+            "Factorial recursivo: T(n) = T(n−1) + O(1), que resuelve a Θ(n).",
+            "Búsqueda binaria: T(n) = T(n/2) + O(1), que resuelve a Θ(log n).",
+            "Fibonacci ingenuo: T(n) = T(n−1) + T(n−2) + O(1), que crece como φⁿ, con φ ≈ 1,618."
+          ],
+          "notes": "Enseñe a leer una función recursiva y traducirla a recurrencia: cuántas llamadas hace, con qué tamaño y cuánto trabajo realiza fuera de ellas. Resuelva la recurrencia de la búsqueda binaria por el método de expansión: T(n) = T(n/2) + c = T(n/4) + 2c = ... = T(1) + c·log₂ n. Luego dibuje el árbol de llamadas de Fibonacci para n = 6 y pida a los estudiantes que cuenten cuántas veces se calcula fib(2): cinco veces. Esa repetición explica el crecimiento exponencial. Mencione que con n = 40 el número de llamadas supera los trescientos millones, por lo que el programa tarda decenas de segundos en Python. Esta observación prepara la memoización, que veremos al final de la unidad, y la programación dinámica de la unidad 4. Pregunte: ¿qué recurrencia tendría un algoritmo que divide el problema en tres partes iguales y hace trabajo lineal para combinarlas?"
+        },
+        {
+          "title": "Divide y vencerás: dividir, resolver y combinar",
+          "bullets": [
+            "Dividir: partir la instancia en a subproblemas de tamaño n/b.",
+            "Vencer: resolver cada subproblema recursivamente hasta un caso base trivial.",
+            "Combinar: integrar las soluciones parciales con un costo f(n).",
+            "Ejemplos clásicos: ordenamiento por mezcla, quicksort, multiplicación de Karatsuba y transformada rápida de Fourier."
+          ],
+          "notes": "Presente el paradigma con su recurrencia general T(n) = a·T(n/b) + f(n). Use como ejemplo histórico el algoritmo de Karatsuba de 1960, que multiplica dos números de n dígitos en aproximadamente n elevado a 1,585 operaciones en lugar de n², refutando una conjetura de Kolmogórov. Este ejemplo muestra que pensar algorítmicamente puede vencer intuiciones de expertos. Luego relacione con la ciencia de datos: la transformada rápida de Fourier de Cooley y Tukey, de 1965, es divide y vencerás y está detrás del procesamiento de audio y señales que usarán en cursos de visión y lenguaje. Proponga un ejercicio breve: encontrar el máximo de una lista dividiéndola en mitades y analizar su recurrencia. Los estudiantes descubrirán que es T(n) = 2T(n/2) + O(1), que resuelve a Θ(n), igual que el recorrido lineal: dividir no siempre mejora."
+        },
+        {
+          "title": "Teorema maestro: resolver recurrencias de divide y vencerás",
+          "bullets": [
+            "Para T(n) = a·T(n/b) + f(n), se compara f(n) con n^(log_b a), el trabajo de las hojas del árbol.",
+            "Caso 1: si f crece polinomialmente más lento, T(n) = Θ(n^(log_b a)).",
+            "Caso 2: si f(n) = Θ(n^(log_b a)), T(n) = Θ(n^(log_b a) · log n); por ejemplo, merge sort da Θ(n log n).",
+            "Caso 3: si f crece polinomialmente más rápido y cumple regularidad, T(n) = Θ(f(n))."
+          ],
+          "notes": "El teorema maestro, presentado por Bentley, Haken y Saxe en 1980 y popularizado por Cormen y colaboradores, permite resolver muchas recurrencias sin expandirlas. Explique la intuición con el árbol de recursión: el costo total es una competencia entre el trabajo de la raíz, f(n), y el trabajo acumulado en las hojas, n^(log_b a). Resuelva tres ejemplos: merge sort con a = 2, b = 2 y f(n) = n, caso 2, Θ(n log n); búsqueda binaria con a = 1, b = 2 y f(n) = 1, caso 2, Θ(log n); y Karatsuba con a = 3, b = 2 y f(n) = n, caso 1, Θ(n^1,585). Advierta que el teorema no se aplica cuando los subproblemas tienen tamaños distintos, como en quicksort con partición desequilibrada; ahí se usa el árbol de recursión directamente. Pida a la clase resolver T(n) = 4T(n/2) + n²."
+        },
+        {
+          "title": "Búsqueda binaria y su invariante de corrección",
+          "bullets": [
+            "Requiere datos ordenados; en cada paso descarta la mitad del intervalo de búsqueda.",
+            "Invariante: si el objetivo existe, está en el intervalo [inicio, fin]; el ciclo termina cuando el intervalo queda vacío.",
+            "Con un millón de registros bastan unas 20 comparaciones; con mil millones, unas 30.",
+            "Errores clásicos: condición de parada mal definida, ciclos infinitos y desbordamiento al calcular el punto medio."
+          ],
+          "notes": "Jon Bentley contó en Programming Pearls que, al pedir a programadores profesionales que escribieran una búsqueda binaria, alrededor del noventa por ciento cometió errores. Use esa anécdota para justificar el razonamiento con invariantes, que ya vieron en Lógica. Escriba la función en vivo y verifique el invariante en cada iteración con una traza sobre una lista de diez códigos de producto. Mencione el error de desbordamiento que Joshua Bloch reportó en 2006 en la biblioteca de Java: calcular (inicio + fin) / 2 puede desbordar enteros de 32 bits; en Python no ocurre porque los enteros son de precisión arbitraria, pero sí en C, Java o en código para GPU. Pregunte: ¿vale la pena ordenar una lista para hacer una sola búsqueda? No, porque ordenar cuesta O(n log n); conviene cuando se harán muchas búsquedas."
+        },
+        {
+          "title": "Variantes de búsqueda binaria: bisect y búsqueda sobre la respuesta",
+          "bullets": [
+            "bisect_left devuelve la primera posición donde insertar x sin romper el orden: equivale a una cota inferior.",
+            "bisect_right devuelve la posición después del último igual; la diferencia cuenta repeticiones en O(log n).",
+            "Clasificación por tramos: ubicar un ingreso en la escala de tasas del impuesto a la renta con bisect.",
+            "Búsqueda sobre la respuesta: hallar el mínimo valor que cumple una condición monótona, como la capacidad mínima de un servidor."
+          ],
+          "notes": "Muestre que el módulo bisect de la biblioteca estándar ahorra escribir búsquedas binarias propias y reduce errores. Ejemplo local: la renta neta de trabajo en el Perú se grava con tasas progresivas por tramos expresados en UIT; con una lista de límites ordenados, bisect_right indica en qué tramo cae un ingreso. Aclare que el cálculo real del impuesto es acumulativo por tramos y que los valores deben verificarse en la norma vigente; aquí interesa la técnica. Luego presente la búsqueda sobre la respuesta: si una función es monótona, por ejemplo si con k servidores se procesan las solicitudes a tiempo y con más también, se puede buscar binariamente el k mínimo. Esta idea aparece en ajuste de hiperparámetros, en planificación de capacidad y en problemas de competencias de programación. Pida que formulen un ejemplo propio de condición monótona."
+        },
+        {
+          "title": "Ordenamiento por inserción: simple, estable y útil en casos pequeños",
+          "bullets": [
+            "Recorre la lista e inserta cada elemento en su lugar dentro del prefijo ya ordenado.",
+            "Peor caso Θ(n²) con datos en orden inverso; mejor caso Θ(n) con datos casi ordenados.",
+            "Es estable, ordena en el mismo arreglo y tiene constantes muy bajas.",
+            "Timsort y otras implementaciones lo usan para tramos pequeños, de unas decenas de elementos."
+          ],
+          "notes": "Explique el algoritmo con la analogía de ordenar las cartas en la mano, que usan Cormen y colaboradores. Implemente la función y cuente las comparaciones con datos aleatorios, ordenados e invertidos de mil elementos, para que los estudiantes vean empíricamente los tres casos. Introduzca la noción de inversiones: el número de pares fuera de orden; inserción realiza un trabajo proporcional a n más el número de inversiones, por eso es excelente cuando los datos están casi ordenados, como un registro de transacciones que llega mayormente en orden cronológico con pocos retrasos. Pregunte a la clase por qué no se enseña el ordenamiento de burbuja como opción profesional: es igualmente cuadrático, no aprovecha tan bien el orden parcial y realiza más intercambios. Concluya que un algoritmo cuadrático puede ser la mejor elección en el régimen correcto, una lección de ingeniería y no solo de teoría."
+        },
+        {
+          "title": "Ordenamiento por mezcla paso a paso",
+          "bullets": [
+            "Dividir la lista en dos mitades, ordenar cada una recursivamente y mezclarlas en tiempo lineal.",
+            "Recurrencia T(n) = 2T(n/2) + Θ(n), que por el teorema maestro da Θ(n log n) en todos los casos.",
+            "Es estable y predecible, pero requiere memoria auxiliar Θ(n).",
+            "Base del ordenamiento externo: archivos que no caben en memoria se ordenan por bloques y se mezclan."
+          ],
+          "notes": "El ordenamiento por mezcla fue descrito por John von Neumann en 1945, uno de los primeros algoritmos diseñados para una computadora con programa almacenado. Implemente la función de mezcla primero y pruébela de manera aislada, porque ahí se concentran los errores: índices fuera de rango y elementos sobrantes. Insista en usar menor o igual al comparar para preservar la estabilidad. Luego construya la función recursiva y haga la traza con ocho elementos, dibujando el árbol de recursión con log₂ 8 = 3 niveles, cada uno con trabajo total n. Esa imagen vale más que la fórmula. Conecte con el mundo real: cuando una entidad necesita ordenar archivos de decenas de gigabytes, como registros históricos de comprobantes electrónicos, aplica ordenamiento externo, que divide en bloques que caben en memoria, los ordena y los mezcla, la misma idea de von Neumann."
+        },
+        {
+          "title": "Quicksort: partición, pivote aleatorio y peor caso",
+          "bullets": [
+            "Elegir un pivote, partir en menores y mayores, y ordenar recursivamente cada parte.",
+            "Caso promedio Θ(n log n) con constantes bajas; peor caso Θ(n²) si el pivote es siempre el extremo.",
+            "Elegir el pivote al azar hace improbable el peor caso para cualquier entrada.",
+            "No es estable en su versión clásica; ordena en el mismo arreglo con memoria O(log n) esperada."
+          ],
+          "notes": "Quicksort fue inventado por Tony Hoare en 1959 cuando trabajaba en traducción automática en Moscú, una curiosidad histórica que vincula el algoritmo con el procesamiento de lenguaje natural. Implemente la partición de Lomuto, más fácil de entender, y mencione que la de Hoare hace menos intercambios. Ejecute el algoritmo con pivote fijo en el último elemento sobre una lista ya ordenada de 3 000 elementos: verán un RecursionError o un tiempo muy alto, porque cada partición deja un lado vacío. Luego cambie a pivote aleatorio y el problema desaparece. Discuta el concepto de algoritmo aleatorizado: la garantía Θ(n log n) esperada vale para toda entrada, porque el azar lo controla el algoritmo, no el adversario. Pregunte: ¿por qué un atacante podría explotar un pivote fijo en un servicio web público? Esto conecta con seguridad y denegación de servicio."
+        },
+        {
+          "title": "La cota inferior Ω(n log n) de los ordenamientos por comparación",
+          "bullets": [
+            "Todo algoritmo que ordena solo comparando pares puede modelarse como un árbol de decisión binario.",
+            "El árbol debe tener al menos n! hojas, una por cada permutación posible de la entrada.",
+            "Su altura, el peor caso de comparaciones, es al menos log₂(n!), que es Θ(n log n) por la aproximación de Stirling.",
+            "Conclusión: merge sort y heapsort son asintóticamente óptimos entre los ordenamientos por comparación."
+          ],
+          "notes": "Este es uno de los resultados más elegantes del curso porque demuestra un límite para todos los algoritmos posibles, no solo para los que conocemos. Dibuje el árbol de decisión para ordenar tres elementos a, b y c: hay seis permutaciones, por lo que el árbol necesita al menos seis hojas y altura mínima tres. Luego generalice: log₂(n!) es aproximadamente n log₂ n − 1,44n. Con n = 1 000 000, esto significa unas 18,5 millones de comparaciones como mínimo en el peor caso. Pregunte a la clase: si nadie puede bajar de n log n comparando, ¿cómo existen algoritmos que ordenan en tiempo lineal? La respuesta, que veremos en la siguiente diapositiva, es que no comparan: aprovechan la estructura de las claves, como dígitos o rangos acotados. Es un buen momento para resaltar el valor de las demostraciones de imposibilidad en ingeniería."
+        },
+        {
+          "title": "Ordenamientos lineales: conteo y radix",
+          "bullets": [
+            "Counting sort ordena enteros en un rango de tamaño k en Θ(n + k) contando apariciones.",
+            "Radix sort ordena por dígitos, del menos al más significativo, usando un ordenamiento estable en cada pasada.",
+            "Ejemplo: ordenar millones de DNI de 8 dígitos en 8 pasadas lineales, o 4 si se usan bloques de dos dígitos.",
+            "Solo convienen con claves de rango acotado; con claves arbitrarias, Timsort sigue siendo la opción práctica."
+          ],
+          "notes": "Implemente counting sort para ordenar calificaciones vigesimales de 0 a 20 de una promoción de cinco mil estudiantes: con k = 21, el algoritmo es prácticamente lineal y muy sencillo. Luego explique radix sort con números de DNI, que tienen exactamente ocho dígitos; enfatice que la estabilidad de cada pasada es lo que hace funcionar el método. Herman Hollerith utilizó una idea similar con tarjetas perforadas en el censo estadounidense de 1890, lo que vincula el algoritmo con la historia de la estadística oficial, un buen guiño para quienes llevan Estadística y Probabilidad en paralelo. Pregunte: ¿por qué no usamos radix sort para todo? Porque requiere memoria auxiliar, depende del formato de las claves y, en Python, el costo del intérprete suele hacerlo más lento que sorted, que está escrito en C. La teoría orienta; la medición decide."
+        },
+        {
+          "title": "Estabilidad, Timsort y ordenamiento multicriterio en Python",
+          "bullets": [
+            "sorted y list.sort usan Timsort (Tim Peters, 2002): híbrido de mezcla e inserción que aprovecha tramos ya ordenados.",
+            "Es estable: los elementos con clave igual conservan su orden relativo original.",
+            "El parámetro key evita comparaciones costosas: sorted(clientes, key=lambda c: (c['region'], -c['monto'])).",
+            "La estabilidad permite ordenar por varios criterios en pasadas sucesivas, del menos al más importante."
+          ],
+          "notes": "Timsort fue creado por Tim Peters para Python y luego adoptado por Java para objetos y por Android, una contribución de la comunidad Python a la industria. Explique que detecta tramos naturales ascendentes o descendentes y los mezcla de forma inteligente, por eso en datos reales, que suelen estar parcialmente ordenados, supera al peor caso teórico. Muestre el ordenamiento multicriterio con un listado de ventas: primero por región y, dentro de cada región, por monto descendente. Use tuplas como clave y el signo negativo para invertir números; para cadenas, explique la técnica de dos pasadas aprovechando la estabilidad. Mencione operator.itemgetter como alternativa más eficiente a lambda. Pregunte: ¿qué pasa si ordenamos nombres con tildes como Ángel y Álvaro? El orden por código Unicode no respeta el español; se requiere normalización o locale. Es un detalle que importa en reportes oficiales."
+        },
+        {
+          "title": "Memoización: de recursión exponencial a tiempo lineal",
+          "bullets": [
+            "Memoizar es guardar el resultado de cada subproblema la primera vez que se calcula y reutilizarlo después.",
+            "functools.lru_cache o functools.cache agregan memoización a una función pura con un decorador.",
+            "Fibonacci memoizado pasa de Θ(φⁿ) a Θ(n) llamadas efectivas, con memoria Θ(n).",
+            "Solo es válida para funciones puras: mismo argumento, mismo resultado y sin efectos secundarios."
+          ],
+          "notes": "Retome el árbol de Fibonacci y muestre cómo, con un diccionario de resultados, cada valor se calcula una sola vez. Mida el tiempo de fib(35) sin y con @lru_cache: la diferencia pasa de varios segundos a microsegundos. Explique que el término memoización lo acuñó Donald Michie en 1968, en el contexto de la inteligencia artificial y el aprendizaje automático. Advierta las condiciones: los argumentos deben ser hashables, porque se usan como claves de diccionario, y la función no debe depender de estado externo. Pida a los estudiantes que identifiquen otro problema con subproblemas repetidos, como contar las formas de subir una escalera de n peldaños dando pasos de uno o dos. Cierre la unidad anunciando que esta idea, sistematizada por Richard Bellman como programación dinámica, será protagonista de la unidad 4, y recuerde la tarea y el cuestionario de la semana ocho."
+        }
+      ],
+      "reading": {
+        "title": "Divide y vencerás: ordenar y buscar con garantías",
+        "minutes": 35,
+        "content": "## Por qué ordenar es tan importante\n\nOrdenar es probablemente la operación más estudiada de la computación. Knuth dedicó buena parte del tercer volumen de *The Art of Computer Programming* a ella, y no por capricho: una vez ordenados, los datos permiten buscar en tiempo logarítmico, detectar duplicados en una sola pasada, calcular medianas y percentiles, y cruzar dos fuentes con un recorrido lineal. En la práctica de la analítica, desde la conciliación de comprobantes electrónicos hasta la construcción de rankings, ordenar bien es la diferencia entre un proceso de segundos y otro de horas.\n\n## Recurrencias y teorema maestro\n\nLos algoritmos de divide y vencerás se analizan con recurrencias de la forma:\n\n```\nT(n) = a * T(n / b) + f(n)\n```\n\ndonde a es el número de subproblemas, n/b su tamaño y f(n) el costo de dividir y combinar. El teorema maestro compara f(n) con n^(log_b a). Para el ordenamiento por mezcla, a = 2, b = 2 y f(n) = Θ(n); como n^(log_2 2) = n coincide con f(n), estamos en el caso 2 y T(n) = Θ(n log n).\n\n## Ordenamiento por mezcla\n\n```python\ndef mezclar(izq, der):\n    resultado, i, j = [], 0, 0\n    while i < len(izq) and j < len(der):\n        if izq[i] <= der[j]:          # <= preserva la estabilidad\n            resultado.append(izq[i]); i += 1\n        else:\n            resultado.append(der[j]); j += 1\n    resultado.extend(izq[i:])         # agrega lo que sobre\n    resultado.extend(der[j:])\n    return resultado\n\ndef merge_sort(datos):\n    if len(datos) <= 1:               # caso base\n        return datos\n    medio = len(datos) // 2\n    return mezclar(merge_sort(datos[:medio]), merge_sort(datos[medio:]))\n```\n\nSu costo es Θ(n log n) en todos los casos, es estable y requiere memoria auxiliar lineal. Quicksort, en cambio, ordena en el mismo arreglo y suele ser más rápido en la práctica, pero su peor caso es cuadrático; la elección aleatoria del pivote vuelve ese caso extremadamente improbable.\n\n## El límite que nadie puede romper\n\nTodo ordenamiento basado en comparaciones necesita, en el peor caso, al menos log₂(n!) comparaciones, que por la aproximación de Stirling es Θ(n log n). La demostración modela el algoritmo como un árbol de decisión con n! hojas. Solo los algoritmos que explotan la estructura de las claves, como counting sort o radix sort, superan ese límite, y únicamente cuando las claves tienen un rango acotado: notas vigesimales, DNI de ocho dígitos o códigos de ubigeo de seis.\n\n## Búsqueda binaria con invariantes\n\n```python\ndef busqueda_binaria(lista, objetivo):\n    inicio, fin = 0, len(lista) - 1\n    # Invariante: si objetivo esta en lista, esta en lista[inicio..fin]\n    while inicio <= fin:\n        medio = (inicio + fin) // 2\n        if lista[medio] == objetivo:\n            return medio\n        if lista[medio] < objetivo:\n            inicio = medio + 1\n        else:\n            fin = medio - 1\n    return -1\n```\n\nEn la práctica conviene usar el módulo `bisect`, que implementa las variantes de cota inferior y superior:\n\n```python\nfrom bisect import bisect_left, bisect_right\n\nfechas = sorted(f[\"fecha_emision\"] for f in facturas)\n# Cuantas facturas se emitieron en marzo de 2026 (fechas ISO ordenables)\ntotal_marzo = bisect_left(fechas, \"2026-04-01\") - bisect_left(fechas, \"2026-03-01\")\n```\n\nComo las fechas en formato ISO 8601 se ordenan lexicográficamente igual que cronológicamente, dos búsquedas binarias responden una consulta de rango en O(log n).\n\n## Un ejemplo de conciliación\n\nSupongamos que un estudio contable debe verificar qué comprobantes de su registro de compras figuran en el reporte descargado de SUNAT. Con dos bucles anidados sobre 500 000 y 520 000 registros, el proceso exigiría unas 2,6 × 10¹¹ comparaciones. Si ordenamos ambos listados por la clave compuesta RUC, serie y número, el costo es Θ(n log n) para ordenar y Θ(n) para recorrerlos en paralelo, con la misma técnica de la función mezclar:\n\n```python\ndef conciliar(propios, sunat, clave):\n    a, b = sorted(propios, key=clave), sorted(sunat, key=clave)\n    i = j = 0\n    solo_propios, solo_sunat = [], []\n    while i < len(a) and j < len(b):\n        ka, kb = clave(a[i]), clave(b[j])\n        if ka == kb:   i += 1; j += 1\n        elif ka < kb:  solo_propios.append(a[i]); i += 1\n        else:          solo_sunat.append(b[j]); j += 1\n    return solo_propios + a[i:], solo_sunat + b[j:]\n```\n\n## Timsort y el criterio práctico\n\nPython ordena con Timsort, diseñado por Tim Peters en 2002: un híbrido de mezcla e inserción que detecta tramos ya ordenados y es estable. Para el trabajo diario, `sorted` con un buen parámetro `key` es casi siempre la mejor opción; implementar los algoritmos clásicos sirve para entender sus garantías, reconocer cuándo una solución es cuadrática y diseñar variantes cuando el problema lo exige, como en el ordenamiento externo de archivos que no caben en memoria."
+      },
+      "case": {
+        "title": "Caso: La conciliación de comprobantes de Contadores Asociados del Norte",
+        "content": "**Contadores Asociados del Norte** es un estudio contable de Trujillo que atiende a 140 empresas de los sectores agroexportador, comercio y transporte. Cada mes, antes de presentar las declaraciones, el estudio debe conciliar el registro de compras de cada cliente con los comprobantes de pago electrónicos que figuran en los reportes que descarga de SUNAT. Las diferencias importan: un comprobante no sustentado puede implicar el desconocimiento del crédito fiscal del IGV y contingencias tributarias.\n\nHasta hace dos años, la conciliación se hacía en hojas de cálculo con fórmulas de búsqueda. Cuando el volumen creció, el practicante Jorge Vílchez, estudiante de Inteligencia Artificial, escribió un script en Python que, para cada comprobante del registro, recorre la lista completa del reporte de SUNAT buscando coincidencia de RUC del emisor, serie y número. El script funciona bien para la mayoría de clientes, que tienen entre 2 000 y 15 000 comprobantes al mes.\n\nEl problema apareció con **AgroValle**, una agroexportadora de La Libertad que en temporada de campaña registra unos 480 000 comprobantes mensuales, muchos de ellos boletas y facturas de proveedores pequeños. El script corrió toda una noche y no terminó; al día siguiente se cortó la energía y se perdió el avance. El vencimiento de la declaración es en cuatro días, según el cronograma por último dígito del RUC.\n\nEn la reunión de emergencia surgieron tres propuestas:\n\n1. **La socia Carmen Rodríguez** propone dividir el archivo en 40 partes y repartirlas entre las computadoras de la oficina para correrlas por la noche.\n2. **El analista Diego Paredes** propone cargar ambos listados en una base de datos con índices y usar una consulta de cruce.\n3. **Jorge** cree que puede reescribir el script ordenando ambos listados por una clave compuesta y recorriéndolos en paralelo, o bien usando un diccionario indexado por la clave.\n\nHay complicaciones adicionales: en el registro de compras algunas series están escritas en minúsculas o con espacios, ciertos números tienen ceros a la izquierda y otros no, y hay comprobantes duplicados por errores de digitación. Además, la socia exige poder explicar el método al cliente y reproducir el resultado si SUNAT realiza una fiscalización. El estudio tiene que decidir hoy qué camino tomar para AgroValle y, al mismo tiempo, qué solución adoptar para los próximos años, considerando que planea incorporar a 60 clientes más.",
+        "questions": [
+          "Estime el número de comparaciones del script actual con 480 000 comprobantes en cada listado y explique por qué no terminó en una noche.",
+          "Evalúe la propuesta de dividir el trabajo entre 40 computadoras: ¿qué reducción logra realmente y qué riesgos operativos introduce?",
+          "Compare la solución por ordenamiento y recorrido en paralelo con la del diccionario indexado en tiempo, memoria y facilidad de explicación al cliente.",
+          "¿Cómo deben tratarse los problemas de formato y los duplicados antes del cruce para que la conciliación sea confiable y reproducible ante SUNAT?",
+          "Recomiende una decisión inmediata para AgroValle y una arquitectura para los próximos años, justificando con complejidad algorítmica."
+        ]
+      },
+      "assignment": {
+        "title": "Conciliador eficiente de comprobantes con ordenamiento y búsqueda",
+        "instructions": "**Objetivo:** aplicar algoritmos de ordenamiento y búsqueda para resolver un problema de conciliación de gran volumen con evidencia de corrección y eficiencia.\n\n**Insumos:** el docente proporciona un generador de datos sintéticos de comprobantes (RUC del emisor, serie, número, fecha y monto) con errores de formato y duplicados intencionales. No se usan datos reales de contribuyentes, en cumplimiento de la Ley 29733.\n\n**Qué entregar:**\n\n1. Implementaciones propias de ordenamiento por mezcla y quicksort aleatorizado, con pruebas que verifiquen el resultado contra `sorted` en al menos 100 listas aleatorias, incluidas listas vacías, con repetidos y ya ordenadas.\n2. Una función de normalización de claves (mayúsculas, eliminación de espacios, ceros a la izquierda) y una función que detecte duplicados.\n3. Tres versiones del conciliador: bucles anidados, ordenamiento con recorrido en paralelo y diccionario indexado. Mida las tres con 10 000, 50 000 y 200 000 comprobantes (la versión anidada solo hasta donde sea viable) y estime su complejidad.\n4. Una consulta de rango por fechas con `bisect`.\n5. Un informe técnico de dos a tres páginas con recurrencias, tabla de tiempos, análisis de memoria y recomendación para el estudio del caso.\n\n**Formato:** repositorio o archivo comprimido con código, pruebas, informe en PDF y README.",
+        "rubric": [
+          {
+            "name": "Corrección de los ordenamientos y pruebas exhaustivas",
+            "points": 5
+          },
+          {
+            "name": "Normalización de claves y manejo de duplicados",
+            "points": 3
+          },
+          {
+            "name": "Comparación experimental de las tres versiones del conciliador",
+            "points": 5
+          },
+          {
+            "name": "Análisis con recurrencias, complejidad temporal y espacial",
+            "points": 4
+          },
+          {
+            "name": "Recomendación técnica fundamentada y reproducible",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: recursión, ordenamiento y búsqueda",
+        "questions": [
+          {
+            "prompt": "Por el teorema maestro, ¿cuál es la solución de T(n) = 2T(n/2) + n?",
+            "options": [
+              "Θ(n²)",
+              "Θ(log n)",
+              "Θ(n)",
+              "Θ(n log n)"
+            ],
+            "correct": 3,
+            "explanation": "Con a = 2 y b = 2, n^(log_b a) = n, que coincide con f(n) = n; es el caso 2 y la solución es Θ(n log n), como en merge sort."
+          },
+          {
+            "prompt": "Un quicksort con pivote fijo en el último elemento tarda muchísimo con una lista ya ordenada de 50 000 elementos. ¿Cuál es la causa?",
+            "options": [
+              "Cada partición deja un lado vacío, generando n niveles de recursión y costo Θ(n²)",
+              "El intérprete no permite listas de más de 10 000 elementos",
+              "Quicksort solo funciona con números enteros",
+              "La lista ordenada ocupa más memoria que una aleatoria"
+            ],
+            "correct": 0,
+            "explanation": "Con pivote en el extremo de una lista ordenada, cada partición separa n−1 elementos de cero; la recurrencia T(n) = T(n−1) + n produce costo cuadrático y recursión profunda."
+          },
+          {
+            "prompt": "Se debe ordenar un listado de ventas por región ascendente y, dentro de cada región, por monto descendente. ¿Qué opción es correcta en Python?",
+            "options": [
+              "sorted(ventas, key=lambda v: (v['region'], -v['monto']))",
+              "sorted(ventas, key=lambda v: v['region'] + v['monto'])",
+              "sorted(ventas, key=lambda v: (v['monto'], v['region']))",
+              "sorted(ventas, key=lambda v: v['monto'], reverse=True)"
+            ],
+            "correct": 0,
+            "explanation": "La tupla ordena primero por región y desempata por el monto negado, que equivale a monto descendente; las demás opciones ignoran un criterio o mezclan tipos incompatibles."
+          },
+          {
+            "prompt": "¿Por qué ningún algoritmo de ordenamiento basado solo en comparaciones puede garantizar menos de Θ(n log n) comparaciones en el peor caso?",
+            "options": [
+              "Porque las computadoras actuales no son lo bastante rápidas",
+              "Porque Python impone ese límite en la función sorted",
+              "Porque todos usan recursión y la recursión es costosa",
+              "Porque su árbol de decisión necesita al menos n! hojas y su altura es al menos log₂(n!)"
+            ],
+            "correct": 3,
+            "explanation": "Cada permutación posible debe llevar a una hoja distinta del árbol de decisión; un árbol binario con n! hojas tiene altura mínima log₂(n!) = Θ(n log n)."
+          },
+          {
+            "prompt": "Se tiene una lista ordenada de fechas ISO de facturas. ¿Cómo se cuenta eficientemente cuántas caen en un rango [a, b)?",
+            "options": [
+              "bisect_left(fechas, b) − bisect_left(fechas, a), en O(log n)",
+              "Recorriendo la lista con un for y un contador, en O(log n)",
+              "Convirtiendo la lista en set y usando in, en O(1)",
+              "Ordenando de nuevo la lista y tomando la longitud"
+            ],
+            "correct": 0,
+            "explanation": "Las dos búsquedas binarias ubican las posiciones de los límites del rango y su diferencia es la cantidad de elementos en él, en tiempo logarítmico."
+          },
+          {
+            "prompt": "La función fib(n) recursiva ingenua tarda segundos con n = 35. ¿Qué cambio reduce drásticamente el tiempo sin alterar la lógica?",
+            "options": [
+              "Ejecutarla en un servidor con más núcleos",
+              "Aumentar el límite de recursión con sys.setrecursionlimit",
+              "Decorar la función con functools.lru_cache para memoizar resultados",
+              "Cambiar el caso base a n == 2"
+            ],
+            "correct": 2,
+            "explanation": "El costo exponencial se debe a recalcular los mismos subproblemas; la memoización guarda cada resultado y reduce las llamadas efectivas a Θ(n)."
+          },
+          {
+            "prompt": "¿En qué situación el ordenamiento por inserción puede ser preferible a merge sort?",
+            "options": [
+              "Con listas pequeñas o casi ordenadas, por su costo proporcional a n más las inversiones",
+              "Con listas grandes en orden inverso",
+              "Cuando los datos no caben en memoria",
+              "Cuando se necesita garantizar Θ(n log n) en el peor caso"
+            ],
+            "correct": 0,
+            "explanation": "Inserción trabaja en tiempo proporcional a n más el número de inversiones y tiene constantes muy bajas; por eso Timsort lo usa en tramos pequeños o casi ordenados."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Tablas hash, árboles y colas de prioridad",
+      "description": "Al finalizar la unidad, el estudiante implementa y selecciona tablas hash, árboles binarios de búsqueda, árboles balanceados, montículos y tries, justificando su elección según las operaciones de búsqueda, orden y prioridad que exige un sistema de información, e integra estas estructuras en soluciones de priorización y consulta eficiente.",
+      "topics": [
+        "Tablas hash: funciones hash, colisiones, factor de carga y diccionarios de Python",
+        "Árboles: terminología, recorridos y árboles binarios de búsqueda",
+        "Árboles balanceados AVL, rojo-negro y árboles B en índices",
+        "Montículos binarios y colas de prioridad con heapq",
+        "Tries para búsqueda por prefijos y autocompletado"
+      ],
+      "slides": [
+        {
+          "title": "El problema del diccionario: buscar, insertar y eliminar",
+          "bullets": [
+            "Un diccionario o mapa asocia claves únicas con valores: RUC con razón social, DNI con historia clínica.",
+            "Con lista no ordenada, buscar cuesta O(n); con lista ordenada, buscar es O(log n) pero insertar es O(n).",
+            "Las tablas hash ofrecen las tres operaciones en O(1) promedio; los árboles balanceados, en O(log n) con orden.",
+            "La elección depende de si necesitamos consultas por rango, recorrido ordenado o solo acceso por clave."
+          ],
+          "notes": "Abra la unidad recordando la tabla de costos de la unidad 1: ninguna estructura lineal resuelve bien las tres operaciones a la vez. Plantee el problema de un sistema de historias clínicas de una red de salud regional que debe ubicar a un paciente por DNI entre cientos de miles de registros, admitir nuevos pacientes cada minuto y, a veces, listar pacientes por rango de fecha de nacimiento. Pregunte qué estructura elegirían y por qué. Guíe la discusión hacia dos familias: las tablas hash, cuando solo importa la clave exacta, y los árboles balanceados, cuando además importa el orden. Conecte con el curso de Base de Datos que llevan en paralelo: los motores relacionales ofrecen índices hash e índices de árbol B, y entender sus diferencias permite crear índices adecuados en lugar de crearlos por intuición."
+        },
+        {
+          "title": "Funciones hash: propiedades y la función hash de Python",
+          "bullets": [
+            "Una función hash transforma una clave en un entero; el índice de la tabla se obtiene con h(clave) mod m.",
+            "Propiedades deseables: determinismo, rapidez y distribución uniforme de las claves en las celdas.",
+            "En Python, hash() funciona con objetos inmutables; las cadenas usan SipHash con semilla aleatoria por proceso.",
+            "Objetos que definen __eq__ deben definir __hash__ coherente: claves iguales deben producir el mismo hash."
+          ],
+          "notes": "Construya en vivo una función hash ingenua que suma los códigos de los caracteres y muestre su defecto: los anagramas, como roma y amor, colisionan siempre. Luego presente el hash polinomial, que pondera cada carácter por potencias de una base, y explique por qué distribuye mejor. Comente que Python usa SipHash para cadenas desde la versión 3.4 y que la variable PYTHONHASHSEED cambia la semilla en cada ejecución, por lo que hash('IGV') no da el mismo número en dos sesiones; nunca debe guardarse ese valor en un archivo. Pregunte: ¿por qué una lista no puede ser clave de diccionario? Porque es mutable y su hash cambiaría al modificarla, perdiendo el elemento dentro de la tabla. Muestre cómo una dataclass con frozen=True genera automáticamente un __hash__ coherente con __eq__, útil para claves compuestas."
+        },
+        {
+          "title": "Colisiones: encadenamiento y direccionamiento abierto",
+          "bullets": [
+            "Colisión: dos claves distintas caen en la misma celda; por el principio del palomar son inevitables.",
+            "Encadenamiento: cada celda guarda una lista de pares clave-valor; usado en Java HashMap.",
+            "Direccionamiento abierto: si la celda está ocupada, se sondea otra según una secuencia; usado en dict de CPython.",
+            "Eliminar con direccionamiento abierto exige marcas de borrado para no romper las secuencias de sondeo."
+          ],
+          "notes": "Dibuje una tabla de ocho celdas e inserte claves de códigos de distrito para provocar colisiones. Primero resuélvalas con encadenamiento, donde cada celda apunta a una pequeña lista. Luego con sondeo lineal, donde se busca la siguiente celda libre, y muestre el fenómeno de agrupamiento primario: se forman bloques ocupados que alargan las búsquedas. Explique que CPython usa una secuencia de sondeo pseudoaleatoria que mezcla los bits altos del hash para evitar ese agrupamiento. Recuerde la paradoja del cumpleaños: con 23 personas, la probabilidad de que dos compartan cumpleaños supera el 50 %; análogamente, las colisiones aparecen mucho antes de que la tabla se llene. Pregunte a la clase: ¿qué ocurre con la búsqueda si se elimina una clave sin dejar marca en direccionamiento abierto? Se cortaría la cadena de sondeo y otras claves se volverían inalcanzables."
+        },
+        {
+          "title": "Factor de carga, redimensionamiento y garantías de dict y set",
+          "bullets": [
+            "Factor de carga α = n/m; con hash uniforme, una búsqueda espera O(1 + α) pasos.",
+            "CPython redimensiona dict cuando se ocupa alrededor de dos tercios de la tabla, manteniendo α acotado.",
+            "Desde Python 3.7, dict preserva el orden de inserción gracias a un arreglo compacto de entradas.",
+            "Operaciones O(1) promedio, pero O(n) en el peor caso si muchas claves colisionan."
+          ],
+          "notes": "Explique la fórmula O(1 + α) con la intuición de que cada celda tiene en promedio α elementos. Muestre que redimensionar implica reinsertar todas las claves, lo que cuesta O(n), pero que, igual que en el append de listas, el costo es constante amortizado porque la tabla crece geométricamente. Comente el diseño compacto de dict propuesto por Raymond Hettinger, que separa un arreglo de índices de un arreglo denso de entradas; esto ahorró memoria y, como efecto colateral, preservó el orden de inserción, que Python 3.7 convirtió en garantía del lenguaje. Haga una demostración con collections.Counter para contar frecuencias de palabras en un corpus de noticias peruanas, conectando con el procesamiento de lenguaje natural del cuarto ciclo. Pregunte: ¿cuándo preferiríamos un set a un dict? Cuando solo importa la pertenencia, como una lista negra de números telefónicos."
+        },
+        {
+          "title": "Riesgos de las tablas hash: claves mutables y ataques de colisión",
+          "bullets": [
+            "Modificar un objeto usado como clave cambia su hash y lo vuelve inalcanzable dentro de la tabla.",
+            "Ataque de inundación de hash: un adversario envía claves que colisionan para degradar el servicio a O(n²).",
+            "En 2011 se demostró este ataque contra servidores web de varios lenguajes; la respuesta fue la semilla aleatoria.",
+            "Hash criptográfico (SHA-256) no es lo mismo que hash de tabla: uno prioriza seguridad, el otro velocidad."
+          ],
+          "notes": "Presente el caso real expuesto por Alexander Klink y Julian Wälde en el congreso de seguridad del Chaos Computer Club de 2011: enviando formularios web con miles de parámetros diseñados para colisionar, un solo atacante podía mantener ocupado un servidor durante minutos. Python, PHP, Java y otros lenguajes publicaron correcciones, y Python adoptó la aleatorización del hash, que hoy viene activada por defecto. Use este ejemplo para mostrar que la complejidad en el peor caso no es un asunto académico, sino de seguridad informática. Luego aclare la confusión frecuente entre funciones hash de tabla y funciones hash criptográficas: SHA-256 se usa para verificar integridad, almacenar contraseñas con sal o en cadenas de bloques, y es deliberadamente más costosa. Pregunte: ¿qué función usarían para detectar si un archivo de padrón descargado fue alterado? La criptográfica."
+        },
+        {
+          "title": "Árboles: terminología y recorridos",
+          "bullets": [
+            "Un árbol es un grafo conexo sin ciclos con una raíz; cada nodo tiene padre, salvo la raíz, y cero o más hijos.",
+            "Altura: longitud del camino más largo de la raíz a una hoja; determina el costo de muchas operaciones.",
+            "Recorridos en profundidad: preorden, inorden y postorden; en amplitud: por niveles con una cola.",
+            "Ejemplos: sistema de archivos, estructura del ubigeo, árbol sintáctico del código y árboles de decisión."
+          ],
+          "notes": "Use como ejemplo el ubigeo del INEI, que organiza el territorio en departamentos, provincias y distritos: un árbol de tres niveles con la raíz Perú, 25 nodos en el primer nivel contando la Provincia Constitucional del Callao, 196 provincias y alrededor de 1 890 distritos. Pida a los estudiantes que identifiquen raíz, hojas, altura y grado máximo. Implemente un recorrido en preorden recursivo que imprima el árbol con sangría, y un recorrido por niveles con deque, retomando la cola de la unidad 1. Explique el uso de cada recorrido: preorden para copiar o serializar, postorden para calcular tamaños o liberar recursos, como el comando du que suma el tamaño de carpetas, e inorden para obtener los elementos de un árbol binario de búsqueda en orden. Conecte con los árboles de decisión que vieron en Lógica y que reaparecerán en Aprendizaje Automático I."
+        },
+        {
+          "title": "Árbol binario de búsqueda: búsqueda e inserción",
+          "bullets": [
+            "Propiedad: para cada nodo, las claves del subárbol izquierdo son menores y las del derecho, mayores.",
+            "Buscar e insertar recorren un camino desde la raíz: costo O(h), donde h es la altura.",
+            "El recorrido inorden devuelve las claves ordenadas, lo que permite consultas por rango.",
+            "Operaciones adicionales: mínimo, máximo, sucesor y predecesor, todas en O(h)."
+          ],
+          "notes": "Construya en la pizarra un árbol insertando los códigos 50, 30, 70, 20, 40, 60 y 80, y muestre que queda perfectamente balanceado con altura dos. Implemente en Python la clase NodoABB y los métodos insertar y buscar, primero recursivos y luego iterativos para evitar el límite de recursión. Haga una consulta por rango: obtener todas las claves entre 35 y 65 podando subárboles que no pueden contener resultados. Esta operación es la razón por la que las bases de datos prefieren árboles sobre tablas hash para índices generales. Pregunte: ¿qué pasa si insertamos los mismos números en orden ascendente? El árbol se convierte en una lista enlazada de altura seis. Ese problema motiva la siguiente diapositiva. Pida que escriban una prueba que compare el recorrido inorden con sorted sobre mil claves aleatorias, una técnica de verificación muy útil."
+        },
+        {
+          "title": "Eliminación en un ABB y el problema de la degeneración",
+          "bullets": [
+            "Eliminar una hoja es directo; un nodo con un hijo se reemplaza por ese hijo.",
+            "Un nodo con dos hijos se reemplaza por su sucesor inorden, el mínimo del subárbol derecho.",
+            "Con inserciones aleatorias, la altura esperada es O(log n); con datos ordenados, degenera a O(n).",
+            "Los datos reales suelen llegar ordenados por fecha o código: la degeneración es un riesgo práctico."
+          ],
+          "notes": "Trabaje los tres casos de eliminación con el árbol de la diapositiva anterior y pida a los estudiantes que hagan la traza de eliminar la raíz 50: el sucesor 60 ocupa su lugar y se elimina de su posición original. Es la operación más propensa a errores, por lo que conviene escribir primero las pruebas. Luego demuestre empíricamente la degeneración: inserte cien mil números de comprobante consecutivos en un ABB simple y mida la altura y el tiempo de búsqueda; compare con las mismas claves insertadas en orden aleatorio, donde la altura ronda 2,99 log₂ n según el análisis de Devroye. Pregunte: ¿qué sistema real recibe claves en orden creciente? Casi todos: correlativos de facturas, marcas de tiempo, identificadores autoincrementales. Por eso los árboles de producción siempre son balanceados, como veremos a continuación."
+        },
+        {
+          "title": "Árboles balanceados: AVL y rojo-negro",
+          "bullets": [
+            "AVL (Adelson-Velski y Landis, 1962): en cada nodo, las alturas de los subárboles difieren a lo sumo en uno.",
+            "Las rotaciones simples y dobles restauran el balance tras insertar o eliminar, con costo O(1) por rotación.",
+            "Rojo-negro (Guibas y Sedgewick, 1978): balance más relajado, menos rotaciones; usado en TreeMap de Java y el kernel de Linux.",
+            "Ambos garantizan altura O(log n) y, por tanto, búsqueda, inserción y eliminación en O(log n) en el peor caso."
+          ],
+          "notes": "El árbol AVL es el primer árbol autobalanceado de la historia, propuesto por dos matemáticos soviéticos. Muestre con dibujos la rotación simple a la derecha cuando se inserta 30, 20 y 10 en orden: el nodo 20 sube a la raíz. Luego muestre el caso doble, insertando 30, 10 y 20, que requiere rotar primero a la izquierda y luego a la derecha. No es necesario que los estudiantes memoricen todos los casos; sí que entiendan que el balance se mantiene con operaciones locales y baratas. Explique que la altura de un AVL es como máximo alrededor de 1,44 log₂ n. En Python no existe un árbol balanceado en la biblioteca estándar; la biblioteca sortedcontainers ofrece SortedList y SortedDict con un diseño distinto basado en listas de listas, muy eficiente en la práctica. Pregunte: ¿por qué Python no incluyó un árbol balanceado? Debate sobre simplicidad y uso real."
+        },
+        {
+          "title": "Árboles B: la estructura detrás de los índices de bases de datos",
+          "bullets": [
+            "Un árbol B (Bayer y McCreight, 1972) tiene nodos con cientos de claves y es muy ancho y poco profundo.",
+            "Cada nodo se ajusta a una página de disco, de modo que cada nivel cuesta un solo acceso a almacenamiento.",
+            "Con 500 claves por nodo, tres niveles indexan más de cien millones de registros.",
+            "PostgreSQL, MySQL InnoDB y SQLite usan variantes B+ para índices primarios y secundarios."
+          ],
+          "notes": "Explique que en memoria principal el costo dominante son las comparaciones, pero en disco es el número de accesos, y que un acceso aleatorio a disco magnético cuesta del orden de milisegundos, millones de veces más que una comparación. Por eso conviene reducir la altura aunque cada nodo tenga muchas claves. Haga el cálculo con la clase: con nodos de 500 claves, la altura para 125 millones de registros es aproximadamente log base 500 de 125 millones, alrededor de tres. Conecte con el curso de Base de Datos: cuando crean un índice con CREATE INDEX sobre el RUC en PostgreSQL, por defecto se construye un árbol B, que sirve para igualdades y rangos; el índice hash solo sirve para igualdad. Pida que ejecuten EXPLAIN en una consulta con y sin índice sobre una tabla de prueba y comparen los planes, una actividad que integra ambos cursos."
+        },
+        {
+          "title": "Montículos binarios: propiedad y representación en arreglo",
+          "bullets": [
+            "Un montículo de mínimos es un árbol binario completo donde cada padre es menor o igual que sus hijos.",
+            "Se almacena en un arreglo: los hijos del índice i están en 2i+1 y 2i+2; el padre, en (i−1)//2.",
+            "Insertar y extraer el mínimo cuestan O(log n) flotando o hundiendo el elemento; ver el mínimo cuesta O(1).",
+            "Construir un montículo desde n elementos cuesta O(n) con el método de Floyd, no O(n log n)."
+          ],
+          "notes": "El montículo fue introducido por J. W. J. Williams en 1964 junto con el algoritmo heapsort. Dibuje un montículo de siete elementos como árbol y como arreglo, y haga que los estudiantes verifiquen las fórmulas de índices. Simule la inserción de un elemento pequeño que flota hasta la raíz y la extracción del mínimo, donde el último elemento sube a la raíz y se hunde intercambiándose con el hijo menor. Recalque que el montículo no está ordenado: solo garantiza que la raíz es el mínimo, lo cual es suficiente para colas de prioridad y mucho más barato que mantener todo ordenado. Explique brevemente por qué construir el montículo de abajo hacia arriba es lineal: la mayoría de nodos están cerca de las hojas y se hunden pocos niveles. Pregunte: ¿cómo se obtendría un montículo de máximos con heapq, que solo ofrece mínimos? Negando las prioridades."
+        },
+        {
+          "title": "Colas de prioridad con heapq: urgencias, top-k y mezcla de flujos",
+          "bullets": [
+            "heapq.heappush y heapq.heappop operan sobre una list común en O(log n).",
+            "Tuplas (prioridad, orden_llegada, dato) desempatan por llegada y evitan comparar objetos no comparables.",
+            "heapq.nlargest(k, datos) obtiene los k mayores en O(n log k): útil para rankings y recomendaciones.",
+            "heapq.merge combina flujos ordenados en un solo recorrido, base del ordenamiento externo."
+          ],
+          "notes": "Implemente en vivo un sistema de triaje para un servicio de emergencia: cada paciente llega con un nivel de prioridad de I a IV, y debe atenderse primero la prioridad más urgente y, a igual prioridad, el que llegó antes. Use un contador de llegada con itertools.count para garantizar estabilidad. Luego muestre la técnica de borrado perezoso para actualizar prioridades: se marca la entrada antigua como inválida y se inserta una nueva, como recomienda la documentación oficial de heapq. Presente nlargest con un ejemplo de los diez productos más vendidos entre millones de transacciones, explicando por qué un montículo de tamaño k es mejor que ordenar todo. Pregunte: en un sistema de recomendación que debe devolver los veinte artículos más similares entre un millón, ¿qué costo tendría ordenar todo frente a usar un montículo de tamaño veinte? Esta técnica reaparecerá en búsqueda de vecinos cercanos."
+        },
+        {
+          "title": "Tries: búsqueda por prefijos y autocompletado",
+          "bullets": [
+            "Un trie es un árbol donde cada arista representa un carácter y cada camino desde la raíz, un prefijo.",
+            "Buscar una palabra o prefijo cuesta O(L), donde L es su longitud, independiente del número de palabras.",
+            "Aplicaciones: autocompletado, corrección ortográfica, enrutamiento IP y tokenizadores de modelos de lenguaje.",
+            "Costo de memoria alto; los árboles radix comprimen las cadenas de nodos con un solo hijo."
+          ],
+          "notes": "Construya un trie con nombres de distritos de Lima, como San Isidro, San Borja, San Miguel, San Juan de Lurigancho y San Juan de Miraflores, y muestre cómo comparten el prefijo San y luego San Juan de. Implemente la clase con un diccionario de hijos por nodo y un indicador de fin de palabra, y una función que devuelva todas las palabras con un prefijo dado mediante un recorrido en profundidad. Explique que el término proviene de retrieval, propuesto por Edward Fredkin en 1960. Conecte con el procesamiento de lenguaje natural: los tokenizadores de subpalabras usados por los modelos de lenguaje buscan el prefijo más largo coincidente en un vocabulario, operación que un trie resuelve eficientemente. Pregunte: ¿cómo combinarían un trie con un montículo para sugerir los cinco términos más buscados con cierto prefijo? Es la arquitectura básica de un buscador con autocompletado."
+        },
+        {
+          "title": "Criterios para elegir entre tabla hash, árbol y montículo",
+          "bullets": [
+            "Solo acceso por clave exacta y alto volumen: dict o set, O(1) promedio.",
+            "Orden, rangos, mínimo y máximo con actualizaciones: árbol balanceado o SortedList, O(log n).",
+            "Solo extraer repetidamente el más urgente: montículo, O(log n) con constantes bajas.",
+            "Consultas por prefijo de cadenas: trie; datos en disco: árbol B mediante el motor de base de datos."
+          ],
+          "notes": "Cierre la unidad con un ejercicio de decisión por equipos. Proponga cuatro escenarios: un verificador de RUC en un formulario de ventas, un tablero que muestra en tiempo real el rango de precios de un producto en distintos mercados mayoristas, la planificación de tareas de un servidor que ejecuta trabajos por prioridad y un buscador de medicamentos por nombre parcial en una farmacia en línea. Cada equipo debe elegir estructura, justificar las operaciones dominantes y estimar el costo. Insista en que las estructuras se combinan: muchos sistemas reales usan un diccionario para localizar elementos y un montículo para el orden de atención, exactamente lo que pide la tarea de esta unidad. Recuerde que el cuestionario de la semana doce evaluará estos criterios con escenarios aplicados y anuncie que la unidad 4 tratará los grafos, que generalizan los árboles."
+        }
+      ],
+      "reading": {
+        "title": "Diccionarios, árboles y montículos: estructuras para buscar y priorizar",
+        "minutes": 35,
+        "content": "## Tres preguntas, tres familias de estructuras\n\nCasi todo sistema de información responde una de estas preguntas: ¿existe este elemento y cuáles son sus datos?, ¿qué elementos están entre tal y cual valor? y ¿cuál es el siguiente más urgente? La primera se resuelve con tablas hash; la segunda, con árboles de búsqueda balanceados; la tercera, con montículos. Elegir bien exige saber qué garantiza cada estructura y a qué costo.\n\n## Tablas hash\n\nUna tabla hash guarda pares clave-valor en un arreglo de m celdas, y ubica cada clave en la celda h(clave) mod m. Si la función hash distribuye uniformemente, el número esperado de pasos para buscar es O(1 + α), donde α = n/m es el factor de carga. Una implementación didáctica con encadenamiento:\n\n```python\nclass TablaHash:\n    def __init__(self, capacidad=8):\n        self.celdas = [[] for _ in range(capacidad)]\n        self.n = 0\n\n    def _celda(self, clave):\n        return self.celdas[hash(clave) % len(self.celdas)]\n\n    def poner(self, clave, valor):\n        celda = self._celda(clave)\n        for i, (k, _) in enumerate(celda):\n            if k == clave:\n                celda[i] = (clave, valor); return\n        celda.append((clave, valor)); self.n += 1\n        if self.n / len(self.celdas) > 0.75:      # factor de carga\n            self._redimensionar(2 * len(self.celdas))\n\n    def obtener(self, clave):\n        for k, v in self._celda(clave):\n            if k == clave:\n                return v\n        raise KeyError(clave)\n\n    def _redimensionar(self, nueva):\n        pares = [p for celda in self.celdas for p in celda]\n        self.celdas = [[] for _ in range(nueva)]\n        for k, v in pares:\n            self._celda(k).append((k, v))\n```\n\nEl dict de CPython usa direccionamiento abierto con una secuencia de sondeo pseudoaleatoria y se redimensiona al ocupar cerca de dos tercios. Su garantía O(1) es promedio: en el peor caso, si todas las claves colisionan, las operaciones degeneran a O(n). Por esa razón Python aleatoriza el hash de las cadenas en cada proceso, una defensa contra los ataques de inundación de hash demostrados en 2011.\n\n## Árboles binarios de búsqueda y su balance\n\nUn árbol binario de búsqueda (ABB) mantiene la propiedad de que las claves menores están a la izquierda y las mayores a la derecha. Buscar, insertar y eliminar cuestan O(h), donde h es la altura, y el recorrido inorden entrega las claves ordenadas, lo que habilita las consultas por rango que una tabla hash no puede responder. El problema es que, si las claves llegan ordenadas, como los correlativos de facturas o las marcas de tiempo, el árbol degenera en una lista con h = n. Los árboles AVL y rojo-negro corrigen esto con rotaciones locales que garantizan h = O(log n). En almacenamiento secundario, los árboles B y B+ llevan la idea al extremo: nodos con cientos de claves que caben en una página de disco, de modo que tres o cuatro accesos bastan para ubicar un registro entre cientos de millones. Son la estructura por defecto de los índices en PostgreSQL, MySQL y SQLite.\n\n## Montículos y colas de prioridad\n\nUn montículo binario de mínimos es un árbol completo almacenado en un arreglo, donde cada padre es menor o igual que sus hijos. Los hijos del índice i están en 2i + 1 y 2i + 2. Insertar y extraer el mínimo cuestan O(log n). El módulo heapq lo implementa sobre listas:\n\n```python\nimport heapq\nfrom itertools import count\n\nllegada = count()\ncola = []   # (prioridad, orden_de_llegada, paciente)\n\ndef registrar(paciente, prioridad):\n    heapq.heappush(cola, (prioridad, next(llegada), paciente))\n\ndef atender():\n    prioridad, _, paciente = heapq.heappop(cola)\n    return paciente, prioridad\n\nregistrar(\"Paciente A\", 3)\nregistrar(\"Paciente B\", 1)   # prioridad I: atencion inmediata\nregistrar(\"Paciente C\", 3)\nprint(atender())   # ('Paciente B', 1); luego A y C por orden de llegada\n```\n\nEl contador de llegada cumple dos funciones: desempata con justicia, en orden de llegada, y evita que Python intente comparar los objetos paciente cuando dos prioridades coinciden. Para actualizar la prioridad de alguien, la técnica recomendada es el borrado perezoso: se marca la entrada antigua como inválida en un diccionario y se inserta una nueva; al extraer, se descartan las inválidas.\n\nLos montículos también resuelven el problema de los k mayores: `heapq.nlargest(10, ventas, key=...)` recorre los datos manteniendo un montículo de tamaño 10, con costo O(n log k), muy inferior a ordenar todo cuando k es pequeño.\n\n## Tries\n\nCuando las claves son cadenas y las consultas son por prefijo, el trie ofrece búsquedas en O(L), donde L es la longitud de la cadena, independientemente del número de palabras almacenadas. Es la base del autocompletado y de ciertos tokenizadores de modelos de lenguaje.\n\n## Síntesis para el diseño\n\nEn sistemas reales las estructuras se combinan. Un servicio de emergencias puede usar un diccionario para ubicar al paciente por DNI en O(1), un montículo para decidir a quién atender y un árbol B en la base de datos para consultar atenciones por rango de fechas. Diseñar es asignar a cada pregunta la estructura que la responde con el menor costo, y verificarlo con pruebas y mediciones."
+      },
+      "case": {
+        "title": "Caso: El triaje digital del Hospital Regional de Huancayo",
+        "content": "El servicio de emergencia de un **hospital regional de Huancayo**, de referencia para buena parte de la región Junín, atiende en promedio 260 pacientes diarios, con picos de más de 400 durante los friajes de junio y julio, cuando aumentan las infecciones respiratorias. Al llegar, cada paciente pasa por triaje y recibe una prioridad de I a IV: la prioridad I corresponde a riesgo vital inmediato y la IV a casos que pueden esperar o derivarse a consulta externa.\n\nEl hospital adoptó hace un año un sistema de gestión de atenciones desarrollado por un proveedor local. El sistema guarda los pacientes en espera en una lista y, cada vez que un médico se libera, la ordena completa por prioridad y hora de llegada para elegir al siguiente. Además, cuando la enfermera de triaje reevalúa a un paciente y cambia su prioridad, por ejemplo porque su saturación de oxígeno cae, el sistema busca al paciente recorriendo la lista por nombre.\n\nLa jefa de emergencia, la doctora Elena Huamán, reporta tres problemas. Primero, en los picos la pantalla del médico tarda varios segundos en mostrar al siguiente paciente, y los médicos han empezado a llamar a viva voz. Segundo, hubo dos incidentes en los que pacientes homónimos fueron confundidos al reevaluar su prioridad. Tercero, la dirección quiere un tablero que muestre en tiempo real cuántos pacientes hay en cada prioridad y el tiempo máximo de espera por nivel, porque los indicadores de oportunidad de atención se reportan a la autoridad regional de salud.\n\nEl ingeniero Raúl Ccanto, del área de informática, tiene dos meses y un presupuesto limitado. Evalúa tres opciones: pedir al proveedor un servidor más potente; reemplazar la lista por una base de datos con consultas ordenadas por prioridad; o rediseñar el núcleo del sistema con estructuras de datos adecuadas, combinando un identificador único por paciente, una cola de prioridad y contadores por nivel.\n\nRaúl también debe considerar aspectos no técnicos. Los datos de salud son datos sensibles según la Ley 29733, de Protección de Datos Personales, y su reglamento, por lo que cualquier rediseño debe limitar el acceso y registrar quién modifica cada prioridad. El personal tiene alta rotación y poca tolerancia a cambios en la interfaz. Por último, el sistema debe seguir funcionando si la conexión con el servidor central se interrumpe, algo frecuente en temporada de lluvias, lo que sugiere una solución que pueda ejecutarse localmente con pocos recursos.",
+        "questions": [
+          "Analice la complejidad de las dos operaciones críticas del sistema actual, atender al siguiente y reevaluar, en un pico de 400 pacientes. ¿Cuál es el cuello de botella?",
+          "¿Qué combinación de estructuras propondría para atender en O(log n), reevaluar sin confundir homónimos y mostrar contadores por prioridad en O(1)?",
+          "Compare su propuesta con la alternativa de un servidor más potente y con la base de datos con consultas ordenadas, considerando costo, operación sin conexión y mantenimiento.",
+          "¿Qué medidas de diseño exige la Ley 29733 para el tratamiento de datos de salud en este sistema y cómo afectan a las estructuras elegidas?",
+          "Formule la recomendación que Raúl debería presentar a la dirección, incluyendo indicadores para verificar su éxito."
+        ]
+      },
+      "assignment": {
+        "title": "Sistema de triaje con cola de prioridad y actualización eficiente",
+        "instructions": "**Objetivo:** diseñar e implementar el núcleo de un sistema de priorización que combine estructuras de datos para lograr operaciones eficientes y confiables.\n\n**Requisitos funcionales:**\n\n1. Registrar pacientes con un identificador único (no el nombre), prioridad de I a IV y hora de llegada.\n2. Atender al siguiente paciente según prioridad y, a igual prioridad, orden de llegada.\n3. Reevaluar la prioridad de un paciente en O(log n) usando un diccionario de índices y borrado perezoso sobre `heapq`.\n4. Consultar en O(1) cuántos pacientes hay en cada prioridad y, con la estructura que usted justifique, el tiempo máximo de espera por nivel.\n5. Registrar en un historial quién y cuándo modificó cada prioridad.\n\n**Qué entregar:**\n\n- Código en Python con clases documentadas, indicando la complejidad de cada operación.\n- Al menos diez pruebas automatizadas, incluidas reevaluaciones sucesivas, pacientes homónimos y cola vacía.\n- Una simulación de un día pico con 400 llegadas y 150 reevaluaciones, comparando su diseño con la versión que ordena la lista completa en cada atención.\n- Un informe de dos páginas que justifique las estructuras elegidas, presente los resultados de la simulación y explique las medidas de protección de datos sensibles.\n\n**Formato:** archivo comprimido con código, pruebas, informe en PDF y README. Datos ficticios.",
+        "rubric": [
+          {
+            "name": "Diseño y justificación de la combinación de estructuras",
+            "points": 5
+          },
+          {
+            "name": "Corrección de atención y reevaluación con borrado perezoso",
+            "points": 5
+          },
+          {
+            "name": "Pruebas automatizadas y casos borde",
+            "points": 3
+          },
+          {
+            "name": "Simulación comparativa e interpretación de resultados",
+            "points": 4
+          },
+          {
+            "name": "Trazabilidad y protección de datos sensibles",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: tablas hash, árboles y colas de prioridad",
+        "questions": [
+          {
+            "prompt": "Un sistema debe responder consultas como 'todos los clientes con deuda entre S/ 5 000 y S/ 10 000' con datos que cambian constantemente. ¿Qué estructura es la más adecuada?",
+            "options": [
+              "Un montículo de mínimos por deuda",
+              "Una lista no ordenada con búsqueda lineal",
+              "Un árbol de búsqueda balanceado indexado por deuda",
+              "Un diccionario con la deuda como clave"
+            ],
+            "correct": 2,
+            "explanation": "Las consultas por rango requieren orden; un árbol balanceado permite ubicar el inicio del rango en O(log n) y recorrer los resultados en orden, algo que una tabla hash o un montículo no ofrecen."
+          },
+          {
+            "prompt": "Se insertan en un ABB simple 100 000 números de factura consecutivos. ¿Qué ocurre con la búsqueda?",
+            "options": [
+              "La búsqueda sigue siendo O(log n) porque el ABB se balancea solo",
+              "El árbol degenera en una lista y la búsqueda cuesta O(n)",
+              "La búsqueda se vuelve O(1) porque las claves son enteros",
+              "El árbol rechaza claves consecutivas"
+            ],
+            "correct": 1,
+            "explanation": "Con claves en orden creciente, cada inserción va a la derecha y la altura llega a n; un ABB sin balanceo no corrige esa degeneración."
+          },
+          {
+            "prompt": "¿Por qué no se puede usar una list como clave de un dict en Python?",
+            "options": [
+              "Porque dict solo acepta cadenas como claves",
+              "Porque es mutable y su hash podría cambiar, dejando la entrada inalcanzable",
+              "Porque las listas ocupan demasiada memoria",
+              "Porque las listas no pueden compararse con =="
+            ],
+            "correct": 1,
+            "explanation": "Las claves deben tener un hash estable; como una lista puede modificarse, Python no le asigna hash. Una tupla de elementos inmutables sí puede ser clave."
+          },
+          {
+            "prompt": "En una cola de prioridad con heapq se insertan tuplas (prioridad, paciente) y se produce TypeError cuando dos pacientes tienen igual prioridad. ¿Cuál es la solución recomendada?",
+            "options": [
+              "Usar un set en lugar de una lista",
+              "Insertar (prioridad, contador_de_llegada, paciente) con un contador creciente",
+              "Convertir la prioridad en cadena de texto",
+              "Ordenar la lista después de cada inserción"
+            ],
+            "correct": 1,
+            "explanation": "Al empatar la prioridad, Python compara el segundo elemento; un contador único evita comparar objetos no comparables y, además, desempata por orden de llegada."
+          },
+          {
+            "prompt": "Para obtener los 20 productos más vendidos entre 5 millones de registros, ¿qué enfoque es más eficiente?",
+            "options": [
+              "Construir un trie con los nombres de los productos",
+              "heapq.nlargest(20, registros, key=...), con costo O(n log 20)",
+              "Insertarlos en un dict y recorrerlo 20 veces",
+              "Ordenar todos los registros y tomar los 20 primeros, con costo O(n log n)"
+            ],
+            "correct": 1,
+            "explanation": "Mantener un montículo de tamaño k = 20 cuesta O(n log k), prácticamente lineal, frente a O(n log n) de ordenar todo."
+          },
+          {
+            "prompt": "Un índice de base de datos sobre 100 millones de filas usa un árbol B con unas 500 claves por nodo. ¿Aproximadamente cuántos niveles tiene?",
+            "options": [
+              "Alrededor de 3",
+              "Alrededor de 27",
+              "Exactamente 1",
+              "Alrededor de 500"
+            ],
+            "correct": 0,
+            "explanation": "La altura es aproximadamente log base 500 de 10⁸, cercana a 3; por eso bastan pocos accesos a disco para ubicar cualquier fila."
+          },
+          {
+            "prompt": "¿Cuál es el costo de buscar si existe alguna palabra con el prefijo 'San Juan' en un trie que almacena todos los nombres de distritos del país?",
+            "options": [
+              "O(1), porque usa una función hash",
+              "O(n), proporcional al número de distritos",
+              "O(n log n), por el ordenamiento previo",
+              "O(L), proporcional a la longitud del prefijo"
+            ],
+            "correct": 3,
+            "explanation": "En un trie se desciende un nivel por carácter del prefijo, sin depender del número de palabras almacenadas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Grafos, técnicas de diseño algorítmico y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante modela problemas de redes como grafos, aplica recorridos, caminos mínimos y árboles de expansión, diseña soluciones voraces y de programación dinámica, reconoce problemas intratables y entrega un proyecto integrador que combina estructuras y algoritmos con evidencia de corrección y eficiencia.",
+      "topics": [
+        "Grafos: modelado, representaciones y recorridos BFS y DFS",
+        "Caminos mínimos con Dijkstra y árboles de expansión mínima con Kruskal",
+        "Algoritmos voraces y programación dinámica",
+        "Intratabilidad, clases P y NP, y heurísticas",
+        "Proyecto integrador: diseño, implementación, medición y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Grafos: el modelo universal de las relaciones",
+          "bullets": [
+            "Un grafo G = (V, E) tiene vértices y aristas; puede ser dirigido o no dirigido, ponderado o no ponderado.",
+            "Modela redes viales, rutas aéreas, redes sociales, dependencias de tareas, transacciones entre cuentas y páginas web.",
+            "Grado, camino, ciclo, componente conexa y grafo acíclico dirigido son conceptos centrales.",
+            "Euler fundó la teoría en 1736 al demostrar que los puentes de Königsberg no admitían un recorrido único."
+          ],
+          "notes": "Inicie con el problema de los puentes de Königsberg y muestre cómo Euler abstrajo la ciudad en puntos y líneas, el primer ejemplo de modelado con grafos. Luego pida a los estudiantes que propongan grafos en su entorno: las estaciones del Metro de Lima y el Metropolitano como red de transporte, los vuelos nacionales entre Lima, Cusco, Arequipa e Iquitos como red ponderada por tiempo o tarifa, y las transferencias entre cuentas de una billetera digital como grafo dirigido, útil para detectar lavado de activos. Pregunte para cada caso si el grafo es dirigido y qué representaría el peso. Recuerde que en Lógica y Pensamiento Computacional vieron la búsqueda en espacios de estados, que es un recorrido sobre un grafo implícito; ahora formalizaremos esas ideas y las llevaremos a grafos con millones de aristas. Anuncie que los árboles de la unidad 3 son un caso particular de grafo."
+        },
+        {
+          "title": "Representaciones: matriz de adyacencia frente a lista de adyacencia",
+          "bullets": [
+            "Matriz de adyacencia: arreglo V×V; consultar una arista cuesta O(1), pero la memoria es Θ(V²).",
+            "Lista de adyacencia: para cada vértice, sus vecinos; memoria Θ(V + E), ideal para grafos dispersos.",
+            "En Python: dict de listas o dict de dict para pesos, por ejemplo grafo['Lima']['Ica'] = 303.",
+            "La mayoría de redes reales son dispersas: cada vértice se conecta con pocos otros respecto del total."
+          ],
+          "notes": "Haga el cálculo de memoria con la red vial: si modeláramos los cruces de calles de Lima Metropolitana con una matriz, con unos cien mil nodos necesitaríamos diez mil millones de celdas, mientras que cada cruce tiene típicamente tres o cuatro vecinos, así que la lista de adyacencia ocupa unas cuatrocientas mil entradas. Ese contraste justifica por qué las listas son la representación por defecto. Construya en vivo un grafo de ciudades peruanas con distancias aproximadas por carretera usando un diccionario de diccionarios. Aclare cuándo conviene la matriz: grafos densos o cuando se usan operaciones de álgebra lineal, como en el análisis espectral o las redes neuronales de grafos, que conectan con Álgebra Lineal Aplicada del próximo ciclo. Mencione que bibliotecas como NetworkX usan internamente diccionarios anidados y SciPy ofrece matrices dispersas para grafos grandes."
+        },
+        {
+          "title": "Búsqueda en amplitud: caminos mínimos sin pesos",
+          "bullets": [
+            "BFS explora por niveles usando una cola: primero los vecinos a distancia 1, luego a distancia 2, y así.",
+            "Calcula el camino con menos aristas desde un origen; costo O(V + E).",
+            "Se registra el predecesor de cada vértice para reconstruir el camino al final.",
+            "Aplicaciones: grados de separación en redes, rutas con menos transbordos, propagación en redes de contagio."
+          ],
+          "notes": "Implemente BFS con deque, retomando la cola de la unidad 1, y un diccionario de predecesores. Ejecútelo sobre un grafo simplificado de líneas de transporte de Lima para encontrar la ruta con menos transbordos entre dos estaciones. Haga que los estudiantes reconstruyan el camino recorriendo los predecesores desde el destino hasta el origen y luego invirtiéndolo. Explique por qué BFS garantiza el camino más corto en número de aristas: cuando un vértice se descubre por primera vez, ya se ha explorado todo el nivel anterior. Advierta el error frecuente de marcar como visitado al extraer en lugar de al encolar, que produce duplicados en la cola y puede multiplicar el trabajo. Pregunte: ¿sirve BFS si las aristas tienen tiempos de viaje distintos? No, porque minimiza aristas y no la suma de pesos; para eso necesitamos Dijkstra."
+        },
+        {
+          "title": "Búsqueda en profundidad: componentes, ciclos y orden topológico",
+          "bullets": [
+            "DFS avanza lo más profundo posible y retrocede; se implementa con recursión o con una pila explícita.",
+            "Identifica componentes conexas, detecta ciclos y clasifica aristas en O(V + E).",
+            "Orden topológico: en un grafo acíclico dirigido, ordena tareas respetando dependencias; útil en planes de estudio y pipelines.",
+            "En Python conviene la pila explícita para grafos grandes y evitar el límite de recursión."
+          ],
+          "notes": "Use como ejemplo el plan de estudios de la carrera: cada curso es un vértice y cada prerrequisito una arista dirigida. Un orden topológico indica una secuencia válida para llevar los cursos, y si hay un ciclo, el plan sería imposible de cumplir. Implemente el algoritmo de Kahn, que usa grados de entrada y una cola, y la versión basada en DFS con orden de finalización inverso; compare ambas. Mencione que graphlib.TopologicalSorter forma parte de la biblioteca estándar desde Python 3.9 y que herramientas como Airflow o los sistemas de compilación ordenan tareas así. Muestre la detección de ciclos con tres colores: blanco, gris y negro. Pregunte: en un pipeline de datos donde la limpieza depende de la extracción y el entrenamiento depende de la limpieza, ¿qué sucede si alguien agrega por error una dependencia del entrenamiento hacia la extracción? Aparece un ciclo y el orquestador debe rechazarlo."
+        },
+        {
+          "title": "Algoritmo de Dijkstra con cola de prioridad",
+          "bullets": [
+            "Encuentra caminos mínimos desde un origen en grafos con pesos no negativos.",
+            "Mantiene distancias provisionales y extrae siempre el vértice no definitivo más cercano con un montículo.",
+            "Relajación: si dist[u] + peso(u, v) < dist[v], se actualiza dist[v] y se inserta en el montículo.",
+            "Con heapq y borrado perezoso, el costo es O((V + E) log V)."
+          ],
+          "notes": "Edsger Dijkstra contó que diseñó el algoritmo en unos veinte minutos, en 1956, sentado en una cafetería de Ámsterdam y sin papel. Ejecútelo a mano sobre un grafo de seis ciudades peruanas con distancias por carretera, llenando una tabla de distancias y predecesores en cada iteración. Luego impleméntelo con heapq, reutilizando la cola de prioridad de la unidad 3, e ignore las entradas obsoletas al extraerlas. Explique la idea de corrección: cuando un vértice sale del montículo con la menor distancia, ningún camino alternativo puede mejorarla porque los pesos no son negativos. Pregunte: ¿qué representa el peso si queremos la ruta más rápida y no la más corta? Tiempo de viaje, que depende de la hora; esto lleva a grafos dinámicos que usan las aplicaciones de navegación. Comente que el resultado es un árbol de caminos mínimos desde el origen."
+        },
+        {
+          "title": "Más allá de Dijkstra: pesos negativos y búsqueda heurística A*",
+          "bullets": [
+            "Con pesos negativos Dijkstra falla; Bellman-Ford los admite en O(V·E) y detecta ciclos negativos.",
+            "Detección de ciclos negativos: aplicaciones en arbitraje de divisas con logaritmos de tipos de cambio.",
+            "A* (Hart, Nilsson y Raphael, 1968) agrega una heurística admisible que estima la distancia restante.",
+            "Con la distancia en línea recta como heurística, A* explora muchos menos vértices en mapas reales."
+          ],
+          "notes": "Muestre un contraejemplo de tres vértices en el que Dijkstra da una respuesta incorrecta con una arista negativa, para que los estudiantes entiendan por qué la condición de pesos no negativos es esencial. Presente Bellman-Ford como alternativa más lenta y general, y explique el ejemplo de arbitraje: si se transforma cada tipo de cambio en el logaritmo negativo, un ciclo con suma negativa representa una secuencia de conversiones que genera ganancia; los mercados eficientes eliminan esas oportunidades en milisegundos. Luego introduzca A*, desarrollado en el Instituto de Investigación de Stanford para el robot Shakey, uno de los hitos de la inteligencia artificial. Explique que una heurística admisible nunca sobreestima el costo real, lo que garantiza optimalidad. Conecte con la búsqueda en espacios de estados vista en Lógica: A* es búsqueda informada, base de planificación en robótica y videojuegos."
+        },
+        {
+          "title": "Árbol de expansión mínima: Kruskal y unión-búsqueda",
+          "bullets": [
+            "Un árbol de expansión mínima conecta todos los vértices con el menor peso total y sin ciclos.",
+            "Kruskal: ordenar aristas por peso y agregar cada una si no forma ciclo; costo O(E log E).",
+            "La estructura unión-búsqueda con compresión de caminos detecta ciclos en tiempo casi constante.",
+            "Aplicaciones: diseño de redes de fibra óptica, electrificación rural y agrupamiento jerárquico de datos."
+          ],
+          "notes": "Plantee el problema de conectar con fibra óptica un conjunto de capitales de provincia minimizando kilómetros de tendido, inspirado en proyectos de conectividad regional como la Red Dorsal Nacional de Fibra Óptica. Aclare que un proyecto real incluye restricciones de geografía, costos y redundancia, pero que el árbol de expansión mínima da la base de costo mínimo. Ejecute Kruskal a mano con ocho aristas: ordenar, recorrer y descartar las que cierran ciclos. Luego implemente unión-búsqueda con un arreglo de padres, unión por rango y compresión de caminos, y comente el resultado de Tarjan: el costo amortizado es prácticamente constante, acotado por la inversa de la función de Ackermann. Conecte con Aprendizaje Automático: si se eliminan las k−1 aristas más pesadas del árbol de expansión mínima, se obtienen k grupos, equivalente al agrupamiento jerárquico de enlace simple."
+        },
+        {
+          "title": "Algoritmos voraces: decisiones locales que a veces son óptimas",
+          "bullets": [
+            "Un algoritmo voraz elige en cada paso la opción que parece mejor ahora, sin reconsiderar decisiones.",
+            "Funciona si el problema tiene la propiedad de elección voraz y subestructura óptima, lo que debe demostrarse.",
+            "Ejemplos correctos: Dijkstra, Kruskal, selección de actividades y codificación de Huffman.",
+            "Contraejemplo: con monedas de 1, 3 y 4, dar 6 de forma voraz usa tres monedas en vez de dos."
+          ],
+          "notes": "Use el ejemplo del vuelto con las monedas en soles: con denominaciones de 5, 2 y 1 sol y de 50, 20 y 10 céntimos, la estrategia voraz de dar siempre la moneda más grande posible produce el mínimo número de monedas, porque el sistema es canónico. Luego muestre el contraejemplo con monedas hipotéticas de 1, 3 y 4: para dar 6, el voraz entrega 4, 1 y 1, mientras que la solución óptima es 3 y 3. Este ejemplo ilustra que la estrategia voraz requiere una demostración, normalmente por intercambio: se muestra que cualquier solución óptima puede transformarse en la voraz sin empeorar. Presente la selección de actividades, por ejemplo programar el máximo número de reuniones en una sala ordenándolas por hora de fin, y la codificación de Huffman, de 1952, base de formatos de compresión. Pregunte: ¿qué problema de su trabajo resolverían con una regla voraz y cómo verificarían que es óptima?"
+        },
+        {
+          "title": "Programación dinámica: subproblemas solapados y subestructura óptima",
+          "bullets": [
+            "Richard Bellman acuñó el término en los años cincuenta para problemas de decisión en múltiples etapas.",
+            "Requisitos: la solución óptima se compone de soluciones óptimas de subproblemas, y estos se repiten.",
+            "Enfoque descendente con memoización o ascendente llenando una tabla en orden de dependencias.",
+            "Pasos: definir el estado, escribir la recurrencia, fijar casos base, establecer el orden y reconstruir la solución."
+          ],
+          "notes": "Retome la memoización de la unidad 2 y presente la programación dinámica como su sistematización. Resuelva el problema del vuelto con monedas de 1, 3 y 4 para el monto 6 llenando una tabla de 0 a 6, donde cada celda guarda el mínimo de monedas para ese monto; así la clase ve cómo la programación dinámica corrige al voraz. Enfatice los cinco pasos de la diapositiva como método de trabajo, porque la principal dificultad de los estudiantes es definir bien el estado. Cuente la anécdota de Bellman, quien eligió la palabra dinámica, según su autobiografía, en parte porque sonaba bien ante funcionarios que desconfiaban de la palabra investigación. Conecte con la inteligencia artificial: la ecuación de Bellman es el fundamento del aprendizaje por refuerzo, y el algoritmo de Viterbi, también de programación dinámica, se usa en reconocimiento de voz y etiquetado gramatical."
+        },
+        {
+          "title": "Programación dinámica aplicada: mochila 0/1 y distancia de edición",
+          "bullets": [
+            "Mochila 0/1: elegir proyectos con costo y beneficio sin superar un presupuesto; tabla de n × presupuesto.",
+            "Distancia de Levenshtein: mínimo de inserciones, eliminaciones y sustituciones entre dos cadenas, en O(m·n).",
+            "La distancia de edición detecta duplicados con errores de digitación, como Quispe y Quispé o Huamán y Guamán.",
+            "Ambas tablas permiten reconstruir la solución recorriendo hacia atrás las decisiones óptimas."
+          ],
+          "notes": "Presente la mochila con un ejemplo de gestión pública: una municipalidad tiene un presupuesto de inversión y una cartera de proyectos con costo y beneficio estimado; debe elegir el subconjunto con mayor beneficio total sin exceder el presupuesto. Llene una tabla pequeña con cuatro proyectos y un presupuesto de diez unidades. Aclare que el algoritmo es pseudopolinomial: depende del valor numérico del presupuesto, no solo de la cantidad de proyectos. Luego desarrolle la distancia de Levenshtein, propuesta en 1965, llenando la tabla para HUAMAN y GUAMAN, cuya distancia es uno. Explique su utilidad en calidad de datos: unificar registros de clientes con nombres mal digitados, un problema muy común en padrones y bases comerciales del país. Pregunte: ¿qué umbral de distancia usarían para considerar dos apellidos como el mismo, y qué riesgos tiene un umbral muy alto?"
+        },
+        {
+          "title": "Intratabilidad: clases P y NP y el uso de heurísticas",
+          "bullets": [
+            "P: problemas resolubles en tiempo polinomial; NP: problemas cuya solución se verifica en tiempo polinomial.",
+            "Los problemas NP-completos, como el del viajante o la mochila general, no tienen algoritmo polinomial conocido.",
+            "Si P = NP es un problema abierto desde que Cook lo planteó en 1971; es uno de los problemas del milenio.",
+            "Ante problemas intratables: heurísticas, algoritmos de aproximación, búsqueda local y solvers especializados."
+          ],
+          "notes": "Explique el problema del viajante con una empresa de reparto que debe visitar treinta puntos en Lima: el número de rutas posibles es del orden de 29 factorial dividido entre dos, una cifra de treinta y un dígitos, imposible de explorar exhaustivamente. Presente la heurística del vecino más cercano y la mejora 2-opt, que intercambia pares de aristas para eliminar cruces, y muestre que dan rutas buenas aunque no necesariamente óptimas. Mencione que herramientas como OR-Tools de Google o el solver Concorde resuelven instancias grandes en la práctica combinando técnicas exactas y heurísticas. Destaque la actitud profesional: reconocer que un problema es NP-difícil evita perder semanas buscando un algoritmo exacto eficiente que probablemente no existe. Conecte con aprendizaje automático: entrenar muchos modelos implica optimizar funciones difíciles, y por eso se aceptan soluciones aproximadas con buenas propiedades."
+        },
+        {
+          "title": "Del algoritmo al sistema: medir, perfilar y reutilizar bibliotecas",
+          "bullets": [
+            "Perfilar antes de optimizar: cProfile y line_profiler revelan dónde se consume realmente el tiempo.",
+            "Reutilizar implementaciones probadas: heapq, bisect, collections, graphlib, NetworkX y SciPy.",
+            "Vectorizar con NumPy traslada bucles de Python a código compilado, con mejoras de uno o dos órdenes de magnitud.",
+            "Documentar complejidad, supuestos y límites de cada componente como parte de la entrega profesional."
+          ],
+          "notes": "Muestre cómo ejecutar python -m cProfile -s cumtime sobre un script de cálculo de rutas e interpretar las columnas de llamadas, tiempo propio y tiempo acumulado. Haga notar que, a menudo, el cuello de botella no está donde el programador supone, sino en la lectura de archivos o en conversiones de tipos. Luego compare su implementación de Dijkstra con la de NetworkX sobre el mismo grafo, verificando que den las mismas distancias: esta práctica de validación cruzada es fundamental. Explique cuándo implementar y cuándo reutilizar: se implementa para aprender, para adaptar un algoritmo a una restricción particular o cuando no existe una biblioteca adecuada; en producción se prefiere código mantenido por una comunidad. Mencione que pandas y scikit-learn, que usarán en el tercer ciclo, se apoyan en estas estructuras y en código compilado. Cierre pidiendo que incluyan un perfil de rendimiento en el proyecto integrador."
+        },
+        {
+          "title": "Proyecto integrador: estructura, entregables y criterios",
+          "bullets": [
+            "Problema real del contexto peruano que combine al menos tres estructuras y dos técnicas algorítmicas del curso.",
+            "Entregables: repositorio con código y pruebas, informe técnico con análisis de complejidad y mediciones, y video demostrativo.",
+            "Sustentación individual de 15 minutos con preguntas sobre decisiones de diseño y alternativas descartadas.",
+            "Opciones sugeridas: planificador de rutas de reparto, deduplicador de padrones, recomendador por similitud o planificador de tareas."
+          ],
+          "notes": "Presente el proyecto integrador como la evidencia principal de la competencia del curso. Explique que cada equipo de dos o tres estudiantes debe elegir un problema, justificar por qué las estructuras elegidas son adecuadas, implementar con pruebas, medir con datos sintéticos o abiertos de tamaño realista y comparar con al menos una alternativa. Recalque la exigencia de originalidad y de uso transparente de asistentes de inteligencia artificial: pueden usarlos, pero deben declarar cómo y ser capaces de explicar cada línea durante la sustentación, donde se pedirá modificar el código en vivo. Revise la rúbrica criterio por criterio y muestre un ejemplo de informe bien estructurado. Establezca hitos: propuesta en la semana trece, avance con revisión de pares en la catorce, entrega en la quince y sustentación en la dieciséis. Pregunte a cada equipo qué riesgo principal anticipan y cómo lo mitigarán."
+        }
+      ],
+      "reading": {
+        "title": "Grafos y técnicas de diseño: de Dijkstra a la programación dinámica",
+        "minutes": 40,
+        "content": "## Modelar con grafos\n\nUn grafo G = (V, E) representa entidades y sus relaciones. Las redes viales, las conexiones de fibra óptica, las transferencias entre cuentas y las dependencias entre tareas de un pipeline de datos son grafos. En Python, la representación más práctica para grafos dispersos es la lista de adyacencia mediante diccionarios:\n\n```python\ngrafo = {\n    \"Lima\":     {\"Huacho\": 148, \"Ica\": 303, \"La Oroya\": 175},\n    \"Huacho\":   {\"Lima\": 148, \"Barranca\": 54},\n    \"Barranca\": {\"Huacho\": 54},\n    \"Ica\":      {\"Lima\": 303, \"Nasca\": 140},\n    \"Nasca\":    {\"Ica\": 140},\n    \"La Oroya\": {\"Lima\": 175, \"Huancayo\": 125},\n    \"Huancayo\": {\"La Oroya\": 125},\n}\n# Distancias aproximadas por carretera en km, solo con fines didacticos\n```\n\n## Recorridos\n\nLa búsqueda en amplitud (BFS) usa una cola y encuentra el camino con menos aristas en O(V + E). La búsqueda en profundidad (DFS) usa una pila o recursión y sirve para detectar ciclos, encontrar componentes conexas y obtener un orden topológico en grafos acíclicos dirigidos, como un plan de estudios con prerrequisitos.\n\n## Caminos mínimos con Dijkstra\n\nCuando las aristas tienen pesos no negativos, Dijkstra calcula las distancias mínimas desde un origen. Combina la cola de prioridad de la unidad 3 con la idea de relajación:\n\n```python\nimport heapq\n\ndef dijkstra(grafo, origen):\n    dist = {origen: 0}\n    previo = {}\n    monticulo = [(0, origen)]\n    while monticulo:\n        d, u = heapq.heappop(monticulo)\n        if d > dist.get(u, float(\"inf\")):\n            continue                      # entrada obsoleta: borrado perezoso\n        for v, peso in grafo[u].items():\n            nueva = d + peso\n            if nueva < dist.get(v, float(\"inf\")):\n                dist[v] = nueva           # relajacion\n                previo[v] = u\n                heapq.heappush(monticulo, (nueva, v))\n    return dist, previo\n\ndef reconstruir(previo, origen, destino):\n    camino = [destino]\n    while camino[-1] != origen:\n        camino.append(previo[camino[-1]])\n    return camino[::-1]\n```\n\nSu costo es O((V + E) log V). Si existieran pesos negativos, la garantía se rompe y se recurre a Bellman-Ford, de costo O(V·E). Si se dispone de una buena estimación de la distancia restante, A* acelera la búsqueda, como ocurre en navegación y robótica.\n\n## Voraces frente a programación dinámica\n\nUn algoritmo voraz toma la decisión localmente mejor en cada paso. Funciona en Dijkstra, Kruskal o en el vuelto con las monedas peruanas, cuyo sistema es canónico, pero falla en general: con monedas de 1, 3 y 4, el voraz entrega tres monedas para 6, cuando bastan dos. La programación dinámica, formulada por Richard Bellman, resuelve estos casos sistemáticamente cuando hay subestructura óptima y subproblemas que se repiten. El método tiene cinco pasos: definir el estado, escribir la recurrencia, fijar los casos base, establecer el orden de cálculo y reconstruir la solución.\n\nLa distancia de Levenshtein ilustra el método y tiene aplicación directa en la calidad de datos. Sea D[i][j] la distancia entre los primeros i caracteres de a y los primeros j de b:\n\n```\nD[i][0] = i,   D[0][j] = j\nD[i][j] = min( D[i-1][j] + 1,                 # eliminar\n               D[i][j-1] + 1,                 # insertar\n               D[i-1][j-1] + (a[i] != b[j]) ) # sustituir\n```\n\n```python\ndef levenshtein(a, b):\n    previa = list(range(len(b) + 1))\n    for i, ca in enumerate(a, 1):\n        actual = [i]\n        for j, cb in enumerate(b, 1):\n            actual.append(min(previa[j] + 1, actual[j - 1] + 1,\n                              previa[j - 1] + (ca != cb)))\n        previa = actual\n    return previa[-1]\n\nprint(levenshtein(\"HUAMAN\", \"GUAMAN\"))   # 1\n```\n\nLa versión usa solo dos filas, por lo que la memoria es O(n) en lugar de O(m·n). Con ella se detectan registros duplicados por errores de digitación en padrones de clientes o beneficiarios, un problema frecuente en las bases de datos de organizaciones públicas y privadas del país.\n\n## Los límites de lo eficiente\n\nNo todo problema admite un algoritmo eficiente conocido. El problema del viajante, la mochila general o la programación de horarios son NP-difíciles: no se conoce algoritmo polinomial y, si P ≠ NP, no existe. La respuesta profesional no es rendirse, sino usar heurísticas, como el vecino más cercano con mejora 2-opt, algoritmos de aproximación o solvers especializados, y medir la calidad de la solución obtenida frente a cotas conocidas.\n\n## Hacia el proyecto integrador\n\nEl proyecto final combina lo aprendido: modelar el problema, elegir estructuras para cada operación, implementar con pruebas, analizar la complejidad, perfilar el rendimiento y comparar con alternativas. Es el mismo ciclo de trabajo que seguirán en los cursos de aprendizaje automático, donde cada modelo descansa sobre estructuras de datos y algoritmos eficientes."
+      },
+      "case": {
+        "title": "Caso: Las rutas de última milla de Rápido Andino",
+        "content": "**Rápido Andino** es una empresa de mensajería y paquetería con sede en Lima que atiende a tiendas virtuales de ropa, tecnología y cosméticos. Con el crecimiento del comercio electrónico, su volumen pasó de 1 200 a 5 800 entregas diarias en dos años, distribuidas en 32 distritos de Lima Metropolitana y el Callao. Opera con 70 motorizados y 18 furgonetas, que salen de un almacén en Ate y de un centro de distribución en Los Olivos.\n\nHoy, cada mañana, dos coordinadores asignan manualmente los paquetes a los repartidores agrupándolos por distrito, y cada repartidor decide el orden de visita según su experiencia. Los indicadores muestran problemas: el 14 % de entregas se realiza fuera de la ventana horaria prometida, el kilometraje promedio por motorizado aumentó un 22 % en el último año y los clientes corporativos amenazan con aplicar penalidades. Además, la congestión de la ciudad hace que el tiempo de viaje entre dos puntos varíe mucho según la hora: un trayecto de Ate a San Isidro puede tardar 25 minutos a las 6:00 y más de una hora a las 8:00.\n\nEl gerente de operaciones, Alonso Benavides, ha recibido dos propuestas. Una consultora ofrece una plataforma de optimización de rutas con licencia anual equivalente al 9 % del margen operativo de la empresa. Por otro lado, la analista junior Milagros Torres, egresada técnica en Inteligencia Artificial, propone construir una solución propia por etapas: primero, modelar la ciudad como un grafo con tiempos de viaje por franja horaria, obtenidos del historial de GPS de los repartidores; segundo, calcular con Dijkstra la matriz de tiempos entre los puntos de entrega de cada día; tercero, asignar paquetes a repartidores con una heurística de agrupamiento; y cuarto, ordenar las visitas de cada repartidor con vecino más cercano y mejora 2-opt.\n\nAlonso tiene dudas. Un repartidor con 60 entregas tendría un número astronómico de órdenes posibles; ¿puede una heurística dar resultados confiables? Calcular caminos mínimos entre 5 800 puntos, ¿es viable cada mañana en una computadora modesta? ¿Qué pasa con las ventanas horarias, las entregas urgentes que llegan a mediodía y los repartidores que se ausentan? También le preocupa que los datos de GPS de los repartidores son datos personales, y que su tratamiento debe ajustarse a la Ley 29733 y a lo informado a los trabajadores.\n\nEl directorio pide una recomendación en tres semanas: comprar la plataforma, construir la solución propia o una combinación, con una estimación del ahorro en kilómetros y del impacto en entregas a tiempo, y un plan piloto que permita comparar con la operación actual sin poner en riesgo a los clientes corporativos.",
+        "questions": [
+          "¿Cómo modelaría la red vial de Lima como grafo para este problema? Defina vértices, aristas, pesos y cómo trataría la variación del tiempo según la hora.",
+          "Estime el costo de calcular la matriz de tiempos entre los puntos de entrega con Dijkstra y proponga formas de hacerlo viable cada mañana.",
+          "¿Por qué no es posible encontrar el orden óptimo exacto para 60 entregas y cómo evaluaría la calidad de una heurística frente a la operación actual?",
+          "Compare la plataforma comercial con la solución propia en costo, control, riesgo y capacidad de adaptación a ventanas horarias y urgencias.",
+          "Diseñe el plan piloto y los indicadores que presentaría al directorio, incluyendo el tratamiento de los datos de GPS conforme a la Ley 29733."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: solución algorítmica para un problema real",
+        "instructions": "**Objetivo:** integrar estructuras de datos y técnicas algorítmicas del curso en una solución funcional, medida y sustentada para un problema del contexto peruano.\n\n**Opciones de problema (elegir una o proponer otra con aprobación docente):** planificador de rutas de reparto con Dijkstra y heurísticas de ordenamiento de visitas; deduplicador de padrones con normalización, índices hash y distancia de Levenshtein; planificador de tareas con dependencias, orden topológico y cola de prioridad; recomendador con top-k mediante montículos.\n\n**Requisitos mínimos:** usar al menos tres estructuras de datos y dos técnicas algorítmicas del curso; documentar la complejidad de cada operación; incluir pruebas automatizadas; medir el rendimiento con al menos tres tamaños de entrada y compararlo con una alternativa (ingenua o de biblioteca); usar datos sintéticos o abiertos, sin datos personales reales.\n\n**Qué entregar:**\n\n1. Repositorio Git con código, pruebas y README.\n2. Informe técnico de cinco a ocho páginas: problema, modelo, estructuras elegidas y alternativas descartadas, análisis de complejidad, resultados experimentales con perfil de rendimiento, limitaciones y declaración del uso de asistentes de inteligencia artificial.\n3. Video demostrativo de cinco minutos.\n4. Sustentación individual de 15 minutos con modificación del código en vivo.\n\n**Hitos:** propuesta (semana 13), avance con revisión de pares (semana 14), entrega (semana 15) y sustentación (semana 16).",
+        "rubric": [
+          {
+            "name": "Modelado del problema y elección justificada de estructuras",
+            "points": 5
+          },
+          {
+            "name": "Corrección de la implementación y pruebas automatizadas",
+            "points": 5
+          },
+          {
+            "name": "Análisis de complejidad y evaluación experimental comparativa",
+            "points": 4
+          },
+          {
+            "name": "Calidad del informe técnico y del repositorio",
+            "points": 3
+          },
+          {
+            "name": "Sustentación individual y dominio de las decisiones",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: grafos y técnicas de diseño algorítmico",
+        "questions": [
+          {
+            "prompt": "Se quiere hallar la ruta con menos transbordos entre dos estaciones de una red de transporte, sin considerar tiempos. ¿Qué algoritmo es el más adecuado?",
+            "options": [
+              "Ordenamiento topológico",
+              "Búsqueda en profundidad (DFS)",
+              "Búsqueda en amplitud (BFS)",
+              "Algoritmo de Kruskal"
+            ],
+            "correct": 2,
+            "explanation": "BFS explora por niveles y encuentra el camino con menor número de aristas en O(V + E); DFS no garantiza caminos mínimos y Kruskal construye un árbol de expansión."
+          },
+          {
+            "prompt": "Un grafo de rutas tiene una arista con peso negativo que representa un descuento. ¿Qué ocurre con Dijkstra?",
+            "options": [
+              "Entra siempre en un ciclo infinito",
+              "Funciona igual porque solo cambia el orden de extracción",
+              "Se vuelve más rápido porque reduce las distancias",
+              "Puede dar distancias incorrectas; conviene usar Bellman-Ford"
+            ],
+            "correct": 3,
+            "explanation": "Dijkstra asume que una distancia extraída del montículo es definitiva, lo que solo vale con pesos no negativos; Bellman-Ford admite pesos negativos y detecta ciclos negativos."
+          },
+          {
+            "prompt": "Con monedas de 1, 3 y 4, ¿cuántas monedas entrega el algoritmo voraz para el monto 6 y cuál es el óptimo?",
+            "options": [
+              "Voraz 3 monedas (4+1+1); óptimo 2 monedas (3+3)",
+              "Voraz 2 monedas; óptimo 2 monedas",
+              "Voraz 2 monedas (4+2); óptimo 3 monedas",
+              "Voraz 6 monedas; óptimo 3 monedas"
+            ],
+            "correct": 0,
+            "explanation": "El voraz toma 4 y luego dos monedas de 1; la programación dinámica encuentra 3+3. El ejemplo muestra que la elección voraz debe demostrarse para cada sistema."
+          },
+          {
+            "prompt": "Un plan de estudios se modela como grafo dirigido de prerrequisitos. ¿Qué indica que el algoritmo de orden topológico no logre ordenar todos los cursos?",
+            "options": [
+              "Que faltan pesos en las aristas",
+              "Que el grafo tiene demasiados vértices",
+              "Que el grafo es no dirigido y conexo",
+              "Que existe un ciclo de prerrequisitos y el plan es imposible de cumplir"
+            ],
+            "correct": 3,
+            "explanation": "Un orden topológico existe si y solo si el grafo dirigido es acíclico; si quedan vértices sin ordenar, hay un ciclo de dependencias."
+          },
+          {
+            "prompt": "¿Qué componente de la distancia de Levenshtein hace que el algoritmo sea de programación dinámica y no de fuerza bruta?",
+            "options": [
+              "El uso de una función hash sobre las cadenas",
+              "El ordenamiento previo de ambas cadenas",
+              "La tabla D[i][j] que reutiliza soluciones de prefijos más cortos",
+              "El uso de recursión sin memoización"
+            ],
+            "correct": 2,
+            "explanation": "Cada celda se calcula a partir de tres celdas ya resueltas; se reutilizan subproblemas solapados y el costo queda en O(m·n) en lugar de exponencial."
+          },
+          {
+            "prompt": "Una empresa debe conectar 40 sedes con fibra minimizando kilómetros, sin necesidad de rutas directas entre todas. ¿Qué técnica es la apropiada?",
+            "options": [
+              "Problema del viajante con 2-opt",
+              "Dijkstra desde cada sede",
+              "Búsqueda en profundidad desde la sede principal",
+              "Árbol de expansión mínima con Kruskal o Prim"
+            ],
+            "correct": 3,
+            "explanation": "Se busca conectar todos los vértices con peso total mínimo y sin ciclos, que es exactamente el árbol de expansión mínima; Dijkstra minimiza distancias desde un origen, no el costo total de la red."
+          },
+          {
+            "prompt": "Un repartidor tiene 60 entregas y se busca el orden de visita de menor tiempo. ¿Qué enfoque es profesionalmente razonable?",
+            "options": [
+              "Usar búsqueda binaria sobre los distritos",
+              "Una heurística como vecino más cercano con mejora 2-opt, evaluando su calidad",
+              "Enumerar todas las permutaciones posibles de visitas",
+              "Ordenar las entregas alfabéticamente por dirección"
+            ],
+            "correct": 1,
+            "explanation": "El problema del viajante es NP-difícil y 60! permutaciones es inviable; las heurísticas dan buenas soluciones en poco tiempo y su calidad puede medirse."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Tipos de datos abstractos, modelo de costo y propósito del curso en inteligencia artificial",
+      "activity": "Lectura previa de la unidad 1; sesión de programación en vivo de una pila con dos implementaciones y foro de diagnóstico.",
+      "evidence": "Ejercicio de TDA resuelto"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Notación asintótica O, Omega y Theta y reglas para derivar complejidad",
+      "activity": "Taller de análisis de fragmentos de código en salas pequeñas y prueba de razón duplicada en Colab.",
+      "evidence": "Hoja de análisis de complejidad"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Arreglos dinámicos, análisis amortizado y listas enlazadas",
+      "activity": "Análisis del caso PagoSur en equipos y plenaria; laboratorio de listas enlazadas con pruebas pytest.",
+      "evidence": "Informe breve del caso PagoSur"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Pilas, colas, deque y criterios de elección de estructuras lineales",
+      "activity": "Entrega de la tarea de laboratorio de rendimiento y desarrollo del cuestionario 1 con retroalimentación.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Recursión, pila de llamadas y planteamiento de recurrencias",
+      "activity": "Lectura previa de la unidad 2; trazas guiadas de funciones recursivas y resolución de recurrencias por expansión.",
+      "evidence": "Ejercicios de recurrencias"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Divide y vencerás, teorema maestro y búsqueda binaria con bisect",
+      "activity": "Laboratorio de búsqueda binaria con invariantes y consultas de rango por fechas con bisect.",
+      "evidence": "Laboratorio de búsqueda binaria"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Ordenamiento por inserción, mezcla y quicksort; cota inferior y ordenamientos lineales",
+      "activity": "Análisis del caso Contadores Asociados del Norte; comparación experimental de algoritmos de ordenamiento.",
+      "evidence": "Informe del caso de conciliación"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Timsort, ordenamiento multicriterio y memoización",
+      "activity": "Entrega de la tarea del conciliador de comprobantes y desarrollo del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Tablas hash: funciones hash, colisiones, factor de carga y dict de Python",
+      "activity": "Lectura previa de la unidad 3; implementación guiada de una tabla hash con encadenamiento y medición de colisiones.",
+      "evidence": "Tabla hash implementada"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Árboles binarios de búsqueda, recorridos y árboles balanceados AVL y rojo-negro",
+      "activity": "Laboratorio de ABB con prueba de degeneración y comparación con SortedList; trazas de rotaciones AVL.",
+      "evidence": "Laboratorio de árboles"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Árboles B e índices de bases de datos; montículos y colas de prioridad",
+      "activity": "Análisis del caso del triaje hospitalario en Huancayo; práctica de heapq con borrado perezoso y EXPLAIN en PostgreSQL.",
+      "evidence": "Informe del caso de triaje"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Tries para autocompletado y criterios de elección entre hash, árbol y montículo",
+      "activity": "Entrega de la tarea del sistema de triaje y desarrollo del cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Grafos, representaciones, BFS, DFS y orden topológico",
+      "activity": "Lectura previa de la unidad 4; laboratorio de recorridos sobre una red de transporte; presentación de propuestas del proyecto integrador.",
+      "evidence": "Propuesta del proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Dijkstra, A*, Bellman-Ford y árbol de expansión mínima con Kruskal",
+      "activity": "Análisis del caso Rápido Andino; implementación de Dijkstra con heapq validada contra NetworkX; revisión de pares del avance.",
+      "evidence": "Avance del proyecto e informe del caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Algoritmos voraces, programación dinámica e intratabilidad con heurísticas",
+      "activity": "Taller de mochila y distancia de Levenshtein; perfilado con cProfile; entrega del proyecto integrador y cuestionario 4.",
+      "evidence": "Proyecto integrador y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y cierre del curso",
+      "activity": "Sustentaciones individuales con modificación de código en vivo, retroalimentación final y autoevaluación del logro de la competencia.",
+      "evidence": "Sustentación y autoevaluación"
+    }
+  ]
+}

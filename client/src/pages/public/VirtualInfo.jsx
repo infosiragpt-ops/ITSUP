@@ -1,7 +1,8 @@
 import {
   Home as HomeIcon, UserRound, CalendarDays, Cpu, MonitorPlay, LayoutGrid, HandHeart, ArrowRight, Mail, Video, Library, LifeBuoy,
-  GraduationCap, HeartHandshake, Briefcase, MessageCircle, Clock,
+  GraduationCap, HeartHandshake, Briefcase, MessageCircle, Clock, Scale, ShieldCheck, FileBadge2,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useApi } from '../../lib/api.js';
 import { fmtDate } from '../../lib/format.js';
 import { Button, Badge, cx } from '../../components/ui.jsx';
@@ -11,7 +12,7 @@ import { NEEDS, FIND } from './Home.jsx';
 const TABS = [
   ['inicio', 'Inicio', HomeIcon], ['estudiante', 'Información del estudiante', UserRound], ['fechas', 'Fechas importantes', CalendarDays],
   ['requisitos', 'Requisitos técnicos', Cpu], ['aula', 'Aula Virtual', MonitorPlay], ['plataformas', 'Plataformas digitales', LayoutGrid],
-  ['servicios', 'Servicios al estudiante', HandHeart],
+  ['servicios', 'Servicios al estudiante', HandHeart], ['normativa', 'Normativa académica', Scale],
 ];
 
 const TYPE = { academic: ['Académico', 'primary'], exam: ['Evaluaciones', 'danger'], event: ['Evento', 'info'], institutional: ['Institucional', 'neutral'] };
@@ -155,6 +156,29 @@ export default function VirtualInfo() {
               <h3 className="mt-4 font-semibold text-ink">{t}</h3>
               <p className="mt-1 text-sm text-muted">{d}</p>
             </div>
+          ))}
+        </div>
+      </Block>
+
+      <Block id="normativa" title="Normativa académica que aplica tu aula virtual">
+        <p className="-mt-4 mb-8 max-w-3xl text-muted">El sistema de evaluación y los registros del Aula Virtual ISUP siguen la Ley N.° 30512, su Reglamento (D.S. N.° 010-2017-MINEDU) y los Lineamientos Académicos Generales del Ministerio de Educación para institutos de educación superior.</p>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            ['13', 'Nota mínima aprobatoria', 'Escala vigesimal (0 a 20). La fracción 0.5 o más se redondea a favor del estudiante en la nota final.'],
+            ['30%', 'Límite de inasistencias', 'Más del 30 % de inasistencias injustificadas a las sesiones desaprueba la unidad didáctica (DPI).'],
+            ['10–12', 'Evaluación de recuperación', 'Con nota final entre 10 y 12 puedes rendir una recuperación cuya nota reemplaza a la final.'],
+            ['1 = 16 h', 'Crédito académico', 'Un crédito equivale a 16 horas teóricas o 32 horas prácticas. Tu plan: 120 créditos y 2 550 horas.'],
+          ].map(([n, t, d]) => (
+            <div key={t} className="card p-6"><div className="font-display text-3xl font-semibold text-primary">{n}</div><h3 className="mt-2 font-semibold text-ink">{t}</h3><p className="mt-1 text-sm leading-relaxed text-muted">{d}</p></div>
+          ))}
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {[
+            [ShieldCheck, 'Protección de tus datos', 'Tratamos tus datos conforme a la Ley N.° 29733. Puedes revisar la política y ejercer tus derechos ARCO.', '/privacidad', 'Leer política'],
+            [FileBadge2, 'Documentos verificables', 'Constancias, boletas y récord académico con código único que cualquiera puede verificar en línea.', '/verificar', 'Verificar un documento'],
+            [Scale, 'Sílabo y acta por curso', 'Cada unidad didáctica publica su sílabo (competencia, capacidades, criterios de evaluación) y cierra con un acta oficial.', '/login', 'Ingresar al aula'],
+          ].map(([Icon, t, d, to, cta]) => (
+            <div key={t} className="card flex flex-col p-6"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-soft text-primary"><Icon size={22} /></span><h3 className="mt-4 font-semibold text-ink">{t}</h3><p className="mt-1 flex-1 text-sm text-muted">{d}</p><Link to={to} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-ink hover:underline">{cta} <ArrowRight size={14} /></Link></div>
           ))}
         </div>
       </Block>

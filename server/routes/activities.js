@@ -1,7 +1,27 @@
 import { Router } from 'express';
-import { all, get, run, insert, now, httpError, notify, tx } from '../db.js';
-import { courseAccess, requireEdit } from '../auth.js';
+import { all, get, run, insert, now, httpError, notify, tx, audit } from '../db.js';
+import { courseAccess, requireEdit, requireOpen } from '../auth.js';
 import { upload, fileName, studentIds, userBrief } from '../lib.js';
+import { courseCategories } from '../academic.js';
+
+/** Valida que el criterio de evaluación pertenezca al curso. */
+function categoryFor(courseId, value) {
+  if (value === undefined || value === null || value === '') return null;
+  const id = Number(value);
+  if (!courseCategories(courseId).some((c) => c.id === id)) throw httpError(400, 'El criterio de evaluación no pertenece a este curso');
+  return id;
+}
+
+/** Rúbrica: lista de criterios { name, points, description? } cuyos puntajes suman el puntaje máximo. */
+function parseRubric(value, points) {
+  if (value === undefined) return undefined;
+  const list = (Array.isArray(value) ? value : []).map((c) => ({ name: String(c.name || '').trim(), points: Number(c.points) || 0, description: String(c.description || '').trim() })).filter((c) => c.name);
+  if (!list.length) return '[]';
+  const total = list.reduce((s, c) => s + c.points, 0);
+  if (Math.abs(total - Number(points)) > 0.01) throw httpError(400, `Los puntajes de la rúbrica deben sumar ${points} (suman ${total})`);
+  return JSON.stringify(list);
+}
+const withRubric = (a) => a && { ...a, rubric: (() => { try { return JSON.parse(a.rubric || '[]'); } catch { return []; } })() };
 
 const r = Router();
 
@@ -11,7 +31,9 @@ r.get('/courses/:id/assignments', (req, res) => {
   const { course, canEdit } = courseAccess(req.params.id, req.user);
   const list = all('SELECT * FROM assignments WHERE course_id = ? ORDER BY due_at', course.id);
   const total = get("SELECT COUNT(*) n FROM enrollments e JOIN users u ON u.id = e.user_id WHERE e.course_id = ? AND u.role = 'student'", course.id).n;
-  res.json(list.map((a) => {
+  const cats = Object.fromEntries(courseCategories(course.id).map((c) => [c.id, c.name]));
+  res.json(list.map(withRubric).map((a) => {
+    a.category = a.category_id ? cats[a.category_id] : null;
     if (canEdit) {
       const st = get('SELECT COUNT(*) AS subs, SUM(grade IS NULL) AS pending FROM submissions WHERE assignment_id = ?', a.id);
       return { ...a, stats: { submitted: st.subs, pending: st.pending || 0, students: total } };
@@ -22,11 +44,14 @@ r.get('/courses/:id/assignments', (req, res) => {
 
 r.post('/courses/:id/assignments', (req, res) => {
   const { course } = requireEdit(req.params.id, req.user);
-  const { title, instructions, due_at, points, module_id, allow_late } = req.body;
+  requireOpen(course);
+  const { title, instructions, due_at, points, module_id, allow_late, category_id, rubric } = req.body;
   if (!title?.trim() || !due_at) throw httpError(400, 'Título y fecha de entrega son obligatorios');
-  const id = insert('INSERT INTO assignments (course_id, module_id, title, instructions, due_at, points, allow_late) VALUES (?,?,?,?,?,?,?)',
+  const pts = Number(points) || 20;
+  const id = insert('INSERT INTO assignments (course_id, module_id, title, instructions, due_at, points, allow_late, category_id, rubric) VALUES (?,?,?,?,?,?,?,?,?)',
     course.id, module_id ? Number(module_id) : null, title.trim(), instructions || '', new Date(due_at).toISOString(),
-    Number(points) || 20, allow_late === false ? 0 : 1);
+    pts, allow_late === false ? 0 : 1, categoryFor(course.id, category_id), parseRubric(rubric, pts) ?? '[]');
+  audit(req, 'assignment.create', { entity: 'assignment', entityId: id, details: { course_id: course.id, title: title.trim() } });
   notify(studentIds(course.id), {
     type: 'assignment', title: `Nueva tarea · ${course.name}`, body: title.trim(), link: `/app/cursos/${course.id}/tareas/${id}`,
   });
@@ -42,7 +67,8 @@ const assignmentOf = (id) => {
 r.get('/assignments/:id', (req, res) => {
   const a = assignmentOf(req.params.id);
   const { course, canEdit } = courseAccess(a.course_id, req.user);
-  const out = { ...a, can_edit: canEdit, course: { id: course.id, name: course.name, code: course.code, color: course.color } };
+  const cat = a.category_id ? get('SELECT name, weight FROM grade_categories WHERE id = ?', a.category_id) : null;
+  const out = { ...withRubric(a), category: cat, can_edit: canEdit, course_closed: course.status === 'closed', course: { id: course.id, name: course.name, code: course.code, color: course.color } };
   if (canEdit) {
     const students = all(
       `SELECT u.id, u.first_name, u.last_name, u.code, u.avatar_color FROM enrollments e JOIN users u ON u.id = e.user_id
@@ -59,17 +85,24 @@ r.get('/assignments/:id', (req, res) => {
 
 r.put('/assignments/:id', (req, res) => {
   const a = assignmentOf(req.params.id);
-  requireEdit(a.course_id, req.user);
-  const { title, instructions, due_at, points } = req.body;
-  run('UPDATE assignments SET title = ?, instructions = ?, due_at = ?, points = ? WHERE id = ?',
-    title ?? a.title, instructions ?? a.instructions, due_at ? new Date(due_at).toISOString() : a.due_at, points ?? a.points, a.id);
-  res.json(get('SELECT * FROM assignments WHERE id = ?', a.id));
+  const { course } = requireEdit(a.course_id, req.user);
+  requireOpen(course);
+  const { title, instructions, due_at, points, category_id, allow_late, rubric } = req.body;
+  const pts = points === undefined || points === '' ? a.points : Number(points);
+  const rub = parseRubric(rubric, pts);
+  run('UPDATE assignments SET title = ?, instructions = ?, due_at = ?, points = ?, category_id = ?, allow_late = ?, rubric = ? WHERE id = ?',
+    title ?? a.title, instructions ?? a.instructions, due_at ? new Date(due_at).toISOString() : a.due_at, pts,
+    category_id === undefined ? a.category_id : categoryFor(course.id, category_id), allow_late === undefined ? a.allow_late : allow_late ? 1 : 0, rub ?? a.rubric, a.id);
+  audit(req, 'assignment.update', { entity: 'assignment', entityId: a.id });
+  res.json(withRubric(get('SELECT * FROM assignments WHERE id = ?', a.id)));
 });
 
 r.delete('/assignments/:id', (req, res) => {
   const a = assignmentOf(req.params.id);
-  requireEdit(a.course_id, req.user);
+  const { course } = requireEdit(a.course_id, req.user);
+  requireOpen(course);
   run('DELETE FROM assignments WHERE id = ?', a.id);
+  audit(req, 'assignment.delete', { entity: 'assignment', entityId: a.id, details: { title: a.title } });
   res.json({ ok: true });
 });
 
@@ -77,6 +110,7 @@ r.post('/assignments/:id/submit', upload.single('file'), (req, res) => {
   const a = assignmentOf(req.params.id);
   const { course } = courseAccess(a.course_id, req.user);
   if (req.user.role !== 'student') throw httpError(400, 'Solo los estudiantes pueden entregar tareas');
+  if (course.status === 'closed') throw httpError(409, 'El acta del curso está cerrada: ya no se reciben entregas');
   const late = a.due_at && new Date() > new Date(a.due_at);
   if (late && !a.allow_late) throw httpError(400, 'La fecha de entrega ya venció');
   const body = (req.body.body || '').trim();
@@ -104,9 +138,19 @@ r.put('/submissions/:id/grade', (req, res) => {
   if (!s) throw httpError(404, 'Entrega no encontrada');
   const a = assignmentOf(s.assignment_id);
   const { course } = requireEdit(a.course_id, req.user);
+  requireOpen(course);
   const grade = Number(req.body.grade);
   if (Number.isNaN(grade) || grade < 0 || grade > a.points) throw httpError(400, `La nota debe estar entre 0 y ${a.points}`);
-  run('UPDATE submissions SET grade = ?, feedback = ?, graded_at = ? WHERE id = ?', grade, req.body.feedback || null, now(), s.id);
+  let rubricScores = null;
+  if (Array.isArray(req.body.rubric_scores) && req.body.rubric_scores.length) {
+    const rubric = withRubric(a).rubric;
+    const scores = req.body.rubric_scores.map((v) => Number(v) || 0);
+    scores.forEach((v, i) => { if (rubric[i] && (v < 0 || v > rubric[i].points)) throw httpError(400, `El criterio "${rubric[i].name}" admite de 0 a ${rubric[i].points} puntos`); });
+    rubricScores = JSON.stringify(scores);
+  }
+  const previous = s.grade;
+  run('UPDATE submissions SET grade = ?, feedback = ?, graded_at = ?, rubric_scores = ?, graded_by = ? WHERE id = ?', grade, req.body.feedback || null, now(), rubricScores, req.user.id, s.id);
+  audit(req, previous == null ? 'grade.set' : 'grade.change', { entity: 'submission', entityId: s.id, details: { assignment_id: a.id, student_id: s.user_id, from: previous, to: grade } });
   notify([s.user_id], {
     type: 'grade', title: `Calificación publicada · ${a.title}`, body: `${course.name}: ${grade}/${a.points}`,
     link: `/app/cursos/${course.id}/tareas/${a.id}`,
@@ -125,8 +169,10 @@ const parseQ = (q, withAnswers) => ({
 r.get('/courses/:id/quizzes', (req, res) => {
   const { course, canEdit } = courseAccess(req.params.id, req.user);
   const list = all('SELECT * FROM quizzes WHERE course_id = ? ORDER BY due_at', course.id);
+  const cats = Object.fromEntries(courseCategories(course.id).map((c) => [c.id, c.name]));
   res.json(list.map((q) => {
     const questions = get('SELECT COUNT(*) n FROM quiz_questions WHERE quiz_id = ?', q.id).n;
+    q.category = q.category_id ? cats[q.category_id] : null;
     if (canEdit) {
       const st = get('SELECT COUNT(DISTINCT user_id) n, AVG(score) avg FROM quiz_attempts WHERE quiz_id = ? AND submitted_at IS NOT NULL', q.id);
       return { ...q, questions, stats: { students: st.n, average: st.avg != null ? Math.round(st.avg * 10) / 10 : null } };
@@ -138,7 +184,9 @@ r.get('/courses/:id/quizzes', (req, res) => {
 
 r.post('/courses/:id/quizzes', (req, res) => {
   const { course } = requireEdit(req.params.id, req.user);
-  const { title, description, due_at, available_from, time_limit_min, max_attempts, points, module_id, questions = [] } = req.body;
+  requireOpen(course);
+  const { title, description, due_at, available_from, time_limit_min, max_attempts, points, module_id, questions = [], category_id } = req.body;
+  const catId = categoryFor(course.id, category_id);
   if (!title?.trim() || !due_at) throw httpError(400, 'Título y fecha límite son obligatorios');
   if (!questions.length) throw httpError(400, 'Agrega al menos una pregunta');
   for (const [i, q] of questions.entries()) {
@@ -147,9 +195,9 @@ r.post('/courses/:id/quizzes', (req, res) => {
   }
   const id = tx(() => {
     const qid = insert(
-      'INSERT INTO quizzes (course_id, module_id, title, description, available_from, due_at, time_limit_min, max_attempts, points) VALUES (?,?,?,?,?,?,?,?,?)',
+      'INSERT INTO quizzes (course_id, module_id, title, description, available_from, due_at, time_limit_min, max_attempts, points, category_id) VALUES (?,?,?,?,?,?,?,?,?,?)',
       course.id, module_id ? Number(module_id) : null, title.trim(), description || '', available_from || now(),
-      new Date(due_at).toISOString(), Number(time_limit_min) || 20, Number(max_attempts) || 1, Number(points) || 20
+      new Date(due_at).toISOString(), Number(time_limit_min) || 20, Number(max_attempts) || 1, Number(points) || 20, catId
     );
     questions.forEach((q, i) => {
       const options = q.type === 'truefalse' ? ['Verdadero', 'Falso'] : q.options.filter((o) => String(o).trim());
@@ -161,6 +209,7 @@ r.post('/courses/:id/quizzes', (req, res) => {
   notify(studentIds(course.id), {
     type: 'quiz', title: `Nueva evaluación · ${course.name}`, body: title.trim(), link: `/app/cursos/${course.id}/evaluaciones/${id}`,
   });
+  audit(req, 'quiz.create', { entity: 'quiz', entityId: id, details: { course_id: course.id, title: title.trim() } });
   res.status(201).json(get('SELECT * FROM quizzes WHERE id = ?', id));
 });
 
@@ -175,7 +224,8 @@ r.get('/quizzes/:id', (req, res) => {
   const { course, canEdit } = courseAccess(q.course_id, req.user);
   const questions = all('SELECT * FROM quiz_questions WHERE quiz_id = ? ORDER BY position', q.id);
   const out = {
-    ...q, can_edit: canEdit, course: { id: course.id, name: course.name, code: course.code, color: course.color },
+    ...q, can_edit: canEdit, course_closed: course.status === 'closed', category: q.category_id ? get('SELECT name, weight FROM grade_categories WHERE id = ?', q.category_id) : null,
+    course: { id: course.id, name: course.name, code: course.code, color: course.color },
     question_count: questions.length,
     total_points: questions.reduce((s, x) => s + x.points, 0),
   };
@@ -197,8 +247,9 @@ r.get('/quizzes/:id', (req, res) => {
 
 r.post('/quizzes/:id/start', (req, res) => {
   const q = quizOf(req.params.id);
-  courseAccess(q.course_id, req.user);
+  const { course: qc } = courseAccess(q.course_id, req.user);
   if (req.user.role !== 'student') throw httpError(400, 'Solo los estudiantes rinden evaluaciones');
+  if (qc.status === 'closed') throw httpError(409, 'El acta del curso está cerrada: la evaluación ya no está disponible');
   if (q.available_from && new Date() < new Date(q.available_from)) throw httpError(400, 'La evaluación aún no está disponible');
   if (q.due_at && new Date() > new Date(q.due_at)) throw httpError(400, 'La evaluación ya cerró');
   let attempt = get('SELECT * FROM quiz_attempts WHERE quiz_id = ? AND user_id = ? AND submitted_at IS NULL', q.id, req.user.id);
@@ -254,18 +305,22 @@ r.get('/quizzes/:id/attempts/:aid', (req, res) => {
 
 r.put('/quizzes/:id', (req, res) => {
   const q = quizOf(req.params.id);
-  requireEdit(q.course_id, req.user);
-  const { title, description, due_at, time_limit_min, max_attempts } = req.body;
-  run('UPDATE quizzes SET title = ?, description = ?, due_at = ?, time_limit_min = ?, max_attempts = ? WHERE id = ?',
+  const { course } = requireEdit(q.course_id, req.user);
+  requireOpen(course);
+  const { title, description, due_at, time_limit_min, max_attempts, category_id } = req.body;
+  run('UPDATE quizzes SET title = ?, description = ?, due_at = ?, time_limit_min = ?, max_attempts = ?, category_id = ? WHERE id = ?',
     title ?? q.title, description ?? q.description, due_at ? new Date(due_at).toISOString() : q.due_at,
-    time_limit_min ?? q.time_limit_min, max_attempts ?? q.max_attempts, q.id);
+    time_limit_min ?? q.time_limit_min, max_attempts ?? q.max_attempts, category_id === undefined ? q.category_id : categoryFor(course.id, category_id), q.id);
+  audit(req, 'quiz.update', { entity: 'quiz', entityId: q.id });
   res.json(get('SELECT * FROM quizzes WHERE id = ?', q.id));
 });
 
 r.delete('/quizzes/:id', (req, res) => {
   const q = quizOf(req.params.id);
-  requireEdit(q.course_id, req.user);
+  const { course } = requireEdit(q.course_id, req.user);
+  requireOpen(course);
   run('DELETE FROM quizzes WHERE id = ?', q.id);
+  audit(req, 'quiz.delete', { entity: 'quiz', entityId: q.id, details: { title: q.title } });
   res.json({ ok: true });
 });
 

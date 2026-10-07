@@ -1,0 +1,987 @@
+{
+  "name": "Auditoría y Calidad de Sistemas",
+  "slug": "auditoria-y-calidad-de-sistemas",
+  "course_type": "especifica",
+  "module_name": "Gestión de proyectos y servicios de tecnologías de la información",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Auditoría y Calidad de Sistemas es un curso de formación específica, de naturaleza teórico-práctica, del sexto ciclo de la carrera de Computación e Informática (código CEI-602). Su propósito es que el estudiante evalúe con independencia y evidencia si los sistemas de información de una organización están bien gobernados, controlados y construidos con calidad, y que proponga mejoras verificables. Comprende cuatro unidades: fundamentos de auditoría de sistemas, control interno y gobierno de TI con COSO 2013, COBIT 2019, ITAF y la normativa peruana de la SBS y la Contraloría; ejecución de la auditoría de controles generales y de aplicación, con evidencia, muestreo y análisis de datos asistido por computadora en SQL y Python; aseguramiento de la calidad del software y de los procesos con ISO/IEC 25010:2023, ISO/IEC/IEEE 29119, CMMI e ISO/IEC 29110; y auditoría de servicios, continuidad, terceros y datos personales, que culmina en un informe de auditoría con plan de mejora. Construye sobre Seguridad Informática, Desarrollo de Software Empresarial, Gestión de Proyectos de TI y Base de Datos, y se articula con el Proyecto Integrador de Software y las Experiencias Formativas en Situación Real de Trabajo.",
+  "competency": "Audita sistemas de información y evalúa la calidad del software y de los procesos de TI de una organización: planifica el trabajo según el riesgo, obtiene y analiza evidencia suficiente con técnicas asistidas por computadora, mide la calidad con modelos y métricas normalizados, y comunica hallazgos y recomendaciones en un informe conforme a COBIT 2019, ITAF, ISO/IEC 25010 y la normativa peruana, actuando con independencia, escepticismo profesional y ética.",
+  "capacities": [
+    "Planifica una auditoría de sistemas de información basada en riesgos, definiendo objetivos, alcance, criterios y programa de trabajo a partir de COSO 2013, COBIT 2019, ITAF y la regulación peruana aplicable.",
+    "Evalúa el diseño y la eficacia operativa de los controles generales de TI y de los controles de aplicación, obteniendo evidencia suficiente y apropiada mediante muestreo y técnicas de auditoría asistidas por computadora.",
+    "Evalúa la calidad de productos de software y de procesos de desarrollo con modelos y métricas normalizados, y diseña un plan de aseguramiento de la calidad proporcional al riesgo del sistema.",
+    "Audita la gestión de servicios de TI, la continuidad del negocio, los proveedores en la nube y el tratamiento de datos personales, contrastando la práctica con ISO/IEC 20000-1, ISO 22301, los informes SOC 2 y la Ley 29733.",
+    "Comunica los resultados de la auditoría en un informe con hallazgos estructurados, recomendaciones priorizadas y un plan de acción con seguimiento, actuando con independencia y ética profesional."
+  ],
+  "indicators": [
+    "Elabora un programa de auditoría con objetivos, alcance, criterios, universo auditable calificado y pruebas asignadas a cada control clave, justificando la priorización por riesgo.",
+    "Relaciona problemas de una organización con objetivos de gobierno y gestión de COBIT 2019 y determina con evidencia el nivel de capacidad de un proceso de TI.",
+    "Calcula el tamaño de una muestra de atributos según el nivel de confianza y la tasa de desviación tolerable, y concluye sobre la eficacia operativa del control probado.",
+    "Ejecuta pruebas con SQL o Python sobre datos simulados para detectar cesados con acceso, conflictos de segregación, cambios no autorizados, duplicados y anomalías según la ley de Benford.",
+    "Especifica requisitos de calidad medibles con ISO/IEC 25010:2023 y calcula e interpreta complejidad ciclomática, densidad de defectos, eficacia de remoción y disponibilidad.",
+    "Diseña un plan de aseguramiento de la calidad con revisiones, técnicas de prueba, métricas con umbrales y criterios de entrada y salida proporcionales al riesgo del sistema.",
+    "Evalúa un informe SOC 2 tipo II y un plan de continuidad, identificando excepciones, controles complementarios del usuario, brechas de RTO y RPO y riesgos residuales.",
+    "Redacta hallazgos con condición, criterio, causa, efecto y recomendación, y sustenta un informe de auditoría con plan de acción ante un comité de auditoría simulado."
+  ],
+  "methodology": "El curso aplica metodologías activas en modalidad 100 % virtual. Con aula invertida, el estudiante revisa lecturas y diapositivas antes de cada sesión síncrona, que se dedica a resolver problemas y discutir decisiones de auditoría. Cada unidad gira en torno a un caso de una organización peruana trabajado con el método de casos. Los laboratorios virtuales aplican técnicas de auditoría asistidas por computadora con SQL y Python sobre bases de datos simuladas y anonimizadas, así como mediciones de calidad sobre el código del Proyecto Integrador de Software. El aprendizaje basado en proyectos culmina en un informe de auditoría construido de forma incremental y sustentado ante un comité simulado. Se incluyen simulacros de inspección de software y juegos de roles sobre independencia y ética. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, foros técnicos y revisión entre pares.",
+  "bibliography": [
+    "Committee of Sponsoring Organizations of the Treadway Commission. (2013). Internal control — Integrated framework. COSO.",
+    "ISACA. (2018). COBIT 2019 framework: Introduction and methodology. ISACA.",
+    "ISACA. (2020). IT audit framework (ITAF): A professional practices framework for IS audit and assurance (4th ed.). ISACA.",
+    "Hall, J. A. (2016). Information technology auditing (4th ed.). Cengage Learning.",
+    "Senft, S., Gallegos, F. y Davis, A. (2012). Information technology control and audit (4th ed.). CRC Press.",
+    "Pressman, R. S. (2010). Ingeniería del software: Un enfoque práctico (7.ª ed.). McGraw-Hill.",
+    "Galin, D. (2018). Software quality: Concepts and practice. Wiley-IEEE Computer Society Press.",
+    "Nigrini, M. J. (2012). Benford's law: Applications for forensic accounting, auditing, and fraud detection. Wiley.",
+    "International Organization for Standardization. (2023). ISO/IEC 25010:2023 Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model. ISO.",
+    "Contraloría General de la República. (2006). Normas de Control Interno (Resolución de Contraloría N.° 320-2006-CG). Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuatro cuestionarios de unidad, laboratorios de análisis de datos y de medición de calidad, y participación argumentada en los casos, foros y simulacros de inspección."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Tareas de las unidades 1, 2 y 3: memorando y programa de auditoría, pruebas de controles generales con SQL y Python, y plan de aseguramiento de la calidad, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 35,
+      "description": "Proyecto integrador: informe de auditoría de sistemas con hallazgos, evaluación de continuidad, terceros y datos personales, y plan de mejora, sustentado ante un comité de auditoría simulado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de la auditoría de sistemas, control interno y gobierno de TI",
+      "description": "Al finalizar la unidad, el estudiante explica el papel de la auditoría de sistemas en el gobierno de la organización, relaciona los controles de TI con COSO 2013 y COBIT 2019, y planifica una auditoría basada en riesgos con objetivos, alcance, criterios y programa de trabajo conforme a ITAF y a la normativa peruana.",
+      "topics": [
+        "Auditoría de sistemas de información: naturaleza, tipos, aseguramiento y modelo de las tres líneas",
+        "Control interno con COSO 2013 y clasificación de controles de TI",
+        "Gobierno y gestión de TI con COBIT 2019: objetivos, componentes y niveles de capacidad",
+        "Marco profesional ITAF, normas del IIA, ética e independencia del auditor",
+        "Normativa peruana: Ley 28716, Normas de Control Interno, reglamentos de la SBS y Ley 29733",
+        "Planificación basada en riesgos: modelo de riesgo de auditoría, alcance, criterios y programa"
+      ],
+      "slides": [
+        {
+          "title": "Qué es auditar un sistema de información",
+          "bullets": [
+            "Proceso sistemático, independiente y documentado para obtener evidencia y evaluarla con objetividad frente a criterios definidos (ISO 19011:2018)",
+            "Brinda seguridad razonable, no absoluta: hay límites de muestreo, de juicio profesional y riesgo de colusión o elusión de controles",
+            "Evalúa si los sistemas salvaguardan activos, mantienen la integridad de los datos, logran sus objetivos y usan los recursos con eficiencia",
+            "El auditor opina y recomienda; la gerencia decide e implementa. Confundir ambos roles destruye la independencia"
+          ],
+          "notes": "Inicie preguntando: ¿en qué se diferencia una auditoría de una revisión que hace el propio jefe de TI? Conduzca la discusión hacia tres palabras clave de la definición de ISO 19011: sistemático, porque sigue un método planificado; independiente, porque quien evalúa no es responsable de lo evaluado; y documentado, porque otro profesional debe poder reproducir la conclusión a partir de los papeles de trabajo. Explique la noción de seguridad razonable: ninguna auditoría examina todas las transacciones ni puede descubrir siempre una colusión bien diseñada, por eso la opinión se formula con un nivel de confianza. Retome la clásica definición de Ron Weber sobre los cuatro objetivos de la auditoría de sistemas: salvaguarda de activos, integridad de datos, eficacia y eficiencia. Cierre recordando que el auditor no implementa controles; si lo hace, después no podrá evaluarlos con objetividad."
+        },
+        {
+          "title": "Tipos de auditoría de sistemas y quién las ejecuta",
+          "bullets": [
+            "Auditoría de estados financieros: el auditor externo prueba controles generales de TI para confiar en los controles automatizados del ERP",
+            "Auditoría de cumplimiento: verifica requisitos de la SBS, la SMV, la Contraloría o la Autoridad Nacional de Protección de Datos Personales",
+            "Auditoría operativa o de desempeño: evalúa la eficacia y la eficiencia de servicios, proyectos e inversiones de TI",
+            "Auditoría de sistemas en desarrollo, de certificación (ISO/IEC 27001, ISO 9001) y forense ante fraudes o incidentes"
+          ],
+          "notes": "Pida a los estudiantes que propongan un ejemplo peruano de cada tipo. En la auditoría financiera de una empresa listada en la Bolsa de Valores de Lima, el auditor externo necesita confiar en que los cálculos automáticos del ERP, como la depreciación o la valorización de inventarios, no fueron alterados; por eso prueba los controles generales de TI. En una auditoría de cumplimiento, una caja municipal debe demostrar ante la SBS que cumple el reglamento de seguridad de la información y ciberseguridad. Una municipalidad recibe servicios de control de la Contraloría General de la República, que puede revisar la contratación y operación de sus sistemas. La auditoría operativa pregunta si el nuevo sistema de citas de un hospital redujo realmente los tiempos de espera. Subraye que el tipo de auditoría determina los criterios, el alcance y el destinatario del informe, y que confundirlos produce trabajos costosos que no responden la pregunta correcta."
+        },
+        {
+          "title": "El modelo de las tres líneas del IIA",
+          "bullets": [
+            "Primera línea: la gerencia operativa y TI, dueñas de los riesgos y responsables de operar los controles día a día",
+            "Segunda línea: gestión de riesgos, cumplimiento y seguridad de la información, que asesoran, supervisan y retan a la primera",
+            "Tercera línea: auditoría interna, que brinda aseguramiento independiente y reporta funcionalmente al comité de auditoría del directorio",
+            "Los auditores externos y los reguladores, como la SBS, actúan fuera de la organización y complementan el aseguramiento"
+          ],
+          "notes": "El Instituto de Auditores Internos publicó en 2020 el modelo de las tres líneas, que reemplazó a la versión de las tres líneas de defensa de 2013 para enfatizar la creación de valor y la colaboración, no solo la defensa. Dibuje en la pizarra virtual el órgano de gobierno en la parte superior, la gerencia con sus primeras y segundas líneas, y auditoría interna a un costado con línea directa al comité de auditoría. Pregunte: ¿a quién debería reportar el auditor de sistemas para ser independiente? Si reporta al gerente de TI, su independencia está comprometida. Use un ejemplo: en un banco peruano, el oficial de seguridad de la información pertenece a la segunda línea y define políticas, el área de infraestructura aplica parches como primera línea y auditoría interna verifica, con muestras y evidencia, que el proceso funciona. Comente que en organizaciones pequeñas las líneas se superponen y que el auditor debe identificar esos conflictos."
+        },
+        {
+          "title": "COSO 2013: componentes y principios del control interno",
+          "bullets": [
+            "Cinco componentes: entorno de control, evaluación de riesgos, actividades de control, información y comunicación, y actividades de supervisión",
+            "Diecisiete principios; el principio 11 exige seleccionar y desarrollar controles generales sobre la tecnología",
+            "Tres categorías de objetivos: operaciones, información financiera y no financiera, y cumplimiento",
+            "El control es eficaz cuando los cinco componentes están presentes, funcionan y operan de manera integrada"
+          ],
+          "notes": "COSO, el Comité de Organizaciones Patrocinadoras de la Comisión Treadway, publicó en 1992 el marco integrado de control interno y lo actualizó en 2013 con diecisiete principios explícitos. Es el marco que usan los auditores externos para la sección 404 de la ley Sarbanes-Oxley y que inspira las Normas de Control Interno de la Contraloría peruana. Muestre el cubo de COSO y pida que ubiquen un control concreto, por ejemplo la revisión trimestral de usuarios del sistema de planillas: es una actividad de control, sirve al objetivo de información y opera a nivel de proceso. Destaque el principio 11, que conecta directamente con este curso: la organización debe definir controles generales sobre infraestructura, seguridad, adquisición, desarrollo y mantenimiento de la tecnología. Pregunte qué ocurre si el entorno de control es débil, por ejemplo si la gerencia tolera que se compartan contraseñas: ningún control técnico compensa esa cultura."
+        },
+        {
+          "title": "Clasificación de controles: función, ejecución y relevancia",
+          "bullets": [
+            "Por su función: preventivos, que impiden; detectivos, que identifican después del hecho; y correctivos, que restauran o reparan",
+            "Por su ejecución: manuales, automatizados y manuales dependientes de TI, que usan un reporte generado por el sistema",
+            "Controles clave: los que, solos o combinados, mitigan un riesgo relevante y por eso se prueban en la auditoría",
+            "Controles compensatorios: reducen el riesgo cuando el control principal no existe o falla, como revisar bitácoras del superusuario"
+          ],
+          "notes": "Proponga un ejercicio rápido con controles del proceso de compras de una comercializadora de Lima. El ERP bloquea el pago si no coinciden orden de compra, guía de remisión y factura: control preventivo automatizado. El contador revisa cada semana el reporte de proveedores creados: control detectivo manual dependiente de TI, cuya eficacia depende de que el reporte sea íntegro y exacto. El área de TI restaura un respaldo tras un borrado accidental: control correctivo. Explique que los controles automatizados son consistentes, por lo que basta probar una instancia si los controles generales funcionan durante todo el periodo, mientras que los manuales requieren muestras más grandes porque dependen de personas. Pregunte: ¿qué riesgo adicional introduce un control manual que usa un reporte del sistema? La respuesta es que el auditor debe validar también la información generada por la entidad, tema que se profundizará en la unidad 2."
+        },
+        {
+          "title": "Controles generales de TI frente a controles de aplicación",
+          "bullets": [
+            "Controles generales: acceso a programas y datos, gestión de cambios, desarrollo y adquisición, y operaciones de cómputo",
+            "Controles de aplicación: aseguran integridad, exactitud, validez y autorización de las transacciones en entrada, procesamiento y salida",
+            "Los generales son la base: si fallan, no puede confiarse en que los controles de aplicación operaron igual todo el periodo",
+            "Ejemplo: un cálculo de intereses correcto hoy pierde valor como evidencia si cualquiera pudo modificar el programa en marzo"
+          ],
+          "notes": "Esta distinción es la columna vertebral de la auditoría de sistemas. Use la metáfora de un edificio: los controles generales son los cimientos y las instalaciones comunes; los controles de aplicación son las cerraduras de cada departamento. Una cerradura excelente sirve poco si el administrador entrega copias de llaves maestras sin registro. Explique las cuatro familias de controles generales que usan las firmas auditoras. Luego presente ejemplos de controles de aplicación en un sistema de facturación electrónica: validación del RUC del adquirente, cálculo automático del IGV al 18 %, numeración correlativa de comprobantes y conciliación de los comprobantes aceptados por la SUNAT con las ventas registradas. Pregunte: si un programador puede pasar cambios a producción sin aprobación, ¿podemos confiar en el cálculo del IGV probado en diciembre? Deje que concluyan que no, salvo que se obtengan pruebas adicionales que cubran todo el periodo."
+        },
+        {
+          "title": "Gobierno frente a gestión de TI en COBIT 2019",
+          "bullets": [
+            "Gobierno: evaluar, dirigir y monitorear (dominio EDM), responsabilidad del directorio, en línea con ISO/IEC 38500",
+            "Gestión: planificar, construir, ejecutar y monitorear mediante los dominios APO, BAI, DSS y MEA",
+            "Cuarenta objetivos de gobierno y gestión, como APO12 riesgo, BAI06 cambios, DSS04 continuidad y DSS05 seguridad",
+            "El gobierno de TI forma parte del gobierno corporativo; no es una tarea que se delega al área de sistemas"
+          ],
+          "notes": "COBIT nació en 1996 como un conjunto de objetivos de control para auditores y evolucionó hasta COBIT 2019, un marco de gobierno y gestión de la información y la tecnología de toda la empresa, publicado por ISACA. Explique la diferencia esencial: el gobierno decide qué hacer y por qué, fija la dirección y el apetito de riesgo; la gestión decide cómo hacerlo y ejecuta. Muestre el mapa de los cinco dominios y sus cuarenta objetivos. Pida a los estudiantes que ubiquen problemas reales en el mapa: un proyecto de core bancario que excede su presupuesto se relaciona con BAI01, gestión de programas, y con EDM02, entrega de beneficios; una caída prolongada del sistema de ventas apunta a DSS04, continuidad, y a DSS02, incidentes. Para el auditor, COBIT ofrece un lenguaje común y criterios de evaluación. Advierta que COBIT no se implementa completo: se adapta a cada organización, como veremos con los factores de diseño."
+        },
+        {
+          "title": "Componentes y factores de diseño de COBIT 2019",
+          "bullets": [
+            "Siete componentes: procesos; estructuras; políticas y marcos; información; cultura y comportamiento; personas y habilidades; servicios, infraestructura y aplicaciones",
+            "Once factores de diseño adaptan el sistema de gobierno: estrategia, metas, perfil de riesgo, cumplimiento, rol de TI y tamaño, entre otros",
+            "La cascada de metas traduce las necesidades de las partes interesadas en metas empresariales, metas de alineamiento y objetivos priorizados",
+            "Los componentes amplían la evidencia: no basta un procedimiento escrito si nadie tiene competencias para ejecutarlo"
+          ],
+          "notes": "Presente los siete componentes como los ingredientes que todo objetivo de gobierno necesita para funcionar. Tome como ejemplo DSS05, servicios de seguridad: hay un proceso definido, una estructura con oficial de seguridad, una política aprobada, información como el registro de incidentes, una cultura que reporta errores sin miedo, personas con certificaciones y herramientas desplegadas. Si falta uno, el objetivo no se logra plenamente. Luego explique los factores de diseño: una startup de comercio electrónico con veinte personas y TI en la nube no prioriza los mismos objetivos que una aseguradora regulada con centro de datos propio. Muestre cómo el factor de requisitos de cumplimiento eleva la prioridad de MEA03, cumplimiento de requisitos externos, en una entidad supervisada por la SBS. Pregunte a la clase cuáles serían los tres objetivos más prioritarios para una cooperativa de ahorro y crédito y pida justificarlos con factores de diseño."
+        },
+        {
+          "title": "Niveles de capacidad de los procesos en COBIT 2019",
+          "bullets": [
+            "Escala de 0 a 5 inspirada en CMMI: desde la ausencia de capacidad hasta la mejora continua del proceso",
+            "Nivel 2: actividades básicas completas; nivel 3: proceso definido y organizado; nivel 4: medido cuantitativamente",
+            "La capacidad se asigna con evidencia de las actividades de cada nivel, no con entrevistas ni autoevaluaciones",
+            "El nivel objetivo lo fija el gobierno según el riesgo; perseguir el nivel 5 en todos los procesos es costoso e innecesario"
+          ],
+          "notes": "COBIT 2019 adoptó un esquema de capacidad basado en CMMI. Cada actividad de un objetivo de gestión está asociada a un nivel, de modo que un proceso alcanza el nivel 2 cuando ejecuta todas las actividades básicas, el nivel 3 cuando además está definido, documentado y con roles claros, y el nivel 4 cuando se gestiona con indicadores cuantitativos. Plantee un ejemplo con BAI06, gestión de cambios: si los cambios se aprueban por correo sin registro formal, quizás estemos en nivel 1; si existe un flujo en la herramienta de tickets con aprobación del dueño del sistema, pruebas y ventana de pase, nos acercamos al nivel 3; si además se miden la tasa de cambios fallidos y el tiempo de ciclo para mejorar, avanzamos hacia el nivel 4. Insista en el rigor: el auditor asigna el nivel con evidencia y lo documenta. Pregunte por qué una brecha entre el nivel actual y el objetivo es más útil que un nivel aislado."
+        },
+        {
+          "title": "ITAF y las normas profesionales del auditor de sistemas",
+          "bullets": [
+            "ITAF de ISACA (4.ª ed., 2020): normas generales, de desempeño y de informe, con directrices y técnicas de aplicación",
+            "Exige estatuto de auditoría, independencia, debido cuidado profesional, competencia, evidencia suficiente, informe y seguimiento",
+            "Las Normas Globales de Auditoría Interna del IIA, vigentes desde enero de 2025, rigen la función de auditoría interna",
+            "La certificación CISA abarca cinco dominios: proceso de auditoría, gobierno, ciclo de vida de sistemas, operaciones y resiliencia, y protección de activos"
+          ],
+          "notes": "Explique que la auditoría de sistemas es una profesión regida por normas, igual que la auditoría financiera. ITAF, el marco de prácticas profesionales de ISACA, organiza sus normas en tres familias. Las generales tratan el estatuto de auditoría, que define autoridad y alcance, la independencia organizativa, la objetividad, la competencia y el debido cuidado profesional. Las de desempeño regulan la evaluación de riesgos en la planificación, la supervisión, la evidencia y el uso del trabajo de otros expertos. Las de informe establecen cómo comunicar resultados y hacer seguimiento. En paralelo, el IIA publicó en 2024 las Normas Globales de Auditoría Interna, organizadas en dominios y principios. Mencione la certificación CISA como referencia de carrera: bancos y consultoras de Lima la valoran para analistas de auditoría de TI. Pregunte: ¿por qué un estatuto aprobado por el directorio protege al auditor cuando necesita acceder a datos sensibles?"
+        },
+        {
+          "title": "Ética, independencia y escepticismo profesional",
+          "bullets": [
+            "Amenazas a la independencia: autorrevisión, interés propio, familiaridad, intimidación y defensa de la posición del auditado",
+            "Salvaguardas: rotación, supervisión, separación de funciones, declaración de conflictos y reporte al comité de auditoría",
+            "Escepticismo: actitud inquisitiva que exige corroborar las afirmaciones de la gerencia con evidencia independiente",
+            "Confidencialidad: la evidencia contiene datos personales y secretos comerciales protegidos por la Ley 29733 y por contrato"
+          ],
+          "notes": "Plantee un dilema: la cooperativa quiere que su analista de TI, que diseñó el módulo de créditos hace dos años, audite ahora ese módulo porque conoce el sistema. Pregunte qué amenaza aparece; los estudiantes deben identificar la autorrevisión. Explique las salvaguardas posibles: asignar a otro auditor, limitar al analista a ser fuente de información o, si no hay alternativa, revelar la limitación en el informe. Defina el escepticismo profesional con ejemplos: cuando el jefe de TI afirma que todos los respaldos se prueban, el auditor pide las actas de restauración y elige una fecha para verificar. Recuerde que el código de ética de ISACA obliga a mantener la confidencialidad y a no usar la información obtenida para beneficio personal. Cierre con una reflexión: el auditor que cede a la presión para suavizar un hallazgo pone en riesgo a la organización, a sus clientes y a su propia carrera profesional."
+        },
+        {
+          "title": "Marco normativo peruano que exige controles de TI",
+          "bullets": [
+            "Sector público: Ley 28716 de Control Interno y Normas de Control Interno de la Contraloría (Resolución 320-2006-CG)",
+            "Sistema financiero: Resolución SBS 504-2021 sobre seguridad de la información y ciberseguridad, y Resolución SBS 877-2020 sobre continuidad del negocio",
+            "Cooperativas de ahorro y crédito: supervisadas por la SBS desde la Ley 30822 (2018), con exigencias graduales",
+            "Datos personales: Ley 29733 y su reglamento (D. S. 016-2024-JUS); los emisores en bolsas de EE. UU. aplican la sección 404 de SOX"
+          ],
+          "notes": "El auditor debe conocer los criterios legales aplicables, porque son la vara con la que mide. En el sector público, la Ley 28716 obliga a las entidades del Estado a implantar control interno, y las Normas de Control Interno de la Contraloría incluyen normas específicas para las tecnologías de la información. En el sistema financiero, la SBS exige a bancos, cajas, financieras y aseguradoras un sistema de gestión de seguridad de la información y ciberseguridad, y un sistema de gestión de continuidad del negocio, con evaluaciones de auditoría interna. La Ley 30822 trasladó la supervisión de las cooperativas de ahorro y crédito a la SBS, lo que obligó a muchas a profesionalizar su TI. La Ley 29733 y su reglamento de 2024 establecen obligaciones de seguridad y de gestión de incidentes con datos personales. Pida a cada grupo identificar qué normas aplicarían a una caja municipal, a un hospital regional y a una minera que cotiza en Nueva York."
+        },
+        {
+          "title": "Planificación basada en riesgos y modelo de riesgo de auditoría",
+          "bullets": [
+            "Riesgo de auditoría = riesgo inherente × riesgo de control × riesgo de detección; el auditor solo gobierna el riesgo de detección",
+            "Ejemplo: RA objetivo de 5 %, RI de 100 % y RC de 50 % exigen un RD de 10 %, es decir, pruebas extensas",
+            "El universo auditable lista sistemas, procesos y proveedores; se prioriza por criticidad, cambios recientes, incidentes y regulación",
+            "La materialidad orienta el esfuerzo hacia lo que podría cambiar las decisiones de los usuarios del informe"
+          ],
+          "notes": "Desarrolle el modelo con números en la pizarra. El riesgo inherente es la susceptibilidad a errores antes de considerar controles: un sistema de cálculo de intereses con millones de operaciones y cambios frecuentes tiene riesgo inherente alto. El riesgo de control es la probabilidad de que los controles no prevengan ni detecten el error. El riesgo de detección es la probabilidad de que nuestras pruebas no descubran un error existente. Si aceptamos un riesgo de auditoría de 5 %, con riesgo inherente de 1 y riesgo de control de 0,5, despejamos el riesgo de detección: 0,05 dividido entre 0,5 da 0,10. Un riesgo de detección bajo significa más pruebas, muestras más grandes o análisis de toda la población. Luego explique cómo se construye el plan anual: inventario del universo auditable, calificación de cada elemento con criterios ponderados y asignación de horas a los de mayor riesgo. Pregunte qué sistemas priorizarían en una caja municipal con cien mil clientes."
+        },
+        {
+          "title": "Del memorando de planificación al programa de auditoría",
+          "bullets": [
+            "Memorando: objetivos, alcance (sistemas, procesos, periodo, sedes), criterios, enfoque, equipo, horas, cronograma y riesgos del encargo",
+            "Programa: por cada control clave, el riesgo, la prueba de diseño, la prueba de eficacia operativa y la evidencia esperada",
+            "Reunión de inicio con el auditado: confirmar alcance, interlocutores, accesos a datos y calendario",
+            "El programa es vivo: se ajusta si aparecen nuevos riesgos, dejando constancia y aprobación del supervisor"
+          ],
+          "notes": "Muestre una plantilla de memorando de planificación y otra de programa. Explique la diferencia entre objetivos y alcance: el objetivo responde qué queremos concluir, por ejemplo si los controles de acceso al core financiero son eficaces; el alcance delimita sistemas, procesos, periodo y sedes. Los criterios son la referencia contra la que se compara: la política interna de accesos, la Resolución SBS 504-2021 o los objetivos de COBIT. Luego construyan juntos una fila del programa: control, revisión trimestral de accesos; riesgo, usuarios con privilegios no autorizados; prueba de diseño, recorrido con el responsable y revisión del procedimiento; prueba de eficacia, selección de dos trimestres y verificación de que la revisión se hizo, se firmó y se ejecutaron las bajas; evidencia, reportes, actas y tickets. Insista en documentar los cambios al programa. Anuncie que la tarea de la unidad consiste en elaborar este memorando y su programa."
+        }
+      ],
+      "reading": {
+        "title": "La auditoría de sistemas como garantía de confianza en la organización digital",
+        "minutes": 35,
+        "content": "## Por qué auditar sistemas\n\nHoy casi todas las decisiones relevantes de una organización pasan por un sistema de información: el cálculo de una planilla, la aprobación de un crédito, la emisión de un comprobante electrónico ante la SUNAT o la programación de una cita médica. Cuando esos sistemas fallan, el daño no se limita al área de TI. Un error en la fórmula de intereses afecta a miles de clientes; un usuario con privilegios excesivos puede crear proveedores ficticios y desviar pagos; un respaldo que nunca se probó convierte un ataque de ransomware en una crisis de continuidad. La auditoría de sistemas existe para responder, con independencia y evidencia, una pregunta que la dirección no puede contestar por sí misma: ¿podemos confiar en nuestros sistemas?\n\nRon Weber resumió los objetivos de esta disciplina en cuatro: salvaguardar los activos, mantener la integridad de los datos, lograr la eficacia de los sistemas y usar los recursos con eficiencia. A ellos se suman hoy el cumplimiento regulatorio y la protección de los datos personales.\n\n## Del control interno al gobierno de TI\n\nEl punto de partida es el control interno, que COSO (2013) define como un proceso llevado a cabo por el directorio, la gerencia y el personal, diseñado para brindar seguridad razonable sobre el logro de objetivos de operaciones, información y cumplimiento. Sus cinco componentes —entorno de control, evaluación de riesgos, actividades de control, información y comunicación, y supervisión— se despliegan en diecisiete principios. El principio 11 es decisivo para nosotros: la organización debe seleccionar y desarrollar controles generales sobre la tecnología.\n\nCOBIT 2019 lleva esa lógica al gobierno de la información y la tecnología. Separa el **gobierno** (evaluar, dirigir y monitorear, responsabilidad del directorio) de la **gestión** (planificar, construir, ejecutar y monitorear) y ofrece cuarenta objetivos que el auditor puede usar como criterios. Su valor no está en implementarlo completo, sino en adaptarlo a los factores de diseño de cada empresa.\n\n## Controles generales y controles de aplicación\n\nLa distinción más útil para planificar una auditoría es la siguiente:\n\n| Tipo | Ejemplos | Pregunta del auditor |\n|---|---|---|\n| Generales de TI | Accesos, cambios, operaciones y respaldos, desarrollo | ¿El entorno impide alterar programas y datos sin autorización? |\n| De aplicación | Validación del RUC, cálculo del IGV, correlatividad, conciliaciones | ¿Cada transacción es completa, exacta, válida y autorizada? |\n\nLos controles generales sostienen a los de aplicación. Si un programador puede modificar el sistema de facturación sin aprobación, que hoy el IGV se calcule bien no prueba que se haya calculado bien durante todo el año.\n\n## El modelo de riesgo de auditoría\n\nLa planificación se apoya en una relación clásica de las normas de auditoría:\n\n```\nRA = RI × RC × RD\nRD = RA / (RI × RC)\n\nEjemplo: RA = 0,05; RI = 1,0; RC = 0,5\nRD = 0,05 / (1,0 × 0,5) = 0,10\n```\n\nEl auditor no puede modificar el riesgo inherente ni el de control: solo decide cuánta evidencia obtener. Un riesgo de detección bajo exige pruebas más extensas, muestras mayores o el análisis de la población completa con técnicas asistidas por computadora.\n\n## La regulación peruana como criterio\n\nEn el Perú, el auditor encuentra criterios obligatorios según el sector. Las entidades públicas se rigen por la Ley 28716 y por las Normas de Control Interno de la Contraloría General de la República. Las empresas del sistema financiero deben cumplir la Resolución SBS 504-2021, sobre seguridad de la información y ciberseguridad, y la Resolución SBS 877-2020, sobre continuidad del negocio. Desde la Ley 30822, las cooperativas de ahorro y crédito también son supervisadas por la SBS. Toda organización que trate datos personales está sujeta a la Ley 29733 y a su reglamento, aprobado por el Decreto Supremo 016-2024-JUS. Las empresas peruanas que cotizan en bolsas estadounidenses deben, además, evaluar sus controles sobre la información financiera conforme a la sección 404 de la ley Sarbanes-Oxley.\n\n## Planificar con criterio profesional\n\nUna buena auditoría empieza mucho antes de pedir el primer reporte. El auditor comprende el negocio, identifica los procesos y sistemas críticos, consulta los incidentes y hallazgos previos y califica el riesgo de cada elemento del universo auditable. Con ese insumo redacta un memorando de planificación —objetivos, alcance, criterios, enfoque, equipo y cronograma— y un programa que asigna a cada control clave una prueba de diseño y una de eficacia operativa. ITAF exige, además, que el trabajo se realice con independencia, debido cuidado profesional y competencia. Planificar mal significa gastar horas en lo irrelevante y dejar sin revisar aquello que podría poner en riesgo a toda la organización."
+      },
+      "case": {
+        "title": "Caso: Cooperativa Qhapaq Ñan y su primera auditoría de sistemas",
+        "content": "**Contexto.** La Cooperativa de Ahorro y Crédito Qhapaq Ñan (organización ficticia con fines académicos) opera desde 1998 en Arequipa, Puno y Cusco. Tiene 38 000 socios, 11 agencias y una cartera de créditos de S/ 210 millones. Desde que la Ley 30822 trasladó la supervisión de las cooperativas a la SBS, la entidad ha recibido dos visitas de inspección. La última dejó una observación contundente: «la cooperativa no evidencia una evaluación independiente de sus controles de tecnología de la información».\n\n**La tecnología.** El sistema central, desarrollado internamente en 2012 con PHP y MySQL, gestiona socios, ahorros, créditos y contabilidad. El área de TI tiene seis personas. Su jefe, Rodrigo Mamani, administra la base de datos, aprueba los cambios y, en ocasiones, los pasa él mismo a producción. Un diagnóstico preliminar arroja estos datos:\n\n- En promedio, 14 cambios mensuales en producción, de los cuales solo 5 tienen ticket.\n- 22 usuarios con perfil de administrador en el sistema central, incluidos 4 practicantes.\n- Respaldos completos semanales; la última restauración probada data de 2023.\n- 3 caídas del sistema en el último semestre, una de 9 horas durante el pago de remuneraciones a socios de una empresa minera.\n- La política de seguridad fue aprobada en 2019 y no se ha actualizado.\n- Las tasas de interés se parametrizan en una tabla que pueden modificar tres usuarios de TI.\n\n**El encargo.** El gerente general, Julio Condori, pide al jefe de auditoría interna, el CPC Víctor Huamán, un plan de auditoría de sistemas para presentarlo al comité de auditoría en tres semanas. Huamán es contador con amplia experiencia en auditoría financiera, pero nunca ha auditado tecnología. El presupuesto alcanza para 120 horas-auditor este año.\n\nHuamán evalúa incorporar temporalmente a Lucía Ccama, analista de TI que diseñó el módulo de créditos y conoce el sistema mejor que nadie. Mamani, por su parte, sugiere que la auditoría se concentre en la red y los antivirus, «que es donde están los riesgos de verdad». El presidente del consejo de administración quiere, ante todo, levantar la observación de la SBS antes de la próxima visita.\n\n**El dilema.** Con 120 horas, un auditor sin experiencia en TI, una candidata con un evidente conflicto de independencia y un jefe de TI que intenta orientar el alcance, Huamán debe decidir qué auditar primero, con qué criterios y con qué equipo, y cómo justificarlo ante el comité de auditoría.",
+        "questions": [
+          "¿Qué situaciones del caso calificaría con mayor riesgo inherente y por qué? Relacione cada una con un objetivo de COBIT 2019.",
+          "Con 120 horas disponibles, ¿qué alcance propondría para la primera auditoría? Justifique lo que dejaría fuera y por qué.",
+          "¿Qué amenazas a la independencia identifica en la propuesta de incorporar a Lucía Ccama y en la sugerencia del jefe de TI? ¿Qué salvaguardas aplicaría?",
+          "¿Qué criterios normativos usaría para evaluar los controles y cómo demostraría ante la SBS que la evaluación fue independiente?",
+          "Redacte tres filas del programa de auditoría con control, riesgo, prueba de diseño, prueba de eficacia operativa y evidencia esperada."
+        ]
+      },
+      "assignment": {
+        "title": "Memorando de planificación y programa de auditoría de sistemas basado en riesgos",
+        "instructions": "**Objetivo:** planificar una auditoría de sistemas basada en riesgos para una organización peruana real o verosímil (puede usar la Cooperativa Qhapaq Ñan, la empresa donde trabaja o una organización aprobada por el docente).\n\n**Qué entregar:**\n\n1. **Comprensión de la entidad:** sector, procesos críticos, sistemas que los soportan, proveedores de TI y normativa aplicable.\n2. **Universo auditable** de al menos 10 elementos (sistemas, procesos de TI y proveedores) calificados con criterios ponderados: criticidad, volumen de transacciones, cambios recientes, incidentes y exigencia regulatoria.\n3. **Memorando de planificación:** objetivos, alcance, criterios (COBIT 2019, normas peruanas y políticas internas), enfoque, equipo, horas y cronograma, con aplicación explícita del modelo de riesgo de auditoría.\n4. **Programa de auditoría** con al menos 10 controles clave: riesgo que mitigan, tipo de control, objetivo de COBIT relacionado, prueba de diseño, prueba de eficacia operativa y evidencia esperada.\n5. **Declaración de independencia** del equipo, con las amenazas identificadas y las salvaguardas adoptadas.\n\n**Formato:** informe PDF de 6 a 10 páginas y hoja de cálculo con el universo auditable y el programa. Trabajo individual o en parejas.\n\n**Criterios:** pertinencia de los riesgos identificados, coherencia entre riesgos, alcance y pruebas, uso correcto de los marcos de referencia y claridad profesional de la redacción.",
+        "rubric": [
+          { "name": "Comprensión de la entidad y universo auditable calificado", "points": 4 },
+          { "name": "Evaluación de riesgos y definición de alcance y criterios", "points": 6 },
+          { "name": "Programa de auditoría con pruebas de diseño y de eficacia", "points": 6 },
+          { "name": "Independencia, recursos y calidad de la redacción", "points": 4 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: fundamentos, control interno y planificación de la auditoría",
+        "questions": [
+          {
+            "prompt": "En el modelo de las tres líneas del IIA, ¿a quién debe reportar funcionalmente la auditoría interna para preservar su independencia?",
+            "options": ["Al gerente de tecnología de la información", "Al comité de auditoría del directorio", "Al oficial de seguridad de la información", "Al gerente de administración y finanzas"],
+            "correct": 1,
+            "explanation": "El reporte funcional al comité de auditoría del órgano de gobierno evita que la auditoría dependa de quienes gestionan los riesgos que evalúa, como TI o finanzas."
+          },
+          {
+            "prompt": "El ERP impide registrar una orden de pago si el RUC del proveedor no figura como activo en el maestro de proveedores. ¿Cómo se clasifica este control?",
+            "options": ["Detectivo manual dependiente de TI", "Preventivo automatizado de aplicación", "Correctivo automatizado general de TI", "Detectivo automatizado general de TI"],
+            "correct": 1,
+            "explanation": "Actúa antes de que ocurra el error, lo ejecuta el sistema sin intervención humana y opera sobre transacciones de un proceso de negocio: es preventivo, automatizado y de aplicación."
+          },
+          {
+            "prompt": "El auditor detecta que los programadores pasan cambios a producción sin aprobación. ¿Qué implicación tiene para el control automatizado de cálculo del IGV probado en diciembre?",
+            "options": ["Ninguna, porque el control funcionó al probarlo", "Solo afecta a los cambios realizados en diciembre", "No puede asumirse que operó igual todo el año sin pruebas adicionales", "Debe calificarse automáticamente como debilidad material"],
+            "correct": 2,
+            "explanation": "Una deficiencia en la gestión de cambios impide asumir que el programa fue el mismo durante todo el periodo; el auditor debe ampliar pruebas u obtener evidencia alternativa antes de concluir."
+          },
+          {
+            "prompt": "Con un riesgo de auditoría aceptable de 5 %, un riesgo inherente de 0,8 y un riesgo de control de 0,5, ¿cuál es el riesgo de detección máximo que puede aceptar el auditor?",
+            "options": ["12,5 %", "2 %", "40 %", "6,25 %"],
+            "correct": 0,
+            "explanation": "RD = RA / (RI × RC) = 0,05 / (0,8 × 0,5) = 0,05 / 0,4 = 0,125, es decir, 12,5 %."
+          },
+          {
+            "prompt": "Un hallazgo indica que los pases a producción no tienen aprobación del dueño del sistema. ¿En qué dominio de COBIT 2019 se ubica el objetivo directamente relacionado?",
+            "options": ["EDM: Evaluar, Dirigir y Monitorear", "APO: Alinear, Planificar y Organizar", "BAI: Construir, Adquirir e Implementar", "MEA: Monitorear, Evaluar y Valorar"],
+            "correct": 2,
+            "explanation": "La gestión de cambios de TI corresponde a BAI06, Gestionar los cambios de TI, dentro del dominio Construir, Adquirir e Implementar."
+          },
+          {
+            "prompt": "Se asigna la auditoría del módulo de créditos a la analista que lo diseñó hace dos años. ¿Qué amenaza a la independencia se presenta principalmente?",
+            "options": ["Intimidación", "Autorrevisión", "Familiaridad", "Interés propio"],
+            "correct": 1,
+            "explanation": "Evaluar un trabajo propio genera amenaza de autorrevisión: la persona tenderá a no reconocer deficiencias de un diseño que ella misma realizó."
+          },
+          {
+            "prompt": "Una municipalidad provincial solicita los criterios obligatorios para evaluar el control interno de sus sistemas. ¿Qué referencia corresponde aplicar en primer lugar?",
+            "options": ["La Resolución SBS 504-2021", "La Ley 28716 y las Normas de Control Interno de la Contraloría", "La sección 404 de la ley Sarbanes-Oxley", "La certificación ISO/IEC 27001 de la entidad"],
+            "correct": 1,
+            "explanation": "Las entidades del Estado están obligadas por la Ley 28716 y las Normas de Control Interno de la Contraloría; la norma de la SBS rige al sistema financiero y SOX a emisores en EE. UU."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Ejecución de la auditoría: controles generales, de aplicación y análisis de datos",
+      "description": "Al finalizar la unidad, el estudiante evalúa el diseño y la eficacia operativa de los controles generales de TI y de los controles de aplicación, obtiene evidencia suficiente y apropiada mediante recorridos, muestreo y técnicas asistidas por computadora con SQL y Python, y documenta sus pruebas y conclusiones en papeles de trabajo.",
+      "topics": [
+        "Evidencia de auditoría: suficiencia, idoneidad y técnicas de obtención",
+        "Pruebas de diseño y de eficacia operativa: recorridos y muestreo de atributos",
+        "Auditoría de controles generales de TI: accesos lógicos, segregación, cambios, operaciones y respaldos",
+        "Controles de aplicación: entrada, procesamiento, salida e interfaces",
+        "Técnicas de auditoría asistidas por computadora con SQL y Python, incluida la ley de Benford",
+        "Papeles de trabajo, supervisión y evaluación de deficiencias de control"
+      ],
+      "slides": [
+        {
+          "title": "Evidencia de auditoría: suficiente, apropiada y confiable",
+          "bullets": [
+            "Suficiencia: cantidad de evidencia, que crece con el riesgo y disminuye cuando mejora la calidad de la evidencia obtenida",
+            "Idoneidad: relevancia para la afirmación evaluada y fiabilidad según su fuente, naturaleza y forma de obtención",
+            "Es más fiable la evidencia externa, la obtenida directamente por el auditor, la documental y la generada en entornos con controles eficaces",
+            "La información generada por la entidad, como reportes y extracciones, exige verificar su integridad y exactitud antes de usarla"
+          ],
+          "notes": "Explique que la evidencia es la materia prima de la opinión. Las normas de desempeño de ITAF exigen que sea suficiente y apropiada para respaldar conclusiones razonables. Use una escala de fiabilidad con ejemplos: la declaración verbal del administrador de base de datos es débil; una captura de pantalla enviada por correo es mejor, pero manipulable; la configuración que el auditor extrae directamente del sistema en su presencia es mucho más fiable. Dedique tiempo a la información generada por la entidad: si el auditor recibe un listado de usuarios en Excel, debe verificar que proviene del sistema, que está completo y que no se editó. ¿Cómo? Observando la ejecución de la consulta, comparando conteos con la pantalla de administración y revisando la sentencia SQL usada. Pregunte: si la población está incompleta, ¿qué valor tiene una muestra perfecta? Ninguno, porque la conclusión no se extiende a los elementos omitidos."
+        },
+        {
+          "title": "Técnicas para obtener evidencia",
+          "bullets": [
+            "Indagación: entrevistas y cuestionarios; útil para entender, pero insuficiente por sí sola para concluir sobre un control",
+            "Observación e inspección: ver el control en ejecución y examinar registros, configuraciones, actas y bitácoras",
+            "Reejecución y recálculo: el auditor ejecuta el control o repite el cálculo de forma independiente",
+            "Procedimientos analíticos y confirmaciones externas complementan la evidencia, por ejemplo con proveedores de nube"
+          ],
+          "notes": "Presente cada técnica con un ejemplo aplicado al control de bloqueo de cuentas tras cinco intentos fallidos. Por indagación, el administrador afirma que existe; por inspección, el auditor revisa el parámetro en la consola del directorio; por observación, mira cómo un usuario de prueba queda bloqueado; por reejecución, el propio auditor intenta autenticarse cinco veces con una cuenta de prueba autorizada y verifica el bloqueo y el registro del evento. Explique que las técnicas se combinan y que la indagación siempre debe corroborarse. El recálculo es frecuente en controles de aplicación: el auditor recalcula los intereses de una muestra de créditos y los compara con el sistema. Los procedimientos analíticos comparan tendencias, por ejemplo el número de usuarios activos frente al número de trabajadores en planilla. Pida a los estudiantes que propongan la combinación de técnicas más eficiente para probar la revisión trimestral de accesos."
+        },
+        {
+          "title": "Recorrido y prueba de diseño de un control",
+          "bullets": [
+            "El recorrido sigue una transacción de principio a fin para confirmar el entendimiento del proceso y de sus controles",
+            "Documente quién ejecuta el control, con qué frecuencia, con qué información, qué hace ante excepciones y qué evidencia deja",
+            "Diseño eficaz: si el control opera como se describe, previene o detecta oportunamente el riesgo identificado",
+            "Herramientas: narrativa, diagrama de flujo y matriz de riesgos y controles que vincula cada riesgo con sus controles clave"
+          ],
+          "notes": "El recorrido es la técnica que conecta el entendimiento con las pruebas. Escoja el proceso de alta de usuarios en el sistema de créditos de una caja municipal. El auditor toma una solicitud real, verifica que el jefe del área la firmó, que seguridad de la información asignó el perfil según la matriz de roles, que el usuario se creó con ese perfil y que la credencial se envió por un canal seguro. En cada paso pregunta qué pasaría si el control fallara. La evaluación del diseño responde si el control, bien ejecutado, es capaz de mitigar el riesgo: una revisión de accesos que solo verifica nombres, pero no perfiles, tiene un defecto de diseño aunque se ejecute puntualmente. Muestre una matriz de riesgos y controles con columnas de riesgo, control, tipo, frecuencia, responsable y prueba. Pregunte: ¿tiene sentido probar la eficacia operativa de un control mal diseñado? Lleve a la conclusión de que no: se informa directamente la deficiencia de diseño."
+        },
+        {
+          "title": "Eficacia operativa y muestreo de atributos",
+          "bullets": [
+            "La prueba de eficacia verifica que el control operó de forma consistente durante todo el periodo auditado",
+            "Sin desviaciones esperadas: n = ln(1 − confianza) / ln(1 − tasa tolerable); con 95 % y 5 % resultan 59 elementos",
+            "Con 90 % de confianza y 10 % tolerable bastan 22; un control automatizado se prueba con una instancia si los generales funcionan",
+            "Selección aleatoria o sistemática con arranque aleatorio; cada desviación se investiga y nunca se reemplaza por otro elemento"
+          ],
+          "notes": "Desarrolle la fórmula en la pizarra. Si el auditor no espera desviaciones, la probabilidad de no encontrar ninguna en n elementos cuando la tasa real es igual a la tolerable es (1 − p) elevado a n; igualamos esa probabilidad a uno menos el nivel de confianza y despejamos n. Con 95 % de confianza y 5 % de desviación tolerable, el logaritmo natural de 0,05 entre el logaritmo natural de 0,95 da 58,4, que redondeamos a 59. Muestre la tabla práctica que usan muchas firmas según la frecuencia del control: anual, una instancia; trimestral, dos; mensual, entre dos y cinco; semanal, entre cinco y quince; diaria, entre veinte y cuarenta. Recalque que la selección debe ser imparcial: si el responsable elige los casos, la muestra no es representativa. Pregunte qué hacer si aparece una desviación en una muestra diseñada para cero desviaciones: no se cambia el elemento; se investiga la causa y se evalúa si el control puede considerarse eficaz."
+        },
+        {
+          "title": "Auditoría de accesos lógicos: altas, bajas y revisiones",
+          "bullets": [
+            "Altas: muestra de usuarios creados en el periodo con solicitud autorizada y perfil coherente con la matriz de roles",
+            "Bajas: cruce de cesados de la planilla con usuarios activos y con su último acceso posterior a la fecha de cese",
+            "Revisiones periódicas: evidencia de que el dueño del sistema revisó perfiles, no solo nombres, y de que se ejecutaron las bajas",
+            "Privilegiados y genéricos: inventario de administradores, uso de cuentas compartidas, autenticación multifactor y monitoreo de su actividad"
+          ],
+          "notes": "Recuerde que en Seguridad Informática diseñaron controles de identidad y acceso; ahora los auditarán. La prueba más reveladora es el cruce entre la relación de trabajadores cesados, obtenida de recursos humanos o de la planilla electrónica, y la lista de usuarios activos extraída del sistema. Cada coincidencia exige investigar: si el usuario registró accesos después del cese, el hallazgo es grave porque indica que alguien usó esa cuenta. Para las altas, pida el listado de usuarios creados en el periodo directamente del sistema y seleccione una muestra; verifique la solicitud, la aprobación y que el perfil coincida con el puesto. Para las revisiones periódicas, el error frecuente es que el revisor firma un listado de nombres sin evaluar permisos. Las cuentas privilegiadas merecen atención especial: ¿cuántos administradores hay?, ¿se justifica cada uno?, ¿alguien revisa lo que hacen? Pregunte qué evidencia pedirían para demostrar que una revisión fue real y no un trámite."
+        },
+        {
+          "title": "Segregación de funciones y matrices de conflictos",
+          "bullets": [
+            "Ningún usuario debe controlar todas las fases de una transacción: autorización, registro, custodia y conciliación",
+            "Conflictos típicos: crear proveedores y aprobar pagos; desarrollar y pasar a producción; registrar ventas y emitir notas de crédito",
+            "La matriz de conflictos cruza transacciones incompatibles; el análisis se hace sobre permisos efectivos, no sobre el cargo",
+            "Si la segregación no es viable, se exigen controles compensatorios documentados, como la revisión independiente de bitácoras"
+          ],
+          "notes": "La segregación de funciones es uno de los controles más antiguos y más vulnerados en las pymes. Explique el principio con el ciclo de compras: si una misma persona puede crear un proveedor, registrar su factura y aprobar el pago, puede inventar un proveedor y pagarse a sí misma sin que nadie lo note. En TI, el conflicto clásico es que el desarrollador también pueda pasar sus cambios a producción. Muestre una matriz de conflictos sencilla, con transacciones en filas y columnas y una marca donde la combinación es incompatible. Luego explique que el análisis debe hacerse sobre los permisos efectivos extraídos del sistema, porque los perfiles acumulan accesos con los años. En organizaciones pequeñas, como la cooperativa del caso anterior, no siempre hay personal suficiente; entonces se aceptan controles compensatorios, por ejemplo una revisión mensual de las transacciones del superusuario por alguien independiente. Pida identificar tres conflictos en el sistema de facturación electrónica de una ferretería."
+        },
+        {
+          "title": "Auditoría de la gestión de cambios a programas",
+          "bullets": [
+            "Obtenga la población desde una fuente técnica: historial del repositorio, registros del pipeline o fechas de objetos en producción",
+            "Concilie despliegues con tickets: todo cambio en producción debe tener solicitud, pruebas, aprobación y ventana registradas",
+            "Verifique la segregación: quien desarrolla no aprueba ni despliega; revise accesos directos a producción y cambios de emergencia",
+            "Los cambios directos a datos mediante scripts SQL requieren la misma autorización y trazabilidad que los cambios de programas"
+          ],
+          "notes": "El error más común del auditor novato es pedir a TI la lista de cambios y probar una muestra de ella: así solo verá los cambios que TI registró. La población debe obtenerse de una fuente técnica independiente, por ejemplo el historial de etiquetas del repositorio Git, los registros de despliegue de la herramienta de integración continua o las fechas de modificación de los objetos en producción. Luego se concilia esa población con los tickets aprobados; cada despliegue sin ticket es una excepción. Recuerde lo aprendido en Desarrollo de Software Empresarial: un pipeline bien configurado puede ser en sí mismo un control automatizado, siempre que nadie pueda saltarlo. Revise también los cambios de emergencia, que deben aprobarse a posteriori en un plazo definido, y los scripts que modifican datos directamente, frecuentes para corregir saldos. Pregunte: si encontramos 412 despliegues y solo 371 tickets, ¿qué hacemos con los 41 restantes? Investigar cada uno y evaluar su impacto."
+        },
+        {
+          "title": "Auditoría de operaciones de TI y respaldos",
+          "bullets": [
+            "Procesos programados: inventario de tareas críticas, monitoreo de fallos y evidencia del seguimiento de cada error",
+            "Respaldos: política alineada con el RPO, regla 3-2-1, copia inmutable o fuera de línea y cifrado",
+            "La prueba clave es la restauración: actas con fecha, sistema restaurado, tiempo medido y validación del usuario",
+            "Gestión de incidentes y problemas: registro completo, clasificación, escalamiento y análisis de causa raíz de los recurrentes"
+          ],
+          "notes": "Las operaciones de TI parecen rutinarias hasta que fallan. Use el ejemplo de una caja municipal cuyo proceso nocturno de cierre diario calcula intereses, provisiones y moras. El auditor verifica que exista un inventario de tareas programadas críticas, que las fallas generen alertas y que cada alerta tenga un ticket con su solución. En respaldos, distinga entre existir y funcionar: un respaldo que nunca se restauró es una hipótesis. Pida actas de pruebas de restauración y, si es posible, solicite una restauración de una fecha elegida por el auditor y en su presencia. Explique la regla 3-2-1: tres copias, en dos medios distintos, una fuera del sitio; y la importancia de las copias inmutables frente al ransomware, tema visto en Seguridad Informática. En incidentes, la pregunta del auditor es si el registro es completo: compare las caídas reportadas por las agencias con los tickets. Pregunte qué evidencia mínima aceptarían como prueba de que una restauración se hizo realmente."
+        },
+        {
+          "title": "Controles de aplicación: entrada, procesamiento y salida",
+          "bullets": [
+            "Entrada: validaciones de formato, rango, existencia y dígito verificador, como el módulo 11 del RUC",
+            "Procesamiento: totales de control, cálculos automáticos, secuencias correlativas y bloqueo de reprocesos duplicados",
+            "Salida: conciliación de reportes con la fuente, distribución restringida y control de comprobantes aceptados por la SUNAT",
+            "Interfaces: conteo de registros, suma de importes y totales hash entre el sistema de origen y el de destino"
+          ],
+          "notes": "Los controles de aplicación protegen cada transacción. Explique las validaciones de entrada con el RUC: tiene once dígitos y el último es un dígito verificador calculado con módulo 11, de modo que el sistema puede rechazar un RUC mal digitado antes de consultarlo. En procesamiento, los totales de control permiten verificar que todas las operaciones de un lote se procesaron, y la numeración correlativa de comprobantes permite detectar faltantes o duplicados. En salida, un control relevante en el Perú es conciliar los comprobantes electrónicos emitidos y aceptados con el registro de ventas, porque una diferencia implica riesgo tributario. Las interfaces merecen atención: cuando el sistema de ventas envía información a contabilidad, ambos extremos deben coincidir en número de registros, suma de importes y un total hash, por ejemplo la suma de los números de comprobante. Pida a la clase diseñar tres controles de aplicación para el registro de créditos y la prueba de auditoría que usarían para cada uno."
+        },
+        {
+          "title": "Técnicas de auditoría asistidas por computadora",
+          "bullets": [
+            "Permiten analizar la población completa en lugar de una muestra, lo que aumenta la cobertura y reduce el riesgo de detección",
+            "Herramientas: SQL, Python con pandas, hojas de cálculo avanzadas y software especializado como ACL o IDEA",
+            "Flujo: solicitar datos, validar su integridad con conteos y totales del sistema, analizar, investigar excepciones y documentar",
+            "Los scripts se conservan en los papeles de trabajo para que otro auditor pueda reproducir el resultado"
+          ],
+          "notes": "Las técnicas de auditoría asistidas por computadora transforman el trabajo: en vez de revisar 59 pagos, se revisan los 18 000 del año. Explique el flujo con rigor. Primero, solicitar los datos por escrito, indicando tablas, campos, periodo y formato. Segundo, validar la integridad: el número de registros y la suma de importes del archivo deben coincidir con los totales del sistema, idealmente con un reporte obtenido por el auditor. Tercero, aplicar pruebas: duplicados, faltantes en secuencias, valores fuera de rango, cruces entre tablas y estratificación. Cuarto, investigar cada excepción con el área responsable, porque una excepción no es automáticamente un hallazgo. Quinto, documentar el script, la versión de los datos y los resultados. Mencione que áreas de auditoría interna y firmas en el Perú usan Python, SQL e IDEA. Pregunte: ¿qué riesgo existe si analizamos un archivo que TI depuró antes de entregarlo? La respuesta conecta con la validación de integridad."
+        },
+        {
+          "title": "Pruebas con SQL: cesados activos, duplicados y faltantes",
+          "bullets": [
+            "Paso 1: cargar las tablas en un entorno aislado del auditor y verificar conteos y sumas contra el sistema",
+            "Paso 2: cruzar usuarios con planilla por DNI para hallar cuentas activas o usadas después del cese",
+            "Paso 3: agrupar pagos por RUC, serie y número del comprobante para detectar duplicados",
+            "Paso 4: buscar saltos en la numeración correlativa con funciones de ventana como LAG"
+          ],
+          "notes": "Haga una demostración en vivo con una base de datos de prueba. Para los cesados, una unión entre la tabla de usuarios y la de planilla por DNI, filtrando el estado activo y la fecha de cese no nula, muestra en segundos lo que manualmente tomaría días. Agregue la condición de último acceso posterior al cese para separar las cuentas no dadas de baja de las efectivamente usadas, que son mucho más graves. Para duplicados, agrupe por RUC del proveedor, serie y número del comprobante y filtre los grupos con más de un pago; luego investigue si son devoluciones o pagos dobles reales. Para faltantes, use la función LAG para comparar cada número de comprobante con el anterior dentro de una serie; un salto indica comprobantes anulados o no registrados. Insista en que el auditor trabaja sobre una copia de los datos en su propio entorno, nunca en producción, y que guarda las consultas en los papeles de trabajo. La lectura de la unidad incluye el código completo."
+        },
+        {
+          "title": "Ley de Benford para detectar anomalías en importes",
+          "bullets": [
+            "En muchos conjuntos de importes, el primer dígito sigue P(d) = log10(1 + 1/d): 30,1 % empiezan con 1 y 4,6 % con 9",
+            "Aplica a datos que abarcan varios órdenes de magnitud; no a precios fijados, montos tope ni números asignados como el DNI",
+            "Nigrini mide la conformidad con la desviación absoluta media (MAD); para el primer dígito, más de 0,015 indica no conformidad",
+            "Un exceso en ciertos dígitos es un indicio que orienta pruebas detalladas, no una prueba de fraude"
+          ],
+          "notes": "La ley de Benford fue descrita por Simon Newcomb en 1881 y retomada por Frank Benford en 1938; Mark Nigrini la llevó a la auditoría forense desde la década de 1990. Explique la intuición: en datos que crecen multiplicativamente, un importe pasa más tiempo empezando con 1 que con 9. Muestre la distribución esperada y un gráfico con datos de pagos donde sobresale el dígito 4. ¿Qué podría explicarlo? Si el umbral de aprobación del gerente es de S/ 5 000, alguien podría estar fraccionando pagos en montos de S/ 4 500 a S/ 4 999 para evitar la aprobación. Enfatice las condiciones de uso: no sirve para tarifas fijas, montos con tope legal ni números de comprobante. Presente la medida MAD y los umbrales de Nigrini para el primer dígito: hasta 0,006, conformidad cercana; hasta 0,012, aceptable; hasta 0,015, marginal; y por encima, no conformidad. Recalque que la conclusión requiere investigar las transacciones que generan el exceso."
+        },
+        {
+          "title": "Papeles de trabajo y supervisión",
+          "bullets": [
+            "Documentan objetivo, fuente de datos, población, muestra, procedimiento aplicado, resultados, excepciones y conclusión",
+            "Deben permitir que un auditor experimentado, sin participación previa, entienda el trabajo y llegue a la misma conclusión",
+            "Incluyen referencias cruzadas, preparado por, revisado por y fechas; la revisión del supervisor es un control de calidad",
+            "Se custodian con acceso restringido, se cifran si contienen datos personales y se conservan según la política de retención"
+          ],
+          "notes": "Los papeles de trabajo son la memoria y la defensa del auditor. Si dentro de un año el regulador o un tribunal pregunta cómo se llegó a una conclusión, la respuesta está en ellos. Muestre un papel de trabajo bien elaborado para la prueba de bajas de usuarios: encabezado con entidad, periodo, prueba y referencia; objetivo; fuente, con el detalle de cómo se obtuvo el listado y cómo se validó su integridad; procedimiento paso a paso; resultados con las excepciones identificadas y la respuesta del área; y una conclusión clara y firmada. Explique el criterio de reproducibilidad. Enfatice la confidencialidad: los papeles contienen datos personales de trabajadores y clientes, por lo que deben almacenarse en repositorios con acceso restringido y, cuando corresponda, anonimizar los datos innecesarios para la conclusión. Pregunte qué debilidades encuentran en un papel que solo dice: se revisaron los usuarios y todo está conforme."
+        },
+        {
+          "title": "Evaluación de deficiencias de control",
+          "bullets": [
+            "Deficiencia de diseño: el control no existe o no mitiga el riesgo; deficiencia operativa: está bien diseñado pero no se ejecutó",
+            "Severidad según la probabilidad y la magnitud del error potencial: deficiencia, deficiencia significativa o debilidad material",
+            "Considere los controles compensatorios probados y la agregación de deficiencias que afectan a un mismo riesgo",
+            "Comunique oportunamente a la gerencia las deficiencias graves, sin esperar al informe final"
+          ],
+          "notes": "Cerramos la unidad con la pregunta más difícil: ¿cuán grave es lo que encontramos? Explique las categorías de severidad que usa la norma de auditoría 2201 de la PCAOB para el control interno sobre la información financiera: una deficiencia de control; una deficiencia significativa, que merece la atención de los responsables del gobierno; y una debilidad material, cuando existe una posibilidad razonable de que un error material no se prevenga ni detecte oportunamente. Fuera del ámbito financiero se usan escalas de impacto alto, medio y bajo. Los factores a ponderar son la probabilidad, la magnitud del error potencial, la existencia de controles compensatorios probados y la agregación: tres deficiencias menores en accesos al mismo sistema pueden sumar una significativa. Ponga un ejemplo: nueve cesados con usuario activo, uno de los cuales creó un proveedor después del cese. Pregunte cómo calificarían esa situación y qué pruebas adicionales harían antes de concluir. Anuncie la tarea de la unidad."
+        }
+      ],
+      "reading": {
+        "title": "Evidencia que convence: pruebas de controles y análisis de datos en la auditoría de sistemas",
+        "minutes": 40,
+        "content": "## De la opinión a la evidencia\n\nUn auditor de sistemas no opina por intuición. Cada conclusión debe sostenerse en evidencia **suficiente**, en cantidad acorde con el riesgo, y **apropiada**, es decir, relevante para lo que se quiere probar y fiable por su origen. La evidencia que el auditor obtiene directamente del sistema es más fiable que la que le entregan; la documental, más que la verbal; la externa, más que la interna. Por eso la indagación —preguntar al responsable— sirve para entender, pero nunca basta para concluir que un control funciona.\n\n## Diseño y eficacia operativa\n\nEvaluar un control exige dos preguntas sucesivas. La primera es de **diseño**: si el control se ejecuta tal como está descrito, ¿mitiga el riesgo? Se responde con un recorrido que sigue una transacción real de principio a fin. La segunda es de **eficacia operativa**: ¿el control funcionó de manera consistente durante todo el periodo? Se responde con pruebas sobre una muestra o sobre la población completa.\n\nPara controles manuales, el tamaño de muestra de un muestreo de atributos sin desviaciones esperadas se obtiene así:\n\n```\nn = ln(1 − NC) / ln(1 − TDT)\n\nNC = 95 %, TDT = 5 %   →  n = ln(0,05) / ln(0,95) = 58,4 ≈ 59\nNC = 90 %, TDT = 10 %  →  n = ln(0,10) / ln(0,90) = 21,9 ≈ 22\n```\n\nNC es el nivel de confianza y TDT, la tasa de desviación tolerable. Si en la muestra aparece una desviación, no se reemplaza el elemento: se investiga su causa y se evalúa si el control puede seguir considerándose eficaz.\n\n## Controles generales: dónde mirar\n\nLa auditoría de controles generales de TI se concentra en cuatro áreas. En **accesos lógicos** se prueban altas autorizadas, bajas oportunas, revisiones periódicas y cuentas privilegiadas. En **gestión de cambios**, la población se obtiene de una fuente técnica —historial del repositorio o registros del pipeline— y se concilia con los tickets aprobados. En **operaciones**, se verifica el monitoreo de procesos programados y, sobre todo, la restauración efectiva de respaldos. En **desarrollo y adquisición**, se revisa que los sistemas nuevos hayan pasado por pruebas y aprobación del usuario antes de entrar en producción.\n\n## Técnicas asistidas por computadora\n\nEstas técnicas permiten examinar el 100 % de las transacciones. Antes de analizar, el auditor valida que el archivo recibido sea íntegro: el número de registros y la suma de importes deben coincidir con los totales del sistema. Dos consultas ilustran el enfoque:\n\n```sql\n-- Prueba 1: cuentas activas o usadas después del cese\nSELECT u.usuario, u.dni, p.fecha_cese, u.ultimo_acceso\nFROM usuarios_core AS u\nJOIN planilla AS p ON p.dni = u.dni\nWHERE p.fecha_cese IS NOT NULL\n  AND (u.estado = 'ACTIVO' OR u.ultimo_acceso > p.fecha_cese);\n\n-- Prueba 2: posibles pagos duplicados del mismo comprobante\nSELECT ruc_proveedor, serie, numero,\n       COUNT(*) AS veces, SUM(importe) AS total_pagado\nFROM pagos\nGROUP BY ruc_proveedor, serie, numero\nHAVING COUNT(*) > 1;\n```\n\nLa primera prueba separa dos situaciones de distinta gravedad: una cuenta que no se dio de baja y una cuenta que alguien usó después del cese. La segunda identifica comprobantes pagados más de una vez, que luego deben investigarse con tesorería.\n\n## La ley de Benford\n\nEn muchos conjuntos de importes que abarcan varios órdenes de magnitud, el primer dígito no se distribuye de manera uniforme, sino según P(d) = log10(1 + 1/d). Alrededor del 30,1 % de los importes empieza con 1 y solo el 4,6 % con 9. Nigrini propone medir la conformidad con la desviación absoluta media (MAD):\n\n```python\nimport math\nimport pandas as pd\n\npagos = pd.read_csv('pagos_2025.csv')\nmontos = pagos.loc[pagos['importe'] >= 10, 'importe']\nprimer = montos.astype(str).str[0].astype(int)\nobs = primer.value_counts(normalize=True).reindex(range(1, 10), fill_value=0)\nesp = pd.Series({d: math.log10(1 + 1 / d) for d in range(1, 10)})\nmad = (obs - esp).abs().mean()\nprint(pd.DataFrame({'observado': obs, 'esperado': esp}).round(3))\nprint(f'MAD = {mad:.4f}')  # > 0.015: no conformidad en el primer dígito\n```\n\nUn exceso de importes que empiezan con 4, cuando el umbral de aprobación gerencial es de S/ 5 000, sugiere fraccionamiento de pagos. Benford no prueba un fraude: señala dónde mirar. Tampoco se aplica a precios fijados, montos con tope ni números asignados, como los del DNI o los correlativos de comprobantes.\n\n## Documentar y evaluar\n\nCada prueba se registra en papeles de trabajo que describen objetivo, fuente, población, procedimiento, resultados y conclusión, de modo que otro auditor pueda reproducirla. Finalmente, el auditor califica la severidad de las deficiencias considerando la probabilidad y la magnitud del error potencial, los controles compensatorios y la agregación de deficiencias que afectan a un mismo riesgo. Una excepción aislada no siempre es un hallazgo; un patrón sin explicación casi siempre lo es."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Ferretera del Norte y los pagos que nadie aprobó",
+        "content": "**La empresa.** Distribuidora Ferretera del Norte S.A.C. (organización ficticia con fines académicos) comercializa materiales de construcción desde Trujillo hacia La Libertad, Lambayeque y Cajamarca. En 2025 facturó S/ 96 millones, tiene 240 trabajadores y opera un ERP comercial adquirido en 2019, personalizado por un equipo interno de cuatro desarrolladores. Los accionistas planean incorporar a un socio financiero en 2026 y contrataron a una firma de auditoría externa para sus estados financieros.\n\n**El trabajo de campo.** Andrea Salazar, auditora senior de sistemas de la firma, ejecuta las pruebas de controles generales de TI. Sus primeros resultados son estos:\n\n- Los cuatro desarrolladores tienen acceso de escritura a la base de datos de producción «para atender urgencias».\n- El registro de despliegues del servidor muestra 412 pases a producción en el año; la herramienta de tickets solo registra 371 cambios aprobados.\n- El cruce entre la planilla y los usuarios activos identifica 9 trabajadores cesados con cuenta vigente. Una de esas cuentas, de un excomprador que dejó la empresa en abril, creó un proveedor nuevo en junio.\n- El procedimiento exige la aprobación del gerente de administración para pagos mayores a S/ 5 000.\n\nAndrea aplicó la ley de Benford a los 18 400 pagos a proveedores del año. La desviación absoluta media del primer dígito fue 0,019, y el dígito 4 aparece en el 14,2 % de los importes, frente al 9,7 % esperado. Al estratificar, encontró 1 310 pagos entre S/ 4 500 y S/ 4 999, de los cuales 286 corresponden a tres proveedores registrados en los últimos dieciocho meses. El proveedor creado con la cuenta del excomprador recibió 61 pagos por un total de S/ 287 000, todos por debajo del umbral de aprobación.\n\n**Las reacciones.** El gerente de TI, Martín Vega, sostiene que los 41 despliegues sin ticket son correcciones menores y que el acceso de los desarrolladores es indispensable porque «el ERP falla todas las semanas». El gerente de administración atribuye los pagos fraccionados a compras urgentes para obras de clientes. El socio de la firma recuerda a Andrea que el presupuesto de horas se agotará en diez días y que el cliente es estratégico.\n\n**El dilema.** Andrea debe decidir si los hallazgos constituyen una deficiencia significativa o una debilidad material, si amplía las pruebas pese al presupuesto, si comunica de inmediato a la gerencia general y al directorio la posible existencia de un fraude y cómo documentar todo de manera que resista una revisión posterior.",
+        "questions": [
+          "¿Qué deficiencias de controles generales identifica y cómo afectan la confianza en los controles automatizados del ERP?",
+          "Interprete los resultados de Benford y de la estratificación. ¿Qué pruebas adicionales con SQL diseñaría para confirmar o descartar el fraccionamiento?",
+          "¿Cómo calificaría la severidad de las deficiencias considerando probabilidad, magnitud, agregación y posibles controles compensatorios?",
+          "¿A quién y cuándo debe comunicar Andrea la posible irregularidad? Argumente desde ITAF, la ética profesional y el interés del cliente.",
+          "¿Es aceptable limitar las pruebas por razones de presupuesto? Proponga una decisión y explique cómo la documentaría en los papeles de trabajo."
+        ]
+      },
+      "assignment": {
+        "title": "Pruebas de controles generales de TI con técnicas asistidas por computadora",
+        "instructions": "**Objetivo:** ejecutar y documentar pruebas de controles generales de TI sobre un conjunto de datos simulado que el docente publicará en el aula virtual (usuarios, planilla, despliegues, tickets de cambio y pagos de una empresa peruana).\n\n**Qué entregar:**\n\n1. **Matriz de riesgos y controles** de al menos 6 controles (accesos, segregación, cambios, respaldos y un control de aplicación), con tipo, frecuencia, responsable y prueba propuesta.\n2. **Validación de integridad** de los datos recibidos: conteos y totales comparados con las cifras de control del enunciado.\n3. **Muestreo:** cálculo justificado del tamaño de muestra para un control manual y selección aleatoria reproducible, con la semilla documentada.\n4. **Cuatro pruebas con SQL o Python:** cesados con acceso, conflictos de segregación, despliegues sin ticket y ley de Benford con MAD sobre los pagos; incluya código comentado, resultados e interpretación.\n5. **Papeles de trabajo** de cada prueba con objetivo, fuente, procedimiento, excepciones y conclusión.\n6. **Evaluación de deficiencias:** clasificación de severidad, controles compensatorios considerados y comunicación propuesta a la gerencia.\n\n**Formato:** informe PDF de 8 a 12 páginas, scripts en archivos .sql o .py (o un cuaderno Jupyter) y hoja de cálculo con la matriz. Trabajo individual o en parejas.\n\n**Criterios:** corrección técnica de las pruebas, reproducibilidad, rigor en la evaluación de excepciones y claridad de la documentación.",
+        "rubric": [
+          { "name": "Matriz de riesgos y controles y validación de integridad", "points": 4 },
+          { "name": "Muestreo justificado y reproducible", "points": 3 },
+          { "name": "Pruebas con SQL o Python correctas e interpretadas", "points": 7 },
+          { "name": "Papeles de trabajo y evaluación de deficiencias", "points": 6 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: evidencia, pruebas de controles y análisis de datos",
+        "questions": [
+          {
+            "prompt": "Para verificar la política de bloqueo de cuentas tras cinco intentos fallidos, ¿qué evidencia es la más fiable?",
+            "options": ["La declaración del administrador del directorio", "Una captura de pantalla enviada por correo por TI", "La reejecución con una cuenta de prueba autorizada, observada por el auditor", "La política de contraseñas aprobada por la gerencia"],
+            "correct": 2,
+            "explanation": "La evidencia obtenida directamente por el auditor mediante reejecución es la más fiable; la indagación, la captura enviada y la política escrita no prueban que el control opere."
+          },
+          {
+            "prompt": "Sin desviaciones esperadas, con 95 % de confianza y una tasa de desviación tolerable de 5 %, ¿cuál es el tamaño mínimo de la muestra?",
+            "options": ["25", "59", "95", "100"],
+            "correct": 1,
+            "explanation": "n = ln(0,05) / ln(0,95) = 58,4, que se redondea al entero superior: 59 elementos."
+          },
+          {
+            "prompt": "Para probar la gestión de cambios, ¿de dónde debe obtener el auditor la población de cambios del periodo?",
+            "options": ["De la lista de tickets aprobados que entrega TI", "Del registro técnico de despliegues o del historial del repositorio", "De las actas del comité de cambios", "De una entrevista con el jefe de desarrollo"],
+            "correct": 1,
+            "explanation": "La población debe venir de una fuente técnica independiente; usar los tickets solo mostraría los cambios registrados y ocultaría los realizados sin aprobación."
+          },
+          {
+            "prompt": "¿Cuál de estas combinaciones de permisos representa un conflicto crítico de segregación de funciones en el ciclo de compras?",
+            "options": ["Consultar proveedores y consultar pagos", "Registrar proveedores y aprobar pagos a proveedores", "Emitir reportes de compras y exportarlos", "Registrar órdenes de compra y consultar inventarios"],
+            "correct": 1,
+            "explanation": "Quien crea proveedores y aprueba pagos puede inventar un proveedor y pagarle sin intervención de otra persona, lo que abre la puerta al fraude."
+          },
+          {
+            "prompt": "¿En cuál de estos conjuntos de datos NO es apropiado aplicar la ley de Benford?",
+            "options": ["Importes de facturas de compras del año", "Números correlativos de comprobantes emitidos", "Montos de gastos de viaje reembolsados", "Importes de transferencias a proveedores"],
+            "correct": 1,
+            "explanation": "Los correlativos son números asignados en secuencia, sin el comportamiento multiplicativo que requiere Benford; los importes de transacciones sí suelen cumplirla."
+          },
+          {
+            "prompt": "¿Cuál es el propósito principal de un recorrido (walkthrough) en una auditoría de sistemas?",
+            "options": ["Probar la eficacia operativa durante todo el periodo", "Confirmar el entendimiento del proceso y evaluar el diseño de sus controles", "Calcular el tamaño de la muestra de atributos", "Emitir la opinión final sobre el sistema"],
+            "correct": 1,
+            "explanation": "El recorrido sigue una transacción de principio a fin para confirmar cómo funciona el proceso y si los controles están bien diseñados e implementados; la eficacia operativa requiere pruebas adicionales."
+          },
+          {
+            "prompt": "En una muestra de 25 revisiones de accesos, diseñada para cero desviaciones, se hallan dos revisiones no ejecutadas. ¿Qué corresponde hacer?",
+            "options": ["Reemplazar los dos elementos por otros dos de la población", "Concluir que el control es eficaz porque el 92 % se ejecutó", "Investigar las causas, considerar el control no eficaz y evaluar controles compensatorios", "Excluir el control del alcance de la auditoría"],
+            "correct": 2,
+            "explanation": "Las desviaciones no se reemplazan; superan lo tolerable según el diseño de la muestra, por lo que el control no puede considerarse eficaz sin evidencia compensatoria."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Aseguramiento de la calidad del software y de los procesos",
+      "description": "Al finalizar la unidad, el estudiante especifica y mide la calidad de un producto de software con ISO/IEC 25010:2023 y métricas normalizadas, evalúa la madurez de los procesos de desarrollo con CMMI, ISO 9001 e ISO/IEC 29110, y diseña un plan de aseguramiento de la calidad proporcional al riesgo del sistema.",
+      "topics": [
+        "Calidad del software: perspectivas, costo de la calidad y aseguramiento frente a control",
+        "Modelo de calidad del producto ISO/IEC 25010:2023 y requisitos de calidad medibles",
+        "Métricas de producto y de proceso: complejidad, defectos, eficacia de remoción y fiabilidad",
+        "Revisiones, inspecciones y proceso de pruebas según ISO/IEC/IEEE 29119",
+        "Madurez de procesos: CMMI, ISO 9001 con ISO/IEC 90003 e ISO/IEC 29110 para pequeñas organizaciones",
+        "Plan de aseguramiento de la calidad del software y su auditoría"
+      ],
+      "slides": [
+        {
+          "title": "Qué significa calidad en el software",
+          "bullets": [
+            "Garvin identificó cinco perspectivas: trascendente, basada en el producto, en el usuario, en la manufactura y en el valor",
+            "Crosby define la calidad como conformidad con los requisitos; Juran, como adecuación al uso del cliente",
+            "En software confluyen ambas: cumplir la especificación no basta si el sistema no resuelve el problema del usuario",
+            "La calidad se especifica, se construye y se verifica; no puede añadirse al final mediante pruebas"
+          ],
+          "notes": "Abra con una pregunta provocadora: ¿una aplicación sin defectos conocidos, pero que nadie usa porque es lenta y confusa, es de calidad? Use las respuestas para presentar las perspectivas de David Garvin, profesor de Harvard, quien en 1984 mostró que la palabra calidad significa cosas distintas para el filósofo, el ingeniero, el usuario, el fabricante y el gerente financiero. Contraste a Philip Crosby, para quien la calidad es conformidad con los requisitos, con Joseph Juran, que la entiende como adecuación al uso. En software ambas visiones son necesarias: el producto debe cumplir lo especificado y además resolver la necesidad real. De ahí la importancia de los requisitos de calidad, que trabajaron en Análisis y Diseño de Sistemas. Cierre con una idea que guiará la unidad: la calidad no se inspecciona al final; se planifica, se construye en cada actividad y se verifica con evidencia, igual que los controles que auditamos en las unidades anteriores."
+        },
+        {
+          "title": "Aseguramiento, control y mejora de la calidad",
+          "bullets": [
+            "Aseguramiento de la calidad: actividades planificadas sobre el proceso para dar confianza de que el producto cumplirá los requisitos",
+            "Control de la calidad: actividades sobre el producto para detectar defectos, como pruebas e inspecciones",
+            "Verificación: ¿construimos bien el producto? Validación: ¿construimos el producto correcto? (Boehm)",
+            "Mejora continua con el ciclo planificar, hacer, verificar y actuar de Shewhart y Deming"
+          ],
+          "notes": "Muchas organizaciones llaman aseguramiento de la calidad a su equipo de pruebas, pero son cosas distintas. El aseguramiento actúa sobre el proceso y es preventivo: define estándares, revisa que el equipo los siga y audita la conformidad con el plan. El control actúa sobre el producto y es detectivo: inspecciones, pruebas y análisis que encuentran defectos. Use la célebre formulación de Barry Boehm: verificación es preguntarse si estamos construyendo bien el producto, conforme a la especificación; validación es preguntarse si construimos el producto correcto, el que el usuario necesita. Una revisión del diseño contra los requisitos es verificación; una prueba de aceptación con usuarios reales es validación. Conecte con el ciclo de Deming: medir sin actuar no mejora nada. Pregunte cuál es el rol del auditor de calidad en este esquema: evaluar con independencia si el proceso definido se cumple y si produce los resultados esperados."
+        },
+        {
+          "title": "Costo de la calidad y costo de la mala calidad",
+          "bullets": [
+            "Costos de conformidad: prevención (capacitación, estándares, revisiones) y evaluación (pruebas, inspecciones, auditorías)",
+            "Costos de no conformidad: fallas internas antes de liberar y fallas externas en producción, que son las más caras",
+            "Boehm estimó que corregir un defecto en producción puede costar decenas o hasta cien veces más que en requisitos",
+            "El CISQ estimó en USD 2,41 billones el costo de la mala calidad del software en EE. UU. en 2022"
+          ],
+          "notes": "Explique el modelo de costo de la calidad en cuatro categorías. Invertir en prevención y evaluación reduce las fallas, especialmente las externas, que incluyen soporte, compensaciones, multas y daño reputacional. Presente la curva clásica de Boehm sobre el costo de corregir defectos según la fase; aclare que estudios posteriores matizan las cifras exactas, pero la tendencia se mantiene: cuanto más tarde se descubre un defecto, más caro resulta. Mencione el informe del Consortium for Information and Software Quality de 2022, que estimó en 2,41 billones de dólares el costo de la mala calidad del software en Estados Unidos, sumando fallas operativas, proyectos cancelados y deuda técnica. Traiga un ejemplo local: una caída de la banca móvil en día de pago de gratificaciones genera colas en agencias, reclamos ante el regulador y publicaciones negativas en redes. Pida a los estudiantes clasificar diez costos de un proyecto en las cuatro categorías y discutir dónde conviene invertir más."
+        },
+        {
+          "title": "ISO/IEC 25010:2023: modelo de calidad del producto",
+          "bullets": [
+            "Nueve características: adecuación funcional, eficiencia de desempeño, compatibilidad, capacidad de interacción, fiabilidad, seguridad, mantenibilidad, flexibilidad y protección frente a daños",
+            "La revisión de 2023 incorporó la protección frente a daños (safety), renombró usabilidad y portabilidad y trasladó la calidad en uso a ISO/IEC 25019",
+            "Cada característica se descompone en subcaracterísticas medibles, como madurez, disponibilidad, modularidad o capacidad de prueba",
+            "Integra la familia SQuaRE: ISO/IEC 25023 define medidas y la serie ISO/IEC 2504n, el proceso de evaluación"
+          ],
+          "notes": "ISO/IEC 25010 es el modelo de referencia para hablar de calidad del producto con un vocabulario común. Recorra las nueve características de la versión 2023 con ejemplos de un sistema de citas médicas: adecuación funcional, que asigne bien los turnos; eficiencia de desempeño, que responda rápido en horas pico; compatibilidad, que se integre con el sistema de historias clínicas; capacidad de interacción, antes usabilidad, que un adulto mayor pueda reservar sin ayuda; fiabilidad, que esté disponible; seguridad, que proteja los datos de salud; mantenibilidad, que se modifique sin romperse; flexibilidad, antes portabilidad, que se adapte a nuevos entornos; y protección frente a daños, que no ponga en peligro a personas o bienes. Explique que la calidad en uso pasó a ISO/IEC 25019. Para el auditor, este modelo es un criterio: permite evaluar si los requisitos de calidad de un proyecto se especificaron y verificaron. Pida a cada grupo elegir las tres características más críticas para una billetera digital y justificar su elección."
+        },
+        {
+          "title": "De la característica al requisito de calidad medible",
+          "bullets": [
+            "Requisito ambiguo: «el sistema debe ser rápido»; verificable: «el 95 % de consultas de saldo responde en menos de 2 s con 500 usuarios»",
+            "Plantilla: característica, subcaracterística, medida, umbral, condiciones de medición y método de verificación",
+            "ISO/IEC 25023 ofrece medidas normalizadas, como tiempo medio de respuesta, tasa de fallas o cobertura de pruebas",
+            "Sin umbral acordado no hay criterio de auditoría: no se puede declarar conformidad ni no conformidad"
+          ],
+          "notes": "Este paso es donde fallan muchos proyectos. Escriba en la pizarra requisitos típicos de documentos de proyectos: el sistema debe ser amigable, seguro y rápido. Pregunte cómo los probarían; la clase descubrirá que no pueden. Transformen juntos cada uno en un requisito verificable con la plantilla: característica, subcaracterística, medida, umbral, condiciones y método. Por ejemplo, para fiabilidad: disponibilidad mensual mayor o igual a 99,5 %, medida por un monitor externo y excluyendo ventanas de mantenimiento anunciadas. Para capacidad de interacción: que el 90 % de los usuarios nuevos complete el registro en menos de tres minutos sin ayuda, en una prueba con ocho participantes. Para seguridad: cero vulnerabilidades de severidad alta en el análisis previo a cada liberación. Conecte con la auditoría: un requisito sin umbral impide concluir, porque no hay criterio contra el cual comparar la condición. Pida que reformulen cinco requisitos ambiguos de su Proyecto Integrador."
+        },
+        {
+          "title": "Enfoque objetivo, pregunta y métrica (GQM)",
+          "bullets": [
+            "Basili, Caldiera y Rombach proponen medir de arriba hacia abajo: primero el objetivo, luego las preguntas y al final las métricas",
+            "Objetivo: mejorar la fiabilidad del módulo de pagos desde la perspectiva del cliente durante el próximo semestre",
+            "Preguntas: ¿con qué frecuencia falla?, ¿cuánto tarda en recuperarse?, ¿qué fallas afectan más transacciones?",
+            "Métricas: fallas por mes, MTBF, MTTR y porcentaje de transacciones fallidas; se descarta lo que nadie usará para decidir"
+          ],
+          "notes": "El enfoque GQM, propuesto por Victor Basili y sus colegas de la Universidad de Maryland a partir de su trabajo con el Laboratorio de Ingeniería de Software de la NASA, responde a un problema frecuente: equipos que acumulan tableros con decenas de métricas que nadie usa para decidir. La lógica es descendente. Se parte de un objetivo de medición expresado con propósito, objeto, enfoque de calidad, punto de vista y contexto. Luego se formulan las preguntas que permitirían saber si se alcanza el objetivo. Solo entonces se eligen las métricas que responden cada pregunta. Desarrolle el ejemplo del módulo de pagos de una fintech y muestre que una métrica como las líneas de código escritas por semana no responde ninguna pregunta relevante y debe descartarse. Para el auditor, GQM sirve para evaluar si los indicadores de calidad que reporta TI informan realmente sobre los objetivos del negocio. Pida a cada grupo construir un árbol GQM para la mantenibilidad de su proyecto integrador."
+        },
+        {
+          "title": "Métricas de producto: complejidad y mantenibilidad",
+          "bullets": [
+            "Complejidad ciclomática de McCabe: V(G) = E − N + 2P, equivalente al número de decisiones simples más uno",
+            "Interpretación habitual: hasta 10, riesgo bajo; de 11 a 20, moderado; más de 20, alto y difícil de probar",
+            "V(G) indica el número mínimo de casos de prueba necesarios para cubrir todos los caminos independientes",
+            "Complemente con cobertura de ramas, duplicación de código y acoplamiento; ninguna métrica aislada define la calidad"
+          ],
+          "notes": "Thomas McCabe propuso en 1976 medir la complejidad de un programa a partir de su grafo de flujo de control. Calcule en vivo la complejidad de una función que valida una solicitud de crédito con cuatro sentencias if y un bucle while: cinco decisiones más uno da seis. Muestre que la fórmula con aristas y nodos da el mismo resultado. Explique la interpretación: una función con complejidad 47, como la del caso que veremos, tiene al menos 47 caminos independientes que probar, lo que explica por qué los defectos se esconden allí. En Desarrollo de Software Empresarial configuraron análisis estático con puertas de calidad; aquí el foco es otro: interpretar las métricas como auditor y como responsable de calidad. Advierta sobre sus riesgos: cuando una medida se convierte en meta deja de ser una buena medida, como enuncia la ley de Goodhart. Una cobertura de 90 % con pruebas sin aserciones no garantiza nada. Pregunte cómo detectarían esa manipulación."
+        },
+        {
+          "title": "Métricas de defectos y eficacia de remoción",
+          "bullets": [
+            "Densidad de defectos: defectos confirmados por mil líneas de código o por punto de función, comparable entre versiones",
+            "Eficacia de remoción de defectos: DRE = defectos hallados antes de liberar / (antes + hallados en los 90 días posteriores)",
+            "Ejemplo: 180 defectos antes y 20 después dan una DRE de 90 %; Capers Jones reporta líderes por encima de 95 %",
+            "Contención por fase: identifica en qué actividad se inyectó cada defecto y en cuál se detectó"
+          ],
+          "notes": "Las métricas de defectos son el termómetro del proceso. La densidad de defectos permite comparar versiones o módulos, siempre que se normalice por tamaño, ya sea en líneas de código o en puntos de función, que estudiaron en Gestión de Proyectos de TI. La eficacia de remoción de defectos, popularizada por Capers Jones, mide qué proporción de los defectos totales se eliminó antes de llegar al usuario. Calcule el ejemplo: 180 defectos encontrados en revisiones y pruebas y 20 reportados por usuarios en los noventa días siguientes dan 180 entre 200, es decir, 90 %. Jones reporta promedios de la industria cercanos a 85 % y organizaciones líderes por encima de 95 %, gracias a inspecciones y análisis estático, no solo a pruebas. La matriz de contención por fase muestra, por ejemplo, que muchos defectos detectados en producción se originaron en requisitos, lo que orienta la mejora hacia las revisiones de requisitos. Pregunte qué concluirían si la DRE baja de 93 % a 81 % en cuatro versiones."
+        },
+        {
+          "title": "Fiabilidad y disponibilidad medibles",
+          "bullets": [
+            "MTBF: tiempo medio entre fallas; MTTR: tiempo medio de reparación; disponibilidad = MTBF / (MTBF + MTTR)",
+            "Una disponibilidad de 99,9 % admite 8,76 horas de caída al año; una de 99,99 %, unos 53 minutos",
+            "Indicador de nivel de servicio (SLI), objetivo de nivel de servicio (SLO) y presupuesto de error = 1 − SLO, según Google SRE",
+            "Ejemplo: un SLO mensual de 99,5 % deja 3,6 horas de presupuesto; si se agota, se congelan las liberaciones riesgosas"
+          ],
+          "notes": "La fiabilidad debe expresarse en números que el negocio entienda. Calcule la disponibilidad de un sistema con MTBF de 720 horas y MTTR de 4 horas: 720 entre 724 da 99,45 %. Traduzca porcentajes a tiempo de caída: muchos contratos prometen 99,9 % sin que el cliente sepa que eso significa casi nueve horas anuales. Presente el enfoque de ingeniería de fiabilidad de sitios de Google: un indicador de nivel de servicio mide algo que el usuario percibe, como la proporción de transferencias exitosas; un objetivo fija la meta, por ejemplo 99,5 % en treinta días; y el presupuesto de error es lo que se puede fallar. En treinta días hay 720 horas; el 0,5 % equivale a 3,6 horas. Si el equipo consume el presupuesto, prioriza la estabilidad sobre las nuevas funciones. Para el auditor, la pregunta es si los SLO existen, se miden con datos íntegros y orientan decisiones. Pregunte qué ocurre cuando el SLO se mide desde el servidor y no desde la experiencia del usuario."
+        },
+        {
+          "title": "Revisiones técnicas e inspecciones de Fagan",
+          "bullets": [
+            "Tipos: revisión entre pares, recorrido guiado por el autor e inspección formal con roles, criterios y métricas",
+            "Inspección: moderador, autor, lector, inspectores y registrador; fases de planificación, preparación, reunión, corrección y seguimiento",
+            "Un estudio de Cisco con SmartBear sugiere revisar como máximo de 200 a 400 líneas por sesión de 60 a 90 minutos",
+            "Las revisiones detectan defectos de requisitos y diseño que las pruebas encuentran tarde o nunca"
+          ],
+          "notes": "Michael Fagan desarrolló en IBM, en la década de 1970, el método de inspección formal que demostró que revisar documentos y código antes de probarlos reduce de forma drástica los defectos. Explique los roles y las fases. El moderador planifica y conduce; el autor responde dudas, pero no defiende su trabajo; el lector parafrasea el material; los inspectores buscan defectos con listas de verificación; y el registrador documenta cada defecto con su severidad. La reunión se dedica a encontrar defectos, no a corregirlos ni a discutir soluciones. Comparta la evidencia del estudio de revisiones de código realizado en Cisco con SmartBear: por encima de 400 líneas por sesión, la eficacia cae. Conecte con las solicitudes de integración en GitHub, que son revisiones entre pares ligeras. Proponga un simulacro: en grupos, inspeccionen durante veinte minutos una historia de usuario y su código, registren los defectos y calculen la tasa de defectos por hora. Pregunte qué defectos encontraron que una prueba automatizada no habría detectado."
+        },
+        {
+          "title": "Proceso de pruebas según ISO/IEC/IEEE 29119",
+          "bullets": [
+            "Tres niveles de proceso: organizacional (política y estrategia), de gestión (planificación, monitoreo y cierre) y dinámico (diseño, ejecución e incidencias)",
+            "Documentos: política, estrategia, plan de pruebas, especificaciones de diseño y de casos, registros de incidencias e informe de cierre",
+            "Técnicas de diseño: particiones de equivalencia, valores límite, tablas de decisión y transición de estados",
+            "Pruebas basadas en riesgo: la intensidad de prueba de cada función se ajusta a la probabilidad y al impacto de su falla"
+          ],
+          "notes": "La serie ISO/IEC/IEEE 29119 normaliza la gestión de pruebas. En Desarrollo de Software Empresarial automatizaron pruebas unitarias y de integración; ahora miramos el proceso completo desde la perspectiva de calidad y auditoría. Explique los tres niveles de proceso y los documentos asociados. Luego trabaje las técnicas de diseño con un ejemplo peruano: la tasa de interés de un crédito según el monto, con tramos hasta S/ 5 000, de S/ 5 001 a S/ 20 000 y más de S/ 20 000. Las particiones de equivalencia generan un caso por tramo; los valores límite prueban 5 000, 5 001, 20 000 y 20 001, donde suelen esconderse los errores de comparación. Las tablas de decisión combinan condiciones, como el tipo de cliente y la garantía. Explique las pruebas basadas en riesgo: no todo se prueba con la misma intensidad. Para el auditor, la evidencia clave es la trazabilidad entre requisitos, casos, resultados e incidencias. Pida diseñar casos con valores límite para la validación del monto de un retiro."
+        },
+        {
+          "title": "Madurez de procesos con CMMI",
+          "bullets": [
+            "Cinco niveles de madurez: inicial, gestionado, definido, gestionado cuantitativamente y en optimización",
+            "CMMI, hoy de ISACA, publicó su versión 3.0 en 2023, con áreas de práctica para desarrollo, servicios, proveedores, personas y datos",
+            "La evaluación formal la conduce un evaluador líder certificado con evidencia de prácticas implementadas en proyectos reales",
+            "La madurez es un medio: el valor está en la predictibilidad y la reducción de defectos, no en el certificado"
+          ],
+          "notes": "CMMI surgió del Instituto de Ingeniería de Software de la Universidad Carnegie Mellon, a partir del trabajo de Watts Humphrey, y hoy pertenece a ISACA. Explique los niveles de madurez: en el inicial el éxito depende de héroes; en el gestionado los proyectos planifican y controlan su trabajo; en el definido la organización tiene procesos estándar que los proyectos adaptan; en el gestionado cuantitativamente se usan estadísticas para controlar el desempeño; y en el de optimización se mejora con base en datos. Mencione que la versión 3.0 amplió el modelo con áreas como gestión de datos, gestión de personas y trabajo virtual. Discuta críticamente: algunas empresas buscan el nivel 3 para ganar licitaciones o atraer inversionistas sin cambiar su forma de trabajar, lo que produce burocracia sin mejora. Pregunte a la clase cómo distinguiría un auditor un proceso maduro de uno que solo tiene documentos bien presentados: la respuesta está en la evidencia de uso y en los resultados medidos."
+        },
+        {
+          "title": "ISO 9001, ISO/IEC 90003 e ISO/IEC 29110 para pymes de software",
+          "bullets": [
+            "ISO 9001:2015 exige un sistema de gestión de la calidad con enfoque a procesos, pensamiento basado en riesgos y mejora continua",
+            "ISO/IEC 90003:2018 orienta la aplicación de ISO 9001 al desarrollo, suministro y mantenimiento de software",
+            "ISO/IEC 29110 define perfiles para entidades muy pequeñas, de hasta 25 personas, con dos procesos: gestión de proyectos e implementación de software",
+            "El perfil básico es alcanzable para pymes peruanas que desarrollan software y buscan clientes corporativos o del Estado"
+          ],
+          "notes": "Muchas empresas de software en el Perú tienen menos de veinticinco personas, y una evaluación CMMI les resulta costosa. Para ellas existe ISO/IEC 29110, desarrollada con fuerte participación latinoamericana. Explique sus dos procesos en el perfil básico: gestión de proyectos, con planificación, ejecución, evaluación y control, y cierre; e implementación de software, con requisitos, diseño, construcción, integración y pruebas, y entrega. Cada proceso define productos de trabajo concretos, como el plan del proyecto, la especificación de requisitos o el registro de pruebas. Compare con ISO 9001:2015, que certifica el sistema de gestión de la calidad de cualquier organización, y con ISO/IEC 90003, que interpreta ISO 9001 para el software. Señale que la certificación ISO 9001 es frecuente entre proveedores del Estado. Pregunte qué modelo recomendarían a una startup de doce desarrolladores que quiere vender a bancos, y qué evidencias pedirían como auditores para verificar que el perfil básico se aplica en la práctica."
+        },
+        {
+          "title": "Plan de aseguramiento de la calidad del software",
+          "bullets": [
+            "IEEE 730-2014 define los procesos de aseguramiento de la calidad del software y orienta el contenido del plan",
+            "Contenido: alcance, estándares, revisiones y auditorías, estrategia de pruebas, métricas, gestión de problemas, configuración y registros",
+            "Criterios de entrada y salida por fase, como cero defectos críticos abiertos y una DRE objetivo antes de liberar",
+            "Proporcionalidad: un sistema de pagos exige más revisiones, pruebas y evidencia que un sitio informativo"
+          ],
+          "notes": "El plan de aseguramiento de la calidad traduce todo lo visto en compromisos verificables. La norma IEEE 730 de 2014 describe los procesos de aseguramiento que deben planificarse: evaluación de la conformidad del producto y del proceso, revisiones, auditorías, medición y gestión de no conformidades. Muestre una estructura práctica: propósito y alcance; estándares de codificación y documentación; calendario de revisiones e inspecciones; estrategia de pruebas por nivel y técnica; métricas con umbrales tomadas del árbol GQM; gestión de defectos; gestión de la configuración; y registros de calidad. Destaque los criterios de entrada y salida, porque convierten el plan en controles: no se libera una versión con defectos críticos abiertos ni con cobertura de ramas inferior al umbral acordado en los módulos críticos. Insista en la proporcionalidad: un plan excesivo para un sitio informativo desperdicia recursos y uno ligero para un sistema de pagos es una negligencia. Anuncie la tarea: elaborar este plan para el software del Proyecto Integrador."
+        }
+      ],
+      "reading": {
+        "title": "Medir para mejorar: calidad del producto y del proceso de software",
+        "minutes": 40,
+        "content": "## La calidad como requisito, no como deseo\n\nEn muchos proyectos la calidad aparece como un adjetivo —«sistema robusto, seguro y amigable»— que nadie puede verificar. La ingeniería de software madura la trata como un conjunto de **requisitos medibles** que se especifican al inicio, se construyen en cada actividad y se verifican con evidencia. Esa disciplina tiene un beneficio económico directo: el modelo de costo de la calidad muestra que invertir en prevención y evaluación reduce las fallas externas, que son las más costosas porque incluyen soporte, compensaciones, sanciones y pérdida de reputación.\n\n## El modelo de ISO/IEC 25010:2023\n\nLa norma ISO/IEC 25010, revisada en 2023, define nueve características de calidad del producto:\n\n| Característica | Pregunta que responde |\n|---|---|\n| Adecuación funcional | ¿Hace lo que debe, de forma completa y correcta? |\n| Eficiencia de desempeño | ¿Responde a tiempo con los recursos disponibles? |\n| Compatibilidad | ¿Coexiste e intercambia datos con otros sistemas? |\n| Capacidad de interacción | ¿Los usuarios lo aprenden y operan con facilidad? |\n| Fiabilidad | ¿Está disponible y tolera fallas? |\n| Seguridad | ¿Protege la información frente a accesos indebidos? |\n| Mantenibilidad | ¿Se modifica y prueba sin introducir errores? |\n| Flexibilidad | ¿Se adapta a nuevos entornos y escalas? |\n| Protección frente a daños | ¿Evita poner en peligro a personas o bienes? |\n\nCada característica se concreta en subcaracterísticas y medidas, como las que propone ISO/IEC 25023. El enfoque GQM de Basili ayuda a elegir solo las métricas que responden preguntas vinculadas con objetivos reales.\n\n## Métricas esenciales y su interpretación\n\n```\nComplejidad ciclomática:  V(G) = E − N + 2P   (decisiones simples + 1)\nDensidad de defectos:     DD = defectos confirmados / KLOC\nEficacia de remoción:     DRE = D_antes / (D_antes + D_90 días después)\nDisponibilidad:           A = MTBF / (MTBF + MTTR)\nPresupuesto de error:     PE = (1 − SLO) × periodo\n```\n\nConsidere una billetera digital peruana con 120 000 líneas de código. En la última versión se registraron 240 defectos en revisiones y pruebas, y los usuarios reportaron 60 en los noventa días siguientes. La DRE fue 240 / 300 = 80 %, lejos del 95 % de las organizaciones líderes que reporta Capers Jones. La densidad total fue 300 / 120 = 2,5 defectos por KLOC. Si el servicio de transferencias tuvo un MTBF de 720 horas y un MTTR de 4 horas, su disponibilidad fue 720 / 724 = 99,45 %, por debajo de un SLO de 99,5 %, cuyo presupuesto mensual es 0,005 × 720 = 3,6 horas.\n\nLas métricas deben leerse juntas. Una cobertura de pruebas de 78 % parece aceptable, pero si el módulo de transferencias tiene una complejidad ciclomática de 47, hay decenas de caminos sin probar donde se concentran los defectos. Y conviene recordar la ley de Goodhart: cuando una medida se convierte en meta, deja de ser una buena medida.\n\n## Calidad del proceso: madurez y normas\n\nLa calidad del producto depende de la calidad del proceso que lo produce. **CMMI**, hoy gestionado por ISACA, describe cinco niveles de madurez, desde el inicial, donde el éxito depende de individuos, hasta el de optimización, donde se mejora con base en datos. **ISO 9001:2015**, interpretada para el software por **ISO/IEC 90003:2018**, exige un sistema de gestión de la calidad con enfoque a procesos y pensamiento basado en riesgos. Para las entidades muy pequeñas, de hasta veinticinco personas —la mayoría de las empresas de software del país—, **ISO/IEC 29110** ofrece un perfil básico con dos procesos: gestión de proyectos e implementación de software.\n\n## Revisiones, pruebas y plan de calidad\n\nLas inspecciones formales de Fagan y las revisiones entre pares detectan defectos de requisitos y diseño que las pruebas encuentran tarde. La serie ISO/IEC/IEEE 29119 organiza las pruebas en procesos organizacionales, de gestión y dinámicos, y promueve técnicas como particiones de equivalencia y valores límite. Todo ello se integra en un **plan de aseguramiento de la calidad**, guiado por IEEE 730, con criterios de entrada y salida que funcionan como controles.\n\n## Calidad proporcional al riesgo\n\nNo todos los sistemas requieren el mismo rigor. Un sitio informativo y el motor de pagos de una entidad supervisada por la SBS no merecen el mismo plan. El auditor evalúa precisamente esa proporcionalidad: si el esfuerzo de aseguramiento es coherente con el impacto que tendría una falla sobre los usuarios, la organización y el cumplimiento regulatorio."
+      },
+      "case": {
+        "title": "Caso: BilleteraYa y la actualización que congeló los pagos de quincena",
+        "content": "**La empresa.** BilleteraYa (organización ficticia con fines académicos) es una empresa emisora de dinero electrónico autorizada por la SBS al amparo de la Ley 29985. Su aplicación móvil tiene 1,2 millones de usuarios activos, en su mayoría trabajadores independientes y comerciantes de Lima, Arequipa y Piura que reciben y envían pagos inmediatos. El equipo de tecnología suma 28 desarrolladores, organizados en cinco equipos ágiles, y 3 analistas de pruebas. Se libera una versión cada dos semanas.\n\n**El incidente.** El viernes 15 de agosto, a las 18:10, se liberó la versión 4.12, que incluía una mejora en el cálculo de comisiones. A las 18:40 comenzaron los rechazos de transferencias. El servicio se restableció a las 22:20, tras revertir la versión: 3 horas y 40 minutos de interrupción en plena quincena. Se rechazaron 214 000 operaciones, la empresa recibió 6 800 reclamos y el hecho fue tendencia en redes sociales. La SBS solicitó un informe del incidente.\n\n**Los datos de calidad.** La gerente de calidad, Carla Ríos, reunió estas cifras de las últimas cuatro versiones:\n\n| Versión | Defectos antes de liberar | Defectos en producción (90 días) | Cobertura de ramas |\n|---|---|---|---|\n| 4.9 | 212 | 16 | 81 % |\n| 4.10 | 198 | 24 | 80 % |\n| 4.11 | 176 | 33 | 79 % |\n| 4.12 | 143 | 34 | 78 % |\n\nEl análisis de causa raíz mostró que el 62 % de los defectos en producción se originó en requisitos ambiguos y que la función principal del módulo de transferencias tiene una complejidad ciclomática de 47. Las revisiones de código se aprueban, en promedio, en 7 minutos para cambios de más de 900 líneas. El SLO interno de disponibilidad de transferencias es de 99,5 % mensual.\n\n**Las posiciones.** El director de tecnología, Diego Paredes, propone eliminar el equipo de pruebas manuales y «confiar en la automatización», porque las pruebas retrasan las entregas. El gerente general quiere obtener una evaluación CMMI de nivel 3 en seis meses para presentarla a un fondo de inversión. Carla sostiene que el problema no es de pruebas, sino de proceso, y que una evaluación apresurada solo agregaría documentos.\n\n**El dilema.** El directorio pide a Carla una recomendación en dos semanas: qué cambiar en el proceso, cómo medir la mejora y si conviene perseguir la evaluación CMMI ahora.",
+        "questions": [
+          "Calcule la DRE de cada versión y el consumo del presupuesto de error de agosto. ¿Qué tendencia revelan y qué conclusión extrae?",
+          "Identifique al menos tres causas de proceso del incidente y relaciónelas con las revisiones, los requisitos y la complejidad del código.",
+          "Evalúe la propuesta de eliminar las pruebas manuales. ¿Qué evidencia necesitaría para aceptarla o rechazarla?",
+          "¿Recomendaría perseguir CMMI de nivel 3 en seis meses? Compare esa opción con alternativas como ISO/IEC 29110 o mejoras focalizadas.",
+          "Proponga tres criterios de salida medibles para las próximas liberaciones y explique cómo los auditaría."
+        ]
+      },
+      "assignment": {
+        "title": "Plan de aseguramiento de la calidad y medición de un producto de software",
+        "instructions": "**Objetivo:** especificar, medir y planificar la calidad de un producto de software real. Se recomienda usar el software que desarrolla en el Proyecto Integrador de Software; si no es posible, el docente asignará un repositorio de código abierto.\n\n**Qué entregar:**\n\n1. **Ocho requisitos de calidad medibles** basados en ISO/IEC 25010:2023, con característica, subcaracterística, medida, umbral, condiciones y método de verificación.\n2. **Árbol GQM** para dos objetivos de calidad prioritarios.\n3. **Medición real del producto:** complejidad ciclomática de las cinco funciones más complejas, cobertura de ramas, densidad de defectos y, si hay datos, DRE y disponibilidad. Indique la herramienta usada, adjunte evidencias e interprete cada resultado.\n4. **Plan de aseguramiento de la calidad** según IEEE 730: estándares, revisiones e inspecciones, estrategia de pruebas con técnicas de diseño (al menos diez casos con valores límite o tablas de decisión), métricas con umbrales, gestión de defectos y criterios de entrada y salida.\n5. **Autoevaluación del proceso** con el perfil básico de ISO/IEC 29110: productos de trabajo existentes, brechas y tres mejoras priorizadas.\n\n**Formato:** informe PDF de 10 a 14 páginas con anexos de medición. Trabajo individual o con el mismo equipo del Proyecto Integrador.\n\n**Criterios:** verificabilidad de los requisitos, rigor y honestidad de la medición, proporcionalidad del plan al riesgo y pertinencia de las mejoras propuestas.",
+        "rubric": [
+          { "name": "Requisitos de calidad medibles y árbol GQM", "points": 5 },
+          { "name": "Medición del producto e interpretación de métricas", "points": 5 },
+          { "name": "Plan de aseguramiento de la calidad proporcional al riesgo", "points": 6 },
+          { "name": "Autoevaluación del proceso y mejoras priorizadas", "points": 4 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: calidad del producto, métricas y madurez de procesos",
+        "questions": [
+          {
+            "prompt": "¿Cuál de las siguientes formulaciones es un requisito de calidad verificable para un sistema de citas médicas?",
+            "options": ["El sistema debe ser rápido y amigable", "El sistema debe tener una interfaz moderna e intuitiva", "El 95 % de las reservas se confirma en menos de 3 segundos con 300 usuarios concurrentes", "El sistema debe usar la tecnología más eficiente del mercado"],
+            "correct": 2,
+            "explanation": "Solo esa opción define medida, umbral y condiciones de medición, lo que permite declarar conformidad o no conformidad con evidencia."
+          },
+          {
+            "prompt": "Una función tiene cuatro sentencias if simples y un bucle while, sin condiciones compuestas. ¿Cuál es su complejidad ciclomática?",
+            "options": ["4", "5", "6", "7"],
+            "correct": 2,
+            "explanation": "V(G) equivale al número de decisiones simples más uno: cinco decisiones, cuatro if y un while, más uno da seis caminos independientes."
+          },
+          {
+            "prompt": "Un equipo encontró 240 defectos en revisiones y pruebas, y los usuarios reportaron 60 en los 90 días posteriores a la liberación. ¿Cuál es la eficacia de remoción de defectos?",
+            "options": ["75 %", "80 %", "25 %", "90 %"],
+            "correct": 1,
+            "explanation": "DRE = 240 / (240 + 60) = 240 / 300 = 0,80; es decir, el 80 % de los defectos se eliminó antes de llegar al usuario."
+          },
+          {
+            "prompt": "Un servicio tiene un MTBF de 720 horas y un MTTR de 4 horas. ¿Cuál es su disponibilidad aproximada?",
+            "options": ["99,45 %", "99,99 %", "99,90 %", "98,50 %"],
+            "correct": 0,
+            "explanation": "A = MTBF / (MTBF + MTTR) = 720 / 724 = 0,9945, es decir, aproximadamente 99,45 %."
+          },
+          {
+            "prompt": "Un equipo revisa el documento de diseño para comprobar que cumple la especificación de requisitos aprobada. ¿Qué actividad está realizando?",
+            "options": ["Validación", "Verificación", "Prueba de aceptación del usuario", "Auditoría de cumplimiento regulatorio"],
+            "correct": 1,
+            "explanation": "Verificar es comprobar que un producto de trabajo cumple su especificación; validar es confirmar con el usuario que el producto satisface su necesidad real."
+          },
+          {
+            "prompt": "Una empresa de software de doce personas quiere demostrar procesos ordenados ante clientes corporativos con un modelo proporcional a su tamaño. ¿Qué referencia es más adecuada para empezar?",
+            "options": ["CMMI de nivel 5", "ISO/IEC 29110, perfil básico", "ISO/IEC 20000-1", "ISO 22301"],
+            "correct": 1,
+            "explanation": "ISO/IEC 29110 se diseñó para entidades muy pequeñas de hasta veinticinco personas; CMMI de nivel 5 es desproporcionado y las otras normas tratan servicios y continuidad."
+          },
+          {
+            "prompt": "En el modelo de costo de la calidad, ¿cómo se clasifica la capacitación de los desarrolladores en estándares de codificación?",
+            "options": ["Costo de prevención", "Costo de evaluación", "Costo de falla interna", "Costo de falla externa"],
+            "correct": 0,
+            "explanation": "La capacitación busca evitar que los defectos se introduzcan, por lo que es un costo de prevención; las pruebas son costos de evaluación y las correcciones, costos de falla."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Auditoría de servicios, continuidad, terceros y datos personales; informe final",
+      "description": "Al finalizar la unidad, el estudiante audita la gestión de servicios de TI, la continuidad del negocio, los proveedores en la nube y el tratamiento de datos personales, redacta hallazgos con sus atributos y sustenta un informe integral de auditoría de sistemas con plan de acción, plan de mejora de la calidad y seguimiento.",
+      "topics": [
+        "Auditoría de la gestión de servicios de TI con ISO/IEC 20000-1 e ITIL 4",
+        "Auditoría de la continuidad del negocio y de la recuperación ante desastres con ISO 22301",
+        "Auditoría de terceros y de la nube: informes SOC 1, SOC 2 e ISAE 3402",
+        "Auditoría del tratamiento de datos personales según la Ley 29733 y su reglamento",
+        "Hallazgos, informe de auditoría, plan de acción y seguimiento",
+        "Proyecto integrador: auditoría de sistemas con plan de mejora de la calidad"
+      ],
+      "slides": [
+        {
+          "title": "Auditoría de la gestión de servicios de TI",
+          "bullets": [
+            "ISO/IEC 20000-1:2018 establece los requisitos de un sistema de gestión del servicio; ITIL 4 ofrece prácticas de referencia",
+            "Pruebas clave: catálogo y acuerdos de nivel de servicio, incidentes, problemas, solicitudes y relación con proveedores",
+            "Evidencia desde la herramienta de mesa de servicio: población completa de tickets, tiempos, reaperturas y escalamientos",
+            "Pregunta central: ¿el servicio entregado coincide con lo acordado y con lo reportado a la dirección?"
+          ],
+          "notes": "En Gestión de Proyectos de TI estudiaron la transición al servicio con ITIL 4; ahora auditaremos el servicio en operación. ISO/IEC 20000-1 es certificable y exige, entre otros, gestión de niveles de servicio, de incidentes, de problemas, de cambios y de proveedores, además de un ciclo de mejora. El auditor obtiene de la herramienta de mesa de servicio la población completa de tickets del periodo y la analiza con las técnicas de la unidad 2: tiempos de atención frente al acuerdo, reaperturas, tickets cerrados sin solución y escalamientos. Un ejemplo frecuente: un banco contrata a un proveedor de soporte para sus agencias con un acuerdo de cuatro horas de solución; el proveedor reporta 97 % de cumplimiento, pero al analizar los datos el auditor descubre que muchos tickets se pausaban en estado de espera del usuario para detener el reloj. Pregunte qué prueba diseñarían para detectar esa práctica y cómo la redactarían como hallazgo."
+        },
+        {
+          "title": "Indicadores de servicio que el auditor debe recalcular",
+          "bullets": [
+            "Cumplimiento del acuerdo de nivel de servicio por prioridad, tiempo medio de solución y resolución en el primer contacto",
+            "Problemas abiertos y su antigüedad, incidentes recurrentes y tasa de cambios exitosos",
+            "Recalcule los indicadores con los datos fuente; no acepte el tablero del proveedor o del área como evidencia final",
+            "Revise las reglas que alteran la medición: pausas del reloj, reclasificación de prioridades y cierre automático de tickets"
+          ],
+          "notes": "La lección más importante es que los indicadores son afirmaciones de la gerencia y, como tales, deben verificarse. Muestre un ejemplo con datos: el tablero indica 96 % de cumplimiento en incidentes de prioridad alta; el auditor exporta los 1 240 tickets del trimestre y recalcula el tiempo transcurrido sin descontar las pausas; el cumplimiento real resulta 81 %. Explique otras prácticas que distorsionan la medición: bajar la prioridad de un incidente después de que venció el plazo, dividir un incidente grande en varios pequeños o cerrar tickets automáticamente si el usuario no responde en 24 horas. Recuerde que, como en toda prueba con datos, primero se valida la integridad de la extracción. Conecte con la relación contractual: si el contrato prevé penalidades por incumplimiento, el hallazgo tiene un efecto económico cuantificable que fortalece la recomendación. Pida a los estudiantes calcular el cumplimiento de veinte tickets de ejemplo con y sin pausas, y discutir cuál refleja mejor la experiencia del usuario."
+        },
+        {
+          "title": "Auditoría de la continuidad del negocio",
+          "bullets": [
+            "ISO 22301:2019 exige análisis de impacto, evaluación de riesgos, estrategias, planes, ejercicios y mejora continua",
+            "RTO: tiempo objetivo de recuperación; RPO: pérdida máxima tolerable de datos; MTPD: periodo máximo tolerable de interrupción",
+            "En el sistema financiero, la Resolución SBS 877-2020 exige un sistema de gestión de continuidad del negocio con pruebas periódicas",
+            "El auditor contrasta los objetivos del análisis de impacto con la capacidad técnica realmente demostrada"
+          ],
+          "notes": "Explique la lógica de la continuidad desde el análisis de impacto en el negocio: para cada proceso crítico se determina cuánto tiempo puede estar detenido antes de causar daños inaceptables y cuántos datos puede perder. De ahí salen el RTO y el RPO, y el RTO debe ser menor que el periodo máximo tolerable. El auditor verifica tres coherencias. Primera, entre el análisis de impacto y la estrategia: si el RPO del sistema de créditos es de una hora, un respaldo diario no basta. Segunda, entre la estrategia y la capacidad técnica: si se declara un sitio alterno con recuperación en cuatro horas, debe existir evidencia de pruebas que lo logren. Tercera, entre los planes y las personas: los responsables conocen su rol y los contactos están actualizados. Use el contexto peruano: el riesgo sísmico de Lima y Callao, los huaicos que cortan carreteras y comunicaciones y los cortes eléctricos regionales. Pregunte qué escenarios priorizarían para una empresa con un solo centro de datos en Lima."
+        },
+        {
+          "title": "Pruebas de recuperación: de la teoría a la evidencia",
+          "bullets": [
+            "Tipos de prueba, de menor a mayor exigencia: revisión documental, ejercicio de mesa, simulación, prueba paralela e interrupción completa",
+            "Evidencia esperada: plan de prueba con objetivos, registro de tiempos, sistemas restaurados, validación del usuario y lecciones aprendidas",
+            "Brecha clave: RTO demostrado frente al RTO objetivo; por ejemplo, 11 horas reales frente a 4 comprometidas",
+            "Una prueba sin incidencias registradas suele indicar un alcance demasiado cómodo, no una recuperación perfecta"
+          ],
+          "notes": "Los planes de continuidad que nunca se prueban son documentos de esperanza. Describa los tipos de prueba con su costo y su realismo. El ejercicio de mesa reúne a los responsables para recorrer un escenario y detecta vacíos de roles y de comunicación. La simulación recupera sistemas en un entorno aislado. La prueba paralela levanta el sitio alterno y procesa transacciones sin detener el principal. La interrupción completa traslada la operación real, con riesgo alto. El auditor pide el plan de la prueba, el informe con tiempos medidos y las acciones derivadas. Ponga un ejemplo: la prueba anual de una clínica recuperó la historia clínica electrónica en once horas, frente a un RTO de cuatro, porque la restauración de la base de datos tardó más de lo calculado y faltaban credenciales en la bóveda. Ese resultado no es un fracaso de la prueba, sino su propósito. Pregunte qué sospecharía el auditor si cinco años de pruebas reportan cero incidencias y siempre el mismo escenario."
+        },
+        {
+          "title": "Auditoría de proveedores y servicios en la nube",
+          "bullets": [
+            "La responsabilidad sobre el riesgo no se terceriza: la organización responde ante clientes y reguladores por sus proveedores",
+            "Modelo de responsabilidad compartida: el proveedor asegura la infraestructura; el cliente, las identidades, la configuración y los datos",
+            "Revise debida diligencia, niveles de servicio, derecho a auditar, ubicación de los datos, subcontratistas y plan de salida",
+            "Fuentes de aseguramiento: informes SOC, certificaciones ISO/IEC 27001 y 27017, y la matriz de controles de la Cloud Security Alliance"
+          ],
+          "notes": "La migración a la nube y la tercerización trasladan la operación, pero no la responsabilidad. Una entidad supervisada que contrata un servicio de procesamiento en la nube sigue respondiendo ante la SBS y ante sus clientes si el proveedor falla. Explique el modelo de responsabilidad compartida con un ejemplo: en un servicio de infraestructura, el proveedor protege los centros de datos y el hipervisor, pero si el cliente deja un almacenamiento de objetos con acceso público, la filtración es responsabilidad del cliente. Recorra los puntos de revisión del contrato: niveles de servicio con penalidades, derecho a auditar o a recibir informes independientes, ubicación y transferencia de datos, notificación de incidentes, subcontratistas y un plan de salida que permita recuperar los datos en un formato utilizable. Mencione la matriz de controles de la Cloud Security Alliance como criterio de evaluación. Pregunte qué riesgos aparecen si el contrato no contempla la devolución de los datos al término del servicio."
+        },
+        {
+          "title": "Informes SOC 1, SOC 2 e ISAE 3402",
+          "bullets": [
+            "SOC 1 (SSAE 18 o ISAE 3402): controles del proveedor relevantes para la información financiera de sus clientes",
+            "SOC 2: criterios de servicios de confianza de seguridad, disponibilidad, integridad del procesamiento, confidencialidad y privacidad",
+            "Tipo I evalúa el diseño en una fecha; tipo II evalúa además la eficacia operativa durante un periodo, usualmente de 6 a 12 meses",
+            "Incluye controles complementarios de la entidad usuaria (CUEC) y puede excluir subservicios mediante el método de exclusión"
+          ],
+          "notes": "Cuando una organización no puede auditar directamente a su proveedor, recurre a informes de aseguramiento emitidos por un auditor independiente. Explique la diferencia entre SOC 1, orientado a la información financiera y útil para el auditor externo del cliente, y SOC 2, orientado a seguridad y disponibilidad, que es el que suelen pedir las áreas de TI y de riesgos. Insista en la diferencia entre tipo I y tipo II: un informe tipo I solo dice que los controles estaban bien diseñados en una fecha, mientras que el tipo II prueba que funcionaron durante un periodo. Para decisiones de confianza se requiere el tipo II. Explique dos conceptos que suelen pasarse por alto. Los controles complementarios de la entidad usuaria son los que el cliente debe operar para que el sistema sea seguro, como revisar los accesos de sus propios usuarios. Los subservicios, como el proveedor de nube que usa el proveedor de software, pueden quedar fuera del informe. Pregunte qué pasa si nadie en la organización implementa los controles complementarios."
+        },
+        {
+          "title": "Cómo leer un informe SOC 2 tipo II en seis pasos",
+          "bullets": [
+            "Primero, verificar que el sistema descrito y su alcance coincidan con el servicio contratado",
+            "Segundo, confirmar que el periodo cubre el nuestro o pedir una carta puente; tercero, revisar el tipo de opinión del auditor",
+            "Cuarto, analizar cada excepción en las pruebas, su causa y la respuesta de la gerencia del proveedor",
+            "Quinto, implementar y probar los controles complementarios de la entidad usuaria; sexto, evaluar los subservicios excluidos"
+          ],
+          "notes": "Convierta la teoría en un procedimiento práctico. Primero, el alcance: un informe que cubre un centro de datos del proveedor en otro país no sirve si nuestros datos se procesan en una región distinta. Segundo, el periodo: si el informe termina en junio y nuestro ejercicio cierra en diciembre, se pide una carta puente en la que el proveedor declara que no hubo cambios significativos. Tercero, la opinión: una opinión con salvedades indica que algún criterio no se cumplió. Cuarto, las excepciones: la sección de pruebas detalla, por ejemplo, que en tres de veinticinco altas de usuarios no se encontró aprobación; el auditor evalúa si ese control afecta nuestros riesgos y qué hizo el proveedor al respecto. Quinto, los controles complementarios: hay que asignarlos a responsables internos y probarlos. Sexto, los subservicios: si se excluyó al proveedor de infraestructura, debe obtenerse su propio informe. Entregue un extracto de informe anonimizado y pida a los grupos aplicar los seis pasos en quince minutos."
+        },
+        {
+          "title": "Auditoría del tratamiento de datos personales",
+          "bullets": [
+            "Ley 29733 y reglamento aprobado por D. S. 016-2024-JUS: principios de consentimiento, finalidad, proporcionalidad, calidad y seguridad",
+            "Obligaciones verificables: inscripción de bancos de datos, consentimiento informado, medidas de seguridad y atención de derechos ARCO",
+            "Los datos sensibles, como los de salud, exigen consentimiento expreso por escrito y medidas de seguridad reforzadas",
+            "Flujo transfronterizo: enviar datos a proveedores en el extranjero requiere garantías de un nivel adecuado de protección"
+          ],
+          "notes": "La protección de datos personales es hoy un objeto de auditoría propio. La Ley 29733, de 2011, y su nuevo reglamento, aprobado en 2024, establecen principios y obligaciones que el auditor puede verificar con evidencia. Explique los principios con ejemplos: una clínica que pide el DNI y el teléfono para una cita cumple la proporcionalidad; si además pide información sobre ingresos sin justificación, la vulnera. Revise las obligaciones: inscribir los bancos de datos en el Registro Nacional de Protección de Datos Personales; obtener un consentimiento libre, previo, expreso, inequívoco e informado; aplicar medidas de seguridad acordes con la sensibilidad de los datos; atender los derechos de acceso, rectificación, cancelación y oposición; y gestionar los incidentes. Subraye que los datos de salud son sensibles. Comente que el nuevo reglamento fortalece la gestión de incidentes y la figura del oficial de datos personales. Pregunte qué riesgos legales aparecen cuando una empresa almacena historias clínicas en un servicio en la nube ubicado en otro país."
+        },
+        {
+          "title": "Programa de pruebas de privacidad",
+          "bullets": [
+            "Inventario: comparar los bancos de datos reales del sistema con los inscritos en el registro nacional",
+            "Consentimiento: muestra de registros con evidencia del consentimiento, su fecha, sus finalidades y la versión del aviso de privacidad",
+            "Retención y eliminación: datos conservados más allá del plazo justificado y procedimientos de anonimización",
+            "Accesos y derechos: bitácoras de acceso a datos sensibles y atención de solicitudes ARCO dentro del plazo legal"
+          ],
+          "notes": "Construya con la clase un programa de pruebas concreto. Para el inventario, el auditor usa las técnicas de la unidad 2: consulta el diccionario de datos y las tablas que contienen DNI, teléfonos, correos o diagnósticos, y los compara con los bancos de datos inscritos. Para el consentimiento, selecciona una muestra aleatoria de registros de clientes y verifica que exista evidencia del consentimiento, con fecha y finalidad, y que la versión del aviso coincida con la vigente en esa fecha. Para la retención, busca datos de excliente que debieron eliminarse o anonimizarse. Para los accesos, analiza las bitácoras de consulta de historias clínicas en busca de patrones anómalos, como un usuario de admisión que consultó cientos de historias de pacientes que no atendió o la historia de una persona conocida públicamente. Para los derechos, revisa una muestra de solicitudes y su tiempo de respuesta. Pregunte qué evidencia sería suficiente para demostrar que un consentimiento obtenido mediante una aplicación móvil fue realmente informado."
+        },
+        {
+          "title": "Del dato al hallazgo: los atributos de una observación",
+          "bullets": [
+            "Condición: lo que el auditor encontró, con cifras; criterio: la norma, política o buena práctica que debía cumplirse",
+            "Causa: la razón de fondo de la diferencia; efecto: el riesgo o daño real o potencial, cuantificado cuando sea posible",
+            "Recomendación: acción concreta dirigida a la causa, con responsable sugerido, y no a los síntomas",
+            "Ejemplo: 9 cesados activos (condición), política de baja en 24 horas (criterio), sin integración con Recursos Humanos (causa)"
+          ],
+          "notes": "Un hallazgo bien construido convence; uno mal construido se discute indefinidamente. Presente los atributos que usan la Contraloría y las normas profesionales: condición, criterio, causa y efecto, a los que se añade la recomendación. Desarrolle el ejemplo completo. Condición: nueve trabajadores cesados mantenían cuentas activas en el ERP al 31 de diciembre, y una de ellas registró un proveedor dos meses después del cese. Criterio: la política de accesos exige deshabilitar la cuenta dentro de las 24 horas del cese. Causa: no existe una comunicación automática de Recursos Humanos a TI; la baja depende de un correo que a veces no se envía. Efecto: riesgo de transacciones no autorizadas; el proveedor registrado recibió pagos por S/ 287 000 que están en investigación. Recomendación: integrar el sistema de planillas con el directorio para deshabilitar cuentas automáticamente y revisar cada mes las excepciones. Pida a los estudiantes identificar el atributo débil de tres hallazgos mal redactados."
+        },
+        {
+          "title": "Calificación y priorización de hallazgos",
+          "bullets": [
+            "Califique cada hallazgo como alto, medio o bajo según impacto y probabilidad, con criterios definidos antes del trabajo de campo",
+            "Agrupe los hallazgos con causa común: una recomendación estructural vale más que diez parches",
+            "Evite recomendaciones genéricas como «capacitar al personal» o «mejorar los controles»; deben ser específicas y verificables",
+            "Vincule la calificación con el apetito de riesgo aprobado por el directorio y con las exigencias del regulador"
+          ],
+          "notes": "Un informe con cuarenta hallazgos de igual peso paraliza a la gerencia. La calificación ayuda a priorizar. Explique cómo se define una escala antes del trabajo de campo, para no calificar según la presión del auditado: alto, si puede causar pérdidas significativas, sanciones regulatorias o interrupciones de procesos críticos; medio, si afecta la eficiencia o el cumplimiento de políticas internas con impacto moderado; bajo, si es una oportunidad de mejora. Luego enseñe a buscar causas comunes: cesados activos, accesos excesivos de practicantes y cuentas genéricas pueden compartir la misma causa, la ausencia de un proceso de gestión de identidades, y merecen una recomendación integral. Analice recomendaciones débiles: capacitar al personal no dice qué, a quién ni cómo se verificará. Una recomendación fuerte tiene acción, responsable sugerido y criterio de cierre. Pida a cada grupo reescribir tres recomendaciones genéricas para que sean específicas, medibles y verificables."
+        },
+        {
+          "title": "Estructura del informe de auditoría de sistemas",
+          "bullets": [
+            "Resumen ejecutivo de una página: conclusión general, hallazgos de mayor riesgo y decisiones que se esperan del directorio",
+            "Cuerpo: objetivos, alcance y limitaciones, criterios, metodología, hallazgos detallados y comentarios de la gerencia",
+            "Anexos: detalle de pruebas, muestras, consultas aplicadas y glosario; distribución restringida y confidencial",
+            "Lenguaje claro, objetivo y basado en hechos: ninguna afirmación sin respaldo en los papeles de trabajo"
+          ],
+          "notes": "La norma de informe de ITAF exige comunicar con claridad el alcance, los objetivos, el periodo, la naturaleza del trabajo, los hallazgos, las conclusiones y las recomendaciones, así como las limitaciones o reservas. Explique que el informe tiene dos audiencias: el directorio, que leerá una página y decidirá, y la gerencia, que necesita detalle para corregir. El resumen ejecutivo debe responder en lenguaje no técnico: ¿podemos confiar en nuestros sistemas?, ¿cuáles son los tres riesgos más graves? y ¿qué decisiones necesitamos? Los comentarios de la gerencia se incluyen porque el auditado tiene derecho a expresar su posición; si discrepa, el auditor la presenta y explica por qué mantiene el hallazgo. Explique que las limitaciones de alcance, como la negativa a entregar datos, deben revelarse. Muestre dos versiones del mismo resumen ejecutivo, una técnica y confusa y otra clara, y pida a la clase identificar qué hace eficaz a la segunda."
+        },
+        {
+          "title": "Plan de acción, seguimiento y auditoría continua",
+          "bullets": [
+            "El plan de acción define, por hallazgo, la acción comprometida, el responsable, la fecha y la evidencia de cierre",
+            "El seguimiento verifica la implementación con evidencia; si la dirección acepta un riesgo alto, la aceptación debe formalizarse",
+            "La auditoría continua programa pruebas periódicas con scripts y tableros que alertan desviaciones casi en tiempo real",
+            "La IA amplía el análisis, pero exige auditar sus propios riesgos; ISO/IEC 42001:2023 orienta la gestión de sistemas de IA"
+          ],
+          "notes": "El informe no es el final: su valor depende de que los hallazgos se corrijan. La norma de seguimiento de ITAF exige monitorear si la gerencia implementó las acciones o si la alta dirección asumió formalmente el riesgo de no hacerlo. Explique el ciclo: el auditado propone un plan, el auditor evalúa si las acciones atacan la causa, se registran en un sistema de seguimiento y, al vencer el plazo, el auditor verifica con evidencia. Discuta el caso en que la gerencia decide no implementar una recomendación de riesgo alto: el auditor debe asegurarse de que esa aceptación sea formal, informada y del nivel jerárquico adecuado, y escalarla al comité de auditoría si excede el apetito de riesgo. Presente la auditoría continua: los scripts de la unidad 2 pueden ejecutarse cada semana y alimentar un tablero. Cierre con la inteligencia artificial: acelera el análisis, pero introduce riesgos de sesgo, explicabilidad y privacidad que también deben auditarse. Pregunte qué evidencia pedirían sobre un modelo que aprueba créditos."
+        },
+        {
+          "title": "Proyecto integrador: auditoría de sistemas con plan de mejora",
+          "bullets": [
+            "Objeto: un sistema real o simulado de una organización peruana, preferentemente el del Proyecto Integrador o el de las prácticas",
+            "Integra la planificación de la unidad 1, las pruebas con datos de la unidad 2, la calidad de la unidad 3 y la continuidad, terceros y privacidad",
+            "Producto: informe con resumen ejecutivo, al menos seis hallazgos con sus atributos y un plan de acción y de mejora de la calidad",
+            "Sustentación de 15 minutos ante un comité de auditoría simulado que formulará preguntas y objeciones"
+          ],
+          "notes": "Presente el proyecto final como la síntesis del curso. Cada equipo auditará un sistema concreto: el software que construye en el Proyecto Integrador de Software; un sistema de la organización donde realizará sus Experiencias Formativas, con autorización escrita y datos anonimizados; o el caso simulado que proporciona el docente. Explique los entregables y el cronograma: en la semana 13 se aprueba el alcance; en la 14 se ejecutan las pruebas de continuidad, terceros y privacidad; en la 15 se revisa un borrador entre pares con una lista de verificación; y en la 16 se entrega el informe y se sustenta. Describa la dinámica de la sustentación: el docente y dos estudiantes asumen los papeles de presidente del comité de auditoría, gerente de TI y gerente general, y plantean objeciones reales, como que el hallazgo es exagerado o que no hay presupuesto. Recalque los principios éticos: confidencialidad, autorización y uso de datos ficticios o anonimizados. Muestre la rúbrica y resuelva dudas."
+        }
+      ],
+      "reading": {
+        "title": "Más allá de la frontera: continuidad, terceros, privacidad y comunicación de resultados",
+        "minutes": 40,
+        "content": "## La organización extendida\n\nLas organizaciones peruanas operan cada vez más a través de terceros: la planilla en un servicio de nómina en la nube, la historia clínica en una plataforma especializada, la facturación electrónica en un operador de servicios electrónicos. Esa extensión aporta eficiencia, pero no traslada la responsabilidad. Ante sus clientes, la SBS o la Autoridad Nacional de Protección de Datos Personales, la organización responde por lo que hacen sus proveedores. Por eso el auditor de sistemas ya no puede limitarse a lo que ocurre dentro del centro de datos propio.\n\n## Continuidad: probar, no suponer\n\nLa norma ISO 22301:2019 organiza la continuidad del negocio a partir del análisis de impacto, que fija para cada proceso crítico el tiempo objetivo de recuperación (RTO) y el punto objetivo de recuperación (RPO). El auditor contrasta esos objetivos con la capacidad demostrada:\n\n```\nBrecha de RTO = RTO demostrado en la prueba − RTO objetivo\nEjemplo: 11 h − 4 h = 7 h de brecha (no conformidad)\n\nPérdida máxima de datos ≈ intervalo entre respaldos o réplicas\nRespaldo diario a las 23:00 con RPO de 1 h → hasta 24 h de pérdida potencial\n```\n\nUn plan que nunca se probó, o que se prueba siempre con el mismo escenario cómodo, no ofrece seguridad. En el sistema financiero, la Resolución SBS 877-2020 exige gestionar la continuidad con pruebas periódicas; en los demás sectores, el riesgo sísmico, los huaicos y los ataques de ransomware imponen la misma exigencia por la vía de los hechos.\n\n## Aseguramiento de terceros\n\nCuando no es posible auditar al proveedor, se recurre a informes de aseguramiento independientes. Un **SOC 1** (SSAE 18 o ISAE 3402) cubre controles relevantes para la información financiera del cliente; un **SOC 2** evalúa los criterios de servicios de confianza: seguridad, disponibilidad, integridad del procesamiento, confidencialidad y privacidad. Solo el **tipo II** prueba la eficacia operativa durante un periodo. Leerlo bien exige verificar alcance y periodo, revisar la opinión y cada excepción, implementar los controles complementarios de la entidad usuaria y obtener informes de los subservicios excluidos. Un informe archivado sin análisis es una falsa tranquilidad.\n\n## Datos personales como objeto de auditoría\n\nLa Ley 29733 y su reglamento, aprobado por el Decreto Supremo 016-2024-JUS, establecen obligaciones verificables: inscribir los bancos de datos, obtener consentimiento informado, aplicar medidas de seguridad proporcionales a la sensibilidad de los datos, atender los derechos de acceso, rectificación, cancelación y oposición, y gestionar los incidentes de seguridad. Los datos de salud son sensibles y exigen protección reforzada. El auditor combina pruebas documentales con análisis de datos: compara las tablas que contienen datos personales con los bancos inscritos, verifica el consentimiento en una muestra de registros y analiza bitácoras de acceso en busca de consultas injustificadas.\n\n## Anatomía de un hallazgo\n\nUn hallazgo sólido tiene atributos que el lector reconoce de inmediato:\n\n> **Condición:** 9 cuentas de trabajadores cesados seguían activas al 31/12/2025; una registró un proveedor dos meses después del cese.\n>\n> **Criterio:** la política de accesos exige deshabilitar la cuenta en un máximo de 24 horas desde el cese.\n>\n> **Causa:** la baja depende de un correo manual de Recursos Humanos, sin integración con el directorio.\n>\n> **Efecto:** riesgo de transacciones no autorizadas; el proveedor recibió pagos por S/ 287 000, hoy en investigación.\n>\n> **Recomendación:** integrar planillas con el directorio para deshabilitar cuentas automáticamente y revisar las excepciones cada mes.\n\nLa recomendación ataca la causa, no el síntoma. «Capacitar al personal» rara vez lo hace.\n\n## Un informe que se lee y se usa\n\nEl informe de auditoría tiene dos audiencias. El directorio necesita un resumen ejecutivo de una página que responda si puede confiar en sus sistemas, cuáles son los riesgos más graves y qué decisiones se esperan de él. La gerencia necesita el detalle: objetivos, alcance y limitaciones, criterios, metodología, hallazgos calificados y sus propios comentarios. Todo debe estar respaldado en papeles de trabajo.\n\n## Seguimiento y auditoría continua\n\nEl valor de una auditoría se mide por lo que cambia. Cada hallazgo genera un compromiso con responsable, fecha y evidencia de cierre, que el auditor verifica al vencimiento. Si la dirección decide no actuar frente a un riesgo alto, esa aceptación debe ser formal y escalarse al comité de auditoría cuando exceda el apetito de riesgo. Los scripts desarrollados durante la auditoría pueden programarse para ejecutarse periódicamente, lo que convierte una revisión anual en un monitoreo continuo."
+      },
+      "case": {
+        "title": "Caso: Clínica Inti Salud, la nube y el informe que la gerencia quería suavizar",
+        "content": "**La organización.** Clínica Inti Salud (organización ficticia con fines académicos) atiende a 180 000 pacientes al año en cuatro sedes de Lima y Callao. En 2024 migró su historia clínica electrónica a MediNube, un proveedor de software como servicio con sede en Chile que aloja la plataforma en un centro de datos de un gran proveedor de nube en São Paulo. La clínica negocia un contrato con una entidad prestadora de salud que representaría el 30 % de sus ingresos y que exige evidencias de seguridad y continuidad.\n\n**La auditoría.** El comité de auditoría encargó una auditoría de sistemas a una consultora. La auditora líder, Patricia Quispe, ha reunido esta evidencia:\n\n- MediNube entregó un informe SOC 2 tipo II de enero a junio de 2025, con opinión sin salvedades, pero con tres excepciones: dos altas de administradores sin aprobación y una prueba de restauración no ejecutada en el trimestre. El informe excluye al proveedor de infraestructura y lista ocho controles complementarios de la entidad usuaria; la clínica no ha asignado responsables para ninguno.\n- El análisis de impacto fija un RTO de 4 horas para la historia clínica. En la única prueba realizada, en marzo, la recuperación tomó 11 horas.\n- El contrato con MediNube no incluye derecho a auditar ni un plan de salida que garantice la devolución de los datos en un formato utilizable.\n- El banco de datos de pacientes está inscrito ante la autoridad de protección de datos, pero no se documentó el flujo transfronterizo hacia Chile y Brasil.\n- El análisis de bitácoras reveló que dos usuarios de admisión consultaron 1 420 historias clínicas de pacientes que no atendieron, incluida la de una conocida presentadora de televisión.\n- Hay 14 trabajadores cesados con cuenta activa en la plataforma, porque las bajas las ejecuta MediNube a pedido, por correo.\n\n**La presión.** Una semana antes de la sesión del directorio, el gerente general, Óscar Villanueva, se reúne con Patricia. Le pide calificar los hallazgos como «oportunidades de mejora», eliminar la mención a la presentadora y presentar el informe después de firmar el contrato con la entidad prestadora de salud. Argumenta que los problemas son del proveedor y no de la clínica, y que un informe duro pondría en riesgo cientos de empleos.\n\n**El dilema.** Patricia debe decidir cómo calificar y priorizar los hallazgos, cómo responder a la solicitud del gerente, qué comunicar al comité de auditoría y cuándo, y qué recomendaciones permitirían a la clínica corregir los problemas sin perder la oportunidad comercial.",
+        "questions": [
+          "Aplique los seis pasos de lectura al informe SOC 2 tipo II de MediNube. ¿Qué riesgos residuales quedan para la clínica?",
+          "Redacte el hallazgo sobre los accesos indebidos a historias clínicas con sus cinco atributos y califique su severidad.",
+          "¿Qué obligaciones de la Ley 29733 y de su reglamento podrían estar incumpliéndose? ¿Qué acciones inmediatas recomendaría?",
+          "¿Cómo debe responder Patricia a la solicitud del gerente general? Fundamente su decisión en la independencia y la ética profesional.",
+          "Proponga un plan de acción priorizado de seis medidas, con responsables y plazos, que permita avanzar en la negociación sin ocultar riesgos."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: informe de auditoría de sistemas con plan de mejora de la calidad",
+        "instructions": "**Objetivo:** realizar y comunicar una auditoría integral de un sistema de información, integrando lo aprendido en las cuatro unidades. El objeto puede ser el software del Proyecto Integrador, un sistema de su centro de Experiencias Formativas (con autorización escrita y datos anonimizados) o el caso simulado del docente.\n\n**Qué entregar:**\n\n1. **Resumen ejecutivo** de una página dirigido al directorio, con la conclusión general y los tres riesgos principales.\n2. **Objetivos, alcance y limitaciones, criterios y metodología**, actualizando el memorando de la unidad 1.\n3. **Al menos seis hallazgos** con condición, criterio, causa, efecto cuantificado y recomendación, calificados como alto, medio o bajo y respaldados por pruebas con datos de la unidad 2 o mediciones de calidad de la unidad 3.\n4. **Evaluación específica** de la continuidad (RTO y RPO frente a la capacidad demostrada), de un proveedor o servicio en la nube (contrato o informe SOC 2) y del cumplimiento de la Ley 29733.\n5. **Plan de acción y de mejora de la calidad** con acciones, responsables, plazos, indicadores y evidencia de cierre.\n6. **Anexos:** papeles de trabajo, consultas o scripts y matriz de seguimiento.\n7. **Sustentación** de 15 minutos ante un comité de auditoría simulado, seguida de 10 minutos de preguntas.\n\n**Formato:** informe PDF de 12 a 18 páginas más anexos y una presentación de apoyo. Trabajo en equipos de dos a cuatro integrantes.\n\n**Criterios:** solidez de la evidencia, calidad de los hallazgos, pertinencia de las recomendaciones, claridad del informe y desempeño en la sustentación.",
+        "rubric": [
+          { "name": "Hallazgos con atributos completos y evidencia suficiente", "points": 6 },
+          { "name": "Evaluación de continuidad, terceros y datos personales", "points": 4 },
+          { "name": "Resumen ejecutivo, conclusión y calificación de riesgos", "points": 3 },
+          { "name": "Plan de acción y de mejora de la calidad", "points": 4 },
+          { "name": "Sustentación y respuesta ante el comité", "points": 3 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: servicios, continuidad, terceros, privacidad e informe",
+        "questions": [
+          {
+            "prompt": "El área de riesgos necesita evidencia de que los controles de seguridad de un proveedor de software como servicio funcionaron durante todo el año. ¿Qué informe debe solicitar?",
+            "options": ["SOC 1 tipo I", "SOC 2 tipo I", "SOC 2 tipo II", "Certificado de vigencia de poder del proveedor"],
+            "correct": 2,
+            "explanation": "El SOC 2 cubre criterios de seguridad y disponibilidad, y solo el tipo II evalúa la eficacia operativa de los controles durante un periodo."
+          },
+          {
+            "prompt": "Un informe SOC 2 lista como control complementario de la entidad usuaria la revisión trimestral de los accesos de sus propios usuarios. ¿Qué implica para el cliente?",
+            "options": ["Que el proveedor ya ejecuta esa revisión por el cliente", "Que el cliente debe implementar y evidenciar esa revisión para que el sistema de control sea eficaz", "Que el control está fuera del alcance y no es relevante", "Que el auditor del proveedor encontró una excepción"],
+            "correct": 1,
+            "explanation": "Los controles complementarios son responsabilidad de la entidad usuaria; si no los opera, las conclusiones del informe no la protegen frente a esos riesgos."
+          },
+          {
+            "prompt": "El análisis de impacto fija un RPO de 1 hora para el sistema de admisión, pero solo existen respaldos diarios a las 23:00. ¿Qué concluye el auditor?",
+            "options": ["El control cumple porque existen respaldos diarios", "Hay una brecha: podrían perderse hasta 24 horas de datos frente a 1 hora tolerable", "El RPO no es relevante si el RTO se cumple", "Basta con ampliar el RTO a 24 horas"],
+            "correct": 1,
+            "explanation": "El RPO define la pérdida máxima tolerable de datos; con respaldos cada 24 horas, la pérdida potencial supera ampliamente la hora aceptada."
+          },
+          {
+            "prompt": "En un hallazgo, el texto «la política exige revisar los accesos cada trimestre» corresponde a uno de sus atributos. ¿A cuál?",
+            "options": ["Condición", "Criterio", "Causa", "Efecto"],
+            "correct": 1,
+            "explanation": "El criterio es la norma, política o buena práctica que debía cumplirse y contra la cual se compara la condición encontrada."
+          },
+          {
+            "prompt": "La causa de que haya cesados con cuenta activa es que la baja depende de un correo manual de Recursos Humanos. ¿Cuál es la recomendación más sólida?",
+            "options": ["Capacitar al personal en seguridad de la información", "Recordar a Recursos Humanos que envíe los correos a tiempo", "Integrar planillas con el directorio para deshabilitar cuentas automáticamente y revisar excepciones cada mes", "Cambiar las contraseñas de todos los usuarios cada mes"],
+            "correct": 2,
+            "explanation": "Esa recomendación ataca la causa raíz, elimina la dependencia manual e incluye un control detectivo verificable; las demás atacan síntomas o no se relacionan con la causa."
+          },
+          {
+            "prompt": "Una clínica peruana almacena historias clínicas en un proveedor de nube con servidores en Brasil. ¿Qué debe verificar el auditor en relación con la Ley 29733?",
+            "options": ["Solo que el proveedor tenga certificación ISO 9001", "Que el flujo transfronterizo de datos sensibles cuente con garantías adecuadas y esté documentado", "Que los servidores usen el mismo sistema operativo que la clínica", "Nada, porque la ley no regula a proveedores extranjeros"],
+            "correct": 1,
+            "explanation": "Transferir datos personales al extranjero es un flujo transfronterizo sujeto a la ley; al tratarse de datos de salud, que son sensibles, exige garantías y documentación reforzadas."
+          },
+          {
+            "prompt": "La gerencia decide no implementar una recomendación calificada como de riesgo alto. ¿Qué debe hacer el auditor?",
+            "options": ["Eliminar el hallazgo del sistema de seguimiento", "Asegurar que la aceptación del riesgo sea formal y escalarla al comité de auditoría si excede el apetito de riesgo", "Implementar él mismo la recomendación para cerrar el hallazgo", "Rebajar la calificación del hallazgo a riesgo bajo"],
+            "correct": 1,
+            "explanation": "La dirección puede aceptar riesgos, pero de forma informada y al nivel adecuado; el auditor no implementa soluciones ni rebaja calificaciones para cerrar hallazgos."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    { "week": 1, "unit": 1, "topic": "Auditoría de sistemas de información: naturaleza, tipos, aseguramiento y modelo de las tres líneas", "activity": "Revisión previa de la lectura 1, sesión síncrona sobre los objetivos de la auditoría y foro para analizar fallas de sistemas reportadas en la prensa peruana según el control ausente", "evidence": "Aporte argumentado en el foro" },
+    { "week": 2, "unit": 1, "topic": "Control interno con COSO 2013, clasificación de controles y controles generales frente a controles de aplicación", "activity": "Taller de clasificación de veinte controles de un ERP por función, ejecución y tipo, con discusión de su dependencia de los controles generales de TI", "evidence": "Matriz de clasificación de controles" },
+    { "week": 3, "unit": 1, "topic": "Gobierno de TI con COBIT 2019, marco ITAF, ética del auditor y normativa peruana aplicable", "activity": "Discusión del caso Cooperativa Qhapaq Ñan con el método de casos y mapeo de sus problemas a objetivos de COBIT 2019 y a normas de la SBS", "evidence": "Informe breve del caso" },
+    { "week": 4, "unit": 1, "topic": "Planificación basada en riesgos: modelo de riesgo de auditoría, universo auditable, memorando y programa", "activity": "Taller de cálculo del riesgo de detección y priorización del universo auditable; entrega de la tarea de planificación; cuestionario de la unidad 1", "evidence": "Memorando, programa de auditoría y cuestionario 1" },
+    { "week": 5, "unit": 2, "topic": "Evidencia de auditoría, técnicas de obtención, recorridos y matriz de riesgos y controles", "activity": "Laboratorio de recorrido del proceso de compras en un ERP simulado y elaboración de la narrativa y la matriz de riesgos y controles", "evidence": "Narrativa y matriz de riesgos y controles" },
+    { "week": 6, "unit": 2, "topic": "Muestreo de atributos, auditoría de accesos lógicos y segregación de funciones", "activity": "Laboratorio con SQL: cálculo de muestras, cruce de cesados con usuarios activos y detección de conflictos de segregación en una base de datos de prueba", "evidence": "Hoja de muestreo y consultas SQL documentadas" },
+    { "week": 7, "unit": 2, "topic": "Gestión de cambios, operaciones, respaldos y controles de aplicación en entrada, procesamiento y salida", "activity": "Discusión del caso Distribuidora Ferretera del Norte y conciliación de despliegues con tickets de cambio en un conjunto de datos simulado", "evidence": "Informe del caso y conciliación de cambios" },
+    { "week": 8, "unit": 2, "topic": "Técnicas asistidas por computadora con Python, ley de Benford, papeles de trabajo y evaluación de deficiencias", "activity": "Laboratorio de Benford con pandas y cálculo de MAD; entrega de la tarea de pruebas de controles generales; cuestionario de la unidad 2", "evidence": "Pruebas con SQL y Python, papeles de trabajo y cuestionario 2" },
+    { "week": 9, "unit": 3, "topic": "Calidad del software, costo de la calidad, modelo ISO/IEC 25010:2023 y requisitos de calidad medibles", "activity": "Taller de reformulación de requisitos ambiguos del Proyecto Integrador en requisitos verificables con medida, umbral y método de verificación", "evidence": "Requisitos de calidad reformulados" },
+    { "week": 10, "unit": 3, "topic": "Enfoque GQM y métricas de producto y de defectos: complejidad ciclomática, densidad y eficacia de remoción", "activity": "Laboratorio de medición sobre el repositorio del Proyecto Integrador: complejidad, cobertura de ramas y densidad de defectos, con su árbol GQM", "evidence": "Tablero de métricas interpretado" },
+    { "week": 11, "unit": 3, "topic": "Fiabilidad y disponibilidad, revisiones e inspecciones de Fagan y proceso de pruebas según ISO/IEC/IEEE 29119", "activity": "Simulacro de inspección formal con roles y discusión del caso BilleteraYa, con cálculo de la DRE y del presupuesto de error", "evidence": "Acta de inspección e informe del caso" },
+    { "week": 12, "unit": 3, "topic": "Madurez de procesos con CMMI, ISO 9001, ISO/IEC 90003 e ISO/IEC 29110 y plan de aseguramiento de la calidad", "activity": "Autoevaluación guiada con el perfil básico de ISO/IEC 29110; entrega de la tarea del plan de aseguramiento de la calidad; cuestionario de la unidad 3", "evidence": "Plan de aseguramiento de la calidad y cuestionario 3" },
+    { "week": 13, "unit": 4, "topic": "Auditoría de la gestión de servicios de TI y de la continuidad del negocio con ISO/IEC 20000-1 e ISO 22301", "activity": "Laboratorio de recálculo de indicadores de servicio y evaluación de brechas de RTO y RPO; aprobación del alcance del proyecto integrador", "evidence": "Matriz de brechas y alcance aprobado" },
+    { "week": 14, "unit": 4, "topic": "Auditoría de proveedores en la nube con informes SOC 2 y del tratamiento de datos personales según la Ley 29733", "activity": "Lectura guiada de un informe SOC 2 tipo II en seis pasos y discusión del caso Clínica Inti Salud con el método de casos", "evidence": "Evaluación del informe SOC 2 e informe del caso" },
+    { "week": 15, "unit": 4, "topic": "Hallazgos y sus atributos, calificación, informe de auditoría y plan de acción", "activity": "Taller de redacción de hallazgos y revisión entre pares del borrador del informe integrador con una lista de verificación", "evidence": "Borrador del informe revisado" },
+    { "week": 16, "unit": 4, "topic": "Seguimiento, auditoría continua y sustentación del proyecto integrador", "activity": "Sustentación del informe ante un comité de auditoría simulado, cuestionario de la unidad 4 y cierre reflexivo del curso", "evidence": "Informe final, sustentación y cuestionario 4" }
+  ]
+}

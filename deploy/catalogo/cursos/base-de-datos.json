@@ -1,0 +1,1259 @@
+{
+  "name": "Base de Datos",
+  "slug": "base-de-datos",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y gestión de datos",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Base de Datos es un curso de formación específica, de naturaleza teórico-práctica, que se dicta en el tercer ciclo de Computación e Informática y en el segundo ciclo de Inteligencia Artificial. Su propósito es que el estudiante diseñe, implemente, consulte, proteja y administre bases de datos relacionales que sostengan los procesos de una organización. Comprende el modelado entidad-relación y la normalización; el lenguaje SQL en PostgreSQL para definir, manipular y consultar datos; el SQL analítico con expresiones de tabla comunes y funciones de ventana; la programación en el servidor, las transacciones, la concurrencia y la optimización con índices; y la administración segura, el respaldo, la protección de datos personales conforme a la Ley 29733 y las alternativas NoSQL. Se apoya en la programación y la matemática discreta del primer ciclo, y prepara para el desarrollo web y empresarial, el análisis de datos y el aprendizaje automático. Aporta al perfil la capacidad de construir soluciones de datos confiables y conformes a la normativa.",
+  "competency": "Diseña, implementa y administra bases de datos relacionales en PostgreSQL que responden a los requerimientos de información de una organización, aplicando modelado normalizado, SQL avanzado, control transaccional, optimización basada en evidencia y medidas de seguridad y protección de datos personales conforme a la normativa peruana.",
+  "capacities": [
+    "Modela los requerimientos de información de una organización mediante diagramas entidad-relación y esquemas relacionales normalizados hasta la tercera forma normal, documentados en un diccionario de datos.",
+    "Implementa esquemas y resuelve requerimientos de negocio con SQL, utilizando restricciones de integridad, reuniones, agregaciones, subconsultas, expresiones de tabla comunes y funciones de ventana.",
+    "Desarrolla vistas, funciones, disparadores y transacciones que garantizan la consistencia de los datos en escenarios concurrentes, y optimiza el rendimiento con índices verificados mediante planes de ejecución.",
+    "Administra la seguridad, el respaldo y la recuperación de la base de datos, aplicando el principio de mínimo privilegio, la Ley 29733 y criterios fundamentados para elegir entre tecnologías relacionales y NoSQL."
+  ],
+  "indicators": [
+    "Elabora un diagrama entidad-relación con cardinalidades, claves y atributos de relación coherentes con las reglas de negocio documentadas del caso.",
+    "Normaliza una tabla plana hasta 3FN identificando dependencias funcionales parciales y transitivas, y verifica que la descomposición sea sin pérdida.",
+    "Crea en PostgreSQL un esquema con claves primarias, foráneas, restricciones CHECK y UNIQUE que rechaza datos inválidos en pruebas documentadas.",
+    "Escribe consultas con reuniones, agregaciones y funciones de ventana cuyos resultados valida contra totales de referencia independientes.",
+    "Implementa una transacción de varios pasos que mantiene la consistencia ante fallos y concurrencia, evitando actualizaciones perdidas e interbloqueos.",
+    "Reduce el tiempo de respuesta de consultas críticas mediante índices, demostrando la mejora con EXPLAIN ANALYZE antes y después.",
+    "Configura roles con mínimo privilegio, una política de respaldo probada con restauración medida y medidas de protección de datos personales.",
+    "Sustenta las decisiones de diseño y de elección tecnológica de su proyecto integrador con argumentos técnicos, normativos y de negocio."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa. Se aplica el aula invertida: el estudiante revisa lecturas y videos antes de cada sesión síncrona, que se dedica a laboratorios guiados en PostgreSQL y a la resolución de problemas. En cada unidad se analiza un caso de una organización peruana mediante el método de casos, con discusión en foro y en sesión síncrona. El aprendizaje basado en proyectos articula las cuatro tareas en un proyecto integrador que el estudiante construye de forma incremental durante el ciclo. La evaluación formativa se realiza con cuestionarios con retroalimentación inmediata, revisión de código entre pares y retroalimentación del docente sobre cada entrega antes del producto final. Todo el código se gestiona en scripts versionados.",
+  "bibliography": [
+    "Elmasri, R. y Navathe, S. B. (2007). Fundamentos de sistemas de bases de datos (5.ª ed.). Pearson Addison Wesley.",
+    "Silberschatz, A., Korth, H. F. y Sudarshan, S. (2014). Fundamentos de bases de datos (6.ª ed.). McGraw-Hill.",
+    "Date, C. J. (2001). Introducción a los sistemas de bases de datos (7.ª ed.). Pearson Educación.",
+    "Coronel, C. y Morris, S. (2019). Database systems: Design, implementation, and management (13th ed.). Cengage Learning.",
+    "Codd, E. F. (1970). A relational model of data for large shared data banks. Communications of the ACM, 13(6), 377-387.",
+    "Chen, P. P. (1976). The entity-relationship model: Toward a unified view of data. ACM Transactions on Database Systems, 1(1), 9-36.",
+    "Winand, M. (2012). SQL performance explained. Markus Winand.",
+    "Kleppmann, M. (2017). Designing data-intensive applications. O'Reilly Media.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuatro cuestionarios por unidad, participación en el análisis de casos y laboratorios semanales con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Tareas 1, 2 y 3: modelo normalizado, implementación con consultas de negocio y SQL avanzado con optimización medida, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 35,
+      "description": "Proyecto integrador con base de datos segura, respaldo probado y sustentación técnica con demostración en vivo ante el docente."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos y modelado de bases de datos relacionales",
+      "description": "Al finalizar la unidad, el estudiante diseña el modelo conceptual entidad-relación y el esquema relacional normalizado hasta la tercera forma normal de un caso organizacional peruano, justificando claves, cardinalidades y restricciones de integridad.",
+      "topics": [
+        "Sistemas gestores de bases de datos y arquitectura ANSI/SPARC",
+        "Modelo entidad-relación de Chen y notación pata de gallo",
+        "Modelo relacional de Codd, claves e integridad",
+        "Álgebra relacional básica",
+        "Dependencias funcionales y normalización hasta 3FN y FNBC"
+      ],
+      "slides": [
+        {
+          "title": "Del archivo plano al sistema gestor de bases de datos",
+          "bullets": [
+            "Los archivos y hojas de cálculo aislados generan redundancia, inconsistencia y dependencia entre datos y programas.",
+            "Un SGBD (PostgreSQL, MySQL, Oracle, SQL Server) centraliza datos, controla concurrencia, seguridad y recuperación ante fallos.",
+            "Base de datos: colección de datos persistentes, relacionados y compartidos, descrita por un esquema o metadatos.",
+            "En el Perú, SUNAT, RENIEC y los bancos operan sobre SGBD relacionales que procesan millones de transacciones diarias."
+          ],
+          "notes": "Inicie preguntando: ¿cuántos han visto un negocio que lleva su inventario en varias hojas de Excel? Pida un ejemplo concreto, como una botica de barrio con un archivo de ventas por cada sucursal. Muestre que, si el precio de un medicamento cambia, hay que actualizarlo en tres archivos; si uno se olvida, aparece la inconsistencia. Explique que el SGBD resuelve ese problema separando la descripción de los datos (el esquema) de los programas que los usan. Mencione que la emisión de comprobantes electrónicos ante SUNAT supone volúmenes enormes de documentos validados en tiempo real, imposibles de gestionar con archivos sueltos. Cierre preguntando qué funciones del SGBD serían críticas para un banco y cuáles para una tienda en línea pequeña."
+        },
+        {
+          "title": "Arquitectura de tres niveles ANSI/SPARC",
+          "bullets": [
+            "Nivel externo: vistas que cada usuario o aplicación necesita, por ejemplo, el cajero solo ve saldos.",
+            "Nivel conceptual: esquema lógico global con entidades, atributos, relaciones y restricciones.",
+            "Nivel interno: almacenamiento físico, páginas, índices y archivos en disco.",
+            "Independencia lógica y física: cambiar un nivel no obliga a reescribir los programas de los otros."
+          ],
+          "notes": "La arquitectura ANSI/SPARC, propuesta en 1975, es la base de la independencia de datos. Dibuje tres capas en la pizarra virtual. Pregunte: si el administrador agrega un índice para acelerar las búsquedas por DNI, ¿debe cambiar el código de la aplicación web? La respuesta es no, gracias a la independencia física. Luego plantee: si agregamos la columna correo a la tabla de clientes, ¿se rompe la vista que usa el área de cobranzas? Si la vista selecciona columnas explícitas, no; esto es independencia lógica. Relacione con lo visto en Sistemas Operativos y Arquitectura de Computadoras: el nivel interno conversa con el sistema de archivos y con los bloques del disco. Enfatice que un técnico que diseña bien el nivel conceptual reduce costos de mantenimiento durante años."
+        },
+        {
+          "title": "Roles y ciclo de vida de una base de datos",
+          "bullets": [
+            "Roles: usuario final, desarrollador, diseñador de datos y administrador de base de datos (DBA).",
+            "Ciclo de vida: análisis de requerimientos, diseño conceptual, diseño lógico, diseño físico, implementación y mantenimiento.",
+            "Errores de análisis cuestan más que errores de código: un mal modelo contamina todas las capas.",
+            "Entregables típicos: diccionario de datos, diagrama ER, esquema relacional y script DDL versionado."
+          ],
+          "notes": "Explique que este curso los prepara para actuar como desarrolladores con criterio de diseñador y nociones de DBA. Describa cada fase del ciclo de vida con un proyecto real: un sistema de matrícula para un instituto. En el análisis se entrevista a la secretaría académica; en el diseño conceptual se dibuja el diagrama ER; en el lógico se obtienen tablas; en el físico se eligen tipos de datos e índices. Pregunte a la clase qué pasaría si en el análisis nadie preguntó si un estudiante puede llevar dos carreras a la vez. Esa omisión obligaría a rediseñar claves y tablas meses después. Insista en que el diccionario de datos es un documento profesional que los empleadores valoran y que lo construirán en la tarea de la unidad."
+        },
+        {
+          "title": "Modelo entidad-relación de Peter Chen",
+          "bullets": [
+            "Propuesto por Peter Chen en 1976 para representar la realidad independientemente del SGBD.",
+            "Entidad: objeto distinguible (Cliente, Producto); atributo: propiedad (RUC, razón social).",
+            "Relación: asociación entre entidades (Cliente realiza Pedido), con grado y cardinalidad.",
+            "Atributos simples, compuestos, multivaluados y derivados; la edad se deriva de la fecha de nacimiento."
+          ],
+          "notes": "Presente a Chen y su artículo de 1976 en ACM Transactions on Database Systems, uno de los más citados de la disciplina. Construya en vivo un mini modelo para una empresa de transporte interprovincial: entidades Pasajero, Bus, Viaje y Boleto. Pregunte qué atributos tiene Pasajero; surgirán DNI, nombres, teléfono. Pregunte si el teléfono puede ser multivaluado: muchos pasajeros tienen dos números. Explique que un atributo multivaluado no puede quedar como columna simple en el modelo relacional, lo que anticipa la normalización. Muestre que la edad no se almacena: se deriva de la fecha de nacimiento, porque almacenarla genera datos obsoletos cada año. Pida a los estudiantes que propongan un atributo compuesto, como la dirección con distrito, provincia y departamento."
+        },
+        {
+          "title": "Cardinalidad y participación en las relaciones",
+          "bullets": [
+            "Cardinalidades: uno a uno (1:1), uno a muchos (1:N) y muchos a muchos (N:M).",
+            "Participación total u obligatoria frente a parcial u opcional; se expresa con mínimos y máximos.",
+            "Notación pata de gallo (Crow's Foot) de Gordon Everest, usada por herramientas como MySQL Workbench y draw.io.",
+            "Regla práctica: leer la relación en ambos sentidos, por ejemplo, un pedido pertenece a exactamente un cliente."
+          ],
+          "notes": "La cardinalidad es la decisión de diseño que más errores provoca. Enseñe a leer la relación en ambos sentidos con frases completas: un cliente realiza cero o muchos pedidos; un pedido es realizado por uno y solo un cliente. Por tanto es 1:N con participación opcional del lado cliente y obligatoria del lado pedido. Luego plantee Estudiante y Curso: un estudiante se matricula en muchos cursos y un curso tiene muchos estudiantes, es N:M. Pregunte dónde se guarda la nota final: no pertenece al estudiante ni al curso, sino a la relación matrícula. Ese es un atributo de la relación. Dibuje ambas notaciones, Chen y pata de gallo, y explique que en el mercado laboral peruano predomina la segunda por las herramientas CASE."
+        },
+        {
+          "title": "Entidades débiles y especialización",
+          "bullets": [
+            "Entidad débil: depende de otra para identificarse, como Cuota respecto de Préstamo.",
+            "Clave parcial más la clave del propietario forman su identificador completo.",
+            "Generalización y especialización: Persona se especializa en Cliente y Empleado.",
+            "Restricciones de disyunción y completitud determinan cómo se traducen las jerarquías a tablas."
+          ],
+          "notes": "Use un ejemplo financiero cercano: una caja municipal otorga un préstamo con un cronograma de doce cuotas. La cuota número tres no tiene sentido sin el préstamo al que pertenece; por eso es entidad débil y su identificador es el número de préstamo más el número de cuota. Luego trabaje la especialización: en una clínica, Persona puede ser Paciente, Médico o ambos. Pregunte si las subclases son disjuntas o solapadas; un médico también puede atenderse como paciente, entonces son solapadas. Explique que esta decisión afecta la traducción: una tabla por jerarquía, una por subclase o una por clase con claves compartidas. No profundice aún en la traducción, solo deje claro que el modelo conceptual debe capturar estas reglas del negocio."
+        },
+        {
+          "title": "Modelo relacional de Edgar F. Codd",
+          "bullets": [
+            "Codd (IBM, 1970) propuso representar los datos como relaciones matemáticas: conjuntos de tuplas.",
+            "Relación = tabla; tupla = fila; atributo = columna; dominio = conjunto de valores válidos.",
+            "Las filas no tienen orden y no se admiten tuplas duplicadas en la teoría relacional.",
+            "Independencia del acceso físico: se consulta por valores, no por punteros ni rutas de navegación."
+          ],
+          "notes": "Cuente la historia: en 1970 Codd publicó en Communications of the ACM el artículo que fundó la industria relacional, frente a los modelos jerárquico y de red que obligaban a navegar con punteros. IBM tardó en adoptarlo y Oracle lanzó primero un producto comercial en 1979. Relacione con Matemática Discreta: una relación es un subconjunto del producto cartesiano de dominios. Pregunte por qué es importante que las filas no tengan orden; la respuesta es que el resultado de una consulta no debe depender de cómo se guardaron los datos. Advierta que SQL se aparta de la teoría al admitir duplicados y valores nulos, lo que verán en la Unidad 2. Use el ejemplo del dominio del DNI: cadenas de ocho dígitos, no números enteros, porque pueden empezar en cero."
+        },
+        {
+          "title": "Claves e integridad referencial",
+          "bullets": [
+            "Superclave, clave candidata, clave primaria y clave alterna; la primaria identifica cada tupla de forma única y mínima.",
+            "Clave natural (RUC, DNI) frente a clave sustituta o subrogada (identificador autogenerado).",
+            "Integridad de entidad: la clave primaria nunca es nula; integridad referencial: toda clave foránea apunta a una fila existente.",
+            "Acciones referenciales: RESTRICT, CASCADE y SET NULL ante borrados o actualizaciones."
+          ],
+          "notes": "Este es un tema de alto impacto práctico. Plantee el debate: ¿usar el DNI como clave primaria de Cliente? Ventajas: es natural y único. Desventajas: los extranjeros usan carné de extranjería o pasaporte, con longitudes distintas, y las empresas tienen RUC de once dígitos. Muchas organizaciones optan por una clave sustituta numérica y declaran el documento como clave alterna única. Luego explique la integridad referencial con un pedido que apunta a un cliente inexistente: un dato huérfano. Pregunte qué acción referencial conviene si se elimina un cliente con pedidos: en contextos contables casi siempre RESTRICT, porque los comprobantes deben conservarse por obligación tributaria. CASCADE es apropiado para detalles que no tienen vida propia, como las líneas de un carrito abandonado."
+        },
+        {
+          "title": "Del diagrama ER al esquema relacional: reglas de transformación",
+          "bullets": [
+            "Cada entidad fuerte se convierte en tabla con su clave primaria.",
+            "Relación 1:N: la clave del lado uno se coloca como clave foránea en la tabla del lado muchos.",
+            "Relación N:M: se crea una tabla asociativa con ambas claves foráneas y los atributos de la relación.",
+            "Atributo multivaluado: nueva tabla; entidad débil: clave compuesta con la clave del propietario."
+          ],
+          "notes": "Haga un ejercicio guiado en vivo. Tome el modelo de la academia: Estudiante, Curso y la relación Matrícula con atributo nota. Paso uno: Estudiante(id_estudiante, dni, nombres). Paso dos: Curso(id_curso, codigo, nombre, creditos). Paso tres: Matricula(id_estudiante, id_curso, periodo, nota), con clave primaria compuesta por las tres primeras columnas. Pregunte por qué el periodo debe ser parte de la clave: porque un estudiante desaprobado puede volver a llevar el curso en otro ciclo. Ese detalle viene del análisis del negocio, no de una regla mecánica. Para el teléfono multivaluado cree TelefonoEstudiante(id_estudiante, telefono). Remarque que la transformación es casi algorítmica, pero las decisiones de claves siempre requieren conocer el negocio."
+        },
+        {
+          "title": "Álgebra relacional: operaciones fundamentales",
+          "bullets": [
+            "Selección (σ) filtra filas; proyección (π) elige columnas; ambas producen nuevas relaciones.",
+            "Producto cartesiano (×) y reunión natural (⋈) combinan relaciones por atributos comunes.",
+            "Unión, intersección y diferencia exigen relaciones compatibles en número y dominio de atributos.",
+            "Toda consulta SQL se traduce internamente a un árbol de operaciones algebraicas que el optimizador reordena."
+          ],
+          "notes": "El álgebra relacional es el lenguaje formal detrás de SQL y explica por qué el optimizador puede reescribir consultas. Escriba: π nombre (σ distrito = 'Miraflores' (Cliente)). Pida a la clase que lo lea en lenguaje natural: los nombres de los clientes de Miraflores. Luego muestre una reunión entre Pedido y Cliente y explique que equivale a un producto cartesiano seguido de una selección por igualdad de claves, pero mucho más eficiente. Pregunte: ¿conviene filtrar antes o después de la reunión? Filtrar antes reduce las filas a combinar; eso es exactamente lo que hace el optimizador con la técnica de empujar selecciones. No busque memorización de símbolos; busque que entiendan que cada operación recibe tablas y devuelve tablas, propiedad llamada clausura."
+        },
+        {
+          "title": "Dependencias funcionales y anomalías",
+          "bullets": [
+            "Dependencia funcional X → Y: cada valor de X determina un único valor de Y, por ejemplo, RUC → razón social.",
+            "Anomalía de inserción: no puedo registrar un producto nuevo si aún no tiene ventas.",
+            "Anomalía de actualización: cambiar un precio exige modificar muchas filas y arriesga inconsistencias.",
+            "Anomalía de eliminación: al borrar la única venta de un cliente se pierde su información de contacto."
+          ],
+          "notes": "Presente una tabla única de ventas tal como la exporta un sistema antiguo: número de boleta, fecha, DNI del cliente, nombre, distrito, código de producto, descripción, precio y cantidad. Pida a los estudiantes identificar dependencias: el código de producto determina la descripción; el DNI determina el nombre. Luego muestre las tres anomalías con filas concretas. Pregunte cuántas filas habría que actualizar si el arroz extra de cinco kilos sube de precio y se vendió en dos mil boletas. Explique que las dependencias funcionales son restricciones del mundo real que el diseñador descubre conversando con usuarios, no se deducen solo de mirar datos de ejemplo, porque una muestra puede coincidir por casualidad."
+        },
+        {
+          "title": "Normalización: 1FN, 2FN y 3FN",
+          "bullets": [
+            "1FN: valores atómicos, sin grupos repetitivos ni listas dentro de una celda.",
+            "2FN: en 1FN y sin dependencias parciales de una parte de la clave compuesta.",
+            "3FN: en 2FN y sin dependencias transitivas entre atributos no clave, como distrito → provincia.",
+            "Procedimiento: identificar clave y dependencias, descomponer sin pérdida y verificar que se preserven las dependencias."
+          ],
+          "notes": "Continúe con la tabla de ventas. Primera forma normal: si la columna productos contiene 'arroz, aceite, azúcar' separados por comas, se viola la atomicidad; se crea una fila por producto. Segunda forma normal: con clave (numero_boleta, codigo_producto), la descripción depende solo del código de producto, dependencia parcial; se extrae la tabla Producto. Tercera forma normal: en Boleta, el DNI determina el nombre del cliente, dependencia transitiva respecto del número de boleta; se extrae Cliente. Recuerde la frase clásica atribuida a Bill Kent: cada atributo no clave debe depender de la clave, de toda la clave y nada más que de la clave. Pida que verifiquen que la reunión de las tablas descompuestas reproduce exactamente la tabla original."
+        },
+        {
+          "title": "FNBC y desnormalización controlada",
+          "bullets": [
+            "Forma normal de Boyce-Codd: todo determinante debe ser clave candidata; elimina casos que 3FN tolera.",
+            "Formas superiores (4FN, 5FN) tratan dependencias multivaluadas y de reunión, raras en la práctica.",
+            "Desnormalizar puede acelerar lecturas analíticas, pero exige mecanismos que mantengan la consistencia.",
+            "Criterio profesional: normalizar en sistemas transaccionales; desnormalizar con evidencia de rendimiento."
+          ],
+          "notes": "Explique un caso clásico de FNBC: en una academia, cada docente dicta una sola asignatura, pero una asignatura tiene varios docentes. Con la tabla (estudiante, asignatura, docente) y clave (estudiante, asignatura), el docente determina la asignatura sin ser clave, lo que viola FNBC. Luego abra el debate profesional: los almacenes de datos que verán los estudiantes de Inteligencia Artificial usan esquemas en estrella deliberadamente desnormalizados para análisis. Pregunte: ¿por qué un reporte de ventas mensuales tolera redundancia y un sistema de facturación no? Porque en el reporte los datos se cargan periódicamente y no se actualizan fila por fila. Insista en que desnormalizar es una decisión justificada con mediciones, nunca una excusa para un mal diseño inicial."
+        },
+        {
+          "title": "Diccionario de datos y tipos de datos con criterio peruano",
+          "bullets": [
+            "Documenta tabla, columna, tipo, longitud, nulabilidad, valor por defecto, regla y descripción de negocio.",
+            "DNI CHAR(8), RUC CHAR(11) y ubigeo INEI CHAR(6) son cadenas, no números, para conservar ceros iniciales.",
+            "Montos en NUMERIC(12,2), nunca en FLOAT, para evitar errores de redondeo en soles.",
+            "Fechas con DATE o TIMESTAMP WITH TIME ZONE, considerando la zona horaria America/Lima."
+          ],
+          "notes": "Cierre la unidad con buenas prácticas que distinguen a un técnico competente. Muestre por qué el DNI no debe ser INTEGER: un DNI que empieza con cero, como 04512345, perdería el primer dígito. Lo mismo ocurre con el ubigeo del INEI, donde Amazonas inicia con 01. Explique el problema del punto flotante: en binario, 0,1 no se representa con exactitud y la suma de miles de montos puede descuadrar la caja por céntimos, inaceptable para un contador o para SUNAT. Pida que redacten la fila del diccionario para la columna monto_total: tipo NUMERIC(12,2), no nulo, mayor o igual a cero, suma de subtotales más IGV del 18 %. Anuncie que el diccionario será parte central de la Tarea 1."
+        }
+      ],
+      "reading": {
+        "title": "Del mundo real al esquema relacional: modelado y normalización",
+        "minutes": 35,
+        "content": "## 1. Por qué el modelo importa más que el código\n\nUna aplicación puede reescribirse en un año; un esquema de base de datos suele sobrevivir una década. Los sistemas de recaudación, los padrones electorales y los núcleos bancarios de la región conservan tablas diseñadas hace más de veinte años. Por eso el diseño de datos es una decisión estratégica: un modelo pobre multiplica el costo de cada informe, cada integración y cada auditoría. Esta lectura recorre el camino clásico propuesto por la literatura (Chen, Codd, Elmasri y Navathe): **requerimientos → modelo conceptual → modelo lógico relacional → normalización**.\n\n## 2. El modelo entidad-relación\n\nPeter Chen (1976) propuso describir la realidad con tres elementos: **entidades**, **atributos** y **relaciones**. Su valor es que se discute con el usuario sin hablar de tablas. Considere una distribuidora de abarrotes de Huancayo que vende a bodegas:\n\n- *Bodega* (RUC, razón social, dirección, ubigeo)\n- *Producto* (código, descripción, precio de lista)\n- *Pedido* (número, fecha, estado)\n- *Bodega realiza Pedido* (1:N) y *Pedido contiene Producto* (N:M, con atributos cantidad y precio pactado)\n\nEl precio pactado vive en la relación, no en el producto, porque la distribuidora negocia descuentos por volumen: el mismo producto puede venderse a precios distintos en pedidos distintos. Identificar dónde vive cada atributo es la habilidad central del modelado.\n\n## 3. El modelo relacional y sus restricciones\n\nCodd (1970) definió una relación como un subconjunto del producto cartesiano de dominios. En términos prácticos, cada tabla tiene una **clave primaria** que identifica cada fila, y las **claves foráneas** materializan las relaciones. Transformando el modelo anterior:\n\n```sql\n-- Esquema lógico resultante (notación simplificada)\nBodega(id_bodega PK, ruc UNIQUE, razon_social, direccion, ubigeo)\nProducto(id_producto PK, codigo UNIQUE, descripcion, precio_lista)\nPedido(id_pedido PK, numero UNIQUE, fecha, estado, id_bodega FK -> Bodega)\nDetallePedido(id_pedido FK, id_producto FK, cantidad, precio_pactado,\n              PK(id_pedido, id_producto))\n```\n\nObserve tres decisiones. Primero, se usan claves sustitutas (`id_bodega`) y el RUC se declara único: si un cliente cambia de RUC por reorganización societaria, las referencias no se rompen. Segundo, la relación N:M se convirtió en la tabla asociativa `DetallePedido`. Tercero, el ubigeo del INEI se guarda como texto de seis caracteres (`150101` es Lima Cercado), porque los códigos de Amazonas comienzan con cero.\n\n## 4. Dependencias funcionales\n\nUna dependencia funcional `X → Y` afirma que conocer X basta para conocer Y. En la distribuidora: `ruc → razon_social`, `codigo → descripcion`, `ubigeo → distrito, provincia, departamento`. Estas dependencias no se deducen de los datos; se obtienen del negocio. Un ejemplo instructivo: en una muestra de diez pedidos podría parecer que `fecha → estado`, pero es una coincidencia, no una regla.\n\n## 5. Normalización paso a paso\n\nSuponga que el área comercial entrega esta hoja única:\n\n| n_pedido | fecha | ruc | razon_social | ubigeo | distrito | codigo | descripcion | cantidad |\n|---|---|---|---|---|---|---|---|---|\n\nLa clave es `(n_pedido, codigo)`. Analicemos:\n\n1. **1FN.** Si una celda contenía varios productos separados por comas, se separan en filas. La tabla ya tiene valores atómicos.\n2. **2FN.** `codigo → descripcion` depende solo de parte de la clave: dependencia parcial. También `n_pedido → fecha, ruc`. Se descompone en `Pedido(n_pedido, fecha, ruc)`, `Producto(codigo, descripcion)` y `Detalle(n_pedido, codigo, cantidad)`.\n3. **3FN.** En `Pedido`, `ruc → razon_social, ubigeo` y `ubigeo → distrito`: dependencias transitivas. Se extraen `Bodega(ruc, razon_social, ubigeo)` y `Ubigeo(ubigeo, distrito, provincia, departamento)`.\n\nLa prueba de calidad es doble: la descomposición debe ser **sin pérdida** (reunir las tablas reproduce exactamente la original) y debe **preservar las dependencias** (cada regla puede verificarse dentro de una sola tabla).\n\n## 6. FNBC y los límites de la normalización\n\nLa forma normal de Boyce-Codd exige que todo determinante sea clave candidata. Casi todos los esquemas en 3FN la cumplen; las excepciones aparecen con claves candidatas compuestas que se solapan. Más allá de FNBC, las formas 4FN y 5FN tratan dependencias multivaluadas, poco frecuentes en sistemas de gestión.\n\nNormalizar no es un fin en sí mismo. En sistemas transaccionales (facturación, matrícula, inventario) la normalización protege la consistencia. En sistemas analíticos, Ralph Kimball popularizó el **esquema en estrella**, que desnormaliza dimensiones para acelerar consultas de lectura. La regla profesional es: *normalice primero y desnormalice solo con evidencia medida*.\n\n## 7. Ideas clave\n\n- El modelo conceptual se valida con el usuario; el lógico, con reglas formales.\n- Los atributos de una relación N:M viven en la tabla asociativa.\n- Códigos peruanos como DNI, RUC y ubigeo son cadenas de longitud fija, no números.\n- Toda descomposición debe ser sin pérdida y preservar dependencias.\n"
+      },
+      "case": {
+        "title": "Caso: Distribuidora Andina del Centro y sus doce hojas de cálculo",
+        "content": "**Distribuidora Andina del Centro S.A.C.** es una empresa familiar de Huancayo que abastece de abarrotes a unas 1 800 bodegas de Junín, Pasco y Huancavelica. Factura alrededor de S/ 14 millones anuales y emplea a 46 personas, entre ellas 12 vendedores que toman pedidos en ruta con el celular.\n\nDesde hace ocho años, la información vive en **doce libros de Excel**: uno por vendedor para pedidos, uno de almacén para inventario, uno de cobranzas y otro de precios que el gerente comercial, Rubén Quispe, actualiza cada lunes. Cada viernes la asistente administrativa, Milagros Huamán, consolida manualmente los pedidos para emitir las facturas electrónicas mediante un proveedor de servicios electrónicos.\n\nEn el último trimestre se registraron estos incidentes:\n\n- **Precios inconsistentes.** En 214 pedidos se aplicó el precio anterior del aceite vegetal porque tres vendedores no descargaron el archivo actualizado. La diferencia acumulada fue de S/ 9 870 a favor de los clientes.\n- **Clientes duplicados.** La misma bodega figura con tres nombres distintos (\"Bodega Rosita\", \"Comercial Rosita E.I.R.L.\" y \"Rosa Taipe\") y dos RUC mal digitados, lo que provocó el rechazo de comprobantes.\n- **Stock fantasma.** El almacén reporta 120 cajas de leche evaporada, pero los pedidos registrados suman 160 en la misma semana; no hay forma de saber qué pedidos quedaron sin atender.\n- **Pérdida de historial.** Cuando un vendedor renunció, su archivo se borró por error y con él la información de 230 bodegas de Pasco.\n\nEl gerente general, Óscar Rojas, contrató a un técnico en computación para \"pasar todo a una base de datos\". El técnico tiene dos propuestas de su equipo:\n\n1. **Opción rápida:** importar las hojas tal como están a una sola tabla de PostgreSQL con 34 columnas, y construir encima una aplicación de captura. Tiempo estimado: tres semanas.\n2. **Opción de diseño:** levantar requerimientos con cada área, construir un modelo entidad-relación, normalizarlo y depurar los datos (clientes duplicados, RUC inválidos) antes de migrar. Tiempo estimado: nueve semanas.\n\nÓscar presiona por la opción rápida porque la campaña navideña empieza en diez semanas. Milagros advierte que, si se arrastran los errores, la facturación de diciembre será un desastre. Además, el contador recuerda que la empresa debe conservar los comprobantes y sus datos de sustento durante el plazo de prescripción tributaria.\n",
+        "questions": [
+          "¿Qué anomalías de inserción, actualización y eliminación explican cada uno de los cuatro incidentes descritos? Relaciónelas con dependencias funcionales concretas.",
+          "Proponga el modelo entidad-relación mínimo (entidades, relaciones y cardinalidades) que eliminaría los problemas de precios inconsistentes y stock fantasma.",
+          "¿Dónde debe almacenarse el precio aplicado en cada pedido para conservar el historial cuando cambia la lista de precios? Justifique su respuesta.",
+          "Evalúe la opción rápida frente a la opción de diseño en términos de riesgo, costo y obligaciones tributarias. ¿Existe una alternativa intermedia viable en diez semanas?",
+          "¿Qué reglas de integridad (claves, unicidad, verificaciones) impedirían el problema de clientes duplicados y RUC mal digitados?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Modelo ER, esquema relacional normalizado y diccionario de datos",
+        "instructions": "**Objetivo.** Diseñar la base de datos de un proceso real de una organización peruana, desde los requerimientos hasta un esquema en tercera forma normal.\n\n**Instrucciones.**\n1. Elija un proceso de una organización que conozca (botica, ferretería, academia, taller mecánico, cooperativa). Redacte entre 8 y 12 reglas de negocio en lenguaje natural, por ejemplo: *un pedido pertenece a un único cliente*.\n2. Elabore el diagrama entidad-relación en notación pata de gallo con un mínimo de seis entidades, al menos una relación N:M con atributos propios y una entidad débil o una jerarquía de especialización.\n3. Transforme el diagrama al esquema relacional indicando claves primarias, foráneas y alternas.\n4. Parta de una tabla plana inicial (la hoja de cálculo que usaría el negocio) y documente su normalización paso a paso hasta 3FN, listando las dependencias funcionales de cada paso.\n5. Redacte el diccionario de datos de todas las tablas: columna, tipo de dato en PostgreSQL, nulabilidad, restricciones y descripción. Use tipos adecuados para DNI, RUC, ubigeo y montos.\n\n**Entregable.** Un PDF de 6 a 10 páginas con el diagrama exportado desde draw.io, pgModeler o MySQL Workbench. Nombre del archivo: `T1_Apellido_Nombre.pdf`.\n\n**Criterios.** Se evaluará la fidelidad a las reglas de negocio, la corrección técnica de cardinalidades y claves, el rigor de la normalización y la calidad del diccionario de datos.",
+        "rubric": [
+          {
+            "name": "Reglas de negocio y modelo ER coherente con el caso",
+            "points": 6
+          },
+          {
+            "name": "Transformación correcta al esquema relacional con claves e integridad",
+            "points": 5
+          },
+          {
+            "name": "Normalización justificada con dependencias funcionales hasta 3FN",
+            "points": 5
+          },
+          {
+            "name": "Diccionario de datos con tipos y restricciones adecuados",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Modelado conceptual, modelo relacional y normalización",
+        "questions": [
+          {
+            "prompt": "En un sistema de matrícula, un estudiante puede llevar muchos cursos y cada curso tiene muchos estudiantes. ¿Dónde debe almacenarse la nota final?",
+            "options": [
+              "En la tabla Estudiante",
+              "En la tabla asociativa Matrícula",
+              "En la tabla Curso",
+              "En una columna multivaluada de Curso"
+            ],
+            "correct": 1,
+            "explanation": "La nota depende de la combinación estudiante-curso-periodo; por tanto es atributo de la relación N:M, que se implementa como tabla asociativa."
+          },
+          {
+            "prompt": "¿Por qué el DNI peruano debe declararse como CHAR(8) y no como INTEGER?",
+            "options": [
+              "Porque INTEGER no admite ocho dígitos",
+              "Porque CHAR ocupa siempre menos espacio",
+              "Porque INTEGER no puede ser clave primaria",
+              "Porque los DNI que empiezan con cero perderían ese dígito"
+            ],
+            "correct": 3,
+            "explanation": "El DNI es un código, no una cantidad. Como entero, 04512345 se guardaría como 4512345, alterando el dato y su validación."
+          },
+          {
+            "prompt": "La tabla Detalle(n_boleta, cod_producto, descripcion, cantidad) tiene clave (n_boleta, cod_producto). ¿Qué forma normal incumple?",
+            "options": [
+              "Segunda forma normal, por dependencia parcial",
+              "Primera forma normal, por valores no atómicos",
+              "Tercera forma normal, por dependencia transitiva",
+              "Ninguna, está en FNBC"
+            ],
+            "correct": 0,
+            "explanation": "La descripción depende solo de cod_producto, una parte de la clave compuesta: es una dependencia parcial que viola la 2FN."
+          },
+          {
+            "prompt": "Se elimina la única venta registrada de un cliente y con ella desaparecen su nombre y teléfono. ¿Qué tipo de anomalía es?",
+            "options": [
+              "Anomalía de inserción",
+              "Anomalía de actualización",
+              "Anomalía de eliminación",
+              "Violación de integridad de entidad"
+            ],
+            "correct": 2,
+            "explanation": "Al borrar un hecho (la venta) se pierde información independiente (datos del cliente), lo que caracteriza la anomalía de eliminación."
+          },
+          {
+            "prompt": "Una empresa elimina un cliente que tiene facturas emitidas. Por obligaciones tributarias, ¿qué acción referencial conviene en la clave foránea de Factura?",
+            "options": [
+              "CASCADE, para borrar también las facturas",
+              "RESTRICT, para impedir el borrado",
+              "SET NULL, para dejar facturas sin cliente",
+              "Ninguna, no usar clave foránea"
+            ],
+            "correct": 1,
+            "explanation": "Los comprobantes deben conservarse; RESTRICT impide eliminar al cliente mientras existan facturas que lo referencian."
+          },
+          {
+            "prompt": "En la expresión π nombre (σ distrito = 'Surco' (Cliente)), ¿qué hace el operador σ?",
+            "options": [
+              "Elige la columna nombre",
+              "Une Cliente con otra tabla",
+              "Filtra las filas cuyo distrito es Surco",
+              "Ordena el resultado por distrito"
+            ],
+            "correct": 2,
+            "explanation": "La selección σ filtra tuplas según una condición; la proyección π es la que elige columnas."
+          },
+          {
+            "prompt": "En Cuota(n_prestamo, n_cuota, monto, vencimiento), la cuota no se identifica sin su préstamo. ¿Cómo se clasifica la entidad Cuota?",
+            "options": [
+              "Entidad fuerte con clave n_cuota",
+              "Atributo multivaluado de Préstamo",
+              "Subclase de Préstamo",
+              "Entidad débil con clave parcial n_cuota"
+            ],
+            "correct": 3,
+            "explanation": "Cuota depende de Préstamo para identificarse; su identificador completo combina la clave del propietario con su clave parcial."
+          },
+          {
+            "prompt": "¿Cuándo es razonable desnormalizar un esquema?",
+            "options": [
+              "Cuando hay evidencia medida de rendimiento en lecturas analíticas",
+              "Siempre, porque las uniones son lentas",
+              "Cuando el diseñador no conoce las dependencias",
+              "Para evitar declarar claves foráneas"
+            ],
+            "correct": 0,
+            "explanation": "La desnormalización es una decisión justificada, típica en esquemas analíticos, y requiere mecanismos que preserven la consistencia."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · SQL para definir, manipular y consultar datos",
+      "description": "Al finalizar la unidad, el estudiante implementa en PostgreSQL el esquema diseñado con restricciones de integridad, carga datos y resuelve requerimientos de información con consultas que combinan filtros, reuniones, agregaciones y agrupamientos.",
+      "topics": [
+        "Lenguaje SQL: DDL, DML, DCL y TCL",
+        "Creación de tablas, tipos de datos y restricciones",
+        "Inserción, actualización y eliminación segura de datos",
+        "Consultas SELECT con filtros, ordenamiento y valores nulos",
+        "Reuniones INNER, LEFT y autorreuniones",
+        "Funciones de agregación, GROUP BY y HAVING"
+      ],
+      "slides": [
+        {
+          "title": "SQL: el lenguaje estándar de los datos relacionales",
+          "bullets": [
+            "Nació como SEQUEL en IBM (Chamberlin y Boyce, 1974); estandarizado por ANSI en 1986 e ISO desde 1987.",
+            "Sublenguajes: DDL (CREATE, ALTER, DROP), DML (INSERT, UPDATE, DELETE, SELECT), DCL (GRANT, REVOKE) y TCL (COMMIT, ROLLBACK).",
+            "Es declarativo: se describe qué resultado se quiere, no cómo obtenerlo; el optimizador decide el plan.",
+            "Usaremos PostgreSQL, SGBD de código abierto con alto cumplimiento del estándar SQL."
+          ],
+          "notes": "Explique que SQL lleva casi cincuenta años vigente y que sigue siendo una de las habilidades más pedidas en avisos de empleo de desarrolladores y analistas de datos en el Perú. Contraste el paradigma declarativo con lo que aprendieron en programación: en Python recorrían una lista con un bucle para filtrar; en SQL solo escriben la condición y el SGBD elige el camino. Pregunte: ¿qué ventaja tiene que el motor decida el plan? Que el mismo código se vuelve más rápido cuando el DBA agrega un índice, sin tocar la aplicación. Justifique la elección de PostgreSQL: es gratuito, robusto, lo usan entidades públicas y empresas privadas de la región, y su dialecto se transfiere con facilidad a MySQL, SQL Server u Oracle."
+        },
+        {
+          "title": "Entorno de trabajo: psql, pgAdmin y DBeaver",
+          "bullets": [
+            "Instalar PostgreSQL o usar un servicio gestionado en la nube con capa gratuita.",
+            "Conectarse con psql: psql -h servidor -U usuario -d basedatos.",
+            "Comandos útiles de psql: \\l lista bases, \\dt lista tablas, \\d tabla describe columnas.",
+            "Guardar todo el código en scripts .sql versionados, nunca solo en la consola."
+          ],
+          "notes": "Dedique este momento a una demostración en vivo compartiendo pantalla. Cree una base de datos llamada tienda con CREATE DATABASE tienda; y conéctese a ella. Muestre psql y luego un cliente gráfico como DBeaver o pgAdmin, explicando que el cliente gráfico es cómodo pero que en servidores reales muchas veces solo tendrán una terminal, como vieron en Sistemas Operativos. Insista en el hábito profesional de escribir scripts numerados, por ejemplo 01_esquema.sql, 02_datos.sql y 03_consultas.sql, y guardarlos en un repositorio. Pregunte qué pasaría si el servidor de pruebas se borra y el esquema solo existía en la consola. Pida que, antes de la siguiente clase, todos tengan su entorno funcionando y envíen una captura del comando SELECT version();."
+        },
+        {
+          "title": "CREATE TABLE con tipos y restricciones",
+          "bullets": [
+            "Tipos clave: INTEGER, BIGINT, NUMERIC(p,s), VARCHAR(n), CHAR(n), TEXT, DATE, TIMESTAMPTZ, BOOLEAN.",
+            "Identificadores autogenerados: id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY.",
+            "Restricciones: PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK y DEFAULT.",
+            "Ejemplo: ruc CHAR(11) UNIQUE NOT NULL CHECK (ruc ~ '^(10|15|17|20)[0-9]{9}$')."
+          ],
+          "notes": "Escriba en vivo la tabla cliente con id autogenerado, RUC, razón social, correo y fecha de registro con DEFAULT now(). Explique la restricción CHECK con expresión regular: los RUC peruanos comienzan con 10 para personas naturales, 20 para personas jurídicas y otros prefijos para casos especiales. Pregunte: ¿por qué validar en la base de datos si la aplicación web ya valida? Porque hay muchas puertas de entrada a los datos, como cargas masivas, otras aplicaciones o un analista que ejecuta un script, y la base es la última línea de defensa. Muestre el error que se produce al insertar un RUC de diez dígitos. Recalque que el nombre de las restricciones, con CONSTRAINT nombre, facilita entender los mensajes de error en producción."
+        },
+        {
+          "title": "Claves foráneas y evolución del esquema con ALTER",
+          "bullets": [
+            "FOREIGN KEY (id_cliente) REFERENCES cliente(id) ON DELETE RESTRICT.",
+            "ALTER TABLE permite agregar columnas, restricciones o cambiar tipos con cuidado.",
+            "DROP TABLE elimina estructura y datos; en producción se usa con extrema precaución.",
+            "Las migraciones versionadas (Flyway, Alembic) registran cada cambio de esquema."
+          ],
+          "notes": "Cree la tabla pedido referenciando a cliente y muestre qué ocurre al intentar insertar un pedido con un id_cliente inexistente: el SGBD rechaza la operación y protege la integridad. Luego simule un cambio de requerimientos: el negocio ahora quiere registrar el canal de venta. Use ALTER TABLE pedido ADD COLUMN canal VARCHAR(20) NOT NULL DEFAULT 'tienda'. Pregunte por qué se necesita el DEFAULT: porque ya hay filas y la columna nueva no puede quedar nula. Introduzca la idea de migraciones: en equipos profesionales, cada cambio de esquema es un archivo versionado que se aplica igual en desarrollo, pruebas y producción. Comente que los estudiantes de Computación verán herramientas de este tipo en Desarrollo de Software Empresarial."
+        },
+        {
+          "title": "INSERT, UPDATE y DELETE sin accidentes",
+          "bullets": [
+            "INSERT INTO producto (codigo, nombre, precio) VALUES (...), (...); permite inserción múltiple.",
+            "UPDATE y DELETE sin WHERE afectan todas las filas: primero ejecutar el SELECT equivalente.",
+            "RETURNING devuelve las filas afectadas, útil para auditar y para obtener ids generados.",
+            "Envolver cambios masivos en BEGIN ... COMMIT para poder deshacer con ROLLBACK."
+          ],
+          "notes": "Cuente una historia realista: un practicante ejecuta UPDATE producto SET precio = 0 olvidando el WHERE, y la tienda en línea vende todo gratis durante veinte minutos. Este tipo de incidente ocurre en empresas de todos los tamaños. Enseñe el protocolo seguro: primero escribir el SELECT con el mismo WHERE y verificar cuántas filas devuelve; después abrir una transacción con BEGIN, ejecutar el UPDATE, revisar el número de filas afectadas y recién entonces COMMIT. Si algo no cuadra, ROLLBACK. Muestre RETURNING para ver exactamente qué cambió. Pregunte a la clase qué otras salvaguardas existen: permisos restringidos para que los usuarios de aplicación no puedan borrar tablas, y copias de seguridad, que verán en la Unidad 4."
+        },
+        {
+          "title": "SELECT: anatomía y orden lógico de evaluación",
+          "bullets": [
+            "Orden de escritura: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT.",
+            "Orden lógico de evaluación: FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT.",
+            "Por eso un alias definido en SELECT no puede usarse en WHERE, pero sí en ORDER BY.",
+            "Evitar SELECT * en código de aplicación: listar columnas explícitas mejora claridad y rendimiento."
+          ],
+          "notes": "Este es uno de los conceptos que más diferencia a quien entiende SQL de quien lo copia. Dibuje el orden lógico como una tubería: primero se arma el conjunto de filas con FROM, luego se filtran con WHERE, luego se agrupan, se filtran grupos con HAVING, se calculan las expresiones de SELECT, se ordena y finalmente se limita. Muestre el error clásico: SELECT precio * 1.18 AS precio_igv FROM producto WHERE precio_igv > 100; falla porque el alias aún no existe cuando se evalúa WHERE. Pregunte cómo lo arreglarían: repitiendo la expresión o usando una subconsulta. Explique que SELECT * rompe aplicaciones cuando se agregan columnas y transfiere datos innecesarios por la red."
+        },
+        {
+          "title": "Filtros, patrones y el problema de los valores nulos",
+          "bullets": [
+            "Operadores: =, <>, BETWEEN, IN, LIKE, ILIKE y expresiones regulares con ~.",
+            "NULL significa desconocido o no aplicable; NULL = NULL no es verdadero sino desconocido.",
+            "Usar IS NULL e IS NOT NULL; COALESCE(telefono, 'sin registro') reemplaza nulos al mostrar.",
+            "La lógica de tres valores (verdadero, falso, desconocido) afecta filtros, NOT IN y agregaciones."
+          ],
+          "notes": "Muestre que WHERE telefono = NULL nunca devuelve filas, aunque existan teléfonos nulos, y pida a la clase que explique por qué. Codd introdujo el nulo para representar información faltante, y con él la lógica de tres valores. Dé un ejemplo con impacto: un reporte de clientes que no son de Lima usando WHERE departamento <> 'LIMA' omite silenciosamente a los clientes sin departamento registrado. Si el gerente decide con ese reporte, decide con datos incompletos. Explique la trampa de NOT IN cuando la subconsulta contiene un nulo: el resultado queda vacío. Recomiende declarar NOT NULL siempre que el negocio lo permita, porque cada columna anulable multiplica los casos que hay que considerar en las consultas."
+        },
+        {
+          "title": "Reunión interna: combinar tablas relacionadas",
+          "bullets": [
+            "INNER JOIN devuelve solo filas con coincidencia en ambas tablas según la condición ON.",
+            "Usar alias cortos: FROM pedido p JOIN cliente c ON c.id = p.id_cliente.",
+            "Reunir varias tablas encadenando JOIN: pedido, detalle, producto y categoría.",
+            "Olvidar la condición produce un producto cartesiano: 10 000 × 5 000 = 50 millones de filas."
+          ],
+          "notes": "Use el esquema de la tienda para resolver un requerimiento real: listar cada pedido con la razón social del cliente y el total. Escriba la consulta paso a paso, primero FROM pedido, luego el JOIN con cliente y la condición ON. Explique que JOIN es la operación de reunión del álgebra relacional que vieron en la Unidad 1. Muestre el desastre de olvidar la condición: el resultado explota y puede tumbar el servidor de pruebas. Pregunte: ¿qué pasa con los clientes que nunca han comprado? No aparecen, porque INNER JOIN exige coincidencia; esto prepara la siguiente diapositiva. Pida a los estudiantes que escriban una reunión de cuatro tablas que muestre producto, categoría y cantidad vendida en cada pedido."
+        },
+        {
+          "title": "Reuniones externas y autorreuniones",
+          "bullets": [
+            "LEFT JOIN conserva todas las filas de la tabla izquierda y completa con NULL lo que no coincide.",
+            "Patrón antirreunión: LEFT JOIN ... WHERE derecha.id IS NULL encuentra registros sin relación.",
+            "RIGHT y FULL OUTER JOIN cubren los casos simétricos; CROSS JOIN genera combinaciones deliberadas.",
+            "Autorreunión: empleado e JOIN empleado j ON j.id = e.id_jefe obtiene jerarquías."
+          ],
+          "notes": "Plantee el requerimiento del área comercial: clientes registrados que no han comprado en el año, para una campaña de reactivación. Solución con LEFT JOIN de cliente a pedido filtrando los pedidos del año en la condición ON, y luego WHERE p.id IS NULL. Subraye una sutileza que causa muchos errores: si el filtro de fecha se coloca en WHERE en lugar de ON, la reunión externa se convierte en interna y el resultado es incorrecto. Haga que los estudiantes predigan el resultado de ambas versiones antes de ejecutarlas. Después muestre la autorreunión con la tabla empleado para listar cada trabajador junto con el nombre de su jefe, un caso típico de organigramas en sistemas de recursos humanos."
+        },
+        {
+          "title": "Funciones de agregación y agrupamiento",
+          "bullets": [
+            "COUNT, SUM, AVG, MIN y MAX resumen muchas filas en un valor.",
+            "COUNT(*) cuenta filas; COUNT(columna) ignora nulos; COUNT(DISTINCT columna) cuenta valores únicos.",
+            "GROUP BY forma grupos; toda columna no agregada del SELECT debe estar en GROUP BY.",
+            "HAVING filtra grupos después de agregar; WHERE filtra filas antes de agrupar."
+          ],
+          "notes": "Resuelva con la clase el requerimiento de la gerencia: ventas totales por departamento en 2025, solo para departamentos que superen S/ 50 000. Construya la consulta gradualmente: primero las reuniones necesarias, luego WHERE con el rango de fechas, después GROUP BY departamento y SUM del subtotal, y finalmente HAVING SUM(...) > 50000. Pregunte por qué el filtro de fechas va en WHERE y el de monto en HAVING; la respuesta conecta con el orden lógico de evaluación. Muestre la diferencia entre COUNT(*) y COUNT(correo) en la tabla de clientes, y relacione con Estadística: AVG ignora nulos, lo que puede sesgar el promedio si los nulos no son aleatorios. Proponga calcular el ticket promedio por canal de venta."
+        },
+        {
+          "title": "Funciones de fecha, texto y expresiones condicionales",
+          "bullets": [
+            "Fechas: date_trunc('month', fecha), EXTRACT(YEAR FROM fecha), fecha + INTERVAL '30 days'.",
+            "Texto: UPPER, TRIM, LENGTH, SUBSTRING y concatenación con || o concat().",
+            "CASE WHEN ... THEN ... ELSE ... END clasifica filas, por ejemplo, por rango de compras.",
+            "Conversión explícita con CAST(valor AS tipo) o el operador :: de PostgreSQL."
+          ],
+          "notes": "Muestre cómo construir un reporte mensual con date_trunc, que agrupa todas las fechas del mes en su primer día, ideal para gráficos de tendencia. Luego resuelva un problema de limpieza de datos frecuente en el Perú: razones sociales con espacios dobles y mayúsculas inconsistentes; aplique UPPER(TRIM(razon_social)). Introduzca CASE para segmentar clientes: más de S/ 10 000 anuales es clave, entre 2 000 y 10 000 es regular y el resto es ocasional. Pregunte qué pasa con un cliente que exactamente compra S/ 10 000: obliga a definir bien los límites. Comente que la zona horaria importa: un pedido registrado a las 23:30 en Lima ya es el día siguiente en tiempo universal coordinado, lo que puede mover ventas entre meses."
+        },
+        {
+          "title": "Ordenamiento, paginación y buenas prácticas de estilo",
+          "bullets": [
+            "ORDER BY total DESC, fecha ASC; NULLS LAST controla la posición de los nulos.",
+            "LIMIT y OFFSET paginan resultados; para tablas grandes conviene paginar por clave (keyset).",
+            "Estilo: palabras reservadas en mayúsculas, una cláusula por línea, alias significativos.",
+            "Comentar la intención del negocio con -- antes de cada consulta del script."
+          ],
+          "notes": "Explique que sin ORDER BY el SGBD no garantiza ningún orden, aunque en pruebas parezca que sí; el orden puede cambiar tras una actualización o un cambio de plan. Muestre la paginación típica de una tienda en línea con LIMIT 20 OFFSET 40, y luego explique por qué OFFSET se vuelve lento en tablas de millones de filas: el motor igual debe recorrer y descartar las filas anteriores. La alternativa es la paginación por clave: WHERE id > último_id_visto ORDER BY id LIMIT 20, técnica que Markus Winand explica en SQL Performance Explained. Cierre con estilo: muestre una consulta escrita en una sola línea y la misma con formato profesional. Pregunte cuál preferirían depurar a las tres de la mañana durante una incidencia."
+        },
+        {
+          "title": "Del requerimiento a la consulta: método de cinco pasos",
+          "bullets": [
+            "Paso 1: reescribir el requerimiento como pregunta precisa con periodo, granularidad y métrica.",
+            "Paso 2: identificar tablas y rutas de reunión en el diagrama.",
+            "Paso 3: escribir FROM y JOIN, verificar el conteo de filas antes de agregar.",
+            "Paso 4: agregar filtros, agrupamientos y cálculos; paso 5: validar contra un total conocido."
+          ],
+          "notes": "Cierre la unidad con un método que usarán en la tarea y en su vida profesional. Tome un requerimiento ambiguo del gerente: quiero saber qué productos se venden más. Pregunte a la clase qué falta precisar: más en unidades o en soles, en qué periodo, por tienda o en total, incluyendo devoluciones o no. Reescriba la pregunta: los diez productos con mayor monto vendido en soles en el primer semestre de 2025, sin anulaciones. Luego aplique los pasos. Insista en el paso de validación: comparar el total general de su consulta con el total del reporte contable o de las ventas declaradas. Un analista que entrega cifras que no cuadran pierde credibilidad rápidamente, aunque su SQL sea elegante."
+        }
+      ],
+      "reading": {
+        "title": "SQL en la práctica: del esquema a las respuestas de negocio",
+        "minutes": 35,
+        "content": "## 1. Un lenguaje declarativo con medio siglo de vigencia\n\nSQL surgió en los laboratorios de IBM a mediados de los setenta como implementación práctica del modelo de Codd. Su rasgo esencial es ser **declarativo**: el programador describe el resultado y el optimizador decide cómo obtenerlo. Esta lectura desarrolla, con un esquema de comercio minorista peruano, el flujo completo: definir tablas, cargar datos y responder preguntas de negocio.\n\n## 2. Definir el esquema con integridad\n\n```sql\nCREATE TABLE cliente (\n  id            BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n  tipo_doc      CHAR(1)      NOT NULL CHECK (tipo_doc IN ('D','R','E')), -- DNI, RUC, extranjería\n  num_doc       VARCHAR(12)  NOT NULL,\n  nombre        VARCHAR(150) NOT NULL,\n  ubigeo        CHAR(6),\n  creado_en     TIMESTAMPTZ  NOT NULL DEFAULT now(),\n  CONSTRAINT uq_cliente_doc UNIQUE (tipo_doc, num_doc)\n);\n\nCREATE TABLE producto (\n  id      BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n  codigo  VARCHAR(20)   NOT NULL UNIQUE,\n  nombre  VARCHAR(120)  NOT NULL,\n  precio  NUMERIC(10,2) NOT NULL CHECK (precio >= 0)\n);\n\nCREATE TABLE venta (\n  id          BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n  id_cliente  BIGINT NOT NULL REFERENCES cliente(id) ON DELETE RESTRICT,\n  fecha       DATE   NOT NULL,\n  estado      VARCHAR(10) NOT NULL DEFAULT 'EMITIDA'\n);\n\nCREATE TABLE venta_detalle (\n  id_venta    BIGINT NOT NULL REFERENCES venta(id) ON DELETE CASCADE,\n  id_producto BIGINT NOT NULL REFERENCES producto(id),\n  cantidad    INTEGER       NOT NULL CHECK (cantidad > 0),\n  precio_unit NUMERIC(10,2) NOT NULL,\n  PRIMARY KEY (id_venta, id_producto)\n);\n```\n\nNote que la unicidad del documento es compuesta (tipo y número), que el detalle se borra en cascada con su venta pero que un cliente con ventas no puede borrarse, y que el precio unitario se copia al detalle para conservar el precio histórico.\n\n## 3. Manipular datos de forma segura\n\n```sql\nBEGIN;\nUPDATE producto SET precio = round(precio * 1.05, 2)\nWHERE codigo LIKE 'ABR-%'\nRETURNING codigo, precio;    -- revisar antes de confirmar\nCOMMIT;                      -- o ROLLBACK si algo no cuadra\n```\n\nEsta disciplina (transacción explícita, condición verificada, `RETURNING`) evita los incidentes más costosos de la vida profesional.\n\n## 4. Consultar: orden lógico y reuniones\n\nEl SGBD evalúa una consulta en este orden lógico: `FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT`. Comprenderlo explica casi todos los errores de principiante. Por ejemplo, ventas por departamento del primer semestre de 2025, solo comprobantes emitidos:\n\n```sql\nSELECT u.departamento,\n       COUNT(DISTINCT v.id)                AS n_ventas,\n       SUM(d.cantidad * d.precio_unit)     AS monto\nFROM venta v\nJOIN venta_detalle d ON d.id_venta = v.id\nJOIN cliente c       ON c.id = v.id_cliente\nLEFT JOIN ubigeo u   ON u.codigo = c.ubigeo\nWHERE v.fecha >= DATE '2025-01-01' AND v.fecha < DATE '2025-07-01'\n  AND v.estado = 'EMITIDA'\nGROUP BY u.departamento\nHAVING SUM(d.cantidad * d.precio_unit) > 50000\nORDER BY monto DESC;\n```\n\nObserve tres detalles profesionales. El rango de fechas es semiabierto (`>=` inicio y `<` fin), lo que evita perder registros del último día cuando la columna incluye hora. Se usa `COUNT(DISTINCT v.id)` porque la reunión con el detalle repite cada venta tantas veces como productos tenga. Y la reunión con ubigeo es externa para no perder clientes sin ubigeo registrado: aparecerán agrupados bajo un departamento nulo, lo que revela un problema de calidad de datos que conviene reportar.\n\n## 5. Nulos y lógica de tres valores\n\nEn SQL, una comparación con `NULL` produce *desconocido*, y `WHERE` solo conserva filas verdaderas. De ahí que `departamento <> 'LIMA'` excluya a quienes no tienen departamento. La recomendación de Date es minimizar los nulos en el diseño; cuando existan, tratarlos explícitamente con `IS NULL` o `COALESCE`.\n\n## 6. Antirreunión: encontrar lo que falta\n\n```sql\n-- Clientes sin compras en 2025 (para campaña de reactivación)\nSELECT c.id, c.nombre\nFROM cliente c\nLEFT JOIN venta v ON v.id_cliente = c.id\n                 AND v.fecha >= DATE '2025-01-01'\nWHERE v.id IS NULL;\n```\n\nEl filtro de fecha va en `ON`; si se moviera a `WHERE`, la reunión externa se degradaría a interna y el resultado sería vacío.\n\n## 7. Ideas clave\n\n- Las restricciones en la base son la última línea de defensa de la calidad de datos.\n- Todo `UPDATE` o `DELETE` va precedido de su `SELECT` y dentro de una transacción.\n- Validar siempre los totales contra una fuente independiente.\n"
+      },
+      "case": {
+        "title": "Caso: Moda Gamarra Online y el reporte que nadie creía",
+        "content": "**Moda Gamarra Online S.A.C.** vende ropa de confección nacional a través de su tienda web y de redes sociales. En 2025 procesó unos 96 000 pedidos y su base PostgreSQL contiene 41 000 clientes, 3 200 productos con variantes de talla y color, y 260 000 líneas de detalle.\n\nLa gerente comercial, **Karina Vílchez**, solicitó al equipo de sistemas un reporte para la junta de socios: ventas por departamento, ticket promedio y los productos más vendidos del primer semestre. El desarrollador junior **Luis Ccahuana** entregó el reporte en dos días. Los resultados generaron alarma:\n\n- Las ventas totales del semestre según el reporte sumaban **S/ 8,9 millones**, mientras que el área contable, con los comprobantes declarados a SUNAT, registraba **S/ 6,1 millones**.\n- El ticket promedio aparecía en **S/ 214**, pero la plataforma de pagos informaba un promedio cercano a S/ 148.\n- Arequipa y Piura, mercados en crecimiento según el equipo de marketing, mostraban ventas casi nulas.\n- Un 7 % de pedidos no aparecía en ningún departamento.\n\nAl revisar el código, la analista sénior **Paola Yupanqui** encontró la consulta principal:\n\n```sql\nSELECT c.departamento, SUM(p.total) AS ventas, AVG(p.total) AS ticket\nFROM pedido p\nJOIN pedido_detalle d ON d.id_pedido = p.id\nJOIN cliente c ON c.id = p.id_cliente\nWHERE p.fecha BETWEEN '2025-01-01' AND '2025-06-30'\nGROUP BY c.departamento;\n```\n\nTambién descubrió que la columna `pedido.fecha` es de tipo `TIMESTAMPTZ`, que la tabla `pedido` incluye pedidos con estado `ANULADO` y `PENDIENTE_PAGO`, y que muchos clientes de provincias registraron su dirección en el campo de referencia y dejaron `departamento` vacío. Además, el departamento se escribe de formas distintas: \"AREQUIPA\", \"Arequipa \" y \"AQP\".\n\nKarina debe presentar a la junta en cinco días y pregunta si puede confiar en algún número. Luis se siente expuesto y propone exportar todo a Excel para \"cuadrarlo a mano\". Paola cree que el problema es de diseño y de consultas, no de herramienta, pero sabe que corregir la calidad de los datos de departamento tomará más tiempo del disponible.\n",
+        "questions": [
+          "Identifique al menos tres errores de la consulta de Luis que explican por qué las ventas y el ticket promedio aparecen inflados.",
+          "Reescriba la consulta corregida aplicando el método de cinco pasos y explique cómo validaría su resultado contra la información contable.",
+          "¿Qué efecto tiene usar BETWEEN con una columna TIMESTAMPTZ para el último día del semestre? Proponga la alternativa correcta.",
+          "¿Cómo presentaría a la junta los resultados por departamento, sabiendo que la calidad del dato de ubicación es deficiente? Argumente la decisión.",
+          "¿Qué restricciones y cambios de esquema propondría para que el problema del departamento no se repita?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Implementación en PostgreSQL y batería de consultas de negocio",
+        "instructions": "**Objetivo.** Implementar el esquema diseñado en la Tarea 1 y responder preguntas de negocio con SQL correcto y validado.\n\n**Instrucciones.**\n1. Escriba el script `01_esquema.sql` con `CREATE TABLE` para todas las tablas, incluyendo claves primarias, foráneas con acción referencial justificada, `UNIQUE`, `NOT NULL`, `CHECK` y `DEFAULT`. Incorpore las correcciones recibidas en la Tarea 1.\n2. Escriba `02_datos.sql` con datos de prueba verosímiles: al menos 30 filas en las tablas principales y 100 en las de hechos (ventas, matrículas, atenciones). Incluya casos límite: clientes sin compras, valores nulos permitidos y fechas en el borde de meses.\n3. Escriba `03_consultas.sql` con 10 consultas que respondan preguntas de negocio redactadas con precisión. Debe incluir como mínimo: dos reuniones de tres o más tablas, una reunión externa con antirreunión, una autorreunión o CASE, tres consultas con GROUP BY (una con HAVING) y una con funciones de fecha.\n4. Para cada consulta, anote la pregunta de negocio, el resultado esperado y cómo validó que es correcto.\n5. Demuestre con tres sentencias que las restricciones rechazan datos inválidos y copie el mensaje de error.\n\n**Entregable.** Archivo comprimido con los tres scripts y un PDF breve (3 a 5 páginas) con capturas de resultados.",
+        "rubric": [
+          {
+            "name": "Esquema con restricciones completas y justificadas",
+            "points": 5
+          },
+          {
+            "name": "Datos de prueba verosímiles con casos límite",
+            "points": 3
+          },
+          {
+            "name": "Corrección y variedad de las diez consultas",
+            "points": 8
+          },
+          {
+            "name": "Validación de resultados y estilo profesional del código",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: SQL de definición, manipulación y consulta",
+        "questions": [
+          {
+            "prompt": "¿Por qué falla la consulta SELECT precio * 1.18 AS con_igv FROM producto WHERE con_igv > 100?",
+            "options": [
+              "El operador * no se permite en SELECT",
+              "Los alias solo se permiten en tablas",
+              "Falta la cláusula GROUP BY",
+              "WHERE se evalúa antes que SELECT y el alias aún no existe"
+            ],
+            "correct": 3,
+            "explanation": "En el orden lógico, WHERE se procesa antes que SELECT; por eso el alias definido en SELECT no es visible en WHERE."
+          },
+          {
+            "prompt": "La tabla cliente tiene 500 filas y 40 tienen departamento nulo. ¿Cuántas filas devuelve WHERE departamento <> 'LIMA' si 200 clientes son de Lima?",
+            "options": [
+              "260",
+              "300",
+              "500",
+              "240"
+            ],
+            "correct": 0,
+            "explanation": "Las 40 filas nulas producen desconocido y se descartan: 500 - 200 - 40 = 260 filas."
+          },
+          {
+            "prompt": "Necesita listar los clientes que no tienen ningún pedido. ¿Qué técnica es correcta?",
+            "options": [
+              "INNER JOIN pedido y filtrar pedido.id IS NULL",
+              "CROSS JOIN pedido sin condición",
+              "LEFT JOIN pedido y filtrar pedido.id IS NULL",
+              "GROUP BY cliente con HAVING COUNT(*) = 0 tras INNER JOIN"
+            ],
+            "correct": 2,
+            "explanation": "La reunión externa conserva clientes sin coincidencia con nulos en las columnas de pedido; filtrar esos nulos implementa la antirreunión."
+          },
+          {
+            "prompt": "Un pedido con cinco productos se reúne con su detalle y luego se calcula COUNT(*) por cliente. ¿Qué problema aparece?",
+            "options": [
+              "COUNT(*) ignora los nulos",
+              "Cuenta líneas de detalle, no pedidos; debe usarse COUNT(DISTINCT id_pedido)",
+              "La reunión elimina pedidos con un producto",
+              "No hay problema alguno"
+            ],
+            "correct": 1,
+            "explanation": "La reunión repite el pedido por cada línea; contar filas sobreestima la cantidad de pedidos."
+          },
+          {
+            "prompt": "¿Cuál es la diferencia entre WHERE y HAVING?",
+            "options": [
+              "Son equivalentes y se pueden intercambiar",
+              "HAVING filtra filas y WHERE filtra columnas",
+              "WHERE filtra filas antes de agrupar; HAVING filtra grupos después de agregar",
+              "WHERE solo admite agregaciones"
+            ],
+            "correct": 2,
+            "explanation": "WHERE actúa sobre filas individuales; HAVING evalúa condiciones sobre resultados de funciones de agregación por grupo."
+          },
+          {
+            "prompt": "Para obtener las ventas de junio de una columna TIMESTAMPTZ, ¿qué condición es más segura?",
+            "options": [
+              "fecha BETWEEN '2025-06-01' AND '2025-06-30'",
+              "EXTRACT(MONTH FROM fecha) = 6",
+              "fecha LIKE '2025-06%'",
+              "fecha >= '2025-06-01' AND fecha < '2025-07-01'"
+            ],
+            "correct": 3,
+            "explanation": "El rango semiabierto incluye todo el 30 de junio con cualquier hora; BETWEEN corta a medianoche y EXTRACT mezcla años."
+          },
+          {
+            "prompt": "Un técnico debe subir 5 % el precio de una categoría en producción. ¿Qué procedimiento es el más profesional?",
+            "options": [
+              "Ejecutar el SELECT equivalente, luego BEGIN, UPDATE con RETURNING y COMMIT tras verificar",
+              "Ejecutar el UPDATE directamente y revisar después",
+              "Exportar a Excel, editar y volver a importar",
+              "Borrar los productos y volver a insertarlos"
+            ],
+            "correct": 0,
+            "explanation": "Verificar el alcance y usar una transacción permite revisar los cambios y deshacerlos con ROLLBACK si algo no coincide."
+          },
+          {
+            "prompt": "¿Por qué se copia precio_unit en venta_detalle si el producto ya tiene precio?",
+            "options": [
+              "Para acelerar las búsquedas por producto",
+              "Para conservar el precio histórico aplicado en cada venta",
+              "Porque PostgreSQL lo exige en claves foráneas",
+              "Para cumplir la primera forma normal"
+            ],
+            "correct": 1,
+            "explanation": "El precio del producto cambia en el tiempo; el detalle debe registrar el valor pactado al momento de la venta."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · SQL avanzado, programación en el servidor, transacciones y rendimiento",
+      "description": "Al finalizar la unidad, el estudiante resuelve requerimientos analíticos con subconsultas, expresiones de tabla comunes y funciones de ventana, implementa vistas, funciones y disparadores, y garantiza la consistencia y el rendimiento mediante transacciones e índices verificados con planes de ejecución.",
+      "topics": [
+        "Subconsultas correlacionadas, EXISTS y expresiones de tabla comunes",
+        "Funciones de ventana para análisis",
+        "Vistas, funciones PL/pgSQL y disparadores",
+        "Transacciones ACID, aislamiento y concurrencia",
+        "Índices B-tree y lectura de planes con EXPLAIN ANALYZE"
+      ],
+      "slides": [
+        {
+          "title": "Subconsultas: escalares, de conjunto y correlacionadas",
+          "bullets": [
+            "Subconsulta escalar: devuelve un único valor, por ejemplo, el precio promedio del catálogo.",
+            "Subconsulta de conjunto con IN o EXISTS: verifica pertenencia o existencia.",
+            "Correlacionada: referencia columnas de la consulta externa y se evalúa por cada fila.",
+            "EXISTS es seguro frente a nulos; NOT IN con un nulo en la subconsulta devuelve un resultado vacío."
+          ],
+          "notes": "Plantee: productos cuyo precio supera el promedio de su propia categoría. Pida que intenten resolverlo con lo visto en la Unidad 2; descubrirán que necesitan comparar cada fila con un agregado de su grupo. Muestre la subconsulta correlacionada: WHERE p.precio > (SELECT AVG(precio) FROM producto x WHERE x.id_categoria = p.id_categoria). Explique que conceptualmente se ejecuta una vez por fila, aunque el optimizador puede transformarla en una reunión. Luego recuerde la trampa de NOT IN con nulos y muestre la versión con NOT EXISTS, que se comporta como se espera. Pregunte cuándo preferir EXISTS: cuando solo importa si existe al menos una fila, como clientes que alguna vez compraron un producto de la categoría escolar."
+        },
+        {
+          "title": "Expresiones de tabla comunes (WITH)",
+          "bullets": [
+            "WITH nombre AS (consulta) define un resultado temporal con nombre, legible y reutilizable.",
+            "Permiten descomponer un problema complejo en pasos, como un pipeline de transformaciones.",
+            "WITH RECURSIVE recorre jerarquías: organigramas, categorías anidadas, rutas.",
+            "Desde PostgreSQL 12 las CTE no recursivas pueden integrarse al plan principal y optimizarse."
+          ],
+          "notes": "Las CTE son la herramienta favorita de los analistas porque convierten una consulta monstruosa en una secuencia de pasos con nombre. Construya en vivo: paso uno, ventas_mes por cliente; paso dos, clientes_activos con más de tres compras; paso tres, la consulta final que une ambas. Pida a los estudiantes que lean la consulta en voz alta como si fuera un relato. Después muestre WITH RECURSIVE para un organigrama: partir del gerente general y descender nivel por nivel, acumulando la profundidad. Comente que los estudiantes de Inteligencia Artificial usarán exactamente este estilo al preparar datos para modelos, y que herramientas modernas de transformación de datos se basan en encadenar consultas con nombre de esta manera."
+        },
+        {
+          "title": "Funciones de ventana: agregar sin colapsar filas",
+          "bullets": [
+            "Sintaxis: función OVER (PARTITION BY grupo ORDER BY criterio ROWS ...).",
+            "Ranking: ROW_NUMBER, RANK y DENSE_RANK difieren en el tratamiento de empates.",
+            "Desplazamiento: LAG y LEAD comparan con la fila anterior o siguiente, por ejemplo, crecimiento mensual.",
+            "Acumulados y medias móviles: SUM(monto) OVER (ORDER BY mes ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)."
+          ],
+          "notes": "Las funciones de ventana son quizá la mejora más poderosa de SQL desde el estándar de 2003. A diferencia de GROUP BY, mantienen cada fila y le agregan un cálculo sobre su ventana. Resuelva tres requerimientos reales. Primero, el producto más vendido de cada categoría con ROW_NUMBER particionado por categoría y filtrando el número uno. Segundo, el crecimiento mensual de ventas con LAG: (ventas - LAG(ventas)) / LAG(ventas). Tercero, la participación de cada tienda en el total con SUM() OVER () sin partición. Pregunte qué diferencia hay entre RANK y DENSE_RANK si dos productos empatan en el segundo lugar. Relacione con Estadística: la media móvil de tres meses suaviza la estacionalidad de campañas como el Día de la Madre o Fiestas Patrias."
+        },
+        {
+          "title": "Vistas y vistas materializadas",
+          "bullets": [
+            "Vista: consulta almacenada con nombre; simplifica, reutiliza y restringe el acceso a columnas.",
+            "Vista materializada: guarda físicamente el resultado y se actualiza con REFRESH MATERIALIZED VIEW.",
+            "Uso típico: tablero de ventas diarias calculado cada noche en lugar de en cada consulta.",
+            "Riesgo: datos desactualizados entre refrescos; documentar la frecuencia de actualización."
+          ],
+          "notes": "Muestre la creación de una vista v_ventas_detalladas que oculta las reuniones complejas y expone columnas listas para el área comercial. Explique su doble utilidad: simplificar consultas y controlar la seguridad, pues se puede dar permiso sobre la vista sin dar acceso a la tabla de clientes con datos personales. Luego contraste con la vista materializada: la vista normal recalcula todo cada vez; la materializada guarda el resultado. Pregunte en qué casos aceptarían datos con un día de retraso: un reporte gerencial mensual, sí; el saldo disponible de una cuenta bancaria, nunca. Señale que el refresco concurrente requiere un índice único sobre la vista materializada, detalle que aparece con frecuencia en entornos productivos."
+        },
+        {
+          "title": "Funciones y procedimientos en PL/pgSQL",
+          "bullets": [
+            "CREATE FUNCTION encapsula lógica reutilizable que devuelve un valor o una tabla.",
+            "CREATE PROCEDURE (desde PostgreSQL 11) permite controlar transacciones dentro del procedimiento.",
+            "Variables, condicionales IF, bucles y manejo de excepciones con RAISE EXCEPTION.",
+            "Criterio: lógica de integridad cerca de los datos; reglas de negocio volátiles en la aplicación."
+          ],
+          "notes": "Escriba una función calcular_igv(monto NUMERIC) que devuelva el monto del impuesto con la tasa vigente del 18 %, y luego mejórela leyendo la tasa desde una tabla de parámetros, para que un cambio normativo no exija modificar código. Muestre una función que devuelve una tabla: el estado de cuenta de un cliente entre dos fechas. Abra el debate que divide a los equipos de desarrollo: ¿la lógica de negocio debe vivir en la base de datos o en la aplicación? Ventajas en la base: consistencia y rendimiento; desventajas: más difícil de versionar, probar y migrar entre motores. Una postura equilibrada, defendida en la literatura, es mantener en la base las reglas de integridad y en la aplicación las reglas que cambian con frecuencia."
+        },
+        {
+          "title": "Disparadores para auditoría e integridad",
+          "bullets": [
+            "Trigger: función que se ejecuta automáticamente BEFORE o AFTER de INSERT, UPDATE o DELETE.",
+            "Variables NEW y OLD dan acceso a la fila nueva y a la anterior.",
+            "Usos legítimos: auditoría de cambios, sellos de tiempo, validaciones complejas, mantener saldos.",
+            "Abuso: cadenas de triggers ocultos que dificultan depurar y degradan el rendimiento."
+          ],
+          "notes": "Construya en vivo una tabla auditoria_precio y un trigger AFTER UPDATE sobre producto que registra el precio anterior, el nuevo, el usuario y la fecha. Ejecute un UPDATE y muestre cómo aparece automáticamente el registro. Explique por qué la auditoría en la base de datos es más confiable que en la aplicación: captura cambios hechos por cualquier vía, incluidos scripts manuales. Conecte con controles internos: los auditores y la normativa de protección de datos valoran poder responder quién cambió qué y cuándo. Luego advierta sobre el abuso: un trigger que actualiza otra tabla que dispara otro trigger genera efectos difíciles de rastrear. Pida a la clase que proponga un trigger útil para su proyecto, por ejemplo descontar stock al registrar una venta."
+        },
+        {
+          "title": "Transacciones y propiedades ACID",
+          "bullets": [
+            "Atomicidad: todo o nada; si falla un paso, se deshace la transacción completa.",
+            "Consistencia: la transacción lleva la base de un estado válido a otro válido según las restricciones.",
+            "Aislamiento: transacciones concurrentes no ven estados intermedios de las demás.",
+            "Durabilidad: lo confirmado sobrevive a caídas gracias al registro de escritura anticipada (WAL)."
+          ],
+          "notes": "Use el ejemplo canónico de una transferencia entre cuentas de una billetera digital: débito de S/ 200 en la cuenta A y crédito en la cuenta B. Pregunte qué pasa si el servidor se apaga entre ambos pasos sin transacciones: el dinero desaparece. Con BEGIN y COMMIT, la atomicidad garantiza que ambos pasos ocurren o ninguno. Explique la durabilidad: PostgreSQL escribe primero en el registro WAL y luego en las tablas, de modo que tras un corte de energía puede rehacer lo confirmado. Mencione que el término ACID fue acuñado por Härder y Reuter en 1983 y que Jim Gray, Premio Turing, sentó las bases de la teoría de transacciones. Pregunte qué propiedad violaría un sistema que muestra al cliente un saldo intermedio."
+        },
+        {
+          "title": "Concurrencia: anomalías y niveles de aislamiento",
+          "bullets": [
+            "Anomalías: lectura sucia, lectura no repetible, lectura fantasma y actualización perdida.",
+            "Niveles SQL: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ y SERIALIZABLE.",
+            "PostgreSQL usa control de concurrencia multiversión (MVCC): los lectores no bloquean a los escritores.",
+            "Su nivel por defecto es READ COMMITTED; SERIALIZABLE puede abortar transacciones que deben reintentarse."
+          ],
+          "notes": "Dramatice la actualización perdida con dos estudiantes: ambos leen el stock de un producto, que es 5; cada uno vende 3 y escribe 2. El stock final debería ser negativo o la segunda venta rechazarse, pero queda en 2 y se vendieron 6 unidades. Esto ocurre en campañas como el Cyber Wow, cuando miles de compradores compiten por las mismas ofertas. Explique MVCC: cada transacción ve una instantánea consistente, por eso las consultas largas no bloquean las ventas. Muestre las soluciones: SELECT ... FOR UPDATE para bloquear la fila, una actualización atómica UPDATE ... SET stock = stock - 3 WHERE stock >= 3, o el nivel SERIALIZABLE con reintentos. Pregunte cuál elegirían para una tienda con alta concurrencia y por qué."
+        },
+        {
+          "title": "Bloqueos e interbloqueos",
+          "bullets": [
+            "Bloqueos de fila y de tabla protegen datos modificados hasta el COMMIT o ROLLBACK.",
+            "Interbloqueo (deadlock): A espera a B y B espera a A; el SGBD aborta una de las transacciones.",
+            "Prevención: acceder a los recursos siempre en el mismo orden y mantener transacciones cortas.",
+            "Diagnóstico con pg_stat_activity y pg_locks; nunca dejar transacciones abiertas esperando al usuario."
+          ],
+          "notes": "Simule un interbloqueo en dos sesiones de psql abiertas en paralelo. Sesión uno: BEGIN y actualiza la cuenta 1. Sesión dos: BEGIN y actualiza la cuenta 2. Luego la sesión uno intenta actualizar la cuenta 2 y queda esperando; la sesión dos intenta actualizar la cuenta 1 y PostgreSQL detecta el ciclo y aborta una con un error de deadlock. Explique la regla de oro: si todas las transacciones bloquean las cuentas en orden ascendente de identificador, el ciclo no puede formarse. Advierta sobre un error frecuente en aplicaciones web: abrir una transacción, mostrar un formulario y esperar a que el usuario confirme; mientras tanto, los bloqueos paralizan a otros usuarios. Enseñe a consultar pg_stat_activity para encontrar sesiones inactivas en transacción."
+        },
+        {
+          "title": "Índices: cómo encuentra los datos el SGBD",
+          "bullets": [
+            "Sin índice, el motor recorre la tabla completa (Seq Scan); con índice B-tree navega un árbol balanceado.",
+            "Un B-tree de tres o cuatro niveles localiza una fila entre millones con pocas lecturas de página.",
+            "Índices compuestos: el orden de columnas importa; (ruc, fecha) sirve para filtrar por ruc, no solo por fecha.",
+            "Costo: cada índice ocupa espacio y ralentiza INSERT, UPDATE y DELETE."
+          ],
+          "notes": "Use la analogía del índice alfabético al final de un libro: sin él, para encontrar normalización hay que leer todo el libro. Explique la estructura B-tree, propuesta por Bayer y McCreight en 1972, que mantiene el árbol balanceado y ordenado. Muestre con números: una tabla de diez millones de comprobantes, búsqueda por número de serie, pasa de varios segundos a milisegundos. Enfatice la regla del prefijo izquierdo en índices compuestos con un ejemplo de guía telefónica ordenada por apellido y luego nombre: sirve para buscar por apellido, pero no para buscar solo por nombre. Pregunte por qué no indexar todas las columnas: porque cada inserción debe actualizar todos los índices, y en tablas de alta escritura eso es costoso."
+        },
+        {
+          "title": "Leer planes de ejecución con EXPLAIN ANALYZE",
+          "bullets": [
+            "EXPLAIN muestra el plan estimado; EXPLAIN ANALYZE lo ejecuta y reporta tiempos y filas reales.",
+            "Nodos frecuentes: Seq Scan, Index Scan, Bitmap Heap Scan, Hash Join, Nested Loop y Sort.",
+            "Comparar filas estimadas frente a reales: grandes diferencias indican estadísticas desactualizadas (ANALYZE).",
+            "Funciones sobre columnas, como WHERE UPPER(nombre) = ..., impiden usar el índice normal."
+          ],
+          "notes": "Haga una demostración con una tabla de un millón de filas generada con generate_series. Ejecute una búsqueda por número de documento con EXPLAIN ANALYZE y muestre el Seq Scan y su tiempo. Cree el índice y repita: aparece Index Scan y el tiempo cae drásticamente. Luego muestre el error frecuente: WHERE date_trunc('month', fecha) = '2025-03-01' no aprovecha el índice sobre fecha; reescrito como rango semiabierto sí lo aprovecha. Este concepto, que Winand llama predicados que permiten usar índices, es una de las optimizaciones de mayor retorno. Enseñe a leer el plan de adentro hacia afuera. Pregunte por qué el optimizador a veces prefiere Seq Scan aunque exista índice: cuando la condición devuelve gran parte de la tabla, recorrerla completa es más barato."
+        },
+        {
+          "title": "Estrategia de optimización basada en evidencia",
+          "bullets": [
+            "Medir primero: identificar las consultas más costosas con la extensión pg_stat_statements.",
+            "Revisar el plan, el diseño de la consulta y los índices antes de comprar más servidor.",
+            "Evitar el patrón N+1: cientos de consultas pequeñas desde la aplicación en lugar de una reunión.",
+            "Documentar el antes y después con tiempos reales; un cambio sin medición es una opinión."
+          ],
+          "notes": "Cierre la unidad con un enfoque profesional de diagnóstico. Cuente que muchas empresas, ante lentitud, deciden contratar un servidor más grande en la nube y el problema persiste porque la causa era una consulta sin índice o un patrón N+1 en la aplicación. Explique pg_stat_statements: acumula estadísticas de cada consulta y permite ordenar por tiempo total, lo que revela que a menudo tres o cuatro consultas consumen la mayor parte del recurso, un principio de Pareto aplicado a datos. Describa el patrón N+1 con un listado de pedidos que consulta al cliente una vez por cada pedido. Pida a los estudiantes que, en la tarea, presenten una tabla comparativa con el tiempo antes y después de cada optimización aplicada."
+        }
+      ],
+      "reading": {
+        "title": "Más allá del SELECT: análisis, programación en el servidor y transacciones confiables",
+        "minutes": 40,
+        "content": "## 1. De consultar a analizar\n\nCuando las preguntas pasan de \"¿cuánto vendimos?\" a \"¿qué producto lidera cada categoría y cómo evoluciona mes a mes?\", el SQL básico no basta. Esta lectura presenta tres familias de herramientas: **SQL analítico**, **programación en el servidor** y **control transaccional**, y cierra con los **índices** como base del rendimiento.\n\n## 2. CTE y funciones de ventana\n\nConsidere una cadena de boticas con sucursales en Lima, Trujillo y Chiclayo. La gerencia pide el crecimiento mensual de ventas por sucursal y el ranking dentro de cada ciudad:\n\n```sql\nWITH ventas_mes AS (\n  SELECT s.ciudad, s.nombre AS sucursal,\n         date_trunc('month', v.fecha)::date AS mes,\n         SUM(v.total) AS monto\n  FROM venta v JOIN sucursal s ON s.id = v.id_sucursal\n  WHERE v.fecha >= DATE '2025-01-01' AND v.fecha < DATE '2026-01-01'\n  GROUP BY 1, 2, 3\n)\nSELECT ciudad, sucursal, mes, monto,\n       round(100.0 * (monto - LAG(monto) OVER w) / NULLIF(LAG(monto) OVER w, 0), 1)\n         AS crec_pct,\n       RANK() OVER (PARTITION BY ciudad, mes ORDER BY monto DESC) AS puesto\nFROM ventas_mes\nWINDOW w AS (PARTITION BY sucursal ORDER BY mes)\nORDER BY ciudad, mes, puesto;\n```\n\nLa CTE prepara el grano mensual; las funciones de ventana calculan sin colapsar filas. `NULLIF` evita la división entre cero en el primer mes, cuando `LAG` devuelve nulo.\n\n## 3. Programación en el servidor\n\nPL/pgSQL permite encapsular lógica junto a los datos. Un uso de alto valor es la **auditoría**:\n\n```sql\nCREATE TABLE auditoria_precio (\n  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n  id_producto BIGINT NOT NULL,\n  precio_ant NUMERIC(10,2), precio_nuevo NUMERIC(10,2),\n  usuario TEXT NOT NULL DEFAULT current_user,\n  cambiado_en TIMESTAMPTZ NOT NULL DEFAULT now()\n);\n\nCREATE FUNCTION fn_audita_precio() RETURNS trigger AS $$\nBEGIN\n  IF NEW.precio IS DISTINCT FROM OLD.precio THEN\n    INSERT INTO auditoria_precio (id_producto, precio_ant, precio_nuevo)\n    VALUES (OLD.id, OLD.precio, NEW.precio);\n  END IF;\n  RETURN NEW;\nEND;\n$$ LANGUAGE plpgsql;\n\nCREATE TRIGGER tg_audita_precio\nAFTER UPDATE OF precio ON producto\nFOR EACH ROW EXECUTE FUNCTION fn_audita_precio();\n```\n\n`IS DISTINCT FROM` compara correctamente incluso cuando hay nulos. La regla de diseño es usar disparadores para integridad y auditoría, no para esconder reglas de negocio que el equipo no pueda rastrear.\n\n## 4. Transacciones y concurrencia\n\nUna transacción agrupa operaciones bajo las propiedades **ACID** (Härder y Reuter, 1983). El riesgo cotidiano no es el apagón, sino la **concurrencia**. Durante una campaña de descuentos, dos compradores pueden leer el mismo stock y vender más de lo disponible: la *actualización perdida*. La solución más simple es una actualización condicional y atómica:\n\n```sql\nBEGIN;\nUPDATE producto\n   SET stock = stock - 3\n WHERE id = 1205 AND stock >= 3;   -- si afecta 0 filas: no hay stock\nINSERT INTO venta_detalle (id_venta, id_producto, cantidad, precio_unit)\nVALUES (88231, 1205, 3, 12.90);\nCOMMIT;\n```\n\nSi el `UPDATE` afecta cero filas, la aplicación hace `ROLLBACK` e informa la falta de stock. PostgreSQL implementa **MVCC**: cada transacción ve una instantánea, de modo que las lecturas no bloquean escrituras. El nivel por defecto es `READ COMMITTED`; `SERIALIZABLE` ofrece la garantía más fuerte a cambio de abortar transacciones conflictivas, que la aplicación debe reintentar.\n\n## 5. Índices y planes de ejecución\n\nUn índice B-tree (Bayer y McCreight, 1972) mantiene las claves ordenadas en un árbol balanceado. El método de trabajo es empírico:\n\n```sql\nEXPLAIN ANALYZE\nSELECT * FROM comprobante WHERE serie = 'F001' AND numero = 45871;\n-- Seq Scan ... actual time=0.02..812.4 rows=1   (antes)\nCREATE INDEX ix_comprobante_serie_num ON comprobante (serie, numero);\n-- Index Scan using ix_comprobante_serie_num ... actual time=0.03..0.05 (después)\n```\n\nTres reglas resumen la práctica: (1) indexar columnas de filtros y reuniones frecuentes y selectivas; (2) respetar el prefijo izquierdo en índices compuestos; (3) escribir predicados que permitan usar el índice, evitando funciones sobre la columna indexada.\n\n## 6. Ideas clave\n\n- Las CTE estructuran el razonamiento; las ventanas calculan rankings, acumulados y variaciones.\n- Los disparadores son ideales para auditoría; su abuso oculta lógica.\n- La consistencia en concurrencia se diseña: actualizaciones atómicas, orden de bloqueo y reintentos.\n- Toda optimización se demuestra con `EXPLAIN ANALYZE`, antes y después.\n"
+      },
+      "case": {
+        "title": "Caso: BilleteraYa y la noche del Cyber Wow",
+        "content": "**BilleteraYa** es una billetera digital peruana con 1,2 millones de usuarios, regulada como empresa emisora de dinero electrónico. Su núcleo transaccional corre en PostgreSQL sobre un servidor gestionado en la nube con 16 núcleos y 64 GB de memoria. En una noche normal procesa unas 40 transferencias por segundo.\n\nDurante el último **Cyber Wow**, BilleteraYa se alió con una cadena de tiendas para ofrecer 15 % de reembolso en compras pagadas con la billetera. Entre las 20:00 y las 22:00 el tráfico llegó a 310 transacciones por segundo. Se registraron estos hechos:\n\n1. **Saldos negativos.** 37 usuarios terminaron con saldo negativo. El análisis mostró que el servicio de pagos leía el saldo con un `SELECT`, verificaba en la aplicación que alcanzara y luego ejecutaba un `UPDATE cuenta SET saldo = :nuevo_saldo`.\n2. **Interbloqueos.** El registro mostró 1 900 errores de *deadlock* en transferencias entre usuarios. El servicio bloqueaba primero la cuenta del emisor y luego la del receptor.\n3. **Lentitud del historial.** La pantalla \"Mis movimientos\" pasó de 120 ms a 9 segundos. Consulta: `SELECT * FROM movimiento WHERE date_trunc('day', fecha) >= :desde AND id_cuenta = :id ORDER BY fecha DESC`. La tabla tiene 410 millones de filas y un índice solo sobre `fecha`.\n4. **Reembolsos duplicados.** Un trigger calculaba el reembolso en cada `UPDATE` de la tabla `pago`; como el estado del pago se actualizaba tres veces (pendiente, autorizado, liquidado), algunos clientes recibieron triple reembolso, con un costo de S/ 186 000.\n\nEl gerente de tecnología, **Jorge Salazar**, propone triplicar el tamaño del servidor antes de la próxima campaña, con un costo adicional de US$ 9 000 mensuales. La jefa de datos, **Rocío Chumpitaz**, sostiene que ninguno de los cuatro problemas se resuelve con más hardware y que, de hecho, más concurrencia empeoraría los saldos negativos y los interbloqueos. El área de cumplimiento exige un informe sobre cómo se garantizará la integridad de los saldos, porque los fondos de los usuarios están sujetos a supervisión.\n\nUsted integra el equipo de Rocío y debe proponer el plan técnico antes de la reunión del comité de riesgos.\n",
+        "questions": [
+          "Explique, con la terminología de concurrencia, por qué el patrón leer-verificar-escribir produjo saldos negativos, y reescriba la operación de pago de forma segura.",
+          "¿Qué cambio en el orden de bloqueo eliminaría los interbloqueos en transferencias? Justifique por qué funciona.",
+          "Diagnostique la lentitud del historial: reescriba la consulta y proponga el índice adecuado, indicando cómo verificaría la mejora con EXPLAIN ANALYZE.",
+          "¿Cómo rediseñaría el trigger de reembolsos para que se ejecute una sola vez por pago? Evalúe si debería ser un trigger o lógica de aplicación.",
+          "Elabore el argumento para el comité de riesgos: ¿triplicar el servidor o invertir en correcciones de diseño? Considere costo, riesgo regulatorio y plazo."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Consultas analíticas, programación en el servidor y optimización medida",
+        "instructions": "**Objetivo.** Ampliar la base de datos del proyecto con capacidades analíticas, lógica en el servidor y evidencias de rendimiento.\n\n**Instrucciones.**\n1. **SQL analítico.** Escriba seis consultas sobre su base: dos con subconsultas (una correlacionada y una con EXISTS o NOT EXISTS), dos con CTE (una recursiva si su modelo lo permite o, en su defecto, un pipeline de tres pasos) y dos con funciones de ventana (un ranking por grupo y una variación periodo a periodo con LAG).\n2. **Programación en el servidor.** Implemente una vista para un usuario de negocio, una función PL/pgSQL con parámetros y manejo de excepciones, y un trigger de auditoría o de control de stock. Pruebe cada objeto con casos válidos e inválidos.\n3. **Transacciones.** Escriba un script que demuestre una operación de varios pasos (venta con descuento de stock o transferencia) usando transacción explícita y que maneje el caso de fallo.\n4. **Rendimiento.** Genere al menos 500 000 filas de prueba con generate_series, elija dos consultas lentas, muestre su plan con EXPLAIN ANALYZE, cree los índices adecuados y presente una tabla con tiempos antes y después.\n\n**Entregable.** Script `04_avanzado.sql` comentado y un informe PDF de 4 a 6 páginas con capturas, planes de ejecución y conclusiones.",
+        "rubric": [
+          {
+            "name": "Corrección de consultas con subconsultas, CTE y ventanas",
+            "points": 6
+          },
+          {
+            "name": "Vista, función y trigger funcionales y probados",
+            "points": 5
+          },
+          {
+            "name": "Transacción segura con manejo de fallos",
+            "points": 4
+          },
+          {
+            "name": "Optimización demostrada con planes y tiempos medidos",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: SQL avanzado, transacciones e índices",
+        "questions": [
+          {
+            "prompt": "La subconsulta de NOT IN devuelve los valores (5, 8, NULL). ¿Qué ocurre con WHERE id NOT IN (subconsulta)?",
+            "options": [
+              "No devuelve ninguna fila",
+              "Devuelve todas las filas excepto 5 y 8",
+              "Devuelve solo las filas con id nulo",
+              "Produce un error de sintaxis"
+            ],
+            "correct": 0,
+            "explanation": "Comparar con NULL da desconocido, así que ninguna fila resulta verdadera; NOT EXISTS evita este problema."
+          },
+          {
+            "prompt": "Se requiere el producto más vendido de cada categoría, conservando una sola fila por categoría aun con empates. ¿Qué función conviene?",
+            "options": [
+              "RANK() OVER (ORDER BY ventas DESC)",
+              "SUM(ventas) OVER (PARTITION BY categoria)",
+              "ROW_NUMBER() OVER (PARTITION BY categoria ORDER BY ventas DESC)",
+              "COUNT(*) con GROUP BY categoria"
+            ],
+            "correct": 2,
+            "explanation": "ROW_NUMBER asigna números únicos dentro de cada partición; filtrar el número 1 garantiza una fila por categoría."
+          },
+          {
+            "prompt": "Dos transacciones leen stock = 5, cada una vende 3 y escribe stock = 2. ¿Qué anomalía ocurrió?",
+            "options": [
+              "Lectura sucia",
+              "Actualización perdida",
+              "Lectura fantasma",
+              "Interbloqueo"
+            ],
+            "correct": 1,
+            "explanation": "Una escritura sobrescribe a la otra basándose en un valor leído obsoleto; la solución es UPDATE stock = stock - 3 con condición o bloqueo."
+          },
+          {
+            "prompt": "Una transacción bloquea la cuenta A y luego B; otra bloquea B y luego A. ¿Qué medida previene el interbloqueo?",
+            "options": [
+              "Usar READ UNCOMMITTED",
+              "Eliminar las claves foráneas",
+              "Bloquear siempre las cuentas en el mismo orden, por ejemplo, por id ascendente",
+              "Aumentar la memoria del servidor"
+            ],
+            "correct": 2,
+            "explanation": "Un orden global de adquisición de bloqueos impide que se forme el ciclo de espera que define al interbloqueo."
+          },
+          {
+            "prompt": "Existe un índice sobre fecha, pero la consulta usa WHERE date_trunc('day', fecha) >= '2025-03-01'. ¿Qué sucede probablemente?",
+            "options": [
+              "El índice se usa de forma óptima",
+              "PostgreSQL rechaza la consulta",
+              "El índice se reconstruye automáticamente",
+              "El índice no se usa porque la función se aplica a la columna"
+            ],
+            "correct": 3,
+            "explanation": "Aplicar una función a la columna impide usar el índice normal; reescribir como rango sobre fecha sí lo aprovecha."
+          },
+          {
+            "prompt": "Hay un índice compuesto (ruc, fecha). ¿Qué consulta lo aprovecha mejor?",
+            "options": [
+              "WHERE ruc = '20100047218' AND fecha >= '2025-01-01'",
+              "WHERE fecha >= '2025-01-01'",
+              "WHERE razon_social LIKE '%SAC'",
+              "WHERE UPPER(ruc) = '20100047218'"
+            ],
+            "correct": 0,
+            "explanation": "Por la regla del prefijo izquierdo, el índice es eficiente cuando se filtra por su primera columna y, opcionalmente, por la siguiente."
+          },
+          {
+            "prompt": "¿Qué propiedad ACID garantiza que una transferencia confirmada persista tras un corte de energía?",
+            "options": [
+              "Atomicidad",
+              "Durabilidad",
+              "Aislamiento",
+              "Consistencia"
+            ],
+            "correct": 1,
+            "explanation": "La durabilidad asegura que lo confirmado sobrevive a fallos; PostgreSQL la implementa con el registro de escritura anticipada (WAL)."
+          },
+          {
+            "prompt": "Un tablero gerencial recalcula cada vez ventas de cinco años y tarda 40 segundos; se acepta un día de desfase. ¿Qué solución es más adecuada?",
+            "options": [
+              "Una vista normal",
+              "Un trigger sobre cada venta",
+              "Desactivar las claves foráneas",
+              "Una vista materializada refrescada cada noche"
+            ],
+            "correct": 3,
+            "explanation": "La vista materializada almacena el resultado precalculado; el refresco nocturno equilibra rendimiento y frescura aceptada."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Administración, seguridad, NoSQL y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante administra usuarios, permisos y copias de seguridad, aplica medidas de protección de datos personales conforme a la Ley 29733, integra la base con una aplicación de forma segura, evalúa alternativas NoSQL y sustenta un proyecto integrador de base de datos.",
+      "topics": [
+        "Roles, privilegios y principio de mínimo privilegio",
+        "Protección de datos personales: Ley 29733 y su reglamento",
+        "Copias de seguridad, recuperación y alta disponibilidad",
+        "Acceso desde aplicaciones y prevención de inyección SQL",
+        "Bases de datos NoSQL y criterios de elección",
+        "Proyecto integrador y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Roles, privilegios y mínimo privilegio",
+          "bullets": [
+            "En PostgreSQL los usuarios y grupos son roles: CREATE ROLE app_ventas LOGIN PASSWORD '...'.",
+            "GRANT SELECT, INSERT ON venta TO app_ventas; REVOKE ALL ON cliente FROM PUBLIC.",
+            "Principio de mínimo privilegio (Saltzer y Schroeder, 1975): cada cuenta solo con lo indispensable.",
+            "Separar roles: propietario del esquema, aplicación, analista de solo lectura y administrador."
+          ],
+          "notes": "Pregunte cuántos han visto aplicaciones que se conectan a la base con el usuario administrador postgres. Es una práctica muy común y muy peligrosa: si la aplicación es vulnerada, el atacante obtiene control total, incluso para borrar tablas. Diseñe con la clase un esquema de roles para la tienda: rol propietario que crea objetos, rol de aplicación que inserta ventas y consulta productos, rol analista que solo lee vistas sin datos personales, y rol de respaldo. Escriba los GRANT correspondientes. Explique que los permisos se asignan a roles de grupo y luego los usuarios heredan del grupo, lo que facilita altas y bajas de personal. Relacione con Seguridad Informática, curso posterior de Computación, donde profundizarán en controles de acceso."
+        },
+        {
+          "title": "Seguridad de la base: autenticación, cifrado y auditoría",
+          "bullets": [
+            "Autenticación robusta con scram-sha-256 y reglas de acceso por red en pg_hba.conf.",
+            "Cifrado en tránsito con TLS y cifrado de discos o columnas sensibles en reposo.",
+            "Seguridad a nivel de fila (Row Level Security) para que cada sede vea solo sus registros.",
+            "Registro de accesos y cambios, y revisión periódica de cuentas y privilegios."
+          ],
+          "notes": "Recorra las capas de defensa en profundidad. Primero la red: la base nunca debería estar expuesta directamente a internet; en escaneos públicos se encuentran miles de servidores de bases de datos accesibles sin necesidad. Segundo la autenticación: contraseñas con scram-sha-256 y restricciones por dirección IP. Tercero el cifrado: TLS impide que alguien en la red lea consultas y resultados. Cuarto la autorización fina: muestre una política de Row Level Security donde cada sucursal de una cadena solo ve sus ventas, aunque compartan la misma tabla. Quinto la auditoría. Pregunte: si un empleado descarga la base completa de clientes antes de renunciar, ¿qué controles lo habrían prevenido o al menos detectado? Discuta permisos, vistas restringidas y registros de actividad."
+        },
+        {
+          "title": "Ley 29733: protección de datos personales en el Perú",
+          "bullets": [
+            "Ley N.° 29733 (2011) y su reglamento regulan el tratamiento de datos personales en bancos de datos públicos y privados.",
+            "Principios: legalidad, consentimiento, finalidad, proporcionalidad, calidad, seguridad, disposición de recurso y nivel de protección adecuado.",
+            "Datos sensibles, como salud, origen racial o datos biométricos, exigen protección reforzada.",
+            "Autoridad Nacional de Protección de Datos Personales, del Ministerio de Justicia y Derechos Humanos, fiscaliza y sanciona."
+          ],
+          "notes": "Explique que la ley convierte decisiones técnicas en obligaciones legales. El principio de finalidad implica que los datos recogidos para emitir una boleta no pueden usarse libremente para campañas de marketing sin consentimiento. El principio de proporcionalidad implica no almacenar datos que no se necesitan: ¿por qué un gimnasio guardaría el estado civil de sus clientes? El principio de seguridad exige medidas técnicas y organizativas, como las que estamos viendo. Mencione los derechos de los titulares, conocidos como ARCO: acceso, rectificación, cancelación y oposición. Pregunte cómo implementaría técnicamente el derecho de cancelación en una base con integridad referencial y obligaciones tributarias de conservar comprobantes. Esa tensión se resuelve con anonimización y bloqueo, no con un DELETE indiscriminado."
+        },
+        {
+          "title": "Privacidad desde el diseño en el esquema",
+          "bullets": [
+            "Minimización: almacenar solo los datos necesarios para la finalidad declarada.",
+            "Separar datos identificatorios de datos transaccionales y analíticos.",
+            "Seudonimización y anonimización para análisis y entornos de prueba.",
+            "Registrar consentimientos con fecha, finalidad y versión de la política aceptada."
+          ],
+          "notes": "Traduzca la ley en decisiones de modelado. Proponga una tabla consentimiento con id_cliente, finalidad, versión de la política, fecha de aceptación y fecha de revocación. Pregunte por qué no basta con una columna booleana acepta_marketing: porque no permite demostrar cuándo y bajo qué términos se otorgó el consentimiento, ni registrar su retiro. Explique la seudonimización: reemplazar el DNI por un identificador sin significado en las tablas analíticas, guardando la correspondencia en una tabla protegida. Advierta sobre un error frecuente: copiar la base de producción con datos reales a la computadora del desarrollador o a un entorno de pruebas sin protección. La práctica correcta es enmascarar nombres, documentos y teléfonos antes de copiar."
+        },
+        {
+          "title": "Copias de seguridad: lógicas y físicas",
+          "bullets": [
+            "Lógicas: pg_dump -Fc tienda > tienda.dump y restauración selectiva con pg_restore.",
+            "Físicas: pg_basebackup más archivado continuo del WAL permite recuperación a un punto en el tiempo (PITR).",
+            "Regla 3-2-1: tres copias, en dos medios distintos, una fuera del sitio.",
+            "Una copia que nunca se restauró en una prueba no es una copia confiable."
+          ],
+          "notes": "Comience con una pregunta incómoda: ¿cuándo fue la última vez que su organización restauró una copia para comprobar que funciona? Muchas empresas descubren que sus respaldos estaban incompletos recién cuando los necesitan, por ejemplo, tras un ataque de ransomware. Explique la diferencia: pg_dump genera una copia lógica, portable y adecuada para bases pequeñas y medianas; la copia física con archivado del WAL permite volver al estado exacto de, por ejemplo, las 10:42 de ayer, justo antes de que alguien ejecutara un DELETE erróneo. Muestre un cron que ejecuta el respaldo diario y lo copia a almacenamiento externo. Pida que en el proyecto documenten y prueben una restauración completa, midiendo cuánto tiempo toma."
+        },
+        {
+          "title": "RPO, RTO y alta disponibilidad",
+          "bullets": [
+            "RPO: cuántos datos se pueden perder, medido en tiempo; RTO: cuánto tiempo puede durar la caída.",
+            "Replicación en streaming: un servidor réplica recibe el WAL y puede promoverse si el principal falla.",
+            "Réplicas de lectura descargan reportes pesados del servidor transaccional.",
+            "El nivel de inversión depende del costo del negocio por hora de caída."
+          ],
+          "notes": "Traiga la conversación al lenguaje de la gerencia. RPO y RTO son decisiones de negocio, no solo técnicas. Pregunte a la clase: para una bodega con ventas en cuaderno, ¿cuál es su RPO aceptable? Probablemente un día. Para un banco o una billetera digital, el RPO tolerable se acerca a cero y el RTO a minutos. Explique que la replicación en streaming de PostgreSQL mantiene una copia casi en tiempo real en otro servidor, idealmente en otra zona de disponibilidad. Advierta que la réplica no reemplaza a la copia de seguridad: si alguien borra una tabla, el borrado se replica en segundos. Pida que estimen el costo de una hora sin ventas para una tienda en línea que factura S/ 2 millones al mes."
+        },
+        {
+          "title": "Acceso desde aplicaciones con Python",
+          "bullets": [
+            "Conectar con psycopg: psycopg.connect(conninfo) y uso de cursores dentro de bloques with.",
+            "Consultas parametrizadas: cur.execute(\"SELECT ... WHERE dni = %s\", (dni,)).",
+            "Manejar transacciones desde el código: commit explícito y rollback ante excepciones.",
+            "Credenciales en variables de entorno o gestores de secretos, nunca en el código fuente."
+          ],
+          "notes": "Muestre un script breve en Python, lenguaje que ya conocen de primer ciclo, que se conecta a la base, consulta los productos con stock bajo y genera un archivo CSV para el área de compras. Resalte que el bloque with garantiza cerrar la conexión y que, si ocurre una excepción, la transacción se revierte. Explique por qué las credenciales nunca deben escribirse en el código: los repositorios se comparten y se filtran, y existen robots que escanean repositorios públicos en busca de contraseñas. Para los estudiantes de Inteligencia Artificial, mencione que pandas puede leer el resultado de una consulta directamente a un DataFrame, el punto de partida de los cursos de análisis y aprendizaje automático del siguiente ciclo."
+        },
+        {
+          "title": "Inyección SQL: el error que no debe cometer",
+          "bullets": [
+            "Concatenar entradas del usuario en el texto SQL permite alterar la consulta.",
+            "Ejemplo: ingresar ' OR '1'='1 en un formulario de inicio de sesión devuelve todos los usuarios.",
+            "Defensa principal: consultas parametrizadas; complementos: mínimo privilegio y validación de entrada.",
+            "Figura de forma recurrente en el OWASP Top 10 dentro de la categoría de inyección."
+          ],
+          "notes": "Haga la demostración en un entorno controlado. Muestre una función de inicio de sesión mal escrita que arma la consulta concatenando el usuario y la contraseña. Ingrese la cadena maliciosa y observe cómo la condición se vuelve siempre verdadera. Luego muestre algo peor: una entrada que agrega un segundo comando. Explique que con consultas parametrizadas el valor viaja separado del código SQL y nunca se interpreta como instrucción. Recalque el vínculo con el mínimo privilegio: aunque exista una vulnerabilidad, si el usuario de la aplicación no puede borrar tablas, el daño se limita. Pregunte quién es responsable legal si se filtran datos de clientes por una inyección: la organización, que debía adoptar medidas de seguridad conforme a la Ley 29733."
+        },
+        {
+          "title": "NoSQL: cuándo y por qué",
+          "bullets": [
+            "Familias: documentos (MongoDB), clave-valor (Redis), columnas anchas (Cassandra) y grafos (Neo4j).",
+            "Motivaciones: esquemas flexibles, escalamiento horizontal y patrones de acceso específicos.",
+            "Teorema CAP (Brewer, 2000): ante una partición de red, elegir entre consistencia y disponibilidad.",
+            "No reemplaza al modelo relacional: es una herramienta adicional para problemas concretos."
+          ],
+          "notes": "Desmonte el mito de que NoSQL es la evolución moderna de SQL. Explique que surgió en empresas de escala masiva con necesidades particulares y que hoy convive con lo relacional en arquitecturas llamadas de persistencia políglota. Dé ejemplos de uso pertinente: Redis como caché de sesiones de una tienda en línea; MongoDB para un catálogo de productos con atributos muy variables, como un celular frente a un polo; Neo4j para detectar redes de fraude entre cuentas. Presente el teorema CAP con un ejemplo: si se corta la red entre dos centros de datos, o se rechazan escrituras para mantener consistencia o se aceptan arriesgando divergencias. Pregunte qué elegirían para los saldos de una billetera y qué para los me gusta de una red social."
+        },
+        {
+          "title": "Modelo de documentos con MongoDB",
+          "bullets": [
+            "Un documento JSON (BSON) agrupa datos relacionados: pedido con sus líneas embebidas.",
+            "Diseño guiado por patrones de acceso: embeber lo que se lee junto, referenciar lo que crece sin límite.",
+            "Consultas: db.pedidos.find({ \"cliente.ruc\": \"20601234567\" }) y pipelines de agregación.",
+            "PostgreSQL también ofrece el tipo JSONB con índices GIN para datos semiestructurados."
+          ],
+          "notes": "Muestre el mismo pedido en ambos modelos: en relacional, tres tablas reunidas; en documentos, un solo objeto con el cliente resumido y un arreglo de líneas. Pregunte qué ventaja tiene el documento: una sola lectura obtiene todo el pedido. Y qué desventaja: si cambia la razón social del cliente, hay que decidir si actualizar todos sus pedidos o conservar la copia histórica. Enseñe la regla de diseño: embeber cuando los datos se leen juntos y tienen tamaño acotado; referenciar cuando crecen sin límite, como los comentarios de un producto popular. Cierre mostrando que PostgreSQL con JSONB permite combinar lo mejor de ambos mundos: columnas relacionales para lo estable y un campo JSONB indexado para atributos variables."
+        },
+        {
+          "title": "Criterios para elegir la tecnología de datos",
+          "bullets": [
+            "Naturaleza de los datos: estructurados y relacionados, semiestructurados o grafos.",
+            "Requisitos de consistencia: transacciones multientidad favorecen el modelo relacional.",
+            "Volumen, velocidad de escritura y patrones de consulta conocidos de antemano.",
+            "Capacidades del equipo, costo total, soporte y ecosistema en el mercado local."
+          ],
+          "notes": "Proponga una matriz de decisión con criterios ponderados, una herramienta que también usarán en Gestión de Proyectos de TI. Aplíquela a tres escenarios: un sistema de matrícula de un instituto, el registro de lecturas de sensores de temperatura de una cadena de frío cada segundo y un catálogo de ferretería con cuarenta mil productos de atributos heterogéneos. Pida a los grupos que discutan cinco minutos y presenten su elección. Normalmente concluirán relacional para matrícula, una base de series de tiempo o columnar para sensores, y PostgreSQL con JSONB o MongoDB para el catálogo. Subraye que el criterio del equipo y el costo de contratar especialistas en el mercado local son factores legítimos, no secundarios, en la decisión."
+        },
+        {
+          "title": "Proyecto integrador: alcance y entregables",
+          "bullets": [
+            "Base de datos completa de un caso real: modelo, scripts DDL, datos y consultas de negocio.",
+            "Objetos de servidor: vistas, funciones, disparadores e índices justificados con evidencia.",
+            "Plan de seguridad: roles, permisos, medidas de protección de datos y política de respaldo probada.",
+            "Sustentación de 15 minutos con demostración en vivo y defensa de decisiones de diseño."
+          ],
+          "notes": "Presente el proyecto integrador como la evidencia final del curso y como pieza para su portafolio profesional. Explique que integra todas las tareas previas: el modelo de la Tarea 1, la implementación de la Tarea 2 y los objetos avanzados de la Tarea 3, ahora corregidos y completados con seguridad y respaldo. Muestre ejemplos de buenos proyectos de ciclos anteriores, si los tiene, o describa uno: el sistema de una clínica veterinaria con historias clínicas, citas, inventario de medicamentos y facturación. Aclare que en la sustentación se les pedirá ejecutar consultas no preparadas y explicar planes de ejecución, para verificar autoría y comprensión. Recomiende publicar el proyecto en un repositorio sin datos personales reales."
+        },
+        {
+          "title": "Sustentación técnica: cómo defender un diseño",
+          "bullets": [
+            "Estructura: problema, modelo, decisiones clave, demostración, seguridad y lecciones aprendidas.",
+            "Defender cada decisión con un criterio: regla de negocio, norma o medición.",
+            "Reconocer limitaciones y trabajo futuro demuestra madurez profesional.",
+            "Preparar respuestas sobre alternativas descartadas y su porqué."
+          ],
+          "notes": "Cierre el curso trabajando una competencia transversal: comunicar decisiones técnicas a audiencias mixtas. Explique que en una entrevista de trabajo o ante un jefe de proyecto no basta con que el sistema funcione; hay que explicar por qué se diseñó así. Modele una buena respuesta: elegimos clave sustituta en cliente porque la empresa atiende a extranjeros con documentos de distinta longitud y porque el RUC puede cambiar tras una reorganización; mantuvimos el documento como clave alterna única. Practique con preguntas difíciles: ¿por qué no usaron MongoDB?, ¿qué pasa si el servidor se cae a las tres de la tarde?, ¿cómo atienden una solicitud de cancelación de datos? Pida que cada grupo ensaye su sustentación cronometrada."
+        }
+      ],
+      "reading": {
+        "title": "Operar con responsabilidad: seguridad, respaldo, protección de datos y alternativas NoSQL",
+        "minutes": 40,
+        "content": "## 1. Diseñar no basta: hay que operar\n\nUna base de datos bien diseñada puede fracasar por una contraseña débil, un respaldo que nunca se probó o una consulta construida por concatenación. Esta lectura aborda la dimensión operativa: **seguridad**, **cumplimiento normativo**, **continuidad** y **elección de tecnología**.\n\n## 2. Mínimo privilegio en la práctica\n\nEl principio formulado por Saltzer y Schroeder (1975) establece que cada componente debe operar con los privilegios mínimos necesarios. En PostgreSQL se implementa con roles:\n\n```sql\nCREATE ROLE grp_lectura NOLOGIN;\nCREATE ROLE grp_app     NOLOGIN;\n\nGRANT USAGE ON SCHEMA ventas TO grp_lectura, grp_app;\nGRANT SELECT ON ventas.v_ventas_resumen TO grp_lectura;          -- solo vistas sin datos personales\nGRANT SELECT, INSERT, UPDATE ON ventas.venta, ventas.venta_detalle TO grp_app;\nGRANT SELECT ON ventas.producto TO grp_app;\nREVOKE ALL ON ventas.cliente FROM PUBLIC;\n\nCREATE ROLE analista_lucia LOGIN PASSWORD 'cambiar-al-primer-ingreso' IN ROLE grp_lectura;\n```\n\nLa aplicación no puede borrar tablas ni leer la lista completa de clientes con documentos; la analista solo accede a vistas agregadas.\n\n## 3. La Ley 29733 como requisito de diseño\n\nLa **Ley N.° 29733, Ley de Protección de Datos Personales** (2011), y su reglamento establecen principios que se traducen en decisiones técnicas:\n\n| Principio | Implicancia en la base de datos |\n|---|---|\n| Finalidad y consentimiento | Tabla de consentimientos con finalidad, versión y fecha de revocación |\n| Proporcionalidad | No almacenar columnas sin finalidad declarada |\n| Calidad | Restricciones `CHECK`, unicidad y procesos de actualización |\n| Seguridad | Roles, cifrado, auditoría, respaldos y control de accesos |\n\nLos **datos sensibles**, como la información de salud, exigen protección reforzada. Los titulares pueden ejercer los derechos de acceso, rectificación, cancelación y oposición. La cancelación debe conciliarse con obligaciones de conservación, por ejemplo, las tributarias: la solución técnica suele ser **bloquear y anonimizar** los datos identificatorios, preservando los registros transaccionales necesarios.\n\n```sql\nUPDATE cliente\n   SET nombre = 'ANONIMIZADO', num_doc = 'X' || id, telefono = NULL, correo = NULL,\n       anonimizado_en = now()\n WHERE id = 4821;\n```\n\n## 4. Respaldo y recuperación\n\nDos métricas guían la estrategia: **RPO** (pérdida máxima tolerable de datos) y **RTO** (tiempo máximo de recuperación).\n\n```bash\n# Respaldo lógico diario, comprimido y con fecha\npg_dump -Fc -d tienda -f /respaldos/tienda_$(date +%F).dump\n# Prueba de restauración en un servidor de ensayo\ncreatedb tienda_prueba && pg_restore -d tienda_prueba /respaldos/tienda_2025-11-03.dump\n```\n\nEl respaldo lógico es simple y portable. Para RPO de minutos se usa respaldo físico con `pg_basebackup` y archivado continuo del WAL, que permite la **recuperación a un punto en el tiempo**. La regla 3-2-1 (tres copias, dos medios, una fuera del sitio) protege frente a fallas de hardware y ransomware. Una réplica no es un respaldo: replica también los errores.\n\n## 5. Acceso seguro desde aplicaciones\n\n```python\nimport os, psycopg\n\nwith psycopg.connect(os.environ[\"DATABASE_URL\"]) as conn:\n    with conn.cursor() as cur:\n        cur.execute(\n            \"SELECT id, nombre FROM cliente WHERE tipo_doc = %s AND num_doc = %s\",\n            (\"D\", dni_ingresado),          # parámetros: nunca concatenar\n        )\n        fila = cur.fetchone()\n```\n\nLas consultas parametrizadas neutralizan la inyección SQL, recurrente en el OWASP Top 10. Las credenciales provienen del entorno, no del código.\n\n## 6. Más allá de lo relacional\n\nLas bases NoSQL responden a necesidades específicas: documentos (MongoDB) para estructuras variables, clave-valor (Redis) para cachés, columnas anchas (Cassandra) para escrituras masivas distribuidas y grafos (Neo4j) para relaciones complejas. El teorema CAP de Brewer recuerda que, ante una partición de red, un sistema distribuido debe privilegiar consistencia o disponibilidad. Kleppmann (2017) propone elegir según el modelo de datos, los patrones de acceso y las garantías requeridas, no según la moda. En muchos casos, PostgreSQL con `JSONB` cubre la flexibilidad requerida sin renunciar a las transacciones.\n\n## 7. Ideas clave\n\n- La seguridad se construye por capas: red, autenticación, autorización, cifrado y auditoría.\n- La Ley 29733 se cumple con decisiones concretas de esquema y operación.\n- Un respaldo solo vale si se ha restaurado con éxito.\n- La elección tecnológica se justifica con criterios, no con tendencias.\n"
+      },
+      "case": {
+        "title": "Caso: Clínica San Gabriel y la base de datos expuesta",
+        "content": "**Clínica San Gabriel** es una clínica privada de Trujillo con 85 camas, 140 médicos y unas 9 000 atenciones mensuales. Su sistema de historias clínicas, desarrollado internamente hace seis años, usa PostgreSQL y una aplicación web en PHP.\n\nUn lunes por la mañana, un periodista local informó a la clínica que en un foro circulaba un archivo con **52 000 registros de pacientes**: nombres, DNI, teléfonos, diagnósticos y resultados de laboratorio. La investigación preliminar del jefe de sistemas, **Marco Alvarado**, encontró:\n\n- El servidor de base de datos aceptaba conexiones desde cualquier dirección de internet en el puerto estándar, por una configuración temporal hecha durante una migración y nunca revertida.\n- La aplicación se conectaba con el usuario `postgres`, cuya contraseña figuraba en un archivo de configuración subido a un repositorio público por un practicante.\n- El formulario de búsqueda de pacientes construía la consulta concatenando el texto ingresado.\n- Las copias de seguridad se hacían cada domingo en un disco conectado al mismo servidor; nunca se había probado una restauración.\n- Una copia completa de producción, con datos reales, estaba en las laptops de tres desarrolladores para hacer pruebas.\n- No existía registro de quién accedía a las historias clínicas.\n\nDos días después, un ataque de ransomware cifró el servidor y el disco de respaldo. La clínica operó con formatos en papel durante cuatro días.\n\nLa directora general, **Dra. Patricia Lozano**, convocó a un comité con el área legal, el área de calidad y sistemas. La asesora legal recordó que los datos de salud son **datos sensibles** según la Ley 29733, que la clínica debía contar con medidas de seguridad apropiadas y que la Autoridad Nacional de Protección de Datos Personales podría iniciar un procedimiento sancionador. El gerente financiero pregunta si conviene migrar a \"una base de datos en la nube que sea más segura\" y abandonar PostgreSQL.\n\nEl comité le encarga a usted, técnico del área de sistemas, un plan de remediación priorizado para los próximos 90 días, con presupuesto limitado a S/ 120 000, que debe presentar en una semana.\n",
+        "questions": [
+          "Clasifique las fallas encontradas según la capa de seguridad afectada (red, autenticación, autorización, aplicación, respaldo, gestión de datos de prueba) y priorícelas por riesgo.",
+          "¿Qué obligaciones de la Ley 29733 se incumplieron y qué medidas técnicas y organizativas demostrarían diligencia ante la autoridad?",
+          "Diseñe la estrategia de respaldo con RPO y RTO adecuados para una clínica y explique por qué la estrategia anterior falló frente al ransomware.",
+          "¿Migrar a un servicio gestionado en la nube resolvería por sí solo los problemas? Argumente qué cambia y qué responsabilidades permanecen en la clínica.",
+          "Proponga el plan de 90 días con presupuesto, indicando qué acciones son inmediatas, cuáles de corto plazo y cuáles estructurales."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: base de datos segura y sustentada para un caso real",
+        "instructions": "**Objetivo.** Integrar lo aprendido en una base de datos completa, segura y documentada, lista para operar en una organización.\n\n**Componentes obligatorios.**\n1. **Diseño:** modelo ER y esquema relacional en 3FN (versión final corregida), con diccionario de datos.\n2. **Implementación:** scripts DDL, carga de datos verosímiles (sin datos personales reales) y 12 consultas de negocio, incluyendo CTE y funciones de ventana.\n3. **Lógica y rendimiento:** al menos dos vistas, dos funciones, un trigger de auditoría y tres índices justificados con EXPLAIN ANALYZE antes y después.\n4. **Seguridad y cumplimiento:** script de roles con mínimo privilegio, tabla de consentimientos, procedimiento de anonimización y análisis de la aplicación de la Ley 29733 a su caso.\n5. **Continuidad:** política de respaldo con RPO y RTO, script de respaldo y evidencia de una restauración exitosa con tiempo medido.\n6. **Integración:** un script en Python con consultas parametrizadas que genere un reporte útil para el negocio.\n7. **Reflexión tecnológica:** una página que argumente si alguna parte del sistema se beneficiaría de una base NoSQL o de JSONB.\n\n**Entregable.** Repositorio o archivo comprimido con scripts numerados, informe técnico de 12 a 18 páginas y presentación para una sustentación de 15 minutos con demostración en vivo.",
+        "rubric": [
+          {
+            "name": "Diseño e implementación completos y correctos",
+            "points": 5
+          },
+          {
+            "name": "Consultas, lógica en el servidor y optimización con evidencia",
+            "points": 5
+          },
+          {
+            "name": "Seguridad, protección de datos y respaldo probado",
+            "points": 5
+          },
+          {
+            "name": "Sustentación, demostración y defensa de decisiones",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Administración, seguridad, protección de datos y NoSQL",
+        "questions": [
+          {
+            "prompt": "Una aplicación web se conecta a la base con el superusuario postgres. ¿Qué principio se vulnera y cuál es el riesgo principal?",
+            "options": [
+              "Normalización; aparecen anomalías de actualización",
+              "Atomicidad; las transacciones quedan incompletas",
+              "Mínimo privilegio; una vulneración de la aplicación otorga control total de la base",
+              "Durabilidad; se pierden los datos confirmados"
+            ],
+            "correct": 2,
+            "explanation": "Con el superusuario, cualquier falla de la aplicación permite borrar tablas o leer todo; los roles con permisos mínimos limitan el daño."
+          },
+          {
+            "prompt": "Un formulario arma la consulta concatenando el texto ingresado. ¿Cuál es la defensa principal contra la inyección SQL?",
+            "options": [
+              "Cifrar el disco del servidor",
+              "Usar consultas parametrizadas",
+              "Aumentar la longitud de las contraseñas",
+              "Crear más índices"
+            ],
+            "correct": 1,
+            "explanation": "Los parámetros viajan separados del código SQL y no pueden alterar la estructura de la consulta."
+          },
+          {
+            "prompt": "Un cliente solicita la cancelación de sus datos, pero la empresa debe conservar sus comprobantes por obligaciones tributarias. ¿Qué solución técnica es más adecuada?",
+            "options": [
+              "Ejecutar DELETE en cascada de cliente y comprobantes",
+              "Ignorar la solicitud por existir comprobantes",
+              "Anonimizar y bloquear los datos identificatorios conservando las transacciones",
+              "Copiar los datos a una hoja de cálculo y borrar la base"
+            ],
+            "correct": 2,
+            "explanation": "La anonimización atiende el derecho del titular y preserva los registros que la empresa debe conservar legalmente."
+          },
+          {
+            "prompt": "Una tienda define RPO de 15 minutos y RTO de 1 hora. ¿Qué estrategia cumple el RPO?",
+            "options": [
+              "pg_dump semanal en el mismo servidor",
+              "Una réplica sin respaldos",
+              "Exportar tablas a CSV cada mes",
+              "Respaldo físico con archivado continuo del WAL"
+            ],
+            "correct": 3,
+            "explanation": "El archivado continuo del WAL permite recuperar hasta pocos minutos antes del incidente; los respaldos semanales implican perder días."
+          },
+          {
+            "prompt": "¿Por qué una réplica en streaming no sustituye a una copia de seguridad?",
+            "options": [
+              "Porque replica también los errores, como un DROP TABLE accidental",
+              "Porque no recibe el WAL del servidor principal",
+              "Porque solo funciona con MongoDB",
+              "Porque no puede leerse nunca"
+            ],
+            "correct": 0,
+            "explanation": "La réplica refleja en segundos cualquier cambio, incluidos los destructivos; el respaldo permite volver a un estado anterior."
+          },
+          {
+            "prompt": "Un catálogo tiene 40 000 productos con atributos muy variables según la categoría y se requieren transacciones con inventario. ¿Qué alternativa es más razonable?",
+            "options": [
+              "Un archivo de texto por producto",
+              "PostgreSQL con columnas relacionales y un campo JSONB indexado",
+              "Redis como única base de datos",
+              "Una base de grafos para todo el sistema"
+            ],
+            "correct": 1,
+            "explanation": "JSONB aporta flexibilidad para atributos variables sin renunciar a las transacciones y la integridad del modelo relacional."
+          },
+          {
+            "prompt": "Según el teorema CAP, durante una partición de red, ¿qué debe decidir un sistema distribuido?",
+            "options": [
+              "Elegir entre SQL y NoSQL",
+              "Normalizar o desnormalizar",
+              "Usar índices B-tree o hash",
+              "Privilegiar consistencia o disponibilidad"
+            ],
+            "correct": 3,
+            "explanation": "Ante una partición, el sistema debe rechazar operaciones para mantener consistencia o aceptarlas arriesgando datos divergentes."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Sistemas gestores de bases de datos, arquitectura ANSI/SPARC y ciclo de vida",
+      "activity": "Clase síncrona de diagnóstico; lectura previa en aula invertida y foro sobre problemas de datos en organizaciones locales.",
+      "evidence": "Participación en foro de diagnóstico"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Modelo entidad-relación: entidades, atributos, cardinalidades, entidades débiles y especialización",
+      "activity": "Taller de modelado en grupos con draw.io y análisis del caso Distribuidora Andina del Centro.",
+      "evidence": "Diagrama ER preliminar del caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Modelo relacional de Codd, claves, integridad referencial y álgebra relacional",
+      "activity": "Ejercicios guiados de transformación del diagrama ER al esquema relacional y consultas en álgebra relacional.",
+      "evidence": "Esquema relacional con claves"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Dependencias funcionales, normalización hasta 3FN y FNBC, diccionario de datos",
+      "activity": "Clínica de normalización con tablas reales; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Lenguaje SQL, entorno PostgreSQL y DDL con tipos y restricciones",
+      "activity": "Laboratorio de instalación y creación del esquema del proyecto con CREATE TABLE y restricciones CHECK.",
+      "evidence": "Script 01_esquema.sql inicial"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "DML seguro: INSERT, UPDATE, DELETE, transacciones básicas y RETURNING",
+      "activity": "Laboratorio de carga de datos de prueba con casos límite y práctica del protocolo de cambios seguros.",
+      "evidence": "Script 02_datos.sql"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "SELECT, orden lógico, filtros, valores nulos y reuniones internas, externas y autorreuniones",
+      "activity": "Resolución de requerimientos de negocio en parejas y análisis del caso Moda Gamarra Online.",
+      "evidence": "Consultas del caso corregidas"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Agregaciones, GROUP BY, HAVING, funciones de fecha y método de cinco pasos",
+      "activity": "Reto de consultas cronometrado; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Subconsultas correlacionadas, EXISTS y expresiones de tabla comunes recursivas",
+      "activity": "Laboratorio de SQL analítico con datos de una cadena de boticas y discusión de alternativas de solución.",
+      "evidence": "Consultas con subconsultas y CTE"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Funciones de ventana, vistas y vistas materializadas",
+      "activity": "Construcción de un tablero de indicadores con rankings, acumulados y variación mensual mediante vistas.",
+      "evidence": "Vistas y consultas de ventana"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Funciones PL/pgSQL, disparadores, transacciones ACID y concurrencia",
+      "activity": "Simulación de concurrencia en dos sesiones y análisis del caso BilleteraYa en sesión síncrona.",
+      "evidence": "Trigger de auditoría y análisis del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Índices B-tree, planes de ejecución y optimización basada en evidencia",
+      "activity": "Laboratorio de rendimiento con un millón de filas; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Roles, privilegios, seguridad por capas y Ley 29733 de protección de datos",
+      "activity": "Diseño del esquema de roles y de la tabla de consentimientos del proyecto; análisis del caso Clínica San Gabriel.",
+      "evidence": "Script de roles y análisis del caso"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Respaldo, recuperación, RPO, RTO y acceso seguro desde Python",
+      "activity": "Laboratorio de respaldo y restauración medida; script Python con consultas parametrizadas.",
+      "evidence": "Evidencia de restauración y script Python"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Bases de datos NoSQL, MongoDB, JSONB y criterios de elección tecnológica",
+      "activity": "Matriz de decisión grupal para tres escenarios; resolución del Cuestionario 4 y avance revisado del proyecto.",
+      "evidence": "Cuestionario 4 y avance del proyecto"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador: sustentación técnica y evaluación final",
+      "activity": "Sustentación de 15 minutos con demostración en vivo, preguntas no preparadas y retroalimentación.",
+      "evidence": "Proyecto integrador sustentado"
+    }
+  ]
+}

@@ -1,0 +1,1214 @@
+{
+  "name": "Álgebra Lineal Aplicada",
+  "slug": "algebra-lineal-aplicada",
+  "course_type": "especifica",
+  "module_name": "Análisis de datos y desarrollo de modelos de aprendizaje automático",
+  "credits": 4,
+  "hours_theory": 48,
+  "hours_practice": 32,
+  "summary": "Álgebra Lineal Aplicada (IAR-303) es un curso de formación específica, de naturaleza teórico-práctica, del tercer ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante domine el lenguaje matricial en el que se expresan los datos y los modelos de aprendizaje automático, y que lo use para resolver, diagnosticar y comunicar problemas reales con NumPy y SciPy. Construye sobre los vectores, el producto punto y el producto matriz-vector vistos en Matemática para Ciencia de Datos, y se organiza en cuatro unidades: sistemas lineales, factorización LU y condicionamiento numérico; espacios vectoriales, transformaciones lineales y los cuatro subespacios fundamentales; ortogonalidad, factorización QR y mínimos cuadrados; y valores propios y descomposición en valores singulares, con aplicaciones a PageRank, análisis de componentes principales, compresión de imágenes y sistemas de recomendación. Se articula con Aprendizaje Automático I, que se cursa en paralelo, y prepara Aprendizaje Automático II, Visión por Computadora, Procesamiento de Lenguaje Natural y Aprendizaje Profundo. Aporta al perfil de egreso la capacidad de razonar geométricamente sobre los datos y de elegir algoritmos numéricamente estables.",
+  "competency": "Modela problemas de datos, ingeniería y negocio como sistemas y transformaciones matriciales, y los resuelve con algoritmos numéricamente estables en Python, interpretando el rango, la ortogonalidad, los valores propios y los valores singulares para diagnosticar redundancias, reducir dimensionalidad y fundamentar decisiones técnicas en soluciones de inteligencia artificial, con rigor, transparencia y responsabilidad en el uso de los datos.",
+  "capacities": [
+    "Formula y resuelve sistemas de ecuaciones lineales mediante eliminación gaussiana y factorización LU, evaluando la existencia, unicidad y sensibilidad de la solución con el rango y el número de condición.",
+    "Analiza matrices de datos e imágenes mediante espacios vectoriales, bases, dimensión y los cuatro subespacios fundamentales, para detectar redundancias e interpretar transformaciones lineales.",
+    "Aplica la ortogonalidad, las proyecciones y la factorización QR para resolver problemas de mínimos cuadrados de manera estable y justificar geométricamente el ajuste de modelos.",
+    "Emplea valores propios, el teorema espectral y la descomposición en valores singulares para modelar procesos dinámicos, reducir dimensionalidad y construir aproximaciones de rango bajo en aplicaciones de inteligencia artificial."
+  ],
+  "indicators": [
+    "Resuelve sistemas lineales con pivoteo parcial y factorización LU en NumPy y SciPy, verificando la solución con el residuo relativo y reportando el número de condición.",
+    "Determina el rango y bases de los cuatro subespacios fundamentales de una matriz de diseño, e identifica explícitamente las dependencias lineales entre variables.",
+    "Representa rotaciones, escalamientos, cizallas y proyecciones como matrices y explica su efecto sobre datos e imágenes, incluido el determinante como factor de área.",
+    "Resuelve problemas de mínimos cuadrados con QR o lstsq, comprueba la ortogonalidad del residuo y justifica por qué evita formar la matriz AᵀA.",
+    "Calcula e interpreta valores y vectores propios para analizar cadenas de Markov y jerarquizar nodos de una red mediante el método de potencias.",
+    "Aplica la descomposición en valores singulares y el análisis de componentes principales para comprimir o reducir datos, eligiendo el rango k con criterios de energía y de error.",
+    "Documenta en un cuaderno reproducible y en una sustentación oral sus decisiones algorítmicas, supuestos, limitaciones y consideraciones éticas sobre los datos."
+  ],
+  "methodology": "El curso aplica el aula invertida: antes de cada sesión síncrona, el estudiante revisa la lectura de la unidad y microvideos con ejercicios de verificación automática. Las sesiones en vivo combinan la explicación geométrica con visualizaciones interactivas, resolución guiada de problemas y programación en cuadernos Jupyter compartidos con NumPy, SciPy y Matplotlib. Cada unidad incluye un caso analizado con el método de casos, primero en foro y luego en un debate síncrono orientado a la decisión, y un laboratorio basado en problemas con datos abiertos del Perú (INEI, BCRP, COES). La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, revisión de código entre pares y retroalimentación docente con rúbricas. El curso culmina con un proyecto integrador basado en la descomposición en valores singulares, sustentado oralmente.",
+  "bibliography": [
+    "Strang, G. (2016). Introduction to linear algebra (5th ed.). Wellesley-Cambridge Press.",
+    "Strang, G. (2019). Linear algebra and learning from data. Wellesley-Cambridge Press.",
+    "Lay, D. C., Lay, S. R. y McDonald, J. J. (2016). Álgebra lineal y sus aplicaciones (5.ª ed.). Pearson.",
+    "Grossman, S. I. y Flores Godoy, J. J. (2012). Álgebra lineal (7.ª ed.). McGraw-Hill.",
+    "Boyd, S. y Vandenberghe, L. (2018). Introduction to applied linear algebra: Vectors, matrices, and least squares. Cambridge University Press.",
+    "Deisenroth, M. P., Faisal, A. A. y Ong, C. S. (2020). Mathematics for machine learning. Cambridge University Press.",
+    "Trefethen, L. N. y Bau, D. (1997). Numerical linear algebra. SIAM.",
+    "Golub, G. H. y Van Loan, C. F. (2013). Matrix computations (4th ed.). Johns Hopkins University Press.",
+    "Koren, Y., Bell, R. y Volinsky, C. (2009). Matrix factorization techniques for recommender systems. Computer, 42(8), 30-37.",
+    "Harris, C. R., Millman, K. J., van der Walt, S. J. et al. (2020). Array programming with NumPy. Nature, 585, 357-362."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso: cuestionarios",
+      "weight": 20,
+      "description": "Cuatro cuestionarios en línea de comprensión y aplicación, uno por unidad, con retroalimentación inmediata y dos intentos."
+    },
+    {
+      "name": "Evaluación de proceso: laboratorios",
+      "weight": 30,
+      "description": "Laboratorios de las unidades 1 a 3: cuadernos reproducibles en Python evaluados con rúbrica de corrección, estabilidad numérica e interpretación."
+    },
+    {
+      "name": "Evaluación de producto: proyecto integrador",
+      "weight": 25,
+      "description": "Proyecto de la unidad 4 con descomposición en valores singulares: cuaderno, informe técnico y sustentación oral de ocho minutos."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 25,
+      "description": "Examen individual síncrono con problemas de cálculo, interpretación geométrica y análisis de código que abarca las cuatro unidades."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Sistemas de ecuaciones lineales, matrices y estabilidad numérica",
+      "description": "Al finalizar la unidad, el estudiante modela situaciones reales como sistemas lineales Ax = b, los resuelve con eliminación gaussiana y factorización LU en NumPy y SciPy, y evalúa la existencia, unicidad y sensibilidad de la solución mediante el rango y el número de condición.",
+      "topics": [
+        "Sistemas lineales: forma matricial y lecturas por filas, por columnas y como transformación",
+        "Eliminación gaussiana, pivoteo parcial y forma escalonada reducida",
+        "Existencia y unicidad de soluciones: rango y matriz aumentada",
+        "Matriz inversa, factorización LU y costo computacional",
+        "Normas matriciales, número de condición y error de redondeo",
+        "Aplicación: modelo insumo-producto de Leontief"
+      ],
+      "slides": [
+        {
+          "title": "Por qué el álgebra lineal es el idioma de la IA",
+          "bullets": [
+            "Un conjunto de datos de n observaciones y p variables es una matriz X de n×p; cada fila es un vector observación.",
+            "Una capa densa de red neuronal calcula σ(Wx + b): producto matriz-vector, suma de un sesgo y activación, repetido capa tras capa.",
+            "Una imagen en escala de grises de 28×28 píxeles es un vector de 784 componentes; un lote de 64 imágenes, una matriz de 64×784.",
+            "Las bibliotecas BLAS y LAPACK, sobre las que corren NumPy, SciPy y PyTorch, están optimizadas precisamente para estas operaciones."
+          ],
+          "notes": "Abra la sesión conectando con Matemática para Ciencia de Datos: allí calcularon vectores, productos punto y productos matriz-vector. Ahora damos el salto de calcular a razonar sobre la estructura: ¿cuándo un sistema tiene solución?, ¿qué información de una tabla es redundante?, ¿qué direcciones de los datos concentran la variación? Muestre en vivo un arreglo de NumPy con forma (64, 784) y pregunte qué representa cada fila y cada columna. Enfatice que el rendimiento de las GPU en aprendizaje profundo se mide en operaciones de punto flotante sobre matrices, y que entender su estructura permite elegir algoritmos más rápidos y más estables. Pregunta para la clase: si duplicamos el número de variables de un modelo lineal, ¿qué ocurre con el tamaño de la matriz XᵀX y con el costo de resolver el sistema asociado? Deje la respuesta abierta; la retomaremos al estudiar el costo cúbico de la eliminación gaussiana."
+        },
+        {
+          "title": "Tres lecturas de un mismo sistema Ax = b",
+          "bullets": [
+            "Lectura por filas: cada ecuación es un hiperplano y la solución es la intersección de todos ellos.",
+            "Lectura por columnas: b debe escribirse como combinación lineal x₁a₁ + x₂a₂ + … + xₙaₙ de las columnas de A.",
+            "Lectura como transformación: buscamos el vector x que la función lineal T(x) = Ax envía exactamente a b.",
+            "La lectura por columnas, enfatizada por Gilbert Strang, anticipa los conceptos de espacio columna y de rango."
+          ],
+          "notes": "Use el sistema 2×2: 2x + y = 5; x − y = 1. Dibuje primero las dos rectas y su intersección en (2, 1). Luego dibuje los vectores columna (2, 1) y (1, −1) y muestre que 2·(2, 1) + 1·(1, −1) = (5, 1). Explique que en dimensiones altas la imagen de rectas que se cortan deja de ser útil, pero la de combinaciones de columnas sigue funcionando: un sistema es consistente si y solo si b pertenece al conjunto generado por las columnas. Pregunte: ¿qué ocurre geométricamente si las dos columnas son paralelas? Los estudiantes deberían concluir que solo se alcanzan vectores sobre una recta, de modo que casi ningún b tiene solución. Esta idea es la base de la Unidad 2 y del problema de mínimos cuadrados de la Unidad 3, cuando b no pertenezca al espacio columna y debamos buscar la mejor aproximación posible."
+        },
+        {
+          "title": "Eliminación gaussiana paso a paso",
+          "bullets": [
+            "Operaciones elementales: intercambiar filas, multiplicar una fila por un escalar no nulo y sumar a una fila un múltiplo de otra.",
+            "Fase hacia adelante: anular las entradas bajo cada pivote hasta obtener una matriz triangular superior U.",
+            "Sustitución regresiva: despejar xₙ en la última ecuación, luego xₙ₋₁, y así sucesivamente hasta x₁.",
+            "Costo aproximado: 2n³/3 operaciones de punto flotante para la eliminación y del orden de n² para la sustitución."
+          ],
+          "notes": "Resuelva en la pizarra digital el sistema x + 2y + z = 8; 2x + 5y + 3z = 21; x + 3y + 4z = 19. Con los multiplicadores 2 y 1 se anula la primera columna; con el multiplicador 1 se anula la segunda, y queda una triangular superior con diagonal 1, 1 y 2. La sustitución regresiva da z = 3, y = 2, x = 1. Pida a los estudiantes que guarden los multiplicadores, porque reaparecerán en la factorización LU. Luego dimensione el costo: para n = 1000 son unas 6,7×10⁸ operaciones, menos de un segundo en una laptop; para n = 100 000 serían unas 6,7×10¹⁴, lo que explica por qué los problemas grandes aprovechan la estructura dispersa o usan métodos iterativos. Pregunta: si el número de ecuaciones se multiplica por diez, ¿por cuánto se multiplica el tiempo de cómputo? La respuesta esperada es por cerca de mil, consecuencia directa del crecimiento cúbico."
+        },
+        {
+          "title": "Pivoteo parcial: por qué el orden de las filas importa",
+          "bullets": [
+            "Un pivote cercano a cero genera multiplicadores enormes que amplifican el error de redondeo de la aritmética de punto flotante.",
+            "Pivoteo parcial: en cada columna se elige como pivote la entrada de mayor valor absoluto y se intercambian las filas.",
+            "Ejemplo clásico: con pivote 10⁻²⁰, la eliminación ingenua en doble precisión devuelve x₁ = 0 en lugar de x₁ ≈ 1.",
+            "np.linalg.solve llama a la rutina gesv de LAPACK, que factoriza PA = LU con pivoteo parcial."
+          ],
+          "notes": "Muestre el sistema 10⁻²⁰x₁ + x₂ = 1; x₁ + x₂ = 2, cuya solución exacta es prácticamente x₁ = x₂ = 1. Sin intercambio de filas, el multiplicador es 10²⁰; al restar, 1 − 10²⁰ se redondea a −10²⁰ y 2 − 10²⁰ también, de modo que x₂ = 1 y, al sustituir, x₁ = 0: un error del cien por ciento. Si primero intercambiamos filas, el multiplicador es 10⁻²⁰ y el resultado es correcto. Programe ambas versiones en vivo para que lo vean con sus propios ojos. Recalque que la matriz está bien condicionada: el problema no está en los datos sino en el algoritmo. Esa es la diferencia entre un problema mal condicionado y un algoritmo inestable, que formalizaremos más adelante. Pregunte: ¿por qué un analista no debería programar su propia eliminación para producción? Porque LAPACK incorpora décadas de análisis de errores iniciado por James H. Wilkinson."
+        },
+        {
+          "title": "Existencia y unicidad: el papel del rango",
+          "bullets": [
+            "Rango de A: número de pivotes tras la eliminación; mide cuántas ecuaciones o columnas son realmente independientes.",
+            "Teorema de Rouché–Frobenius: Ax = b es consistente si y solo si rango(A) = rango([A | b]).",
+            "Si además el rango es igual al número de incógnitas n, la solución es única; si es menor, hay infinitas con n − r parámetros libres.",
+            "En datos reales, una fila [0 … 0 | c] con c ≠ 0 señala ecuaciones contradictorias, típicamente mediciones con ruido."
+          ],
+          "notes": "Presente tres sistemas de 3×3 y pida a los estudiantes clasificarlos antes de resolver: uno con solución única, otro cuya tercera ecuación es la suma de las dos primeras (infinitas soluciones) y un tercero cuya última ecuación contradice a las anteriores (sin solución). Use np.linalg.matrix_rank para comprobar el rango de A y de la matriz aumentada. Explique que en el mundo real casi nunca hay sistemas exactamente consistentes cuando hay más ecuaciones que incógnitas: sensores, encuestas y registros contables tienen ruido. Por eso el problema relevante no suele ser resolver, sino aproximar lo mejor posible, tema de la Unidad 3. Advierta también que matrix_rank aplica una tolerancia sobre los valores singulares: el rango numérico depende de un umbral, idea que retomaremos con la SVD en la Unidad 4. Pregunta: ¿puede un sistema con más incógnitas que ecuaciones tener solución única?"
+        },
+        {
+          "title": "Forma escalonada reducida y variables libres",
+          "bullets": [
+            "Forma escalonada reducida: pivotes iguales a 1 y ceros arriba y abajo de cada pivote; es única para cada matriz.",
+            "Las variables pivote se expresan en función de las variables libres, que pueden tomar cualquier valor real.",
+            "Solución general = una solución particular + combinaciones de soluciones del sistema homogéneo Ax = 0.",
+            "En Python, sympy.Matrix(A).rref() devuelve la forma reducida y los índices de las columnas pivote."
+          ],
+          "notes": "Trabaje un sistema con infinitas soluciones, por ejemplo un balance de flujos vehiculares en cuatro intersecciones del Centro de Lima, donde todo lo que entra a un nodo debe salir. Plantee cuatro ecuaciones con cinco flujos desconocidos y muestre que la forma reducida deja una variable libre. Interprete: la red admite infinitas configuraciones compatibles, y la condición adicional de no negatividad acota un intervalo de valores factibles para cada calle. Subraye la estructura «solución particular más soluciones del homogéneo», porque reaparecerá en la Unidad 2: el conjunto de soluciones es un desplazamiento del espacio nulo. Aclare que la forma reducida es una herramienta didáctica y simbólica; en cómputo numérico no se usa porque es sensible al redondeo, y se prefieren LU, QR o SVD. Pregunta: si la municipalidad instala un contador en una de las calles, ¿cuántas variables libres quedan?"
+        },
+        {
+          "title": "Álgebra de matrices: producto, transpuesta e inversa",
+          "bullets": [
+            "El producto AB compone transformaciones: primero aplica B y luego A; en general AB ≠ BA.",
+            "Propiedades clave: (AB)ᵀ = BᵀAᵀ y (AB)⁻¹ = B⁻¹A⁻¹ cuando ambas matrices son invertibles.",
+            "A de n×n es invertible si y solo si su rango es n, su determinante es no nulo y Ax = 0 solo admite x = 0.",
+            "Regla práctica: no calcule A⁻¹b; resuelva Ax = b con solve, que es más rápido y más exacto."
+          ],
+          "notes": "Muestre que el producto de matrices es composición de funciones lineales, conectando con la Unidad 2. Construya un contraejemplo de no conmutatividad con una rotación de 90° y una reflexión respecto del eje x: el orden cambia el resultado. Luego enuncie la versión resumida del teorema de la matriz invertible. La regla práctica merece énfasis: calcular la inversa cuesta cerca de 2n³ operaciones frente a 2n³/3 de la factorización LU, y acumula más error de redondeo. En el cuaderno en vivo, compare np.linalg.inv(A) @ b con np.linalg.solve(A, b) para una matriz aleatoria de 2000×2000, midiendo el tiempo con %timeit y el residuo ‖Ax − b‖. Pregunta: ¿en qué caso sí tiene sentido calcular la inversa explícitamente? Cuando sus entradas tienen significado propio, como en la matriz inversa de Leontief, cuyos elementos son multiplicadores económicos que se reportan e interpretan."
+        },
+        {
+          "title": "Factorización LU: muchos sistemas con una sola eliminación",
+          "bullets": [
+            "La eliminación registra sus multiplicadores en L, triangular inferior con unos en la diagonal: A = LU, o PA = LU con pivoteo.",
+            "Ejemplo: A = [[1, 2, 1], [2, 5, 3], [1, 3, 4]] da L = [[1, 0, 0], [2, 1, 0], [1, 1, 1]] y U = [[1, 2, 1], [0, 1, 1], [0, 0, 2]].",
+            "Resolver Ax = b se reduce a Ly = b (sustitución progresiva) y Ux = y (sustitución regresiva), cada una de costo n².",
+            "En SciPy: lu, piv = scipy.linalg.lu_factor(A) una sola vez; luego lu_solve((lu, piv), b) para cada nuevo b."
+          ],
+          "notes": "Recupere los multiplicadores 2, 1 y 1 del ejemplo de eliminación y arme L; verifique en vivo que L @ U reproduce A. La ventaja práctica aparece cuando la matriz es fija y cambia el lado derecho: en un modelo insumo-producto se evalúan decenas de escenarios de demanda final; en la simulación de circuitos o de estructuras, cientos de cargas distintas. Factorizar cuesta del orden de n³ una sola vez, y cada solución adicional solo n². Para n = 2000 y 500 escenarios, la diferencia entre repetir solve y reutilizar la factorización es de minutos frente a segundos. Pida a los estudiantes que estimen el ahorro con la fórmula de costos. Mencione que para matrices simétricas definidas positivas existe la factorización de Cholesky, A = LLᵀ, con la mitad del costo, que reaparecerá al estudiar matrices de covarianza en la Unidad 4."
+        },
+        {
+          "title": "Normas y número de condición",
+          "bullets": [
+            "Norma matricial inducida ‖A‖ = máx ‖Ax‖/‖x‖: el mayor factor de estiramiento que A aplica a un vector.",
+            "Número de condición κ(A) = ‖A‖·‖A⁻¹‖ ≥ 1: mide cuánto se amplifican los errores relativos de los datos.",
+            "Cota fundamental: error relativo en x ≤ κ(A) × error relativo en b.",
+            "Regla práctica: con doble precisión, unos 16 dígitos, se pierden aproximadamente log₁₀ κ(A) dígitos exactos."
+          ],
+          "notes": "Defina el condicionamiento como una propiedad del problema, no del algoritmo. Use un ejemplo de 2×2 casi singular: A = [[1, 1], [1, 1,0001]], cuyo número de condición es cercano a 40 000. Cambie b de (2; 2,0001) a (2; 2,0002), una variación relativa diminuta, y muestre que la solución salta de (1, 1) a (0, 2). Pregunte: ¿qué significa esto para un modelo cuyas variables están casi perfectamente correlacionadas? Que los coeficientes estimados pueden cambiar drásticamente ante cambios mínimos en los datos, aunque las predicciones sigan siendo razonables. Este es el puente con la multicolinealidad que verán en Aprendizaje Automático I. Introduzca np.linalg.cond y recuerde que el épsilon de máquina en doble precisión es cercano a 2,2×10⁻¹⁶: con κ = 10¹⁰ solo cabe esperar unos seis dígitos correctos en la solución."
+        },
+        {
+          "title": "Matrices mal condicionadas en la práctica",
+          "bullets": [
+            "La matriz de Hilbert de orden 10, con entradas 1/(i + j − 1), tiene κ ≈ 1,6×10¹³: se pierden casi todos los dígitos.",
+            "Las matrices de Vandermonde de la regresión polinomial con años sin centrar superan κ = 10¹¹ ya en grado 2.",
+            "Variables en escalas muy distintas, como soles y millones de soles, inflan κ; escalar columnas suele reducirlo.",
+            "Síntoma típico: residuo pequeño, pero solución muy distinta entre herramientas o ante cambios mínimos en los datos."
+          ],
+          "notes": "Haga una demostración en vivo: construya la matriz de Hilbert con scipy.linalg.hilbert(10), defina como solución verdadera un vector de unos, calcule b = Hx y resuelva. El residuo será del orden de 10⁻¹⁶, pero el error en x puede ser del orden de 10⁻⁴ o mayor. Esta paradoja, residuo pequeño con error grande, es la firma del mal condicionamiento. Relacione con la práctica: un analista que ajusta una tendencia cuadrática a los años 2000 a 2025 sin centrarlos enfrenta un κ cercano a 3×10¹¹, y obtiene coeficientes que cambian entre Excel, R y Python. Explique los remedios: centrar y escalar columnas, usar bases ortogonales o regularizar, temas que conectan con Ridge en Aprendizaje Automático I y con QR en la Unidad 3. Pregunta: ¿por qué el residuo no basta para validar una solución? Porque mide cuánto se cumple la ecuación, no cuán cerca estamos de la verdad."
+        },
+        {
+          "title": "Modelo insumo-producto de Leontief",
+          "bullets": [
+            "Wassily Leontief, Nobel de Economía en 1973, describió la economía como sectores que se compran insumos entre sí.",
+            "Coeficiente técnico aᵢⱼ: soles del sector i necesarios para producir un sol del sector j; la producción cumple x = Ax + d.",
+            "Solución: (I − A)x = d, de modo que x = (I − A)⁻¹d; la inversa de Leontief contiene los multiplicadores sectoriales.",
+            "El INEI elaboró la Tabla Insumo-Producto con año base 2007, referencia de las cuentas nacionales del Perú."
+          ],
+          "notes": "Plantee una economía ilustrativa de tres sectores: agropecuario, manufactura y servicios. Explique que cada columna de A describe la receta de insumos de un sector y que la suma de cada columna debe ser menor que 1 para que quede valor agregado. Si la demanda final de manufactura sube en 100 millones de soles por mayores exportaciones, la producción total no sube solo 100 millones: los proveedores también producen más, y los proveedores de los proveedores. La suma de la columna j de (I − A)⁻¹ es el multiplicador de producción del sector j. Muestre la serie de Neumann, (I − A)⁻¹ = I + A + A² + …, como interpretación por rondas sucesivas de compras. Pregunta: ¿qué sector conviene estimular si se busca el mayor efecto de arrastre? Advierta los supuestos del modelo: coeficientes fijos, rendimientos constantes y ausencia de restricciones de capacidad."
+        },
+        {
+          "title": "Del papel a NumPy y SciPy: flujo de trabajo recomendado",
+          "bullets": [
+            "Paso 1: construir A y b con np.array y verificar sus formas con A.shape y b.shape antes de resolver.",
+            "Paso 2: diagnosticar con np.linalg.matrix_rank(A) y np.linalg.cond(A), y decidir si el problema es confiable.",
+            "Paso 3: resolver con np.linalg.solve, o reutilizar lu_factor y lu_solve de SciPy cuando hay múltiples escenarios.",
+            "Paso 4: validar con el residuo relativo ‖Ax − b‖/‖b‖ y con una perturbación pequeña de b."
+          ],
+          "notes": "Presente este flujo como estándar profesional para el laboratorio de la unidad. Insista en verificar formas: el error más común es confundir un vector de forma (n,) con una matriz columna (n, 1), lo que produce difusión inesperada de dimensiones en NumPy. Diagnosticar antes de resolver es como revisar la calidad de los datos antes de entrenar un modelo. El paso de validación con perturbación es un pequeño análisis de sensibilidad: agregue a b un ruido relativo de 10⁻⁶ y observe cuánto cambia x; si cambia en el orden de 10⁻² o más, el problema está mal condicionado y el informe técnico debe advertirlo explícitamente. Pida a los estudiantes que adopten este flujo en el Laboratorio 1 y que documenten cada paso en celdas de Markdown. Pregunta de cierre: ¿cuál de estos pasos omite con más frecuencia un analista apurado y qué consecuencias puede tener para la decisión?"
+        },
+        {
+          "title": "Errores frecuentes y criterios de decisión",
+          "bullets": [
+            "Confundir singular con mal condicionado: la primera no tiene solución única; la segunda sí, pero es frágil.",
+            "Usar la inversa explícita por comodidad, triplicando el costo y aumentando el error de redondeo.",
+            "Interpretar un residuo pequeño como garantía de exactitud sin revisar el número de condición.",
+            "Ignorar las escalas: mezclar metros y kilómetros, o soles y miles de soles, sin estandarizar las columnas."
+          ],
+          "notes": "Cierre la unidad con un ejercicio de diagnóstico: entregue cuatro fragmentos de código con errores típicos y pida a los grupos que identifiquen el problema y propongan la corrección. Por ejemplo, un analista calcula coeficientes con np.linalg.inv(X.T @ X) @ X.T @ y sobre variables sin escalar; otro concluye que su sistema no tiene solución porque np.linalg.solve lanzó LinAlgError por matriz singular, cuando en realidad tenía infinitas soluciones. Discuta cómo comunicar estas limitaciones a un jefe no técnico: no basta decir que la matriz está mal condicionada; hay que traducirlo a «los coeficientes individuales no son confiables, aunque las predicciones dentro del rango observado sí lo sean». Recuerde el cuestionario de la semana 3 y la entrega del Laboratorio 1 en la semana 4, y anticipe la Unidad 2: entender por qué una matriz es singular exige el lenguaje de los espacios vectoriales."
+        }
+      ],
+      "reading": {
+        "title": "Resolver bien no es lo mismo que resolver: eliminación, LU y condicionamiento",
+        "minutes": 35,
+        "content": "## Resolver bien no es lo mismo que resolver\n\nTodo analista de datos termina enfrentando un sistema de ecuaciones lineales, aunque no lo vea escrito como tal: al estimar una regresión, al calibrar un sensor, al balancear flujos en una red de distribución o al proyectar el impacto económico de una inversión. La pregunta profesional no es solo «¿cuál es la solución?», sino también «¿existe?, ¿es única?, ¿cuánto puedo confiar en ella?». Esta lectura desarrolla esas tres preguntas.\n\n## 1. Un sistema, tres miradas\n\nUn sistema de m ecuaciones con n incógnitas se escribe Ax = b, con A de m×n. Puede leerse **por filas** (cada ecuación es un hiperplano y buscamos su intersección), **por columnas** (buscamos coeficientes que combinen las columnas de A para producir b) o **como transformación** (buscamos el vector que la función lineal T(x) = Ax envía a b). La lectura por columnas, popularizada por Gilbert Strang, es la más poderosa: el sistema tiene solución si y solo si b pertenece al espacio generado por las columnas. El teorema de Rouché–Frobenius lo formaliza: hay solución si y solo si rango(A) = rango([A | b]); y es única si, además, ese rango es igual a n.\n\n## 2. Eliminación gaussiana y factorización LU\n\nLa eliminación gaussiana transforma A en una matriz triangular superior U mediante operaciones de fila, y luego despeja por sustitución regresiva. Su costo es de unas 2n³/3 operaciones. Si se guardan los multiplicadores en una matriz triangular inferior L, se obtiene A = LU (o PA = LU, con una permutación P cuando se intercambian filas). La ventaja es decisiva cuando A permanece fija y cambian los datos b: se factoriza una vez, con costo cúbico, y cada nuevo escenario se resuelve con dos sustituciones triangulares, con costo cuadrático.\n\nEl **pivoteo parcial**, que elige como pivote la entrada de mayor valor absoluto de cada columna, no es un detalle: sin él, un pivote diminuto produce multiplicadores enormes y el redondeo destruye la solución, aun cuando el problema esté bien planteado.\n\n## 3. Una aplicación peruana: el modelo insumo-producto\n\nWassily Leontief, Premio Nobel de Economía en 1973, representó la economía como sectores que se compran insumos entre sí. Si aᵢⱼ son los soles que el sector i vende al sector j por cada sol que este produce, la producción x debe cubrir la demanda intermedia Ax y la demanda final d: x = Ax + d, es decir, (I − A)x = d. El INEI elaboró la Tabla Insumo-Producto con año base 2007, que sustenta las cuentas nacionales del Perú. Con coeficientes **ilustrativos** para tres sectores (agropecuario, manufactura y servicios) y una demanda final de 500, 800 y 1200 millones de soles:\n\n```python\nimport numpy as np\nfrom scipy.linalg import lu_factor, lu_solve\n\nA = np.array([[0.10, 0.20, 0.05],      # coeficientes técnicos ilustrativos\n              [0.15, 0.25, 0.10],      # columna j = receta de insumos del sector j\n              [0.20, 0.30, 0.25]])\nM = np.eye(3) - A                      # matriz de Leontief I - A\nprint(np.linalg.cond(M))               # ≈ 2.2: problema bien condicionado\n\nlu, piv = lu_factor(M)                 # se factoriza una sola vez: PM = LU\nescenarios = {'base':    [500, 800, 1200],\n              'export+': [500, 900, 1200]}   # +100 millones en manufactura\nfor nombre, d in escenarios.items():\n    x = lu_solve((lu, piv), d)         # dos sustituciones triangulares\n    print(nombre, x.round(1), x.sum().round(1))\n# base    [1054.7 1614.6 2527.1] 5196.4\n# export+ [1092.  1764.7 2597.1] 5453.7\n\nL_inv = np.linalg.inv(M)               # aquí sí interesa la inversa: sus entradas se interpretan\nprint(L_inv.sum(axis=0).round(2))      # multiplicadores: [1.94 2.57 1.81]\n```\n\nEl aumento de 100 millones en la demanda de manufactura eleva la producción total en 257,3 millones: exactamente 100 veces el multiplicador de manufactura (2,57), porque cada sol vendido desencadena compras sucesivas a los proveedores.\n\n## 4. Condicionamiento: cuándo desconfiar de una respuesta\n\nEl **número de condición** κ(A) = ‖A‖·‖A⁻¹‖ mide cuánto puede amplificarse un error relativo en los datos:\n\nerror relativo en x ≤ κ(A) · error relativo en b.\n\nComo la doble precisión ofrece unos 16 dígitos significativos (épsilon de máquina ≈ 2,2×10⁻¹⁶), se pierden aproximadamente log₁₀ κ(A) dígitos. La matriz de Leontief anterior tiene κ ≈ 2,2: los resultados son confiables. En cambio, la matriz [[1, 1], [1, 1,0001]] tiene κ ≈ 40 000: si el segundo dato pasa de 2,0001 a 2,0002, la solución salta de (1, 1) a (0, 2). Y la matriz de Hilbert de orden 10 tiene κ ≈ 1,6×10¹³, por lo que apenas sobreviven tres dígitos.\n\nConviene distinguir dos fenómenos: un **problema mal condicionado** es sensible por naturaleza, sin importar el algoritmo; un **algoritmo inestable**, como la eliminación sin pivoteo, arruina incluso problemas bien condicionados. El primero se combate reformulando (escalando variables, eliminando redundancias, regularizando); el segundo, usando rutinas probadas como las de LAPACK.\n\n## 5. Lecciones para el analista de IA\n\n1. Diagnostique antes de resolver: forma, rango y número de condición.\n2. Use solve o factorizaciones; evite la inversa salvo que sus entradas tengan significado propio.\n3. Valide con el residuo relativo y con perturbaciones pequeñas de los datos.\n4. Comunique la incertidumbre numérica en el lenguaje de la decisión, no solo en el de las matrices."
+      },
+      "case": {
+        "title": "Caso: Nutriandes y la fórmula que se volvió frágil",
+        "content": "**Nutriandes S.A.C.** (empresa ficticia) fabrica alimento balanceado para pollos de engorde en el valle de Virú, La Libertad, una de las principales regiones avícolas del país. Produce 4500 toneladas mensuales y abastece a granjas medianas de la costa norte. Rosa Quispe, jefa de formulación, prepara cada semana la mezcla base de la etapa de crecimiento con tres insumos principales; las vitaminas, minerales y aminoácidos sintéticos se agregan después en una premezcla.\n\nLa mezcla base debe cumplir tres condiciones por kilogramo: las proporciones de los insumos deben sumar 1, la proteína cruda debe ser 20 % y la energía metabolizable debe ser 3100 kcal/kg. La composición y los precios referenciales son:\n\n| Insumo | Proteína cruda (%) | Energía metabolizable (kcal/kg) | Precio (S/ por t) |\n|---|---|---|---|\n| Maíz amarillo duro | 8,5 | 3350 | 1250 |\n| Torta de soya | 46,0 | 2450 | 2000 |\n| Harina de pescado | 65,0 | 2900 | 6500 |\n\nRosa resolvió el sistema en una hoja de cálculo y obtuvo 70,8 % de maíz, 26,3 % de torta de soya y 2,9 % de harina de pescado. Sin embargo, el laboratorio de control de calidad reporta que la proteína de la torta de soya varía entre 44 % y 47 % según el lote, y que el requerimiento de proteína podría subir a 21 % si el cliente principal adopta una línea genética de crecimiento más rápido.\n\nEl gerente de compras, Martín Salazar, trae una propuesta urgente: tras una temporada de pesca de anchoveta afectada por El Niño costero, prevé que la harina de pescado suba a S/ 8000 por tonelada. Propone reemplazarla por una **torta de soya de alta proteína** (49 % de proteína, 2500 kcal/kg, S/ 2600 por t). Con ese cambio, la nueva fórmula sería 71,0 % de maíz, 7,7 % de torta convencional y 21,3 % de torta de alta proteína. Martín necesita confirmar el lunes una compra de 600 toneladas.\n\nRosa repite el cálculo con proteína de 21 % y se alarma: con la fórmula actual la solución cambia poco (69,5 %, 25,0 % y 5,5 %), pero con la fórmula propuesta la torta convencional resulta **−10,9 %**, una proporción imposible. Calcula el número de condición de ambas matrices: unas 35 000 para la actual y unas 207 000 para la propuesta, aunque nota que estos valores dependen de las unidades en que expresa la energía y la proteína.\n\nAdemás, la nutricionista externa pide agregar un cuarto requisito, lisina digestible de 1,0 %, sin añadir nuevos insumos a la mezcla base. El gerente general quiere una recomendación clara: ¿se compra la torta de alta proteína?, ¿qué riesgo técnico se asume?, ¿cómo debe cambiar el proceso de formulación?",
+        "questions": [
+          "Formule el sistema Ax = b de la fórmula actual, verifique la solución reportada y calcule el costo por tonelada con ambos precios de harina de pescado.",
+          "Compare el número de condición de ambas formulaciones expresando la energía en Mcal/kg y la proteína como fracción. ¿Qué parte del mal condicionamiento es artificial y qué parte es estructural?",
+          "Explique con la lectura por columnas por qué una torta de alta proteína, de composición parecida a la convencional, vuelve frágil la solución.",
+          "¿Qué ocurre al agregar el requisito de lisina con solo tres insumos? Clasifique el sistema resultante y proponga cómo reformular el problema.",
+          "¿Recomendaría la compra de las 600 toneladas? Redacte un párrafo para el gerente general que cuantifique el ahorro y el riesgo técnico."
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio 1: Solución y sensibilidad de sistemas lineales en Python",
+        "instructions": "**Objetivo.** Resolver sistemas lineales reales con algoritmos estables y evaluar críticamente la confiabilidad de sus soluciones.\n\n**Qué entregar.** Un cuaderno Jupyter reproducible (.ipynb) y un reporte técnico en PDF de máximo tres páginas.\n\n**Actividades.**\n\n1. **Implementación.** Programe la función `eliminacion_pivoteo(A, b)` con pivoteo parcial y sustitución regresiva. Compárela con `np.linalg.solve` en cinco matrices aleatorias de 50×50: reporte el error relativo entre ambas soluciones y el residuo relativo ‖Ax − b‖/‖b‖. Demuestre el fallo de la eliminación sin pivoteo con el sistema de pivote 10⁻²⁰.\n2. **Modelo de Leontief.** Con los coeficientes ilustrativos de la lectura, calcule la producción de equilibrio, la inversa de Leontief y los multiplicadores. Evalúe cuatro escenarios de demanda final (uno propuesto por usted, justificado con información económica del BCRP o del INEI) reutilizando `lu_factor` y `lu_solve`.\n3. **Sensibilidad.** Perturbe aleatoriamente los coeficientes técnicos en ±1 % (cien repeticiones) y reporte la variación máxima de la producción sectorial. Contraste con el número de condición.\n4. **Caso Nutriandes.** Resuelva ambas formulaciones, calcule su número de condición con unidades originales y reescaladas, y redacte una recomendación de compra de un párrafo.\n\n**Formato.** Código comentado, celdas de Markdown que expliquen cada decisión, gráficos rotulados y conclusiones en lenguaje no técnico. Se descontará el uso de `np.linalg.inv` para resolver sistemas, salvo para interpretar multiplicadores.",
+        "rubric": [
+          {
+            "name": "Implementación correcta y verificada con residuos",
+            "points": 6
+          },
+          {
+            "name": "Modelo de Leontief con uso eficiente de la factorización LU",
+            "points": 5
+          },
+          {
+            "name": "Análisis de condicionamiento y sensibilidad",
+            "points": 5
+          },
+          {
+            "name": "Recomendación del caso, comunicación y reproducibilidad",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 1: sistemas lineales, LU y condicionamiento",
+        "questions": [
+          {
+            "prompt": "Al reducir la matriz aumentada de un sistema de tres ecuaciones y tres incógnitas aparece la fila [0 0 0 | 4]. ¿Qué se concluye?",
+            "options": [
+              "El sistema es inconsistente y no tiene solución",
+              "El sistema tiene infinitas soluciones con una variable libre",
+              "La solución es única y x₃ = 4",
+              "La matriz de coeficientes es invertible"
+            ],
+            "correct": 0,
+            "explanation": "La fila equivale a la ecuación 0 = 4, una contradicción. Entonces rango(A) < rango([A | b]) y, por el teorema de Rouché–Frobenius, el sistema no tiene solución."
+          },
+          {
+            "prompt": "Un analista debe resolver Ax = b con la misma matriz A de 3000×3000 y 200 vectores b distintos que llegan uno por uno. ¿Qué estrategia es más eficiente y estable?",
+            "options": [
+              "Factorizar una vez con lu_factor y aplicar lu_solve a cada b",
+              "Calcular np.linalg.inv(A) y multiplicarla por cada b",
+              "Llamar a np.linalg.solve(A, b) en cada una de las 200 llegadas",
+              "Obtener la forma escalonada reducida con sympy para cada sistema"
+            ],
+            "correct": 0,
+            "explanation": "La factorización cuesta del orden de n³ una sola vez y cada sustitución solo n². La inversa es más costosa y menos exacta; repetir solve refactoriza 200 veces; sympy trabaja simbólicamente y es inviable a esta escala."
+          },
+          {
+            "prompt": "Si κ(A) ≈ 10¹⁰ y se trabaja en doble precisión, ¿cuántos dígitos correctos cabe esperar aproximadamente en la solución de Ax = b?",
+            "options": [
+              "Unos 6 dígitos",
+              "Unos 16 dígitos",
+              "Unos 10 dígitos",
+              "Ninguno, porque el sistema no tiene solución"
+            ],
+            "correct": 0,
+            "explanation": "La doble precisión ofrece unos 16 dígitos y se pierden cerca de log₁₀ κ = 10, por lo que quedan unos 6. Una matriz mal condicionada sí tiene solución; lo que se pierde es precisión."
+          },
+          {
+            "prompt": "En el sistema 10⁻²⁰x₁ + x₂ = 1; x₁ + x₂ = 2, la eliminación sin intercambio de filas devuelve x₁ = 0. ¿Cuál es la causa principal?",
+            "options": [
+              "El algoritmo es inestable: el pivote diminuto amplifica el redondeo",
+              "La matriz es singular y no tiene solución única",
+              "El problema está intrínsecamente mal condicionado",
+              "Python no puede representar el número 10⁻²⁰"
+            ],
+            "correct": 0,
+            "explanation": "La matriz está bien condicionada (κ ≈ 2,6); el fallo proviene del multiplicador 10²⁰. El pivoteo parcial intercambia filas y corrige el problema. El número 10⁻²⁰ sí es representable en doble precisión."
+          },
+          {
+            "prompt": "En un modelo de Leontief, la suma de la columna j de la matriz (I − A)⁻¹ es 1,85. ¿Cómo se interpreta este valor?",
+            "options": [
+              "Un sol adicional de demanda final del sector j genera 1,85 soles de producción total",
+              "El sector j compra 1,85 soles de insumos por cada sol que produce",
+              "El sector j explica el 85 % del producto bruto interno",
+              "La economía es inviable porque el valor supera la unidad"
+            ],
+            "correct": 0,
+            "explanation": "La inversa de Leontief recoge los efectos directos e indirectos de la demanda final; la suma de su columna j es el multiplicador de producción. Los insumos por sol producido están en la matriz A, no en su inversa."
+          },
+          {
+            "prompt": "Al resolver un sistema con la matriz de Hilbert de orden 10 se obtiene un residuo cercano a 10⁻¹⁶, pero x difiere del valor verdadero en 10⁻³. ¿Qué explica la diferencia?",
+            "options": [
+              "El mal condicionamiento: un residuo pequeño no implica un error pequeño",
+              "Un error de programación, porque un residuo pequeño garantiza exactitud",
+              "La matriz de Hilbert es singular",
+              "NumPy trabaja en precisión simple por defecto"
+            ],
+            "correct": 0,
+            "explanation": "El error relativo de x puede llegar a κ(A) veces el residuo relativo; con κ ≈ 1,6×10¹³ un residuo mínimo es compatible con errores grandes. NumPy usa doble precisión y la matriz de Hilbert es invertible."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Espacios vectoriales, transformaciones lineales y los cuatro subespacios fundamentales",
+      "description": "Al finalizar la unidad, el estudiante analiza matrices de datos e imágenes mediante independencia lineal, bases, dimensión y los cuatro subespacios fundamentales, aplica el teorema del rango y la nulidad para detectar redundancias, e interpreta transformaciones lineales y cambios de base en contextos de inteligencia artificial.",
+      "topics": [
+        "Espacios y subespacios vectoriales, combinación lineal y espacio generado",
+        "Independencia lineal, base, dimensión y coordenadas",
+        "Los cuatro subespacios fundamentales y el teorema del rango y la nulidad",
+        "Transformaciones lineales: rotación, escalamiento, cizalla y proyección",
+        "Determinante como factor de área y cambio de base",
+        "Redundancia en matrices de diseño y aumento de datos en imágenes"
+      ],
+      "slides": [
+        {
+          "title": "Espacios vectoriales: más allá de las flechas",
+          "bullets": [
+            "Un espacio vectorial es un conjunto cerrado bajo la suma y la multiplicación por escalares que cumple ocho axiomas.",
+            "Ejemplos: ℝⁿ, las matrices de m×n, los polinomios de grado ≤ k, las señales de audio muestreadas y las imágenes de 28×28.",
+            "Un subespacio contiene al vector cero y es cerrado bajo combinaciones lineales: rectas y planos que pasan por el origen.",
+            "Contraejemplo: los vectores cuyas componentes suman 1 no forman un subespacio, sino un conjunto afín."
+          ],
+          "notes": "Inicie preguntando qué tienen en común una lista de precios, una fotografía y una grabación de voz. La respuesta es que todas pueden sumarse y escalarse componente a componente, y esas dos operaciones bastan para hablar de espacio vectorial. No memorice los ocho axiomas con los estudiantes; destaque los dos que se verifican en la práctica para un subespacio: contener al cero y ser cerrado bajo combinaciones lineales. Trabaje el contraejemplo de las proporciones de una cartera de inversión, que suman 1: la suma de dos carteras suma 2, por lo que el conjunto no es cerrado, aunque es un plano desplazado del origen. Conecte con IA: los vectores de probabilidad que produce una capa softmax viven en un conjunto de este tipo, el simplex. Pregunta: ¿el conjunto de imágenes con todos sus píxeles no negativos es un subespacio de ℝ⁷⁸⁴? No, porque multiplicar por −1 nos saca del conjunto."
+        },
+        {
+          "title": "Combinación lineal y espacio generado",
+          "bullets": [
+            "Combinación lineal: c₁v₁ + c₂v₂ + … + cₖvₖ con escalares reales; es la operación central de todo el curso.",
+            "Espacio generado gen{v₁, …, vₖ}: el conjunto de todas las combinaciones lineales posibles; siempre es un subespacio.",
+            "Una predicción lineal ŷ = Xβ es una combinación de columnas de X, por lo que siempre vive en su espacio generado.",
+            "Pregunta clave en modelado: ¿qué parte de la variable objetivo y puede explicarse con las columnas disponibles?"
+          ],
+          "notes": "Muestre que el espacio generado por dos vectores no paralelos en ℝ³ es un plano por el origen, y que agregar un tercer vector contenido en ese plano no amplía nada. Esta observación aparentemente simple es la clave del modelado lineal: si la variable objetivo tiene componentes fuera del espacio generado por las variables explicativas, ningún coeficiente podrá capturarlas, y la única forma de mejorar es incorporar información nueva, no repetir la existente. Use el ejemplo de un modelo de ventas de una cadena de boticas con precio, publicidad y una variable de gasto total que es la suma de las dos anteriores: la tercera columna no añade capacidad explicativa. Pregunta: si agrego al modelo la variable precio en dólares, calculada con un tipo de cambio fijo, ¿se amplía el espacio generado? No, porque es un múltiplo de la columna precio en soles; con tipo de cambio variable, en cambio, sí aporta una dirección nueva."
+        },
+        {
+          "title": "Independencia lineal: detectar información redundante",
+          "bullets": [
+            "v₁, …, vₖ son independientes si c₁v₁ + … + cₖvₖ = 0 solo se cumple cuando todos los cᵢ son cero.",
+            "Prueba computacional: las columnas de A son independientes si y solo si rango(A) es igual al número de columnas.",
+            "Ejemplo real: ingreso_total = ingreso_fijo + ingreso_variable crea una dependencia exacta entre tres columnas.",
+            "Trampa de las variables ficticias: intercepto más una columna por cada categoría produce dependencia lineal exacta."
+          ],
+          "notes": "Defina la independencia como ausencia de redundancia: ningún vector puede escribirse con los demás. Haga el cálculo en vivo con una tabla de seis clientes y las columnas intercepto, tres variables ficticias de región, ingreso fijo, ingreso variable e ingreso total: siete columnas y rango cinco. Pregunte cuáles son las dos dependencias y deje que los estudiantes las descubran: la suma de las ficticias reproduce el intercepto, y el ingreso total es la suma de los otros dos ingresos. Explique por qué importa: con columnas dependientes, la matriz XᵀX es singular y existen infinitos vectores de coeficientes que producen exactamente las mismas predicciones, por lo que interpretar cualquiera de ellos es engañoso. La solución estándar con variables categóricas es eliminar una categoría de referencia, como hace pandas.get_dummies con drop_first=True. Pregunta: ¿se elimina la dependencia si la columna se multiplica por 1000?"
+        },
+        {
+          "title": "Base, dimensión y coordenadas",
+          "bullets": [
+            "Base: conjunto independiente que genera el espacio; todo vector se escribe de forma única como combinación de ella.",
+            "Dimensión: número de vectores de cualquier base; ℝⁿ tiene dimensión n y las matrices de 3×3, dimensión 9.",
+            "Coordenadas: coeficientes respecto de una base; cambiar de base cambia los números, no el vector.",
+            "Una buena base revela estructura: Fourier para audio, ondículas en JPEG 2000 y componentes principales en datos tabulares."
+          ],
+          "notes": "Insista en que la dimensión es un invariante: cualquier base de un mismo espacio tiene el mismo número de elementos. Ilustre con colores: un color en pantalla tiene coordenadas RGB, pero también puede expresarse en el espacio YCbCr, que separa luminancia y crominancia; es el mismo color en otra base, y esa base permite comprimir mejor porque el ojo humano es menos sensible a la crominancia. Esta es la lógica de toda la ingeniería de representaciones: elegir coordenadas en las que la información relevante se concentra en pocas componentes. En aprendizaje automático, una representación aprendida, o embedding, es precisamente un sistema de coordenadas útil para la tarea. Pregunta: un conjunto de datos tiene 50 variables, pero todas sus filas caben, salvo ruido, en un subespacio de dimensión 5. ¿Cuántos números necesitamos realmente para describir cada observación? Anticipe que la Unidad 4 enseñará a encontrar ese subespacio con la SVD."
+        },
+        {
+          "title": "Espacio columna y espacio nulo",
+          "bullets": [
+            "Espacio columna C(A): todos los productos Ax posibles; Ax = b tiene solución si y solo si b pertenece a C(A).",
+            "Espacio nulo N(A): todos los x con Ax = 0; describe las direcciones que la matriz vuelve invisibles.",
+            "Si xₚ resuelve Ax = b, toda solución tiene la forma xₚ + xₙ con xₙ en N(A).",
+            "En SciPy, scipy.linalg.null_space(A) devuelve una base ortonormal de N(A) y scipy.linalg.orth(A), una de C(A)."
+          ],
+          "notes": "Presente ambos subespacios como respuestas a dos preguntas distintas: el espacio columna responde qué salidas puede producir la matriz; el espacio nulo responde qué entradas se pierden por completo. Use una matriz de proyección sobre el plano xy como ejemplo visual: su espacio columna es el plano y su espacio nulo es el eje z, porque toda la información vertical desaparece. Luego traslade al modelado: si v está en el espacio nulo de la matriz de diseño, sumar v a los coeficientes no cambia ninguna predicción, por lo que los datos no pueden distinguir entre β y β + v. A esto se le llama falta de identificabilidad. Muestre el resultado de null_space y advierta que entrega una base ortonormal que puede mezclar varias dependencias; para leerlas con números enteros conviene sympy.Matrix(X).nullspace(). Pregunta: si N(A) contiene solo al vector cero, ¿qué podemos afirmar sobre la unicidad de las soluciones de Ax = b?"
+        },
+        {
+          "title": "Los cuatro subespacios fundamentales de Strang",
+          "bullets": [
+            "Para A de m×n y rango r: C(A) y N(Aᵀ) viven en ℝᵐ; C(Aᵀ) y N(A) viven en ℝⁿ.",
+            "Dimensiones: dim C(A) = dim C(Aᵀ) = r; dim N(A) = n − r; dim N(Aᵀ) = m − r.",
+            "El espacio fila es ortogonal al espacio nulo, y el espacio columna es ortogonal al espacio nulo izquierdo.",
+            "Este gran cuadro organiza el curso entero: sistemas lineales, mínimos cuadrados, proyecciones y SVD."
+          ],
+          "notes": "Dibuje el diagrama clásico de Gilbert Strang: a la izquierda ℝⁿ dividido en espacio fila y espacio nulo, a la derecha ℝᵐ dividido en espacio columna y espacio nulo izquierdo, con la matriz llevando el espacio fila al espacio columna de manera biyectiva y aplastando el espacio nulo en el cero. Recalque que el espacio fila y el espacio nulo son complementos ortogonales: cada fila de A multiplicada por un vector del espacio nulo da cero, lo que es justamente la definición de Ax = 0. Anticipe que en la Unidad 3 el residuo de mínimos cuadrados vivirá en el espacio nulo izquierdo, y que en la Unidad 4 la SVD entregará bases ortonormales de los cuatro subespacios a la vez. Pregunta: una matriz de 200×50 tiene rango 50. ¿Qué dimensión tienen sus cuatro subespacios? Respuesta: 50, 50, 0 y 150. Discuta qué significa un espacio nulo izquierdo tan grande en un problema de ajuste."
+        },
+        {
+          "title": "Teorema del rango y la nulidad aplicado a datos",
+          "bullets": [
+            "rango(A) + dim N(A) = n: las direcciones que la matriz distingue más las que no ve suman el total de variables.",
+            "Una matriz de diseño de 10 000 clientes y 25 columnas con rango 23 tiene exactamente dos dependencias independientes.",
+            "Cada vector de una base de N(X) indica una combinación exacta de columnas que suma cero: el diagnóstico de la redundancia.",
+            "Con rango incompleto, XᵀX es singular y los coeficientes de la regresión dejan de estar determinados de manera única."
+          ],
+          "notes": "Enuncie el teorema como una ley de conservación: las n direcciones del espacio de coeficientes se reparten entre las que la matriz distingue (el rango) y las que no ve (la nulidad). Su valor práctico es enorme: con dos llamadas, matrix_rank y X.shape, el analista sabe cuántas redundancias exactas hay antes de entrenar cualquier modelo. Trabaje el ejemplo de 25 columnas y rango 23 y pida a los grupos que propongan qué tipos de columnas suelen generar esas dependencias en bases de datos comerciales peruanas: montos expresados en soles y en miles de soles, edad y año de nacimiento con una fecha de corte común, proporciones que suman 100 % o variables ficticias completas. Explique que scikit-learn no falla ante estas redundancias porque usa lstsq, que devuelve la solución de norma mínima, pero eso no hace interpretables los coeficientes. Pregunta: ¿qué consecuencia tiene esto para un modelo de crédito que debe explicarse ante un regulador?"
+        },
+        {
+          "title": "Transformaciones lineales y su matriz",
+          "bullets": [
+            "T es lineal si T(u + v) = T(u) + T(v) y T(cu) = cT(u); toda transformación lineal de ℝⁿ en ℝᵐ es T(x) = Ax.",
+            "La columna j de A es la imagen del vector canónico eⱼ: basta saber adónde van los ejes para conocer A.",
+            "La composición de transformaciones equivale al producto de matrices, que se lee de derecha a izquierda.",
+            "Sin funciones de activación, apilar capas lineales equivale a una sola matriz: la no linealidad da poder expresivo a las redes."
+          ],
+          "notes": "Construya la matriz de una transformación a partir de su efecto sobre los ejes: si e₁ va a (2, 1) y e₂ va a (−1, 1), esas son las columnas de A. Pida a los estudiantes que apliquen la transformación a un cuadrado unitario y dibujen el paralelogramo resultante. Luego explique la composición: aplicar B y después A equivale a multiplicar por AB, y el orden importa. El cierre conceptual es el argumento sobre redes neuronales: si cada capa fuera solo Wᵢx, la red completa sería W₃W₂W₁x, es decir, una única matriz, sin importar cuántas capas se apilen. Las funciones de activación no lineales, como ReLU, son las que permiten aproximar relaciones complejas. Este argumento se retomará en Aprendizaje Profundo. Pregunta: ¿es lineal la transformación T(x) = Ax + b con b distinto de cero? No, porque T(0) = b ≠ 0; se llama transformación afín, y es la que realmente calcula una capa densa."
+        },
+        {
+          "title": "Galería geométrica: rotación, escalamiento, cizalla y proyección",
+          "bullets": [
+            "Rotación en ángulo θ: [[cos θ, −sen θ], [sen θ, cos θ]]; conserva longitudes y ángulos.",
+            "Escalamiento diag(sₓ, s_y); cizalla horizontal [[1, k], [0, 1]]; reflexión respecto del eje x: diag(1, −1).",
+            "Proyección sobre el eje x: [[1, 0], [0, 0]]; es singular y pierde información, pues su espacio nulo es el eje y.",
+            "Aumento de datos en visión por computadora: rotaciones, escalamientos y cizallas aleatorias generan nuevas imágenes de entrenamiento."
+          ],
+          "notes": "Muestre en un cuaderno cada transformación aplicada a las coordenadas de los píxeles de una imagen, por ejemplo un dígito del conjunto load_digits de scikit-learn o la silueta de un logotipo. Para cada matriz, pida a los estudiantes que predigan el resultado antes de ejecutar el código, y luego que calculen su determinante: la rotación da 1, la cizalla da 1, el escalamiento da sₓs_y, la reflexión da −1 y la proyección da 0. Explique el uso profesional en visión por computadora: bibliotecas como torchvision aplican transformaciones afines aleatorias para que el modelo aprenda a reconocer objetos rotados o inclinados, lo que reduce el sobreajuste cuando hay pocas imágenes etiquetadas. Advierta que en la práctica se usa el mapeo inverso con interpolación para evitar huecos en la imagen transformada. Pregunta: ¿qué transformación conviene excluir del aumento de datos al entrenar un clasificador de dígitos manuscritos? La reflexión, porque convierte algunos dígitos en símbolos inexistentes."
+        },
+        {
+          "title": "El determinante como factor de área y volumen",
+          "bullets": [
+            "|det A| es el factor por el que A multiplica áreas en 2D o volúmenes en 3D; el signo indica si invierte la orientación.",
+            "det A = 0 si y solo si A aplana el espacio a una dimensión menor, es decir, si la matriz es singular.",
+            "det(AB) = det A · det B; las rotaciones tienen determinante 1 y las reflexiones, −1.",
+            "Advertencia numérica: det(0,1·I) en dimensión 100 vale 10⁻¹⁰⁰, pero esa matriz tiene κ = 1 y es perfectamente estable."
+          ],
+          "notes": "Presente el determinante desde la geometría y no desde la fórmula de cofactores, que tiene costo factorial y no se usa en cómputo. Muestre que el cuadrado unitario se convierte en un paralelogramo de área |det A|, y que si el determinante es cero el cuadrado colapsa en un segmento. Explique que en la práctica el determinante se calcula como el producto de los pivotes de la factorización LU, con el signo ajustado por los intercambios de filas. La advertencia numérica es clave para no cometer un error frecuente: usar un determinante pequeño como indicador de casi singularidad. Multiplicar una matriz por 0,1 divide su determinante entre 10¹⁰⁰ en dimensión 100, pero no cambia su condicionamiento. Pregunta: ¿qué mide entonces la cercanía a la singularidad? El número de condición o, como veremos en la Unidad 4, el cociente entre el mayor y el menor valor singular. Mencione también que en estadística el determinante de la covarianza mide el volumen de la nube de datos."
+        },
+        {
+          "title": "Cambio de base y coordenadas",
+          "bullets": [
+            "Si las columnas de P forman una base, las coordenadas de x en esa base son c = P⁻¹x, y se recupera x = Pc.",
+            "Una transformación A se escribe en la nueva base como P⁻¹AP: las matrices semejantes describen la misma transformación.",
+            "Elegir una base adaptada simplifica: en una base de vectores propios, A actúa como una matriz diagonal.",
+            "Estandarizar variables o rotarlas hacia componentes principales son cambios de coordenadas que facilitan el modelado."
+          ],
+          "notes": "Trabaje un ejemplo en ℝ² con la base formada por (1, 1) y (1, −1). El vector (3, 1) tiene coordenadas (2, 1) en esa base, porque 2·(1, 1) + 1·(1, −1) = (3, 1). Luego muestre que una transformación que estira al doble en la dirección (1, 1) y deja fija la dirección (1, −1) tiene una matriz poco intuitiva en la base canónica, pero en la nueva base es simplemente diag(2, 1). Esa es la idea de la diagonalización que formalizaremos en la Unidad 4: buscar las direcciones naturales de una transformación. Conecte con datos: cuando dos variables están muy correlacionadas, rotar los ejes hacia la dirección de máxima variación y su perpendicular produce coordenadas no correlacionadas, que es lo que hace el análisis de componentes principales. Pregunta: ¿cambian las predicciones de un modelo lineal si se reexpresan las variables en otra base invertible? No, cambian los coeficientes, pero el espacio generado es el mismo."
+        },
+        {
+          "title": "Diagnóstico de redundancia en Python",
+          "bullets": [
+            "Paso 1: construir la matriz de diseño X con intercepto y variables codificadas, conservando los nombres de las columnas.",
+            "Paso 2: comparar np.linalg.matrix_rank(X) con X.shape[1]; la diferencia es la dimensión del espacio nulo.",
+            "Paso 3: obtener una base de N(X) con sympy.Matrix(X).nullspace() o scipy.linalg.null_space y leer sus entradas no nulas.",
+            "Paso 4: eliminar o combinar columnas, por ejemplo con pd.get_dummies(drop_first=True), y verificar que el rango sea completo."
+          ],
+          "notes": "Ejecute el flujo completo con la tabla de clientes de la lectura. Muestre que el espacio nulo tiene dimensión dos y que sympy devuelve vectores con entradas como 1, −1 y 0 que se leen directamente: «intercepto menos las tres ficticias es igual a cero» y «ingreso fijo más ingreso variable menos ingreso total es igual a cero». Contraste con null_space, que devuelve una base ortonormal donde ambas dependencias pueden aparecer mezcladas, lo que dificulta la lectura aunque describa el mismo subespacio. Para matrices grandes con decimales, recomiende escalar columnas antes de calcular el rango, porque la tolerancia numérica se fija en relación con el mayor valor singular. Pregunta: después de eliminar las columnas redundantes, ¿cómo cambia la interpretación del coeficiente de una región? Pasa a ser la diferencia respecto de la región de referencia. Recuerde que este flujo es el núcleo del Laboratorio 2."
+        },
+        {
+          "title": "Síntesis: el lenguaje de los subespacios en IA",
+          "bullets": [
+            "Representaciones vectoriales de palabras: espacios de cientos de dimensiones donde ciertas direcciones capturan relaciones semánticas.",
+            "Modelos lineales: las predicciones viven en C(X) y los coeficientes no identificables, en N(X).",
+            "Visión por computadora: transformaciones afines para alinear rostros, corregir perspectiva y aumentar datos de entrenamiento.",
+            "Pregunta guía para la Unidad 3: si b no pertenece a C(A), ¿cuál es el punto de C(A) más cercano a b?"
+          ],
+          "notes": "Cierre la unidad mostrando que los conceptos abstractos tienen consecuencias concretas en los cursos siguientes. En Procesamiento de Lenguaje Natural, los vectores de palabras se analizan con diferencias y proyecciones: la dirección que separa dos términos relacionados puede reaparecer en otros pares. En Visión por Computadora, alinear rostros antes de reconocerlos requiere estimar una transformación afín a partir de puntos de referencia, un problema de mínimos cuadrados. En aprendizaje automático, detectar el espacio nulo de la matriz de diseño evita interpretar coeficientes arbitrarios. Proponga a los estudiantes un minuto de escritura: «explique a un compañero de otra carrera qué es el espacio nulo usando un ejemplo de su vida cotidiana». Anuncie la entrega del Laboratorio 2 en la semana 8 y plantee la pregunta guía de la Unidad 3, que conecta todo lo visto con el problema más frecuente del análisis de datos: aproximar cuando no hay solución exacta."
+        }
+      ],
+      "reading": {
+        "title": "Los cuatro subespacios fundamentales: una radiografía de cualquier matriz",
+        "minutes": 35,
+        "content": "## Los cuatro subespacios fundamentales: una radiografía de cualquier matriz\n\nEn la Unidad 1 resolvimos sistemas. Ahora cambiamos de pregunta: en lugar de buscar un vector solución, queremos entender la **estructura** de la matriz, es decir, qué puede producir, qué información pierde y qué redundancias contiene. Para un analista de datos, esta radiografía es la diferencia entre un modelo interpretable y uno cuyos coeficientes no significan nada.\n\n## 1. Independencia, base y dimensión\n\nUn conjunto de vectores es **linealmente independiente** si ninguno puede escribirse como combinación de los demás; formalmente, si c₁v₁ + … + cₖvₖ = 0 obliga a que todos los cᵢ sean cero. Una **base** de un subespacio es un conjunto independiente que lo genera, y su número de elementos, la **dimensión**, no depende de la base elegida. En una matriz de datos, la dimensión del espacio generado por las columnas es el número de variables realmente distintas: el **rango**.\n\n## 2. Los cuatro subespacios\n\nGilbert Strang organiza toda matriz A de m×n y rango r en cuatro subespacios:\n\n| Subespacio | Vive en | Dimensión | Pregunta que responde |\n|---|---|---|---|\n| Espacio columna C(A) | ℝᵐ | r | ¿Qué salidas Ax son posibles? |\n| Espacio nulo N(A) | ℝⁿ | n − r | ¿Qué entradas se vuelven invisibles? |\n| Espacio fila C(Aᵀ) | ℝⁿ | r | ¿Qué combinaciones de entradas distingue A? |\n| Espacio nulo izquierdo N(Aᵀ) | ℝᵐ | m − r | ¿Qué parte de ℝᵐ nunca se alcanza? |\n\nDos relaciones de ortogonalidad completan el cuadro: el espacio fila es perpendicular al espacio nulo (cada fila multiplicada por una solución de Ax = 0 da cero), y el espacio columna es perpendicular al espacio nulo izquierdo. El **teorema del rango y la nulidad**, r + (n − r) = n, es la contabilidad de estas dimensiones.\n\n## 3. Diagnóstico de redundancia con el espacio nulo\n\nConsidere una tabla de clientes de una entidad microfinanciera con región (Lima, Arequipa o Piura), ingreso fijo, ingreso variable e ingreso total. Un analista crea una variable ficticia por región y agrega un intercepto:\n\n```python\nimport numpy as np\nimport pandas as pd\nimport sympy as sp\n\ndf = pd.DataFrame({\n    'region': ['Lima', 'Arequipa', 'Piura', 'Lima', 'Piura', 'Arequipa'],\n    'ingreso_fijo': [2500, 1800, 1500, 3200, 1200, 2100],\n    'ingreso_variable': [600, 400, 900, 300, 500, 700]})\ndf['ingreso_total'] = df['ingreso_fijo'] + df['ingreso_variable']\n\nX = pd.get_dummies(df, columns=['region'], dtype=float)  # una columna por región\nX.insert(0, 'intercepto', 1.0)\nprint(X.shape[1], np.linalg.matrix_rank(X))   # 7 columnas, rango 5 -> nulidad 2\n\nfor v in sp.Matrix(X.to_numpy(dtype=int)).nullspace():   # base racional e interpretable\n    print(dict(zip(X.columns, v)))\n# Las dos dependencias: intercepto = suma de las tres ficticias\n#                       ingreso_total = ingreso_fijo + ingreso_variable\n```\n\nCada vector del espacio nulo es una receta de columnas que suma exactamente cero. Si se agrega cualquiera de ellos a los coeficientes de una regresión, las predicciones no cambian: los datos no pueden distinguir entre ambos vectores de coeficientes. Por eso XᵀX resulta singular y los coeficientes individuales pierden significado. La corrección es eliminar una categoría de referencia (`drop_first=True`) y la columna derivada, y verificar que el rango sea igual al número de columnas. Note que `scipy.linalg.null_space` describe el mismo subespacio con una base ortonormal, pero puede mezclar ambas dependencias en cada vector; para interpretarlas conviene la base racional de SymPy.\n\n## 4. Transformaciones lineales: la matriz como acción\n\nToda transformación lineal T de ℝⁿ en ℝᵐ es T(x) = Ax, y la columna j de A es la imagen del j-ésimo eje. En el plano:\n\n- **Rotación** en ángulo θ: [[cos θ, −sen θ], [sen θ, cos θ]], con determinante 1.\n- **Cizalla** horizontal: [[1, k], [0, 1]], que inclina las figuras sin cambiar su área (determinante 1).\n- **Escalamiento**: diag(sₓ, s_y), que multiplica el área por sₓs_y.\n- **Proyección** sobre el eje x: [[1, 0], [0, 0]], con determinante 0 y espacio nulo igual al eje y.\n\nEl valor absoluto del determinante es el factor por el que se multiplican las áreas, y un determinante nulo indica que la transformación aplasta el plano en una recta. En visión por computadora, estas matrices se usan para el **aumento de datos**: se generan versiones rotadas o inclinadas de cada imagen para que el modelo aprenda a reconocer objetos en distintas posiciones. La composición de transformaciones es un producto de matrices que no conmuta: rotar y luego cizallar no es lo mismo que cizallar y luego rotar.\n\n## 5. Cambio de base\n\nSi las columnas de una matriz invertible P forman una base, las coordenadas de x en esa base son c = P⁻¹x, y la transformación A se escribe como P⁻¹AP. Elegir bien la base puede convertir una matriz complicada en una diagonal, idea que culminará en la Unidad 4 con los vectores propios y la SVD.\n\n## 6. Implicancias para el analista de IA\n\n1. Antes de entrenar, compare el rango de la matriz de diseño con su número de columnas.\n2. Lea el espacio nulo para identificar las redundancias exactas y elimínelas con criterio de negocio.\n3. No confunda dependencia exacta con correlación alta: la primera hace singular a XᵀX; la segunda la vuelve mal condicionada.\n4. Piense en las matrices como acciones geométricas: rotan, estiran, inclinan o aplastan, y esa geometría explica su comportamiento numérico."
+      },
+      "case": {
+        "title": "Caso: Coeficientes que no cuadran en el modelo de riesgo de Caja Valle Norte",
+        "content": "**Caja Valle Norte** (entidad ficticia) es una caja municipal de ahorro y crédito con sede en Piura y 46 agencias en la costa norte. Su cartera MYPE representa el 68 % de las colocaciones. En 2024, la gerencia de riesgos encargó a su nueva unidad de analítica un modelo de probabilidad de incumplimiento para créditos de hasta S/ 30 000, que debía documentarse ante el comité de riesgos y quedar disponible para la supervisión de la SBS, cuya regulación sobre gestión del riesgo de crédito exige modelos internos comprensibles, validados y documentados.\n\nEl equipo, liderado por Diego Ramírez, reunió 48 300 créditos desembolsados entre 2021 y 2024 y construyó una matriz de diseño con 15 columnas:\n\n- intercepto;\n- cuatro variables ficticias de zona: Piura, Sullana, Paita y Talara (todas las agencias pertenecen a alguna de ellas);\n- ingreso fijo, ingreso variable e ingreso total declarados (en soles);\n- antigüedad del negocio en años y antigüedad del negocio en meses;\n- edad del titular, número de entidades con deuda, monto del crédito, plazo en meses y cuota mensual.\n\nAl estimar una regresión logística con statsmodels apareció la advertencia: «The smallest eigenvalue is 2.1e-24. This might indicate that there are strong multicollinearity problems or that the design matrix is singular». Diego la ignoró porque las predicciones parecían razonables: el área bajo la curva ROC en validación fue 0,74. Sin embargo, el informe mostró coeficientes de zona del orden de ±10⁶ con signos opuestos, un coeficiente negativo para el ingreso total y uno positivo para el ingreso fijo. Al repetir el ajuste en otra computadora con una versión distinta de la biblioteca, los coeficientes cambiaron por completo, aunque las probabilidades predichas coincidían hasta el cuarto decimal.\n\nEn el comité de riesgos, la jefa de validación de modelos, Carmen Villegas, preguntó por qué un mayor ingreso total reduciría la probabilidad de pago y pidió una explicación técnica antes de aprobar el modelo. Diego propuso aplicar regularización Ridge «para estabilizar los coeficientes». Carmen objetó que Ridge produciría coeficientes estables, pero repartiría arbitrariamente el efecto entre columnas redundantes, y que el regulador podría cuestionar variables sin interpretación clara. Un analista junior sugirió además eliminar la cuota mensual, por considerar que «es una combinación del monto y el plazo».\n\nLa gerencia necesita decidir en dos semanas qué versión del modelo se presenta, con qué variables y con qué argumentos técnicos.",
+        "questions": [
+          "Identifique todas las dependencias lineales exactas de la matriz de diseño y calcule su rango y la dimensión de su espacio nulo con el teorema del rango y la nulidad.",
+          "Escriba una base del espacio nulo con entradas enteras y explique qué combinación de columnas representa cada vector.",
+          "¿Por qué los coeficientes de zona toman valores enormes con signos opuestos mientras las probabilidades predichas siguen siendo estables?",
+          "Compare eliminar columnas redundantes frente a aplicar Ridge. ¿Qué opción defendería ante el comité de riesgos y la supervisión de la SBS?",
+          "¿Genera la cuota mensual una dependencia lineal exacta con el monto y el plazo? Distinga dependencia exacta, casi colinealidad y relación no lineal."
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio 2: Radiografía de una matriz de diseño y transformaciones de imágenes",
+        "instructions": "**Objetivo.** Diagnosticar la estructura de una matriz de datos con los cuatro subespacios fundamentales e interpretar transformaciones lineales sobre imágenes.\n\n**Qué entregar.** Un cuaderno Jupyter reproducible y un informe en PDF de máximo cuatro páginas.\n\n**Parte A: radiografía de una matriz de diseño.**\n\n1. Use la base de datos sintética del caso Caja Valle Norte publicada en el aula virtual (2000 filas) o construya una tabla equivalente a partir de variables de la ENAHO del INEI, respetando la anonimización exigida por la Ley 29733.\n2. Construya la matriz de diseño con todas las columnas propuestas por el equipo de Diego. Calcule su rango, la dimensión de sus cuatro subespacios fundamentales y una base racional del espacio nulo con SymPy.\n3. Interprete cada vector del espacio nulo en términos de negocio y corrija la matriz hasta obtener rango completo. Verifique numéricamente que cada fila de X es ortogonal a la base del espacio nulo.\n4. Compare el número de condición antes y después de escalar las columnas.\n\n**Parte B: transformaciones lineales.**\n\n1. Aplique a las coordenadas de una imagen (un dígito de `load_digits` o una fotografía en escala de grises) una rotación, una cizalla, un escalamiento y una proyección.\n2. Calcule el determinante de cada matriz y compruebe el cambio de área sobre el contorno de la figura.\n3. Muestre con un ejemplo que la composición no conmuta.\n\n**Formato.** Celdas de Markdown que justifiquen cada paso, figuras rotuladas y una conclusión dirigida al comité de riesgos de no más de 150 palabras.",
+        "rubric": [
+          {
+            "name": "Diagnóstico correcto de rango y espacio nulo",
+            "points": 6
+          },
+          {
+            "name": "Corrección de la matriz e interpretación de negocio",
+            "points": 5
+          },
+          {
+            "name": "Transformaciones lineales y determinantes",
+            "points": 5
+          },
+          {
+            "name": "Calidad del cuaderno y comunicación al comité",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 2: espacios vectoriales y transformaciones lineales",
+        "questions": [
+          {
+            "prompt": "Una matriz de diseño X tiene 5000 filas, 12 columnas y rango 10. ¿Cuál es la dimensión del espacio nulo de X?",
+            "options": [
+              "2",
+              "4990",
+              "10",
+              "0"
+            ],
+            "correct": 0,
+            "explanation": "Por el teorema del rango y la nulidad, dim N(X) = n − r = 12 − 10 = 2. Existen dos dependencias lineales independientes entre las columnas."
+          },
+          {
+            "prompt": "Un modelo incluye intercepto y una variable ficticia por cada una de las cuatro regiones de la muestra. ¿Qué ocurre con la matriz de diseño X?",
+            "options": [
+              "Sus columnas son linealmente dependientes y XᵀX es singular",
+              "Gana rango porque aumenta el número de columnas",
+              "Queda mal condicionada pero conserva rango completo",
+              "Solo se ve afectada si las regiones tienen igual número de clientes"
+            ],
+            "correct": 0,
+            "explanation": "Las cuatro ficticias suman exactamente la columna de unos del intercepto, una dependencia lineal exacta. Se corrige eliminando una categoría de referencia."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes conjuntos de vectores (x, y, z) es un subespacio de ℝ³?",
+            "options": [
+              "Los que cumplen x − 2y + z = 0",
+              "Los que cumplen x + y + z = 1",
+              "Los que tienen todas sus componentes no negativas",
+              "Los que tienen norma igual a 1"
+            ],
+            "correct": 0,
+            "explanation": "Un plano que pasa por el origen es cerrado bajo suma y producto por escalares. El plano x + y + z = 1 no contiene al cero, el octante no admite escalares negativos y la esfera no es cerrada bajo la suma."
+          },
+          {
+            "prompt": "¿Qué efecto produce la matriz [[1, 0.5], [0, 1]] al aplicarse a las coordenadas de los píxeles de una imagen?",
+            "options": [
+              "Una cizalla horizontal que conserva el área",
+              "Una rotación de 30 grados en sentido antihorario",
+              "Un escalamiento que duplica el área de la figura",
+              "Una proyección que aplana la imagen sobre una recta"
+            ],
+            "correct": 0,
+            "explanation": "La cizalla desplaza cada punto horizontalmente en proporción a su altura. Su determinante es 1, por lo que inclina la figura sin cambiar su área."
+          },
+          {
+            "prompt": "Si xₚ es una solución de Ax = b y N(A) tiene dimensión 1, generado por el vector v, ¿cómo es el conjunto de soluciones?",
+            "options": [
+              "La recta xₚ + tv, con t real",
+              "Únicamente el vector xₚ",
+              "El espacio nulo generado por v",
+              "El conjunto vacío, porque A es singular"
+            ],
+            "correct": 0,
+            "explanation": "Toda solución es una solución particular más un elemento del espacio nulo. Con N(A) unidimensional, el conjunto es una recta que pasa por xₚ con dirección v."
+          },
+          {
+            "prompt": "Un analista concluye que una matriz de 100×100 es casi singular porque su determinante vale 10⁻⁵⁰. ¿Es correcto su razonamiento?",
+            "options": [
+              "No: el determinante depende de la escala; la cercanía a la singularidad se mide con el número de condición",
+              "Sí: un determinante cercano a cero siempre indica casi singularidad",
+              "Sí, porque alguno de los pivotes de su factorización es exactamente cero",
+              "No, porque el determinante de toda matriz de 100×100 es pequeño"
+            ],
+            "correct": 0,
+            "explanation": "Multiplicar una matriz por una constante cambia su determinante en esa constante elevada a 100 sin alterar su condicionamiento. κ(A), y no det A, mide la sensibilidad de la solución."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Ortogonalidad, proyecciones y mínimos cuadrados",
+      "description": "Al finalizar la unidad, el estudiante resuelve problemas de ajuste sobredeterminados mediante proyecciones ortogonales, el proceso de Gram–Schmidt y la factorización QR, justifica geométricamente la solución de mínimos cuadrados y elige el método numéricamente más estable para datos reales del Perú.",
+      "topics": [
+        "Producto interno, ortogonalidad y complemento ortogonal",
+        "Proyección sobre una recta y sobre un subespacio; matriz de proyección",
+        "Bases ortonormales, Gram–Schmidt y factorización QR",
+        "Mínimos cuadrados: geometría, ecuaciones normales y solución con QR",
+        "Condicionamiento de AᵀA, polinomios mal condicionados y regularización",
+        "Ajuste de curvas con datos del BCRP y del COES"
+      ],
+      "slides": [
+        {
+          "title": "Del sistema imposible al mejor ajuste",
+          "bullets": [
+            "Con más ecuaciones que incógnitas (m > n), Ax = b casi nunca tiene solución exacta debido al ruido de medición.",
+            "Mínimos cuadrados: elegir x̂ que minimiza ‖b − Ax‖², la suma de los cuadrados de los residuos.",
+            "Legendre publicó el método en 1805; Gauss lo había usado para recuperar la órbita del asteroide Ceres en 1801.",
+            "Geométricamente, Ax̂ es el punto del espacio columna más cercano a b: una proyección ortogonal."
+          ],
+          "notes": "Abra con la pregunta guía que dejó la Unidad 2: si b no pertenece al espacio columna, ¿cuál es el punto de ese espacio más cercano a b? Cuente brevemente la historia de Ceres: el astrónomo Giuseppe Piazzi lo observó durante pocas semanas antes de que se perdiera tras el resplandor del Sol, y Gauss, con apenas unas decenas de observaciones ruidosas, estimó su órbita con tal precisión que fue reencontrado a fines de 1801. Explique por qué se minimiza la suma de cuadrados y no la de valores absolutos: el cuadrado es diferenciable, conduce a un sistema lineal y, bajo errores normales, coincide con la estimación de máxima verosimilitud que verán en Aprendizaje Automático I. Pregunta para la clase: ¿qué desventaja tiene elevar al cuadrado los residuos cuando hay valores atípicos? La respuesta esperada es que un solo punto lejano puede dominar el ajuste, lo que motiva métodos robustos."
+        },
+        {
+          "title": "Producto interno y ortogonalidad",
+          "bullets": [
+            "Producto interno uᵀv = ‖u‖‖v‖cos θ; los vectores u y v son ortogonales si uᵀv = 0.",
+            "Teorema de Pitágoras generalizado: si u y v son ortogonales, ‖u + v‖² = ‖u‖² + ‖v‖².",
+            "Complemento ortogonal W⊥: todos los vectores perpendiculares a W, con dim W + dim W⊥ = n.",
+            "El coeficiente de correlación de Pearson entre dos variables centradas es el coseno del ángulo entre ellas."
+          ],
+          "notes": "Recuerde el producto punto de Matemática para Ciencia de Datos y elévelo a herramienta estructural. La ortogonalidad es la versión geométrica de «no compartir información»: dos variables centradas con correlación cero son vectores perpendiculares. Muestre en vivo que al centrar dos columnas de un conjunto de datos y calcular el coseno entre ellas se obtiene exactamente el coeficiente de correlación que devuelve pandas. Luego enuncie el teorema de Pitágoras generalizado y explique que es el fundamento de la descomposición de la variabilidad en regresión: la variación total se separa en variación explicada más variación residual porque ambas componentes son ortogonales. De ahí proviene el coeficiente R². Pregunta: si dos variables explicativas son ortogonales, ¿cambia el coeficiente de una al agregar o quitar la otra del modelo? No, y esa es una de las grandes ventajas de los diseños ortogonales en la experimentación."
+        },
+        {
+          "title": "Proyección sobre una recta",
+          "bullets": [
+            "Proyección de b sobre a: p = (aᵀb / aᵀa)·a; el error e = b − p es ortogonal a a.",
+            "Matriz de proyección P = aaᵀ / aᵀa, que cumple P² = P (idempotente) y Pᵀ = P (simétrica).",
+            "Ejemplo: a = (1, 1) y b = (3, 1) dan p = (2, 2) y e = (1, −1), con aᵀe = 0.",
+            "Interpretación: p es la mejor aproximación de b que puede construirse usando solo la dirección de a."
+          ],
+          "notes": "Haga el ejemplo en la pizarra digital y dibuje el triángulo rectángulo formado por b, su proyección p y el error e. Pida a los estudiantes que verifiquen que el error es perpendicular a la recta y que ningún otro múltiplo de a está más cerca de b; pueden comprobarlo derivando la función ‖b − ta‖² respecto de t e igualando a cero, lo que conecta con la optimización vista en el primer ciclo. Luego explique las dos propiedades de la matriz de proyección: proyectar dos veces es lo mismo que proyectar una vez, y la matriz es simétrica. Esas dos propiedades caracterizan a todas las proyecciones ortogonales. Pregunta: ¿cuál es la relación entre esta fórmula y la pendiente de una regresión sin intercepto? Es la misma: el coeficiente aᵀb / aᵀa es la pendiente que minimiza la suma de cuadrados cuando el modelo es y = βx."
+        },
+        {
+          "title": "Proyección sobre un subespacio: las ecuaciones normales",
+          "bullets": [
+            "El error e = b − Ax̂ debe ser ortogonal a cada columna de A, es decir, Aᵀ(b − Ax̂) = 0.",
+            "Ecuaciones normales AᵀAx̂ = Aᵀb; si A tiene columnas independientes, x̂ = (AᵀA)⁻¹Aᵀb.",
+            "Matriz de proyección P = A(AᵀA)⁻¹Aᵀ; en estadística se denomina matriz sombrero, porque ŷ = Py.",
+            "El residuo pertenece al espacio nulo izquierdo N(Aᵀ): conexión directa con los cuatro subespacios."
+          ],
+          "notes": "Generalice el caso de la recta: en lugar de una dirección tenemos varias columnas, y el error debe ser perpendicular a todas ellas a la vez. Escribir esa condición para cada columna produce, en forma compacta, Aᵀ(b − Ax̂) = 0, de donde salen las ecuaciones normales. Subraye que esta derivación es puramente geométrica y no requiere cálculo diferencial, aunque llega al mismo resultado que igualar a cero el gradiente de la suma de cuadrados. Explique el nombre de matriz sombrero: transforma el vector observado y en el vector ajustado con sombrero. Conecte con la Unidad 2: el residuo es ortogonal al espacio columna, por lo que vive en el espacio nulo izquierdo. Pregunta: ¿por qué las ecuaciones normales requieren columnas independientes? Porque solo entonces AᵀA es invertible; si hay redundancias, como las del caso de la Unidad 2, existen infinitas soluciones de mínimos cuadrados."
+        },
+        {
+          "title": "Ejemplo resuelto: recta de tendencia",
+          "bullets": [
+            "Datos (t, y): (0, 1), (1, 2), (2, 2) y (3, 4); modelo y = β₀ + β₁t con A = [1 t].",
+            "AᵀA = [[4, 6], [6, 14]] y Aᵀy = (9, 18); al resolver se obtiene β₀ = 0,9 y β₁ = 0,9.",
+            "Residuos (0,1; 0,2; −0,7; 0,4): suman cero y son ortogonales a la columna t, como exige la geometría.",
+            "Suma de cuadrados del error igual a 0,70; ningún otro par de coeficientes logra un valor menor."
+          ],
+          "notes": "Resuelva el ejemplo completo a mano y luego en NumPy. Construya A con una columna de unos y otra con los tiempos, calcule AᵀA y Aᵀy, y resuelva el sistema de 2×2: el determinante es 20 y se obtienen ambos coeficientes iguales a 0,9. Calcule las predicciones 0,9; 1,8; 2,7 y 3,6 y los residuos. Haga notar las dos verificaciones: los residuos suman cero porque son ortogonales a la columna de unos, y su producto con la columna t también es cero. Estas comprobaciones son una herramienta de depuración muy útil: si Aᵀr no es prácticamente cero, hay un error en el código. Pida a los estudiantes que propongan otra recta, por ejemplo y = 1 + t, y calculen su suma de cuadrados para comprobar que es mayor que 0,70. Pregunta: ¿cómo cambiarían los coeficientes si el último dato fuera 6 en lugar de 4? Úselo para hablar de la influencia de los puntos extremos."
+        },
+        {
+          "title": "Bases ortonormales: por qué simplifican todo",
+          "bullets": [
+            "Una matriz Q con columnas ortonormales cumple QᵀQ = I; si además es cuadrada, Q⁻¹ = Qᵀ.",
+            "Las matrices ortogonales conservan longitudes y ángulos: ‖Qx‖ = ‖x‖ y su número de condición es 1.",
+            "Coordenadas en una base ortonormal: cᵢ = qᵢᵀx, sin necesidad de resolver ningún sistema.",
+            "Proyección sobre C(Q): P = QQᵀ, mucho más simple y estable que A(AᵀA)⁻¹Aᵀ."
+          ],
+          "notes": "Explique por qué los analistas numéricos aman las matrices ortogonales: no amplifican errores. Multiplicar por Q es rotar o reflejar, y esas operaciones no estiran ningún vector, de modo que el número de condición es exactamente 1. Además, la inversa es gratuita, pues basta transponer. Compare la fórmula general de proyección, que exige formar e invertir AᵀA, con la fórmula para columnas ortonormales, donde AᵀA es la identidad y la proyección se reduce a QQᵀ. Presente ejemplos de bases ortonormales famosas: la base de Fourier, usada en el análisis de señales y audio, y las bases de cosenos discretos de la compresión JPEG. Pregunta: si tenemos columnas que no son ortonormales, ¿podemos construir a partir de ellas una base ortonormal que genere el mismo espacio? Esa pregunta introduce el proceso de Gram–Schmidt de la siguiente diapositiva."
+        },
+        {
+          "title": "Proceso de Gram–Schmidt",
+          "bullets": [
+            "Parte de columnas independientes a₁, …, aₙ y produce q₁, …, qₙ ortonormales que generan el mismo espacio.",
+            "Paso j: restar a aⱼ sus proyecciones sobre q₁, …, qⱼ₋₁ y normalizar el vector resultante.",
+            "Gram–Schmidt clásico pierde ortogonalidad en aritmética finita; la versión modificada es más estable.",
+            "En la práctica, LAPACK usa reflexiones de Householder, de estabilidad numérica superior."
+          ],
+          "notes": "Desarrolle el algoritmo con dos vectores en ℝ³: normalice el primero, reste al segundo su proyección sobre el primero y normalice el resultado. Muestre el código de Gram–Schmidt modificado, que resta las proyecciones una por una, actualizando el vector en cada paso, en lugar de calcularlas todas con el vector original. Explique la diferencia numérica: con columnas casi dependientes, la versión clásica produce vectores q que dejan de ser perpendiculares, y la pérdida de ortogonalidad, medida como ‖QᵀQ − I‖, crece con el número de condición. Proponga un experimento rápido con una matriz de Vandermonde mal condicionada para comparar ambas versiones. Mencione que las reflexiones de Householder, introducidas por Alston Householder en 1958, son el método estándar de LAPACK. Pregunta: ¿qué ocurre en Gram–Schmidt si una columna es combinación de las anteriores? El vector restante es cero y no puede normalizarse, lo que revela la dependencia."
+        },
+        {
+          "title": "Factorización QR",
+          "bullets": [
+            "Gram–Schmidt equivale a A = QR, con Q de columnas ortonormales y R triangular superior.",
+            "Mínimos cuadrados con QR: se resuelve Rx̂ = Qᵀb por sustitución regresiva, sin formar AᵀA.",
+            "En Python: Q, R = np.linalg.qr(A) en modo reducido y luego scipy.linalg.solve_triangular(R, Q.T @ b).",
+            "Costo: unas 2mn² operaciones con Householder, cerca del doble que las ecuaciones normales cuando m es mucho mayor que n."
+          ],
+          "notes": "Muestre cómo surge R: los coeficientes de las proyecciones que se restaron en Gram–Schmidt se guardan en una matriz triangular superior, igual que los multiplicadores de la eliminación se guardaban en L. Luego derive la solución de mínimos cuadrados: sustituyendo A = QR en las ecuaciones normales se obtiene RᵀQᵀQRx̂ = RᵀQᵀb, y como QᵀQ = I y R es invertible, queda Rx̂ = Qᵀb. Resalte que nunca se formó AᵀA. Ejecute el código en vivo con el ejemplo de la recta de tendencia y compruebe que devuelve los mismos coeficientes 0,9 y 0,9. Discuta el costo adicional: para un problema con un millón de filas y veinte columnas, ambos métodos tardan una fracción de segundo, por lo que la estabilidad gana con holgura. Pregunta: ¿en qué situación preferiría las ecuaciones normales? Cuando la matriz es enorme, está bien condicionada y solo se dispone de AᵀA acumulada por bloques, como en algunos sistemas distribuidos."
+        },
+        {
+          "title": "Por qué evitar AᵀA: el condicionamiento se eleva al cuadrado",
+          "bullets": [
+            "κ(AᵀA) = κ(A)²: si κ(A) = 10⁶, las ecuaciones normales enfrentan κ = 10¹² y pierden unos 12 dígitos.",
+            "Con QR, la sensibilidad queda gobernada por κ(A) y no por su cuadrado cuando el residuo es pequeño.",
+            "np.linalg.lstsq usa la rutina gelsd de LAPACK, basada en la SVD, y admite incluso matrices de rango deficiente.",
+            "LinearRegression de scikit-learn resuelve con scipy.linalg.lstsq, no con la fórmula de la inversa."
+          ],
+          "notes": "Este es el mensaje numérico central de la unidad. Explique por qué el condicionamiento se eleva al cuadrado: los valores singulares de AᵀA son los cuadrados de los de A, de modo que el cociente entre el mayor y el menor también se eleva al cuadrado. Use cifras concretas: con años del 2000 al 2025 sin transformar, una tendencia cuadrática tiene κ(A) cercano a 3×10¹¹; formar AᵀA lleva el número de condición a cerca de 10²³, muy por encima de los 16 dígitos de la doble precisión, de modo que el resultado de las ecuaciones normales puede no tener ningún dígito correcto. Con el tiempo centrado y escalado, κ(A) baja a 3,6. Muestre en vivo que la fórmula np.linalg.inv(A.T @ A) @ A.T @ y y lstsq discrepan con datos crudos y coinciden con datos escalados. Pregunta: si las bibliotecas profesionales evitan AᵀA, ¿por qué muchos tutoriales en internet siguen enseñando la fórmula de la inversa? Discuta la diferencia entre una fórmula para entender y un algoritmo para calcular."
+        },
+        {
+          "title": "Ajuste de curvas y matrices de Vandermonde",
+          "bullets": [
+            "Modelo polinomial y = β₀ + β₁t + … + β_d t^d: la matriz A tiene columnas 1, t, t², …, t^d.",
+            "Con años entre 2000 y 2025 sin centrar, κ(A) pasa de 5×10⁵ en grado 1 a 2×10¹⁷ en grado 3.",
+            "Remedio: centrar y escalar, por ejemplo s = (t − 2012,5)/12,5, lo que deja κ(A) en 7,6 para grado 3.",
+            "Más grado no siempre es mejor: el sobreajuste reaparece como equilibrio entre sesgo y varianza en Aprendizaje Automático I."
+          ],
+          "notes": "Muestre la matriz de Vandermonde con np.vander y explique por qué las columnas se vuelven casi paralelas: cuando t está entre 2000 y 2025, las columnas t² y t³ crecen casi en la misma proporción, de modo que el ángulo entre ellas es diminuto. Las cifras de la diapositiva se calcularon con precisión extendida y conviene que los estudiantes las reproduzcan con np.linalg.cond. Luego transforme la variable a s en el intervalo de −1 a 1 y muestre la caída espectacular del número de condición. Mencione que los polinomios ortogonales, como los de Legendre o Chebyshev, van aún más lejos, pues construyen columnas casi perpendiculares desde el inicio; numpy.polynomial los implementa. Cierre con una advertencia de modelado: un polinomio de grado alto puede reproducir perfectamente los datos y comportarse de forma absurda al extrapolar. Pregunta: ¿qué grado elegiría para proyectar la demanda del próximo año y con qué criterio lo justificaría?"
+        },
+        {
+          "title": "Mínimos cuadrados ponderados y regularizados",
+          "bullets": [
+            "Ponderados: minimizar Σ wᵢrᵢ², que equivale a escalar cada fila por √wᵢ; útil con varianzas desiguales entre observaciones.",
+            "Ridge: minimizar ‖b − Ax‖² + λ‖x‖², con solución (AᵀA + λI)x = Aᵀb.",
+            "Ridge equivale a mínimos cuadrados ordinarios con la matriz aumentada [A; √λ I] y mejora el condicionamiento.",
+            "La elección de λ se aborda con validación cruzada en Aprendizaje Automático I, que se cursa en paralelo."
+          ],
+          "notes": "Presente dos extensiones que aparecen constantemente en la práctica. Los mínimos cuadrados ponderados resuelven el caso en que algunas observaciones son más confiables que otras, por ejemplo promedios departamentales calculados con muestras de distinto tamaño en una encuesta del INEI: los departamentos con más hogares encuestados deben pesar más. Muestre que basta multiplicar cada fila de A y de b por la raíz del peso y aplicar mínimos cuadrados ordinarios. La regularización Ridge se presenta aquí desde el álgebra lineal: sumar λI a AᵀA eleva todos sus valores propios en λ, lo que aleja la matriz de la singularidad. La formulación con matriz aumentada permite resolver Ridge con QR sin formar AᵀA. Coordine con el docente de Aprendizaje Automático I para que los estudiantes vean ambas miradas, la numérica y la estadística. Pregunta: ¿qué ocurre con los coeficientes cuando λ tiende a infinito?"
+        },
+        {
+          "title": "Flujo de trabajo para un ajuste confiable",
+          "bullets": [
+            "Paso 1: construir A con nombres de columnas y verificar que tenga rango completo.",
+            "Paso 2: centrar o escalar las columnas y medir κ(A) antes y después de la transformación.",
+            "Paso 3: resolver con np.linalg.lstsq o con QR, nunca con inv(A.T @ A).",
+            "Paso 4: comprobar que Aᵀr ≈ 0, analizar los residuos y reportar R² junto con la incertidumbre de los coeficientes."
+          ],
+          "notes": "Integre lo visto en un procedimiento estándar que los estudiantes aplicarán en el Laboratorio 3. Recalque que el paso 1 reutiliza el diagnóstico de la Unidad 2 y el paso 2 el de la Unidad 1: la asignatura es acumulativa. En el paso 4, distinga dos verificaciones: la ortogonalidad del residuo comprueba que el cálculo es correcto, mientras que el análisis gráfico de residuos comprueba que el modelo es adecuado. Un residuo ortogonal pero con patrones claros, como una curvatura o estacionalidad no modelada, indica que falta una columna en la matriz de diseño. Muestre un gráfico de residuos contra el tiempo de una serie mensual del BCRP ajustada solo con tendencia lineal, donde la estacionalidad salta a la vista. Pregunta: si el R² es 0,98, ¿está terminado el análisis? No necesariamente; en series de tiempo con tendencia, un R² alto puede ocultar residuos autocorrelacionados y un modelo inadecuado para pronosticar."
+        },
+        {
+          "title": "Aplicaciones en el Perú: series del BCRP y demanda eléctrica",
+          "bullets": [
+            "Tendencia y estacionalidad del PBI mensual publicado por el BCRP, con columnas de tiempo y variables ficticias de mes.",
+            "Demanda del Sistema Eléctrico Interconectado Nacional, publicada por el COES, en función de la temperatura, la hora y el tipo de día.",
+            "Calibración de sensores de calidad del aire de bajo costo frente a estaciones de referencia del SENAMHI.",
+            "Georreferenciación: estimar una posición a partir de distancias a antenas o satélites con mínimos cuadrados linealizados."
+          ],
+          "notes": "Cierre la unidad con aplicaciones que los estudiantes pueden reproducir con datos abiertos. Para el PBI mensual, la matriz de diseño combina una tendencia con once variables ficticias de mes, evitando la trampa de las ficticias estudiada en la Unidad 2. Para la demanda eléctrica, el COES publica estadísticas de operación del sistema, y la relación con la temperatura suele ser no lineal, lo que motiva términos cuadráticos bien escalados. La calibración de sensores es un caso de regresión con pocas variables y mucho valor social: municipios y universidades instalan sensores económicos cuya lectura debe corregirse con mínimos cuadrados frente a una estación de referencia. Finalmente, la georreferenciación por trilateración muestra que los mínimos cuadrados sostienen tecnologías cotidianas como el GPS. Anuncie el caso de la distribuidora eléctrica, el cuestionario de la semana 11 y la entrega del Laboratorio 3 en la semana 12. Pregunta: ¿cuál de estas aplicaciones podría desarrollar en su proyecto integrador?"
+        }
+      ],
+      "reading": {
+        "title": "La geometría de los mínimos cuadrados: proyecciones, QR y estabilidad numérica",
+        "minutes": 40,
+        "content": "## La geometría de los mínimos cuadrados: proyecciones, QR y estabilidad numérica\n\nEn la práctica casi nunca resolvemos sistemas cuadrados y exactos. Tenemos cientos o millones de observaciones y unas pocas incógnitas: los coeficientes de una tendencia, los parámetros de calibración de un sensor o los pesos de un modelo lineal. El sistema Ax = b, con A de m×n y m mucho mayor que n, no tiene solución exacta porque los datos tienen ruido. La pregunta correcta es otra: ¿qué x hace que Ax esté lo más cerca posible de b?\n\n## 1. La respuesta geométrica\n\nTodo vector de la forma Ax pertenece al espacio columna C(A). Buscamos, entonces, el punto de C(A) más cercano a b. La geometría responde de inmediato: es la **proyección ortogonal** de b sobre C(A), y el vector de error e = b − Ax̂ debe ser perpendicular a todas las columnas de A:\n\nAᵀ(b − Ax̂) = 0   ⟹   AᵀAx̂ = Aᵀb   (ecuaciones normales)\n\nSi las columnas de A son independientes, AᵀA es invertible y la solución es única. La matriz P = A(AᵀA)⁻¹Aᵀ, llamada matriz sombrero en estadística, transforma los datos observados en los valores ajustados. El residuo vive en el espacio nulo izquierdo N(Aᵀ), lo que cierra el círculo con los cuatro subespacios de la Unidad 2.\n\n**Ejemplo.** Para los puntos (0, 1), (1, 2), (2, 2) y (3, 4) y el modelo y = β₀ + β₁t, se tiene AᵀA = [[4, 6], [6, 14]] y Aᵀy = (9, 18). La solución es β₀ = β₁ = 0,9. Los residuos (0,1; 0,2; −0,7; 0,4) suman cero y son ortogonales a la columna t; su suma de cuadrados, 0,70, es la mínima posible.\n\n## 2. Bases ortonormales y factorización QR\n\nSi las columnas de Q son ortonormales, QᵀQ = I y todo se simplifica: la proyección es QQᵀb y las coordenadas se obtienen con productos punto. El proceso de **Gram–Schmidt** convierte columnas independientes en columnas ortonormales que generan el mismo espacio, y registra los coeficientes en una matriz triangular superior R. El resultado es la factorización **A = QR**. Sustituyéndola en las ecuaciones normales, el problema se reduce a\n\nRx̂ = Qᵀb,\n\nun sistema triangular que se resuelve por sustitución regresiva. En aritmética finita, Gram–Schmidt clásico pierde ortogonalidad cuando las columnas son casi dependientes; la variante modificada mejora la situación y las reflexiones de Householder, usadas por LAPACK, son el estándar profesional.\n\n## 3. El costo oculto de las ecuaciones normales\n\nFormar AᵀA tiene un precio: **κ(AᵀA) = κ(A)²**. Un problema moderadamente delicado se vuelve imposible. Considere una tendencia ajustada a los años 2000 a 2025:\n\n| Modelo | κ(A) con años sin transformar | κ(A) con s = (t − 2012,5)/12,5 |\n|---|---|---|\n| Grado 1 | 5,4×10⁵ | 1,7 |\n| Grado 2 | 3,3×10¹¹ | 3,6 |\n| Grado 3 | 2,0×10¹⁷ | 7,6 |\n\nCon grado 2 y años crudos, AᵀA tiene un número de condición cercano a 10²³: ningún dígito del resultado de las ecuaciones normales es confiable en doble precisión. Con la variable centrada y escalada, el problema es trivial para cualquier método. Por eso `np.linalg.lstsq`, que usa una rutina de LAPACK basada en la SVD, y `LinearRegression` de scikit-learn, que se apoya en `scipy.linalg.lstsq`, evitan la fórmula de la inversa.\n\n## 4. Código comentado\n\n```python\nimport numpy as np\nfrom scipy.linalg import solve_triangular\n\nrng = np.random.default_rng(7)\nt = np.arange(2000, 2026, dtype=float)               # 26 años\ns = (t - 2012.5) / 12.5                               # tiempo centrado y escalado en [-1, 1]\ny = 100 + 40*s + 8*s**2 + rng.normal(0, 3, t.size)    # serie sintética con tendencia\n\nfor nombre, x in [('años crudos', t), ('años escalados', s)]:\n    A = np.vander(x, 3, increasing=True)              # columnas 1, x, x^2\n    print(nombre, f'cond(A) = {np.linalg.cond(A):.1e}')   # ≈ 3.3e+11 frente a ≈ 3.6e+00\n\nA = np.vander(s, 3, increasing=True)\nbeta_ne = np.linalg.solve(A.T @ A, A.T @ y)           # 1) ecuaciones normales: κ al cuadrado\nQ, R = np.linalg.qr(A)                                # 2) QR reducida (Householder)\nbeta_qr = solve_triangular(R, Q.T @ y)                #    R beta = Qᵀ y\nbeta_ls, *_ = np.linalg.lstsq(A, y, rcond=None)       # 3) SVD: robusta ante rango deficiente\n\nr = y - A @ beta_qr\nprint(np.abs(A.T @ r).max())                          # del orden del redondeo: residuo ⟂ C(A)\nprint(np.abs(Q.T @ Q - np.eye(3)).max())              # ortogonalidad de Q\n```\n\n## 5. Extensiones y criterios para el analista\n\n- **Ponderación.** Si las observaciones tienen distinta confiabilidad, se minimiza Σ wᵢrᵢ², lo que equivale a escalar cada fila por √wᵢ.\n- **Regularización.** Ridge resuelve (AᵀA + λI)x = Aᵀb, que equivale a mínimos cuadrados con la matriz aumentada [A; √λ I] y puede resolverse con QR.\n- **Verificación.** Compruebe siempre que Aᵀr ≈ 0 (corrección del cálculo) y analice los residuos (adecuación del modelo).\n- **Comunicación.** Un coeficiente estimado con un problema mal condicionado no debe interpretarse, aunque las predicciones dentro del rango observado sean buenas.\n\nLa lección central es doble: los mínimos cuadrados son una proyección, y la forma de calcular esa proyección importa tanto como la fórmula."
+      },
+      "case": {
+        "title": "Caso: El modelo de demanda que nadie podía reproducir en Luz del Pacífico",
+        "content": "**Luz del Pacífico S.A.** (empresa ficticia) es una concesionaria de distribución eléctrica de la costa sur del país con 410 000 clientes. Cada año debe proyectar su demanda máxima para sustentar los contratos de suministro con generadoras y planificar inversiones en subestaciones. Un error de proyección cuesta caro: si subestima, compra energía a precios de corto plazo; si sobreestima, paga potencia contratada que no usa.\n\nEn septiembre, la gerencia comercial encargó a Jorge Huamán, analista de planeamiento, un modelo para la demanda máxima diaria a partir de tres años de datos (enero de 2022 a diciembre de 2024, 1096 días). La demanda osciló entre 280 y 410 MW, y la temperatura máxima diaria, entre 14 °C y 32 °C. Jorge construyó una matriz de diseño con 13 columnas: intercepto; el índice del día (1 a 1096) y sus potencias al cuadrado y al cubo; la temperatura y sus potencias al cuadrado y al cubo; seis variables ficticias de día de la semana (con el domingo como referencia), y una variable de feriado.\n\nEstimó el modelo de tres maneras: con la función ESTIMACION.LINEAL de Excel, con la fórmula np.linalg.inv(X.T @ X) @ X.T @ y en Python y con statsmodels. Las tres versiones produjeron coeficientes muy distintos; el coeficiente del índice del día al cubo incluso cambió de signo. Sin embargo, las predicciones dentro del periodo observado coincidieron con diferencias menores a 0,5 MW y un R² de 0,91.\n\nLas diferencias se volvieron críticas al proyectar el verano de 2025: una versión anticipaba una demanda máxima de 438 MW y otra de 463 MW. El gerente comercial, Luis Cárdenas, debe decidir si contrata 20 MW adicionales de potencia para el verano, con un costo anual estimado de S/ 4,8 millones, y exige saber «cuál de los tres modelos es el correcto».\n\nUna ingeniera del área de operaciones, Patricia Mamani, revisó el cuaderno de Jorge y calculó que solo el bloque del índice del día con sus potencias tiene un número de condición cercano a 2×10⁹, y el bloque de la temperatura, cercano a 1,7×10⁶. Al reemplazar el índice del día por una versión centrada y escalada entre −1 y 1, el número de condición de ese bloque bajó a 8,2. Patricia sugiere además usar QR o lstsq, reducir el grado de la tendencia y validar el modelo con el año 2024 como periodo de prueba antes de extrapolar.\n\nJorge tiene una semana para presentar una propuesta defendible ante la gerencia.",
+        "questions": [
+          "Explique por qué tres herramientas producen coeficientes muy distintos y, sin embargo, predicciones casi idénticas dentro del periodo observado.",
+          "Estime el orden de κ(XᵀX) para el bloque del índice del día y cuántos dígitos confiables quedan al usar ecuaciones normales en doble precisión.",
+          "Proponga una reformulación de la matriz de diseño y del método de resolución, y justifíquela con el número de condición y la ortogonalidad del residuo.",
+          "¿Es razonable extrapolar un polinomio cúbico del índice del día para el verano de 2025? Discuta los riesgos y una alternativa.",
+          "¿Recomendaría contratar los 20 MW adicionales? Indique qué evidencia técnica presentaría al gerente comercial."
+        ]
+      },
+      "assignment": {
+        "title": "Laboratorio 3: Mínimos cuadrados con QR sobre series del BCRP",
+        "instructions": "**Objetivo.** Resolver un problema real de mínimos cuadrados con métodos estables y justificar geométricamente el ajuste.\n\n**Datos.** Descargue del portal de series estadísticas del BCRP una serie mensual de al menos diez años (por ejemplo, el índice del PBI mensual o la producción de electricidad). Documente el código de la serie y la fecha de descarga.\n\n**Qué entregar.** Un cuaderno Jupyter reproducible y un informe técnico en PDF de máximo cuatro páginas.\n\n**Actividades.**\n\n1. **Matriz de diseño.** Construya un modelo con intercepto, tendencia lineal y cuadrática y once variables ficticias de mes. Verifique el rango y calcule κ(A) con el tiempo crudo y con el tiempo centrado y escalado.\n2. **Gram–Schmidt modificado.** Implemente su propia función `qr_gsm(A)` y mida la pérdida de ortogonalidad ‖QᵀQ − I‖ frente a `np.linalg.qr`, con y sin escalar el tiempo.\n3. **Comparación de métodos.** Estime los coeficientes con ecuaciones normales, con su QR, con `np.linalg.qr` y con `np.linalg.lstsq`. Presente una tabla de diferencias relativas y relaciónelas con κ(A) y κ(AᵀA).\n4. **Verificación e interpretación.** Compruebe que Aᵀr ≈ 0, grafique los residuos en el tiempo e interprete la estacionalidad estimada. Proyecte los próximos seis meses y discuta los límites de la extrapolación.\n\n**Formato.** Código comentado, tablas y gráficos rotulados, y una sección final de conclusiones para un público no técnico de máximo 200 palabras.",
+        "rubric": [
+          {
+            "name": "Construcción y diagnóstico de la matriz de diseño",
+            "points": 4
+          },
+          {
+            "name": "Implementación de Gram–Schmidt modificado y QR",
+            "points": 6
+          },
+          {
+            "name": "Comparación de métodos y análisis de condicionamiento",
+            "points": 6
+          },
+          {
+            "name": "Verificación, interpretación y comunicación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 3: ortogonalidad, QR y mínimos cuadrados",
+        "questions": [
+          {
+            "prompt": "En un ajuste por mínimos cuadrados, ¿qué propiedad geométrica cumple el vector de residuos r = b − Ax̂?",
+            "options": [
+              "Es ortogonal a todas las columnas de A",
+              "Es paralelo al vector de datos b",
+              "Tiene norma cero cuando los datos son reales",
+              "Es ortogonal solo a la primera columna de A"
+            ],
+            "correct": 0,
+            "explanation": "Las ecuaciones normales Aᵀ(b − Ax̂) = 0 expresan que el residuo es perpendicular al espacio columna; por eso Ax̂ es la proyección ortogonal de b sobre C(A)."
+          },
+          {
+            "prompt": "Si el número de condición de una matriz de diseño es κ(A) = 10⁷, ¿cuál es aproximadamente el de AᵀA?",
+            "options": [
+              "10¹⁴",
+              "10⁷",
+              "10³",
+              "1"
+            ],
+            "correct": 0,
+            "explanation": "Los valores singulares de AᵀA son los cuadrados de los de A, de modo que κ(AᵀA) = κ(A)². Con 10¹⁴, las ecuaciones normales en doble precisión conservan apenas uno o dos dígitos."
+          },
+          {
+            "prompt": "¿Cuál es la proyección ortogonal del vector b = (3, 1) sobre la recta generada por a = (1, 1)?",
+            "options": [
+              "(2, 2)",
+              "(3, 3)",
+              "(1, −1)",
+              "(1,5; 1,5)"
+            ],
+            "correct": 0,
+            "explanation": "p = (aᵀb / aᵀa)·a = (4/2)·(1, 1) = (2, 2). El error (1, −1) es ortogonal a a, como debe ocurrir en toda proyección ortogonal."
+          },
+          {
+            "prompt": "Una matriz P de 5×5, distinta de la identidad, cumple P² = P y Pᵀ = P. ¿Qué representa?",
+            "options": [
+              "Una proyección ortogonal sobre un subespacio",
+              "Una rotación que conserva longitudes",
+              "Una matriz invertible con determinante 1",
+              "Una cizalla que conserva volúmenes"
+            ],
+            "correct": 0,
+            "explanation": "La idempotencia y la simetría caracterizan a las proyecciones ortogonales: proyectar dos veces no cambia nada. Salvo la identidad, son singulares, por lo que no pueden ser rotaciones ni cizallas."
+          },
+          {
+            "prompt": "Al ajustar un polinomio de grado 3 a años entre 2000 y 2025 sin transformar, los coeficientes cambian entre Excel y Python. ¿Cuál es la medida más adecuada?",
+            "options": [
+              "Centrar y escalar la variable año antes de construir las potencias",
+              "Aumentar el grado del polinomio a 10",
+              "Calcular la inversa de AᵀA con más decimales",
+              "Eliminar la columna del intercepto"
+            ],
+            "correct": 0,
+            "explanation": "Las potencias de valores cercanos a 2000 son casi colineales y κ(A) llega a 2×10¹⁷. Centrar y escalar, o usar polinomios ortogonales, lo reduce a un solo dígito."
+          },
+          {
+            "prompt": "¿Por qué Gram–Schmidt modificado y las reflexiones de Householder se prefieren a Gram–Schmidt clásico en cómputo científico?",
+            "options": [
+              "Porque conservan mejor la ortogonalidad de Q en aritmética de punto flotante",
+              "Porque producen una matriz R triangular inferior",
+              "Porque evitan normalizar los vectores y ahorran memoria",
+              "Porque funcionan con columnas dependientes sin advertirlo"
+            ],
+            "correct": 0,
+            "explanation": "En aritmética finita, Gram–Schmidt clásico acumula errores y las columnas de Q dejan de ser perpendiculares cuando A está mal condicionada. Las variantes modificada y de Householder son numéricamente más estables."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Valores propios, descomposición en valores singulares y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante calcula e interpreta valores y vectores propios, aplica el teorema espectral y la descomposición en valores singulares para modelar procesos dinámicos, reducir dimensionalidad y comprimir información, e integra lo aprendido en un proyecto aplicado que sustenta oralmente.",
+      "topics": [
+        "Valores y vectores propios, polinomio característico y diagonalización",
+        "Cadenas de Markov, método de potencias y PageRank",
+        "Matrices simétricas, teorema espectral y formas cuadráticas",
+        "Descomposición en valores singulares y teorema de Eckart–Young",
+        "Análisis de componentes principales, compresión de imágenes y sistemas de recomendación",
+        "Proyecto integrador y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Valores y vectores propios: direcciones que la matriz no gira",
+          "bullets": [
+            "Un vector v ≠ 0 es vector propio de A con valor propio λ si Av = λv: la matriz solo lo estira, encoge o invierte.",
+            "Los valores propios son las raíces del polinomio característico det(A − λI) = 0.",
+            "La traza es la suma de los valores propios y el determinante, su producto.",
+            "En cómputo, np.linalg.eig usa el algoritmo QR de Francis (1961), no las raíces del polinomio característico."
+          ],
+          "notes": "Comience con una animación o un cuaderno que aplique una matriz de 2×2 a muchos vectores unitarios: casi todos cambian de dirección, pero algunos permanecen sobre su misma recta. Esos son los vectores propios. Calcule a mano los valores propios de [[4, 1], [2, 3]]: el polinomio característico es λ² − 7λ + 10, con raíces 5 y 2, y los vectores propios son (1, 1) y (1, −2). Verifique que la traza, 7, es la suma y el determinante, 10, el producto. Luego advierta que el polinomio característico es una herramienta conceptual: calcular raíces de polinomios de grado alto es numéricamente inestable, por lo que LAPACK reduce la matriz a forma de Hessenberg y aplica iteraciones QR, el algoritmo desarrollado por John Francis y, de forma independiente, por Vera Kublanovskaya. Pregunta: ¿qué significa un valor propio negativo? Que la matriz invierte el sentido del vector propio además de escalarlo. ¿Y un valor propio cero? Que el vector propio pertenece al espacio nulo."
+        },
+        {
+          "title": "Diagonalización y potencias de matrices",
+          "bullets": [
+            "Si A tiene n vectores propios independientes, A = VΛV⁻¹, con Λ diagonal formada por los valores propios.",
+            "Potencias: Aᵏ = VΛᵏV⁻¹; el comportamiento a largo plazo lo domina el valor propio de mayor módulo.",
+            "En un sistema dinámico xₖ₊₁ = Axₖ, si todos los |λ| < 1 el estado converge a cero; si alguno supera 1, diverge.",
+            "No toda matriz es diagonalizable: [[1, 1], [0, 1]] tiene un único vector propio independiente."
+          ],
+          "notes": "Conecte con el cambio de base de la Unidad 2: diagonalizar es expresar la transformación en la base de sus vectores propios, donde actúa como un simple escalamiento independiente en cada dirección. La consecuencia más útil es el cálculo de potencias: elevar Λ a la k solo requiere elevar números. Escriba x₀ como combinación de vectores propios, c₁v₁ + c₂v₂, y muestre que Aᵏx₀ = c₁λ₁ᵏv₁ + c₂λ₂ᵏv₂: con λ₁ = 5 y λ₂ = 2, el primer término domina rápidamente. Esta idea explica el crecimiento de poblaciones, la propagación de choques en modelos económicos y, en aprendizaje profundo, por qué los gradientes explotan o se desvanecen en redes recurrentes cuando se multiplican muchas veces por la misma matriz de pesos. Pregunta: un sistema tiene valores propios 0,9 y 1,02. ¿Qué ocurrirá a largo plazo? El componente asociado a 1,02 crecerá lentamente y terminará dominando."
+        },
+        {
+          "title": "Cadenas de Markov: dinámica de participación de mercado",
+          "bullets": [
+            "Matriz de transición P: la entrada pᵢⱼ es la probabilidad de pasar del estado j al estado i; cada columna suma 1.",
+            "La distribución en el periodo k es xₖ = Pᵏx₀ y converge al vector estacionario π, que cumple Pπ = π.",
+            "π es el vector propio asociado a λ = 1, el mayor valor propio de una matriz estocástica regular (teorema de Perron–Frobenius).",
+            "Ejemplo ilustrativo: migración mensual de líneas móviles entre operadores, al estilo de las estadísticas de portabilidad de OSIPTEL."
+          ],
+          "notes": "Plantee el ejemplo de la lectura con tres operadores ficticios, A, B y C, y una matriz de transición mensual en la que cada operador retiene entre 95 % y 96 % de sus líneas. Partiendo de participaciones de 40 %, 35 % y 25 %, itere en vivo y muestre que la distribución converge a 38,8 %, 32,7 % y 28,6 %, sin importar la distribución inicial. Explique que ese límite es el vector propio asociado al valor propio 1, normalizado para que sume 1, y que la velocidad de convergencia depende del segundo valor propio, que en este ejemplo es 0,93. Subraye las aplicaciones peruanas: OSIPTEL publica estadísticas de portabilidad numérica que permiten estimar flujos entre operadores, y las entidades financieras modelan la migración de deudores entre categorías de riesgo con matrices de transición. Pregunta: ¿qué supuesto fuerte hace el modelo de Markov? Que la probabilidad de cambiar depende solo del estado actual, no de la historia del cliente."
+        },
+        {
+          "title": "Método de potencias y PageRank",
+          "bullets": [
+            "Método de potencias: repetir x ← Ax / ‖Ax‖; converge al vector propio dominante a un ritmo cercano a |λ₂/λ₁|ᵏ.",
+            "PageRank (Brin y Page, 1998): la importancia de una página es la probabilidad estacionaria de un navegante aleatorio.",
+            "Matriz de Google: G = αS + (1 − α)(1/n)11ᵀ, con un factor de amortiguamiento típico α = 0,85.",
+            "Aplicaciones actuales: centralidad en redes de transacciones, detección de fraude y priorización de proveedores."
+          ],
+          "notes": "Explique el método de potencias como la forma más simple y escalable de obtener el vector propio dominante: solo requiere productos matriz-vector, que con matrices dispersas cuestan del orden del número de entradas no nulas. Luego cuente la idea de Sergey Brin y Larry Page: un navegante hace clic al azar en los enlaces de cada página y, con probabilidad 1 − α, salta a una página cualquiera. La importancia de una página es la fracción del tiempo que el navegante pasa en ella a largo plazo. El salto aleatorio garantiza que todas las entradas de G sean positivas, de modo que el teorema de Perron–Frobenius asegura un único vector estacionario y la convergencia del método, con un ritmo gobernado por α. Construya en clase una red de seis páginas y calcule su PageRank en diez líneas de NumPy. Pregunta: ¿cómo usaría PageRank una unidad de cumplimiento para priorizar cuentas sospechosas en una red de transferencias?"
+        },
+        {
+          "title": "Matrices simétricas y teorema espectral",
+          "bullets": [
+            "Si A = Aᵀ, sus valores propios son reales y sus vectores propios pueden elegirse ortonormales.",
+            "Teorema espectral: A = QΛQᵀ = Σ λᵢqᵢqᵢᵀ, una suma de proyecciones ponderadas por los valores propios.",
+            "Las matrices de covarianza, las matrices de Gram XᵀX y los laplacianos de grafos son simétricas.",
+            "np.linalg.eigh aprovecha la simetría: es más rápida que eig y devuelve los valores propios en orden ascendente."
+          ],
+          "notes": "Presente el teorema espectral como el resultado más elegante del curso: toda matriz simétrica real es una combinación de proyecciones sobre direcciones perpendiculares, cada una ponderada por su valor propio. Relacione con la Unidad 3: cada término qᵢqᵢᵀ es una matriz de proyección sobre una recta. Explique por qué importa en datos: la matriz de covarianza es simétrica, de modo que sus vectores propios forman un sistema de ejes perpendiculares, y sus valores propios miden la varianza de los datos en cada eje. Esa es la base del análisis de componentes principales. Los laplacianos de grafos, también simétricos, sustentan el agrupamiento espectral que verán en Aprendizaje Automático II. Recomiende usar eigh siempre que la matriz sea simétrica, porque eig puede devolver partes imaginarias diminutas por redondeo. Pregunta: si los valores propios de una covarianza son 9 y 1, ¿qué forma tiene la nube de puntos? Una elipse alargada, con desviación típica 3 en un eje y 1 en el otro."
+        },
+        {
+          "title": "Formas cuadráticas y matrices definidas positivas",
+          "bullets": [
+            "Forma cuadrática f(x) = xᵀAx; A simétrica es definida positiva si xᵀAx > 0 para todo x ≠ 0.",
+            "Criterios equivalentes: todos los valores propios positivos, todos los pivotes positivos o existencia de Cholesky A = LLᵀ.",
+            "Una hessiana definida positiva garantiza un mínimo local estricto: base de la convexidad en optimización.",
+            "Toda covarianza es semidefinida positiva: la varianza de una combinación wᵀx es wᵀΣw ≥ 0."
+          ],
+          "notes": "Dibuje las curvas de nivel de f(x) = xᵀAx para tres matrices: una definida positiva, cuyo gráfico es un tazón con elipses concéntricas; una indefinida, cuyo gráfico es una silla de montar; y una semidefinida, con un valle plano. Relacione con la optimización del primer ciclo: el descenso de gradiente converge bien en un tazón, y su velocidad depende del cociente entre el mayor y el menor valor propio de la hessiana, que es otra vez un número de condición. Explique la aplicación financiera: en la teoría de carteras de Harry Markowitz, el riesgo de una cartera con pesos w es wᵀΣw, y la covarianza debe ser semidefinida positiva para que ninguna cartera tenga varianza negativa. Mencione que una matriz de covarianza estimada con datos faltantes puede perder esta propiedad, lo que se detecta con eigh o al intentar Cholesky. Pregunta: ¿qué indica que Cholesky falle sobre una covarianza estimada?"
+        },
+        {
+          "title": "Descomposición en valores singulares (SVD)",
+          "bullets": [
+            "Toda matriz A de m×n se factoriza como A = UΣVᵀ, con U y V ortogonales y Σ diagonal con entradas no negativas.",
+            "Valores singulares σ₁ ≥ σ₂ ≥ … ≥ σᵣ > 0: son las raíces cuadradas de los valores propios de AᵀA.",
+            "Geometría: toda transformación lineal es una rotación, un estiramiento a lo largo de ejes y otra rotación.",
+            "La SVD entrega bases ortonormales de los cuatro subespacios fundamentales y determina el rango numérico."
+          ],
+          "notes": "Presente la SVD como la culminación del curso, el resultado que Gilbert Strang presenta como la cima de un curso de álgebra lineal. A diferencia de la diagonalización, existe para cualquier matriz, cuadrada o rectangular, y usa bases ortonormales a ambos lados. Muestre la imagen geométrica: la matriz transforma el círculo unitario en una elipse; las columnas de V son las direcciones de entrada que se convierten en los ejes de la elipse, las columnas de U son esos ejes y los valores singulares son sus longitudes. Conecte con la Unidad 2: las primeras r columnas de V generan el espacio fila, las restantes el espacio nulo, y lo mismo ocurre con U para el espacio columna y el espacio nulo izquierdo. Conecte con la Unidad 1: κ₂(A) = σ₁/σₙ. Ejecute np.linalg.svd en una matriz pequeña y verifique la reconstrucción. Pregunta: ¿por qué no conviene calcular la SVD formando AᵀA? Por la misma razón que en la Unidad 3: se eleva al cuadrado el condicionamiento."
+        },
+        {
+          "title": "SVD como suma de capas de rango uno",
+          "bullets": [
+            "A = σ₁u₁v₁ᵀ + σ₂u₂v₂ᵀ + … + σᵣuᵣvᵣᵀ: cada término es una matriz de rango uno.",
+            "κ₂(A) = σ₁/σₙ: el número de condición se lee directamente en los valores singulares.",
+            "Pseudoinversa A⁺ = VΣ⁺Uᵀ: da la solución de mínimos cuadrados de norma mínima, incluso con rango deficiente.",
+            "Rango numérico: número de σᵢ mayores que una tolerancia, criterio que aplica np.linalg.matrix_rank."
+          ],
+          "notes": "Reescriba la SVD como suma de capas y explique la intuición: cada capa σᵢuᵢvᵢᵀ es una tabla completa construida con un solo patrón de filas y un solo patrón de columnas, y las capas están ordenadas por importancia. Use como ejemplo una matriz de ventas de productos por agencia: la primera capa suele capturar el tamaño de cada agencia y la popularidad general de cada producto; las siguientes, patrones regionales o estacionales. Luego retome dos hilos del curso. Primero, el número de condición como cociente de valores singulares. Segundo, la pseudoinversa, que resuelve el caso de la Caja Valle Norte de la Unidad 2: con columnas redundantes, A⁺b elige, entre las infinitas soluciones de mínimos cuadrados, la de menor norma, que es lo que devuelve lstsq. Pregunta: ¿por qué la solución de norma mínima no resuelve el problema de interpretación de los coeficientes? Porque sigue siendo una elección arbitraria entre soluciones equivalentes, aunque sea estable."
+        },
+        {
+          "title": "Teorema de Eckart–Young: la mejor aproximación de rango bajo",
+          "bullets": [
+            "La SVD truncada Aₖ = Σᵢ≤ₖ σᵢuᵢvᵢᵀ es la mejor aproximación de rango k en norma espectral y de Frobenius.",
+            "Errores: ‖A − Aₖ‖₂ = σₖ₊₁ y ‖A − Aₖ‖²_F = σ²ₖ₊₁ + … + σ²ᵣ.",
+            "Energía retenida: (σ₁² + … + σₖ²)/(σ₁² + … + σᵣ²), criterio habitual para elegir k.",
+            "Almacenamiento: k(m + n + 1) números en lugar de mn; para 1000×1000 con k = 50, cerca del 10 %."
+          ],
+          "notes": "Enuncie el teorema demostrado por Carl Eckart y Gale Young en 1936 y destaque su fuerza: entre todas las matrices de rango k imaginables, ninguna está más cerca de A que la SVD truncada, y el error se conoce exactamente a partir de los valores singulares descartados. Esto convierte la elección de k en una decisión cuantificable. Trabaje un ejemplo numérico: con valores singulares 50, 20, 5, 1 y 0,1, la aproximación de rango 2 retiene más del 99 % de la energía, mientras que sumar los valores singulares sin elevarlos al cuadrado daría un 92 %, un error frecuente. Calcule el ahorro de almacenamiento para una matriz de 1000×1000 con k = 50. Advierta que la energía retenida no es el único criterio: en un sistema de recomendación interesa la calidad de las predicciones fuera de la muestra. Pregunta: ¿qué patrón de valores singulares hace que la compresión sea eficaz? Un decaimiento rápido; si todos son parecidos, no hay estructura de rango bajo que aprovechar."
+        },
+        {
+          "title": "Compresión de imágenes con SVD",
+          "bullets": [
+            "Una imagen en escala de grises de 512×512 es una matriz; con k = 40 se almacena cerca del 15,6 % de los datos.",
+            "En las imágenes naturales los valores singulares decaen rápido: pocas capas capturan la estructura principal.",
+            "Para imágenes en color se aplica la SVD a cada canal RGB o a una representación de luminancia.",
+            "JPEG usa la transformada discreta del coseno, no la SVD, por eficiencia; la SVD ilustra el principio de rango bajo."
+          ],
+          "notes": "Haga una demostración en vivo con una fotografía propia en escala de grises, por ejemplo un paisaje andino o una fachada del Centro Histórico de Lima. Muestre la reconstrucción con k = 1, 5, 20, 40 y 100, junto con el gráfico de los valores singulares en escala logarítmica y la curva de energía acumulada. Con k = 1 la imagen es un patrón de bandas; con k = 20 ya se reconoce la escena; con k = 40 se distinguen detalles. Calcule con los estudiantes la proporción almacenada: 40 por la suma de 512, 512 y 1, dividido entre 512 al cuadrado, da cerca de 15,6 %. Aclare que los formatos reales usan transformadas fijas, como la del coseno en JPEG, porque no requieren almacenar bases distintas para cada imagen, pero que la idea de quedarse con pocas componentes dominantes es la misma. Pregunta: ¿qué tipo de imagen se comprime peor con SVD? Una con texturas finas o ruido, cuyos valores singulares decaen lentamente."
+        },
+        {
+          "title": "Análisis de componentes principales mediante SVD",
+          "bullets": [
+            "Centrar los datos: X̃ = X − media de cada columna; la covarianza muestral es S = X̃ᵀX̃/(n − 1).",
+            "Si X̃ = UΣVᵀ, las columnas de V son las direcciones principales y σᵢ²/(n − 1), las varianzas explicadas.",
+            "Puntajes: Z = X̃Vₖ = UₖΣₖ, la proyección de los datos sobre las k primeras componentes.",
+            "Pearson (1901) y Hotelling (1933) formularon el método; sklearn.decomposition.PCA lo calcula con SVD."
+          ],
+          "notes": "Muestre que el análisis de componentes principales no es una técnica nueva, sino una aplicación directa de lo aprendido: centrar, calcular la SVD y leer los resultados. Insista en que centrar es obligatorio: sin centrar, la primera componente apunta hacia la media de los datos y no hacia la dirección de máxima variación. Si las variables están en unidades distintas, como soles, porcentajes y años, hay que estandarizarlas, lo que equivale a trabajar con la matriz de correlación. Ejecute el código de la lectura con el conjunto de dígitos de scikit-learn y muestre que unas dos decenas de componentes retienen el 90 % de la varianza de 64 píxeles. Aclare la división de responsabilidades con Aprendizaje Automático II, donde el ACP se usará como técnica de preprocesamiento y visualización junto con otros métodos no supervisados. Pregunta: si la primera componente de indicadores socioeconómicos departamentales tiene cargas positivas en ingreso, acceso a internet y años de educación, ¿cómo la interpretaría?"
+        },
+        {
+          "title": "Sistemas de recomendación por factorización matricial",
+          "bullets": [
+            "Matriz usuarios × productos de compras o calificaciones, muy dispersa: suele tener menos del 1 % de entradas observadas.",
+            "Modelo de factores latentes R ≈ UVᵀ, con k factores que representan gustos de los usuarios y atributos implícitos de los productos.",
+            "El Premio Netflix (2006–2009) mostró la potencia de la factorización; Koren, Bell y Volinsky la sistematizaron en 2009.",
+            "Con datos faltantes no se aplica la SVD directa: se usan mínimos cuadrados alternados o descenso de gradiente regularizado."
+          ],
+          "notes": "Plantee el problema con una tienda virtual: millones de pares cliente-producto posibles y solo una pequeña fracción observada. La hipótesis de rango bajo dice que las preferencias se explican con pocos factores latentes, por ejemplo afinidad por tecnología, sensibilidad al precio o etapa familiar. Cada cliente y cada producto se representan con un vector de k números, y la afinidad predicha es su producto punto, un concepto del primer ciclo. Explique por qué no se aplica la SVD directamente: la SVD supone una matriz completa, y rellenar los vacíos con ceros confunde no comprado con no gustado. Por eso se minimiza el error solo sobre las entradas observadas, con regularización, alternando mínimos cuadrados para usuarios y para productos. Mencione que para matrices dispersas grandes existen scipy.sparse.linalg.svds y TruncatedSVD de scikit-learn, útiles como punto de partida. Pregunta: ¿qué problema ético surge si las recomendaciones se basan en compras de productos de salud?"
+        },
+        {
+          "title": "Valores propios y singulares en la IA moderna",
+          "bullets": [
+            "Visión: los eigenfaces de Turk y Pentland (1991) representaban rostros como combinaciones de componentes principales.",
+            "Lenguaje: el análisis semántico latente aplica SVD truncada a matrices término-documento para capturar temas.",
+            "Modelos de lenguaje: LoRA ajusta modelos grandes con actualizaciones de rango bajo ΔW = BA, con pocos parámetros entrenables.",
+            "Estabilidad del entrenamiento: valores singulares grandes o pequeños en las matrices de pesos explican gradientes que explotan o se desvanecen."
+          ],
+          "notes": "Use esta diapositiva para mostrar el horizonte de la carrera. En Visión por Computadora, los eigenfaces fueron uno de los primeros sistemas de reconocimiento facial y siguen siendo un ejemplo pedagógico excelente, aunque hoy se usan redes convolucionales. En Procesamiento de Lenguaje Natural, el análisis semántico latente de Deerwester y colaboradores, de 1990, anticipó las representaciones vectoriales de palabras. En IA Generativa, la técnica LoRA, propuesta por Hu y colaboradores en 2021, reduce drásticamente el costo de adaptar un modelo de lenguaje: en lugar de modificar una matriz de pesos de millones de entradas, se entrenan dos matrices delgadas cuyo producto tiene rango bajo. En Aprendizaje Profundo, la normalización espectral y la inicialización ortogonal de pesos controlan los valores singulares para estabilizar el entrenamiento. Pregunta: con una matriz de pesos de 4096×4096 y rango 8, ¿cuántos parámetros entrena LoRA frente a la matriz completa? Unos 65 000 frente a casi 17 millones."
+        },
+        {
+          "title": "Proyecto integrador: lineamientos y criterios",
+          "bullets": [
+            "Opción A: compresión de imágenes peruanas con SVD, con análisis de energía, error de Eckart–Young y calidad visual.",
+            "Opción B: recomendador de productos con factorización de rango bajo sobre datos anonimizados conforme a la Ley 29733.",
+            "Opción C: análisis de componentes principales de indicadores socioeconómicos departamentales publicados por el INEI.",
+            "Entregables: cuaderno reproducible, informe técnico de 6 a 8 páginas y sustentación oral de 8 minutos en la semana 16."
+          ],
+          "notes": "Presente las tres opciones y explique que todas exigen integrar los contenidos del curso: construir y diagnosticar la matriz (Unidades 1 y 2), entender la aproximación como proyección (Unidad 3) y aplicar la SVD con criterio (Unidad 4). Pida que cada equipo, de dos o tres integrantes, entregue en la semana 14 una propuesta de una página con la fuente de datos, la pregunta que responderán y el criterio para elegir el rango k. Recalque los requisitos éticos: en la opción B, los datos deben estar anonimizados y debe explicarse cómo se respetarían los principios de consentimiento y finalidad de la Ley 29733; en la opción C, deben citarse las fuentes oficiales con su fecha de consulta. En la sustentación, cada integrante debe responder al menos una pregunta técnica, por ejemplo por qué centró los datos o qué significa el error σₖ₊₁. Pregunta: ¿qué opción conecta mejor con el campo laboral que le interesa y por qué?"
+        }
+      ],
+      "reading": {
+        "title": "Valores propios y SVD: la estructura oculta de los datos",
+        "minutes": 40,
+        "content": "## Valores propios y SVD: la estructura oculta de los datos\n\nLas unidades anteriores trataron a las matrices como sistemas que se resuelven, estructuras que se diagnostican y proyecciones que se calculan. Esta unidad responde una pregunta más profunda: ¿cuáles son las **direcciones naturales** de una matriz? La respuesta, a través de los valores propios y de la descomposición en valores singulares (SVD), sostiene buena parte de la inteligencia artificial moderna.\n\n## 1. Direcciones invariantes\n\nUn vector propio v de una matriz cuadrada A cumple Av = λv: la matriz no lo gira, solo lo escala por el valor propio λ. Si A tiene n vectores propios independientes, puede escribirse A = VΛV⁻¹, y sus potencias se calculan como Aᵏ = VΛᵏV⁻¹. Esto explica el comportamiento a largo plazo de cualquier sistema dinámico lineal xₖ₊₁ = Axₖ: lo domina el valor propio de mayor módulo.\n\n## 2. Cadenas de Markov y método de potencias\n\nSuponga tres operadores móviles **ficticios**, A, B y C, con la siguiente matriz de transición mensual, ilustrativa y en el espíritu de las estadísticas de portabilidad que publica OSIPTEL (la columna indica el origen y la fila, el destino):\n\n```python\nimport numpy as np\n\nP = np.array([[0.96, 0.03, 0.02],\n              [0.02, 0.95, 0.03],\n              [0.02, 0.02, 0.95]])    # cada columna suma 1\nx = np.array([0.40, 0.35, 0.25])      # participación inicial de mercado\n\nfor k in range(500):                  # método de potencias: x_{k+1} = P x_k\n    x = P @ x\nprint(x.round(4))                     # [0.3878 0.3265 0.2857]\n\nvals, vecs = np.linalg.eig(P)\nv = vecs[:, np.argmax(vals.real)].real    # vector propio del valor propio 1\nprint((v / v.sum()).round(4))             # el mismo vector estacionario\n```\n\nLa participación converge a 38,8 %, 32,7 % y 28,6 % (exactamente 19/49, 16/49 y 14/49), sin importar el punto de partida. El vector estacionario es el vector propio asociado a λ = 1, y la velocidad de convergencia depende del segundo valor propio, 0,93 en este ejemplo. El mismo principio sustenta **PageRank**: Brin y Page (1998) definieron la importancia de una página como la probabilidad estacionaria de un navegante aleatorio, calculada con el método de potencias sobre la matriz de Google G = αS + (1 − α)(1/n)11ᵀ, con α = 0,85.\n\n## 3. Matrices simétricas y teorema espectral\n\nSi A es simétrica, sus valores propios son reales y sus vectores propios pueden elegirse ortonormales: A = QΛQᵀ. Las matrices de covarianza son simétricas y semidefinidas positivas, de modo que sus vectores propios son ejes perpendiculares y sus valores propios, las varianzas a lo largo de esos ejes. Una matriz es **definida positiva** si todos sus valores propios son positivos, lo que equivale a que admita la factorización de Cholesky y garantiza que la forma cuadrática xᵀAx tenga forma de tazón: la base de la convexidad en optimización.\n\n## 4. La descomposición en valores singulares\n\nToda matriz A de m×n, sin excepción, se factoriza como **A = UΣVᵀ**, con U y V ortogonales y Σ diagonal con los valores singulares σ₁ ≥ σ₂ ≥ … ≥ 0. Equivalentemente, A = Σ σᵢuᵢvᵢᵀ, una suma de capas de rango uno ordenadas por importancia. La SVD lo reúne todo:\n\n- κ₂(A) = σ₁/σₙ (Unidad 1);\n- bases ortonormales de los cuatro subespacios y el rango numérico (Unidad 2);\n- la pseudoinversa A⁺ = VΣ⁺Uᵀ, que da la solución de mínimos cuadrados de norma mínima (Unidad 3).\n\nEl **teorema de Eckart–Young** (1936) afirma que truncar la suma en k términos produce la mejor aproximación de rango k posible, con error ‖A − Aₖ‖₂ = σₖ₊₁ y ‖A − Aₖ‖²_F = σ²ₖ₊₁ + … + σ²ᵣ. Si los valores singulares decaen rápido, pocas capas bastan: es el principio de la compresión de imágenes, de la reducción de dimensionalidad y de los sistemas de recomendación.\n\n## 5. Análisis de componentes principales mediante SVD\n\nEl análisis de componentes principales (ACP), formulado por Pearson (1901) y Hotelling (1933), busca las direcciones de máxima varianza. Si X̃ es la matriz de datos centrada y X̃ = UΣVᵀ, las columnas de V son las direcciones principales y σᵢ²/(n − 1), las varianzas explicadas:\n\n```python\nfrom sklearn.datasets import load_digits\n\nX = load_digits().data                  # 1797 imágenes de 8x8 = 64 variables\nXc = X - X.mean(axis=0)                 # centrar es obligatorio en el ACP\nU, s, Vt = np.linalg.svd(Xc, full_matrices=False)\nenergia = np.cumsum(s**2) / np.sum(s**2)\nk = np.searchsorted(energia, 0.90) + 1  # menor k que retiene el 90 % de la varianza\nZ = Xc @ Vt[:k].T                       # puntajes: coordenadas en las k componentes\nXk = U[:, :k] * s[:k] @ Vt[:k]          # aproximación de rango k (Eckart-Young)\nprint(k, np.linalg.norm(Xc - Xk) / np.linalg.norm(Xc))\n```\n\nEn este conjunto, unas dos decenas de componentes retienen el 90 % de la varianza de los 64 píxeles, y el error relativo de Frobenius es exactamente la raíz de la energía descartada, algo menos de 0,32. Si las variables tienen unidades distintas, deben estandarizarse antes de aplicar la SVD.\n\n## 6. Responsabilidad en las aplicaciones\n\nLa factorización de rango bajo es la base de los recomendadores, popularizada por el Premio Netflix y sistematizada por Koren, Bell y Volinsky (2009). En el Perú, su uso con datos de clientes debe respetar la Ley 29733 de Protección de Datos Personales: finalidad informada, consentimiento y, para datos sensibles como los de salud, consentimiento expreso y por escrito. El álgebra lineal ofrece la herramienta; el criterio profesional decide cómo y para qué usarla."
+      },
+      "case": {
+        "title": "Caso: Recomendaciones personalizadas y datos sensibles en Ayni Market",
+        "content": "**Ayni Market S.A.C.** (empresa ficticia) es una tienda virtual limeña de productos para el hogar, tecnología, cuidado personal y farmacia sin receta. En los últimos 18 meses registró 1,9 millones de compras de 85 000 clientes activos sobre un catálogo de 6200 productos. La gerente de comercio electrónico, Valeria Chávez, quiere reemplazar las recomendaciones actuales, basadas en los productos más vendidos, por recomendaciones personalizadas en la página de inicio y en los correos semanales.\n\nEl equipo de datos, liderado por Andrés Torres, representó las compras como una matriz binaria de clientes por productos, con un 1 si el cliente compró el producto alguna vez. Solo el 0,36 % de las entradas es distinto de cero. Un practicante intentó convertir la matriz a formato denso para aplicar np.linalg.svd y la sesión se cerró por falta de memoria. Andrés usó entonces una SVD truncada para matrices dispersas y evaluó el modelo ocultando el 20 % más reciente de las compras de cada cliente y midiendo qué proporción de las diez primeras recomendaciones coincidía con esas compras ocultas (precisión@10):\n\n| Rango k | Energía retenida | Precisión@10 en validación |\n|---|---|---|\n| 20 | 31 % | 0,081 |\n| 60 | 44 % | 0,094 |\n| 120 | 55 % | 0,091 |\n| 250 | 68 % | 0,083 |\n| Más vendidos (línea base) | — | 0,052 |\n\nValeria pregunta por qué no usar k = 250 «si retiene más información». Además, el 28 % de las visitas mensuales corresponde a clientes nuevos sin historial de compras, para quienes el modelo no puede calcular un vector de factores latentes.\n\nEl gerente de marketing, Ricardo Paredes, propone incluir con mayor peso las compras de la categoría de farmacia y cuidado de la salud, porque «revelan necesidades muy específicas» y permitirían campañas segmentadas por condición, como diabetes o hipertensión. La oficial de protección de datos, Lucía Rojas, advierte que, conforme a la Ley 29733, los datos relativos a la salud son datos sensibles, que su tratamiento requiere consentimiento expreso y por escrito, y que la política de privacidad vigente solo informa el uso de las compras para «mejorar la experiencia de compra».\n\nEl directorio quiere lanzar el recomendador antes de la campaña de fin de año. Andrés debe presentar una propuesta que defina el rango k, la estrategia para clientes nuevos, el tratamiento de las compras de salud y los indicadores con los que se medirá el éxito.",
+        "questions": [
+          "Estime la memoria necesaria para almacenar la matriz en formato denso de doble precisión y explique por qué una SVD truncada dispersa es la herramienta adecuada.",
+          "Interprete la tabla: ¿qué rango k recomendaría y por qué la energía retenida no basta como criterio de selección?",
+          "Explique con la geometría de la SVD qué representan los vectores latentes de clientes y productos y cómo se obtiene la afinidad predicha.",
+          "Proponga una estrategia para los clientes nuevos sin historial que combine información disponible y modelos sencillos.",
+          "¿Es legítimo incorporar las compras de farmacia y salud al modelo? Analice la propuesta a la luz de la Ley 29733 y proponga salvaguardas."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: aplicaciones de la descomposición en valores singulares",
+        "instructions": "**Objetivo.** Integrar los contenidos del curso en una aplicación de la descomposición en valores singulares sobre datos reales, con decisiones técnicas justificadas y sustentadas oralmente.\n\n**Modalidad.** Equipos de dos o tres estudiantes. Elijan una opción:\n\n- **A. Compresión de imágenes:** al menos tres fotografías del Perú de autoría propia o con licencia abierta.\n- **B. Recomendador:** datos de compras o calificaciones públicos o anonimizados, con una nota sobre el cumplimiento de la Ley 29733.\n- **C. Análisis de componentes principales:** al menos ocho indicadores departamentales del INEI de un mismo año.\n\n**Entregables.**\n\n1. **Propuesta (semana 14):** una página con la pregunta, la fuente de datos y el criterio para elegir k.\n2. **Cuaderno reproducible (semana 16):** construcción y diagnóstico de la matriz (rango, κ, centrado o estandarización), cálculo de la SVD, gráfico de valores singulares y de energía acumulada, verificación numérica del teorema de Eckart–Young (‖A − Aₖ‖₂ = σₖ₊₁) y resultados de la aplicación.\n3. **Informe técnico (6 a 8 páginas):** fundamentación matemática, metodología, resultados, selección justificada de k con al menos dos criterios (energía y calidad de la aplicación), limitaciones y consideraciones éticas.\n4. **Sustentación oral (8 minutos más preguntas):** todos los integrantes exponen y responden preguntas técnicas.\n\n**Criterios.** Se valorará la corrección matemática, la reproducibilidad, la calidad de la interpretación y la capacidad de comunicar decisiones a un público no especialista. El plagio o el uso no declarado de asistentes de IA para redactar el informe se sancionan conforme al reglamento institucional.",
+        "rubric": [
+          {
+            "name": "Fundamentación matemática: SVD, Eckart–Young y ACP",
+            "points": 5
+          },
+          {
+            "name": "Implementación correcta y reproducible",
+            "points": 5
+          },
+          {
+            "name": "Selección justificada de k y análisis del error",
+            "points": 4
+          },
+          {
+            "name": "Interpretación, limitaciones y ética de datos",
+            "points": 3
+          },
+          {
+            "name": "Sustentación oral y respuesta a preguntas",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario de la Unidad 4: valores propios, SVD y aplicaciones",
+        "questions": [
+          {
+            "prompt": "Una matriz de 2×2 tiene traza 7 y determinante 10. ¿Cuáles son sus valores propios?",
+            "options": [
+              "5 y 2",
+              "7 y 10",
+              "3,5 y 3,5",
+              "10 y −3"
+            ],
+            "correct": 0,
+            "explanation": "Los valores propios suman la traza y su producto es el determinante: λ₁ + λ₂ = 7 y λ₁λ₂ = 10. Las raíces de λ² − 7λ + 10 son 5 y 2."
+          },
+          {
+            "prompt": "En una cadena de Markov regular con matriz de transición P, ¿qué representa el vector estacionario?",
+            "options": [
+              "El vector propio de P asociado al valor propio 1, normalizado para sumar 1",
+              "La primera columna de la matriz P",
+              "El vector propio asociado al menor valor propio de P",
+              "La distribución inicial x₀ del sistema"
+            ],
+            "correct": 0,
+            "explanation": "El estado estacionario cumple Pπ = π: es el vector propio de λ = 1, normalizado como distribución de probabilidad. En una cadena regular no depende de la distribución inicial."
+          },
+          {
+            "prompt": "Los valores singulares de una matriz son 50, 20, 5, 1 y 0,1. ¿Qué fracción de la energía retiene su aproximación de rango 2?",
+            "options": [
+              "Aproximadamente 99,1 %",
+              "Aproximadamente 92,0 %",
+              "Exactamente 40 %",
+              "Aproximadamente 85,5 %"
+            ],
+            "correct": 0,
+            "explanation": "La energía usa cuadrados: (2500 + 400)/(2500 + 400 + 25 + 1 + 0,01) ≈ 0,991. Sumar los valores singulares sin elevarlos al cuadrado produce el distractor de 92 %."
+          },
+          {
+            "prompt": "¿Qué afirma el teorema de Eckart–Young sobre la SVD truncada Aₖ de una matriz A?",
+            "options": [
+              "Es la mejor aproximación de rango k de A en norma espectral y de Frobenius",
+              "Es la única factorización exacta posible de A",
+              "Conserva todos los valores propios de la matriz A",
+              "Garantiza que la diferencia A − Aₖ tenga rango k"
+            ],
+            "correct": 0,
+            "explanation": "Ninguna matriz de rango k está más cerca de A que Aₖ, y el error espectral es exactamente σₖ₊₁. La diferencia A − Aₖ tiene rango r − k, no k."
+          },
+          {
+            "prompt": "Antes de aplicar ACP con SVD a indicadores departamentales medidos en soles, porcentajes y años, ¿qué paso es imprescindible?",
+            "options": [
+              "Centrar y, dadas las unidades distintas, estandarizar cada variable",
+              "Ordenar los departamentos alfabéticamente",
+              "Eliminar la variable de menor varianza",
+              "Elevar al cuadrado cada variable para evitar signos negativos"
+            ],
+            "correct": 0,
+            "explanation": "El ACP requiere datos centrados; si las unidades difieren, las variables de mayor escala dominarían las componentes. Estandarizar equivale a trabajar con la matriz de correlación."
+          },
+          {
+            "prompt": "Una matriz simétrica de 3×3 tiene valores propios 4, 1 y −2. ¿Qué se concluye sobre ella?",
+            "options": [
+              "Es indefinida: su forma cuadrática toma valores positivos y negativos",
+              "Es definida positiva porque su traza es positiva",
+              "Es semidefinida positiva",
+              "No es diagonalizable"
+            ],
+            "correct": 0,
+            "explanation": "La definición positiva exige que todos los valores propios sean positivos; con uno negativo la matriz es indefinida. Por el teorema espectral, toda matriz simétrica real es diagonalizable."
+          },
+          {
+            "prompt": "En PageRank con factor de amortiguamiento α = 0,85, ¿para qué sirve el término (1 − α)(1/n)11ᵀ de la matriz de Google?",
+            "options": [
+              "Garantiza un vector estacionario único y la convergencia del método de potencias",
+              "Elimina las páginas que tienen pocos enlaces entrantes",
+              "Ordena alfabéticamente las páginas antes de iterar",
+              "Vuelve simétrica la matriz para poder usar eigh"
+            ],
+            "correct": 0,
+            "explanation": "El salto aleatorio hace positivas todas las entradas de G; por el teorema de Perron–Frobenius existe un único vector propio dominante positivo y el método de potencias converge a un ritmo gobernado por α."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "El álgebra lineal como lenguaje de la IA; sistemas lineales y sus tres lecturas",
+      "activity": "Aula invertida con la lectura de la Unidad 1; sesión síncrona de interpretación geométrica y primeros cálculos con arreglos de NumPy.",
+      "evidence": "Ejercicios de diagnóstico resueltos en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Eliminación gaussiana, pivoteo parcial, rango y forma escalonada reducida",
+      "activity": "Resolución guiada de sistemas, demostración del fallo sin pivoteo y análisis del caso Nutriandes en foro y debate síncrono.",
+      "evidence": "Aporte al foro del caso Nutriandes"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Matriz inversa, factorización LU y modelo insumo-producto de Leontief",
+      "activity": "Taller con lu_factor y lu_solve sobre escenarios de demanda final; resolución del cuestionario de la Unidad 1.",
+      "evidence": "Cuestionario de la Unidad 1"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Normas, número de condición y sensibilidad de las soluciones",
+      "activity": "Experimentos con matrices de Hilbert y perturbaciones de datos; revisión entre pares y entrega del Laboratorio 1.",
+      "evidence": "Laboratorio 1: cuaderno y reporte técnico"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Espacios y subespacios vectoriales, combinación lineal, espacio generado e independencia lineal",
+      "activity": "Aula invertida y resolución colaborativa de ejercicios de independencia con matrices de datos comerciales.",
+      "evidence": "Hoja de ejercicios resuelta"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Base, dimensión, cuatro subespacios fundamentales y teorema del rango y la nulidad",
+      "activity": "Diagnóstico grupal de la matriz de diseño del caso Caja Valle Norte y debate síncrono sobre qué columnas eliminar.",
+      "evidence": "Informe grupal del caso Caja Valle Norte"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Transformaciones lineales, determinante y cambio de base",
+      "activity": "Taller de transformaciones de imágenes con matrices de rotación, cizalla y escalamiento; resolución del cuestionario de la Unidad 2.",
+      "evidence": "Cuestionario de la Unidad 2"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Integración: redundancia en matrices de diseño y transformaciones en visión",
+      "activity": "Asesoría síncrona, revisión de avances entre pares y entrega del Laboratorio 2.",
+      "evidence": "Laboratorio 2: cuaderno e informe"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Producto interno, ortogonalidad y proyección sobre una recta",
+      "activity": "Aula invertida y ejercicios de proyección con verificación gráfica en Matplotlib.",
+      "evidence": "Ejercicios de proyección resueltos"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Proyección sobre subespacios, ecuaciones normales y proceso de Gram–Schmidt",
+      "activity": "Implementación guiada de Gram–Schmidt modificado y análisis del caso Luz del Pacífico en foro y debate síncrono.",
+      "evidence": "Aporte al foro del caso Luz del Pacífico"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Factorización QR, condicionamiento de AᵀA y mínimos cuadrados con lstsq",
+      "activity": "Comparación en vivo de ecuaciones normales, QR y lstsq con datos crudos y escalados; resolución del cuestionario de la Unidad 3.",
+      "evidence": "Cuestionario de la Unidad 3"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Ajuste de curvas, mínimos cuadrados ponderados y regularizados con series del BCRP",
+      "activity": "Asesoría sobre series del BCRP, revisión entre pares y entrega del Laboratorio 3.",
+      "evidence": "Laboratorio 3: cuaderno e informe técnico"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Valores y vectores propios, diagonalización y cadenas de Markov",
+      "activity": "Aula invertida y taller de cadenas de Markov y método de potencias con datos ilustrativos de portabilidad móvil.",
+      "evidence": "Ejercicios de cadenas de Markov resueltos"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "PageRank, teorema espectral, descomposición en valores singulares y teorema de Eckart–Young",
+      "activity": "Análisis del caso Ayni Market en debate síncrono y entrega de la propuesta del proyecto integrador.",
+      "evidence": "Propuesta del proyecto integrador"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Análisis de componentes principales, compresión de imágenes y sistemas de recomendación",
+      "activity": "Taller de SVD aplicada, asesoría de proyectos y resolución del cuestionario de la Unidad 4.",
+      "evidence": "Cuestionario de la Unidad 4 y avance del proyecto"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador y evaluación final",
+      "activity": "Sustentación oral del proyecto integrador ante el docente y el grupo, y examen final individual síncrono.",
+      "evidence": "Proyecto integrador sustentado y examen final"
+    }
+  ]
+}

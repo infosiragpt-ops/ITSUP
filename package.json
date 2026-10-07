@@ -1,21 +1,24 @@
 {
   "name": "isup-aula-virtual",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "ISUP — Instituto Superior Universitario Privado · Aula Virtual",
+  "description": "ISUP — Instituto Superior Universitario Privado · Aula Virtual (LMS alineado a la normativa MINEDU para IES)",
   "scripts": {
     "dev:server": "node --watch server/index.js",
     "dev:client": "vite --config client/vite.config.js",
     "build": "vite build --config client/vite.config.js",
     "start": "node server/index.js",
-    "seed": "node server/seed.js --reset"
+    "seed": "node --no-warnings server/seed.js --reset",
+    "check": "node --check server/index.js && node --check server/academic.js",
+    "local": "node scripts/local.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "multer": "^2.4.0"
+    "multer": "^2.4.0",
+    "pptxgenjs": "^4.0.1"
   },
   "devDependencies": {
     "@fontsource-variable/inter": "^5.3.0",
@@ -28,5 +31,8 @@
     "react-router-dom": "^7.18.4",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.2"
+  },
+  "engines": {
+    "node": ">=22.13"
   }
 }

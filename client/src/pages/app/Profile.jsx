@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Save, KeyRound, Moon, Sun, Mail, IdCard, GraduationCap } from 'lucide-react';
-import { api } from '../../lib/api.js';
+import { Save, KeyRound, Moon, Sun, Mail, IdCard, GraduationCap, ShieldCheck, Fingerprint } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { fmtDate } from '../../lib/format.js';
+import { api, setToken } from '../../lib/api.js';
 import { useAuth, useTheme, useUi } from '../../lib/context.jsx';
 import { Avatar, Badge, Button, Card, Field, Input, PageHeader, Textarea, cx } from '../../components/ui.jsx';
 import { ROLE_LABEL, fullName } from '../../lib/format.js';
@@ -34,7 +36,8 @@ export default function Profile() {
     if (pwd.next !== pwd.confirm) return toast('Las contraseñas nuevas no coinciden', 'error');
     setSavingPwd(true);
     try {
-      await api.put('/auth/password', pwd);
+      const r = await api.put('/auth/password', pwd);
+      if (r?.token) setToken(r.token); // las sesiones anteriores quedan cerradas; esta continúa con el token nuevo
       setPwd({ current: '', next: '', confirm: '' });
       toast('Contraseña actualizada');
     } catch (err) { toast(err.message, 'error'); } finally { setSavingPwd(false); }
@@ -51,10 +54,15 @@ export default function Profile() {
           <div className="mt-5 space-y-2 text-left text-sm text-ink-2">
             <div className="flex items-center gap-2"><Mail size={15} className="text-muted" /> <span className="truncate">{user.email}</span></div>
             {user.code && <div className="flex items-center gap-2"><IdCard size={15} className="text-muted" /> {user.code}</div>}
+            {user.dni && <div className="flex items-center gap-2"><Fingerprint size={15} className="text-muted" /> DNI <span className="font-mono">{user.dni}</span></div>}
             {user.program && <div className="flex items-center gap-2"><GraduationCap size={15} className="text-muted" /> {user.program.name}{user.cycle ? ` · Ciclo ${user.cycle}` : ''}</div>}
           </div>
           <div className="mt-6 border-t border-line pt-5">
             <Button variant="secondary" className="w-full" icon={theme === 'dark' ? Sun : Moon} onClick={toggle}>{theme === 'dark' ? 'Usar modo claro' : 'Usar modo oscuro'}</Button>
+          </div>
+          <div className="mt-4 rounded-xl bg-sunken p-3 text-left text-xs text-muted">
+            <div className="flex items-center gap-1.5 font-semibold text-ink"><ShieldCheck size={13} className="text-success" /> Datos personales</div>
+            <p className="mt-1">{user.consent_at ? `Aceptaste la política de privacidad (versión ${user.consent_version}) el ${fmtDate(user.consent_at)}.` : 'Aún no has aceptado la política de privacidad.'} <Link to="/privacidad" className="font-medium text-primary-ink underline">Ver política</Link>. Para corregir tu DNI o nombres legales escribe a Secretaría Académica desde Ayuda y soporte.</p>
           </div>
         </Card>
         <div className="space-y-6">
@@ -81,7 +89,7 @@ export default function Profile() {
             <h2 className="flex items-center gap-2 font-semibold text-ink"><KeyRound size={17} className="text-primary" /> Cambiar contraseña</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <Field label="Actual"><Input type="password" autoComplete="current-password" value={pwd.current} onChange={(e) => setPwd({ ...pwd, current: e.target.value })} /></Field>
-              <Field label="Nueva" hint="Mínimo 8 caracteres"><Input type="password" autoComplete="new-password" value={pwd.next} onChange={(e) => setPwd({ ...pwd, next: e.target.value })} /></Field>
+              <Field label="Nueva" hint="Mínimo 8 caracteres, letras y números"><Input type="password" autoComplete="new-password" value={pwd.next} onChange={(e) => setPwd({ ...pwd, next: e.target.value })} /></Field>
               <Field label="Confirmar"><Input type="password" autoComplete="new-password" value={pwd.confirm} onChange={(e) => setPwd({ ...pwd, confirm: e.target.value })} /></Field>
             </div>
             <div className="flex justify-end"><Button type="submit" variant="secondary" loading={savingPwd} disabled={!pwd.current || !pwd.next}>Actualizar contraseña</Button></div>

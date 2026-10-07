@@ -1,0 +1,1274 @@
+{
+  "name": "Automatización Inteligente de Procesos",
+  "slug": "automatizacion-inteligente-de-procesos",
+  "course_type": "especifica",
+  "module_name": "Desarrollo y despliegue de soluciones de inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Automatización Inteligente de Procesos (IAR-603) es un curso de formación específica, de naturaleza teórico-práctica, del sexto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante transforme procesos reales de organizaciones peruanas combinando gestión por procesos, automatización robótica, procesamiento inteligente de documentos, orquestación de flujos y modelos de inteligencia artificial, con criterios de valor, riesgo y supervisión humana. Integra lo aprendido en Aprendizaje Automático I y II, Procesamiento de Lenguaje Natural, Visión por Computadora, IA Generativa y Modelos de Lenguaje y Despliegue de Modelos (MLOps) sin repetirlo: aquí el modelo es un componente del proceso, no el fin. Comprende cuatro unidades: gestión de procesos, modelado BPMN y minería de procesos; automatización robótica y procesamiento inteligente de documentos, con énfasis en los comprobantes electrónicos de la SUNAT; orquestación, automatización de decisiones y agentes con intervención humana; y caso de negocio, gobernanza, cumplimiento normativo y proyecto integrador. Se dicta en paralelo con el Proyecto Integrador de Inteligencia Artificial y Ética y Gobernanza de la IA, y prepara las Experiencias Formativas. Aporta al perfil de egreso la capacidad de diseñar, implementar y sustentar automatizaciones inteligentes que generan valor medible.",
+  "competency": "Diseña, implementa y sustenta soluciones de automatización inteligente de procesos en organizaciones peruanas, descubriendo y midiendo procesos con modelado BPMN y minería de procesos, combinando automatización robótica, procesamiento inteligente de documentos, motores de flujo y modelos de inteligencia artificial con intervención humana calibrada, y justificándolas con un caso de negocio, controles de gobernanza y cumplimiento de la Ley 29733 y la Ley 31814.",
+  "capacities": [
+    "Analiza procesos de negocio mediante modelado BPMN 2.0, indicadores de desempeño y minería de procesos sobre registros de eventos, para diagnosticar cuellos de botella, variantes y desviaciones, y priorizar con evidencia las oportunidades de automatización.",
+    "Implementa automatizaciones robóticas y flujos de procesamiento inteligente de documentos en Python, combinando extracción, validaciones de negocio peruanas y umbrales de confianza que derivan los casos dudosos a revisión humana.",
+    "Orquesta procesos de extremo a extremo que integran sistemas, reglas de decisión, modelos predictivos y agentes basados en modelos de lenguaje, aplicando patrones de integración, idempotencia, compensación y observabilidad.",
+    "Formula el caso de negocio y el modelo de gobernanza de una automatización, cuantificando costos, beneficios y riesgos, y estableciendo controles, gestión del cambio y cumplimiento de la normativa peruana."
+  ],
+  "indicators": [
+    "Modela un proceso real en BPMN 2.0 en versiones AS-IS y TO-BE, respetando la semántica de eventos y compuertas y las guías de modelado 7PMG.",
+    "Descubre el modelo de un proceso con PM4Py a partir de un registro de eventos, reporta variantes, tiempos de espera y aptitud de conformidad, e interpreta los hallazgos con el dueño del proceso.",
+    "Prioriza candidatos a automatizar con una matriz ponderada que considera volumen, estabilidad, estructura de las entradas, tasa de excepciones y riesgo, y asigna la tecnología adecuada a cada actividad.",
+    "Construye un flujo de procesamiento de comprobantes que extrae campos, valida RUC, montos e IGV, controla duplicados y reporta tasa de procesamiento directo y error residual sobre un conjunto de prueba.",
+    "Diseña una orquestación con manejo de errores, reintentos, claves de idempotencia, compensación y tareas humanas, documentada con su tabla de decisión DMN.",
+    "Calcula umbrales de automatización a partir de los costos de error y de revisión, y justifica el nivel de supervisión humana asignado a cada función del proceso.",
+    "Presenta un caso de negocio con costo total de propiedad, VAN, periodo de recuperación y escenarios de sensibilidad, acompañado de un registro de riesgos y controles.",
+    "Sustenta oralmente un proyecto integrador de automatización inteligente, respondiendo con evidencia sobre desempeño, riesgos, cumplimiento normativo e impacto en las personas."
+  ],
+  "methodology": "El curso aplica el aprendizaje basado en proyectos: desde la semana 1 cada equipo adopta un proceso real o realista, como cuentas por pagar, reclamos o reembolsos, que diagnostica, automatiza y sustenta en la unidad 4. Cada unidad combina aula invertida, con lectura previa a la sesión síncrona; laboratorios guiados en Python con PM4Py, Playwright, Tesseract y un motor de flujos; y el método de casos, con discusión estructurada en foro y plenaria. Las sesiones síncronas se centran en decisiones: qué automatizar, con qué tecnología y con cuánta supervisión humana. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, revisión de código entre pares y tableros de avance. Toda afirmación exige evidencia cuantitativa, como registros de eventos, métricas de extracción o costos, y el uso de asistentes de IA debe declararse en cada entrega.",
+  "bibliography": [
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). Fundamentals of business process management (2.ª ed.). Springer.",
+    "Van der Aalst, W. M. P. (2016). Process mining: Data science in action (2.ª ed.). Springer.",
+    "Object Management Group. (2011). Business Process Model and Notation (BPMN), versión 2.0. Object Management Group.",
+    "Mendling, J., Reijers, H. A. y van der Aalst, W. M. P. (2010). Seven process modeling guidelines (7PMG). Information and Software Technology, 52(2), 127-136.",
+    "Lacity, M. y Willcocks, L. (2018). Robotic process and cognitive automation: The next phase. SB Publishing.",
+    "Van der Aalst, W. M. P., Bichler, M. y Heinzl, A. (2018). Robotic process automation. Business & Information Systems Engineering, 60(4), 269-272.",
+    "Hohpe, G. y Woolf, B. (2003). Enterprise integration patterns: Designing, building, and deploying messaging solutions. Addison-Wesley.",
+    "Davenport, T. H. (2018). The AI advantage: How to put the artificial intelligence revolution to work. MIT Press.",
+    "Parasuraman, R., Sheridan, T. B. y Wickens, C. D. (2000). A model for types and levels of human interaction with automation. IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans, 30(3), 286-297.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, laboratorios semanales, revisión de código entre pares y participación argumentada en el análisis de los casos, con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3 evaluadas con rúbrica: diagnóstico con minería de procesos, flujo de procesamiento inteligente de comprobantes y orquestación con decisiones calibradas y tareas humanas."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador de la unidad 4: automatización inteligente de extremo a extremo con caso de negocio, modelo de gobernanza, video demostrativo y sustentación oral ante jurado."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Gestión por procesos, modelado BPMN y minería de procesos",
+      "description": "Al finalizar la unidad, el estudiante modela procesos en BPMN 2.0, mide su desempeño con indicadores de tiempo, costo y calidad, descubre su comportamiento real mediante minería de procesos sobre registros de eventos y prioriza con evidencia qué actividades conviene automatizar y con qué tecnología.",
+      "topics": [
+        "Automatización inteligente: espectro de tecnologías, hiperautomatización y lecciones de la reingeniería y del Lean",
+        "Ciclo de vida de la gestión de procesos de negocio y arquitectura de procesos",
+        "Modelado con BPMN 2.0, guías 7PMG y tablas de decisión DMN",
+        "Indicadores de desempeño: tiempo de ciclo, eficiencia del flujo, ley de Little y costo por caso",
+        "Minería de procesos con PM4Py: descubrimiento, conformidad y mejora",
+        "Selección y priorización de candidatos a automatizar y elección de tecnología por actividad"
+      ],
+      "slides": [
+        {
+          "title": "Qué es la automatización inteligente de procesos",
+          "bullets": [
+            "Combina gestión por procesos, automatización de reglas y modelos de IA que perciben, predicen o generan, bajo supervisión humana calibrada.",
+            "Espectro tecnológico: integración por API, RPA, procesamiento inteligente de documentos, motores de flujo, reglas DMN, modelos predictivos y agentes con LLM.",
+            "La unidad de análisis es el proceso de extremo a extremo, no la tarea aislada ni el modelo; el valor se mide en tiempo, costo, calidad y experiencia.",
+            "Gartner popularizó el término «hiperautomatización» para la combinación coordinada de estas tecnologías: úselo como mapa de opciones, no como promesa."
+          ],
+          "notes": "Abra la sesión con una pregunta: ¿qué parte de su trabajo, o del de sus familiares, consiste en copiar datos de un sistema a otro? Sitúe el curso en la carrera: en Aprendizaje Automático I y II construyeron modelos, en Procesamiento de Lenguaje Natural y Visión por Computadora aprendieron a interpretar texto e imágenes, en IA Generativa usaron modelos de lenguaje y en Despliegue de Modelos aprendieron a operarlos. Aquí cambia la unidad de análisis: el modelo es una pieza dentro de un proceso donde también hay personas, reglas, sistemas heredados y plazos legales. Explique que el término hiperautomatización fue difundido por Gartner como tendencia tecnológica y que conviene usarlo como mapa de opciones, no como argumento de venta. Ponga un ejemplo peruano: un estudio contable que recibe miles de comprobantes al mes puede leer los XML de la SUNAT sin ningún modelo, usar OCR solo para fotografías de tickets y reservar a sus contadores para los casos dudosos. Cierre preguntando qué indicador usarían para saber si esa automatización realmente funcionó."
+        },
+        {
+          "title": "Lecciones de la reingeniería y del Lean antes de automatizar",
+          "bullets": [
+            "Hammer (1990): «no automatice, elimine»; digitalizar un proceso defectuoso solo acelera sus errores y consolida sus desperdicios.",
+            "Pensamiento Lean (Womack y Jones): distinguir actividades que agregan valor, necesarias sin valor y desperdicio puro antes de invertir en tecnología.",
+            "Desperdicios en oficinas: esperas, reprocesos, traslado de expedientes, sobreprocesamiento, inventario de casos, movimientos innecesarios y defectos.",
+            "Secuencia práctica: eliminar, simplificar, estandarizar las variantes y recién entonces automatizar lo que queda."
+          ],
+          "notes": "Recuerde el artículo de Michael Hammer publicado en Harvard Business Review en 1990, cuyo subtítulo era precisamente no automatizar sino eliminar, y el libro de Hammer y Champy de 1993. Su mensaje sigue vigente: si un trámite exige cinco firmas porque nadie confía en los datos, un robot que recoja esas firmas más rápido no resuelve la causa. Conecte con el pensamiento Lean de Womack y Jones, nacido del sistema de producción de Toyota, y traduzca los desperdicios a la oficina: expedientes que esperan en una bandeja, datos que se vuelven a digitar, aprobaciones redundantes, informes que nadie lee. Pida a los estudiantes que elijan un trámite que hayan vivido, como una matrícula, un reclamo a una operadora o un reembolso de seguro, y clasifiquen sus pasos en valor agregado, necesario sin valor y desperdicio. Insista en la secuencia: eliminar lo innecesario, simplificar, estandarizar y después automatizar. Automatizar primero suele congelar el desperdicio en código, que luego es caro de cambiar."
+        },
+        {
+          "title": "Ciclo de vida BPM según Dumas y colaboradores",
+          "bullets": [
+            "Seis fases: identificación, descubrimiento, análisis, rediseño, implementación, y monitoreo y control del proceso.",
+            "La identificación produce la arquitectura de procesos: estratégicos, misionales u operativos y de soporte, cada uno con un dueño responsable.",
+            "El rediseño puede ser incremental, con heurísticas de rediseño, o radical; la automatización es una opción de implementación, no un fin.",
+            "El monitoreo cierra el ciclo: los datos de ejecución alimentan un nuevo descubrimiento y la mejora continua."
+          ],
+          "notes": "Presente el ciclo de vida de Dumas, La Rosa, Mendling y Reijers, texto base del curso. La identificación responde qué procesos tiene la organización y cuáles importan más, y produce una arquitectura de procesos en niveles. El descubrimiento documenta cómo funciona el proceso hoy mediante entrevistas, talleres, revisión documental y, cada vez más, minería de procesos. El análisis cuantifica problemas; el rediseño propone cambios; la implementación incluye cambios organizacionales y tecnológicos, donde entra la automatización; el monitoreo verifica si el proceso cumple sus metas. En el sector público peruano, la Secretaría de Gestión Pública de la PCM emitió en 2018 una norma técnica para implementar la gestión por procesos en las entidades, y muchas municipalidades y ministerios cuentan con mapas de procesos en varios niveles. Pregunte: ¿en qué fase del ciclo suelen comenzar los proyectos de automatización en las empresas? La respuesta habitual es la implementación, saltándose el descubrimiento y el análisis, y esa es una causa frecuente de fracaso."
+        },
+        {
+          "title": "BPMN 2.0: elementos esenciales para modelar",
+          "bullets": [
+            "Objetos de flujo: eventos de inicio, intermedios y de fin; actividades, como tareas y subprocesos; y compuertas que dividen o unen el flujo.",
+            "Compuertas: exclusiva elige un camino, paralela activa todos, inclusiva activa uno o más; la basada en eventos espera lo que ocurra primero.",
+            "Piscinas y carriles asignan responsabilidades; el flujo de mensajes conecta participantes distintos, nunca carriles de una misma piscina.",
+            "Tipos de tarea clave para automatizar: de usuario, de servicio, de script, manual, de regla de negocio y de envío o recepción de mensajes."
+          ],
+          "notes": "Trabaje con un ejemplo en vivo: aprobación de reembolsos de gastos de viaje en una empresa minera de Arequipa. Dibuje un evento de inicio de mensaje cuando llega la solicitud, una tarea de usuario para revisar el sustento, una tarea de regla de negocio para aplicar la política, una compuerta exclusiva que pregunta si se aprueba, una tarea de servicio que registra en el ERP y un evento de fin. Explique la diferencia entre flujo de secuencia y flujo de mensajes: dentro de una piscina se usa secuencia; entre la empresa y el banco, mensajes. Advierta el error clásico: dividir con compuerta exclusiva y unir con compuerta paralela produce un bloqueo, porque la unión paralela espera fichas de todos los caminos y solo llegará una. Muestre también que la compuerta basada en eventos sirve para esperar lo que ocurra primero, por ejemplo la respuesta del proveedor o el vencimiento de un plazo de cinco días. Pregunte qué tipo de tarea usarían para un paso que ejecutará un robot RPA: normalmente una tarea de servicio, anotada explícitamente."
+        },
+        {
+          "title": "Guías 7PMG y errores frecuentes de modelado",
+          "bullets": [
+            "Mendling, Reijers y van der Aalst (2010): usar el menor número de elementos, minimizar rutas por elemento y un solo evento de inicio y de fin.",
+            "Modelar de forma estructurada: cada compuerta de división tiene su compuerta de unión del mismo tipo.",
+            "Evitar compuertas inclusivas, etiquetar actividades con verbo y objeto, como «Validar comprobante», y descomponer modelos de más de 50 elementos.",
+            "Errores típicos: bloqueo por unir con paralela tras dividir con exclusiva, eventos sin disparador y carriles que mezclan sistemas con personas."
+          ],
+          "notes": "Las guías 7PMG surgieron de estudios empíricos sobre la comprensibilidad y la tasa de errores de modelos de procesos reales. Explique cada una con un contraejemplo: un modelo con tres eventos de inicio confunde al lector sobre cuándo empieza realmente el proceso; un modelo no estructurado, donde una compuerta exclusiva se cierra con otra de tipo diferente, aumenta la probabilidad de errores de comportamiento. La guía de etiquetado verbo más objeto parece menor, pero reduce ambigüedades al automatizar: «Validar comprobante» describe una acción concreta que puede convertirse en tarea de servicio; «Comprobante» no. Recomiende descomponer modelos grandes en subprocesos, porque los autores asocian el tamaño con mayor probabilidad de error. Proyecte un modelo con errores intencionales y pida a la clase encontrar al menos cinco en tres minutos, justificando cada hallazgo con la guía correspondiente. Cierre recordando que un modelo AS-IS honesto, aunque poco elegante, vale más que un TO-BE vistoso sin evidencia que lo respalde."
+        },
+        {
+          "title": "DMN: separar las decisiones del flujo",
+          "bullets": [
+            "El estándar DMN de la OMG modela decisiones como tablas con entradas, salidas y reglas, invocadas desde una tarea de regla de negocio.",
+            "Políticas de acierto: UNIQUE exige reglas excluyentes, FIRST aplica la primera regla que coincide y COLLECT reúne varias salidas.",
+            "Ventaja: el área usuaria actualiza montos o condiciones sin tocar el flujo ni el código, y cada versión de la tabla es auditable.",
+            "Ejemplo: aprobar un reembolso según monto, tipo de gasto, comprobante electrónico válido y puntaje de riesgo de un modelo."
+          ],
+          "notes": "DMN, Decision Model and Notation, es el estándar complementario de BPMN publicado por la OMG. Su idea central es separar qué se decide de cómo fluye el trabajo. Muestre una tabla de decisión de reembolsos con entradas de monto, tipo de gasto y validez del comprobante, y una salida de decisión. Con la política UNIQUE cada combinación debe caer en una sola regla, y el motor alerta si hay solapamientos; con FIRST el orden importa y conviene colocar las excepciones arriba. Explique el valor organizacional: cuando finanzas cambia el tope de S/ 500 a S/ 800, se modifica una celda versionada, no un programa. Mencione que el lenguaje FEEL permite expresiones en las celdas. Relacione con la carrera: una tabla DMN puede consumir el puntaje de un modelo de aprendizaje automático como una entrada más, de modo que la política sobre cómo usar la predicción queda explícita y auditable. Pregunte qué riesgos aparecen cuando las reglas de negocio viven escondidas dentro del código de un robot que nadie revisa."
+        },
+        {
+          "title": "Medir el proceso: tiempo, costo, calidad y flexibilidad",
+          "bullets": [
+            "Cuadrilátero del diablo (Brand y van der Kolk): tiempo, costo, calidad y flexibilidad compiten; mejorar una dimensión suele empeorar otra.",
+            "Tiempo de ciclo = tiempo de procesamiento + tiempo de espera; en procesos administrativos la espera suele dominar.",
+            "Eficiencia del flujo = tiempo que agrega valor / tiempo de ciclo; en trámites con muchas esperas puede caer por debajo del 10 %.",
+            "Costo por caso = (mano de obra + sistemas + reprocesos) / casos completados en el periodo; un caso que regresa dos veces cuesta el triple."
+          ],
+          "notes": "Introduzca el cuadrilátero del diablo, formulado por Brand y van der Kolk y difundido por Dumas y colaboradores: tiempo, costo, calidad y flexibilidad compiten entre sí. Una automatización rígida puede bajar costo y tiempo, pero reducir la flexibilidad para atender casos atípicos. Defina con precisión el tiempo de ciclo como el intervalo entre el inicio y el fin del caso, y descompóngalo en procesamiento y espera. Haga un ejercicio: una solicitud de crédito tarda seis días hábiles, pero la suma de tiempos de trabajo efectivo es de cincuenta minutos. La eficiencia del flujo es muy baja, y ningún robot que acelere esos cincuenta minutos cambiará la experiencia del cliente; lo que importa son las esperas. Explique que el costo por caso debe incluir los reprocesos, porque cada vuelta consume trabajo adicional. Advierta que la cifra de 10 % no es una norma: hay que medirla antes de suponerla. Pida a los equipos que definan para su proceso del proyecto un indicador de cada dimensión y la fuente de datos de la que lo obtendrían."
+        },
+        {
+          "title": "Ley de Little aplicada a procesos administrativos",
+          "bullets": [
+            "En régimen estable: casos en curso = tasa de salida × tiempo de ciclo promedio, es decir, L = λ · W.",
+            "Ejemplo: 600 reclamos abiertos y 120 cierres por día hábil implican un tiempo de ciclo promedio de 5 días hábiles.",
+            "Para reducir el tiempo de ciclo sin más personal hay que reducir el inventario de casos: limitar el trabajo en curso o eliminar esperas.",
+            "La ley exige estabilidad; en picos estacionales, como la campaña de renta anual, mida por ventanas de tiempo cortas."
+          ],
+          "notes": "La ley de Little, demostrada por John Little en 1961, relaciona el número promedio de casos en el sistema, la tasa de llegada y el tiempo promedio en el sistema, sin importar la distribución de llegadas ni el orden de atención, siempre que el sistema sea estable. Resuelva el ejemplo de la diapositiva y luego un caso peruano: el Libro de Reclamaciones obliga a responder en un plazo de 15 días hábiles; si un área tiene 1 800 reclamos abiertos y cierra 100 por día hábil, su tiempo promedio es de 18 días y está incumpliendo en promedio, aun cuando el equipo se perciba muy ocupado. Muestre la implicancia de gestión: para cumplir el plazo con la misma capacidad hay que reducir el inventario de casos, por ejemplo con un frente de clasificación automática que resuelva consultas simples y detecte duplicados. Advierta que en meses de campaña, como la declaración anual del impuesto a la renta, el sistema no es estable y conviene medir por semanas. Pida a la clase calcular el inventario máximo compatible con el plazo legal."
+        },
+        {
+          "title": "Registros de eventos: la materia prima de la minería de procesos",
+          "bullets": [
+            "Atributos mínimos: identificador de caso, actividad y marca de tiempo; opcionales: recurso, costo, canal y atributos del caso.",
+            "Fuentes típicas: tablas de auditoría del ERP, historial de tickets y bitácoras del sistema de trámite documentario o del CRM.",
+            "Estándares: XES (IEEE 1849) y OCEL para registros centrados en objetos, como pedidos, facturas y pagos relacionados entre sí.",
+            "Calidad: relojes desincronizados, eventos faltantes, granularidad dispar y datos personales que exigen seudonimización según la Ley 29733."
+          ],
+          "notes": "Explique que la minería de procesos parte de una premisa simple: los sistemas de información ya registran lo que ocurre. Un evento es una actividad ejecutada en un caso en un momento dado. Muestre una tabla de ejemplo con columnas id_caso, actividad, fecha_hora y recurso, extraída de la tabla de auditoría de un ERP. Mencione el estándar XES, aprobado por la IEEE, y el formato OCEL para registros centrados en objetos, útil cuando un pedido genera varias facturas y un pago cubre varias facturas, situación en la que forzar un único identificador de caso distorsiona el análisis. Dedique tiempo a la calidad de datos: servidores con zonas horarias distintas, actividades registradas solo al finalizar y usuarios genéricos que ocultan quién trabajó. Recuerde la Ley 29733: los nombres de trabajadores y clientes deben seudonimizarse antes del análisis, y la finalidad debe ser la mejora del proceso, no la vigilancia individual. Pregunte qué sistema de su proceso del proyecto registra las marcas de tiempo necesarias y quién autorizaría su extracción."
+        },
+        {
+          "title": "Descubrimiento de procesos: algoritmos y criterios de elección",
+          "bullets": [
+            "Grafo de seguimiento directo: rápido e intuitivo, pero sin semántica de concurrencia; útil para explorar, peligroso para concluir.",
+            "Minero alfa: histórico y didáctico; falla con ruido, bucles cortos y actividades duplicadas.",
+            "Minero heurístico: usa frecuencias y umbrales de dependencia, por lo que tolera mejor el ruido de los registros reales.",
+            "Minero inductivo (Leemans, Fahland y van der Aalst, 2013): garantiza modelos sólidos estructurados en bloques; su umbral de ruido filtra lo infrecuente."
+          ],
+          "notes": "Presente los algoritmos con un mismo registro pequeño para que la clase compare resultados. El grafo de seguimiento directo cuenta cuántas veces una actividad sigue inmediatamente a otra; es lo que muestran por defecto muchas herramientas comerciales, pero no distingue concurrencia de alternancia y puede sugerir caminos que nunca ocurrieron completos. El minero alfa, propuesto por van der Aalst y colaboradores a inicios de la década de 2000, fue el primero en descubrir redes de Petri con concurrencia, pero es sensible al ruido. El minero heurístico de Weijters filtra dependencias poco frecuentes. El minero inductivo descompone el registro recursivamente en operadores de secuencia, exclusión, paralelismo y bucle, y produce modelos sólidos por construcción. Muestre cómo el umbral de ruido cambia el modelo: con cero aparece un espagueti ilegible; con 0,2 emerge la estructura principal. Pregunte qué se pierde al filtrar: precisamente las excepciones que suelen costar más dinero y que luego deberá atender una persona."
+        },
+        {
+          "title": "Conformidad: ¿el proceso real sigue la norma?",
+          "bullets": [
+            "Compara el registro con un modelo normativo mediante reproducción de fichas o alineamientos, más precisos y costosos de calcular.",
+            "Cuatro criterios de calidad de un modelo: aptitud, precisión, generalización y simplicidad.",
+            "Desviaciones típicas: pagos sin orden de compra aprobada, aprobaciones saltadas, retrabajo en bucle y segregación de funciones vulnerada.",
+            "Un hallazgo de conformidad no equivale a fraude: valide con el dueño del proceso antes de concluir."
+          ],
+          "notes": "La conformidad compara lo que debería ocurrir con lo que ocurre. Explique la reproducción de fichas: cada traza avanza sobre la red de Petri y se cuentan fichas faltantes y sobrantes; la aptitud resume qué tan bien el modelo explica el registro. Los alineamientos encuentran la correspondencia de menor costo entre traza y modelo, y permiten diagnósticos más finos a mayor costo computacional. Defina los cuatro criterios de calidad: aptitud para reproducir el registro, precisión para no permitir comportamiento inexistente, generalización para no ajustarse en exceso y simplicidad. Use un ejemplo de compras: el 6 % de los pagos se ejecutó sin orden de compra aprobada. Antes de alertar a auditoría, verifique con el dueño del proceso: puede tratarse de servicios públicos, tributos o alquileres que no requieren orden. Relacione con el control interno: la conformidad continua es un control detectivo que las auditorías financieras valoran cada vez más. Pregunte qué desviación de su proceso del proyecto sería la más grave."
+        },
+        {
+          "title": "Mejora: variantes, cuellos de botella y traspasos de trabajo",
+          "bullets": [
+            "Análisis de variantes: con frecuencia unas pocas variantes cubren la mayoría de casos; automatice primero el camino feliz frecuente.",
+            "Los tiempos de espera entre actividades revelan cuellos de botella; reporte mediana y percentil 90, no solo promedios.",
+            "Las redes de traspaso de trabajo muestran rebotes entre áreas y concentración de carga en pocas personas.",
+            "Herramientas: PM4Py, de código abierto en Python; Celonis y Disco, comerciales; Apromore, de origen académico."
+          ],
+          "notes": "Explique que en la mayoría de procesos reales las variantes siguen una distribución de cola larga: pocas variantes concentran gran parte de los casos y cientos de variantes aparecen una o dos veces. Esto orienta la automatización: robotizar el camino feliz frecuente y derivar la cola larga a personas. Para los cuellos de botella, enseñe a mirar el tiempo de espera entre pares de actividades y a reportar mediana y percentil 90, porque los promedios esconden casos atascados durante semanas. La red de traspaso de trabajo muestra cuándo un expediente rebota varias veces entre contabilidad y logística; ese ir y venir suele indicar reglas poco claras o datos maestros defectuosos. Mencione las herramientas: PM4Py, que usaremos en el laboratorio, es de código abierto y fue desarrollada en el Instituto Fraunhofer FIT; Celonis y Disco son comerciales; Apromore tiene origen académico. Proponga una pregunta crítica: si el análisis revela que una persona concentra la mitad de las aprobaciones, ¿es un problema de proceso o de esa persona?"
+        },
+        {
+          "title": "¿Qué automatizar? Matriz de priorización con evidencia",
+          "bullets": [
+            "Automatizabilidad: reglas claras, entradas estructuradas o estructurables, alto volumen, proceso estable y sistemas accesibles.",
+            "Valor: horas liberadas, errores evitados, impacto en el cliente y en el cumplimiento normativo, y velocidad de respuesta.",
+            "Puntaje ponderado P = Σ wᵢ·xᵢ en escala de 1 a 5; la estabilidad y la tasa de excepciones funcionan como filtros previos.",
+            "Matriz de facilidad frente a valor: empiece por ganancias rápidas que construyan confianza, datos y patrocinio."
+          ],
+          "notes": "Presente la matriz como una herramienta de conversación con el negocio, no como una fórmula mágica. Cada criterio se califica de 1 a 5 con evidencia: el volumen sale del registro de eventos; la tasa de excepciones, del análisis de variantes; la estabilidad, de la frecuencia de cambios del sistema o de la norma aplicable. Los pesos se acuerdan con el patrocinador antes de puntuar, para evitar ajustarlos a favor de un candidato preferido. Explique por qué un proceso con muchas excepciones o en plena reorganización es mal candidato: el robot quedará obsoleto antes de recuperar su inversión. Ilustre con tres candidatos de una empresa de distribución: registro de facturas de proveedores, conciliación bancaria diaria y elaboración del informe mensual de gerencia. Pida a los equipos calificarlos de forma independiente y comparar resultados: las diferencias revelan supuestos distintos que deben discutirse abiertamente. Recalque que las ganancias rápidas generan confianza, datos y patrocinio para candidatos más ambiciosos en los siguientes ciclos de la cartera."
+        },
+        {
+          "title": "Elegir la tecnología adecuada para cada actividad",
+          "bullets": [
+            "Si el sistema expone una API estable, integre: es más robusto y barato de mantener que un robot que simula clics.",
+            "RPA para sistemas heredados sin API; procesamiento inteligente de documentos para entradas no estructuradas; DMN para decisiones explícitas.",
+            "Modelos predictivos cuando la decisión depende de patrones históricos; LLM para texto libre, clasificación abierta y redacción asistida.",
+            "Toda decisión con impacto en los derechos de las personas requiere supervisión humana y trazabilidad, sin importar la tecnología."
+          ],
+          "notes": "Cierre la unidad con un árbol de decisión tecnológica. Primero, ¿el sistema ofrece una API o un mecanismo de integración estable? Si es así, integre: un robot que simula clics depende del diseño de la pantalla y se rompe con cada actualización. Segundo, ¿la tarea opera sobre un sistema heredado o un portal sin API? Entonces la RPA puede ser una solución táctica razonable, con fecha de revisión. Tercero, ¿la entrada es un documento? Use procesamiento inteligente de documentos, priorizando versiones estructuradas como el XML de los comprobantes electrónicos. Cuarto, ¿la decisión es explícita? Modele reglas en DMN. Quinto, ¿depende de patrones históricos? Use un modelo predictivo como los que construyeron en Aprendizaje Automático. Sexto, ¿hay texto libre o se requiere redactar? Use un LLM con salida estructurada. Enfatice la última viñeta: la supervisión humana no depende de la tecnología, sino del impacto de la decisión en las personas. Encargue leer el caso Distribuidora Pacífico Norte para la siguiente sesión."
+        }
+      ],
+      "reading": {
+        "title": "Del proceso real al candidato de automatización: medir, descubrir y priorizar",
+        "minutes": 40,
+        "content": "## Por qué empezar por el proceso\n\nLas organizaciones que automatizan suelen comenzar por la herramienta: compran licencias de RPA o contratan un piloto con un modelo de lenguaje y buscan después dónde usarlos. La gestión de procesos de negocio (BPM) propone el orden inverso. Dumas, La Rosa, Mendling y Reijers (2018) describen un ciclo de vida de seis fases —identificación, descubrimiento, análisis, rediseño, implementación y monitoreo— en el que la automatización es solo una de varias opciones de implementación. La advertencia de Hammer (1990) sigue vigente: automatizar un proceso defectuoso solo produce errores más rápido.\n\n## Medir antes de opinar\n\nUn proceso se evalúa en cuatro dimensiones que compiten entre sí: tiempo, costo, calidad y flexibilidad. En la dimensión tiempo, el indicador central es el **tiempo de ciclo**, desde que el caso inicia hasta que termina. Se descompone en tiempo de procesamiento y tiempo de espera, y de esa descomposición surge la **eficiencia del flujo**:\n\n```text\nEficiencia del flujo = tiempo de procesamiento con valor / tiempo de ciclo\n```\n\nSi una solicitud de reembolso tarda 8 días hábiles (64 horas laborables) y recibe 1,6 horas de trabajo efectivo, su eficiencia es 1,6 / 64 = 2,5 %. Un robot que reduzca a la mitad esas 1,6 horas apenas moverá el tiempo de ciclo; eliminar esperas, en cambio, lo transforma.\n\nLa **ley de Little** relaciona tres magnitudes en un sistema estable:\n\n```text\nL = λ · W\nL: casos en curso   λ: casos completados por unidad de tiempo   W: tiempo de ciclo promedio\n```\n\nUn área de atención con 1 800 reclamos abiertos que cierra 100 por día hábil tiene W = 18 días hábiles, por encima del plazo de 15 días hábiles del Libro de Reclamaciones. Para cumplir sin contratar, debe reducir L: filtrar consultas simples, resolver duplicados o limitar el trabajo en curso.\n\n## Descubrir el proceso real con minería de procesos\n\nLas entrevistas revelan cómo las personas creen que funciona el proceso; los registros de eventos muestran cómo funciona. Van der Aalst (2016) distingue tres tipos de minería de procesos: **descubrimiento**, que obtiene un modelo a partir del registro; **conformidad**, que compara el registro con un modelo normativo; y **mejora**, que enriquece el modelo con tiempos, costos o recursos. Un registro de eventos requiere, como mínimo, identificador de caso, actividad y marca de tiempo.\n\nEl siguiente fragmento usa PM4Py sobre un registro de cuentas por pagar extraído del ERP y seudonimizado conforme a la Ley 29733:\n\n```python\nimport pandas as pd\nimport pm4py\n\ndf = pd.read_csv('cxp_eventos.csv', sep=';')\ndf = pm4py.format_dataframe(df, case_id='id_factura',\n                            activity_key='actividad',\n                            timestamp_key='fecha_hora')\n\n# 1. Descubrimiento: minero inductivo que filtra comportamiento infrecuente\nred, ini, fin = pm4py.discover_petri_net_inductive(df, noise_threshold=0.2)\n\n# 2. Conformidad: aptitud por reproducción de fichas sobre el registro completo\napt = pm4py.fitness_token_based_replay(df, red, ini, fin)\nprint(round(apt['log_fitness'], 3))\n\n# 3. Variantes: frecuencia de cada secuencia de actividades\nvariantes = pm4py.get_variants(df)\ntop = sorted(variantes.items(), key=lambda kv: kv[1], reverse=True)[:5]\n```\n\nTres lecturas son claves. Primero, una **aptitud** cercana a 1 indica que el modelo explica el registro; si es baja, el umbral filtró demasiado o el proceso es caótico. Segundo, las **variantes** suelen seguir una cola larga: unas pocas secuencias concentran la mayoría de los casos, lo que sugiere automatizar primero el camino feliz y derivar la cola larga a personas. Tercero, los **tiempos de espera** entre actividades, analizados con mediana y percentil 90, localizan los cuellos de botella mejor que cualquier promedio.\n\n## Priorizar con criterios explícitos\n\nCon el diagnóstico en mano, cada candidato se califica de 1 a 5 en criterios de automatizabilidad (reglas claras, entradas estructuradas, estabilidad, sistemas accesibles) y de valor (volumen, horas liberadas, errores evitados, impacto en el cliente y en el cumplimiento):\n\n```text\nP = Σ wᵢ · xᵢ     con Σ wᵢ = 1\n```\n\nLos pesos se acuerdan con el patrocinador antes de puntuar. Un candidato con alto volumen, pero con 35 % de excepciones o con un sistema que se reemplazará en seis meses, debe postergarse aunque su puntaje sea alto: la estabilidad funciona como filtro, no como sumando.\n\n## Elegir la tecnología por actividad\n\nLa pregunta final no es si usar RPA o IA, sino qué tecnología corresponde a cada actividad: integración por API cuando existe, RPA para sistemas heredados sin interfaz programática, procesamiento inteligente de documentos para entradas no estructuradas, tablas DMN para decisiones explícitas, modelos predictivos para patrones históricos y modelos de lenguaje para texto libre. Davenport (2018) resume la experiencia de numerosos proyectos: los retornos más consistentes provienen de iniciativas acotadas y bien integradas en los procesos existentes, no de proyectos grandilocuentes. El resto del curso desarrolla cada una de estas piezas."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Pacífico Norte y el cuello de botella en cuentas por pagar",
+        "content": "Distribuidora Pacífico Norte S.A.C. es una empresa de distribución de productos de consumo masivo con sede en Trujillo, almacenes en Chiclayo y Piura, y una facturación anual cercana a S/ 210 millones. Trabaja con unos 380 proveedores, de los cuales el 70 % son mypes regionales que dependen de cobrar a tiempo para sostener su capital de trabajo.\n\nEl área de cuentas por pagar tiene seis analistas y recibe en promedio 2 400 facturas electrónicas al mes. El proceso formal, según el manual de 2019, es: recepción del XML y del PDF por correo, registro manual en el ERP, conciliación con la orden de compra y la guía de remisión, aprobación del jefe de compras de la sede, programación del pago y transferencia bancaria. La política comercial promete pagar a 30 días.\n\nEn los últimos meses, la cámara de comercio regional ha recibido quejas de proveedores por retrasos y dos transportistas suspendieron el servicio. La gerente de finanzas, Rocío Valdivia, propone contratar un robot RPA que digite las facturas en el ERP: un proveedor le ofreció implementarlo en seis semanas por S/ 48 000 más licencias anuales.\n\nAntes de aprobar, el analista de mejora continua, Martín Chávez, extrajo seis meses de la tabla de auditoría del ERP (14 300 casos) y aplicó minería de procesos con PM4Py. Sus hallazgos fueron:\n\n- Tiempo de ciclo desde la recepción hasta el pago: mediana de 34 días calendario y percentil 90 de 58 días.\n- Registro manual en el ERP: 9 minutos de trabajo efectivo por factura y una espera mediana de 1,5 días hasta ser registrada.\n- Espera entre la conciliación y la aprobación del jefe de compras: mediana de 13 días; en Piura, 21 días.\n- Solo el 54 % de los casos sigue el camino feliz; existen 212 variantes y las cinco más frecuentes cubren el 81 % de los casos.\n- El 23 % de las facturas regresa al menos una vez de aprobación a conciliación por diferencias de precio o cantidad con la orden de compra.\n- El 4,8 % de los pagos se ejecutó sin orden de compra aprobada en el sistema.\n- En promedio hay 2 950 facturas en curso.\n\nMartín sostiene que el robot atacaría una parte menor del tiempo de ciclo y que la causa principal está en las aprobaciones y en las diferencias con las órdenes de compra, que se originan en el área de compras. Rocío responde que necesita una solución visible antes del cierre del trimestre, que el robot liberará a dos analistas y que rediseñar el proceso con compras tomará un año. El gerente general les pide una recomendación conjunta para el comité de la próxima semana.",
+        "questions": [
+          "Con los datos de minería, ¿dónde está realmente el cuello de botella y qué proporción del tiempo de ciclo eliminaría el robot de digitación propuesto por la gerencia?",
+          "Aplique la ley de Little: si la espera de aprobación bajara de 13 a 2 días, ¿cuántas facturas en curso tendría la empresa y cumpliría la promesa de pago a 30 días?",
+          "¿Qué rediseño propondría antes de automatizar y qué actividades priorizaría con la matriz de automatizabilidad? Justifique la tecnología elegida para cada una.",
+          "¿Qué riesgos revela el 4,8 % de pagos sin orden de compra aprobada y cómo validaría ese hallazgo con el dueño del proceso antes de concluir?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: diagnóstico de un proceso con BPMN y minería de procesos",
+        "instructions": "**Objetivo:** diagnosticar con evidencia el proceso elegido por tu equipo y priorizar las actividades candidatas a automatizar.\n\n**Insumos:** el registro de eventos de tu proceso, extraído de un sistema real y seudonimizado según la Ley 29733, o, si no tienes acceso a uno, el registro sintético de cuentas por pagar disponible en el aula virtual.\n\n**Qué entregar:**\n\n1. Modelo AS-IS en BPMN 2.0 con piscinas y carriles que cumpla las guías 7PMG, y modelo TO-BE con los cambios propuestos.\n2. Cuaderno de Python con PM4Py que incluya descubrimiento con el minero inductivo (justifica el umbral de ruido), aptitud de conformidad, las cinco variantes más frecuentes con su cobertura y los tiempos de espera entre actividades con mediana y percentil 90.\n3. Tabla de indicadores de línea base: tiempo de ciclo, eficiencia del flujo, casos en curso contrastados con la ley de Little, tasa de reprocesos y costo estimado por caso.\n4. Matriz de priorización con al menos cinco actividades candidatas, pesos acordados y justificados, y la tecnología propuesta para cada una.\n5. Informe ejecutivo de máximo cuatro páginas con hallazgos, rediseño previo a la automatización y recomendación.\n\n**Formato:** un archivo comprimido con el informe en PDF, los archivos .bpmn y el cuaderno .ipynb ejecutable.\n\n**Criterios:** se evalúa la corrección semántica de los modelos, el rigor del análisis de datos, la coherencia entre la evidencia y la priorización, y la claridad para un lector gerencial.",
+        "rubric": [
+          {
+            "name": "Modelado BPMN AS-IS y TO-BE según 7PMG",
+            "points": 5
+          },
+          {
+            "name": "Minería de procesos e indicadores de línea base",
+            "points": 6
+          },
+          {
+            "name": "Matriz de priorización y elección tecnológica justificada",
+            "points": 5
+          },
+          {
+            "name": "Informe ejecutivo: claridad y uso de evidencia",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: procesos, indicadores y minería de procesos",
+        "questions": [
+          {
+            "prompt": "Un área de reclamos mantiene en promedio 450 casos abiertos y cierra 90 casos por día hábil en régimen estable. Según la ley de Little, ¿cuál es el tiempo de ciclo promedio?",
+            "options": [
+              "4,5 días hábiles",
+              "5 días hábiles",
+              "9 días hábiles",
+              "0,2 días hábiles"
+            ],
+            "correct": 1,
+            "explanation": "W = L / λ = 450 / 90 = 5 días hábiles. La ley de Little exige estabilidad, pero no depende de la distribución de llegadas ni del orden de atención."
+          },
+          {
+            "prompt": "Una solicitud tarda 40 horas laborables de inicio a fin y recibe 2 horas de trabajo que agrega valor. Un robot reduciría esas 2 horas a 1. ¿Qué conclusión es la más correcta?",
+            "options": [
+              "La eficiencia del flujo es 5 % y la mayor palanca está en eliminar esperas",
+              "La eficiencia del flujo es 95 % y el robot es la mejor inversión",
+              "La eficiencia del flujo es 20 % y el robot duplicará la velocidad del proceso",
+              "El robot reducirá el tiempo de ciclo a la mitad, de 40 a 20 horas"
+            ],
+            "correct": 0,
+            "explanation": "2 / 40 = 5 %. El robot ahorra 1 hora de 40, apenas 2,5 % del ciclo; las 38 horas de espera son la verdadera oportunidad de mejora."
+          },
+          {
+            "prompt": "En un modelo BPMN, el flujo se divide con una compuerta exclusiva en dos caminos y luego se une con una compuerta paralela. ¿Qué ocurre al ejecutar una instancia?",
+            "options": [
+              "El proceso ejecuta ambos caminos al mismo tiempo",
+              "El motor convierte automáticamente la unión en exclusiva",
+              "El proceso termina dos veces, una por cada camino",
+              "La instancia se bloquea porque la unión paralela espera un camino que nunca se activó"
+            ],
+            "correct": 3,
+            "explanation": "La compuerta paralela de unión sincroniza todos sus flujos entrantes; como la exclusiva activó solo uno, la instancia queda bloqueada indefinidamente. Por eso 7PMG recomienda modelos estructurados."
+          },
+          {
+            "prompt": "Su registro de eventos contiene ruido y actividades poco frecuentes, y necesita un modelo sólido y estructurado para analizar la conformidad. ¿Qué enfoque es el más apropiado?",
+            "options": [
+              "Grafo de seguimiento directo sin filtros",
+              "Minero alfa sobre el registro completo",
+              "Minero inductivo con un umbral de ruido justificado",
+              "Dibujar el modelo a partir de la entrevista con el jefe del área"
+            ],
+            "correct": 2,
+            "explanation": "El minero inductivo garantiza redes sólidas estructuradas en bloques y su umbral filtra lo infrecuente; el alfa es sensible al ruido y el grafo directo carece de semántica de concurrencia."
+          },
+          {
+            "prompt": "El análisis de conformidad revela que el 6 % de los pagos se ejecutó sin orden de compra aprobada. ¿Cuál es el siguiente paso más adecuado?",
+            "options": [
+              "Reportar de inmediato un fraude a la gerencia general",
+              "Validar con el dueño del proceso si hay gastos exceptuados y examinar esas trazas",
+              "Eliminar esos casos del registro para mejorar la aptitud",
+              "Automatizar los pagos para que el robot impida cualquier excepción"
+            ],
+            "correct": 1,
+            "explanation": "Una desviación no equivale a fraude: pueden existir excepciones legítimas, como servicios públicos o tributos. Se valida el hallazgo y se examinan las trazas antes de concluir o diseñar controles."
+          },
+          {
+            "prompt": "El sistema de pedidos de un cliente corporativo expone una API documentada y estable. Un analista propone un robot RPA que copie los pedidos desde la pantalla. ¿Qué recomienda?",
+            "options": [
+              "Usar RPA porque siempre se implementa más rápido",
+              "Aplicar OCR a capturas de pantalla del sistema",
+              "Integrar mediante la API, más robusta y barata de mantener",
+              "Mantener el proceso manual hasta contar con un modelo de lenguaje"
+            ],
+            "correct": 2,
+            "explanation": "Cuando existe una API estable, la integración directa evita la fragilidad de los selectores de pantalla y reduce el mantenimiento. La RPA es una solución táctica para sistemas sin interfaz programática."
+          },
+          {
+            "prompt": "¿Cuál de estos candidatos debería priorizarse para automatizar primero, según los criterios de automatizabilidad y valor?",
+            "options": [
+              "Registro diario de 400 facturas electrónicas con reglas claras y ERP estable",
+              "Elaboración del informe estratégico anual para el directorio",
+              "Proceso de compras que se reorganizará el próximo trimestre",
+              "Atención de reclamos complejos con 60 % de casos atípicos"
+            ],
+            "correct": 0,
+            "explanation": "Combina alto volumen, entradas estructuradas, reglas claras y sistema estable. Los demás fallan en estabilidad, volumen o proporción de excepciones."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Automatización robótica y procesamiento inteligente de documentos",
+      "description": "Al finalizar la unidad, el estudiante implementa robots de software y flujos de procesamiento inteligente de documentos en Python, con extracción de campos, validaciones de negocio peruanas, manejo de excepciones e idempotencia, y umbrales de confianza que derivan los casos dudosos a revisión humana, midiendo su desempeño con métricas de extracción y de procesamiento directo.",
+      "topics": [
+        "Automatización robótica de procesos: arquitectura, robots atendidos y no atendidos, orquestador y colas de trabajo",
+        "Robots robustos en Python con Playwright: selectores, esperas, excepciones, idempotencia, reintentos y credenciales",
+        "Procesamiento inteligente de documentos: OCR, clasificación, extracción con reglas, modelos y LLM",
+        "Comprobantes electrónicos de la SUNAT y validaciones de RUC, IGV y duplicados",
+        "Umbrales de confianza, revisión humana, métricas de procesamiento directo y pase a producción"
+      ],
+      "slides": [
+        {
+          "title": "RPA: qué es y qué no es",
+          "bullets": [
+            "Van der Aalst, Bichler y Heinzl (2018): software que opera las interfaces existentes como lo haría una persona, sin modificar los sistemas subyacentes.",
+            "Enfoque de afuera hacia adentro: rápido de implementar, pero frágil ante cambios de pantalla; genera deuda técnica si sustituye integraciones posibles.",
+            "Apto para tareas basadas en reglas, de alto volumen, con entradas digitales estructuradas y sistemas estables.",
+            "No es inteligencia artificial: el robot ejecuta reglas; la inteligencia proviene de los componentes de IA que se le incorporan."
+          ],
+          "notes": "Presente la caracterización de van der Aalst, Bichler y Heinzl, que describe la RPA como un enfoque de afuera hacia adentro: el sistema de información no cambia y el software opera la interfaz como lo haría una persona. Contraste con la integración tradicional, de adentro hacia afuera, que conecta los sistemas mediante API o servicios. Explique por qué la RPA se difundió en banca, seguros y centros de servicios compartidos: permite automatizar sin esperar a que el área de sistemas priorice el proyecto. Luego muestre su lado oscuro: cada cambio de pantalla puede romper el robot, y una cartera de robots frágiles genera una deuda técnica comparable a la de los modelos que estudiaron en Despliegue de Modelos. Desmitifique el discurso comercial: el robot no aprende ni razona; si se le añade OCR, un clasificador o un LLM, la inteligencia está en esos componentes y debe evaluarse como tal. Pregunte a la clase qué procesos de su experiencia laboral o de prácticas cumplen los criterios de la tercera viñeta."
+        },
+        {
+          "title": "Arquitectura de una plataforma RPA",
+          "bullets": [
+            "Estudio de desarrollo, robots de ejecución y orquestador que programa, distribuye, registra y entrega credenciales.",
+            "Robots atendidos asisten al trabajador en su escritorio; los no atendidos operan en servidores y procesan colas sin intervención.",
+            "Colas de trabajo: cada elemento es una transacción con estado, reintentos y trazabilidad, lo que permite escalar con varios robots.",
+            "Plataformas comerciales como UiPath, Power Automate o Automation Anywhere; alternativas abiertas como Robot Framework y Playwright con Python."
+          ],
+          "notes": "Describa los componentes con un ejemplo concreto: una caja municipal de ahorro y crédito que concilia cada mañana los abonos de sus convenios de recaudación. El desarrollador construye el flujo en el estudio; el orquestador lo publica, lo programa a las seis de la mañana, entrega credenciales desde la bóveda y registra cada ejecución; los robots no atendidos procesan los elementos de la cola, cada uno un abono. Contraste con un robot atendido: el asesor de agencia lo activa para prellenar un formulario mientras atiende al cliente. Explique que la cola es clave para escalar y auditar: si mañana el volumen se duplica, se agregan robots sin cambiar el flujo, y cada elemento conserva su estado, intentos y motivo de falla. Mencione las plataformas comerciales más difundidas y las alternativas abiertas con Python, que usaremos en los laboratorios porque permiten control de versiones, pruebas automatizadas y costos predecibles. Pregunte qué ventajas y riesgos tiene licenciar por robot frente a pagar por consumo."
+        },
+        {
+          "title": "Patrón de máquina de estados para robots robustos",
+          "bullets": [
+            "Estados: inicialización de credenciales y aplicaciones, obtención de la transacción, procesamiento y finalización con cierre ordenado.",
+            "Excepción de sistema, como portal caído o tiempo agotado: reintentar con espera exponencial y reiniciar aplicaciones.",
+            "Excepción de negocio, como RUC inválido u orden inexistente: no reintentar; registrar el motivo y derivar a una persona.",
+            "Cada transacción termina en un estado auditable: exitosa, excepción de negocio o excepción de sistema tras agotar reintentos."
+          ],
+          "notes": "Explique el patrón de máquina de estados que implementan los marcos de trabajo de las plataformas comerciales, como el REFramework de UiPath, y que conviene reproducir en Python. La distinción central es entre excepciones de sistema y de negocio. Una excepción de sistema, como un portal que no responde o un elemento que tarda en cargar, puede resolverse reintentando; una excepción de negocio, como una factura emitida por un RUC que no está registrado como proveedor, no se resuelve reintentando: hay que derivarla a una persona con un motivo claro. Confundirlas produce dos males: robots que reintentan cien veces un caso imposible, o casos válidos abandonados por un fallo de red pasajero. Muestre una tabla de estados finales y exija que cada transacción termine en uno de ellos, con evidencia adjunta. Proponga un ejercicio: clasificar diez fallas reales de un robot de conciliación bancaria como excepción de sistema o de negocio, y discutir los casos ambiguos, como un archivo del banco que llega vacío."
+        },
+        {
+          "title": "Selectores y esperas: la principal fuente de fragilidad",
+          "bullets": [
+            "Prefiera localizadores semánticos por rol, etiqueta y texto accesible frente a rutas XPath absolutas o coordenadas de pantalla.",
+            "Espere por condición, como elemento visible o descarga iniciada, nunca con pausas fijas que fallan cuando la red está lenta.",
+            "Playwright espera automáticamente a que el elemento sea accionable; aun así, defina tiempos máximos por operación.",
+            "Una prueba de humo diaria detecta selectores rotos antes de procesar la cola y evita cientos de excepciones."
+          ],
+          "notes": "La mayor parte del mantenimiento de un robot se origina en selectores rotos. Explique la jerarquía de localizadores recomendada por la documentación de Playwright: primero por rol y nombre accesible, luego por etiqueta o texto visible y, solo en último caso, por CSS o XPath. Una ruta absoluta como /html/body/div[3]/table/tr[2]/td[5] se rompe en cuanto el portal agrega un banner informativo. Muestre por qué las pausas fijas son un antipatrón: esperar cinco segundos es demasiado cuando la red va bien y demasiado poco cuando va mal. Playwright incorpora esperas automáticas hasta que el elemento es visible, está habilitado y permanece estable. Recomiende una prueba de humo diaria antes de procesar la cola: el robot inicia sesión, navega a las pantallas clave y verifica que los elementos existen; si falla, alerta al equipo antes de que se acumulen excepciones. Pregunte qué significa que un portal público incorpore un CAPTCHA: es una señal de que su titular no desea acceso automatizado y debe buscarse un canal oficial."
+        },
+        {
+          "title": "Idempotencia y reintentos seguros",
+          "bullets": [
+            "Una operación idempotente produce el mismo efecto si se ejecuta una o varias veces; es indispensable cuando hay reintentos.",
+            "Clave natural en el Perú: RUC del emisor, tipo, serie y número identifican de forma única un comprobante electrónico.",
+            "Antes de registrar, consulte si la clave ya existe; después, guarde la evidencia, como número de asiento, captura o constancia.",
+            "Reintente solo errores transitorios con espera exponencial y fluctuación aleatoria, con un máximo de intentos y registro de cada uno."
+          ],
+          "notes": "Introduzca la idempotencia con un incidente típico: un robot registra una factura en el ERP, pero antes de marcar el elemento de la cola como completado se cae la conexión; al reintentar, registra la factura otra vez y la empresa la paga dos veces. La solución es verificar antes de actuar usando una clave natural. En el Perú, la combinación de RUC del emisor, tipo de comprobante, serie y número identifica de forma única un comprobante electrónico, porque un emisor no puede repetir la misma serie y número para un mismo tipo de comprobante. Explique la espera exponencial con fluctuación: intentar a los dos, cuatro y ocho segundos con un componente aleatorio evita que muchos robots golpeen el portal al mismo tiempo después de una caída. Insista en guardar evidencia de cada efecto: número de asiento, captura de pantalla o constancia. Anticipe la unidad 3: las colas de mensajes entregan al menos una vez, por lo que todo consumidor debe ser idempotente. Pregunte qué clave natural existe en su proceso del proyecto."
+        },
+        {
+          "title": "Credenciales, seguridad y segregación de funciones del robot",
+          "bullets": [
+            "Cada robot tiene identidad propia y privilegios mínimos; nunca usa la cuenta de un trabajador ni comparte contraseñas.",
+            "Credenciales en una bóveda o gestor de secretos, jamás en el código, en hojas de cálculo o en los registros de ejecución.",
+            "Un mismo robot no debe crear proveedores y programar sus pagos: la segregación de funciones también aplica a identidades digitales.",
+            "Las bitácoras registran qué hizo el robot, cuándo y con qué datos, minimizando datos personales según la Ley 29733."
+          ],
+          "notes": "Plantee la seguridad del robot como un problema de control interno, no solo técnico. Un robot que usa la cuenta de un analista hereda todos sus permisos y vuelve imposible distinguir en la auditoría quién hizo qué. Cada robot debe tener identidad propia, con los privilegios mínimos para su tarea. Para los servicios de la SUNAT, recomiende crear usuarios secundarios de la Clave SOL con perfiles limitados a las operaciones necesarias, en lugar de usar el usuario principal de la empresa. Las credenciales se guardan en la bóveda del orquestador o en un gestor de secretos y se recuperan en tiempo de ejecución; nunca deben aparecer en el repositorio, en una hoja de cálculo compartida ni en los registros de ejecución. Explique la segregación de funciones: si el mismo robot puede crear proveedores y programar pagos, un error o una manipulación del flujo habilita pagos fraudulentos. Cierre con la Ley 29733: las bitácoras deben registrar lo necesario para auditar, sin copiar datos personales innecesarios, como el número completo de una tarjeta."
+        },
+        {
+          "title": "Procesamiento inteligente de documentos: la cadena completa",
+          "bullets": [
+            "Etapas: captura, preprocesamiento de imagen, OCR, clasificación del tipo documental, extracción de campos, validación y exportación.",
+            "Documentos estructurados como XML, semiestructurados como facturas en PDF con diseños variados, y no estructurados como cartas o contratos.",
+            "Si existe la versión estructurada, úsela: leer el XML es exacto, mientras que aplicar OCR al PDF introduce errores evitables.",
+            "Cada campo extraído lleva valor, confianza y ubicación en el documento, para facilitar la revisión y la auditoría."
+          ],
+          "notes": "Presente la cadena del procesamiento inteligente de documentos con un caso de reembolsos de salud: el afiliado sube fotografías de boletas, recetas e informes médicos. La captura recibe archivos de distintos canales; el preprocesamiento corrige la imagen; el OCR la convierte en texto con coordenadas; la clasificación determina si es boleta, receta o informe; la extracción obtiene campos como RUC, fecha, importe y diagnóstico; la validación verifica coherencia; la exportación entrega datos estructurados al flujo. Enfatice la tercera viñeta, que ahorra mucho dinero: si el emisor produce comprobantes electrónicos, el XML contiene los datos exactos y firmados, y aplicar OCR a su representación impresa es introducir errores de manera voluntaria. Explique el valor de registrar la ubicación del campo: permite al revisor humano ver de dónde salió el valor y al auditor reconstruir la decisión meses después. Pregunte qué proporción de los documentos de su proceso del proyecto llega en formato estructurado y cómo podrían aumentarla desde el canal de recepción."
+        },
+        {
+          "title": "OCR y preprocesamiento de imágenes",
+          "bullets": [
+            "Tesseract (Smith, 2007) incorpora reconocimiento con redes LSTM desde la versión 4 y dispone de modelo para español.",
+            "Preprocesamiento: corrección de inclinación, binarización adaptativa, eliminación de ruido y resolución de al menos 300 puntos por pulgada.",
+            "Métricas: tasa de error de caracteres y de palabras, calculadas con distancia de edición sobre una muestra transcrita a mano.",
+            "Fotografías con sombras y pliegues degradan el OCR; defina estándares de captura en la aplicación o canal de recepción."
+          ],
+          "notes": "Resuma la historia de Tesseract: desarrollado en HP entre 1984 y 1994, liberado como código abierto en 2005 y mantenido durante años con apoyo de Google; Smith (2007) describe su arquitectura original. Desde la versión 4 incorpora reconocimiento con redes LSTM, como las que estudiaron en Aprendizaje Profundo. Muestre el efecto del preprocesamiento con dos versiones de la misma boleta fotografiada: la imagen inclinada y con sombra produce errores en el RUC, mientras que la versión enderezada y binarizada se lee correctamente. Defina la tasa de error de caracteres como la distancia de Levenshtein entre el texto reconocido y la transcripción de referencia, dividida entre la longitud de la referencia. Una tasa de 2 % parece baja, pero si los errores fueran independientes, la probabilidad de que un RUC de once dígitos tenga al menos uno sería cercana al 20 %. Por eso toda extracción se valida con reglas. Pregunte cómo mejorarían la calidad desde la captura: guías visuales en la aplicación móvil, detección de desenfoque y rechazo inmediato con instrucciones."
+        },
+        {
+          "title": "Extracción de campos: reglas, modelos y LLM",
+          "bullets": [
+            "Reglas y expresiones regulares: precisas para patrones fijos como el RUC o la serie F001-00012345, frágiles ante diseños nuevos.",
+            "Modelos de comprensión de documentos que combinan texto y posición, como LayoutLM, ajustados con documentos etiquetados.",
+            "LLM multimodales con salida JSON validada por esquema: flexibles ante diseños nunca vistos, pero exigen verificación y control de costos.",
+            "Estrategia híbrida: XML si existe; si no, modelo o LLM para extraer y reglas deterministas para validar."
+          ],
+          "notes": "Compare las tres familias con un mismo conjunto de facturas en PDF de cuarenta proveedores distintos. Las expresiones regulares extraen el RUC y la serie con altísima precisión porque su patrón es fijo, pero fallan con el importe total cuando cada proveedor lo ubica en un lugar diferente y con etiquetas distintas. Los modelos de comprensión de documentos como LayoutLM, propuesto por Xu y colaboradores en 2020, combinan el texto con su posición en la página y se ajustan con documentos etiquetados; requieren cientos de ejemplos anotados. Los LLM multimodales extraen campos de diseños nunca vistos con una instrucción y un esquema, como practicaron en IA Generativa, pero pueden producir valores plausibles e incorrectos, y su costo por documento debe controlarse. La estrategia híbrida combina lo mejor de cada familia. Pregunte qué ocurre si el LLM devuelve un RUC con dígito verificador válido pero equivocado: por eso también se cruza con el padrón de proveedores y con la orden de compra."
+        },
+        {
+          "title": "Comprobantes electrónicos de la SUNAT",
+          "bullets": [
+            "Facturas y boletas electrónicas se emiten en XML con el estándar UBL 2.1, firmadas digitalmente por el emisor.",
+            "La SUNAT o un Operador de Servicios Electrónicos (OSE) valida el comprobante y devuelve la Constancia de Recepción (CDR).",
+            "Las series de facturas comienzan con F y las de boletas con B; la representación impresa en PDF no reemplaza al XML.",
+            "El receptor puede verificar la validez del comprobante y la condición del RUC del emisor con los servicios de consulta de la SUNAT."
+          ],
+          "notes": "Explique el sistema de emisión electrónica de la SUNAT con el recorrido de una factura: el emisor genera el XML en estándar UBL 2.1, lo firma con su certificado digital y lo envía a la SUNAT o a un Operador de Servicios Electrónicos, que valida estructura y reglas y devuelve la Constancia de Recepción. La representación impresa en PDF es solo una versión legible; el comprobante es el XML. Señale que las series de facturas comienzan con F y las de boletas con B, y que cada comprobante tiene un número correlativo dentro de su serie. Para el receptor, el XML trae todo lo necesario: RUC del emisor y del adquirente, fecha, moneda, líneas, base gravada, IGV e importe total. Recomiende verificar la validez del comprobante y la condición del emisor mediante los servicios de consulta de la SUNAT, por ejemplo para detectar emisores con RUC de baja o en condición de no habido, que pueden afectar el uso del crédito fiscal. En el laboratorio, cada equipo abrirá un XML de ejemplo e identificará el nodo de cada campo."
+        },
+        {
+          "title": "Validaciones de negocio deterministas",
+          "bullets": [
+            "RUC: once dígitos, prefijo válido y dígito verificador por módulo 11 con los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3 y 2.",
+            "Montos: total = valor de venta + IGV; en operaciones gravadas el IGV es 18 % de la base (16 % de IGV más 2 % de IPM).",
+            "Coherencia: fecha de emisión no futura, moneda declarada, adquirente igual al RUC de la empresa y orden de compra existente.",
+            "Duplicados: rechace todo comprobante cuya clave RUC, tipo, serie y número ya fue registrada."
+          ],
+          "notes": "Implemente en vivo la validación del RUC. Se multiplican los diez primeros dígitos por los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3 y 2; se suman los productos; se calcula once menos el residuo de dividir la suma entre once; si el resultado es 10 el dígito es 0, y si es 11 es 1. Verifique con el RUC de la propia SUNAT, 20131312955: la suma ponderada es 94, el residuo es 6 y el dígito verificador es 5, que coincide con el último dígito. Luego valide montos: en una operación gravada, el IGV equivale al 18 % de la base, que incluye 16 % de impuesto general a las ventas y 2 % de impuesto de promoción municipal; tolere diferencias de redondeo de un céntimo por línea. Advierta excepciones: operaciones exoneradas o inafectas, exportaciones, beneficios regionales y comprobantes sujetos a detracción. Explique por qué estas reglas son tan valiosas junto a un modelo: convierten errores silenciosos en excepciones visibles. Pregunte qué otra validación cruzada podrían hacer con las órdenes de compra y las guías de remisión."
+        },
+        {
+          "title": "Umbrales de confianza y revisión humana",
+          "bullets": [
+            "Un campo se acepta automáticamente solo si su confianza supera un umbral calibrado para ese campo y las validaciones deterministas pasan.",
+            "Los umbrales se fijan con un conjunto de validación etiquetado, mediante curvas de precisión frente a cobertura por campo crítico.",
+            "La interfaz de revisión muestra el documento, el campo resaltado y el valor propuesto; cada corrección se guarda como dato etiquetado.",
+            "Muchas confianzas de modelos están mal calibradas: verifíquelas con diagramas de fiabilidad antes de usarlas como umbral."
+          ],
+          "notes": "Explique que un umbral único para todo el documento desperdicia información: el RUC y el importe total son críticos, mientras que la dirección del emisor rara vez importa para la decisión. Muestre cómo construir una curva de precisión frente a cobertura por campo con un conjunto de validación de unos trescientos documentos etiquetados: para cada umbral posible, qué porcentaje de documentos se aceptaría y con qué precisión. Elija el umbral que cumple la precisión exigida por el negocio con la mayor cobertura posible. Advierta sobre la calibración: muchas redes y LLM producen confianzas sobreestimadas, de modo que un 0,95 declarado puede corresponder a un acierto real del 85 %. Los diagramas de fiabilidad permiten detectarlo, y técnicas como el escalado de temperatura pueden corregirlo. Describa la interfaz de revisión ideal y subraye que cada corrección humana es un dato etiquetado que mejora el sistema. Pregunte cómo evitarían que un revisor cansado acepte todo lo propuesto: casos de control con error conocido y métricas de discrepancia."
+        },
+        {
+          "title": "Métricas de un flujo de procesamiento de documentos",
+          "bullets": [
+            "Por campo: precisión, exhaustividad y coincidencia exacta tras normalizar formatos de fechas e importes.",
+            "Por documento: tasa de procesamiento directo (STP) = documentos sin intervención humana / documentos procesados.",
+            "Error residual: proporción de documentos aceptados automáticamente con algún campo crítico incorrecto; es el riesgo que el negocio acepta.",
+            "Operativas: tiempo y costo por documento, incluyendo cómputo, licencias y revisión, y antigüedad de la cola de revisión."
+          ],
+          "notes": "Diferencie las métricas de modelo de las métricas de proceso. A nivel de campo, normalice antes de comparar: 07/03/2025 y 2025-03-07 son la misma fecha, y 1.475,00 y 1475.00 el mismo importe. A nivel de documento, la tasa de procesamiento directo indica qué proporción atraviesa el flujo sin tocar a una persona; es la métrica que suele mirar la gerencia. Pero una tasa alta con muchos errores no detectados es peligrosa; por eso el error residual, estimado con muestreo aleatorio de documentos aceptados automáticamente, debe reportarse siempre junto con ella. Ejemplo: sobre 10 000 facturas mensuales, una tasa de 70 % con un error residual de 0,5 % implica 35 facturas con algún campo crítico incorrecto al mes. ¿Es aceptable? Depende del costo de cada error, y esa decisión corresponde al negocio, informado por el equipo técnico. Termine con las métricas operativas y pida a cada equipo definir cuáles reportará en su proyecto y cómo obtendrá la muestra para estimar el error residual."
+        },
+        {
+          "title": "Del piloto a la operación de un robot",
+          "bullets": [
+            "Documento de definición del proceso con pasos, reglas, excepciones y volúmenes, y diseño técnico de la solución.",
+            "Pruebas con casos reales y excepciones, aceptación del usuario y ejecución en paralelo con el equipo humano antes de confiar.",
+            "Hipercuidado de dos a cuatro semanas tras el pase a producción, con métricas diarias y un responsable de guardia.",
+            "Plan de continuidad: procedimiento manual documentado por si el robot o un portal externo fallan en fechas críticas."
+          ],
+          "notes": "Recorra el ciclo de entrega de un robot con artefactos concretos. El documento de definición del proceso lo elabora el analista con el usuario experto e incluye cada paso relevante, reglas, excepciones conocidas y volúmenes diarios; el diseño técnico define componentes, colas, credenciales y manejo de errores. Las pruebas deben incluir casos de negocio reales, no solo el camino feliz: comprobantes con operaciones exoneradas, RUC dados de baja y órdenes parcialmente atendidas. La ejecución en paralelo, en la que el robot y el equipo humano procesan lo mismo y se comparan los resultados, aporta evidencia antes de confiar. El hipercuidado concentra la atención en las primeras semanas, cuando aparecen las excepciones no previstas. Insista en el plan de continuidad: si el robot falla el día del vencimiento de la declaración mensual según el cronograma de la SUNAT, el equipo debe saber procesar manualmente. Pregunte quién debería firmar el pase a producción: el dueño del proceso, no el desarrollador. Encargue leer el caso Quispe & Asociados."
+        }
+      ],
+      "reading": {
+        "title": "Robots robustos y procesamiento inteligente de comprobantes electrónicos",
+        "minutes": 45,
+        "content": "## La RPA como solución táctica con reglas de ingeniería\n\nLa automatización robótica de procesos opera las interfaces de usuario de los sistemas existentes (van der Aalst, Bichler y Heinzl, 2018). Su ventaja es la rapidez; su debilidad, la fragilidad. Lacity y Willcocks (2018) documentan que los programas exitosos tratan a los robots como software empresarial, con diseño, pruebas, control de versiones y gobierno. Tres reglas concentran buena parte de esa disciplina.\n\n**Distinguir excepciones.** Una excepción de sistema, como un portal caído, se reintenta; una excepción de negocio, como un proveedor inexistente, se deriva a una persona sin reintentar.\n\n**Garantizar idempotencia.** Toda acción con efecto debe poder repetirse sin duplicarlo. En el Perú, la clave natural de un comprobante es RUC del emisor, tipo, serie y número.\n\n**Usar localizadores semánticos y esperas por condición.** El siguiente robot con Playwright descarga el estado de cuenta de un portal de proveedores sin coordenadas ni pausas fijas:\n\n```python\nimport os, random, time\nfrom playwright.sync_api import sync_playwright, TimeoutError as PWTimeout\n\ndef descargar_estado_cuenta(portal: str, destino: str, intentos: int = 3) -> str:\n    for n in range(1, intentos + 1):\n        try:\n            with sync_playwright() as p:\n                nav = p.chromium.launch(headless=True)\n                pag = nav.new_page()\n                pag.goto(portal, timeout=30_000)\n                pag.get_by_label('Usuario').fill(os.environ['PORTAL_USUARIO'])\n                pag.get_by_label('Contraseña').fill(os.environ['PORTAL_CLAVE'])\n                pag.get_by_role('button', name='Ingresar').click()\n                pag.get_by_role('link', name='Estado de cuenta').click()\n                with pag.expect_download() as d:\n                    pag.get_by_role('button', name='Exportar CSV').click()\n                d.value.save_as(destino)\n                nav.close()\n                return 'exitosa'\n        except PWTimeout:\n            if n == intentos:\n                return 'excepcion_sistema'      # agotó reintentos: alerta\n            time.sleep(2 ** n + random.random())  # espera exponencial\n```\n\nLas credenciales llegan como variables de entorno desde la bóveda del orquestador; nunca se escriben en el código.\n\n## Procesamiento inteligente de documentos\n\nEl procesamiento inteligente de documentos convierte documentos en datos estructurados mediante captura, preprocesamiento, OCR, clasificación, extracción, validación y exportación. La decisión más rentable es también la más simple: **si existe una versión estructurada, se usa**. Los comprobantes electrónicos peruanos se emiten en XML con el estándar UBL 2.1, firmados digitalmente y validados por la SUNAT o por un Operador de Servicios Electrónicos, que devuelve la Constancia de Recepción. Leer el XML es exacto; aplicar OCR a su representación impresa introduce errores evitables.\n\nPara lo que llega solo como imagen, la extracción combina OCR (Tesseract usa redes LSTM desde su versión 4; Smith, 2007), modelos de comprensión de documentos o LLM multimodales con salida estructurada. Ninguno es infalible: con una tasa de error de caracteres de 2 %, si los errores fueran independientes, la probabilidad de que un RUC de 11 dígitos tenga al menos un error sería 1 − 0,98¹¹ ≈ 20 %. Por eso toda extracción se somete a validaciones deterministas.\n\n## Validaciones de negocio peruanas\n\n```python\nPESOS = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]\n\ndef ruc_valido(ruc: str) -> bool:\n    if len(ruc) != 11 or not ruc.isdigit() or ruc[:2] not in {'10', '15', '16', '17', '20'}:\n        return False\n    suma = sum(int(d) * p for d, p in zip(ruc[:10], PESOS))\n    dv = 11 - suma % 11\n    dv = {10: 0, 11: 1}.get(dv, dv)\n    return dv == int(ruc[10])\n\ndef igv_coherente(base: float, igv: float, total: float, tol: float = 0.02) -> bool:\n    # válido para operaciones totalmente gravadas; otras afectaciones se validan por línea\n    return abs(igv - round(base * 0.18, 2)) <= tol and abs(total - (base + igv)) <= tol\n\nassert ruc_valido('20131312955')   # RUC de la SUNAT: suma 94, residuo 6, dígito 5\n```\n\nA estas reglas se suman la fecha de emisión no futura, la coincidencia del RUC del adquirente con el de la empresa, la existencia de la orden de compra y el control de duplicados por la clave natural.\n\n## Umbrales de confianza y métricas\n\nCada campo se acepta automáticamente solo si su confianza supera un umbral calibrado para ese campo **y** pasa las validaciones; en otro caso, el documento va a una bandeja de revisión que muestra la imagen, el campo resaltado y el valor propuesto. Las métricas operan en dos niveles: por campo, precisión y exhaustividad tras normalizar formatos; por documento:\n\n```text\nSTP = documentos sin intervención humana / documentos procesados\nError residual = aceptados automáticamente con algún campo crítico incorrecto / aceptados automáticamente\n```\n\nUna STP de 70 % sobre 10 000 facturas mensuales con error residual de 0,5 % implica 35 facturas incorrectas al mes. Si cada una genera un crédito fiscal mal sustentado, el costo puede superar el ahorro; si afecta un campo informativo, quizá sea aceptable. Esa decisión corresponde al negocio, informado por el equipo técnico. Las confianzas deben verificarse con diagramas de fiabilidad antes de usarlas como umbrales, y cada corrección humana debe guardarse para reentrenar y recalibrar."
+      },
+      "case": {
+        "title": "Caso: Quispe & Asociados y la semana de vencimientos",
+        "content": "Quispe & Asociados es un estudio contable de Arequipa con 14 colaboradores que lleva la contabilidad de 160 clientes, en su mayoría mypes del régimen MYPE Tributario y del régimen general. Cada mes procesa alrededor de 9 000 comprobantes de compra para preparar los registros de compras y calcular el crédito fiscal del IGV de cada cliente.\n\nLos clientes envían sus comprobantes por correo y WhatsApp. Según una muestra del último trimestre, el 46 % llega como XML, el 31 % como PDF de la representación impresa, el 17 % como fotografía tomada con celular y el 6 % como escaneo de otros documentos. Aunque la SUNAT pone a disposición en el SIRE una propuesta del registro de compras con los comprobantes electrónicos recibidos, el estudio debe contrastarla con el sustento de cada cliente, asignar cuenta contable y centro de costo, y descartar gastos no vinculados con la actividad gravada.\n\nDurante la semana de vencimientos de la declaración mensual, que la SUNAT fija según el último dígito del RUC, los asistentes trabajan hasta la madrugada. En marzo, dos clientes recibieron comunicaciones de la SUNAT por inconsistencias en el crédito fiscal y uno debió rectificar su declaración.\n\nLa socia directora, Carmen Quispe, incorporó a Diego Mamani, egresado de una carrera de inteligencia artificial, quien construyó un piloto: lee los XML con lxml y, para PDF y fotografías, usa un LLM multimodal con salida JSON validada por esquema. Sus resultados sobre 1 200 comprobantes etiquetados manualmente son:\n\n- Con XML: 100 % de exactitud en RUC, fecha, base imponible, IGV e importe total.\n- Con PDF y fotografías: RUC 97,8 %; fecha 98,9 %; importe total 96,1 %; IGV 95,4 %.\n- Con umbrales conservadores y validaciones de RUC, IGV y duplicados, la tasa de procesamiento directo global es de 58 % y el error residual en campos críticos es de 0,4 %.\n- Si se bajan los umbrales, la tasa sube a 80 %, pero el error residual estimado sube a 2,1 %.\n- El LLM cuesta S/ 0,06 por documento; la revisión humana toma 2,5 minutos por documento, con un costo cargado de S/ 18 por hora.\n- Corregir un error de crédito fiscal detectado posteriormente cuesta en promedio S/ 350 entre rectificación, horas del estudio e intereses, sin contar posibles multas ni el daño a la relación con el cliente.\n\nCarmen quiere llegar a 80 % antes de la próxima semana de vencimientos: si no automatizan más, tendrá que contratar dos asistentes. El contador senior, Julio Ccama, advierte que un error en el crédito fiscal lo paga el cliente y la reputación del estudio, y propone exigir a los clientes el envío del XML. Diego debe presentar una recomendación el viernes.",
+        "questions": [
+          "¿Qué parte del volumen debería procesarse leyendo XML y qué parte con OCR o LLM? ¿Cómo cambiaría la estrategia de captura con los clientes?",
+          "Estime el ahorro mensual en horas de revisión y el costo esperado de los errores adicionales si se bajan los umbrales para pasar de 58 % a 80 %. ¿Conviene?",
+          "¿Qué validaciones deterministas adicionales habrían detectado los errores residuales y en qué orden las aplicaría dentro del flujo?",
+          "¿Cómo organizaría la revisión humana durante la semana de vencimientos para proteger el crédito fiscal de los clientes sin contratar más personal?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: flujo de procesamiento inteligente de comprobantes con revisión humana",
+        "instructions": "**Objetivo:** construir y medir un flujo de procesamiento inteligente de comprobantes que combine lectura estructurada, extracción con modelos y validaciones de negocio peruanas, con derivación de los casos dudosos a revisión humana.\n\n**Insumos:** carpeta del aula virtual con 60 comprobantes de prueba (30 XML UBL 2.1, 20 PDF y 10 fotografías) y su archivo de etiquetas de referencia. Puedes añadir documentos de tu proceso del proyecto, previamente anonimizados.\n\n**Qué entregar:**\n\n1. Flujo en Python con lector de XML, extracción para PDF e imágenes (Tesseract con reglas, modelo de documentos o LLM con salida validada por esquema; justifica tu elección) y validaciones de RUC por módulo 11, coherencia de IGV y total, fecha, adquirente y duplicados por clave RUC, tipo, serie y número.\n2. Umbrales de confianza por campo elegidos con curvas de precisión frente a cobertura y una regla de enrutamiento a una bandeja de revisión, que puede ser un CSV o una interfaz sencilla.\n3. Reporte de métricas: exactitud por campo y por tipo de entrada, tasa de procesamiento directo, error residual estimado, costo y tiempo por documento.\n4. Pruebas automatizadas con pytest para las validaciones, incluido el RUC 20131312955 y al menos tres casos inválidos.\n5. Nota técnica de dos páginas con decisiones, límites conocidos y recomendación de umbrales para el negocio.\n\n**Formato:** archivo comprimido con el repositorio, su README de ejecución y la nota técnica en PDF.\n\n**Criterios:** corrección de la extracción, rigor de las validaciones, calibración justificada de los umbrales y calidad de la medición.",
+        "rubric": [
+          {
+            "name": "Extracción de XML y de documentos no estructurados",
+            "points": 6
+          },
+          {
+            "name": "Validaciones de negocio, idempotencia y pruebas automatizadas",
+            "points": 5
+          },
+          {
+            "name": "Umbrales de confianza y enrutamiento a revisión humana",
+            "points": 4
+          },
+          {
+            "name": "Medición de métricas y nota técnica",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: robots y procesamiento inteligente de documentos",
+        "questions": [
+          {
+            "prompt": "Un robot de cuentas por pagar busca en el ERP la orden de compra indicada en una factura y descubre que no existe. ¿Cómo debe tratarse la transacción?",
+            "options": [
+              "Como excepción de sistema, con tres reintentos y espera exponencial",
+              "Como excepción de negocio: registrar el motivo y derivarla a una persona sin reintentar",
+              "Ignorarla y continuar con la siguiente sin dejar registro",
+              "Crear la orden de compra faltante para completar el registro"
+            ],
+            "correct": 1,
+            "explanation": "La ausencia de la orden es una condición de negocio que no cambia al reintentar; debe derivarse con un motivo claro. Crear la orden vulneraría la segregación de funciones."
+          },
+          {
+            "prompt": "Un robot registró una factura en el ERP, pero la conexión cayó antes de marcar el elemento de la cola como completado. ¿Qué diseño evita el doble registro al reintentar?",
+            "options": [
+              "Aumentar el tiempo máximo de espera del robot",
+              "Ejecutar el robot solo de noche, cuando la red es estable",
+              "Verificar antes de registrar si ya existe la clave RUC, tipo, serie y número",
+              "Pedir al analista que revise manualmente todas las facturas del día"
+            ],
+            "correct": 2,
+            "explanation": "La idempotencia basada en una clave natural permite repetir la operación sin duplicar su efecto. En el Perú, RUC del emisor, tipo, serie y número identifican unívocamente un comprobante."
+          },
+          {
+            "prompt": "Para el RUC 20131312955, la suma ponderada de sus diez primeros dígitos con los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3 y 2 es 94. ¿Cuál debe ser el dígito verificador?",
+            "options": [
+              "5",
+              "6",
+              "4",
+              "0"
+            ],
+            "correct": 0,
+            "explanation": "94 mod 11 = 6 y 11 − 6 = 5. Como el último dígito del RUC es 5, el número es válido. Si el resultado fuera 10 u 11, el dígito sería 0 o 1."
+          },
+          {
+            "prompt": "Una factura por una operación totalmente gravada tiene un valor de venta de S/ 1 250,00. ¿Qué importe total es coherente con el IGV vigente?",
+            "options": [
+              "S/ 1 450,00",
+              "S/ 1 500,00",
+              "S/ 1 250,00",
+              "S/ 1 475,00"
+            ],
+            "correct": 3,
+            "explanation": "El IGV es 18 % de la base (16 % de IGV más 2 % de IPM): 1 250 × 0,18 = 225. El total es 1 250 + 225 = S/ 1 475,00."
+          },
+          {
+            "prompt": "De 2 000 documentos procesados, 1 240 pasaron sin intervención humana, y una muestra de esos 1 240 estimó 1 % con algún campo crítico incorrecto. ¿Qué afirmación es correcta?",
+            "options": [
+              "STP de 38 % y unos 20 documentos incorrectos aceptados",
+              "STP de 62 % y ningún error, porque el resto fue revisado",
+              "STP de 62 % y unos 12 documentos incorrectos aceptados automáticamente",
+              "STP de 99 % porque el error residual es 1 %"
+            ],
+            "correct": 2,
+            "explanation": "STP = 1 240 / 2 000 = 62 %. El error residual se aplica a los documentos aceptados automáticamente: 1 % × 1 240 ≈ 12 documentos incorrectos."
+          },
+          {
+            "prompt": "Un proveedor envía por correo el XML de su factura electrónica y el PDF de su representación impresa. ¿Cómo debe procesarse?",
+            "options": [
+              "Aplicar OCR al PDF, porque es lo que ve el usuario",
+              "Leer los datos del XML y usar el PDF solo como apoyo visual",
+              "Usar un LLM multimodal sobre el PDF para mayor flexibilidad",
+              "Digitarlo manualmente para evitar errores de lectura"
+            ],
+            "correct": 1,
+            "explanation": "El comprobante electrónico es el XML UBL 2.1 firmado y su lectura es exacta. Aplicar OCR o un LLM al PDF añade errores evitables y costos innecesarios."
+          },
+          {
+            "prompt": "Un modelo de extracción declara confianza 0,95 en el importe total, pero en validación los campos con esa confianza aciertan solo el 85 % de las veces. ¿Qué corresponde hacer?",
+            "options": [
+              "Usar 0,95 como umbral, porque el modelo lo declara",
+              "Calibrar las confianzas y fijar el umbral con curvas de precisión frente a cobertura",
+              "Eliminar la revisión humana porque 85 % es suficiente",
+              "Adoptar un umbral único para todos los campos del documento"
+            ],
+            "correct": 1,
+            "explanation": "Las confianzas sobreestimadas deben calibrarse, por ejemplo con escalado de temperatura, y el umbral se elige según la precisión exigida por el negocio sobre datos de validación."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Orquestación, automatización de decisiones y agentes con supervisión humana",
+      "description": "Al finalizar la unidad, el estudiante orquesta procesos de extremo a extremo que integran sistemas, robots, reglas DMN, modelos predictivos y agentes basados en modelos de lenguaje, aplicando patrones de integración, compensación e idempotencia, calibrando umbrales de automatización por costos y diseñando la intervención humana y la observabilidad del proceso.",
+      "topics": [
+        "Orquestación y coreografía; motores de flujo y ejecución duradera",
+        "Patrones de integración empresarial: mensajería, colas, idempotencia y sagas con compensación",
+        "Automatización de decisiones: reglas DMN, modelos predictivos y umbrales calculados por costo",
+        "Agentes basados en modelos de lenguaje dentro de procesos: autonomía acotada, herramientas y salidas estructuradas",
+        "Niveles de automatización y diseño de las tareas humanas",
+        "Observabilidad, conformidad continua y arquitectura de referencia"
+      ],
+      "slides": [
+        {
+          "title": "De tareas automatizadas a procesos orquestados",
+          "bullets": [
+            "Automatizar tareas sueltas crea islas: un robot termina y nadie sabe si el siguiente paso ocurrió.",
+            "Orquestación: un motor central conoce el estado de cada caso y decide el siguiente paso, lo que facilita la trazabilidad y la auditoría.",
+            "Coreografía: cada servicio reacciona a eventos sin coordinador; escala bien, pero reconstruir el estado global es difícil.",
+            "Criterio: orqueste procesos con plazos, aprobaciones y tareas humanas; use coreografía para notificaciones y sincronizaciones desacopladas."
+          ],
+          "notes": "Comience con una situación frecuente en empresas que automatizaron por tareas: un robot descarga facturas, otro las registra, un tercero programa pagos, y cada uno funciona, pero cuando un proveedor reclama nadie puede decir en qué paso está su factura. Ocurre porque nadie es dueño del estado del caso. Explique la orquestación: un motor conoce cada instancia, sus variables y su posición en el diagrama, y decide el siguiente paso; la trazabilidad queda garantizada por diseño. La coreografía distribuye la lógica: cada servicio publica eventos y otros reaccionan, como en las arquitecturas de microservicios; escala y desacopla, pero reconstruir el estado global exige correlacionar eventos dispersos. En procesos administrativos con plazos legales, aprobaciones y tareas humanas, la orquestación suele ser la mejor opción; la coreografía funciona bien para notificaciones, actualizaciones de catálogos o sincronizaciones entre sistemas. Pregunte a la clase qué patrón usarían para el proceso de su proyecto y qué perderían con la alternativa."
+        },
+        {
+          "title": "Motores de flujo y ejecución duradera",
+          "bullets": [
+            "Motores BPMN como Camunda ejecutan el diagrama: tareas de servicio y de usuario, temporizadores y eventos de mensaje.",
+            "Plataformas de bajo código como n8n o Power Automate conectan aplicaciones mediante disparadores y acciones.",
+            "Ejecución duradera, como en Temporal: el estado del flujo persiste y se reanuda tras fallos, incluso en procesos de semanas.",
+            "Airflow o Prefect orquestan cargas de datos por lotes; no están diseñados para tareas humanas ni para casos individuales de larga duración."
+          ],
+          "notes": "Presente el panorama de motores sin promover un proveedor. Los motores BPMN ejecutan directamente el diagrama que modelaron en la unidad 1: las tareas de servicio llaman a código o a robots, las tareas de usuario aparecen en bandejas, los temporizadores controlan plazos y los eventos de mensaje esperan respuestas externas. Camunda es un ejemplo extendido en banca y seguros. Las plataformas de bajo código conectan aplicaciones con disparadores y acciones y resultan útiles para integraciones simples, aunque su control de versiones y sus pruebas exigen disciplina adicional. La ejecución duradera, difundida por Temporal, permite escribir flujos como código cuyo estado se persiste automáticamente, de modo que un proceso que espera la firma de un contrato durante tres semanas sobrevive a reinicios del servidor. Aclare la confusión frecuente con Airflow o Prefect, que vieron en Despliegue de Modelos: orquestan tuberías de datos por lotes, no casos individuales con personas. Pida comparar dos motores para el proceso de su proyecto con criterios explícitos."
+        },
+        {
+          "title": "Mensajería y colas: desacoplar sin perder casos",
+          "bullets": [
+            "Hohpe y Woolf (2003): canales, mensajes, enrutadores y traductores como vocabulario común de la integración empresarial.",
+            "La entrega al menos una vez es la norma en las colas: el consumidor debe ser idempotente para tolerar duplicados.",
+            "Una cola de mensajes fallidos aísla los mensajes que agotaron reintentos para su revisión, sin bloquear el resto.",
+            "Patrón de bandeja de salida: guarde el cambio y el evento en la misma transacción para no perder notificaciones."
+          ],
+          "notes": "Introduzca el vocabulario de Hohpe y Woolf, cuyo libro sigue siendo la referencia de la integración empresarial: un mensaje viaja por un canal, los enrutadores deciden su destino y los traductores transforman formatos entre sistemas. Explique la semántica de entrega: en su configuración habitual, colas como RabbitMQ, Amazon SQS o Kafka garantizan entrega al menos una vez, lo que significa que un consumidor puede recibir el mismo mensaje dos veces tras un fallo. Por eso la idempotencia de la unidad 2 no es opcional. La cola de mensajes fallidos evita que un mensaje defectuoso bloquee la cola o se reintente para siempre; alguien debe revisarla a diario y tener un procedimiento para reprocesar. El patrón de bandeja de salida resuelve un problema sutil: si el sistema guarda una aprobación en su base de datos y falla antes de publicar el evento, el resto del proceso nunca se entera. Guardar ambos en la misma transacción y publicar después lo evita. Pregunte qué pasaría en su proyecto si se perdiera un mensaje."
+        },
+        {
+          "title": "Sagas y compensación en procesos de larga duración",
+          "bullets": [
+            "Un proceso que toca varios sistemas no puede usar una transacción única: se divide en pasos locales con acciones compensatorias.",
+            "Ejemplo: reservar stock, emitir el comprobante y cobrar; si el cobro falla, se libera el stock y se anula el comprobante.",
+            "En BPMN, los eventos de compensación asocian cada actividad con la que deshace su efecto de negocio.",
+            "Un comprobante aceptado por la SUNAT no se borra: se da de baja cuando procede o se corrige con nota de crédito."
+          ],
+          "notes": "Explique el patrón saga, propuesto por García-Molina y Salem en 1987 para transacciones de larga duración en bases de datos y hoy central en los procesos distribuidos. Como no se puede bloquear el ERP, la pasarela de pagos y el sistema de facturación en una única transacción, cada paso confirma localmente y define una acción compensatoria que deshace su efecto en términos de negocio. Recorra el ejemplo de un comercio electrónico peruano: se reserva stock, se emite la factura electrónica y se intenta el cobro; si el cobro falla de forma definitiva, se libera el stock y se anula la factura. Aquí aparece una particularidad local: un comprobante aceptado por la SUNAT no se elimina de ningún sistema; se da de baja mediante la comunicación correspondiente cuando procede, o se emite una nota de crédito electrónica. Por eso la compensación debe diseñarse junto con el área contable. Muestre cómo BPMN representa la compensación y pida a los equipos identificar qué pasos de su proceso requieren una acción compensatoria y quién la autoriza."
+        },
+        {
+          "title": "Automatización de decisiones: reglas, modelos y personas",
+          "bullets": [
+            "Reglas DMN para políticas explícitas y auditables; modelos predictivos para patrones que las reglas no capturan.",
+            "Secuencia típica: reglas de elegibilidad primero, puntaje del modelo después y política de decisión al final.",
+            "Agrawal, Gans y Goldfarb (2018): la IA abarata la predicción, pero el juicio sobre costos y consecuencias sigue siendo humano.",
+            "Documente quién es dueño de cada regla y de cada umbral, y cómo se versionan y aprueban sus cambios."
+          ],
+          "notes": "Diferencie tres fuentes de decisión. Las reglas expresan políticas conocidas y deben ser explícitas porque alguien responde por ellas: si el monto supera S/ 10 000, se requiere doble aprobación. Los modelos predictivos capturan patrones que nadie podría escribir como reglas, como la probabilidad de que una solicitud sea irregular. Las personas aportan juicio en casos ambiguos o de alto impacto. Presente el argumento de Agrawal, Gans y Goldfarb en Prediction Machines: la IA reduce drásticamente el costo de predecir, lo que aumenta el valor de los complementos de la predicción, en especial el juicio sobre qué hacer con ella y los datos que la alimentan. Muestre la secuencia recomendada: primero reglas de elegibilidad que descartan casos imposibles, luego el modelo que estima el riesgo y al final una política de decisión, expresada en DMN, que traduce el puntaje en acción. Pregunte quién debería ser el dueño de cada pieza en una aseguradora: el área de riesgos, la de operaciones o la de tecnología."
+        },
+        {
+          "title": "Umbrales por costo: cuándo decide la máquina",
+          "bullets": [
+            "Si p es la probabilidad de que el caso sea correcto, aprobar automáticamente cuesta (1 − p)·C_error y revisar cuesta C_rev.",
+            "Conviene automatizar si (1 − p)·C_error < C_rev, es decir, si p > p* = 1 − C_rev / C_error.",
+            "Ejemplo: revisión de S/ 4,50 y error de S/ 180 dan p* = 0,975; si el error cuesta S/ 45, p* baja a 0,90.",
+            "Requiere probabilidades calibradas y costos acordados con el negocio; recalcule el umbral cuando cambien los costos o los datos."
+          ],
+          "notes": "Desarrolle la derivación en la pizarra. Si se aprueba automáticamente un caso con probabilidad p de ser correcto, la pérdida esperada es la probabilidad de error por su costo, es decir, uno menos p multiplicado por el costo del error. Si se envía a revisión, se paga el costo de revisar y se supone que la persona corrige el error. Conviene automatizar cuando la pérdida esperada es menor que el costo de revisar, lo que da el umbral de la diapositiva. Resuelva el ejemplo: con una revisión de S/ 4,50 y un error de S/ 180, el umbral es 0,975; si el error cuesta S/ 45, baja a 0,90. La intuición es clave: cuanto más caro el error, más exigente el umbral; y, de manera menos intuitiva, cuanto más barata la revisión, más conviene revisar. Remarque dos supuestos: las probabilidades deben estar calibradas, como vieron en la unidad 2, y los costos deben acordarse con el negocio, incluyendo los reputacionales y regulatorios. Pida a los equipos estimar ambos costos para su proceso y calcular su umbral."
+        },
+        {
+          "title": "Tres zonas de decisión",
+          "bullets": [
+            "Zona alta: aprobación automática; zona baja: derivación directa a tratamiento especial si la política y la ley lo permiten.",
+            "Zona gris intermedia: revisión humana con la evidencia y la explicación del modelo a la vista.",
+            "El ancho de la zona gris se ajusta según la capacidad del equipo revisor y el costo de los errores en cada extremo.",
+            "Los rechazos automáticos que afectan derechos, como crédito, salud o empleo, exigen explicación y una vía de revisión humana."
+          ],
+          "notes": "Extienda el análisis a dos umbrales. Por encima del superior se aprueba automáticamente; por debajo del inferior se deriva directamente a un tratamiento especial, como la unidad antifraude, siempre que la política y la ley lo permitan; entre ambos está la zona gris de revisión humana. Muestre un histograma de probabilidades de un modelo de reembolsos: con umbrales de 0,975 y 0,40, por ejemplo, el 55 % de los casos se aprueba directamente, el 41 % pasa a revisión y el 4 % se deriva a antifraude. Explique que el ancho de la zona gris es una palanca operativa: si el equipo revisor solo puede atender 300 casos diarios, el umbral puede ajustarse, pero entonces cambia el riesgo aceptado y debe aprobarlo el dueño del proceso, no el equipo técnico. Subraye la última viñeta: un rechazo automático de un crédito o de un reembolso de salud afecta derechos, y la Ley 29733 reconoce el derecho al tratamiento objetivo frente a decisiones basadas únicamente en tratamiento automatizado. Pregunte cómo comunicarían una denegación al afiliado."
+        },
+        {
+          "title": "Niveles de automatización y supervisión humana",
+          "bullets": [
+            "Parasuraman, Sheridan y Wickens (2000): diez niveles, desde sugerir alternativas hasta actuar sin informar a nadie.",
+            "Se aplican por función: adquirir información, analizarla, seleccionar la decisión y ejecutar la acción; cada una puede tener un nivel distinto.",
+            "Riesgos humanos: complacencia, sesgo de automatización y pérdida de habilidades del personal que solo supervisa.",
+            "Diseño: muestre evidencia y no solo la recomendación, y mida la tasa de discrepancia entre revisor y modelo."
+          ],
+          "notes": "Presente el modelo de Parasuraman, Sheridan y Wickens, uno de los artículos más citados sobre interacción entre personas y automatización. Su aporte central es que la automatización no es un interruptor de todo o nada: se distribuye en cuatro funciones, que son adquisición de información, análisis, selección de la decisión e implementación de la acción, y cada una puede tener un nivel distinto. Por ejemplo, un sistema de reembolsos puede automatizar por completo la adquisición y el análisis de documentos, sugerir la decisión con su explicación y dejar la ejecución del pago a una persona cuando el monto es alto. Discuta los riesgos documentados en aviación y medicina: la complacencia, cuando el supervisor deja de verificar porque el sistema casi siempre acierta, y el sesgo de automatización, cuando acepta recomendaciones erróneas. Proponga métricas: tasa de discrepancia entre revisor y modelo, y casos de control con error conocido insertados para verificar la atención. Pregunte qué nivel asignarían a cada función de su proyecto y por qué."
+        },
+        {
+          "title": "Modelos de lenguaje dentro de un proceso: flujo o agente",
+          "bullets": [
+            "Flujo determinista: el código define los pasos y el LLM ejecuta subtareas acotadas, como clasificar, extraer o redactar.",
+            "Agente: el LLM decide qué herramienta usar y en qué orden; es más flexible, pero menos predecible y más difícil de auditar.",
+            "Regla de diseño: use la menor autonomía que resuelva el problema y aumente solo cuando la evidencia lo justifique.",
+            "Contrato de salida: esquema JSON validado; si la validación falla, reintento acotado y luego derivación a una persona."
+          ],
+          "notes": "Retome lo aprendido en IA Generativa y Modelos de Lenguaje sobre agentes y llamadas a herramientas, y llévelo al contexto de procesos empresariales. En un flujo determinista, el diagrama o el código definen los pasos y el LLM ejecuta subtareas acotadas: clasificar un correo, extraer campos, resumir un expediente o redactar un borrador. En un agente, el modelo decide qué herramienta invocar y en qué orden, lo que aporta flexibilidad ante casos imprevistos, pero dificulta predecir costos, tiempos y comportamientos, y complica la auditoría. Varias guías técnicas de proveedores de modelos recomiendan comenzar con la solución más simple y aumentar la autonomía solo cuando la evidencia lo justifique; es un buen principio de ingeniería en cualquier caso. Insista en el contrato de salida: un esquema JSON validado convierte la respuesta del modelo en datos tipados que el flujo puede usar; si la validación falla tras uno o dos reintentos, el caso pasa a una persona. Pregunte en qué parte de su proceso un agente aportaría algo que un flujo no puede."
+        },
+        {
+          "title": "Patrón de clasificación y enrutamiento de solicitudes",
+          "bullets": [
+            "Entrada: correos, formularios o mensajes con texto libre y adjuntos, como las hojas del Libro de Reclamaciones.",
+            "El LLM devuelve tipo, urgencia, entidades como número de pedido y una confianza, dentro de un esquema cerrado.",
+            "Reglas posteriores aplican plazos legales y prioridades; la respuesta redactada por el LLM requiere aprobación humana.",
+            "Evaluación con un conjunto dorado etiquetado: macro-F1, matriz de confusión y errores en categorías críticas."
+          ],
+          "notes": "Desarrolle el patrón con el Libro de Reclamaciones de una empresa de retail. Las solicitudes llegan por varios canales y en texto libre. El LLM recibe el mensaje y devuelve una estructura cerrada: tipo, urgencia, entidades como el número de pedido y una confianza. Recuerde la distinción del Código de Protección y Defensa del Consumidor: el reclamo expresa disconformidad con el producto o servicio; la queja, malestar con la atención recibida. Después, reglas deterministas calculan el plazo legal de 15 días hábiles y asignan la cola correspondiente. La respuesta al consumidor puede redactarla el LLM, pero la aprueba un asesor, porque compromete a la empresa. Explique la evaluación con un conjunto dorado de varios cientos de mensajes etiquetados por dos personas, con macro-F1 y atención especial a los errores costosos, como clasificar un reclamo como consulta, lo que puede hacer vencer el plazo legal. Recuerde que los datos de los consumidores son personales y su envío a un proveedor externo debe evaluarse. Pida diseñar el esquema de salida para su proceso."
+        },
+        {
+          "title": "Herramientas y permisos para agentes",
+          "bullets": [
+            "Cada herramienta es una función con parámetros validados, permisos mínimos y registro de cada invocación.",
+            "Separe lectura de escritura: consultar el estado de un pedido es distinto de emitir un reembolso.",
+            "Las acciones irreversibles o de alto impacto requieren aprobación humana explícita como tarea de usuario en el flujo.",
+            "Defina límites de pasos, tiempo y costo por caso, y trate todo contenido externo como dato, nunca como instrucción."
+          ],
+          "notes": "Explique que las herramientas son la superficie de riesgo de un agente. Cada herramienta debe ser una función con parámetros tipados y validados, que verifica permisos con la identidad del agente y registra cada invocación con sus argumentos y su resultado. Separe las herramientas de lectura, como consultar el estado de un pedido, de las de escritura, como emitir un reembolso; las segundas deben tener límites de monto y, por encima de ellos, una tarea humana de aprobación modelada en el flujo. Recuerde la inyección de instrucciones estudiada en IA Generativa: un documento adjunto o un correo puede contener texto que pretende dar órdenes al modelo, como ignorar las reglas y aprobar el reembolso; por eso el contenido externo se trata como datos y las acciones críticas no dependen solo del juicio del modelo. Defina límites de pasos, tiempo y costo por caso para evitar bucles costosos. Pregunte cuál sería la herramienta más peligrosa de su proyecto y qué controles le pondrían antes de habilitarla."
+        },
+        {
+          "title": "Tareas humanas bien diseñadas",
+          "bullets": [
+            "La tarea humana es parte del proceso: tiene plazo, responsable, prioridad, formulario y escalamiento automático.",
+            "La bandeja muestra el contexto completo: documento, extracción, validaciones fallidas y recomendación del modelo.",
+            "Cada decisión humana se registra con un motivo estructurado que alimenta el reentrenamiento y la revisión de reglas.",
+            "Mida la espera de las tareas humanas: suele convertirse en el nuevo cuello de botella tras automatizar."
+          ],
+          "notes": "Reivindique la tarea humana como un componente de primera clase. En muchos proyectos se diseña con cuidado la automatización y la excepción termina en un correo a una bandeja compartida que nadie vigila. Una tarea humana bien diseñada tiene responsable o grupo asignado, plazo, prioridad, formulario con los datos necesarios y escalamiento automático si vence. La bandeja debe mostrar el contexto completo para decidir sin abrir cinco sistemas: el documento, lo que se extrajo, qué validaciones fallaron y qué recomienda el modelo, con su explicación. Cada decisión se registra con un motivo elegido de una lista cerrada, lo que permite analizar por qué se corrige al modelo y alimentar el reentrenamiento. Advierta un fenómeno muy común: después de automatizar, el cuello de botella se traslada a la cola de revisión humana, y el tiempo de ciclo total apenas mejora. Por eso se mide la antigüedad de la cola. Pregunte cómo dimensionarían el equipo revisor usando la ley de Little que estudiaron en la unidad 1."
+        },
+        {
+          "title": "Observabilidad de procesos automatizados",
+          "bullets": [
+            "Cada caso emite eventos con un identificador común; el registro alimenta tableros y minería de procesos continua.",
+            "Indicadores: casos en curso, tiempo de ciclo, STP, excepciones por tipo, cola humana y costo por caso.",
+            "Alertas por cambio de comportamiento: un aumento súbito de excepciones suele indicar un cambio en un portal o en los datos.",
+            "Para los componentes de IA, vigile deriva y desempeño con las prácticas de MLOps ya estudiadas."
+          ],
+          "notes": "Cierre el círculo con la unidad 1: un proceso automatizado bien instrumentado genera su propio registro de eventos, de modo que la minería de procesos deja de ser un estudio puntual y se vuelve continua. Cada evento lleva el identificador del caso, la actividad, la marca de tiempo, el ejecutor, sea persona, robot o modelo, y la versión del componente que actuó. Proponga un tablero que combine indicadores de proceso y técnicos. Explique por qué las alertas por cambio de comportamiento son tan útiles: si la tasa de excepciones de negocio de un robot sube de 3 % a 25 % en una mañana, casi siempre se debe a un cambio en un portal, en un formato de archivo o en una regla externa, y detenerlo a tiempo evita cientos de casos mal procesados. Para los componentes de IA, retome lo visto en Despliegue de Modelos: monitoreo de deriva, desempeño con etiquetas tardías obtenidas de las revisiones humanas y reglas de reentrenamiento. Pida a los equipos definir tres alertas para su proyecto con su umbral y su responsable."
+        },
+        {
+          "title": "Conformidad continua y auditoría",
+          "bullets": [
+            "Compare a diario el registro de ejecución con el modelo normativo para detectar desviaciones y controles saltados.",
+            "Pista de auditoría: quién actuó, persona o robot, qué decidió, con qué versión de regla o modelo y con qué evidencia.",
+            "Flujos, tablas DMN, modelos e instrucciones de los LLM se gestionan como código, con revisión y aprobación.",
+            "La auditoría interna y la externa deben poder reconstruir cualquier caso de punta a punta."
+          ],
+          "notes": "Explique que la automatización puede fortalecer el control interno o debilitarlo. Lo fortalece cuando cada paso queda registrado con evidencia y las desviaciones se detectan a diario mediante conformidad continua; lo debilita cuando el robot ejecuta lo que nadie revisa. Muestre una pista de auditoría ejemplar: un caso fue aprobado por el modelo de riesgo en su versión 3.2 con probabilidad 0,991, aplicando la tabla DMN de reembolsos en su versión 7, y fue ejecutado por el robot de pagos con su identidad propia, con referencias a la evidencia almacenada. Insista en que flujos, tablas, modelos e instrucciones de los LLM son artefactos versionados con revisión y aprobación, igual que el código. Relacione con las auditorías financieras: los auditores externos evalúan los controles automatizados y piden evidencia de que no se modificaron sin autorización durante el periodo auditado. Pregunte cómo responderían a un auditor que pide reconstruir por qué se pagó un reembolso hace ocho meses y qué datos necesitarían conservar."
+        },
+        {
+          "title": "Arquitectura de referencia de automatización inteligente",
+          "bullets": [
+            "Capa de entrada: correo, portales, API, carpetas y eventos; capa de comprensión: procesamiento de documentos, clasificación y extracción.",
+            "Capa de decisión: DMN, modelos predictivos y políticas de umbral; capa de ejecución: API, robots y tareas humanas.",
+            "Capa transversal: motor de orquestación, registro de eventos, bóveda de credenciales, observabilidad y gobierno de versiones.",
+            "Diseñe primero el flujo y los datos y elija proveedores después, evitando la dependencia excesiva de una sola plataforma."
+          ],
+          "notes": "Use esta diapositiva como síntesis de las tres primeras unidades. Dibuje la arquitectura en capas y ubique cada tecnología estudiada: la minería de procesos en la base para descubrir y monitorear; el procesamiento de documentos y los LLM en la capa de comprensión; DMN y modelos en la de decisión; API, robots y personas en la de ejecución; y el motor de orquestación coordinando todo. Enfatice la capa transversal, que es la que diferencia un conjunto de scripts de una plataforma empresarial: registro de eventos unificado, gestión de credenciales, observabilidad y gobierno de versiones. Advierta sobre la dependencia de proveedor: si todos los componentes, desde el OCR hasta el motor de flujos, pertenecen a una misma suite propietaria, el costo de cambiar puede volverse prohibitivo; conviene usar estándares como BPMN, DMN y formatos abiertos de eventos. Pida a cada equipo dibujar la arquitectura de su proyecto con esta plantilla y presentarla en dos minutos en la siguiente sesión, señalando qué componente es el más riesgoso."
+        }
+      ],
+      "reading": {
+        "title": "Orquestar personas, robots y modelos: decisiones calibradas y agentes con autonomía acotada",
+        "minutes": 45,
+        "content": "## Del robot aislado al proceso orquestado\n\nLa automatización por tareas produce islas: cada robot funciona, pero nadie conoce el estado del caso de punta a punta. La orquestación resuelve ese problema con un motor que mantiene el estado de cada instancia y decide el siguiente paso según un modelo BPMN ejecutable. Hohpe y Woolf (2003) aportan el vocabulario para conectar sistemas: mensajes, canales, enrutadores y traductores. La entrega al menos una vez de las colas tiene dos consecuencias prácticas: todo consumidor debe ser idempotente, y los mensajes que agotan reintentos deben aislarse en una cola de mensajes fallidos que alguien revise.\n\nCuando un proceso toca varios sistemas, ninguna transacción única lo protege. El patrón **saga** lo divide en pasos locales, cada uno con su compensación:\n\n1. Reservar stock en el ERP; compensación: liberar la reserva.\n2. Emitir la factura electrónica; compensación: comunicar la baja cuando procede o emitir una nota de crédito.\n3. Cobrar con la pasarela; compensación: devolver el cobro.\n\nEl segundo paso muestra por qué el diseño exige conocer el negocio: un comprobante aceptado por la SUNAT no se elimina, se corrige con los mecanismos que la normativa prevé.\n\n## Decisiones: reglas, modelos y juicio\n\nAgrawal, Gans y Goldfarb (2018) sostienen que la IA abarata la predicción y, por eso, aumenta el valor del juicio: decidir qué hacer con una probabilidad exige conocer los costos de equivocarse. Una arquitectura sana separa tres piezas: reglas de elegibilidad, modelo predictivo y política de decisión. La política se expresa en una tabla DMN versionada y aprobada por el dueño del proceso. Con la política de acierto FIRST, una tabla de reembolsos podría evaluar en orden:\n\n1. Comprobante inválido: solicitar subsanación.\n2. Probabilidad de legitimidad menor que 0,40: derivar a antifraude.\n3. Probabilidad de al menos 0,975 y monto hasta S/ 2 000: aprobar automáticamente.\n4. Probabilidad de al menos 0,975 y monto mayor: aprobar con revisión por muestreo.\n5. Cualquier otro caso: revisión humana.\n\nEl orden importa: la primera regla atrapa los comprobantes inválidos antes de mirar la probabilidad.\n\n## El umbral se calcula, no se negocia\n\nSi se aprueba automáticamente un caso cuya probabilidad de ser correcto es p, la pérdida esperada es (1 − p) · C_error; revisarlo cuesta C_rev. Automatizar conviene cuando:\n\n```text\n(1 − p) · C_error < C_rev   ⇔   p > p* = 1 − C_rev / C_error\n```\n\nEn una aseguradora con revisión de S/ 6 por caso y un pago indebido promedio de S/ 240, p* = 1 − 6/240 = 0,975. Si la empresa abarata la revisión a S/ 3 con una mejor bandeja, el umbral sube a 0,9875: revisar se vuelve tan barato que conviene revisar más. La fórmula supone probabilidades calibradas y un revisor que corrige los errores; si el revisor también se equivoca, su tasa de error debe incorporarse al costo de revisión.\n\n## Modelos de lenguaje en el flujo: autonomía mínima suficiente\n\nPara el texto libre, como correos, reclamos o informes, los modelos de lenguaje son la herramienta adecuada, pero en un proceso empresarial conviene usarlos como componentes acotados de un flujo determinista antes que como agentes autónomos. El contrato de salida es un esquema validado:\n\n```python\nfrom enum import Enum\nfrom pydantic import BaseModel, Field, ValidationError\n\nclass Tipo(str, Enum):\n    reclamo = 'reclamo'      # disconformidad con el producto o servicio\n    queja = 'queja'          # malestar con la atención recibida\n    consulta = 'consulta'\n\nclass Solicitud(BaseModel):\n    tipo: Tipo\n    urgente: bool\n    numero_pedido: str | None = Field(default=None, max_length=12)\n    confianza: float = Field(ge=0, le=1)\n\ndef clasificar(texto: str, llm, intentos: int = 2) -> Solicitud | None:\n    for _ in range(intentos):\n        bruto = llm.generar_json(instruccion=INSTRUCCION, entrada=texto)\n        try:\n            return Solicitud.model_validate_json(bruto)\n        except ValidationError:\n            continue\n    return None   # sin salida válida: bandeja humana\n\ndef enrutar(s: Solicitud | None) -> str:\n    if s is None or s.confianza < 0.85:\n        return 'revision_humana'\n    if s.tipo is Tipo.reclamo:\n        return 'reclamo_plazo_15_dias_habiles'\n    return s.tipo.value\n```\n\nEl objeto llm representa el cliente del proveedor elegido. El texto del consumidor se trata como dato y nunca como instrucción, para mitigar la inyección de instrucciones, y ninguna acción irreversible depende solo de la salida del modelo.\n\n## Diseñar la intervención humana\n\nParasuraman, Sheridan y Wickens (2000) muestran que la automatización se gradúa por función: adquirir información, analizarla, decidir y actuar. Un diseño prudente automatiza la adquisición y el análisis, sugiere la decisión con su evidencia y reserva la acción irreversible a una persona cuando el impacto es alto. Las tareas humanas necesitan responsable, plazo, contexto completo y un motivo estructurado de decisión. Y deben medirse: tras automatizar, la cola de revisión suele convertirse en el nuevo cuello de botella, algo que la minería de procesos continua revela de inmediato."
+      },
+      "case": {
+        "title": "Caso: Sur Vital Seguros y la propuesta de un agente autónomo de reembolsos",
+        "content": "Sur Vital Seguros es una aseguradora peruana de tamaño mediano con 420 000 afiliados a planes de salud individuales y corporativos. Cuando un afiliado se atiende fuera de la red de clínicas afiliadas, paga y luego solicita el reembolso adjuntando comprobantes, recetas e informes médicos. La empresa recibe en promedio 18 000 solicitudes mensuales; el tiempo de ciclo mediano es de 11 días hábiles y la demora es la segunda causa de reclamos de los afiliados.\n\nEl proceso actual tiene tres etapas manuales: un equipo de 22 analistas revisa documentos y digita datos; un médico auditor evalúa coberturas y pertinencia en los casos de más de S/ 1 500; y tesorería programa los pagos. La unidad de riesgos estima que el 3 % de las solicitudes contiene algún error o irregularidad, que un pago indebido cuesta en promedio S/ 240 y que la revisión manual de un caso cuesta S/ 6.\n\nEl área de innovación desarrolló un modelo de legitimidad de solicitudes entrenado con dos años de historia; en validación, sus probabilidades están razonablemente calibradas. En una simulación con datos recientes, el 55 % de las solicitudes obtuvo una probabilidad superior a 0,975; el 30 %, entre 0,85 y 0,975; el 11 %, entre 0,40 y 0,85; y el 4 %, menor que 0,40.\n\nDos propuestas compiten:\n\n**Propuesta A, de un proveedor tecnológico:** un agente basado en un LLM multimodal alojado en la nube del proveedor fuera del país, con acceso a herramientas de consulta de pólizas, cálculo de coberturas y programación de pagos. El agente leería los documentos, decidiría y pagaría de forma autónoma. Prometen un tiempo de ciclo de 24 horas y reducir el equipo a 8 analistas en un año. Costo: S/ 0,90 por solicitud más una implementación de S/ 380 000.\n\n**Propuesta B, del equipo interno:** un flujo orquestado en un motor BPMN con procesamiento de documentos, validaciones de RUC y montos, el modelo de legitimidad y una tabla DMN con tres zonas; un LLM solo para clasificar documentos y redactar borradores de comunicaciones; y tareas humanas para la zona gris y para todo rechazo. Estiman un tiempo de ciclo mediano de 3 días hábiles. Costo: S/ 0,35 por solicitud más S/ 290 000.\n\nEl oficial de cumplimiento recuerda que la información de salud es un dato sensible según la Ley 29733 y que la empresa está sujeta a la supervisión de la SBS y de SUSALUD. El gerente de operaciones insiste en que la competencia ya paga en un día y que la propuesta B es demasiado conservadora. El comité ejecutivo debe decidir en dos semanas.",
+        "questions": [
+          "Calcule el umbral de aprobación automática con los costos de la empresa y estime qué proporción de solicitudes se aprobaría sin intervención humana.",
+          "Compare las propuestas A y B en riesgo operativo, auditabilidad, costo a tres años y experiencia del afiliado. ¿Cuál recomendaría y con qué condiciones?",
+          "¿Qué funciones del proceso no deberían automatizarse por completo y qué nivel de automatización asignaría a cada una según Parasuraman y colaboradores?",
+          "¿Qué exigencias de la Ley 29733 sobre datos sensibles, flujo transfronterizo y tratamiento objetivo condicionan el uso de un LLM alojado fuera del país?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: orquestación de un proceso con decisiones calibradas y tareas humanas",
+        "instructions": "**Objetivo:** implementar una orquestación de extremo a extremo de tu proceso del proyecto que integre al menos un componente de IA, decisiones explícitas y tareas humanas, con manejo robusto de errores.\n\n**Qué entregar:**\n\n1. Modelo BPMN ejecutable en un motor de flujos (Camunda, Temporal, n8n u otro justificado) con tareas de servicio, al menos una tarea de usuario, un temporizador de escalamiento y manejo de errores con compensación donde corresponda.\n2. Tabla DMN con política de acierto explícita que combine reglas de elegibilidad con el puntaje de un modelo o la salida de un LLM.\n3. Cálculo documentado de los umbrales a partir de los costos estimados de revisión y de error, con un análisis de cómo cambian si esos costos varían en más o menos 50 %.\n4. Si usas un LLM: esquema de salida validado, límite de reintentos, derivación a una persona y una prueba de inyección de instrucciones con su resultado.\n5. Evidencia de ejecución de al menos 50 casos simulados, que incluya casos felices, excepciones de negocio y de sistema, y el registro de eventos exportado para analizarlo con PM4Py.\n6. Tablero sencillo con casos en curso, tasa de procesamiento directo, excepciones por tipo y antigüedad de la cola humana.\n\n**Formato:** archivo comprimido con el repositorio, su README de ejecución y un video de cinco minutos que muestre un caso feliz, una excepción y una tarea humana.\n\n**Criterios:** corrección y robustez del flujo, justificación cuantitativa de las decisiones, diseño de la intervención humana y calidad de la evidencia de ejecución.",
+        "rubric": [
+          {
+            "name": "Flujo BPMN ejecutable, manejo de errores y compensación",
+            "points": 6
+          },
+          {
+            "name": "Tabla DMN y umbrales calculados por costo",
+            "points": 5
+          },
+          {
+            "name": "Intervención humana y uso acotado de modelos de lenguaje",
+            "points": 5
+          },
+          {
+            "name": "Evidencia de ejecución, registro de eventos y tablero",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: orquestación, decisiones y agentes",
+        "questions": [
+          {
+            "prompt": "Revisar manualmente un caso cuesta S/ 5 y aprobar por error un caso incorrecto cuesta S/ 100. ¿A partir de qué probabilidad de que el caso sea correcto conviene aprobar automáticamente?",
+            "options": [
+              "0,50",
+              "0,95",
+              "0,05",
+              "0,995"
+            ],
+            "correct": 1,
+            "explanation": "p* = 1 − C_rev / C_error = 1 − 5/100 = 0,95. Por encima de ese valor, la pérdida esperada de automatizar es menor que el costo de revisar."
+          },
+          {
+            "prompt": "Su cola de mensajes garantiza entrega al menos una vez. ¿Qué propiedad debe tener el servicio que registra los pagos que consume de esa cola?",
+            "options": [
+              "Ser idempotente, para que un mensaje duplicado no genere un segundo pago",
+              "Procesar los mensajes en paralelo para ganar velocidad",
+              "Prescindir de la cola de mensajes fallidos para no perder tiempo",
+              "Confirmar cada mensaje antes de procesarlo"
+            ],
+            "correct": 0,
+            "explanation": "Con entrega al menos una vez, el consumidor puede recibir duplicados tras un fallo. La idempotencia, por ejemplo con una clave natural, evita efectos repetidos como un doble pago."
+          },
+          {
+            "prompt": "En una venta en línea se reservó stock y se emitió la factura electrónica, aceptada por la SUNAT, pero el cobro falló definitivamente. ¿Qué compensación es correcta?",
+            "options": [
+              "Borrar la factura de la base de datos y liberar el stock",
+              "Liberar el stock y anular la factura con los mecanismos previstos, como la nota de crédito",
+              "Mantener la factura y reintentar el cobro indefinidamente",
+              "Liberar el stock y dejar la factura vigente sin ninguna acción"
+            ],
+            "correct": 1,
+            "explanation": "En una saga cada paso tiene una compensación de negocio. Un comprobante aceptado no se borra: se da de baja cuando procede o se corrige con nota de crédito."
+          },
+          {
+            "prompt": "Un proceso de cuentas por pagar tiene pasos bien definidos y exigencias de auditoría, y solo necesita interpretar correos de proveedores en texto libre. ¿Qué diseño es el más adecuado?",
+            "options": [
+              "Un agente autónomo que decida todos los pasos y herramientas",
+              "Reemplazar el motor de flujos por un LLM con memoria",
+              "Un flujo determinista donde un LLM clasifica y extrae datos de los correos con salida validada",
+              "Eliminar la interpretación de correos y procesar todo manualmente"
+            ],
+            "correct": 2,
+            "explanation": "La menor autonomía suficiente reduce riesgos y facilita la auditoría: el flujo controla los pasos y el LLM resuelve solo la subtarea de lenguaje, con un contrato de salida validado."
+          },
+          {
+            "prompt": "Tras automatizar la aprobación de reembolsos, el tiempo de ciclo casi no mejoró. La cola de revisión humana acumula 900 casos y se atienden 150 por día. ¿Qué interpretación es correcta?",
+            "options": [
+              "La cola humana es el nuevo cuello de botella, con unos 6 días de espera promedio",
+              "El modelo es inexacto y debe reemplazarse de inmediato",
+              "El motor de flujos es lento y debe cambiarse",
+              "La automatización no tuvo efecto y debe revertirse"
+            ],
+            "correct": 0,
+            "explanation": "Por la ley de Little, W = 900 / 150 = 6 días. Corresponde dimensionar el equipo revisor, mejorar la bandeja o revisar el ancho de la zona gris con el dueño del proceso."
+          },
+          {
+            "prompt": "Según Parasuraman, Sheridan y Wickens (2000), ¿qué afirmación describe mejor un diseño adecuado de la automatización?",
+            "options": [
+              "La automatización debe ser total o nula para evitar ambigüedades",
+              "El nivel más alto de automatización siempre reduce los errores humanos",
+              "La supervisión humana elimina por sí sola el sesgo de automatización",
+              "Adquirir, analizar, decidir y actuar pueden tener niveles de automatización distintos"
+            ],
+            "correct": 3,
+            "explanation": "El modelo distribuye la automatización en cuatro funciones con diez niveles. Más automatización puede inducir complacencia y sesgo de automatización, que deben mitigarse con el diseño."
+          },
+          {
+            "prompt": "Un LLM clasificador devuelve dos veces seguidas una salida que no cumple el esquema JSON definido. ¿Qué debe hacer el flujo?",
+            "options": [
+              "Aceptar la salida parcial y continuar",
+              "Reintentar indefinidamente hasta obtener una salida válida",
+              "Derivar el caso a la bandeja de revisión humana y registrar el fallo",
+              "Asignar por defecto la categoría más frecuente"
+            ],
+            "correct": 2,
+            "explanation": "Los reintentos deben ser acotados; luego el caso pasa a una persona y el fallo se registra para analizar la instrucción o el modelo. Asumir valores por defecto oculta errores."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Caso de negocio, gobernanza, cumplimiento normativo y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante sustenta un proyecto integrador de automatización inteligente con caso de negocio cuantificado, modelo operativo y de gobernanza, controles de riesgo, cumplimiento de la normativa peruana y plan de gestión del cambio, demostrando su funcionamiento con evidencia y respondiendo a cuestionamientos técnicos y de negocio.",
+      "topics": [
+        "Caso de negocio: costo total de propiedad, beneficios verificables, VAN, periodo de recuperación y sensibilidad",
+        "Modelo operativo: centro de excelencia, ciclo de vida de las automatizaciones y escalamiento de la cartera",
+        "Gestión de riesgos y controles internos de la automatización",
+        "Marco normativo peruano: Ley 29733 y su reglamento, Ley 31814 y gobierno digital",
+        "Personas y gestión del cambio: rediseño de puestos, reconversión y comunicación",
+        "Proyecto integrador: demostración, documentación y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "Por qué fracasan los programas de automatización",
+          "bullets": [
+            "Lacity y Willcocks (2018): los resultados dependen más de la estrategia, el gobierno y la gestión del cambio que de la herramienta.",
+            "Síntomas: decenas de robots aislados, mantenimiento creciente, procesos mal elegidos y beneficios nunca verificados.",
+            "Muchos pilotos no escalan porque no tienen dueño del proceso, presupuesto operativo ni medición de beneficios.",
+            "Antídoto: cartera priorizada, línea base medida, caso de negocio auditable y modelo operativo explícito."
+          ],
+          "notes": "Abra con una pregunta incómoda: ¿cuántos programas de automatización conocen que hayan cumplido los beneficios prometidos en su caso de negocio? Lacity y Willcocks estudiaron numerosas organizaciones y concluyeron que la herramienta rara vez explica el fracaso; lo explican la elección de procesos, la falta de gobierno, la ausencia de dueños y la mala gestión del cambio. Describa los síntomas de un programa enfermo: robots construidos por iniciativa de cada área sin estándares comunes, un proveedor que factura un mantenimiento creciente y beneficios calculados una vez al inicio y nunca verificados. Advierta que muchas cifras sobre tasas de fracaso de proyectos de automatización provienen de encuestas de consultoras con metodologías poco transparentes: úselas como señales, no como evidencia concluyente. El antídoto es la disciplina que verán en esta unidad: cartera priorizada con datos, línea base medida antes de automatizar, caso de negocio auditable y un modelo operativo explícito. Pida a los equipos revisar si su proyecto cuenta con una línea base medida y quién la validó."
+        },
+        {
+          "title": "Costo total de propiedad de una automatización",
+          "bullets": [
+            "Inversión inicial: análisis, desarrollo, pruebas, licencias de arranque, infraestructura y capacitación.",
+            "Costos recurrentes: licencias por robot o por consumo, nube, llamadas a modelos, mantenimiento y soporte.",
+            "Costo oculto principal: mantenimiento por cambios en aplicaciones, portales y normas; presupueste un porcentaje anual del desarrollo.",
+            "Incluya el costo de la revisión humana residual y el costo esperado de los errores que pasan sin detectar."
+          ],
+          "notes": "Construya con la clase el costo total de propiedad de un robot de cuentas por pagar. La inversión inicial incluye horas de análisis y documentación del proceso, desarrollo y pruebas, licencias del primer año, infraestructura y capacitación de usuarios y soporte. Los costos recurrentes incluyen licencias, que en muchas plataformas comerciales se pagan por robot o por usuario y en dólares, consumo de nube y de llamadas a modelos de lenguaje, y soporte. Insista en el mantenimiento: cada actualización del ERP, cambio de un portal externo o nueva disposición tributaria obliga a ajustar el robot; presupuestar un porcentaje anual del costo de desarrollo es prudente, y el porcentaje real debe medirse en la propia organización con datos de incidentes. Agregue dos costos que casi siempre se omiten: la revisión humana de la zona gris, que no desaparece, y el costo esperado de los errores residuales. Pregunte qué ocurre con el caso de negocio si el tipo de cambio sube 10 % y las licencias están en dólares."
+        },
+        {
+          "title": "Beneficios cuantificables, verificables y estratégicos",
+          "bullets": [
+            "Horas liberadas = volumen × tiempo manual por caso × proporción automatizada; solo valen dinero si se redistribuyen o evitan costos.",
+            "Menos errores, multas, intereses y reprocesos; mejor cumplimiento de plazos legales y pagos puntuales a proveedores.",
+            "Beneficios estratégicos: escalabilidad en picos, trazabilidad para auditoría y datos para nuevas mejoras.",
+            "Error común: contar puestos liberados como ahorro aunque nadie cambie de rol ni se evite una contratación."
+          ],
+          "notes": "Explique la fórmula de horas liberadas con un ejemplo: 3 000 facturas mensuales, 12 minutos manuales por factura y 70 % de procesamiento directo dan 420 horas al mes. Pregunte: ¿esas horas son un ahorro? Solo si se traducen en algo concreto: una contratación evitada por crecimiento, horas extra eliminadas, personal reasignado a tareas de mayor valor que antes no se hacían o una reducción de planilla decidida por la empresa. Si las 420 horas se diluyen en la jornada sin cambio alguno, el beneficio financiero es cero, aunque la presentación diga lo contrario. Presente los otros beneficios cuantificables: menos errores, menos multas, intereses y reprocesos, mejor cumplimiento de plazos legales como el del Libro de Reclamaciones y pagos puntuales que mejoran las condiciones con proveedores. Los beneficios estratégicos, como la escalabilidad en campañas o la trazabilidad, se describen con indicadores aunque no se valoricen. Pida a los equipos clasificar los beneficios de su proyecto en estas tres categorías y definir cómo verificarán cada uno después del pase a producción."
+        },
+        {
+          "title": "VAN, periodo de recuperación y sensibilidad",
+          "bullets": [
+            "VAN = −I₀ + Σ FCₜ / (1 + r)ᵗ, con flujos netos incrementales y la tasa de descuento que exige la empresa.",
+            "Periodo de recuperación: mes en que el flujo acumulado se vuelve positivo; útil para comunicar, insuficiente para decidir.",
+            "Sensibilidad: varíe volumen, tasa de procesamiento directo, costo de mantenimiento y tipo de cambio si las licencias son en dólares.",
+            "Presente escenarios pesimista, base y optimista: la decisión debe resistir el escenario pesimista o fijar condiciones."
+          ],
+          "notes": "Introduzca el valor actual neto con la intuición de que un sol hoy vale más que un sol dentro de un año, porque podría invertirse. Aplíquelo al caso de la lectura: una inversión de S/ 95 000, flujos netos anuales de S/ 75 000 durante tres años y una tasa de 12 % dan un VAN cercano a S/ 85 000 y una recuperación en el mes 16. Luego construya el escenario pesimista con una tasa de procesamiento directo de 50 % en lugar de 70 %: el flujo neto anual cae a S/ 39 000 y el VAN se vuelve ligeramente negativo. Esa es la conversación que el comité necesita: el proyecto solo crea valor si la tasa supera cierto nivel, y ese nivel se convierte en meta y en condición de continuidad durante el hipercuidado. Explique por qué el periodo de recuperación es popular pero insuficiente: ignora lo que ocurre después del punto de equilibrio y el valor del dinero en el tiempo. Recomiende un análisis de tornado para mostrar qué variable mueve más el VAN. Pregunte qué variable del proyecto de cada equipo es la más incierta."
+        },
+        {
+          "title": "Modelo operativo y centro de excelencia",
+          "bullets": [
+            "Modelos centralizado, federado o híbrido; el centro de excelencia fija estándares, plataforma, seguridad y cartera.",
+            "Roles: dueño del proceso, analista de procesos, desarrollador de automatización, ingeniero de IA, soporte y patrocinador.",
+            "El desarrollo ciudadano con bajo código acelera, pero requiere catálogo, revisión y límites sobre datos sensibles.",
+            "Indicadores del programa: beneficios verificados, disponibilidad de robots, incidentes, tiempo de entrega y estado de la cartera."
+          ],
+          "notes": "Describa los tres modelos operativos. En el centralizado, un centro de excelencia construye y opera todas las automatizaciones: hay estándares fuertes, pero se forma un cuello de botella. En el federado, cada área desarrolla con sus propios equipos y el centro fija reglas mínimas: se gana velocidad, pero se pierde consistencia. El híbrido, frecuente en organizaciones maduras, centraliza plataforma, seguridad, estándares y cartera, y distribuye el desarrollo con revisión obligatoria. Repase los roles con ejemplos de una entidad financiera: el dueño del proceso responde por los resultados del negocio, el analista documenta y mide, el desarrollador construye, el ingeniero de IA entrena y monitorea modelos, soporte atiende incidentes y el patrocinador asegura presupuesto y prioridad. Discuta el desarrollo ciudadano con herramientas de bajo código: democratiza la automatización, pero sin catálogo ni límites puede crear flujos que envían datos personales a servicios no autorizados. Pregunte qué modelo operativo sería adecuado para una institución educativa como la nuestra y por qué."
+        },
+        {
+          "title": "Ciclo de vida de una automatización",
+          "bullets": [
+            "Fases: idea, evaluación, diseño, construcción, pruebas, despliegue, hipercuidado, operación, mejora y retiro.",
+            "Control de versiones y ambientes separados de desarrollo, pruebas y producción, también para flujos de bajo código.",
+            "Gestión de cambios: una actualización del ERP o de un portal externo dispara pruebas de regresión de los robots afectados.",
+            "Retiro planificado: cuando aparece una API o se rediseña el proceso, el robot se apaga y se documenta su baja."
+          ],
+          "notes": "Recorra el ciclo de vida completo e insista en las fases que suelen olvidarse. La evaluación filtra ideas con la matriz de la unidad 1; el diseño produce el documento de definición del proceso y el diseño técnico; la construcción sigue los estándares del centro de excelencia; las pruebas incluyen regresión; el despliegue pasa por ambientes separados; el hipercuidado vigila las primeras semanas; la operación mide beneficios. Destaque la gestión de cambios: el área de sistemas debe notificar al centro de excelencia cada actualización del ERP, y los portales externos deben vigilarse con pruebas de humo, porque nadie avisará cuando un banco o una entidad pública cambien una pantalla. Explique el retiro como una decisión de éxito, no de fracaso: cuando aparece una API o se rediseña el proceso, apagar el robot reduce costos y riesgos. Pida que cada equipo defina en su proyecto quién aprobará el pase a producción, cómo se probará un cambio y en qué fecha se revisará si la automatización debe mantenerse, mejorarse o retirarse."
+        },
+        {
+          "title": "Riesgos y controles de la automatización",
+          "bullets": [
+            "Riesgos: errores repetidos a escala, fraude con credenciales del robot, dependencia de proveedor y fallas silenciosas.",
+            "Controles preventivos: privilegios mínimos, segregación de funciones, validaciones y aprobación humana para montos altos.",
+            "Controles detectivos: conciliaciones, conformidad continua, alertas de volumen y muestreo aleatorio de casos automáticos.",
+            "Registro de riesgos con probabilidad, impacto, dueño, control y riesgo residual, revisado periódicamente."
+          ],
+          "notes": "Plantee los riesgos específicos de la automatización. El primero es la escala del error: una persona que se equivoca afecta algunos casos; un robot con una regla mal configurada puede afectar miles antes de que alguien lo note. El segundo es el fraude con credenciales: una identidad digital con permisos amplios es un objetivo atractivo para atacantes internos y externos. El tercero es la dependencia de un proveedor o de pocas personas que conocen el flujo. El cuarto son las fallas silenciosas, cuando el robot termina sin errores, pero procesa mal. Muestre cómo responden los controles preventivos y detectivos, y relacione con los marcos de control interno que usan los auditores, como COSO. Presente un registro de riesgos con columnas de probabilidad, impacto, dueño, control y riesgo residual, y complete dos filas con la clase. Sugiera el muestreo aleatorio de casos automáticos como un control detectivo barato y efectivo. Pregunte qué riesgo de su proyecto tiene mayor impacto y qué control concreto lo mitiga."
+        },
+        {
+          "title": "Ley 29733 y su reglamento aplicados a la automatización",
+          "bullets": [
+            "Principios: legalidad, consentimiento, finalidad, proporcionalidad, calidad, seguridad, disposición de recurso y nivel de protección adecuado.",
+            "Artículo 23: derecho al tratamiento objetivo frente a decisiones significativas basadas únicamente en tratamiento automatizado que evalúa a la persona.",
+            "Los datos de salud son sensibles y exigen consentimiento por escrito y medidas reforzadas; el reglamento vigente es el DS 016-2024-JUS.",
+            "Enviar datos a una nube o a un LLM alojado en el extranjero es flujo transfronterizo: verifique nivel de protección y contrato."
+          ],
+          "notes": "Repase los principios de la Ley 29733 con ejemplos de automatización. Finalidad: los datos recogidos para un reembolso no pueden reutilizarse para campañas comerciales sin base legal. Proporcionalidad: el robot no debe copiar en sus bitácoras el DNI completo si no lo necesita. Seguridad: credenciales en bóveda, cifrado y control de accesos. Presente el artículo 23, que reconoce el derecho al tratamiento objetivo: el titular puede oponerse a decisiones con efectos jurídicos o que le afecten significativamente cuando se sustentan únicamente en un tratamiento automatizado destinado a evaluar aspectos de su personalidad o conducta, salvo las excepciones previstas en la ley; en la práctica, obliga a prever intervención humana y explicación. Los datos de salud son sensibles y su tratamiento exige consentimiento por escrito. Mencione el reglamento aprobado por el DS 016-2024-JUS, que actualizó las obligaciones de seguridad y gestión de incidentes, y recuerde que enviar datos a una nube o a un LLM alojado en el extranjero constituye flujo transfronterizo. Pida a los equipos inventariar los datos personales de su proceso."
+        },
+        {
+          "title": "Ley 31814, gobierno digital y normas sectoriales",
+          "bullets": [
+            "Ley 31814 (2023): promueve el uso de la IA con enfoque basado en riesgos; su reglamento exige más salvaguardas en usos de riesgo alto.",
+            "Decreto Legislativo 1412, Ley de Gobierno Digital: marco para digitalizar procedimientos, servicios e interoperabilidad en el sector público.",
+            "Normas sectoriales: comprobantes electrónicos de la SUNAT, Libro de Reclamaciones y regulación de la SBS sobre seguridad de la información.",
+            "Ley 30096 de delitos informáticos: el acceso no autorizado mediante un robot también tiene consecuencias penales."
+          ],
+          "notes": "Ubique la Ley 31814, promulgada en julio de 2023, como el primer marco legal peruano específico sobre inteligencia artificial: declara de interés nacional su promoción y establece principios como el enfoque basado en riesgos, la transparencia, la privacidad y el desarrollo ético. Su reglamento adopta ese enfoque y exige mayores salvaguardas, como transparencia y supervisión humana, en los usos de riesgo alto; insista en revisar siempre el texto vigente, porque esta regulación evoluciona rápido. Para el sector público, el Decreto Legislativo 1412, Ley de Gobierno Digital, y sus normas de desarrollo ordenan la digitalización de procedimientos y la interoperabilidad, lo que abre un espacio importante para la automatización en ministerios, gobiernos regionales y municipalidades. Recuerde las normas sectoriales que condicionan el diseño: comprobantes electrónicos, Libro de Reclamaciones y regulación de la SBS para entidades supervisadas. Cierre con la Ley 30096: un robot que accede a sistemas sin autorización expone a la empresa y a sus responsables. El curso paralelo de Ética y Gobernanza de la IA profundiza estos temas."
+        },
+        {
+          "title": "Personas: impacto en el trabajo y gestión del cambio",
+          "bullets": [
+            "La automatización sustituye tareas más que ocupaciones completas; el puesto se rediseña hacia excepciones, análisis y relación con clientes.",
+            "Kotter (1996): urgencia, coalición, visión, comunicación, remoción de obstáculos, logros tempranos, consolidación y anclaje cultural.",
+            "Involucre desde el diagnóstico a quienes ejecutan el proceso: conocen las excepciones que no aparecen en ningún manual.",
+            "Plan de reconversión con rutas concretas: supervisión de robots, análisis de datos y mejora de procesos."
+          ],
+          "notes": "Discuta el impacto laboral con evidencia, sin alarmismo ni complacencia. Los estudios recientes sobre exposición de ocupaciones a los modelos de lenguaje concluyen que muchas ocupaciones tienen una fracción de sus tareas expuestas y pocas tienen todas sus tareas automatizables. El estudio de Brynjolfsson, Li y Raymond sobre agentes de atención al cliente que usaron un asistente de IA generativa encontró aumentos de productividad promedio cercanos al 14 %, mayores en los trabajadores con menos experiencia. Presente los ocho pasos de Kotter con ejemplos de un programa de automatización en una caja municipal: crear urgencia con datos de la línea base, formar una coalición con jefes respetados, comunicar una visión que explique qué pasará con las personas, eliminar obstáculos y celebrar logros tempranos. Insista en involucrar a quienes ejecutan el proceso: conocen excepciones que no aparecen en ningún manual, y su resistencia suele ser racional. Pida a los equipos redactar el mensaje que dirigirían a los analistas afectados por su automatización y someterlo a crítica de otro equipo."
+        },
+        {
+          "title": "Escalar: de un robot a una cartera",
+          "bullets": [
+            "Reutilice componentes: conectores, validadores de RUC, lectores de XML, plantillas de flujo y servicios de extracción compartidos.",
+            "Gestione la capacidad: licencias, ventanas nocturnas y prioridades en cierres contables o vencimientos tributarios.",
+            "Plataformización: un servicio común de procesamiento de documentos atiende a finanzas, logística y atención al cliente.",
+            "Revise la cartera cada trimestre: beneficios reales frente a proyectados, costo de mantenimiento y candidatos a retiro."
+          ],
+          "notes": "Explique que escalar no es multiplicar robots, sino construir capacidades reutilizables. Un validador de RUC, un lector de XML UBL, un conector al ERP o un servicio de extracción con LLM deben construirse una vez, probarse a fondo y compartirse con documentación clara. Muestre el problema de capacidad en fechas pico: durante la semana de vencimientos tributarios o el cierre contable, todos los procesos quieren robots al mismo tiempo; se necesita priorizar, programar ejecuciones nocturnas y reservar capacidad con anticipación. La plataformización convierte componentes en servicios internos con niveles de servicio, como un servicio de procesamiento documental que atiende a varias áreas. Proponga una revisión trimestral de la cartera con datos: beneficios reales frente a proyectados, costo de mantenimiento por robot, incidentes y volumen procesado. Los robots con muy bajo volumen o alto mantenimiento son candidatos a retiro o a reemplazo por integraciones. Pregunte qué componente de su proyecto podría reutilizar otro equipo de la clase y qué haría falta para compartirlo."
+        },
+        {
+          "title": "Estructura del proyecto integrador",
+          "bullets": [
+            "Diagnóstico con BPMN y minería de procesos, línea base medida y justificación de la priorización.",
+            "Solución funcional: orquestación con al menos un componente de IA, validaciones, tareas humanas y registro de eventos.",
+            "Evidencia de desempeño sobre un conjunto de prueba independiente: STP, error residual, tiempo de ciclo y costo por caso.",
+            "Caso de negocio, registro de riesgos, análisis normativo, plan de gestión del cambio y manual de operación."
+          ],
+          "notes": "Presente la estructura del proyecto integrador, que los equipos vienen construyendo desde la semana 1. El diagnóstico retoma la tarea 1 con el modelo AS-IS, la minería de procesos y la línea base, ahora completada con la justificación de la priorización. La solución funcional retoma las tareas 2 y 3: debe incluir orquestación, al menos un componente de IA con su evaluación, validaciones deterministas, tareas humanas y registro de eventos. La evidencia de desempeño se mide sobre un conjunto de prueba que no se usó para ajustar umbrales, con las métricas definidas en la unidad 2. El caso de negocio y la gobernanza son el aporte nuevo de esta unidad: costo total, VAN con escenarios, registro de riesgos con controles, análisis de cumplimiento de la Ley 29733 y de la Ley 31814, y plan de gestión del cambio. Muestre la rúbrica de la tarea 4 y aclare que la coherencia entre las partes pesa tanto como cada parte por separado. Resuelva dudas de alcance por equipo y registre los acuerdos."
+        },
+        {
+          "title": "Demostración y documentación profesional",
+          "bullets": [
+            "Video de 8 a 10 minutos: caso feliz, excepción de negocio, excepción de sistema y tarea humana.",
+            "Repositorio con instrucciones de ejecución, datos de prueba seudonimizados y pruebas automatizadas.",
+            "Manual de operación: monitoreo, respuesta a incidentes, procedimiento manual de contingencia y responsables.",
+            "Ficha de la automatización: propósito, alcance, componentes de IA, límites conocidos, métricas y dueño."
+          ],
+          "notes": "Explique los entregables de documentación como lo haría un cliente exigente. El video debe demostrar comportamiento, no mostrar diapositivas: un caso feliz que atraviesa todo el flujo, una excepción de negocio que termina en una tarea humana bien presentada, una excepción de sistema con reintento y la evidencia correspondiente en el registro de eventos. El repositorio debe permitir que otra persona ejecute la solución siguiendo el README, con datos seudonimizados y pruebas automatizadas, tal como exigieron en Despliegue de Modelos. El manual de operación responde a qué hacer a las tres de la mañana cuando el flujo falla en una fecha crítica: cómo detectar el problema, a quién llamar y cómo procesar manualmente. La ficha de la automatización, inspirada en las tarjetas de modelo de Mitchell y colaboradores, documenta propósito, alcance, componentes de IA, límites conocidos, métricas y dueño. Pregunte qué límite conocido de su solución deberían declarar en la ficha y por qué declararlo fortalece, en lugar de debilitar, su propuesta."
+        },
+        {
+          "title": "Sustentación: argumentar con evidencia",
+          "bullets": [
+            "Estructura: problema y línea base, solución, evidencia, caso de negocio, riesgos y próximos pasos.",
+            "Anticipe preguntas: ¿qué pasa si falla el portal?, ¿por qué ese umbral?, ¿quién responde por un error del robot?",
+            "Distinga resultados medidos de proyecciones y declare los supuestos y límites de su evaluación.",
+            "El jurado evalúa decisiones justificadas, no la cantidad de tecnología utilizada."
+          ],
+          "notes": "Prepare a los equipos para la sustentación con una estructura de seis bloques y un tiempo de quince minutos de exposición más diez de preguntas. Ejemplifique preguntas típicas del jurado: ¿qué pasa si el portal de la SUNAT no responde el día del vencimiento?, ¿por qué eligieron ese umbral y qué ocurre si cambian los costos?, ¿quién responde ante el cliente por un error del robot?, ¿cómo se enteraría la empresa de que el modelo se degradó? Enseñe a distinguir el lenguaje de la evidencia del de la proyección: afirmar que midieron una tasa de procesamiento directo de 64 % en 300 casos de prueba es distinto de afirmar que esperan alcanzar 80 %. Recomiende declarar las limitaciones antes de que el jurado las descubra, porque demuestra dominio del problema. Recuerde el criterio central: una solución sencilla, bien justificada y con controles vale más que una arquitectura sofisticada sin evidencia. Organice en la semana 15 un ensayo entre equipos con retroalimentación cruzada usando la rúbrica oficial."
+        }
+      ],
+      "reading": {
+        "title": "Caso de negocio, gobernanza y personas: lo que separa un piloto de un programa",
+        "minutes": 40,
+        "content": "## Del piloto al programa\n\nUn piloto demuestra que una automatización es técnicamente posible; un programa demuestra que crea valor sostenido. Lacity y Willcocks (2018) concluyen que la diferencia rara vez está en la herramienta y casi siempre en tres disciplinas: un caso de negocio verificable, un modelo de gobierno y una gestión del cambio que involucra a las personas.\n\n## El caso de negocio\n\nEl costo total de propiedad suma la inversión inicial —análisis, desarrollo, pruebas, licencias de arranque y capacitación— y los costos recurrentes: licencias, nube, llamadas a modelos, mantenimiento, soporte, revisión humana residual y el costo esperado de los errores que pasan sin detectar.\n\nLos beneficios se calculan sobre una **línea base medida**, no estimada. Para las horas liberadas:\n\n```text\nHoras liberadas por mes = volumen × tiempo manual por caso × proporción automatizada\n```\n\nConsidere un área de cuentas por pagar con 3 000 facturas mensuales, 12 minutos manuales por factura y una tasa de procesamiento directo (STP) de 70 %: 3 000 × 0,2 h × 0,70 = 420 horas al mes. A un costo cargado de S/ 25 por hora equivalen a S/ 126 000 anuales, **siempre que** esas horas se traduzcan en una contratación evitada, menos horas extra o personal reasignado a tareas de mayor valor. Si se diluyen en la jornada, el beneficio financiero es nulo.\n\nCon una inversión de S/ 95 000, licencias y nube por S/ 36 000 anuales y mantenimiento por S/ 15 000 anuales, el flujo neto es de S/ 75 000 por año. Con una tasa de descuento de 12 %:\n\n```python\ndef van(tasa, flujos):\n    # flujos[0] ocurre hoy (t = 0); los siguientes, al final de cada año\n    return sum(f / (1 + tasa) ** t for t, f in enumerate(flujos))\n\nbase = [-95_000, 75_000, 75_000, 75_000]\npesimista = [-95_000, 39_000, 39_000, 39_000]   # STP de 50 % en lugar de 70 %\nprint(round(van(0.12, base)))        # 85137\nprint(round(van(0.12, pesimista)))   # -1329\n```\n\nEl escenario base es atractivo y se recupera en el mes 16; el pesimista apenas destruye valor. La conclusión útil para el comité no es un número, sino una condición: el proyecto crea valor si la STP supera aproximadamente 50 %, y esa meta debe verificarse durante el hipercuidado. Conviene variar también el volumen, el costo de mantenimiento y el tipo de cambio cuando las licencias se pagan en dólares.\n\n## Gobierno y control\n\nUn **centro de excelencia** fija estándares, administra la plataforma, mantiene la cartera priorizada y verifica beneficios. En el modelo híbrido, frecuente en organizaciones maduras, el centro concentra plataforma, seguridad y estándares, mientras las áreas desarrollan con revisión obligatoria. Cada automatización recorre un ciclo de vida —evaluación, diseño, construcción, pruebas, despliegue, hipercuidado, operación, mejora y retiro— con ambientes separados y control de versiones.\n\nLos riesgos propios de la automatización exigen controles específicos:\n\n- **Error a escala:** validaciones deterministas, límites de monto y muestreo aleatorio de casos automáticos.\n- **Fraude con identidades digitales:** privilegios mínimos, bóveda de credenciales y segregación de funciones; el robot que registra proveedores no programa pagos.\n- **Fallas silenciosas:** conformidad continua con minería de procesos y alertas ante cambios en la tasa de excepciones.\n- **Dependencia:** estándares abiertos como BPMN y DMN, documentación y conocimiento distribuido en el equipo.\n\n## Cumplimiento normativo peruano\n\nLa Ley 29733 de Protección de Datos Personales y su reglamento, aprobado por el DS 016-2024-JUS, rigen todo proceso que trate datos de personas. Sus principios de finalidad y proporcionalidad limitan qué datos procesa y registra un robot; los datos de salud son sensibles y su tratamiento requiere consentimiento por escrito; el envío a nubes o modelos alojados fuera del país es flujo transfronterizo. El artículo 23 reconoce el **derecho al tratamiento objetivo**: las decisiones con efectos jurídicos o que afectan significativamente a una persona no deben sustentarse únicamente en un tratamiento automatizado que evalúe aspectos de su personalidad o conducta, salvo las excepciones legales. La Ley 31814, de 2023, promueve el uso de la inteligencia artificial con un enfoque basado en riesgos, y su reglamento exige mayores salvaguardas de transparencia y supervisión humana en los usos de riesgo alto.\n\n## Personas\n\nLa automatización transforma puestos más que eliminarlos de golpe: desplaza el trabajo hacia las excepciones, el análisis y la relación con los clientes. Kotter (1996) propone una secuencia para conducir ese cambio: crear urgencia con datos, formar una coalición, desarrollar y comunicar la visión, remover obstáculos, generar logros tempranos, consolidar las mejoras y anclarlas en la cultura. Quien ejecuta el proceso conoce las excepciones que ningún registro muestra; involucrarlo desde el diagnóstico mejora la solución y reduce la resistencia."
+      },
+      "case": {
+        "title": "Caso: Comercial Tawa y su cartera de 27 robots",
+        "content": "Comercial Tawa S.A. es una cadena peruana de mejoramiento del hogar con 42 tiendas en 14 regiones, venta en línea y unos 3 800 colaboradores. Hace tres años, la gerencia de finanzas contrató a un proveedor para automatizar procesos con RPA. Hoy la empresa tiene 27 robots en producción, distribuidos en finanzas (12), logística (8), recursos humanos (4) y atención al cliente (3).\n\nEl caso de negocio original proyectaba beneficios anuales de S/ 1,2 millones, calculados como horas liberadas multiplicadas por el costo de los puestos. Una revisión de auditoría interna encontró que los beneficios verificables, es decir, contrataciones evitadas, horas extra eliminadas y multas evitadas, suman S/ 410 000 al año. Los costos actuales son licencias por S/ 22 000 mensuales, pagadas en dólares, y mantenimiento del proveedor por S/ 38 000 mensuales.\n\nLa revisión también reveló lo siguiente:\n\n- Nueve robots procesan menos de 100 transacciones al mes.\n- Seis robots fallaron durante más de una semana en los últimos seis meses tras cambios en portales bancarios y en el ERP; el equipo se enteró por reclamos de las áreas usuarias.\n- Tres robots de finanzas usan la cuenta personal de un analista que dejó la empresa hace cuatro meses.\n- El robot que registra proveedores en el ERP es el mismo que genera el archivo de pagos para el banco.\n- Para cuatro de los procesos robotizados, el ERP ya ofrece API desde su última actualización.\n- Nadie en la empresa conoce el detalle técnico de los robots: toda la documentación la tiene el proveedor.\n\nMientras tanto, el gerente de experiencia del cliente propone un nuevo proyecto: agentes basados en LLM que atiendan automáticamente las hojas del Libro de Reclamaciones, unas 2 600 al mes, clasificando, investigando en los sistemas y respondiendo al consumidor sin intervención humana, con un presupuesto de S/ 450 000. El sindicato, informado por rumores, ha pedido una reunión porque teme despidos en el centro de servicios compartidos, donde trabajan 140 personas.\n\nEl nuevo gerente de finanzas, Andrés Paredes, debe presentar al directorio en un mes un plan de automatización para la empresa: qué hacer con la cartera actual, cómo gobernarla, si aprobar el proyecto de agentes y cómo manejar la relación con los colaboradores.",
+        "questions": [
+          "¿Qué explica la brecha entre los beneficios proyectados y los verificados, y cómo rediseñaría la medición de beneficios del programa?",
+          "Con los datos de la revisión, ¿qué robots retiraría, cuáles reemplazaría por integraciones y cuáles mantendría? Justifique con criterios explícitos y con el balance anual de costos y beneficios.",
+          "Evalúe la propuesta de agentes para el Libro de Reclamaciones considerando el plazo legal, la Ley 29733, el derecho al tratamiento objetivo y los riesgos reputacionales.",
+          "Diseñe el modelo operativo, los controles urgentes y el plan de gestión del cambio que presentaría al directorio y al sindicato."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: proyecto integrador de automatización inteligente de extremo a extremo",
+        "instructions": "**Objetivo:** integrar los productos de las unidades 1 a 3 en una automatización inteligente de extremo a extremo, justificada con evidencia, económicamente viable, gobernada y conforme a la normativa peruana.\n\n**Qué entregar:**\n\n1. **Informe final** de máximo 15 páginas: diagnóstico con BPMN y minería de procesos, línea base, priorización, arquitectura de la solución, evaluación de desempeño sobre un conjunto de prueba independiente (tasa de procesamiento directo, error residual, tiempo de ciclo y costo por caso) y caso de negocio con costo total de propiedad, VAN a tres años en escenarios pesimista, base y optimista, y análisis de sensibilidad.\n2. **Gobernanza:** registro de al menos ocho riesgos con controles preventivos y detectivos, modelo operativo propuesto, análisis de cumplimiento de la Ley 29733 (incluido el artículo 23 si hay decisiones sobre personas) y de la Ley 31814, y plan de gestión del cambio basado en Kotter.\n3. **Solución funcional:** repositorio con README, pruebas automatizadas, datos seudonimizados, registro de eventos y ficha de la automatización.\n4. **Manual de operación** con monitoreo, respuesta a incidentes y procedimiento manual de contingencia.\n5. **Video demostrativo** de 8 a 10 minutos con caso feliz, excepción de negocio, excepción de sistema y tarea humana.\n6. **Sustentación oral** de 15 minutos más 10 minutos de preguntas del jurado en la semana 16.\n\n**Formato:** un archivo comprimido con el informe en PDF, el repositorio, el manual y el video; la sustentación se realiza en la sesión síncrona.\n\n**Criterios:** funcionamiento y calidad técnica, solidez de la evidencia y del caso de negocio, pertinencia de los controles y del análisis normativo, y claridad y rigor en la sustentación. La coherencia entre diagnóstico, solución y caso de negocio se considera en todos los criterios.",
+        "rubric": [
+          {
+            "name": "Solución funcional y calidad técnica",
+            "points": 6
+          },
+          {
+            "name": "Evidencia de desempeño y caso de negocio",
+            "points": 5
+          },
+          {
+            "name": "Gobernanza, riesgos y cumplimiento normativo",
+            "points": 5
+          },
+          {
+            "name": "Sustentación oral y comunicación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: caso de negocio, gobernanza y normativa",
+        "questions": [
+          {
+            "prompt": "Una automatización requiere S/ 100 000 de inversión y genera flujos netos de S/ 50 000 al final de cada uno de los tres años siguientes. Con una tasa de descuento de 10 %, ¿cuál es su VAN aproximado?",
+            "options": [
+              "S/ 50 000",
+              "S/ 24 343",
+              "S/ 124 343",
+              "−S/ 24 343"
+            ],
+            "correct": 1,
+            "explanation": "VAN = −100 000 + 50 000 × (1/1,1 + 1/1,21 + 1/1,331) = −100 000 + 124 343 ≈ S/ 24 343. El valor presente de los flujos supera la inversión."
+          },
+          {
+            "prompt": "Una automatización libera 420 horas mensuales, pero ningún analista cambia de funciones, no se evita ninguna contratación y no se reducen horas extra. ¿Cómo deben tratarse esas horas en el caso de negocio?",
+            "options": [
+              "Como ahorro completo, valorizado al costo cargado de los puestos",
+              "Como ahorro del 50 %, por prudencia",
+              "Como beneficio financiero nulo hasta que se redistribuyan o eviten costos reales",
+              "Como ingreso adicional por mayor productividad"
+            ],
+            "correct": 2,
+            "explanation": "Las horas liberadas solo crean valor financiero si se traducen en costos evitados o en trabajo de mayor valor. Contarlas como ahorro sin cambio real infla el caso de negocio."
+          },
+          {
+            "prompt": "Un banco rechaza automáticamente solicitudes de crédito con un modelo, sin intervención humana ni explicación al solicitante. ¿Qué disposición normativa es la más directamente relevante?",
+            "options": [
+              "El derecho al tratamiento objetivo del artículo 23 de la Ley 29733",
+              "La Ley de Gobierno Digital, Decreto Legislativo 1412",
+              "La Ley 30096 de delitos informáticos",
+              "La obligación de emitir comprobantes electrónicos"
+            ],
+            "correct": 0,
+            "explanation": "El artículo 23 protege frente a decisiones significativas basadas únicamente en tratamiento automatizado que evalúa a la persona; obliga a prever intervención humana y explicación, salvo excepciones legales."
+          },
+          {
+            "prompt": "Una auditoría encuentra que el mismo robot registra proveedores en el ERP y genera el archivo de pagos al banco. ¿Qué principio de control se vulnera y qué corresponde hacer?",
+            "options": [
+              "Ninguno, porque un robot no comete fraude por sí mismo",
+              "Segregación de funciones: separar identidades y permisos y añadir aprobación humana para pagos",
+              "Disponibilidad: duplicar el robot para tener respaldo",
+              "Eficiencia: concentrar más tareas en el mismo robot"
+            ],
+            "correct": 1,
+            "explanation": "Crear proveedores y pagar con una misma identidad permite que un error o una manipulación generen pagos indebidos. Se separan identidades y permisos y se añaden controles de aprobación."
+          },
+          {
+            "prompt": "Un equipo quiere enviar historias clínicas a un LLM alojado en otro país para extraer diagnósticos. ¿Qué consideración es imprescindible según la Ley 29733?",
+            "options": [
+              "Ninguna, si el proveedor es una empresa reconocida",
+              "Solo cifrar el archivo durante la transferencia",
+              "Tratarlo como flujo transfronterizo de datos sensibles, con base legal, consentimiento escrito, protección adecuada y contrato",
+              "Solicitar una autorización a la SUNAT"
+            ],
+            "correct": 2,
+            "explanation": "Los datos de salud son sensibles y su envío al extranjero es flujo transfronterizo: requiere base legal, consentimiento por escrito, nivel de protección adecuado y garantías contractuales, además de medidas de seguridad."
+          },
+          {
+            "prompt": "Tras una actualización del ERP, seis robots fallaron durante una semana sin que el equipo lo notara. ¿Qué combinación de prácticas habría prevenido mejor el problema?",
+            "options": [
+              "Más licencias y robots de respaldo",
+              "Reentrenar cada mes los modelos de IA",
+              "Volver al proceso manual de forma permanente",
+              "Gestión de cambios con pruebas de regresión y alertas por aumento de excepciones"
+            ],
+            "correct": 3,
+            "explanation": "La gestión de cambios dispara pruebas de regresión antes de que la actualización llegue a producción, y las alertas por cambio de comportamiento detectan fallas silenciosas en horas, no en semanas."
+          },
+          {
+            "prompt": "Según Kotter (1996), ¿cuál debería ser el primer paso para conducir un programa de automatización que genera temor en el personal?",
+            "options": [
+              "Crear sentido de urgencia con datos compartidos sobre el problema y su impacto",
+              "Anunciar los robots ya implementados para mostrar resultados",
+              "Anclar los cambios en la cultura organizacional",
+              "Reemplazar a los jefes que se resisten"
+            ],
+            "correct": 0,
+            "explanation": "Kotter inicia con la urgencia basada en evidencia compartida; anclar en la cultura es el último paso. Imponer resultados o sustituir jefes sin visión ni coalición aumenta la resistencia."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Automatización inteligente, lecciones de la reingeniería y del Lean, y ciclo de vida BPM",
+      "activity": "Clase síncrona introductoria; conformación de equipos y elección del proceso del proyecto; foro de diagnóstico sobre un trámite vivido con esperas, reprocesos o aprobaciones redundantes.",
+      "evidence": "Ficha del proceso elegido y aporte en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Modelado BPMN 2.0, guías 7PMG y tablas de decisión DMN",
+      "activity": "Aula invertida con la lectura de la unidad 1; taller de modelado AS-IS del proceso del proyecto en Camunda Modeler; revisión entre pares de errores de modelado.",
+      "evidence": "Modelo AS-IS revisado por pares"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Indicadores de desempeño, ley de Little y minería de procesos con PM4Py",
+      "activity": "Laboratorio de descubrimiento, conformidad y variantes sobre un registro de cuentas por pagar; análisis en equipos del caso Distribuidora Pacífico Norte.",
+      "evidence": "Cuaderno de laboratorio y respuestas preliminares al caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Priorización de candidatos a automatizar y elección de tecnología por actividad",
+      "activity": "Plenaria del caso Distribuidora Pacífico Norte con recomendación al comité; taller de matriz de priorización; entrega de la tarea 1 y resolución del cuestionario 1.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Arquitectura RPA, robots atendidos y no atendidos, colas de trabajo y patrón de máquina de estados",
+      "activity": "Aula invertida con la lectura de la unidad 2; demostración de un orquestador; ejercicio de clasificación de excepciones de sistema y de negocio del proceso del proyecto.",
+      "evidence": "Tabla de excepciones del proceso del proyecto"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Robots en Python con Playwright: selectores, esperas, idempotencia, reintentos y credenciales",
+      "activity": "Laboratorio de un robot de descarga y registro con clave natural y espera exponencial; revisión de código entre pares centrada en seguridad y segregación de funciones.",
+      "evidence": "Robot funcional en el repositorio del equipo"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Procesamiento inteligente de documentos: OCR, extracción híbrida y comprobantes electrónicos UBL 2.1",
+      "activity": "Laboratorio de lectura de XML UBL 2.1 y de extracción de PDF e imágenes con Tesseract y un LLM; análisis en equipos del caso Quispe & Asociados.",
+      "evidence": "Extractor funcional y respuestas preliminares al caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Validaciones de negocio, umbrales de confianza, revisión humana y métricas de procesamiento directo",
+      "activity": "Plenaria del caso Quispe & Asociados; laboratorio de validación de RUC e IGV y de curvas de precisión frente a cobertura; entrega de la tarea 2 y resolución del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Orquestación y coreografía, motores de flujo, mensajería y sagas con compensación",
+      "activity": "Aula invertida con la lectura de la unidad 3; laboratorio de un flujo BPMN ejecutable con temporizador, manejo de errores y compensación.",
+      "evidence": "Flujo ejecutable inicial del proyecto"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Automatización de decisiones con DMN, modelos predictivos y umbrales calculados por costo",
+      "activity": "Taller de tabla DMN y cálculo de umbrales con análisis de sensibilidad; análisis en equipos del caso Sur Vital Seguros.",
+      "evidence": "Tabla DMN y cálculo de umbrales"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Modelos de lenguaje en procesos, herramientas con permisos mínimos y niveles de automatización",
+      "activity": "Laboratorio de clasificación y enrutamiento con salida validada y prueba de inyección de instrucciones; plenaria del caso Sur Vital Seguros con recomendación al comité.",
+      "evidence": "Clasificador validado y decisión del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Tareas humanas, observabilidad y conformidad continua de procesos automatizados",
+      "activity": "Laboratorio de bandeja de revisión humana y tablero de indicadores; minería del registro generado por el propio flujo; entrega de la tarea 3 y resolución del cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Caso de negocio: costo total de propiedad, beneficios verificables, VAN y sensibilidad",
+      "activity": "Aula invertida con la lectura de la unidad 4; taller de VAN con escenarios para el proyecto; análisis en equipos del caso Comercial Tawa.",
+      "evidence": "Caso de negocio preliminar"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Modelo operativo, ciclo de vida, riesgos, controles y marco normativo peruano",
+      "activity": "Plenaria del caso Comercial Tawa ante un directorio simulado; taller de registro de riesgos y de análisis de cumplimiento de la Ley 29733 y la Ley 31814.",
+      "evidence": "Registro de riesgos y análisis normativo"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Gestión del cambio, escalamiento de la cartera y ensayo de la sustentación",
+      "activity": "Taller de plan de gestión del cambio con el modelo de Kotter; ensayo de sustentación entre equipos con retroalimentación cruzada usando la rúbrica; resolución del cuestionario 4.",
+      "evidence": "Cuestionario 4 y plan de gestión del cambio"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador de automatización inteligente",
+      "activity": "Entrega de la tarea 4 con informe, repositorio, manual y video; sustentación oral ante jurado; coevaluación y cierre reflexivo del curso.",
+      "evidence": "Tarea 4 y sustentación oral"
+    }
+  ]
+}

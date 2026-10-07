@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  Library, Plus, Search, Pencil, Trash2, Users, UserPlus, UserMinus, ArrowUpRight, Clock, ClipboardCheck, X, Check, GraduationCap,
+  Library, Plus, Search, Pencil, Trash2, Users, UserPlus, UserMinus, ArrowUpRight, Clock, ClipboardCheck, X, Check, GraduationCap, Lock, BookMarked,
 } from 'lucide-react';
 import { api, useApi } from '../../lib/api.js';
 import { useUi } from '../../lib/context.jsx';
@@ -11,16 +11,22 @@ import {
 import { CourseCover } from '../../components/brand.jsx';
 
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
-const EMPTY_FORM = { code: '', name: '', description: '', program_id: '', teacher_id: '', cycle: '1', credits: '3', schedule: '' };
+const COURSE_TYPES = [['especifica', 'Competencia técnica o específica'], ['empleabilidad', 'Competencia para la empleabilidad'], ['efsrt', 'Experiencias formativas en situaciones reales de trabajo']];
+const EMPTY_FORM = { code: '', name: '', description: '', program_id: '', teacher_id: '', cycle: '1', credits: '3', schedule: '', module_name: '', course_type: 'especifica', hours_theory: '32', hours_practice: '32', term_id: '', min_grade: '13', max_absence_pct: '30' };
+/** 1 crédito = 16 h teóricas = 32 h prácticas (Ley 30512 / LAG). */
+const creditsFor = (t, p) => Math.round(((Number(t) || 0) / 16 + (Number(p) || 0) / 32) * 10) / 10;
 
 export default function AdminCourses() {
   const { toast, confirm } = useUi();
-  const courses = useApi('/admin/courses');
+  const terms = useApi('/admin/terms');
+  const [termId, setTermId] = useState('');
+  const courses = useApi(`/admin/courses?term=${termId || 'all'}`);
   const programs = useApi('/admin/programs');
   const teachers = useApi('/admin/users?role=teacher');
 
   const [q, setQ] = useState('');
   const [program, setProgram] = useState('');
+  useEffect(() => { if (!termId && terms.data) { const a = terms.data.find((t) => t.is_active); if (a) setTermId(String(a.id)); } }, [terms.data]); // eslint-disable-line react-hooks/exhaustive-deps
   const [editing, setEditing] = useState(null); // null | 'new' | course
   const [enrolling, setEnrolling] = useState(null);
 
@@ -84,6 +90,10 @@ export default function AdminCourses() {
           {(programs.data || []).map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
           <option value="none">Sin carrera (transversales)</option>
         </Select>
+        <Select value={termId} onChange={(e) => setTermId(e.target.value)} className="sm:max-w-[200px]" aria-label="Periodo académico">
+          <option value="">Todos los periodos</option>
+          {(terms.data || []).map((t) => <option key={t.id} value={t.id}>{t.name}{t.is_active ? ' (activo)' : t.closed_at ? ' (cerrado)' : ''}</option>)}
+        </Select>
         <span className="text-xs text-muted sm:ml-auto">{filtered ? `${list.length} de ${total}` : pluralize(total, 'curso', 'cursos')}</span>
       </div>
 
@@ -103,8 +113,9 @@ export default function AdminCourses() {
             <Card key={c.id} className="flex flex-col overflow-hidden">
               <CourseCover course={c} className="h-24 px-4 pt-3.5">
                 <div className="relative flex items-start justify-between gap-2">
-                  <span className="rounded-md bg-black/20 px-2 py-0.5 font-mono text-xs font-medium text-white backdrop-blur-sm">{c.code}</span>
-                  {c.program && <span className="truncate rounded-md bg-white/20 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">{c.program.short}</span>}
+                  <span className="rounded-md bg-black/20 px-2 py-0.5 font-mono text-xs font-medium text-white backdrop-blur-sm">{c.code}{c.term ? ` · ${c.term.name}` : ''}</span>
+                  {c.closed ? <span className="flex items-center gap-1 rounded-md bg-white px-2 py-0.5 text-xs font-medium text-ink"><Lock size={11} /> Acta cerrada</span>
+                    : c.program && <span className="truncate rounded-md bg-white/20 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">{c.program.short}</span>}
                 </div>
               </CourseCover>
               <div className="flex flex-1 flex-col p-4">
@@ -119,19 +130,20 @@ export default function AdminCourses() {
                     <Badge tone="warn">Sin docente asignado</Badge>
                   )}
                 </div>
+                {c.module_name && <div className="mt-1.5 flex items-center gap-1 truncate text-xs text-muted"><BookMarked size={12} className="shrink-0" /> <span className="truncate">{c.module_name}</span></div>}
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted">
                   <span className="inline-flex items-center gap-1"><Users size={13} /> {pluralize(c.students, 'matriculado', 'matriculados')}</span>
                   {c.cycle && <span className="inline-flex items-center gap-1"><GraduationCap size={13} /> Ciclo {ROMAN[c.cycle] || c.cycle}</span>}
-                  <span>{pluralize(c.credits || 0, 'crédito', 'créditos')}</span>
+                  <span>{pluralize(c.credits || 0, 'crédito', 'créditos')} · {c.hours} h</span>
                   {c.to_grade > 0 && <span className="inline-flex items-center gap-1 text-warn"><ClipboardCheck size={13} /> {c.to_grade} por calificar</span>}
                 </div>
                 {c.schedule && <div className="mt-1.5 flex items-center gap-1 truncate text-xs text-faint"><Clock size={13} className="shrink-0" /> <span className="truncate">{c.schedule}</span></div>}
                 <div className="mt-auto flex items-center gap-1.5 pt-4">
                   <Button size="sm" variant="secondary" icon={ArrowUpRight} to={`/app/cursos/${c.id}`}>Abrir aula</Button>
-                  <Button size="sm" variant="soft" icon={UserPlus} onClick={() => setEnrolling(c)}>Matrícula</Button>
+                  <Button size="sm" variant="soft" icon={UserPlus} onClick={() => setEnrolling(c)} disabled={c.closed}>Matrícula</Button>
                   <div className="ml-auto flex">
                     <IconButton icon={Pencil} label="Editar curso" onClick={() => setEditing(c)} />
-                    <IconButton icon={Trash2} label="Eliminar curso" onClick={() => remove(c)} className="hover:bg-danger-soft hover:text-danger" />
+                    <IconButton icon={Trash2} label="Eliminar curso" onClick={() => remove(c)} disabled={c.closed} className={cx('hover:bg-danger-soft hover:text-danger', c.closed && 'opacity-30')} />
                   </div>
                 </div>
               </div>
@@ -144,6 +156,7 @@ export default function AdminCourses() {
         open={editing != null}
         course={editing === 'new' ? null : editing}
         programs={programs.data || []}
+        terms={terms.data || []}
         teachers={(teachers.data || []).filter((t) => t.active || (editing && editing !== 'new' && editing.teacher_id === t.id))}
         onClose={closeEditor}
         onSaved={onSaved}
@@ -155,7 +168,7 @@ export default function AdminCourses() {
 
 /* ---------------- Create / edit ---------------- */
 
-function CourseFormModal({ open, course, programs, teachers, onClose, onSaved }) {
+function CourseFormModal({ open, course, programs, teachers, terms, onClose, onSaved }) {
   const { toast } = useUi();
   const [form, setForm] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
@@ -170,11 +183,15 @@ function CourseFormModal({ open, course, programs, teachers, onClose, onSaved })
         code: course.code || '', name: course.name || '', description: course.description || '',
         program_id: course.program_id ? String(course.program_id) : '', teacher_id: course.teacher_id ? String(course.teacher_id) : '',
         cycle: course.cycle ? String(course.cycle) : '', credits: String(course.credits ?? 3), schedule: course.schedule || '',
+        module_name: course.module_name || '', course_type: course.course_type || 'especifica', hours_theory: String(course.hours_theory ?? 32), hours_practice: String(course.hours_practice ?? 32),
+        term_id: course.term_id ? String(course.term_id) : '', min_grade: String(course.min_grade ?? 13), max_absence_pct: String(course.max_absence_pct ?? 30),
       }
-      : EMPTY_FORM);
-  }, [open, course]);
+      : { ...EMPTY_FORM, term_id: String(terms.find((t) => t.is_active)?.id || '') });
+  }, [open, course, terms]);
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const setHours = (k) => (e) => setForm((f) => { const n = { ...f, [k]: e.target.value }; const c = creditsFor(n.hours_theory, n.hours_practice); return { ...n, credits: String(Math.max(1, Math.round(c))) }; });
+  const suggested = creditsFor(form.hours_theory, form.hours_practice);
 
   const submit = async (ev) => {
     ev?.preventDefault();
@@ -195,6 +212,8 @@ function CourseFormModal({ open, course, programs, teachers, onClose, onSaved })
       cycle: form.cycle ? Number(form.cycle) : null,
       credits: cr,
       schedule: form.schedule.trim(),
+      module_name: form.module_name.trim(), course_type: form.course_type, hours_theory: Number(form.hours_theory) || 0, hours_practice: Number(form.hours_practice) || 0,
+      term_id: form.term_id ? Number(form.term_id) : null, min_grade: Number(form.min_grade) || 13, max_absence_pct: Number(form.max_absence_pct) || 30,
     };
     try {
       if (isNew) await api.post('/admin/courses', payload);
@@ -243,18 +262,34 @@ function CourseFormModal({ open, course, programs, teachers, onClose, onSaved })
             {teachers.map((t) => <option key={t.id} value={t.id}>{fullName(t)}</option>)}
           </Select>
         </Field>
+        <Field label="Módulo formativo" className="sm:col-span-3" hint="Según el plan de estudios (p. ej. Módulo II · Desarrollo de software).">
+          <Input value={form.module_name} onChange={set('module_name')} placeholder="Módulo I · …" />
+        </Field>
+        <Field label="Tipo de unidad didáctica" className="sm:col-span-3">
+          <Select value={form.course_type} onChange={set('course_type')}>{COURSE_TYPES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</Select>
+        </Field>
+        <Field label="Periodo académico" className="sm:col-span-2">
+          <Select value={form.term_id} onChange={set('term_id')}>
+            <option value="">Sin periodo</option>
+            {terms.map((t) => <option key={t.id} value={t.id} disabled={!!t.closed_at}>{t.name}{t.is_active ? ' (activo)' : t.closed_at ? ' (cerrado)' : ''}</option>)}
+          </Select>
+        </Field>
         <Field label="Ciclo" className="sm:col-span-2">
           <Select value={form.cycle} onChange={set('cycle')}>
             <option value="">—</option>
             {[1, 2, 3, 4, 5, 6].map((c) => <option key={c} value={c}>Ciclo {ROMAN[c]}</option>)}
           </Select>
         </Field>
-        <Field label="Créditos" error={errors.credits} className="sm:col-span-1">
+        <Field label="Horario" className="sm:col-span-2" hint="Texto libre que verán los estudiantes.">
+          <Input value={form.schedule} onChange={set('schedule')} placeholder="Lun y Mié · 19:00 – 20:30" />
+        </Field>
+        <Field label="Horas teóricas" className="sm:col-span-2"><Input type="number" min={0} step={16} value={form.hours_theory} onChange={setHours('hours_theory')} /></Field>
+        <Field label="Horas prácticas" className="sm:col-span-2"><Input type="number" min={0} step={32} value={form.hours_practice} onChange={setHours('hours_practice')} /></Field>
+        <Field label="Créditos" error={errors.credits} className="sm:col-span-2" hint={`Sugerido: ${suggested} (16 h T o 32 h P = 1 crédito)`}>
           <Input type="number" min={1} max={10} value={form.credits} onChange={set('credits')} inputMode="numeric" />
         </Field>
-        <Field label="Horario" className="sm:col-span-3" hint="Texto libre que verán los estudiantes.">
-          <Input value={form.schedule} onChange={set('schedule')} placeholder="Ej. Lun y Mié · 7:00 – 8:30 p. m." />
-        </Field>
+        <Field label="Nota mínima aprobatoria" className="sm:col-span-3" hint="LAG: 13. Cambia solo si el reglamento institucional lo dispone."><Input type="number" min={0} max={20} value={form.min_grade} onChange={set('min_grade')} /></Field>
+        <Field label="Límite de inasistencias (%)" className="sm:col-span-3" hint="LAG: más del 30 % desaprueba por inasistencia."><Input type="number" min={0} max={100} value={form.max_absence_pct} onChange={set('max_absence_pct')} /></Field>
         <button type="submit" className="hidden" aria-hidden tabIndex={-1} />
       </form>
     </Modal>

@@ -1,0 +1,1192 @@
+{
+  "name": "Redes de Computadoras",
+  "slug": "redes-de-computadoras",
+  "course_type": "especifica",
+  "module_name": "Administración de redes e infraestructura tecnológica",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo del programa de Computación e Informática. Su propósito es que el estudiante comprenda cómo se comunican los sistemas informáticos y sea capaz de diseñar, implementar, documentar y diagnosticar redes de área local para pequeñas y medianas organizaciones. Construye sobre Arquitectura de Computadoras y Matemática Discreta (sistemas binario y hexadecimal, lógica) y se articula con Sistemas Operativos, que se cursa en paralelo. Desarrolla los modelos OSI y TCP/IP, medios físicos y cableado estructurado, Ethernet y conmutación, direccionamiento IPv4 e IPv6 con subredes y VLSM, VLAN, protocolo de árbol de expansión, enrutamiento estático y OSPF, NAT, servicios de red (DHCP, DNS), redes inalámbricas 802.11 y fundamentos de aseguramiento de dispositivos. Se trabaja con simuladores, analizadores de protocolos y casos de empresas peruanas. Aporta al perfil del administrador de redes y soporte TI, y prepara los cursos de Administración de Servidores y Nube y Seguridad Informática.",
+  "competency": "Diseña, implementa y diagnostica redes de área local conmutadas y enrutadas para pequeñas y medianas organizaciones, aplicando los modelos OSI y TCP/IP, un plan de direccionamiento IPv4/IPv6 eficiente, VLAN, enrutamiento y servicios básicos, con documentación técnica, criterios de disponibilidad y seguridad elemental, conforme a estándares ANSI/TIA e IEEE.",
+  "capacities": [
+    "Explica el funcionamiento de una red mediante los modelos OSI y TCP/IP, identificando protocolos, unidades de datos y dispositivos de cada capa a partir de capturas reales de tráfico.",
+    "Elabora planes de direccionamiento IPv4 con subredes y VLSM, y de direccionamiento IPv6, que optimizan el uso del espacio de direcciones y facilitan el crecimiento de la organización.",
+    "Configura conmutadores y enrutadores con VLAN, enlaces troncales, árbol de expansión, enrutamiento estático y OSPF de área única, NAT y DHCP, verificando la conectividad extremo a extremo.",
+    "Implementa servicios de red, acceso inalámbrico y medidas básicas de aseguramiento de dispositivos, y diagnostica fallas aplicando un método sistemático por capas.",
+    "Diseña y sustenta la propuesta de red de una pyme con topología, direccionamiento, configuración, presupuesto y documentación técnica profesional."
+  ],
+  "indicators": [
+    "Identifica en una captura de Wireshark los encabezados Ethernet, IP y TCP/UDP de una trama e interpreta correctamente sus campos principales.",
+    "Calcula subredes con VLSM para un caso dado sin solapamientos, con máscara, rango utilizable y difusión correctos en cada segmento.",
+    "Configura VLAN, troncales 802.1Q y enrutamiento entre VLAN en un simulador, demostrando conectividad mediante ping y traceroute.",
+    "Implementa enrutamiento estático y OSPF de área única y explica la tabla de enrutamiento resultante, incluyendo distancia administrativa y métrica.",
+    "Configura DHCP, NAT con sobrecarga y acceso SSH seguro en los dispositivos, verificando su funcionamiento con comandos show.",
+    "Resuelve fallas de conectividad aplicando el método de diagnóstico por capas y documenta causa, evidencia y solución.",
+    "Presenta un diseño de red para una pyme con topología, plan de direccionamiento, configuraciones y presupuesto justificados técnicamente."
+  ],
+  "methodology": "El curso aplica metodologías activas adaptadas a la modalidad 100 % virtual. Con aula invertida, el estudiante revisa la lectura y las diapositivas antes de la sesión síncrona, que se dedica a resolver problemas de direccionamiento y diagnóstico en vivo. Cada unidad se articula en torno a un caso de una organización peruana, discutido con el método de casos para tomar decisiones técnicas y económicas. Los laboratorios semanales en Cisco Packet Tracer y GNS3, y el análisis de tráfico con Wireshark, desarrollan la práctica guiada y autónoma. El aprendizaje basado en proyectos culmina con el diseño de la red de una pyme. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, foros técnicos y revisión de configuraciones.",
+  "bibliography": [
+    "Tanenbaum, A. S. y Wetherall, D. J. (2012). Redes de computadoras (5.ª ed.). Pearson Educación.",
+    "Kurose, J. F. y Ross, K. W. (2017). Redes de computadoras: un enfoque descendente (7.ª ed.). Pearson Educación.",
+    "Forouzan, B. A. (2013). Data communications and networking (5th ed.). McGraw-Hill.",
+    "Odom, W. (2019). CCNA 200-301 official cert guide, volume 1. Cisco Press.",
+    "Odom, W. (2019). CCNA 200-301 official cert guide, volume 2. Cisco Press.",
+    "Comer, D. E. (2014). Internetworking with TCP/IP: Principles, protocols, and architecture (Vol. 1, 6th ed.). Pearson.",
+    "Oppenheimer, P. (2011). Top-down network design (3rd ed.). Cisco Press.",
+    "Stallings, W. (2014). Data and computer communications (10th ed.). Pearson."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuatro cuestionarios de unidad, laboratorios semanales en simulador con entrega de configuraciones y participación argumentada en el análisis de casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Tareas de las unidades 1, 2 y 3: análisis de tráfico con Wireshark, plan de direccionamiento VLSM e IPv6 y red conmutada y enrutada en simulador, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 35,
+      "description": "Proyecto integrador de diseño de red para una pyme, con archivo de simulación funcional, documentación técnica, presupuesto y sustentación oral con diagnóstico de una falla en vivo."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de redes, medios físicos y Ethernet",
+      "description": "Al finalizar la unidad, el estudiante explica la comunicación en red mediante los modelos OSI y TCP/IP, selecciona medios físicos según la norma ANSI/TIA-568, interpreta tramas Ethernet y el funcionamiento de un conmutador a partir de capturas reales de tráfico.",
+      "topics": [
+        "Redes, topologías y métricas de desempeño",
+        "Modelos OSI y TCP/IP y encapsulamiento",
+        "Medios físicos y cableado estructurado ANSI/TIA-568",
+        "Ethernet, direcciones MAC y conmutación",
+        "Análisis de tráfico con Wireshark y simulación con Packet Tracer"
+      ],
+      "slides": [
+        {
+          "title": "Qué es una red y por qué importa",
+          "bullets": [
+            "Red: conjunto de nodos (hosts, conmutadores, enrutadores) que intercambian datos mediante protocolos acordados sobre medios compartidos",
+            "Clasificación por alcance: PAN, LAN, MAN y WAN; Internet es una red de redes interconectadas por proveedores y puntos de intercambio",
+            "En el Perú, la Red Dorsal Nacional de Fibra Óptica y el punto de intercambio PeIX en Lima influyen en latencia y costo",
+            "Un administrador de redes garantiza disponibilidad, desempeño y seguridad: los tres ejes que guiarán todo el curso"
+          ],
+          "notes": "Abra la sesión preguntando: ¿qué ocurre, paso a paso, desde que un cajero de una farmacia en Arequipa escanea un producto hasta que el inventario central en Lima se actualiza? Anote las respuestas en la pizarra virtual; casi siempre aparecerán palabras como wifi, internet o nube, pero sin precisión. Ese es el punto de partida: el curso convertirá esa intuición en un modelo riguroso. Explique la diferencia entre LAN, MAN y WAN con ejemplos locales: la red de una oficina, la red metropolitana de una municipalidad y el enlace entre sedes de una cadena retail. Mencione que el tráfico entre dos operadores peruanos puede intercambiarse localmente en un punto de intercambio en lugar de viajar al extranjero, lo que reduce la latencia. Cierre conectando con Arquitectura de Computadoras: la tarjeta de red es un periférico más, y lo que veremos es cómo coopera con millones de otros equipos."
+        },
+        {
+          "title": "Topologías físicas y lógicas",
+          "bullets": [
+            "Topología física: cómo se cablean los equipos; topología lógica: cómo circulan realmente las tramas y paquetes",
+            "Estrella extendida: la topología dominante en LAN modernas, con conmutadores de acceso conectados a un núcleo",
+            "Malla total o parcial: usada en núcleos y WAN por redundancia; n(n-1)/2 enlaces para malla total de n nodos",
+            "Bus y anillo: históricas, pero sus conceptos sobreviven en redes industriales y anillos de fibra metropolitanos"
+          ],
+          "notes": "Dibuje en vivo una estrella extendida para un colegio de tres pisos: un conmutador por piso y uno central. Luego pregunte qué pasa si el conmutador central falla. Esta pregunta introduce la idea de punto único de falla, que retomaremos con el protocolo de árbol de expansión en la Unidad 3. Calcule con la clase cuántos enlaces requiere una malla total de 6 sedes: 6 por 5 entre 2, es decir 15 enlaces. Pregunte si una cadena de 6 tiendas podría pagar 15 circuitos dedicados; la respuesta obvia lleva a la malla parcial o a la topología hub and spoke. Insista en la diferencia entre topología física y lógica: un conmutador cableado en estrella puede, con VLAN, crear varias redes lógicas independientes. Esta distinción es clave para entender por qué un mismo cableado sirve a contabilidad y a ventas sin mezclar su tráfico."
+        },
+        {
+          "title": "Métricas de desempeño de una red",
+          "bullets": [
+            "Ancho de banda: capacidad nominal del enlace en bit/s; rendimiento (throughput): tasa real obtenida extremo a extremo",
+            "Latencia total = retardo de transmisión (L/R) + propagación (d/v) + procesamiento + espera en colas",
+            "Fluctuación (jitter) y pérdida de paquetes: críticas para voz sobre IP y videoconferencia en educación virtual",
+            "Ejemplo: enviar 1 500 bytes a 100 Mbit/s toma 120 µs; propagar 1 000 km de fibra toma unos 5 ms"
+          ],
+          "notes": "Esta diapositiva conecta las redes con la física y con la experiencia del estudiante virtual. Resuelva el ejemplo en la pizarra: 1 500 bytes son 12 000 bits; divididos entre 100 millones de bits por segundo dan 0,00012 segundos. La velocidad de propagación en fibra es aproximadamente dos tercios de la velocidad de la luz, unos 200 000 km/s, de modo que 1 000 km toman 5 ms. Pregunte: si un estudiante en Puno se conecta a una plataforma alojada en Virginia, ¿qué componente de la latencia domina? Discuta por qué contratar más megas no reduce la propagación. Explique el jitter con una videollamada que se entrecorta aunque la velocidad medida sea alta. Pida que cada estudiante ejecute ping hacia un servidor nacional y otro internacional y compare los tiempos de ida y vuelta en el foro; esa evidencia empírica se retoma en la tarea."
+        },
+        {
+          "title": "El modelo de referencia OSI",
+          "bullets": [
+            "Propuesto por ISO (ISO/IEC 7498-1) como marco conceptual de siete capas, cada una con servicios bien definidos",
+            "Capas: física, enlace de datos, red, transporte, sesión, presentación y aplicación",
+            "Cada capa ofrece servicios a la superior y usa los de la inferior; la comunicación lógica es entre capas pares",
+            "Utilidad práctica: lenguaje común para diagnosticar fallas, por ejemplo problema de capa 1 o de capa 3"
+          ],
+          "notes": "Presente OSI no como algo que memorizar sino como una herramienta de pensamiento. Use la analogía del envío de una encomienda desde Lima a Iquitos: quien escribe la carta no necesita saber si viaja en avión o en barco; cada nivel resuelve un problema distinto. Destaque que OSI es un modelo de referencia: casi ningún protocolo real lo implementa al pie de la letra, pero los profesionales lo usan a diario. Cuando un técnico dice que la falla es de capa 1, todos entienden que hay que revisar cable, conector o potencia óptica. Pregunte a la clase en qué capa ubicarían una contraseña wifi errónea, un cable cortado, una dirección IP duplicada y un sitio web caído. Las discrepancias en las respuestas son valiosas: muestran que algunos problemas involucran varias capas, idea que retomaremos al estudiar el método de diagnóstico por capas en la Unidad 4."
+        },
+        {
+          "title": "La arquitectura TCP/IP y su correspondencia con OSI",
+          "bullets": [
+            "TCP/IP nació en ARPANET; Cerf y Kahn publicaron su diseño en 1974 y es la base real de Internet",
+            "Cuatro capas: acceso a la red, internet (IP), transporte (TCP, UDP) y aplicación (HTTP, DNS, DHCP)",
+            "Las capas 5, 6 y 7 de OSI se integran en la capa de aplicación de TCP/IP",
+            "Principio de extremo a extremo: la inteligencia reside en los hosts y el núcleo de la red solo reenvía paquetes"
+          ],
+          "notes": "Explique que mientras ISO discutía OSI, la comunidad de Internet ya desplegaba TCP/IP con implementaciones funcionales, lo que explica su triunfo. Muestre la tabla de correspondencia y enfatice dónde viven los protocolos que usarán en el curso: Ethernet y Wi-Fi en acceso a la red, IPv4 e IPv6 en internet, TCP y UDP en transporte, y DNS, DHCP y HTTP en aplicación. Comente el principio de extremo a extremo de Saltzer, Reed y Clark: la red debe ser simple y los extremos inteligentes. Esto explica por qué un enrutador no verifica si un archivo llegó completo; esa tarea corresponde a TCP en los hosts. Pregunte: ¿por qué una aplicación de videollamada preferiría UDP en lugar de TCP? Deje la pregunta abierta para la Unidad 4. Recomiende la lectura de Kurose y Ross, capítulo 1, como complemento."
+        },
+        {
+          "title": "Encapsulamiento y unidades de datos de protocolo",
+          "bullets": [
+            "Cada capa agrega su encabezado: datos, segmento (transporte), paquete (red), trama (enlace) y bits (física)",
+            "Una trama Ethernet típica transporta un paquete IP que contiene un segmento TCP con datos HTTP",
+            "Sobrecarga: 14 B Ethernet + 20 B IPv4 + 20 B TCP = 54 bytes de encabezados por trama sin opciones",
+            "En el receptor ocurre el desencapsulamiento: cada capa lee su encabezado y entrega la carga útil a la capa superior"
+          ],
+          "notes": "Use la analogía de las muñecas rusas, pero luego pase rápidamente a la evidencia: abra una captura de Wireshark en pantalla compartida y despliegue una trama HTTP. Señale el encabezado Ethernet con direcciones MAC, el encabezado IP con direcciones de origen y destino, el encabezado TCP con puertos y finalmente los datos. Calcule la eficiencia: si la MTU de Ethernet es 1 500 bytes y 40 se usan en encabezados IP y TCP, la carga útil máxima es 1 460 bytes, el famoso MSS. Pregunte qué ocurre con la eficiencia cuando se envían paquetes muy pequeños, como en voz sobre IP, donde la sobrecarga puede superar a los datos. Esta reflexión conecta con decisiones de diseño reales. Pida que identifiquen las unidades de datos en una captura propia durante el laboratorio de la semana."
+        },
+        {
+          "title": "Medios de cobre: par trenzado y categorías",
+          "bullets": [
+            "UTP Cat 5e soporta 1 Gbit/s; Cat 6 hasta 10 Gbit/s en 55 m; Cat 6A 10 Gbit/s en 100 m",
+            "Longitud máxima del canal: 100 m (90 m de cableado horizontal más 10 m de cables de conexión)",
+            "Esquemas de terminación T568A y T568B; cable directo para la mayoría de enlaces gracias a Auto-MDIX",
+            "PoE (IEEE 802.3af/at/bt) alimenta teléfonos IP, cámaras y puntos de acceso por el mismo cable"
+          ],
+          "notes": "Explique por qué el trenzado cancela la interferencia electromagnética y la diafonía. Muestre un conector RJ45 y los colores de T568B; si la clase es virtual, use una imagen ampliada. Insista en la regla de los 100 metros: es una de las causas más frecuentes de fallas intermitentes en oficinas que crecieron sin planificación. Comente un ejemplo típico: un almacén en Lurín donde el cable a la cámara del fondo mide 130 metros y la conexión cae cuando hace calor. Pregunte qué alternativas existen: un conmutador intermedio, fibra óptica o un enlace inalámbrico punto a punto. Explique PoE y su presupuesto de potencia: un conmutador con 370 W de PoE no puede alimentar 24 puntos de acceso de 30 W cada uno. Este cálculo aparecerá en el proyecto final, cuando deban dimensionar equipos."
+        },
+        {
+          "title": "Fibra óptica y medios inalámbricos",
+          "bullets": [
+            "Fibra multimodo (OM3/OM4) para distancias de cientos de metros dentro de un campus; monomodo para kilómetros",
+            "Ventajas de la fibra: inmunidad electromagnética, gran ancho de banda y baja atenuación (aprox. 0,35 dB/km a 1 310 nm)",
+            "FTTH con GPON es la tecnología de acceso que despliegan los operadores peruanos en hogares y pymes",
+            "El medio inalámbrico es compartido y no guiado: sujeto a interferencia, atenuación y regulación del espectro por el MTC"
+          ],
+          "notes": "Compare los medios con una tabla de decisión: costo, distancia, inmunidad al ruido y facilidad de instalación. Explique por qué la fibra monomodo, con un núcleo de unos 9 micrómetros, permite distancias de decenas de kilómetros, mientras la multimodo, con núcleo de 50 micrómetros, sufre dispersión modal. Comente que la expansión de la fibra hasta el hogar en el Perú ha cambiado la oferta para pymes: hoy una bodega en Villa El Salvador puede tener fibra simétrica. Pregunte a los estudiantes qué tecnología de acceso tienen en casa y pida que revisen su ONT. Adelante que las redes inalámbricas se estudiarán a fondo en la Unidad 4. Recalque que el espectro radioeléctrico es un recurso del Estado administrado por el MTC, lo que explica por qué ciertas bandas son de uso libre y otras requieren licencia."
+        },
+        {
+          "title": "Cableado estructurado según ANSI/TIA-568",
+          "bullets": [
+            "Subsistemas: instalaciones de entrada, cuarto de equipos, cableado vertical (backbone), cuarto de telecomunicaciones y horizontal",
+            "Área de trabajo: toma de red con cable de conexión de hasta 5 m hasta el equipo del usuario",
+            "Documentación: etiquetado (ANSI/TIA-606), planos y pruebas de certificación de cada enlace",
+            "Una buena instalación dura 15 años o más y soporta varias generaciones de equipos activos"
+          ],
+          "notes": "Explique que el cableado estructurado es la infraestructura pasiva y que, a diferencia de los conmutadores, se diseña para durar más de una década. Muestre la jerarquía desde la entrada del operador hasta el escritorio del usuario. Insista en el etiquetado: en un gabinete sin etiquetas, encontrar qué puerto corresponde a qué oficina puede tomar horas. Narre el caso típico de una empresa que se mudó a un edificio en San Isidro y heredó un gabinete desordenado; la primera semana del área de TI se perdió rastreando cables. Pregunte: ¿quién paga el costo de una mala instalación? Discuta el costo total de propiedad, concepto ya visto en Arquitectura de Computadoras. Mencione que una certificación de enlaces con un equipo especializado demuestra que cada punto cumple la categoría prometida, y que muchas licitaciones públicas peruanas la exigen."
+        },
+        {
+          "title": "Ethernet: estándar IEEE 802.3 y la trama",
+          "bullets": [
+            "Campos: preámbulo, MAC destino (6 B), MAC origen (6 B), EtherType (0x0800 IPv4, 0x86DD IPv6), datos y FCS",
+            "Tamaño de trama de 64 a 1 518 bytes; FCS usa CRC-32 para detectar errores, no para corregirlos",
+            "Dirección MAC de 48 bits: OUI de 24 bits asignado por IEEE al fabricante más 24 bits del dispositivo",
+            "Direcciones de unidifusión, multidifusión y difusión (FF:FF:FF:FF:FF:FF)"
+          ],
+          "notes": "Ethernet, inventada por Robert Metcalfe en Xerox PARC en 1973, es hoy la tecnología de capa 2 dominante en el mundo. Muestre la trama en Wireshark y localice cada campo. Pida a los estudiantes que ejecuten ipconfig /all o ip link y encuentren su dirección MAC; luego busquen a qué fabricante corresponde su OUI. Explique el EtherType: es el campo que le dice al receptor qué protocolo viene dentro, igual que el número de piso en un sobre interno. Recalque que el CRC detecta errores y la trama dañada simplemente se descarta; Ethernet no retransmite. Pregunte quién se encarga entonces de recuperar la información perdida. La respuesta, TCP, refuerza la división de responsabilidades por capas. Comente brevemente que las direcciones MAC pueden aleatorizarse en teléfonos modernos por privacidad, lo que afecta ciertos controles de acceso."
+        },
+        {
+          "title": "Cómo aprende y reenvía un conmutador",
+          "bullets": [
+            "El conmutador aprende la MAC de origen de cada trama y la asocia al puerto de entrada en su tabla CAM",
+            "Si conoce la MAC destino reenvía solo por ese puerto; si no la conoce, inunda por todos los puertos excepto el de entrada",
+            "Cada puerto es un dominio de colisión independiente y trabaja en dúplex completo; la difusión sí se propaga a todos",
+            "Comando de verificación en Cisco IOS: show mac address-table; entradas dinámicas envejecen por defecto a los 300 s"
+          ],
+          "notes": "Esta es la diapositiva más importante de la unidad, porque explica el comportamiento cotidiano de una LAN. Simule en Packet Tracer cuatro PC conectadas a un conmutador con la tabla vacía. Envíe un ping y use el modo simulación para mostrar la inundación inicial y luego el reenvío selectivo. Pregunte por qué un concentrador (hub) era peor: repetía todo a todos y compartía el ancho de banda en un solo dominio de colisión. Explique que el conmutador elimina las colisiones, pero no las difusiones: una tormenta de difusión puede saturar toda la LAN. Esta limitación motiva las VLAN y el enrutamiento que veremos después. Pregunte qué pasaría si un atacante inundara la tabla CAM con miles de direcciones falsas; el conmutador se comportaría como un hub. Mencione que esto se mitiga con seguridad de puertos, tema que se profundizará en Seguridad Informática."
+        },
+        {
+          "title": "Herramientas de laboratorio: Packet Tracer y Wireshark",
+          "bullets": [
+            "Cisco Packet Tracer: simulador gratuito para diseñar topologías, configurar IOS y visualizar el paso de paquetes",
+            "Wireshark: analizador de protocolos de código abierto; captura y decodifica tráfico real con filtros",
+            "Filtros útiles: arp, icmp, ip.addr==192.168.1.10, tcp.port==443, dns",
+            "Ética y legalidad: capturar solo en redes propias o autorizadas; la Ley 29733 protege los datos personales observados"
+          ],
+          "notes": "Dedique esta diapositiva a preparar el laboratorio de la semana. Haga una demostración de instalación de Packet Tracer con la cuenta gratuita de Networking Academy y de Wireshark. Muestre la diferencia entre un filtro de captura y un filtro de visualización. Proponga un ejercicio inmediato: capturar durante un minuto, filtrar por dns y observar qué nombres resuelve el equipo sin que el usuario lo note. Esta actividad suele sorprender y abre una conversación sobre privacidad. Recalque el componente ético: capturar tráfico en una red ajena sin autorización puede constituir delito informático según la Ley 30096, y los datos personales que aparecen en una captura están protegidos por la Ley 29733. Establezca la regla del curso: todas las capturas se hacen en la red doméstica propia o en el simulador, y se anonimizan antes de publicarse en el foro."
+        }
+      ],
+      "reading": {
+        "title": "Del bit a la trama: arquitectura en capas, medios y Ethernet",
+        "minutes": 35,
+        "content": "## Por qué pensamos las redes en capas\n\nUna red de computadoras es uno de los sistemas de ingeniería más complejos que existen: millones de equipos de fabricantes distintos, con sistemas operativos diversos, intercambian datos a través de cobre, fibra y aire. La única manera de dominar esa complejidad es la **abstracción por capas**. Cada capa resuelve un problema acotado, ofrece un servicio a la capa superior y oculta los detalles de la inferior. Tanenbaum y Wetherall lo resumen así: una arquitectura de red es un conjunto de capas y protocolos, donde un protocolo es el acuerdo sobre cómo se comunican las entidades pares.\n\nEl modelo **OSI** de ISO propone siete capas; la arquitectura **TCP/IP**, diseñada por Vinton Cerf y Robert Kahn, usa cuatro. En la práctica profesional se mezclan ambos vocabularios: se habla de \"conmutador de capa 2\" o \"falla de capa 1\" (OSI), pero los protocolos reales son los de TCP/IP.\n\n| OSI | TCP/IP | Ejemplos | PDU |\n|---|---|---|---|\n| 7-5 Aplicación, presentación, sesión | Aplicación | HTTP, DNS, DHCP, TLS | Datos |\n| 4 Transporte | Transporte | TCP, UDP | Segmento / datagrama |\n| 3 Red | Internet | IPv4, IPv6, ICMP | Paquete |\n| 2-1 Enlace y física | Acceso a la red | Ethernet, Wi-Fi | Trama / bits |\n\n## Encapsulamiento: lo que realmente viaja por el cable\n\nCuando un navegador solicita una página, el mensaje HTTP se entrega a TCP, que añade un encabezado de 20 bytes con puertos y números de secuencia; IP añade otros 20 bytes con las direcciones lógicas; Ethernet agrega 14 bytes de encabezado y 4 de verificación (FCS). La eficiencia de una trama completa puede estimarse así:\n\n```text\nEficiencia = carga útil / (carga útil + encabezados)\nTrama máxima: 1460 B de datos TCP\nEncabezados: 20 (TCP) + 20 (IP) + 18 (Ethernet con FCS) = 58 B\nEficiencia = 1460 / 1518 ≈ 96,2 %\n```\n\nPara un paquete de voz de 160 bytes, la misma sobrecarga más 12 bytes de RTP y 8 de UDP en lugar de TCP reduce la eficiencia a cerca del 70 %. Por eso el diseño de redes para telefonía IP considera la sobrecarga al dimensionar enlaces.\n\n## El desempeño: ancho de banda no es latencia\n\nEl retardo nodal se descompone, siguiendo a Kurose y Ross, en cuatro términos:\n\n```text\nd_total = d_proc + d_cola + L/R + d/s\nL = tamaño del paquete (bits), R = tasa del enlace (bit/s)\nd = distancia (m), s = velocidad de propagación (≈ 2×10^8 m/s en fibra)\n```\n\nUn estudiante en Cusco que accede a un servidor en Lima (unos 1 100 km por ruta terrestre de fibra) sufre al menos 5,5 ms de propagación en cada sentido, por más que contrate un plan de 1 Gbit/s. Si el servidor está en Estados Unidos, la propagación supera fácilmente los 60 ms de ida y vuelta. Esta es la razón técnica por la que los grandes proveedores de contenido instalan nodos de caché en Lima y por la que los puntos de intercambio de tráfico nacionales, como el PeIX, son relevantes para la calidad del servicio.\n\n## Medios físicos y cableado estructurado\n\nLa capa física convierte bits en señales. El **par trenzado UTP** domina el cableado horizontal: Cat 6A soporta 10 Gbit/s en canales de 100 metros. La **fibra óptica** monomodo alcanza decenas de kilómetros y es la base de la Red Dorsal Nacional de Fibra Óptica y de los accesos FTTH que hoy ofrecen los operadores peruanos. El diseño de la infraestructura pasiva se rige por la familia **ANSI/TIA-568**, que define subsistemas (entrada, cuarto de equipos, backbone, cuarto de telecomunicaciones, horizontal y área de trabajo), y por **ANSI/TIA-606** para la administración y el etiquetado. Una regla de oro: el cableado se diseña para quince años; los equipos activos se renuevan cada cinco.\n\n## Ethernet y el conmutador que aprende\n\nEthernet (IEEE 802.3) define la trama y el direccionamiento físico. Una dirección MAC tiene 48 bits: los primeros 24 identifican al fabricante (OUI). El conmutador moderno implementa un algoritmo de aprendizaje transparente:\n\n```text\nal recibir trama T por el puerto p:\n    tabla[T.mac_origen] = p            # aprender\n    si T.mac_destino es difusión o no está en tabla:\n        inundar por todos los puertos excepto p\n    si tabla[T.mac_destino] == p:\n        descartar                       # filtrar\n    si no:\n        reenviar por tabla[T.mac_destino]\n```\n\nEste algoritmo explica por qué una LAN conmutada escala mejor que una red con concentradores: cada puerto es un dominio de colisión separado y opera en dúplex completo. Sin embargo, todas las difusiones (por ejemplo, las consultas ARP) siguen llegando a todos los puertos, lo que define un **dominio de difusión**. Controlar el tamaño de ese dominio, mediante VLAN y enrutamiento, será uno de los ejes de las unidades siguientes.\n\n## Para pensar\n\nSi una empresa tiene 300 computadoras en un solo dominio de difusión, ¿qué efectos observaría en el desempeño y la seguridad? Formule una hipótesis y verifíquela durante el laboratorio con Wireshark observando la frecuencia de difusiones ARP."
+      },
+      "case": {
+        "title": "Caso: La red que creció sin plan en Distribuidora Andina del Sur",
+        "content": "**Distribuidora Andina del Sur S.A.C.** es una empresa arequipeña de distribución de productos de consumo masivo con 65 colaboradores. Su local en el Parque Industrial de Arequipa tiene tres zonas: oficinas administrativas (segundo piso), área comercial (primer piso) y un almacén de 2 400 m² con oficina de despacho al fondo.\n\nLa red nació en 2016 con un enrutador del operador y un conmutador no administrable de 24 puertos. Con el crecimiento, el personal de mantenimiento fue agregando conmutadores domésticos de 8 puertos \"donde faltaban puntos\". Hoy hay siete conmutadores en cascada, algunos sobre los escritorios. El cable hacia la oficina de despacho recorre unos 140 metros por el techo del almacén, junto a las luminarias de alta potencia.\n\nDurante los últimos tres meses el área de despacho reporta que el sistema de facturación electrónica \"se cuelga\" entre las 11:00 y las 15:00, cuando los montacargas eléctricos se cargan y la temperatura del techo supera los 35 °C. Los vendedores también se quejan de que las videollamadas con clientes de Juliaca y Tacna se entrecortan. El gerente, Ing. Marco Huamán, recibió dos propuestas:\n\n1. **Proveedor A:** subir el plan de internet de 200 a 600 Mbit/s por S/ 380 adicionales al mes, \"porque el problema es de velocidad\".\n2. **Proveedor B:** rediseñar el cableado con un gabinete central, un enlace de fibra multimodo hacia el almacén, dos conmutadores administrables y certificación de puntos, por un costo único de S/ 21 500.\n\nEl técnico de soporte, recién contratado, hizo una captura de 10 minutos con Wireshark en una PC de despacho y encontró: abundantes difusiones ARP, retransmisiones TCP frecuentes en las horas críticas y errores de FCS reportados por la tarjeta de red. Un ping al servidor de facturación local muestra tiempos normales de 1 ms, pero de 40 a 900 ms con pérdidas del 8 % en horas críticas. El ping a un servidor en Lima desde la oficina administrativa es estable en 18 ms.\n\nEl gerente debe decidir esta semana porque se acerca la campaña navideña, que duplica el volumen de despachos. Le pide al técnico un informe que explique, con argumentos técnicos y económicos, qué está pasando y qué conviene hacer.",
+        "questions": [
+          "¿En qué capa o capas del modelo OSI se ubica el origen más probable de las fallas en despacho? Justifique con las evidencias de la captura y del ping.",
+          "¿Por qué aumentar el ancho de banda contratado no resolvería el problema principal? Use el concepto de componentes de la latencia.",
+          "¿Qué incumplimientos de la norma ANSI/TIA-568 identifica en la instalación actual y qué riesgos generan?",
+          "Compare económicamente ambas propuestas a tres años y recomiende una decisión, considerando el costo de una caída en campaña navideña.",
+          "Proponga una solución de transición que pueda implementarse en dos semanas antes de la campaña."
+        ]
+      },
+      "questions": [],
+      "assignment": {
+        "title": "Tarea 1: Análisis de tráfico y desempeño de una red real",
+        "instructions": "**Objetivo:** aplicar los modelos OSI y TCP/IP para analizar el tráfico y el desempeño de la red doméstica o de un laboratorio autorizado.\n\n**Qué entregar:**\n\n1. Un diagrama de la topología física y lógica de la red analizada (dispositivos, medios, direcciones IP y MAC anonimizadas).\n2. Una captura de Wireshark de 5 minutos (archivo .pcapng) en la que identifique y explique, con capturas de pantalla anotadas: una trama ARP, un intercambio DNS, el establecimiento de una conexión TCP (tres vías) y una trama de difusión.\n3. Una tabla de encapsulamiento de una trama HTTP o HTTPS con los valores reales de cada campo principal (MAC, EtherType, IP, TTL, puertos) y su capa correspondiente.\n4. Mediciones de ping y traceroute hacia un servidor nacional y uno internacional (10 repeticiones), con cálculo del promedio, la fluctuación y la estimación de la latencia de propagación; interprete las diferencias.\n5. Tres recomendaciones de mejora fundamentadas.\n\n**Formato:** informe PDF de 4 a 6 páginas, fuente 11, con referencias en APA, más el archivo de captura. Anonimice datos personales conforme a la Ley 29733.\n\n**Criterios:** precisión técnica, correcta asignación de capas, calidad de las mediciones y sustento de las recomendaciones.",
+        "rubric": [
+          {
+            "name": "Topología y documentación de la red",
+            "points": 4
+          },
+          {
+            "name": "Identificación y explicación de protocolos en la captura",
+            "points": 6
+          },
+          {
+            "name": "Tabla de encapsulamiento correcta por capas",
+            "points": 4
+          },
+          {
+            "name": "Mediciones e interpretación del desempeño",
+            "points": 4
+          },
+          {
+            "name": "Recomendaciones y redacción académica",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Modelos de referencia, medios y Ethernet",
+        "questions": [
+          {
+            "prompt": "Un usuario puede hacer ping a su puerta de enlace por dirección IP, pero el navegador no abre ningún sitio por su nombre. ¿En qué capa de TCP/IP es más probable el problema?",
+            "options": [
+              "Física, por interferencia electromagnética",
+              "Aplicación, por falla en la resolución DNS",
+              "Acceso a la red, por cable defectuoso",
+              "Internet, por máscara incorrecta en el enrutador"
+            ],
+            "correct": 1,
+            "explanation": "Si hay conectividad IP con la puerta de enlace, las capas inferiores funcionan; la falla en resolver nombres apunta al servicio DNS, de la capa de aplicación."
+          },
+          {
+            "prompt": "Se transmite un paquete de 12 000 bits por un enlace de 10 Mbit/s y 2 000 km de fibra (2×10^8 m/s). ¿Cuál es la suma de retardos de transmisión y propagación?",
+            "options": [
+              "1,2 ms",
+              "10 ms",
+              "0,12 ms",
+              "11,2 ms"
+            ],
+            "correct": 3,
+            "explanation": "Transmisión: 12 000/10 000 000 = 1,2 ms. Propagación: 2 000 000/200 000 000 = 10 ms. La suma es 11,2 ms."
+          },
+          {
+            "prompt": "Un conmutador recibe por el puerto 3 una trama cuya MAC de destino no figura en su tabla. ¿Qué hace?",
+            "options": [
+              "La reenvía por todos los puertos excepto el 3",
+              "La descarta y envía un mensaje de error",
+              "La devuelve por el puerto 3",
+              "La envía solo al enrutador predeterminado"
+            ],
+            "correct": 0,
+            "explanation": "Ante un destino desconocido, el conmutador inunda la trama por todos los puertos salvo el de entrada; además aprende la MAC de origen asociada al puerto 3."
+          },
+          {
+            "prompt": "Un cable UTP Cat 6 de 130 m conecta una cámara IP y presenta caídas intermitentes. ¿Cuál es la solución más adecuada según la norma?",
+            "options": [
+              "Aumentar el plan de internet contratado",
+              "Configurar la tarjeta de red en semidúplex",
+              "Instalar un enlace de fibra o un conmutador intermedio que respete el límite de 100 m",
+              "Cambiar a cable Cat 5e, más flexible"
+            ],
+            "correct": 2,
+            "explanation": "ANSI/TIA-568 limita el canal de cobre a 100 m; exceder ese límite causa atenuación y errores. Se debe acortar el tramo o usar fibra."
+          },
+          {
+            "prompt": "En una captura, una trama tiene EtherType 0x86DD. ¿Qué transporta?",
+            "options": [
+              "Una trama etiquetada 802.1Q",
+              "Un paquete IPv6",
+              "Un paquete IPv4",
+              "Un mensaje ARP"
+            ],
+            "correct": 1,
+            "explanation": "El EtherType 0x86DD identifica IPv6; 0x0800 corresponde a IPv4, 0x0806 a ARP y 0x8100 a una etiqueta 802.1Q."
+          },
+          {
+            "prompt": "¿Por qué una LAN con 300 equipos en un solo segmento conmutado puede tener problemas de desempeño aun sin colisiones?",
+            "options": [
+              "Porque los conmutadores comparten un solo dominio de colisión",
+              "Porque Ethernet no admite más de 254 equipos",
+              "Porque el CRC falla con muchos equipos",
+              "Porque todas las difusiones llegan a los 300 equipos y consumen recursos"
+            ],
+            "correct": 3,
+            "explanation": "El conmutador separa dominios de colisión, pero no de difusión; un dominio grande multiplica el tráfico de difusión que todos procesan."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Direccionamiento IPv4 e IPv6, subredes y protocolos de soporte",
+      "description": "Al finalizar la unidad, el estudiante diseña planes de direccionamiento IPv4 con subredes y VLSM y planes IPv6 para organizaciones con varias sedes, y explica el funcionamiento de ARP, ICMP y DHCP verificándolos en simulador y con capturas de tráfico.",
+      "topics": [
+        "Protocolo IPv4: encabezado, clases históricas y CIDR",
+        "Direcciones privadas, públicas y agotamiento de IPv4",
+        "Subredes de longitud fija y VLSM",
+        "IPv6: formato, tipos de direcciones y autoconfiguración",
+        "ARP, ICMP y DHCP"
+      ],
+      "slides": [
+        {
+          "title": "El protocolo IPv4 y su encabezado",
+          "bullets": [
+            "IPv4 (RFC 791, 1981): protocolo sin conexión y de mejor esfuerzo que entrega paquetes entre redes",
+            "Campos clave: versión, longitud, TTL, protocolo (6 = TCP, 17 = UDP, 1 = ICMP), origen, destino y suma de verificación",
+            "TTL se reduce en uno por cada enrutador; al llegar a cero el paquete se descarta y se envía ICMP de tiempo excedido",
+            "La fragmentación ocurre cuando el paquete excede la MTU del siguiente enlace; IPv6 la elimina en los enrutadores"
+          ],
+          "notes": "Empiece recordando la Unidad 1: el conmutador usa direcciones MAC dentro de una LAN, pero para llegar a otra red necesitamos direcciones lógicas jerárquicas. Abra en Wireshark un paquete IPv4 y recorra el encabezado campo por campo. Detenga la explicación en el TTL: pregunte por qué existe. La respuesta, evitar que un paquete circule eternamente en un bucle de enrutamiento, prepara la explicación de traceroute, que manipula deliberadamente el TTL para descubrir cada salto. Muestre el campo protocolo y pida que identifiquen qué número tendría una consulta DNS normal, que va sobre UDP. Explique que IP es de mejor esfuerzo: no garantiza entrega, orden ni ausencia de duplicados, y que esa simplicidad fue una decisión de diseño deliberada que permitió a Internet crecer sobre cualquier tecnología de enlace. Conecte con Matemática Discreta: todo el direccionamiento se basa en aritmética binaria."
+        },
+        {
+          "title": "Dirección, máscara y prefijo",
+          "bullets": [
+            "Dirección IPv4: 32 bits en notación decimal con puntos; se divide en porción de red y porción de host",
+            "La máscara indica los bits de red: 255.255.255.0 equivale al prefijo /24",
+            "Dirección de red = IP AND máscara; difusión = todos los bits de host en 1",
+            "Hosts utilizables por subred = 2^h − 2, donde h es el número de bits de host"
+          ],
+          "notes": "Haga el cálculo completo en la pizarra con 172.16.45.130/26. Convierta el último octeto a binario: 130 es 10000010. Con /26, los dos primeros bits del último octeto son de red, por lo que la dirección de red es 172.16.45.128, la difusión 172.16.45.191 y el rango utilizable va de .129 a .190, es decir 62 hosts. Repita con dos ejemplos más y luego pida a los estudiantes que resuelvan otros tres en salas pequeñas, con cinco minutos por ejercicio. Insista en el método del número mágico: 256 menos el valor de la máscara en el octeto interesante da el tamaño del bloque; con /26 es 256 menos 192, igual a 64. Este atajo será indispensable en el examen y en el trabajo real. Recuerde que el AND lógico ya lo vieron en Matemática Discreta; aquí adquiere una aplicación inmediata."
+        },
+        {
+          "title": "De las clases a CIDR",
+          "bullets": [
+            "Direccionamiento con clases (A /8, B /16, C /24) desperdiciaba millones de direcciones",
+            "CIDR (RFC 4632) permite prefijos de cualquier longitud y la agregación de rutas (supernetting)",
+            "Ejemplo de agregación: 10.10.0.0/24 a 10.10.3.0/24 se resumen como 10.10.0.0/22",
+            "La agregación reduce el tamaño de las tablas de enrutamiento en Internet y en las redes corporativas"
+          ],
+          "notes": "Narre brevemente la historia: a inicios de los noventa la Internet enfrentaba dos crisis, el agotamiento de bloques clase B y el crecimiento explosivo de las tablas de enrutamiento. CIDR resolvió ambas temporalmente. Explique la agregación con un ejemplo práctico: una empresa con cuatro sedes que usan 10.10.0.0/24 a 10.10.3.0/24 puede anunciar desde la sede central una sola ruta /22. Pida a la clase que verifique en binario que los cuatro bloques comparten los primeros 22 bits. Pregunte qué pasaría si una quinta sede usara 10.10.4.0/24: ya no entra en el resumen y obliga a un /21 que incluye espacio no utilizado, o a una ruta adicional. Esta pregunta muestra por qué el diseño del plan de direccionamiento debe anticipar el crecimiento, idea que guiará la tarea de la unidad."
+        },
+        {
+          "title": "Direcciones privadas, públicas y NAT",
+          "bullets": [
+            "Rangos privados RFC 1918: 10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16, no enrutables en Internet",
+            "Otros especiales: 127.0.0.0/8 (bucle local), 169.254.0.0/16 (APIPA) y 100.64.0.0/10 (CGNAT de operadores)",
+            "LACNIC, registro regional de América Latina y el Caribe, agotó su reserva general de IPv4 en 2020",
+            "NAT permite que muchos hosts privados compartan una dirección pública; se configurará en la Unidad 3"
+          ],
+          "notes": "Explique que el agotamiento de IPv4 es un problema real y regional. LACNIC, con sede en Montevideo, administra las direcciones para el Perú y el resto de la región, y desde 2020 solo asigna pequeños bloques a nuevos solicitantes. La consecuencia práctica es que muchos operadores peruanos usan CGNAT: el router del hogar recibe una dirección del rango 100.64.0.0/10 y no una pública real. Pida que los estudiantes revisen la dirección WAN de su router y la comparen con la que muestra un servicio de consulta de IP pública; si difieren, están detrás de CGNAT. Pregunte qué implica esto para alojar un servidor en casa o para una cámara que se quiere ver desde afuera. Mencione que una dirección 169.254.x.x en una PC indica que no obtuvo respuesta de DHCP, un síntoma de diagnóstico muy útil en soporte."
+        },
+        {
+          "title": "Subredes de longitud fija: procedimiento",
+          "bullets": [
+            "Paso 1: determinar el número de subredes requeridas y calcular bits prestados n tal que 2^n ≥ subredes",
+            "Paso 2: verificar que los bits de host restantes cubran el segmento más grande: 2^h − 2 ≥ hosts",
+            "Paso 3: calcular el tamaño de bloque y listar dirección de red, primer y último host y difusión",
+            "Ejemplo: 192.168.10.0/24 en 6 subredes requiere /27: bloques de 32 con 30 hosts cada uno"
+          ],
+          "notes": "Resuelva el ejemplo completo: seis subredes exigen tres bits prestados porque 2 elevado a 3 es 8, lo que deja cinco bits de host y 30 direcciones utilizables por subred. Construya la tabla con las ocho subredes: .0, .32, .64, .96, .128, .160, .192 y .224. Pregunte cuántas direcciones se desperdician si una subred es un enlace entre dos enrutadores que solo necesita dos direcciones: se pierden 28. Este desperdicio motiva VLSM, la siguiente diapositiva. Proponga a la clase un ejercicio relámpago: dividir 172.20.0.0/16 en 50 subredes iguales e indicar la máscara y los hosts por subred. La respuesta es /22 con 1 022 hosts. Recalque la importancia de documentar cada subred en una hoja de cálculo; en la práctica profesional nadie memoriza un plan de direccionamiento, se mantiene un inventario actualizado."
+        },
+        {
+          "title": "VLSM: máscaras de longitud variable",
+          "bullets": [
+            "VLSM asigna a cada segmento el prefijo justo según sus hosts, empezando por el segmento más grande",
+            "Ordenar requerimientos de mayor a menor evita solapamientos y fragmentación del espacio",
+            "Enlaces punto a punto entre enrutadores: /30 (2 hosts) o /31 según RFC 3021",
+            "Requiere protocolos de enrutamiento sin clase, como OSPF, que anuncian la máscara con cada ruta"
+          ],
+          "notes": "Resuelva un caso completo con 192.168.50.0/24: ventas 100 hosts, administración 50, almacén 25, gerencia 10 y dos enlaces WAN. Ventas necesita /25 (126 hosts): 192.168.50.0/25. Administración /26: .128/26. Almacén /27: .192/27. Gerencia /28: .224/28. Los enlaces /30: .240/30 y .244/30. Queda libre .248/29 para crecimiento. Muestre que, sin VLSM, este requerimiento no habría cabido en un /24. Pregunte qué ocurriría si se empezara por los segmentos pequeños: los bloques grandes quedarían desalineados y no cabrían. Enfatice que la dirección de red de un bloque debe ser múltiplo de su tamaño, principio que evita la mayoría de errores de los estudiantes. Esta técnica es exactamente la que aplicarán en la tarea de la unidad y luego en el proyecto final."
+        },
+        {
+          "title": "IPv6: motivación y formato",
+          "bullets": [
+            "IPv6 (RFC 8200) usa 128 bits: unos 3,4×10^38 direcciones, escritas en ocho grupos hexadecimales de 16 bits",
+            "Reglas de abreviación: omitir ceros iniciales de cada grupo y reemplazar una sola secuencia de grupos cero por ::",
+            "Ejemplo: 2001:0db8:0000:0000:0000:ff00:0042:8329 se abrevia 2001:db8::ff00:42:8329",
+            "Encabezado fijo de 40 bytes, sin suma de verificación ni fragmentación en enrutadores; usa encabezados de extensión"
+          ],
+          "notes": "Comience con la pregunta: si IPv4 tiene 4 300 millones de direcciones y hay más dispositivos conectados que personas en el planeta, ¿cómo sigue funcionando Internet? La respuesta incluye NAT, pero la solución de fondo es IPv6. Practique la abreviación con cinco ejemplos y advierta el error más común: usar el doble dos puntos dos veces en la misma dirección, lo que la hace ambigua. Recuerde que la notación hexadecimal se vio en Arquitectura de Computadoras: cada dígito equivale a cuatro bits. Mencione que el prefijo 2001:db8::/32 está reservado para documentación y es el que usaremos en ejercicios. Comente que la adopción de IPv6 en el Perú ha crecido gracias a los operadores móviles y de fibra, y pida a los estudiantes que verifiquen si su conexión doméstica tiene una dirección IPv6 global con ipconfig o ip -6 addr."
+        },
+        {
+          "title": "Tipos de direcciones IPv6 y plan de subredes",
+          "bullets": [
+            "Unidifusión global (2000::/3), enlace local (fe80::/10, obligatoria en toda interfaz) y local única (fc00::/7)",
+            "Multidifusión (ff00::/8) reemplaza la difusión; no existe difusión en IPv6",
+            "Estructura típica: prefijo global /48 del proveedor, 16 bits de subred y 64 bits de identificador de interfaz",
+            "Un /48 permite 65 536 subredes /64: el plan se diseña por sedes y funciones, no por ahorro de direcciones"
+          ],
+          "notes": "Explique el cambio de mentalidad: en IPv4 el diseñador ahorra direcciones; en IPv6 diseña para claridad y agregación. Con un prefijo 2001:db8:acad::/48, una empresa puede usar el cuarto grupo para codificar sede y área: 2001:db8:acad:1010::/64 para la sede 1, área 10. Haga un ejemplo con tres sedes y cuatro áreas cada una. Pregunte por qué cada subred LAN debe ser /64 aunque tenga solo veinte equipos: la autoconfiguración SLAAC requiere 64 bits de identificador de interfaz. Explique la dirección de enlace local, que todo equipo genera automáticamente y que los enrutadores usan como siguiente salto. Mencione que la ausencia de difusión reduce el ruido en la LAN, porque la multidifusión solo llega a los interesados. Este plan jerárquico será parte obligatoria de la tarea."
+        },
+        {
+          "title": "Autoconfiguración en IPv6: SLAAC y DHCPv6",
+          "bullets": [
+            "NDP (Neighbor Discovery, RFC 4861) reemplaza a ARP con mensajes ICMPv6 de solicitud y anuncio de vecino",
+            "SLAAC: el host recibe el prefijo en un anuncio de enrutador (RA) y genera su identificador de interfaz",
+            "El identificador puede derivarse de EUI-64 o ser aleatorio (direcciones temporales por privacidad, RFC 8981)",
+            "DHCPv6 con estado o sin estado complementa a SLAAC para entregar DNS y llevar registro de asignaciones"
+          ],
+          "notes": "Muestre en Packet Tracer un enrutador con ipv6 unicast-routing y una dirección en la interfaz LAN; luego observe cómo una PC configurada en automático obtiene su dirección sin servidor DHCP. Capture en modo simulación los mensajes de solicitud y anuncio de enrutador. Explique EUI-64: se toma la MAC de 48 bits, se inserta FFFE en el medio y se invierte el séptimo bit. Haga un ejemplo con la MAC 00:1A:2B:3C:4D:5E, que produce 021a:2bff:fe3c:4d5e. Luego discuta por qué los sistemas operativos actuales prefieren identificadores aleatorios: con EUI-64 un dispositivo es rastreable en cualquier red. Pregunte a la clase qué ventaja tiene DHCPv6 para un administrador que necesita saber qué equipo usaba qué dirección en determinado momento, por ejemplo ante un incidente de seguridad."
+        },
+        {
+          "title": "ARP: del IP a la MAC",
+          "bullets": [
+            "ARP (RFC 826) resuelve la dirección MAC correspondiente a una IPv4 dentro de la misma red local",
+            "Solicitud ARP en difusión, respuesta en unidifusión; el resultado se guarda en la caché ARP del host",
+            "Para un destino remoto, el host resuelve la MAC de su puerta de enlace, no la del destino final",
+            "Comandos: arp -a (Windows), ip neigh (Linux); riesgo: suplantación ARP, base de ataques de intermediario"
+          ],
+          "notes": "Esta diapositiva une la Unidad 1 con la Unidad 2. Pregunte: si mi PC conoce la IP del servidor de facturación, ¿cómo construye la trama si no conoce su MAC? Muestre en Wireshark una solicitud ARP con destino de difusión y la respuesta correspondiente. Luego plantee el punto clave: si el destino está en otra red, la PC compara su propia dirección y máscara con la del destino, concluye que es remoto y solicita la MAC de su puerta de enlace. Por eso una puerta de enlace mal configurada provoca que la red local funcione pero no se llegue a Internet. Haga que los estudiantes ejecuten arp -a antes y después de hacer ping a un equipo local. Mencione que la suplantación ARP permite a un atacante interceptar tráfico y que se mitiga con inspección ARP dinámica, tema de Seguridad Informática."
+        },
+        {
+          "title": "ICMP: diagnóstico y mensajes de control",
+          "bullets": [
+            "ICMP informa errores y condiciones: eco (tipo 8) y respuesta (tipo 0), destino inalcanzable (3), tiempo excedido (11)",
+            "ping mide alcance y tiempo de ida y vuelta; traceroute usa TTL crecientes para revelar cada salto",
+            "Bloquear todo ICMP en un cortafuegos rompe el descubrimiento de MTU de ruta y dificulta el diagnóstico",
+            "ICMPv6 es aún más esencial: transporta NDP, anuncios de enrutador y descubrimiento de MTU"
+          ],
+          "notes": "Ejecute un traceroute en vivo hacia un sitio peruano y otro internacional y analice la salida. Identifique los saltos dentro de la red del operador, el punto donde cambia de proveedor y los saltos con asteriscos, que suelen indicar enrutadores configurados para no responder ICMP. Explique el funcionamiento: el primer paquete sale con TTL 1, el primer enrutador lo descarta y responde con tiempo excedido, revelando su dirección; luego TTL 2, y así sucesivamente. Pregunte a la clase: si un ping a un servidor falla, ¿significa necesariamente que el servidor está caído? No, puede que un cortafuegos bloquee ICMP. Esta reflexión evita conclusiones apresuradas en soporte técnico. Advierta que en IPv6 bloquear ICMPv6 de forma indiscriminada rompe la red, porque NDP depende de él."
+        },
+        {
+          "title": "DHCP: asignación dinámica de direcciones",
+          "bullets": [
+            "Proceso DORA: Discover (difusión), Offer, Request y Acknowledge, sobre UDP puertos 67 y 68",
+            "Entrega dirección, máscara, puerta de enlace, servidores DNS y tiempo de concesión",
+            "Agente de retransmisión (ip helper-address) permite un servidor DHCP central para varias subredes",
+            "Buenas prácticas: reservas para impresoras y servidores, exclusiones y monitoreo del agotamiento del ámbito"
+          ],
+          "notes": "Configure en vivo un servidor DHCP en un enrutador de Packet Tracer con los comandos ip dhcp excluded-address, ip dhcp pool, network, default-router y dns-server. Luego cambie una PC a modo automático y observe el intercambio DORA en modo simulación. Explique por qué Discover es una difusión: el cliente aún no tiene dirección ni conoce al servidor. Esto implica que, sin agente de retransmisión, el servidor debe estar en la misma subred. Plantee un problema real: una clínica con cinco subredes y un solo servidor Windows con DHCP; ¿cómo atenderlo? La respuesta es ip helper-address en cada interfaz del enrutador. Comente un fallo típico: un router doméstico conectado por error a la red corporativa que reparte direcciones equivocadas, conocido como servidor DHCP no autorizado, y que se previene con DHCP snooping."
+        }
+      ],
+      "reading": {
+        "title": "Ingeniería del direccionamiento: de IPv4 con VLSM a IPv6 jerárquico",
+        "minutes": 40,
+        "content": "## El direccionamiento como decisión de diseño\n\nUn plan de direccionamiento es al administrador de redes lo que un plano catastral es a una municipalidad: si está mal hecho, cada ampliación genera conflictos. Oppenheimer, en *Top-down network design*, recomienda diseñar el direccionamiento de forma **jerárquica y estructurada**, de manera que las direcciones reflejen la organización (sedes, edificios, funciones) y permitan resumir rutas. En el Perú, donde muchas pymes crecen de una a varias sedes en pocos años, esta previsión evita costosas renumeraciones.\n\n## Aritmética de subredes\n\nToda dirección IPv4 se interpreta con su máscara. Las operaciones fundamentales son:\n\n```text\nRed        = IP AND máscara\nDifusión   = Red OR (NOT máscara)\nHosts      = 2^(32 − prefijo) − 2\nBloque     = 256 − valor de la máscara en el octeto interesante\n```\n\nEjemplo con 10.20.37.200/21:\n\n```text\nMáscara /21 = 255.255.248.0  → octeto interesante: el tercero (248)\nBloque      = 256 − 248 = 8  → redes en el tercer octeto: 0, 8, 16, 24, 32, 40...\n37 cae en el bloque que empieza en 32\nRed         = 10.20.32.0\nDifusión    = 10.20.39.255\nRango       = 10.20.32.1 – 10.20.39.254   (2046 hosts)\n```\n\n## VLSM paso a paso\n\nConsidere la cooperativa de ahorro y crédito ficticia **CoopSur**, con sede principal en Juliaca y dos agencias, a la que se le asignó internamente 172.18.0.0/22 (1 024 direcciones). Requerimientos: oficina principal 300 hosts, agencia Puno 120, agencia Ilave 50, cámaras de seguridad 40, gestión de equipos 12 y tres enlaces WAN.\n\n| Segmento | Hosts | Prefijo | Red asignada | Rango utilizable |\n|---|---|---|---|---|\n| Principal | 300 | /23 | 172.18.0.0/23 | .0.1 – .1.254 |\n| Puno | 120 | /25 | 172.18.2.0/25 | .2.1 – .2.126 |\n| Ilave | 50 | /26 | 172.18.2.128/26 | .2.129 – .2.190 |\n| Cámaras | 40 | /26 | 172.18.2.192/26 | .2.193 – .2.254 |\n| Gestión | 12 | /28 | 172.18.3.0/28 | .3.1 – .3.14 |\n| WAN 1-3 | 2 | /30 | 172.18.3.16, .20, .24 | dos hosts cada uno |\n\nSe procede de mayor a menor y cada bloque inicia en un múltiplo de su tamaño. Queda libre 172.18.3.28 en adelante para crecimiento. Si la cooperativa hubiera usado subredes fijas de /23, solo cabrían dos segmentos; VLSM hace viable el diseño.\n\n## IPv6: diseñar para la claridad\n\nIPv6 cambia la lógica: el espacio sobra, y lo escaso es la **simplicidad operativa**. La práctica recomendada por los registros regionales es asignar a una organización un /48, del que se derivan 65 536 subredes /64. Un esquema legible para CoopSur, con el prefijo de documentación 2001:db8:c00b::/48, podría codificar el cuarto grupo como `SSFF` (sede y función):\n\n```text\n2001:db8:c00b:0110::/64   Sede 01 (Juliaca), función 10 (usuarios)\n2001:db8:c00b:0120::/64   Sede 01, función 20 (cámaras)\n2001:db8:c00b:0210::/64   Sede 02 (Puno), usuarios\n2001:db8:c00b:ff00::/64   Enlaces e infraestructura\n```\n\nConfigurar una interfaz en Cisco IOS es directo:\n\n```text\nR1(config)# ipv6 unicast-routing\nR1(config)# interface g0/0/0\nR1(config-if)# ipv6 address 2001:db8:c00b:110::1/64\nR1(config-if)# ipv6 address fe80::1 link-local\n```\n\n## Protocolos de soporte: ARP, NDP, ICMP y DHCP\n\nEl direccionamiento lógico necesita protocolos auxiliares. **ARP** traduce IPv4 a MAC mediante difusión; en IPv6 lo reemplaza **NDP**, que usa multidifusión ICMPv6 y además descubre enrutadores y detecta direcciones duplicadas. **ICMP** reporta errores y habilita herramientas como ping y traceroute. **DHCP** automatiza la configuración con el intercambio DORA; en redes con varias subredes se centraliza mediante agentes de retransmisión.\n\nUn error frecuente en soporte es diagnosticar \"no hay internet\" cuando la PC muestra una dirección 169.254.x.x: eso indica que no recibió respuesta del servidor DHCP, y el problema está en el servidor, en el agente de retransmisión o en el enlace, no en el proveedor.\n\n## Reflexión\n\nLACNIC agotó su reserva de IPv4 en 2020. Para una empresa peruana que planea crecer, ¿es razonable seguir diseñando solo en IPv4? Argumente considerando costos, compatibilidad de equipos y capacidades del personal."
+      },
+      "case": {
+        "title": "Caso: Renumerar o colapsar en Clínica San Gabriel",
+        "content": "**Clínica San Gabriel** es una clínica privada de Trujillo con 140 colaboradores, 60 camas y un centro de imágenes. Hasta 2024 tenía una sola sede y toda su red usaba 192.168.1.0/24, con un router del operador que asignaba direcciones por DHCP. La clínica compró recientemente un local en Chiclayo para consultorios y un laboratorio en Chimbote, y planea abrir una tercera sede en Piura en 2027.\n\nEl jefe de TI, Lic. Renzo Valdivia, enfrenta varios síntomas:\n\n- La red de Trujillo tiene ya 238 dispositivos activos entre PC, impresoras, teléfonos IP, equipos biomédicos con interfaz de red y 46 cámaras. El ámbito DHCP se agota en las mañanas y algunos equipos reciben 169.254.x.x.\n- Los equipos de rayos X y el tomógrafo tienen IP fijas configuradas por el proveedor dentro del mismo rango; dos veces al mes hay conflictos de dirección duplicada que interrumpen la transferencia de imágenes al sistema PACS.\n- Chiclayo y Chimbote también usan 192.168.1.0/24, porque se instalaron con la configuración por defecto. Al intentar conectar las sedes por VPN, el enrutamiento falla.\n- El nuevo sistema de historias clínicas exige segmentar los equipos biomédicos y cumplir medidas de seguridad para proteger datos sensibles de salud, conforme a la Ley 29733 y su reglamento.\n\nInventario y proyección a tres años:\n\n| Sede | Usuarios y PC | Biomédicos | Cámaras | Teléfonos IP | Crecimiento |\n|---|---|---|---|---|---|\n| Trujillo | 120 | 35 | 46 | 40 | 25 % |\n| Chiclayo | 30 | 6 | 12 | 10 | 50 % |\n| Chimbote | 15 | 10 | 8 | 6 | 30 % |\n| Piura (2027) | 40 | 10 | 16 | 15 | — |\n\nEl gerente general propone una solución rápida: cambiar la máscara de Trujillo a /23 y dejar las demás sedes como están. El proveedor de VPN, en cambio, recomienda renumerar todo con 10.0.0.0/8 y un esquema jerárquico, y aprovechar para habilitar IPv6 en el núcleo. La renumeración implica reconfigurar 30 equipos con IP fija y coordinar con los proveedores biomédicos una ventana de mantenimiento nocturna, en una clínica que atiende emergencias las 24 horas.\n\nRenzo debe presentar al comité de gerencia un plan de direccionamiento y una estrategia de migración que minimice el riesgo asistencial.",
+        "questions": [
+          "¿Por qué cambiar la máscara de Trujillo a /23 no resuelve el problema de interconexión entre sedes? Explique con el proceso de decisión de reenvío de un host.",
+          "Diseñe un esquema jerárquico sobre 10.0.0.0/8 que codifique sede y función y permita resumir cada sede en una sola ruta.",
+          "Calcule con VLSM los prefijos de cada segmento de Trujillo considerando el crecimiento proyectado y justifique la reserva de espacio.",
+          "Proponga una estrategia de migración por fases que proteja la continuidad de la atención de emergencias y de los equipos biomédicos.",
+          "¿Conviene habilitar IPv6 desde ahora? Argumente ventajas, riesgos y requisitos para la clínica."
+        ]
+      },
+      "questions": [],
+      "assignment": {
+        "title": "Tarea 2: Plan de direccionamiento IPv4 con VLSM e IPv6 para una empresa multisede",
+        "instructions": "**Objetivo:** diseñar un plan de direccionamiento jerárquico, eficiente y escalable para la Clínica San Gabriel (caso de la unidad).\n\n**Qué entregar:**\n\n1. **Análisis de requerimientos:** tabla de segmentos por sede y función (usuarios, biomédicos, cámaras, voz, gestión, enlaces WAN) con hosts actuales y proyectados a tres años.\n2. **Plan IPv4 con VLSM** sobre el bloque 10.40.0.0/16: para cada segmento indique red, prefijo, máscara, rango utilizable, difusión, puerta de enlace y porcentaje de ocupación. Debe permitir resumir cada sede en una sola ruta; demuestre el resumen en binario.\n3. **Plan IPv6** sobre 2001:db8:5a6::/48 con un esquema legible de sede y función, y direcciones de enlace local de las puertas de enlace.\n4. **Configuración en Packet Tracer** de la sede Trujillo: enrutador con al menos tres subinterfaces o interfaces, DHCP con exclusiones para equipos fijos y verificación con ipconfig, ping y show ip dhcp binding.\n5. **Estrategia de migración** de una página.\n\n**Formato:** informe PDF (5 a 8 páginas) más archivo .pkt y hoja de cálculo del plan.\n\n**Criterios:** ausencia de solapamientos, eficiencia y previsión de crecimiento, correcta agregación, funcionamiento verificable y claridad de la documentación.",
+        "rubric": [
+          {
+            "name": "Análisis de requerimientos y crecimiento",
+            "points": 3
+          },
+          {
+            "name": "Plan IPv4 VLSM correcto y resumible",
+            "points": 7
+          },
+          {
+            "name": "Plan IPv6 jerárquico",
+            "points": 4
+          },
+          {
+            "name": "Implementación y verificación en simulador",
+            "points": 4
+          },
+          {
+            "name": "Estrategia de migración y documentación",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Direccionamiento IP y protocolos de soporte",
+        "questions": [
+          {
+            "prompt": "¿Cuál es la dirección de difusión de la subred a la que pertenece el host 192.168.20.77/27?",
+            "options": [
+              "192.168.20.95",
+              "192.168.20.63",
+              "192.168.20.127",
+              "192.168.20.79"
+            ],
+            "correct": 0,
+            "explanation": "Con /27 el bloque es de 32: subredes .64 a .95. El host .77 cae en la subred 192.168.20.64, cuya difusión es .95."
+          },
+          {
+            "prompt": "Se necesita una subred para 500 hosts con el menor desperdicio posible. ¿Qué prefijo corresponde?",
+            "options": [
+              "/22",
+              "/25",
+              "/23",
+              "/24"
+            ],
+            "correct": 2,
+            "explanation": "Un /23 tiene 9 bits de host: 2^9 − 2 = 510 hosts utilizables. Un /24 solo ofrece 254 y un /22 desperdiciaría más de 500 direcciones."
+          },
+          {
+            "prompt": "¿Cuál es el resumen más específico de las redes 172.16.8.0/24, 172.16.9.0/24, 172.16.10.0/24 y 172.16.11.0/24?",
+            "options": [
+              "172.16.8.0/23",
+              "172.16.8.0/22",
+              "172.16.8.0/21",
+              "172.16.0.0/16"
+            ],
+            "correct": 1,
+            "explanation": "Los terceros octetos 8 a 11 comparten los seis primeros bits (000010xx); con 16 + 6 = 22 bits el resumen exacto es 172.16.8.0/22."
+          },
+          {
+            "prompt": "Una PC con 10.1.1.20/24 y puerta de enlace 10.1.1.1 envía un paquete a 8.8.8.8. ¿Qué dirección MAC de destino lleva la trama?",
+            "options": [
+              "La MAC del servidor 8.8.8.8",
+              "La dirección de difusión FF:FF:FF:FF:FF:FF",
+              "La MAC del conmutador de acceso",
+              "La MAC de la interfaz 10.1.1.1 del enrutador"
+            ],
+            "correct": 3,
+            "explanation": "El destino es remoto; el host entrega la trama a su puerta de enlace, cuya MAC obtiene por ARP. La IP de destino sigue siendo 8.8.8.8."
+          },
+          {
+            "prompt": "¿Cuál es la forma abreviada correcta de 2001:0db8:0000:0000:0001:0000:0000:0abc?",
+            "options": [
+              "2001:db8::1:0:0:abc",
+              "2001:db8::1::abc",
+              "2001:db8:0:0:1::abc:0",
+              "2001:db8::1:abc"
+            ],
+            "correct": 0,
+            "explanation": "Se omiten ceros iniciales y se reemplaza una sola secuencia de grupos cero por ::. Usar :: dos veces es inválido y 2001:db8::1:abc pierde dos grupos."
+          },
+          {
+            "prompt": "Varios usuarios de una subred remota reciben direcciones 169.254.x.x desde que se migró el DHCP a un servidor central. ¿Cuál es la causa más probable?",
+            "options": [
+              "Los cables de los usuarios superan los 100 m",
+              "El enrutador tiene el TTL demasiado bajo",
+              "Falta configurar el agente de retransmisión (ip helper-address) en la interfaz del enrutador",
+              "El servidor DNS está caído"
+            ],
+            "correct": 2,
+            "explanation": "El Discover de DHCP es una difusión que el enrutador no reenvía; sin agente de retransmisión no llega al servidor central y los clientes recurren a APIPA."
+          },
+          {
+            "prompt": "¿Por qué se recomienda usar prefijos /64 en las subredes LAN IPv6 aunque tengan pocos equipos?",
+            "options": [
+              "Porque permite usar difusión",
+              "Porque SLAAC necesita 64 bits para el identificador de interfaz",
+              "Porque IPv6 no admite otros prefijos",
+              "Porque reduce la tabla ARP"
+            ],
+            "correct": 1,
+            "explanation": "La autoconfiguración sin estado genera identificadores de interfaz de 64 bits; con otro prefijo SLAAC deja de funcionar. IPv6 no tiene difusión ni ARP."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Conmutación con VLAN y enrutamiento estático y dinámico",
+      "description": "Al finalizar la unidad, el estudiante implementa redes conmutadas con VLAN, enlaces troncales 802.1Q y árbol de expansión, y redes enrutadas con rutas estáticas, OSPF de área única y NAT, verificando la conectividad y explicando las decisiones de reenvío.",
+      "topics": [
+        "Configuración básica de dispositivos Cisco IOS",
+        "VLAN, troncales 802.1Q y enrutamiento entre VLAN",
+        "Redundancia en capa 2 con STP y Rapid PVST+",
+        "Tabla de enrutamiento, rutas estáticas y OSPFv2 de área única",
+        "NAT con sobrecarga y listas de control de acceso básicas"
+      ],
+      "slides": [
+        {
+          "title": "Configuración inicial de un dispositivo Cisco IOS",
+          "bullets": [
+            "Modos: usuario (>), privilegiado (#), configuración global (config)# y de interfaz (config-if)#",
+            "Pasos: hostname, enable secret, banner, contraseñas de consola y service password-encryption",
+            "Guardar: copy running-config startup-config; la configuración en ejecución vive en RAM y se pierde al reiniciar",
+            "Verificación: show running-config, show ip interface brief, show version"
+          ],
+          "notes": "Inicie con una demostración en Packet Tracer desde la consola de un conmutador recién desempaquetado. Recorra los modos y muestre cómo el signo del indicador revela dónde está el usuario. Configure nombre, contraseña cifrada con enable secret y un mensaje de advertencia legal; explique que en muchas organizaciones el banner se redacta con el área legal para respaldar acciones ante accesos no autorizados. Haga énfasis en la diferencia entre running-config y startup-config, conectando con la jerarquía de memoria vista en Arquitectura de Computadoras: RAM volátil frente a NVRAM. Cuente la anécdota frecuente del técnico que configura durante horas, no guarda, y un corte de energía borra todo su trabajo. Pida que los estudiantes practiquen el atajo de autocompletar con tabulador y el signo de interrogación como ayuda contextual. Estos hábitos aceleran el trabajo y reducen errores de tipeo en producción."
+        },
+        {
+          "title": "VLAN: segmentación lógica de la LAN",
+          "bullets": [
+            "Una VLAN es un dominio de difusión independiente definido por software sobre la misma infraestructura física",
+            "Beneficios: menos difusiones, seguridad por separación, agrupación por función y no por ubicación física",
+            "Tipos: datos, voz, gestión, nativa y VLAN de agujero negro para puertos no usados",
+            "Comandos: vlan 10, name VENTAS, interface f0/5, switchport mode access, switchport access vlan 10"
+          ],
+          "notes": "Regrese al problema planteado en la Unidad 1: un dominio de difusión grande degrada el desempeño. Las VLAN son la respuesta. Ilustre con la clínica del caso anterior: los equipos biomédicos, las cámaras y los usuarios administrativos comparten el mismo cableado pero no deberían ver el tráfico de los demás. Configure en vivo dos VLAN en un conmutador, asigne puertos y demuestre que dos PC en VLAN distintas, aun con direcciones de la misma subred, no se comunican. Pregunte por qué. La respuesta refuerza que la VLAN separa en capa 2 y que para comunicarlas se requiere un dispositivo de capa 3. Recomiende como buena práctica no usar la VLAN 1 para datos de usuarios y asignar los puertos libres a una VLAN sin uso y apagados, medida simple que reduce la superficie de ataque."
+        },
+        {
+          "title": "Enlaces troncales IEEE 802.1Q",
+          "bullets": [
+            "Un troncal transporta varias VLAN por un mismo enlace insertando una etiqueta de 4 bytes con el ID de VLAN (12 bits)",
+            "Hasta 4 094 VLAN utilizables; la VLAN nativa viaja sin etiqueta y debe coincidir en ambos extremos",
+            "Comandos: switchport mode trunk, switchport trunk native vlan 99, switchport trunk allowed vlan 10,20,99",
+            "Verificación: show interfaces trunk; desactivar DTP con switchport nonegotiate en enlaces críticos"
+          ],
+          "notes": "Dibuje dos conmutadores, uno por piso, cada uno con usuarios de las VLAN 10 y 20. Pregunte cuántos cables se necesitarían entre ellos si cada VLAN necesitara su propio enlace. Con diez VLAN serían diez cables, algo impráctico; el troncal resuelve esto con la etiqueta 802.1Q. Muestre en el modo simulación de Packet Tracer cómo la trama se etiqueta al entrar al troncal y se desetiqueta al salir hacia el puerto de acceso. Explique el problema de la VLAN nativa no coincidente: el tráfico sin etiqueta termina en la VLAN equivocada y el conmutador muestra mensajes de advertencia de CDP. Comente que limitar las VLAN permitidas en cada troncal es una práctica de seguridad y de eficiencia. Pida que en el laboratorio provoquen deliberadamente el error de VLAN nativa y lo diagnostiquen con show interfaces trunk."
+        },
+        {
+          "title": "Enrutamiento entre VLAN",
+          "bullets": [
+            "Router-on-a-stick: un enlace troncal al enrutador con una subinterfaz por VLAN (encapsulation dot1Q 10)",
+            "Conmutador multicapa: interfaces virtuales SVI (interface vlan 10) con ip routing; mayor desempeño",
+            "Cada VLAN es una subred IP distinta; la puerta de enlace de los hosts es la subinterfaz o SVI correspondiente",
+            "Criterio de elección: router-on-a-stick para pymes pequeñas; SVI cuando el tráfico entre VLAN es alto"
+          ],
+          "notes": "Configure router-on-a-stick paso a paso: la interfaz física sin dirección y encendida, y luego las subinterfaces g0/0.10 y g0/0.20 con encapsulation dot1Q y la dirección de puerta de enlace de cada VLAN. Verifique con ping entre VLAN y con show ip route, donde aparecerán redes directamente conectadas por cada subinterfaz. Pregunte a la clase cuál es la limitación de esta solución: todo el tráfico entre VLAN sube y baja por un solo enlace físico, que se convierte en cuello de botella. Calcule: si 50 usuarios copian archivos de 100 Mbit/s entre VLAN por un enlace de 1 Gbit/s, se saturará. Luego muestre la alternativa con un conmutador multicapa y SVI, donde el enrutamiento ocurre en hardware. Discuta costos aproximados de ambas opciones para que la decisión sea técnica y económica, como lo exige el proyecto final."
+        },
+        {
+          "title": "Redundancia en capa 2 y el problema de los bucles",
+          "bullets": [
+            "Enlaces redundantes entre conmutadores aumentan la disponibilidad, pero crean bucles de capa 2",
+            "Sin control, un bucle provoca tormentas de difusión, inestabilidad de la tabla MAC y tramas duplicadas",
+            "La trama Ethernet no tiene TTL: una difusión puede circular indefinidamente y saturar la red en segundos",
+            "Solución: el protocolo de árbol de expansión (STP, IEEE 802.1D) creado por Radia Perlman"
+          ],
+          "notes": "Haga la demostración más impactante del curso: en Packet Tracer, desactive STP en tres conmutadores conectados en triángulo y envíe una sola difusión. En modo simulación verán cómo la trama se multiplica sin fin. Pregunte por qué esto no ocurre con paquetes IP en un bucle de enrutamiento: el TTL los elimina, mientras que la trama Ethernet no tiene un campo equivalente. Cuente que tormentas de difusión han paralizado redes de hospitales y universidades cuando alguien conectó un cable entre dos tomas de pared de la misma oficina. Presente a Radia Perlman, ingeniera que diseñó el algoritmo de árbol de expansión y lo explicó en un poema. Aproveche para destacar el aporte de las mujeres en la ingeniería de redes. Plantee la pregunta guía: ¿cómo conservar la redundancia sin sufrir bucles?"
+        },
+        {
+          "title": "Funcionamiento de STP y Rapid PVST+",
+          "bullets": [
+            "Elección del puente raíz: menor ID de puente (prioridad de 16 bits más MAC); prioridad por defecto 32768",
+            "Cada conmutador elige un puerto raíz (menor costo hacia la raíz); cada segmento, un puerto designado; el resto se bloquea",
+            "Costos IEEE: 100 Mbit/s = 19, 1 Gbit/s = 4, 10 Gbit/s = 2 (método corto)",
+            "Rapid PVST+ (802.1w por VLAN) converge en segundos frente a 30-50 s de STP clásico; usar PortFast en puertos de usuario"
+          ],
+          "notes": "Resuelva un ejercicio de elección de raíz con tres conmutadores de prioridades iguales y MAC distintas: gana la MAC más baja. Luego muestre el riesgo: si el conmutador más antiguo, de acceso y con enlaces lentos, tiene la MAC más baja, se convierte en raíz y el tráfico sigue rutas subóptimas. Por eso el administrador debe fijar la raíz con spanning-tree vlan 10 root primary en el conmutador de núcleo. Calcule el costo de ruta y determine qué puerto queda bloqueado. Desconecte un enlace en el simulador y observe la reconvergencia, comparando el tiempo con STP clásico y con Rapid PVST+. Explique PortFast y BPDU Guard: los puertos de usuarios pasan inmediatamente a reenvío, y si alguien conecta un conmutador no autorizado, el puerto se desactiva. Esto resuelve directamente problemas como los del caso de la Unidad 1."
+        },
+        {
+          "title": "La tabla de enrutamiento y la decisión de reenvío",
+          "bullets": [
+            "El enrutador elige la ruta con la coincidencia de prefijo más larga hacia el destino",
+            "Entre fuentes distintas decide la distancia administrativa: conectada 0, estática 1, OSPF 110, RIP 120",
+            "Dentro de un mismo protocolo decide la métrica: costo en OSPF, saltos en RIP",
+            "Códigos de show ip route: C conectada, L local, S estática, O OSPF, S* ruta predeterminada"
+          ],
+          "notes": "Proyecte una tabla de enrutamiento real con varias entradas, incluidas 10.0.0.0/8, 10.1.0.0/16 y 10.1.1.0/24, y pregunte por dónde se envía un paquete hacia 10.1.1.50. Muchos responderán la primera que aparece; la respuesta correcta es la coincidencia más larga, /24. Repita con 10.1.2.7, que coincide con /16. Este ejercicio aclara el principio central del enrutamiento IP. Luego explique la distancia administrativa como un indicador de confianza en la fuente de información: el enrutador cree más a una ruta estática configurada por el administrador que a una aprendida por OSPF. Pregunte qué ocurriría si existiera una estática y una OSPF hacia la misma red con distinto siguiente salto. Concluya que entender la tabla de enrutamiento es la habilidad diagnóstica más valiosa de un administrador de redes."
+        },
+        {
+          "title": "Rutas estáticas y ruta predeterminada",
+          "bullets": [
+            "Sintaxis: ip route red máscara {siguiente-salto | interfaz-salida} [distancia]",
+            "Ruta predeterminada: ip route 0.0.0.0 0.0.0.0 siguiente-salto, típica hacia el proveedor de internet",
+            "Ruta estática flotante: distancia mayor (p. ej., 5) para un enlace de respaldo que solo se usa si falla el principal",
+            "Ventajas: control, cero consumo de ancho de banda; desventaja: no se adapta a cambios ni escala bien"
+          ],
+          "notes": "Configure en vivo una topología de tres enrutadores en línea y muestre que, sin rutas, los extremos no se comunican. Añada las rutas estáticas necesarias en ambos sentidos y recalque el error más común de los estudiantes: configurar solo la ida, olvidando que el paquete de respuesta también necesita una ruta. Luego configure una ruta predeterminada hacia un enrutador que simula al proveedor. Presente la ruta estática flotante con un ejemplo peruano típico: una agencia bancaria en provincia con enlace principal de fibra y respaldo por red móvil 4G. Si la fibra cae, la ruta principal desaparece de la tabla y entra la flotante. Pregunte cuántas rutas estáticas necesitaría una red de 20 sedes en malla parcial y cuántos errores podrían cometerse al mantenerlas manualmente. Esta reflexión justifica los protocolos dinámicos."
+        },
+        {
+          "title": "OSPFv2 de área única: fundamentos",
+          "bullets": [
+            "Protocolo de estado de enlace (RFC 2328): cada enrutador construye un mapa completo y calcula rutas con el algoritmo de Dijkstra",
+            "Proceso: descubrir vecinos con Hello, intercambiar LSA, construir la base de datos (LSDB) y calcular el árbol SPF",
+            "Costo = ancho de banda de referencia / ancho de banda de la interfaz; ajustar referencia a 10 000 Mbit/s en redes con enlaces de 10 Gbit/s",
+            "En redes multiacceso se eligen enrutador designado (DR) y de respaldo (BDR) para reducir adyacencias"
+          ],
+          "notes": "Explique OSPF con una analogía: en lugar de que cada enrutador pregunte a su vecino cómo llegar a un destino, todos comparten un mapa completo de la red y cada uno calcula el camino más corto por sí mismo. Conecte con Matemática Discreta: el algoritmo de Dijkstra sobre un grafo ponderado ya lo conocen en teoría; aquí ven su aplicación más importante. Resuelva un pequeño grafo de cinco enrutadores con costos y determine el árbol de caminos mínimos desde R1. Explique por qué el ancho de banda de referencia por defecto, 100 Mbit/s, hace que enlaces de 1 y 10 Gbit/s tengan el mismo costo de 1, lo que lleva a decisiones subóptimas; por eso se ajusta con auto-cost reference-bandwidth. Mencione que OSPF es un estándar abierto, lo que permite interoperar equipos de distintos fabricantes, ventaja relevante en licitaciones públicas peruanas."
+        },
+        {
+          "title": "Configuración y verificación de OSPF",
+          "bullets": [
+            "router ospf 1; router-id 1.1.1.1; network 10.0.12.0 0.0.0.3 area 0 (máscara comodín)",
+            "Alternativa por interfaz: ip ospf 1 area 0; passive-interface en interfaces LAN sin vecinos",
+            "Verificar: show ip ospf neighbor (estado FULL), show ip route ospf, show ip protocols",
+            "Fallas típicas de adyacencia: temporizadores Hello/Dead distintos, área o subred diferente, MTU no coincidente"
+          ],
+          "notes": "Configure OSPF en la misma topología de tres enrutadores que usó con rutas estáticas y elimine las estáticas; observe cómo las rutas O aparecen solas. Explique la máscara comodín como el inverso de la máscara de subred: para un /30, 255.255.255.252 se convierte en 0.0.0.3. Muestre los estados de vecino hasta llegar a FULL. Luego simule una falla: desconecte un enlace en una topología con redundancia y vea cómo OSPF recalcula en segundos. Provoque deliberadamente un error de área o de temporizador para que los estudiantes practiquen el diagnóstico con show ip ospf interface. Recalque la importancia de passive-interface: evita enviar Hello hacia las LAN de usuarios, lo que ahorra recursos y reduce el riesgo de que un equipo no autorizado se convierta en vecino e inyecte rutas falsas."
+        },
+        {
+          "title": "NAT y PAT: salida a Internet con direcciones privadas",
+          "bullets": [
+            "NAT estática: correspondencia uno a uno, usada para publicar un servidor interno",
+            "PAT o NAT con sobrecarga: muchos hosts comparten una IP pública diferenciados por número de puerto",
+            "Configuración: ip nat inside/outside en interfaces, access-list 1 permit 192.168.0.0 0.0.255.255, ip nat inside source list 1 interface g0/1 overload",
+            "Verificar con show ip nat translations; NAT rompe el principio de extremo a extremo y complica algunas aplicaciones"
+          ],
+          "notes": "Retome la discusión de la Unidad 2 sobre el agotamiento de IPv4 y CGNAT. Configure PAT en el enrutador de borde de la topología y muestre la tabla de traducciones mientras varias PC navegan hacia un servidor web simulado. Explique la terminología de Cisco: dirección local interna, global interna, local externa y global externa; aunque confusa, aparece en exámenes de certificación y en la documentación. Pregunte: si una empresa quiere publicar su servidor de correo interno, ¿qué tipo de NAT necesita? La respuesta, NAT estática o reenvío de puertos, abre una conversación sobre exposición a riesgos. Recuerde que NAT no es un mecanismo de seguridad, aunque oculte direcciones internas; la seguridad la proveen el cortafuegos y las políticas. Comente que con IPv6 NAT deja de ser necesario, lo que recupera la conectividad extremo a extremo."
+        },
+        {
+          "title": "Listas de control de acceso básicas",
+          "bullets": [
+            "ACL estándar (1-99) filtra por IP de origen; ACL extendida (100-199) por origen, destino, protocolo y puerto",
+            "Se evalúan en orden de arriba abajo; la primera coincidencia decide; existe un deny any implícito al final",
+            "Ubicación: estándar cerca del destino, extendida cerca del origen; aplicar con ip access-group en una interfaz y dirección",
+            "Uso típico: restringir acceso SSH a los dispositivos solo desde la VLAN de gestión (access-class en líneas vty)"
+          ],
+          "notes": "Presente las ACL como el primer contacto con el filtrado de tráfico; su profundización corresponde a Seguridad Informática en el quinto ciclo. Escriba una ACL extendida que permita a la VLAN de usuarios acceder al servidor web interno por el puerto 443 y bloquee el acceso de esa VLAN a la red biomédica. Ejecute pruebas antes y después. Explique la trampa del deny implícito: una ACL con solo una línea deny bloquea todo lo demás. Cuente el error clásico de aplicar una ACL remotamente por SSH y bloquearse a sí mismo, lo que obliga a viajar hasta el equipo; recomiende la técnica de programar un reinicio con reload in 10 antes de cambios riesgosos. Pregunte por qué la ACL estándar se ubica cerca del destino: porque solo mira el origen y, ubicada cerca de este, bloquearía demasiado tráfico legítimo."
+        }
+      ],
+      "reading": {
+        "title": "Conmutar y enrutar: VLAN, árbol de expansión, OSPF y NAT en una red empresarial",
+        "minutes": 45,
+        "content": "## De una LAN plana a una red jerárquica\n\nCisco popularizó el **modelo jerárquico de tres capas**, acceso, distribución y núcleo, que en pymes suele reducirse a dos capas con un núcleo colapsado. Odom resume la lógica: la capa de acceso conecta usuarios y aplica políticas por puerto; la distribución agrega, enruta entre VLAN y filtra; el núcleo transporta rápido. La base de este diseño son las VLAN y el enrutamiento.\n\n## VLAN y troncales\n\nCada VLAN es un dominio de difusión y, por convención, una subred IP. La configuración en un conmutador de acceso de una agencia de la cooperativa CoopSur sería:\n\n```text\nSW-ACC1(config)# vlan 10\nSW-ACC1(config-vlan)# name USUARIOS\nSW-ACC1(config)# vlan 20\nSW-ACC1(config-vlan)# name CAMARAS\nSW-ACC1(config)# vlan 99\nSW-ACC1(config-vlan)# name GESTION\nSW-ACC1(config)# interface range f0/1-20\nSW-ACC1(config-if-range)# switchport mode access\nSW-ACC1(config-if-range)# switchport access vlan 10\nSW-ACC1(config-if-range)# spanning-tree portfast\nSW-ACC1(config-if-range)# spanning-tree bpduguard enable\nSW-ACC1(config)# interface g0/1\nSW-ACC1(config-if)# switchport mode trunk\nSW-ACC1(config-if)# switchport trunk native vlan 99\nSW-ACC1(config-if)# switchport trunk allowed vlan 10,20,99\n```\n\nEl enrutamiento entre VLAN en un enrutador con un solo enlace troncal (router-on-a-stick):\n\n```text\nR1(config)# interface g0/0/0.10\nR1(config-subif)# encapsulation dot1Q 10\nR1(config-subif)# ip address 172.18.2.1 255.255.255.128\nR1(config-subif)# ip helper-address 172.18.0.10   ! servidor DHCP central\n```\n\n## Árbol de expansión: redundancia sin bucles\n\nRadia Perlman diseñó en 1985 el algoritmo que permite tener enlaces redundantes sin bucles. STP elige un **puente raíz** (menor ID de puente), calcula el costo de cada camino y bloquea los puertos que formarían ciclos. El administrador no debe dejar la elección al azar:\n\n```text\nSW-CORE(config)# spanning-tree mode rapid-pvst\nSW-CORE(config)# spanning-tree vlan 10,20,99 root primary   ! prioridad 24576\n```\n\nSi el núcleo falla, el conmutador con root secondary asume en uno o dos segundos con Rapid PVST+, frente a los 30 a 50 segundos de STP clásico.\n\n## El enrutador decide: coincidencia más larga\n\nPara cada paquete, el enrutador busca en su tabla la entrada con el **prefijo más largo** que coincide con el destino. Si dos fuentes ofrecen la misma red, decide la **distancia administrativa**; dentro de un mismo protocolo, la **métrica**. Una ruta estática flotante aprovecha esta lógica para respaldos:\n\n```text\nR-AGENCIA(config)# ip route 0.0.0.0 0.0.0.0 10.255.0.1        ! fibra, AD 1\nR-AGENCIA(config)# ip route 0.0.0.0 0.0.0.0 10.255.9.1 5      ! 4G, AD 5 (flotante)\n```\n\n## OSPF: Dijkstra en producción\n\nOSPF es un protocolo de estado de enlace: cada enrutador conoce la topología completa del área y ejecuta el algoritmo de Dijkstra. El costo de una interfaz es:\n\n```text\ncosto = ancho_de_banda_referencia / ancho_de_banda_interfaz\nCon referencia 10 000 Mbit/s:  1 Gbit/s → 10 ;  100 Mbit/s → 100 ;  10 Gbit/s → 1\n```\n\nConfiguración típica en el enrutador principal:\n\n```text\nR1(config)# router ospf 1\nR1(config-router)# router-id 1.1.1.1\nR1(config-router)# auto-cost reference-bandwidth 10000\nR1(config-router)# network 172.18.0.0 0.0.3.255 area 0\nR1(config-router)# passive-interface g0/0/0.10\nR1(config-router)# default-information originate          ! propaga la ruta por defecto\n```\n\nSi un enlace WAN entre Juliaca y Puno cae, los enrutadores inundan un nuevo LSA, recalculan el árbol de caminos mínimos y convergen por la ruta alternativa en segundos, sin intervención humana.\n\n## NAT con sobrecarga y ACL\n\nCon direcciones privadas, la salida a Internet exige **PAT**:\n\n```text\nR1(config)# access-list 1 permit 172.18.0.0 0.0.3.255\nR1(config)# ip nat inside source list 1 interface g0/0/1 overload\nR1(config)# interface g0/0/0\nR1(config-if)# ip nat inside\nR1(config)# interface g0/0/1\nR1(config-if)# ip nat outside\n```\n\nLas ACL extendidas permiten una primera política: por ejemplo, impedir que la VLAN de usuarios acceda a la red de cámaras salvo el puesto de vigilancia. Recuerde el **deny implícito** al final de toda lista y la regla de ubicación: extendidas cerca del origen.\n\n## Pensar como diseñador\n\nCada decisión técnica tiene un costo: un conmutador multicapa puede costar varias veces más que uno de capa 2, pero elimina el cuello de botella del router-on-a-stick. Antes de configurar, pregúntese qué tráfico circula, cuánto cuesta la indisponibilidad y quién mantendrá la red."
+      },
+      "case": {
+        "title": "Caso: Tres agencias, un solo enlace y una caída en día de pago en CoopSur",
+        "content": "**Cooperativa de Ahorro y Crédito CoopSur** (caso con fines académicos) opera en Puno con su oficina principal en Juliaca y agencias en Puno, Ilave y Ayaviri. Atiende a 28 000 socios, muchos de ellos comerciantes y productores de la región, y procesa sus operaciones en un sistema financiero central alojado en Juliaca. Por su naturaleza, está supervisada por la Superintendencia de Banca, Seguros y AFP, que exige gestionar la continuidad del negocio.\n\nLa topología actual es una estrella: cada agencia tiene un enlace de fibra de 100 Mbit/s contratado a un operador hacia Juliaca, con rutas estáticas configuradas manualmente. En cada agencia hay un conmutador de capa 2 sin VLAN y todos los equipos (cajas, plataforma, cámaras y wifi de clientes) comparten una sola subred.\n\nEl último día de pago de gratificaciones, un camión dañó el poste de fibra cerca de Ilave. La agencia quedó cuatro horas sin sistema; se atendió manualmente y se acumularon 600 operaciones pendientes. Ese mismo mes, en Juliaca, un practicante conectó un cable entre dos tomas de la misma sala de reuniones y la red de la oficina principal colapsó durante 25 minutos, sin que nadie entendiera por qué hasta que se desconectaron todos los equipos uno por uno.\n\nEl jefe de infraestructura, Ing. Wilber Mamani, propone:\n\n- Contratar enlaces de respaldo 4G en cada agencia (S/ 250 mensuales por agencia) y un enlace de fibra adicional entre Puno e Ilave (S/ 900 mensuales), creando una malla parcial.\n- Migrar de rutas estáticas a OSPF de área única.\n- Segmentar cada agencia en VLAN: cajas, plataforma, cámaras, wifi de clientes y gestión.\n- Reemplazar el conmutador de la oficina principal por dos conmutadores multicapa con Rapid PVST+ (inversión de S/ 38 000).\n\nEl gerente de finanzas cuestiona la inversión: argumenta que \"una caída al año\" no justifica el gasto y que la wifi de clientes \"no consume casi nada\". El gerente general pide a Wilber sustentar técnicamente cada componente, priorizarlo y estimar el riesgo evitado. Se sabe que cada hora de caída en una agencia en día de pago representa unas 150 operaciones no atendidas, pérdida de comisiones y daño reputacional en un mercado con fuerte competencia de cajas municipales y billeteras digitales.",
+        "questions": [
+          "Explique técnicamente qué ocurrió cuando el practicante conectó las dos tomas y qué configuración lo habría evitado.",
+          "Compare la convergencia ante la caída de la fibra con rutas estáticas, con rutas estáticas flotantes y con OSPF en la malla parcial propuesta.",
+          "Diseñe el esquema de VLAN de una agencia y justifique por qué la wifi de clientes debe aislarse aunque consuma poco ancho de banda.",
+          "Priorice los cuatro componentes de la propuesta según riesgo evitado y costo, y argumente la decisión ante el gerente de finanzas.",
+          "¿Qué ACL básicas implementaría en el enrutador de cada agencia para proteger el sistema financiero central?"
+        ]
+      },
+      "questions": [],
+      "assignment": {
+        "title": "Tarea 3: Red conmutada y enrutada multisede en simulador",
+        "instructions": "**Objetivo:** implementar y verificar en Cisco Packet Tracer la red de CoopSur con la oficina principal y dos agencias.\n\n**Requerimientos mínimos:**\n\n1. **Conmutación:** en cada sede, VLAN de cajas, plataforma, cámaras, wifi de clientes y gestión; troncales 802.1Q con VLAN nativa no predeterminada; en la principal, dos conmutadores con Rapid PVST+, raíz primaria y secundaria definidas, PortFast y BPDU Guard en puertos de acceso.\n2. **Enrutamiento entre VLAN:** router-on-a-stick en agencias y SVI en el conmutador multicapa de la principal.\n3. **Enrutamiento:** OSPFv2 de área 0 entre las tres sedes en malla parcial, con router-id, ancho de banda de referencia ajustado e interfaces pasivas; ruta predeterminada propagada desde la principal y ruta estática flotante de respaldo en una agencia.\n4. **Servicios:** DHCP centralizado con agentes de retransmisión y PAT hacia un enrutador que simule al proveedor.\n5. **Política básica:** ACL extendida que impida a la wifi de clientes llegar a cualquier red interna.\n\n**Qué entregar:** archivo .pkt funcional; informe PDF (6 a 10 páginas) con diagrama, tabla de direccionamiento, configuraciones comentadas y evidencias de verificación (show ip route, show ip ospf neighbor, show spanning-tree, show ip nat translations, pruebas de ping y traceroute) y una prueba de falla del enlace principal con su resultado.\n\n**Criterios:** funcionamiento, correcta aplicación de cada tecnología, calidad de las evidencias y claridad de la documentación.",
+        "rubric": [
+          {
+            "name": "VLAN, troncales y árbol de expansión",
+            "points": 5
+          },
+          {
+            "name": "Enrutamiento entre VLAN y OSPF funcional",
+            "points": 6
+          },
+          {
+            "name": "DHCP, PAT y ACL",
+            "points": 4
+          },
+          {
+            "name": "Prueba de falla y evidencias de verificación",
+            "points": 3
+          },
+          {
+            "name": "Documentación técnica",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Conmutación, enrutamiento, NAT y ACL",
+        "questions": [
+          {
+            "prompt": "Dos PC conectadas al mismo conmutador, en las VLAN 10 y 20, con direcciones 192.168.1.10/24 y 192.168.1.20/24, no se comunican. ¿Por qué?",
+            "options": [
+              "La máscara /24 no admite dos hosts",
+              "El conmutador tiene la tabla MAC llena",
+              "Falta configurar la VLAN nativa en los puertos de acceso",
+              "Están en dominios de difusión distintos y no hay un dispositivo de capa 3 entre ellas"
+            ],
+            "correct": 3,
+            "explanation": "Cada VLAN es un dominio de difusión aislado; ARP no cruza entre VLAN. Además, el diseño correcto asigna una subred distinta por VLAN y enruta entre ellas."
+          },
+          {
+            "prompt": "Un enrutador tiene rutas a 10.0.0.0/8 por OSPF, 10.5.0.0/16 estática y 10.5.4.0/22 por OSPF. ¿Qué ruta usa para el destino 10.5.6.9?",
+            "options": [
+              "10.5.4.0/22, por ser la coincidencia de prefijo más larga",
+              "10.5.0.0/16, por tener menor distancia administrativa",
+              "10.0.0.0/8, por ser la primera en la tabla",
+              "Balancea entre las tres rutas"
+            ],
+            "correct": 0,
+            "explanation": "10.5.6.9 está dentro de 10.5.4.0/22 (10.5.4.0 a 10.5.7.255). La coincidencia más larga prevalece; la distancia administrativa solo desempata rutas al mismo prefijo."
+          },
+          {
+            "prompt": "En una agencia se configuran una ruta predeterminada por fibra con distancia 1 y otra por 4G con distancia 5. ¿Qué ocurre en operación normal?",
+            "options": [
+              "Se usa la ruta 4G por tener mayor distancia",
+              "El enrutador rechaza la segunda ruta como duplicada",
+              "Solo la ruta por fibra está en la tabla; la de 4G se instala si la fibra cae",
+              "Ambas rutas se usan en balanceo de carga"
+            ],
+            "correct": 2,
+            "explanation": "Es una ruta estática flotante: la de mayor distancia administrativa solo entra a la tabla cuando desaparece la principal."
+          },
+          {
+            "prompt": "Tres conmutadores con prioridad STP por defecto tienen MAC 00:0A..., 00:1B... y 00:2C.... El primero es un equipo antiguo de acceso. ¿Qué conviene hacer?",
+            "options": [
+              "Aumentar la prioridad del conmutador de núcleo a 61440",
+              "Configurar el conmutador de núcleo como raíz primaria reduciendo su prioridad",
+              "Nada, STP siempre elige la mejor raíz",
+              "Desactivar STP en el equipo antiguo"
+            ],
+            "correct": 1,
+            "explanation": "Con prioridades iguales gana la MAC más baja, aquí el equipo antiguo. Se debe forzar la raíz en el núcleo con root primary o prioridad menor."
+          },
+          {
+            "prompt": "Dos enrutadores OSPF conectados directamente no forman adyacencia. Uno tiene Hello de 10 s y el otro de 30 s. ¿Cuál es el efecto?",
+            "options": [
+              "Formarán adyacencia, pero con métrica mayor",
+              "Usarán el temporizador menor automáticamente",
+              "Se convertirán ambos en DR",
+              "No serán vecinos porque los temporizadores Hello y Dead deben coincidir"
+            ],
+            "correct": 3,
+            "explanation": "OSPF exige que coincidan los temporizadores Hello y Dead, el área, la subred y la autenticación; si difieren, no se establece la adyacencia."
+          },
+          {
+            "prompt": "Con un ancho de banda de referencia de 100 Mbit/s, ¿qué problema ocurre en una red con enlaces de 1 Gbit/s y 10 Gbit/s?",
+            "options": [
+              "Ambos enlaces tienen costo 1 y OSPF no los distingue",
+              "OSPF no puede formar adyacencias en enlaces rápidos",
+              "El costo de 10 Gbit/s resulta negativo",
+              "Los enlaces de 1 Gbit/s quedan bloqueados"
+            ],
+            "correct": 0,
+            "explanation": "El costo mínimo es 1; 100/1000 y 100/10000 se redondean a 1. Ajustar la referencia a 10 000 Mbit/s diferencia los enlaces."
+          },
+          {
+            "prompt": "Una ACL extendida tiene una sola línea: deny ip 172.18.4.0 0.0.0.255 172.18.2.192 0.0.0.63. Se aplica de entrada en la interfaz de la wifi de clientes. ¿Qué sucede?",
+            "options": [
+              "Se permite todo excepto el tráfico web",
+              "La ACL no tiene efecto por estar de entrada",
+              "Se bloquea todo el tráfico de esa interfaz por el deny implícito",
+              "Solo se bloquea el acceso a las cámaras"
+            ],
+            "correct": 2,
+            "explanation": "Al final de toda ACL hay un deny any implícito; sin un permit explícito posterior, se descarta todo el tráfico que entra por esa interfaz."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Servicios, redes inalámbricas, aseguramiento y proyecto de red",
+      "description": "Al finalizar la unidad, el estudiante integra transporte, servicios de aplicación, acceso inalámbrico y aseguramiento básico de dispositivos en el diseño completo de la red de una pyme, y diagnostica fallas con un método sistemático, sustentando su propuesta técnica y económica.",
+      "topics": [
+        "Capa de transporte: TCP, UDP y puertos",
+        "Servicios de aplicación: DNS, HTTP/HTTPS y correo",
+        "Redes inalámbricas IEEE 802.11 y su seguridad",
+        "Aseguramiento básico de dispositivos y diagnóstico por capas",
+        "Diseño descendente y proyecto de red para una pyme"
+      ],
+      "slides": [
+        {
+          "title": "TCP y UDP: dos filosofías de transporte",
+          "bullets": [
+            "Puertos identifican procesos: bien conocidos 0-1023 (HTTP 80, HTTPS 443, DNS 53, SSH 22), registrados y dinámicos",
+            "TCP: orientado a conexión con acuerdo de tres vías (SYN, SYN-ACK, ACK), confiable, ordenado y con control de flujo y congestión",
+            "UDP: sin conexión, encabezado de 8 bytes, sin retransmisiones; ideal para DNS, voz y video en tiempo real",
+            "Un socket se identifica por la tupla IP origen, puerto origen, IP destino, puerto destino y protocolo"
+          ],
+          "notes": "Responda la pregunta que dejamos abierta en la Unidad 1: ¿por qué una videollamada prefiere UDP? Porque un paquete de voz que llega tarde ya no sirve; retransmitirlo, como haría TCP, solo añade retardo. Muestre en Wireshark el acuerdo de tres vías de una conexión HTTPS y use la opción de seguir el flujo TCP. Explique números de secuencia y de acuse de recibo con un ejemplo numérico. Luego muestre una consulta DNS sobre UDP: un solo datagrama de ida y otro de vuelta. Pida a los estudiantes que ejecuten netstat -an o ss -tan y que identifiquen conexiones establecidas y puertos en escucha de su propio equipo. Relacione con Sistemas Operativos, que llevan en paralelo: el sistema operativo asigna un puerto efímero a cada conexión saliente y gestiona los buffers de los sockets."
+        },
+        {
+          "title": "Control de congestión y ventana de TCP",
+          "bullets": [
+            "Control de flujo: el receptor anuncia su ventana para no ser desbordado",
+            "Control de congestión (Van Jacobson, 1988): arranque lento, evitación de congestión y reducción ante pérdidas",
+            "Rendimiento máximo aproximado de una conexión = ventana / RTT",
+            "Ejemplo: ventana de 64 KB y RTT de 80 ms limitan a unos 6,5 Mbit/s aunque el enlace sea de 1 Gbit/s"
+          ],
+          "notes": "Esta diapositiva explica un fenómeno que confunde a usuarios y técnicos: un enlace rápido que no rinde en transferencias a larga distancia. Resuelva el ejemplo: 65 535 bytes son unos 524 000 bits; divididos entre 0,08 segundos resultan cerca de 6,5 Mbit/s. Pregunte cómo se mejora: con escalamiento de ventana, opción de TCP habilitada en los sistemas modernos, o reduciendo el RTT acercando el servidor. Mencione brevemente la historia: a fines de los ochenta Internet sufrió colapsos por congestión y Van Jacobson propuso los algoritmos que la salvaron. Explique el comportamiento en diente de sierra de la ventana de congestión con un gráfico. Conecte con el caso de la Unidad 1: las retransmisiones TCP observadas en despacho reducían drásticamente el rendimiento porque cada pérdida hace que TCP interprete congestión y reduzca su ventana."
+        },
+        {
+          "title": "DNS: el directorio de Internet",
+          "bullets": [
+            "Sistema jerárquico y distribuido: raíz, dominios de nivel superior (.pe administrado por NIC Perú) y dominios autoritativos",
+            "Resolución recursiva (resolvedor del proveedor o corporativo) e iterativa (raíz, TLD, autoritativo)",
+            "Registros: A, AAAA, CNAME, MX, NS, TXT y PTR; el TTL controla el tiempo en caché",
+            "Herramientas: nslookup, dig; fallas de DNS suelen percibirse como si no hubiera internet"
+          ],
+          "notes": "Ejecute dig con la opción trace hacia un dominio .pe y recorra la cadena: servidores raíz, servidores de .pe y finalmente el servidor autoritativo del dominio. Explique que NIC Perú, a cargo de la Red Científica Peruana, administra el dominio de nivel superior del país. Pregunte qué registros necesita una empresa que tiene su web en un proveedor y su correo en otro: un registro A o CNAME para la web y registros MX para el correo, además de TXT para SPF. Explique el TTL con una situación real: una empresa que migra su web debe bajar el TTL días antes para que el cambio se propague rápido. Pida que comparen la respuesta de dos resolvedores públicos distintos y midan el tiempo de respuesta. Cierre recordando que muchos tickets de soporte que dicen no hay internet son en realidad fallas de DNS, como vimos en el cuestionario 1."
+        },
+        {
+          "title": "HTTP, HTTPS y servicios de correo",
+          "bullets": [
+            "HTTP/1.1, HTTP/2 y HTTP/3 (sobre QUIC y UDP); métodos GET, POST y códigos de estado 200, 301, 404, 500",
+            "HTTPS = HTTP sobre TLS 1.3: cifrado, integridad y autenticación del servidor mediante certificados",
+            "Correo: SMTP (25/587) para envío, IMAP (993) para lectura; SPF, DKIM y DMARC contra suplantación",
+            "La facturación electrónica ante SUNAT depende de servicios web sobre HTTPS: su disponibilidad es crítica para el negocio"
+          ],
+          "notes": "Use las herramientas de desarrollador del navegador para mostrar una solicitud HTTPS real con sus encabezados y códigos de estado. Explique la evolución hacia HTTP/3 sobre QUIC, que corre sobre UDP para reducir latencia en conexiones móviles, un ejemplo de cómo los protocolos se reinventan. Muestre el certificado de un sitio y explique la cadena de confianza de manera conceptual; la criptografía en detalle se verá en Seguridad Informática. Conecte con el contexto peruano: los sistemas de emisión electrónica envían comprobantes a SUNAT o a un operador de servicios electrónicos mediante servicios web; si la red de una empresa no resuelve DNS o bloquea el puerto 443, no puede facturar. Pregunte a la clase qué registros DNS evitarían que delincuentes envíen correos falsos a nombre de una empresa: SPF, DKIM y DMARC."
+        },
+        {
+          "title": "Redes inalámbricas IEEE 802.11",
+          "bullets": [
+            "Generaciones: Wi-Fi 4 (802.11n), Wi-Fi 5 (802.11ac), Wi-Fi 6/6E (802.11ax) y Wi-Fi 7 (802.11be)",
+            "Bandas: 2,4 GHz (mayor alcance, solo tres canales sin solapamiento: 1, 6 y 11), 5 GHz y 6 GHz (más canales y capacidad)",
+            "Acceso al medio CSMA/CA: el medio es compartido y semidúplex; la capacidad real es menor que la tasa nominal",
+            "Componentes: puntos de acceso autónomos o gestionados por controlador, SSID, BSS y ESS"
+          ],
+          "notes": "Comience preguntando cuántos estudiantes tienen problemas de wifi en casa y por qué creen que ocurre. Explique que el medio inalámbrico es compartido y semidúplex: a diferencia de un puerto de conmutador, todos los clientes de un punto de acceso compiten por el mismo canal. Por eso la tasa anunciada en la caja nunca se obtiene. Muestre con una aplicación de análisis de wifi en el celular la saturación típica de la banda de 2,4 GHz en un edificio de Lima, con decenas de redes en los canales 1, 6 y 11. Explique por qué en 2,4 GHz solo hay tres canales sin solapamiento. Mencione que el MTC regula el uso de bandas no licenciadas, y que la banda de 6 GHz habilita Wi-Fi 6E con mucha más capacidad. Pregunte por qué una oficina con 80 usuarios no debe resolverse con un solo punto de acceso potente."
+        },
+        {
+          "title": "Diseño y seguridad de una red inalámbrica",
+          "bullets": [
+            "Diseñar por capacidad, no solo por cobertura: estimar usuarios por punto de acceso (p. ej., 25-30) y aplicaciones",
+            "Estudio de sitio, planificación de canales sin solapamiento y ajuste de potencia para minimizar interferencia",
+            "Seguridad: WPA3-Personal (SAE) o WPA2/WPA3-Enterprise con 802.1X y RADIUS; nunca WEP ni WPS",
+            "Red de invitados en VLAN separada, con aislamiento de clientes y límite de ancho de banda"
+          ],
+          "notes": "Plantee un ejercicio de diseño: un coworking en Miraflores con 120 usuarios simultáneos que usan videollamadas. Si cada punto de acceso atiende bien a unos 30 usuarios activos, se necesitan al menos cuatro, en canales distintos de 5 GHz. Explique que el estudio de sitio, predictivo o con mediciones, identifica zonas muertas y fuentes de interferencia como microondas o paredes de concreto armado, comunes en construcciones peruanas. Compare WPA3-Personal con contraseña compartida y WPA2 o WPA3-Enterprise, donde cada usuario se autentica con sus credenciales mediante un servidor RADIUS; si un colaborador renuncia, solo se desactiva su cuenta. Relacione con el caso CoopSur: la wifi de clientes debe estar en una VLAN separada y con ACL que impidan llegar a la red interna. Advierta que WPS y WEP son vulnerables y deben desactivarse."
+        },
+        {
+          "title": "Aseguramiento básico de dispositivos de red",
+          "bullets": [
+            "Acceso remoto solo por SSH v2: ip domain-name, crypto key generate rsa modulus 2048, transport input ssh",
+            "Usuarios locales con privilegios, enable secret, login block-for y tiempo de inactividad (exec-timeout)",
+            "Seguridad de puertos: switchport port-security maximum 2, violation restrict; apagar puertos no usados",
+            "Registro y sincronización: NTP y syslog para reconstruir incidentes; respaldo periódico de configuraciones"
+          ],
+          "notes": "Configure SSH en vivo en un conmutador: nombre de dominio, generación de llaves RSA, usuario local y restricción de las líneas vty a SSH. Luego muestre con Wireshark la diferencia entre una sesión Telnet, donde la contraseña se ve en texto claro, y una sesión SSH cifrada. El contraste convence a los estudiantes más que cualquier explicación. Explique la seguridad de puertos como respuesta al ataque de inundación de la tabla CAM mencionado en la Unidad 1. Insista en la sincronización de hora con NTP: sin una hora correcta, los registros de distintos equipos no pueden correlacionarse ante un incidente. Recuerde que estas medidas son la base; la gestión integral de la seguridad, con cortafuegos, detección de intrusiones y normas como la NTP-ISO/IEC 27001, se desarrollará en Seguridad Informática en el quinto ciclo."
+        },
+        {
+          "title": "Método de diagnóstico por capas",
+          "bullets": [
+            "Enfoques: ascendente (de la capa física hacia arriba), descendente y divide y vencerás (empezar por la capa 3 con ping)",
+            "Ciclo: definir el problema, recolectar información, formular hipótesis, probar, resolver y documentar",
+            "Comandos clave: show interfaces (errores, CRC), show ip interface brief, ping, traceroute, show ip route, nslookup",
+            "Documentar cada incidente con síntoma, causa raíz, solución y medida preventiva construye la base de conocimiento"
+          ],
+          "notes": "Presente el diagnóstico como un método científico aplicado. Proponga un escenario: un usuario reporta que no puede ingresar al sistema contable. Recorra las preguntas: ¿afecta a uno o a muchos?, ¿desde cuándo?, ¿qué cambió? Luego aplique divide y vencerás: si el ping a la puerta de enlace funciona, las capas 1 a 3 locales están bien; se sube a DNS y aplicación. Si falla, se baja a capa 2 y 1. Muestre cómo show interfaces revela errores CRC que indican problemas de cableado, como en el caso de la Unidad 1. Organice un ejercicio en salas pequeñas: cada grupo recibe un archivo de Packet Tracer con tres fallas ocultas, por ejemplo VLAN mal asignada, puerta de enlace incorrecta y ACL bloqueante, y debe encontrarlas en veinte minutos documentando el proceso. Esta práctica prepara la sustentación final."
+        },
+        {
+          "title": "Diseño descendente de redes",
+          "bullets": [
+            "Metodología de Oppenheimer: analizar objetivos del negocio y restricciones antes de elegir tecnologías",
+            "Fases: análisis de requerimientos, diseño lógico (topología, direccionamiento, seguridad), diseño físico, pruebas y documentación",
+            "Requerimientos técnicos: escalabilidad, disponibilidad, desempeño, seguridad, manejabilidad y costo",
+            "Entregables: diagramas lógico y físico, plan de direccionamiento, configuración base, presupuesto y plan de implementación"
+          ],
+          "notes": "Presente el libro de Priscilla Oppenheimer como la referencia de diseño del proyecto final. Su idea central es empezar por las capas superiores, es decir, por lo que el negocio necesita, y no por el catálogo de equipos. Un error frecuente es preguntar qué marca de conmutador comprar antes de saber cuántos usuarios hay, qué aplicaciones usan y cuánto cuesta una hora de caída. Proponga a la clase identificar los objetivos del negocio de una pyme conocida, como una cadena de pollerías o una academia preuniversitaria, y traducirlos a requerimientos técnicos medibles: por ejemplo, disponibilidad de 99,5 % en horario de atención, o soporte para 40 llamadas IP simultáneas. Explique que los requerimientos contrapuestos, como mayor disponibilidad y menor costo, obligan a priorizar, y que esa priorización debe justificarse ante la gerencia."
+        },
+        {
+          "title": "Dimensionamiento y presupuesto de la red",
+          "bullets": [
+            "Puertos de acceso = puntos de red actuales × (1 + crecimiento) redondeado al conmutador superior de 24 o 48 puertos",
+            "Presupuesto PoE: sumar consumo de teléfonos, cámaras y puntos de acceso y dejar 20 % de margen",
+            "Ancho de banda de internet estimado por perfiles de uso concurrente; enlace de respaldo de otro operador",
+            "Costo total de propiedad a cinco años: equipos, cableado, licencias, enlaces, mantenimiento y personal"
+          ],
+          "notes": "Resuelva un ejemplo de dimensionamiento: una academia con 60 puntos actuales y 30 % de crecimiento necesita 78 puertos, es decir, dos conmutadores de 48 puertos. Si tiene 12 cámaras de 7 W y 6 puntos de acceso de 15 W, el consumo PoE es 174 W y con margen requiere unos 210 W. Para el ancho de banda de internet, estime: 40 usuarios concurrentes con perfil ofimático y videollamadas, a un promedio de 2 Mbit/s, más picos, justifican un plan de 200 Mbit/s simétrico. Explique por qué el respaldo debe contratarse con otro operador y, de ser posible, con otra ruta física: si ambos enlaces salen por el mismo poste, como en el caso de CoopSur, una sola falla los afecta. Recuerde el concepto de costo total de propiedad visto en Arquitectura de Computadoras y aplíquelo a la red completa."
+        },
+        {
+          "title": "Documentación técnica profesional",
+          "bullets": [
+            "Diagrama lógico (VLAN, subredes, enrutamiento) y diagrama físico (ubicación de gabinetes, recorridos y puertos)",
+            "Tabla de direccionamiento, inventario de equipos con número de serie, versión de software y garantía",
+            "Configuraciones respaldadas y comentadas, procedimientos operativos y matriz de contactos de proveedores",
+            "La documentación es un activo: reduce el tiempo de diagnóstico y la dependencia de una sola persona"
+          ],
+          "notes": "Pregunte: si el único técnico que conoce la red de la empresa renuncia mañana, ¿qué pasa? Esta pregunta retrata la realidad de muchas pymes peruanas, donde la red vive en la memoria de una persona. Muestre ejemplos de buena documentación: un diagrama lógico claro con convenciones de colores por VLAN, un diagrama físico del edificio y una tabla de direccionamiento con hoja de cálculo. Explique que la documentación debe mantenerse viva, actualizándose con cada cambio, y que los cambios en producción deben seguir un procedimiento de control: solicitud, aprobación, ventana de mantenimiento y plan de reversión. Mencione que buenas prácticas de gestión de servicios como ITIL formalizan estos procesos. Indique que en el proyecto final la documentación tiene un peso significativo en la rúbrica, porque refleja el desempeño profesional que espera un empleador."
+        },
+        {
+          "title": "Proyecto final: red para una pyme peruana",
+          "bullets": [
+            "Cada equipo elige una pyme real o realista con al menos dos sedes, 40 usuarios y servicios críticos",
+            "Entregables: análisis de requerimientos, diseño lógico y físico, archivo de simulación funcional, presupuesto y documentación",
+            "Requisitos técnicos: VLSM e IPv6, VLAN, Rapid PVST+, OSPF, DHCP, PAT, ACL, wifi segura y SSH",
+            "Sustentación de 15 minutos con demostración en vivo y diagnóstico de una falla introducida por el docente"
+          ],
+          "notes": "Presente el proyecto final con claridad y entregue la rúbrica desde la semana 13 para que los equipos planifiquen. Explique que el proyecto integra todo lo aprendido: medios y cableado de la Unidad 1, direccionamiento de la Unidad 2, conmutación y enrutamiento de la Unidad 3 y servicios, wifi y aseguramiento de esta unidad. Sugiera ejemplos de organizaciones: una cadena de boticas con tres locales, un colegio privado con dos sedes, una empresa agroexportadora con planta en Ica y oficina en Lima. Destaque el componente de diagnóstico en vivo: el docente introducirá una falla en el archivo del equipo y deberán resolverla aplicando el método por capas, explicando su razonamiento. Recomiende distribuir roles en el equipo, pero advierta que en la sustentación cualquier integrante puede ser consultado sobre cualquier parte del diseño."
+        }
+      ],
+      "reading": {
+        "title": "Servicios, inalámbricas y diseño descendente: de la configuración al proyecto profesional",
+        "minutes": 40,
+        "content": "## La capa de transporte en la práctica\n\nLas aplicaciones no hablan con direcciones IP sino con **sockets**. TCP ofrece un flujo confiable gracias a números de secuencia, acuses de recibo, retransmisiones y control de congestión; UDP ofrece un servicio mínimo y rápido. La consecuencia práctica más subestimada es el límite que impone el retardo al rendimiento de una sola conexión TCP:\n\n```text\nRendimiento_max ≈ Ventana / RTT\nVentana = 64 KB = 524 288 bits ; RTT Lima–Miami ≈ 70 ms\nRendimiento_max ≈ 524 288 / 0,070 ≈ 7,5 Mbit/s\n```\n\nPor eso los sistemas modernos usan escalamiento de ventana y los proveedores de contenido acercan sus servidores a los usuarios.\n\n## DNS y servicios de aplicación\n\nEl DNS traduce nombres en direcciones mediante una jerarquía distribuida. Para el dominio de una pyme peruana, la zona mínima podría verse así:\n\n```text\n; zona de ejemplo para botica-sana.pe (con fines académicos)\n@       3600  IN  NS     ns1.proveedor-dns.pe.\n@       3600  IN  A      203.0.113.25\nwww     3600  IN  CNAME  botica-sana.pe.\n@       3600  IN  MX 10  correo.botica-sana.pe.\n@       3600  IN  TXT    \"v=spf1 mx -all\"\n```\n\nEl registro TXT con SPF indica qué servidores pueden enviar correo en nombre del dominio, una defensa básica contra el fraude por suplantación, frecuente en ataques a empresas peruanas que reciben falsas solicitudes de pago. La emisión de comprobantes electrónicos ante SUNAT depende de servicios web sobre HTTPS; una falla de DNS o de salida al puerto 443 puede detener la facturación de toda la empresa.\n\n## Redes inalámbricas: capacidad antes que cobertura\n\nIEEE 802.11 comparte un medio semidúplex con acceso CSMA/CA. Un punto de acceso Wi-Fi 6 puede anunciar tasas superiores a 1 Gbit/s, pero el rendimiento agregado real suele ser bastante menor y se reparte entre todos los clientes asociados. Un dimensionamiento razonable para una oficina parte de la concurrencia:\n\n```text\nAPs requeridos = max( usuarios_concurrentes / usuarios_por_AP ,\n                      área_a_cubrir / área_por_AP )\nEjemplo: 90 usuarios / 30 por AP = 3 ; 900 m² / 250 m² por AP = 3,6 → 4 APs\n```\n\nLa seguridad mínima aceptable hoy es **WPA3** (o WPA2-AES donde haya equipos antiguos); en organizaciones medianas conviene la autenticación **802.1X con RADIUS**, que asocia cada conexión a una persona. La red de invitados siempre va en una VLAN separada con ACL hacia la red interna.\n\n## Aseguramiento básico de la infraestructura\n\nAntes de hablar de cortafuegos avanzados, todo dispositivo de red debe cumplir una línea base:\n\n```text\nSW1(config)# ip domain-name empresa.local\nSW1(config)# crypto key generate rsa modulus 2048\nSW1(config)# username admin privilege 15 secret ClaveRobusta#2026\nSW1(config)# line vty 0 15\nSW1(config-line)# login local\nSW1(config-line)# transport input ssh\nSW1(config-line)# exec-timeout 5 0\nSW1(config)# interface range f0/21-24\nSW1(config-if-range)# switchport access vlan 999\nSW1(config-if-range)# shutdown\nSW1(config)# ntp server 10.0.99.1\nSW1(config)# logging host 10.0.99.20\n```\n\nEsta línea base protege la gestión, inutiliza puertos libres y permite reconstruir incidentes. Si los registros contienen datos personales de usuarios, su conservación debe respetar la Ley 29733.\n\n## Diagnóstico sistemático\n\nEl diagnóstico profesional sigue un ciclo: definir el problema, recolectar información, formular hipótesis, probar, resolver y documentar. La estrategia **divide y vencerás** comienza con un ping a la puerta de enlace: si responde, las capas 1 a 3 locales funcionan y se investiga hacia arriba (enrutamiento remoto, DNS, aplicación); si no, se investiga hacia abajo (VLAN, puerto, cable). La documentación de cada incidente alimenta una base de conocimiento que reduce los tiempos de atención.\n\n## Diseño descendente\n\nPriscilla Oppenheimer propone diseñar desde los objetivos del negocio hacia la tecnología. El proceso parte de entrevistar a la gerencia para identificar aplicaciones críticas, usuarios, crecimiento, costo de la indisponibilidad y presupuesto; continúa con el diseño lógico (topología jerárquica, VLAN, direccionamiento, enrutamiento, seguridad), el diseño físico (cableado, equipos, enlaces) y concluye con pruebas, documentación y un plan de implementación. Las decisiones se justifican con el **costo total de propiedad** a cinco años y con el riesgo evitado: un enlace de respaldo de S/ 250 mensuales es barato si una hora de caída cuesta miles de soles en ventas perdidas.\n\n## Del laboratorio al empleo\n\nEl perfil de administrador de redes que demandan las empresas peruanas combina tres competencias: configurar con precisión, diagnosticar con método y comunicar con claridad a personas no técnicas. El proyecto final está diseñado para evidenciar las tres."
+      },
+      "case": {
+        "title": "Caso: Botica Sana ante su expansión y una auditoría de proveedores",
+        "content": "**Botica Sana S.A.C.** (caso con fines académicos) es una cadena familiar de boticas fundada en 2012 en Huancayo. Tiene un local principal con almacén en El Tambo, dos locales en Huancayo centro y planea abrir dos más en Jauja y Tarma en 2027. Emplea a 48 personas y emite unas 1 800 boletas y facturas electrónicas diarias desde un sistema de punto de venta en la nube.\n\nLa red de cada local se compone de un router entregado por el operador, con wifi activada con la contraseña impresa en la etiqueta, y un conmutador no administrable. Las cámaras se ven desde el celular del dueño mediante reenvío de puertos abierto en el router. La administración de los equipos se hace por Telnet o directamente desde la interfaz web del router. No existe documentación: la red fue instalada por un sobrino del dueño, que ahora trabaja en Lima.\n\nEn los últimos seis meses ocurrieron tres incidentes:\n\n1. Un sábado por la mañana, el local principal no pudo facturar durante tres horas. El técnico externo reinició todo y funcionó, pero nunca se supo la causa; después se descubrió que el router había quedado con un servidor DNS inexistente tras una actualización.\n2. Un cliente se conectó a la wifi del local, que es la misma red de las cajas, y pocos días después el antivirus detectó software malicioso en una PC de caja.\n3. La contadora recibió un correo aparentemente enviado por el gerente solicitando una transferencia urgente de S/ 12 000 a un proveedor; se detectó a tiempo, pero el dominio de la empresa no tenía configurados registros SPF ni DMARC.\n\nAdemás, una distribuidora farmacéutica multinacional, principal proveedor de la cadena, exige a sus socios una auditoría básica de seguridad de la información antes de renovar el acuerdo comercial con condiciones preferentes de crédito.\n\nLa gerente general, Sra. Rosa Quispe, contrató a un egresado técnico para proponer en un mes una red estandarizada para los cinco locales, con presupuesto máximo de S/ 45 000 en equipos e instalación, y una mensualidad de enlaces no mayor a S/ 2 200. Pide una propuesta que pueda replicarse en cada nuevo local \"como una franquicia de red\": misma configuración, misma documentación y gestión centralizada.",
+        "questions": [
+          "Aplique el método de diagnóstico por capas al incidente del sábado: ¿cómo habría identificado la causa en menos de 15 minutos?",
+          "Proponga el diseño lógico estándar de un local (VLAN, direccionamiento, wifi de clientes, cámaras y gestión) y justifique cada segmento.",
+          "¿Qué medidas de aseguramiento básico y qué registros DNS habrían prevenido los incidentes 2 y 3?",
+          "Elabore un presupuesto estimado por local que respete los límites de inversión y mensualidad, priorizando según el riesgo.",
+          "¿Cómo garantizaría que la red sea replicable y gestionable en nuevos locales sin depender de una sola persona?"
+        ]
+      },
+      "questions": [],
+      "assignment": {
+        "title": "Proyecto final: Diseño, implementación y sustentación de la red de una pyme",
+        "instructions": "**Objetivo:** diseñar, implementar en simulador y sustentar la red completa de una pyme peruana con al menos dos sedes (puede usar el caso Botica Sana u otra organización aprobada por el docente).\n\n**Qué entregar:**\n\n1. **Análisis de requerimientos** (diseño descendente): objetivos del negocio, aplicaciones críticas, usuarios, crecimiento, costo de indisponibilidad y restricciones.\n2. **Diseño lógico:** topología jerárquica, VLAN, plan IPv4 con VLSM y plan IPv6, enrutamiento OSPF, NAT, ACL y red inalámbrica segura.\n3. **Diseño físico:** ubicación de gabinetes, puntos de red, cableado según ANSI/TIA-568, enlaces principal y de respaldo.\n4. **Implementación en Packet Tracer** completamente funcional, con SSH, seguridad de puertos, NTP o syslog y DHCP.\n5. **Presupuesto y costo total de propiedad a cinco años**, con cotizaciones referenciales del mercado peruano.\n6. **Documentación técnica:** diagramas, tabla de direccionamiento, inventario, configuraciones comentadas y procedimiento de diagnóstico.\n\n**Formato:** informe PDF de 12 a 20 páginas, archivo .pkt y presentación de 10 diapositivas. Trabajo en equipos de tres integrantes.\n\n**Sustentación:** 15 minutos de exposición y demostración, más la resolución en vivo de una falla introducida por el docente.\n\n**Criterios:** coherencia entre necesidades y diseño, corrección técnica, funcionamiento verificable, viabilidad económica y calidad de la comunicación.",
+        "rubric": [
+          {
+            "name": "Análisis de requerimientos y justificación del diseño",
+            "points": 4
+          },
+          {
+            "name": "Diseño lógico y físico técnicamente correcto",
+            "points": 5
+          },
+          {
+            "name": "Implementación funcional y aseguramiento",
+            "points": 5
+          },
+          {
+            "name": "Presupuesto, TCO y documentación",
+            "points": 3
+          },
+          {
+            "name": "Sustentación y diagnóstico en vivo",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Transporte, servicios, inalámbricas y diagnóstico",
+        "questions": [
+          {
+            "prompt": "Una transferencia entre Lima y un servidor con RTT de 100 ms usa una ventana TCP fija de 64 KB. ¿Cuál es el rendimiento máximo aproximado de esa conexión?",
+            "options": [
+              "El ancho de banda total del enlace",
+              "Unos 5 Mbit/s",
+              "Unos 50 Mbit/s",
+              "Unos 640 kbit/s"
+            ],
+            "correct": 1,
+            "explanation": "Rendimiento ≈ ventana/RTT = 524 288 bits / 0,1 s ≈ 5,2 Mbit/s, independientemente de que el enlace sea más rápido."
+          },
+          {
+            "prompt": "Una empresa recibe correos fraudulentos que aparentan venir de su propio dominio. ¿Qué medida de DNS reduce directamente este riesgo?",
+            "options": [
+              "Aumentar el TTL de los registros A",
+              "Crear un registro CNAME para www",
+              "Cambiar el registro MX a otro proveedor",
+              "Publicar registros SPF, DKIM y DMARC"
+            ],
+            "correct": 3,
+            "explanation": "SPF, DKIM y DMARC permiten a los servidores receptores verificar si un correo proviene de un servidor autorizado por el dominio y rechazar suplantaciones."
+          },
+          {
+            "prompt": "En una oficina de 2,4 GHz hay tres puntos de acceso en los canales 1, 3 y 6 con baja calidad de servicio. ¿Qué cambio es más adecuado?",
+            "options": [
+              "Usar los canales 1, 6 y 11 y migrar clientes a 5 GHz",
+              "Subir la potencia de todos al máximo",
+              "Poner los tres en el canal 6",
+              "Cambiar el cifrado a WEP para mayor velocidad"
+            ],
+            "correct": 0,
+            "explanation": "En 2,4 GHz solo 1, 6 y 11 no se solapan; los canales 1 y 3 interfieren entre sí. La banda de 5 GHz ofrece más canales."
+          },
+          {
+            "prompt": "Un usuario no puede acceder a ningún servicio. Su PC tiene IP correcta, pero el ping a la puerta de enlace falla y show interfaces muestra muchos errores CRC en su puerto. ¿Qué capa revisar primero?",
+            "options": [
+              "Capa de transporte: puertos TCP",
+              "Capa de red: tabla de enrutamiento del núcleo",
+              "Capa física: cable, conector o puerto",
+              "Capa de aplicación: servidor DNS"
+            ],
+            "correct": 2,
+            "explanation": "Los errores CRC indican tramas dañadas en el medio; con un enfoque ascendente se revisa primero el cableado y el puerto antes que configuraciones superiores."
+          },
+          {
+            "prompt": "¿Por qué se recomienda SSH en lugar de Telnet para administrar conmutadores?",
+            "options": [
+              "Porque SSH usa UDP y es más rápido",
+              "Porque SSH cifra la sesión, incluidas las credenciales",
+              "Porque SSH no requiere contraseña",
+              "Porque Telnet no funciona en IPv4"
+            ],
+            "correct": 1,
+            "explanation": "Telnet transmite todo en texto claro, visible en una captura; SSH cifra la sesión y autentica al servidor. SSH usa TCP puerto 22."
+          },
+          {
+            "prompt": "Según el diseño descendente, ¿cuál debe ser el primer paso al proyectar la red de una pyme?",
+            "options": [
+              "Elegir la marca de conmutadores",
+              "Configurar OSPF en los enrutadores",
+              "Contratar el mayor ancho de banda disponible",
+              "Analizar objetivos del negocio, aplicaciones y restricciones"
+            ],
+            "correct": 3,
+            "explanation": "Oppenheimer propone partir de las necesidades del negocio y los requerimientos técnicos antes de seleccionar tecnologías o equipos."
+          },
+          {
+            "prompt": "Una botica comparte la misma red entre la wifi de clientes y las cajas. ¿Cuál es la medida más eficaz y proporcionada?",
+            "options": [
+              "Ubicar la wifi de clientes en una VLAN aislada con ACL hacia la red interna",
+              "Ocultar el SSID de la red",
+              "Cambiar la contraseña cada año",
+              "Reducir la potencia del punto de acceso"
+            ],
+            "correct": 0,
+            "explanation": "Ocultar el SSID o reducir potencia no aísla el tráfico. Una VLAN separada con ACL impide que un dispositivo de cliente alcance las cajas."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Redes, topologías y métricas de desempeño",
+      "activity": "Lectura previa y sesión síncrona de cálculo de latencia; mediciones de ping y traceroute compartidas en foro técnico.",
+      "evidence": "Foro con mediciones de latencia"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Modelos OSI y TCP/IP, encapsulamiento",
+      "activity": "Laboratorio de Wireshark: identificar encabezados por capa; discusión del caso Distribuidora Andina del Sur.",
+      "evidence": "Capturas anotadas y aporte al caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Medios físicos, cableado estructurado ANSI/TIA-568",
+      "activity": "Análisis de un plano de oficina para proponer cableado; cálculo de presupuesto PoE en equipos.",
+      "evidence": "Propuesta de cableado"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Ethernet, direcciones MAC y conmutación",
+      "activity": "Laboratorio Packet Tracer sobre aprendizaje de tabla MAC; entrega de la Tarea 1 y Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "IPv4, máscaras, CIDR y direcciones privadas",
+      "activity": "Taller de cálculo de redes y resúmenes de rutas con retroalimentación en vivo; verificación de CGNAT doméstico.",
+      "evidence": "Hoja de ejercicios resueltos"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Subredes fijas y VLSM",
+      "activity": "Resolución por equipos de casos de VLSM; discusión del caso Clínica San Gabriel.",
+      "evidence": "Plan VLSM preliminar"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "IPv6: formato, tipos de direcciones, SLAAC",
+      "activity": "Laboratorio de direccionamiento IPv6 con SLAAC en Packet Tracer; diseño de esquema jerárquico.",
+      "evidence": "Configuración IPv6 verificada"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "ARP, ICMP y DHCP",
+      "activity": "Laboratorio de DHCP con agente de retransmisión y análisis ARP; entrega de la Tarea 2 y Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Configuración IOS, VLAN y troncales 802.1Q",
+      "activity": "Laboratorio guiado de configuración inicial, VLAN y troncales con diagnóstico de VLAN nativa.",
+      "evidence": "Archivo .pkt con VLAN"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Enrutamiento entre VLAN y árbol de expansión",
+      "activity": "Router-on-a-stick, SVI y Rapid PVST+ en simulador; demostración de bucle; discusión del caso CoopSur.",
+      "evidence": "Laboratorio STP y aporte al caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Tabla de enrutamiento, rutas estáticas y OSPF",
+      "activity": "Ejercicios de coincidencia más larga; configuración de rutas flotantes y OSPF de área única.",
+      "evidence": "Tablas de enrutamiento verificadas"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "NAT con sobrecarga y ACL básicas",
+      "activity": "Configuración de PAT y ACL extendidas; entrega de la Tarea 3 y Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "TCP, UDP, DNS y servicios de aplicación",
+      "activity": "Análisis de flujos TCP y resolución DNS con dig; presentación del proyecto final y conformación de equipos.",
+      "evidence": "Requerimientos del proyecto"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Redes inalámbricas 802.11 y su seguridad",
+      "activity": "Diseño de cobertura y capacidad wifi; discusión del caso Botica Sana; avance del diseño lógico.",
+      "evidence": "Diseño lógico preliminar"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Aseguramiento de dispositivos y diagnóstico por capas",
+      "activity": "Laboratorio de SSH y seguridad de puertos; reto de diagnóstico con fallas ocultas; Cuestionario 4.",
+      "evidence": "Informe de diagnóstico y Cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto final: integración y sustentación",
+      "activity": "Entrega del proyecto final y sustentación con demostración y resolución de una falla en vivo.",
+      "evidence": "Proyecto final sustentado"
+    }
+  ]
+}

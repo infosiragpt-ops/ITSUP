@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Users, UserPlus, Search, Pencil, Power, X, Mail, KeyRound } from 'lucide-react';
+import { Users, UserPlus, Search, Pencil, Power, X, Mail, KeyRound, IdCard, LockOpen, ShieldCheck } from 'lucide-react';
 import { api, useApi } from '../../lib/api.js';
 import { useAuth, useUi } from '../../lib/context.jsx';
 import { relative, fullName, ROLE_LABEL } from '../../lib/format.js';
@@ -17,7 +17,7 @@ const ROLE_FILTERS = [
 const CYCLES = [1, 2, 3, 4, 5, 6];
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 
-const EMPTY_FORM = { first_name: '', last_name: '', email: '', role: 'student', program_id: '', cycle: '1', title: '', password: '' };
+const EMPTY_FORM = { first_name: '', last_name: '', email: '', role: 'student', program_id: '', cycle: '1', title: '', password: '', dni: '' };
 
 function useDebounced(value, delay = 300) {
   const [v, setV] = useState(value);
@@ -93,17 +93,31 @@ export default function AdminUsers() {
     }
   };
 
+  const unlock = async (u) => {
+    setBusyId(u.id);
+    try { const updated = await api.put(`/admin/users/${u.id}`, { unlock: true }); setRows((list) => list.map((x) => (x.id === u.id ? { ...x, ...updated } : x))); toast(`Cuenta de ${fullName(u)} desbloqueada`); } catch (e) { toast(e.message, 'error'); } finally { setBusyId(null); }
+  };
+
   const closeEditor = useCallback(() => setEditing(null), []);
-  const onSaved = useCallback((saved, isNew) => {
+  const onSaved = useCallback(async (saved, isNew) => {
     setEditing(null);
-    toast(isNew ? `Usuario creado · código ${saved.code}` : 'Cambios guardados');
+    const enrolled = saved.auto_enrolled ? ` · matriculado(a) en ${saved.auto_enrolled} curso(s) de su ciclo` : '';
+    toast((isNew ? `Usuario creado · código ${saved.code}` : 'Cambios guardados') + enrolled);
     load();
-  }, [toast, load]);
+    if (isNew && saved.temp_password) {
+      await confirm({
+        title: 'Contraseña inicial generada',
+        message: `Entrégala a ${saved.first_name} ${saved.last_name} por un canal seguro; no volverá a mostrarse.\n\nCorreo: ${saved.email}\nContraseña: ${saved.temp_password}`,
+        confirmText: 'Entendido',
+      });
+    }
+  }, [toast, load, confirm]);
 
   const actions = (u) => {
     const self = u.id === me?.id;
     return (
       <div className="flex items-center justify-end gap-0.5">
+        {u.locked && <IconButton icon={LockOpen} label="Desbloquear cuenta (bloqueada por intentos fallidos)" onClick={() => unlock(u)} className="text-warn hover:text-warn" />}
         <IconButton icon={Pencil} label="Editar" onClick={() => setEditing(u)} />
         <IconButton
           icon={Power}
@@ -166,12 +180,13 @@ export default function AdminUsers() {
             <div className={cx('transition-opacity', fetching && 'opacity-60')}>
               {/* Desktop table */}
               <Card className="hidden overflow-hidden md:block">
-                <div className="overflow-x-auto">
+                <div className="relative overflow-x-auto">
                   <table className="w-full min-w-[860px] text-sm">
                     <thead>
                       <tr className="border-b border-line bg-sunken/60 text-left text-xs font-medium tracking-wide text-muted uppercase">
                         <th className="px-4 py-3 font-medium">Usuario</th>
                         <th className="px-4 py-3 font-medium">Código</th>
+                        <th className="px-4 py-3 font-medium">DNI</th>
                         <th className="px-4 py-3 font-medium">Rol</th>
                         <th className="px-4 py-3 font-medium">Carrera</th>
                         <th className="px-4 py-3 font-medium">Último ingreso</th>
@@ -195,13 +210,14 @@ export default function AdminUsers() {
                             </div>
                           </td>
                           <td className="px-4 py-3 font-mono text-[13px] text-ink-2">{u.code || '—'}</td>
+                          <td className="px-4 py-3 font-mono text-[13px] text-ink-2">{u.dni || <span className="text-faint">—</span>}</td>
                           <td className="px-4 py-3"><Badge tone={ROLE_TONE[u.role]}>{ROLE_LABEL[u.role]}</Badge></td>
                           <td className="px-4 py-3 text-ink-2">
                             {u.program_short || <span className="text-faint">—</span>}
                             {u.role === 'student' && u.cycle && <span className="ml-1 text-xs text-faint">· Ciclo {ROMAN[u.cycle] || u.cycle}</span>}
                           </td>
                           <td className="px-4 py-3 whitespace-nowrap text-muted">{u.last_login ? relative(u.last_login) : <span className="text-faint">Nunca</span>}</td>
-                          <td className="px-4 py-3"><StatusBadge active={u.active} /></td>
+                          <td className="px-4 py-3"><div className="flex flex-wrap gap-1"><StatusBadge active={u.active} />{u.locked && <Badge tone="warn">Bloqueado</Badge>}{u.consent_at && <Badge tone="neutral" icon={ShieldCheck} className="!px-1.5" />}</div></td>
                           <td className="px-3 py-2">{actions(u)}</td>
                         </tr>
                       ))}
@@ -266,7 +282,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
     setForm(user
       ? {
         first_name: user.first_name || '', last_name: user.last_name || '', email: user.email || '', role: user.role,
-        program_id: user.program_id ? String(user.program_id) : '', cycle: user.cycle ? String(user.cycle) : '1', title: user.title || '', password: '',
+        program_id: user.program_id ? String(user.program_id) : '', cycle: user.cycle ? String(user.cycle) : '1', title: user.title || '', password: '', dni: user.dni || '',
       }
       : EMPTY_FORM);
   }, [open, user]);
@@ -280,6 +296,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
     if (!form.email.trim()) e.email = 'Ingresa el correo';
     else if (!/^\S+@\S+\.\S+$/.test(form.email.trim())) e.email = 'Ingresa un correo válido';
     if (form.password && form.password.length < 8) e.password = 'Debe tener al menos 8 caracteres';
+    if (form.dni && !/^\d{8}$/.test(form.dni.trim())) e.dni = 'El DNI tiene 8 dígitos';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -295,6 +312,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
       role: form.role,
       program_id: form.role !== 'admin' && form.program_id ? Number(form.program_id) : null,
       cycle: form.role === 'student' && form.cycle ? Number(form.cycle) : null,
+      dni: form.dni.trim() || null,
     };
     if (form.role === 'teacher') payload.title = form.title.trim();
     else if (isNew) payload.title = null;
@@ -329,10 +347,16 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
         <Field label="Apellidos" required error={errors.last_name}>
           <Input value={form.last_name} onChange={set('last_name')} autoComplete="off" />
         </Field>
-        <Field label="Correo electrónico" required error={errors.email} className="sm:col-span-2">
+        <Field label="Correo electrónico" required error={errors.email}>
           <div className="relative">
             <Mail size={16} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-faint" />
             <Input type="email" value={form.email} onChange={set('email')} placeholder="nombre@isup.edu.pe" className="pl-9" autoComplete="off" />
+          </div>
+        </Field>
+        <Field label="DNI" error={errors.dni} hint="Requerido para actas y constancias. Se muestra enmascarado al propio usuario.">
+          <div className="relative">
+            <IdCard size={16} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-faint" />
+            <Input value={form.dni} onChange={set('dni')} placeholder="12345678" inputMode="numeric" maxLength={8} className="pl-9 font-mono" autoComplete="off" />
           </div>
         </Field>
         <Field label="Rol" required hint={isSelf ? 'No puedes cambiar el rol de tu propia cuenta.' : undefined}>
@@ -351,7 +375,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
           </Field>
         ) : <div className="hidden sm:block" />}
         {form.role === 'student' && (
-          <Field label="Ciclo">
+          <Field label="Ciclo" hint="Se matricula automáticamente en los cursos de su carrera y ciclo del periodo activo.">
             <Select value={form.cycle} onChange={set('cycle')}>
               {CYCLES.map((c) => <option key={c} value={c}>Ciclo {ROMAN[c]}</option>)}
             </Select>
@@ -366,8 +390,8 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
           label={isNew ? 'Contraseña inicial' : 'Nueva contraseña'}
           error={errors.password}
           hint={isNew
-            ? 'Opcional. Si la dejas en blanco se asignará la contraseña demo configurada en el servidor.'
-            : 'Dejar en blanco para no cambiar.'}
+            ? 'Opcional. Mínimo 8 caracteres con letras y números; si la dejas en blanco se genera una contraseña temporal que verás una sola vez.'
+            : 'Dejar en blanco para no cambiar. Restablecerla también desbloquea la cuenta.'}
           className={form.role === 'student' ? '' : 'sm:col-span-2'}
         >
           <div className="relative">

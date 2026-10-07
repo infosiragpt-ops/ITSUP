@@ -6,7 +6,7 @@ import {
 import { api, useApi, fileUrl } from '../../../lib/api.js';
 import { useUi } from '../../../lib/context.jsx';
 import { Avatar, Badge, Button, Card, EmptyState, ErrorState, Field, Input, PageLoader, Segmented, Textarea, cx } from '../../../components/ui.jsx';
-import { DueChip } from '../../../components/lms.jsx';
+import { DueChip, ClosedNotice } from '../../../components/lms.jsx';
 import Markdown from '../../../components/Markdown.jsx';
 import { fmtDateTime, fmtGrade, fullName, gradeTone, relative } from '../../../lib/format.js';
 import { useCourse } from './CourseLayout.jsx';
@@ -39,7 +39,7 @@ export default function AssignmentDetail() {
               <div className="mb-2 flex flex-wrap gap-2"><Badge tone="primary">Tarea</Badge><DueChip due={a.due_at} done={!!a.submission} /></div>
               <h2 className="font-display text-[1.7rem] leading-tight font-semibold text-ink sm:text-[2rem]">{a.title}</h2>
             </div>
-            {a.can_edit && (
+            {a.can_edit && !a.course_closed && (
               <div className="flex gap-2">
                 <Button variant="secondary" size="sm" icon={Pencil} onClick={() => setEditing(true)}>Editar</Button>
                 <Button variant="ghost" size="sm" icon={Trash2} onClick={remove}>Eliminar</Button>
@@ -49,11 +49,26 @@ export default function AssignmentDetail() {
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
             <span className="flex items-center gap-1.5"><Calendar size={15} /> Entrega hasta el {fmtDateTime(a.due_at)}</span>
             <span className="flex items-center gap-1.5"><Award size={15} /> {a.points} puntos</span>
+            {a.category && <span className="flex items-center gap-1.5"><Award size={15} /> Criterio: {a.category.name} ({a.category.weight}%)</span>}
             <span className="flex items-center gap-1.5"><Clock size={15} /> {a.allow_late ? 'Acepta entregas tardías' : 'No acepta entregas tardías'}</span>
           </div>
+          {a.course_closed && <div className="mt-4"><ClosedNotice course={{ status: 'closed' }} compact /></div>}
           <div className="my-6 h-px bg-line" />
           <h3 className="mb-2 text-sm font-semibold tracking-wide text-muted uppercase">Instrucciones</h3>
           <Markdown>{a.instructions || 'Sin instrucciones adicionales.'}</Markdown>
+          {a.rubric?.length > 0 && (
+            <>
+              <h3 className="mt-6 mb-2 text-sm font-semibold tracking-wide text-muted uppercase">Rúbrica de evaluación</h3>
+              <div className="overflow-hidden rounded-xl border border-line">
+                <table className="w-full text-sm">
+                  <thead className="bg-sunken text-left text-xs text-muted"><tr><th className="px-4 py-2 font-semibold">Criterio</th><th className="px-4 py-2 text-right font-semibold">Puntaje</th></tr></thead>
+                  <tbody className="divide-y divide-line">
+                    {a.rubric.map((c, i) => <tr key={i}><td className="px-4 py-2 text-ink-2">{c.name}{c.description ? <div className="text-xs text-muted">{c.description}</div> : null}</td><td className="px-4 py-2 text-right font-semibold tabular-nums">{c.points}</td></tr>)}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
         </Card>
         {!a.can_edit && <StudentSubmission a={a} onSaved={(s) => setData((x) => ({ ...x, submission: s }))} />}
       </div>
@@ -71,7 +86,7 @@ function StudentSubmission({ a, onSaved }) {
   const [file, setFile] = useState(null);
   const [sending, setSending] = useState(false);
   const late = new Date() > new Date(a.due_at);
-  const closed = late && !a.allow_late;
+  const closed = (late && !a.allow_late) || a.course_closed;
 
   const submit = async (e) => {
     e.preventDefault();
@@ -99,6 +114,14 @@ function StudentSubmission({ a, onSaved }) {
           </div>
           <div className="mt-1 text-xs text-muted">Calificado {relative(s.graded_at)}</div>
         </div>
+        {a.rubric?.length > 0 && s.rubric_scores && (
+          <div className="border-t border-line p-5">
+            <div className="mb-2 text-sm font-semibold text-ink">Detalle por criterio</div>
+            <ul className="divide-y divide-line rounded-xl border border-line text-sm">
+              {a.rubric.map((c, i) => { const v = JSON.parse(s.rubric_scores)[i]; return <li key={i} className="flex items-center justify-between px-3 py-2"><span className="text-ink-2">{c.name}</span><span className="font-semibold tabular-nums">{v ?? '—'}<span className="text-xs font-normal text-faint">/{c.points}</span></span></li>; })}
+            </ul>
+          </div>
+        )}
         {s.feedback && (
           <div className="border-t border-line p-5">
             <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-ink"><MessageSquareText size={16} className="text-primary" /> Retroalimentación del docente</div>
@@ -133,7 +156,7 @@ function StudentSubmission({ a, onSaved }) {
         <p className="text-xs text-muted">Escribe tu respuesta, adjunta un archivo o ambos.</p>
       </div>
       {closed ? (
-        <div className="flex gap-2 rounded-xl bg-danger-soft p-3 text-sm text-danger"><AlertTriangle size={17} className="shrink-0" /> El plazo de entrega venció y esta tarea no acepta entregas tardías.</div>
+        <div className="flex gap-2 rounded-xl bg-danger-soft p-3 text-sm text-danger"><AlertTriangle size={17} className="shrink-0" /> {a.course_closed ? 'El acta del curso está cerrada: ya no se reciben entregas.' : 'El plazo de entrega venció y esta tarea no acepta entregas tardías.'}</div>
       ) : (
         <>
           {late && <div className="flex gap-2 rounded-xl bg-warn-soft p-3 text-sm text-warn"><AlertTriangle size={17} className="shrink-0" /> La fecha límite ya pasó. Tu entrega se registrará como tardía.</div>}
@@ -242,15 +265,21 @@ function Grader({ a, onChange }) {
 function GradeForm({ a, row, onSaved }) {
   const { toast } = useUi();
   const s = row.submission;
+  const rubric = a.rubric || [];
   const [grade, setGrade] = useState(s.grade ?? '');
+  const [scores, setScores] = useState(() => (s.rubric_scores ? JSON.parse(s.rubric_scores) : rubric.map(() => '')));
   const [feedback, setFeedback] = useState(s.feedback || '');
   const [saving, setSaving] = useState(false);
   const quick = ['¡Excelente trabajo! Sigue así.', 'Buen trabajo. Revisa los comentarios para mejorar.', 'Cumple con lo solicitado; profundiza más en el análisis.', 'Falta completar algunos puntos de la consigna.'];
+  const useRubric = rubric.length > 0;
+  const rubricSum = scores.reduce((t, v) => t + (Number(v) || 0), 0);
+  const setScore = (i, v) => { const next = scores.map((x, j) => (j === i ? v : x)); setScores(next); setGrade(Math.round(next.reduce((t, x) => t + (Number(x) || 0), 0) * 10) / 10); };
   const save = async (e) => {
     e.preventDefault();
+    if (a.course_closed) return toast('El acta del curso está cerrada', 'error');
     setSaving(true);
     try {
-      await api.put(`/submissions/${s.id}/grade`, { grade: Number(grade), feedback });
+      await api.put(`/submissions/${s.id}/grade`, { grade: Number(grade), feedback, rubric_scores: useRubric ? scores.map(Number) : undefined });
       toast(`Nota publicada para ${row.student.first_name}`);
       onSaved();
     } catch (err) { toast(err.message, 'error'); } finally { setSaving(false); }
@@ -273,9 +302,23 @@ function GradeForm({ a, row, onSaved }) {
         )}
       </div>
       <form onSubmit={save} className="space-y-4 border-t border-line bg-sunken/40 p-5">
+        {useRubric && (
+          <div className="rounded-xl border border-line bg-surface">
+            <div className="flex items-center justify-between border-b border-line px-4 py-2 text-xs font-semibold text-muted uppercase"><span>Rúbrica</span><span className="tabular-nums">{rubricSum}/{a.points}</span></div>
+            <ul className="divide-y divide-line">
+              {rubric.map((c, i) => (
+                <li key={i} className="flex items-center gap-3 px-4 py-2">
+                  <div className="min-w-0 flex-1"><div className="text-sm text-ink">{c.name}</div>{c.description && <div className="text-xs text-muted">{c.description}</div>}</div>
+                  <Input type="number" min="0" max={c.points} step="0.5" value={scores[i] ?? ''} onChange={(e) => setScore(i, e.target.value)} className="!w-20 !py-1.5 text-right text-sm font-semibold" aria-label={c.name} required />
+                  <span className="w-8 text-xs text-faint">/{c.points}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-[160px_1fr]">
-          <Field label={`Nota (0 – ${a.points})`} required>
-            <Input type="number" step="0.5" min="0" max={a.points} value={grade} onChange={(e) => setGrade(e.target.value)} className="text-lg font-semibold" required />
+          <Field label={`Nota (0 – ${a.points})`} required hint={useRubric ? 'Suma de la rúbrica' : undefined}>
+            <Input type="number" step="0.5" min="0" max={a.points} value={grade} onChange={(e) => setGrade(e.target.value)} className="text-lg font-semibold" required readOnly={useRubric} />
           </Field>
           <Field label="Retroalimentación">
             <Textarea rows={3} value={feedback} onChange={(e) => setFeedback(e.target.value)} placeholder="Comentarios para el estudiante…" />
@@ -284,7 +327,7 @@ function GradeForm({ a, row, onSaved }) {
         <div className="flex flex-wrap gap-1.5">
           {quick.map((t) => <button type="button" key={t} onClick={() => setFeedback(t)} className="rounded-full border border-line bg-surface px-3 py-1 text-xs text-ink-2 hover:border-primary">{t}</button>)}
         </div>
-        <div className="flex justify-end"><Button type="submit" icon={Send} loading={saving}>{s.grade != null ? 'Actualizar nota' : 'Publicar nota'}</Button></div>
+        <div className="flex justify-end"><Button type="submit" icon={Send} loading={saving} disabled={a.course_closed}>{s.grade != null ? 'Actualizar nota' : 'Publicar nota'}</Button></div>
       </form>
     </Card>
   );

@@ -1,0 +1,1318 @@
+{
+  "name": "Estadística y Probabilidad",
+  "slug": "estadistica-y-probabilidad",
+  "course_type": "especifica",
+  "module_name": "Programación y preparación de datos para inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 48,
+  "hours_practice": 32,
+  "summary": "Estadística y Probabilidad es un curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo de la carrera de Inteligencia Artificial (código IAR-202). Su propósito es que el estudiante razone con rigor bajo incertidumbre y fundamente decisiones con datos, condición indispensable para preparar datos, entrenar y evaluar modelos de aprendizaje automático. Comprende cuatro unidades: estadística descriptiva y análisis exploratorio; probabilidad, probabilidad condicional y teorema de Bayes; variables aleatorias, distribuciones y teorema central del límite; e inferencia estadística, pruebas A/B y un proyecto integrador con datos reales del Perú. Todos los contenidos se implementan en Python con pandas, NumPy, SciPy y statsmodels. El curso se apoya en Matemática para Ciencia de Datos y Fundamentos de Programación en Python, y prepara directamente para Análisis y Visualización de Datos y Aprendizaje Automático I, contribuyendo al perfil profesional con pensamiento cuantitativo, crítico y ético.",
+  "competency": "Analiza conjuntos de datos reales y situaciones de incertidumbre aplicando estadística descriptiva, modelos de probabilidad e inferencia estadística implementados en Python, para sustentar decisiones técnicas y de negocio con evidencia cuantificada, verificando supuestos, reconociendo sesgos y comunicando resultados con su nivel de incertidumbre de manera ética y reproducible.",
+  "capacities": [
+    "Describe y explora conjuntos de datos mediante medidas de tendencia, dispersión, posición, forma y asociación, identificando sesgos de muestreo, valores atípicos y datos faltantes.",
+    "Modela situaciones de incertidumbre con las reglas de la probabilidad, la probabilidad condicional y el teorema de Bayes, verificando sus resultados mediante simulación Monte Carlo.",
+    "Selecciona, ajusta y valida distribuciones de probabilidad discretas y continuas para procesos reales, y explica el comportamiento de los promedios mediante el teorema central del límite.",
+    "Estima parámetros y contrasta hipótesis con intervalos de confianza, pruebas paramétricas, chi-cuadrado, bootstrap y pruebas A/B, interpretando valores p, tamaños del efecto y potencia.",
+    "Comunica hallazgos estadísticos en informes reproducibles que explicitan supuestos, limitaciones e incertidumbre y formulan recomendaciones accionables."
+  ],
+  "indicators": [
+    "Calcula e interpreta medidas descriptivas pertinentes según la escala de medición y la forma de la distribución, justificando la elección de medidas robustas.",
+    "Detecta y trata valores atípicos y faltantes con criterios documentados, como la regla de Tukey y la puntuación z robusta.",
+    "Resuelve problemas de probabilidad condicional y teorema de Bayes, incluyendo el cálculo del valor predictivo positivo con distintas tasas base.",
+    "Verifica resultados probabilísticos mediante simulaciones Monte Carlo reproducibles con semilla fija en Python.",
+    "Calcula probabilidades y cuantiles con distribuciones binomial, Poisson, exponencial y normal, y evalúa sus supuestos con gráficos Q-Q y pruebas formales.",
+    "Construye e interpreta correctamente intervalos de confianza y calcula tamaños de muestra para medias y proporciones.",
+    "Selecciona y ejecuta la prueba de hipótesis adecuada, reportando valor p, tamaño del efecto e intervalo, y aplica correcciones por comparaciones múltiples.",
+    "Presenta un proyecto integrador reproducible que responde una pregunta real con evidencia estadística y una recomendación fundamentada."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, un video breve y un cuaderno guiado en Google Colab. Las sesiones síncronas aplican el método de casos con situaciones de organizaciones peruanas (logística, banca, salud y fintech) y el aprendizaje basado en problemas, donde los equipos plantean, calculan, simulan y defienden decisiones. Cada concepto se implementa en Python con pandas, NumPy, SciPy y statsmodels, y se verifica mediante simulación. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, revisión entre pares de cuadernos y foros de discusión. El curso culmina con un proyecto integrador en equipos que articula las cuatro unidades y se sustenta ante el docente.",
+  "bibliography": [
+    "Walpole, R. E., Myers, R. H., Myers, S. L. y Ye, K. (2012). Probabilidad y estadística para ingeniería y ciencias (9.ª ed.). Pearson Educación.",
+    "Devore, J. L. (2016). Probabilidad y estadística para ingeniería y ciencias (9.ª ed.). Cengage Learning.",
+    "Montgomery, D. C. y Runger, G. C. (2014). Applied statistics and probability for engineers (6th ed.). Wiley.",
+    "Bruce, P., Bruce, A. y Gedeck, P. (2020). Practical statistics for data scientists (2nd ed.). O'Reilly Media.",
+    "Downey, A. B. (2014). Think stats: Exploratory data analysis (2nd ed.). O'Reilly Media.",
+    "Blitzstein, J. K. y Hwang, J. (2019). Introduction to probability (2nd ed.). CRC Press.",
+    "Wasserman, L. (2004). All of statistics: A concise course in statistical inference. Springer.",
+    "Kohavi, R., Tang, D. y Xu, Y. (2020). Trustworthy online controlled experiments: A practical guide to A/B testing. Cambridge University Press.",
+    "Freedman, D., Pisani, R. y Purves, R. (2007). Statistics (4th ed.). W. W. Norton & Company.",
+    "Wasserstein, R. L. y Lazar, N. A. (2016). The ASA statement on p-values: Context, process, and purpose. The American Statistician, 70(2), 129-133."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuatro cuestionarios de unidad, participación argumentada en el análisis de casos y foros, y cuadernos guiados semanales en Python."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1, 2 y 3: informe exploratorio, análisis bayesiano de alertas y modelamiento probabilístico, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 40,
+      "description": "Proyecto integrador en equipos con informe inferencial reproducible y sustentación ejecutiva de diez minutos en la semana 16."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Estadística descriptiva y análisis exploratorio de datos",
+      "description": "Al finalizar la unidad, el estudiante describe conjuntos de datos reales mediante medidas de tendencia, dispersión, posición, forma y asociación, detecta sesgos de muestreo y valores atípicos, y comunica hallazgos exploratorios reproducibles en Python con pandas.",
+      "topics": [
+        "Población, muestra, tipos de variables y diseño muestral",
+        "Medidas de tendencia central, dispersión y posición",
+        "Valores atípicos, asimetría y forma de la distribución",
+        "Covarianza, correlación y sus límites interpretativos",
+        "Análisis exploratorio reproducible con pandas"
+      ],
+      "slides": [
+        {
+          "title": "La estadística en el ciclo de vida de un proyecto de IA",
+          "bullets": [
+            "CRISP-DM (1999) ubica la comprensión y preparación de datos antes del modelado: allí la estadística consume hasta el 60-80 % del esfuerzo.",
+            "Estadística descriptiva: resume lo observado; estadística inferencial: generaliza de la muestra a la población con incertidumbre cuantificada.",
+            "Probabilidad: lenguaje formal de la incertidumbre que usan los modelos de clasificación, las métricas y la evaluación de riesgos.",
+            "Un modelo de aprendizaje automático es, en esencia, un estimador estadístico: hereda sus sesgos de los datos de entrenamiento."
+          ],
+          "notes": "Abra la sesión preguntando: ¿cuántos de ustedes han visto un modelo de IA fallar por culpa de los datos y no del algoritmo? Explique que el curso es el puente entre Matemática para Ciencia de Datos, ya aprobada, y Aprendizaje Automático I del siguiente ciclo. Presente CRISP-DM, el estándar propuesto por un consorcio industrial en 1999, y subraye que las fases de comprensión y preparación de datos son estadísticas. Distinga claramente descripción e inferencia con un ejemplo: describir las ventas de 500 bodegas encuestadas frente a afirmar algo sobre todas las bodegas de Lima. Cierre con la idea fuerza del curso: todo modelo es un estimador y toda predicción tiene un margen de error que debemos medir y comunicar."
+        },
+        {
+          "title": "Población, muestra, parámetro y estadístico",
+          "bullets": [
+            "Población: conjunto completo de unidades de interés; muestra: subconjunto efectivamente observado y analizado.",
+            "Parámetro (μ, σ, p) describe a la población y suele ser desconocido; estadístico (x̄, s, p̂) se calcula con la muestra.",
+            "El Censo Nacional 2017 del INEI observó a toda la población; la ENAHO estima indicadores con una muestra anual de hogares.",
+            "Unidad de análisis y marco muestral deben definirse antes de recolectar datos, no después de obtenerlos."
+          ],
+          "notes": "Use la notación griega para parámetros y latina para estadísticos de manera consistente durante todo el curso; los estudiantes la verán en cada libro de aprendizaje automático. Explique por qué el INEI no puede censar cada año: costo, tiempo y logística. La ENAHO es una encuesta por muestreo probabilístico que permite estimar la pobreza monetaria con márgenes de error conocidos; en 2023 el INEI reportó una pobreza monetaria de 29,0 % a nivel nacional. Pregunte a la clase: si un aplicativo de delivery analiza solo a sus usuarios activos, ¿cuál es su población y qué conclusiones no puede extraer sobre todos los consumidores limeños? Introduzca el concepto de marco muestral como la lista de la que realmente se extrae la muestra."
+        },
+        {
+          "title": "Tipos de variables y escalas de medición",
+          "bullets": [
+            "Stevens (1946) propuso cuatro escalas: nominal, ordinal, de intervalo y de razón, cada una con operaciones válidas distintas.",
+            "Cualitativas: región, método de pago (nominal); nivel de satisfacción de 1 a 5 (ordinal).",
+            "Cuantitativas discretas: número de reclamos; continuas: tiempo de entrega, ingreso mensual en soles.",
+            "La escala determina el resumen correcto: moda para nominal, mediana para ordinal, media para intervalo y razón.",
+            "En pandas, declarar dtype 'category' u ordinal evita cálculos sin sentido y reduce memoria."
+          ],
+          "notes": "Esta diapositiva parece elemental, pero los errores aquí se propagan hasta el modelo. Un caso frecuente: codificar departamentos del Perú como 1 a 25 y luego calcular su promedio, lo que no tiene sentido porque la escala es nominal. Otro error común es tratar una escala de Likert como continua sin justificación. Explique que la temperatura en grados Celsius es de intervalo (el cero es arbitrario) mientras que el ingreso es de razón (el cero significa ausencia). Pida a los estudiantes que clasifiquen cinco columnas de un dataset de reclamos de INDECOPI: tipo de reclamo, fecha, monto reclamado, sector y estado del caso. Anticipe que en Aprendizaje Automático I la escala decidirá si se usa codificación one-hot u ordinal."
+        },
+        {
+          "title": "Diseño muestral: cómo se elige a quién observar",
+          "bullets": [
+            "Muestreo aleatorio simple: cada unidad tiene igual probabilidad de selección; es la base teórica de las fórmulas del curso.",
+            "Estratificado: divide la población en estratos homogéneos (urbano/rural, región) y muestrea dentro de cada uno, reduciendo la varianza.",
+            "Por conglomerados: selecciona grupos completos, como manzanas o centros poblados; abarata el trabajo de campo.",
+            "La ENAHO combina estratificación, conglomerados y varias etapas; por ello usa factores de expansión para estimar totales.",
+            "Muestreo no probabilístico (por conveniencia, bola de nieve) no permite calcular márgenes de error válidos."
+          ],
+          "notes": "Dibuje en la pizarra virtual una población de 1000 puntos de colores y muestre visualmente los tres diseños. Explique que el factor de expansión indica a cuántos hogares de la población representa cada hogar encuestado; si se ignora, los promedios quedan sesgados hacia los estratos sobrerrepresentados. Este detalle es crítico cuando los estudiantes descarguen microdatos del INEI para sus proyectos. Pregunte: una empresa publica un formulario en Instagram y obtiene 3000 respuestas; ¿es una muestra probabilística? Discuta por qué el tamaño no compensa el sesgo de selección. Enlace con aprendizaje automático: la partición estratificada en entrenamiento y prueba es exactamente un muestreo estratificado por la variable objetivo."
+        },
+        {
+          "title": "Sesgos que destruyen una muestra",
+          "bullets": [
+            "Sesgo de selección: la muestra excluye sistemáticamente a parte de la población, como hogares sin internet en encuestas en línea.",
+            "Sesgo de no respuesta: quienes no responden difieren de quienes sí lo hacen, por ejemplo los hogares de mayores ingresos.",
+            "Sesgo de supervivencia: Wald analizó aviones que regresaban de combate, no los derribados; el error está en lo ausente.",
+            "En IA, un dataset sesgado produce modelos que discriminan: la estadística es la primera línea de defensa ética."
+          ],
+          "notes": "Cuente la historia de Abraham Wald y el Grupo de Investigación Estadística de la Universidad de Columbia durante la Segunda Guerra Mundial: los militares querían blindar las zonas con más impactos en los aviones que regresaban, y Wald razonó que había que blindar las zonas sin impactos, porque los aviones alcanzados allí no volvían. Traslade el razonamiento a un banco peruano que entrena un modelo de riesgo crediticio solo con clientes a quienes se les aprobó un préstamo: nunca observa cómo habrían pagado los rechazados. Pregunte a la clase qué sesgo tendría un modelo de empleabilidad entrenado con egresados que respondieron una encuesta voluntaria. Este tema se retomará en Ética y Gobernanza de la IA."
+        },
+        {
+          "title": "Medidas de tendencia central",
+          "bullets": [
+            "Media aritmética: x̄ = Σxᵢ / n; usa toda la información pero es sensible a valores extremos.",
+            "Mediana: valor central de los datos ordenados; robusta ante atípicos, preferida para ingresos y precios de vivienda.",
+            "Moda: valor más frecuente; única medida válida para variables nominales.",
+            "Media ponderada: Σwᵢxᵢ / Σwᵢ; se usa con factores de expansión o promedios de notas por créditos.",
+            "Si media > mediana, la distribución suele tener asimetría positiva (cola a la derecha)."
+          ],
+          "notes": "Use un ejemplo numérico: ingresos mensuales de diez trabajadores de una empresa, nueve entre S/ 1200 y S/ 2500 y el gerente con S/ 25 000. La media se dispara mientras la mediana apenas cambia. Por eso el INEI y los organismos internacionales reportan el ingreso mediano cuando se quiere describir al hogar típico. Pida a los estudiantes que calculen su promedio ponderado del primer ciclo usando los créditos como pesos, conectando con la escala vigesimal y la nota mínima de 13. En pandas, muestre df['ingreso'].mean(), .median() y .mode(), y enfatice que la elección de la medida es una decisión analítica que debe justificarse en el informe, no un automatismo."
+        },
+        {
+          "title": "Medidas de dispersión",
+          "bullets": [
+            "Rango = máximo − mínimo; simple pero depende solo de dos observaciones.",
+            "Varianza muestral: s² = Σ(xᵢ − x̄)² / (n − 1); el divisor n − 1 (corrección de Bessel) la hace insesgada.",
+            "Desviación estándar s = √s²; se expresa en las mismas unidades que los datos.",
+            "Coeficiente de variación CV = s / x̄ × 100 %; compara variabilidad entre variables de escalas distintas.",
+            "Desviación absoluta mediana (MAD): alternativa robusta cuando hay valores atípicos."
+          ],
+          "notes": "Pregunte: dos agencias bancarias tienen el mismo tiempo promedio de atención, ocho minutos; ¿son igual de buenas? No, si en una los tiempos varían entre 7 y 9 minutos y en la otra entre 1 y 30. La dispersión mide la confiabilidad del proceso. Explique la corrección de Bessel intuitivamente: al usar x̄ en lugar de μ perdemos un grado de libertad, y dividir entre n subestimaría la varianza. Advierta que numpy.var usa por defecto ddof=0 mientras que pandas usa ddof=1; es una fuente clásica de discrepancias entre resultados. Muestre el CV comparando la volatilidad del tipo de cambio con la de la inflación mensual publicadas por el BCRP."
+        },
+        {
+          "title": "Medidas de posición y diagrama de caja",
+          "bullets": [
+            "Cuartiles Q1, Q2 y Q3 dividen los datos ordenados en cuatro partes con 25 % de observaciones cada una.",
+            "Percentil k: valor bajo el cual queda el k % de los datos; útil para tiempos de respuesta (p95, p99) de sistemas.",
+            "Rango intercuartílico RIC = Q3 − Q1 mide la dispersión del 50 % central y es robusto.",
+            "Diagrama de caja (Tukey, 1977): resume mediana, cuartiles, bigotes y atípicos en una sola figura.",
+            "pandas: df.describe() y df.quantile([0.25, 0.5, 0.75]) entregan el resumen de cinco números."
+          ],
+          "notes": "Relacione los percentiles con la práctica profesional: en un servicio de IA desplegado, el tiempo de respuesta promedio engaña; los equipos de ingeniería monitorean el percentil 95 o 99 porque es lo que experimentan los usuarios peor atendidos. Presente a John Tukey y su libro Exploratory Data Analysis de 1977, que fundó el análisis exploratorio moderno. Construya en vivo un diagrama de caja con tiempos de entrega de un aplicativo y pida a los estudiantes que lo lean en voz alta: dónde está la mediana, qué tan dispersa es la mitad central, hacia dónde se alarga. Advierta que distintos programas calculan cuartiles con métodos de interpolación diferentes; pandas usa interpolación lineal por defecto."
+        },
+        {
+          "title": "Detección y tratamiento de valores atípicos",
+          "bullets": [
+            "Regla de Tukey: atípico si x < Q1 − 1,5·RIC o x > Q3 + 1,5·RIC; atípico extremo con 3·RIC.",
+            "Puntuación z = (x − x̄) / s; |z| > 3 es sospechoso, pero x̄ y s también se contaminan con los atípicos.",
+            "Puntuación z robusta: 0,6745·(x − mediana) / MAD; recomendada por Iglewicz y Hoaglin (1993).",
+            "Antes de eliminar, investigar: error de digitación, unidad equivocada o evento real como un fraude.",
+            "Documentar toda decisión: eliminar, recortar (winsorizar), transformar con logaritmo o modelar aparte."
+          ],
+          "notes": "Insista en que un valor atípico no es automáticamente un error. En detección de fraude con tarjetas, los atípicos son precisamente lo que se busca. Muestre un caso real de digitación: una edad registrada como 250 en una base de clientes, claramente un error, frente a un ticket de compra de S/ 18 000 en una tienda de electrodomésticos, que puede ser legítimo. Pida a la clase que aplique la regla de Tukey a un conjunto de diez montos y luego la puntuación z clásica, para descubrir que el atípico infla la desviación estándar y se enmascara a sí mismo. Concluya con la regla profesional: toda limpieza debe quedar documentada y ser reproducible en el cuaderno de trabajo."
+        },
+        {
+          "title": "Forma de la distribución: asimetría y curtosis",
+          "bullets": [
+            "Asimetría positiva: cola larga a la derecha; típica en ingresos, montos de compra y tiempos de espera.",
+            "Asimetría negativa: cola a la izquierda; por ejemplo, notas de un examen muy fácil.",
+            "Coeficiente de asimetría de Fisher: cercano a 0 indica simetría; |valor| > 1 indica asimetría marcada.",
+            "Curtosis en exceso: valores positivos señalan colas pesadas y más eventos extremos que la normal.",
+            "Transformación logarítmica reduce la asimetría positiva y estabiliza la varianza antes de modelar."
+          ],
+          "notes": "Proyecte histogramas de tres variables reales: ingresos de hogares, estaturas y notas finales. Pida a los estudiantes que ordenen las relaciones entre media, mediana y moda en cada caso. Explique que la curtosis no mide lo puntiagudo de la curva, como dicen algunos textos antiguos, sino el peso de las colas; Westfall publicó en 2014 una aclaración muy citada sobre esta confusión. Enlace con finanzas: los retornos de acciones de la Bolsa de Valores de Lima presentan colas pesadas, por lo que asumir normalidad subestima el riesgo de caídas extremas. Demuestre en pandas df['monto'].skew() y df['monto'].kurt(), y luego aplique np.log1p para mostrar cómo cambia la forma."
+        },
+        {
+          "title": "Tablas de frecuencias e histogramas",
+          "bullets": [
+            "Frecuencia absoluta, relativa y acumulada organizan datos y responden preguntas como qué porcentaje supera un umbral.",
+            "Regla de Sturges: k = 1 + 3,322·log₁₀(n) intervalos; adecuada para datos aproximadamente simétricos.",
+            "Regla de Freedman-Diaconis: ancho = 2·RIC·n^(−1/3); más robusta con colas largas.",
+            "El número de intervalos cambia la historia que cuenta el histograma: probar varios antes de concluir.",
+            "Tablas de contingencia (pd.crosstab) resumen dos variables categóricas a la vez."
+          ],
+          "notes": "Este curso no reemplaza a Análisis y Visualización de Datos del próximo ciclo, por eso el énfasis está en la lógica estadística del gráfico, no en el diseño. Demuestre con el mismo conjunto de 300 tiempos de entrega cómo un histograma con cinco intervalos oculta una distribución bimodal que aparece con veinte intervalos: dos tipos de pedido mezclados. Calcule Sturges para n = 300: aproximadamente 9 intervalos. Luego compare con Freedman-Diaconis. Introduzca pd.crosstab con normalize='index' para obtener porcentajes por fila, que será la base de la probabilidad condicional en la Unidad 2. Pregunte: ¿qué porcentaje de reclamos del sector financiero se resolvió a favor del consumidor?"
+        },
+        {
+          "title": "Asociación entre dos variables cuantitativas",
+          "bullets": [
+            "Covarianza: cov(x, y) = Σ(xᵢ − x̄)(yᵢ − ȳ) / (n − 1); su signo indica dirección, su magnitud depende de las unidades.",
+            "Correlación de Pearson r = cov(x, y) / (sₓ·s_y), entre −1 y 1; mide solo asociación lineal.",
+            "Correlación de Spearman: Pearson aplicada a rangos; capta relaciones monótonas y es robusta a atípicos.",
+            "Matriz de correlaciones (df.corr()) detecta redundancia entre variables antes de entrenar un modelo.",
+            "r² indica la proporción de varianza compartida: r = 0,7 implica solo 49 % de varianza común."
+          ],
+          "notes": "Construya un diagrama de dispersión entre horas de estudio y nota final de una sección ficticia de 40 estudiantes y calcule r paso a paso con una tabla de desviaciones, para que vean de dónde sale la fórmula. Recuerde que Karl Pearson formalizó este coeficiente a fines del siglo XIX a partir de ideas de Francis Galton. Muestre luego una relación en forma de U, como edad versus gasto en salud por tramos, donde r se acerca a cero pese a una relación fuerte: Pearson solo ve rectas. Pida a los estudiantes que interpreten r = 0,7 en términos de r², desmontando la intuición de que 0,7 significa 70 % de explicación."
+        },
+        {
+          "title": "Correlación no implica causalidad",
+          "bullets": [
+            "Variable de confusión: un tercer factor causa ambas; las ventas de helados y los ahogamientos dependen del verano.",
+            "Paradoja de Simpson: una tendencia en cada grupo se invierte al agregar los datos, como en las admisiones de Berkeley de 1973.",
+            "Cuarteto de Anscombe (1973): cuatro conjuntos con igual media, varianza y r ≈ 0,82, pero formas totalmente distintas.",
+            "Regla práctica: siempre graficar antes de resumir; los números solos pueden ocultar la estructura."
+          ],
+          "notes": "Presente el cuarteto de Anscombe, publicado por Francis Anscombe en The American Statistician en 1973, y pida a los estudiantes que adivinen los gráficos a partir de los estadísticos idénticos; luego revele las cuatro figuras. Explique la paradoja de Simpson con el caso de admisiones de posgrado de la Universidad de California en Berkeley: en el agregado parecía haber sesgo contra las mujeres, pero por departamento la diferencia desaparecía porque ellas postulaban más a programas muy competitivos. Pregunte: un hospital tiene mayor mortalidad que otro; ¿es peor? Puede que reciba los casos más graves. Señale que la inferencia causal rigurosa requiere experimentos aleatorizados, que veremos al estudiar pruebas A/B en la Unidad 4."
+        },
+        {
+          "title": "Flujo de análisis exploratorio reproducible en Python",
+          "bullets": [
+            "Paso 1: cargar y auditar con df.info(), df.shape y df.isna().mean() para cuantificar faltantes por columna.",
+            "Paso 2: corregir tipos de datos y escalas; convertir fechas y categorías.",
+            "Paso 3: resumir con df.describe(include='all') y medidas robustas por grupo con groupby.",
+            "Paso 4: detectar atípicos, revisar distribuciones y matriz de correlaciones.",
+            "Paso 5: documentar hallazgos, supuestos y decisiones de limpieza en el cuaderno Jupyter."
+          ],
+          "notes": "Realice una demostración en vivo en Google Colab con un archivo CSV de reclamos o de precios de alimentos. Escriba el código frente a los estudiantes, cometiendo deliberadamente un error de tipo de dato, por ejemplo montos leídos como texto por usar coma decimal, y muestre cómo se detecta con df.info() y se corrige con el parámetro decimal=','. Explique la diferencia entre faltantes completamente aleatorios y faltantes sistemáticos, y por qué imputar con la media puede reducir artificialmente la varianza. Este flujo de cinco pasos será la plantilla obligatoria para la tarea de la unidad. Cierre recordando que un análisis reproducible es aquel que otra persona puede ejecutar de principio a fin y obtener los mismos resultados."
+        }
+      ],
+      "reading": {
+        "title": "Describir antes de modelar: estadística descriptiva para proyectos de datos",
+        "minutes": 35,
+        "content": "## Por qué describir es el primer acto de rigor\n\nJohn Tukey, en *Exploratory Data Analysis* (1977), defendió que el analista debe actuar como un detective antes que como un juez: primero buscar pistas en los datos y solo después confirmar hipótesis. En un proyecto de inteligencia artificial esta etapa evita entrenar modelos sobre datos mal codificados, sesgados o contaminados por errores. La estadística descriptiva no es un trámite previo: es la auditoría que determina si los datos merecen confianza.\n\n## Población, muestra y diseño\n\nToda pregunta comienza por definir la **población** y la **unidad de análisis**. Cuando el INEI estima la pobreza monetaria con la Encuesta Nacional de Hogares (ENAHO), la unidad es el hogar y la población, todos los hogares del país. Como censar cada año es inviable, se usa un **muestreo probabilístico** estratificado y por conglomerados en varias etapas. Cada hogar encuestado tiene un **factor de expansión** que indica cuántos hogares representa. Ignorarlo produce estimaciones sesgadas, porque algunos estratos se sobremuestrean deliberadamente para obtener precisión regional.\n\nLas muestras no probabilísticas, como un formulario difundido en redes sociales, pueden ser útiles para explorar, pero no permiten calcular márgenes de error válidos: el tamaño de la muestra no corrige el sesgo de selección.\n\n## Medidas de resumen\n\nPara una variable cuantitativa con observaciones x₁, …, xₙ:\n\n$$\\bar{x} = \\frac{1}{n}\\sum_{i=1}^{n} x_i \\qquad s^2 = \\frac{1}{n-1}\\sum_{i=1}^{n}(x_i-\\bar{x})^2$$\n\nLa media aprovecha toda la información, pero un solo valor extremo puede desplazarla. La **mediana** es robusta: por eso se prefiere para ingresos, precios de vivienda o montos de compra, distribuciones típicamente asimétricas a la derecha. El divisor n − 1 en la varianza (corrección de Bessel) compensa que usamos x̄ en lugar de la media poblacional μ.\n\nEl **coeficiente de variación** (CV = s / x̄) permite comparar dispersiones de variables con unidades distintas, y el **rango intercuartílico** (RIC = Q3 − Q1) resume la dispersión del 50 % central sin dejarse afectar por los extremos.\n\n## Valores atípicos: investigar antes de borrar\n\nLa regla de Tukey marca como atípicos los valores fuera de [Q1 − 1,5·RIC; Q3 + 1,5·RIC]. La puntuación z clásica tiene un problema: el atípico infla la desviación estándar y puede enmascararse. Iglewicz y Hoaglin (1993) recomiendan la z robusta basada en la mediana y la desviación absoluta mediana (MAD). Ante un atípico, la pregunta profesional es *por qué existe*: puede ser un error de digitación, una unidad equivocada (soles frente a miles de soles) o un evento real y valioso, como una transacción fraudulenta.\n\n## Asociación y sus trampas\n\nEl coeficiente de Pearson mide asociación **lineal**:\n\n$$r = \\frac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum (x_i-\\bar{x})^2}\\sqrt{\\sum (y_i-\\bar{y})^2}}$$\n\nAnscombe (1973) mostró cuatro conjuntos con igual media, varianza y correlación (r ≈ 0,82) pero formas radicalmente distintas: una recta, una curva, una recta con un atípico y un solo punto influyente. La lección es simple: **siempre graficar**. Además, la correlación no prueba causalidad: una variable de confusión puede explicar ambas, y la paradoja de Simpson muestra que una tendencia por grupos puede invertirse al agregar.\n\n## Un flujo reproducible en Python\n\n```python\nimport pandas as pd\nimport numpy as np\n\ndf = pd.read_csv(\"entregas_lima.csv\", decimal=\",\", parse_dates=[\"fecha\"])\nprint(df.info())                       # tipos y faltantes\nprint(df.isna().mean().round(3))       # proporción de faltantes por columna\n\ndf[\"distrito\"] = df[\"distrito\"].astype(\"category\")\nresumen = df.groupby(\"distrito\")[\"minutos\"].agg([\"count\", \"median\", \"mean\", \"std\"])\n\nq1, q3 = df[\"minutos\"].quantile([0.25, 0.75])\nric = q3 - q1\natipicos = df[(df[\"minutos\"] < q1 - 1.5 * ric) | (df[\"minutos\"] > q3 + 1.5 * ric)]\n\nprint(df[\"minutos\"].skew(), df[[\"minutos\", \"km\", \"monto\"]].corr(method=\"spearman\"))\n```\n\nObserve tres decisiones: se declara el separador decimal usado en el Perú, se convierte el distrito a categoría y se usa Spearman porque los tiempos de entrega suelen ser asimétricos. Cada decisión debe justificarse por escrito en el informe.\n\n## Idea fuerza\n\nDescribir bien es decidir bien. Un analista que conoce la forma, la dispersión, los faltantes y los sesgos de sus datos sabe qué modelo es razonable y qué conclusiones no puede extraer."
+      },
+      "case": {
+        "title": "Caso: Rapidito Express y la promesa de 30 minutos",
+        "content": "**Rapidito Express** es una startup limeña de reparto de última milla fundada en 2021 que atiende a bodegas, farmacias y restaurantes en 12 distritos. Su propuesta de valor es la entrega en 30 minutos o menos. En 2025 cerró un acuerdo con una cadena de farmacias que exige un indicador de cumplimiento del 90 % de pedidos a tiempo, con penalidades del 5 % de la facturación mensual si no se cumple.\n\nLa gerenta de operaciones, Lucía Huamán, recibió del área comercial un reporte con una sola cifra: *tiempo promedio de entrega: 27,4 minutos*. Con ese dato, el área comercial propone ampliar el servicio a Carabayllo y Pachacámac. Lucía duda y le pide al equipo de datos, del que usted forma parte, una revisión de los 18 600 pedidos del último trimestre.\n\nLa primera exploración arroja lo siguiente:\n\n| Indicador | Valor |\n|---|---|\n| Media | 27,4 min |\n| Mediana | 22,0 min |\n| Desviación estándar | 19,8 min |\n| Q1 / Q3 | 15 / 33 min |\n| Máximo | 610 min |\n| Pedidos con tiempo faltante | 4,1 % |\n\nAl desagregar por distrito, Miraflores y San Isidro muestran medianas de 17 minutos, mientras que San Juan de Lurigancho y Ate superan los 31. Además, 212 registros tienen tiempos mayores de 180 minutos; un repartidor explica que, cuando la aplicación se cuelga, el pedido se cierra al día siguiente. Los pedidos sin tiempo registrado se concentran en horas punta de los viernes.\n\nEl área comercial insiste en que, con un promedio de 27,4 minutos, la empresa *cumple de sobra* la promesa. El equipo financiero advierte que perder el contrato con la cadena de farmacias significaría el 22 % de los ingresos.\n\nLucía necesita una recomendación en 48 horas: ¿la cifra de 27,4 minutos describe adecuadamente el servicio?, ¿cuál es el verdadero porcentaje de cumplimiento?, ¿qué datos deben limpiarse y cómo?, y ¿es prudente expandirse ahora?",
+        "questions": [
+          "¿Por qué la media de 27,4 minutos no es un indicador adecuado para evaluar la promesa de 30 minutos y qué medida o indicador propondría en su lugar?",
+          "¿Cómo trataría los 212 registros mayores de 180 minutos y el 4,1 % de tiempos faltantes, y qué riesgo implica cada alternativa?",
+          "Con Q3 = 33 minutos, ¿qué puede afirmar sobre el porcentaje real de pedidos entregados a tiempo frente a la meta contractual del 90 %?",
+          "¿Qué variables de confusión podrían explicar las diferencias entre distritos y qué análisis adicional pediría antes de expandirse a Carabayllo y Pachacámac?",
+          "Redacte la recomendación de dos párrafos que presentaría a Lucía, explicando la decisión y sus límites."
+        ]
+      },
+      "assignment": {
+        "title": "Informe exploratorio de un conjunto de datos público peruano",
+        "instructions": "**Objetivo:** aplicar el flujo de análisis exploratorio de la unidad a datos reales y comunicar hallazgos con rigor.\n\n**Qué hacer:**\n1. Elija un conjunto de datos abierto peruano (por ejemplo, microdatos del INEI, reclamos de INDECOPI o series del BCRP) con al menos 500 filas y 6 variables.\n2. Clasifique cada variable según su tipo y escala de medición, y describa la población, la unidad de análisis y el posible diseño muestral o sesgo de selección.\n3. Calcule medidas de tendencia central, dispersión, posición y forma para tres variables cuantitativas, justificando qué medida es la más representativa en cada caso.\n4. Detecte valores atípicos con la regla de Tukey y la z robusta; documente qué hizo con ellos y por qué.\n5. Analice la asociación entre al menos tres pares de variables con Pearson y Spearman, y discuta un posible factor de confusión.\n\n**Qué entregar:** un cuaderno Jupyter ejecutado de principio a fin y un informe de 2 a 3 páginas en PDF con tablas y no más de cuatro gráficos comentados.\n\n**Criterios:** corrección de los cálculos, pertinencia de las medidas elegidas, calidad del tratamiento de datos, interpretación crítica y reproducibilidad del código.",
+        "rubric": [
+          {
+            "name": "Caracterización de datos, variables y sesgos",
+            "points": 4
+          },
+          {
+            "name": "Medidas descriptivas correctas y justificadas",
+            "points": 5
+          },
+          {
+            "name": "Tratamiento documentado de atípicos y faltantes",
+            "points": 4
+          },
+          {
+            "name": "Análisis de asociación e interpretación crítica",
+            "points": 4
+          },
+          {
+            "name": "Reproducibilidad y claridad del informe",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: estadística descriptiva aplicada",
+        "questions": [
+          {
+            "prompt": "Los ingresos mensuales de 200 trabajadores tienen media de S/ 3850 y mediana de S/ 2100. ¿Qué medida describe mejor al trabajador típico y por qué?",
+            "options": [
+              "La media, porque utiliza toda la información disponible",
+              "La moda, porque los ingresos son una variable nominal",
+              "Ambas por igual, porque las dos son medidas de tendencia central",
+              "La mediana, porque la distribución presenta asimetría positiva marcada"
+            ],
+            "correct": 3,
+            "explanation": "Una media muy superior a la mediana indica una cola larga a la derecha; la mediana es robusta y representa mejor al trabajador típico."
+          },
+          {
+            "prompt": "Un analista codifica los 25 departamentos del Perú del 1 al 25 y reporta que el departamento promedio de los clientes es 12,4. ¿Cuál es el error?",
+            "options": [
+              "Calcular una media sobre una variable nominal, que no tiene orden ni distancias",
+              "Debió dividir entre n − 1 en lugar de n",
+              "No hay error si el tamaño de muestra es grande",
+              "Debió usar la mediana porque los datos son asimétricos"
+            ],
+            "correct": 0,
+            "explanation": "La escala nominal solo admite conteos y moda; promediar códigos arbitrarios carece de significado."
+          },
+          {
+            "prompt": "En un conjunto de tiempos de respuesta, Q1 = 120 ms y Q3 = 200 ms. Según la regla de Tukey, ¿a partir de qué valor un dato es atípico superior?",
+            "options": [
+              "440 ms",
+              "320 ms",
+              "200 ms",
+              "280 ms"
+            ],
+            "correct": 1,
+            "explanation": "RIC = 80 ms; el límite superior es Q3 + 1,5 × 80 = 200 + 120 = 320 ms."
+          },
+          {
+            "prompt": "Una variable A tiene media 50 y desviación estándar 10; la variable B, media 400 y desviación 40. ¿Cuál es relativamente más variable?",
+            "options": [
+              "Ambas son igual de variables por tener datos positivos",
+              "B, porque su desviación estándar es cuatro veces mayor",
+              "A, con coeficiente de variación de 20 % frente a 10 % de B",
+              "Ninguna, porque no se pueden comparar variables distintas"
+            ],
+            "correct": 2,
+            "explanation": "El CV relativiza la dispersión: 10/50 = 20 % y 40/400 = 10 %; A es relativamente más variable."
+          },
+          {
+            "prompt": "Se encuentra r = 0,02 entre la temperatura ambiente y el consumo eléctrico de un edificio, pero el diagrama de dispersión muestra una clara forma de U. ¿Qué concluye?",
+            "options": [
+              "La correlación prueba que la temperatura no causa consumo",
+              "Debe eliminarse la mitad de los datos para obtener una recta",
+              "Existe una relación no lineal fuerte que Pearson no detecta",
+              "No existe ninguna relación entre ambas variables"
+            ],
+            "correct": 2,
+            "explanation": "Pearson mide solo asociación lineal; una relación en U puede dar r cercano a cero pese a ser intensa."
+          },
+          {
+            "prompt": "Una encuesta en línea sobre uso de banca móvil obtiene 20 000 respuestas y concluye que el 92 % de peruanos usa banca digital. ¿Cuál es el principal problema?",
+            "options": [
+              "Sesgo de selección: excluye a quienes no tienen internet o no siguen la encuesta",
+              "Debió calcularse la mediana en lugar del porcentaje",
+              "El tamaño de muestra es insuficiente para una conclusión nacional",
+              "La variable debió tratarse como continua"
+            ],
+            "correct": 0,
+            "explanation": "Una muestra grande no corrige un marco sesgado; la población sin conectividad queda sistemáticamente fuera."
+          },
+          {
+            "prompt": "Al agregar datos de dos hospitales, el A muestra mayor mortalidad, pero al separar por gravedad del paciente el A tiene menor mortalidad en cada grupo. ¿Qué fenómeno ocurre?",
+            "options": [
+              "Sesgo de supervivencia en el registro de pacientes",
+              "Paradoja de Simpson causada por una variable de confusión",
+              "Asimetría negativa de la distribución de mortalidad",
+              "Error de cálculo de la desviación estándar"
+            ],
+            "correct": 1,
+            "explanation": "La tendencia se invierte al agregar porque el hospital A atiende proporcionalmente más casos graves."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Probabilidad, probabilidad condicional y teorema de Bayes",
+      "description": "Al finalizar la unidad, el estudiante modela situaciones de incertidumbre con los axiomas de la probabilidad, aplica conteo, probabilidad condicional, independencia, probabilidad total y teorema de Bayes, y valida sus resultados mediante simulación Monte Carlo en Python.",
+      "topics": [
+        "Experimentos aleatorios, espacio muestral y axiomas de Kolmogórov",
+        "Técnicas de conteo y reglas de la probabilidad",
+        "Probabilidad condicional e independencia",
+        "Probabilidad total y teorema de Bayes en diagnóstico y clasificación",
+        "Simulación Monte Carlo y ley de los grandes números"
+      ],
+      "slides": [
+        {
+          "title": "Experimento aleatorio, espacio muestral y eventos",
+          "bullets": [
+            "Experimento aleatorio: proceso cuyo resultado no puede predecirse con certeza, aunque se conocen los resultados posibles.",
+            "Espacio muestral Ω: conjunto de todos los resultados; un evento es cualquier subconjunto de Ω.",
+            "Operaciones con eventos: unión (A ∪ B), intersección (A ∩ B), complemento (Aᶜ); se representan con diagramas de Venn.",
+            "Ejemplo: un cliente abre la app; Ω = {compra, abandona carrito, solo navega}; evento 'no compra' = {abandona, navega}."
+          ],
+          "notes": "Empiece con una pregunta provocadora: ¿qué significa que un modelo diga que hay 80 % de probabilidad de que un cliente abandone la empresa? Para responderla con propiedad necesitamos el lenguaje formal de la probabilidad. Defina experimento aleatorio con ejemplos del entorno profesional: si una transacción será fraudulenta, cuántos pedidos llegarán en la próxima hora, si un correo es spam. Construya en conjunto el espacio muestral de lanzar dos dados y muestre que tiene 36 resultados equiprobables. Luego represente eventos con diagramas de Venn y practique unión, intersección y complemento. Recalque que la claridad en la definición del evento evita la mayoría de errores de cálculo posteriores."
+        },
+        {
+          "title": "Tres interpretaciones y los axiomas de Kolmogórov",
+          "bullets": [
+            "Clásica (Laplace, 1812): P(A) = casos favorables / casos posibles, válida si los resultados son equiprobables.",
+            "Frecuentista: P(A) es el límite de la frecuencia relativa en repeticiones a largo plazo.",
+            "Subjetiva o bayesiana: grado de creencia racional que se actualiza con evidencia.",
+            "Axiomas de Kolmogórov (1933): P(A) ≥ 0; P(Ω) = 1; si A y B son excluyentes, P(A ∪ B) = P(A) + P(B)."
+          ],
+          "notes": "Explique que las tres interpretaciones coexisten en la práctica profesional. La clásica sirve para juegos y loterías; la frecuentista sustenta las pruebas de hipótesis de la Unidad 4; la bayesiana es la base de filtros de spam y de muchos modelos de aprendizaje automático. Cuente que Andréi Kolmogórov publicó en 1933 sus Fundamentos de la teoría de la probabilidad, que unificó todas las interpretaciones bajo tres axiomas. Pregunte: ¿cuál es la probabilidad de que llueva mañana en Lima? No es un experimento repetible, así que la respuesta es necesariamente subjetiva o basada en modelos. Muestre que de los axiomas se deducen todas las reglas que siguen, incluida la del complemento."
+        },
+        {
+          "title": "Reglas básicas de la probabilidad",
+          "bullets": [
+            "Complemento: P(Aᶜ) = 1 − P(A); útil cuando 'al menos uno' es difícil de calcular directamente.",
+            "Adición general: P(A ∪ B) = P(A) + P(B) − P(A ∩ B), para no contar dos veces la intersección.",
+            "Eventos mutuamente excluyentes: P(A ∩ B) = 0; no confundir con eventos independientes.",
+            "Ejemplo: 40 % usa Yape, 35 % Plin y 15 % ambos; P(al menos uno) = 0,40 + 0,35 − 0,15 = 0,60."
+          ],
+          "notes": "Trabaje la regla de adición con el ejemplo de billeteras digitales, muy familiar para los estudiantes; aclare que las cifras son ilustrativas. Dibuje el diagrama de Venn y muestre visualmente por qué se resta la intersección. Luego plantee el problema del cumpleaños: en un aula virtual de 23 estudiantes, ¿cuál es la probabilidad de que al menos dos cumplan años el mismo día? Pida estimaciones intuitivas, que suelen ser bajas, y calcule con el complemento: la probabilidad supera el 50 %. Este resultado contraintuitivo prepara la discusión sobre colisiones en funciones hash, relevante para los cursos de estructuras de datos. Finalmente, insista en la diferencia conceptual entre excluyentes e independientes."
+        },
+        {
+          "title": "Técnicas de conteo",
+          "bullets": [
+            "Principio multiplicativo: si una tarea tiene m formas y otra n, ambas juntas tienen m·n formas.",
+            "Permutaciones (importa el orden): nPr = n! / (n − r)!; por ejemplo, contraseñas o rankings.",
+            "Combinaciones (no importa el orden): nCr = n! / [r!(n − r)!]; por ejemplo, comités o subconjuntos de variables.",
+            "Aplicación en IA: con 20 variables existen 2²⁰ ≈ 1 048 576 subconjuntos posibles para selección de características.",
+            "Python: math.perm(n, r), math.comb(n, r) e itertools.combinations para enumerar."
+          ],
+          "notes": "Explique por qué el conteo importa en ciencia de datos: dimensiona espacios de búsqueda. Si un equipo quiere probar todas las combinaciones de 3 hiperparámetros con 5 valores cada uno, son 5³ = 125 entrenamientos; si son 10 hiperparámetros, casi diez millones. Por eso existen la búsqueda aleatoria y la optimización bayesiana. Calcule con la clase cuántas contraseñas de 8 caracteres con 62 símbolos posibles existen y cuánto tardaría un ataque de fuerza bruta. Luego resuelva: de 12 postulantes, ¿de cuántas formas se elige un equipo de 4? Compare con elegir coordinador, analista, desarrollador y tester. Pida que verifiquen con math.comb y math.perm en Colab."
+        },
+        {
+          "title": "Probabilidad condicional",
+          "bullets": [
+            "Definición: P(A | B) = P(A ∩ B) / P(B), con P(B) > 0; la condición reduce el espacio muestral a B.",
+            "P(A | B) y P(B | A) son distintas: confundirlas es la falacia del fiscal.",
+            "En tablas de contingencia: dividir la celda entre el total de la fila o columna condicionante.",
+            "Ejemplo: de 1000 clientes, 200 usan crédito y 50 de ellos están en mora; P(mora | crédito) = 50/200 = 0,25."
+          ],
+          "notes": "La probabilidad condicional es el concepto más importante de la unidad porque todo clasificador estima una probabilidad condicional: la probabilidad de la clase dada las características. Retome la tabla cruzada de la Unidad 1 y muestre que normalizar por filas produce probabilidades condicionales. Ilustre la falacia del fiscal con el caso de Sally Clark en el Reino Unido, condenada en 1999 con un argumento probabilístico erróneo y absuelta en 2003 tras críticas de la Royal Statistical Society. Pregunte: la probabilidad de que un mensaje contenga la palabra 'gratis' dado que es spam, ¿es igual a la probabilidad de que sea spam dado que contiene 'gratis'? Calcule ambas con una tabla de ejemplo."
+        },
+        {
+          "title": "Independencia de eventos",
+          "bullets": [
+            "A y B son independientes si P(A ∩ B) = P(A)·P(B), equivalente a P(A | B) = P(A).",
+            "Independencia es una propiedad del fenómeno; se verifica con datos, no se supone por comodidad.",
+            "Independencia condicional: A y B pueden ser independientes dado C sin serlo marginalmente.",
+            "Error frecuente: asumir independencia en fallas de servidores que comparten energía o red."
+          ],
+          "notes": "Use un ejemplo de confiabilidad: un sistema tiene dos servidores redundantes con probabilidad de falla diaria de 0,01 cada uno. Si fueran independientes, la probabilidad de que ambos fallen sería 0,0001. Pero si comparten el mismo centro de datos, un corte eléctrico los hace caer juntos y la independencia es falsa; el riesgo real es mucho mayor. Este error contribuyó a varias crisis financieras, donde se asumió independencia entre impagos hipotecarios. Pida a los estudiantes que verifiquen con una tabla de contingencia si el método de pago y la devolución de productos son independientes, comparando P(A ∩ B) con el producto. Anticipe que la prueba chi-cuadrado de la Unidad 4 formaliza esta verificación."
+        },
+        {
+          "title": "Regla de la multiplicación y diagramas de árbol",
+          "bullets": [
+            "Regla de la multiplicación: P(A ∩ B) = P(A)·P(B | A); se extiende a cadenas de eventos.",
+            "Diagrama de árbol: cada rama lleva una probabilidad condicional; se multiplica a lo largo de la rama.",
+            "Las ramas que salen de un mismo nodo deben sumar 1: control rápido de errores.",
+            "Ejemplo de embudo: 30 % visita producto, 20 % de ellos agrega al carrito, 50 % paga; conversión = 3 %."
+          ],
+          "notes": "Construya en la pizarra el árbol de un embudo de comercio electrónico de una tienda peruana. Cada etapa es una probabilidad condicional sobre la etapa anterior, y la conversión final es el producto. Pregunte: si el equipo de marketing logra subir la tasa de agregar al carrito de 20 % a 25 %, ¿cuánto sube la conversión total? Muestre que pasa de 3 % a 3,75 %, un aumento relativo del 25 %. Luego introduzca extracciones sin reemplazo: de un lote de 20 equipos con 3 defectuosos, se prueban 2; ¿probabilidad de que ambos sean defectuosos? 3/20 × 2/19. Este razonamiento prepara la distribución hipergeométrica y el control de calidad por muestreo."
+        },
+        {
+          "title": "Teorema de la probabilidad total",
+          "bullets": [
+            "Si B₁, …, Bₖ forman una partición de Ω: P(A) = Σ P(A | Bᵢ)·P(Bᵢ).",
+            "Permite calcular una probabilidad global combinando segmentos con comportamientos distintos.",
+            "Ejemplo: tres canales de venta con 50 %, 30 % y 20 % de pedidos y tasas de devolución de 2 %, 5 % y 8 %.",
+            "P(devolución) = 0,5·0,02 + 0,3·0,05 + 0,2·0,08 = 0,041."
+          ],
+          "notes": "Explique que la probabilidad total es una media ponderada de probabilidades condicionales, conectando con la media ponderada de la Unidad 1. Resuelva el ejemplo de canales de venta paso a paso con un árbol: tienda física, web y marketplace. Pregunte a la clase qué canal aporta más devoluciones en términos absolutos: la web aporta 0,015 y el marketplace 0,016, aunque el marketplace tenga solo 20 % de pedidos. Esta pregunta abre la puerta al teorema de Bayes en la siguiente diapositiva. Enfatice que una partición requiere eventos mutuamente excluyentes y exhaustivos; pida un contraejemplo donde las categorías se superponen, como clientes que compran por varios canales."
+        },
+        {
+          "title": "Teorema de Bayes",
+          "bullets": [
+            "P(Bᵢ | A) = P(A | Bᵢ)·P(Bᵢ) / Σ P(A | Bⱼ)·P(Bⱼ); invierte el sentido de la condición.",
+            "Probabilidad a priori P(Bᵢ), verosimilitud P(A | Bᵢ) y probabilidad a posteriori P(Bᵢ | A).",
+            "Publicado póstumamente (1763) por Richard Price a partir del trabajo de Thomas Bayes; generalizado por Laplace.",
+            "Con el ejemplo anterior: P(marketplace | devolución) = 0,016 / 0,041 ≈ 0,39."
+          ],
+          "notes": "Presente a Thomas Bayes, ministro presbiteriano inglés, cuyo ensayo fue publicado por Richard Price en 1763, dos años después de su muerte; Laplace le dio la forma general que usamos hoy. Explique la lógica en lenguaje cotidiano: empezamos con una creencia a priori, observamos evidencia y actualizamos la creencia. Resuelva la pregunta pendiente: si un producto fue devuelto, ¿cuál es la probabilidad de que se haya vendido por marketplace? Calcule también para web y tienda y verifique que las tres posteriores suman 1. Pida a los estudiantes identificar a priori, verosimilitud y posterior en un problema de detección de spam. Este teorema es la base del clasificador Naive Bayes y de la inferencia bayesiana moderna."
+        },
+        {
+          "title": "Bayes en pruebas diagnósticas y la falacia de la tasa base",
+          "bullets": [
+            "Sensibilidad = P(positivo | enfermo); especificidad = P(negativo | sano).",
+            "Valor predictivo positivo (VPP) = P(enfermo | positivo); depende fuertemente de la prevalencia.",
+            "Prueba con 99 % de sensibilidad y 95 % de especificidad, prevalencia 1 %: VPP ≈ 16,7 %.",
+            "Falacia de la tasa base: ignorar la prevalencia conduce a sobreestimar el valor de un positivo.",
+            "Mismo fenómeno en detección de fraude: con eventos raros, la mayoría de alertas son falsas."
+          ],
+          "notes": "Este es el ejemplo más poderoso de la unidad. Pida primero una estimación intuitiva: si la prueba es 99 % sensible y 95 % específica y sale positiva, ¿qué tan probable es estar enfermo? Muchos responderán 95 o 99 %. Luego calcule con frecuencias naturales, como recomienda Gerd Gigerenzer: de 10 000 personas, 100 están enfermas y 99 dan positivo; de 9900 sanas, 495 dan falso positivo. Entonces solo 99 de 594 positivos están enfermos, cerca de 16,7 %. Traslade el razonamiento a un modelo antifraude de un banco peruano: si el fraude es 0,1 % de las transacciones, incluso un modelo muy bueno generará muchas alertas falsas. Esto anticipa la discusión de precisión y exhaustividad en Aprendizaje Automático I."
+        },
+        {
+          "title": "La matriz de confusión como tabla de probabilidades",
+          "bullets": [
+            "Celdas: verdaderos positivos (VP), falsos positivos (FP), falsos negativos (FN) y verdaderos negativos (VN).",
+            "Precisión = VP / (VP + FP) estima P(real positivo | predicho positivo): es el VPP de Bayes.",
+            "Exhaustividad (recall) = VP / (VP + FN) estima P(predicho positivo | real positivo): es la sensibilidad.",
+            "La exactitud (accuracy) engaña con clases desbalanceadas: predecir siempre 'no fraude' logra 99,9 %."
+          ],
+          "notes": "Muestre que las métricas de clasificación que verán en el siguiente ciclo no son nuevas: son probabilidades condicionales estimadas con frecuencias. Construya una matriz de confusión para 10 000 transacciones con 10 fraudes y pida a los estudiantes calcular exactitud, precisión y exhaustividad de un modelo que detecta 8 fraudes y genera 200 falsas alarmas. La exactitud será alta, cercana a 98 %, pero la precisión apenas llegará a 3,8 %. Pregunte: ¿qué costo es mayor para el banco, un fraude no detectado o una tarjeta bloqueada por error? La respuesta depende del negocio y define qué métrica priorizar. Así se vinculan probabilidad, costos y decisiones."
+        },
+        {
+          "title": "Clasificador Naive Bayes: Bayes en acción",
+          "bullets": [
+            "Estima P(clase | x₁, …, xₙ) ∝ P(clase)·Π P(xᵢ | clase), suponiendo independencia condicional de las características.",
+            "Supuesto 'ingenuo' rara vez cierto, pero el clasificador funciona bien en texto y filtros de spam.",
+            "Suavizado de Laplace: sumar 1 a los conteos evita probabilidades cero para palabras no vistas.",
+            "Implementación: sklearn.naive_bayes.MultinomialNB para conteos de palabras."
+          ],
+          "notes": "Presente Naive Bayes como la aplicación directa del teorema estudiado. Trabaje un ejemplo pequeño a mano: un corpus de 100 mensajes, 30 spam y 70 legítimos, con frecuencias de las palabras 'premio' y 'reunión' en cada clase. Calcule las posteriores no normalizadas, compárelas y clasifique un mensaje nuevo. Muestre el problema de la probabilidad cero cuando una palabra nunca apareció en una clase y resuélvalo con el suavizado de Laplace. Discuta por qué el supuesto de independencia condicional es falso en lenguaje natural, ya que las palabras se correlacionan, pero aun así el clasificador ordena bien las clases. Este tema se profundizará en Procesamiento de Lenguaje Natural del cuarto ciclo."
+        },
+        {
+          "title": "Simulación Monte Carlo en Python",
+          "bullets": [
+            "Idea: aproximar una probabilidad repitiendo un experimento aleatorio muchas veces con un generador de números aleatorios.",
+            "Desarrollada por Ulam y von Neumann en Los Álamos (década de 1940) para problemas de difusión de neutrones.",
+            "Pasos: definir el modelo, simular N repeticiones, contar éxitos, estimar P ≈ éxitos / N.",
+            "Fijar la semilla (np.random.default_rng(42)) garantiza reproducibilidad.",
+            "El error de la estimación disminuye proporcionalmente a 1/√N."
+          ],
+          "notes": "Programe en vivo la simulación del problema del cumpleaños con 100 000 repeticiones y compare con el resultado analítico. Luego simule el problema de Monty Hall, que suele generar debate intenso: cambiar de puerta gana con probabilidad 2/3. Cuente que Stanislaw Ulam concibió el método mientras jugaba solitario convaleciente y que John von Neumann lo implementó en las primeras computadoras. Muestre el código con numpy vectorizado, evitando bucles lentos. Explique que la simulación es una herramienta de verificación: si el cálculo analítico y la simulación discrepan, hay un error en alguno de los dos. Pida a los estudiantes que dupliquen N y observen cuánto cambia la estimación."
+        },
+        {
+          "title": "Ley de los grandes números",
+          "bullets": [
+            "Ley débil (Bernoulli, 1713): la frecuencia relativa converge a la probabilidad cuando n crece.",
+            "No implica compensación: tras cinco caras seguidas, la siguiente sigue teniendo probabilidad 0,5.",
+            "Falacia del jugador: creer que los resultados pasados 'equilibran' los futuros en eventos independientes.",
+            "Fundamenta los seguros, las encuestas y la evaluación de modelos con conjuntos de prueba grandes."
+          ],
+          "notes": "Grafique en Colab la frecuencia acumulada de caras en 10 000 lanzamientos simulados: oscila mucho al principio y se estabiliza cerca de 0,5. Atribuya la ley a Jacob Bernoulli en su obra Ars Conjectandi, publicada en 1713. Aclare el malentendido más común: la ley no dice que las desviaciones se corrigen activamente, sino que se diluyen al aumentar n. Relacione con la industria de seguros peruana: una aseguradora no sabe qué asegurado tendrá un siniestro, pero puede predecir con precisión la proporción total, y con ello fija primas. Pregunte: ¿por qué evaluar un modelo con 50 casos de prueba es poco confiable? Anticipe que la Unidad 3 cuantificará esa incertidumbre con el error estándar."
+        }
+      ],
+      "reading": {
+        "title": "Razonar con incertidumbre: probabilidad condicional y teorema de Bayes",
+        "minutes": 35,
+        "content": "## La probabilidad como lenguaje de la IA\n\nCuando un modelo de riesgo crediticio asigna a un solicitante una probabilidad de impago de 0,12, está estimando una **probabilidad condicional**: la probabilidad de impago *dadas* sus características. Comprender la probabilidad no es opcional para quien construye o evalúa sistemas inteligentes; es su gramática.\n\n## Axiomas y reglas\n\nKolmogórov (1933) fundamentó la teoría en tres axiomas: toda probabilidad es no negativa, la probabilidad del espacio muestral es 1 y la probabilidad de la unión de eventos excluyentes es la suma de sus probabilidades. De ellos se derivan:\n\n- Complemento: P(Aᶜ) = 1 − P(A).\n- Adición: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).\n- Condicional: P(A | B) = P(A ∩ B) / P(B).\n- Multiplicación: P(A ∩ B) = P(B)·P(A | B).\n\nDos eventos son **independientes** cuando P(A ∩ B) = P(A)·P(B). La independencia es una afirmación empírica sobre el mundo: dos servidores en el mismo centro de datos no fallan de forma independiente, y dos créditos hipotecarios en la misma ciudad tampoco.\n\n## Probabilidad total y Bayes\n\nSi los eventos B₁, …, Bₖ forman una partición, la probabilidad total afirma que P(A) = Σ P(A | Bᵢ)P(Bᵢ). El **teorema de Bayes** invierte la condición:\n\n$$P(B_i \\mid A) = \\frac{P(A \\mid B_i)\\,P(B_i)}{\\sum_j P(A \\mid B_j)\\,P(B_j)}$$\n\nLa probabilidad **a priori** P(Bᵢ) resume lo que sabemos antes de observar la evidencia; la **verosimilitud** P(A | Bᵢ) mide qué tan compatible es la evidencia con cada hipótesis; la probabilidad **a posteriori** es la creencia actualizada.\n\n## La trampa de la tasa base\n\nConsidere un modelo antifraude con sensibilidad de 95 % y especificidad de 99 %, aplicado a transacciones donde el fraude es 0,2 %. ¿Qué proporción de alertas son fraudes reales? Con frecuencias naturales, como recomienda Gigerenzer (2002), imagine 100 000 transacciones:\n\n| | Fraude (200) | Legítima (99 800) |\n|---|---|---|\n| Alerta | 190 | 998 |\n| Sin alerta | 10 | 98 802 |\n\nEl valor predictivo positivo es 190 / (190 + 998) ≈ 16 %. Más de cinco de cada seis alertas son falsas, pese a que el modelo parece excelente. Kahneman y Tversky documentaron en la década de 1970 que las personas ignoran sistemáticamente la tasa base; un profesional de datos debe hacerla explícita siempre. Para un banco, la consecuencia práctica es dimensionar el equipo que revisa alertas y comunicar al cliente que un bloqueo no implica acusación.\n\n## Del teorema al clasificador\n\nEl clasificador Naive Bayes aplica el teorema suponiendo que las características son condicionalmente independientes dada la clase:\n\n$$P(c \\mid x_1,\\dots,x_n) \\propto P(c)\\prod_{i=1}^{n} P(x_i \\mid c)$$\n\nEl supuesto rara vez se cumple, pero el método ordena bien las clases y es muy eficiente en clasificación de textos, como reclamos o mensajes de clientes.\n\n## Verificar con simulación\n\nLa simulación Monte Carlo permite comprobar resultados analíticos y abordar problemas sin solución cerrada. El siguiente código verifica el valor predictivo positivo del ejemplo:\n\n```python\nimport numpy as np\n\nrng = np.random.default_rng(2026)\nn = 1_000_000\nfraude = rng.random(n) < 0.002                 # tasa base 0,2 %\nalerta = np.where(fraude,\n                  rng.random(n) < 0.95,         # sensibilidad\n                  rng.random(n) < 0.01)         # 1 - especificidad\nvpp = fraude[alerta].mean()\nprint(f\"VPP simulado: {vpp:.3f}\")              # cercano a 0,160\n```\n\nLa ley de los grandes números (Bernoulli, 1713) garantiza que la frecuencia simulada se aproxima a la probabilidad verdadera al aumentar n, con un error que decrece como 1/√n.\n\n## Idea fuerza\n\nAntes de interpretar cualquier resultado positivo de un modelo o prueba, pregunte siempre: ¿cuál es la tasa base? Sin ella, ninguna probabilidad condicional se interpreta correctamente."
+      },
+      "case": {
+        "title": "Caso: alertas de fraude en Banco Andino Digital",
+        "content": "**Banco Andino Digital** es una entidad financiera peruana con 1,8 millones de clientes que operan principalmente desde su aplicativo móvil. En 2025 procesó en promedio 2,4 millones de transacciones diarias con tarjeta de débito y transferencias inmediatas. El área de Prevención de Fraude cuenta con 14 analistas que pueden revisar manualmente, como máximo, 6000 alertas por día.\n\nEl banco contrató a un proveedor que ofrece un nuevo modelo de detección. En su presentación comercial, el proveedor afirma: *nuestro modelo detecta el 97 % de los fraudes y tiene una exactitud de 99,2 %*. El gerente de Canales Digitales, entusiasmado, propone implementarlo de inmediato y bloquear automáticamente toda transacción marcada como sospechosa, sin revisión humana.\n\nEl histórico interno muestra que la tasa de fraude confirmada es de 0,05 % de las transacciones. El equipo de datos, del que usted forma parte, obtiene en una prueba piloto los siguientes datos sobre 500 000 transacciones etiquetadas: el modelo marcó 4200 transacciones como sospechosas, de las cuales 243 eran fraudes; en total hubo 250 fraudes en la muestra.\n\nAdemás, el área de Experiencia del Cliente reporta que cada bloqueo injustificado genera, en promedio, una llamada al centro de contacto con un costo de S/ 9 y que el 3 % de los clientes afectados presenta un reclamo formal, lo que expone al banco ante INDECOPI y la SBS. Por otro lado, el monto promedio de un fraude no detectado es de S/ 1350, que el banco suele reembolsar.\n\nLa gerenta de Riesgos, Carmen Rojas, le pide un análisis antes del comité del lunes: ¿son correctas las cifras del proveedor?, ¿qué significa realmente que una transacción sea marcada?, ¿cuántas alertas diarias generaría el modelo a escala real y puede el equipo revisarlas?, y ¿conviene el bloqueo automático o un esquema mixto? Debe sustentar su respuesta con probabilidades condicionales, un análisis de costos esperados y una simulación que el comité pueda reproducir.",
+        "questions": [
+          "Con los datos del piloto, calcule la exhaustividad, la precisión y la exactitud del modelo. ¿Son coherentes con lo que afirma el proveedor y qué omite su presentación?",
+          "Si una transacción es marcada como sospechosa, ¿cuál es la probabilidad de que sea realmente un fraude? Explíquelo con frecuencias naturales para el comité.",
+          "Estime cuántas alertas diarias generaría el modelo con 2,4 millones de transacciones y compárelo con la capacidad del equipo de analistas.",
+          "Compare el costo esperado diario del bloqueo automático frente a un esquema mixto de revisión humana priorizada. ¿Qué supuestos condicionan su resultado?",
+          "¿Qué recomendación presentaría a Carmen Rojas y qué riesgos regulatorios y de experiencia del cliente debe vigilar el banco?"
+        ]
+      },
+      "assignment": {
+        "title": "Análisis bayesiano de un sistema de alertas",
+        "instructions": "**Objetivo:** aplicar probabilidad condicional, probabilidad total y teorema de Bayes a un problema de decisión real, verificando resultados con simulación.\n\n**Qué hacer:**\n1. Elija un sistema de alertas o diagnóstico: detección de fraude, prueba médica de tamizaje, filtro de spam, alerta de deserción estudiantil o control de calidad en una línea de producción.\n2. Defina con claridad los eventos, la tasa base, la sensibilidad y la especificidad, citando de dónde obtiene o cómo supone cada valor.\n3. Construya el diagrama de árbol y la tabla de frecuencias naturales para 100 000 casos; calcule el valor predictivo positivo y negativo con el teorema de Bayes.\n4. Realice un análisis de sensibilidad: cómo cambia el valor predictivo positivo si la tasa base se multiplica por 10 o se divide entre 10.\n5. Verifique sus cálculos con una simulación Monte Carlo en Python con semilla fija y al menos 500 000 repeticiones.\n6. Redacte una recomendación de decisión que considere los costos de falsos positivos y falsos negativos.\n\n**Qué entregar:** cuaderno Jupyter ejecutado y un informe de máximo tres páginas.\n\n**Criterios:** planteamiento probabilístico, exactitud de cálculos, simulación, análisis de sensibilidad y calidad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Planteamiento de eventos, supuestos y tasa base",
+            "points": 4
+          },
+          {
+            "name": "Cálculo correcto con árbol, tabla y teorema de Bayes",
+            "points": 6
+          },
+          {
+            "name": "Simulación Monte Carlo reproducible y coherente",
+            "points": 4
+          },
+          {
+            "name": "Análisis de sensibilidad y recomendación de decisión",
+            "points": 6
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: probabilidad y teorema de Bayes",
+        "questions": [
+          {
+            "prompt": "En una tienda, el 40 % de clientes paga con Yape, el 35 % con Plin y el 15 % usa ambos. ¿Qué proporción usa al menos una de las dos billeteras?",
+            "options": [
+              "0,75",
+              "0,60",
+              "0,14",
+              "0,90"
+            ],
+            "correct": 1,
+            "explanation": "Por la regla de adición: 0,40 + 0,35 − 0,15 = 0,60; se resta la intersección para no contarla dos veces."
+          },
+          {
+            "prompt": "Si P(A) = 0,3 y P(B) = 0,5 y los eventos son independientes, ¿cuánto vale P(A ∩ B)?",
+            "options": [
+              "0",
+              "0,15",
+              "0,80",
+              "0,20"
+            ],
+            "correct": 1,
+            "explanation": "Para eventos independientes la probabilidad conjunta es el producto: 0,3 × 0,5 = 0,15."
+          },
+          {
+            "prompt": "Una prueba tiene 99 % de sensibilidad, 95 % de especificidad y la prevalencia es 1 %. Si una persona da positivo, ¿cuál es aproximadamente la probabilidad de que esté enferma?",
+            "options": [
+              "17 %",
+              "95 %",
+              "50 %",
+              "99 %"
+            ],
+            "correct": 0,
+            "explanation": "De 10 000 personas, 99 verdaderos positivos y 495 falsos positivos: 99 / 594 ≈ 16,7 %. La baja prevalencia domina el resultado."
+          },
+          {
+            "prompt": "Un modelo antifraude tiene 99,9 % de exactitud en un conjunto donde el fraude es 0,1 %. ¿Qué puede concluirse?",
+            "options": [
+              "Que es superior a cualquier otro modelo posible",
+              "Que detecta el 99,9 % de los fraudes",
+              "Nada sobre su utilidad: predecir siempre 'no fraude' logra la misma exactitud",
+              "Que el 99,9 % de sus alertas son fraudes reales"
+            ],
+            "correct": 2,
+            "explanation": "Con clases desbalanceadas la exactitud es engañosa; deben revisarse precisión y exhaustividad sobre la clase minoritaria."
+          },
+          {
+            "prompt": "De 12 analistas se debe formar un equipo de 3 sin roles diferenciados. ¿Cuántos equipos distintos pueden formarse?",
+            "options": [
+              "36",
+              "220",
+              "1320",
+              "1728"
+            ],
+            "correct": 1,
+            "explanation": "Como el orden no importa, se usan combinaciones: 12! / (3!·9!) = 220. Las permutaciones darían 1320."
+          },
+          {
+            "prompt": "Tres canales generan el 50 %, 30 % y 20 % de pedidos, con tasas de devolución de 2 %, 5 % y 8 %. Si un pedido fue devuelto, ¿probabilidad de que provenga del tercer canal?",
+            "options": [
+              "0,08",
+              "Aproximadamente 0,39",
+              "Aproximadamente 0,24",
+              "0,20"
+            ],
+            "correct": 1,
+            "explanation": "P(devolución) = 0,041 por probabilidad total; por Bayes, 0,016 / 0,041 ≈ 0,39."
+          },
+          {
+            "prompt": "Tras observar seis caras consecutivas con una moneda equilibrada, un estudiante apuesta a sello porque 'ya le toca'. ¿Qué error comete?",
+            "options": [
+              "Confunde eventos excluyentes con complementarios",
+              "Aplica mal el teorema de Bayes al ignorar la verosimilitud",
+              "La falacia del jugador: los lanzamientos son independientes y P(sello) sigue siendo 0,5",
+              "Ninguno, la ley de los grandes números obliga a compensar"
+            ],
+            "correct": 2,
+            "explanation": "La ley de los grandes números no implica compensación; cada lanzamiento independiente mantiene su probabilidad."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Variables aleatorias, distribuciones de probabilidad y teorema central del límite",
+      "description": "Al finalizar la unidad, el estudiante modela fenómenos reales con variables aleatorias discretas y continuas, calcula esperanzas, varianzas y probabilidades con las distribuciones binomial, Poisson, exponencial y normal, evalúa supuestos de normalidad y explica el teorema central del límite mediante simulación.",
+      "topics": [
+        "Variables aleatorias, funciones de probabilidad y distribución acumulada",
+        "Esperanza, varianza y decisiones con valor esperado",
+        "Distribuciones discretas: Bernoulli, binomial y Poisson",
+        "Distribuciones continuas: uniforme, exponencial y normal",
+        "Distribuciones muestrales, error estándar y teorema central del límite"
+      ],
+      "slides": [
+        {
+          "title": "Variable aleatoria: de eventos a números",
+          "bullets": [
+            "Variable aleatoria X: función que asigna un número real a cada resultado del espacio muestral.",
+            "Discreta: toma valores contables, como número de reclamos diarios o clics en un anuncio.",
+            "Continua: toma valores en un intervalo, como tiempo de atención, peso o temperatura.",
+            "Notación: X mayúscula para la variable, x minúscula para un valor observado.",
+            "Convertir eventos en números permite calcular promedios, varianzas y aplicar modelos matemáticos."
+          ],
+          "notes": "Conecte con la Unidad 2: allí calculábamos probabilidades de eventos; ahora asignamos números a los resultados para operar con ellos. Ejemplo: al revisar tres transacciones, el espacio muestral tiene ocho resultados posibles de fraude o no fraude, pero lo que nos interesa es X, el número de fraudes, que toma valores 0, 1, 2 o 3. Pida a los estudiantes que propongan cinco variables aleatorias de su entorno laboral y las clasifiquen como discretas o continuas. Advierta sobre casos ambiguos: el monto en soles es técnicamente discreto, porque se registra en céntimos, pero se modela como continuo por conveniencia. Esta decisión de modelado es habitual en la práctica profesional y debe justificarse."
+        },
+        {
+          "title": "Función de probabilidad y función de distribución acumulada",
+          "bullets": [
+            "Función de probabilidad (discreta): p(x) = P(X = x), con p(x) ≥ 0 y Σ p(x) = 1.",
+            "Función de densidad (continua): f(x) ≥ 0, área total 1; P(a ≤ X ≤ b) = ∫ f(x) dx entre a y b.",
+            "En variables continuas P(X = x) = 0: solo los intervalos tienen probabilidad positiva.",
+            "Función de distribución acumulada F(x) = P(X ≤ x): creciente, de 0 a 1; sirve para ambos tipos.",
+            "scipy.stats: .pmf() para discretas, .pdf() para continuas, .cdf() para acumuladas y .ppf() para cuantiles."
+          ],
+          "notes": "Use el cálculo integral visto en Matemática para Ciencia de Datos para explicar que la probabilidad en variables continuas es un área bajo la curva. Muchos estudiantes creen que f(x) es una probabilidad; aclare que una densidad puede ser mayor que 1, por ejemplo la uniforme en el intervalo de 0 a 0,5 tiene densidad 2. Construya la tabla de probabilidad del número de fraudes en tres transacciones y su función acumulada escalonada. Luego muestre la acumulada suave de una variable continua. Introduzca la función .ppf, inversa de la acumulada, que será indispensable para obtener valores críticos en la Unidad 4. Practique en Colab con scipy.stats para familiarizarse con la sintaxis."
+        },
+        {
+          "title": "Esperanza y varianza de una variable aleatoria",
+          "bullets": [
+            "Esperanza: E[X] = Σ x·p(x) (discreta) o ∫ x·f(x) dx (continua); promedio a largo plazo.",
+            "Varianza: Var(X) = E[(X − μ)²] = E[X²] − μ²; desviación estándar σ = √Var(X).",
+            "Linealidad: E[aX + b] = aE[X] + b; Var(aX + b) = a²Var(X).",
+            "Suma de variables independientes: E[X + Y] = E[X] + E[Y] y Var(X + Y) = Var(X) + Var(Y).",
+            "La esperanza no es el valor más probable: puede ser un valor imposible, como 2,5 hijos."
+          ],
+          "notes": "Explique la esperanza como un centro de gravedad de la distribución. Ejemplo: un vendedor recibe S/ 0 con probabilidad 0,6, S/ 200 con 0,3 y S/ 1000 con 0,1 de comisión por visita; E[X] = 160 soles, aunque nunca recibe exactamente 160. Calcule la varianza con la fórmula abreviada. Luego aplique la linealidad: si la empresa paga un bono fijo de S/ 50 más el doble de la comisión, la nueva esperanza es 370 y la varianza se multiplica por cuatro. Advierta que la varianza de una suma es la suma de varianzas solo si hay independencia; con correlación aparece un término de covarianza, idea clave para diversificar portafolios y para combinar modelos en ensambles."
+        },
+        {
+          "title": "Decidir con valor esperado",
+          "bullets": [
+            "Valor monetario esperado (VME): suma de pagos ponderados por sus probabilidades; criterio clásico de decisión.",
+            "Ejemplo: campaña con 30 % de éxito y ganancia de S/ 80 000, 70 % de fracaso y pérdida de S/ 20 000: VME = S/ 10 000.",
+            "La varianza mide el riesgo: dos opciones con igual VME pueden tener riesgos muy distintos.",
+            "La aversión al riesgo explica por qué empresas y personas compran seguros con VME negativo.",
+            "En IA: elegir el umbral de clasificación que maximiza la ganancia esperada según costos de errores."
+          ],
+          "notes": "Esta diapositiva conecta probabilidad con toma de decisiones, competencia central del perfil profesional. Desarrolle el ejemplo de la campaña y pregunte: ¿la lanzarían? Luego presente una segunda opción con VME de S/ 10 000 pero sin riesgo y discuta cuál prefieren; la mayoría escogerá la segura, lo que revela aversión al riesgo. Mencione que Daniel Bernoulli propuso en 1738 la idea de utilidad esperada para explicar este comportamiento. Finalmente, conecte con el caso del banco de la Unidad 2: el umbral óptimo de un modelo de fraude se elige minimizando el costo esperado de falsos positivos y falsos negativos, no maximizando la exactitud. Pida un cálculo rápido de costo esperado con dos umbrales."
+        },
+        {
+          "title": "Distribuciones Bernoulli y binomial",
+          "bullets": [
+            "Bernoulli: un ensayo con éxito (1) de probabilidad p; E[X] = p, Var(X) = p(1 − p).",
+            "Binomial: número de éxitos en n ensayos independientes con igual p: P(X = k) = C(n, k)pᵏ(1 − p)ⁿ⁻ᵏ.",
+            "E[X] = np y Var(X) = np(1 − p).",
+            "Ejemplo: si 8 % de clientes responde a un correo, con 50 envíos P(al menos 5) = 1 − F(4).",
+            "Supuestos críticos: n fijo, ensayos independientes y p constante; verificarlos antes de aplicar."
+          ],
+          "notes": "Explique que la binomial es el modelo de conteo de éxitos más usado en negocios y tecnología: clientes que convierten, piezas defectuosas, respuestas correctas de un modelo. Calcule con la clase, paso a paso, la probabilidad de exactamente 3 conversiones en 50 envíos con p = 0,08, y luego use scipy.stats.binom.pmf(3, 50, 0.08) para verificar. Calcule la media, cuatro conversiones, y la desviación estándar, aproximadamente 1,92. Discuta cuándo se rompen los supuestos: si los correos se envían a personas de una misma familia, las respuestas no son independientes. Enlace con la evaluación de modelos: el número de aciertos de un clasificador en n casos de prueba es aproximadamente binomial."
+        },
+        {
+          "title": "Distribución de Poisson",
+          "bullets": [
+            "Modela el número de eventos en un intervalo fijo de tiempo o espacio, con tasa promedio λ.",
+            "P(X = k) = e^(−λ)λᵏ / k!; con E[X] = Var(X) = λ.",
+            "Supuestos: eventos independientes, tasa constante y probabilidad despreciable de dos eventos simultáneos.",
+            "Ejemplo: un centro de contacto recibe 12 llamadas por hora; P(más de 18) ≈ 0,037.",
+            "Sobredispersión: si la varianza observada supera claramente a la media, conviene la binomial negativa."
+          ],
+          "notes": "Cuente que Siméon Denis Poisson la publicó en 1837 y que Ladislaus Bortkiewicz la popularizó en 1898 con el famoso análisis de muertes de soldados prusianos por coces de caballo. Aplíquela a casos actuales: pedidos por minuto en un aplicativo, solicitudes por segundo a una API, reclamos diarios en una agencia. Calcule con scipy.stats.poisson.sf(18, 12) la probabilidad de superar 18 llamadas, que sirve para dimensionar personal. Muestre que la binomial con n grande y p pequeña se aproxima a la Poisson con λ = np. Finalmente, enseñe a verificar el supuesto comparando la media y la varianza muestrales de los conteos; si la varianza es mucho mayor, hay sobredispersión y el modelo subestima los picos."
+        },
+        {
+          "title": "Distribución uniforme continua",
+          "bullets": [
+            "Todos los intervalos de igual longitud dentro de [a, b] tienen la misma probabilidad.",
+            "f(x) = 1 / (b − a); E[X] = (a + b) / 2; Var(X) = (b − a)² / 12.",
+            "Ejemplo: un bus pasa cada 15 minutos; el tiempo de espera de un pasajero que llega al azar es U(0, 15).",
+            "Base de la simulación: rng.random() genera U(0, 1) y, por transformación inversa, cualquier distribución."
+          ],
+          "notes": "Presente la uniforme como la distribución de máxima ignorancia dentro de un intervalo conocido. Resuelva el ejemplo del bus del corredor: la espera media es 7,5 minutos y la probabilidad de esperar más de 10 minutos es 5/15, un tercio. Explique luego su papel fundamental en simulación: los generadores de números pseudoaleatorios producen valores uniformes entre 0 y 1, y mediante el método de la transformada inversa, aplicando la función .ppf de cualquier distribución, se obtienen muestras de esa distribución. Haga una demostración: generar 10 000 uniformes, aplicar la inversa de la exponencial y graficar el histograma resultante. Así se cierra el círculo con la simulación Monte Carlo de la unidad anterior."
+        },
+        {
+          "title": "Distribución exponencial",
+          "bullets": [
+            "Modela el tiempo entre eventos de un proceso de Poisson con tasa λ: f(x) = λe^(−λx), x ≥ 0.",
+            "E[X] = 1/λ; P(X > t) = e^(−λt).",
+            "Propiedad de falta de memoria: P(X > s + t | X > s) = P(X > t).",
+            "Ejemplo: con 12 llamadas por hora, el tiempo medio entre llamadas es 5 minutos; P(espera > 10 min) = e^(−2) ≈ 0,135.",
+            "Aplicaciones: confiabilidad de componentes, teoría de colas y tiempos de llegada a servidores."
+          ],
+          "notes": "Enlace directo con Poisson: si el número de llamadas por hora es Poisson con λ = 12, el tiempo entre llamadas es exponencial con media de cinco minutos. Calcule la probabilidad de esperar más de diez minutos. Luego explique la propiedad de falta de memoria con un ejemplo concreto: si un servidor modelado como exponencial ya funcionó 1000 horas sin fallar, la probabilidad de que dure 100 horas más es la misma que para uno nuevo. Pregunte si esto es realista para discos duros que se desgastan; no lo es, por eso en confiabilidad se usa también la distribución de Weibull. Esta discusión enseña a cuestionar los supuestos de cualquier modelo antes de usarlo para decisiones."
+        },
+        {
+          "title": "La distribución normal",
+          "bullets": [
+            "Densidad simétrica en forma de campana, definida por media μ y desviación estándar σ: N(μ, σ²).",
+            "Regla empírica: aproximadamente 68 %, 95 % y 99,7 % de los datos dentro de 1, 2 y 3 desviaciones.",
+            "Desarrollada por De Moivre (1733) y Gauss (1809) para modelar errores de medición.",
+            "Modela bien estaturas, errores de medición y promedios; mal los ingresos o tiempos de espera asimétricos.",
+            "Combinaciones lineales de normales independientes también son normales."
+          ],
+          "notes": "Presente la normal con su historia: Abraham de Moivre la obtuvo en 1733 como aproximación de la binomial, y Carl Friedrich Gauss la usó en 1809 para errores en observaciones astronómicas. Use un ejemplo con datos plausibles: la estatura de adultos varones en una población con media de 165 centímetros y desviación estándar de 7. Pregunte qué porcentaje mide entre 158 y 172 centímetros: alrededor del 68 %. Advierta que no todo es normal: los ingresos de hogares de la ENAHO o los montos de compra son claramente asimétricos, y suponer normalidad conduce a errores graves en colas. Anticipe que, aunque los datos no sean normales, los promedios sí tienden a serlo, como mostrará el teorema central del límite."
+        },
+        {
+          "title": "Estandarización y cálculo de probabilidades normales",
+          "bullets": [
+            "Estandarizar: Z = (X − μ) / σ transforma cualquier normal en N(0, 1).",
+            "P(X ≤ x) = Φ(z), donde Φ es la acumulada normal estándar: norm.cdf(z).",
+            "Cuantiles: x = μ + z·σ, con z = norm.ppf(p); por ejemplo, z₀,₉₇₅ ≈ 1,96.",
+            "Ejemplo: tiempo de proceso N(40, 6²) minutos; P(X > 50) = 1 − Φ(1,67) ≈ 0,048.",
+            "La estandarización también es un paso de preprocesamiento para muchos algoritmos de aprendizaje automático."
+          ],
+          "notes": "Explique la estandarización como un cambio de unidades: medir cuántas desviaciones estándar se aleja un valor de la media. Resuelva con la clase el ejemplo del tiempo de proceso y luego la pregunta inversa: ¿qué tiempo máximo se debe prometer para cumplir en el 95 % de los casos? Respuesta: 40 + 1,645 × 6, cerca de 49,9 minutos. Muestre ambos cálculos con scipy.stats.norm(40, 6).sf(50) y .ppf(0.95). Retome el caso Rapidito Express de la Unidad 1 para mostrar cómo se fijaría una promesa de servicio si los tiempos fueran aproximadamente normales, y advierta que, siendo asimétricos, conviene usar percentiles empíricos. Conecte con StandardScaler de scikit-learn, que verán en Aprendizaje Automático I."
+        },
+        {
+          "title": "¿Son normales mis datos? Evaluación de supuestos",
+          "bullets": [
+            "Gráfico cuantil-cuantil (Q-Q): si los puntos siguen la recta, la normalidad es razonable.",
+            "Desviaciones típicas en el Q-Q: curva en forma de S indica colas pesadas; arco indica asimetría.",
+            "Prueba de Shapiro-Wilk (1965): H₀ = los datos provienen de una normal; sensible con muestras grandes.",
+            "Con n grande, diferencias irrelevantes resultan significativas: priorizar el juicio gráfico.",
+            "Alternativas: transformar (logaritmo, Box-Cox) o usar métodos no paramétricos y bootstrap."
+          ],
+          "notes": "Muestre tres gráficos Q-Q generados con scipy.stats.probplot: datos normales, datos con asimetría positiva como ingresos y datos con colas pesadas como retornos bursátiles. Enseñe a leerlos: el patrón de desviación indica el tipo de problema. Presente la prueba de Shapiro y Wilk, publicada en Biometrika en 1965, y advierta sobre un error frecuente: con 50 000 observaciones casi cualquier conjunto real rechaza la normalidad, aunque la desviación sea irrelevante para el análisis. Por eso se combina siempre con la inspección gráfica. Pida a los estudiantes que apliquen ambos métodos a una variable de su dataset de la Unidad 1 y decidan si conviene transformarla."
+        },
+        {
+          "title": "Distribuciones muestrales y error estándar",
+          "bullets": [
+            "Un estadístico como x̄ varía de muestra en muestra: su distribución se llama distribución muestral.",
+            "E[x̄] = μ: la media muestral es un estimador insesgado de la media poblacional.",
+            "Error estándar: EE(x̄) = σ / √n; mide la precisión del estimador, no la dispersión de los datos.",
+            "Para cuadruplicar la precisión hay que multiplicar el tamaño de muestra por 16.",
+            "Para proporciones: EE(p̂) = √[p(1 − p) / n]."
+          ],
+          "notes": "Esta diapositiva es el puente hacia la inferencia. Insista en distinguir la desviación estándar de los datos, que describe cuánto varían los individuos, del error estándar, que describe cuánto variaría el promedio si repitiéramos el muestreo. Simule en Colab: tome 5000 muestras de tamaño 30 de una población de ingresos y grafique el histograma de las 5000 medias; será mucho más estrecho que el de los datos. Muestre que su desviación estándar coincide con σ/√30. Explique el rendimiento decreciente de aumentar la muestra: pasar de 100 a 400 encuestas solo reduce el error a la mitad. Esto tiene consecuencias presupuestales directas en el diseño de encuestas y experimentos."
+        },
+        {
+          "title": "Teorema central del límite",
+          "bullets": [
+            "Si X₁, …, Xₙ son independientes con media μ y varianza σ² finita, x̄ ≈ N(μ, σ²/n) cuando n es grande.",
+            "Se cumple aunque la población original no sea normal: uniforme, exponencial o asimétrica.",
+            "Regla práctica: n ≥ 30 suele bastar; con asimetría fuerte se requiere un n mayor.",
+            "Justifica intervalos de confianza y pruebas de hipótesis para medias y proporciones.",
+            "No aplica a distribuciones de varianza infinita ni a datos fuertemente dependientes."
+          ],
+          "notes": "Presente el teorema como uno de los resultados más importantes de toda la ciencia. Su historia recorre a De Moivre, Laplace y Lyapunov, quien dio una demostración rigurosa en 1901. Haga la demostración por simulación, que es la forma más convincente: parta de una población exponencial muy asimétrica, tome medias de muestras de tamaño 2, 5, 30 y 100, y grafique cómo los histogramas se vuelven acampanados. Pregunte por qué esto es tan útil: nos permite calcular probabilidades sobre promedios sin conocer la distribución original. Señale los límites: si los datos están autocorrelacionados, como ventas diarias consecutivas, el error estándar clásico subestima la incertidumbre."
+        },
+        {
+          "title": "Caja de herramientas: scipy.stats en la práctica",
+          "bullets": [
+            "Crear distribuciones: binom(n, p), poisson(mu), expon(scale=1/λ), norm(loc=μ, scale=σ).",
+            "Métodos comunes: pmf/pdf, cdf, sf = 1 − cdf, ppf para cuantiles y rvs para simular.",
+            "Ajuste a datos: norm.fit(datos) o expon.fit(datos) estima parámetros por máxima verosimilitud.",
+            "Atención a la parametrización: expon usa scale = 1/λ, no la tasa λ.",
+            "Validar el ajuste comparando histograma y densidad, y gráficos Q-Q."
+          ],
+          "notes": "Cierre la unidad con una sesión práctica guiada. Muestre un patrón de trabajo recomendable: congelar la distribución en una variable, por ejemplo llamadas = poisson(12), y luego usar sus métodos. Insista en el error más común con scipy: la parametrización de la exponencial con scale igual a la inversa de la tasa; un estudiante que escribe expon(12) cuando quería λ = 12 obtiene una media de 12 en lugar de 1/12. Introduzca brevemente el método de máxima verosimilitud, propuesto por Ronald Fisher en la década de 1920, como forma de estimar parámetros a partir de datos; se profundizará en Aprendizaje Automático I. Proponga un reto: ajustar una Poisson a los pedidos por hora de un dataset y evaluar la sobredispersión."
+        }
+      ],
+      "reading": {
+        "title": "Modelos de probabilidad para fenómenos reales",
+        "minutes": 35,
+        "content": "## Del dato al modelo\n\nUna distribución de probabilidad es un modelo matemático que describe cómo se reparten los valores posibles de una variable aleatoria. Elegir bien el modelo permite responder preguntas operativas: cuántos agentes necesita un centro de contacto, qué promesa de entrega es sostenible o qué tan probable es un pico de solicitudes en un servidor. Como advirtió George Box (1976), *todos los modelos son erróneos, pero algunos son útiles*: el arte consiste en elegir el modelo cuyos supuestos se acercan más a la realidad.\n\n## Esperanza y varianza\n\nPara una variable discreta, E[X] = Σ x·p(x) y Var(X) = E[X²] − (E[X])². La esperanza es el promedio a largo plazo y sustenta decisiones con valor esperado; la varianza cuantifica el riesgo. La linealidad, E[aX + b] = aE[X] + b, permite trasladar resultados entre unidades y escenarios.\n\n## Modelos discretos\n\n**Binomial.** Cuenta éxitos en n ensayos independientes con probabilidad constante p:\n\n$$P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k},\\quad E[X]=np,\\quad Var(X)=np(1-p)$$\n\nSi un modelo de clasificación acierta con probabilidad 0,85 y se evalúa en 200 casos independientes, el número de aciertos es aproximadamente binomial con media 170 y desviación estándar √(200·0,85·0,15) ≈ 5,05.\n\n**Poisson.** Cuenta eventos en un intervalo con tasa λ: P(X = k) = e^(−λ)λᵏ / k!, con media y varianza iguales a λ. Es útil para pedidos por minuto, reclamos diarios o solicitudes a una API. Si la varianza observada es mucho mayor que la media (sobredispersión), el modelo subestima los picos.\n\n## Modelos continuos\n\n**Exponencial.** Describe el tiempo entre eventos de un proceso de Poisson: P(X > t) = e^(−λt). Su propiedad de falta de memoria la hace adecuada para llegadas aleatorias, pero no para componentes que se desgastan.\n\n**Normal.** Con densidad simétrica definida por μ y σ, cumple la regla 68-95-99,7. La estandarización Z = (X − μ)/σ permite calcular cualquier probabilidad con la acumulada estándar Φ. Es un buen modelo para errores de medición y para promedios, pero no para ingresos o montos, que son asimétricos.\n\n## El teorema central del límite\n\nLa media muestral de n observaciones independientes con varianza finita se distribuye aproximadamente como:\n\n$$\\bar{X} \\sim N\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$$\n\naunque la población original no sea normal. El **error estándar** σ/√n mide la precisión del promedio y decrece con la raíz del tamaño de muestra. Este resultado, demostrado rigurosamente por Lyapunov en 1901, es la base de la inferencia de la Unidad 4.\n\n## Aplicación: dimensionar un centro de contacto\n\nUna aseguradora en Lima recibe en promedio 12 llamadas por hora en horario regular. ¿Con qué probabilidad recibirá más de 18 en una hora? ¿Cuánto tiempo pasa entre llamadas?\n\n```python\nfrom scipy import stats\nimport numpy as np\n\nllamadas = stats.poisson(mu=12)\nprint(llamadas.sf(18))               # P(X > 18) ≈ 0,037\nprint(llamadas.ppf(0.95))            # 95 % de las horas no superan 18 llamadas\n\nespera = stats.expon(scale=1/12)     # horas entre llamadas; scale = 1/λ\nprint(espera.sf(10/60))              # P(espera > 10 min) = e^(-2) ≈ 0,135\n\n# Teorema central del límite por simulación\nrng = np.random.default_rng(7)\npoblacion = rng.exponential(scale=5, size=1_000_000)   # tiempos asimétricos\nmedias = rng.choice(poblacion, size=(5000, 40)).mean(axis=1)\nprint(medias.mean(), medias.std(), poblacion.std() / np.sqrt(40))\n```\n\nLa última línea muestra que la desviación estándar de las 5000 medias coincide con σ/√40, como predice la teoría, y un histograma de `medias` revelaría una campana pese a que la población es exponencial.\n\n## Verificar supuestos\n\nAntes de usar un modelo: compare la media y la varianza de los conteos (Poisson), revise gráficos Q-Q y la prueba de Shapiro-Wilk (normalidad) y cuestione la independencia. Un modelo con supuestos violados produce probabilidades precisas pero equivocadas.\n\n## Idea fuerza\n\nElegir una distribución es una decisión de modelado que debe justificarse con la naturaleza del fenómeno y validarse con los datos."
+      },
+      "case": {
+        "title": "Caso: dimensionamiento del centro de contacto de SaludPlus",
+        "content": "**SaludPlus** es una aseguradora privada de salud con 320 000 afiliados en Lima, Arequipa y Trujillo. Su centro de contacto atiende consultas de cobertura, autorizaciones de atención y reclamos. Desde 2024 opera de forma híbrida y desea incorporar un asistente virtual con IA que resuelva las consultas simples.\n\nLa jefa de operaciones, Rosa Quispe, enfrenta dos presiones. Por un lado, la Superintendencia de Salud (SUSALUD) y las buenas prácticas del sector exigen tiempos de espera razonables; la meta interna es que el 90 % de las llamadas sea atendido en menos de 60 segundos. Por otro, Finanzas pide reducir costos de personal en 15 % tras la implementación del asistente virtual.\n\nEl equipo de analítica entrega estos datos de lunes a viernes, de 9:00 a 13:00, durante 12 semanas:\n\n| Indicador | Valor |\n|---|---|\n| Llamadas por hora: media | 96 |\n| Llamadas por hora: varianza | 210 |\n| Duración media de atención | 4,5 min (asimétrica a la derecha) |\n| Agentes actuales por turno | 9 |\n| Picos observados | lunes 9:00-10:00, hasta 150 llamadas |\n\nEl proveedor del asistente virtual estima que resolverá el 35 % de las llamadas, con un rango entre 25 % y 45 % según experiencias en otras aseguradoras de la región. El área de Finanzas calculó la nueva dotación así: *si llegan 96 llamadas por hora y el asistente resuelve 35 %, quedan 62,4 llamadas; con 4,5 minutos cada una, se requieren 4,7 horas-agente; bastan 5 agentes*.\n\nUn analista junior propone modelar las llegadas con una distribución de Poisson de λ = 96 y los tiempos de atención con una distribución normal de media 4,5 minutos. Una analista senior objeta ambos supuestos: señala que la varianza de las llegadas es más del doble de la media, que los lunes concentran picos y que un tiempo de atención no puede ser negativo.\n\nRosa debe presentar al directorio una propuesta de dotación que sea financieramente responsable sin deteriorar la atención a los afiliados, y sabe que un cálculo basado solo en promedios puede llevar a colas largas justamente en los momentos críticos.",
+        "questions": [
+          "¿Qué errores conceptuales contiene el cálculo de Finanzas basado únicamente en promedios y por qué conduce a colas largas en las horas pico?",
+          "Evalúe las objeciones de la analista senior: ¿qué distribuciones serían más adecuadas para las llegadas y para los tiempos de atención y por qué?",
+          "Si el asistente resuelve entre 25 % y 45 % de las llamadas, ¿cómo incorporaría esa incertidumbre en el dimensionamiento mediante simulación?",
+          "¿Debería SaludPlus usar la misma dotación todos los días y horas? Proponga un criterio de dotación basado en percentiles.",
+          "¿Qué recomendación presentaría Rosa al directorio para equilibrar la meta de reducción de costos con la calidad de atención?"
+        ]
+      },
+      "assignment": {
+        "title": "Modelamiento probabilístico de un proceso operativo",
+        "instructions": "**Objetivo:** seleccionar, ajustar y validar distribuciones de probabilidad para un proceso real y usarlas en una decisión operativa.\n\n**Qué hacer:**\n1. Elija un proceso con conteos y tiempos: llegadas a una agencia, pedidos en un aplicativo, solicitudes a un servidor o reclamos diarios. Puede usar datos reales o el conjunto simulado que proporciona el docente.\n2. Para la variable de conteo, compare la media y la varianza, ajuste una distribución de Poisson y discuta si hay sobredispersión.\n3. Para la variable de tiempo, ajuste una exponencial y una normal; compárelas con histogramas, gráficos Q-Q y la prueba de Shapiro-Wilk, y elija la más adecuada.\n4. Calcule al menos tres probabilidades de interés operativo (picos, esperas largas, percentiles de servicio) con scipy.stats.\n5. Demuestre por simulación el teorema central del límite con su variable de tiempo, usando tamaños de muestra 5, 30 y 100, y compare el error estándar simulado con σ/√n.\n6. Formule una recomendación operativa basada en sus resultados.\n\n**Qué entregar:** cuaderno Jupyter ejecutado e informe ejecutivo de dos páginas.\n\n**Criterios:** justificación del modelo, validación de supuestos, cálculos correctos, simulación y utilidad de la recomendación.",
+        "rubric": [
+          {
+            "name": "Selección y justificación de las distribuciones",
+            "points": 5
+          },
+          {
+            "name": "Validación de supuestos con gráficos y pruebas",
+            "points": 4
+          },
+          {
+            "name": "Cálculo correcto de probabilidades operativas",
+            "points": 4
+          },
+          {
+            "name": "Simulación del teorema central del límite",
+            "points": 4
+          },
+          {
+            "name": "Recomendación operativa fundamentada",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: variables aleatorias y distribuciones",
+        "questions": [
+          {
+            "prompt": "Una comisión vale S/ 0 con probabilidad 0,6, S/ 200 con 0,3 y S/ 1000 con 0,1. ¿Cuál es su valor esperado?",
+            "options": [
+              "S/ 0",
+              "S/ 160",
+              "S/ 200",
+              "S/ 400"
+            ],
+            "correct": 1,
+            "explanation": "E[X] = 0·0,6 + 200·0,3 + 1000·0,1 = 160; la esperanza no tiene que ser un valor posible de la variable."
+          },
+          {
+            "prompt": "El 8 % de los clientes responde a una campaña. Si se envían 50 correos independientes, ¿cuál es el número esperado de respuestas y su varianza?",
+            "options": [
+              "Media 8 y varianza 7,36",
+              "Media 0,08 y varianza 0,0736",
+              "Media 4 y varianza 3,68",
+              "Media 4 y varianza 4"
+            ],
+            "correct": 2,
+            "explanation": "En la binomial, E[X] = np = 4 y Var(X) = np(1 − p) = 50·0,08·0,92 = 3,68."
+          },
+          {
+            "prompt": "Los reclamos diarios de una agencia tienen media 6 y varianza 19. ¿Qué indica esto respecto de un modelo de Poisson?",
+            "options": [
+              "Indica que los reclamos son eventos mutuamente excluyentes",
+              "Hay sobredispersión; Poisson subestimaría la frecuencia de días con muchos reclamos",
+              "Debe usarse una normal porque la varianza es mayor que 10",
+              "Poisson es ideal porque la media es entera"
+            ],
+            "correct": 1,
+            "explanation": "Poisson exige media igual a varianza; una varianza tres veces mayor sugiere un modelo como la binomial negativa."
+          },
+          {
+            "prompt": "El tiempo de proceso sigue N(40, 6²) minutos. ¿Qué tiempo debe prometerse para cumplir en el 95 % de los casos?",
+            "options": [
+              "Aproximadamente 41,6 minutos",
+              "Aproximadamente 49,9 minutos",
+              "46 minutos",
+              "Aproximadamente 51,8 minutos"
+            ],
+            "correct": 1,
+            "explanation": "Se usa el cuantil 0,95: 40 + 1,645·6 ≈ 49,9 minutos. El valor 51,8 usa z = 1,96, que corresponde a dos colas."
+          },
+          {
+            "prompt": "Una población tiene σ = 20. ¿Qué tamaño de muestra se necesita para reducir el error estándar de la media de 4 a 2?",
+            "options": [
+              "50, el doble de la muestra original",
+              "No depende del tamaño de muestra",
+              "100, el cuádruple de la muestra original de 25",
+              "200, ocho veces la muestra original"
+            ],
+            "correct": 2,
+            "explanation": "EE = σ/√n: con n = 25 el EE es 4; reducirlo a la mitad exige cuadruplicar n hasta 100."
+          },
+          {
+            "prompt": "Los tiempos de atención son muy asimétricos. ¿Qué afirma el teorema central del límite sobre la media de 100 tiempos elegidos al azar?",
+            "options": [
+              "Solo se cumple si la población original es normal",
+              "Los tiempos individuales pasan a ser normales",
+              "Su distribución es aproximadamente normal con media μ y desviación σ/10",
+              "La media muestral será exactamente igual a μ"
+            ],
+            "correct": 2,
+            "explanation": "El teorema se refiere a la distribución del promedio, no de los datos individuales; su error estándar es σ/√100."
+          },
+          {
+            "prompt": "Un servidor modelado como exponencial ya funcionó 2000 horas sin fallar. ¿Qué implica la propiedad de falta de memoria?",
+            "options": [
+              "Es más probable que falle pronto por desgaste",
+              "Su tiempo medio restante es cero",
+              "Es menos probable que falle porque demostró ser robusto",
+              "La probabilidad de durar 100 horas más es igual que la de un servidor nuevo"
+            ],
+            "correct": 3,
+            "explanation": "En la exponencial P(X > s + t | X > s) = P(X > t); por eso no modela bien componentes que se desgastan."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Inferencia estadística, pruebas A/B y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante estima parámetros con intervalos de confianza, contrasta hipótesis sobre medias, proporciones e independencia, diseña y analiza pruebas A/B, aplica bootstrap y presenta un proyecto integrador reproducible que sustenta una decisión con evidencia estadística.",
+      "topics": [
+        "Estimación puntual e intervalos de confianza para medias y proporciones",
+        "Tamaño de muestra y margen de error",
+        "Pruebas de hipótesis, errores tipo I y II, potencia y valor p",
+        "Pruebas t, de proporciones, chi-cuadrado y pruebas A/B",
+        "Bootstrap, comparaciones múltiples y proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "Estimación puntual: propiedades de un buen estimador",
+          "bullets": [
+            "Estimador: regla que convierte datos en una estimación del parámetro, como x̄ para μ o p̂ para p.",
+            "Insesgadez: E[θ̂] = θ; en promedio el estimador acierta.",
+            "Eficiencia: entre estimadores insesgados, preferir el de menor varianza.",
+            "Consistencia: el estimador converge al parámetro cuando n crece.",
+            "Error cuadrático medio = sesgo² + varianza: base del dilema sesgo-varianza del aprendizaje automático."
+          ],
+          "notes": "Abra la unidad recordando que la inferencia responde a la pregunta: ¿qué podemos afirmar sobre la población a partir de una muestra, y con cuánta seguridad? Explique las propiedades con la analogía del tiro al blanco: un tirador insesgado pero disperso frente a uno preciso pero desviado. Presente el error cuadrático medio y su descomposición en sesgo al cuadrado más varianza; esta misma idea reaparecerá en Aprendizaje Automático I como el dilema sesgo-varianza, que explica el sobreajuste. Pregunte: ¿la mediana muestral es un estimador insesgado de la media en una población simétrica? Sí, pero es menos eficiente que la media cuando la población es normal. En cambio, con atípicos puede ser mejor."
+        },
+        {
+          "title": "Intervalo de confianza para la media",
+          "bullets": [
+            "Forma general: estimación ± valor crítico × error estándar.",
+            "Con σ desconocida: x̄ ± t(α/2, n−1)·s/√n, usando la distribución t de Student.",
+            "Gosset publicó la distribución t en 1908 bajo el seudónimo 'Student', mientras trabajaba en la cervecería Guinness.",
+            "Ejemplo: n = 36, x̄ = 24,5 min, s = 6; IC 95 % ≈ 24,5 ± 2,03·1 = [22,5; 26,5].",
+            "Python: stats.t.interval(0.95, df=n-1, loc=xbar, scale=s/np.sqrt(n))."
+          ],
+          "notes": "Cuente la historia de William Sealy Gosset, químico de la cervecería Guinness en Dublín, que necesitaba conclusiones con muestras pequeñas de cebada y publicó en Biometrika en 1908 con el seudónimo Student porque la empresa no permitía publicar a sus empleados. Explique que la t tiene colas más pesadas que la normal para compensar la incertidumbre adicional de estimar σ con s, y que converge a la normal cuando n crece. Calcule el ejemplo paso a paso con la clase y luego verifíquelo en Python. Pregunte qué pasaría con el intervalo si quisiéramos 99 % de confianza: se ensancha. Más confianza implica menos precisión con el mismo tamaño de muestra."
+        },
+        {
+          "title": "Interpretar correctamente un intervalo de confianza",
+          "bullets": [
+            "Correcto: si se repitiera el muestreo muchas veces, el 95 % de los intervalos así construidos contendría a μ.",
+            "Incorrecto: 'hay 95 % de probabilidad de que μ esté en este intervalo'; μ es fijo y el intervalo es aleatorio.",
+            "El intervalo describe incertidumbre sobre el parámetro, no el rango donde caen los datos individuales.",
+            "Ancho del intervalo depende de la confianza, la variabilidad y el tamaño de muestra.",
+            "Reportar siempre el intervalo junto con la estimación puntual."
+          ],
+          "notes": "Esta interpretación es una de las más malentendidas de toda la estadística, incluso entre investigadores con experiencia. Haga una simulación visual en Colab: genere 100 muestras de una población conocida, calcule el intervalo de 95 % de cada una y grafíquelos como segmentos horizontales con una línea vertical en la media verdadera. Aproximadamente cinco segmentos no la tocarán. Pregunte a los estudiantes: para el intervalo concreto que calculamos, ¿la media está o no está dentro? Está o no está; la probabilidad se refiere al procedimiento. Advierta también la confusión con el intervalo de predicción: un IC de 95 % para el tiempo medio no implica que el 95 % de los pedidos caiga en ese rango."
+        },
+        {
+          "title": "Intervalos para proporciones y margen de error en encuestas",
+          "bullets": [
+            "IC para una proporción (Wald): p̂ ± z(α/2)·√[p̂(1 − p̂)/n]; requiere np̂ ≥ 10 y n(1 − p̂) ≥ 10.",
+            "Intervalo de Wilson: mejor cobertura con muestras pequeñas o proporciones extremas.",
+            "Margen de error máximo con n = 1200 y 95 %: 1,96·√(0,25/1200) ≈ ±2,8 puntos porcentuales.",
+            "Encuestas electorales en el Perú reportan ficha técnica con tamaño, margen y nivel de confianza.",
+            "El margen de error no cubre sesgos de cobertura, de no respuesta ni errores de redacción."
+          ],
+          "notes": "Use un ejemplo cercano: las encuestas de opinión que publican las principales encuestadoras del país suelen trabajar con alrededor de 1200 entrevistas y reportan un margen cercano a 2,8 puntos con 95 % de confianza. Calcule ese margen en clase. Luego pregunte: si un candidato tiene 24 % y otro 21 %, ¿hay empate técnico? Discuta que la diferencia entre dos proporciones tiene su propio error estándar, mayor que el de cada una por separado. Presente el intervalo de Wilson, propuesto en 1927, como alternativa recomendada cuando la proporción está cerca de 0 o de 1, por ejemplo una tasa de fraude. En Python: statsmodels.stats.proportion.proportion_confint con method='wilson'."
+        },
+        {
+          "title": "¿Cuántos datos necesito? Tamaño de muestra",
+          "bullets": [
+            "Para estimar una media: n = (z·σ / E)², donde E es el margen de error deseado.",
+            "Para una proporción: n = z²·p(1 − p) / E²; con p desconocida usar p = 0,5 (caso más conservador).",
+            "Ejemplo: margen de ±3 puntos al 95 %: n = 1,96²·0,25 / 0,03² ≈ 1068.",
+            "Corrección por población finita cuando la muestra supera el 5 % de la población.",
+            "Ajustar por tasa de no respuesta esperada: si responde el 60 %, contactar n / 0,6."
+          ],
+          "notes": "Plantee un caso realista: el área de experiencia del cliente de una cadena de supermercados quiere estimar la proporción de clientes satisfechos con un margen de tres puntos. Calcule el tamaño necesario y luego muestre que reducir el margen a dos puntos exige unas 2401 encuestas, más del doble. Discuta el equilibrio entre precisión y costo. Explique la corrección por población finita con un ejemplo de una empresa con 800 trabajadores, donde no tiene sentido encuestar a 1068. Recuerde que el tamaño calculado es el de respuestas válidas; si la tasa de respuesta de encuestas digitales es baja, hay que contactar a muchas más personas y vigilar el sesgo de no respuesta visto en la Unidad 1."
+        },
+        {
+          "title": "Lógica de las pruebas de hipótesis",
+          "bullets": [
+            "Hipótesis nula H₀: afirmación de 'no efecto' o statu quo; hipótesis alternativa H₁: lo que se busca evidenciar.",
+            "Estadístico de prueba: mide cuán lejos están los datos de lo esperado bajo H₀, en unidades de error estándar.",
+            "Nivel de significancia α: probabilidad de rechazar H₀ siendo verdadera; usualmente 0,05.",
+            "Decisión: rechazar H₀ o no rechazarla; nunca 'aceptar' H₀ como verdadera.",
+            "Enfoques históricos: Fisher (valor p como evidencia) y Neyman-Pearson (decisión con errores controlados)."
+          ],
+          "notes": "Use la analogía del juicio penal: H₀ es la presunción de inocencia y solo se rechaza con evidencia suficiente; no rechazarla no prueba la inocencia, solo indica falta de pruebas. Explique que la estructura moderna combina dos tradiciones que en su época estuvieron en conflicto: Ronald Fisher propuso el valor p como medida de evidencia, mientras que Jerzy Neyman y Egon Pearson formularon en 1933 un marco de decisión con errores controlados. Plantee con la clase hipótesis para tres situaciones: un nuevo diseño de página aumenta la conversión, el tiempo medio de entrega supera 30 minutos, y el método de pago es independiente de la devolución. Pida identificar si la prueba es de una o dos colas."
+        },
+        {
+          "title": "Errores tipo I, tipo II y potencia",
+          "bullets": [
+            "Error tipo I (α): rechazar H₀ verdadera; un falso positivo, como lanzar una mejora que no funciona.",
+            "Error tipo II (β): no rechazar H₀ falsa; un falso negativo, como descartar una mejora real.",
+            "Potencia = 1 − β: probabilidad de detectar un efecto real; meta habitual de 0,80.",
+            "La potencia aumenta con el tamaño de muestra, el tamaño del efecto y un α mayor.",
+            "Análisis de potencia antes de recolectar datos: statsmodels.stats.power."
+          ],
+          "notes": "Vincule con la matriz de confusión de la Unidad 2: los errores tipo I y II son los falsos positivos y falsos negativos de la decisión estadística. Pregunte: en un ensayo clínico de un medicamento, ¿qué error es más grave? ¿Y en una prueba de una nueva función de un aplicativo? La gravedad relativa define el α y la potencia adecuados. Explique que muchos experimentos empresariales fracasan por baja potencia: con pocos usuarios, una mejora real de 0,5 puntos en conversión es indetectable. Muestre cómo calcular el tamaño de muestra necesario con NormalIndPower de statsmodels para detectar un efecto dado con potencia de 80 %. Recomiende fijar siempre el tamaño de muestra antes de iniciar el experimento."
+        },
+        {
+          "title": "El valor p y su mal uso",
+          "bullets": [
+            "Valor p: probabilidad de observar un resultado tan extremo o más, suponiendo que H₀ es verdadera.",
+            "No es la probabilidad de que H₀ sea verdadera ni la probabilidad de que el resultado sea casual.",
+            "Declaración de la American Statistical Association (2016): p < 0,05 no basta para concluir.",
+            "Significancia estadística no equivale a importancia práctica: reportar tamaño del efecto e intervalo.",
+            "Con muestras enormes, diferencias triviales resultan estadísticamente significativas."
+          ],
+          "notes": "Dedique tiempo a desmontar los mitos. Presente la declaración de la American Statistical Association de 2016, redactada por Wasserstein y Lazar, que fijó seis principios sobre el valor p, entre ellos que no mide la probabilidad de que la hipótesis sea cierta y que las decisiones no deben basarse solo en si supera un umbral. Ejemplo: una empresa con dos millones de usuarios encuentra que un botón verde aumenta la conversión de 3,00 % a 3,02 %, con p = 0,01. ¿Vale la pena el cambio? Depende del costo y del impacto económico, no del valor p. Pida a los estudiantes reescribir conclusiones mal redactadas, como 'se demostró que no hay diferencia', en formulaciones correctas."
+        },
+        {
+          "title": "Pruebas t para una y dos muestras",
+          "bullets": [
+            "Una muestra: t = (x̄ − μ₀) / (s/√n); por ejemplo, ¿el tiempo medio de atención supera los 5 minutos?",
+            "Dos muestras independientes: prueba de Welch, que no supone varianzas iguales; recomendada por defecto.",
+            "Muestras pareadas: diferencias antes y después en las mismas unidades; mayor potencia.",
+            "Supuestos: independencia y normalidad aproximada o n suficientemente grande por el teorema central del límite.",
+            "Python: stats.ttest_1samp, stats.ttest_ind(a, b, equal_var=False) y stats.ttest_rel."
+          ],
+          "notes": "Trabaje tres ejemplos en Colab. Primero, una muestra: 40 tiempos de atención con media 5,6 minutos y desviación 1,8; ¿supera la meta de 5 minutos? Segundo, dos muestras independientes: tiempos de entrega de dos operadores logísticos, usando la prueba de Welch, propuesta por Bernard Welch en 1947, que es más segura cuando las varianzas difieren. Tercero, pareadas: productividad de 25 agentes antes y después de usar un asistente de IA; al comparar cada agente consigo mismo se elimina la variabilidad entre personas. Muestre cómo el mismo conjunto de datos analizado como independiente en lugar de pareado puede perder significancia. Insista en reportar la diferencia de medias con su intervalo de confianza."
+        },
+        {
+          "title": "Pruebas A/B: experimentos controlados en productos digitales",
+          "bullets": [
+            "Asignación aleatoria de usuarios a control (A) y variante (B): elimina variables de confusión.",
+            "Definir antes del experimento: métrica principal, efecto mínimo detectable, α, potencia y duración.",
+            "Prueba z para dos proporciones: z = (p̂_B − p̂_A) / √[p̂(1 − p̂)(1/n_A + 1/n_B)].",
+            "Evitar mirar los resultados cada día y detener al ver p < 0,05: infla el error tipo I.",
+            "Kohavi, Tang y Xu (2020) documentan que la mayoría de ideas probadas no mejora la métrica."
+          ],
+          "notes": "Explique que las pruebas A/B son la forma en que las empresas digitales aplican el método experimental, y que la aleatorización resuelve el problema de la causalidad discutido en la Unidad 1. Cite el libro de Ron Kohavi, Diane Tang y Ya Xu sobre experimentos controlados en línea, que reporta que en grandes empresas tecnológicas solo una fracción minoritaria de ideas mejora la métrica objetivo. Resuelva un ejemplo: una fintech peruana prueba dos versiones del formulario de registro con 8000 usuarios cada una y conversiones de 6,0 % y 6,9 %. Calcule el estadístico z y el valor p con proportions_ztest de statsmodels. Discuta el problema de detener el experimento antes de tiempo y la necesidad de cubrir semanas completas por la estacionalidad."
+        },
+        {
+          "title": "Prueba chi-cuadrado de independencia",
+          "bullets": [
+            "Contrasta si dos variables categóricas son independientes usando una tabla de contingencia.",
+            "Frecuencia esperada: Eᵢⱼ = (total fila × total columna) / total general.",
+            "Estadístico: χ² = Σ (O − E)² / E, con (f − 1)(c − 1) grados de libertad.",
+            "Requisito: frecuencias esperadas de al menos 5 en la mayoría de celdas.",
+            "Medir la intensidad con V de Cramér; Python: stats.chi2_contingency(tabla)."
+          ],
+          "notes": "Retome la pregunta de independencia de la Unidad 2 y formalícela. Construya con la clase una tabla de contingencia de 600 reclamos según sector, financiero, telecomunicaciones o retail, y resultado, a favor o en contra del consumidor. Calcule a mano las frecuencias esperadas de dos celdas para que entiendan la lógica: lo que se esperaría si no hubiera relación. Presente a Karl Pearson, que propuso esta prueba en 1900. Luego ejecute chi2_contingency y lea el estadístico, los grados de libertad y el valor p. Enfatice que un resultado significativo indica asociación, no causalidad, y que la V de Cramér informa si la asociación es débil o fuerte, lo que el valor p no dice."
+        },
+        {
+          "title": "Bootstrap: inferencia por remuestreo",
+          "bullets": [
+            "Propuesto por Bradley Efron (1979): remuestrear con reemplazo la muestra observada miles de veces.",
+            "Calcular el estadístico en cada remuestra para aproximar su distribución muestral.",
+            "Intervalo percentil: tomar los percentiles 2,5 y 97,5 de los estadísticos remuestreados.",
+            "Útil para medianas, percentiles, razones y métricas de modelos sin fórmula cerrada.",
+            "Python: scipy.stats.bootstrap o un bucle con rng.choice(datos, size=n, replace=True)."
+          ],
+          "notes": "Presente el bootstrap como una idea elegante que la computación hizo práctica. Bradley Efron lo publicó en Annals of Statistics en 1979 y hoy es estándar en ciencia de datos. Explique la intuición: si la muestra representa bien a la población, remuestrear de ella imita el proceso de obtener nuevas muestras. Programe en vivo un intervalo bootstrap para la mediana del tiempo de entrega de Rapidito Express, algo para lo que no hay una fórmula sencilla. Luego muestre su uso para evaluar modelos: un intervalo de confianza para la exhaustividad de un clasificador remuestreando el conjunto de prueba. Advierta sus límites: no corrige una muestra sesgada y funciona mal con muestras muy pequeñas."
+        },
+        {
+          "title": "Comparaciones múltiples y p-hacking",
+          "bullets": [
+            "Con 20 pruebas independientes a α = 0,05, la probabilidad de al menos un falso positivo es 1 − 0,95²⁰ ≈ 64 %.",
+            "Corrección de Bonferroni: usar α/m para m pruebas; conservadora pero sencilla.",
+            "Procedimiento de Benjamini-Hochberg (1995): controla la tasa de falsos descubrimientos con más potencia.",
+            "p-hacking: probar variables, subgrupos o métodos hasta encontrar p < 0,05.",
+            "Buenas prácticas: preregistrar hipótesis, reportar todas las pruebas y separar exploración de confirmación."
+          ],
+          "notes": "Calcule con la clase la probabilidad de al menos un falso positivo con 20 pruebas: casi dos de cada tres veces aparecerá un hallazgo espurio. Relacione con la crisis de replicabilidad en psicología y medicina, documentada por John Ioannidis en su artículo de 2005 sobre por qué la mayoría de hallazgos publicados serían falsos. Traslade el problema a la empresa: un analista revisa la conversión en 30 segmentos de clientes y reporta solo los dos significativos. Muestre la corrección de Bonferroni y el procedimiento de Benjamini y Hochberg con statsmodels.stats.multitest.multipletests. Concluya con una regla ética y profesional: el análisis exploratorio genera hipótesis; solo nuevos datos o un diseño preregistrado las confirman."
+        },
+        {
+          "title": "Proyecto integrador: del dato a la decisión",
+          "bullets": [
+            "Pregunta de negocio o de política pública precisa, medible y relevante para una organización peruana.",
+            "Análisis exploratorio, modelo probabilístico pertinente e inferencia con intervalos y pruebas.",
+            "Verificación de supuestos, tamaño del efecto y discusión de limitaciones y sesgos.",
+            "Cuaderno reproducible con semillas fijas, datos documentados y conclusiones trazables.",
+            "Presentación ejecutiva de 10 minutos con recomendación y nivel de confianza explícito."
+          ],
+          "notes": "Presente el proyecto integrador como la síntesis del curso y explique sus etapas y fechas en el plan semanal. Muestre ejemplos de preguntas bien formuladas, como ¿difiere el tiempo medio de resolución de reclamos entre sectores?, frente a preguntas vagas como analizar los reclamos. Exija que cada equipo use al menos una técnica de cada unidad: descripción, probabilidad condicional, modelo de distribución e inferencia. Recomiende fuentes abiertas como microdatos del INEI, series del BCRP o datos abiertos del Estado peruano, respetando la Ley 29733 de protección de datos personales si se usan datos de organizaciones. Comparta la rúbrica y destaque que la calidad del razonamiento pesa más que la complejidad técnica."
+        }
+      ],
+      "reading": {
+        "title": "De la muestra a la decisión: inferencia estadística y experimentos",
+        "minutes": 40,
+        "content": "## El problema de la inferencia\n\nToda decisión basada en datos enfrenta la misma limitación: observamos una muestra, pero queremos conclusiones sobre una población o un proceso futuro. La inferencia estadística cuantifica cuánto podemos confiar en esas conclusiones. Sus dos herramientas centrales son la **estimación por intervalos** y las **pruebas de hipótesis**.\n\n## Intervalos de confianza\n\nUn intervalo de confianza tiene la forma *estimación ± valor crítico × error estándar*. Para una media con σ desconocida se usa la distribución t de Student (Gosset, 1908):\n\n$$\\bar{x} \\pm t_{\\alpha/2,\\,n-1}\\,\\frac{s}{\\sqrt{n}}$$\n\nPara una proporción, con muestra suficientemente grande:\n\n$$\\hat{p} \\pm z_{\\alpha/2}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$\n\nLa interpretación correcta se refiere al procedimiento: el 95 % de los intervalos construidos así contendría el parámetro verdadero. El margen de error solo cubre la variación aleatoria del muestreo, no los sesgos de cobertura o de no respuesta.\n\n## Pruebas de hipótesis\n\nUna prueba contrasta una hipótesis nula H₀ con una alternativa H₁. Se calcula un estadístico que mide cuán lejos están los datos de lo esperado bajo H₀ y su **valor p**: la probabilidad de obtener un resultado igual o más extremo si H₀ fuera cierta. Se fijan de antemano el nivel α (error tipo I) y la potencia 1 − β deseada.\n\nLa American Statistical Association advirtió en 2016 que el valor p no mide la probabilidad de que la hipótesis sea verdadera ni la importancia del efecto. Por eso un informe profesional reporta siempre el **tamaño del efecto** y su intervalo de confianza.\n\n## Pruebas A/B\n\nUna prueba A/B asigna usuarios al azar a dos versiones de un producto. La aleatorización equilibra en promedio todas las variables de confusión, lo que permite atribuir causalmente la diferencia a la intervención. Supongamos que una fintech prueba un formulario de registro simplificado:\n\n```python\nimport numpy as np\nfrom statsmodels.stats.proportion import proportions_ztest, confint_proportions_2indep\nfrom statsmodels.stats.power import NormalIndPower\nfrom statsmodels.stats.proportion import proportion_effectsize\n\nconversiones = np.array([552, 480])      # variante B, control A\nusuarios = np.array([8000, 8000])        # 6,9 % frente a 6,0 %\n\nz, p = proportions_ztest(conversiones, usuarios, alternative=\"two-sided\")\nic = confint_proportions_2indep(552, 8000, 480, 8000, method=\"wald\")\nprint(f\"z = {z:.2f}, p = {p:.4f}, IC 95 % de la diferencia = {ic}\")\n\n# Tamaño de muestra necesario por grupo para detectar 6,0 % -> 6,9 %\nh = proportion_effectsize(0.069, 0.060)\nn = NormalIndPower().solve_power(effect_size=h, alpha=0.05, power=0.8)\nprint(round(n))\n```\n\nEl resultado (z ≈ 2,3; p ≈ 0,02) sugiere una mejora real, pero la decisión debe considerar también el intervalo de la diferencia, el impacto económico y si el experimento cubrió semanas completas. Kohavi, Tang y Xu (2020) recomiendan definir la métrica principal y la duración antes de comenzar y no detener el experimento al primer resultado favorable.\n\n## Independencia entre variables categóricas\n\nLa prueba chi-cuadrado de Pearson (1900) compara frecuencias observadas y esperadas en una tabla de contingencia: χ² = Σ (O − E)² / E. Un valor p pequeño indica asociación; la V de Cramér mide su intensidad.\n\n## Bootstrap\n\nEfron (1979) propuso aproximar la distribución muestral de cualquier estadístico remuestreando con reemplazo los datos observados. Es especialmente útil para medianas, percentiles y métricas de modelos:\n\n```python\nfrom scipy import stats\nres = stats.bootstrap((tiempos,), np.median, confidence_level=0.95,\n                      n_resamples=10_000, random_state=1)\nprint(res.confidence_interval)\n```\n\n## Comparaciones múltiples\n\nAl realizar muchas pruebas, los falsos positivos se acumulan: con 20 pruebas a α = 0,05, la probabilidad de al menos uno es cercana al 64 %. Las correcciones de Bonferroni o de Benjamini-Hochberg (1995) controlan este problema. La regla de oro es separar el análisis exploratorio, que genera hipótesis, del confirmatorio, que las pone a prueba con datos nuevos.\n\n## Idea fuerza\n\nUna conclusión estadística responsable responde tres preguntas: ¿cuál es el efecto estimado?, ¿con qué incertidumbre? y ¿importa en la práctica?"
+      },
+      "case": {
+        "title": "Caso: el nuevo flujo de registro de PagaYa",
+        "content": "**PagaYa** es una fintech peruana supervisada por la SBS que ofrece una billetera digital y microcréditos para emprendedores. En 2025 alcanzó 650 000 usuarios registrados, pero su embudo de adquisición muestra un problema: solo el 6 % de quienes descargan el aplicativo completa el registro con validación de identidad.\n\nEl equipo de producto rediseñó el flujo de registro: redujo los pasos de siete a cuatro y añadió validación biométrica automática del DNI. Para evaluar el cambio, se diseñó una prueba A/B. Los usuarios nuevos fueron asignados aleatoriamente al flujo actual (A) o al nuevo (B). El plan original, aprobado por la gerencia, establecía cuatro semanas de duración, la tasa de registro completo como métrica principal y un efecto mínimo detectable de 0,8 puntos porcentuales.\n\nAl final del día 9, el gerente de crecimiento, Diego Salazar, revisó el tablero y encontró estos resultados:\n\n| Grupo | Usuarios | Registros completos | Tasa |\n|---|---|---|---|\n| A (actual) | 8000 | 480 | 6,0 % |\n| B (nuevo) | 8000 | 552 | 6,9 % |\n\nEl valor p de la prueba de diferencia de proporciones es aproximadamente 0,02. Diego propone detener el experimento y lanzar el nuevo flujo a todos los usuarios de inmediato, argumentando que *ya está demostrado*. Además, su equipo revisó 18 segmentos (por región, sistema operativo, edad y canal de adquisición) y destaca que en usuarios de Android de regiones del sur la mejora es de 2,5 puntos, con p = 0,03, por lo que sugiere una campaña específica.\n\nLa jefa de analítica, Ana Torres, tiene reservas. Le preocupa que se haya revisado el tablero varias veces desde el día 3, que nueve días no incluyan dos fines de semana completos y que la validación biométrica haya elevado el tiempo de respuesta del servidor en horas pico. También le inquieta el área de Riesgos, que pregunta si el nuevo flujo podría aumentar la tasa de registros fraudulentos, un dato que solo estará disponible tras 30 días.\n\nEl comité de producto se reúne mañana y debe decidir entre lanzar el nuevo flujo, continuar el experimento según lo planificado o rediseñarlo. Ana le pide a usted un análisis estadístico independiente y una recomendación.",
+        "questions": [
+          "¿Es válido detener el experimento en el día 9 con p ≈ 0,02? Analice el efecto de revisar el tablero repetidamente y de no cubrir semanas completas.",
+          "Calcule el intervalo de confianza de 95 % para la diferencia de tasas y evalúe si el efecto observado supera el efecto mínimo detectable planificado.",
+          "¿Qué opina del hallazgo en usuarios Android del sur tras revisar 18 segmentos? Aplique una corrección por comparaciones múltiples y discuta su validez.",
+          "¿Qué métricas de resguardo, como fraude y tiempo de respuesta, deberían incluirse en la decisión y cómo afectan la recomendación?",
+          "Redacte la recomendación para el comité de producto: lanzar, continuar o rediseñar, justificando con evidencia e incertidumbre."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: informe inferencial reproducible",
+        "instructions": "**Objetivo:** integrar las cuatro unidades del curso para responder una pregunta real con evidencia estadística y una recomendación de decisión.\n\n**Qué hacer (en equipos de dos o tres integrantes):**\n1. Formule una pregunta precisa sobre un conjunto de datos peruano abierto o proporcionado por una organización con autorización y anonimizado conforme a la Ley 29733.\n2. Realice un análisis exploratorio breve que caracterice la muestra, sus sesgos y la forma de las variables clave.\n3. Aplique al menos un razonamiento de probabilidad condicional y ajuste una distribución pertinente a una variable.\n4. Construya intervalos de confianza y ejecute al menos dos pruebas de hipótesis adecuadas (t, proporciones, chi-cuadrado o bootstrap), verificando supuestos y reportando tamaños del efecto.\n5. Si realiza varias pruebas, aplique una corrección por comparaciones múltiples.\n6. Redacte conclusiones con su nivel de incertidumbre, limitaciones y una recomendación accionable.\n\n**Qué entregar:** cuaderno Jupyter reproducible, informe de 4 a 6 páginas y una presentación de 10 minutos en la semana 16.\n\n**Criterios:** pertinencia de la pregunta y los métodos, corrección técnica, interpretación crítica, reproducibilidad y comunicación ejecutiva.",
+        "rubric": [
+          {
+            "name": "Pregunta, datos y análisis exploratorio pertinentes",
+            "points": 4
+          },
+          {
+            "name": "Corrección de modelos probabilísticos e inferencia",
+            "points": 6
+          },
+          {
+            "name": "Verificación de supuestos, efectos y limitaciones",
+            "points": 4
+          },
+          {
+            "name": "Reproducibilidad del cuaderno",
+            "points": 3
+          },
+          {
+            "name": "Comunicación ejecutiva y recomendación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: inferencia estadística y pruebas A/B",
+        "questions": [
+          {
+            "prompt": "Un IC de 95 % para el tiempo medio de entrega es [22,5; 26,5] minutos. ¿Cuál es la interpretación correcta?",
+            "options": [
+              "El 95 % de los pedidos se entrega entre 22,5 y 26,5 minutos",
+              "La media poblacional cambia y cae en el intervalo el 95 % del tiempo",
+              "El 95 % de los intervalos construidos con este método contendría la media verdadera",
+              "Hay 95 % de probabilidad de que la media muestral esté en el intervalo"
+            ],
+            "correct": 2,
+            "explanation": "La confianza se refiere al procedimiento; no describe dónde caen los pedidos individuales ni a la media muestral."
+          },
+          {
+            "prompt": "¿Qué tamaño de muestra se requiere para estimar una proporción con margen de ±3 puntos al 95 % de confianza, sin información previa sobre p?",
+            "options": [
+              "Aproximadamente 600",
+              "Aproximadamente 2401",
+              "Aproximadamente 1068",
+              "Aproximadamente 385"
+            ],
+            "correct": 2,
+            "explanation": "n = 1,96²·0,25 / 0,03² ≈ 1067,1; se redondea hacia arriba a 1068. El valor 2401 corresponde a ±2 puntos."
+          },
+          {
+            "prompt": "Un estudio obtiene p = 0,30 al comparar dos campañas. ¿Qué conclusión es correcta?",
+            "options": [
+              "No hay evidencia suficiente para afirmar una diferencia; no se demuestra que sean iguales",
+              "Hay 30 % de probabilidad de que la hipótesis nula sea verdadera",
+              "La diferencia es importante, pero no significativa",
+              "Se demostró que ambas campañas tienen el mismo efecto"
+            ],
+            "correct": 0,
+            "explanation": "No rechazar H₀ indica falta de evidencia, no prueba de igualdad; el valor p no es la probabilidad de H₀."
+          },
+          {
+            "prompt": "Se mide la productividad de 25 agentes antes y después de usar un asistente de IA. ¿Qué prueba es la más adecuada?",
+            "options": [
+              "Prueba chi-cuadrado de independencia",
+              "Prueba t para muestras pareadas",
+              "Prueba z para dos proporciones",
+              "Prueba t de Welch para muestras independientes"
+            ],
+            "correct": 1,
+            "explanation": "Las mediciones corresponden a las mismas personas; analizar las diferencias pareadas elimina la variabilidad entre agentes."
+          },
+          {
+            "prompt": "Un analista realiza 20 pruebas independientes con α = 0,05 sin efectos reales. ¿Cuál es aproximadamente la probabilidad de al menos un falso positivo?",
+            "options": [
+              "5 %",
+              "100 %",
+              "20 %",
+              "64 %"
+            ],
+            "correct": 3,
+            "explanation": "1 − 0,95²⁰ ≈ 0,64; por ello se aplican correcciones como Bonferroni o Benjamini-Hochberg."
+          },
+          {
+            "prompt": "En una prueba A/B, el equipo revisa el valor p cada día y detiene el experimento la primera vez que p < 0,05. ¿Cuál es la consecuencia?",
+            "options": [
+              "No tiene consecuencias si la muestra es grande",
+              "Se infla la tasa real de falsos positivos por encima de α",
+              "Se reduce el error tipo I por usar más información",
+              "Aumenta la potencia sin ningún costo"
+            ],
+            "correct": 1,
+            "explanation": "Las revisiones repetidas multiplican las oportunidades de un resultado significativo por azar; deben fijarse duración o usar métodos secuenciales."
+          },
+          {
+            "prompt": "¿Para qué situación es especialmente útil el bootstrap?",
+            "options": [
+              "Construir un intervalo de confianza para la mediana sin fórmula analítica sencilla",
+              "Corregir una muestra con sesgo de selección",
+              "Aumentar el tamaño real de la muestra recolectada",
+              "Reemplazar la aleatorización en un experimento"
+            ],
+            "correct": 0,
+            "explanation": "El bootstrap aproxima la distribución muestral remuestreando los datos; no corrige sesgos ni crea información nueva."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Estadística en proyectos de IA: población, muestra, variables y diseño muestral",
+      "activity": "Aula invertida con la lectura de la unidad; clasificación de variables y discusión de sesgos de selección con microdatos del INEI.",
+      "evidence": "Ficha de clasificación de variables"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Medidas de tendencia central, dispersión y posición",
+      "activity": "Taller en Colab calculando medidas robustas y no robustas con pandas sobre un dataset de entregas.",
+      "evidence": "Cuaderno guiado 1"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Valores atípicos, forma de la distribución y asociación entre variables",
+      "activity": "Análisis del caso Rapidito Express en equipos; aplicación de la regla de Tukey, Pearson y Spearman.",
+      "evidence": "Respuestas al caso Rapidito Express"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Análisis exploratorio reproducible y paradojas de la correlación",
+      "activity": "Entrega de la tarea de informe exploratorio y resolución del cuestionario 1 con retroalimentación.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Espacio muestral, axiomas de Kolmogórov, reglas y técnicas de conteo",
+      "activity": "Resolución de problemas de adición, complemento y combinatoria; verificación con math.comb en Python.",
+      "evidence": "Hoja de ejercicios de conteo"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Probabilidad condicional, independencia y diagramas de árbol",
+      "activity": "Construcción de árboles para un embudo de conversión y pruebas de independencia con tablas de contingencia.",
+      "evidence": "Cuaderno guiado 2"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Probabilidad total, teorema de Bayes y falacia de la tasa base",
+      "activity": "Discusión del caso Banco Andino Digital: matriz de confusión, valor predictivo positivo y costos esperados.",
+      "evidence": "Respuestas al caso Banco Andino"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Naive Bayes, simulación Monte Carlo y ley de los grandes números",
+      "activity": "Entrega de la tarea de análisis bayesiano con simulación y resolución del cuestionario 2.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Variables aleatorias, funciones de probabilidad, esperanza y varianza",
+      "activity": "Taller de decisiones con valor esperado y cálculo de varianzas aplicando propiedades de linealidad.",
+      "evidence": "Ejercicios de valor esperado"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Distribuciones binomial, Poisson, uniforme y exponencial",
+      "activity": "Modelamiento de conversiones y llegadas con scipy.stats; diagnóstico de sobredispersión en conteos reales.",
+      "evidence": "Cuaderno guiado 3"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Distribución normal, estandarización y evaluación de normalidad",
+      "activity": "Análisis del caso SaludPlus: dimensionamiento con percentiles, gráficos Q-Q y prueba de Shapiro-Wilk.",
+      "evidence": "Respuestas al caso SaludPlus"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Distribuciones muestrales, error estándar y teorema central del límite",
+      "activity": "Simulación del teorema central del límite; entrega de la tarea de modelamiento probabilístico y cuestionario 3.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Estimación, intervalos de confianza para medias y proporciones y tamaño de muestra",
+      "activity": "Cálculo e interpretación de intervalos con simulación de cobertura; formulación de la pregunta del proyecto integrador.",
+      "evidence": "Propuesta del proyecto integrador"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Pruebas de hipótesis, errores, potencia, valor p y pruebas t",
+      "activity": "Taller de pruebas t de una muestra, Welch y pareadas; análisis de potencia con statsmodels.",
+      "evidence": "Cuaderno guiado 4 y avance del proyecto"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Pruebas A/B, chi-cuadrado, bootstrap y comparaciones múltiples",
+      "activity": "Discusión del caso PagaYa; aplicación de pruebas de proporciones, chi-cuadrado y correcciones de Bonferroni y Benjamini-Hochberg.",
+      "evidence": "Respuestas al caso PagaYa y cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador: informe inferencial reproducible y sustentación",
+      "activity": "Sustentación ejecutiva de diez minutos por equipo, retroalimentación del docente y autoevaluación del curso.",
+      "evidence": "Proyecto integrador e informe final"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { CareersMega, CareersMobileList } from '../components/programs.jsx';
 import { Button, cx, useClickOutside } from '../components/ui.jsx';
 import { useAuth } from '../lib/context.jsx';
 import { useApi } from '../lib/api.js';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
 export default function PublicLayout() {
   const loc = useLocation();
@@ -18,7 +19,7 @@ export default function PublicLayout() {
     <div className="min-h-dvh bg-bg">
       <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2">Saltar al contenido</a>
       <SiteHeader />
-      <main id="contenido"><Outlet /></main>
+      <main id="contenido"><ErrorBoundary><Outlet /></ErrorBoundary></main>
       <SiteFooter />
       <HelpWidget />
     </div>
@@ -48,14 +49,6 @@ function SiteHeader() {
 
   return (
     <header className={cx('sticky top-0 z-50 transition-all duration-300', scrolled ? 'border-b border-line bg-bg/85 backdrop-blur-xl' : 'border-b border-transparent bg-bg')}>
-      <div className="hidden border-b border-line/70 bg-sunken/60 md:block">
-        <div className="mx-auto flex h-9 max-w-7xl items-center justify-end gap-5 px-6 text-[12.5px] text-muted">
-          <Link to="/aula-virtual" className="hover:text-ink">Estudiantes</Link>
-          <Link to="/aula-virtual#requisitos" className="hover:text-ink">Requisitos técnicos</Link>
-          <a href={`mailto:${CONTACT.email}`} className="hover:text-ink">{CONTACT.email}</a>
-          <Link to="/login" className="font-semibold text-primary-ink hover:underline">Mi aula ISUP</Link>
-        </div>
-      </div>
       <div className="relative mx-auto flex h-[72px] max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Logo />
         <nav className="ml-auto hidden items-center gap-1 lg:flex" aria-label="Principal">
@@ -76,14 +69,21 @@ function SiteHeader() {
           <Link to="/#contacto" className={link}>Contacto</Link>
         </nav>
         <div className="ml-auto flex items-center gap-2 lg:ml-3">
-          {user ? (
-            <Button to="/app" size="md" iconRight={ArrowRight} className="hidden sm:inline-flex">Ir a mi aula</Button>
-          ) : (
-            <>
-              <Button to="/login" variant="secondary" icon={LogIn} className="hidden sm:inline-flex">Ingresar</Button>
-              <Button to="/admision" className="hidden sm:inline-flex">Postula a ISUP</Button>
-            </>
-          )}
+          {/* En el celular estas acciones están en el menú: el contenedor se oculta porque Button siempre es inline-flex */}
+          <div className="hidden items-center gap-2 sm:flex">
+            {user ? (
+              <Button to="/app" size="md" iconRight={ArrowRight}>Ir a mi aula</Button>
+            ) : (
+              <>
+                <Button to="/login" variant="secondary" icon={LogIn}>Ingresar</Button>
+                <Button to="/admision">Postula a ISUP</Button>
+              </>
+            )}
+          </div>
+          {/* Celular: acceso al aula junto al menú, en texto discreto */}
+          <Link to={user ? '/app' : '/login'} className="inline-flex h-10 items-center gap-1.5 shrink-0 rounded-xl px-2 text-[13.5px] font-medium whitespace-nowrap text-ink-2 hover:bg-sunken hover:text-ink sm:hidden">
+            <LogIn size={16} /> {user ? 'Mi aula' : 'Iniciar sesión'}
+          </Link>
           <button className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-ink hover:bg-sunken lg:hidden" onClick={() => setMobile(true)} aria-label="Abrir menú">
             <Menu size={22} />
           </button>
@@ -137,6 +137,8 @@ function SiteFooter() {
             <li><Link to="/aula-virtual" className="hover:text-white">Guía del aula virtual</Link></li>
             <li><Link to="/aula-virtual#fechas" className="hover:text-white">Fechas importantes</Link></li>
             <li><Link to="/aula-virtual#requisitos" className="hover:text-white">Requisitos técnicos</Link></li>
+            <li><Link to="/aula-virtual#normativa" className="hover:text-white">Normativa académica</Link></li>
+            <li><Link to="/verificar" className="hover:text-white">Verificar un documento</Link></li>
             <li><Link to="/admision" className="hover:text-white">Admisión</Link></li>
           </ul>
         </div>
@@ -153,7 +155,7 @@ function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-white/45 sm:flex-row sm:justify-between sm:px-6">
           <span>© {new Date().getFullYear()} ISUP · Instituto Superior Universitario Privado. Todos los derechos reservados.</span>
-          <span>Libro de reclamaciones · Políticas de privacidad</span>
+          <span className="flex flex-wrap gap-x-3"><Link to="/privacidad" className="hover:text-white">Política de privacidad (Ley 29733)</Link><span>·</span><Link to="/privacidad" className="hover:text-white">Condiciones de uso</Link><span>·</span><span>Libro de reclamaciones</span></span>
         </div>
       </div>
     </footer>
