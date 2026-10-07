@@ -1,0 +1,1272 @@
+{
+  "name": "Desarrollo de Software Empresarial",
+  "slug": "desarrollo-de-software-empresarial",
+  "course_type": "especifica",
+  "module_name": "Desarrollo de software y aplicaciones",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Desarrollo de Software Empresarial es un curso de formación específica, de naturaleza teórico-práctica, del quinto ciclo de la carrera de Computación e Informática (código CEI-502). Su propósito es que el estudiante construya aplicaciones de negocio robustas, seguras e integradas, capaces de sostener durante años los procesos críticos de una organización. Se trabaja con Java y Spring Boot, una de las plataformas más empleadas en el desarrollo corporativo. Comprende cuatro unidades: arquitectura de aplicaciones empresariales, patrones de lógica de dominio e inyección de dependencias; modelo de dominio y persistencia con JPA, transacciones y concurrencia; servicios REST seguros con OAuth 2.0 e integración con la facturación electrónica de la SUNAT mediante mensajería y patrones de resiliencia; y pruebas automatizadas, integración continua, contenedores y observabilidad, que culminan en un proyecto integrador. Construye sobre Programación Orientada a Objetos, Base de Datos, Desarrollo Web, Análisis y Diseño de Sistemas y Administración de Servidores y Nube; se articula con Seguridad Informática y Gestión de Proyectos de TI, y prepara el Proyecto Integrador de Software y las Experiencias Formativas.",
+  "competency": "Desarrolla aplicaciones de software empresarial en Java con Spring Boot —modelo de dominio, persistencia transaccional, servicios REST seguros e integración con sistemas externos como la facturación electrónica de la SUNAT— aplicando patrones de arquitectura, pruebas automatizadas e integración continua, para automatizar procesos de negocio de organizaciones peruanas con calidad, seguridad, trazabilidad y cumplimiento de la normativa vigente.",
+  "capacities": [
+    "Diseña la arquitectura de una aplicación empresarial seleccionando patrones de lógica de dominio, estilos arquitectónicos y mecanismos de inyección de dependencias según la complejidad y la evolución esperada del negocio.",
+    "Implementa el modelo de dominio y su persistencia con JPA y Spring Data, definiendo agregados, límites transaccionales y estrategias de concurrencia que preservan la consistencia de los datos.",
+    "Construye servicios REST seguros y documentados, y los integra con sistemas externos y con la facturación electrónica mediante mensajería, patrones de resiliencia e idempotencia.",
+    "Asegura la calidad y la operabilidad del software mediante pruebas automatizadas, integración continua, empaquetado en contenedores y observabilidad, documentando las decisiones técnicas."
+  ],
+  "indicators": [
+    "Justifica en un registro de decisión arquitectónica la elección del patrón de lógica de dominio y del estilo arquitectónico, con criterios de complejidad, costo y mantenibilidad.",
+    "Implementa agregados con objetos de valor e invariantes protegidas, persistidos con JPA y migraciones versionadas con Flyway que superan la validación del esquema.",
+    "Demuestra mediante pruebas concurrentes contra PostgreSQL que la estrategia de bloqueo elegida evita actualizaciones perdidas y sobreventa de inventario.",
+    "Expone una API REST documentada con OpenAPI, con validación de entradas, errores en formato Problem Details y autorización por permisos y por objeto con JWT.",
+    "Integra la emisión de comprobantes electrónicos de forma asíncrona con bandeja de salida, idempotencia, tiempos de espera, reintentos e interruptor de circuito verificados ante fallos simulados.",
+    "Mantiene un flujo de integración continua con pruebas unitarias y de integración, cobertura mínima del 70 % en el núcleo y una puerta de calidad que bloquea defectos.",
+    "Sustenta el proyecto integrador demostrando su funcionamiento de extremo a extremo, su observabilidad en ejecución y su dominio individual mediante una modificación de código en vivo."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura, las diapositivas y un laboratorio guiado en su repositorio. En la sesión se analiza un caso de una organización peruana mediante el método de casos, con roles de arquitecto, desarrollador y responsable del negocio, y se resuelven retos de código en programación en pareja dentro de salas paralelas. El aprendizaje basado en proyectos articula las cuatro unidades: cada equipo construye, por entregas incrementales, un sistema de pedidos y facturación electrónica para una distribuidora real o verosímil. La evaluación formativa es continua: cuestionarios con retroalimentación inmediata, revisión de código entre pares en cada solicitud de integración, resultados del pipeline de integración continua como evidencia objetiva y retroalimentación del docente en cada entrega.",
+  "bibliography": [
+    "Fowler, M. (2002). Patterns of enterprise application architecture. Addison-Wesley.",
+    "Evans, E. (2003). Domain-driven design: Tackling complexity in the heart of software. Addison-Wesley.",
+    "Vernon, V. (2013). Implementing domain-driven design. Addison-Wesley.",
+    "Hohpe, G. y Woolf, B. (2003). Enterprise integration patterns: Designing, building, and deploying messaging solutions. Addison-Wesley.",
+    "Walls, C. (2022). Spring in action (6.ª ed.). Manning.",
+    "Bauer, C., King, G. y Gregory, G. (2015). Java persistence with Hibernate (2.ª ed.). Manning.",
+    "Nygard, M. T. (2018). Release it! Design and deploy production-ready software (2.ª ed.). Pragmatic Bookshelf.",
+    "Humble, J. y Farley, D. (2010). Continuous delivery: Reliable software releases through build, test, and deployment automation. Addison-Wesley.",
+    "Forsgren, N., Humble, J. y Kim, G. (2018). Accelerate: The science of lean software and DevOps. IT Revolution Press.",
+    "Superintendencia Nacional de Aduanas y de Administración Tributaria. (2012). Resolución de Superintendencia N.° 097-2012/SUNAT: Crean el Sistema de Emisión Electrónica desarrollado desde los sistemas del contribuyente. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 35,
+      "description": "Cuestionarios de las cuatro unidades, tareas 1 a 3 entregadas por incrementos y participación argumentada en los foros de casos, valorados con rúbricas y retroalimentación oportuna."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 35,
+      "description": "Proyecto integrador desarrollado en equipo, con repositorio Git, pipeline de integración continua en verde, imagen de contenedor y documentación arquitectónica, calificado con la rúbrica de la Tarea 4."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Sustentación técnica individual del proyecto ante comité, con simulación de fallas y modificación de código en vivo, y prueba práctica supervisada de desarrollo con Spring Boot."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos del software empresarial, arquitectura y plataforma Spring",
+      "description": "Al finalizar la unidad, el estudiante caracteriza los sistemas empresariales, selecciona el patrón de lógica de dominio y el estilo arquitectónico adecuados a un problema de negocio, y construye el esqueleto de un servicio con Spring Boot aplicando inversión de control, configuración externa y una estructura de módulos mantenible.",
+      "topics": [
+        "Software empresarial: características, sistemas ERP y CRM, y decisión de construir o comprar",
+        "Patrones de lógica de dominio y capa de servicio según Fowler",
+        "Arquitectura en capas, hexagonal y monolito modular",
+        "Inversión de control e inyección de dependencias con el contenedor de Spring",
+        "Spring Boot: arrancadores, autoconfiguración, perfiles y configuración externa",
+        "Construcción con Maven, estructura de paquetes y registro de decisiones arquitectónicas"
+      ],
+      "slides": [
+        {
+          "title": "¿Qué hace empresarial a un software?",
+          "bullets": [
+            "Fowler (2002) lo caracteriza por datos persistentes durante años, grandes volúmenes de información y muchos usuarios que acceden de forma concurrente.",
+            "Incluye numerosas pantallas y reportes, integración con otros sistemas internos y externos, y reglas de negocio cambiantes y a veces contradictorias.",
+            "En el Perú se suma la integración obligatoria con la SUNAT, bancos, pasarelas de pago y, según el sector, entidades reguladoras como la SBS.",
+            "Lo crítico no es un algoritmo sofisticado, sino la consistencia de los datos, la trazabilidad y la capacidad de cambiar sin detener la operación."
+          ],
+          "notes": "Inicie preguntando qué sistemas usan las empresas donde los estudiantes trabajan o han hecho prácticas: casi siempre aparecerán un sistema de ventas, uno contable y varias hojas de cálculo que los conectan. Explique que Martin Fowler usó el término aplicaciones empresariales para distinguirlas de compiladores, videojuegos o software embebido: su complejidad no está en el cálculo, sino en el volumen de reglas, la persistencia de datos durante décadas y la integración con otros sistemas. Mencione la expresión de Fowler sobre la lógica de negocio ilógica: excepciones tributarias, descuentos por canal o reglas que dependen del tipo de cliente. Muestre cómo una factura electrónica en el Perú atraviesa al menos cuatro sistemas: ventas, inventario, contabilidad y el operador de servicios electrónicos. Pregunta para la clase: ¿qué ocurre si el sistema de ventas registra un pedido, pero el inventario no se actualiza por un error de integración? Anote las respuestas para retomarlas en la unidad 2, al estudiar transacciones."
+        },
+        {
+          "title": "ERP, CRM, sistemas a medida y SaaS: construir o comprar",
+          "bullets": [
+            "Un ERP integra finanzas, logística, compras y planillas sobre una base de datos común; ejemplos: SAP S/4HANA, Oracle NetSuite y Odoo.",
+            "Un CRM gestiona la relación con el cliente: prospectos, oportunidades, atención y fidelización; ejemplos: Salesforce y HubSpot.",
+            "Se compra lo que es estándar en el sector, como contabilidad o planillas, y se construye lo que diferencia a la empresa, como su motor de precios.",
+            "Criterios de decisión: costo total de propiedad a cinco años, ajuste al proceso, dependencia del proveedor, talento disponible y cumplimiento normativo."
+          ],
+          "notes": "Distinga con claridad las categorías. Un ERP, o sistema de planificación de recursos empresariales, integra procesos transversales sobre una base de datos única; SAP tiene fuerte presencia en grandes corporaciones peruanas, mientras que soluciones como Odoo o sistemas de proveedores locales se difunden entre medianas empresas. Un CRM se centra en el ciclo de vida del cliente. Explique la decisión de construir o comprar con el criterio de diferenciación: comprar lo que es igual en todas las empresas, como la contabilidad bajo el Plan Contable General Empresarial, y construir lo que constituye ventaja competitiva, como el motor de bonificaciones de una distribuidora o la asignación de rutas de reparto. Advierta que la personalización excesiva de un ERP genera un costo enorme de actualización, porque cada versión nueva obliga a rehacer las adaptaciones. Pregunta para la clase: en una empresa de transporte interprovincial, ¿qué módulos comprarían y cuáles construirían? Exija justificar con el costo total de propiedad y no solo con el precio de la licencia."
+        },
+        {
+          "title": "El costo real del software está en su mantenimiento",
+          "bullets": [
+            "Lientz y Swanson (1980) mostraron que el mantenimiento consume la mayor parte del esfuerzo del ciclo de vida, sobre todo en adaptaciones y mejoras.",
+            "Las leyes de Lehman: un sistema en uso debe cambiar continuamente o pierde utilidad, y su complejidad crece si no se trabaja para reducirla.",
+            "Los cambios normativos obligan a adaptar sistemas en producción, como ocurrió con el impuesto al consumo de bolsas de plástico en los comprobantes desde 2019.",
+            "Por eso la arquitectura empresarial prioriza mantenibilidad, facilidad de prueba y modificabilidad por encima de optimizaciones prematuras."
+          ],
+          "notes": "Este dato cambia la forma en que los estudiantes piensan su trabajo: la mayor parte del costo de un sistema empresarial ocurre después de su primera puesta en producción. Lientz y Swanson clasificaron el mantenimiento en correctivo, adaptativo y perfectivo, y encontraron que corregir defectos es solo una fracción; la mayor parte del esfuerzo se destina a adaptar el sistema y a mejorarlo. Las leyes de Lehman, formuladas a partir del estudio de la evolución de sistemas reales como el OS/360 de IBM, establecen el cambio continuo y la complejidad creciente. Conecte con el Perú: la Ley 30884 creó el impuesto al consumo de las bolsas de plástico y miles de sistemas de ventas tuvieron que modificar sus comprobantes electrónicos con plazos fijos. Pregunta para la clase: si un sistema vivirá diez años y será modificado por personas que hoy no trabajan en la empresa, ¿qué cualidades debería tener su código? Use las respuestas para recordar la mantenibilidad de la norma ISO/IEC 25010, estudiada en Análisis y Diseño de Sistemas."
+        },
+        {
+          "title": "Patrones de lógica de dominio: tres formas de organizar las reglas",
+          "bullets": [
+            "Guion de transacción: un procedimiento por operación de negocio; simple y directo, pero duplica reglas cuando el dominio crece.",
+            "Módulo de tabla: una clase por tabla que opera sobre conjuntos de registros; útil con herramientas orientadas a registros.",
+            "Modelo de dominio: objetos con datos y comportamiento que protegen sus invariantes; más costoso al inicio, rentable con reglas complejas.",
+            "Según Fowler, el esfuerzo de mejora crece con rapidez en el guion de transacción y mucho más despacio en el modelo de dominio cuando la lógica se complica."
+          ],
+          "notes": "Presente los tres patrones con un mismo ejemplo: registrar un pedido con descuentos por volumen y verificación de la línea de crédito. En el guion de transacción, un método recorre los ítems, calcula descuentos, consulta el crédito e inserta registros; funciona bien con veinte reglas y se vuelve inmanejable con doscientas, porque la misma regla termina copiada en varios procedimientos. El módulo de tabla fue popular con los DataSet de .NET, pero hoy es menos frecuente. El modelo de dominio coloca la regla en el objeto que posee los datos: el pedido sabe calcular su total y rechazar líneas inválidas. Dibuje el gráfico conceptual de Fowler, esfuerzo de mejora frente a complejidad de la lógica, y muestre que las curvas se cruzan. Insista en que no existe un patrón correcto en abstracto. Pregunta para la clase: ¿qué patrón usarían para mantener la tabla de unidades de medida y cuál para calcular las bonificaciones de una distribuidora? Pida justificar por la frecuencia con que cambian las reglas."
+        },
+        {
+          "title": "Capa de servicio: la frontera de los casos de uso",
+          "bullets": [
+            "La capa de servicio define las operaciones que la aplicación ofrece a sus clientes y coordina la respuesta a cada una.",
+            "Cada método corresponde a un caso de uso, como registrar pedido, anular factura o aprobar crédito, y allí se abre y se cierra la transacción.",
+            "Debe ser delgada: orquesta repositorios, objetos de dominio y servicios externos, sin contener las reglas propias del dominio.",
+            "Recibe comandos o DTO y devuelve resultados; nunca expone entidades persistentes ni detalles del protocolo HTTP."
+          ],
+          "notes": "La capa de servicio responde a una pregunta práctica: ¿dónde comienza y dónde termina una operación de negocio? Fowler la describe como la frontera de la aplicación; Evans la denomina servicio de aplicación y Robert C. Martin, en su arquitectura limpia, caso de uso o interactor. Muestre un método registrarPedido que recibe un comando, carga el cliente, crea el pedido, verifica el crédito y guarda, todo dentro de una transacción. Señale los dos errores opuestos: una capa de servicio que concentra todas las reglas, lo que deja entidades anémicas, y la ausencia de capa de servicio, que dispersa la lógica en los controladores. Destaque que el servicio no debe conocer la solicitud HTTP ni los códigos de estado: así puede invocarse desde una API REST, una cola de mensajes o una tarea programada sin cambios. Pregunta para la clase: ¿qué casos de uso tendría el módulo de cobranzas de una cooperativa de ahorro y crédito, y cuál de ellos requiere la transacción más cuidadosa?"
+        },
+        {
+          "title": "Arquitectura en capas y la regla de dependencia",
+          "bullets": [
+            "Capas típicas: presentación (controladores), aplicación (casos de uso), dominio (entidades y reglas) e infraestructura (persistencia, mensajería, servicios externos).",
+            "Regla de dependencia: el código depende hacia el dominio; el dominio no conoce Spring, JPA ni HTTP.",
+            "Las capas estrictas reducen el acoplamiento, pero añaden código de traspaso; las relajadas son prácticas, aunque erosionan la arquitectura con el tiempo.",
+            "Antipatrón frecuente: el modelo de dominio anémico, con entidades sin comportamiento y toda la lógica en servicios gigantes."
+          ],
+          "notes": "Dibuje las cuatro capas primero como pila y luego como círculos concéntricos, para mostrar que son la misma idea vista desde dos ángulos. Lo esencial es la dirección de las dependencias: el dominio es el centro estable y la infraestructura, que cambia con más frecuencia, depende de él. Explique la diferencia entre capas estrictas, donde cada capa solo usa la inmediata inferior, y relajadas, donde se permite saltar capas. Ilustre el modelo de dominio anémico, que Fowler describió como antipatrón en 2003: entidades que son simples bolsas de métodos de acceso, acompañadas de servicios de miles de líneas. Es el resultado más común en proyectos que dicen seguir una arquitectura en capas sin diseñar el dominio. Muestre cómo herramientas como ArchUnit permiten escribir pruebas que fallan si una clase del dominio importa paquetes de Spring o de JPA. Pregunta para la clase: ¿qué problemas aparecen cuando una entidad JPA se devuelve directamente como respuesta JSON desde un controlador? Guíe hacia la fuga de datos y las cargas perezosas."
+        },
+        {
+          "title": "Arquitectura hexagonal: puertos y adaptadores",
+          "bullets": [
+            "Propuesta por Alistair Cockburn (2005): la aplicación se comunica con el exterior solo mediante puertos, interfaces que ella misma define.",
+            "Puertos de entrada: casos de uso invocados desde REST, colas o tareas programadas. Puertos de salida: persistencia, OSE, correo y pagos.",
+            "Los adaptadores implementan los puertos con tecnologías concretas; cambiar de base de datos o de proveedor de facturación no toca el dominio.",
+            "Beneficio central: el núcleo se prueba sin base de datos ni red, con dobles de prueba que implementan los puertos."
+          ],
+          "notes": "Alistair Cockburn propuso la arquitectura hexagonal, también llamada de puertos y adaptadores, para que una aplicación pueda ser usada por igual por personas, programas, pruebas automatizadas o procesos por lotes, y desarrollarse aislada de sus bases de datos y dispositivos. El hexágono no tiene significado geométrico: solo sugiere varias caras para conectar adaptadores. Explique que los puertos pertenecen a la aplicación y se nombran en el lenguaje del negocio, por ejemplo EmisorDeComprobantes y no ClienteSoapOse. Así, si la empresa cambia de operador de servicios electrónicos, solo se reemplaza un adaptador. Relacione con el principio de inversión de dependencias de SOLID, visto en Programación Orientada a Objetos. Dibuje el controlador REST y un consumidor de cola a la izquierda, y el repositorio JPA y el cliente del OSE a la derecha. Pregunta para la clase: ¿qué adaptadores necesitaría una aplicación que recibe pedidos por WhatsApp Business, por la web y mediante un archivo Excel que llega cada noche?"
+        },
+        {
+          "title": "Monolito modular frente a microservicios",
+          "bullets": [
+            "Ley de Conway (1968): la estructura de un sistema tiende a reflejar la estructura de comunicación de la organización que lo construye.",
+            "Los microservicios ofrecen despliegue independiente y escalado selectivo, pero cobran caro en operación, consistencia distribuida y observabilidad.",
+            "Fowler recomienda empezar con un monolito bien modularizado y extraer servicios solo cuando los límites del dominio estén probados.",
+            "Un monolito modular organiza el código por contextos de negocio con interfaces explícitas; Spring Modulith verifica esos límites con pruebas."
+          ],
+          "notes": "Melvin Conway observó en 1968 que los sistemas reproducen la estructura de comunicación de sus organizaciones; por eso los microservicios funcionan cuando hay equipos autónomos por dominio, no cuando la empresa tiene cinco desarrolladores en total. Explique los costos ocultos de los microservicios: consistencia entre servicios sin transacciones globales, versionado de contratos, trazabilidad distribuida, despliegue de decenas de componentes y una plataforma operativa madura. Fowler, en su artículo sobre empezar por el monolito, advierte que los límites mal trazados entre servicios son mucho más caros de corregir que entre módulos de un mismo proceso. El monolito modular ofrece un punto medio: un solo despliegue, con módulos que se comunican solo por interfaces públicas o eventos. Spring Modulith permite escribir una prueba que falla si un módulo accede a clases internas de otro. Pregunta para la clase: ¿qué señales concretas, como ritmos de cambio o cargas distintas, indicarían que conviene extraer el módulo de facturación como servicio independiente?"
+        },
+        {
+          "title": "Inversión de control e inyección de dependencias",
+          "bullets": [
+            "Con inversión de control, el marco crea los objetos y gestiona su ciclo de vida; el código de negocio ya no instancia sus dependencias con new.",
+            "Fowler (2004) distingue inyección por constructor, por método modificador y por interfaz; Spring recomienda la inyección por constructor.",
+            "La inyección por constructor hace explícitas las dependencias, permite campos final e inmutables y facilita las pruebas sin el contenedor.",
+            "Un constructor con más de cuatro o cinco dependencias indica que la clase asume demasiadas responsabilidades."
+          ],
+          "notes": "Recuerde que en Programación Orientada a Objetos los estudiantes creaban sus objetos con new dentro de las clases que los usaban. Muestre el problema: un servicio que ejecuta new ClienteOseSoap() no puede probarse sin el OSE real ni cambiar de proveedor sin modificar su código. La inversión de control traslada esa responsabilidad a un ensamblador externo: el contenedor. Martin Fowler popularizó el término inyección de dependencias en su artículo de 2004 y distinguió sus variantes. Spring recomienda la inyección por constructor; si la clase tiene un único constructor, ni siquiera necesita la anotación @Autowired. Contraste con la inyección en atributos, que oculta dependencias, impide campos final y obliga a usar reflexión o el contenedor en las pruebas. Explique la regla práctica sobre el número de dependencias como señal del principio de responsabilidad única. Pregunta para la clase: ¿cómo probarían unitariamente un caso de uso que depende de un repositorio y de un emisor de comprobantes, sin base de datos ni red? Conduzca hacia los dobles de prueba."
+        },
+        {
+          "title": "El contenedor de Spring: beans, ámbitos y proxies",
+          "bullets": [
+            "Un bean es un objeto gestionado por el ApplicationContext; se declara con estereotipos (@Component, @Service, @Repository, @RestController) o con métodos @Bean.",
+            "Ámbitos: singleton (por defecto), prototype, request y session; un singleton se comparte entre hilos y debe carecer de estado mutable.",
+            "Spring envuelve beans en proxies para añadir transacciones, seguridad o caché sin modificar su código, según la programación orientada a aspectos.",
+            "Si hay varias implementaciones de una interfaz, se resuelve con @Primary, @Qualifier o con beans activados por perfil."
+          ],
+          "notes": "Explique que el ApplicationContext es un registro de beans y de sus dependencias que Spring construye al arrancar. Los estereotipos son variantes de @Component con significado semántico; @Repository, además, traduce las excepciones de persistencia a una jerarquía uniforme. Los métodos @Bean dentro de una clase @Configuration permiten registrar objetos de bibliotecas de terceros que no podemos anotar. Dedique tiempo a los ámbitos: el singleton es el predeterminado y lo comparten todos los hilos que atienden solicitudes, de modo que guardar datos de una solicitud en un atributo produce errores intermitentes muy difíciles de reproducir. Introduzca el concepto de proxy: cuando un bean tiene @Transactional, lo que se inyecta no es el objeto original, sino un envoltorio que abre y cierra la transacción; esta idea será clave en la unidad 2. Pregunta para la clase: si existen dos implementaciones del puerto EmisorDeComprobantes, una real y otra simulada, ¿cómo lograrían usar la simulada solo en el perfil de desarrollo?"
+        },
+        {
+          "title": "Spring Boot: arrancadores y autoconfiguración",
+          "bullets": [
+            "Los arrancadores agrupan dependencias compatibles: spring-boot-starter-web, -data-jpa, -security, -validation y -actuator, entre otros.",
+            "La autoconfiguración crea beans según lo que encuentra en el classpath y en las propiedades, mediante condiciones como @ConditionalOnClass.",
+            "Incluye un servidor web embebido, Tomcat por defecto: la aplicación se distribuye como un JAR ejecutable con java -jar.",
+            "Spring Boot 3 exige Java 17 o superior y adopta los paquetes jakarta.*; en la empresa se prefiere una versión LTS, como Java 21."
+          ],
+          "notes": "Muestre la clase principal con @SpringBootApplication y explique que combina tres anotaciones: declaración de configuración, habilitación de la autoconfiguración y escaneo de componentes desde el paquete actual. Haga una demostración en vivo: agregue el arrancador de JPA y el controlador de PostgreSQL, defina tres propiedades de conexión y observe cómo aparece un DataSource con un pool HikariCP sin escribir código. Luego ejecute la aplicación con la opción --debug para ver el informe de condiciones: qué autoconfiguraciones se aplicaron y por qué otras no. Esta herramienta desmitifica la supuesta magia del marco. Recalque el cambio de javax a jakarta en Spring Boot 3, que obliga a migrar código heredado. Explique por qué en entornos empresariales se elige una versión de Java con soporte extendido: actualizaciones de seguridad durante años y compatibilidad de bibliotecas. Pregunta para la clase: ¿qué riesgos implica depender de la autoconfiguración sin entender qué beans crea, por ejemplo, en la seguridad o en el pool de conexiones?"
+        },
+        {
+          "title": "Configuración externa, perfiles y secretos",
+          "bullets": [
+            "Una misma compilación se despliega en desarrollo, pruebas y producción; lo que cambia es la configuración, según el tercer factor de la metodología de doce factores.",
+            "Precedencia: argumentos de línea de comandos y variables de entorno prevalecen sobre el application.yml empaquetado en el JAR.",
+            "@ConfigurationProperties vincula propiedades a clases tipadas y validadas, como el RUC emisor o el tiempo de espera del OSE.",
+            "Nunca se versionan contraseñas, claves privadas ni certificados digitales: se inyectan por variables de entorno o desde un gestor de secretos."
+          ],
+          "notes": "La metodología de doce factores, difundida por ingenieros de Heroku, establece que la configuración que varía entre entornos debe residir en el entorno y no en el código. Spring Boot implementa una jerarquía de fuentes de propiedades: archivos dentro del JAR, archivos externos, variables de entorno y argumentos, en orden creciente de prioridad. Muestre cómo la variable de entorno SPRING_DATASOURCE_PASSWORD sobrescribe spring.datasource.password gracias a la vinculación flexible de nombres. Explique @ConfigurationProperties con un record validado: si falta el RUC emisor o tiene formato inválido, la aplicación no arranca, lo que es preferible a fallar con el primer cliente. Refuerce la gestión de secretos: el certificado digital para firmar comprobantes electrónicos y su contraseña son activos críticos, porque su filtración permitiría emitir documentos en nombre de la empresa. Pregunta para la clase: ¿qué ocurriría si un desarrollador sube el certificado digital a un repositorio público? Discutan medidas preventivas como escáneres de secretos y la rotación inmediata del certificado."
+        },
+        {
+          "title": "Maven y estructura del proyecto",
+          "bullets": [
+            "El pom.xml declara coordenadas, dependencias y complementos; el padre spring-boot-starter-parent fija versiones compatibles de cientos de bibliotecas.",
+            "Fases del ciclo de vida: validate, compile, test, package, verify, install y deploy; mvn verify ejecuta pruebas unitarias y de integración.",
+            "Empaquetar por funcionalidad (pedidos, facturacion, clientes) supera a empaquetar por capa técnica cuando el sistema crece.",
+            "El envoltorio mvnw fija la versión de Maven del proyecto y garantiza construcciones reproducibles en cualquier máquina o servidor de integración."
+          ],
+          "notes": "Abra un pom.xml generado y recorra sus partes: el padre que hereda la gestión de versiones, las coordenadas del proyecto, la propiedad java.version, los arrancadores y el complemento spring-boot-maven-plugin que genera el JAR ejecutable. Explique que el padre evita el infierno de dependencias: el equipo de Spring ya probó la compatibilidad entre versiones de Hibernate, Jackson, Tomcat y muchas otras bibliotecas. Repase las fases del ciclo de vida y la diferencia entre el complemento Surefire, que ejecuta pruebas unitarias en la fase test, y Failsafe, que ejecuta pruebas de integración en la fase verify. Compare empaquetar por capa, con paquetes controller, service y repository que mezclan todos los dominios, frente a empaquetar por funcionalidad, que agrupa el código que cambia junto. Mencione que Gradle es una alternativa válida, ya usada en Desarrollo de Aplicaciones Móviles. Pregunta para la clase: en un sistema con pedidos, clientes, inventario y facturación, ¿qué clases deberían ser públicas en cada paquete y cuáles podrían tener visibilidad de paquete?"
+        },
+        {
+          "title": "Pasos para crear el primer servicio con Spring Boot",
+          "bullets": [
+            "1. Generar el proyecto en Spring Initializr: Maven, Java 21 y dependencias Web, Validation, Data JPA, PostgreSQL Driver y Actuator.",
+            "2. Crear paquetes por contexto con subpaquetes dominio, aplicacion e infraestructura, y escribir primero las clases del dominio sin anotaciones.",
+            "3. Definir el puerto de salida como interfaz, implementar un adaptador en memoria y conectar el caso de uso por constructor.",
+            "4. Exponer un controlador mínimo, configurar perfiles dev y test, ejecutar mvn verify y registrar la decisión arquitectónica en un ADR."
+          ],
+          "notes": "Use esta diapositiva como guion del laboratorio de la semana 4. Genere el proyecto en vivo con Spring Initializr y explique cada dependencia seleccionada y por qué no se agregan otras todavía: cada dependencia adicional es superficie de ataque y costo de mantenimiento. Escriba primero la clase Pedido con sus invariantes y su prueba unitaria, sin Spring, para demostrar que el núcleo del negocio no depende del marco. Luego cree la interfaz del repositorio y un adaptador en memoria basado en un ConcurrentHashMap, que servirá hasta la unidad 2, cuando se reemplace por JPA sin tocar el caso de uso. Muestre cómo se conecta todo por constructor y ejecute mvn verify. Finalmente, presente la plantilla de registro de decisión arquitectónica propuesta por Michael Nygard: título, contexto, decisión, estado y consecuencias. Pregunta para la clase: ¿qué decisiones de esta semana merecen un ADR y cuáles son simples convenciones del equipo? Concluya que se documenta lo que es costoso revertir."
+        }
+      ],
+      "reading": {
+        "title": "Arquitectura de aplicaciones empresariales: del guion de transacción al servicio hexagonal con Spring Boot",
+        "minutes": 40,
+        "content": "## 1. Qué distingue al software empresarial\n\nMartin Fowler, en *Patterns of Enterprise Application Architecture* (2002), describe las aplicaciones empresariales por rasgos que no dependen del lenguaje: manejan datos persistentes que sobreviven a varias generaciones de hardware y software, procesan grandes volúmenes de información, son usadas a la vez por muchas personas, presentan numerosas pantallas, se integran con otros sistemas y, sobre todo, implementan reglas de negocio que cambian por decisiones comerciales, contractuales o normativas. Basta pensar en un sistema de ventas peruano: debe emitir comprobantes electrónicos válidos para la SUNAT, aplicar correctamente el IGV y el impuesto al consumo de las bolsas de plástico, tratar datos personales conforme a la Ley 29733 y conciliar cobros con varios bancos.\n\nPor ello, la arquitectura de este tipo de software responde menos al rendimiento bruto y más a tres preguntas: ¿dónde viven las reglas de negocio?, ¿cómo se protege la consistencia de los datos? y ¿cuánto costará cambiar el sistema dentro de cinco años?\n\n## 2. Tres patrones para organizar la lógica de dominio\n\nEl **guion de transacción** organiza la lógica como un procedimiento por operación:\n\n```java\n// Guion de transacción: la regla vive en un procedimiento\npublic void registrarPedido(long clienteId, List<ItemDto> items) {\n    BigDecimal total = BigDecimal.ZERO;\n    for (ItemDto item : items) {\n        total = total.add(item.precio().multiply(BigDecimal.valueOf(item.cantidad())));\n    }\n    if (total.compareTo(lineaDeCredito(clienteId)) > 0) {\n        throw new IllegalStateException(\"El pedido excede la línea de crédito\");\n    }\n    jdbc.update(\"INSERT INTO pedido (cliente_id, total) VALUES (?, ?)\", clienteId, total);\n}\n```\n\nEs claro y rápido de escribir, pero cuando aparecen la modificación, la anulación y la reprogramación de pedidos, el cálculo del total y la verificación del crédito se copian en cada procedimiento. El **módulo de tabla** agrupa la lógica en una clase por tabla que trabaja sobre conjuntos de registros. El **modelo de dominio** coloca cada regla en el objeto que posee los datos:\n\n```java\n// Modelo de dominio: el pedido protege sus propias invariantes\npublic class Pedido {\n    private final ClienteId cliente;\n    private final List<LineaPedido> lineas = new ArrayList<>();\n    private EstadoPedido estado = EstadoPedido.BORRADOR;\n\n    public Pedido(ClienteId cliente) { this.cliente = Objects.requireNonNull(cliente); }\n\n    public void agregar(ProductoId producto, int cantidad, Dinero precio) {\n        if (estado != EstadoPedido.BORRADOR) throw new PedidoCerradoException(cliente);\n        if (cantidad <= 0) throw new IllegalArgumentException(\"Cantidad inválida\");\n        lineas.add(new LineaPedido(producto, cantidad, precio));\n    }\n\n    public Dinero total() {\n        return lineas.stream().map(LineaPedido::subtotal).reduce(Dinero.CERO, Dinero::sumar);\n    }\n}\n```\n\nLa regla del total existe en un solo lugar y ningún código externo puede agregar líneas a un pedido cerrado. El costo es una curva de aprendizaje mayor y la necesidad de un mapeo objeto-relacional, tema de la unidad 2. La elección depende de la complejidad y de la frecuencia de cambio de las reglas.\n\n## 3. Puertos, adaptadores e inyección de dependencias\n\nLa arquitectura hexagonal de Alistair Cockburn separa el núcleo (dominio y casos de uso) de la tecnología mediante **puertos**, interfaces definidas por la aplicación, y **adaptadores**, que las implementan. Spring actúa como ensamblador: crea los adaptadores y los inyecta por constructor.\n\n```java\n// Puerto de salida: lo define la aplicación, en lenguaje del negocio\npublic interface PedidoRepositorio {\n    void guardar(Pedido pedido);\n    Optional<Pedido> buscar(PedidoId id);\n}\n\n@Service\npublic class RegistrarPedido {\n    private final PedidoRepositorio pedidos;\n    private final PoliticaDeCredito credito;\n\n    public RegistrarPedido(PedidoRepositorio pedidos, PoliticaDeCredito credito) {\n        this.pedidos = pedidos;   // Spring inyecta el adaptador concreto\n        this.credito = credito;\n    }\n\n    @Transactional\n    public void ejecutar(RegistrarPedidoComando cmd) {\n        Pedido pedido = new Pedido(cmd.cliente());\n        cmd.items().forEach(i -> pedido.agregar(i.producto(), i.cantidad(), i.precio()));\n        credito.verificar(cmd.cliente(), pedido.total());\n        pedidos.guardar(pedido);\n    }\n}\n```\n\nEn la prueba unitaria, `PedidoRepositorio` se reemplaza por una implementación en memoria y el caso de uso se verifica en milisegundos, sin base de datos ni red.\n\n## 4. Configuración externa y perfiles\n\nSpring Boot separa el artefacto de su configuración: un mismo JAR se ejecuta en desarrollo, pruebas y producción con distintos valores.\n\n```yaml\n# application.yml\nfacturacion:\n  ruc-emisor: ${RUC_EMISOR}\n  ose:\n    tiempo-espera: 5s\nspring:\n  jpa:\n    open-in-view: false\n```\n\n```java\n// Registrada con @ConfigurationPropertiesScan en la clase principal\n@Validated\n@ConfigurationProperties(prefix = \"facturacion\")\npublic record FacturacionProperties(@Pattern(regexp = \"\\\\d{11}\") String rucEmisor, Ose ose) {\n    public record Ose(Duration tiempoEspera) {}\n}\n```\n\nSi la variable `RUC_EMISOR` falta o no tiene once dígitos, la aplicación no arranca: es preferible fallar al desplegar que emitir comprobantes inválidos.\n\n## 5. Proporcionalidad arquitectónica\n\nMuchas empresas peruanas operan con sistemas heredados y hojas de cálculo; el reto no es aplicar todos los patrones, sino los necesarios. Un catálogo de unidades de medida no requiere modelo de dominio, mientras que el motor de precios de una distribuidora sí. Documentar estas elecciones en registros de decisión arquitectónica (ADR), con contexto, decisión y consecuencias, permite que quien herede el sistema entienda por qué se construyó así y cuándo conviene revisarlo.\n"
+      },
+      "case": {
+        "title": "Caso: Distribuidora Andina del Sur y la decisión entre un ERP y un desarrollo propio",
+        "content": "*Los nombres de la organización y de las personas son ficticios; el contexto normativo y de mercado es real.*\n\n**Distribuidora Andina del Sur S.A.C.** abastece de productos de consumo masivo a unas 2 300 bodegas, minimercados y mayoristas de Arequipa, Moquegua, Tacna y Puno. Factura alrededor de S/ 62 millones al año, emplea a 180 personas y cuenta con 35 vendedores preventistas que toman pedidos con una aplicación móvil. Emite cerca de 48 000 comprobantes electrónicos al mes a través de un proveedor de servicios electrónicos que cobra por documento.\n\nSu sistema comercial fue desarrollado en 2006 en Visual Basic 6 sobre una base de datos SQL Server que ya no recibe actualizaciones de seguridad. Solo un programador, próximo a jubilarse, conoce el código. Las reglas de precios son el corazón del negocio: bonificaciones por volumen negociadas cada mes con los fabricantes, descuentos por canal (bodega, minimercado, mayorista), precios diferenciados por zona y promociones que se superponen. Cada cambio de regla demora entre una y tres semanas, y los errores de precio obligan a emitir notas de crédito equivalentes a cerca del 1,2 % de las ventas.\n\nLa gerente general, **Lucía Paredes**, recibió tres propuestas:\n\n| Opción | Descripción | Inversión estimada | Plazo |\n|---|---|---|---|\n| A | ERP comercial en la nube con módulos de ventas, inventario y contabilidad | US$ 180 000 de implementación y US$ 95 000 anuales de suscripción | 9 meses |\n| B | Desarrollo propio completo con Java y Spring Boot, con cuatro desarrolladores y un arquitecto externo | S/ 1,1 millones en 18 meses y luego S/ 480 000 anuales de mantenimiento | 18 meses |\n| C | Híbrido: ERP para contabilidad, compras y planillas, y desarrollo propio del motor comercial (pedidos, precios y bonificaciones) integrado por API | US$ 110 000 de implementación, US$ 60 000 anuales y S/ 650 000 de desarrollo | 12 meses |\n\nEl proveedor del ERP afirma que su motor de promociones cubre «el 85 % de los escenarios», pero las bonificaciones escalonadas por fabricante requieren un desarrollo a medida dentro del ERP, cuyo costo no está cotizado y que debe revalidarse en cada actualización de versión. La jefa de TI, **Rosa Quispe**, advierte que en Arequipa es difícil contratar desarrolladores Java con experiencia y que el equipo actual domina SQL, pero no la programación orientada a objetos. El gerente comercial sostiene que la velocidad para cambiar promociones es la principal ventaja frente a dos competidores nacionales que entraron a la región.\n\nRosa debe presentar al directorio, en tres semanas, una recomendación con su arquitectura de alto nivel, los riesgos y un plan de mitigación. El directorio exige comparar el costo total de propiedad a cinco años, usando un tipo de cambio supuesto de S/ 3,70 por dólar, y saber qué pasará con la integración con la facturación electrónica y con la aplicación de los preventistas.\n",
+        "questions": [
+          "¿Qué características del software empresarial descritas por Fowler están presentes en la distribuidora y cuál representa el mayor riesgo técnico actual?",
+          "Calcule el costo total de propiedad a cinco años de las tres opciones con los supuestos del caso. ¿Qué costos omitidos podrían cambiar la decisión?",
+          "Para el motor de precios y bonificaciones, ¿recomendaría un guion de transacción o un modelo de dominio? Justifique con la frecuencia y la complejidad de los cambios.",
+          "Si se elige la opción C, ¿qué puertos y adaptadores definiría para integrar el motor comercial con el ERP, la aplicación móvil y el proveedor de facturación?",
+          "¿Qué debería recomendar Rosa Quispe al directorio y cómo mitigaría los riesgos de talento y de dependencia del proveedor?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Esqueleto arquitectónico del sistema de pedidos con Spring Boot",
+        "instructions": "**Objetivo:** construir la base del proyecto integrador del curso, un sistema de pedidos y facturación electrónica para una distribuidora peruana real o verosímil, aplicando los patrones y principios de la unidad. El trabajo es en equipos de tres o cuatro integrantes.\n\n**Qué entregar**\n\n1. **Repositorio Git** con un proyecto Spring Boot (Maven, Java 21) organizado por contexto (`pedidos`, `clientes`, `catalogo`), cada uno con subpaquetes `dominio`, `aplicacion` e `infraestructura`.\n2. **Modelo de dominio sin anotaciones del marco:** entidades `Pedido` y `LineaPedido`, y objetos de valor `Dinero`, `Ruc` y `Cantidad`, con al menos cuatro invariantes protegidas (por ejemplo, RUC de once dígitos, cantidades positivas, pedido confirmado no modificable, total no negativo).\n3. **Caso de uso `RegistrarPedido`** con inyección por constructor y un puerto de salida implementado por un adaptador en memoria.\n4. **Pruebas unitarias con JUnit 5** de las invariantes y del caso de uso, sin levantar el contexto de Spring; deben ejecutarse con `./mvnw verify`.\n5. **Configuración:** perfiles `dev` y `test`, y una clase `@ConfigurationProperties` validada para los datos del emisor.\n6. **Registro de decisión arquitectónica (ADR)** de una página, con el formato de Nygard, que justifique la elección entre guion de transacción y modelo de dominio, y entre capas tradicionales y arquitectura hexagonal.\n\n**Formato:** archivo README con el propósito del sistema, instrucciones de ejecución y un diagrama de paquetes; historial de commits con aportes de todos los integrantes. Entrega en la semana 4 por el aula virtual.\n\n**Criterios:** se evalúa la calidad del modelo de dominio, la separación arquitectónica, la cobertura y claridad de las pruebas, y la argumentación del ADR.\n",
+        "rubric": [
+          {
+            "name": "Modelo de dominio con invariantes y objetos de valor",
+            "points": 6
+          },
+          {
+            "name": "Arquitectura hexagonal e inyección de dependencias",
+            "points": 5
+          },
+          {
+            "name": "Pruebas unitarias y construcción reproducible",
+            "points": 5
+          },
+          {
+            "name": "Registro de decisión arquitectónica y documentación",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Arquitectura empresarial y fundamentos de Spring",
+        "questions": [
+          {
+            "prompt": "Un módulo de mantenimiento de tablas maestras (monedas, unidades de medida) tiene validaciones mínimas y no se espera que crezca. Según Fowler, ¿qué patrón de lógica de dominio es más razonable?",
+            "options": [
+              "Guion de transacción",
+              "Modelo de dominio con agregados y eventos",
+              "Un microservicio independiente por cada tabla",
+              "Arquitectura orientada a eventos con colas"
+            ],
+            "correct": 0,
+            "explanation": "Con reglas escasas y estables, el guion de transacción es simple y suficiente. El modelo de dominio se justifica cuando la lógica es compleja y cambia con frecuencia; aplicarlo aquí añadiría costo sin beneficio."
+          },
+          {
+            "prompt": "En una arquitectura hexagonal, la interfaz EmisorDeComprobantes que usa el caso de uso para enviar facturas al OSE es:",
+            "options": [
+              "Un adaptador de entrada",
+              "Un puerto de salida definido por la aplicación",
+              "Una entidad del dominio",
+              "Un controlador REST"
+            ],
+            "correct": 1,
+            "explanation": "Es un puerto de salida: lo define la aplicación en lenguaje del negocio y lo implementa un adaptador de infraestructura, por ejemplo un cliente SOAP del OSE. Así se puede cambiar de proveedor sin tocar el núcleo."
+          },
+          {
+            "prompt": "¿Por qué Spring recomienda la inyección por constructor en lugar de la inyección en atributos con @Autowired?",
+            "options": [
+              "Porque es la única forma que admite Spring Boot 3",
+              "Porque mejora el rendimiento de la JVM en tiempo de ejecución",
+              "Porque hace explícitas las dependencias, permite campos final y facilita probar sin el contenedor",
+              "Porque evita tener que declarar las clases como beans"
+            ],
+            "correct": 2,
+            "explanation": "La inyección por constructor documenta las dependencias en la firma, garantiza objetos completos e inmutables y permite instanciar la clase en una prueba con dobles, sin reflexión ni contexto de Spring."
+          },
+          {
+            "prompt": "Un servicio singleton guarda en un atributo de instancia el pedido que está procesando para usarlo en métodos auxiliares. ¿Qué ocurrirá en producción?",
+            "options": [
+              "Nada, porque Spring crea una instancia por solicitud",
+              "La aplicación no arrancará por un error de configuración",
+              "Spring copiará el atributo automáticamente para cada hilo",
+              "Las solicitudes concurrentes compartirán y sobrescribirán ese atributo, con errores intermitentes"
+            ],
+            "correct": 3,
+            "explanation": "El ámbito singleton comparte una instancia entre todos los hilos. Guardar estado de una solicitud en un atributo provoca condiciones de carrera difíciles de reproducir; el estado debe pasarse como parámetro o vivir en variables locales."
+          },
+          {
+            "prompt": "Al añadir spring-boot-starter-data-jpa y el controlador de PostgreSQL, y definir la URL de conexión, aparece un DataSource sin escribir código. ¿Qué mecanismo lo explica?",
+            "options": [
+              "La autoconfiguración condicionada por el classpath y las propiedades",
+              "La generación de código fuente durante la compilación",
+              "El escaneo de componentes del paquete de PostgreSQL",
+              "Una configuración XML incluida en el arrancador"
+            ],
+            "correct": 0,
+            "explanation": "Spring Boot evalúa condiciones como @ConditionalOnClass y @ConditionalOnMissingBean: si detecta las clases de JDBC y no hay un DataSource definido, lo crea con un pool HikariCP a partir de las propiedades."
+          },
+          {
+            "prompt": "¿Cómo debe gestionarse la contraseña del certificado digital con el que la aplicación firma los comprobantes electrónicos en producción?",
+            "options": [
+              "Escribirla en application.yml y proteger el repositorio con permisos",
+              "Inyectarla como variable de entorno o desde un gestor de secretos, sin versionarla",
+              "Codificarla en Base64 dentro de una constante Java",
+              "Enviarla por correo al equipo de operaciones en cada despliegue"
+            ],
+            "correct": 1,
+            "explanation": "Los secretos no se versionan ni se ofuscan en el código: Base64 no es cifrado. Se inyectan en tiempo de ejecución desde el entorno o un gestor de secretos, con acceso restringido y rotación."
+          },
+          {
+            "prompt": "Una empresa con cinco desarrolladores y un dominio que aún cambia mucho evalúa adoptar microservicios desde el inicio. ¿Cuál es la recomendación más sólida?",
+            "options": [
+              "Microservicios por entidad de base de datos para escalar desde el primer día",
+              "Un único paquete sin separación interna para avanzar más rápido",
+              "Un monolito modular con límites explícitos y extraer servicios cuando los límites estén probados",
+              "Reescribir el sistema en un lenguaje diferente por cada módulo"
+            ],
+            "correct": 2,
+            "explanation": "Con un equipo pequeño y límites inciertos, los microservicios multiplican costos operativos y de consistencia. Un monolito modular permite corregir límites a bajo costo y extraer servicios cuando la organización y el dominio lo justifiquen."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Modelo de dominio y persistencia con JPA, Spring Data y transacciones",
+      "description": "Al finalizar la unidad, el estudiante modela agregados con entidades y objetos de valor, los persiste en PostgreSQL con JPA y Spring Data, define límites transaccionales correctos y resuelve problemas de concurrencia y rendimiento con bloqueo optimista o pesimista, estrategias de carga y migraciones versionadas con Flyway.",
+      "topics": [
+        "Diseño guiado por el dominio táctico: lenguaje ubicuo, entidades, objetos de valor y agregados",
+        "Mapeo objeto-relacional con JPA e Hibernate: entidades, asociaciones y contexto de persistencia",
+        "Repositorios con Spring Data JPA: consultas derivadas, JPQL, paginación y proyecciones",
+        "Transacciones declarativas: propagación, aislamiento y límites del caso de uso",
+        "Concurrencia con bloqueo optimista y pesimista",
+        "Rendimiento y evolución del esquema: problema N+1 y migraciones con Flyway"
+      ],
+      "slides": [
+        {
+          "title": "El desajuste de impedancia objeto-relacional",
+          "bullets": [
+            "Los objetos se conectan por referencias y herencia; las tablas, por claves foráneas y conjuntos: son dos modelos con reglas distintas.",
+            "Diferencias de identidad (igualdad de objetos frente a clave primaria), de granularidad (un objeto Dirección frente a columnas) y de navegación (grafo frente a JOIN).",
+            "Un mapeador objeto-relacional automatiza la traducción, pero no elimina la necesidad de entender el SQL que genera.",
+            "Fowler cataloga sus piezas: Data Mapper, Unit of Work, Identity Map y Lazy Load; Hibernate implementa todas ellas."
+          ],
+          "notes": "Retome lo aprendido en Base de Datos: los estudiantes ya diseñan esquemas normalizados y escriben SQL con soltura. Ahora el problema es otro: el modelo de dominio de la unidad 1 vive en memoria como un grafo de objetos, y la base de datos guarda conjuntos de filas. Muestre los cinco desajustes clásicos con un ejemplo concreto: un Pedido que contiene una lista de líneas y un objeto de valor Dinero; en la base de datos, son dos tablas, una clave foránea y dos columnas para monto y moneda. Explique que un ORM como Hibernate resuelve la traducción con patrones que Fowler documentó: el Data Mapper separa objetos y tablas, la Unit of Work registra cambios, el Identity Map evita duplicados y la carga perezosa trae datos solo cuando se necesitan. Advierta que la abstracción tiene fugas: quien no lee el SQL generado terminará con problemas de rendimiento. Pregunta para la clase: ¿en qué casos preferirían SQL directo con JdbcClient en lugar de JPA, por ejemplo, en reportes masivos?"
+        },
+        {
+          "title": "Lenguaje ubicuo y contextos delimitados",
+          "bullets": [
+            "Evans (2003) propone que expertos del negocio y desarrolladores compartan un lenguaje ubicuo que aparece literalmente en el código.",
+            "Un contexto delimitado es la frontera donde cada término tiene un único significado: cliente en ventas no equivale a cliente en cobranzas.",
+            "El mapa de contextos documenta relaciones entre equipos y sistemas, como cliente-proveedor, núcleo compartido o capa anticorrupción.",
+            "Una capa anticorrupción traduce el modelo de un sistema heredado o de un ERP para que no contamine el modelo propio."
+          ],
+          "notes": "Explique que el diseño guiado por el dominio tiene una parte estratégica y otra táctica; esta unidad usa ambas. Eric Evans parte de una constatación: los errores más caros nacen de malentendidos entre el negocio y los desarrolladores. El lenguaje ubicuo exige que las palabras de la conversación con el gerente comercial, como bonificación, preventa o nota de crédito, aparezcan tal cual en clases y métodos. Ilustre el contexto delimitado con la palabra cliente: para ventas es quien compra y tiene una línea de crédito; para cobranzas es un deudor con un historial de pagos; para facturación es un adquirente con RUC o DNI. Forzar un único modelo de cliente para todos produce una clase enorme y frágil. La capa anticorrupción es especialmente útil en el Perú, donde muchos proyectos conviven con sistemas heredados. Pregunta para la clase: en una clínica, ¿qué significa paciente para admisión, para farmacia y para facturación a aseguradoras? Pida identificar al menos tres contextos delimitados."
+        },
+        {
+          "title": "Entidades y objetos de valor",
+          "bullets": [
+            "Una entidad tiene identidad que persiste en el tiempo aunque cambien sus atributos: un pedido, un cliente o una cuenta de crédito.",
+            "Un objeto de valor se define solo por sus atributos, es inmutable y se compara por valor: Dinero, Ruc, Direccion o RangoDeFechas.",
+            "Los objetos de valor eliminan la obsesión por los primitivos: un Ruc valida once dígitos y su dígito verificador una sola vez, en su constructor.",
+            "En Java, los record son ideales para objetos de valor; en JPA se mapean como @Embeddable o con un convertidor de atributos."
+          ],
+          "notes": "La distinción entre entidad y objeto de valor es la herramienta táctica de mayor rendimiento del diseño guiado por el dominio. Pregunte: si dos billetes de veinte soles se intercambian, ¿importa cuál es cuál? No, porque se comparan por valor. En cambio, dos clientes con el mismo nombre siguen siendo personas distintas: tienen identidad. Muestre el costo de la obsesión por los primitivos: un RUC guardado como String se valida en el controlador, en el servicio y en el reporte, con reglas ligeramente distintas en cada lugar. Un objeto de valor Ruc concentra la validación, incluido el dígito verificador por módulo 11, y garantiza que cualquier instancia existente es válida. Lo mismo con Dinero: evita sumar soles con dólares y usar double para montos, un error clásico que produce diferencias de redondeo en los comprobantes. Pregunta para la clase: ¿qué otros conceptos del sistema de pedidos deberían ser objetos de valor? Espere respuestas como cantidad, porcentaje de descuento, serie y correlativo."
+        },
+        {
+          "title": "Agregados: fronteras de consistencia",
+          "bullets": [
+            "Un agregado es un grupo de objetos tratado como unidad para los cambios; solo su raíz es accesible desde fuera.",
+            "Reglas de Vernon (2013): proteger invariantes verdaderas dentro del agregado, diseñarlo pequeño y referenciar a otros agregados por identificador.",
+            "Una transacción debería modificar un solo agregado; la consistencia entre agregados se logra de forma eventual mediante eventos de dominio.",
+            "Ejemplo: Pedido con sus líneas forma un agregado; Producto y Cliente son agregados distintos, referenciados por su identificador."
+          ],
+          "notes": "El agregado es el concepto que más confunde y el que más impacto tiene en la persistencia. Defínalo como una frontera de consistencia: todo lo que está dentro debe cumplir sus invariantes al final de cada transacción. La raíz, en este caso el Pedido, es la única puerta de entrada; nadie modifica una línea directamente. Vaughn Vernon propone reglas prácticas: agregados pequeños, porque los grandes provocan conflictos de concurrencia y cargas lentas; referencias por identificador, porque una referencia de objeto a Producto invitaría a modificar el producto dentro de la transacción del pedido; y consistencia eventual entre agregados. Ilustre con el descuento de stock: ¿debe el pedido y el inventario cambiar en la misma transacción? Discuta que depende del negocio: si vender sin stock es inaceptable, se acepta modificar dos agregados con una estrategia de concurrencia explícita. Pregunta para la clase: ¿dónde trazarían la frontera del agregado en una reserva de habitaciones de un hotel en Cusco?"
+        },
+        {
+          "title": "JPA: entidades y su ciclo de vida",
+          "bullets": [
+            "Jakarta Persistence (JPA) es la especificación; Hibernate es la implementación que Spring Boot usa por defecto.",
+            "Estados de una entidad: transitoria (recién creada), gestionada (dentro del contexto de persistencia), separada y eliminada.",
+            "Comprobación de cambios: al confirmar la transacción, Hibernate compara las entidades gestionadas con su estado original y emite los UPDATE necesarios.",
+            "Requisitos: @Entity, identificador @Id, constructor sin argumentos protegido y cuidado al implementar equals y hashCode."
+          ],
+          "notes": "Dibuje el diagrama de estados de una entidad y recórralo con código. Un new Pedido() es transitorio: Hibernate no lo conoce. Al llamar a save o persist pasa a gestionado y desde ese momento cualquier cambio en sus atributos se detectará automáticamente al confirmar la transacción, sin llamar a ningún método de actualización. Esta comprobación de cambios sorprende a los estudiantes: muéstrela activando el registro de SQL y modificando un atributo dentro de un método transaccional. Cuando la transacción termina, la entidad queda separada: sus cambios ya no se sincronizan. Explique por qué JPA exige un constructor sin argumentos: Hibernate crea instancias por reflexión al leer filas; hacerlo protegido evita que el código de negocio cree objetos incompletos. Sobre equals y hashCode, recomiende basarlos en el identificador con cuidado para entidades aún no persistidas, o en una clave natural inmutable. Pregunta para la clase: ¿qué ocurre si modifican una entidad separada y no la vuelven a guardar?"
+        },
+        {
+          "title": "Mapeo de asociaciones sin sorpresas",
+          "bullets": [
+            "@ManyToOne debe declararse con fetch = LAZY: por defecto es EAGER y carga datos que muchas pantallas no necesitan.",
+            "@OneToMany(mappedBy = ...) define el lado inverso; el lado propietario es el que tiene la clave foránea en su tabla.",
+            "cascade = ALL y orphanRemoval = true se usan solo dentro de un agregado, nunca entre agregados distintos.",
+            "@Embedded y @AttributeOverride mapean objetos de valor a columnas de la misma tabla sin crear entidades artificiales."
+          ],
+          "notes": "Muestre el mapeo de Pedido y LineaPedido como bidireccional: la línea tiene @ManyToOne hacia el pedido con carga perezosa y el pedido tiene @OneToMany con mappedBy. Explique el concepto de lado propietario: solo los cambios en ese lado se reflejan en la clave foránea, por lo que conviene un método agregarLinea en la raíz que mantenga ambos lados sincronizados. Advierta los valores por defecto peligrosos de JPA: las asociaciones a uno son EAGER y provocan consultas en cascada. La cascada y la eliminación de huérfanos expresan que las líneas viven y mueren con su pedido, exactamente la semántica de un agregado; aplicarlas de Pedido a Cliente sería desastroso, porque eliminar un pedido podría borrar al cliente. Muestre @Embedded con el objeto de valor Ruc mapeado a la columna ruc_cliente. Mencione que, desde Hibernate 6.2, un record puede usarse como @Embeddable. Pregunta para la clase: ¿por qué Pedido no debería tener una asociación @ManyToOne hacia Producto?"
+        },
+        {
+          "title": "Repositorios con Spring Data JPA",
+          "bullets": [
+            "Un repositorio simula una colección de agregados en memoria; Spring Data genera la implementación a partir de una interfaz.",
+            "Consultas derivadas del nombre, como findByEstadoAndFechaBetween; para casos complejos, @Query con JPQL o SQL nativo.",
+            "Pageable y Slice evitan cargar miles de registros; las proyecciones con record devuelven solo las columnas que necesita un reporte.",
+            "Defina repositorios solo para raíces de agregado: un repositorio de LineaPedido revela una frontera de agregado mal trazada."
+          ],
+          "notes": "Presente el patrón Repositorio como lo describen Fowler y Evans: una abstracción que se comporta como una colección de objetos del dominio, ocultando el lenguaje de consulta. Spring Data lleva la idea al extremo: basta declarar una interfaz que extiende JpaRepository para obtener operaciones de guardado, búsqueda, conteo y paginación. Demuestre las consultas derivadas y su límite: nombres de métodos de una línea completa son ilegibles y conviene pasar a @Query. Insista en la paginación: un endpoint que devuelve todos los pedidos funciona en desarrollo con cien registros y colapsa en producción con dos millones. Muestre una proyección basada en record para un reporte de ventas por cliente, que evita cargar entidades completas con sus asociaciones. Relacione con la arquitectura hexagonal: la interfaz de Spring Data puede implementar el puerto del dominio mediante un adaptador, o usarse directamente si el equipo acepta esa dependencia. Pregunta para la clase: ¿qué ventajas y riesgos tiene exponer directamente JpaRepository a la capa de aplicación?"
+        },
+        {
+          "title": "El contexto de persistencia como unidad de trabajo",
+          "bullets": [
+            "El contexto de persistencia implementa la unidad de trabajo: registra objetos nuevos, modificados y eliminados, y los escribe al final.",
+            "También es un mapa de identidad: dentro de una transacción, la misma fila corresponde siempre al mismo objeto en memoria.",
+            "El vaciado envía el SQL pendiente antes del commit, por ejemplo, antes de una consulta que podría verse afectada por esos cambios.",
+            "Desactive spring.jpa.open-in-view: mantener la sesión abierta hasta la vista oculta consultas perezosas ejecutadas desde los controladores."
+          ],
+          "notes": "Conecte los patrones de Fowler con el comportamiento observable de Hibernate. La unidad de trabajo explica por qué los INSERT y UPDATE no se ejecutan en el momento de llamar a save, sino agrupados al confirmar: esto permite ordenar las sentencias y usar lotes. El mapa de identidad explica por qué buscar dos veces el mismo pedido en una transacción devuelve el mismo objeto y no ejecuta dos consultas. Explique el vaciado automático: antes de una consulta JPQL sobre la misma tabla, Hibernate envía los cambios pendientes para que el resultado sea coherente. Dedique tiempo a open-in-view, que Spring Boot activa por defecto y advierte en el registro al arrancar: mantiene la conexión a la base de datos ocupada durante toda la solicitud, incluso mientras se serializa el JSON, y permite que un controlador dispare consultas perezosas sin que nadie lo note. Con tráfico alto, agota el pool de conexiones. Pregunta para la clase: ¿cómo detectarían en las pruebas que un controlador está provocando consultas adicionales?"
+        },
+        {
+          "title": "Transacciones declarativas con @Transactional",
+          "bullets": [
+            "Spring crea un proxy que abre la transacción antes del método y la confirma o revierte al terminar.",
+            "Por defecto revierte ante excepciones no verificadas (RuntimeException y Error), pero no ante excepciones verificadas, salvo que se indique rollbackFor.",
+            "La autoinvocación, un método que llama a otro de la misma clase, no pasa por el proxy y la anotación se ignora.",
+            "Use readOnly = true en consultas; mantenga las transacciones cortas y sin llamadas remotas lentas en su interior."
+          ],
+          "notes": "Explique que @Transactional no es magia, sino el proxy visto en la unidad 1. Cuando el controlador llama al servicio, en realidad llama al envoltorio, que obtiene una conexión, desactiva la confirmación automática, ejecuta el método y confirma o revierte. Demuestre las tres trampas más frecuentes. Primera: lanzar una excepción verificada no revierte la transacción por defecto, herencia de la semántica de los EJB; por eso conviene que las excepciones de negocio sean no verificadas o declarar rollbackFor. Segunda: la autoinvocación ignora la anotación, porque this apunta al objeto original y no al proxy. Tercera: incluir una llamada al OSE o a una pasarela de pagos dentro de la transacción mantiene bloqueadas filas y conexiones durante segundos; si el servicio externo tarda, la base de datos se satura. Esta última trampa será el centro del caso de la unidad 3. Pregunta para la clase: ¿dónde colocarían la anotación transaccional en un caso de uso que confirma un pedido y luego envía un correo al cliente?"
+        },
+        {
+          "title": "Propagación y niveles de aislamiento",
+          "bullets": [
+            "REQUIRED, el valor por defecto, se une a la transacción existente; REQUIRES_NEW suspende la actual y abre otra, útil para registros de auditoría.",
+            "Anomalías de concurrencia: lectura sucia, lectura no repetible, lectura fantasma y actualización perdida.",
+            "PostgreSQL usa READ COMMITTED por defecto; REPEATABLE READ y SERIALIZABLE pueden abortar transacciones que la aplicación debe reintentar.",
+            "Elegir el aislamiento es equilibrar consistencia y concurrencia; se decide por caso de uso, no de forma global."
+          ],
+          "notes": "Repase brevemente las propiedades ACID vistas en Base de Datos y concéntrese en lo que cambia al programar con Spring. La propagación define qué ocurre cuando un método transaccional llama a otro. REQUIRED es correcto en la mayoría de los casos; REQUIRES_NEW tiene usos legítimos, como registrar un intento fallido de inicio de sesión que debe persistir aunque la operación principal se revierta, pero abusar de él produce estados inconsistentes. Sobre el aislamiento, recuerde que PostgreSQL implementa control de concurrencia multiversión: en READ COMMITTED cada sentencia ve los datos confirmados al iniciar esa sentencia, lo que no evita la actualización perdida cuando la aplicación lee, calcula en Java y luego escribe. En SERIALIZABLE, PostgreSQL detecta conflictos y aborta una de las transacciones con un error de serialización que la aplicación debe capturar y reintentar. Pregunta para la clase: en el cierre contable mensual de una empresa, ¿qué nivel de aislamiento elegirían para generar el balance de comprobación y por qué?"
+        },
+        {
+          "title": "Bloqueo optimista con @Version",
+          "bullets": [
+            "Supone que los conflictos son poco frecuentes: no bloquea filas, sino que detecta el conflicto en el momento de escribir.",
+            "Hibernate agrega la condición WHERE version = ? al UPDATE; si no se actualiza ninguna fila, lanza una excepción de bloqueo optimista.",
+            "La API traduce el conflicto a 409 Conflict y el cliente decide: recargar, fusionar cambios o reintentar la operación.",
+            "Evita la actualización perdida en ediciones concurrentes de un pedido, una ficha de cliente o una línea de crédito."
+          ],
+          "notes": "Escenifique la actualización perdida con dos estudiantes: ambos leen el pedido 58 en la versión 3; el primero cambia la dirección de entrega y guarda; el segundo cambia la cantidad y guarda, sobrescribiendo sin saberlo la dirección. Ahora agregue un atributo con @Version: el primer guardado ejecuta un UPDATE con la condición version igual a 3 y lo incrementa a 4; el segundo intenta la misma condición, no encuentra filas y Spring lanza ObjectOptimisticLockingFailureException. Explique que esta estrategia no bloquea a nadie y escala muy bien cuando los conflictos son raros, como en la edición de fichas. Muestre cómo traducir la excepción a un 409 con Problem Details y cómo la interfaz puede ofrecer recargar los datos. Advierta que para operaciones automáticas, como un proceso por lotes, se puede reintentar con un número limitado de intentos. Pregunta para la clase: ¿qué información debería devolver la API al usuario que recibe el conflicto para que pueda decidir sin perder su trabajo?"
+        },
+        {
+          "title": "Bloqueo pesimista y reservas de stock",
+          "bullets": [
+            "Con @Lock(PESSIMISTIC_WRITE), Hibernate emite SELECT ... FOR UPDATE y bloquea la fila hasta el fin de la transacción.",
+            "Conviene cuando la contención es alta y reintentar es costoso, como las últimas unidades de un producto durante una campaña.",
+            "Riesgos: esperas prolongadas e interbloqueos; defina tiempos de espera de bloqueo y adquiera los bloqueos siempre en el mismo orden.",
+            "Alternativa atómica: un UPDATE condicionado a que el disponible alcance, verificando el número de filas afectadas."
+          ],
+          "notes": "Contraste con el bloqueo optimista usando un escenario de alta contención: durante una campaña de descuentos, cientos de clientes intentan comprar las últimas veinte unidades de un televisor. Con bloqueo optimista, la mayoría de las transacciones fallarían y reintentarían, generando más carga justo en el peor momento. El bloqueo pesimista serializa el acceso a la fila del inventario: cada transacción espera su turno. Muestre el riesgo de interbloqueo: si un pedido bloquea el producto A y luego el B, y otro pedido bloquea B y luego A, ambos esperan para siempre hasta que PostgreSQL aborta uno; la solución es ordenar los productos por identificador antes de bloquear. Presente la alternativa más eficiente para el descuento de stock: una sentencia UPDATE que resta la cantidad solo si el disponible alcanza, en una única operación atómica, y revisar si afectó una fila. Pregunta para la clase: ¿por qué leer el stock, comparar en Java y luego guardar falla incluso dentro de una transacción con READ COMMITTED?"
+        },
+        {
+          "title": "El problema N+1 y las estrategias de carga",
+          "bullets": [
+            "Ocurre al recorrer N entidades y acceder a una asociación perezosa en cada una: una consulta inicial más N consultas adicionales.",
+            "Se detecta activando el registro de SQL o las estadísticas de Hibernate en las pruebas, nunca adivinando.",
+            "Soluciones: JOIN FETCH en JPQL, @EntityGraph en el repositorio, carga por lotes o proyecciones específicas para cada pantalla.",
+            "No cambie las asociaciones a EAGER: corrige una pantalla y degrada todas las demás."
+          ],
+          "notes": "Haga una demostración con datos de prueba: un endpoint que lista cincuenta pedidos con sus líneas. Con el registro de SQL activo, los estudiantes verán una consulta para los pedidos y cincuenta consultas más para las líneas. Con una latencia de dos milisegundos por consulta en la nube, son cien milisegundos desperdiciados; con quinientos pedidos y una red lenta, la pantalla tarda segundos. Muestre tres soluciones y cuándo conviene cada una: JOIN FETCH cuando la consulta es específica, @EntityGraph cuando se quiere reutilizar un método derivado, y la carga por lotes con hibernate.default_batch_fetch_size como red de seguridad global. Advierta que combinar JOIN FETCH con paginación sobre colecciones obliga a Hibernate a paginar en memoria; en ese caso conviene paginar identificadores y luego cargar. Recomiende escribir pruebas que verifiquen el número de sentencias ejecutadas. Pregunta para la clase: ¿por qué cambiar la asociación a EAGER parece resolver el problema en una pantalla y lo agrava en otras?"
+        },
+        {
+          "title": "Migraciones de esquema con Flyway",
+          "bullets": [
+            "Cada cambio del esquema es un script versionado, como V1__crear_pedido.sql o V2__agregar_version.sql, que se aplica una sola vez y en orden.",
+            "Flyway registra lo aplicado en la tabla flyway_schema_history y valida sumas de verificación para detectar scripts alterados.",
+            "En producción use spring.jpa.hibernate.ddl-auto=validate: Hibernate verifica que el esquema coincida, pero nunca lo modifica.",
+            "Para cambios sin interrupción se aplica expandir y contraer: agregar lo nuevo, migrar datos, desplegar el código y luego retirar lo antiguo."
+          ],
+          "notes": "Explique que el esquema de la base de datos es código y debe versionarse con el mismo rigor que las clases Java. Flyway ejecuta al arrancar los scripts de la carpeta db/migration que aún no se aplicaron, en orden de versión, y registra cada uno con su suma de verificación. Si alguien modifica un script ya aplicado, Flyway detiene el arranque: los cambios siempre se hacen con un script nuevo. Contraste con ddl-auto=update, que muchos tutoriales usan: Hibernate altera tablas de producción sin revisión, no elimina columnas, no migra datos y puede dejar el esquema en un estado imposible de reproducir. Presente la técnica de expandir y contraer para renombrar una columna sin detener el servicio: agregar la nueva, copiar datos, desplegar código que usa la nueva y, en una versión posterior, eliminar la antigua. Mencione Liquibase como alternativa equivalente. Pregunta para la clase: ¿qué harían si un script de migración falla a la mitad en producción en una base de datos con millones de filas?"
+        }
+      ],
+      "reading": {
+        "title": "Agregados persistentes: JPA, transacciones y concurrencia en un sistema de pedidos",
+        "minutes": 40,
+        "content": "## 1. Del modelo de dominio a las tablas\n\nEn la unidad 1 el pedido era un objeto puro que protegía sus invariantes. Ahora debe sobrevivir en PostgreSQL sin perder esa protección. Eric Evans (2003) y Vaughn Vernon (2013) ofrecen la guía: un **agregado** es una frontera de consistencia con una raíz que controla todo el acceso; sus partes se guardan y se cargan juntas, y los demás agregados se referencian por identificador.\n\n```java\n@Entity\n@Table(name = \"pedido\")\npublic class Pedido {\n    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    @Embedded                                   // objeto de valor en la misma tabla\n    @AttributeOverride(name = \"numero\", column = @Column(name = \"ruc_cliente\", length = 11))\n    private Ruc rucCliente;\n\n    @Enumerated(EnumType.STRING)\n    private EstadoPedido estado = EstadoPedido.BORRADOR;\n\n    @OneToMany(mappedBy = \"pedido\", cascade = CascadeType.ALL, orphanRemoval = true)\n    private List<LineaPedido> lineas = new ArrayList<>();\n\n    @Version                                    // bloqueo optimista\n    private long version;\n\n    protected Pedido() { }                      // exigido por JPA\n    public Pedido(Ruc rucCliente) { this.rucCliente = rucCliente; }\n\n    public void agregar(Long productoId, int cantidad, BigDecimal precio) {\n        if (estado != EstadoPedido.BORRADOR) throw new PedidoCerradoException(id);\n        lineas.add(new LineaPedido(this, productoId, cantidad, precio));\n    }\n    public void confirmar() {\n        if (lineas.isEmpty()) throw new PedidoVacioException(id);\n        estado = EstadoPedido.CONFIRMADO;\n    }\n}\n```\n\nObserve tres decisiones: el producto se referencia por `productoId` y no por una asociación, la cascada solo opera dentro del agregado y no existen métodos `setEstado` que permitan saltarse las reglas.\n\n## 2. El esquema, versionado con Flyway\n\n```sql\n-- src/main/resources/db/migration/V1__crear_pedido.sql\nCREATE TABLE pedido (\n    id          BIGINT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\n    ruc_cliente CHAR(11)    NOT NULL,\n    estado      VARCHAR(20) NOT NULL,\n    version     BIGINT      NOT NULL DEFAULT 0\n);\nCREATE TABLE linea_pedido (\n    id          BIGINT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\n    pedido_id   BIGINT        NOT NULL REFERENCES pedido (id),\n    producto_id BIGINT        NOT NULL,\n    cantidad    INT           NOT NULL CHECK (cantidad > 0),\n    precio      NUMERIC(12,2) NOT NULL\n);\nCREATE INDEX idx_linea_pedido_pedido ON linea_pedido (pedido_id);\n```\n\nCon `spring.jpa.hibernate.ddl-auto=validate`, Hibernate comprueba al arrancar que las entidades coinciden con este esquema, pero nunca lo altera.\n\n## 3. Repositorios y consultas sin N+1\n\n```java\npublic interface PedidoRepository extends JpaRepository<Pedido, Long> {\n    @EntityGraph(attributePaths = \"lineas\")      // una sola consulta con JOIN\n    List<Pedido> findByEstado(EstadoPedido estado);\n}\n\npublic interface InventarioRepository extends JpaRepository<Inventario, Long> {\n    @Modifying\n    @Query(\"update Inventario i set i.disponible = i.disponible - :cantidad \" +\n           \"where i.productoId = :productoId and i.disponible >= :cantidad\")\n    int descontar(Long productoId, int cantidad);  // devuelve filas afectadas\n}\n```\n\nLa sentencia de descuento es atómica: PostgreSQL bloquea la fila durante el UPDATE y reevalúa la condición, de modo que dos compradores simultáneos no pueden dejar el stock en negativo.\n\n## 4. El límite transaccional del caso de uso\n\n```java\n@Service\npublic class RegistrarPedido {\n    private final PedidoRepository pedidos;\n    private final InventarioRepository inventario;\n\n    public RegistrarPedido(PedidoRepository pedidos, InventarioRepository inventario) {\n        this.pedidos = pedidos;\n        this.inventario = inventario;\n    }\n\n    @Transactional\n    public Long ejecutar(RegistrarPedidoComando cmd) {\n        Pedido pedido = new Pedido(new Ruc(cmd.ruc()));\n        for (var item : cmd.items()) {\n            if (inventario.descontar(item.productoId(), item.cantidad()) == 0) {\n                throw new StockInsuficienteException(item.productoId()); // revierte todo\n            }\n            pedido.agregar(item.productoId(), item.cantidad(), item.precio());\n        }\n        pedido.confirmar();\n        return pedidos.save(pedido).getId();\n    }\n}\n```\n\nComo `StockInsuficienteException` es no verificada, Spring revierte también los descuentos ya aplicados. Ordenar los ítems por `productoId` antes del bucle reduce el riesgo de interbloqueos entre pedidos concurrentes.\n\n## 5. Conflictos de edición y bloqueo optimista\n\nCuando dos usuarios editan el mismo pedido, el atributo `@Version` convierte la actualización perdida en un error explícito:\n\n```sql\nUPDATE pedido SET estado = 'ANULADO', version = 4 WHERE id = 58 AND version = 3;\n-- 0 filas actualizadas: Spring lanza ObjectOptimisticLockingFailureException\n```\n\nLa API lo traduce a **409 Conflict**. La regla práctica es: bloqueo optimista para ediciones con baja contención, operaciones atómicas o bloqueo pesimista para recursos muy disputados, y transacciones cortas siempre, sin llamadas a servicios externos en su interior.\n"
+      },
+      "case": {
+        "title": "Caso: Botica Vida Plus y el stock fantasma de la campaña de fin de año",
+        "content": "*Los nombres de la organización y de las personas son ficticios; el contexto normativo es real.*\n\n**Botica Vida Plus** es una cadena peruana con 120 locales en Lima y siete regiones, una tienda virtual y un servicio de reparto propio. Su plataforma de comercio electrónico fue construida hace tres años con Spring Boot y PostgreSQL por un equipo interno de seis desarrolladores. Durante la campaña de descuentos de fin de año, la tienda virtual recibió 18 400 pedidos en 72 horas, cinco veces su promedio.\n\nEl resultado fue preocupante: 1 340 pedidos (7,3 %) fueron confirmados y cobrados sin que existiera stock real. La empresa tuvo que anularlos, devolver el dinero y atender 410 reclamos registrados en el Libro de Reclamaciones, con el riesgo de procedimientos ante el INDECOPI por infracción al Código de Protección y Defensa del Consumidor (Ley 29571). El área comercial estima el costo directo en S/ 260 000, sin contar el daño reputacional en redes sociales.\n\nEl arquitecto de software, **Diego Huamán**, reconstruyó el problema a partir de los registros:\n\n- El caso de uso de compra lee el stock con `findById`, verifica en Java que `disponible >= cantidad`, resta y guarda. Todo ocurre dentro de `@Transactional` con el aislamiento por defecto de PostgreSQL, READ COMMITTED.\n- La transacción incluye además la llamada a la pasarela de pagos, que en la campaña tardó entre 3 y 9 segundos, por lo que el pool de 30 conexiones se agotó en varias ocasiones.\n- El listado de pedidos del panel de operaciones tarda 11 segundos: el registro de SQL muestra 501 consultas para mostrar 500 pedidos con sus líneas.\n- El esquema se gestiona con `ddl-auto=update`; en la última versión, una columna `precio` cambió de tipo en desarrollo, pero no en producción, y nadie lo notó hasta que fallaron los reportes de margen.\n\nDiego debe proponer en una semana una solución para la próxima campaña, dentro de dos meses. Sus opciones son:\n\n1. **Bloqueo pesimista** de la fila de inventario con `SELECT ... FOR UPDATE`.\n2. **Bloqueo optimista** con `@Version` en `Inventario` y hasta tres reintentos automáticos.\n3. **Descuento atómico** con un UPDATE condicionado y una **reserva temporal** de stock que expira a los 15 minutos si el pago no se confirma.\n4. Un **contador en memoria distribuida** fuera de la base de datos, que el equipo nunca ha operado.\n\nEl gerente de operaciones exige que no se vuelva a vender sin stock; el gerente comercial teme que una solución demasiado estricta rechace compras válidas en los minutos de mayor demanda. Diego también debe decidir si adopta Flyway, aunque implique congelar cambios de esquema durante dos semanas para levantar la línea base.\n",
+        "questions": [
+          "Explique con una línea de tiempo de dos transacciones concurrentes por qué el diseño actual vende sin stock, aunque use @Transactional.",
+          "Compare las opciones 1, 2 y 3 en consistencia, rendimiento bajo alta contención y complejidad. ¿Cuál recomendaría y por qué?",
+          "¿Qué cambios propondría en el límite transaccional respecto de la pasarela de pagos y cómo afectarían al pool de conexiones?",
+          "¿Cómo resolvería el listado de 501 consultas y qué prueba automatizada evitaría que el problema reaparezca?",
+          "Justifique ante el gerente de operaciones el costo de adoptar Flyway y describa cómo levantaría la línea base del esquema actual."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Persistencia transaccional del sistema de pedidos",
+        "instructions": "**Objetivo:** reemplazar el adaptador en memoria de la Tarea 1 por una capa de persistencia con JPA y PostgreSQL que preserve las invariantes del dominio y evite la sobreventa bajo concurrencia.\n\n**Qué entregar**\n\n1. **Mapeo de agregados:** `Pedido` con sus líneas, `Cliente` e `Inventario`, con objetos de valor `Ruc` y `Dinero` como `@Embeddable`, referencias entre agregados por identificador y `@Version` en `Pedido`.\n2. **Migraciones con Flyway** (mínimo tres scripts versionados, con restricciones `CHECK`, claves foráneas e índices justificados) y `ddl-auto=validate`.\n3. **Repositorios con Spring Data JPA:** al menos una consulta derivada, una consulta `@Query` en JPQL y una proyección basada en record con paginación para un reporte de ventas por cliente.\n4. **Caso de uso transaccional** `RegistrarPedido` que descuenta stock con la estrategia de concurrencia que el equipo elija y justifique (optimista, pesimista o atómica).\n5. **Prueba de concurrencia** con PostgreSQL real (Testcontainers o una base de datos local en Docker): dos o más hilos compiten por la última unidad y la prueba verifica que exactamente uno la obtiene.\n6. **Evidencia de rendimiento:** registro de SQL antes y después de corregir un problema N+1 en el listado de pedidos.\n7. **Informe técnico** de máximo tres páginas: diagrama de agregados, límites transaccionales, nivel de aislamiento y estrategia de concurrencia elegida con sus riesgos.\n\n**Formato:** solicitud de integración en el repositorio del equipo, revisada por al menos un compañero, e informe en PDF. Entrega en la semana 8.\n",
+        "rubric": [
+          {
+            "name": "Mapeo de agregados y objetos de valor",
+            "points": 5
+          },
+          {
+            "name": "Transacciones y concurrencia demostradas con pruebas",
+            "points": 6
+          },
+          {
+            "name": "Repositorios, consultas y corrección del problema N+1",
+            "points": 5
+          },
+          {
+            "name": "Migraciones con Flyway e informe técnico",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Dominio, persistencia y transacciones",
+        "questions": [
+          {
+            "prompt": "Un equipo crea un repositorio para LineaPedido y un servicio modifica cantidades de líneas directamente, sin pasar por Pedido. ¿Qué principio del diseño de agregados se viola?",
+            "options": [
+              "La regla de usar siempre carga perezosa",
+              "Solo la raíz del agregado puede ser accedida y modificar su interior",
+              "Cada entidad debe tener su propia tabla",
+              "Los objetos de valor deben ser inmutables"
+            ],
+            "correct": 1,
+            "explanation": "Si se modifican líneas sin pasar por la raíz, Pedido no puede proteger invariantes como el total o la prohibición de cambiar un pedido confirmado. Los repositorios se definen solo para raíces de agregado."
+          },
+          {
+            "prompt": "Un método anotado con @Transactional guarda un pedido y luego lanza una IOException, que es una excepción verificada. Sin configuración adicional, ¿qué ocurre con el pedido?",
+            "options": [
+              "Se revierte, porque toda excepción revierte la transacción",
+              "Queda en estado separado y no se guarda",
+              "Se confirma, porque por defecto solo se revierte ante excepciones no verificadas",
+              "Spring reintenta el método automáticamente"
+            ],
+            "correct": 2,
+            "explanation": "Spring revierte por defecto ante RuntimeException y Error. Ante excepciones verificadas confirma, salvo que se indique rollbackFor. Por eso conviene modelar las excepciones de negocio como no verificadas."
+          },
+          {
+            "prompt": "En PedidoService, el método público registrar(), sin anotación, llama a this.guardar(), que sí tiene @Transactional. ¿Qué sucede?",
+            "options": [
+              "No se abre transacción, porque la autoinvocación no pasa por el proxy de Spring",
+              "Se abre la transacción normalmente al entrar a guardar()",
+              "Spring lanza un error al arrancar la aplicación",
+              "Se abren dos transacciones anidadas"
+            ],
+            "correct": 0,
+            "explanation": "La transacción la abre el proxy que envuelve al bean. Una llamada interna mediante this invoca al objeto original y omite el proxy, por lo que la anotación no tiene efecto."
+          },
+          {
+            "prompt": "Dos supervisores abren el mismo pedido en la versión 3. El primero guarda un cambio. ¿Qué ocurre cuando el segundo intenta guardar, si la entidad tiene un atributo @Version?",
+            "options": [
+              "Su cambio sobrescribe al primero sin aviso",
+              "La base de datos fusiona ambos cambios",
+              "El segundo queda bloqueado hasta que el primero cierre sesión",
+              "El UPDATE no afecta filas y se lanza una excepción de bloqueo optimista"
+            ],
+            "correct": 3,
+            "explanation": "El UPDATE incluye la condición version igual a 3, que ya no se cumple porque el primer guardado la incrementó. Spring lanza ObjectOptimisticLockingFailureException, que la API suele traducir a 409 Conflict."
+          },
+          {
+            "prompt": "El listado de 50 pedidos con sus líneas ejecuta 51 consultas SQL. ¿Cuál es la corrección más adecuada?",
+            "options": [
+              "Cambiar la asociación de las líneas a EAGER en la entidad",
+              "Cargar las líneas en la misma consulta con JOIN FETCH o @EntityGraph",
+              "Aumentar el tamaño del pool de conexiones",
+              "Activar open-in-view para mantener la sesión abierta"
+            ],
+            "correct": 1,
+            "explanation": "Es el problema N+1. Cargar las líneas con JOIN FETCH o un grafo de entidad en esa consulta lo resuelve sin afectar otras pantallas, mientras que EAGER degradaría todas las consultas que no necesitan las líneas."
+          },
+          {
+            "prompt": "El RUC del cliente se guarda como String y se valida con reglas ligeramente distintas en cinco lugares del código. ¿Qué técnica táctica corrige mejor el problema?",
+            "options": [
+              "Un objeto de valor inmutable Ruc que valida su formato en el constructor",
+              "Una restricción CHECK en la base de datos como única validación",
+              "Un método estático de utilidades llamado desde cada lugar",
+              "Convertir el RUC en una entidad con su propia tabla"
+            ],
+            "correct": 0,
+            "explanation": "Un objeto de valor concentra la regla y garantiza que toda instancia existente es válida. La restricción CHECK es una defensa complementaria, pero no evita que el código de negocio opere con valores inválidos."
+          },
+          {
+            "prompt": "Dos clientes compran a la vez la última unidad. El código lee el stock, compara en Java y guarda, todo con @Transactional y READ COMMITTED. ¿Qué ocurre?",
+            "options": [
+              "PostgreSQL rechaza automáticamente la segunda compra",
+              "Hibernate detecta el conflicto con la comprobación de cambios",
+              "Ambas transacciones pueden leer el mismo stock y confirmar, produciendo sobreventa",
+              "La segunda transacción espera siempre a la primera por el aislamiento"
+            ],
+            "correct": 2,
+            "explanation": "READ COMMITTED no evita la actualización perdida en el patrón leer, calcular y escribir. Se requiere bloqueo optimista, pesimista o un UPDATE atómico condicionado que verifique las filas afectadas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Servicios REST, seguridad e integración empresarial",
+      "description": "Al finalizar la unidad, el estudiante expone casos de uso mediante API REST validadas y documentadas, las protege con OAuth 2.0 y JWT con autorización por permisos y por objeto, e integra el sistema con la facturación electrónica de la SUNAT y otros servicios externos mediante mensajería, bandeja de salida transaccional, resiliencia e idempotencia.",
+      "topics": [
+        "API REST con Spring Web: controladores, DTO, validación y Problem Details",
+        "Contrato OpenAPI, versionado y compatibilidad de la API",
+        "Seguridad con Spring Security, OAuth 2.0, OpenID Connect y JWT",
+        "Facturación electrónica de la SUNAT: actores, estándares y flujo técnico de emisión",
+        "Mensajería asíncrona, patrones de integración y bandeja de salida transaccional",
+        "Resiliencia e idempotencia frente a servicios externos"
+      ],
+      "slides": [
+        {
+          "title": "Controladores delgados y objetos de transferencia de datos",
+          "bullets": [
+            "El controlador traduce HTTP a un comando del caso de uso y el resultado a una respuesta; no contiene reglas de negocio.",
+            "Use record de Java como DTO de entrada y salida; nunca serialice entidades JPA, para no filtrar campos ni disparar cargas perezosas.",
+            "Códigos con semántica: 201 con cabecera Location al crear, 409 ante conflictos de versión y 422 ante reglas de negocio incumplidas.",
+            "El mapeo entre DTO y dominio puede ser manual o con MapStruct; lo importante es que sea explícito y esté probado."
+          ],
+          "notes": "Recuerde que en Desarrollo Web los estudiantes diseñaron API REST con Express; los principios de recursos, métodos y códigos de estado se mantienen, y ahora se aplican en un contexto con dominio rico y transacciones. Muestre un controlador de pedidos que recibe un record CrearPedidoRequest, lo convierte en comando, invoca el caso de uso y devuelve un PedidoResponse. Explique por qué exponer entidades JPA es peligroso: se filtran atributos internos como la versión o datos personales, el serializador recorre asociaciones perezosas y dispara consultas, y cualquier cambio en el modelo rompe a los clientes de la API. Discuta la diferencia entre 400, que indica una solicitud mal formada, y 422, que indica una solicitud bien formada que viola una regla de negocio, como pedir más unidades que el stock. Mencione que MapStruct genera el código de mapeo en tiempo de compilación, sin reflexión. Pregunta para la clase: ¿qué campos de un pedido nunca deberían aparecer en la respuesta de una API pública para clientes B2B?"
+        },
+        {
+          "title": "Validación de entrada con Bean Validation",
+          "bullets": [
+            "Jakarta Bean Validation ofrece @NotNull, @NotBlank, @Size, @Pattern, @Positive y @Valid para validar objetos anidados.",
+            "@Valid en el parámetro del controlador produce MethodArgumentNotValidException, que se traduce a 400 con el detalle de cada campo.",
+            "Las validaciones de formato van en el DTO y las invariantes de negocio en el dominio: cumplen funciones distintas y ambas son necesarias.",
+            "Los validadores propios con ConstraintValidator permiten, por ejemplo, verificar el dígito de control de un RUC."
+          ],
+          "notes": "Muestre la validación como primera línea de defensa: rechazar datos mal formados en la frontera evita que lleguen al dominio y a la base de datos. Demuestre con un record que anota el RUC con @Pattern de once dígitos, la lista de ítems con @NotEmpty y cada ítem con @Valid y @Positive en la cantidad. Explique la diferencia de responsabilidades: el DTO valida que la solicitud tenga forma correcta; el dominio valida reglas que dependen del estado, como que el pedido no esté confirmado o que el cliente no supere su línea de crédito. Duplicar la validación de formato en el objeto de valor Ruc no es redundancia, sino defensa en profundidad, porque el dominio también puede recibir datos desde colas o procesos por lotes. Muestre un ConstraintValidator que calcula el dígito verificador del RUC por módulo 11. Pregunta para la clase: ¿qué validaciones de un comprobante electrónico pueden hacerse en la frontera de la API y cuáles requieren consultar la base de datos?"
+        },
+        {
+          "title": "Errores uniformes con Problem Details (RFC 9457)",
+          "bullets": [
+            "El RFC 9457 (2023) reemplaza al RFC 7807 y define un formato JSON estándar para errores: type, title, status, detail e instance.",
+            "Spring 6 ofrece la clase ProblemDetail y @RestControllerAdvice para centralizar la traducción de excepciones a respuestas.",
+            "Se pueden añadir propiedades propias, como un código de error de negocio o la lista de campos inválidos.",
+            "Nunca devuelva trazas de pila ni mensajes de SQL al cliente: se registran en el servidor con un identificador de correlación."
+          ],
+          "notes": "Muestre el contraste entre una API sin estándar de errores, donde cada endpoint devuelve formas distintas, y una API con Problem Details, donde los clientes pueden escribir un único manejador. El RFC 9457 de la IETF actualizó en 2023 al RFC 7807 y es el estándar que Spring Framework 6 adoptó de forma nativa. Escriba en vivo un @RestControllerAdvice con métodos @ExceptionHandler para StockInsuficienteException, que devuelve 422, para la excepción de bloqueo optimista, que devuelve 409, y para la validación, que devuelve 400 con los campos inválidos. Enfatice la seguridad: devolver la traza de pila o el mensaje de PostgreSQL revela nombres de tablas, versiones y estructura interna, lo que el OWASP clasifica como exposición de información. La práctica correcta es registrar el detalle en el servidor y devolver al cliente un identificador para que soporte pueda rastrearlo. Pregunta para la clase: ¿qué propiedades adicionales incluirían en el error de stock insuficiente para que la aplicación móvil de los preventistas pueda ofrecer una alternativa?"
+        },
+        {
+          "title": "Contrato OpenAPI y versionado de la API",
+          "bullets": [
+            "OpenAPI 3 describe rutas, esquemas, respuestas y seguridad; springdoc-openapi genera el contrato a partir del código anotado.",
+            "Diseñar primero el contrato conviene cuando varios equipos o socios externos consumen la API; para API internas basta generarlo desde el código.",
+            "Cambios compatibles: añadir campos opcionales o rutas nuevas. Incompatibles: renombrar, eliminar o cambiar tipos; exigen una nueva versión.",
+            "El versionado en la ruta (/api/v1) es el más explícito; anuncie el retiro de versiones con plazos y la cabecera Deprecation."
+          ],
+          "notes": "En Análisis y Diseño de Sistemas los estudiantes derivaron contratos OpenAPI del modelo de diseño; ahora los conectan con el código. Muestre springdoc-openapi generando la documentación interactiva a partir de los controladores y de las anotaciones de validación, y explique que ese documento sirve para generar clientes, configurar puertas de enlace y escribir pruebas de contrato. Discuta las dos estrategias: con diseño primero, el contrato se acuerda antes de programar y se generan las interfaces del servidor, lo cual es valioso cuando un banco o un socio externo integrará su sistema; con código primero, el contrato se deriva y se publica, lo cual es más ágil para consumidores internos. Explique la ley de Postel aplicada a API: ser estricto en lo que se envía y tolerante en lo que se recibe, ignorando campos desconocidos. Muestre ejemplos de cambios incompatibles que rompen integraciones en producción. Pregunta para la clase: ¿cómo comunicarían a cuarenta clientes B2B que la versión 1 de la API será retirada en seis meses?"
+        },
+        {
+          "title": "Spring Security: la cadena de filtros",
+          "bullets": [
+            "Spring Security intercepta cada solicitud con una cadena de filtros configurada como un bean SecurityFilterChain.",
+            "Autenticación responde quién es el usuario; autorización responde qué puede hacer: se configuran y se prueban por separado.",
+            "Una API consumida con tokens es sin estado: sesión STATELESS y protección CSRF desactivada solo si no se usan cookies de sesión.",
+            "Denegación por defecto: anyRequest().authenticated() y permisos explícitos solo para rutas públicas como la salud del servicio."
+          ],
+          "notes": "Dibuje la solicitud atravesando la cadena de filtros antes de llegar al DispatcherServlet: filtros de cabeceras de seguridad, de CORS, de autenticación por token, de manejo de excepciones y de autorización. Explique que con Spring Boot, al agregar el arrancador de seguridad, todo queda protegido por defecto con un usuario generado; en la práctica, se reemplaza esa configuración por un SecurityFilterChain explícito. Insista en la diferencia entre autenticación y autorización: muchos incidentes ocurren con usuarios correctamente autenticados que acceden a datos que no les corresponden. Explique cuándo es seguro desactivar CSRF: solo si la API no se autentica con cookies que el navegador envía automáticamente; si se usan cookies de sesión, la protección debe mantenerse. Recalque la denegación por defecto: es más seguro olvidar abrir una ruta que olvidar cerrarla. Coordine con Seguridad Informática, que se dicta en paralelo y profundiza en amenazas. Pregunta para la clase: ¿qué rutas del sistema de pedidos deberían ser públicas y con qué justificación?"
+        },
+        {
+          "title": "OAuth 2.0 y OpenID Connect en la empresa",
+          "bullets": [
+            "OAuth 2.0 (RFC 6749) delega la autorización entre cuatro roles: propietario del recurso, cliente, servidor de autorización y servidor de recursos.",
+            "OpenID Connect añade identidad sobre OAuth 2.0 mediante el token de identificación y permite el inicio de sesión único.",
+            "Flujos vigentes: código de autorización con PKCE para aplicaciones web y móviles; credenciales de cliente para comunicación entre servicios.",
+            "Servidores de autorización: Keycloak, Microsoft Entra ID, Okta o Spring Authorization Server; la API de negocio no guarda contraseñas."
+          ],
+          "notes": "Explique el problema que resuelve OAuth 2.0: permitir que una aplicación acceda a recursos en nombre de un usuario sin conocer su contraseña. Presente los cuatro roles con el sistema del curso: el vendedor es el propietario del recurso, la aplicación móvil de preventa es el cliente, Keycloak es el servidor de autorización y la API de pedidos es el servidor de recursos. Aclare que OAuth 2.0 trata de autorización; OpenID Connect añade autenticación e identidad, y habilita el inicio de sesión único entre el ERP, el portal de clientes y la API. Explique que los flujos implícito y de contraseña del propietario se desaconsejan en las recomendaciones actuales de seguridad, y que el código de autorización con PKCE es el estándar para aplicaciones públicas, como vieron en Desarrollo de Aplicaciones Móviles. Para procesos sin usuario humano, como la conciliación nocturna, se usan credenciales de cliente. Pregunta para la clase: ¿qué ventajas tiene centralizar la identidad en Keycloak cuando la empresa tiene cinco sistemas internos con sus propios usuarios?"
+        },
+        {
+          "title": "Validación de JWT y autorización por permisos",
+          "bullets": [
+            "El servidor de recursos valida firma, emisor, audiencia y expiración del JWT con las claves públicas que publica el emisor.",
+            "Los alcances del token se convierten en autoridades SCOPE_*; los roles de Keycloak requieren un convertidor personalizado.",
+            "@EnableMethodSecurity y @PreAuthorize permiten reglas finas, como que solo un supervisor apruebe descuentos mayores al 10 %.",
+            "La autorización por objeto evita que un usuario acceda a recursos ajenos cambiando un identificador, primer riesgo del OWASP API Security Top 10 de 2023."
+          ],
+          "notes": "Muestre la configuración mínima de un servidor de recursos: la propiedad issuer-uri, inyectada como variable de entorno, permite a Spring descubrir las claves públicas del emisor y validar automáticamente cada token. Decodifique un JWT de ejemplo y señale sus partes: cabecera con el algoritmo, cuerpo con emisor, sujeto, audiencia, expiración y alcances, y la firma. Advierta que el cuerpo solo está codificado, no cifrado: cualquiera puede leerlo, por lo que no debe contener datos personales innecesarios. Explique la autorización por métodos con @PreAuthorize y expresiones que consultan autoridades. Dedique tiempo a la autorización por objeto, conocida como BOLA: un vendedor autenticado que consulta el pedido 1520 puede cambiar el número y ver pedidos de otros vendedores si la API no verifica la propiedad. La verificación debe hacerse en la capa de aplicación o en la consulta misma, filtrando por el usuario. Pregunta para la clase: ¿cómo escribirían una prueba automatizada que demuestre que un vendedor no puede ver los pedidos de otro?"
+        },
+        {
+          "title": "Facturación electrónica en el Perú: actores y estándares",
+          "bullets": [
+            "El Sistema de Emisión Electrónica de la SUNAT permite emitir facturas, boletas y notas como comprobantes de pago electrónicos (CPE).",
+            "Desde el sistema del contribuyente, el CPE se envía a la SUNAT o a un operador de servicios electrónicos (OSE) que lo valida.",
+            "El comprobante es un XML en estándar UBL 2.1, firmado digitalmente con el certificado del emisor; las facturas usan series que empiezan con F y las boletas con B.",
+            "La constancia de recepción (CDR) indica si el comprobante fue aceptado, aceptado con observaciones o rechazado."
+          ],
+          "notes": "Contextualice con datos del país: la facturación electrónica es obligatoria para la gran mayoría de contribuyentes y es la integración más frecuente en el software empresarial peruano. La Resolución de Superintendencia 097-2012/SUNAT creó el sistema de emisión desde los sistemas del contribuyente, y la Resolución 117-2017/SUNAT incorporó al operador de servicios electrónicos, una empresa autorizada que valida los comprobantes en nombre de la SUNAT. Distinga al OSE del proveedor de servicios electrónicos, que emite por encargo del contribuyente. Explique que el XML sigue el estándar internacional UBL 2.1 de OASIS, con las adaptaciones y catálogos que publica la SUNAT, como los códigos de tipo de documento y de afectación al IGV. Recalque que la firma digital otorga integridad y no repudio. Muestre una estructura simplificada de una factura UBL con emisor, adquirente, líneas y totales. Pregunta para la clase: ¿qué consecuencias tributarias y comerciales tiene para una empresa que sus comprobantes sean rechazados de forma sistemática?"
+        },
+        {
+          "title": "Flujo técnico de emisión de un comprobante electrónico",
+          "bullets": [
+            "1. Generar el XML UBL 2.1 con emisor, adquirente, ítems, IGV de 18 % y totales, a partir del pedido confirmado.",
+            "2. Firmar con XML Signature usando la clave privada del certificado digital, almacenada fuera del código fuente.",
+            "3. Comprimir en ZIP, enviar al servicio web del OSE o de la SUNAT y recibir el CDR o un número de ticket, según el tipo de envío.",
+            "4. Guardar el XML y el CDR, actualizar el estado del comprobante y entregar al cliente su representación impresa."
+          ],
+          "notes": "Recorra el flujo con un pedido real del sistema del curso. El primer paso es un traductor en términos de Hohpe y Woolf: convierte el modelo de dominio en el formato canónico UBL, con reglas tributarias como el cálculo del IGV del 18 %, compuesto por el 16 % del impuesto general y el 2 % del impuesto de promoción municipal, y los redondeos. El segundo paso usa la firma XML del W3C con el certificado digital; la clave privada nunca debe estar en el repositorio. En el tercer paso, el envío de una factura individual devuelve el CDR de forma síncrona, mientras que los envíos agrupados, como el resumen diario de boletas, devuelven un ticket que debe consultarse después: un caso natural de procesamiento asíncrono. Finalmente, el XML y el CDR deben conservarse, porque son la evidencia tributaria. Explique que cada comprobante tiene una serie y un correlativo únicos que no pueden repetirse ni reutilizarse. Pregunta para la clase: ¿qué estados tendría la máquina de estados de un comprobante, desde su creación hasta su aceptación o rechazo?"
+        },
+        {
+          "title": "Integración síncrona frente a asíncrona",
+          "bullets": [
+            "La llamada síncrona acopla en el tiempo: si el servicio externo tarda o falla, el usuario espera o la operación entera falla.",
+            "La mensajería desacopla emisor y receptor; Hohpe y Woolf (2003) catalogan 65 patrones de integración empresarial.",
+            "Patrones esenciales: canal de mensajes, mensaje de comando y de evento, enrutador basado en contenido, traductor y canal de mensajes fallidos.",
+            "Criterio: síncrono cuando el usuario necesita la respuesta para continuar; asíncrono cuando basta garantizar que ocurrirá."
+          ],
+          "notes": "Plantee el dilema con el sistema de pedidos: ¿debe el vendedor esperar la respuesta del OSE para confirmar la venta? Si el OSE tarda doce segundos a fin de mes, la caja se detiene. Explique el acoplamiento temporal: en la integración síncrona ambos sistemas deben estar disponibles al mismo tiempo, y la disponibilidad total es el producto de las disponibilidades; dos servicios al 99 % suman un 98 %. La mensajería rompe esa dependencia: el emisor deposita un mensaje y continúa. Presente el libro de Gregor Hohpe y Bobby Woolf como el vocabulario común de la integración; sus patrones están implementados en herramientas como Apache Camel y Spring Integration. Distinga mensajes de comando, que piden hacer algo, de mensajes de evento, que informan que algo ocurrió. Explique que la asincronía tiene costos: consistencia eventual, mayor complejidad para depurar y necesidad de informar al usuario el estado. Pregunta para la clase: ¿qué partes de la venta en una ferretería deben ser síncronas y cuáles pueden ser asíncronas?"
+        },
+        {
+          "title": "Colas y eventos: RabbitMQ y Apache Kafka",
+          "bullets": [
+            "RabbitMQ implementa colas con intercambiadores y enrutamiento flexible; es adecuado para distribuir tareas y comandos.",
+            "Apache Kafka es un registro de eventos distribuido, particionado y persistente, adecuado para alto volumen y reprocesamiento.",
+            "La garantía usual es al menos una entrega: un mensaje puede llegar dos veces, por lo que los consumidores deben ser idempotentes.",
+            "Los mensajes que fallan repetidamente se derivan a una cola de mensajes fallidos para su análisis, sin bloquear al resto."
+          ],
+          "notes": "Compare las dos tecnologías más usadas sin convertirlo en una competencia. RabbitMQ implementa el protocolo AMQP: los productores publican en intercambiadores que enrutan mensajes a colas según claves; cuando un consumidor confirma el mensaje, este desaparece. Es ideal para encolar la emisión de comprobantes o el envío de correos. Kafka, en cambio, conserva los eventos en un registro ordenado por partición durante un tiempo configurable; distintos consumidores leen a su propio ritmo e incluso pueden releer el historial, lo que lo hace adecuado para analítica, auditoría y alto volumen. Explique las garantías de entrega: como mucho una vez, al menos una vez y, con restricciones, exactamente una vez. En la práctica empresarial se asume al menos una vez y se diseñan consumidores idempotentes. Muestre la configuración de una cola de mensajes fallidos con Spring AMQP. Pregunta para la clase: si el consumidor que emite comprobantes recibe dos veces el mismo evento de pedido confirmado, ¿qué debe hacer para no emitir dos facturas?"
+        },
+        {
+          "title": "Bandeja de salida transaccional",
+          "bullets": [
+            "Problema de la doble escritura: guardar el pedido y publicar el evento son dos operaciones; si una falla, el sistema queda inconsistente.",
+            "Solución: en la misma transacción se guarda el pedido y una fila en la tabla outbox con el evento serializado.",
+            "Un proceso relevador lee las filas pendientes y las publica en el intermediario; otra opción es capturar los cambios del registro con Debezium.",
+            "Garantiza al menos una entrega con consistencia local; el consumidor descarta duplicados por el identificador del evento."
+          ],
+          "notes": "Presente el problema con dos escenarios de falla. Si se guarda el pedido y la aplicación cae antes de publicar el evento, el pedido queda sin factura. Si se publica el evento y luego la transacción de la base de datos se revierte, se emite una factura de un pedido inexistente. No existe una transacción común entre PostgreSQL y RabbitMQ que sea práctica en la empresa; los protocolos de confirmación en dos fases son frágiles y poco soportados. El patrón de bandeja de salida, documentado por Chris Richardson, aprovecha la transacción local: el evento se guarda como una fila más, de modo que el pedido y su evento se confirman juntos o ninguno. Un relevador consulta periódicamente las filas pendientes, las publica y las marca como publicadas; si cae después de publicar y antes de marcar, el evento se publicará otra vez, de ahí la necesidad de consumidores idempotentes. Mencione la captura de cambios con Debezium como alternativa sin consultas periódicas. Pregunta para la clase: ¿qué índices y qué política de limpieza necesitaría la tabla outbox?"
+        },
+        {
+          "title": "Resiliencia con Resilience4j",
+          "bullets": [
+            "Nygard (2018): toda llamada remota necesita un tiempo de espera; sin él, un proveedor lento agota los hilos de la aplicación.",
+            "Reintentos con espera exponencial y variación aleatoria, solo para errores transitorios y operaciones idempotentes.",
+            "Interruptor de circuito con estados cerrado, abierto y semiabierto: corta las llamadas a un servicio que falla y prueba su recuperación.",
+            "Los compartimentos estancos limitan la concurrencia hacia cada dependencia para que una falla no se propague al resto del sistema."
+          ],
+          "notes": "Michael Nygard, en Release It!, documenta cómo las fallas en cascada derriban sistemas completos: un proveedor lento, sin tiempos de espera, mantiene hilos y conexiones ocupados hasta agotar los recursos de quien lo llama. Presente Resilience4j, la biblioteca de referencia en el ecosistema Spring tras el retiro de Hystrix. Explique cada patrón con el OSE como ejemplo. El tiempo de espera limita cuánto se espera. El reintento con espera exponencial y variación aleatoria evita que todos los clientes reintenten en el mismo instante y saturen al proveedor que intenta recuperarse. El interruptor de circuito observa una ventana de llamadas: si la tasa de fallas supera el umbral, se abre y las llamadas fallan de inmediato; tras un periodo, pasa a semiabierto y deja pasar algunas de prueba. El compartimento estanco reserva un número limitado de hilos o permisos para cada dependencia. Pregunta para la clase: ¿qué debería hacer el sistema con los comprobantes pendientes mientras el circuito hacia el OSE está abierto?"
+        },
+        {
+          "title": "Idempotencia en operaciones de negocio",
+          "bullets": [
+            "Una operación es idempotente si repetirla produce el mismo efecto que ejecutarla una vez; GET, PUT y DELETE lo son por definición.",
+            "POST no lo es: un doble clic o un reintento por tiempo de espera puede crear dos pedidos o dos cobros.",
+            "Solución: cabecera Idempotency-Key generada por el cliente y almacenada con restricción única junto con la respuesta original.",
+            "En facturación, la combinación de serie y correlativo es la clave natural: reenviar un comprobante no debe generar un correlativo nuevo."
+          ],
+          "notes": "Cierre la unidad con el concepto que une todo lo anterior. En sistemas distribuidos, el cliente no puede distinguir entre una solicitud que falló y una respuesta que se perdió; por eso reintenta, y los reintentos solo son seguros si la operación es idempotente. Explique la semántica definida por HTTP: GET, PUT y DELETE son idempotentes; POST no. Muestre el patrón de clave de idempotencia popularizado por pasarelas de pago: el cliente genera un identificador único por intención de compra y lo envía en una cabecera; el servidor guarda la clave con una restricción única y, si recibe la misma clave otra vez, devuelve la respuesta original sin volver a ejecutar la operación. Aplíquelo al OSE: si el envío de la factura F001-00004521 falla por tiempo de espera, se reenvía exactamente el mismo comprobante, nunca uno nuevo con otro correlativo; el OSE indicará si ya lo había recibido. Pregunta para la clase: ¿durante cuánto tiempo deberían conservarse las claves de idempotencia y qué riesgos implica eliminarlas pronto?"
+        }
+      ],
+      "reading": {
+        "title": "Servicios empresariales seguros e integrados: API REST, OAuth 2.0 y emisión asíncrona de comprobantes",
+        "minutes": 45,
+        "content": "## 1. La API como puerto de entrada\n\nEn la arquitectura hexagonal, el controlador REST es un adaptador de entrada: traduce HTTP a comandos del caso de uso y nunca contiene reglas de negocio. Los DTO se modelan como record y se validan en la frontera:\n\n```java\npublic record CrearPedidoRequest(\n        @NotBlank @Pattern(regexp = \"\\\\d{11}\", message = \"El RUC debe tener 11 dígitos\") String ruc,\n        @NotEmpty List<@Valid ItemRequest> items) { }\n\n@RestController\n@RequestMapping(\"/api/v1/pedidos\")\nclass PedidoController {\n    private final RegistrarPedido registrar;\n    PedidoController(RegistrarPedido registrar) { this.registrar = registrar; }\n\n    @PostMapping\n    @PreAuthorize(\"hasAuthority('SCOPE_pedidos:escribir')\")\n    ResponseEntity<PedidoResponse> crear(@Valid @RequestBody CrearPedidoRequest req,\n                                         @RequestHeader(\"Idempotency-Key\") UUID clave,\n                                         UriComponentsBuilder uri) {\n        PedidoResponse creado = registrar.ejecutar(req.aComando(), clave);\n        return ResponseEntity.created(uri.path(\"/api/v1/pedidos/{id}\").build(creado.id()))\n                             .body(creado);\n    }\n}\n```\n\nLos errores se responden con el formato estándar del RFC 9457, que Spring 6 implementa con `ProblemDetail`:\n\n```java\n@RestControllerAdvice\nclass ManejadorDeErrores {\n    @ExceptionHandler(StockInsuficienteException.class)\n    ProblemDetail stock(StockInsuficienteException ex) {\n        ProblemDetail pd = ProblemDetail.forStatusAndDetail(HttpStatus.UNPROCESSABLE_ENTITY, ex.getMessage());\n        pd.setTitle(\"Stock insuficiente\");\n        pd.setProperty(\"productoId\", ex.productoId());\n        return pd;\n    }\n}\n```\n\n## 2. Seguridad: servidor de recursos OAuth 2.0\n\nLa API no gestiona contraseñas: confía en un servidor de autorización, como Keycloak, que emite tokens JWT. Spring Security valida firma, emisor y expiración de cada token:\n\n```java\n@Configuration\n@EnableMethodSecurity\nclass SeguridadConfig {\n    @Bean\n    SecurityFilterChain api(HttpSecurity http) throws Exception {\n        http.csrf(csrf -> csrf.disable())                       // API sin cookies de sesión\n            .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/actuator/health/**\").permitAll()\n                .anyRequest().authenticated())                  // denegación por defecto\n            .oauth2ResourceServer(o -> o.jwt(Customizer.withDefaults()));\n        return http.build();\n    }\n}\n```\n\nEl emisor se configura con `spring.security.oauth2.resourceserver.jwt.issuer-uri=${OIDC_ISSUER}`. Validar el token no basta: el caso de uso debe verificar que el pedido consultado pertenece al vendedor o a su zona, para evitar la autorización rota a nivel de objeto, primer riesgo del OWASP API Security Top 10 de 2023.\n\n## 3. Comprobantes electrónicos sin acoplamiento temporal\n\nEn el Perú, una factura electrónica es un XML UBL 2.1 firmado digitalmente que se envía a la SUNAT o a un OSE, el cual responde con una constancia de recepción (CDR). Si la venta espera esa respuesta dentro de su transacción, cualquier lentitud del OSE detiene las cajas y bloquea filas. La alternativa es la **bandeja de salida transaccional**:\n\n```java\n@Transactional\npublic void confirmar(Long pedidoId) {\n    Pedido pedido = pedidos.findById(pedidoId).orElseThrow();\n    pedido.confirmar();\n    outbox.save(EventoOutbox.de(\"PedidoConfirmado\", pedido.getId(), json.write(pedido)));\n}   // el pedido y su evento se confirman juntos o ninguno\n```\n\nUn relevador programado publica los eventos pendientes en RabbitMQ y los marca como publicados. El consumidor genera el XML, lo firma y lo envía al OSE. Como la entrega es «al menos una vez», el consumidor es idempotente: si el comprobante con esa serie y ese correlativo ya existe, no crea otro.\n\n## 4. Resiliencia frente al OSE\n\n```java\n@Component\nclass OseAdapter implements EmisorDeComprobantes {\n    @CircuitBreaker(name = \"ose\")\n    @Retry(name = \"ose\")\n    public Cdr enviar(ComprobanteFirmado cpe) {\n        return clienteSoap.enviarFactura(cpe.nombreArchivo(), cpe.zip());\n    }\n}\n```\n\n```yaml\nresilience4j:\n  circuitbreaker:\n    instances:\n      ose:\n        sliding-window-size: 20\n        failure-rate-threshold: 50\n        wait-duration-in-open-state: 30s\n  retry:\n    instances:\n      ose:\n        max-attempts: 3\n        wait-duration: 1s\n        enable-exponential-backoff: true\n```\n\nEl cliente SOAP debe tener además tiempos de conexión y de lectura explícitos. Con el circuito abierto, el mensaje vuelve a la cola con demora y el comprobante queda en estado «pendiente de envío», visible para el área contable. Así se respetan los plazos de envío que fija la SUNAT sin comprometer la operación de venta: la integración tolera fallas parciales, que en un sistema empresarial son la norma y no la excepción.\n"
+      },
+      "case": {
+        "title": "Caso: Ferretería Constructora Norte y las facturas duplicadas de fin de mes",
+        "content": "*Los nombres de la organización y de las personas son ficticios; el contexto normativo es real.*\n\n**Ferretería Constructora Norte S.A.C.** opera 14 tiendas en Trujillo, Chiclayo y Piura, y atiende a empresas constructoras mediante un portal B2B. Emite cerca de 160 000 comprobantes electrónicos al mes a través de un OSE. Su sistema de ventas, desarrollado con Spring Boot, confirma cada venta así: dentro de una única transacción guarda el pedido, descuenta el stock, genera el XML, lo firma, lo envía al OSE y espera el CDR, con un tiempo de espera de 30 segundos.\n\nEn los últimos días hábiles de cada mes, cuando miles de empresas emiten a la vez, la latencia del OSE sube de 0,8 a más de 12 segundos. En esas horas:\n\n- Las cajas quedan detenidas y se forman colas; el área comercial estima que se pierde el 3 % de las ventas del día.\n- El pool de conexiones a PostgreSQL se agota porque cada transacción mantiene filas de inventario bloqueadas mientras espera al OSE.\n- Cuando la llamada vence, la transacción se revierte, pero en algunos casos el OSE sí había recibido el comprobante. El cajero reintenta, el sistema asigna un **nuevo correlativo** y el cliente recibe dos facturas por la misma venta. El mes pasado hubo 1 240 duplicados, que obligaron a emitir notas de crédito y a conciliar manualmente durante una semana.\n\nAdemás, una auditoría de seguridad encontró dos hallazgos en el portal B2B:\n\n1. Todas las constructoras usan una **misma clave de API** compartida, que apareció en un repositorio público de un proveedor de software de una de ellas.\n2. Un usuario autenticado puede descargar facturas de otras empresas cambiando el número en la ruta `/api/facturas/{id}`.\n\nLa gerente de TI, **Carmen Vílchez**, tiene dos meses antes del inicio de la temporada alta de autoconstrucción. El jefe de desarrollo propone una solución rápida: subir el tiempo de espera a 90 segundos, deshabilitar los reintentos del cajero y rotar la clave de API. Un consultor externo propone rediseñar: confirmar la venta sin esperar al OSE, emitir el comprobante de forma asíncrona con bandeja de salida, aplicar idempotencia por serie y correlativo, interruptor de circuito hacia el OSE, y migrar el portal B2B a OAuth 2.0 con credenciales por empresa y autorización por objeto. El rediseño requiere unas seis semanas de dos desarrolladores y cambiar el procedimiento de las cajas, que entregarían una representación impresa con estado «en validación» en los pocos casos de demora.\n\nEl contador general advierte que cualquier solución debe respetar los plazos de envío al OSE que exige la SUNAT y permitir identificar en todo momento qué comprobantes están pendientes, aceptados o rechazados.\n",
+        "questions": [
+          "Identifique la causa raíz de las facturas duplicadas y explique por qué subir el tiempo de espera a 90 segundos no la resuelve.",
+          "Diseñe el nuevo flujo de venta y emisión: qué ocurre dentro de la transacción, qué se publica y cómo se garantiza que no se dupliquen correlativos.",
+          "¿Qué configuración de tiempos de espera, reintentos e interruptor de circuito propondría hacia el OSE? Justifique cada parámetro.",
+          "Proponga la solución a los dos hallazgos de seguridad del portal B2B, indicando el flujo de OAuth 2.0 adecuado y cómo probaría la autorización por objeto.",
+          "¿Qué debería decidir Carmen Vílchez considerando el plazo de dos meses, el riesgo tributario y el cambio en el procedimiento de las cajas?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: API segura y emisión asíncrona de comprobantes",
+        "instructions": "**Objetivo:** exponer los casos de uso del sistema de pedidos mediante una API REST segura y desacoplar la emisión de comprobantes electrónicos con mensajería, resiliencia e idempotencia.\n\n**Qué entregar**\n\n1. **API REST** versionada (`/api/v1`) para crear, consultar, listar con paginación y confirmar pedidos, con DTO en record, Bean Validation, respuestas de error con `ProblemDetail` y documentación OpenAPI generada con springdoc.\n2. **Seguridad:** Keycloak en Docker Compose con un dominio de prueba y los roles `vendedor` y `supervisor`; la API configurada como servidor de recursos JWT, con `@PreAuthorize` y autorización por objeto (un vendedor solo ve sus pedidos).\n3. **Integración asíncrona:** al confirmar un pedido se registra un evento en una tabla de bandeja de salida; un relevador lo publica en RabbitMQ y un consumidor genera un XML UBL 2.1 simplificado (puede firmarse con un certificado de prueba autofirmado) y lo envía a un **OSE simulado con WireMock**.\n4. **Resiliencia e idempotencia:** tiempo de espera, reintentos con espera exponencial e interruptor de circuito con Resilience4j; cabecera `Idempotency-Key` en la creación de pedidos y consumidor que no duplica comprobantes.\n5. **Pruebas:** con MockMvc para validación, errores y autorización (incluido el intento de acceder a un pedido ajeno), y una prueba de falla donde WireMock responde con 10 segundos de demora y se demuestra la apertura del circuito.\n6. **Informe** de máximo tres páginas con el diagrama de secuencia del flujo de emisión y la máquina de estados del comprobante.\n\n**Formato:** solicitud de integración revisada por pares, archivo `docker-compose.yml` que levante todo el entorno con un comando e informe en PDF. Entrega en la semana 12.\n",
+        "rubric": [
+          {
+            "name": "API REST, validación, errores estándar y contrato OpenAPI",
+            "points": 5
+          },
+          {
+            "name": "Seguridad con OAuth 2.0, JWT y autorización por objeto",
+            "points": 5
+          },
+          {
+            "name": "Integración asíncrona con bandeja de salida e idempotencia",
+            "points": 6
+          },
+          {
+            "name": "Resiliencia demostrada con pruebas de falla",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Servicios, seguridad e integración",
+        "questions": [
+          {
+            "prompt": "Un cliente B2B envía un pedido cuyo JSON trae el RUC con diez dígitos. ¿Qué respuesta de la API es la más adecuada?",
+            "options": [
+              "500 con la traza de la excepción para facilitar el diagnóstico",
+              "200 con un campo de error dentro del cuerpo",
+              "400 con Problem Details que indique el campo inválido",
+              "404 porque el cliente no existe"
+            ],
+            "correct": 2,
+            "explanation": "Es una solicitud mal formada: corresponde 400 con el formato estándar del RFC 9457 y el detalle del campo. Exponer trazas filtra información interna y un 200 con error rompe la semántica de HTTP."
+          },
+          {
+            "prompt": "El servicio guarda el pedido y después publica el evento en RabbitMQ. A veces el pedido queda guardado, pero el evento se pierde por una caída. ¿Qué patrón resuelve la inconsistencia?",
+            "options": [
+              "Aumentar el tiempo de espera de RabbitMQ",
+              "Bandeja de salida transaccional con un relevador que publica los eventos",
+              "Publicar el evento antes de guardar el pedido",
+              "Usar REQUIRES_NEW en el método que publica"
+            ],
+            "correct": 1,
+            "explanation": "La bandeja de salida guarda el evento en la misma transacción local que el pedido; un relevador lo publica después. Así ambos se confirman juntos o ninguno, con entrega de al menos una vez."
+          },
+          {
+            "prompt": "¿En qué situación es apropiado reintentar automáticamente el envío de una factura al OSE?",
+            "options": [
+              "Ante un tiempo de espera, reenviando el mismo comprobante con su misma serie y correlativo",
+              "Ante cualquier error, generando un comprobante nuevo con otro correlativo",
+              "Ante un rechazo por datos inválidos del adquirente",
+              "Nunca, porque los reintentos siempre duplican comprobantes"
+            ],
+            "correct": 0,
+            "explanation": "Los reintentos son seguros para errores transitorios y operaciones idempotentes. Reenviar el mismo comprobante no lo duplica; un rechazo por datos inválidos no se corrige reintentando, sino corrigiendo los datos."
+          },
+          {
+            "prompt": "Con Resilience4j, ¿qué significa que el interruptor de circuito hacia el OSE esté en estado abierto?",
+            "options": [
+              "Las llamadas pasan normalmente y se registran las fallas",
+              "Solo se permite un número limitado de llamadas de prueba",
+              "El circuito se reinicia en cada solicitud",
+              "Las llamadas fallan de inmediato sin invocar al OSE hasta que transcurre el periodo de espera"
+            ],
+            "correct": 3,
+            "explanation": "En estado abierto se corta el tráfico hacia la dependencia que falla para no agotar recursos. Tras el periodo de espera pasa a semiabierto, donde algunas llamadas de prueba deciden si vuelve a cerrarse."
+          },
+          {
+            "prompt": "Un vendedor autenticado obtiene facturas de otras empresas cambiando el identificador en la ruta /api/v1/facturas/{id}. ¿Qué control falla?",
+            "options": [
+              "La validación de la firma del JWT",
+              "La autorización a nivel de objeto",
+              "La protección contra CSRF",
+              "El cifrado TLS de la conexión"
+            ],
+            "correct": 1,
+            "explanation": "El usuario está autenticado, pero la API no verifica que el recurso le pertenezca. Es la autorización rota a nivel de objeto, primer riesgo del OWASP API Security Top 10 de 2023."
+          },
+          {
+            "prompt": "Un proceso nocturno de conciliación debe consumir la API de pedidos sin intervención de un usuario humano. ¿Qué flujo de OAuth 2.0 corresponde?",
+            "options": [
+              "Código de autorización con PKCE",
+              "Flujo implícito",
+              "Credenciales de cliente",
+              "Contraseña del propietario del recurso"
+            ],
+            "correct": 2,
+            "explanation": "Las credenciales de cliente están diseñadas para comunicación entre servicios sin usuario. El código con PKCE requiere interacción humana, y los flujos implícito y de contraseña se desaconsejan en las recomendaciones actuales."
+          },
+          {
+            "prompt": "En el sistema de emisión electrónica peruano, ¿qué es la constancia de recepción (CDR)?",
+            "options": [
+              "La respuesta que indica si el comprobante fue aceptado, aceptado con observaciones o rechazado",
+              "El certificado digital con el que el emisor firma el XML",
+              "La representación impresa que se entrega al cliente",
+              "El resumen diario de boletas enviado por la empresa"
+            ],
+            "correct": 0,
+            "explanation": "La SUNAT o el OSE devuelven el CDR tras validar el comprobante. Debe almacenarse junto con el XML como evidencia y determina el estado del comprobante en el sistema."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Calidad, entrega continua, operación y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante asegura la calidad del sistema con una estrategia de pruebas automatizadas, lo integra y empaqueta mediante un flujo de integración continua con puerta de calidad, lo instrumenta para su operación en producción y sustenta un proyecto integrador listo para desplegarse en una organización real.",
+      "topics": [
+        "Estrategia de pruebas: unitarias, de capas, de integración con Testcontainers y de contrato",
+        "Integración continua con GitHub Actions y análisis estático con puerta de calidad",
+        "Empaquetado en contenedores y configuración para producción",
+        "Observabilidad de la aplicación con Actuator, Micrometer y OpenTelemetry",
+        "Deuda técnica, refactorización y métricas DORA de entrega de software",
+        "Proyecto integrador: documentación, demostración y sustentación"
+      ],
+      "slides": [
+        {
+          "title": "La pirámide de pruebas y sus variantes",
+          "bullets": [
+            "Cohn propuso una base amplia de pruebas unitarias, una capa media de pruebas de servicio y pocas pruebas de interfaz de extremo a extremo.",
+            "Cuanto más alta la prueba, más lenta, frágil y costosa de mantener, pero más cercana a la experiencia del usuario.",
+            "En servicios empresariales, las pruebas de integración con infraestructura real ganan peso, pues muchos defectos ocurren en la frontera con la base de datos.",
+            "Una buena estrategia se mide por la confianza para desplegar, no por el porcentaje de cobertura aislado."
+          ],
+          "notes": "Abra la unidad con una pregunta incómoda: ¿se atreverían a desplegar su proyecto un viernes a las seis de la tarde? La respuesta depende de cuánta confianza les dan sus pruebas. Presente la pirámide de Mike Cohn y explique su lógica económica: las pruebas unitarias se ejecutan en milisegundos y señalan el defecto con precisión; las de extremo a extremo tardan minutos, fallan por razones ajenas al código, como tiempos de carga, y es difícil saber qué se rompió. Discuta las variantes: algunos autores proponen un trofeo con más pruebas de integración, argumentando que en aplicaciones con poca lógica algorítmica la mayoría de los defectos aparecen al combinar componentes. Para el sistema de pedidos, la lógica del dominio justifica muchas pruebas unitarias, pero la persistencia, la seguridad y la mensajería requieren pruebas de integración. Advierta contra la cobertura como meta: un 90 % de cobertura sin aserciones significativas no protege nada. Pregunta para la clase: ¿qué defecto de las unidades anteriores habría detectado cada nivel de la pirámide?"
+        },
+        {
+          "title": "Pruebas unitarias del dominio con JUnit 5",
+          "bullets": [
+            "El dominio se prueba sin el contexto de Spring: instancias directas, ejecución en milisegundos y diagnóstico preciso.",
+            "Estructura Dado-Cuando-Entonces: preparar el estado, ejecutar una sola acción y verificar un comportamiento observable.",
+            "@ParameterizedTest cubre valores límite y casos de equivalencia, como RUC de 10, 11 y 12 dígitos o con letras.",
+            "AssertJ ofrece aserciones legibles; el nombre de la prueba describe la regla de negocio, no el método probado."
+          ],
+          "notes": "Muestre que la inversión hecha en la unidad 1, un dominio sin dependencias del marco, rinde frutos ahora: las pruebas del Pedido no necesitan base de datos ni contenedor y se ejecutan cientos en un segundo. Escriba en vivo una prueba con nombre descriptivo, como noPermiteAgregarLineasAUnPedidoConfirmado, y señale que funciona como documentación ejecutable de la regla. Repase las técnicas de diseño de casos vistas en Fundamentos de Programación, valores límite y particiones de equivalencia, y aplíquelas con pruebas parametrizadas al objeto de valor Ruc y al cálculo del IGV con redondeo. Explique la estructura Dado-Cuando-Entonces, heredada del desarrollo guiado por comportamiento, y la regla de una sola acción por prueba. Muestre AssertJ y su capacidad de encadenar aserciones legibles sobre colecciones y excepciones. Mencione el desarrollo guiado por pruebas de Kent Beck como disciplina para diseñar el dominio desde sus reglas. Pregunta para la clase: ¿qué casos de prueba mínimos necesita el cálculo del total de una factura con descuentos y productos inafectos al IGV?"
+        },
+        {
+          "title": "Dobles de prueba con Mockito",
+          "bullets": [
+            "Meszaros clasifica los dobles en dummy, stub, spy, mock y fake, según si sustituyen datos o verifican interacciones.",
+            "Mockito crea dobles de los puertos de salida para probar casos de uso sin base de datos ni servicios externos.",
+            "Principio de Freeman y Pryce: no simule lo que no le pertenece; los tipos de bibliotecas externas se prueban con integración real.",
+            "El exceso de simulaciones acopla las pruebas a la implementación y las vuelve frágiles ante cualquier refactorización."
+          ],
+          "notes": "Presente la taxonomía de Gerard Meszaros con ejemplos concretos del curso. Un stub del puerto PoliticaDeCredito que siempre aprueba permite probar el caso de uso feliz. Un fake del repositorio basado en un mapa en memoria, como el de la unidad 1, permite probar flujos completos. Un mock del EmisorDeComprobantes permite verificar que se llamó exactamente una vez con el comprobante esperado. Muestre la sintaxis de Mockito con when, thenReturn y verify, y la extensión de JUnit 5. Luego explique el principio de Steve Freeman y Nat Pryce, autores de Growing Object-Oriented Software, Guided by Tests: simular el EntityManager o el RestTemplate prueba suposiciones sobre bibliotecas ajenas, que pueden ser falsas; esos adaptadores se verifican con pruebas de integración reales. Advierta sobre el olor de las pruebas que verifican cada llamada interna: cuando se refactoriza sin cambiar el comportamiento, fallan decenas de pruebas. Pregunta para la clase: en el caso de uso de confirmación de pedido, ¿qué interacciones merecen verificarse con un mock y cuáles basta con observar en el resultado?"
+        },
+        {
+          "title": "Pruebas por capas con los slices de Spring Boot",
+          "bullets": [
+            "@WebMvcTest carga solo la capa web con MockMvc: valida rutas, serialización, validación, errores y seguridad.",
+            "@DataJpaTest carga solo la persistencia: mapeos, consultas derivadas, JPQL y restricciones de la base de datos.",
+            "@SpringBootTest levanta el contexto completo; se reserva para pruebas de integración de flujos críticos.",
+            "spring-security-test permite simular tokens JWT con autoridades específicas para probar reglas de autorización."
+          ],
+          "notes": "Explique que entre la prueba unitaria pura y la prueba de la aplicación completa existe un nivel intermedio muy productivo: los slices de Spring Boot, que cargan solo los beans de una capa. Con @WebMvcTest se prueba el controlador de pedidos simulando el caso de uso: que un RUC inválido devuelva 400 con el formato de Problem Details, que un pedido creado devuelva 201 con la cabecera Location y que un usuario sin el alcance adecuado reciba 403. Muestre el post procesador jwt de spring-security-test, que permite fabricar un token con las autoridades deseadas sin un servidor de autorización. Con @DataJpaTest se verifican las consultas del repositorio contra una base de datos real, y conviene combinarlo con Testcontainers. Advierta sobre el costo de @SpringBootTest: cada configuración distinta del contexto obliga a reiniciarlo y las suites se vuelven lentas; Spring almacena en caché los contextos idénticos. Pregunta para la clase: ¿qué slice usarían para demostrar que un vendedor no puede consultar el pedido de otro vendedor?"
+        },
+        {
+          "title": "Pruebas de integración con Testcontainers",
+          "bullets": [
+            "Testcontainers levanta PostgreSQL, RabbitMQ o Keycloak reales en contenedores desechables durante la ejecución de las pruebas.",
+            "Evita las divergencias de H2: tipos, funciones, bloqueos y niveles de aislamiento distintos a los de producción.",
+            "Desde Spring Boot 3.1, @ServiceConnection configura automáticamente la conexión de la aplicación al contenedor.",
+            "Las pruebas de concurrencia y de migraciones Flyway solo son confiables contra el mismo motor y versión de producción."
+          ],
+          "notes": "Cuente un caso típico: el equipo prueba con H2 en memoria, todo pasa, y en producción falla una consulta que usa una función de PostgreSQL, o una prueba de concurrencia que en H2 se comporta distinto. Testcontainers resuelve esto levantando la base de datos real en un contenedor Docker al iniciar las pruebas y destruyéndola al terminar. Conecte con Administración de Servidores y Nube, donde los estudiantes aprendieron Docker. Muestre la anotación @ServiceConnection, que elimina la configuración manual de URL y credenciales. Explique cómo reutilizar el contenedor entre clases de prueba para reducir tiempos y cómo los servidores de integración continua, como los ejecutores de GitHub Actions, ya incluyen Docker. Retome la prueba de concurrencia de la Tarea 2: solo contra PostgreSQL real demuestra que el UPDATE atómico evita la sobreventa. Pregunta para la clase: ¿qué otras dependencias del proyecto conviene levantar con Testcontainers y cuáles es razonable simular con WireMock, como el OSE?"
+        },
+        {
+          "title": "Pruebas de contrato y de servicios externos",
+          "bullets": [
+            "WireMock simula servicios HTTP o SOAP externos, como el OSE, incluidas respuestas lentas, errores y rechazos.",
+            "Las pruebas de contrato dirigidas por el consumidor, con Pact o Spring Cloud Contract, verifican que proveedor y consumidor sigan compatibles.",
+            "El contrato OpenAPI publicado permite validar automáticamente que las respuestas reales cumplan el esquema acordado.",
+            "La inyección de fallas en pruebas demuestra que los tiempos de espera, reintentos e interruptores funcionan antes de producción."
+          ],
+          "notes": "Explique que las integraciones son el punto donde más fallan los sistemas empresariales y donde menos se prueba, porque los servicios externos no están disponibles en desarrollo. WireMock permite simular el OSE con respuestas grabadas: una aceptación con su CDR, un rechazo por datos inválidos, un error 500 y una demora de diez segundos. Esta última prueba, ya realizada en la Tarea 3, demuestra el interruptor de circuito. Presente luego las pruebas de contrato dirigidas por el consumidor: el equipo de la aplicación móvil de preventa publica sus expectativas sobre la API de pedidos y el pipeline del backend verifica que no las rompe antes de desplegar. Es la defensa contra cambios incompatibles que vimos en la unidad 3. Mencione que el contrato OpenAPI también puede servir como oráculo de pruebas. Introduzca la idea de ingeniería del caos, practicada por empresas como Netflix, en su versión más modesta: inyectar fallas controladas en ambientes de prueba. Pregunta para la clase: ¿qué respuestas del OSE grabarían como escenarios de prueba mínimos para el proyecto integrador?"
+        },
+        {
+          "title": "Integración continua con GitHub Actions",
+          "bullets": [
+            "Integración continua: cada cambio se integra a la rama principal varias veces al día y se verifica con una construcción automática.",
+            "Un flujo típico: obtener código, preparar Java con caché de Maven, ejecutar mvn verify, medir cobertura con JaCoCo y construir la imagen.",
+            "La rama principal se protege: solo se integra con revisión aprobada y con todas las verificaciones en verde.",
+            "Una construcción rota es prioridad del equipo; el ciclo completo debería tardar menos de diez minutos."
+          ],
+          "notes": "Defina la integración continua como práctica y no como herramienta: Martin Fowler y Kent Beck la describieron como integrar con frecuencia para que los conflictos sean pequeños. La herramienta, en este caso GitHub Actions, solo automatiza la verificación. Recorra un archivo de flujo de trabajo paso a paso: el disparador en cada envío y solicitud de integración, la máquina virtual de Ubuntu, la acción que prepara Java 21 con caché de dependencias, la ejecución de mvn verify que corre pruebas unitarias y de integración con Testcontainers, el informe de cobertura y la construcción de la imagen. Explique la protección de ramas: exigir revisión de un compañero y verificaciones exitosas antes de integrar. Comente la regla de los diez minutos de Kent Beck y Jez Humble: si la construcción tarda una hora, los desarrolladores dejan de esperarla y la práctica se degrada. Mencione alternativas como GitLab CI y Jenkins, comunes en empresas peruanas. Pregunta para la clase: ¿qué harían si la suite de pruebas tarda veinticinco minutos y el equipo empieza a ignorarla?"
+        },
+        {
+          "title": "Análisis estático y puerta de calidad",
+          "bullets": [
+            "SonarQube mide errores, vulnerabilidades, puntos críticos de seguridad, código duplicado, complejidad y cobertura.",
+            "La puerta de calidad se aplica al código nuevo: por ejemplo, cobertura mínima del 70 % y cero vulnerabilidades críticas.",
+            "OWASP Dependency-Check o Dependabot detectan dependencias con vulnerabilidades conocidas registradas como CVE.",
+            "Una lista de componentes del software (SBOM) inventaría las bibliotecas incluidas y facilita responder a nuevas vulnerabilidades."
+          ],
+          "notes": "Explique que el análisis estático examina el código sin ejecutarlo y detecta defectos que las pruebas no cubren: recursos sin cerrar, comparaciones incorrectas de BigDecimal, inyecciones potenciales o secretos en el código. SonarQube, en su edición comunitaria o como servicio, es el más difundido en empresas de la región; SpotBugs y Checkstyle son alternativas livianas. Insista en el enfoque del código nuevo: exigir cobertura del 80 % a un sistema heredado de diez años es imposible, pero sí puede exigirse a cada cambio, de modo que la calidad mejore gradualmente. Explique el riesgo de las dependencias: la mayor parte del código que se despliega no lo escribió el equipo. Recuerde el caso de Log4Shell en diciembre de 2021, una vulnerabilidad crítica en Log4j que obligó a miles de organizaciones a buscar en qué sistemas usaban esa biblioteca; quienes tenían un inventario de componentes respondieron en horas. Pregunta para la clase: ¿qué condiciones incluirían en la puerta de calidad del proyecto integrador y cuáles serían demasiado exigentes para un equipo de cuatro personas?"
+        },
+        {
+          "title": "Empaquetado: JAR ejecutable e imagen de contenedor",
+          "bullets": [
+            "Spring Boot genera un JAR ejecutable con el servidor embebido; para contenedores conviene separar dependencias y código en capas.",
+            "Dockerfile de varias etapas: compilar con el JDK y ejecutar con una imagen JRE mínima, sin herramientas de compilación.",
+            "La imagen se ejecuta con un usuario sin privilegios y con límites de memoria que la JVM respeta, como MaxRAMPercentage.",
+            "Alternativa sin Dockerfile: mvn spring-boot:build-image construye la imagen con Cloud Native Buildpacks."
+          ],
+          "notes": "Conecte con Administración de Servidores y Nube: allí los estudiantes aprendieron Docker como herramienta de infraestructura; ahora la perspectiva es la del desarrollador que entrega un artefacto listo para operar. Muestre un Dockerfile de dos etapas: la primera compila con Maven y el JDK; la segunda copia solo el JAR a una imagen con el entorno de ejecución, más pequeña y con menos superficie de ataque. Explique las capas del JAR de Spring Boot: las dependencias cambian poco y se cachean, mientras que el código propio cambia en cada versión, de modo que las reconstrucciones son rápidas. Insista en ejecutar como usuario sin privilegios y en ajustar la memoria: las JVM modernas detectan los límites del contenedor, y MaxRAMPercentage controla qué fracción usan para el montículo. Presente los Buildpacks como opción que aplica buenas prácticas sin escribir Dockerfile. Pregunta para la clase: ¿por qué no conviene incluir el certificado digital de facturación dentro de la imagen y cómo se le entregaría al contenedor en producción?"
+        },
+        {
+          "title": "Configuración para producción",
+          "bullets": [
+            "Toda configuración que cambia entre entornos se inyecta por variables de entorno o gestores de secretos, nunca dentro de la imagen.",
+            "Sondas de salud: liveness indica si el proceso debe reiniciarse; readiness indica si puede recibir tráfico.",
+            "El apagado ordenado termina las solicitudes en curso y deja de consumir mensajes antes de detener la aplicación.",
+            "Los registros se escriben a la salida estándar en formato estructurado y la plataforma se encarga de recolectarlos."
+          ],
+          "notes": "Retome la metodología de doce factores vista en la unidad 1 y complétela con los factores de operación: procesos desechables que arrancan rápido y se detienen con gracia, registros como flujos de eventos y paridad entre entornos. Explique las sondas de salud de Actuator, que Spring Boot expone en rutas separadas: la sonda de vida responde si la aplicación está en un estado irrecuperable y debe reiniciarse; la de disponibilidad responde si puede atender solicitudes, por ejemplo, mientras termina de ejecutar las migraciones de Flyway o si perdió la conexión con la base de datos. Confundirlas provoca reinicios en cadena. Explique el apagado ordenado con server.shutdown=graceful: al recibir la señal de terminación, la aplicación deja de aceptar solicitudes y termina las que están en curso, crucial para no dejar pedidos a medias. Muestre la configuración de registros estructurados en JSON. Pregunta para la clase: si la base de datos se cae, ¿debería fallar la sonda de vida, la de disponibilidad o ambas? Discuta las consecuencias de cada respuesta."
+        },
+        {
+          "title": "Observabilidad de la aplicación",
+          "bullets": [
+            "Tres señales: métricas (qué ocurre), registros (qué ocurrió en detalle) y trazas (por dónde pasó una solicitud).",
+            "Micrometer expone métricas en formato Prometheus; el método RED mide tasa de solicitudes, errores y duración por servicio.",
+            "Métricas de negocio: comprobantes emitidos, rechazados y pendientes, y latencia del OSE, visibles para operaciones y contabilidad.",
+            "OpenTelemetry propaga el identificador de traza entre servicios; los registros nunca deben contener datos personales ni secretos."
+          ],
+          "notes": "En Administración de Servidores y Nube se estudiaron los objetivos de nivel de servicio desde la infraestructura; aquí el foco es instrumentar la aplicación. Explique que la observabilidad permite responder preguntas que no se previeron, a diferencia del monitoreo tradicional de umbrales. Presente el método RED de Tom Wilkie para servicios: tasa, errores y duración, complementario al método USE de Brendan Gregg para recursos. Muestre cómo Micrometer, integrado en Spring Boot Actuator, registra automáticamente métricas HTTP, del pool de conexiones y de la JVM, y cómo crear métricas propias con contadores y temporizadores. Destaque el valor de las métricas de negocio: un panel que muestre comprobantes pendientes de envío alerta antes de que el contador general descubra el problema a fin de mes. Explique la propagación de trazas con OpenTelemetry y cómo el identificador de traza en cada registro permite seguir un pedido de punta a punta. Recuerde la Ley 29733: los registros no deben contener datos personales. Pregunta para la clase: ¿qué alerta configurarían sobre la métrica de comprobantes pendientes y con qué umbral?"
+        },
+        {
+          "title": "Métricas DORA y entrega continua",
+          "bullets": [
+            "Forsgren, Humble y Kim (2018) identificaron cuatro métricas: frecuencia de despliegue, tiempo de entrega de cambios, tasa de fallas por cambio y tiempo de restauración.",
+            "Los equipos de alto desempeño son más rápidos y más estables a la vez: velocidad y estabilidad no se oponen.",
+            "Lotes pequeños, automatización de pruebas y despliegues, y control de versiones de todo son prácticas que explican ese desempeño.",
+            "La entrega continua mantiene el software siempre desplegable; el despliegue a producción se vuelve una decisión de negocio."
+          ],
+          "notes": "Presente la investigación de Nicole Forsgren, Jez Humble y Gene Kim publicada en Accelerate, basada en encuestas a miles de profesionales durante varios años del programa DevOps Research and Assessment. Su hallazgo más contraintuitivo es que los equipos que despliegan con más frecuencia también tienen menos fallas y se recuperan más rápido, porque cada cambio es pequeño, fácil de revisar y de revertir. Contraste con la práctica común en muchas organizaciones peruanas: despliegues trimestrales, manuales, en la madrugada del sábado, con decenas de cambios acumulados y alta probabilidad de falla. Defina cada métrica con precisión y muestre cómo podría medirse con los datos del repositorio y del registro de incidentes. Explique la diferencia entre entrega continua, donde cada cambio queda listo para producción, y despliegue continuo, donde se despliega automáticamente. Mencione técnicas como las banderas de funcionalidad para separar desplegar de liberar. Pregunta para la clase: ¿cómo medirían las cuatro métricas en el proyecto integrador durante las últimas cuatro semanas del curso?"
+        },
+        {
+          "title": "Deuda técnica, refactorización y evolución",
+          "bullets": [
+            "Cunningham (1992) acuñó la metáfora de la deuda técnica: atajos que aceleran hoy y cobran intereses en cada cambio futuro.",
+            "El cuadrante de Fowler distingue deuda deliberada o inadvertida, y prudente o imprudente; no toda deuda es negligencia.",
+            "Refactorizar es mejorar la estructura sin cambiar el comportamiento, en pasos pequeños protegidos por pruebas.",
+            "El patrón estrangulador reemplaza gradualmente un sistema heredado; ArchUnit y Spring Modulith impiden que la arquitectura se erosione."
+          ],
+          "notes": "Ward Cunningham introdujo la metáfora para explicar a ejecutivos financieros por qué había que invertir en mejorar código que ya funcionaba: como una deuda, el atajo permite avanzar, pero sus intereses se pagan en cada modificación. Presente el cuadrante de Fowler con ejemplos: lanzar rápido la facturación para cumplir una fecha de la SUNAT, sabiendo que habrá que mejorar el diseño, es deuda deliberada y prudente; no saber qué es una transacción es deuda inadvertida e imprudente. Explique la refactorización según Fowler: pasos pequeños, cada uno verificado por las pruebas, como extraer un método, mover una responsabilidad al objeto de dominio o reemplazar un primitivo por un objeto de valor. Presente el patrón estrangulador, inspirado en la higuera que envuelve a su árbol huésped: se redirigen funcionalidades una a una hacia el nuevo sistema hasta que el antiguo puede retirarse. Muestre una prueba de ArchUnit que impide que el dominio dependa de la infraestructura. Pregunta para la clase: ¿qué deuda técnica deliberada asumió su equipo durante el proyecto y cuándo planean pagarla?"
+        },
+        {
+          "title": "Sustentación del proyecto integrador: qué se evalúa",
+          "bullets": [
+            "Demostración de extremo a extremo: autenticación, registro y confirmación de pedido, emisión asíncrona del comprobante y consulta de su estado.",
+            "Simulación de una falla del OSE en vivo, con evidencia del interruptor de circuito, la cola de pendientes y las métricas.",
+            "Evidencias de calidad: pipeline en verde, cobertura del núcleo, puerta de calidad y pruebas de concurrencia y de autorización.",
+            "Defensa de la arquitectura con diagramas C4 y registros de decisión, y una modificación de código en vivo por cada integrante."
+          ],
+          "notes": "Use esta diapositiva para alinear expectativas desde la semana 13. Explique que la sustentación imita una revisión técnica real antes de un pase a producción: el comité no quiere ver diapositivas bonitas, sino evidencia. Detalle la secuencia sugerida de veinte minutos: cinco de contexto del negocio y arquitectura con el diagrama C4 de contenedores; ocho de demostración, incluida la falla simulada del OSE con WireMock y la recuperación posterior; cuatro de evidencias de calidad en el pipeline y en el panel de métricas; y tres de decisiones arquitectónicas y deuda técnica reconocida. Luego, cada integrante realiza una modificación de código asignada por el docente, como agregar una regla de validación con su prueba, para demostrar dominio individual del sistema. Recalque que reconocer limitaciones con honestidad y con un plan de mejora se valora más que ocultarlas. Muestre la rúbrica de la Tarea 4 y resuelva dudas. Pregunta para la clase: ¿qué pregunta difícil esperan del comité técnico y cómo la responderían con evidencia del repositorio?"
+        }
+      ],
+      "reading": {
+        "title": "Calidad demostrable: pruebas automatizadas, integración continua y observabilidad de un servicio Spring Boot",
+        "minutes": 45,
+        "content": "## 1. Confianza para desplegar\n\nJez Humble y David Farley (2010) definen la entrega continua como la capacidad de llevar cualquier cambio a producción de forma segura, rápida y sostenible. Esa capacidad no depende de una herramienta, sino de un sistema de evidencias: pruebas automatizadas en varios niveles, un flujo de integración que las ejecuta en cada cambio y una aplicación instrumentada para detectar problemas en producción. La investigación de Forsgren, Humble y Kim (2018) mostró que los equipos que trabajan así despliegan con más frecuencia y, al mismo tiempo, fallan menos.\n\n## 2. Pruebas en tres niveles\n\n**Dominio, sin Spring.** Las reglas de negocio se verifican con JUnit 5 y AssertJ en milisegundos:\n\n```java\nclass RucTest {\n    @ParameterizedTest\n    @ValueSource(strings = {\"2010012345\", \"201001234567\", \"20A00123456\"})\n    void rechazaRucConFormatoInvalido(String valor) {\n        assertThatThrownBy(() -> new Ruc(valor)).isInstanceOf(IllegalArgumentException.class);\n    }\n}\n```\n\n**Integración con infraestructura real.** Testcontainers levanta PostgreSQL en un contenedor y `@ServiceConnection` conecta la aplicación sin configuración manual. Así se prueba lo que H2 no reproduce: tipos, bloqueos y concurrencia.\n\n```java\n@SpringBootTest\n@Testcontainers\nclass RegistrarPedidoIT {\n    @Container @ServiceConnection\n    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(\"postgres:16-alpine\");\n\n    @Autowired RegistrarPedido registrar;\n    @Autowired InventarioRepository inventario;\n\n    @Test\n    void noVendeMasDelStockConCompradoresConcurrentes() throws Exception {\n        inventario.save(new Inventario(7L, 1));                 // una sola unidad\n        ExecutorService pool = Executors.newFixedThreadPool(2);\n        Future<Boolean> a = pool.submit(() -> intentarComprar(7L));\n        Future<Boolean> b = pool.submit(() -> intentarComprar(7L));\n        assertThat(List.of(a.get(), b.get())).containsExactlyInAnyOrder(true, false);\n        assertThat(inventario.findById(7L).orElseThrow().disponible()).isZero();\n    }\n}\n```\n\n**Servicios externos simulados.** WireMock reproduce al OSE con respuestas de aceptación, rechazo y demora, para demostrar los tiempos de espera y el interruptor de circuito.\n\n## 3. El flujo de integración continua\n\n```yaml\n# .github/workflows/ci.yml\nname: ci\non: [push, pull_request]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-java@v4\n        with:\n          distribution: temurin\n          java-version: '21'\n          cache: maven\n      - run: ./mvnw -B verify             # unitarias, integración y cobertura JaCoCo\n      - run: ./mvnw -B spring-boot:build-image -DskipTests\n```\n\nLa rama principal se protege para exigir este flujo en verde y la revisión de un compañero. El análisis estático con SonarQube añade una **puerta de calidad** sobre el código nuevo, por ejemplo, cobertura mínima del 70 % y ninguna vulnerabilidad crítica, y un escáner de dependencias alerta sobre bibliotecas con vulnerabilidades conocidas.\n\n## 4. Empaquetado y configuración\n\n```dockerfile\nFROM eclipse-temurin:21-jdk AS build\nWORKDIR /src\nCOPY . .\nRUN ./mvnw -B -DskipTests package\n\nFROM eclipse-temurin:21-jre\nRUN useradd --system --uid 1001 app\nUSER app\nCOPY --from=build /src/target/pedidos.jar /app/pedidos.jar\nENTRYPOINT [\"java\", \"-XX:MaxRAMPercentage=75\", \"-jar\", \"/app/pedidos.jar\"]\n```\n\nLa imagen no contiene secretos: credenciales, certificado digital y emisor de tokens llegan por variables de entorno o desde un gestor de secretos.\n\n## 5. Observabilidad con significado de negocio\n\n```yaml\nmanagement:\n  endpoints:\n    web:\n      exposure:\n        include: health, info, prometheus\n  endpoint:\n    health:\n      probes:\n        enabled: true          # sondas de vida y de disponibilidad\n```\n\n```java\nCdr cdr = registry.timer(\"ose.envio\").record(() -> ose.enviar(cpe));\nregistry.counter(\"cpe.resultado\", \"estado\", cdr.estado()).increment();\n```\n\nCon estas métricas, un panel muestra la latencia del OSE y los comprobantes aceptados, observados y rechazados; una alerta sobre los pendientes avisa antes del cierre de mes. Los registros estructurados incluyen el identificador de traza de OpenTelemetry y excluyen datos personales, en cumplimiento de la Ley 29733.\n\n## 6. Calidad como hábito\n\nLa calidad no se agrega al final: se construye con cambios pequeños, pruebas que acompañan a cada regla, revisiones entre pares y refactorización continua para pagar la deuda técnica antes de que sus intereses paralicen al equipo.\n"
+      },
+      "case": {
+        "title": "Caso: Cooperativa Altiplano Unido y el despliegue del viernes",
+        "content": "*Los nombres de la organización y de las personas son ficticios; el contexto normativo es real.*\n\nLa **Cooperativa de Ahorro y Crédito Altiplano Unido** atiende a unos 95 000 socios en Puno y Cusco, principalmente comerciantes y productores de la región. Desde la Ley 30822, las cooperativas de ahorro y crédito están bajo la supervisión de la SBS, que exige gestionar el riesgo operacional y reportar los incidentes relevantes. Su sistema principal, desarrollado en casa hace ocho años con Java y Spring, tiene unas 280 000 líneas de código y gestiona ahorros, créditos, cobranzas y la contabilidad.\n\nEl equipo de seis desarrolladores despliega cada tres meses, de forma manual, un viernes por la noche. El último despliegue incluía 74 cambios acumulados, entre ellos el nuevo módulo de **créditos grupales**. El sábado por la mañana, los asesores detectaron que los cronogramas de pago se calculaban con una tasa efectiva mal convertida: 3 400 cronogramas resultaron erróneos. Revertir fue imposible porque la versión incluía migraciones de base de datos irreversibles aplicadas a mano. El servicio de créditos se restauró después de 26 horas, y la cooperativa tuvo que recalcular cronogramas, atender reclamos y presentar un informe del incidente.\n\nEl jefe de desarrollo, **Óscar Mamani**, reunió los datos del último año:\n\n| Indicador | Valor |\n|---|---|\n| Frecuencia de despliegue | 4 al año |\n| Tiempo de entrega de un cambio (desde el commit hasta producción) | 70 días en promedio |\n| Despliegues que causaron incidentes | 40 % |\n| Tiempo medio de restauración | 9 horas |\n| Cobertura de pruebas automatizadas | 9 %, solo en utilidades |\n| Ambiente de pruebas | Base de datos distinta de producción y datos de hace dos años |\n\nEl gerente general propone **congelar los cambios durante seis meses** salvo correcciones urgentes. Óscar propone lo contrario: dedicar tres meses a construir un flujo de integración continua, pruebas de integración con la misma base de datos de producción, migraciones versionadas con Flyway, despliegues automáticos más pequeños y paneles de observabilidad, y luego desplegar cada dos semanas. Mientras tanto, el área de negocios exige lanzar en cuatro meses un canal digital para que los socios consulten sus cronogramas y paguen desde el celular, porque dos cajas municipales de la región ya lo ofrecen.\n\nEl consejo de administración, que no tiene formación técnica, debe decidir en su próxima sesión. Teme que desplegar con más frecuencia multiplique los incidentes y pregunta cómo sabrá si la propuesta de Óscar funciona.\n",
+        "questions": [
+          "Usando los hallazgos de Forsgren, Humble y Kim, explique por qué congelar cambios probablemente aumentaría el riesgo en lugar de reducirlo.",
+          "¿Qué pruebas automatizadas habrían detectado el error del cálculo de la tasa efectiva y en qué nivel de la pirámide ubicaría cada una?",
+          "Diseñe el flujo de integración continua y despliegue que propondría Óscar, indicando etapas, puertas de calidad y estrategia de reversión.",
+          "¿Cómo conciliaría la presión por lanzar el canal digital en cuatro meses con la inversión en calidad? Proponga un plan por fases.",
+          "¿Qué indicadores presentaría al consejo cada mes para demostrar avances y qué metas fijaría para el primer año?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Proyecto integrador listo para producción y sustentación",
+        "instructions": "**Objetivo:** integrar los entregables de las tareas 1 a 3 en un sistema de pedidos y facturación electrónica listo para producción, con evidencias objetivas de calidad, y sustentarlo ante un comité técnico.\n\n**Requisitos mínimos**\n\n1. **Funcionalidad de extremo a extremo:** autenticación con Keycloak, registro y confirmación de pedidos con control de stock, emisión asíncrona del comprobante al OSE simulado, consulta de su estado y un reporte paginado de ventas.\n2. **Estrategia de pruebas:** pruebas unitarias del dominio, slices con `@WebMvcTest` y `@DataJpaTest`, integración con Testcontainers (incluida la prueba de concurrencia) y pruebas del OSE con WireMock; cobertura mínima del 70 % en los paquetes de dominio y aplicación.\n3. **Integración continua:** flujo en GitHub Actions con `mvn verify`, informe de JaCoCo, análisis estático (SonarQube, o SpotBugs con Checkstyle), escaneo de dependencias y construcción de la imagen; rama principal protegida.\n4. **Operabilidad:** imagen de contenedor de varias etapas con usuario sin privilegios, `docker-compose.yml` con PostgreSQL, RabbitMQ y Keycloak, sondas de vida y disponibilidad, apagado ordenado, métricas de comprobantes y de latencia del OSE, y registros estructurados sin datos personales.\n5. **Documentación:** README, diagramas C4 de contexto y contenedores, al menos cuatro registros de decisión arquitectónica, contrato OpenAPI y un manual breve de atención de incidentes.\n6. **Sustentación de 20 minutos:** demostración completa, simulación en vivo de una falla del OSE y una modificación de código individual asignada por el docente.\n\n**Entregables:** repositorio con historial de todos los integrantes e informe técnico de máximo diez páginas. Entrega y sustentación en la semana 16.\n",
+        "rubric": [
+          {
+            "name": "Funcionalidad integrada de extremo a extremo",
+            "points": 5
+          },
+          {
+            "name": "Estrategia de pruebas y puerta de calidad en el pipeline",
+            "points": 5
+          },
+          {
+            "name": "Operabilidad: contenedores, configuración y observabilidad",
+            "points": 4
+          },
+          {
+            "name": "Documentación arquitectónica y registros de decisión",
+            "points": 3
+          },
+          {
+            "name": "Sustentación y dominio individual",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Calidad, entrega continua y operación",
+        "questions": [
+          {
+            "prompt": "Las pruebas de integración usan H2 en memoria y pasan, pero en producción falla una consulta que usa una función propia de PostgreSQL. ¿Qué práctica lo habría detectado?",
+            "options": [
+              "Aumentar la cobertura de pruebas unitarias",
+              "Pruebas de integración con Testcontainers contra PostgreSQL real",
+              "Activar ddl-auto en modo update",
+              "Simular el repositorio con Mockito"
+            ],
+            "correct": 1,
+            "explanation": "H2 no reproduce todas las funciones, tipos ni el comportamiento de concurrencia de PostgreSQL. Testcontainers ejecuta las pruebas contra el mismo motor y versión de producción, eliminando esa divergencia."
+          },
+          {
+            "prompt": "Se necesita verificar que un RUC inválido produce 400 con Problem Details y que un usuario sin permisos recibe 403, sin cargar la base de datos. ¿Qué tipo de prueba es la más adecuada?",
+            "options": [
+              "@DataJpaTest con un repositorio real",
+              "Una prueba de extremo a extremo con navegador",
+              "@WebMvcTest con MockMvc y tokens simulados",
+              "Una prueba unitaria del objeto de valor Ruc"
+            ],
+            "correct": 2,
+            "explanation": "@WebMvcTest carga solo la capa web: valida rutas, serialización, manejo de errores y seguridad con MockMvc, mientras el caso de uso se simula. Es rápido y preciso para estas verificaciones."
+          },
+          {
+            "prompt": "Un desarrollador simula con Mockito el EntityManager de JPA para probar las consultas de un repositorio. ¿Cuál es la crítica principal?",
+            "options": [
+              "Prueba suposiciones sobre una biblioteca ajena; conviene una prueba de integración con base de datos real",
+              "Mockito no puede simular interfaces de Jakarta Persistence",
+              "Las pruebas con mocks siempre son más lentas que las de integración",
+              "El EntityManager no debe usarse en aplicaciones Spring"
+            ],
+            "correct": 0,
+            "explanation": "Según el principio de no simular lo que no nos pertenece, simular el EntityManager verifica cómo creemos que funciona Hibernate, no cómo funciona. Los adaptadores de persistencia se validan contra una base de datos real."
+          },
+          {
+            "prompt": "Un equipo despliega cada trimestre y el 40 % de sus despliegues causa incidentes. Según la investigación de Accelerate, ¿qué estrategia mejora a la vez velocidad y estabilidad?",
+            "options": [
+              "Reducir los despliegues a uno por año con más pruebas manuales",
+              "Acumular más cambios por versión para probarlos juntos",
+              "Exigir aprobación del gerente general para cada cambio",
+              "Lotes pequeños y frecuentes con pruebas y despliegue automatizados"
+            ],
+            "correct": 3,
+            "explanation": "Forsgren, Humble y Kim encontraron que los equipos de alto desempeño despliegan con frecuencia cambios pequeños y automatizados, lo que reduce la tasa de fallas y el tiempo de restauración."
+          },
+          {
+            "prompt": "Durante el arranque, la aplicación aún ejecuta migraciones de Flyway y no debe recibir solicitudes. ¿Qué sonda debe indicar ese estado?",
+            "options": [
+              "La sonda de vida, para que la plataforma reinicie el proceso",
+              "La sonda de disponibilidad, para que no se le envíe tráfico todavía",
+              "Ninguna, porque las migraciones son instantáneas",
+              "La métrica de uso de CPU de la JVM"
+            ],
+            "correct": 1,
+            "explanation": "La disponibilidad indica si la instancia puede atender tráfico. Marcar como no viva a una instancia que solo está iniciando provocaría reinicios innecesarios e incluso un ciclo infinito de arranques."
+          },
+          {
+            "prompt": "Para el servicio de facturación, ¿qué conjunto de métricas corresponde al método RED?",
+            "options": [
+              "Uso, saturación y errores de cada servidor",
+              "Cobertura, duplicación y complejidad del código",
+              "Tasa de solicitudes, tasa de errores y duración de las solicitudes",
+              "Frecuencia de despliegue y tiempo de restauración"
+            ],
+            "correct": 2,
+            "explanation": "El método RED de Tom Wilkie mide tasa, errores y duración para servicios. USE se aplica a recursos de infraestructura, y la frecuencia de despliegue pertenece a las métricas DORA."
+          },
+          {
+            "prompt": "Se desea reemplazar gradualmente el módulo heredado de créditos sin una reescritura total que detenga la operación. ¿Qué estrategia es la más prudente?",
+            "options": [
+              "Patrón estrangulador: redirigir funcionalidades por partes al nuevo módulo",
+              "Reescritura completa y cambio en una sola noche",
+              "Congelar el módulo heredado sin cambios indefinidamente",
+              "Copiar el código heredado al nuevo proyecto sin modificaciones"
+            ],
+            "correct": 0,
+            "explanation": "El patrón estrangulador reduce el riesgo al migrar funcionalidad por partes, cada una verificable y reversible, hasta que el sistema antiguo puede retirarse. Las reescrituras totales concentran el riesgo en un solo evento."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Software empresarial: características, ERP, CRM y decisión de construir o comprar",
+      "activity": "Sesión de diagnóstico; análisis comparativo de dos sistemas empresariales usados en empresas peruanas; instalación del JDK 21, el IDE y el repositorio del equipo.",
+      "evidence": "Ficha diagnóstica y repositorio inicial del equipo"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Patrones de lógica de dominio, capa de servicio y costo del mantenimiento",
+      "activity": "Aula invertida con la lectura de la unidad; discusión del caso Distribuidora Andina del Sur; refactorización guiada de un guion de transacción hacia un modelo de dominio.",
+      "evidence": "Participación argumentada en el foro del caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Arquitectura en capas, hexagonal y monolito modular; inversión de control e inyección de dependencias",
+      "activity": "Taller de puertos y adaptadores en parejas; implementación de un adaptador en memoria y pruebas unitarias del caso de uso sin el contenedor de Spring.",
+      "evidence": "Caso de uso con puerto y pruebas en el repositorio"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Spring Boot: autoconfiguración, perfiles, configuración externa y Maven",
+      "activity": "Laboratorio con Spring Initializr, propiedades validadas y perfiles; redacción del primer ADR; entrega de la Tarea 1 y resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Diseño guiado por el dominio táctico: lenguaje ubicuo, entidades, objetos de valor y agregados",
+      "activity": "Taller de modelado de agregados del sistema de pedidos con el glosario del negocio; implementación de los objetos de valor Ruc y Dinero con pruebas.",
+      "evidence": "Diagrama de agregados y objetos de valor probados"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Mapeo con JPA e Hibernate, contexto de persistencia y repositorios con Spring Data",
+      "activity": "Laboratorio de mapeo de Pedido y sus líneas; análisis del SQL generado; discusión del caso Botica Vida Plus en el foro.",
+      "evidence": "Mapeo JPA funcional y participación en el foro del caso"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Transacciones declarativas, propagación, aislamiento y bloqueo optimista y pesimista",
+      "activity": "Experimentos de concurrencia contra PostgreSQL con dos sesiones simultáneas; comparación de estrategias de bloqueo y escritura de una prueba concurrente.",
+      "evidence": "Prueba de concurrencia en el repositorio"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Problema N+1, estrategias de carga y migraciones de esquema con Flyway",
+      "activity": "Diagnóstico y corrección del problema N+1 con registro de SQL; creación de migraciones versionadas; entrega de la Tarea 2 y resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "API REST con Spring Web: DTO, validación, Problem Details y contrato OpenAPI",
+      "activity": "Laboratorio de controladores delgados y manejador centralizado de errores; generación del contrato OpenAPI y revisión cruzada de su compatibilidad.",
+      "evidence": "Endpoints validados y contrato OpenAPI publicado"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Spring Security, OAuth 2.0, OpenID Connect, JWT y autorización por objeto",
+      "activity": "Configuración de Keycloak en Docker Compose y de la API como servidor de recursos; pruebas de autorización con tokens simulados, incluido el acceso a pedidos ajenos.",
+      "evidence": "Pruebas de seguridad en verde"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Facturación electrónica de la SUNAT, mensajería asíncrona y bandeja de salida transaccional",
+      "activity": "Discusión del caso Ferretería Constructora Norte; implementación del evento de pedido confirmado con bandeja de salida, RabbitMQ y OSE simulado con WireMock.",
+      "evidence": "Participación en el foro del caso y flujo asíncrono funcional"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Resiliencia con Resilience4j e idempotencia en operaciones de negocio",
+      "activity": "Inyección de fallas en el OSE simulado para demostrar tiempos de espera, reintentos e interruptor de circuito; entrega de la Tarea 3 y resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Estrategia de pruebas: unitarias, slices de Spring, Testcontainers y pruebas de contrato",
+      "activity": "Auditoría de la suite de pruebas del proyecto con la pirámide; incorporación de pruebas faltantes; presentación de la rúbrica de sustentación.",
+      "evidence": "Suite de pruebas ampliada con informe de cobertura"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Integración continua, análisis estático, puerta de calidad y empaquetado en contenedores",
+      "activity": "Construcción del flujo de GitHub Actions y de la imagen de varias etapas; discusión del caso Cooperativa Altiplano Unido en el foro.",
+      "evidence": "Pipeline en verde y participación en el foro del caso"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Observabilidad, métricas DORA, deuda técnica y preparación de la sustentación",
+      "activity": "Instrumentación con Actuator y Micrometer, panel de métricas de comprobantes; ensayo de sustentación con retroalimentación de pares; resolución del Cuestionario 4.",
+      "evidence": "Panel de métricas, ensayo grabado y Cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y evaluación final",
+      "activity": "Entrega de la Tarea 4; sustentación ante comité con simulación de fallas y modificación de código en vivo; prueba práctica supervisada y cierre del curso.",
+      "evidence": "Tarea 4, sustentación y prueba práctica"
+    }
+  ]
+}

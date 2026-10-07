@@ -1,0 +1,1394 @@
+{
+  "name": "Aprendizaje Profundo",
+  "slug": "aprendizaje-profundo",
+  "course_type": "especifica",
+  "module_name": "Desarrollo y despliegue de soluciones de inteligencia artificial",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Aprendizaje Profundo (IAR-501) es un curso de formación específica, de naturaleza teórico-práctica, del quinto ciclo de la carrera de Inteligencia Artificial. Su propósito es que el estudiante comprenda desde sus fundamentos matemáticos cómo aprenden las redes neuronales profundas y que diseñe, entrene, diagnostique y documente modelos propios en PyTorch para imágenes, señales y series de tiempo de organizaciones peruanas. Construye sobre Álgebra Lineal Aplicada, Aprendizaje Automático I y II y sobre el uso de redes preentrenadas visto en Visión por Computadora y Procesamiento de Lenguaje Natural, para pasar de usar modelos ajenos a construirlos y entrenarlos con rigor. Comprende cuatro unidades: perceptrón multicapa, retropropagación y diferenciación automática; optimización, inicialización, normalización y regularización; modelos secuenciales con redes recurrentes, convoluciones temporales y transformadores implementados desde cero; y aprendizaje de representaciones, entrenamiento eficiente, compresión y un proyecto integrador. Se articula con IA Generativa y Modelos de Lenguaje y con Despliegue de Modelos (MLOps), que se cursan en paralelo, y prepara el Proyecto Integrador de Inteligencia Artificial. Aporta al perfil de egreso la capacidad de entrenar modelos profundos eficientes, verificables y responsables.",
+  "competency": "Desarrolla modelos de aprendizaje profundo en PyTorch para problemas con imágenes, señales y series de tiempo de organizaciones peruanas, eligiendo con fundamento la arquitectura, la función de pérdida y las estrategias de optimización y regularización; los entrena de forma reproducible y eficiente, los diagnostica con curvas de aprendizaje y estudios de ablación, los compara con líneas base honestas y documenta su desempeño, costo computacional, límites y riesgos conforme a la Ley 29733 y a principios de inteligencia artificial responsable.",
+  "capacities": [
+    "Explica e implementa el funcionamiento de las redes neuronales multicapa, desde la propagación hacia adelante y las funciones de pérdida hasta la retropropagación y la diferenciación automática, verificando los gradientes en NumPy y PyTorch.",
+    "Entrena redes profundas de manera estable y reproducible, seleccionando optimizador, programación de la tasa de aprendizaje, inicialización, normalización y regularización a partir del diagnóstico de curvas de aprendizaje y de experimentos controlados.",
+    "Diseña modelos para datos secuenciales con redes recurrentes, convoluciones temporales y mecanismos de atención, y los evalúa con validación temporal frente a líneas base estadísticas y de aprendizaje automático.",
+    "Integra aprendizaje de representaciones, ajuste fino, entrenamiento eficiente y compresión en una solución de aprendizaje profundo de punta a punta, documentada con tarjeta de modelo, análisis de costos y consideraciones éticas y normativas."
+  ],
+  "indicators": [
+    "Calcula a mano el número de parámetros y los gradientes de un perceptrón multicapa pequeño y los contrasta con los obtenidos por autograd y por diferencias finitas, con error relativo menor a 10⁻⁶.",
+    "Implementa un bucle de entrenamiento completo en PyTorch con Dataset, DataLoader, modos de entrenamiento y evaluación y semillas fijas, y demuestra que el modelo puede sobreajustar deliberadamente un minilote.",
+    "Diagnostica subajuste, sobreajuste e inestabilidad a partir de curvas de pérdida y propone ajustes concretos de tasa de aprendizaje, capacidad, normalización o regularización.",
+    "Conduce un estudio de ablación con al menos tres semillas por configuración, reportando media y desviación estándar y extrayendo conclusiones sustentadas en la evidencia.",
+    "Construye ventanas temporales sin fuga de información y evalúa pronósticos con validación de origen móvil, MAE y MASE frente a una línea base estacional ingenua.",
+    "Implementa desde cero la autoatención de producto punto escalado y un bloque transformador con máscara causal, verificando las formas de los tensores en cada paso.",
+    "Aplica un autocodificador para detectar anomalías, fija el umbral según el costo de los errores y la capacidad de revisión, y lo compara con Isolation Forest.",
+    "Comprime y exporta un modelo mediante cuantización o destilación, mide el cambio en desempeño, tamaño y latencia y lo documenta en una tarjeta de modelo."
+  ],
+  "methodology": "El curso aplica una metodología activa en modalidad 100 % virtual. Cada semana combina aula invertida, con la lectura de la unidad y un cuaderno de Google Colab previo a la sesión; una clase síncrona con derivaciones en pizarra digital y programación en vivo en PyTorch; y un laboratorio guiado con GPU en la nube. En cada unidad se analiza un caso de una organización peruana mediante el método de casos: preparación individual, discusión en equipos con roles y decisión argumentada en plenaria. El aprendizaje basado en problemas guía las tareas aplicadas de las unidades 1 a 3, que alimentan el proyecto integrador de la unidad 4, desarrollado por equipos desde la semana 11. La evaluación formativa incluye cuestionarios con retroalimentación inmediata, revisión de código entre pares, bitácoras de experimentos y asesorías por equipo en el foro técnico.",
+  "bibliography": [
+    "Goodfellow, I., Bengio, Y. y Courville, A. (2016). Deep learning. MIT Press.",
+    "Prince, S. J. D. (2023). Understanding deep learning. MIT Press.",
+    "Bishop, C. M. y Bishop, H. (2024). Deep learning: Foundations and concepts. Springer.",
+    "Zhang, A., Lipton, Z. C., Li, M. y Smola, A. J. (2023). Dive into deep learning. Cambridge University Press.",
+    "Stevens, E., Antiga, L. y Viehmann, T. (2020). Deep learning with PyTorch. Manning.",
+    "LeCun, Y., Bengio, Y. y Hinton, G. (2015). Deep learning. Nature, 521(7553), 436-444.",
+    "Rumelhart, D. E., Hinton, G. E. y Williams, R. J. (1986). Learning representations by back-propagating errors. Nature, 323(6088), 533-536.",
+    "Hochreiter, S. y Schmidhuber, J. (1997). Long short-term memory. Neural Computation, 9(8), 1735-1780.",
+    "He, K., Zhang, X., Ren, S. y Sun, J. (2016). Deep residual learning for image recognition. En Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 770-778). IEEE.",
+    "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł. y Polosukhin, I. (2017). Attention is all you need. En Advances in Neural Information Processing Systems 30 (pp. 5998-6008). Curran Associates."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 40,
+      "description": "Cuestionarios de las cuatro unidades, laboratorios semanales en Colab, bitácora de experimentos y participación argumentada en el análisis de los casos, con retroalimentación formativa y revisión de código entre pares."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas aplicadas de las unidades 1 a 3, evaluadas con rúbrica analítica: red neuronal desde cero, estudio de ablación de técnicas de entrenamiento y pronóstico con modelos secuenciales."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador de la unidad 4: solución de aprendizaje profundo con línea base, ablación, compresión, tarjeta de modelo, video demostrativo y sustentación oral ante jurado docente."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Fundamentos de las redes neuronales profundas y retropropagación",
+      "description": "Al finalizar la unidad, el estudiante explica cómo aprende una red neuronal multicapa, deriva e implementa la retropropagación, verifica gradientes numéricamente y entrena en PyTorch un modelo reproducible que compara con una línea base de aprendizaje automático clásico.",
+      "topics": [
+        "Del perceptrón al perceptrón multicapa: historia, el problema XOR y aproximación universal",
+        "Funciones de activación, softmax y funciones de pérdida derivadas de máxima verosimilitud",
+        "Grafos computacionales, regla de la cadena y retropropagación",
+        "Tensores y diferenciación automática con autograd en PyTorch",
+        "Bucle de entrenamiento con minilotes, depuración y comparación con líneas base"
+      ],
+      "slides": [
+        {
+          "title": "Qué significa aprendizaje profundo",
+          "bullets": [
+            "Un modelo profundo es una composición de muchas capas de transformaciones aprendidas: f(x) = f_L(… f_2(f_1(x))).",
+            "Cada capa construye una representación más abstracta: bordes, texturas, partes y objetos en imágenes; patrones, ciclos y regímenes en series de tiempo.",
+            "Diferencia con Aprendizaje Automático I y II: las características ya no se diseñan a mano, se aprenden de los datos junto con el clasificador.",
+            "Lo hicieron viable tres factores: grandes volúmenes de datos etiquetados, procesadores gráficos (GPU) y algoritmos de entrenamiento estables.",
+            "En este curso pasamos de usar redes preentrenadas a construirlas, entrenarlas, diagnosticarlas y comprimirlas."
+          ],
+          "notes": "Abra la sesión recordando lo que los estudiantes ya hicieron en Visión por Computadora y en Procesamiento de Lenguaje Natural: cargaron una ResNet o un BERT y ajustaron la última capa. Este curso abre la caja negra. Pregunte: ¿qué aprendió exactamente la red preentrenada y por qué funciona su ajuste fino? Explique la idea de jerarquía de representaciones con el ejemplo clásico de Zeiler y Fergus, que visualizaron filtros de capas sucesivas: primero bordes, luego texturas y finalmente partes de objetos. Contraste con el flujo de Aprendizaje Automático I, donde el analista diseñaba variables como ratios financieros o promedios móviles. Subraye que el aprendizaje profundo no reemplaza ese conocimiento del dominio, sino que lo desplaza hacia el diseño de la arquitectura, la función de pérdida y los datos. Cierre presentando la ruta del curso: fundamentos y retropropagación, entrenamiento estable, modelos para secuencias y, finalmente, representaciones, eficiencia y proyecto integrador."
+        },
+        {
+          "title": "Breve historia: tres oleadas de redes neuronales",
+          "bullets": [
+            "1943-1969: neurona de McCulloch y Pitts, perceptrón de Rosenblatt (1958) y crítica de Minsky y Papert (1969) sobre sus límites.",
+            "1986-1998: Rumelhart, Hinton y Williams popularizan la retropropagación; las redes convolucionales de LeCun leen cheques bancarios.",
+            "2012: AlexNet reduce el error top-5 en ImageNet de 26,2 % a 15,3 % entrenando en dos GPU.",
+            "2015-2017: ResNet entrena 152 capas y el transformador reemplaza la recurrencia por atención.",
+            "Reconocimientos: Premio Turing 2018 a Bengio, Hinton y LeCun; Premio Nobel de Física 2024 a Hopfield y Hinton."
+          ],
+          "notes": "Cuente la historia como una sucesión de problemas resueltos, no como una lista de fechas. El perceptrón generó un entusiasmo enorme, pero Minsky y Papert demostraron que una sola capa no puede resolver problemas como XOR, y la financiación se contrajo. La retropropagación resolvió cómo entrenar capas ocultas, pero en los años noventa las redes profundas seguían siendo difíciles de entrenar y los métodos de kernel dominaron. El quiebre de 2012 combinó tres ingredientes: un conjunto de datos de más de un millón de imágenes etiquetadas, GPU programables y trucos como ReLU y dropout. Pida a los estudiantes que identifiquen cuál de esos tres ingredientes es hoy el cuello de botella para una empresa peruana mediana. Normalmente la respuesta es el dato etiquetado, no el cómputo, y esa reflexión anticipa las unidades 2 y 4, donde se trabaja la regularización, la transferencia y el aprendizaje autosupervisado."
+        },
+        {
+          "title": "La neurona artificial y el perceptrón",
+          "bullets": [
+            "Neurona: suma ponderada z = w·x + b seguida de una activación no lineal a = g(z).",
+            "Perceptrón de Rosenblatt: g es un escalón y aprende con la regla w ← w + η(y − ŷ)x.",
+            "Teorema de convergencia: si los datos son linealmente separables, el perceptrón encuentra un separador en un número finito de pasos.",
+            "Geométricamente, una neurona define un hiperplano: con activación sigmoide es exactamente la regresión logística de Aprendizaje Automático I."
+          ],
+          "notes": "Conecte con lo conocido: la regresión logística ya es una red neuronal de una sola neurona con activación sigmoide y pérdida de entropía cruzada. Escriba en la pizarra digital un ejemplo con dos entradas, por ejemplo ingreso mensual y antigüedad laboral de un solicitante de crédito, y muestre que w·x + b = 0 es una recta que separa aprobados de rechazados. Ejecute dos o tres pasos de la regla del perceptrón a mano con η = 1 para que vean cómo la recta gira hacia los puntos mal clasificados. Señale la limitación de la regla original: el escalón no es diferenciable, por lo que no admite descenso de gradiente y no se generaliza a varias capas. Esa es la razón por la que se adoptaron activaciones suaves. Pregunta para la clase: si los datos no son separables, ¿qué hace el perceptrón? La respuesta, que oscila indefinidamente, motiva el uso de una función de pérdida continua."
+        },
+        {
+          "title": "El problema XOR y la necesidad de capas ocultas",
+          "bullets": [
+            "XOR: (0,0)→0, (0,1)→1, (1,0)→1, (1,1)→0; ninguna recta separa ambas clases.",
+            "Una capa oculta con dos neuronas transforma el espacio y vuelve el problema linealmente separable.",
+            "Lección general: las capas ocultas aprenden una nueva representación en la que la tarea se simplifica.",
+            "Sin activación no lineal, apilar capas lineales equivale a una sola capa: W₂(W₁x) = (W₂W₁)x."
+          ],
+          "notes": "Dibuje los cuatro puntos de XOR en el plano y pida a la clase que intente separarlos con una recta; en segundos queda claro que es imposible. Luego muestre una solución explícita: la neurona oculta h₁ calcula un OR, la neurona h₂ calcula un AND, y la salida calcula h₁ y no h₂. En el nuevo espacio (h₁, h₂) los puntos quedan separables por una recta. Este ejemplo diminuto contiene la idea central del curso: una red profunda es un aprendiz de representaciones. Insista en el último punto, que es un error conceptual frecuente: sin no linealidad, cien capas lineales colapsan en una sola matriz y el modelo sigue siendo lineal. Proponga como ejercicio verificar en NumPy que el producto de dos matrices aleatorias aplicado a x da el mismo resultado que aplicarlas por separado, y luego repetir con ReLU entre ambas."
+        },
+        {
+          "title": "Perceptrón multicapa y aproximación universal",
+          "bullets": [
+            "Perceptrón multicapa (MLP): h = g(W₁x + b₁), ŷ = W₂h + b₂; cada capa es una matriz de pesos aprendida.",
+            "Teorema de aproximación universal (Cybenko, 1989; Hornik, 1991): una capa oculta suficientemente ancha aproxima cualquier función continua en un dominio acotado.",
+            "El teorema garantiza existencia, no que el entrenamiento encuentre esa red ni cuántos datos se requieren.",
+            "En la práctica, la profundidad es más eficiente que la anchura: reutiliza características intermedias con menos parámetros.",
+            "Parámetros de una capa densa: n_entrada × n_salida + n_salida."
+          ],
+          "notes": "Presente la notación matricial que se usará todo el curso y relacione con Álgebra Lineal Aplicada: cada capa es una transformación lineal seguida de una deformación no lineal del espacio. Explique el teorema de aproximación universal con una intuición visual: con suficientes neuronas ReLU se puede construir una función escalonada o lineal por tramos que se acerque tanto como se quiera a cualquier curva continua. Luego desmitifíquelo: el número de neuronas necesario puede crecer exponencialmente, y nada asegura que el descenso de gradiente lo encuentre o que generalice. Calcule con la clase los parámetros de una red 784-128-10 para imágenes de 28 × 28 píxeles: 100 480 en la primera capa y 1 290 en la segunda, 101 770 en total. Pregunte cuántos ejemplos etiquetados harían falta para estimar razonablemente esos parámetros y qué riesgo aparece si solo hay dos mil."
+        },
+        {
+          "title": "Funciones de activación",
+          "bullets": [
+            "Sigmoide σ(z) = 1/(1 + e^(−z)): derivada máxima de 0,25; satura en los extremos y desvanece el gradiente.",
+            "Tangente hiperbólica: centrada en cero y con derivada máxima 1, pero también satura.",
+            "ReLU = max(0, z): barata y sin saturación para z > 0; riesgo de neuronas muertas con tasas de aprendizaje altas.",
+            "Leaky ReLU, GELU y SiLU: variantes suaves usadas en redes modernas y en transformadores.",
+            "Regla práctica: ReLU o GELU en capas ocultas; la activación de salida depende de la tarea."
+          ],
+          "notes": "Grafique las cuatro funciones y sus derivadas en el mismo cuaderno de Colab; la imagen de la derivada de la sigmoide, que nunca supera 0,25, es la mejor explicación del desvanecimiento del gradiente que se estudiará en la unidad 2. Explique la neurona muerta: si una actualización grande deja el sesgo muy negativo, la ReLU devuelve cero para todos los ejemplos, su gradiente es cero y nunca se recupera. Muestre cómo medirlo contando el porcentaje de activaciones nulas por capa con un gancho de PyTorch. Mencione que GELU, usada en BERT y en muchos transformadores, pondera la entrada por la probabilidad gaussiana de que sea positiva. Cierre con la regla práctica y pregunte: ¿qué activación de salida usarían para predecir la demanda de energía, la probabilidad de fraude y la categoría de un reclamo? Respuestas esperadas: lineal, sigmoide y softmax."
+        },
+        {
+          "title": "Capa de salida, softmax y entropía cruzada",
+          "bullets": [
+            "Regresión: salida lineal y error cuadrático medio, equivalente a máxima verosimilitud con ruido gaussiano.",
+            "Clasificación binaria: un logit con sigmoide y entropía cruzada binaria; en PyTorch, BCEWithLogitsLoss.",
+            "Multiclase: softmax p_k = e^(z_k) / Σ_j e^(z_j) y pérdida −ln p_y; el gradiente respecto a los logits es p − y.",
+            "nn.CrossEntropyLoss recibe logits crudos: aplicar softmax antes es un error frecuente que frena el aprendizaje.",
+            "Pérdida inicial esperada con K clases equilibradas: ln K; con 10 clases, alrededor de 2,30."
+          ],
+          "notes": "Derive brevemente por qué la entropía cruzada es la elección natural: maximizar la verosimilitud de las etiquetas bajo un modelo categórico equivale a minimizar −ln p_y. Destaque la elegancia del gradiente p − y: si la red asigna 0,7 a la clase correcta, el gradiente del logit correcto es −0,3 y empuja a subirlo. Explique por qué PyTorch combina log-softmax y pérdida en una sola función: por estabilidad numérica, ya que exponenciar logits grandes desborda el formato de punto flotante. El valor ln K es una herramienta de depuración poderosa; pídales calcular la pérdida inicial esperada para cuatro clases (1,386) y para dos (0,693). Si una red arranca muy lejos de ese valor, la inicialización o los datos tienen un problema. Anticipe que el caso de la unidad gira precisamente en torno a una pérdida que se queda clavada en ln K."
+        },
+        {
+          "title": "Grafos computacionales",
+          "bullets": [
+            "Toda red es una composición de operaciones elementales: producto matricial, suma, activación y pérdida.",
+            "El grafo dirigido acíclico registra cada operación y sus entradas durante la propagación hacia adelante.",
+            "Cada nodo solo necesita conocer su derivada local respecto a sus entradas inmediatas.",
+            "El mismo marco sirve para un perceptrón multicapa, una red convolucional, una recurrente o un transformador."
+          ],
+          "notes": "Dibuje el grafo de una neurona con pérdida: x y w entran a un nodo de multiplicación, luego un nodo de suma con b, luego la sigmoide y finalmente la entropía cruzada. Insista en la modularidad: el nodo de multiplicación no sabe si forma parte de un modelo de crédito o de un detector de plagas; solo sabe que la derivada de w·x respecto a w es x. Esa propiedad es la que permite a PyTorch y a otras bibliotecas calcular gradientes de arquitecturas arbitrarias. Mencione que PyTorch construye el grafo de forma dinámica, en cada ejecución del método forward, lo que permite usar condicionales y bucles de Python. Proponga a los estudiantes dibujar el grafo de la expresión L = (wx + b − y)² e identificar las derivadas locales de cada nodo antes de pasar a la siguiente diapositiva."
+        },
+        {
+          "title": "Retropropagación: la regla de la cadena hacia atrás",
+          "bullets": [
+            "Objetivo: obtener ∂L/∂θ para millones de parámetros con un costo similar al de una propagación hacia adelante.",
+            "Paso hacia atrás: gradiente que llega desde arriba multiplicado por la derivada local, desde la pérdida hasta las entradas.",
+            "Capa densa con δ = ∂L/∂z: ∂L/∂W = δ hᵀ, ∂L/∂b = δ y ∂L/∂h = Wᵀ δ.",
+            "Es diferenciación automática en modo inverso: eficiente cuando hay muchas entradas y una sola salida escalar.",
+            "Exige guardar las activaciones del paso hacia adelante: la memoria crece con la profundidad y el tamaño del lote."
+          ],
+          "notes": "Desarrolle las tres ecuaciones de la capa densa en la pizarra y muestre que solo usan productos matriciales ya conocidos. Señale la transpuesta en ∂L/∂h = Wᵀδ: el gradiente viaja hacia atrás por las mismas conexiones, pero en sentido inverso. Explique por qué el modo inverso es tan eficiente: calcular por diferencias finitas el gradiente de un millón de parámetros exigiría un millón de evaluaciones de la red, mientras que la retropropagación lo logra con una pasada hacia adelante y una hacia atrás. Relacione la última viñeta con un problema práctico que encontrarán: el error de memoria agotada en la GPU. Ocurre porque las activaciones intermedias de todo el lote se guardan para el paso hacia atrás, y se mitiga reduciendo el lote, usando precisión mixta o recalculando activaciones, temas de la unidad 4."
+        },
+        {
+          "title": "Ejemplo numérico de retropropagación",
+          "bullets": [
+            "Neurona sigmoide con x = 2, w = 0,5, b = −0,5: z = 0,5 y a = σ(0,5) ≈ 0,622; objetivo y = 1.",
+            "Pérdida de entropía cruzada: L = −ln(0,622) ≈ 0,474.",
+            "Gradientes: ∂L/∂z = a − y = −0,378; ∂L/∂w = (a − y)·x = −0,756; ∂L/∂b = −0,378.",
+            "Con η = 0,1: w pasa a 0,576 y b a −0,462; la nueva predicción sube a σ(0,689) ≈ 0,666.",
+            "Verificación: el mismo cálculo en PyTorch con requires_grad=True debe reproducir estos gradientes."
+          ],
+          "notes": "Resuelva este ejemplo completo en vivo, con calculadora, antes de mostrar cualquier línea de código. Pida a un estudiante que calcule z, a otro la sigmoide y a un tercero la pérdida. Luego deriven juntos: la derivada de la entropía cruzada respecto a a es −1/a y la derivada de la sigmoide es a(1 − a); al multiplicarlas, todo se simplifica en a − y. Esa simplificación es la razón práctica por la que se combina sigmoide con entropía cruzada. Actualice los pesos y verifique que la predicción mejora de 0,622 a 0,666 y que la pérdida baja a −ln(0,666) ≈ 0,407. Inmediatamente después, abra Colab y escriba cinco líneas con tensores de PyTorch que reproduzcan los mismos números con backward(). Este ritual de comparar el cálculo manual con autograd se repetirá en la tarea 1."
+        },
+        {
+          "title": "Tensores en PyTorch: forma, tipo y dispositivo",
+          "bullets": [
+            "Un tensor es un arreglo n-dimensional con forma (shape), tipo de dato (dtype) y dispositivo (CPU o cuda).",
+            "Convenciones de lote: tabulares (N, D); imágenes (N, C, H, W); secuencias (N, T, D) con batch_first=True.",
+            "Difusión (broadcasting) y operaciones vectorizadas: evitar bucles de Python sobre los ejemplos.",
+            "Errores típicos: mezclar float64 con float32, tensores en dispositivos distintos y dimensiones transpuestas.",
+            "Hábito profesional: imprimir x.shape tras cada capa la primera vez que se ejecuta un modelo."
+          ],
+          "notes": "Muestre en Colab la creación de tensores desde NumPy con torch.from_numpy, la conversión a float32 y el traslado a GPU con .to(dispositivo). Recalque que la mayoría de errores de los principiantes no son conceptuales sino de forma: una etiqueta con forma (N, 1) cuando la pérdida espera (N), o una imagen en formato (H, W, C) de OpenCV cuando PyTorch espera (C, H, W). Haga un ejercicio rápido: dado un lote de 32 secuencias de 168 horas con 5 variables, ¿qué forma tiene el tensor con batch_first=True? Respuesta: (32, 168, 5). Explique la difusión con un ejemplo de normalización: restar a un tensor (N, D) un vector de medias de forma (D) funciona sin bucles. Cierre con la medición de tiempos: una multiplicación matricial de 4 096 × 4 096 en una GPU T4 de Colab tarda una fracción de lo que tarda en CPU, siempre que se sincronice antes de medir."
+        },
+        {
+          "title": "Diferenciación automática con autograd",
+          "bullets": [
+            "requires_grad=True indica a PyTorch que registre las operaciones aplicadas al tensor.",
+            "loss.backward() recorre el grafo hacia atrás y acumula los gradientes en el atributo .grad de cada parámetro.",
+            "Los gradientes se acumulan entre llamadas: por eso se ejecuta optimizer.zero_grad() en cada iteración.",
+            "torch.no_grad() desactiva el registro durante la evaluación y la inferencia, y ahorra memoria.",
+            "torch.autograd.gradcheck compara los gradientes analíticos con diferencias finitas en doble precisión."
+          ],
+          "notes": "Explique que la acumulación de gradientes no es un error de diseño sino una característica útil: permite sumar gradientes de varios minilotes cuando la GPU no admite un lote grande, técnica que se verá en la unidad 4. Sin embargo, olvidarse de limpiar los gradientes es uno de los errores más comunes; demuéstrelo ejecutando dos veces backward() sobre la misma pérdida y mostrando que .grad se duplica. Presente también detach(), que corta el grafo, y explique por qué es necesario al registrar la pérdida en una lista: guardar el tensor completo retiene todo el grafo y provoca fugas de memoria; se debe guardar loss.item(). Para cerrar, muestre gradcheck con una función propia, por ejemplo una activación personalizada, y pida a los estudiantes que introduzcan intencionalmente un error en la derivada para ver cómo la prueba lo detecta."
+        },
+        {
+          "title": "Organizar el código: nn.Module, Dataset y DataLoader",
+          "bullets": [
+            "nn.Module encapsula capas y parámetros: forward define el cálculo y model.parameters() los entrega al optimizador.",
+            "Dataset implementa __len__ y __getitem__; DataLoader arma minilotes, baraja los datos y carga en paralelo.",
+            "model.train() y model.eval() cambian el comportamiento de dropout y de la normalización por lotes.",
+            "Separar datos, modelo, entrenamiento y evaluación en funciones facilita las pruebas y la reproducibilidad.",
+            "Fijar semillas en random, NumPy y torch, y en el generador del DataLoader, para resultados repetibles."
+          ],
+          "notes": "Escriba juntos una clase MLP que herede de nn.Module con dos capas lineales y ReLU, y una clase Dataset que lea un archivo CSV con pandas y devuelva pares de tensores. Muestre que DataLoader con shuffle=True solo debe barajar el entrenamiento; la validación se recorre en orden. Explique num_workers y pin_memory como palancas de rendimiento cuando la carga de datos, y no la GPU, es el cuello de botella. Insista en la disciplina de estructurar el código en funciones pequeñas: entrenar_una_epoca, evaluar y predecir. Ese orden no es estético; es la base para que en la unidad 2 puedan correr decenas de experimentos comparables y para que en Despliegue de Modelos (MLOps) puedan empaquetar el modelo. Pregunte: si dos integrantes del equipo obtienen exactitudes distintas con el mismo código, ¿qué fuentes de aleatoriedad revisarían primero?"
+        },
+        {
+          "title": "El bucle de entrenamiento en cinco pasos",
+          "bullets": [
+            "Paso 1, propagación hacia adelante: logits = model(x).",
+            "Paso 2, cálculo de la pérdida: loss = criterio(logits, y).",
+            "Paso 3, limpieza de gradientes previos: optimizer.zero_grad().",
+            "Paso 4, retropropagación: loss.backward().",
+            "Paso 5, actualización: optimizer.step(); al cerrar cada época se evalúa en validación sin gradientes."
+          ],
+          "notes": "Este es el corazón operativo de todo el curso; pida que lo memoricen y lo escriban sin consultar. Muestre que el bucle es idéntico para un perceptrón, una red convolucional, una LSTM o un transformador: solo cambian el modelo, los datos y la pérdida. Comente la diferencia entre época, iteración y minilote con números concretos: con 50 000 ejemplos y lotes de 128 hay 391 iteraciones por época. Explique qué se registra en cada época: pérdida y métrica de entrenamiento promediadas, pérdida y métrica de validación, tasa de aprendizaje y tiempo. Recomiende guardar un punto de control con el estado del modelo y del optimizador cada vez que mejore la validación. Pregunta de cierre: ¿qué pasaría si se intercambian los pasos 3 y 4? La respuesta, que se borrarían los gradientes recién calculados y el modelo no aprendería nada, consolida el sentido de cada paso."
+        },
+        {
+          "title": "Depurar una red que no aprende",
+          "bullets": [
+            "Verificar la pérdida inicial: con K clases equilibradas debe estar cerca de ln K.",
+            "Sobreajuste deliberado: un minilote de 32 ejemplos debe llegar a pérdida casi cero; si no lo logra, hay un error.",
+            "Revisar la normalización de entradas, la correspondencia entre etiquetas y salidas y la función de pérdida.",
+            "Vigilar la norma de los gradientes por capa: valores nulos o NaN delatan saturación o explosión.",
+            "Cambiar una sola cosa a la vez y registrar cada experimento con su configuración."
+          ],
+          "notes": "Presente esta lista como el protocolo de diagnóstico que usarán en el caso de la unidad. La prueba de sobreajustar un minilote, recomendada por Andrej Karpathy en su conocida receta para entrenar redes, es la más rentable: si una red con miles de parámetros no puede memorizar 32 ejemplos, el problema no es de capacidad sino un error en los datos, la pérdida o el bucle. Muestre ejemplos reales de errores: etiquetas desalineadas tras barajar imágenes y etiquetas por separado, imágenes en escala 0-255 sin normalizar, softmax aplicada dos veces o una tasa de aprendizaje de 1,0 con SGD. Enseñe a visualizar un lote justo antes de entrar al modelo, con sus etiquetas, porque muchos errores se detectan solo mirando. Pida que cada equipo mantenga una bitácora de experimentos desde esta semana."
+        },
+        {
+          "title": "¿Cuándo conviene el aprendizaje profundo?",
+          "bullets": [
+            "Ventaja clara en datos no estructurados: imágenes, audio, texto, señales de sensores y secuencias largas.",
+            "En datos tabulares de tamaño mediano, el boosting de gradiente suele igualar o superar a las redes (Grinsztajn et al., 2022).",
+            "Costos a considerar: datos etiquetados, GPU, energía, latencia de inferencia y menor interpretabilidad.",
+            "Regla de decisión: empezar por una línea base simple y adoptar la red solo si mejora la métrica de negocio de forma significativa."
+          ],
+          "notes": "Cierre la primera semana con pensamiento crítico. Presente el estudio de Grinsztajn, Oyallon y Varoquaux de 2022, que comparó modelos basados en árboles y redes neuronales en decenas de conjuntos tabulares y encontró que los árboles seguían siendo superiores en datos de tamaño mediano, en parte por su robustez ante variables irrelevantes y funciones irregulares. Esto conecta con lo aprendido en Aprendizaje Automático II con XGBoost y LightGBM. Plantee escenarios peruanos y pida una decisión rápida: clasificar fotos de defectos en mangos de exportación, predecir la morosidad de microcréditos con veinte variables, transcribir audios de atención al cliente en español y quechua, y pronosticar la demanda horaria de electricidad. Discuta que en los dos primeros la respuesta depende de la naturaleza de los datos, no de la moda. Esta discusión es la base del caso de la unidad."
+        }
+      ],
+      "reading": {
+        "title": "Retropropagación y diferenciación automática: del cálculo a PyTorch",
+        "minutes": 40,
+        "content": "## Una red como composición de funciones\n\nUn perceptrón multicapa con una capa oculta calcula, para un lote de entradas **X** de forma (N, D):\n\n- Capa oculta: **Z₁ = X W₁ + b₁** y **H = ReLU(Z₁)**\n- Capa de salida: **Z₂ = H W₂ + b₂** (logits) y **P = softmax(Z₂)**\n- Pérdida media de entropía cruzada: **L = −(1/N) Σᵢ ln Pᵢ,yᵢ**\n\nEntrenar significa encontrar W₁, b₁, W₂ y b₂ que minimicen L. El descenso de gradiente necesita ∂L/∂θ para cada parámetro θ, y la retropropagación es el algoritmo que obtiene todos esos gradientes con un costo comparable al de la propagación hacia adelante. Rumelhart, Hinton y Williams lo presentaron en 1986 como una forma de que las capas ocultas aprendan representaciones internas, y ese sigue siendo su sentido profundo.\n\n## Las ecuaciones de la retropropagación\n\nLlamemos **Y** a la matriz de etiquetas en codificación one-hot. Aplicando la regla de la cadena desde la pérdida hacia las entradas:\n\n1. Gradiente en los logits: **G₂ = (P − Y) / N**\n2. Segunda capa: **∂L/∂W₂ = Hᵀ G₂** y **∂L/∂b₂ = Σᵢ G₂**\n3. Gradiente que vuelve a la capa oculta: **∂L/∂H = G₂ W₂ᵀ**\n4. A través de la ReLU: **G₁ = ∂L/∂H ⊙ 1[Z₁ > 0]**\n5. Primera capa: **∂L/∂W₁ = Xᵀ G₁** y **∂L/∂b₁ = Σᵢ G₁**\n\nObserve tres regularidades. El gradiente de un peso es siempre el producto de la entrada de su capa por el gradiente que llega a su salida. El gradiente viaja hacia atrás multiplicado por la transpuesta de la misma matriz que se usó hacia adelante. Y cada activación aporta su derivada local como un factor multiplicativo; si ese factor es pequeño, como ocurre con la sigmoide saturada, el gradiente se debilita capa tras capa.\n\n## Implementación desde cero en NumPy\n\nEl siguiente código entrena la red anterior y hace explícito cada paso:\n\n```python\nimport numpy as np\nrng = np.random.default_rng(42)\n\ndef softmax(z):\n    z = z - z.max(axis=1, keepdims=True)      # estabilidad numérica\n    e = np.exp(z)\n    return e / e.sum(axis=1, keepdims=True)\n\ndef iniciar(d, h, k):\n    return {\"W1\": rng.normal(0, np.sqrt(2 / d), (d, h)), \"b1\": np.zeros(h),\n            \"W2\": rng.normal(0, np.sqrt(2 / h), (h, k)), \"b2\": np.zeros(k)}\n\ndef paso(p, X, y, lr=0.1):\n    N, K = X.shape[0], p[\"b2\"].size\n    Y = np.eye(K)[y]\n    Z1 = X @ p[\"W1\"] + p[\"b1\"]; H = np.maximum(0, Z1)      # hacia adelante\n    P = softmax(H @ p[\"W2\"] + p[\"b2\"])\n    perdida = -np.log(P[np.arange(N), y] + 1e-12).mean()\n    G2 = (P - Y) / N                                       # hacia atrás\n    g = {\"W2\": H.T @ G2, \"b2\": G2.sum(0)}\n    G1 = (G2 @ p[\"W2\"].T) * (Z1 > 0)\n    g[\"W1\"], g[\"b1\"] = X.T @ G1, G1.sum(0)\n    for k in p:                                            # actualización\n        p[k] -= lr * g[k]\n    return perdida, g\n```\n\nLa inicialización con desviación √(2/d) es la propuesta de He y colaboradores para ReLU, que se justificará en la unidad 2. Restar el máximo dentro de la softmax no cambia el resultado y evita desbordamientos cuando los logits son grandes.\n\n## Verificación numérica de gradientes\n\nUna implementación manual siempre debe verificarse. La diferencia finita centrada aproxima la derivada con error del orden de ε²:\n\n**∂L/∂θ ≈ [L(θ + ε) − L(θ − ε)] / (2ε)**\n\n```python\ndef error_relativo(a, b):\n    return np.abs(a - b).max() / max(np.abs(a).max(), np.abs(b).max(), 1e-12)\n```\n\nSe perturba cada parámetro de una red pequeña, se recalcula la pérdida en doble precisión y se compara con el gradiente analítico. Con ε = 10⁻⁵, un error relativo por debajo de 10⁻⁶ indica una implementación correcta; valores de 10⁻² delatan casi siempre una transpuesta olvidada, una suma sobre el eje equivocado o una división por N duplicada.\n\n## El mismo modelo en PyTorch\n\nPyTorch registra las operaciones en un grafo dinámico y aplica el modo inverso de la diferenciación automática, de modo que basta con escribir la propagación hacia adelante:\n\n```python\nimport torch\nfrom torch import nn\n\ntorch.manual_seed(42)\nmodelo = nn.Sequential(nn.Linear(64, 32), nn.ReLU(), nn.Linear(32, 4))\ncriterio = nn.CrossEntropyLoss()          # recibe logits, no probabilidades\noptimizador = torch.optim.SGD(modelo.parameters(), lr=0.1)\n\nfor epoca in range(50):\n    modelo.train()\n    for xb, yb in cargador_entrenamiento:\n        logits = modelo(xb)               # 1. hacia adelante\n        perdida = criterio(logits, yb)    # 2. pérdida\n        optimizador.zero_grad()           # 3. limpiar gradientes\n        perdida.backward()                # 4. retropropagación\n        optimizador.step()                # 5. actualización\n```\n\nSi se copian los pesos de NumPy a la red de PyTorch, los gradientes de ambas implementaciones deben coincidir hasta el redondeo. Esa comparación es el primer entregable de la tarea de la unidad.\n\n## Lecciones para la práctica\n\nComprender la retropropagación no es un ejercicio académico: es lo que permite depurar. Una fintech o una caja municipal que entrena su primer clasificador de documentos suele enfrentar pérdidas estancadas en ln K, valores NaN o redes que memorizan sin generalizar. Quien entiende que el gradiente de un peso depende de la escala de sus entradas sabe por qué normalizar los píxeles; quien sabe que la softmax ya está incluida en la pérdida evita aplicarla dos veces; y quien ha verificado gradientes confía en su código antes de culpar a los datos. Finalmente, recuerde la evidencia empírica: en tablas con pocas decenas de variables, los modelos de boosting estudiados en Aprendizaje Automático II siguen siendo una línea base exigente. La red profunda debe ganarse su lugar con resultados medidos, no con entusiasmo."
+      },
+      "case": {
+        "title": "Caso: La red que no aprendía en una fintech limeña",
+        "content": "## Contexto\n\nKuntur Pagos S.A.C. es una fintech limeña de pagos móviles y créditos de consumo con unos 400 000 usuarios activos. Para abrir una cuenta, el cliente fotografía con su celular su DNI y un documento que acredite su domicilio, como un recibo de luz o de agua. Hoy, un equipo de seis analistas revisa manualmente unas 85 000 imágenes al mes para clasificarlas en cuatro tipos: DNI, recibo de servicios, boleta de venta y otro documento. El tiempo medio de validación es de 9 horas y el área comercial estima que cada hora de espera reduce la tasa de activación de cuentas.\n\n## El proyecto\n\nLa gerencia de tecnología encargó a dos analistas junior, recién incorporados, construir un clasificador automático. Reunieron 12 000 imágenes etiquetadas, 3 000 por clase, las convirtieron a escala de grises, las redujeron a 64 × 64 píxeles y las aplanaron en vectores de 4 096 valores. Entrenaron en PyTorch un perceptrón multicapa 4096-512-256-4 con activación sigmoide, SGD con tasa de aprendizaje de 0,5 y lotes de 64 durante 20 épocas.\n\nLos resultados fueron decepcionantes: la pérdida de entrenamiento comenzó en 1,39 y terminó en 1,386; la exactitud osciló entre 25 % y 31 % en entrenamiento y validación. En una reunión, el gerente de tecnología concluyó que «el aprendizaje profundo no funciona con nuestros datos» y propuso contratar una API extranjera de clasificación de documentos a USD 0,015 por imagen, con una exactitud anunciada de 97 % y una latencia de 1,8 segundos por llamada.\n\n## La revisión de código\n\nAntes de decidir, la jefa de analítica, Rosa Huamán, pidió revisar el cuaderno. Encontró lo siguiente:\n\n- Los píxeles se usaban en la escala de 0 a 255, sin normalizar.\n- El método forward terminaba en torch.softmax y su salida se pasaba a nn.CrossEntropyLoss.\n- Las imágenes y las etiquetas se barajaban con dos llamadas independientes a una función de mezcla, antes de crear el conjunto de datos.\n- La línea optimizer.zero_grad() estaba comentada «porque parecía no hacer nada».\n- No existía una línea base: nadie había probado una regresión logística ni un modelo sencillo con descriptores.\n\n## Restricciones y dilema\n\nEl directorio quiere reducir el tiempo de validación a menos de 15 minutos antes del próximo trimestre. La API extranjera procesa los datos en servidores ubicados fuera del país; las imágenes contienen datos personales, incluidos nombre, número de DNI, fotografía y dirección, por lo que el área legal advierte que debe evaluarse el flujo transfronterizo y las obligaciones de la Ley 29733 y su reglamento. Por otro lado, el equipo interno dispone de una GPU en la nube con un presupuesto de S/ 2 500 mensuales y de tres semanas antes de la presentación al directorio.\n\nRosa debe recomendar si se corrige y continúa el desarrollo interno, si se contrata la API o si se combina ambas opciones, y debe presentar un plan de depuración con evidencias verificables.",
+        "questions": [
+          "¿Qué síntomas indican un error de implementación y no una falta de capacidad del modelo? Explique el significado del valor 1,386 en la pérdida.",
+          "Ordene los pasos de depuración según su costo y su probabilidad de resolver el problema. ¿Qué prueba mínima ejecutaría primero y qué resultado esperaría?",
+          "¿Es razonable un perceptrón multicapa sobre píxeles aplanados para este problema? Proponga una alternativa y justifique su sesgo inductivo.",
+          "Compare desarrollar el modelo propio frente a contratar la API extranjera, considerando costo mensual, latencia, dependencia del proveedor y obligaciones de la Ley 29733.",
+          "¿Qué evidencia mínima exigiría, como gerente de riesgos, antes de autorizar el uso de cualquiera de las opciones en producción?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Red neuronal desde cero y en PyTorch",
+        "instructions": "**Objetivo:** demostrar que comprende cómo aprende una red neuronal implementando la retropropagación a mano, verificándola y reproduciendo el mismo modelo en PyTorch.\n\n**Datos:** use el conjunto de dígitos manuscritos de scikit-learn (load_digits, 1 797 imágenes de 8 × 8) o un conjunto equivalente aprobado por el docente. Separe 70 % para entrenamiento, 15 % para validación y 15 % para prueba, de forma estratificada y con semilla fija.\n\n**Qué entregar:**\n\n1. **Implementación en NumPy** de un perceptrón multicapa 64-32-10 con ReLU, softmax y entropía cruzada, con funciones separadas para la propagación hacia adelante, la retropropagación y la actualización.\n2. **Verificación de gradientes** por diferencias finitas centradas en doble precisión para los cuatro tensores de parámetros, con una tabla de errores relativos.\n3. **Implementación en PyTorch** del mismo modelo con nn.Module, Dataset y DataLoader. Copie los pesos iniciales de NumPy y demuestre que los gradientes del primer paso coinciden. Incluya la prueba de sobreajuste de un minilote de 32 ejemplos.\n4. **Entrenamiento y comparación:** entrene el modelo de PyTorch, grafique las curvas de pérdida y exactitud y compárelo en prueba con una regresión logística de scikit-learn. Explique en no más de 300 palabras si la red justifica su mayor complejidad.\n5. **Informe breve** de tres a cuatro páginas con decisiones, resultados y dos errores que encontró y cómo los resolvió.\n\n**Formato:** cuaderno de Colab ejecutable de principio a fin, con semillas fijas, más el informe en PDF. Trabajo individual.\n\n**Criterios:** se valora la corrección de las derivadas, la rigurosidad de la verificación, la reproducibilidad y la honestidad del análisis comparativo, más que la exactitud final.",
+        "rubric": [
+          {
+            "name": "Implementación en NumPy de la propagación y la retropropagación",
+            "points": 6
+          },
+          {
+            "name": "Verificación numérica de gradientes",
+            "points": 3
+          },
+          {
+            "name": "Implementación en PyTorch y bucle de entrenamiento reproducible",
+            "points": 5
+          },
+          {
+            "name": "Comparación con la línea base y análisis de resultados",
+            "points": 4
+          },
+          {
+            "name": "Comunicación técnica y orden del repositorio",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Fundamentos y retropropagación",
+        "questions": [
+          {
+            "prompt": "¿Cuántos parámetros entrenables tiene un perceptrón multicapa 784-128-10 con capas densas que incluyen sesgo?",
+            "options": [
+              "101 770",
+              "101 632",
+              "203 540",
+              "100 480"
+            ],
+            "correct": 0,
+            "explanation": "Primera capa: 784·128 + 128 = 100 480. Segunda: 128·10 + 10 = 1 290. Total: 101 770. Sin sesgos serían 101 632."
+          },
+          {
+            "prompt": "Un clasificador de 10 clases equilibradas inicia con pérdida 2,30 y tras 30 épocas sigue en 2,30 tanto en entrenamiento como en validación. ¿Qué es lo más probable?",
+            "options": [
+              "El conjunto de validación está desbalanceado",
+              "La red alcanzó el mínimo global de la pérdida",
+              "La red sobreajusta los datos de entrenamiento",
+              "La red no aprende y predice probabilidades casi uniformes"
+            ],
+            "correct": 3,
+            "explanation": "ln 10 ≈ 2,30 es la pérdida de un modelo que asigna 0,1 a cada clase. Si no baja, hay un error en datos, pérdida, tasa o bucle."
+          },
+          {
+            "prompt": "Un colega apila cinco capas nn.Linear sin activaciones entre ellas para superar a una regresión logística. ¿Qué ocurrirá?",
+            "options": [
+              "El modelo sigue siendo lineal: equivale a una sola capa",
+              "El modelo aproxima cualquier función continua",
+              "El entrenamiento falla porque los gradientes son nulos",
+              "El modelo sobreajusta por exceso de no linealidad"
+            ],
+            "correct": 0,
+            "explanation": "El producto de matrices W₅…W₁ es otra matriz; sin no linealidades la composición es lineal y la frontera de decisión no cambia de tipo."
+          },
+          {
+            "prompt": "El método forward de un modelo termina con torch.softmax y la salida se pasa a nn.CrossEntropyLoss. ¿Cuál es la consecuencia?",
+            "options": [
+              "PyTorch detecta la duplicación y la corrige automáticamente",
+              "Se aplica softmax dos veces y los gradientes se atenúan",
+              "La pérdida se vuelve negativa y el modelo diverge",
+              "No hay efecto, porque softmax es idempotente"
+            ],
+            "correct": 1,
+            "explanation": "CrossEntropyLoss aplica log-softmax internamente. Una softmax previa comprime las salidas en [0, 1], aplana los logits efectivos y vuelve el aprendizaje muy lento."
+          },
+          {
+            "prompt": "En el bucle de entrenamiento se omitió optimizer.zero_grad(). ¿Qué sucede con las actualizaciones de los pesos?",
+            "options": [
+              "Solo se ve afectada la evaluación en validación",
+              "PyTorch limpia los gradientes al llamar a backward",
+              "Los gradientes se acumulan entre iteraciones y las actualizaciones crecen erráticamente",
+              "Los gradientes quedan en cero y el modelo no aprende"
+            ],
+            "correct": 2,
+            "explanation": "backward suma en .grad. Sin limpiar, cada paso usa la suma de todos los gradientes anteriores, lo que equivale a pasos cada vez más grandes y desordenados."
+          },
+          {
+            "prompt": "En una red de 10 capas con activación sigmoide, ¿cuál es la cota superior del factor que aportan las derivadas de las activaciones al gradiente de la primera capa?",
+            "options": [
+              "10 × 0,25 = 2,5",
+              "0,5¹⁰ ≈ 9,8 × 10⁻⁴",
+              "0,25¹⁰ ≈ 9,5 × 10⁻⁷",
+              "1, porque la sigmoide no satura"
+            ],
+            "correct": 2,
+            "explanation": "La derivada de la sigmoide no supera 0,25; en la regla de la cadena estos factores se multiplican, por lo que el gradiente puede desvanecerse."
+          },
+          {
+            "prompt": "Al comparar el gradiente analítico de su capa con el obtenido por diferencias finitas, obtiene un error relativo de 3 × 10⁻². ¿Qué concluye?",
+            "options": [
+              "La red está sobreajustando los datos",
+              "Probablemente hay un error en la derivada analítica",
+              "Es el error normal de redondeo en doble precisión",
+              "El paso de las diferencias finitas es demasiado pequeño"
+            ],
+            "correct": 1,
+            "explanation": "En doble precisión, errores relativos por debajo de 10⁻⁶ son aceptables; un valor de 10⁻² casi siempre indica una derivada mal implementada."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Optimización, regularización y entrenamiento estable de redes profundas",
+      "description": "Al finalizar la unidad, el estudiante entrena redes profundas, incluidas redes convolucionales con bloques residuales, de forma estable y reproducible, seleccionando optimizador, programación de la tasa de aprendizaje, inicialización, normalización y regularización a partir de experimentos controlados y del diagnóstico de curvas de aprendizaje.",
+      "topics": [
+        "Descenso de gradiente estocástico, momento, RMSProp, Adam y AdamW",
+        "Tasa de aprendizaje: prueba de rango, calentamiento y programaciones coseno y de un ciclo",
+        "Inicialización, gradientes que se desvanecen o explotan, normalización y conexiones residuales",
+        "Regularización: decaimiento de pesos, dropout, parada temprana, aumento de datos y suavizado de etiquetas",
+        "Diagnóstico con curvas de aprendizaje, estudios de ablación y reproducibilidad"
+      ],
+      "slides": [
+        {
+          "title": "El paisaje de pérdida de una red profunda",
+          "bullets": [
+            "La pérdida de una red profunda es no convexa: millones de dimensiones, múltiples mínimos y abundantes puntos de silla.",
+            "En alta dimensión, los puntos de silla son mucho más frecuentes que los mínimos locales malos (Dauphin et al., 2014).",
+            "Los mínimos amplios tienden a generalizar mejor que los estrechos; el ruido del minilote ayuda a encontrarlos.",
+            "Meta práctica: no el mínimo global, sino una buena pérdida de validación dentro de un presupuesto de cómputo."
+          ],
+          "notes": "Contraste con Aprendizaje Automático I, donde la regresión logística tenía una pérdida convexa y cualquier mínimo era el global. En redes profundas eso se pierde, y sin embargo el entrenamiento funciona sorprendentemente bien. Explique la intuición de Dauphin y colaboradores: para que un punto crítico sea mínimo, la curvatura debe ser positiva en todas las direcciones; en un millón de dimensiones es mucho más probable que algunas direcciones bajen, es decir, un punto de silla. Por eso el riesgo práctico no es quedar atrapado en un mal mínimo, sino avanzar lentamente por mesetas. Muestre una visualización de superficie de pérdida, como las de Li y colaboradores de 2018, donde las redes con conexiones residuales presentan paisajes más suaves. Pregunte: si tuvieran que elegir entre dos modelos con la misma pérdida de entrenamiento, uno en un valle amplio y otro en uno estrecho, ¿cuál preferirían para datos de una nueva campaña agrícola y por qué?"
+        },
+        {
+          "title": "Descenso de gradiente estocástico por minilotes",
+          "bullets": [
+            "Actualización: θ ← θ − η·ĝ, donde ĝ es el gradiente promedio sobre un minilote de B ejemplos.",
+            "B pequeño: gradiente ruidoso, más actualizaciones por época y un efecto regularizador implícito.",
+            "B grande: mejor aprovechamiento de la GPU, pero riesgo de mínimos estrechos y peor generalización (Keskar et al., 2017).",
+            "Regla de escalamiento lineal: si B se multiplica por k, multiplicar η por k y usar calentamiento (Goyal et al., 2017).",
+            "Iteraciones por época = N / B; con 60 000 ejemplos y B = 128 son 469 actualizaciones."
+          ],
+          "notes": "Explique por qué el minilote es un estimador insesgado del gradiente completo y que su varianza disminuye proporcionalmente a 1/B: duplicar el lote no duplica la calidad de la dirección, pero sí el costo. Presente el resultado de Goyal y colaboradores, que entrenaron una ResNet-50 en ImageNet en una hora con lotes de 8 192 imágenes escalando la tasa linealmente y usando cinco épocas de calentamiento. Advierta que esa regla tiene límites y que, más allá de cierto tamaño, el beneficio desaparece. En la práctica de los estudiantes, el lote está limitado por la memoria de la GPU T4 de Colab, de 16 GB, por lo que deberán elegir el mayor lote que quepa y ajustar la tasa en consecuencia. Ejercicio: si una red se entrenó bien con B = 32 y η = 0,01 y ahora se usa B = 256, ¿qué tasa probarían primero? Respuesta esperada: 0,08 con calentamiento."
+        },
+        {
+          "title": "Momento y Nesterov",
+          "bullets": [
+            "Momento: v ← βv + g; θ ← θ − ηv, con β típico de 0,9.",
+            "Acumula una velocidad que atenúa oscilaciones en direcciones de curvatura alta y acelera en las de curvatura baja.",
+            "Equivale a promediar exponencialmente los últimos 1/(1 − β) ≈ 10 gradientes.",
+            "Nesterov evalúa el gradiente en la posición anticipada y corrige el rumbo antes.",
+            "SGD con momento sigue siendo una referencia competitiva en visión cuando la tasa está bien ajustada."
+          ],
+          "notes": "Use la analogía de una pelota que rueda por un valle alargado y estrecho: el gradiente puro rebota entre las paredes y avanza poco a lo largo del valle; con momento, las componentes que cambian de signo se cancelan y las que apuntan siempre en la misma dirección se acumulan. Muestre en un cuaderno la trayectoria sobre la función de Rosenbrock con y sin momento; el contraste visual es contundente. Explique que la velocidad efectiva en una dirección constante es η/(1 − β), es decir, diez veces mayor con β = 0,9, lo que obliga a reducir la tasa al activar el momento. Recuerde que en PyTorch se activa con torch.optim.SGD(params, lr, momentum=0.9, nesterov=True). Mencione que muchas de las mejores marcas en clasificación de imágenes se lograron con SGD con momento y programación de la tasa, no con métodos adaptativos, aunque estos últimos son más fáciles de ajustar."
+        },
+        {
+          "title": "Métodos adaptativos: AdaGrad, RMSProp y Adam",
+          "bullets": [
+            "AdaGrad divide por la raíz de la suma acumulada de g²: útil con características dispersas, pero la tasa decae demasiado.",
+            "RMSProp usa un promedio exponencial de g²: cada parámetro recibe una tasa efectiva propia.",
+            "Adam combina momento (m) y RMSProp (v) con corrección de sesgo: θ ← θ − η·m̂/(√v̂ + ε).",
+            "Valores por defecto: η = 10⁻³, β₁ = 0,9, β₂ = 0,999 y ε = 10⁻⁸ (Kingma y Ba, 2015).",
+            "Ventaja: robustez ante la escala de los gradientes; desventaja: a veces generaliza peor que SGD bien ajustado."
+          ],
+          "notes": "Escriba las ecuaciones completas de Adam: m ← β₁m + (1 − β₁)g, v ← β₂v + (1 − β₂)g², m̂ = m/(1 − β₁ᵗ) y v̂ = v/(1 − β₂ᵗ). Explique la corrección de sesgo con un cálculo: en el primer paso, m = 0,1g, lo que subestima el gradiente diez veces; al dividir entre 1 − 0,9 = 0,1 se recupera g. Sin esa corrección, los primeros pasos serían diminutos. Discuta por qué los métodos adaptativos son populares: el paso efectivo de cada parámetro queda normalizado por la magnitud típica de su gradiente, de modo que capas con gradientes muy distintos avanzan a ritmos comparables. Mencione el trabajo de Wilson y colaboradores de 2017, que mostró casos donde los métodos adaptativos generalizaban peor que SGD. La conclusión práctica para el curso es empezar con AdamW por su robustez y, si el proyecto lo justifica, comparar con SGD con momento en el estudio de ablación."
+        },
+        {
+          "title": "AdamW: decaimiento de pesos desacoplado",
+          "bullets": [
+            "En Adam, sumar λθ al gradiente como penalización L2 queda distorsionado por la escala adaptativa de cada parámetro.",
+            "AdamW aplica el decaimiento por separado: θ ← θ − η(m̂/(√v̂ + ε) + λθ) (Loshchilov y Hutter, 2019).",
+            "Resultado: regularización más predecible y mejor generalización; es el estándar en transformadores.",
+            "Valores habituales de λ entre 0,01 y 0,1; se excluyen los sesgos y los parámetros de normalización."
+          ],
+          "notes": "Este detalle técnico tiene consecuencias prácticas grandes y suele pasar desapercibido. En SGD clásico, añadir una penalización L2 a la pérdida y aplicar decaimiento de pesos son equivalentes. En Adam no lo son: el término λθ se divide por √v̂, de modo que los parámetros con gradientes grandes reciben menos regularización, justo lo contrario de lo deseable. Loshchilov y Hutter propusieron desacoplar ambos efectos y mostraron mejoras consistentes. En PyTorch, torch.optim.Adam con weight_decay implementa la versión acoplada, mientras que torch.optim.AdamW implementa la desacoplada; elegir mal es un error silencioso. Muestre cómo crear dos grupos de parámetros, uno con decaimiento para pesos de capas lineales y convolucionales y otro sin decaimiento para sesgos y parámetros de normalización, como se hace en las implementaciones de referencia de BERT. Pida a los estudiantes que verifiquen en la documentación de PyTorch el valor por defecto de weight_decay en AdamW."
+        },
+        {
+          "title": "La tasa de aprendizaje: el hiperparámetro decisivo",
+          "bullets": [
+            "Demasiado alta: la pérdida oscila o diverge a NaN; demasiado baja: progreso lento y estancamiento en mesetas.",
+            "Prueba de rango (Smith, 2017): aumentar η exponencialmente durante unas cien iteraciones y graficar la pérdida.",
+            "Elegir un valor aproximadamente un orden de magnitud menor que aquel donde la pérdida se dispara.",
+            "Ajustar la tasa antes que cualquier otro hiperparámetro: suele explicar la mayor parte de la variación del resultado."
+          ],
+          "notes": "Bengio, en sus recomendaciones prácticas de 2012, señaló que si solo se puede ajustar un hiperparámetro, debe ser la tasa de aprendizaje; la experiencia posterior lo confirma. Demuestre en vivo la prueba de rango de Leslie Smith: comience con η = 10⁻⁷, multiplíquela por un factor constante en cada iteración hasta llegar a 10 y registre la pérdida suavizada. La curva típica tiene una meseta inicial, una bajada pronunciada y un disparo final. El punto de mayor pendiente negativa o un décimo del punto de divergencia son buenas elecciones. Advierta que la prueba se hace con una copia del modelo, que luego se descarta. Pida a los estudiantes que ejecuten la prueba para la misma red con SGD y con AdamW y comparen los rangos útiles: normalmente difieren en uno o dos órdenes de magnitud, lo que explica por qué no se puede trasladar la tasa de un optimizador a otro."
+        },
+        {
+          "title": "Programación de la tasa de aprendizaje",
+          "bullets": [
+            "Calentamiento lineal: subir η desde casi cero durante las primeras iteraciones estabiliza Adam y los lotes grandes.",
+            "Decaimiento por escalones: dividir η entre 10 en épocas fijas, como en la ResNet original.",
+            "Coseno: η_t = η_min + ½(η_max − η_min)(1 + cos(πt/T)) (Loshchilov y Hutter, 2017).",
+            "Política de un ciclo (Smith y Topin, 2019): sube y luego baja η, y permite entrenar en menos épocas.",
+            "En PyTorch, OneCycleLR se actualiza en cada iteración; otros programadores, al cerrar cada época."
+          ],
+          "notes": "Explique la lógica: al inicio conviene explorar con pasos grandes y al final refinar con pasos pequeños para asentarse en el fondo del valle. El calentamiento resuelve un problema distinto: en las primeras iteraciones los momentos de Adam y las estadísticas de normalización aún no son confiables, y un paso grande puede llevar la red a una región de la que no se recupera. Grafique las cuatro políticas en el mismo eje para que se vean sus formas. Señale un error frecuente en PyTorch: llamar a scheduler.step() en el lugar equivocado, por ejemplo una vez por época con un programador diseñado por iteración, lo que deja la tasa prácticamente constante. Recomiende siempre registrar la tasa de aprendizaje en cada iteración y graficarla junto con la pérdida. Como ejercicio, calcule con la fórmula del coseno la tasa a mitad del entrenamiento con η_max = 10⁻³ y η_min = 0: el resultado es 5 × 10⁻⁴."
+        },
+        {
+          "title": "Gradientes que se desvanecen y explotan",
+          "bullets": [
+            "El gradiente de la primera capa es un producto de L jacobianos: con normas menores que 1 se desvanece; mayores que 1, explota.",
+            "Síntomas: capas iniciales que no cambian, pérdida estancada o valores NaN repentinos.",
+            "Causas: activaciones saturantes, inicialización inadecuada y redes muy profundas o recurrentes.",
+            "Remedios: ReLU, inicialización adecuada, normalización, conexiones residuales y recorte de la norma del gradiente."
+          ],
+          "notes": "Retome el cálculo del cuestionario anterior: diez capas sigmoides multiplican el gradiente por a lo sumo 0,25¹⁰. Muestre ahora el caso opuesto: si los pesos son demasiado grandes, cada capa amplifica la señal y en pocas capas los valores superan el rango de float32. Enseñe a medir el problema en lugar de adivinarlo: después de backward, recorra model.named_parameters() y registre la norma del gradiente de cada capa; un gráfico de esas normas por capa y por época es el mejor diagnóstico. Explique el recorte de la norma con torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0): si la norma total supera el umbral, se reescala el vector completo conservando su dirección. Pascanu, Mikolov y Bengio lo propusieron en 2013 para redes recurrentes, que se verán en la unidad 3. Pregunta: ¿por qué recortar la norma es preferible a recortar cada componente por separado?"
+        },
+        {
+          "title": "Inicialización de pesos",
+          "bullets": [
+            "Inicializar todo en cero hace simétricas a las neuronas de una capa: todas aprenden exactamente lo mismo.",
+            "Objetivo: conservar la varianza de activaciones y gradientes al atravesar las capas.",
+            "Glorot o Xavier (2010), para tanh y sigmoide: Var(W) = 2/(n_entrada + n_salida).",
+            "He o Kaiming (2015), para ReLU: Var(W) = 2/n_entrada, porque ReLU anula en promedio la mitad de las entradas.",
+            "PyTorch inicializa nn.Linear y nn.Conv2d con una variante de Kaiming uniforme por defecto."
+          ],
+          "notes": "Derive la idea en tres líneas: la activación de una neurona es la suma de n términos wᵢxᵢ; si son independientes y de media cero, su varianza es n·Var(w)·Var(x). Para que la varianza no crezca ni decrezca al pasar de capa en capa, Var(w) debe ser cercana a 1/n. La versión de He añade el factor 2 porque ReLU anula la mitad de los valores. Haga un experimento en Colab: una red de 50 capas con ReLU, inicializada con desviación 1, con desviación 0,01 y con la de He; grafique la desviación estándar de las activaciones por capa. Con 1 explotan, con 0,01 se extinguen y con He se mantienen estables. Ejercicio: para una capa ReLU con 512 entradas, la desviación de He es √(2/512) = 0,0625. Explique que hoy, gracias a la normalización y las conexiones residuales, la inicialización es menos crítica, pero sigue siendo decisiva en arquitecturas nuevas o sin normalización."
+        },
+        {
+          "title": "Normalización por lotes",
+          "bullets": [
+            "Normaliza cada canal con la media y la varianza del minilote y luego aplica escala γ y desplazamiento β aprendidos (Ioffe y Szegedy, 2015).",
+            "Permite tasas de aprendizaje más altas y reduce la sensibilidad a la inicialización.",
+            "En evaluación usa promedios móviles acumulados: olvidar model.eval() produce predicciones que dependen del lote.",
+            "Se degrada con lotes muy pequeños, de menos de ocho ejemplos, y complica el entrenamiento distribuido.",
+            "Orden habitual en redes convolucionales: convolución, normalización por lotes y activación."
+          ],
+          "notes": "Explique la operación con un ejemplo numérico: si en un minilote las activaciones de un canal tienen media 4 y desviación 2, el valor 6 se normaliza a 1 y luego se transforma en γ·1 + β. Los parámetros γ y β permiten que la red recupere la escala original si le conviene. La explicación original de Ioffe y Szegedy, reducir el desplazamiento interno de covariables, ha sido cuestionada; Santurkar y colaboradores mostraron en 2018 que su beneficio principal es suavizar el paisaje de pérdida. Insista en el error más común en producción: evaluar sin model.eval(), de modo que una imagen individual se normaliza con estadísticas de un lote de tamaño uno y la predicción cambia. Muestre el fenómeno en Colab. Señale también que la convolución que precede a la normalización puede omitir el sesgo, porque β lo reemplaza; por eso las implementaciones de ResNet usan bias=False."
+        },
+        {
+          "title": "Normalización por capas y otras variantes",
+          "bullets": [
+            "LayerNorm normaliza sobre las características de cada ejemplo y no depende del tamaño del lote (Ba et al., 2016).",
+            "Es la elección estándar en redes recurrentes y en transformadores, donde las secuencias tienen longitudes variables.",
+            "GroupNorm divide los canales en grupos: útil en detección y segmentación con lotes pequeños (Wu y He, 2018).",
+            "RMSNorm omite la resta de la media y se usa en modelos de lenguaje recientes por eficiencia."
+          ],
+          "notes": "Dibuje un tensor de forma (N, C, H, W) como un cubo y sombree las dimensiones sobre las que cada método calcula la media y la varianza: normalización por lotes sobre N, H y W para cada canal; por capas sobre C, H y W para cada ejemplo; por grupos sobre subconjuntos de canales para cada ejemplo. Esta imagen aclara por qué LayerNorm no depende del lote: cada ejemplo se normaliza por sí mismo, igual en entrenamiento que en inferencia. Relacione con la unidad 3: en un transformador, LayerNorm se aplica al vector de cada posición de la secuencia. Mencione la discusión entre normalización antes o después de la subcapa en transformadores: la variante previa, conocida como pre-LN, entrena de forma más estable sin calentamiento prolongado. Pregunte a la clase qué normalización elegirían para segmentar imágenes satelitales de 1 024 × 1 024 píxeles en una GPU que solo admite dos imágenes por lote."
+        },
+        {
+          "title": "Conexiones residuales",
+          "bullets": [
+            "Bloque residual: y = x + F(x); la red aprende una corrección respecto de la identidad (He et al., 2016).",
+            "El gradiente fluye por el atajo sin atenuarse: ∂y/∂x = I + ∂F/∂x.",
+            "Permitió entrenar ResNet de 152 capas y lograr un error top-5 de 3,57 % en ImageNet.",
+            "Bloque básico: convolución 3×3, normalización, ReLU, convolución 3×3, normalización, suma con el atajo y ReLU.",
+            "Hoy están en casi toda arquitectura profunda: ResNet, U-Net y transformadores."
+          ],
+          "notes": "Plantee primero la paradoja que motivó a He y colaboradores: una red de 56 capas obtenía mayor error de entrenamiento que una de 20, lo cual no es sobreajuste sino dificultad de optimización, porque la red profunda podría al menos copiar a la superficial con capas identidad. La solución fue facilitar precisamente esa identidad: si el bloque no aporta, basta con que F(x) sea cercano a cero. Desarrolle la derivada: gracias al término identidad, el gradiente que llega a capas tempranas incluye una ruta directa que no se multiplica por pesos pequeños. En Visión por Computadora los estudiantes usaron ResNet preentrenada; ahora escribirán un bloque residual desde cero, incluido el caso en que el atajo necesita una convolución 1×1 con paso 2 para igualar dimensiones. Ejercicio: entrenar una red plana y una residual de 20 capas con la misma configuración y comparar las normas de gradiente de la primera capa."
+        },
+        {
+          "title": "Regularización explícita: decaimiento de pesos y dropout",
+          "bullets": [
+            "Decaimiento de pesos: penaliza la magnitud de los pesos y favorece funciones más suaves.",
+            "Dropout: anula cada activación con probabilidad p durante el entrenamiento y escala las restantes por 1/(1 − p) (Srivastava et al., 2014).",
+            "Interpretación: entrena un ensamble implícito de subredes que comparten pesos; en inferencia se usa la red completa.",
+            "Valores típicos: p de 0,1 a 0,5 en capas densas; menos habitual tras convoluciones con normalización por lotes."
+          ],
+          "notes": "Conecte con la regularización Ridge de Aprendizaje Automático I: el decaimiento de pesos es su análogo en redes, y con AdamW se aplica de forma desacoplada. Para dropout, explique la idea original de Hinton y colaboradores: impedir que las neuronas se coadapten, obligando a cada una a ser útil por sí misma. Destaque la versión invertida que usa PyTorch: la escala se aplica durante el entrenamiento, de modo que en inferencia no hay que modificar nada; basta con model.eval(). Muestre el efecto en un experimento corto: un perceptrón grande sobre un conjunto pequeño, con y sin dropout de 0,5, y compare la brecha entre entrenamiento y validación. Advierta que dropout ralentiza la convergencia y que, en redes convolucionales modernas con normalización por lotes y aumento de datos, a menudo aporta poco. Mencione Monte Carlo dropout, que mantiene dropout activo en inferencia para estimar incertidumbre, idea de Gal y Ghahramani de 2016."
+        },
+        {
+          "title": "Regularización implícita: datos, etiquetas y parada temprana",
+          "bullets": [
+            "Parada temprana: detener cuando la pérdida de validación no mejora durante P épocas y restaurar el mejor punto de control.",
+            "Aumento de datos: transformaciones que preservan la etiqueta según el dominio, como recortes, giros, ruido o desplazamientos temporales.",
+            "Suavizado de etiquetas: objetivo 1 − ε para la clase correcta y ε/(K − 1) para las demás; reduce la sobreconfianza (Szegedy et al., 2016).",
+            "Mixup combina pares de ejemplos y de etiquetas: x̃ = λxᵢ + (1 − λ)xⱼ (Zhang et al., 2018)."
+          ],
+          "notes": "Explique que la parada temprana es la regularización más barata y que, para pérdidas cuadráticas, Goodfellow y colaboradores muestran que equivale aproximadamente a una penalización L2. Implemente juntos una clase de parada temprana con paciencia y restauración del mejor estado. Para el aumento de datos, insista en el criterio de dominio que ya vieron en Visión por Computadora: girar verticalmente una fotografía de una hoja de café es válido, pero girar un dígito 6 lo convierte en 9, y alterar el tono de un arándano puede borrar la evidencia de un defecto. En series de tiempo, el aumento debe respetar la causalidad. El suavizado de etiquetas es útil cuando las etiquetas tienen ruido, frecuente cuando las anotan operarios con criterios distintos; en PyTorch basta con nn.CrossEntropyLoss(label_smoothing=0.1). Pregunte qué aumentos serían válidos para radiografías de tórax y cuáles introducirían errores clínicos."
+        },
+        {
+          "title": "Diagnóstico con curvas de aprendizaje",
+          "bullets": [
+            "Pérdidas de entrenamiento y validación altas y parejas: subajuste; aumentar capacidad, entrenar más o revisar la tasa.",
+            "Entrenamiento que baja y validación que sube: sobreajuste; más datos, aumento o regularización.",
+            "Picos o NaN en la pérdida: tasa excesiva, datos corruptos o ausencia de recorte del gradiente.",
+            "Validación mejor que entrenamiento: suele deberse a dropout o aumento activos solo al entrenar, o a fuga de información.",
+            "Graficar también la métrica de negocio y no solo la pérdida."
+          ],
+          "notes": "Proyecte cuatro curvas reales sin rótulo y pida a la clase que diagnostique cada una antes de mostrar la respuesta. Este ejercicio entrena el ojo, que es una de las competencias más valoradas en un equipo de aprendizaje profundo. Explique un matiz importante: la pérdida de validación puede subir mientras la exactitud de validación sigue mejorando, porque el modelo se vuelve sobreconfiado en algunos errores; por eso conviene graficar ambas y decidir con la métrica que importa al negocio. Muestre también que la pérdida de entrenamiento promediada durante la época se calcula con pesos que van cambiando, mientras que la de validación usa los pesos finales, lo que produce un desfase de media época. Recuerde la última viñeta con un caso real: si la validación supera con holgura al entrenamiento sin regularización activa, sospeche que hay imágenes casi duplicadas en ambos conjuntos, como fotos consecutivas del mismo lote de fruta."
+        },
+        {
+          "title": "Una receta disciplinada de entrenamiento",
+          "bullets": [
+            "Conocer los datos: inspeccionar ejemplos, distribuciones y errores de etiquetado antes de modelar.",
+            "Comenzar simple: línea base reproducible, sobreajustar un lote y solo después regularizar.",
+            "Fijar semillas, versiones de bibliotecas y particiones; registrar hiperparámetros y métricas en cada corrida.",
+            "Ablación: cambiar un componente a la vez y repetir con al menos tres semillas, reportando media y desviación.",
+            "Herramientas de seguimiento como TensorBoard o MLflow; su operación a escala se profundiza en MLOps."
+          ],
+          "notes": "Sintetice la unidad en una receta inspirada en la guía de Karpathy y en el manual de ajuste de redes publicado por investigadores de Google en 2023. Insista en la variabilidad entre semillas: en conjuntos pequeños, dos corridas idénticas salvo la semilla pueden diferir en uno o dos puntos de exactitud, de modo que una mejora de 0,5 puntos con una sola corrida no demuestra nada. Por eso la tarea de la unidad exige tres semillas y reportar media y desviación estándar. Presente un formato de tabla de ablación: configuración base, y en cada fila un componente agregado o retirado, con su efecto en la métrica. Explique que la reproducibilidad completa en GPU requiere además torch.use_deterministic_algorithms(True), con cierto costo de velocidad. Cierre conectando con Despliegue de Modelos (MLOps), que se cursa en paralelo: el registro disciplinado de experimentos de este curso es la materia prima del versionado y la trazabilidad que allí se profundizan."
+        }
+      ],
+      "reading": {
+        "title": "La mecánica del entrenamiento estable: optimizadores, normalización y regularización",
+        "minutes": 40,
+        "content": "## Por qué entrenar bien es una disciplina\n\nUna arquitectura correcta puede fracasar por una tasa de aprendizaje mal elegida, una normalización mal ubicada o una partición con fuga. La diferencia entre un equipo que «prueba cosas» y uno profesional es que este último entiende la mecánica de cada componente, formula hipótesis y las verifica con experimentos controlados. Esta lectura reúne esa mecánica y la aplica a un ejemplo concreto: clasificar fotografías de hojas de café en sanas, con roya amarilla y con otras lesiones, un problema relevante para los productores de Junín, Cajamarca, San Martín y Cusco tras la epidemia de roya que golpeó al país en 2013.\n\n## Del gradiente a la actualización\n\nSea g el gradiente del minilote en el paso t. Adam mantiene dos promedios exponenciales:\n\n- **m ← β₁ m + (1 − β₁) g** (primer momento, dirección)\n- **v ← β₂ v + (1 − β₂) g²** (segundo momento, escala)\n- **m̂ = m / (1 − β₁ᵗ)**, **v̂ = v / (1 − β₂ᵗ)** (corrección de sesgo)\n- **θ ← θ − η [ m̂ / (√v̂ + ε) + λ θ ]** (AdamW: decaimiento desacoplado)\n\nEl cociente m̂/√v̂ es adimensional: un parámetro cuyo gradiente es típicamente mil veces mayor que el de otro no avanza mil veces más rápido. Por eso Adam tolera capas con escalas muy distintas y es el punto de partida recomendado. El término λθ, aplicado fuera del cociente, es lo que distingue a AdamW de Adam con penalización L2.\n\n## Un bloque residual en PyTorch\n\n```python\nimport torch\nfrom torch import nn\n\nclass BloqueResidual(nn.Module):\n    def __init__(self, c_in, c_out, paso=1):\n        super().__init__()\n        self.conv1 = nn.Conv2d(c_in, c_out, 3, paso, 1, bias=False)\n        self.bn1 = nn.BatchNorm2d(c_out)\n        self.conv2 = nn.Conv2d(c_out, c_out, 3, 1, 1, bias=False)\n        self.bn2 = nn.BatchNorm2d(c_out)\n        self.atajo = nn.Identity()\n        if paso != 1 or c_in != c_out:          # igualar dimensiones del atajo\n            self.atajo = nn.Sequential(nn.Conv2d(c_in, c_out, 1, paso, bias=False),\n                                       nn.BatchNorm2d(c_out))\n\n    def forward(self, x):\n        y = torch.relu(self.bn1(self.conv1(x)))\n        y = self.bn2(self.conv2(y))\n        return torch.relu(y + self.atajo(x))    # y = F(x) + x\n```\n\nLas convoluciones omiten el sesgo porque el parámetro β de la normalización cumple esa función. Cuando el bloque reduce la resolución con paso 2 o cambia el número de canales, el atajo necesita una convolución 1 × 1 para que la suma sea posible.\n\n## Un bucle de entrenamiento profesional\n\n```python\nimport random, numpy as np\n\ndef fijar_semilla(s):\n    random.seed(s); np.random.seed(s); torch.manual_seed(s)\n    torch.cuda.manual_seed_all(s)\n\nfijar_semilla(7)\ncon_decaimiento = [p for n, p in modelo.named_parameters() if p.ndim > 1]\nsin_decaimiento = [p for n, p in modelo.named_parameters() if p.ndim <= 1]\noptimizador = torch.optim.AdamW([{\"params\": con_decaimiento, \"weight_decay\": 0.05},\n                                 {\"params\": sin_decaimiento, \"weight_decay\": 0.0}], lr=1e-3)\nprogramador = torch.optim.lr_scheduler.OneCycleLR(\n    optimizador, max_lr=3e-3, total_steps=epocas * len(cargador_ent))\ncriterio = nn.CrossEntropyLoss(label_smoothing=0.1)\n\nmejor, paciencia = float(\"inf\"), 0\nfor epoca in range(epocas):\n    modelo.train()\n    for x, y in cargador_ent:\n        x, y = x.to(dispositivo), y.to(dispositivo)\n        perdida = criterio(modelo(x), y)\n        optimizador.zero_grad()\n        perdida.backward()\n        torch.nn.utils.clip_grad_norm_(modelo.parameters(), max_norm=1.0)\n        optimizador.step()\n        programador.step()                     # OneCycleLR: una vez por iteración\n    val = evaluar(modelo, cargador_val)        # usa model.eval() y torch.no_grad()\n    if val < mejor - 1e-4:\n        mejor, paciencia = val, 0\n        torch.save(modelo.state_dict(), \"mejor.pt\")\n    else:\n        paciencia += 1\n        if paciencia == 5:\n            break                              # parada temprana\n```\n\nCada línea responde a una decisión de la unidad: grupos de parámetros para no aplicar decaimiento a sesgos ni a la normalización, política de un ciclo con su paso por iteración, suavizado de etiquetas ante anotaciones imperfectas, recorte de la norma del gradiente como seguro contra picos y parada temprana con restauración del mejor punto de control.\n\n## Leer las curvas\n\n| Patrón observado | Diagnóstico probable | Primera acción |\n|---|---|---|\n| Ambas pérdidas altas y parejas | Subajuste o tasa muy baja | Prueba de rango; mayor capacidad |\n| Entrenamiento baja, validación sube | Sobreajuste | Aumento de datos, decaimiento, parada temprana |\n| Picos y NaN | Tasa excesiva o datos corruptos | Calentamiento, recorte, revisar lotes |\n| Validación muy superior al entrenamiento | Fuga entre conjuntos | Partir por finca, fecha o lote |\n\nEn el ejemplo de la roya, la última fila es la trampa más común: si las fotos de una misma planta caen en entrenamiento y validación, el modelo reconoce la planta y no la enfermedad. La partición debe hacerse por finca o por fecha de captura.\n\n## Experimentos que convencen\n\nUn estudio de ablación parte de una configuración base y agrega o retira un componente por vez, con al menos tres semillas por fila. Si la normalización por lotes eleva la exactitud de 78,1 ± 1,4 % a 84,6 ± 0,8 %, la evidencia es sólida; si el suavizado de etiquetas la mueve de 84,6 ± 0,8 % a 85,0 ± 1,1 %, la diferencia cabe dentro de la variación entre semillas y no debe venderse como mejora. Esa honestidad estadística, más que la cifra final, es lo que se evaluará en la tarea de la unidad."
+      },
+      "case": {
+        "title": "Caso: El modelo que divergía en una agroexportadora de La Libertad",
+        "content": "## Contexto\n\nAgroexportadora Moche Verde S.A.C. procesa arándanos y paltas en una planta de empaque ubicada en el valle de Chao, La Libertad, y exporta principalmente a Estados Unidos, Países Bajos y China. En la campaña de arándano, de agosto a diciembre, sus tres líneas de selección procesan hasta 180 toneladas diarias. La selección de defectos, como fruta blanda, partida, con pedúnculo o con hongos, la realizan 60 operarias por turno, y los rechazos en destino por calidad le costaron a la empresa cerca de USD 410 000 en la última campaña.\n\n## El proyecto\n\nEl área de innovación, formada por un ingeniero agroindustrial y dos técnicos en inteligencia artificial, recibió el encargo de entrenar un clasificador de defectos que se instalará sobre una de las líneas. Reunieron 6 400 imágenes etiquetadas en cinco clases, tomadas con una cámara industrial en la línea 1 durante la campaña anterior. Decidieron construir desde cero una red convolucional de 18 capas con bloques residuales para mantener control total sobre la arquitectura.\n\n## Lo que ocurrió\n\n- **Primer intento:** SGD sin momento, tasa de 0,1, lotes de 256 imágenes y sin normalización por lotes. La pérdida bajó durante dos épocas y en la tercera saltó a NaN.\n- **Segundo intento:** se redujo la tasa a 0,01 y se añadió normalización por lotes. El entrenamiento fue estable: 99,2 % de exactitud en entrenamiento y 81,3 % en validación tras 60 épocas. La partición se hizo al azar por imagen; cada arándano aparece hasta en cuatro fotos consecutivas.\n- **Prueba piloto:** con 900 imágenes nuevas de la línea 3, tomadas al inicio de la campaña actual con otra iluminación, la exactitud cayó a 74,0 %. La clase «hongos», con solo 310 ejemplos de entrenamiento, tuvo una exhaustividad de 41 %.\n\n## Restricciones\n\nEl presupuesto de cómputo en la nube es de S/ 4 000 mensuales, suficiente para unas 600 horas de una GPU de gama media. Faltan tres semanas para el pico de la campaña. El jefe de calidad exige una exhaustividad mínima de 90 % en hongos, porque un solo contenedor rechazado por pudrición puede costar más de USD 60 000, y acepta que el sistema derive a revisión humana hasta un 8 % de la fruta.\n\n## Las opciones sobre la mesa\n\n1. **Etiquetar más datos:** contratar el etiquetado de 5 000 imágenes adicionales de las tres líneas a S/ 0,35 por imagen, con entrega en diez días.\n2. **Mejorar el entrenamiento:** aplicar AdamW, programación de la tasa, aumento de datos con criterio agronómico, suavizado de etiquetas, ponderación de clases y una partición por lote de cosecha y por línea.\n3. **Partir de un modelo preentrenado:** abandonar la red propia y ajustar una red preentrenada en ImageNet, como hizo el equipo de otra empresa del valle.\n\nEl gerente de operaciones pide una recomendación concreta, con un plan de experimentos que quepa en el presupuesto y en el plazo, y una explicación de por qué el modelo que «tenía 99 %» falló en la línea 3.",
+        "questions": [
+          "Diagnostique la divergencia a NaN observada con lotes de 256. ¿Qué cambios concretos de tasa, calentamiento, recorte del gradiente o normalización propondría y en qué orden?",
+          "Interprete la diferencia entre 99 %, 81 % y 74 % de exactitud. ¿Qué parte atribuye al sobreajuste y qué parte al cambio de distribución entre campañas o líneas?",
+          "Diseñe un plan de experimentos de ablación que quepa en el presupuesto de GPU y en las tres semanas disponibles. ¿Qué compararía, con cuántas semillas y con qué partición?",
+          "Compare las opciones de etiquetar más imágenes, regularizar y aumentar datos o partir de un modelo preentrenado. ¿Cuál recomendaría a la gerencia y por qué?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Estudio de ablación de técnicas de entrenamiento",
+        "instructions": "**Objetivo:** demostrar con evidencia experimental el efecto de las técnicas de optimización, normalización y regularización sobre una red convolucional residual entrenada desde cero.\n\n**Datos:** un subconjunto de 10 000 imágenes de CIFAR-10 para entrenamiento y 2 000 para validación, o un conjunto agrícola o industrial peruano aprobado por el docente con al menos cuatro clases. El conjunto de prueba se usa una sola vez, al final.\n\n**Qué entregar:**\n\n1. **Red residual pequeña** implementada desde cero, con entre 8 y 20 capas, y prueba de sobreajuste de un minilote.\n2. **Prueba de rango de la tasa de aprendizaje** para SGD con momento y para AdamW, con gráficos comentados.\n3. **Estudio de ablación** con al menos cinco configuraciones: (a) base con SGD sin normalización; (b) más normalización por lotes; (c) más AdamW con programación coseno o de un ciclo; (d) más aumento de datos; (e) más dropout o suavizado de etiquetas. Cada configuración con tres semillas.\n4. **Tabla de resultados** con media y desviación estándar de la exactitud y la pérdida de validación, tiempo de entrenamiento y número de épocas, y las curvas de aprendizaje de cada configuración.\n5. **Informe técnico** de cuatro a seis páginas: hipótesis de cada experimento, resultados, qué diferencias son significativas frente a la variación entre semillas y recomendación final, con la evaluación única en prueba del modelo elegido.\n\n**Formato:** cuaderno de Colab ejecutable, archivo de configuración con los hiperparámetros de cada corrida y registro en TensorBoard o MLflow. Trabajo en parejas.\n\n**Criterios:** se valora el diseño experimental controlado, la ausencia de fuga, la lectura correcta de las curvas y la prudencia estadística de las conclusiones.",
+        "rubric": [
+          {
+            "name": "Diseño experimental y partición sin fuga",
+            "points": 5
+          },
+          {
+            "name": "Implementación de la red residual y del bucle de entrenamiento",
+            "points": 5
+          },
+          {
+            "name": "Análisis de curvas y resultados con varias semillas",
+            "points": 5
+          },
+          {
+            "name": "Reproducibilidad y registro de experimentos",
+            "points": 3
+          },
+          {
+            "name": "Conclusiones y comunicación técnica",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Optimización y regularización",
+        "questions": [
+          {
+            "prompt": "Una red se entrenó bien con lotes de 64 y tasa de 0,01 usando SGD. Por velocidad, ahora se usarán lotes de 512. Según la regla de escalamiento lineal, ¿qué configuración probaría primero?",
+            "options": [
+              "Tasa de 0,01 sin cambios",
+              "Tasa de 0,64 sin calentamiento",
+              "Tasa de 0,08 con calentamiento inicial",
+              "Tasa de 0,00125 para compensar el lote mayor"
+            ],
+            "correct": 2,
+            "explanation": "El lote crece 8 veces, así que la tasa se multiplica por 8: 0,08. El calentamiento evita la inestabilidad de las primeras iteraciones con tasas altas."
+          },
+          {
+            "prompt": "¿Por qué Adam aplica una corrección de sesgo a los promedios m y v en las primeras iteraciones?",
+            "options": [
+              "Porque así se evita dividir entre cero cuando v es nulo",
+              "Porque los gradientes iniciales siempre están sesgados por la inicialización",
+              "Porque m y v parten de cero y subestiman los momentos al inicio",
+              "Porque así se desacopla el decaimiento de pesos"
+            ],
+            "correct": 2,
+            "explanation": "Con m₀ = 0 y β₁ = 0,9, en el primer paso m = 0,1g. Dividir entre 1 − β₁ᵗ recupera la escala correcta del promedio."
+          },
+          {
+            "prompt": "Un clasificador con normalización por lotes da predicciones distintas para la misma imagen según el lote en que se procese en producción. ¿Cuál es la causa más probable?",
+            "options": [
+              "No se llamó a model.eval() y se usan estadísticas del lote actual",
+              "El modelo fue inicializado con el método de He",
+              "Falta aplicar dropout durante la inferencia",
+              "La tasa de aprendizaje final era demasiado alta"
+            ],
+            "correct": 0,
+            "explanation": "En modo entrenamiento, la normalización usa media y varianza del lote; en modo evaluación usa los promedios móviles, que no dependen de los demás ejemplos."
+          },
+          {
+            "prompt": "Para una capa con activación ReLU y 512 entradas, ¿qué desviación estándar recomienda la inicialización de He para los pesos?",
+            "options": [
+              "Aproximadamente 0,0442",
+              "Aproximadamente 0,0625",
+              "Exactamente 1",
+              "Aproximadamente 0,0039"
+            ],
+            "correct": 1,
+            "explanation": "Var(W) = 2/512 ≈ 0,0039, cuya raíz es 0,0625. El valor 0,0442 corresponde a Xavier con 512 entradas y 512 salidas."
+          },
+          {
+            "prompt": "La pérdida de entrenamiento baja hasta 0,05, mientras que la de validación alcanza su mínimo en la época 12 y sube hasta 0,9 en la época 40. ¿Qué acción es la más adecuada?",
+            "options": [
+              "Restaurar el punto de control de la época 12 y reforzar la regularización",
+              "Eliminar la normalización por lotes del modelo",
+              "Aumentar la tasa de aprendizaje para salir del mínimo",
+              "Entrenar más épocas para que la validación vuelva a bajar"
+            ],
+            "correct": 0,
+            "explanation": "Es sobreajuste clásico. La parada temprana conserva el mejor modelo y la regularización o el aumento de datos reducen la brecha en nuevas corridas."
+          },
+          {
+            "prompt": "¿Por qué las conexiones residuales facilitan entrenar redes de más de cien capas?",
+            "options": [
+              "Convierten la pérdida de la red en una función convexa",
+              "Reducen el número de parámetros a la mitad",
+              "Eliminan la necesidad de funciones de activación",
+              "El atajo añade la identidad al jacobiano y el gradiente no se atenúa multiplicativamente"
+            ],
+            "correct": 3,
+            "explanation": "Como ∂y/∂x = I + ∂F/∂x, existe una ruta directa para el gradiente hacia las capas tempranas, aunque F tenga derivadas pequeñas."
+          },
+          {
+            "prompt": "En PyTorch, ¿qué hace nn.Dropout(p=0.5) cuando el modelo está en modo de entrenamiento?",
+            "options": [
+              "Multiplica todas las activaciones por 0,5 sin anular ninguna",
+              "Anula cerca de la mitad de las activaciones y multiplica las restantes por 2",
+              "Anula la mitad de los pesos de la capa siguiente de forma permanente",
+              "Elimina al azar la mitad de los ejemplos del minilote"
+            ],
+            "correct": 1,
+            "explanation": "Es dropout invertido: las activaciones conservadas se escalan por 1/(1 − p) para que el valor esperado coincida con el de inferencia, donde no se anula nada."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Modelos para secuencias: redes recurrentes, convoluciones temporales y transformadores",
+      "description": "Al finalizar la unidad, el estudiante diseña, implementa y evalúa modelos para datos secuenciales con redes recurrentes, convoluciones causales y autoatención construida desde cero, aplicando validación temporal sin fuga y comparándolos con líneas base estadísticas en problemas de pronóstico de organizaciones peruanas.",
+      "topics": [
+        "Datos secuenciales, ventanas, horizonte de pronóstico y partición temporal sin fuga",
+        "Redes recurrentes, retropropagación en el tiempo, LSTM y GRU",
+        "Convoluciones causales y dilatadas: redes convolucionales temporales",
+        "Autoatención, atención multicabeza, codificación posicional y bloque transformador desde cero",
+        "Evaluación de pronósticos con origen móvil, MASE y líneas base exigentes"
+      ],
+      "slides": [
+        {
+          "title": "Datos secuenciales: cuando el orden es información",
+          "bullets": [
+            "Secuencias: demanda eléctrica horaria, caudales de ríos, transacciones de un cliente, señales de vibración, texto y audio.",
+            "Propiedades: dependencia temporal, estacionalidades múltiples, tendencias, cambios de régimen y longitud variable.",
+            "Tareas: pronóstico, clasificación de secuencias, etiquetado por paso y detección de anomalías.",
+            "Supuesto que se rompe: los ejemplos ya no son independientes ni idénticamente distribuidos."
+          ],
+          "notes": "Inicie con ejemplos peruanos que los estudiantes reconozcan: la curva diaria de demanda eléctrica, con su pico entre las 18 y las 21 horas; los caudales del río Rímac, que se disparan entre enero y marzo; o el flujo de operaciones de una billetera digital, que crece en quincena y fin de mes. Pida que identifiquen en cada caso qué estacionalidades existen: diaria, semanal, anual, y también feriados como Fiestas Patrias o Semana Santa. Explique que el supuesto de independencia de Aprendizaje Automático I se rompe: dos horas consecutivas están fuertemente correlacionadas, y eso cambia tanto el diseño del modelo como la forma de evaluarlo. Mencione eventos de cambio de régimen como El Niño costero de 2017 o la inmovilización social de 2020, que alteraron bruscamente muchas series. Pregunta para la clase: ¿qué información disponible en el momento de pronosticar podría ayudar a anticipar la demanda de mañana?"
+        },
+        {
+          "title": "Ventanas, horizonte y partición temporal sin fuga",
+          "bullets": [
+            "Ventana de entrada de L pasos y horizonte de H pasos: x[t−L+1 … t] → y[t+1 … t+H].",
+            "Variables exógenas: temperatura, calendario y feriados; usar solo las conocidas al momento de pronosticar.",
+            "Partición cronológica: entrenamiento, validación y prueba en bloques sucesivos, nunca al azar.",
+            "Normalizar con estadísticas calculadas solo sobre el bloque de entrenamiento.",
+            "Dejar una brecha entre bloques si las ventanas se solapan, para evitar que compartan observaciones."
+          ],
+          "notes": "Dibuje una línea de tiempo y marque una ventana de 168 horas, una semana, que se usa para predecir las siguientes 24. Explique cómo una serie de cinco años produce decenas de miles de pares de entrenamiento al deslizar la ventana. Detalle las tres fuentes de fuga más frecuentes en series: barajar antes de partir, normalizar con la media de toda la serie y usar como variable exógena un valor que en la práctica no se conoce a tiempo, como la temperatura real de mañana en lugar de su pronóstico. Muestre que la brecha entre bloques es necesaria cuando la última ventana de entrenamiento comparte horas con la primera de validación. Ejercicio rápido: con una serie horaria de 2019 a 2024, proponer la partición, indicar qué estadístico se usa para normalizar y calcular cuántas ventanas de entrenamiento se obtienen con L = 168 y H = 24 si el bloque de entrenamiento tiene 35 064 horas."
+        },
+        {
+          "title": "Red recurrente simple",
+          "bullets": [
+            "Estado oculto que resume el pasado: h_t = tanh(W_x x_t + W_h h_(t−1) + b).",
+            "Los mismos pesos se reutilizan en cada paso: el número de parámetros no depende de la longitud de la secuencia.",
+            "Salida por paso, y_t = W_y h_t, o una sola salida a partir del último estado.",
+            "Sesgo inductivo: procesamiento ordenado y memoria comprimida en un vector de tamaño fijo."
+          ],
+          "notes": "Desenrolle la red recurrente en el tiempo como una red profunda donde cada capa corresponde a un paso y todas comparten pesos. Esta visión, propuesta por Elman en 1990, conecta con la unidad 1: entrenarla es aplicar retropropagación sobre ese grafo desenrollado. Compare con un perceptrón multicapa que reciba la ventana completa aplanada: este tendría pesos distintos para cada posición y no generalizaría a longitudes diferentes. Calcule los parámetros de una celda con entrada de 8 variables y estado de 32: 32·8 + 32·32 + 32 = 1 312. Insista en que el estado oculto es un cuello de botella: todo lo relevante del pasado debe comprimirse en 32 números. Pregunte a la clase qué ocurrirá con la información de hace 300 pasos al atravesar 300 multiplicaciones por W_h y la tangente hiperbólica; la respuesta motiva las dos diapositivas siguientes."
+        },
+        {
+          "title": "Retropropagación en el tiempo",
+          "bullets": [
+            "BPTT: desenrollar la red T pasos y aplicar la regla de la cadena sobre el grafo completo.",
+            "El gradiente respecto a h_k incluye el producto de T − k jacobianos ∂h_t/∂h_(t−1).",
+            "Costo de memoria proporcional a T: hay que guardar todos los estados intermedios.",
+            "BPTT truncada: retropropagar solo K pasos y pasar el estado hacia adelante con detach()."
+          ],
+          "notes": "Escriba la expresión del gradiente de la pérdida en el paso T respecto al estado en el paso k: es un producto de jacobianos, cada uno igual a la transpuesta de W_h multiplicada por la derivada de la tangente hiperbólica. Relacione con la unidad 2: es exactamente el fenómeno de gradientes que se desvanecen o explotan, pero ahora a lo largo del tiempo y con la misma matriz repetida, lo que lo agrava. Si el mayor valor singular de W_h es menor que uno, el gradiente decae exponencialmente; si es mayor, crece exponencialmente. Explique la truncación con un ejemplo práctico: para una serie de un año a resolución horaria no se retropropaga a través de 8 760 pasos, sino en tramos de 168, desconectando el estado con detach() entre tramos. Muestre en PyTorch la diferencia entre conservar y desconectar el estado y el error que aparece al intentar retropropagar dos veces a través del mismo grafo."
+        },
+        {
+          "title": "Desvanecimiento del gradiente en el tiempo",
+          "bullets": [
+            "Bengio, Simard y Frasconi (1994) demostraron la dificultad de aprender dependencias de largo plazo con descenso de gradiente.",
+            "Con desvanecimiento, la red solo aprende patrones de corto plazo y olvida la estacionalidad semanal o anual.",
+            "Con explosión, la pérdida presenta picos y valores NaN; el recorte de la norma del gradiente es obligatorio.",
+            "La solución estructural es crear rutas aditivas para el gradiente: compuertas y celdas de memoria."
+          ],
+          "notes": "Presente el resultado de Bengio, Simard y Frasconi como el problema que dominó la investigación en redes recurrentes durante una década. Haga un experimento ilustrativo en Colab: una tarea sintética en la que la etiqueta depende del primer valor de una secuencia de longitud creciente; la red recurrente simple resuelve longitudes de 10, falla con 50 y se comporta al azar con 100. Explique la conexión con las conexiones residuales de la unidad 2: en ambos casos, la solución es una ruta donde el gradiente se suma en lugar de multiplicarse. Recuerde el recorte de Pascanu y colaboradores, que aquí no es opcional; recomiende una norma máxima de 1,0 como punto de partida. Pregunte: en una serie horaria con estacionalidad semanal, ¿cuántos pasos separan a un lunes a las 19 horas del lunes anterior a la misma hora? La respuesta, 168, muestra por qué las dependencias largas son habituales en problemas reales."
+        },
+        {
+          "title": "LSTM: compuertas y celda de memoria",
+          "bullets": [
+            "Compuertas sigmoides de olvido f_t, entrada i_t y salida o_t, calculadas con x_t y h_(t−1).",
+            "Celda de memoria: c_t = f_t ⊙ c_(t−1) + i_t ⊙ tanh(W_c[h_(t−1), x_t] + b_c).",
+            "Estado oculto: h_t = o_t ⊙ tanh(c_t).",
+            "La actualización aditiva de c_t crea una ruta por la que el gradiente fluye con poca atenuación (Hochreiter y Schmidhuber, 1997).",
+            "Parámetros: 4·(h·(h + d) + h); cuatro veces los de una red recurrente simple del mismo tamaño."
+          ],
+          "notes": "Explique cada compuerta con una interpretación de negocio: la de olvido decide qué parte de la memoria se conserva, por ejemplo olvidar el efecto de un feriado ya pasado; la de entrada decide qué información nueva se escribe; y la de salida decide qué parte de la memoria se usa para la predicción actual. La clave es la ecuación de la celda: si la compuerta de olvido está cerca de uno, c_t ≈ c_(t−1) más una corrección, y el gradiente atraviesa muchos pasos casi intacto. Mencione que la compuerta de olvido fue añadida por Gers, Schmidhuber y Cummins en 2000 y que se recomienda inicializar su sesgo en un valor positivo. Calcule con la clase los parámetros para d = 8 y h = 32: 4·(32·40 + 32) = 5 248. Advierta que PyTorch usa dos vectores de sesgo por compuerta, por lo que reporta 5 376. Pida verificarlo con sum(p.numel() for p in lstm.parameters())."
+        },
+        {
+          "title": "GRU y criterios de elección",
+          "bullets": [
+            "GRU (Cho et al., 2014) fusiona olvido y entrada en una compuerta de actualización y añade una de reinicio.",
+            "No tiene celda separada: h_t = (1 − z_t) ⊙ h_(t−1) + z_t ⊙ h̃_t.",
+            "Usa tres bloques de pesos frente a cuatro: alrededor de 25 % menos parámetros que una LSTM equivalente.",
+            "Desempeño similar en muchas tareas; la elección se decide empíricamente con validación temporal.",
+            "Redes bidireccionales: útiles para clasificar secuencias completas, inválidas para pronosticar el futuro."
+          ],
+          "notes": "Presente la GRU como una simplificación que conserva la idea central de la LSTM: una mezcla convexa entre el estado anterior y un candidato nuevo, controlada por la compuerta z_t. Cuando z_t es cercana a cero, el estado se copia y el gradiente fluye sin atenuarse. Cite el estudio de Chung y colaboradores de 2014 y el de Greff y colaboradores de 2017, que compararon variantes de LSTM y GRU en varias tareas sin encontrar un ganador universal; la conclusión práctica es probar ambas con la misma partición y el mismo presupuesto. Dedique tiempo a la última viñeta, que es fuente de errores graves: una red bidireccional lee la secuencia también desde el final, por lo que en pronóstico usaría información del futuro. Es adecuada para clasificar una señal de vibración completa o una transcripción, pero nunca para predecir la demanda de mañana. Pida a los estudiantes un ejemplo de cada caso."
+        },
+        {
+          "title": "Redes recurrentes en PyTorch",
+          "bullets": [
+            "nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout) devuelve salidas por paso y el estado final (h_n, c_n).",
+            "Con batch_first=True, la entrada tiene forma (N, T, D) y la salida (N, T, H).",
+            "Para pronóstico de varios pasos: cabeza lineal sobre el último estado que produce H valores a la vez.",
+            "Secuencias de longitud variable: relleno más pack_padded_sequence para no procesar posiciones vacías.",
+            "Recortar la norma del gradiente y registrar su valor en cada iteración."
+          ],
+          "notes": "Escriba en vivo una clase PronosticadorLSTM con una LSTM de dos capas y una cabeza lineal que reciba la salida del último paso, salida[:, −1, :], y produzca las 24 horas siguientes. Insista en verificar formas en cada línea: es el error más frecuente en esta unidad. Explique las dos estrategias de pronóstico multipaso: directa, que predice el horizonte completo de una vez, y recursiva, que predice un paso y lo realimenta como entrada; la recursiva acumula errores y además produce un desajuste entre entrenamiento y uso. Muestre por qué el parámetro dropout de nn.LSTM solo actúa entre capas apiladas y no tiene efecto con una sola capa, advertencia que PyTorch emite pero muchos ignoran. Para cerrar, compare tiempos: la recurrencia es inherentemente secuencial y no aprovecha bien la GPU con secuencias largas, una limitación que motiva las convoluciones temporales y los transformadores."
+        },
+        {
+          "title": "Arquitecturas para tareas secuenciales",
+          "bullets": [
+            "Muchos a uno: clasificar una secuencia completa, como una señal de vibración o un reclamo.",
+            "Muchos a muchos sincronizado: una etiqueta por paso, como estados de operación de una máquina.",
+            "Codificador-decodificador: secuencia de entrada a secuencia de salida de distinta longitud (Sutskever et al., 2014).",
+            "Pronóstico multipaso: salida directa del horizonte completo o decodificador autorregresivo."
+          ],
+          "notes": "Use esquemas de cajas para cada patrón y pida a los estudiantes que asignen ejemplos: detectar si una tarjeta tiene una secuencia de transacciones fraudulentas es muchos a uno; etiquetar en cada minuto si un molino está cargado, vacío o en falla es muchos a muchos; traducir del español al quechua es codificador-decodificador. Explique que la arquitectura codificador-decodificador de Sutskever, Vinyals y Le comprimía toda la frase de entrada en un único vector, lo que degradaba el desempeño en frases largas. Esa limitación es exactamente la que resolvió la atención de Bahdanau, que se verá en breve. Comente el forzado del maestro, teacher forcing, en decodificadores: durante el entrenamiento se alimenta la salida verdadera anterior en lugar de la predicha, lo que acelera el aprendizaje pero genera un desajuste en inferencia. Pregunta: ¿qué patrón usarían para pronosticar las 48 horas siguientes de caudal del río Piura?"
+        },
+        {
+          "title": "Convoluciones causales y dilatadas",
+          "bullets": [
+            "Convolución causal: la salida en t solo usa entradas de t y anteriores; se logra con relleno a la izquierda.",
+            "Dilatación d: el filtro salta d − 1 posiciones y amplía el campo receptivo sin más parámetros.",
+            "Con núcleo k y dilataciones 1, 2, 4, …, 2^(n−1), el campo receptivo es 1 + (k − 1)(2^n − 1).",
+            "Redes convolucionales temporales (Bai et al., 2018) y WaveNet (van den Oord et al., 2016) aplican esta idea con bloques residuales.",
+            "Ventaja frente a las recurrentes: todas las posiciones se procesan en paralelo en la GPU."
+          ],
+          "notes": "Conecte con la convolución que los estudiantes conocen de Visión por Computadora, ahora en una dimensión. Dibuje la pila de capas dilatadas como un árbol invertido: con núcleo 3 y dilataciones 1, 2, 4 y 8, una salida ve 1 + 2·15 = 31 pasos hacia atrás con solo cuatro capas. Para cubrir una semana horaria, 168 pasos, bastan pocas capas más. Explique cómo implementar la causalidad en PyTorch: nn.Conv1d con padding = (k − 1)·d y luego descartar los últimos elementos de la salida, o aplicar relleno solo a la izquierda con torch.nn.functional.pad. Cite el estudio de Bai, Kolter y Koltun, que mostró que una red convolucional temporal genérica igualaba o superaba a las LSTM en muchas tareas secuenciales, entrenando más rápido. Ejercicio: calcular cuántas capas con núcleo 3 y dilatación duplicada se necesitan para que el campo receptivo supere 168 pasos. Respuesta: siete capas, que alcanzan 255."
+        },
+        {
+          "title": "De la atención de Bahdanau a la autoatención",
+          "bullets": [
+            "Bahdanau, Cho y Bengio (2015): el decodificador consulta todos los estados del codificador con pesos aprendidos.",
+            "La atención es un promedio ponderado: contexto = Σ αᵢ vᵢ, con pesos α que suman uno.",
+            "Autoatención: cada posición de una secuencia consulta a todas las demás posiciones de la misma secuencia.",
+            "Elimina la recurrencia: cualquier par de posiciones se conecta en un solo paso, sin importar su distancia."
+          ],
+          "notes": "En Procesamiento de Lenguaje Natural los estudiantes vieron la atención de forma conceptual y la usaron a través de BERT. Aquí se trata de entenderla con la profundidad suficiente para implementarla. Comience con la intuición de Bahdanau: en lugar de comprimir toda la frase en un vector, el decodificador decide en cada paso a qué palabras de la entrada prestar atención. Luego generalice: la autoatención permite que cada hora de una serie consulte directamente a la misma hora de la semana anterior, sin pasar por 168 multiplicaciones recurrentes. Compare las longitudes de ruta entre dos posiciones distantes: proporcional a la distancia en una red recurrente, logarítmica en una red convolucional dilatada y constante en la autoatención. Ese argumento, presentado por Vaswani y colaboradores en 2017, explica el éxito de los transformadores. Anticipe el costo, que se verá enseguida: comparar todas las posiciones entre sí crece con el cuadrado de la longitud."
+        },
+        {
+          "title": "Autoatención de producto punto escalado",
+          "bullets": [
+            "Proyecciones aprendidas: Q = XW_Q, K = XW_K y V = XW_V, a partir de la secuencia X de forma (T, d).",
+            "Atención(Q, K, V) = softmax(QKᵀ / √d_k) V.",
+            "La división entre √d_k evita que los productos punto crezcan con la dimensión y saturen la softmax.",
+            "Máscara causal: poner −∞ sobre la diagonal superior impide mirar posiciones futuras.",
+            "La matriz de atención tiene forma (T, T): memoria y cómputo crecen con T²."
+          ],
+          "notes": "Desarrolle la fórmula como una búsqueda difusa en una base de datos: cada posición emite una consulta, compara su consulta con las claves de todas las posiciones y recupera una mezcla de sus valores, ponderada por la similitud. Justifique el factor de escala con el argumento de varianza de la unidad 2: si las componentes de q y k tienen varianza uno, su producto punto tiene varianza d_k; con d_k = 64, los productos rondan ±8, la softmax se vuelve casi una función indicadora y sus gradientes se anulan. Dividir entre √d_k restituye varianza uno. Muestre la máscara causal como una matriz triangular y explique por qué es indispensable para pronóstico y para modelos que generan texto. Calcule el costo: con T = 512 la matriz tiene unas 262 000 entradas por cabeza y por ejemplo; con T = 2 048, dieciséis veces más. Esta limitación explica las técnicas de parches para series largas."
+        },
+        {
+          "title": "Atención multicabeza y codificación posicional",
+          "bullets": [
+            "Multicabeza: h atenciones en paralelo con d_k = d/h; cada cabeza puede especializarse en un tipo de relación.",
+            "Las salidas de las cabezas se concatenan y se proyectan con W_O.",
+            "La autoatención es invariante a permutaciones: sin información de posición, el orden se pierde.",
+            "Codificación sinusoidal: PE(pos, 2i) = sin(pos / 10000^(2i/d)) y PE(pos, 2i+1) = cos(…); alternativa: posiciones aprendidas.",
+            "En series de tiempo se agregan codificaciones de calendario: hora, día de la semana, mes y feriado."
+          ],
+          "notes": "Explique la motivación de las múltiples cabezas: una cabeza podría atender a la hora anterior, otra al mismo momento del día previo y otra a la misma hora de la semana anterior. Insista en que el costo total es similar al de una sola cabeza de dimensión completa, porque cada una trabaja con d/h dimensiones. Luego plantee una pregunta que sorprende a la clase: si se baraja el orden de los elementos de la secuencia, ¿cambia la salida de la autoatención? No cambia, salvo por la misma permutación, y por eso es necesario inyectar la posición. Muestre un mapa de calor de la codificación sinusoidal y explique que sus frecuencias geométricas permiten representar posiciones relativas mediante transformaciones lineales. Para series de tiempo, recomiende complementar con variables de calendario, que suelen aportar más que la posición abstracta. Mencione que modelos recientes usan variantes rotatorias, que se estudiarán en IA Generativa y Modelos de Lenguaje."
+        },
+        {
+          "title": "El bloque transformador",
+          "bullets": [
+            "Subcapa 1: atención multicabeza con conexión residual y LayerNorm.",
+            "Subcapa 2: red densa por posición, típicamente d → 4d → d con GELU, también con residual y LayerNorm.",
+            "Variante pre-LN: x + Atención(LN(x)); entrena de forma más estable que la versión original post-LN.",
+            "Codificador sin máscara para clasificar secuencias; decodificador con máscara causal para pronóstico y generación.",
+            "Parámetros por bloque, sin sesgos: alrededor de 12d²; con d = 128, cerca de 197 000."
+          ],
+          "notes": "Muestre cómo convergen en este bloque todas las piezas del curso: capas densas y activaciones de la unidad 1, conexiones residuales, normalización por capas, dropout y AdamW de la unidad 2, y la autoatención de esta unidad. Calcule los parámetros: las cuatro proyecciones de atención suman 4d² y la red densa d·4d + 4d·d = 8d², en total 12d². Con d = 128 son 196 608 parámetros por bloque, sin contar sesgos ni normalizaciones. Explique que la diferencia entre un codificador, como BERT, y un decodificador, como los modelos generativos que verán en el curso paralelo de IA Generativa, es principalmente la máscara causal. Implementen juntos un bloque en menos de treinta líneas y verifiquen su salida contra nn.TransformerEncoderLayer con norm_first=True. Pregunta: si se duplica d, ¿cuánto crecen los parámetros del bloque? La respuesta es cuatro veces, porque dependen de d²."
+        },
+        {
+          "title": "Transformadores para series de tiempo: la lección de las líneas base",
+          "bullets": [
+            "Zeng et al. (2023) mostraron que un modelo lineal simple, DLinear, superaba a varios transformadores de pronóstico a largo plazo.",
+            "PatchTST (Nie et al., 2023) recupera la ventaja agrupando la serie en parches y procesando cada variable por separado.",
+            "Los transformadores rinden más con muchas series relacionadas y abundantes datos que con una sola serie corta.",
+            "Regla del curso: ningún modelo profundo se reporta sin compararlo con una línea base ingenua y otra de aprendizaje automático."
+          ],
+          "notes": "Esta diapositiva es una lección de pensamiento crítico. Cuente que, entre 2020 y 2022, se publicaron numerosas variantes de transformadores para pronóstico que reportaban mejoras sucesivas, hasta que Zeng, Chen, Zhang y Xu se preguntaron, en un artículo presentado en la conferencia AAAI de 2023, si los transformadores eran realmente efectivos para esta tarea. Un modelo lineal con descomposición en tendencia y estacionalidad superó a la mayoría en los conjuntos de referencia. La respuesta de la comunidad, como PatchTST, mostró que con un diseño adecuado los transformadores sí aportan, pero el episodio deja una lección permanente: las líneas base honestas son indispensables. Relacione con el caso de la unidad, donde un modelo de boosting con rezagos y calendario compite de cerca con la LSTM. Pida a los estudiantes que, en su tarea, incluyan siempre la línea base estacional ingenua y un LightGBM con rezagos antes de presentar cualquier red."
+        },
+        {
+          "title": "Evaluar pronósticos con rigor",
+          "bullets": [
+            "Validación de origen móvil: reentrenar o reevaluar en varios cortes sucesivos, sin mirar el futuro.",
+            "MAE y RMSE en las unidades de la serie; MAPE se distorsiona cuando hay valores cercanos a cero.",
+            "MASE = MAE del modelo / MAE de la línea base estacional ingenua en entrenamiento (Hyndman y Koehler, 2006).",
+            "MASE menor que 1 indica que el modelo supera a la línea base; mayor que 1, que no aporta valor.",
+            "Analizar errores por hora, día de la semana, feriados y eventos extremos, no solo el promedio."
+          ],
+          "notes": "Explique la validación de origen móvil con un esquema: se entrena con datos hasta marzo y se evalúa abril; luego hasta abril y se evalúa mayo; y así sucesivamente. Cada corte simula una decisión real tomada con la información disponible en ese momento. Contraste con la validación cruzada k-fold de Aprendizaje Automático I, que aquí produciría fuga. Presente el MASE de Hyndman y Koehler como la métrica más interpretable para la gerencia: un valor de 0,62 significa que el modelo comete 38 % menos error que repetir lo ocurrido hace una semana. Advierta sobre el MAPE en series con ceros, como ventas diarias de un producto de baja rotación. Finalmente, insista en el análisis desagregado: un modelo puede tener el mejor error promedio y, sin embargo, fallar en los feriados, que son justamente los días en que un error de despacho cuesta más. Pida que la tarea incluya una tabla de error por tipo de día."
+        }
+      ],
+      "reading": {
+        "title": "De la recurrencia a la atención: modelar secuencias en PyTorch",
+        "minutes": 45,
+        "content": "## El problema: pronosticar la demanda de mañana\n\nUna distribuidora eléctrica debe declarar con anticipación cuánta energía requerirá cada hora del día siguiente. Si subestima, compra energía faltante a precios de corto plazo; si sobreestima, paga por capacidad que no usa. La serie horaria de demanda combina una estacionalidad diaria, con el pico nocturno de iluminación y cocina; una semanal, con domingos más bajos; una anual, ligada a la temperatura; y perturbaciones como feriados, huelgas o eventos climáticos. Es un banco de pruebas ideal para comparar redes recurrentes, convoluciones temporales y transformadores frente a líneas base exigentes.\n\n## Ventanas sin fuga\n\n```python\nimport numpy as np, torch\n\ndef crear_ventanas(serie, exog, L=168, H=24):\n    X, Y = [], []\n    for t in range(L, len(serie) - H + 1):\n        pasado = np.column_stack([serie[t-L:t], exog[t-L:t]])   # (L, 1 + n_exog)\n        X.append(pasado)\n        Y.append(serie[t:t+H])                                  # próximas H horas\n    return torch.tensor(np.array(X), dtype=torch.float32), \\\n           torch.tensor(np.array(Y), dtype=torch.float32)\n\ncorte_val, corte_prueba = 35_064, 43_824          # índices horarios cronológicos\nmedia = demanda[:corte_val].mean()                # estadísticos SOLO del entrenamiento\ndesv = demanda[:corte_val].std()\nz = (demanda - media) / desv\n```\n\nLas variables exógenas deben estar disponibles al momento de pronosticar: hora, día de la semana, indicador de feriado y el **pronóstico** de temperatura, no la temperatura observada. La validación empieza en el índice 35 064 y la prueba en el 43 824, sin solapamiento de ventanas entre bloques.\n\n## Una LSTM para pronóstico directo\n\nLa celda LSTM actualiza su memoria con una suma controlada por compuertas:\n\n- **f_t = σ(W_f [h_(t−1), x_t] + b_f)**, **i_t = σ(W_i [h_(t−1), x_t] + b_i)**, **o_t = σ(W_o [h_(t−1), x_t] + b_o)**\n- **c_t = f_t ⊙ c_(t−1) + i_t ⊙ tanh(W_c [h_(t−1), x_t] + b_c)**\n- **h_t = o_t ⊙ tanh(c_t)**\n\nComo c_t depende de c_(t−1) de forma aditiva, el gradiente puede recorrer cientos de pasos sin desvanecerse si la compuerta de olvido permanece cercana a uno.\n\n```python\nfrom torch import nn\n\nclass PronosticadorLSTM(nn.Module):\n    def __init__(self, d_entrada, d_oculto=64, horizonte=24):\n        super().__init__()\n        self.lstm = nn.LSTM(d_entrada, d_oculto, num_layers=2,\n                            batch_first=True, dropout=0.1)\n        self.cabeza = nn.Linear(d_oculto, horizonte)\n\n    def forward(self, x):                 # x: (N, L, d_entrada)\n        salida, _ = self.lstm(x)          # salida: (N, L, d_oculto)\n        return self.cabeza(salida[:, -1]) # (N, horizonte): estrategia directa\n```\n\nLa estrategia directa predice las 24 horas a la vez y evita acumular errores al realimentar predicciones. En el entrenamiento se usan AdamW, recorte de la norma del gradiente en 1,0 y parada temprana sobre la validación, como en la unidad 2.\n\n## Autoatención desde cero\n\n```python\nimport math\n\ndef autoatencion(X, Wq, Wk, Wv, causal=True):\n    Q, K, V = X @ Wq, X @ Wk, X @ Wv                 # (N, T, d_k)\n    puntajes = Q @ K.transpose(-2, -1) / math.sqrt(K.size(-1))   # (N, T, T)\n    if causal:\n        T = X.size(1)\n        mascara = torch.triu(torch.ones(T, T, dtype=torch.bool), diagonal=1)\n        puntajes = puntajes.masked_fill(mascara, float(\"-inf\"))\n    pesos = torch.softmax(puntajes, dim=-1)          # cada fila suma 1\n    return pesos @ V, pesos\n```\n\nLa máscara triangular superior impide que la posición t consulte posiciones posteriores. Los pesos devueltos permiten inspeccionar a qué horas atiende el modelo: en una serie eléctrica bien entrenada suelen concentrarse en la hora anterior y en la misma hora del día y de la semana previos. Para formar un bloque transformador se agregan varias cabezas, una proyección de salida, una red densa por posición, conexiones residuales y LayerNorm; antes de la primera capa se suma una codificación posicional y variables de calendario.\n\n## Evaluar con honestidad\n\nLa métrica principal es el error absoluto medio escalado:\n\n**MASE = MAE_modelo / MAE_ingenuo**, donde el modelo ingenuo estacional predice ŷ_t = y_(t−168), es decir, el valor de la misma hora de la semana anterior, y su MAE se calcula sobre el bloque de entrenamiento.\n\n```python\ndef mase(y, y_hat, y_entrenamiento, m=168):\n    mae_ingenuo = np.mean(np.abs(y_entrenamiento[m:] - y_entrenamiento[:-m]))\n    return np.mean(np.abs(y - y_hat)) / mae_ingenuo\n```\n\nLa evaluación se repite con **origen móvil**: se fija un corte, se entrena con todo lo anterior, se pronostica el mes siguiente y se avanza el corte. Reportar el promedio y la dispersión de cuatro o más cortes evita que la conclusión dependa de un mes atípico.\n\n## Qué aprendimos de las comparaciones\n\nEn problemas de demanda con buena información de calendario, un LightGBM con rezagos de 24 y 168 horas suele ser una línea base muy competitiva, y los modelos profundos aportan sobre todo cuando se entrenan con muchas series relacionadas, como cientos de alimentadores o subestaciones, o cuando las dependencias son largas y no lineales. El estudio de Zeng y colaboradores de 2023 recordó a toda la comunidad que un modelo lineal bien planteado puede superar a arquitecturas sofisticadas. Por eso, el criterio de éxito de esta unidad no es usar el modelo más moderno, sino demostrar con MASE, origen móvil y análisis de feriados cuál modelo conviene a la organización."
+      },
+      "case": {
+        "title": "Caso: Pronóstico de demanda eléctrica en una distribuidora del sur",
+        "content": "## Contexto\n\nEnergía Valle Sur S.A.A. es una empresa distribuidora que atiende a unos 420 000 clientes en tres regiones del sur del país, con una máxima demanda cercana a 380 MW. Cada día debe programar su demanda horaria del día siguiente. Cuando la demanda real se desvía de lo programado, la empresa asume costos por compras en el mercado de corto plazo y penalidades contractuales con sus generadores. En el último año, esas desviaciones le costaron alrededor de S/ 6,8 millones, y el directorio fijó como meta reducirlas en 25 %.\n\n## El proyecto\n\nEl área de planeamiento, liderada por el ingeniero Julio Mamani, encargó a un equipo de dos técnicos en inteligencia artificial y una economista mejorar el pronóstico, que hoy se hace con un modelo SARIMA ajustado manualmente cada mes. El equipo reunió seis años de demanda horaria, de 2019 a 2024, junto con temperatura y humedad de las estaciones del SENAMHI, pronósticos meteorológicos archivados, feriados nacionales y regionales, y un indicador de días con eventos especiales como paros o cortes programados. Usó 2019-2022 para entrenamiento, el primer semestre de 2023 para validación y desde julio de 2023 hasta diciembre de 2024 para prueba.\n\n## Resultados en el periodo de prueba\n\n| Modelo | MASE global | MAPE global | MAPE en feriados | Entrenamiento | Explicabilidad |\n|---|---|---|---|---|---|\n| Ingenuo estacional (semana previa) | 1,00 | 5,9 % | 14,2 % | Ninguno | Total |\n| SARIMA actual | 0,81 | 4,6 % | 11,8 % | Minutos | Alta |\n| LightGBM con rezagos y calendario | 0,61 | 3,5 % | 6,1 % | 4 minutos en CPU | Media, con SHAP |\n| LSTM de dos capas | 0,58 | 3,3 % | 9,4 % | 40 minutos en GPU | Baja |\n| Transformador pequeño | 0,66 | 3,8 % | 8,7 % | 70 minutos en GPU | Baja |\n\nEl análisis de errores mostró que la LSTM falla sobre todo en feriados largos, como Fiestas Patrias y el fin de año, y en los días posteriores. También se observó que el transformador fue entrenado con la misma configuración de la LSTM, sin búsqueda de hiperparámetros propia.\n\n## Tensiones en el equipo\n\nLa economista defiende LightGBM: su error en feriados es el menor y puede explicar cada pronóstico a la gerencia y, si se le solicita, al organismo regulador. Uno de los técnicos defiende la LSTM por tener el menor error global y propone corregir los feriados con más variables. El otro técnico sostiene que el transformador «es el estado del arte» y que con más datos superará a todos. El jefe de sistemas advierte que la empresa no tiene GPU propias y que el reentrenamiento debe ser semanal.\n\n## La decisión\n\nJulio debe presentar en diez días una recomendación al gerente general. Además del modelo, debe proponer cómo evaluarlo de forma continua, qué hacer en días atípicos y cómo comunicar el valor esperado en soles. Una consultora ofreció, además, combinar LightGBM y la LSTM en un promedio ponderado.",
+        "questions": [
+          "Con los resultados de la tabla, ¿qué modelo recomendaría poner en operación? Justifique considerando el error promedio, el error en feriados, el costo de operación y la explicabilidad ante el regulador.",
+          "La LSTM falla en feriados largos. Proponga cambios concretos en las variables de entrada, la ventana o la función de pérdida para corregirlo, y cómo verificaría la mejora sin fuga.",
+          "¿Es válido concluir que el transformador es inferior a la LSTM con una sola partición temporal? Diseñe un protocolo de evaluación más confiable.",
+          "Evalúe la propuesta de combinar LightGBM y LSTM en un promedio ponderado. ¿Qué riesgos y beneficios tiene y cómo fijaría los pesos?",
+          "Redacte en cinco líneas el mensaje para el gerente general explicando qué significa un MASE de 0,58 y por qué el error en feriados importa más que el promedio."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Pronóstico con modelos secuenciales y validación de origen móvil",
+        "instructions": "**Objetivo:** construir, comparar y recomendar modelos de pronóstico para una serie de tiempo peruana, aplicando ventanas sin fuga, modelos secuenciales profundos y validación de origen móvil.\n\n**Datos:** elija una serie con al menos tres años de historia y resolución horaria o diaria: demanda de energía del sistema interconectado publicada por el COES, temperaturas de estaciones del SENAMHI o series diarias del BCRP, como el tipo de cambio interbancario. Documente la fuente, el periodo y la limpieza realizada.\n\n**Qué entregar:**\n\n1. **Preparación temporal:** partición cronológica, normalización con estadísticas del entrenamiento, variables de calendario y feriados, y verificación explícita de que no hay solapamiento entre bloques.\n2. **Líneas base:** modelo ingenuo estacional y LightGBM o regresión lineal con rezagos.\n3. **Modelos profundos:** una LSTM o GRU y, a elección, una red convolucional temporal o un transformador pequeño construido con la autoatención implementada en clase.\n4. **Evaluación:** validación de origen móvil con al menos cuatro cortes; MAE, RMSE y MASE con media y desviación; tabla de errores por tipo de día, incluidos feriados.\n5. **Informe** de cuatro a seis páginas con la recomendación del modelo para una organización real, su costo de cómputo y sus limitaciones, más un mapa de pesos de atención o un análisis equivalente de lo que aprendió el modelo.\n\n**Formato:** cuaderno de Colab ejecutable con semillas fijas, archivo de requisitos e informe en PDF. Trabajo en parejas.\n\n**Criterios:** se valora la ausencia de fuga, la calidad de las líneas base, el rigor de la validación temporal y una recomendación coherente con la evidencia, aunque el modelo ganador no sea el más complejo.",
+        "rubric": [
+          {
+            "name": "Preparación temporal de datos sin fuga",
+            "points": 5
+          },
+          {
+            "name": "Implementación de líneas base y modelos secuenciales",
+            "points": 5
+          },
+          {
+            "name": "Evaluación con origen móvil y métricas pertinentes",
+            "points": 5
+          },
+          {
+            "name": "Análisis de errores y recomendación",
+            "points": 3
+          },
+          {
+            "name": "Reproducibilidad y comunicación",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Modelos secuenciales y atención",
+        "questions": [
+          {
+            "prompt": "Según la formulación clásica con un único vector de sesgo por compuerta, ¿cuántos parámetros tiene una celda LSTM con 8 variables de entrada y estado oculto de tamaño 32?",
+            "options": [
+              "5 248",
+              "1 312",
+              "10 496",
+              "4 096"
+            ],
+            "correct": 0,
+            "explanation": "4·(h·(h + d) + h) = 4·(32·40 + 32) = 4·1 312 = 5 248. El valor 1 312 corresponde a una red recurrente simple."
+          },
+          {
+            "prompt": "¿Por qué la autoatención divide los productos QKᵀ entre √d_k antes de aplicar la softmax?",
+            "options": [
+              "Para reducir la memoria de la matriz de atención",
+              "Para que su varianza no crezca con d_k y la softmax no se sature",
+              "Para que los pesos de atención sumen exactamente uno",
+              "Para que la atención respete el orden temporal"
+            ],
+            "correct": 1,
+            "explanation": "Con componentes de varianza uno, el producto punto tiene varianza d_k. Productos grandes saturan la softmax y anulan sus gradientes; el escalado lo evita."
+          },
+          {
+            "prompt": "Un equipo normalizó la serie completa de 2019 a 2024 con su media y desviación antes de partirla cronológicamente. ¿Cuál es el problema?",
+            "options": [
+              "Ninguno, la normalización no afecta la evaluación",
+              "Las redes recurrentes no admiten datos normalizados",
+              "Hay fuga de información: el entrenamiento usa estadísticas del futuro",
+              "La normalización debió hacerse después de entrenar"
+            ],
+            "correct": 2,
+            "explanation": "Las estadísticas deben calcularse solo con el bloque de entrenamiento; de lo contrario, información del periodo de prueba influye en el modelo y la evaluación es optimista."
+          },
+          {
+            "prompt": "Un modelo de pronóstico obtiene un MASE de 1,2 en el periodo de prueba. ¿Cómo se interpreta?",
+            "options": [
+              "Su error porcentual medio es de 1,2 %",
+              "Explica el 120 % de la varianza de la serie",
+              "Supera a la línea base ingenua en 20 %",
+              "Su error es 20 % mayor que el de la línea base estacional ingenua"
+            ],
+            "correct": 3,
+            "explanation": "MASE divide el MAE del modelo entre el de la línea base ingenua. Un valor mayor que 1 indica que el modelo no aporta valor frente a repetir el ciclo anterior."
+          },
+          {
+            "prompt": "¿Cuál es el campo receptivo de una red convolucional temporal con núcleo 3 y cuatro capas con dilataciones 1, 2, 4 y 8?",
+            "options": [
+              "16 pasos",
+              "81 pasos",
+              "31 pasos",
+              "12 pasos"
+            ],
+            "correct": 2,
+            "explanation": "Campo receptivo = 1 + (k − 1)·Σd = 1 + 2·(1 + 2 + 4 + 8) = 31 pasos."
+          },
+          {
+            "prompt": "Si la longitud de la secuencia de un transformador pasa de 512 a 2 048 posiciones, ¿cuánto crece la memoria de la matriz de atención por cabeza?",
+            "options": [
+              "16 veces",
+              "2 veces",
+              "No cambia",
+              "4 veces"
+            ],
+            "correct": 0,
+            "explanation": "La matriz de atención es de T × T; al multiplicar T por 4, el número de entradas se multiplica por 16."
+          },
+          {
+            "prompt": "Para pronosticar la demanda de las próximas 24 horas, un estudiante propone una LSTM bidireccional. ¿Qué responde?",
+            "options": [
+              "Es la mejor opción, porque duplica la información disponible",
+              "No es válida: la dirección inversa usaría información posterior al momento de pronosticar",
+              "Es válida si la secuencia tiene menos de 168 pasos",
+              "Es válida solo si se usa con convoluciones causales"
+            ],
+            "correct": 1,
+            "explanation": "Una red bidireccional procesa la secuencia también desde el final. En pronóstico, eso equivale a mirar el futuro; solo es adecuada para analizar secuencias completas."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Aprendizaje de representaciones, entrenamiento eficiente y proyecto integrador",
+      "description": "Al finalizar la unidad, el estudiante integra aprendizaje de representaciones, ajuste fino, entrenamiento eficiente y compresión en una solución de aprendizaje profundo de punta a punta para una organización peruana, y la sustenta con evidencia experimental, análisis de costos y una tarjeta de modelo.",
+      "topics": [
+        "Autocodificadores para reducción no lineal, eliminación de ruido y detección de anomalías",
+        "Aprendizaje autosupervisado y contrastivo; reutilización de representaciones",
+        "Estrategias de ajuste fino y búsqueda de hiperparámetros para redes profundas",
+        "Entrenamiento eficiente: precisión mixta, acumulación de gradientes y presupuesto de cómputo",
+        "Compresión y exportación: cuantización, poda, destilación y ONNX",
+        "Tarjeta de modelo, huella de carbono, marco normativo y sustentación del proyecto"
+      ],
+      "slides": [
+        {
+          "title": "Aprendizaje de representaciones: la idea central",
+          "bullets": [
+            "Una buena representación vuelve simple la tarea final: clases separables con un clasificador lineal.",
+            "Bengio, Courville y Vincent (2013): el valor de una red profunda está en las características que aprende.",
+            "Las etiquetas son escasas y caras; los datos sin etiquetar, abundantes: sensores, fotos, registros.",
+            "Estrategia moderna: preentrenar con datos sin etiquetas y ajustar con pocas etiquetas."
+          ],
+          "notes": "Recupere el ejemplo de XOR de la unidad 1: la capa oculta aprendía una representación donde el problema se volvía lineal. Esta unidad generaliza esa idea. Pregunte a la clase cuántos datos sin etiquetar y cuántos etiquetados tiene típicamente una empresa peruana: una minera puede tener años de lecturas de sensores cada segundo, pero solo una docena de fallas documentadas; un hospital puede tener cientos de miles de radiografías, pero pocas con diagnóstico confirmado por especialista. La pregunta clave del aprendizaje de representaciones es cómo aprovechar esa abundancia de datos sin etiquetar. Presente el panorama de la unidad: autocodificadores, que aprenden a reconstruir; métodos autosupervisados y contrastivos, que inventan tareas a partir de los propios datos; y la reutilización de representaciones mediante ajuste fino. Explique que los modelos generativos, como los autocodificadores variacionales, las redes generativas adversarias y los modelos de difusión, se estudian en el curso paralelo de IA Generativa y Modelos de Lenguaje."
+        },
+        {
+          "title": "Autocodificadores: comprimir y reconstruir",
+          "bullets": [
+            "Codificador z = f(x) que comprime en un cuello de botella; decodificador x̂ = g(z) que reconstruye.",
+            "Se entrena sin etiquetas minimizando el error de reconstrucción, por ejemplo ‖x − x̂‖².",
+            "Un autocodificador lineal con pérdida cuadrática aprende el mismo subespacio que el análisis de componentes principales.",
+            "Con capas no lineales aprende variedades curvas que PCA no puede representar (Hinton y Salakhutdinov, 2006).",
+            "Usos: reducción de dimensionalidad, extracción de características, eliminación de ruido y detección de anomalías."
+          ],
+          "notes": "Conecte con dos cursos previos: el análisis de componentes principales de Aprendizaje Automático II y la descomposición en valores singulares de Álgebra Lineal Aplicada. Demuestre la equivalencia de forma intuitiva: un autocodificador sin activaciones y con pérdida cuadrática solo puede proyectar los datos sobre un subespacio, y el mejor subespacio de dimensión k es el de las primeras k componentes principales, por el teorema de Eckart y Young. Con activaciones no lineales, el autocodificador puede desenrollar estructuras curvas. Muestre el resultado clásico de Hinton y Salakhutdinov en Science, donde un autocodificador profundo producía proyecciones bidimensionales de dígitos mucho más separadas que PCA. Advierta el riesgo: si el cuello de botella es demasiado ancho, la red aprende la identidad y no extrae nada útil. Pida a los estudiantes que propongan un tamaño de código razonable para ventanas de 256 lecturas de vibración de tres ejes."
+        },
+        {
+          "title": "Autocodificadores con eliminación de ruido y regularizados",
+          "bullets": [
+            "Eliminación de ruido (Vincent et al., 2008): se corrompe la entrada y se pide reconstruir la versión limpia.",
+            "Obliga a aprender la estructura de los datos y no una copia de la entrada.",
+            "Autocodificador disperso: penaliza la activación del código para que pocas unidades se activen por ejemplo.",
+            "Arquitectura según el dato: convolucional para imágenes, recurrente o convolucional temporal para señales.",
+            "Las variantes generativas, como el autocodificador variacional, se profundizan en IA Generativa."
+          ],
+          "notes": "Explique la intuición de Vincent y colaboradores: si a una fotografía de un documento se le añade ruido o se le borran píxeles y la red aprende a restaurarla, necesariamente aprende cómo son los documentos. Muestre aplicaciones directas: limpiar imágenes escaneadas de expedientes, eliminar ruido eléctrico de señales de sensores o restaurar series con valores faltantes. Presente el código de un autocodificador convolucional unidimensional para señales, con capas Conv1d que reducen la resolución en el codificador y ConvTranspose1d que la recuperan en el decodificador. Discuta la elección de la corrupción: ruido gaussiano, enmascaramiento aleatorio de tramos o ambos; el enmascaramiento es la misma idea que, a gran escala, usan BERT con palabras y los autocodificadores enmascarados con parches de imagen. Pregunte a la clase qué tipo de corrupción sería realista para lecturas de un sensor de vibración instalado en una chancadora con interferencias eléctricas frecuentes."
+        },
+        {
+          "title": "Detección de anomalías por error de reconstrucción",
+          "bullets": [
+            "Entrenar el autocodificador solo con datos de operación normal.",
+            "Puntaje de anomalía: error de reconstrucción de cada ventana; lo que no se parece a lo normal se reconstruye mal.",
+            "Umbral según la operación: percentil del error en validación normal, costo de las fallas y capacidad de revisión.",
+            "Evaluar con las pocas fallas etiquetadas: exhaustividad, alertas falsas por semana y anticipación en horas.",
+            "Comparar siempre con Isolation Forest y con umbrales estadísticos robustos vistos en Aprendizaje Automático II."
+          ],
+          "notes": "Este es el método central del caso de la unidad. Explique la lógica: si el modelo solo vio comportamiento normal, aprende a reconstruirlo bien, y una ventana con un patrón nuevo, como una frecuencia de vibración asociada a un rodamiento dañado, produce un error alto. Insista en que el umbral no es una decisión estadística sino operativa: si el equipo de mantenimiento puede revisar cinco alertas por semana, el umbral debe fijarse para no superar esa cifra en operación normal, y luego verificar cuántas fallas históricas habría detectado y con cuánta anticipación. Advierta los riesgos: si los datos de entrenamiento incluyen fallas no registradas, el modelo aprende a reconstruirlas; si cambia el régimen de operación, por ejemplo un nuevo tipo de mineral, el error sube sin que haya falla. Recuerde Isolation Forest de Aprendizaje Automático II como línea base obligatoria, porque a menudo es competitivo y mucho más simple."
+        },
+        {
+          "title": "Aprendizaje autosupervisado",
+          "bullets": [
+            "Idea: crear la etiqueta a partir de los propios datos mediante una tarea pretexto.",
+            "Ejemplos: predecir el siguiente valor de una serie, reconstruir partes enmascaradas o predecir la rotación de una imagen.",
+            "Es el principio de preentrenamiento de BERT, que predice palabras enmascaradas, y de los modelos de lenguaje que predicen la siguiente palabra.",
+            "La representación aprendida se transfiere luego a tareas con pocas etiquetas."
+          ],
+          "notes": "Muestre que el aprendizaje autosupervisado no es una técnica aislada sino la base de la inteligencia artificial actual. Los estudiantes ajustaron BERT en Procesamiento de Lenguaje Natural: ese modelo aprendió su representación del español prediciendo palabras ocultas en grandes corpus, sin ninguna etiqueta humana. En el curso paralelo de IA Generativa verán que los grandes modelos de lenguaje aprenden prediciendo la siguiente palabra. Aplique la idea a datos peruanos: con diez años de imágenes satelitales de la Amazonía sin etiquetar se puede preentrenar una red reconstruyendo parches enmascarados y luego ajustarla con unos cientos de parcelas etiquetadas como deforestación o bosque. Con lecturas de sensores, la tarea pretexto puede ser predecir el siguiente segundo de la señal. Pregunta para la clase: ¿qué tarea pretexto propondrían para un conjunto de 200 000 fotografías de comprobantes de pago sin etiquetar?"
+        },
+        {
+          "title": "Aprendizaje contrastivo",
+          "bullets": [
+            "Principio: acercar las representaciones de dos vistas del mismo ejemplo y alejar las de ejemplos distintos.",
+            "SimCLR (Chen et al., 2020): dos aumentos de cada imagen, codificador, proyección y pérdida contrastiva.",
+            "Pérdida InfoNCE: −ln[exp(sim(zᵢ, zⱼ)/τ) / Σₖ exp(sim(zᵢ, zₖ)/τ)], con temperatura τ.",
+            "La calidad depende de los aumentos: definen qué variaciones debe ignorar la representación.",
+            "Requiere lotes grandes o bancos de negativos; variantes como BYOL prescinden de los negativos."
+          ],
+          "notes": "Explique SimCLR paso a paso con un lote de N imágenes: cada una se aumenta dos veces, con recortes, cambios de color y desenfoque, lo que produce 2N vistas. Para cada vista, su pareja es el positivo y las otras 2N − 2 vistas son negativos. La pérdida es una entropía cruzada en la que el problema de clasificación consiste en identificar a la pareja entre todas las candidatas. Conecte con la unidad 1: la pérdida InfoNCE es literalmente una softmax con entropía cruzada sobre similitudes coseno divididas por la temperatura. Destaque el punto conceptual más importante: los aumentos codifican conocimiento del dominio. Si se aplican cambios de color fuertes a fotos de fruta, la representación aprenderá a ignorar el color, lo cual sería desastroso para detectar maduración. Mencione que Chen y colaboradores lograron que un clasificador lineal sobre representaciones contrastivas se acercara al desempeño supervisado en ImageNet. Pida proponer aumentos válidos para señales de vibración."
+        },
+        {
+          "title": "Reutilizar representaciones: sondeo lineal y ajuste fino",
+          "bullets": [
+            "Sondeo lineal: congelar el codificador y entrenar solo un clasificador lineal; mide la calidad de la representación.",
+            "Ajuste fino completo: actualizar todos los pesos con tasa pequeña; más potente, pero con mayor riesgo de sobreajuste.",
+            "Descongelamiento gradual y tasas discriminativas: capas profundas con tasas más altas que las iniciales (Howard y Ruder, 2018).",
+            "Con pocas etiquetas y dominio parecido, empezar por el sondeo lineal; con más datos o dominio distinto, ajuste fino.",
+            "Cuidar la normalización por lotes: congelar sus estadísticas cuando el lote es pequeño."
+          ],
+          "notes": "En Visión por Computadora los estudiantes ya congelaron una ResNet y entrenaron una nueva cabeza. Aquí se trata de decidir con criterio entre estrategias y de entender sus riesgos. Presente una matriz de decisión con dos ejes: cantidad de datos etiquetados y similitud entre el dominio de preentrenamiento y el de destino. Con pocos datos y dominio similar, sondeo lineal; con muchos datos y dominio distinto, como imágenes térmicas o espectrogramas, ajuste fino completo. Explique las tasas discriminativas propuestas por Howard y Ruder en ULMFiT: las primeras capas, que capturan rasgos generales, se modifican poco; las últimas, más específicas, se modifican más. Muestre en PyTorch cómo crear grupos de parámetros con tasas distintas, retomando la técnica de la unidad 2. Advierta el olvido catastrófico: un ajuste fino con tasa alta destruye en pocas iteraciones lo aprendido en el preentrenamiento."
+        },
+        {
+          "title": "Búsqueda de hiperparámetros para redes profundas",
+          "bullets": [
+            "Prioridad: tasa de aprendizaje, luego decaimiento de pesos, tamaño de lote, arquitectura y aumento de datos.",
+            "Búsqueda aleatoria antes que rejilla: explora mejor las dimensiones importantes (Bergstra y Bengio, 2012).",
+            "Optuna con poda: detiene corridas poco prometedoras según sus curvas intermedias.",
+            "Asignar presupuesto: pocas épocas para descartar y entrenamiento completo solo para las mejores configuraciones.",
+            "Validar el ganador con varias semillas antes de declararlo superior."
+          ],
+          "notes": "Conecte con Aprendizaje Automático II, donde los estudiantes usaron Optuna para ajustar modelos de boosting. La diferencia en redes profundas es el costo: cada corrida puede tardar horas, por lo que la poda temprana es esencial. Explique la lógica de la reducción sucesiva a la mitad y de su variante asíncrona: se lanzan muchas configuraciones con pocas épocas, se conservan las mejores y se les asigna más presupuesto. Muestre cómo reportar a Optuna la pérdida de validación al final de cada época con trial.report y cómo detener con trial.should_prune. Recuerde el argumento de Bergstra y Bengio: si solo dos de diez hiperparámetros importan, una rejilla desperdicia la mayoría de las corridas en valores repetidos de esos dos, mientras que la búsqueda aleatoria prueba valores distintos en cada corrida. Pida que cada equipo defina su presupuesto de GPU para el proyecto integrador y lo distribuya entre exploración, ablación y entrenamiento final."
+        },
+        {
+          "title": "Precisión mixta y acumulación de gradientes",
+          "bullets": [
+            "Precisión mixta: cálculos en float16 o bfloat16 y pesos maestros en float32 (Micikevicius et al., 2018).",
+            "Beneficio: hasta la mitad de memoria en activaciones y aceleración en GPU con núcleos tensoriales.",
+            "En PyTorch: torch.autocast para el paso hacia adelante y GradScaler para evitar el subdesbordamiento de gradientes en float16.",
+            "Acumulación: sumar gradientes de k minilotes antes de optimizer.step(); lote efectivo = k × B.",
+            "Dividir la pérdida entre k para que la escala del gradiente coincida con la de un lote grande."
+          ],
+          "notes": "Explique el problema del formato float16: su rango es limitado y los gradientes muy pequeños se redondean a cero. La solución de Micikevicius y colaboradores es escalar la pérdida por un factor grande antes de retropropagar y desescalar los gradientes antes de actualizar; GradScaler ajusta ese factor automáticamente y omite los pasos con valores infinitos. Mencione que bfloat16 tiene el mismo rango que float32 y no necesita escalado, pero solo está disponible en GPU más recientes. Muestre el código de un bucle con autocast y GradScaler y mida en Colab la diferencia de memoria y tiempo frente a float32 con la misma red. Luego conecte con la unidad 1: la acumulación de gradientes aprovecha que backward suma en .grad. Si la GPU solo admite lotes de 16 y se desea un lote efectivo de 128, se acumulan ocho minilotes. Advierta que la normalización por lotes sigue viendo lotes de 16, por lo que la equivalencia no es perfecta."
+        },
+        {
+          "title": "Cuantización: enteros en lugar de flotantes",
+          "bullets": [
+            "Representar pesos y activaciones con enteros de 8 bits en lugar de float32: modelo hasta 4 veces más pequeño.",
+            "Cuantización dinámica: pesos en int8 y activaciones cuantizadas al vuelo; ideal para capas lineales y LSTM en CPU.",
+            "Cuantización estática posentrenamiento: requiere un conjunto de calibración representativo.",
+            "Entrenamiento consciente de la cuantización: simula el redondeo durante el entrenamiento y recupera exactitud.",
+            "Medir siempre: desempeño, tamaño en MB y latencia en el hardware real de destino."
+          ],
+          "notes": "Explique la cuantización afín: un valor real r se aproxima como escala × (q − punto cero), donde q es un entero de 8 bits. Con una escala bien elegida, el error de redondeo es pequeño frente a la variabilidad natural de los pesos. Muestre el código de torch.ao.quantization.quantize_dynamic sobre un modelo con capas lineales y LSTM, y compare el tamaño del archivo guardado y la latencia en CPU. Insista en el último punto: las mejoras teóricas no siempre se materializan; dependen de que el hardware tenga instrucciones enteras eficientes y de que el entorno de ejecución las aproveche. Relacione con el caso de la unidad, donde el modelo debe correr en una computadora industrial sin GPU a más de 4 000 metros de altitud. Pregunta para la clase: si la cuantización reduce la exhaustividad de 9 a 8 fallas detectadas de 11, ¿cómo decidirían si la ganancia en latencia lo justifica?"
+        },
+        {
+          "title": "Poda y destilación del conocimiento",
+          "bullets": [
+            "Poda: eliminar pesos o canales de baja importancia; la poda por canales acelera sin hardware especial.",
+            "Han et al. (2016) comprimieron AlexNet y VGG entre 35 y 49 veces combinando poda, cuantización y codificación.",
+            "Destilación (Hinton, Vinyals y Dean, 2015): un estudiante pequeño imita las probabilidades suavizadas de un maestro grande.",
+            "Pérdida combinada: α·CE(y, p_estudiante) + (1 − α)·T²·KL(p_maestro^T ‖ p_estudiante^T).",
+            "La temperatura T > 1 revela similitudes entre clases que la etiqueta dura oculta."
+          ],
+          "notes": "Diferencie la poda no estructurada, que anula pesos individuales y produce matrices dispersas que rara vez aceleran en hardware común, de la poda estructurada, que elimina canales o cabezas de atención completos y sí reduce la latencia. Mencione la hipótesis del billete de lotería de Frankle y Carbin de 2019: dentro de una red grande existen subredes pequeñas que, entrenadas desde su inicialización original, alcanzan un desempeño similar. Para la destilación, explique el concepto de conocimiento oscuro: si el maestro asigna 0,7 a hongos, 0,25 a fruta blanda y 0,05 a fruta sana, esa distribución dice que hongos y fruta blanda se parecen, información que la etiqueta dura no transmite. La temperatura suaviza la distribución para hacer visible esa estructura, y el factor T² mantiene la escala de los gradientes. Mencione que DistilBERT conservó cerca del 97 % del desempeño de BERT con 40 % menos parámetros."
+        },
+        {
+          "title": "Exportación e inferencia eficiente",
+          "bullets": [
+            "Guardar el state_dict junto con el código, la versión de las bibliotecas y el preprocesamiento exacto.",
+            "TorchScript o torch.export capturan el grafo para ejecutarlo sin el código Python original.",
+            "ONNX: formato abierto que permite ejecutar el modelo con ONNX Runtime en CPU, GPU o dispositivos de borde.",
+            "Verificar que las salidas exportadas coincidan con las originales dentro de una tolerancia numérica.",
+            "Medir latencia con calentamiento previo, varias repeticiones y el tamaño de lote real de operación."
+          ],
+          "notes": "Delimite el alcance: este curso cubre cómo dejar un modelo listo y verificado para producción; la operación del servicio, con contenedores, monitoreo y reentrenamiento, es materia de Despliegue de Modelos (MLOps), que los estudiantes cursan en paralelo. Muestre el flujo completo con torch.onnx.export, definiendo un ejemplo de entrada y ejes dinámicos para el tamaño de lote, y luego la carga con ONNX Runtime. Insista en la verificación numérica: comparar las salidas de PyTorch y de ONNX Runtime sobre cien ejemplos y exigir diferencias menores a 10⁻⁴; un error frecuente es exportar con el modelo en modo entrenamiento, con dropout y normalización por lotes activos. Explique la medición de latencia correcta: descartar las primeras ejecuciones, repetir al menos cien veces y reportar la mediana y el percentil 95, no el promedio. Pregunta: ¿por qué el percentil 95 importa más que la mediana en un sistema de alertas en tiempo real?"
+        },
+        {
+          "title": "Costo, energía y huella de carbono",
+          "bullets": [
+            "Strubell, Ganesh y McCallum (2019) estimaron emisiones de cientos de toneladas de CO₂ para una búsqueda de arquitectura de gran escala.",
+            "Estimación básica: energía (kWh) = potencia de la GPU (kW) × horas × factor de eficiencia del centro de datos.",
+            "Emisiones = energía × factor de emisión de la red eléctrica donde se entrena.",
+            "Reportar horas de GPU, energía estimada y costo en soles junto con las métricas de desempeño.",
+            "Decisiones que reducen costo: líneas base fuertes, poda temprana de experimentos, modelos más pequeños y reutilización."
+          ],
+          "notes": "Presente el artículo de Strubell y colaboradores como el punto de partida de una discusión que hoy forma parte de la práctica responsable: el costo ambiental y económico de entrenar modelos grandes. Haga un cálculo con la clase para un proyecto típico del curso: 60 horas de una GPU T4 de 70 W, con un factor de eficiencia del centro de datos de 1,5, consumen 0,07 × 60 × 1,5 = 6,3 kWh; con un factor de emisión supuesto de 0,4 kg de CO₂ por kWh, son unos 2,5 kg de CO₂. Es poco, pero la misma lógica aplicada a miles de corridas o a modelos grandes produce cifras relevantes. Subraye que el costo en soles suele ser la restricción real para una empresa peruana y que la eficiencia es también una ventaja competitiva. Pida que la tarjeta de modelo del proyecto integrador incluya horas de GPU, energía estimada y costo total, además de la comparación con la línea base."
+        },
+        {
+          "title": "Documentación responsable y marco normativo",
+          "bullets": [
+            "Tarjeta de modelo (Mitchell et al., 2019): uso previsto, datos, métricas desagregadas, limitaciones y riesgos.",
+            "Ley 29733 y su reglamento: finalidad, consentimiento, seguridad y flujo transfronterizo de datos personales.",
+            "Ley 31814 (2023) promueve el uso de la inteligencia artificial con enfoque de riesgos, transparencia y respeto de derechos.",
+            "Supervisión humana y vías de reclamo cuando el modelo afecta decisiones sobre personas.",
+            "Evaluar desempeño por subgrupos y condiciones: turno, sede, región, tipo de equipo o de cliente."
+          ],
+          "notes": "Recupere las tarjetas de modelo trabajadas en Aprendizaje Automático I y en Visión por Computadora, y agregue lo específico de los modelos profundos: menor interpretabilidad, sensibilidad a cambios de distribución, costo de cómputo y, en el caso de modelos preentrenados, el origen y las licencias de los datos de preentrenamiento. Presente el marco peruano: la Ley 29733 de Protección de Datos Personales sigue siendo la norma central cuando los datos identifican personas, como fotografías, voces o historiales de crédito, y la Ley 31814, promulgada en 2023, establece un marco para promover la inteligencia artificial con un enfoque basado en riesgos y principios de transparencia y responsabilidad, desarrollado luego por su reglamento. Explique que el curso Ética y Gobernanza de la IA, en el sexto ciclo, profundizará la regulación. Pregunta: en el caso de la minera, ¿hay datos personales involucrados? Pida que analicen los registros de operadores asociados a cada turno."
+        },
+        {
+          "title": "Proyecto integrador: estructura y entregables",
+          "bullets": [
+            "Problema real de una organización peruana con métrica de negocio y costo de los errores definidos.",
+            "Línea base de aprendizaje automático o estadística y modelo profundo entrenado con las prácticas del curso.",
+            "Estudio de ablación con varias semillas y análisis de errores por condición o subgrupo.",
+            "Modelo comprimido o exportado, con medición de tamaño, latencia y cambio de desempeño.",
+            "Tarjeta de modelo, informe técnico, video demostrativo y sustentación de quince minutos ante jurado."
+          ],
+          "notes": "Presente el proyecto como la síntesis del curso y como insumo directo del Proyecto Integrador de Inteligencia Artificial del sexto ciclo. Muestre ejemplos de temas viables: detección de anomalías en sensores industriales, pronóstico de demanda de un servicio público, clasificación de imágenes agrícolas con preentrenamiento autosupervisado o clasificación de señales de audio. Recalque los criterios de viabilidad: datos disponibles y legalmente utilizables, problema acotado a ocho semanas y métrica verificable. Explique el cronograma: propuesta en la semana 11, avance con línea base y primer modelo en la semana 13, bitácora de experimentos en la semana 14, compresión y tarjeta de modelo en la semana 15, y sustentación en la semana 16. Anticipe las preguntas típicas del jurado: por qué este modelo y no la línea base, qué pasa si cambian los datos, cuánto cuesta operarlo y quién responde si se equivoca. Un proyecto con resultados modestos y un análisis honesto puede obtener la nota máxima."
+        }
+      ],
+      "reading": {
+        "title": "Representaciones y eficiencia: autocodificadores, destilación y cuantización",
+        "minutes": 45,
+        "content": "## Pocas etiquetas, muchos datos\n\nEn la industria peruana es habitual una asimetría extrema: una planta concentradora registra la vibración de sus molinos cada segundo durante años, pero solo documenta una decena de fallas; una cooperativa cafetalera tiene miles de fotografías de sus parcelas, pero pocas evaluadas por un agrónomo. El aprendizaje de representaciones aprovecha esa asimetría: primero aprende la estructura de los datos sin etiquetas y luego usa las pocas etiquetas para la tarea final. A su vez, los modelos deben operar en entornos con recursos limitados, lo que exige comprimirlos sin perder lo esencial. Esta lectura recorre ambos frentes.\n\n## El autocodificador como compresor aprendido\n\nUn autocodificador está formado por un codificador **z = f_φ(x)** y un decodificador **x̂ = g_θ(z)**, con dim(z) mucho menor que dim(x). Se entrena minimizando el error de reconstrucción:\n\n**L(φ, θ) = (1/N) Σᵢ ‖xᵢ − g_θ(f_φ(xᵢ))‖²**\n\nSi f y g fueran lineales, la solución óptima proyectaría los datos sobre el subespacio de las primeras componentes principales, como se vio con el teorema de Eckart y Young en Álgebra Lineal Aplicada. Con capas no lineales, el autocodificador aprende variedades curvas y patrones temporales que PCA no captura.\n\n## Detección de anomalías en señales de vibración\n\nEl siguiente autocodificador convolucional procesa ventanas de 256 lecturas de los tres ejes de un acelerómetro:\n\n```python\nimport torch\nfrom torch import nn\n\nclass AutocodificadorSenal(nn.Module):\n    def __init__(self, canales=3, codigo=16):\n        super().__init__()\n        self.codificador = nn.Sequential(\n            nn.Conv1d(canales, 32, 7, stride=2, padding=3), nn.GELU(),   # 256 -> 128\n            nn.Conv1d(32, 64, 7, stride=2, padding=3), nn.GELU(),        # 128 -> 64\n            nn.Conv1d(64, codigo, 7, stride=2, padding=3))               # 64 -> 32\n        self.decodificador = nn.Sequential(\n            nn.ConvTranspose1d(codigo, 64, 8, stride=2, padding=3), nn.GELU(),\n            nn.ConvTranspose1d(64, 32, 8, stride=2, padding=3), nn.GELU(),\n            nn.ConvTranspose1d(32, canales, 8, stride=2, padding=3))\n\n    def forward(self, x):                      # x: (N, 3, 256)\n        return self.decodificador(self.codificador(x))\n\n@torch.no_grad()\ndef puntaje(modelo, x):\n    modelo.eval()\n    return ((modelo(x) - x) ** 2).mean(dim=(1, 2))   # error por ventana\n```\n\nEl modelo se entrena **solo con ventanas de operación normal**. Luego se calcula el puntaje en un periodo de validación sin fallas y se fija el umbral según la operación. Si el equipo de mantenimiento puede revisar cinco alertas por semana y se generan 10 080 ventanas semanales, el umbral debe dejar pasar como máximo 5/10 080 ≈ 0,05 % de las ventanas normales, es decir, el percentil 99,95 del puntaje en validación. Después se verifica, con las fallas históricas, cuántas habrían sido detectadas y con cuántas horas de anticipación. Isolation Forest sobre características espectrales es la línea base obligatoria.\n\n## Destilación del conocimiento\n\nCuando el mejor modelo es demasiado grande para el dispositivo de destino, puede entrenarse un estudiante pequeño que imite al maestro. Con logits z del maestro y s del estudiante, y temperatura T:\n\n**L = α · CE(y, softmax(s)) + (1 − α) · T² · KL( softmax(z/T) ‖ softmax(s/T) )**\n\n```python\nimport torch.nn.functional as F\n\ndef perdida_destilacion(s, z, y, T=4.0, alfa=0.3):\n    dura = F.cross_entropy(s, y)\n    suave = F.kl_div(F.log_softmax(s / T, dim=1), F.softmax(z / T, dim=1),\n                     reduction=\"batchmean\") * T * T\n    return alfa * dura + (1 - alfa) * suave\n```\n\nLa temperatura suaviza las probabilidades del maestro y expone qué clases considera parecidas; el factor T² compensa la reducción de escala de los gradientes.\n\n## Cuantización dinámica y exportación\n\n```python\nimport time, os\n\ncuantizado = torch.ao.quantization.quantize_dynamic(\n    modelo_cpu, {nn.Linear, nn.LSTM}, dtype=torch.qint8)\ntorch.save(cuantizado.state_dict(), \"cuantizado.pt\")\nprint(os.path.getsize(\"cuantizado.pt\") / 1e6, \"MB\")\n\ndef latencia_ms(m, x, rep=200):\n    with torch.no_grad():\n        for _ in range(20): m(x)               # calentamiento\n        tiempos = []\n        for _ in range(rep):\n            t0 = time.perf_counter(); m(x); tiempos.append(time.perf_counter() - t0)\n    tiempos.sort()\n    return 1000 * tiempos[rep // 2], 1000 * tiempos[int(rep * 0.95)]   # mediana y p95\n```\n\nLa cuantización dinámica convierte a enteros de 8 bits los pesos de las capas lineales y recurrentes, lo que reduce su tamaño cerca de cuatro veces; las capas convolucionales requieren cuantización estática con datos de calibración. Para ejecutar fuera de Python se exporta a ONNX con torch.onnx.export y se verifica que las salidas coincidan con las originales dentro de una tolerancia de 10⁻⁴.\n\n## Medir el costo completo\n\nToda propuesta debe reportar, junto con el desempeño, el costo de obtenerlo. Una estimación simple de energía es **E = P × h × PUE**, donde P es la potencia de la GPU en kW, h las horas de entrenamiento y PUE la eficiencia del centro de datos. Sesenta horas de una GPU de 70 W con PUE de 1,5 consumen 6,3 kWh; multiplicadas por el factor de emisión de la red eléctrica correspondiente se obtienen las emisiones. En la práctica, el costo en soles por hora de GPU y la latencia en el hardware de destino son las restricciones que deciden si un modelo profundo llega a operar o se queda en el cuaderno."
+      },
+      "case": {
+        "title": "Caso: Mantenimiento predictivo en una minera de altura",
+        "content": "## Contexto\n\nMinera Apu Ccori S.A. opera una mina de cobre a tajo abierto en el sur andino, con una planta concentradora ubicada a 4 300 metros sobre el nivel del mar que procesa 60 000 toneladas de mineral por día. El equipo crítico es el molino de bolas principal: cada hora de parada no programada significa alrededor de USD 28 000 en producción diferida, y una falla mayor de rodamientos puede detener el molino entre tres y cinco días.\n\n## El proyecto\n\nLa superintendencia de mantenimiento instaló hace tres años 24 sensores de vibración triaxial y temperatura en el molino, el motor y el reductor, con lecturas cada segundo. En ese periodo se documentaron 11 fallas con fecha y causa confirmadas; el resto de los datos se considera operación normal, aunque nadie lo ha verificado de forma sistemática. El equipo de confiabilidad, con dos técnicos en inteligencia artificial recién contratados, desarrolló dos detectores sobre ventanas de un minuto:\n\n| Indicador | Autocodificador convolucional | Isolation Forest sobre características espectrales |\n|---|---|---|\n| Fallas detectadas con 24 h o más de anticipación | 9 de 11 | 6 de 11 |\n| Anticipación mediana | 36 horas | 14 horas |\n| Alertas falsas por semana | 4,2 | 3,1 |\n| Tamaño del modelo | 48 MB | 2 MB |\n| Latencia por ventana en la PC industrial | 120 ms | 8 ms |\n\nEl equipo de mantenimiento puede investigar como máximo cinco alertas por semana; si recibe más, empieza a ignorarlas.\n\n## La restricción del borde\n\nPor la conectividad satelital intermitente de la planta, el modelo debe ejecutarse en una computadora industrial sin GPU instalada junto al molino, que admite modelos de hasta 20 MB y exige una latencia menor de 50 ms por ventana para procesar los 24 sensores en tiempo real. Los técnicos cuantizaron el autocodificador a 8 bits: el tamaño bajó a 13 MB y la latencia a 35 ms, pero la detección cayó a 8 de 11 fallas, con 4,0 alertas falsas por semana. No han probado la destilación ni la poda.\n\n## Otras consideraciones\n\nLa empresa tiene otras dos plantas con molinos similares y dos años de datos de sensores sin fallas etiquetadas. El superintendente se pregunta si esos datos sirven de algo. El área de recursos humanos advirtió que los registros de operación incluyen el código del operador de cada turno y pidió que no se use para evaluar al personal sin un análisis previo. Además, en el último año la planta comenzó a procesar mineral de una nueva zona del tajo, más duro, y desde entonces el error de reconstrucción promedio subió 18 % sin que se registraran fallas.\n\n## La decisión\n\nEl comité de operaciones debe aprobar un piloto de seis meses. Los técnicos deben recomendar qué modelo usar, con qué umbral y en qué versión, cómo manejar el cambio de régimen y qué documentación presentar. El gerente de planta resumió su posición: «Prefiero un sistema que avise menos pero en el que mi gente confíe, a uno que avise de todo y que nadie mire».",
+        "questions": [
+          "Compare el autocodificador y el Isolation Forest con los datos del caso. ¿Qué umbral y qué modelo recomendaría, considerando la capacidad de revisión y el costo de cada parada no programada?",
+          "El modelo cuantizado detecta una falla menos, pero cumple la latencia y el tamaño exigidos. ¿Lo pondría en operación? ¿Qué alternativas de compresión exploraría antes de decidir?",
+          "¿Qué riesgos implica entrenar el autocodificador con tres años de datos supuestamente normales? Proponga cómo depurar ese conjunto y cómo detectar cambios de régimen.",
+          "¿Cómo aprovecharía los datos sin etiquetar de las otras dos plantas para mejorar el modelo con pocas fallas etiquetadas?",
+          "Redacte los cinco elementos imprescindibles de la tarjeta de modelo que presentaría al comité de operaciones antes del piloto."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: solución de aprendizaje profundo de punta a punta",
+        "instructions": "**Objetivo:** diseñar, entrenar, evaluar, comprimir y sustentar una solución de aprendizaje profundo para un problema real de una organización peruana, integrando lo aprendido en las cuatro unidades.\n\n**Modalidad:** equipos de dos o tres estudiantes. Temas sugeridos: detección de anomalías en sensores industriales, pronóstico de demanda de un servicio, clasificación de imágenes agrícolas o de documentos con preentrenamiento autosupervisado, clasificación de señales de audio o una propuesta aprobada en la semana 11.\n\n**Qué entregar:**\n\n1. **Repositorio o cuaderno ejecutable** con partición sin fuga, línea base de aprendizaje automático o estadística, modelo profundo entrenado con las prácticas del curso, semillas fijas y registro de experimentos.\n2. **Estudio de ablación** de al menos tres componentes, con tres semillas, y análisis de errores por condición o subgrupo.\n3. **Versión eficiente** del modelo mediante cuantización, poda o destilación, exportada a ONNX o TorchScript, con tabla de desempeño, tamaño y latencia en CPU antes y después.\n4. **Informe técnico** de seis a ocho páginas: problema y métrica de negocio, datos y su base legal de uso, decisiones de modelado, resultados, costo en horas de GPU, energía estimada y soles, limitaciones y recomendación.\n5. **Tarjeta de modelo** de dos páginas con uso previsto, desempeño desagregado, riesgos, supervisión humana y tratamiento de datos personales conforme a la Ley 29733.\n6. **Video demostrativo** de cinco minutos y **sustentación oral** de quince minutos en la semana 16.\n\n**Criterios:** se evalúa la calidad de las decisiones y su justificación con evidencia, no solo la métrica final. Un modelo que no supera a la línea base, analizado con honestidad, puede obtener una calificación alta; un resultado sobresaliente con fuga de información o sin protocolo verificable, no.",
+        "rubric": [
+          {
+            "name": "Formulación del problema, datos y línea base",
+            "points": 4
+          },
+          {
+            "name": "Modelo profundo y calidad del entrenamiento",
+            "points": 5
+          },
+          {
+            "name": "Evaluación, ablación y análisis de errores",
+            "points": 4
+          },
+          {
+            "name": "Eficiencia, compresión y tarjeta de modelo",
+            "points": 4
+          },
+          {
+            "name": "Comunicación y sustentación oral",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Representaciones, eficiencia y compresión",
+        "questions": [
+          {
+            "prompt": "Un autocodificador de anomalías genera, en operación normal, unas 12 alertas semanales con el umbral actual, pero el equipo de mantenimiento solo puede revisar 5. ¿Cuál es la mejor forma de ajustar el umbral?",
+            "options": [
+              "Fijarlo para no superar 5 alertas semanales y verificar cuántas fallas históricas aún se detectan",
+              "Reentrenar el modelo incluyendo las alertas falsas como fallas",
+              "Usar siempre el percentil 95 del error de reconstrucción",
+              "Mantener el umbral y pedir que se revisen solo las primeras 5 alertas"
+            ],
+            "correct": 0,
+            "explanation": "El umbral es una decisión operativa: debe ajustarse a la capacidad de revisión y luego medirse su exhaustividad y anticipación con las fallas etiquetadas disponibles."
+          },
+          {
+            "prompt": "En la destilación del conocimiento, ¿para qué se usa una temperatura T mayor que 1 en la softmax del maestro?",
+            "options": [
+              "Para acelerar la inferencia del modelo estudiante",
+              "Para suavizar sus probabilidades y revelar similitudes entre clases",
+              "Para convertir las probabilidades en etiquetas duras",
+              "Para que el maestro siga aprendiendo durante la destilación"
+            ],
+            "correct": 1,
+            "explanation": "Con T > 1, las clases incorrectas reciben probabilidades visibles; esa estructura, el llamado conocimiento oscuro, es lo que el estudiante aprende a imitar."
+          },
+          {
+            "prompt": "Su GPU admite lotes de 16 ejemplos, pero desea un lote efectivo de 128 con acumulación de gradientes. ¿Qué configuración es correcta?",
+            "options": [
+              "Acumular 8 minilotes, dividir cada pérdida entre 8 y llamar a step una vez",
+              "Acumular 16 minilotes y multiplicar la tasa de aprendizaje por 16",
+              "Acumular 8 minilotes sin modificar la pérdida ni la tasa",
+              "Llamar a step en cada minilote y a zero_grad cada 8"
+            ],
+            "correct": 0,
+            "explanation": "128/16 = 8 minilotes. Dividir la pérdida entre 8 hace que la suma de gradientes equivalga al promedio de un lote de 128."
+          },
+          {
+            "prompt": "Dispone de un codificador preentrenado de forma autosupervisada con imágenes similares a las suyas y solo 300 ejemplos etiquetados. ¿Qué estrategia conviene probar primero?",
+            "options": [
+              "Entrenar una red nueva desde cero",
+              "Ajuste fino completo con tasa de aprendizaje alta",
+              "Sondeo lineal con el codificador congelado",
+              "Descartar el codificador y usar un autocodificador lineal"
+            ],
+            "correct": 2,
+            "explanation": "Con pocas etiquetas y dominio similar, el sondeo lineal aprovecha la representación con bajo riesgo de sobreajuste; el ajuste fino puede probarse después con tasas pequeñas."
+          },
+          {
+            "prompt": "¿Cuánto se reduce aproximadamente el tamaño de los pesos al cuantizar de float32 a enteros de 8 bits?",
+            "options": [
+              "Unas 32 veces",
+              "Unas 8 veces",
+              "Unas 4 veces",
+              "Unas 2 veces"
+            ],
+            "correct": 2,
+            "explanation": "Cada peso pasa de 32 a 8 bits, lo que reduce el almacenamiento cerca de 4 veces, sin contar escalas, puntos cero y capas no cuantizadas."
+          },
+          {
+            "prompt": "Al entrenar con precisión mixta en float16, ¿cuál es la función principal de GradScaler?",
+            "options": [
+              "Reducir la tasa de aprendizaje cuando la pérdida se estanca",
+              "Escalar la pérdida para que los gradientes pequeños no se redondeen a cero",
+              "Recortar la norma del gradiente a un valor máximo",
+              "Convertir los pesos maestros a float16 para ahorrar memoria"
+            ],
+            "correct": 1,
+            "explanation": "float16 tiene rango limitado; multiplicar la pérdida por un factor grande evita el subdesbordamiento, y los gradientes se desescalan antes de actualizar los pesos."
+          },
+          {
+            "prompt": "En el aprendizaje contrastivo tipo SimCLR, ¿qué constituye un par positivo dentro de un lote?",
+            "options": [
+              "Una imagen y su reconstrucción por un autocodificador",
+              "Las dos imágenes con mayor similitud en el lote",
+              "Dos imágenes diferentes de la misma clase etiquetada",
+              "Dos aumentos distintos de la misma imagen"
+            ],
+            "correct": 3,
+            "explanation": "SimCLR no usa etiquetas: el positivo de cada vista es la otra vista aumentada del mismo ejemplo, y las demás vistas del lote actúan como negativos."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Qué es el aprendizaje profundo, historia, perceptrón y el problema XOR",
+      "activity": "Clase síncrona introductoria; configuración de Google Colab con GPU y PyTorch; foro de diagnóstico sobre cuándo conviene una red profunda frente a un modelo de boosting.",
+      "evidence": "Cuaderno de entorno verificado y aporte en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Perceptrón multicapa, funciones de activación, softmax y funciones de pérdida",
+      "activity": "Aula invertida con la lectura de la unidad 1; ejercicios de conteo de parámetros y de pérdida inicial esperada; laboratorio de propagación hacia adelante en NumPy.",
+      "evidence": "Cuaderno de laboratorio 1 con ejercicios resueltos"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Grafos computacionales, retropropagación, tensores y autograd en PyTorch",
+      "activity": "Derivación guiada de la retropropagación; verificación numérica de gradientes; discusión en equipos del caso de la fintech limeña y plenaria de diagnóstico.",
+      "evidence": "Respuestas al caso y cuaderno de verificación de gradientes"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Bucle de entrenamiento, minilotes, depuración y comparación con líneas base",
+      "activity": "Laboratorio de entrenamiento con Dataset y DataLoader; prueba de sobreajuste de un minilote; entrega de la tarea 1 y cuestionario 1 de la unidad.",
+      "evidence": "Tarea 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Paisaje de pérdida, descenso de gradiente estocástico, momento, Adam y AdamW",
+      "activity": "Aula invertida con la lectura de la unidad 2; experimento comparativo de optimizadores sobre la misma red y visualización de trayectorias en una superficie de pérdida.",
+      "evidence": "Cuaderno comparativo de optimizadores"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Tasa de aprendizaje, prueba de rango, calentamiento y programaciones coseno y de un ciclo",
+      "activity": "Laboratorio de prueba de rango de la tasa de aprendizaje y de programadores en PyTorch; análisis de curvas de pérdida con divergencia y estancamiento.",
+      "evidence": "Gráficos de prueba de rango comentados"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Inicialización, normalización por lotes y por capas, conexiones residuales",
+      "activity": "Construcción de una red convolucional con bloques residuales desde cero; medición de normas de gradiente por capa; discusión del caso de la agroexportadora de La Libertad.",
+      "evidence": "Respuestas al caso y red residual funcional"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Regularización, curvas de aprendizaje, ablación y reproducibilidad",
+      "activity": "Laboratorio de dropout, aumento de datos, suavizado de etiquetas y parada temprana con varias semillas; entrega de la tarea 2 y cuestionario 2 de la unidad.",
+      "evidence": "Tarea 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Datos secuenciales, ventanas, horizonte y partición temporal sin fuga",
+      "activity": "Aula invertida con la lectura de la unidad 3; construcción de ventanas sobre una serie de demanda eléctrica; línea base estacional ingenua y modelo con rezagos.",
+      "evidence": "Cuaderno de ventanas y líneas base"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Redes recurrentes, retropropagación en el tiempo, LSTM, GRU y convoluciones causales",
+      "activity": "Laboratorio de pronóstico con LSTM, GRU y red convolucional temporal; cálculo del campo receptivo; recorte del gradiente y comparación de tiempos de entrenamiento.",
+      "evidence": "Cuaderno de modelos recurrentes y convolucionales"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Autoatención, atención multicabeza, codificación posicional y bloque transformador",
+      "activity": "Implementación desde cero de la autoatención con máscara causal; discusión del caso de la distribuidora eléctrica; conformación de equipos y propuesta del proyecto integrador.",
+      "evidence": "Respuestas al caso y propuesta de proyecto"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Transformadores para series de tiempo, validación de origen móvil y MASE",
+      "activity": "Comparación rigurosa de modelos con validación de origen móvil y análisis de errores en feriados; entrega de la tarea 3 y cuestionario 3 de la unidad.",
+      "evidence": "Tarea 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Autocodificadores, detección de anomalías y aprendizaje autosupervisado y contrastivo",
+      "activity": "Aula invertida con la lectura de la unidad 4; laboratorio de autocodificador sobre señales de vibración y comparación con Isolation Forest; avance 1 del proyecto.",
+      "evidence": "Cuaderno de anomalías y avance 1"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Ajuste fino, búsqueda de hiperparámetros, precisión mixta y acumulación de gradientes",
+      "activity": "Discusión del caso de la minera de altura; laboratorio de sondeo lineal frente a ajuste fino y de búsqueda con Optuna y poda; asesoría por equipo.",
+      "evidence": "Respuestas al caso y bitácora de experimentos"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Compresión, exportación a ONNX, costo energético y tarjeta de modelo",
+      "activity": "Laboratorio de cuantización dinámica y destilación con medición de tamaño y latencia; redacción de la tarjeta de modelo; cuestionario 4 de la unidad.",
+      "evidence": "Cuestionario 4 y borrador de tarjeta de modelo"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador y cierre del curso",
+      "activity": "Entrega final del proyecto integrador con repositorio, informe, tarjeta de modelo y video; sustentación oral ante jurado docente y retroalimentación de cierre.",
+      "evidence": "Proyecto integrador y sustentación"
+    }
+  ]
+}
