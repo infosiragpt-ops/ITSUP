@@ -33,7 +33,7 @@ export function Logo({ to = '/', compact, light, className }) {
       <span className="flex flex-col leading-none">
         <span className={cx('font-display text-[1.45rem] font-semibold tracking-tight', light ? 'text-white' : 'text-ink')}>ISUP</span>
         {!compact && (
-          <span className={cx('mt-0.5 hidden text-[9.5px] font-medium tracking-[0.08em] uppercase min-[400px]:block', light ? 'text-white/70' : 'text-muted')}>
+          <span className={cx('mt-0.5 hidden text-[9.5px] font-medium tracking-[0.08em] uppercase min-[480px]:block', light ? 'text-white/70' : 'text-muted')}>
             Instituto Superior Universitario Privado
           </span>
         )}
