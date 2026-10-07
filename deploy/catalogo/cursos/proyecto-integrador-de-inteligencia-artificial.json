@@ -1,0 +1,1288 @@
+{
+  "name": "Proyecto Integrador de Inteligencia Artificial",
+  "slug": "proyecto-integrador-de-inteligencia-artificial",
+  "course_type": "especifica",
+  "module_name": "Desarrollo y despliegue de soluciones de inteligencia artificial",
+  "credits": 5,
+  "hours_theory": 32,
+  "hours_practice": 96,
+  "summary": "Proyecto Integrador de Inteligencia Artificial (IAR-601) es un curso de formación específica, de naturaleza eminentemente práctica, del sexto ciclo de la carrera de Inteligencia Artificial, y constituye la experiencia culminante del plan de estudios. Su propósito es que el estudiante, en equipos de tres o cuatro integrantes y con una organización patrocinadora real, conciba, construya, evalúe y sustente una solución de inteligencia artificial que resuelva un problema verificable con valor económico o social. No introduce algoritmos nuevos: integra lo aprendido en Aprendizaje Automático I y II, Procesamiento de Lenguaje Natural, Visión por Computadora, Aprendizaje Profundo, IA Generativa y Modelos de Lenguaje, Despliegue de Modelos (MLOps) e Investigación e Innovación Tecnológica, y se articula con Ética y Gobernanza de la IA y con las Experiencias Formativas, cursadas en paralelo. Comprende cuatro unidades: formulación del proyecto; estrategia de datos y prototipo de referencia; integración del sistema y evaluación rigurosa con usuarios; y gobernanza, caso de negocio, transferencia y sustentación ante jurado. Aporta al perfil de egreso la capacidad de entregar soluciones de IA completas, responsables y defendibles ante clientes y empleadores.",
+  "competency": "Desarrolla, en equipo y para una organización patrocinadora, una solución de inteligencia artificial de extremo a extremo, desde la formulación del problema y la estrategia de datos hasta la integración del sistema, su evaluación rigurosa con usuarios y su sustentación ante jurado, justificando cada decisión técnica con evidencia, costos y riesgos, y cumpliendo la Ley 29733, la Ley 31814 y los principios de una IA responsable.",
+  "capacities": [
+    "Formula proyectos de inteligencia artificial a partir de problemas reales de una organización, traduciendo objetivos de negocio en tareas de aprendizaje con métricas, líneas base, criterios de aceptación y análisis de factibilidad técnica, económica y normativa.",
+    "Diseña y ejecuta la estrategia de datos del proyecto, auditando fuentes, licencias y bases legales, construyendo conjuntos etiquetados con calidad medida y un prototipo de extremo a extremo que permite iterar guiado por el análisis de errores.",
+    "Integra modelos, servicios e interfaces en un sistema funcional con supervisión humana y lo evalúa con protocolos rigurosos: intervalos de confianza, comparaciones pareadas, análisis por subgrupos, pruebas de comportamiento y pruebas con usuarios.",
+    "Gobierna y comunica la solución mediante registro de riesgos, evaluación de impacto, tarjetas de modelo y de sistema, caso de negocio con costo total de propiedad, transferencia al patrocinador y sustentación técnica y ejecutiva ante jurado."
+  ],
+  "indicators": [
+    "Redacta un documento de especificación con problema cuantificado, lienzo de IA, métrica técnica vinculada a una métrica de negocio, líneas base y criterios de aceptación verificables aprobados por el patrocinador.",
+    "Presenta una ficha técnica del conjunto de datos con fuentes, licencias y base legal del tratamiento según la Ley 29733, y un contrato de datos ejecutable.",
+    "Reporta el acuerdo entre anotadores con el kappa de Cohen o de Fleiss y una partición sin fuga de información verificada en el código.",
+    "Entrega un prototipo de extremo a extremo reproducible con un comando, comparado con tres líneas base y mejorado a partir de un análisis de errores por categorías.",
+    "Demuestra un sistema integrado con servicio, interfaz, registro de predicciones y mecanismos de supervisión humana alineados con las guías de interacción humano-IA.",
+    "Reporta métricas con intervalos de confianza por bootstrap, comparaciones pareadas, desempeño por subgrupos, pruebas de comportamiento automatizadas y resultados de pruebas con usuarios.",
+    "Sustenta ante jurado el informe técnico, la tarjeta de sistema, el registro de riesgos y el caso de negocio con VAN y sensibilidad, respondiendo a las preguntas con evidencia."
+  ],
+  "methodology": "Aprendizaje basado en proyectos en modalidad 100 % virtual: cada equipo de tres o cuatro estudiantes desarrolla durante dieciséis semanas un proyecto con una organización patrocinadora (empresa, entidad pública, ONG o el centro de Experiencias Formativas), organizado en cuatro iteraciones con compuertas de revisión. Las sesiones síncronas semanales combinan aula invertida con lecturas previas, método de casos con discusión socrática de dilemas reales del Perú y Latinoamérica, y talleres de trabajo guiado. Se aplican prácticas profesionales: tablero Kanban, repositorio con revisión de código entre pares, bitácora de decisiones y revisiones quincenales con el patrocinador. La evaluación es formativa y continua: cuestionarios de comprensión y aplicación, retroalimentación con rúbricas analíticas en cada entregable, coevaluación del trabajo en equipo y sustentación final ante jurado con participación del patrocinador.",
+  "bibliography": [
+    "Huyen, C. (2022). Designing machine learning systems: An iterative process for production-ready applications. O'Reilly Media.",
+    "Agrawal, A., Gans, J. y Goldfarb, A. (2018). Prediction machines: The simple economics of artificial intelligence. Harvard Business Review Press.",
+    "Hevner, A. R., March, S. T., Park, J. y Ram, S. (2004). Design science in information systems research. MIS Quarterly, 28(1), 75-105.",
+    "Chapman, P., Clinton, J., Kerber, R., Khabaza, T., Reinartz, T., Shearer, C. y Wirth, R. (2000). CRISP-DM 1.0: Step-by-step data mining guide. SPSS.",
+    "Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J. W., Wallach, H., Daumé III, H. y Crawford, K. (2021). Datasheets for datasets. Communications of the ACM, 64(12), 86-92.",
+    "Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D. y Gebru, T. (2019). Model cards for model reporting. En Proceedings of the Conference on Fairness, Accountability, and Transparency (pp. 220-229). ACM.",
+    "Amershi, S., Weld, D., Vorvoreanu, M., Fourney, A., Nushi, B., Collisson, P., Suh, J., Iqbal, S., Bennett, P. N., Inkpen, K., Teevan, J., Kikin-Gil, R. y Horvitz, E. (2019). Guidelines for human-AI interaction. En Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (pp. 1-13). ACM.",
+    "Ribeiro, M. T., Wu, T., Guestrin, C. y Singh, S. (2020). Beyond accuracy: Behavioral testing of NLP models with CheckList. En Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (pp. 4902-4912). ACL.",
+    "National Institute of Standards and Technology. (2023). Artificial intelligence risk management framework (AI RMF 1.0) (NIST AI 100-1). U.S. Department of Commerce.",
+    "Congreso de la República del Perú. (2023). Ley N.° 31814, Ley que promueve el uso de la inteligencia artificial en favor del desarrollo económico y social del país. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 25,
+      "description": "Cuestionarios de las cuatro unidades, bitácora de decisiones, revisiones quincenales de avance con el docente y el patrocinador, revisiones de código entre pares y participación argumentada en el análisis de los casos."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Entregables de las unidades 1 a 3 calificados con rúbrica analítica: documento de especificación, conjunto de datos documentado con prototipo de referencia y sistema integrado con protocolo de evaluación."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 35,
+      "description": "Entrega final de la unidad 4: informe técnico, tarjeta de sistema, registro de riesgos, caso de negocio, paquete de transferencia, video demostrativo y sustentación ante jurado con participación del patrocinador."
+    },
+    {
+      "name": "Coevaluación y desempeño en equipo",
+      "weight": 10,
+      "description": "Coevaluación y autoevaluación con rúbrica de contribución, cumplimiento de compromisos y colaboración, contrastadas con el historial del repositorio y del tablero Kanban."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Formulación del proyecto: del problema de la organización a la especificación de la solución",
+      "description": "Al finalizar la unidad, el estudiante formula con su equipo un proyecto de inteligencia artificial para una organización patrocinadora, traduciendo el problema en una tarea de aprendizaje con métricas, líneas base, criterios de aceptación y análisis de factibilidad técnica, económica y normativa, plasmados en un documento de especificación aprobado.",
+      "topics": [
+        "El proyecto integrador como investigación basada en diseño: equipo, patrocinador, roles y compuertas",
+        "Descubrimiento del problema: entrevistas, mapa de interesados y la pregunta de si se necesita IA",
+        "Lienzo de IA: predicción, juicio, acción, resultado y datos de entrenamiento y de retroalimentación",
+        "Formulación de la tarea: unidad de predicción, etiqueta, horizonte, métricas técnicas y de negocio, líneas base",
+        "Factibilidad técnica, económica y normativa: auditoría preliminar de datos, Ley 29733 y premortem",
+        "Documento de especificación, criterios de aceptación y plan de iteraciones"
+      ],
+      "slides": [
+        {
+          "title": "Qué es un proyecto integrador de IA y qué no es",
+          "bullets": [
+            "Integra lo aprendido en seis ciclos para resolver un problema real de una organización patrocinadora, no un ejercicio de competencia con datos limpios.",
+            "Se evalúa la solución completa: problema, datos, modelo, sistema, evaluación, riesgos, valor y comunicación.",
+            "Un modelo con métrica modesta pero útil, evaluado con honestidad, vale más que uno brillante sin usuario.",
+            "Producto final: sistema funcional, informe técnico, tarjeta de sistema, caso de negocio y sustentación ante jurado."
+          ],
+          "notes": "Abra la primera sesión con una pregunta incómoda: ¿cuántos de los modelos que entrenaron en ciclos anteriores resolvieron el problema de alguien? Durante cinco ciclos trabajaron con conjuntos de datos limpios, métricas dadas y enunciados cerrados. En el mundo laboral ocurre lo contrario: el problema llega mal definido, los datos están dispersos y nadie dice qué métrica importa. Este curso cierra esa brecha. Explique que no se enseñarán algoritmos nuevos; el reto es integrar Aprendizaje Automático, Procesamiento de Lenguaje Natural, Visión por Computadora, IA generativa y MLOps en una solución que alguien use. Muestre la estructura de entregables por unidad y la sustentación final ante un jurado con participación del patrocinador. Enfatice el criterio de evaluación central: la calidad de las decisiones y su justificación con evidencia, no la sofisticación del algoritmo. Cierre pidiendo a cada estudiante que escriba en el foro un problema de una organización que conozca, en una sola oración y sin mencionar ninguna tecnología."
+        },
+        {
+          "title": "Investigación basada en diseño como marco del proyecto",
+          "bullets": [
+            "Hevner, March, Park y Ram (2004): se construye un artefacto innovador y se evalúa con rigor en su contexto de uso.",
+            "Tres ciclos: relevancia (problema del entorno), diseño (construir y evaluar) y rigor (base de conocimiento existente).",
+            "El artefacto puede ser un modelo, un método, un sistema o una instancia funcionando en la organización.",
+            "La utilidad se demuestra con evaluación: experimentos, pruebas con usuarios, pilotos o análisis de costos."
+          ],
+          "notes": "Conecte con Investigación e Innovación Tecnológica del cuarto ciclo, donde estudiaron la investigación basada en diseño como enfoque metodológico; aquí se aplica de verdad. Hevner y colaboradores publicaron en MIS Quarterly, en 2004, siete guías para este tipo de investigación; destaque tres: el diseño como artefacto, la relevancia del problema y el rigor de la evaluación. Luego presente el modelo de tres ciclos que Hevner describió en 2007: el ciclo de relevancia conecta con el entorno, es decir, personas, organización y tecnología; el ciclo de rigor conecta con la base de conocimiento, es decir, teorías, métodos y experiencias previas; y el ciclo de diseño itera entre construir y evaluar. Pregunte: ¿qué significaría para su proyecto ignorar el ciclo de rigor? Probablemente reinventar soluciones ya publicadas o usar métricas inadecuadas. ¿Y ignorar el de relevancia? Construir algo técnicamente correcto que nadie necesita. Pida que cada equipo identifique, para su idea preliminar, qué artefacto entregará y cómo demostrará su utilidad."
+        },
+        {
+          "title": "Equipo, patrocinador y gobierno del proyecto",
+          "bullets": [
+            "Equipo de tres o cuatro: responsable de producto, de datos, de modelado y de plataforma; los roles se revisan en cada compuerta.",
+            "Patrocinador: designa un contacto, facilita datos bajo acuerdo de confidencialidad y valida los criterios de aceptación.",
+            "Cuatro compuertas: especificación (semana 4), datos y prototipo (8), sistema evaluado (12) y sustentación (16).",
+            "Acuerdo de equipo: horarios, canales, definición de terminado, manejo de conflictos y criterios de coevaluación."
+          ],
+          "notes": "Los proyectos integradores fracasan más por gobierno que por técnica. Explique la figura del patrocinador: puede ser una empresa, una entidad pública, una ONG o el centro donde realizan sus Experiencias Formativas, siempre que asigne una persona de contacto y firme con el instituto un acuerdo de confidencialidad y uso de datos. Describa los roles: el responsable de producto custodia el problema y la relación con el patrocinador; el de datos, la auditoría y la calidad; el de modelado, los experimentos; el de plataforma, el repositorio, el servicio y la reproducibilidad. En equipos de tres se fusionan roles. Presente las compuertas como decisiones de continuar, ajustar o pivotar, al estilo del proceso de etapas y compuertas de Robert Cooper. Pida que redacten el acuerdo de equipo esta semana y lo suban al repositorio; debe incluir un procedimiento explícito para cuando alguien no cumple, porque la coevaluación tiene peso en la nota y los conflictos no resueltos a tiempo suelen estallar en la semana catorce."
+        },
+        {
+          "title": "Descubrir el problema antes de proponer la solución",
+          "bullets": [
+            "Entreviste a quienes viven el problema: usuarios finales, operadores, responsables del proceso y quien paga.",
+            "Pregunte por hechos pasados y costos concretos, no por opiniones sobre una solución hipotética de IA.",
+            "Mapa de interesados por poder e interés; identifique quién puede bloquear el despliegue: legal, TI o sindicato.",
+            "Cuantifique la línea actual: tiempo por caso, tasa de error, costo mensual, volumen y estacionalidad."
+          ],
+          "notes": "La causa más común de proyectos de IA inútiles es empezar por la tecnología: el patrocinador pide un chatbot porque lo vio en una feria. El equipo debe resistir y descubrir el problema. Recupere las técnicas de entrevista de Emprendimiento e Innovación, en particular la recomendación de Rob Fitzpatrick en The Mom Test: preguntar por lo que la persona hizo la última vez, cuánto le costó y qué intentó antes, en lugar de preguntar si usaría una herramienta. Muestre un ejemplo: en una distribuidora farmacéutica, la gerencia pide un chatbot para pedidos, pero las entrevistas revelan que el mayor costo son las roturas de stock por compras planificadas en hojas de cálculo. Insista en cuantificar la situación actual: sin línea actual no hay forma de demostrar mejora. Pregunte a la clase: ¿qué dato del proceso actual sería la evidencia más convincente para el gerente financiero? Exija un mínimo de cinco entrevistas documentadas por equipo, con guía, notas y una síntesis de hallazgos."
+        },
+        {
+          "title": "¿Realmente necesita inteligencia artificial?",
+          "bullets": [
+            "Use IA cuando la regla es difícil de escribir, el patrón cambia, el volumen es alto y se tolera cierto error.",
+            "Prefiera reglas o automatización simple si la lógica es estable, auditable y cabe en una tabla de decisión.",
+            "Señales de alerta: sin datos históricos, error inaceptable sin supervisión humana o decisiones de muy bajo volumen.",
+            "Guía People + AI de Google: pregunte si la IA aporta valor único o solo agrega complejidad que nadie pidió."
+          ],
+          "notes": "Presente la guía People + AI de Google, cuyo primer capítulo plantea exactamente esta pregunta. La IA aporta valor cuando la tarea requiere reconocer patrones difíciles de codificar, personalizar a escala o predecir eventos a partir de historia abundante. En cambio, si la regla es estable y explicable, por ejemplo determinar si una operación está sujeta al sistema de detracciones según el tipo de bien y el monto, una tabla de decisión es más barata, auditable y no se degrada. Retome lo visto en Automatización Inteligente de Procesos: muchas tareas se resuelven mejor con reglas DMN. Plantee tres ejemplos y vote con la clase: detectar facturas duplicadas por RUC, serie y número; priorizar reclamos del Libro de Reclamaciones por urgencia; estimar la demanda semanal de cien productos en veinte boticas. La primera se resuelve con una consulta SQL; la segunda y la tercera justifican IA. Pida que cada equipo escriba la alternativa sin IA de su propuesta: será una de sus líneas base."
+        },
+        {
+          "title": "El lienzo de IA: anatomía de una decisión",
+          "bullets": [
+            "Agrawal, Gans y Goldfarb (2018): la IA abarata la predicción; el valor surge al combinarla con juicio y acción.",
+            "Siete casillas: predicción, juicio, acción, resultado, datos de entrada, de entrenamiento y de retroalimentación.",
+            "El juicio expresa el costo relativo de los errores: un falso negativo en fraude no cuesta lo mismo que un falso positivo.",
+            "Sin datos de retroalimentación el modelo no podrá medirse ni mejorar después del despliegue."
+          ],
+          "notes": "El lienzo de IA de Prediction Machines es la herramienta central de la unidad. Explique la tesis económica: cuando un insumo se abarata, se usa más y aumenta el valor de sus complementos; con la IA, la predicción se abarata y se valorizan el juicio humano, los datos y la capacidad de actuar. Recorra las siete casillas con un ejemplo: una caja municipal que predice qué clientes de microcrédito entrarán en mora a treinta días. Predicción: probabilidad de mora. Juicio: costo de una llamada preventiva frente a la pérdida esperada por mora. Acción: llamada del asesor o reprogramación. Resultado: reducción de la cartera en riesgo. Datos de entrada: historial de pagos, sector y saldo. Datos de entrenamiento: tres años de créditos con su desenlace. Retroalimentación: pagos posteriores a la intervención. Pregunte: ¿qué problema aparece con los datos de retroalimentación si el asesor interviene precisamente a quienes el modelo marca? Ese sesgo de selección deberá anticiparse en el plan de evaluación."
+        },
+        {
+          "title": "Formular la tarea de aprendizaje con precisión",
+          "bullets": [
+            "Unidad de predicción: ¿por cliente, por transacción, por documento o por producto, local y semana?",
+            "Etiqueta operacional: defina exactamente el evento, por ejemplo atraso mayor de 30 días dentro de los próximos 90 días.",
+            "Momento de predicción y horizonte: use solo información disponible en ese instante para evitar fuga.",
+            "Tipo de tarea: clasificación, regresión, ranking, extracción, generación o recomendación, con su salida y su acción."
+          ],
+          "notes": "Una formulación ambigua invalida todo el trabajo posterior. Trabaje un ejemplo en la pizarra virtual. Un hospital quiere predecir inasistencias. ¿La unidad es el paciente o la cita? La cita, porque la acción, recordatorio o sobreagendamiento, se toma por cita. ¿Qué es inasistencia? No presentarse sin cancelar con al menos 24 horas. ¿Cuándo se predice? 72 horas antes, de modo que no pueden usarse variables que se registran después, como la confirmación telefónica del día anterior. Recuerde el caso de fuga de información de Aprendizaje Automático I: muchos modelos demasiado buenos usaban variables posteriores al momento de predicción. En proyectos con modelos de lenguaje la formulación también importa: no es igual pedir que el modelo responda preguntas que pedir que extraiga campos de un documento con un esquema JSON validable. Pida a cada equipo una ficha de formulación de una página con estos cuatro elementos y revísela entre pares con la consigna de encontrar al menos una ambigüedad."
+        },
+        {
+          "title": "Métrica de negocio, métrica técnica y línea base",
+          "bullets": [
+            "Encadene: métrica técnica (recall, MAE) → métrica operativa (horas ahorradas) → métrica de negocio (soles).",
+            "Defina una métrica principal y métricas de resguardo: latencia, costo por predicción y desempeño por subgrupo.",
+            "Línea base obligatoria: proceso actual, regla heurística simple y modelo trivial como la clase mayoritaria.",
+            "Ley de Goodhart: cuando una medida se convierte en objetivo, deja de ser una buena medida."
+          ],
+          "notes": "Muestre la cadena de valor de las métricas con un ejemplo. Un clasificador de reclamos alcanza un recall de 0,90 en la clase urgente: nueve de cada diez reclamos urgentes llegan a la bandeja prioritaria. Si antes tardaban en promedio seis días en atenderse y ahora uno, la empresa responde dentro del plazo legal del Libro de Reclamaciones y reduce el riesgo de sanciones del INDECOPI. Esa es la conversación que entiende el gerente. Explique la métrica principal única, recomendada por Andrew Ng en Machine Learning Yearning, acompañada de métricas que deben satisfacer un umbral, como una latencia menor a dos segundos. Insista en las tres líneas base: sin ellas no hay forma de saber si el modelo agrega valor. Cite la ley de Goodhart, formulada por el economista Charles Goodhart, y pregunte cómo podría un equipo optimizar el recall de forma que perjudique al negocio. Respuesta esperada: marcando casi todo como urgente y saturando a quienes atienden la bandeja."
+        },
+        {
+          "title": "Matriz de costos y umbral de decisión",
+          "bullets": [
+            "Asigne un valor en soles a cada celda: verdadero positivo, falso positivo, falso negativo y verdadero negativo.",
+            "Costo esperado por caso = Σ p(celda) × costo(celda); compare el modelo, la línea base y no hacer nada.",
+            "Con probabilidades calibradas, el umbral óptimo es p* = C_FP / (C_FP + C_FN); rara vez es 0,5.",
+            "Valide los costos con el patrocinador y analice sensibilidad: ¿cambia la decisión si un costo se duplica?"
+          ],
+          "notes": "Esta diapositiva conecta la formulación con la decisión económica, retomando la evaluación sensible al costo de Aprendizaje Automático I. Trabaje un ejemplo: una distribuidora detecta pedidos con riesgo de devolución. Revisar un pedido cuesta S/ 4 de tiempo de un operador; una devolución no detectada cuesta S/ 60 entre flete y merma. Si la tasa base es 5 % y el modelo, con cierto umbral, detecta el 70 % de las devoluciones marcando para revisión el 12 % de los pedidos, el costo esperado por pedido es 0,12 × 4 + 0,05 × 0,30 × 60 = 0,48 + 0,90 = S/ 1,38, frente a 0,05 × 60 = S/ 3,00 sin modelo, suponiendo que la revisión evita la devolución. El umbral teórico es 4 / 64, cerca de 0,06. Pida a los equipos repetir el cálculo con su propio caso y con un costo de revisión del doble. Subraye que estos números deben venir de entrevistas con el patrocinador, no de supuestos del equipo."
+        },
+        {
+          "title": "Factibilidad: auditoría preliminar de datos",
+          "bullets": [
+            "Inventario: fuente, propietario, formato, volumen, periodo cubierto, frecuencia de actualización y forma de acceso.",
+            "Calidad: completitud, consistencia, unicidad, oportunidad y existencia real de la etiqueta definida.",
+            "Cuente los ejemplos de la clase minoritaria, no solo las filas totales: un millón de filas con 0,1 % son mil casos.",
+            "Datos abiertos complementarios: INEI, BCRP, SENAMHI, Plataforma Nacional de Datos Abiertos y padrón RUC de la SUNAT."
+          ],
+          "notes": "Antes de comprometer un alcance, el equipo debe ver los datos, no una descripción verbal de ellos. Explique la auditoría preliminar como un ejercicio de dos días: solicitar una muestra real, perfilarla con pandas o con una herramienta de perfilado automático y responder si la etiqueta existe y con qué calidad. Comparta situaciones frecuentes: el patrocinador asegura tener cinco años de ventas, pero solo los últimos dieciocho meses tienen códigos de producto consistentes; o existen cien mil reclamos, pero solo trescientos tienen una categoría confiable. Presente fuentes abiertas peruanas que enriquecen proyectos: las series estadísticas del BCRP, la ENAHO del INEI, los datos meteorológicos del SENAMHI y el padrón reducido de RUC de la SUNAT. Pregunte: si el patrocinador no entrega los datos hasta la semana seis, ¿cuál es su plan B? Exija que el documento de especificación incluya esa contingencia, por ejemplo un conjunto público análogo para avanzar con el prototipo."
+        },
+        {
+          "title": "Factibilidad normativa: datos personales y Ley 29733",
+          "bullets": [
+            "Identifique datos personales y sensibles: salud, biométricos, ingresos, origen racial o étnico, entre otros.",
+            "Base legal: consentimiento previo, informado, expreso e inequívoco, o una excepción prevista en la ley.",
+            "Principio de finalidad: datos recogidos para facturar no se reutilizan libremente para entrenar modelos.",
+            "Medidas mínimas: seudonimización, acceso restringido, acuerdo de confidencialidad y eliminación al cierre."
+          ],
+          "notes": "La Ley 29733 y su reglamento vigente, aprobado por el Decreto Supremo 016-2024-JUS, rigen el tratamiento de datos personales en el Perú y aplican a su proyecto aunque sea académico. Explique los principios clave: legalidad, consentimiento, finalidad, proporcionalidad, calidad y seguridad. El de finalidad es el más ignorado en proyectos de IA: si una clínica recogió datos para atender pacientes, usarlos para entrenar un modelo de inasistencias exige evaluar si la nueva finalidad es compatible o si se necesita otra base legal. Distinga la anonimización, que impide reidentificar, de la seudonimización, que reemplaza identificadores pero permite revertir con una clave; esta última sigue siendo tratamiento de datos personales. Comente que las fotos de rostros y las grabaciones de voz pueden ser datos biométricos, de categoría sensible. Pida a cada equipo completar una matriz con dato, categoría, base legal, medida de protección y responsable. Ética y Gobernanza de la IA profundiza estos temas; aquí se aplican a decisiones concretas."
+        },
+        {
+          "title": "Riesgos del proyecto y premortem",
+          "bullets": [
+            "Klein (2007): imagine que el proyecto fracasó en la semana 16 y explique por qué antes de empezar.",
+            "Riesgos típicos: datos tardíos, etiqueta inexistente, patrocinador ausente, alcance inflado y dependencia de una API.",
+            "Registro de riesgos: probabilidad, impacto, disparador observable, respuesta y responsable.",
+            "Reduzca primero la mayor incertidumbre: la primera iteración debe atacar lo que más puede hundir el proyecto."
+          ],
+          "notes": "Gary Klein propuso el premortem en Harvard Business Review en 2007: en lugar de preguntar qué podría salir mal, se asume que el proyecto ya fracasó y cada integrante escribe en silencio las causas. Este cambio de perspectiva reduce el exceso de confianza y legitima expresar dudas. Conduzca el ejercicio en vivo durante quince minutos, con cada equipo en una sala separada. Luego consoliden un registro de riesgos usando lo visto en gestión de proyectos: probabilidad e impacto en escala de uno a cinco, un disparador observable, por ejemplo no haber recibido la muestra de datos al final de la semana tres, y una respuesta concreta con responsable. Destaque el principio de reducir primero la mayor incertidumbre: si nadie sabe si la etiqueta existe, la primera tarea no es elegir una arquitectura sino verificar la etiqueta. Pregunte a la clase qué riesgo aparece en casi todos los equipos y discutan respuestas comunes que puedan compartirse."
+        },
+        {
+          "title": "El documento de especificación del proyecto",
+          "bullets": [
+            "Contexto y problema cuantificado, interesados, lienzo de IA y alternativa sin IA evaluada.",
+            "Formulación: unidad, etiqueta, horizonte, tipo de tarea, métrica principal, métricas de resguardo y líneas base.",
+            "Criterios de aceptación verificables, por ejemplo recall ≥ 0,75 revisando como máximo el 10 % de los casos.",
+            "Datos, factibilidad normativa, riesgos, arquitectura preliminar, cronograma por iteraciones y sección fuera de alcance."
+          ],
+          "notes": "El documento de especificación, que en la industria se conoce como documento de diseño de aprendizaje automático, es el primer entregable y funciona como contrato con el patrocinador. Chip Huyen, en Designing Machine Learning Systems, insiste en que los requisitos incluyan confiabilidad, escalabilidad, mantenibilidad y adaptabilidad, no solo precisión. Explique la diferencia entre un objetivo y un criterio de aceptación: mejorar la atención es un objetivo; reducir el tiempo medio de clasificación de reclamos de seis a dos días en un piloto de dos semanas es verificable. Destaque la sección fuera de alcance: escribir lo que no se hará protege al equipo frente al crecimiento descontrolado del alcance. Muestre un ejemplo anónimo de especificación de un ciclo anterior con los comentarios del jurado. Establezca una extensión máxima de diez páginas: la concisión obliga a priorizar. Recuerde que el patrocinador debe dar su visto bueno por escrito antes de la compuerta de la semana cuatro."
+        },
+        {
+          "title": "Planificar por iteraciones con compuertas",
+          "bullets": [
+            "Cuatro iteraciones de cuatro semanas, alineadas con las unidades, cada una con un incremento demostrable.",
+            "Tablero Kanban con límites de trabajo en curso y una definición de terminado que incluye pruebas y documentación.",
+            "Bitácora de decisiones: fecha, decisión, alternativas consideradas, evidencia y responsable.",
+            "Revisión quincenal con el patrocinador: demostración breve, métricas, riesgos y decisiones solicitadas."
+          ],
+          "notes": "Los proyectos de aprendizaje automático combinan la incertidumbre de la investigación con compromisos de entrega; por eso conviene un enfoque iterativo. Retome CRISP-DM, cuyo ciclo de comprensión del negocio, comprensión de los datos, preparación, modelado, evaluación y despliegue se recorre varias veces. Explique que cada iteración termina con algo demostrable: en la primera, la especificación y los datos explorados; en la segunda, un prototipo de extremo a extremo; en la tercera, el sistema integrado y evaluado; en la cuarta, la versión final documentada. Recomiende un tablero Kanban en GitHub Projects con límite de trabajo en curso por persona. Insista en la bitácora de decisiones, inspirada en los registros de decisiones de arquitectura: el jurado preguntará por qué eligieron un enfoque y no otro, y la bitácora permite responder con fechas y evidencia. Cierre la unidad pidiendo que cada equipo agende desde ahora sus revisiones quincenales con el patrocinador."
+        }
+      ],
+      "reading": {
+        "title": "Del problema a la especificación: cómo se formula un proyecto de inteligencia artificial",
+        "minutes": 35,
+        "content": "## Por qué la formulación decide el éxito\n\nLos estudios sobre adopción de inteligencia artificial coinciden en una observación: la mayoría de las dificultades no está en los algoritmos, sino en la definición del problema, los datos y la integración con el proceso. Paleyes, Urma y Lawrence (2022) revisaron casos publicados de despliegue de aprendizaje automático y encontraron obstáculos en todas las etapas, desde la gestión de datos hasta la operación. Un proyecto que empieza por la tecnología («hagamos un chatbot») hereda todos esos obstáculos sin saber para qué los enfrenta.\n\nLa investigación basada en diseño (Hevner et al., 2004) ofrece el marco del curso: el equipo construye un artefacto para resolver un problema relevante del entorno y demuestra su utilidad mediante una evaluación rigurosa. La relevancia exige entender el problema; el rigor exige usar el conocimiento existente y medir con honestidad.\n\n## Del síntoma al problema\n\nEl patrocinador suele describir un síntoma o una solución. El equipo debe reconstruir el problema con preguntas sobre hechos: ¿cuántos casos ocurren al mes?, ¿cuánto cuesta cada uno?, ¿quién decide y con qué información?, ¿qué se intentó antes? Considere una cadena de boticas del sur del país que pide «un modelo de IA para inventarios». Las entrevistas revelan que el problema medible son las roturas de stock de 120 productos de alta rotación en 35 locales, que la reposición se decide cada lunes con una hoja de cálculo y que las ventas perdidas se estiman en S/ 18 000 mensuales. Ahora existe un problema cuantificado, un decisor, una frecuencia de decisión y una métrica de negocio.\n\n## El lienzo de IA\n\nAgrawal, Gans y Goldfarb (2018) proponen descomponer cada decisión en predicción, juicio y acción. En el ejemplo, la predicción es la demanda semanal por producto y local; el juicio, el costo relativo del sobrestock frente a la rotura; la acción, la cantidad del pedido de reposición. Los datos de entrenamiento son las ventas históricas y los de retroalimentación, las ventas posteriores a cada pedido. Esta descomposición evita un error frecuente: entregar una predicción sin especificar qué acción cambia ni cómo se valoran los errores.\n\n## Formulación precisa de la tarea\n\nUna buena formulación responde cinco preguntas: unidad de predicción (producto, local y semana), etiqueta (unidades demandadas en la semana siguiente), momento de predicción (domingo a medianoche), horizonte (siete días) y tipo de tarea (pronóstico). La etiqueta merece cuidado: las ventas observadas durante una rotura subestiman la demanda real. Es una etiqueta censurada que, si se ignora, enseña al modelo a perpetuar las roturas; el equipo debe corregirla o excluir las semanas sin stock.\n\n## De la matriz de costos al umbral\n\nEn tareas de clasificación, la decisión depende de costos asimétricos. Si C_FP es el costo de un falso positivo, C_FN el de un falso negativo y el modelo entrega una probabilidad calibrada p, conviene actuar cuando el costo esperado de no actuar supera al de actuar:\n\n```text\nActuar si:        p × C_FN  >  (1 − p) × C_FP\nUmbral óptimo:    p* = C_FP / (C_FP + C_FN)\n```\n\nCon C_FP = S/ 4 (revisar un pedido) y C_FN = S/ 60 (devolución no detectada), p* = 4 / 64 ≈ 0,06: conviene revisar todo pedido con probabilidad mayor a 6 %, muy lejos del 0,5 por defecto. La fórmula supone probabilidades calibradas y capacidad ilimitada de revisión. Si el área solo puede revisar 200 pedidos diarios, el problema se convierte en un ranking con capacidad fija y la métrica pertinente pasa a ser la precisión en los k primeros.\n\n## Métricas encadenadas y líneas base\n\nLa métrica técnica debe conectarse con una operativa y esta con una de negocio. En el ejemplo de las boticas: error porcentual absoluto ponderado (WAPE) → tasa de roturas → ventas recuperadas en soles. Toda propuesta se compara con tres líneas base: el proceso actual, una heurística sencilla (el promedio de las últimas cuatro semanas) y un modelo trivial (el valor de la misma semana del año anterior). Si un modelo de boosting reduce el WAPE de 32 % a 29 % frente a la heurística, el equipo debe preguntarse si esos tres puntos justifican el costo de mantenerlo.\n\n## Factibilidad y especificación\n\nLa factibilidad tiene tres dimensiones. Técnica: ¿existen datos con la etiqueta y en cantidad suficiente? Económica: ¿el beneficio esperado supera el costo de construir y operar? Normativa: ¿el tratamiento cumple la Ley 29733, su reglamento (Decreto Supremo 016-2024-JUS) y los principios de la Ley 31814? Las respuestas se plasman en un documento de especificación breve, versionado en el repositorio y aprobado por el patrocinador:\n\n```yaml\nproyecto: Reposición asistida para Boticas Ayllu\nproblema: roturas de stock en 120 SKU de alta rotación (línea actual 9,4 % semanal)\nunidad_prediccion: sku-local-semana\netiqueta: demanda semanal, excluyendo semanas con días sin stock\nmomento_prediccion: domingo 23:59, horizonte 7 días\nmetrica_principal: WAPE con validación de origen móvil (12 semanas)\nmetricas_resguardo: [sesgo absoluto < 5 %, ejecución semanal < 30 min]\nlineas_base: [proceso actual, promedio móvil de 4 semanas, naive estacional]\ncriterio_aceptacion: roturas < 6 % en piloto de 4 semanas en 5 locales\nfuera_de_alcance: precios, promociones, negociación con laboratorios\n```\n\n## Cierre\n\nFormular bien no es burocracia: es la inversión que más reduce el riesgo del proyecto. Una especificación que define unidad, etiqueta, momento, métricas, líneas base y criterios de aceptación permite que las decisiones de las semanas siguientes se tomen con evidencia y que el jurado evalúe el resultado con un estándar acordado de antemano."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Ayni y el pedido de «un chatbot con IA»",
+        "content": "Distribuidora Ayni S.A.C. (nombre ficticio) es una distribuidora de productos farmacéuticos y de cuidado personal con sede en Arequipa que abastece a 1 450 boticas independientes de Arequipa, Moquegua, Tacna y Puno. Factura alrededor de S/ 96 millones anuales, emplea a 210 personas y opera con un ERP local implementado en 2017. En marzo, su gerenta general, Rosa Mamani, firmó un convenio con el instituto para que un equipo del Proyecto Integrador desarrolle «un chatbot con inteligencia artificial que atienda los pedidos por WhatsApp», tras ver una demostración en una feria tecnológica en Lima.\n\nEl equipo (Lucía, Renzo, Kevin y Mariela) dedicó las dos primeras semanas a entrevistas. Estos fueron sus hallazgos:\n\n- El 62 % de los pedidos llega por WhatsApp a seis vendedoras, como texto libre, notas de voz o fotos de listas manuscritas. Cada vendedora digita en promedio 85 pedidos diarios y el tiempo medio desde el mensaje hasta el registro en el ERP es de 47 minutos. Los errores de digitación afectan al 3,1 % de las líneas y generan devoluciones que, según logística, cuestan S/ 38 000 mensuales.\n- La jefa comercial señaló que la principal queja de los clientes no es la demora, sino que «lo que piden no hay»: el nivel de servicio (líneas despachadas completas sobre líneas pedidas) es de 88 %, frente a una meta de 95 %. Finanzas estima las ventas perdidas por quiebres en más de S/ 210 000 mensuales. Las compras a laboratorios se deciden cada quincena en una hoja de cálculo con promedios de los últimos tres meses.\n- El ERP conserva cinco años de ventas por cliente y producto, pero los códigos de producto se reestructuraron en 2021 y la equivalencia con los anteriores es parcial. No existe registro de la demanda no atendida: si un producto no tenía stock, la línea simplemente no se factura.\n- Los mensajes de WhatsApp están en los teléfonos personales de las vendedoras; no hay política de privacidad para ese canal ni consentimiento de los clientes para otros usos. Algunos mensajes incluyen fotos de recetas médicas con nombres y DNI de pacientes.\n- El área de TI tiene dos personas sin experiencia en aprendizaje automático. El presupuesto para servicios en la nube es de S/ 1 500 mensuales.\n\nEn la reunión de la semana tres, la gerenta insistió: «El directorio ya sabe que vamos a tener un chatbot; necesito mostrarlo en junio». El equipo tiene doce semanas y tres alternativas: (a) el asistente conversacional pedido, que interpreta mensajes, consulta stock y registra el pedido en el ERP; (b) un extractor que convierta mensajes y fotos en líneas de pedido estructuradas que la vendedora solo valida; y (c) un modelo de pronóstico de demanda que apoye las compras quincenales. El docente advirtió que una alternativa solo es aceptable si su criterio de aceptación puede verificarse antes de la semana 14.",
+        "questions": [
+          "¿Cuál es el problema de mayor valor para la empresa y cuál es el que percibe la gerenta? ¿Cómo explicaría la diferencia sin perder su apoyo?",
+          "Construya el lienzo de IA de las alternativas (b) y (c). ¿Qué datos de retroalimentación tendría cada una y qué sesgo introduce la falta de registro de la demanda no atendida?",
+          "¿Qué riesgos plantea el uso de las conversaciones de WhatsApp a la luz de la Ley 29733 y cómo los mitigaría si eligiera la alternativa (a) o la (b)?",
+          "Formule la tarea, la métrica principal, las líneas base y un criterio de aceptación verificable antes de la semana 14 para la alternativa que recomendaría.",
+          "Redacte en un párrafo la recomendación a la gerenta: alternativa elegida, alcance, fuera de alcance y qué podrá mostrar al directorio en junio."
+        ]
+      },
+      "assignment": {
+        "title": "Entregable 1: documento de especificación del proyecto integrador",
+        "instructions": "**Objetivo:** formular el proyecto de inteligencia artificial del equipo con la organización patrocinadora y obtener su aprobación para la compuerta de la semana 4.\n\n**Qué entregar** (PDF de máximo diez páginas más anexos, versionado también en el repositorio del equipo):\n\n1. **Contexto y problema cuantificado:** organización, proceso, línea actual con al menos tres indicadores y su fuente; síntesis de un mínimo de cinco entrevistas (anexo con guía y notas).\n2. **Mapa de interesados** por poder e interés y **alternativa sin IA** evaluada.\n3. **Lienzo de IA** con sus siete casillas y **formulación de la tarea:** unidad de predicción, etiqueta operacional, momento y horizonte, tipo de tarea.\n4. **Métricas y líneas base:** métrica principal, métricas de resguardo, cadena hacia la métrica de negocio, tres líneas base y matriz de costos con análisis de sensibilidad.\n5. **Factibilidad:** perfil de una muestra real de datos en un cuaderno ejecutable, matriz de datos personales según la Ley 29733, registro de riesgos inicial y resultado del premortem.\n6. **Plan:** criterios de aceptación verificables, arquitectura preliminar, cronograma por iteraciones, sección fuera de alcance y acuerdo de equipo.\n7. **Aprobación:** constancia escrita (correo o acta) del patrocinador.\n\n**Formato:** citas y referencias en APA 7; no incluya datos personales sin seudonimizar.\n\n**Criterio central:** se valora la precisión y la verificabilidad de la formulación. Un problema acotado, bien cuantificado y factible obtiene mejor calificación que uno ambicioso e impreciso.",
+        "rubric": [
+          {
+            "name": "Problema cuantificado y evidencia de entrevistas",
+            "points": 4
+          },
+          {
+            "name": "Lienzo de IA y formulación precisa de la tarea",
+            "points": 5
+          },
+          {
+            "name": "Métricas, líneas base y matriz de costos",
+            "points": 5
+          },
+          {
+            "name": "Factibilidad de datos, normativa y riesgos",
+            "points": 4
+          },
+          {
+            "name": "Plan, criterios de aceptación y aprobación del patrocinador",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: formulación y factibilidad de proyectos de IA",
+        "questions": [
+          {
+            "prompt": "Un patrocinador pide «un modelo de IA para detectar facturas duplicadas» y define duplicado como igual RUC emisor, serie y número. ¿Cuál es la recomendación más sólida?",
+            "options": [
+              "Entrenar un clasificador de boosting con facturas históricas etiquetadas",
+              "Implementar una regla o consulta SQL, porque la lógica es exacta y estable",
+              "Usar un modelo de lenguaje que lea cada factura y juzgue si es duplicada",
+              "Aplicar agrupamiento no supervisado para descubrir patrones de duplicidad"
+            ],
+            "correct": 1,
+            "explanation": "Cuando la regla es exacta y estable, una consulta es más barata, auditable y no se degrada. La IA se justifica si la regla es difícil de escribir, por ejemplo duplicados con datos alterados."
+          },
+          {
+            "prompt": "Un equipo predice qué clientes de una caja municipal caerán en mora y establece que una llamada preventiva cuesta S/ 3, mientras que una mora no evitada cuesta S/ 250. ¿En qué casilla del lienzo de IA se registra esta información?",
+            "options": [
+              "Predicción",
+              "Datos de entrenamiento",
+              "Juicio",
+              "Resultado"
+            ],
+            "correct": 2,
+            "explanation": "El juicio valora las consecuencias de aciertos y errores; la predicción solo estima la probabilidad del evento, sin indicar qué conviene hacer con ella."
+          },
+          {
+            "prompt": "Con probabilidades calibradas y capacidad ilimitada de revisión, revisar una transacción cuesta S/ 5 y un fraude no detectado cuesta S/ 95. ¿Desde qué probabilidad conviene revisar?",
+            "options": [
+              "Desde 0,50",
+              "Desde 0,95",
+              "Desde 0,10",
+              "Desde 0,05"
+            ],
+            "correct": 3,
+            "explanation": "p* = C_FP / (C_FP + C_FN) = 5 / 100 = 0,05. Con errores asimétricos el umbral óptimo se aleja mucho del valor por defecto de 0,5."
+          },
+          {
+            "prompt": "Un hospital predice inasistencias 72 horas antes de cada cita. ¿Qué variable debe excluirse porque genera fuga de información?",
+            "options": [
+              "Confirmación telefónica registrada el día previo a la cita",
+              "Número de inasistencias del paciente en el último año",
+              "Especialidad médica y horario de la cita",
+              "Días transcurridos entre la reserva y la cita"
+            ],
+            "correct": 0,
+            "explanation": "La confirmación del día previo no existe 72 horas antes; usarla infla la métrica fuera de línea y el modelo falla en producción."
+          },
+          {
+            "prompt": "Un equipo optimiza solo el recall de los reclamos urgentes y alcanza 0,99 marcando como urgente el 70 % de los reclamos. ¿Qué faltó en la formulación?",
+            "options": [
+              "Un algoritmo de mayor capacidad",
+              "Más ejemplos de entrenamiento de la clase urgente",
+              "Un umbral de decisión fijado en 0,5",
+              "Métricas de resguardo, como la precisión o la carga de revisión"
+            ],
+            "correct": 3,
+            "explanation": "La métrica principal debe acompañarse de métricas de resguardo; sin ellas se cumple la ley de Goodhart y el sistema satura a quienes atienden la bandeja prioritaria."
+          },
+          {
+            "prompt": "Un equipo reemplaza el DNI de los pacientes por un código y guarda la tabla de correspondencia en el servidor del patrocinador. ¿Cómo se califican los datos resultantes según la Ley 29733?",
+            "options": [
+              "Son datos anónimos y quedan fuera del ámbito de la ley",
+              "Siguen siendo datos personales, porque la seudonimización es reversible",
+              "Son datos públicos que pueden compartirse sin restricción",
+              "Son datos sensibles solo si incluyen fotografías"
+            ],
+            "correct": 1,
+            "explanation": "La seudonimización reduce el riesgo, pero permite reidentificar con la clave; el tratamiento sigue sujeto a la ley y exige medidas de seguridad."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes enunciados es un criterio de aceptación verificable para un proyecto integrador?",
+            "options": [
+              "Mejorar significativamente la experiencia del cliente con IA",
+              "Lograr el mejor modelo posible con los datos disponibles",
+              "Reducir el registro de pedidos de 47 a 15 minutos en un piloto de dos semanas",
+              "Implementar IA de última generación en el área comercial"
+            ],
+            "correct": 2,
+            "explanation": "Un criterio verificable fija una métrica, un valor objetivo, una línea actual y una condición de medición; los demás enunciados son aspiraciones sin forma de comprobarse."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Estrategia de datos y prototipo de referencia de extremo a extremo",
+      "description": "Al finalizar la unidad, el estudiante construye el conjunto de datos del proyecto con trazabilidad, licencia, base legal y calidad de etiquetas medida, define una partición sin fuga y entrega un prototipo de referencia de extremo a extremo que se compara con las líneas base y se mejora mediante análisis de errores.",
+      "topics": [
+        "Estrategia de datos: fuentes internas y abiertas, licencias, base legal y versionado del conjunto",
+        "Etiquetado: guías de anotación, acuerdo entre anotadores, aprendizaje activo y supervisión débil",
+        "Contratos de datos, ficha técnica del conjunto de datos y partición sin fuga de información",
+        "Prototipo de extremo a extremo: esqueleto ambulante, líneas base y reproducibilidad desde el inicio",
+        "Análisis de errores, rebanadas de datos e iteración centrada en los datos"
+      ],
+      "slides": [
+        {
+          "title": "De la auditoría a la estrategia de datos",
+          "bullets": [
+            "Defina qué datos necesita para entrenar, para evaluar y para operar: no siempre son los mismos.",
+            "Fuentes posibles: sistemas transaccionales del patrocinador, datos abiertos, datos sintéticos y recolección propia.",
+            "Para cada fuente: propietario, licencia, base legal, frecuencia, latencia y costo de obtención.",
+            "Congele cada versión del conjunto con identificador y hash; todo resultado debe citar la versión usada."
+          ],
+          "notes": "En la unidad anterior la auditoría respondió si el proyecto era factible; ahora toca diseñar la estrategia de datos completa. Distinga tres necesidades: los datos de entrenamiento, que pueden ser históricos; los de evaluación, que deben parecerse lo más posible a la producción; y los de operación, que llegarán con otra latencia y otra calidad. Un error frecuente es entrenar con una exportación limpia del ERP y descubrir en la semana doce que la interfaz de producción entrega campos con otros nombres o con un día de retraso. Recuerde el versionado con DVC visto en Despliegue de Modelos: cada resultado del informe debe citar la versión de datos que lo produjo. Pregunte: si el patrocinador actualiza la exportación en la semana nueve y los resultados cambian, ¿cómo sabrán qué cambió? Pida a cada equipo una tabla de fuentes con las columnas mostradas y un responsable por fuente."
+        },
+        {
+          "title": "Datos abiertos y de terceros: valor y condiciones",
+          "bullets": [
+            "Plataforma Nacional de Datos Abiertos, INEI (ENAHO, censos), BCRP (series estadísticas), SENAMHI y MINSA.",
+            "Revise la licencia: atribución, uso comercial y obras derivadas; abierto no significa sin condiciones.",
+            "Los corpus y modelos preentrenados también tienen licencias; algunas prohíben el uso comercial.",
+            "Enriquecimiento útil: clima para la demanda, feriados y calendario escolar, indicadores distritales para el riesgo."
+          ],
+          "notes": "Los datos abiertos peruanos son un recurso subutilizado. Muestre ejemplos concretos: la ENAHO del INEI permite construir indicadores socioeconómicos por departamento; las series del BCRP ofrecen tipo de cambio, inflación y expectativas empresariales; el SENAMHI publica datos de estaciones meteorológicas útiles para pronosticar la demanda de bebidas o las atenciones por enfermedades respiratorias. Destaque el problema de la granularidad y de la unión: un indicador distrital solo sirve si el dato del patrocinador tiene un ubigeo confiable. Luego aborde las licencias. Muchos conjuntos se publican con licencias Creative Commons que exigen atribución; algunos modelos preentrenados tienen licencias no comerciales o restricciones de uso. Un proyecto para una empresa no puede depender de un recurso cuya licencia lo prohíbe. Pida que registren la licencia de cada recurso externo en la ficha técnica. Pregunte: ¿qué variable externa podría mejorar el proyecto de su equipo y cómo verificarían que realmente aporta?"
+        },
+        {
+          "title": "La etiqueta es el insumo más caro del proyecto",
+          "bullets": [
+            "Opciones: etiquetas existentes en el sistema, anotación por expertos, por el equipo o generadas por reglas.",
+            "Guía de anotación: definición de cada clase, ejemplos positivos y negativos, casos límite y regla de desempate.",
+            "Piloto de 150 a 200 ejemplos antes de etiquetar todo; revise los desacuerdos y ajuste la guía.",
+            "Registre quién anotó, cuándo y con qué versión de la guía, para poder auditar después."
+          ],
+          "notes": "En casi todos los proyectos integradores la etiqueta es el recurso más escaso. Explique las opciones: a veces la etiqueta ya existe en el sistema, como el estado de mora de un crédito; otras veces hay que crearla, como la categoría de un reclamo o el defecto visible en una imagen. Cuando hay que crearla, la guía de anotación es el documento más importante del proyecto. Retome lo aprendido en Procesamiento de Lenguaje Natural sobre anotación. Una buena guía incluye definiciones operativas, ejemplos y contraejemplos y, sobre todo, casos límite: ¿un reclamo que menciona una demora y un cobro indebido es de facturación o de entrega? Recomiende un piloto: dos personas anotan la misma muestra, se mide el acuerdo, se discuten los desacuerdos y se corrige la guía; recién entonces se escala. Pregunte: ¿quién debería anotar en su proyecto, el equipo o un experto del patrocinador? Discutan costo, conocimiento del dominio y disponibilidad."
+        },
+        {
+          "title": "Medir la calidad de las etiquetas: kappa de Cohen",
+          "bullets": [
+            "κ = (pₒ − pₑ) / (1 − pₑ): descuenta el acuerdo que ocurriría por azar dada la distribución de clases.",
+            "Landis y Koch (1977): 0,41-0,60 moderado; 0,61-0,80 sustancial; más de 0,80 casi perfecto.",
+            "Con más de dos anotadores: kappa de Fleiss o alfa de Krippendorff, que además admite datos faltantes.",
+            "Un κ bajo suele indicar una tarea mal definida o una guía deficiente, no anotadores descuidados."
+          ],
+          "notes": "Calcule en vivo un ejemplo. Dos anotadores clasifican 200 reclamos como urgentes o no urgentes y coinciden en 170: pₒ = 0,85. El primero marca 40 urgentes y el segundo 50. El acuerdo esperado por azar es pₑ = 0,20 × 0,25 + 0,80 × 0,75 = 0,05 + 0,60 = 0,65. Entonces κ = (0,85 − 0,65) / 0,35 ≈ 0,57, un acuerdo moderado pese al 85 % bruto. Haga notar cómo el desbalance de clases infla el acuerdo bruto. Explique la consecuencia práctica: el desempeño medible de un modelo está acotado por la consistencia de sus etiquetas; si dos expertos coinciden solo moderadamente, una exactitud de 98 % es sospechosa. Mencione el kappa de Fleiss para más de dos anotadores y el alfa de Krippendorff, flexible ante datos faltantes y distintas escalas. Pida a cada equipo calcular el kappa de su piloto con cohen_kappa_score de scikit-learn y reportar la matriz de desacuerdos."
+        },
+        {
+          "title": "Etiquetar más con menos: aprendizaje activo y supervisión débil",
+          "bullets": [
+            "Aprendizaje activo: el modelo elige los ejemplos más inciertos para que el humano los etiquete.",
+            "Supervisión débil: funciones de etiquetado con reglas y fuentes ruidosas combinadas por un modelo, como en Snorkel.",
+            "Modelos de lenguaje como preanotadores: aceleran el trabajo, pero exigen revisión humana y medición de su acuerdo.",
+            "Reserve un conjunto de prueba etiquetado solo por expertos humanos y nunca usado para decidir."
+          ],
+          "notes": "Con presupuestos limitados de anotación, estas técnicas multiplican el rendimiento. En el aprendizaje activo por muestreo de incertidumbre se entrena un modelo inicial con pocos ejemplos, se puntúan los no etiquetados y se envían a anotar los que están cerca de la frontera de decisión; Burr Settles revisó este campo en un informe muy citado de 2009. La supervisión débil, popularizada por el proyecto Snorkel de la Universidad de Stanford, combina reglas heurísticas imperfectas, como palabras clave, patrones o bases de conocimiento, en etiquetas probabilísticas. Un uso actual es pedir a un modelo de lenguaje que preetiquete, como vieron en IA Generativa; funciona, pero debe medirse su acuerdo con los humanos igual que con cualquier anotador. La regla innegociable: el conjunto de prueba final se etiqueta por humanos con la guía definitiva y no se usa para tomar decisiones de modelado. Pregunte: ¿qué sesgo aparece si el conjunto de prueba se preanota con el mismo modelo de lenguaje que luego se evalúa?"
+        },
+        {
+          "title": "Contratos y validación de datos",
+          "bullets": [
+            "Contrato de datos: esquema, tipos, rangos, nulos permitidos, unicidad y frescura esperada de cada campo.",
+            "Validación automática en la ingesta con pandera, Great Expectations o Pydantic.",
+            "Falle temprano: un lote que viola el contrato se rechaza y se notifica; no se entrena con él.",
+            "Las mismas validaciones se aplican en entrenamiento y en producción para evitar el sesgo entre ambos."
+          ],
+          "notes": "Los errores de datos son silenciosos: un modelo entrena igual con una columna de precios en dólares mezclada con soles. Por eso se formalizan contratos de datos. Muestre un ejemplo con pandera: un esquema que exige que el RUC tenga once dígitos y empiece con 10 o 20, que el monto sea positivo, que la fecha no sea futura y que el identificador del pedido sea único. Explique que estos contratos se ejecutan en el pipeline de entrenamiento y, con Pydantic, en el servicio de inferencia, tal como se vio en Despliegue de Modelos. La regla es fallar temprano y con un mensaje claro. Mencione el trabajo de Breck y colaboradores en Google sobre validación de datos para aprendizaje automático, presentado en 2019, que describe cómo la validación sistemática en la ingesta detecta errores antes de que contaminen el entrenamiento. Pida a cada equipo escribir al menos ocho reglas para su conjunto y ejecutarlas sobre la muestra real, reportando cuántas filas fallan y por qué."
+        },
+        {
+          "title": "Ficha técnica del conjunto de datos (datasheet)",
+          "bullets": [
+            "Gebru et al. (2021): motivación, composición, recolección, preprocesamiento, usos, distribución y mantenimiento.",
+            "Documente quién está representado y quién no: regiones, idiomas, canales y periodos ausentes.",
+            "Registre la base legal del tratamiento, la seudonimización aplicada y los usos que deben evitarse.",
+            "La ficha acompaña cada versión del conjunto y alimenta luego la tarjeta de modelo y la de sistema."
+          ],
+          "notes": "Timnit Gebru y colaboradoras propusieron en 2018, con publicación en Communications of the ACM en 2021, que todo conjunto de datos venga con una ficha técnica, por analogía con las hojas de especificaciones de los componentes electrónicos. Recorra las siete secciones con preguntas concretas: ¿para qué se creó?, ¿qué representa cada instancia?, ¿hay datos faltantes y por qué?, ¿quién recolectó y cómo?, ¿qué preprocesamiento se aplicó?, ¿qué usos no se recomiendan?, ¿quién lo mantiene? Enfatice la representación: si el conjunto de reclamos solo incluye el canal web, el modelo fallará con los reclamos presenciales de provincias, escritos de otro modo. En el Perú la diversidad lingüística es relevante: los textos con quechua o castellano andino pueden estar subrepresentados, como vieron en PLN. Pida que la ficha se escriba en Markdown dentro del repositorio y se actualice con cada versión; será insumo directo de la tarjeta de sistema de la unidad cuatro."
+        },
+        {
+          "title": "Partición sin fuga de información",
+          "bullets": [
+            "Particione según cómo llegará el dato en producción: por tiempo, por cliente, por documento o por lote.",
+            "Fuga por grupo: imágenes del mismo lote o mensajes del mismo cliente en entrenamiento y prueba.",
+            "Fuga temporal: entrenar con datos posteriores al periodo de prueba infla el desempeño.",
+            "Fuga por preprocesamiento: ajuste escaladores, codificadores y vocabularios solo con la partición de entrenamiento."
+          ],
+          "notes": "La fuga de información es la causa más frecuente de resultados espectaculares que se desploman ante el jurado. Repase los tres tipos. Fuga por grupo: si cada lote de café se fotografía diez veces, una partición aleatoria coloca fotos casi idénticas en entrenamiento y prueba y el modelo memoriza el lote; la solución es GroupKFold o GroupShuffleSplit por lote. Fuga temporal: en pronósticos o riesgo crediticio la prueba debe ser posterior al entrenamiento; use TimeSeriesSplit o validación con origen móvil, como en Aprendizaje Profundo. Fuga por preprocesamiento: ajustar un TF-IDF o un escalador con todo el conjunto antes de partir filtra estadísticas de la prueba; por eso se usan los Pipeline de scikit-learn. Plantee la pregunta guía: ¿cómo llegará el próximo caso en producción, de un cliente nuevo, de una fecha futura o de un lote nuevo? La partición debe imitar esa situación. Pida a cada equipo que justifique por escrito su esquema de partición."
+        },
+        {
+          "title": "El esqueleto ambulante: de extremo a extremo desde la semana cinco",
+          "bullets": [
+            "Cockburn: una implementación mínima que conecta todas las piezas del sistema, aunque cada pieza sea trivial.",
+            "Ingesta → validación → características → modelo base → servicio → interfaz → registro de predicciones.",
+            "Revela temprano problemas de integración, latencia, formatos y accesos que ningún cuaderno muestra.",
+            "Después se mejora la pieza que más limita el resultado, guiándose por la evidencia."
+          ],
+          "notes": "Alistair Cockburn llamó esqueleto ambulante a una implementación diminuta del sistema que realiza una función de extremo a extremo. En aprendizaje automático la idea es potente: en lugar de pasar ocho semanas optimizando un modelo en un cuaderno, el equipo construye en la semana cinco un flujo completo con el modelo más simple posible, por ejemplo una regresión logística o una regla, servido con FastAPI y con una interfaz mínima en Streamlit o Gradio. Este enfoque revela los problemas reales: el ERP solo exporta una vez al día, el patrocinador necesita la predicción dentro de su hoja de cálculo, el reconocimiento de texto falla con fotos tomadas de noche. Pregunte: ¿qué pieza de su sistema creen que dará más problemas de integración? Luego insista: constrúyanla primero en versión mínima. El entregable de esta unidad exige que este esqueleto funcione y sea reproducible con un solo comando, y que se demuestre en vivo al patrocinador."
+        },
+        {
+          "title": "Líneas base que hay que vencer",
+          "bullets": [
+            "Trivial: clase mayoritaria, media, último valor observado o naive estacional en series de tiempo.",
+            "Heurística del dominio: la regla que hoy usa el experto, codificada y medida con la misma métrica.",
+            "Modelo simple: regresión logística o lineal con TF-IDF o con variables tabulares bien preparadas.",
+            "Con modelos de lenguaje: instrucción directa sin recuperación ni ejemplos, frente a RAG o ajuste fino."
+          ],
+          "notes": "Toda mejora se mide contra algo. Sin líneas base no hay forma de saber si un modelo complejo agrega valor. Muestre ejemplos: en clasificación de textos en español, una regresión logística con TF-IDF a menudo queda a pocos puntos de F1 de un transformador ajustado, con una fracción del costo; en pronóstico de demanda, el naive estacional es difícil de superar en series intermitentes. Explique la heurística del dominio: si el jefe de crédito aprueba según tres reglas, codifíquelas y mídanlas; si el modelo no las supera, el patrocinador no tiene motivo para cambiar. En proyectos con modelos de lenguaje, la línea base es la instrucción directa; la recuperación, las herramientas o el ajuste fino deben demostrar mejora sobre ella en el conjunto dorado. Pregunte: ¿qué harían si la heurística del experto supera a su mejor modelo? Respuesta madura: reportarlo, investigar por qué y quizá incorporarla como variable o como regla de respaldo."
+        },
+        {
+          "title": "Reproducibilidad desde el primer commit",
+          "bullets": [
+            "Repositorio con estructura estándar, dependencias bloqueadas, configuración externa y semillas fijas.",
+            "Pipeline declarado con DVC o Make: preparar, entrenar y evaluar; un comando regenera todo.",
+            "Seguimiento de experimentos con MLflow: parámetros, métricas, versión de datos y commit.",
+            "Prueba cruzada: otro equipo clona y reproduce sus resultados dentro de una tolerancia declarada."
+          ],
+          "notes": "En Despliegue de Modelos practicaron estas herramientas; en el proyecto integrador se vuelven obligatorias porque el jurado y el patrocinador deben poder reproducir los resultados. Insista en empezar con la reproducibilidad y no añadirla al final: reconstruir la historia de los experimentos en la semana catorce es imposible. Defina la tolerancia: con semillas fijas, los modelos de árboles deberían reproducirse exactamente; las redes entrenadas en GPU pueden variar en la tercera decimal. Explique la prueba cruzada entre equipos: en la semana siete cada equipo clonará el repositorio de otro y seguirá su README; los problemas detectados se reportan como incidencias. Muestre una estructura mínima con las carpetas data, src, configs, tests, notebooks solo exploratorios, models y reports. Pregunte cuántos comandos necesitaría hoy una persona externa para regenerar su mejor resultado. Si la respuesta es «no sabemos», ese es el primer trabajo de la semana."
+        },
+        {
+          "title": "Análisis de errores: dónde y por qué falla",
+          "bullets": [
+            "Revise a mano 100 errores de validación y clasifíquelos en categorías con su frecuencia.",
+            "Priorice por techo de mejora: corregir una categoría que explica el 30 % de los errores rinde más.",
+            "Distinga errores de etiqueta, de datos de entrada, de cobertura del dominio y de capacidad del modelo.",
+            "Rebanadas: mida por región, canal, tipo de producto o calidad de imagen para hallar fallas ocultas."
+          ],
+          "notes": "Andrew Ng, en Machine Learning Yearning, propone una práctica sencilla y poderosa: tomar una muestra de errores del conjunto de validación, revisarlos a mano en una hoja y contarlos por categoría. Si de cien errores de un clasificador de defectos de café cuarenta son fotos desenfocadas, quince son etiquetas incorrectas y diez son un defecto poco representado, el equipo sabe dónde invertir: un control de calidad de la foto en la interfaz puede valer más que una arquitectura nueva. El techo de mejora es clave: eliminar por completo una categoría que explica el 5 % de los errores nunca mejorará más que ese 5 %. Introduzca las rebanadas de datos: un modelo con F1 global de 0,82 puede tener 0,60 en reclamos de provincias o en fotos de celulares de gama baja. Pida a cada equipo una tabla de análisis de errores con al menos cinco categorías, su frecuencia, un ejemplo y la acción propuesta."
+        },
+        {
+          "title": "Iteración centrada en los datos",
+          "bullets": [
+            "Con el modelo fijo, mejore los datos: corrija etiquetas, amplíe casos raros y unifique criterios.",
+            "El aprendizaje confiable (Northcutt et al., 2021) señala etiquetas probablemente erróneas para revisarlas.",
+            "Aumento de datos dirigido a las categorías de error, no indiscriminado.",
+            "Registre cada cambio de datos como experimento, con versión, hipótesis y resultado."
+          ],
+          "notes": "El movimiento de IA centrada en los datos, impulsado por Andrew Ng desde 2021, propone invertir el enfoque habitual: en vez de fijar los datos y variar el modelo, fijar el modelo y mejorar sistemáticamente los datos. En proyectos con pocos miles de ejemplos, como la mayoría de los integradores, esta estrategia suele rendir más. Presente el aprendizaje confiable de Northcutt, Jiang y Chuang, publicado en el Journal of Artificial Intelligence Research en 2021 e implementado en la biblioteca cleanlab: usa probabilidades fuera de muestra para señalar ejemplos cuya etiqueta probablemente está equivocada. Esos ejemplos se revisan con la guía; no se corrigen a ciegas. Explique el aumento dirigido: si las fotos nocturnas fallan, se aumentan variaciones de brillo, no rotaciones arbitrarias. Insista en el registro: cada cambio es una hipótesis con versión y resultado medido en el mismo conjunto de validación. Pregunte: ¿qué riesgo existe si corrigen etiquetas del conjunto de prueba mirando las predicciones del modelo?"
+        },
+        {
+          "title": "Compuerta de la semana 8: datos y prototipo",
+          "bullets": [
+            "Conjunto versionado con ficha técnica, contrato validado y acuerdo entre anotadores reportado.",
+            "Partición justificada y líneas base medidas con la métrica principal.",
+            "Esqueleto ambulante reproducible con un comando y demostrado en vivo al patrocinador.",
+            "Decisión documentada: continuar, ajustar el alcance o pivotar, con evidencia del análisis de errores."
+          ],
+          "notes": "La compuerta de la semana ocho es el punto de no retorno: desde aquí el equipo integra y evalúa, ya no explora. Explique los criterios de paso. Si el prototipo no supera la heurística del dominio y el análisis de errores no muestra una vía clara de mejora, la decisión responsable puede ser reducir el alcance, por ejemplo pasar de clasificar doce categorías a priorizar solo la urgente, o cambiar de enfoque. Comparta un ejemplo anónimo: un equipo que buscaba detectar enfermedades en hojas de papa con fotos de campo descubrió en la semana siete que sus etiquetas tenían un kappa de 0,35; pivotó a un sistema que agrupaba fotos similares para que el agrónomo etiquetara más rápido y terminó con un producto útil. Recalque que pivotar con evidencia no se penaliza; insistir sin evidencia sí. Pida que cada equipo prepare una demostración de diez minutos y un memorando de una página con su decisión y su justificación."
+        }
+      ],
+      "reading": {
+        "title": "Datos, etiquetas y prototipo: la ingeniería que sostiene el proyecto",
+        "minutes": 40,
+        "content": "## El dato como decisión de diseño\n\nEn un proyecto integrador el equipo rara vez recibe un conjunto listo. Debe decidir qué datos usar, cómo etiquetarlos, cómo validarlos y cómo particionarlos. Cada una de estas decisiones condiciona el techo de desempeño y la credibilidad de los resultados más que la elección del algoritmo. Sambasivan y colaboradores (2021) llamaron «cascadas de datos» a los efectos negativos acumulados que surgen cuando se subestima el trabajo con datos, y encontraron que eran muy frecuentes entre profesionales de aprendizaje automático de distintos países, en especial en dominios de alto riesgo.\n\n## Etiquetas: guía, piloto y acuerdo\n\nToda etiqueta creada por personas necesita una guía de anotación con definiciones operativas, ejemplos, contraejemplos y reglas para casos límite. El procedimiento recomendado es un piloto: dos anotadores etiquetan de forma independiente la misma muestra de 150 a 200 casos, se mide el acuerdo y se revisan los desacuerdos para corregir la guía. El kappa de Cohen descuenta el acuerdo esperable por azar:\n\n```text\nκ  = (pₒ − pₑ) / (1 − pₑ)\npₒ = proporción de casos en que ambos anotadores coinciden\npₑ = Σₖ P(A elige k) × P(B elige k)\n```\n\n```python\nimport pandas as pd\nfrom sklearn.metrics import cohen_kappa_score\n\npiloto = pd.read_csv(\"data/piloto_anotacion.csv\")   # columnas: id, anot_a, anot_b\nkappa = cohen_kappa_score(piloto[\"anot_a\"], piloto[\"anot_b\"])\nprint(f\"kappa = {kappa:.2f}\")\n# Matriz de desacuerdos: revela qué pares de clases confunde la guía\nprint(pd.crosstab(piloto[\"anot_a\"], piloto[\"anot_b\"]))\n```\n\nSegún la escala de Landis y Koch (1977), los valores entre 0,61 y 0,80 indican acuerdo sustancial. Un kappa bajo no se resuelve entrenando más: señala que la tarea está mal definida. Conviene entonces precisar la guía, fusionar clases que los expertos no distinguen o reformular la tarea.\n\n## Contratos y fichas técnicas\n\nLos datos deben cumplir un contrato explícito, verificado de forma automática en cada ingesta. Con pandera puede expresarse así:\n\n```python\nimport pandera as pa\n\nesquema = pa.DataFrameSchema({\n    \"ruc\": pa.Column(str, pa.Check.str_matches(r\"^(10|20)\\d{9}$\")),\n    \"monto\": pa.Column(float, pa.Check.gt(0)),\n    \"fecha\": pa.Column(\"datetime64[ns]\", pa.Check.le(pd.Timestamp.today())),\n    \"id_pedido\": pa.Column(str, unique=True),\n})\nesquema.validate(df, lazy=True)   # lazy=True reporta todas las violaciones juntas\n```\n\nEl contrato se acompaña de una ficha técnica del conjunto (Gebru et al., 2021) que documenta motivación, composición, recolección, preprocesamiento, usos recomendados y no recomendados, distribución y mantenimiento. La ficha declara también la base legal del tratamiento conforme a la Ley 29733 y la seudonimización aplicada.\n\n## Partición sin fuga\n\nLa regla de oro es particionar como llegará el siguiente caso en producción. Si el modelo clasificará fotos de lotes nuevos de café, ninguna foto de un lote de prueba debe aparecer en entrenamiento:\n\n```python\nfrom sklearn.model_selection import GroupShuffleSplit\n\ngss = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=42)\nidx_tr, idx_te = next(gss.split(X, y, groups=df[\"lote_id\"]))\nassert set(df[\"lote_id\"].iloc[idx_tr]).isdisjoint(df[\"lote_id\"].iloc[idx_te])\n```\n\nEn series de tiempo y riesgo crediticio, la prueba debe ser posterior al entrenamiento. Además, todo ajuste de preprocesamiento (escaladores, codificadores, vocabularios) ocurre dentro de un Pipeline entrenado solo con la partición de entrenamiento.\n\n## El prototipo de extremo a extremo\n\nEl esqueleto ambulante conecta ingesta, validación, características, modelo, servicio, interfaz y registro de predicciones con las versiones más simples posibles. Su valor está en revelar temprano los problemas de integración. Sobre él se miden las líneas base con la métrica principal. Una tabla como la siguiente, con cifras ilustrativas, es la que el jurado espera ver:\n\n| Enfoque | Macro-F1 (validación) | Latencia p95 | Costo mensual estimado |\n|---|---|---|---|\n| Clase mayoritaria | 0,18 | < 1 ms | S/ 0 |\n| Reglas del experto | 0,51 | 5 ms | S/ 0 |\n| TF-IDF + regresión logística | 0,68 | 12 ms | S/ 40 |\n| Transformador ajustado | 0,73 | 180 ms | S/ 420 |\n\nLa pregunta de diseño no es cuál gana, sino si cinco puntos de diferencia justifican diez veces más costo y quince veces más latencia en el contexto del patrocinador.\n\n## Análisis de errores e iteración centrada en datos\n\nCon el prototipo funcionando, el equipo revisa a mano una muestra de errores y los clasifica por causa: etiqueta incorrecta, entrada de mala calidad, caso fuera de cobertura o limitación del modelo. La frecuencia de cada categoría define el techo de mejora de atacarla. Herramientas como cleanlab, basadas en el aprendizaje confiable de Northcutt, Jiang y Chuang (2021), priorizan etiquetas sospechosas para revisión humana. Cada cambio se registra como experimento con hipótesis, versión de datos y resultado.\n\n## Cierre\n\nLa unidad termina con una compuerta: un conjunto versionado y documentado, una partición defendible, líneas base medidas y un prototipo reproducible. Con ese cimiento, la integración de la unidad 3 se apoya en evidencia y no en supuestos."
+      },
+      "case": {
+        "title": "Caso: Cooperativa Alto Marañón y las etiquetas que no coincidían",
+        "content": "La Cooperativa Agraria Cafetalera Alto Marañón (nombre ficticio) agrupa a 640 productores de Jaén y San Ignacio, en Cajamarca, y exporta café verde especial a compradores de Estados Unidos y Europa. El precio depende de la calidad física y en taza: según el protocolo de la Specialty Coffee Association, una muestra de 350 gramos de café especial no admite defectos primarios (grano negro completo, agrio completo, hongos, daño severo de broca) y admite como máximo cinco defectos completos, calculados con equivalencias para los secundarios (partido, inmaduro, broca leve, entre otros). Hoy dos catadores y una técnica inspeccionan a mano cada muestra en el centro de acopio; en cosecha alta, de mayo a agosto, la cola llega a cuatro días y muchos productores, urgidos de liquidez, venden a intermediarios a menor precio.\n\nUn equipo del Proyecto Integrador (Jhon, Milagros y Diego) formuló en la unidad 1 un sistema de apoyo: la técnica fotografía la muestra extendida sobre una bandeja de fondo azul, un modelo de visión detecta y clasifica los granos defectuosos y el sistema propone un conteo que el catador valida. El criterio de aceptación aprobado fue reducir el tiempo de inspección por muestra de 14 a 5 minutos con un error absoluto medio menor a 1,5 defectos completos por muestra y sin omitir defectos primarios en más del 5 % de las muestras.\n\nEn la semana seis el equipo contaba con 4 800 recortes de granos de 160 lotes, fotografiados con dos celulares y etiquetados por los dos catadores y la técnica. Para medir la calidad de las etiquetas, los tres etiquetaron de forma independiente 300 granos: el kappa de Fleiss global fue 0,48. El acuerdo era alto en grano negro y broca, pero muy bajo entre agrio e inmaduro, que en fotografía se distinguen por matices de color sensibles a la iluminación.\n\nEl primer modelo, una ResNet-18 con transferencia de aprendizaje, alcanzó 93 % de exactitud con partición aleatoria de los recortes. Al rehacer la partición por lote, la exactitud bajó a 78 %. El análisis de 120 errores mostró: 34 % de confusiones entre agrio e inmaduro; 22 % de recortes con sombras o desenfoque, casi todos del celular de gama baja usado por la tarde; 18 % de granos partidos con etiqueta dudosa; 15 % de defectos raros con menos de 40 ejemplos, como el daño por hongos; y 11 % de otras causas.\n\nDiego propone una arquitectura más grande y más épocas de entrenamiento. Milagros propone reetiquetar con una guía nueva y fusionar agrio e inmaduro en una clase de «defecto de maduración». Jhon recuerda que la cosecha alta empieza en cuatro semanas y que el patrocinador quiere ver el sistema funcionando en el centro de acopio. Además, la gerencia pregunta si las fotos, que muestran una etiqueta con el nombre y el código del productor, pueden enviarse a un servicio de etiquetado en la nube con servidores en el extranjero.",
+        "questions": [
+          "¿Por qué la exactitud cayó de 93 % a 78 % al particionar por lote y cuál de las dos cifras debe reportarse al patrocinador? Justifique.",
+          "Con el análisis de errores, estime el techo de mejora de cada propuesta (arquitectura mayor, reetiquetado con fusión de clases, control de calidad de la foto) y priorícelas.",
+          "¿Es aceptable fusionar agrio e inmaduro si uno puede ser defecto primario y el otro es secundario? ¿Qué debe acordarse con los catadores?",
+          "¿Qué exige la Ley 29733 para enviar las fotos con el nombre del productor a un servicio en el extranjero y cómo rediseñaría el flujo para evitar el problema?",
+          "Proponga el plan de las cuatro semanas previas a la cosecha alta, con la decisión de continuar, ajustar o pivotar y su justificación."
+        ]
+      },
+      "assignment": {
+        "title": "Entregable 2: conjunto de datos documentado y prototipo de referencia",
+        "instructions": "**Objetivo:** demostrar que el proyecto tiene un cimiento de datos confiable y un flujo de extremo a extremo funcionando, y tomar con evidencia la decisión de la compuerta de la semana 8.\n\n**Qué entregar** (repositorio del equipo y PDF de máximo ocho páginas):\n\n1. **Conjunto de datos versionado** con DVC u otra herramienta, ficha técnica completa en Markdown y tabla de fuentes con licencia y base legal según la Ley 29733.\n2. **Contrato de datos** con al menos ocho reglas ejecutables (pandera, Great Expectations o Pydantic) y reporte de las filas que fallan.\n3. **Calidad de etiquetas:** guía de anotación versionada, piloto de al menos 150 casos, kappa de Cohen o de Fleiss y matriz de desacuerdos con los cambios que produjo en la guía. Si la etiqueta proviene de un sistema, demuestre su confiabilidad con una muestra auditada.\n4. **Partición sin fuga** justificada por escrito y verificada con aserciones en el código.\n5. **Esqueleto ambulante** reproducible con un comando: ingesta, validación, modelo, servicio, interfaz mínima y registro de predicciones.\n6. **Líneas base y primer modelo:** tabla con la métrica principal, las métricas de resguardo y el costo estimado.\n7. **Análisis de errores** de al menos 100 casos con un mínimo de cinco categorías, techo de mejora y acciones, y **memorando de decisión** de la compuerta (continuar, ajustar o pivotar).\n\n**Formato:** enlace al repositorio con la etiqueta v0.8, PDF en el aula virtual y video de cinco minutos con la demostración del esqueleto.\n\n**Criterio central:** la credibilidad de los resultados. Una métrica moderada obtenida sin fuga y con etiquetas de calidad medida vale más que una cifra alta sin trazabilidad.",
+        "rubric": [
+          {
+            "name": "Conjunto versionado, ficha técnica y base legal",
+            "points": 4
+          },
+          {
+            "name": "Calidad de etiquetas y contrato de datos",
+            "points": 4
+          },
+          {
+            "name": "Partición sin fuga y líneas base medidas",
+            "points": 4
+          },
+          {
+            "name": "Esqueleto ambulante reproducible",
+            "points": 4
+          },
+          {
+            "name": "Análisis de errores y decisión de compuerta",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: datos, etiquetas, partición y prototipo",
+        "questions": [
+          {
+            "prompt": "Dos anotadores coinciden en el 90 % de 200 reclamos y cada uno marca como urgente el 10 % de los casos. ¿Cuál es aproximadamente el kappa de Cohen?",
+            "options": [
+              "0,90",
+              "0,44",
+              "0,82",
+              "0,10"
+            ],
+            "correct": 1,
+            "explanation": "pₑ = 0,1 × 0,1 + 0,9 × 0,9 = 0,82; κ = (0,90 − 0,82) / 0,18 ≈ 0,44. El acuerdo bruto alto se explica en gran parte por el desbalance de clases."
+          },
+          {
+            "prompt": "Un equipo clasifica defectos en fotos y cada lote se fotografía 30 veces. Con partición aleatoria obtiene 95 % de exactitud y con partición por lote, 79 %. ¿Qué conclusión es correcta?",
+            "options": [
+              "La cifra de 95 % es válida porque usa más datos para entrenar",
+              "Debe reportarse el promedio de ambas cifras, 87 %",
+              "La cifra de 79 % estima mejor el desempeño con lotes nuevos",
+              "La diferencia indica que el modelo necesita más épocas"
+            ],
+            "correct": 2,
+            "explanation": "La partición aleatoria pone fotos casi idénticas del mismo lote en entrenamiento y prueba; la partición por lote imita la llegada de lotes nuevos en producción."
+          },
+          {
+            "prompt": "¿Cuál es el principal beneficio de construir un esqueleto ambulante en la semana cinco del proyecto?",
+            "options": [
+              "Obtener el mejor desempeño del modelo antes de integrarlo",
+              "Reemplazar la necesidad de líneas base con un modelo funcional",
+              "Postergar la documentación del conjunto de datos hasta el final",
+              "Revelar temprano problemas de integración, formatos y latencia del flujo completo"
+            ],
+            "correct": 3,
+            "explanation": "Un flujo completo con piezas mínimas expone dificultades de acceso a datos, formatos e infraestructura que un cuaderno aislado oculta, cuando todavía hay tiempo para resolverlas."
+          },
+          {
+            "prompt": "El error del modelo es 15 %. De 200 errores revisados, 20 se deben a etiquetas incorrectas y 90 a fotos desenfocadas. ¿Cuánto, como máximo, reduciría el error corregir todas las etiquetas incorrectas?",
+            "options": [
+              "Hasta 1,5 puntos porcentuales, de 15 % a 13,5 %",
+              "Hasta 10 puntos porcentuales, de 15 % a 5 %",
+              "Hasta 6,75 puntos porcentuales",
+              "No puede estimarse sin reentrenar el modelo"
+            ],
+            "correct": 0,
+            "explanation": "El techo de mejora es la fracción de errores atribuible a la categoría: 20/200 = 10 % de 15 %, es decir 1,5 puntos. Atacar las fotos desenfocadas tiene un techo de 6,75 puntos."
+          },
+          {
+            "prompt": "¿Cuál de las siguientes prácticas introduce fuga de información por preprocesamiento?",
+            "options": [
+              "Ajustar el escalador dentro de un Pipeline con la partición de entrenamiento",
+              "Ajustar el vocabulario TF-IDF con todos los textos antes de particionar",
+              "Particionar por cliente antes de construir las variables agregadas",
+              "Calcular los valores de imputación solo con la partición de entrenamiento"
+            ],
+            "correct": 1,
+            "explanation": "Ajustar el vocabulario y los pesos IDF con todo el conjunto filtra información de la prueba al entrenamiento; el ajuste debe hacerse solo con la partición de entrenamiento."
+          },
+          {
+            "prompt": "Un equipo usa un modelo de lenguaje para preetiquetar todo el conjunto, incluida la prueba, y luego evalúa ese mismo modelo con instrucciones mejoradas. ¿Cuál es el problema principal?",
+            "options": [
+              "Los modelos de lenguaje no pueden etiquetar textos en español",
+              "La preanotación siempre reduce el acuerdo entre anotadores humanos",
+              "El costo de la API impide una evaluación rigurosa",
+              "La prueba hereda los sesgos del modelo evaluado y sobreestima su desempeño"
+            ],
+            "correct": 3,
+            "explanation": "Si la referencia proviene del mismo modelo, sus errores sistemáticos se cuentan como aciertos; la prueba debe etiquetarse por humanos con la guía definitiva."
+          },
+          {
+            "prompt": "Un equipo quiere usar, en un sistema para una empresa, un modelo preentrenado cuya licencia prohíbe el uso comercial. ¿Qué corresponde hacer?",
+            "options": [
+              "Elegir un modelo con licencia compatible o negociar una licencia comercial",
+              "Usarlo, porque el proyecto se desarrolla en un instituto educativo",
+              "Usarlo si se cita a los autores en el informe técnico",
+              "Usarlo después de ajustar sus pesos con datos propios"
+            ],
+            "correct": 0,
+            "explanation": "La licencia obliga aunque el desarrollo sea académico si el resultado lo usará la empresa; un modelo ajustado es una obra derivada sujeta a las mismas condiciones."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Integración del sistema, interacción humano-IA y evaluación rigurosa",
+      "description": "Al finalizar la unidad, el estudiante integra modelo, servicio, interfaz y supervisión humana en un sistema funcional, selecciona el enfoque técnico con criterios de desempeño, costo, latencia y riesgo, y lo evalúa con intervalos de confianza, comparaciones pareadas, análisis por subgrupos, pruebas de comportamiento y pruebas con usuarios.",
+      "topics": [
+        "Selección del enfoque: reglas, aprendizaje clásico, aprendizaje profundo, modelos de lenguaje con RAG o soluciones híbridas",
+        "Arquitectura de referencia: servicio, interfaz, registro de predicciones y bucle de retroalimentación",
+        "Interacción humano-IA: guías de Amershi, confianza calibrada y supervisión humana efectiva",
+        "Evaluación rigurosa: intervalos por bootstrap, pruebas pareadas, subgrupos y pruebas de comportamiento",
+        "Pruebas con usuarios, escala SUS y piloto controlado con métricas en línea",
+        "Calidad de software, monitoreo mínimo y plan de reversión"
+      ],
+      "slides": [
+        {
+          "title": "Elegir el enfoque con una matriz de decisión",
+          "bullets": [
+            "Criterios: desempeño en el conjunto dorado, latencia, costo por predicción, explicabilidad, mantenimiento y riesgo.",
+            "Datos tabulares medianos: los modelos de árboles suelen superar a las redes profundas (Grinsztajn et al., 2022).",
+            "Texto con pocas etiquetas: modelo de lenguaje con instrucciones o RAG; con muchas, un clasificador ajustado suele ser más barato.",
+            "Pondere los criterios con el patrocinador antes de ver los resultados para evitar racionalizaciones."
+          ],
+          "notes": "A estas alturas el equipo tiene un prototipo y varias alternativas. La elección debe hacerse con una matriz de decisión ponderada, con pesos acordados con el patrocinador antes de conocer los resultados; de lo contrario se tiende a elegir la opción favorita y justificarla después. Comparta evidencia: Grinsztajn, Oyallon y Varoquaux mostraron en NeurIPS 2022 que en datos tabulares de tamaño mediano los modelos basados en árboles siguen superando a las redes profundas. En texto, la decisión entre un modelo de lenguaje vía API y un clasificador ajustado depende del volumen: con cien mil reclamos al mes el costo por llamada se vuelve relevante, mientras que un BETO ajustado corre en una CPU modesta. Recuerde la discusión de IA Generativa sobre cuándo preferir instrucciones, RAG o ajuste fino. Muestre una matriz de ejemplo con cinco criterios y tres alternativas. Pregunte: ¿qué peso daría el patrocinador de su proyecto a la explicabilidad frente al desempeño, y por qué?"
+        },
+        {
+          "title": "Arquitectura de referencia del sistema",
+          "bullets": [
+            "Capas: ingesta y validación, características, modelo versionado, servicio de inferencia, interfaz y almacenamiento.",
+            "Registro de cada predicción: entrada seudonimizada, versión del modelo, salida, confianza y decisión humana.",
+            "Bucle de retroalimentación: la corrección del usuario se guarda como etiqueta candidata para reentrenar.",
+            "Diagramas C4 de contexto y contenedores en el informe; decisiones registradas como ADR."
+          ],
+          "notes": "Presente una arquitectura de referencia que sirve para casi todos los proyectos del curso. El servicio de inferencia, con FastAPI como en Despliegue de Modelos, expone un contrato validado con Pydantic. La interfaz puede ser Streamlit, Gradio, una extensión de la hoja de cálculo del patrocinador o un bot de mensajería, según dónde trabaja el usuario. Lo que distingue a un sistema de un modelo es el registro de predicciones y el bucle de retroalimentación: sin ellos no hay forma de monitorear ni de mejorar. Explique el modelo C4 de Simon Brown para diagramas de arquitectura, con sus niveles de contexto, contenedores, componentes y código; para el informe bastan los dos primeros. Muestre cómo registrar decisiones de arquitectura con el formato de Michael Nygard: contexto, decisión y consecuencias. Pregunte: en su sistema, ¿dónde queda la corrección que hace el usuario cuando el modelo se equivoca? Si la respuesta es en ninguna parte, deben diseñarlo esta semana."
+        },
+        {
+          "title": "Diseñar la interacción humano-IA",
+          "bullets": [
+            "Amershi et al. (2019): 18 guías en cuatro momentos: al inicio, durante la interacción, cuando falla y con el tiempo.",
+            "Al inicio: deje claro qué puede hacer el sistema y con qué calidad lo hace.",
+            "Cuando falla: facilite corregir, descartar y deshacer, y explique por qué actuó así.",
+            "Con el tiempo: aprenda del comportamiento del usuario y notifique los cambios del sistema."
+          ],
+          "notes": "Saleema Amershi y colegas de Microsoft publicaron en la conferencia CHI de 2019 dieciocho guías de interacción humano-IA, validadas con diseñadores en una veintena de productos. Recorra algunas con ejemplos del curso. Las dos primeras piden dejar claro qué puede hacer el sistema y qué tan bien: en un extractor de pedidos, mostrar que funciona con mensajes de texto y fotos nítidas, pero no con notas de voz. Las guías para cuando el sistema falla piden permitir una corrección eficiente, por ejemplo editar una línea del pedido con un clic, y descartar sugerencias sin fricción. La guía de explicación pide mostrar por qué el sistema hizo algo, como el fragmento del documento que sustenta una respuesta en un sistema RAG. Pida a cada equipo evaluar su interfaz contra las dieciocho guías, marcando cumplida, parcial o no aplica, y priorizar tres mejoras para la semana. Pregunte: ¿qué guía es la más difícil de cumplir en su proyecto y por qué?"
+        },
+        {
+          "title": "Confianza calibrada y supervisión humana",
+          "bullets": [
+            "Sesgo de automatización: los usuarios aceptan sugerencias erróneas cuando confían de más (Parasuraman y Riley, 1997).",
+            "Muestre la confianza solo si está calibrada; verifíquelo con diagrama de fiabilidad y puntuación de Brier.",
+            "Enrutamiento por confianza: alta, automático con auditoría muestral; media, revisión; baja, atención humana.",
+            "Defina quién supervisa y con qué autoridad para anular, y mida la tasa de anulación."
+          ],
+          "notes": "Parasuraman y Riley describieron en 1997 el uso, mal uso, desuso y abuso de la automatización. El mal uso aparece cuando el usuario confía de más y acepta errores: es el sesgo de automatización. El desuso aparece cuando desconfía tras unos pocos errores visibles y abandona la herramienta. El objetivo es una confianza calibrada. Por eso mostrar un porcentaje de confianza solo tiene sentido si las probabilidades están calibradas; recuerde los diagramas de fiabilidad y la puntuación de Brier de Aprendizaje Automático I. Explique el enrutamiento por umbrales, ya visto en Automatización Inteligente de Procesos: los casos de alta confianza se procesan automáticamente con una muestra aleatoria auditada; los de confianza media van a revisión; los de baja, a una persona desde el inicio. Defina la supervisión humana efectiva: no basta con que alguien apruebe; debe tener información, tiempo y autoridad para anular. Pregunte: ¿qué tasa de anulación indicaría que el supervisor solo firma sin revisar?"
+        },
+        {
+          "title": "Protocolo de evaluación fuera de línea",
+          "bullets": [
+            "Conjunto de prueba congelado antes de la evaluación final y usado una sola vez.",
+            "Métrica principal con intervalo de confianza al 95 % por bootstrap con 1 000 o más remuestreos.",
+            "Comparación de modelos sobre los mismos casos con pruebas pareadas: McNemar o bootstrap pareado.",
+            "Declare de antemano las comparaciones que hará, para no buscar después la que resulta significativa."
+          ],
+          "notes": "La evaluación final es donde muchos proyectos pierden credibilidad. Explique el protocolo. Primero, el conjunto de prueba se congela antes de la evaluación y se usa una sola vez; si el equipo lo consulta repetidamente para elegir modelos, se convierte en un conjunto de validación y su estimación se vuelve optimista. Segundo, toda métrica se reporta con su incertidumbre: con 400 casos de prueba, una exactitud de 0,82 tiene un intervalo aproximado de más o menos 0,04. Tercero, para comparar dos modelos sobre los mismos casos se usan pruebas pareadas: la prueba de McNemar para clasificadores, recomendada por Dietterich en 1998, o un bootstrap pareado de la diferencia. Cuarto, para evitar el problema de las comparaciones múltiples, el equipo declara en su protocolo qué comparaciones hará, como en un preregistro. Pregunte: si el modelo nuevo mejora el F1 de 0,71 a 0,73 y el intervalo de la diferencia va de −0,01 a 0,05, ¿qué deben decir al patrocinador?"
+        },
+        {
+          "title": "Intervalos de confianza por bootstrap: procedimiento",
+          "bullets": [
+            "Paso 1: remuestree con reemplazo n casos del conjunto de prueba.",
+            "Paso 2: calcule la métrica en esa muestra y repita B = 1 000 a 10 000 veces.",
+            "Paso 3: tome los percentiles 2,5 y 97,5 de la distribución como intervalo al 95 %.",
+            "Remuestree grupos completos (cliente, lote) si los casos no son independientes."
+          ],
+          "notes": "Bradley Efron introdujo el bootstrap en 1979 y hoy es la forma más práctica de obtener intervalos para métricas sin fórmula cerrada, como el F1 macro o la precisión en los primeros k. Desarrolle el procedimiento en vivo con el código de la lectura. Subraye dos detalles. Primero, si los casos no son independientes, porque hay varias fotos por lote o varios mensajes por cliente, el remuestreo debe hacerse por grupo; si no, el intervalo será demasiado estrecho. Segundo, para comparar dos modelos se remuestrean los mismos índices para ambos y se calcula la diferencia en cada réplica; si el intervalo de la diferencia incluye cero, no hay evidencia suficiente de mejora. Muestre un ejemplo: un modelo con F1 de 0,74 [0,69; 0,79] frente a otro de 0,71 [0,66; 0,76]. Los intervalos individuales se solapan, pero el bootstrap pareado de la diferencia da [0,01; 0,05], lo que sí indica una mejora, porque las réplicas pareadas eliminan la variación común a ambos modelos."
+        },
+        {
+          "title": "Evaluación por subgrupos y equidad",
+          "bullets": [
+            "Defina subgrupos relevantes: región, variante lingüística, canal, sexo, edad, tipo de cliente o dispositivo.",
+            "Reporte métricas por subgrupo con intervalos; los grupos pequeños tienen intervalos amplios.",
+            "Métricas de equidad: paridad demográfica, igualdad de oportunidades e igualdad de tasas de error.",
+            "Kleinberg et al. (2017): ciertas definiciones de equidad no pueden cumplirse a la vez; elija con el patrocinador."
+          ],
+          "notes": "Un desempeño global aceptable puede esconder fallas graves en grupos específicos. Retome lo visto en Aprendizaje Automático I sobre auditoría por subgrupos y llévelo al proyecto. Ejemplo: un clasificador de reclamos con recall global de 0,85 alcanza 0,62 en reclamos escritos en castellano andino con préstamos del quechua; los ciudadanos de esas regiones recibirían peor servicio. Explique las métricas de equidad básicas y el resultado de imposibilidad de Kleinberg, Mullainathan y Raghavan: cuando las tasas base difieren entre grupos, no pueden cumplirse a la vez la calibración por grupo y la igualdad de tasas de falsos positivos y falsos negativos, salvo en casos triviales. Por eso la elección de la métrica de equidad es una decisión normativa que el equipo discute con el patrocinador y documenta, no un detalle técnico. Ética y Gobernanza de la IA desarrolla el fundamento; aquí se aplica. Pida a cada equipo definir al menos tres subgrupos en su protocolo."
+        },
+        {
+          "title": "Pruebas de comportamiento: más allá de la exactitud",
+          "bullets": [
+            "CheckList (Ribeiro et al., 2020): pruebas de funcionalidad mínima, de invariancia y de expectativa direccional.",
+            "Invariancia: cambiar un nombre propio o un distrito no debe cambiar la categoría de un reclamo.",
+            "Direccional: aumentar los días de atraso no debe reducir el riesgo de mora predicho.",
+            "Automatícelas con pytest e inclúyalas en la integración continua como pruebas de regresión."
+          ],
+          "notes": "Ribeiro, Wu, Guestrin y Singh obtuvieron el premio al mejor artículo de ACL 2020 con CheckList, una metodología inspirada en las pruebas de software. Explique los tres tipos. Funcionalidad mínima: casos simples que cualquier modelo competente debe resolver, como un reclamo que dice textualmente «me cobraron dos veces». Invariancia: transformaciones que no deberían alterar la salida, como reemplazar Juan por Juana o Miraflores por Juliaca; si la predicción cambia, hay un sesgo. Expectativa direccional: cambios que deben mover la salida en un sentido conocido, como más días de atraso implican más riesgo. Muestre el ejemplo con pytest de la lectura, que genera variantes de una plantilla y verifica la salida. Para modelos de lenguaje añada pruebas adversarias de inyección de instrucciones y preguntas fuera de dominio, como vieron en IA Generativa. Pida a cada equipo un mínimo de veinte pruebas de comportamiento automatizadas, con al menos una de cada tipo."
+        },
+        {
+          "title": "Evaluar sistemas basados en modelos de lenguaje",
+          "bullets": [
+            "Conjunto dorado de 100 a 300 preguntas reales con respuesta y fuente de referencia validadas por expertos.",
+            "Métricas: exactitud de la respuesta, fidelidad a las fuentes, recall@k de la recuperación y tasa de abstención.",
+            "Modelo juez solo si se contrasta con evaluación humana y se reporta su acuerdo.",
+            "Pruebas adversarias: inyección de instrucciones, preguntas fuera de alcance y solicitudes de datos personales."
+          ],
+          "notes": "Muchos proyectos integradores usan modelos de lenguaje, solos o con RAG. Su evaluación tiene particularidades que vieron en IA Generativa y que aquí se aplican con rigor. El conjunto dorado se construye con preguntas reales de usuarios, no inventadas por el equipo, y sus respuestas se validan con un experto del patrocinador. Evalúe por separado la recuperación, preguntando si el fragmento correcto está entre los cinco primeros, y la generación, preguntando si la respuesta es correcta y fiel a las fuentes citadas. Incluya preguntas cuya respuesta no está en la base documental para medir si el sistema se abstiene en lugar de inventar. Si usan un modelo como juez para escalar la evaluación, deben medir su acuerdo con evaluadores humanos en una muestra, igual que con cualquier anotador. Comente la variabilidad: con temperatura mayor a cero conviene repetir cada pregunta varias veces. Pregunte: ¿qué tasa de respuestas inventadas sería aceptable en su dominio y quién debe decidirlo?"
+        },
+        {
+          "title": "Pruebas con usuarios: diseño y medición",
+          "bullets": [
+            "Cinco a ocho usuarios reales revelan la mayoría de problemas de usabilidad (Nielsen y Landauer, 1993).",
+            "Tareas realistas con criterio de éxito; observe sin ayudar y pida pensar en voz alta.",
+            "Mida éxito de la tarea, tiempo, errores, correcciones al modelo y satisfacción.",
+            "Escala SUS de Brooke (1996): diez ítems y puntaje de 0 a 100; cerca de 68 es el promedio de referencia."
+          ],
+          "notes": "Un sistema técnicamente correcto puede fracasar si los usuarios no lo entienden. Organice las pruebas en modalidad remota, con videollamada y pantalla compartida. Nielsen y Landauer modelaron en 1993 cuántos problemas se encuentran según el número de evaluadores y concluyeron que pocos usuarios detectan la mayor parte; la recomendación práctica es probar con cinco a ocho e iterar. Explique la técnica de pensar en voz alta y la regla de no ayudar: si el usuario se atasca, eso es un hallazgo. Defina tareas realistas con criterio de éxito claro, por ejemplo registrar un pedido recibido por WhatsApp con dos productos ambiguos. Presente la escala de usabilidad del sistema de John Brooke: diez ítems alternados, positivos y negativos, que producen un puntaje de 0 a 100; los estudios de Sauro y Lewis sitúan el promedio alrededor de 68. Recuerde pedir consentimiento informado para grabar las sesiones. Pida un protocolo de prueba con cinco tareas y sus criterios de éxito."
+        },
+        {
+          "title": "Piloto controlado y métricas en línea",
+          "bullets": [
+            "Piloto acotado: un local, un turno o una muestra de casos, con fecha de inicio y de fin.",
+            "Diseño con comparación: experimento A/B, antes y después con grupo de control, o modo sombra.",
+            "Modo sombra: el modelo predice en paralelo sin afectar decisiones y se compara con lo que hizo el humano.",
+            "Métricas en línea: adopción, tasa de aceptación de sugerencias, tiempo por caso y resultado de negocio."
+          ],
+          "notes": "Las métricas fuera de línea no garantizan impacto; el piloto es la evidencia más convincente para el jurado y el patrocinador. Explique tres diseños factibles en un proyecto académico. El modo sombra, visto en Despliegue de Modelos, permite medir el desempeño con datos reales sin riesgo. El experimento A/B, que Kohavi, Tang y Xu describen como el estándar para atribuir causalidad, exige volumen suficiente; en un piloto pequeño rara vez alcanza potencia estadística, y hay que decirlo con honestidad. El antes y después con grupo de control, por ejemplo dos locales con el sistema y dos sin él, es una alternativa razonable, con la advertencia de la estacionalidad. Explique las métricas en línea: la tasa de aceptación de sugerencias revela si el usuario confía; el tiempo por caso, si ahorra trabajo. Pregunte: si el piloto dura dos semanas y coincide con una campaña comercial, ¿cómo afecta la interpretación? Pida que el protocolo del piloto declare sus limitaciones."
+        },
+        {
+          "title": "Calidad de software del sistema",
+          "bullets": [
+            "Pruebas unitarias de transformaciones, pruebas del contrato de la API y pruebas de comportamiento del modelo.",
+            "ML Test Score (Breck et al., 2017): pruebas de datos, de modelo, de infraestructura y de monitoreo.",
+            "Secretos fuera del repositorio y análisis de dependencias vulnerables con pip-audit.",
+            "Contenedor reproducible y despliegue en un entorno accesible para el patrocinador y el jurado."
+          ],
+          "notes": "El jurado evaluará también la calidad de ingeniería. Retome la rúbrica ML Test Score de Breck y colaboradores, vista en Despliegue de Modelos, que propone veintiocho pruebas en cuatro áreas; no se espera cumplirlas todas, pero sí que el equipo sepa cuáles cubre y cuáles no. Insista en la seguridad básica: credenciales de bases de datos o claves de API nunca en el repositorio, sino en variables de entorno o en un gestor de secretos. Una clave expuesta en un repositorio público puede ser usada por terceros en minutos y generar costos a nombre del patrocinador. Defina el entorno de demostración: un contenedor Docker desplegado en un servicio en la nube con capa gratuita o en un servidor del patrocinador, accesible durante la sustentación. Pregunte: si el servicio en la nube falla el día de la sustentación, ¿cuál es su plan? Exija un video de respaldo y una versión ejecutable en local con un solo comando."
+        },
+        {
+          "title": "Monitoreo mínimo y plan de reversión",
+          "bullets": [
+            "Señales: disponibilidad, latencia p95, errores, volumen y distribución de entradas y de predicciones.",
+            "Alerta de deriva sencilla: índice de estabilidad poblacional mayor a 0,2 en variables clave.",
+            "Plan de reversión: volver a la versión anterior o al proceso manual en menos de una hora.",
+            "Responsable designado en el patrocinador y procedimiento de incidentes documentado."
+          ],
+          "notes": "El proyecto integrador no exige una plataforma MLOps completa, pero sí un monitoreo mínimo que el patrocinador pueda sostener. Defina las señales básicas, que ya conocen de Despliegue de Modelos: salud del servicio y distribución de entradas y salidas. Recuerde el índice de estabilidad poblacional: valores sobre 0,2 suelen interpretarse como un cambio importante que merece revisión. Insista en el plan de reversión: todo sistema debe poder apagarse sin paralizar el proceso del patrocinador. Si el extractor de pedidos falla, las vendedoras deben poder volver a digitar como antes, y eso debe estar escrito y probado. Explique la designación de un responsable del lado del patrocinador: cuando el equipo egrese, alguien debe recibir las alertas. Pregunte: ¿quién en su organización patrocinadora recibirá la alerta de deriva dentro de seis meses y sabrá qué hacer? Si no hay respuesta, el plan de transferencia de la unidad cuatro deberá resolverlo."
+        },
+        {
+          "title": "Compuerta de la semana 12: sistema evaluado",
+          "bullets": [
+            "Sistema integrado, desplegado y accesible, con registro de predicciones y retroalimentación.",
+            "Informe de evaluación con intervalos, comparación pareada con líneas base, subgrupos y pruebas de comportamiento.",
+            "Resultados de pruebas con usuarios o del piloto, con sus limitaciones declaradas.",
+            "Lista priorizada de deuda técnica conocida y plan de cierre para la unidad final."
+          ],
+          "notes": "La tercera compuerta verifica que el sistema existe, funciona y fue evaluado con rigor. Explique cómo se revisa: el docente y un integrante de otro equipo conducen una sesión de veinte minutos en la que usan el sistema con casos nuevos proporcionados por el patrocinador, revisan el informe de evaluación y preguntan por tres decisiones de la bitácora. Señale los errores frecuentes de esta etapa: reportar solo la mejor ejecución, usar el conjunto de prueba para ajustar umbrales, omitir subgrupos con malos resultados o presentar opiniones de usuarios sin protocolo. Insista en la honestidad: un resultado negativo bien documentado, como descubrir que el sistema no reduce el tiempo de atención en el piloto, es una contribución válida si se explica por qué y qué se haría distinto. Pida que la lista de deuda técnica se priorice, porque la unidad cuatro no da tiempo para resolverla toda; lo que quede pendiente se transfiere documentado al patrocinador."
+        }
+      ],
+      "reading": {
+        "title": "Evaluar como científico, integrar como ingeniero: el sistema de IA ante la evidencia",
+        "minutes": 40,
+        "content": "## Del modelo al sistema\n\nUn modelo es una función; un sistema es esa función insertada en un proceso con personas, datos que cambian y consecuencias. Sculley et al. (2015) mostraron que el código del modelo es una fracción pequeña de un sistema real de aprendizaje automático: la mayor parte corresponde a configuración, recolección y verificación de datos, servicio, monitoreo y gestión de procesos. En el proyecto integrador, la arquitectura mínima incluye un servicio de inferencia con contrato validado, una interfaz situada donde trabaja el usuario, un registro de predicciones y un bucle de retroalimentación que convierte las correcciones humanas en etiquetas candidatas.\n\n## Elegir el enfoque con criterios declarados\n\nLa elección entre reglas, aprendizaje clásico, aprendizaje profundo o modelos de lenguaje se toma con una matriz de decisión cuyos pesos se acuerdan antes de ver los resultados. Un ejemplo ilustrativo para un clasificador de reclamos con 12 000 casos mensuales:\n\n| Criterio (peso) | TF-IDF + regresión logística | BETO ajustado | LLM vía API con instrucciones |\n|---|---|---|---|\n| Macro-F1 en el conjunto dorado (0,35) | 0,68 | 0,74 | 0,71 |\n| Costo mensual (0,20) | S/ 40 | S/ 180 | S/ 950 |\n| Latencia p95 (0,15) | 12 ms | 90 ms | 2,4 s |\n| Explicabilidad (0,15) | alta | media | media |\n| Riesgo de datos y de proveedor (0,15) | bajo | bajo | alto: envío a terceros |\n\nLa matriz no decide sola, pero obliga a explicitar los compromisos y a justificar ante el jurado por qué seis puntos de F1 valen, o no, el costo adicional.\n\n## Interacción humano-IA\n\nLas guías de Amershi et al. (2019) organizan el diseño en cuatro momentos: al inicio (mostrar qué hace el sistema y con qué calidad), durante la interacción (mostrar información pertinente en el momento oportuno), cuando falla (permitir corregir, descartar y entender) y con el tiempo (aprender del usuario y comunicar los cambios). Para evitar el sesgo de automatización descrito por Parasuraman y Riley (1997), la confianza mostrada debe estar calibrada y los casos se enrutan por umbrales: automáticos con auditoría muestral, revisión humana o atención humana completa.\n\n## Incertidumbre: intervalos por bootstrap\n\nToda métrica calculada sobre un conjunto finito es una estimación. El bootstrap percentil (Efron, 1979) estima su variabilidad remuestreando el conjunto de prueba:\n\n```python\nimport numpy as np\nfrom sklearn.metrics import f1_score\n\ndef bootstrap_ic(y, pred_a, pred_b=None, B=2000, semilla=7):\n    rng = np.random.default_rng(semilla)\n    n, valores = len(y), []\n    for _ in range(B):\n        i = rng.integers(0, n, n)                      # remuestreo con reemplazo\n        m = f1_score(y[i], pred_a[i], average=\"macro\")\n        if pred_b is not None:                         # diferencia pareada A − B\n            m -= f1_score(y[i], pred_b[i], average=\"macro\")\n        valores.append(m)\n    return np.percentile(valores, [2.5, 97.5])\n\nprint(bootstrap_ic(y_test, pred_modelo))               # IC 95 % del modelo\nprint(bootstrap_ic(y_test, pred_modelo, pred_base))    # si excluye 0, la mejora es creíble\n```\n\nCuando los casos no son independientes (varias fotos por lote, varios mensajes por cliente) se remuestrean grupos completos. Para comparar dos clasificadores sobre los mismos casos, la prueba de McNemar (Dietterich, 1998) usa solo los desacuerdos: los casos que acierta A y falla B, y los que acierta B y falla A.\n\n```python\nfrom statsmodels.stats.contingency_tables import mcnemar\n\na, b = (pred_a == y_test), (pred_b == y_test)\ntabla = [[np.sum(a & b),  np.sum(a & ~b)],\n         [np.sum(~a & b), np.sum(~a & ~b)]]\nprint(mcnemar(tabla, exact=False, correction=True).pvalue)\n```\n\n## Subgrupos y pruebas de comportamiento\n\nLa métrica global se desagrega por subgrupos relevantes (región, canal, variante lingüística, dispositivo) con sus intervalos. Kleinberg et al. (2017) demostraron que, cuando las tasas base difieren entre grupos, no es posible satisfacer a la vez la calibración y la igualdad de tasas de error, por lo que la métrica de equidad elegida es una decisión documentada con el patrocinador. Las pruebas de comportamiento de CheckList (Ribeiro et al., 2020) completan el cuadro con casos de funcionalidad mínima, invariancia y expectativa direccional:\n\n```python\nimport pytest\n\nDISTRITOS = [\"Miraflores\", \"Juliaca\", \"Iquitos\", \"San Juan de Lurigancho\"]\n\n@pytest.mark.parametrize(\"distrito\", DISTRITOS)\ndef test_invariancia_distrito(clasificador, distrito):\n    texto = f\"Vivo en {distrito} y me cobraron dos veces el recibo de este mes\"\n    assert clasificador.predecir(texto) == \"facturacion\"\n```\n\n## Usuarios y piloto\n\nLas pruebas con cinco a ocho usuarios reales, con tareas, observación y la escala SUS de Brooke (1996), revelan problemas que ninguna métrica fuera de línea muestra. Cuando es posible, un piloto en modo sombra o con grupo de comparación aporta la evidencia más persuasiva; sus limitaciones (duración corta, estacionalidad, pocos casos) deben declararse.\n\n## Cierre\n\nLa credibilidad del proyecto se construye con un protocolo declarado antes de mirar el conjunto de prueba, métricas con incertidumbre, comparaciones pareadas, subgrupos, pruebas de comportamiento y evidencia de uso real. Un jurado exigente no premia la cifra más alta, sino la afirmación mejor sustentada."
+      },
+      "case": {
+        "title": "Caso: Municipalidad de Pampa Alta y el asistente para licencias de funcionamiento",
+        "content": "La Municipalidad Provincial de Pampa Alta (nombre ficticio), en la sierra central, atiende cada mes unas 900 consultas presenciales y telefónicas sobre licencias de funcionamiento, inspecciones técnicas de seguridad en edificaciones y autorizaciones de anuncios. La Ley 28976, Ley Marco de Licencia de Funcionamiento, fija requisitos y plazos, pero los ciudadanos, en su mayoría titulares de bodegas, restaurantes y talleres, no entienden el Texto Único de Procedimientos Administrativos (TUPA) municipal y llegan con expedientes incompletos: el 41 % de las solicitudes se observa en la primera revisión, lo que alarga el trámite en promedio once días.\n\nUn equipo del Proyecto Integrador desarrolló un asistente de consulta basado en generación aumentada por recuperación (RAG) sobre el TUPA, las ordenanzas vigentes, la Ley 28976 y 120 preguntas frecuentes redactadas por la subgerencia de licencias. El asistente responde por una página web y por WhatsApp, cita el artículo o procedimiento que sustenta cada respuesta y, cuando no encuentra sustento, deriva al teléfono de orientación. Usa un modelo comercial vía API y un índice vectorial en pgvector.\n\nEn la semana 11 el equipo presentó estos resultados:\n\n- Conjunto dorado de 220 preguntas reales recogidas en ventanilla durante dos semanas: exactitud de 81 % [IC 95 %: 76-86] según dos funcionarios evaluadores (kappa de 0,72 entre ellos); fidelidad a las fuentes de 92 %; recall@5 de la recuperación de 88 %.\n- En 30 preguntas cuya respuesta no estaba en los documentos, el asistente se abstuvo correctamente en 19 y respondió con información inventada o desactualizada en 11, entre ellas un monto de derecho de trámite del año anterior.\n- Por subgrupo, la exactitud fue de 85 % en preguntas redactadas en castellano estándar y de 64 % [IC 95 %: 51-76] en 45 preguntas con expresiones del castellano andino o palabras en quechua.\n- En una prueba con siete usuarios, el puntaje SUS fue de 63. Tres usuarios mayores de 55 años no encontraron el enlace para ver la fuente citada y dos aceptaron una respuesta incorrecta sin verificarla.\n- La latencia p95 por WhatsApp fue de 9 segundos y el costo estimado, de S/ 0,07 por consulta.\n\nEl gerente municipal quiere lanzar el asistente al público en la feria de formalización de la próxima semana, con presencia de la prensa local. La subgerenta de licencias pide esperar: teme que una respuesta errónea sobre un requisito provoque observaciones, sanciones y quejas ciudadanas. El equipo tiene cuatro semanas antes de la sustentación y la posibilidad de un piloto de diez días en ventanilla, en el que un orientador use el asistente para atender a los ciudadanos.",
+        "questions": [
+          "¿Está el asistente listo para el lanzamiento público? Argumente con las métricas, sus intervalos y el análisis por subgrupo.",
+          "¿Qué riesgo representan las 11 respuestas inventadas y qué cambios técnicos y de diseño de la interacción las reducirían?",
+          "Diseñe el piloto de diez días en ventanilla: comparación, métricas en línea, supervisión humana y criterio para pasar al lanzamiento público.",
+          "¿Cómo abordaría la brecha de desempeño en preguntas con castellano andino o quechua y qué haría si no logra cerrarla antes de la sustentación?",
+          "Redacte en un párrafo la recomendación al gerente municipal, incluida una alternativa para la feria de formalización."
+        ]
+      },
+      "assignment": {
+        "title": "Entregable 3: sistema integrado y protocolo de evaluación",
+        "instructions": "**Objetivo:** demostrar que la solución funciona como sistema en el contexto del patrocinador y que su desempeño está evaluado con rigor suficiente para tomar decisiones.\n\n**Qué entregar:**\n\n1. **Sistema desplegado** en un entorno accesible (nube o servidor del patrocinador) con servicio de inferencia, interfaz para el usuario final, registro de predicciones seudonimizado, mecanismo de corrección y enrutamiento por confianza. Repositorio con la etiqueta v0.12, contenedor Docker y README de ejecución local.\n2. **Matriz de decisión del enfoque** con pesos acordados con el patrocinador, al menos tres registros de decisiones de arquitectura (ADR) y diagramas C4 de contexto y contenedores.\n3. **Protocolo de evaluación** fechado en un commit anterior al uso del conjunto de prueba e **informe de evaluación:** métrica principal y de resguardo con intervalos por bootstrap, comparación pareada con las líneas base, al menos tres subgrupos, veinte pruebas de comportamiento automatizadas y, si usa modelos de lenguaje, conjunto dorado, tasa de abstención y pruebas adversarias.\n4. **Interacción humano-IA:** lista de verificación de las 18 guías de Amershi con tres mejoras implementadas.\n5. **Pruebas con usuarios o piloto:** protocolo, consentimiento, al menos cinco usuarios reales, éxito de tareas, tiempo, SUS y hallazgos priorizados; o resultados de un piloto en modo sombra o con grupo de comparación.\n6. **Monitoreo mínimo y plan de reversión** probados.\n\n**Formato:** informe PDF de máximo doce páginas más anexos y demostración en vivo de veinte minutos en la semana 12.\n\n**Criterio central:** cada afirmación sobre el desempeño debe estar respaldada por un número con su incertidumbre y un procedimiento reproducible.",
+        "rubric": [
+          {
+            "name": "Sistema integrado, desplegado y reproducible",
+            "points": 5
+          },
+          {
+            "name": "Selección del enfoque y arquitectura documentada",
+            "points": 3
+          },
+          {
+            "name": "Protocolo e informe de evaluación con incertidumbre y subgrupos",
+            "points": 6
+          },
+          {
+            "name": "Interacción humano-IA y pruebas con usuarios",
+            "points": 4
+          },
+          {
+            "name": "Monitoreo mínimo y plan de reversión",
+            "points": 2
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: integración y evaluación rigurosa de sistemas de IA",
+        "questions": [
+          {
+            "prompt": "El modelo A obtiene F1 de 0,74 [0,69; 0,79] y el B, 0,71 [0,66; 0,76], sobre los mismos 400 casos. El bootstrap pareado de la diferencia A − B da [0,01; 0,05]. ¿Qué conclusión es correcta?",
+            "options": [
+              "No hay diferencia, porque los intervalos individuales se solapan",
+              "Hay evidencia de que A supera a B, porque el intervalo de la diferencia excluye cero",
+              "B es preferible, porque su intervalo tiene la misma amplitud",
+              "No puede concluirse nada sin reentrenar con otra semilla"
+            ],
+            "correct": 1,
+            "explanation": "La comparación pareada elimina la variación común a ambos modelos; el solapamiento de intervalos individuales no basta para negar una diferencia."
+          },
+          {
+            "prompt": "Un equipo consulta el conjunto de prueba en cada iteración para elegir el umbral y la arquitectura. ¿Qué consecuencia tiene esta práctica?",
+            "options": [
+              "El modelo pierde capacidad de ajustarse a los datos de entrenamiento",
+              "Los intervalos por bootstrap se vuelven más amplios de lo necesario",
+              "La estimación final del desempeño queda sesgada de forma optimista",
+              "La prueba de McNemar deja de ser aplicable a esos datos"
+            ],
+            "correct": 2,
+            "explanation": "Al usarlo para decidir, la prueba se convierte en validación y deja de estimar el desempeño con datos no vistos; por eso se congela y se usa una sola vez."
+          },
+          {
+            "prompt": "Al reemplazar «Miraflores» por «Juliaca» en un reclamo por lo demás idéntico, la categoría predicha cambia. ¿Qué tipo de prueba detectó la falla y qué sugiere?",
+            "options": [
+              "Una prueba de invariancia; sugiere un sesgo asociado a la ubicación",
+              "Una prueba de funcionalidad mínima; sugiere falta de datos",
+              "Una prueba de expectativa direccional; sugiere un umbral mal calibrado",
+              "Una prueba de carga; sugiere problemas de latencia"
+            ],
+            "correct": 0,
+            "explanation": "La invariancia verifica que transformaciones irrelevantes no alteren la salida; si el distrito cambia la categoría, el modelo usa una señal espuria que perjudica a ciertos usuarios."
+          },
+          {
+            "prompt": "En un piloto, los revisores aprueban el 99,6 % de las sugerencias del modelo con un promedio de tres segundos por caso. ¿Qué riesgo indica principalmente?",
+            "options": [
+              "Desuso de la automatización por desconfianza",
+              "Deriva de datos en las variables de entrada",
+              "Sobreajuste al conjunto de validación",
+              "Sesgo de automatización: la supervisión humana podría no ser efectiva"
+            ],
+            "correct": 3,
+            "explanation": "Una aprobación casi total en segundos sugiere que el revisor no examina los casos; conviene auditar con casos de control y rediseñar la interfaz de revisión."
+          },
+          {
+            "prompt": "En una prueba con siete usuarios, el sistema obtiene un puntaje SUS de 63. ¿Cuál es la interpretación más adecuada?",
+            "options": [
+              "Indica que el 63 % de los usuarios completó sus tareas",
+              "Está por debajo del promedio de referencia, cercano a 68, y requiere mejoras",
+              "Es un puntaje excelente porque supera la mitad de la escala",
+              "Mide la exactitud percibida del modelo, no la usabilidad"
+            ],
+            "correct": 1,
+            "explanation": "La escala SUS produce un puntaje de 0 a 100 que no es un porcentaje; los estudios de referencia sitúan el promedio cerca de 68, de modo que 63 indica usabilidad mejorable."
+          },
+          {
+            "prompt": "Un conjunto de prueba tiene 50 lotes con 20 fotos cada uno. El equipo calcula el intervalo por bootstrap remuestreando fotos individuales. ¿Qué problema tiene?",
+            "options": [
+              "El intervalo resulta demasiado amplio porque hay muchas fotos",
+              "El bootstrap no puede aplicarse a visión por computadora",
+              "El intervalo resulta demasiado estrecho porque ignora la correlación dentro de cada lote",
+              "Ninguno, porque cada foto es un caso independiente"
+            ],
+            "correct": 2,
+            "explanation": "Las fotos de un mismo lote están correlacionadas; la información efectiva se acerca más a 50 casos que a 1 000, por lo que debe remuestrearse por lote."
+          },
+          {
+            "prompt": "Las tasas base de mora difieren entre dos regiones. El patrocinador exige que el modelo esté calibrado por región y que tenga además tasas iguales de falsos positivos y falsos negativos. ¿Qué debe explicar el equipo?",
+            "options": [
+              "Con tasas base distintas, ambas condiciones no pueden cumplirse a la vez salvo casos triviales",
+              "Basta con entrenar un modelo separado por región",
+              "La calibración garantiza automáticamente la igualdad de tasas de error",
+              "Al eliminar la variable región se cumplen ambas condiciones"
+            ],
+            "correct": 0,
+            "explanation": "Es el resultado de imposibilidad de Kleinberg, Mullainathan y Raghavan; el equipo y el patrocinador deben elegir qué criterio priorizar y documentar la decisión."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Gobernanza, caso de negocio, transferencia y sustentación del proyecto",
+      "description": "Al finalizar la unidad, el estudiante gobierna su solución con registro de riesgos, evaluación de impacto y documentación estandarizada, demuestra su valor con un caso de negocio con análisis de sensibilidad, la transfiere al patrocinador y sustenta el proyecto ante jurado con evidencia técnica, económica y ética.",
+      "topics": [
+        "Gestión de riesgos de IA: NIST AI RMF, ISO/IEC 42001, ISO/IEC 23894 y registro de riesgos del sistema",
+        "Marco normativo peruano aplicado: Ley 29733, Ley 31814 y su reglamento, y evaluación de impacto algorítmico",
+        "Documentación: tarjeta de modelo, tarjeta de sistema, ficha técnica de datos e informe técnico",
+        "Caso de negocio: costo total de propiedad, beneficios verificables, VAN, recuperación y sensibilidad",
+        "Transferencia al patrocinador: operación, capacitación, propiedad intelectual y continuidad",
+        "Comunicación y sustentación: principio de la pirámide, demostración, preguntas del jurado y retrospectiva"
+      ],
+      "slides": [
+        {
+          "title": "Del proyecto que funciona al proyecto que se puede adoptar",
+          "bullets": [
+            "La adopción exige confianza: riesgos gestionados, cumplimiento normativo, costos claros y un responsable.",
+            "El jurado evalúa si la organización podría operar la solución mañana sin el equipo.",
+            "Entregables finales: informe técnico, tarjeta de sistema, registro de riesgos, caso de negocio y plan de transferencia.",
+            "La sustentación integra evidencia técnica, económica y ética en una narrativa coherente."
+          ],
+          "notes": "Abra la unidad con una pregunta: si su patrocinador tuviera que decidir hoy si adopta la solución, ¿qué le faltaría para decir que sí? Las respuestas suelen ser cuatro: no sabe cuánto costará operarla, no sabe qué pasa si falla, su área legal no la ha revisado y nadie del equipo estará después. Esta unidad resuelve esas cuatro objeciones. Explique que la evaluación final pondera la solución completa y que la sustentación no es una exposición del trabajo hecho, sino la defensa de una recomendación ante un jurado que incluye al patrocinador. Recuerde que el curso paralelo de Ética y Gobernanza de la IA ofrece el fundamento conceptual; aquí se produce la documentación concreta del sistema. Muestre ejemplos anónimos de sustentaciones anteriores: una que fracasó por no saber cuánto costaba operar el sistema y otra que convenció con un registro de riesgos sólido pese a métricas modestas. Pida que cada equipo liste las objeciones probables de su patrocinador."
+        },
+        {
+          "title": "Marcos de gestión de riesgos de IA",
+          "bullets": [
+            "NIST AI RMF 1.0 (2023): funciones Gobernar, Mapear, Medir y Gestionar, y características de una IA confiable.",
+            "ISO/IEC 42001:2023: sistema de gestión de IA certificable, con el ciclo planificar-hacer-verificar-actuar.",
+            "ISO/IEC 23894:2023: orientación para gestionar riesgos de IA alineada con ISO 31000.",
+            "Use los marcos como listas de verificación proporcionales al riesgo, no como burocracia."
+          ],
+          "notes": "Presente tres referencias internacionales. El marco del NIST, publicado en enero de 2023 como documento NIST AI 100-1, es voluntario y propone cuatro funciones: gobernar crea la cultura y asigna responsabilidades; mapear establece el contexto y los riesgos; medir analiza y da seguimiento; gestionar prioriza y responde. Además define las características de una IA confiable: válida y fiable, segura, protegida y resiliente, responsable y transparente, explicable e interpretable, respetuosa de la privacidad y equitativa, con sesgos nocivos gestionados. La norma ISO/IEC 42001, publicada en diciembre de 2023, especifica un sistema de gestión de IA que una organización puede certificar, y la ISO/IEC 23894 adapta a la IA la gestión de riesgos de la ISO 31000. Para un proyecto integrador se recomienda usar la estructura del NIST para organizar el registro de riesgos de forma proporcional. Pregunte: ¿qué función está más débil en su proyecto? Suele ser gobernar, porque no está claro quién responde por qué."
+        },
+        {
+          "title": "Registro de riesgos del sistema de IA",
+          "bullets": [
+            "Categorías: desempeño, equidad, privacidad, seguridad, uso indebido, dependencia de proveedores y operación.",
+            "Para cada riesgo: causa, efecto, afectados, probabilidad, impacto, nivel, control y riesgo residual.",
+            "Controles técnicos (umbrales, filtros, pruebas) y organizacionales (supervisión, capacitación, procedimientos).",
+            "Vincule cada control con una evidencia verificable del repositorio o del piloto."
+          ],
+          "notes": "El registro de riesgos es el documento sobre el que más pregunta el jurado. Muestre tres filas del caso del asistente municipal. Riesgo uno: respuesta incorrecta sobre requisitos; causa: documentos desactualizados; afectados: ciudadanos; probabilidad media e impacto alto; control: documentos con fecha de vigencia y abstención cuando la fuente está vencida; evidencia: pruebas automatizadas y tasa de abstención medida. Riesgo dos: exposición de datos personales enviados en el chat; control: filtro de DNI y teléfonos antes de enviar el texto al proveedor, aviso de privacidad y retención de treinta días. Riesgo tres: dependencia de un único proveedor de API; control: una capa de abstracción y una prueba con un modelo alternativo. Explique el riesgo residual: lo que queda tras el control y que el patrocinador debe aceptar formalmente. Pida un mínimo de diez riesgos, al menos uno por categoría, y que cada control remita a una evidencia concreta, no a una intención."
+        },
+        {
+          "title": "Marco normativo peruano aplicado al proyecto",
+          "bullets": [
+            "Ley 29733 y su reglamento (DS 016-2024-JUS): base legal, finalidad, seguridad, flujo transfronterizo y derechos ARCO.",
+            "Ley 31814 (2023): promueve la IA con enfoque basado en riesgos, transparencia, privacidad y supervisión humana.",
+            "Su reglamento, aprobado en 2025, gradúa obligaciones según el nivel de riesgo y exige más salvaguardas en usos de riesgo alto.",
+            "Normas sectoriales pertinentes: SBS en banca, MINSA en salud, INDECOPI en consumo y SUNAT en comprobantes."
+          ],
+          "notes": "Aterrice el marco normativo en decisiones del proyecto. La Ley 29733 y su reglamento vigente determinan si el equipo puede usar los datos, con qué medidas de seguridad y si puede enviarlos a un proveedor de nube en el extranjero, lo que constituye flujo transfronterizo. La Ley 31814, promulgada en julio de 2023, declara de interés nacional la promoción de la IA para el desarrollo del país y establece principios como el enfoque basado en riesgos, la privacidad, la transparencia y la supervisión humana; su reglamento desarrolla obligaciones diferenciadas por nivel de riesgo, con implementación gradual. El equipo debe clasificar su sistema y justificarlo: un asistente de consultas sobre trámites no tiene el mismo riesgo que un sistema que influye en el acceso al crédito o a servicios de salud. Mencione las regulaciones sectoriales pertinentes. Advierta que el curso no sustituye una revisión legal profesional y que la interpretación se hace con el área legal del patrocinador. Pida a cada equipo una matriz de cumplimiento de una página."
+        },
+        {
+          "title": "Evaluación de impacto algorítmico",
+          "bullets": [
+            "Preguntas guía: ¿quiénes son afectados?, ¿qué decisión influye?, ¿es reversible?, ¿existe una vía humana alternativa?",
+            "Referentes: la evaluación de impacto algorítmico del Gobierno de Canadá y el marco de clasificación de sistemas de IA de la OCDE.",
+            "Incluya la voz de los afectados: usuarios, operadores y quienes reciben la decisión.",
+            "El resultado define el nivel exigido de supervisión humana, transparencia y monitoreo."
+          ],
+          "notes": "La evaluación de impacto anticipa los efectos sobre las personas antes de desplegar. Presente dos referentes. El Gobierno de Canadá adoptó en 2019 su Directiva sobre Toma de Decisiones Automatizada, que exige una evaluación de impacto algorítmico para los sistemas federales mediante un cuestionario que asigna niveles del uno al cuatro con obligaciones crecientes. La OCDE publicó en 2022 un marco para clasificar sistemas de IA según cinco dimensiones: personas y planeta, contexto económico, datos y entradas, modelo, y tarea y salida. Para el proyecto basta un cuestionario adaptado: quiénes resultan afectados, qué decisión influye el sistema, si es reversible y en cuánto tiempo, si hay una vía humana alternativa y cómo se explica el resultado. Insista en incluir a las personas afectadas: en el caso de la flota de buses de esta unidad, los conductores son los más afectados y su voz cambia el diseño. Pregunte: ¿quién es el afectado más vulnerable de su sistema y lo han entrevistado?"
+        },
+        {
+          "title": "Tarjeta de modelo y tarjeta de sistema",
+          "bullets": [
+            "Mitchell et al. (2019): uso previsto, factores, métricas, datos de evaluación, análisis desagregado y consideraciones éticas.",
+            "La tarjeta de sistema describe el conjunto: interfaz, supervisión humana, monitoreo y límites conocidos.",
+            "Declare los usos fuera de alcance: lo que el sistema no debe hacer, con ejemplos concretos.",
+            "Escriba para dos públicos: un resumen ejecutivo para el patrocinador y el detalle técnico para auditores."
+          ],
+          "notes": "Margaret Mitchell y colaboradores propusieron en 2019 las tarjetas de modelo como documentación breve que acompaña a todo modelo entrenado. Recorra sus secciones: detalles del modelo, uso previsto, factores relevantes, métricas, datos de evaluación y de entrenamiento, análisis cuantitativo desagregado, consideraciones éticas y advertencias. La tarjeta de sistema amplía el alcance al sistema completo: cómo se integra al proceso, qué controles humanos tiene, cómo se monitorea y cuáles son sus modos de falla conocidos. Varios desarrolladores de modelos de lenguaje publican tarjetas de sistema; úselas como referencia de estructura, no como plantilla obligatoria. Insista en la sección de usos fuera de alcance: un extractor de pedidos no debe usarse para decidir el crédito de un cliente. Explique la escritura para dos públicos: una página ejecutiva sin jerga y anexos técnicos. Pida que la tarjeta reutilice la ficha técnica de datos y el informe de evaluación, de modo que toda la documentación sea consistente."
+        },
+        {
+          "title": "El informe técnico final",
+          "bullets": [
+            "Estructura IMRyD adaptada: resumen, problema, trabajos relacionados, datos, método, sistema, evaluación y discusión.",
+            "Discusión honesta: limitaciones, amenazas a la validez y resultados negativos.",
+            "Reproducibilidad: versión de código, datos y modelo; instrucciones y entorno de ejecución.",
+            "Máximo 25 páginas más anexos; cada figura con un título que enuncia su mensaje."
+          ],
+          "notes": "El informe técnico es el documento que permanece cuando el equipo se va. Use la estructura IMRyD que estudiaron en Investigación e Innovación Tecnológica, adaptada a un proyecto aplicado. Resalte la sección de trabajos relacionados: el ciclo de rigor de la investigación basada en diseño exige mostrar qué soluciones existen y en qué se diferencia la propia. Explique las amenazas a la validez: interna, como la fuga o la contaminación de datos; externa, como un piloto en un solo local que no representa a los demás; de constructo, como medir la satisfacción con una sola pregunta. Defienda el valor de los resultados negativos: si el modelo de lenguaje no superó al clasificador simple, es un hallazgo útil para el patrocinador. Recomiende títulos de figuras que digan el mensaje, por ejemplo «El sistema reduce el tiempo de registro en 61 % sin aumentar los errores», en lugar de «Resultados del piloto». Pida un borrador completo en la semana 14 para la revisión entre pares."
+        },
+        {
+          "title": "Caso de negocio: costos de la solución",
+          "bullets": [
+            "Costo total de propiedad: desarrollo, infraestructura, licencias o API, operación, monitoreo y mantenimiento.",
+            "Incluya costos ocultos: etiquetado continuo, revisión humana, capacitación y reentrenamiento.",
+            "Costo por predicción = costo mensual de operación ÷ predicciones mensuales; compárelo con el costo actual por caso.",
+            "Considere escenarios de volumen: el costo de una API crece de forma lineal; la infraestructura propia, por escalones."
+          ],
+          "notes": "Muchos proyectos fracasan en la sustentación porque el equipo no sabe cuánto cuesta operar su solución. Construya con la clase un costo total de propiedad a tres años. Desarrollo: horas del equipo que, aunque sean académicas, tienen un valor de mercado que el patrocinador tendría que pagar para replicarlas. Infraestructura: servidor o servicios en la nube. Uso de API de modelos de lenguaje: tokens por consulta, por precio por token, por volumen. Operación: horas de un analista que monitorea, atiende alertas y reentrena cada trimestre. Revisión humana: si el 20 % de los casos va a revisión, ese tiempo cuesta. Muestre el cálculo del costo por predicción y su comparación con el costo actual por caso, obtenido en la unidad uno. Pida convertir los dólares a soles con el tipo de cambio publicado por el BCRP y documentar los supuestos. Pregunte: ¿qué pasa con su costo si el volumen se triplica? La respuesta depende de la arquitectura."
+        },
+        {
+          "title": "Caso de negocio: beneficios, VAN y sensibilidad",
+          "bullets": [
+            "Beneficios verificables: horas ahorradas, pérdidas evitadas e ingresos recuperados, medidos en el piloto.",
+            "VAN = −I₀ + Σ (Bₜ − Cₜ) / (1 + r)ᵗ, con la tasa de descuento que indique el patrocinador.",
+            "Periodo de recuperación y análisis de sensibilidad sobre los tres supuestos más inciertos.",
+            "Separe los beneficios demostrados en el piloto de los proyectados; el jurado los distingue."
+          ],
+          "notes": "Retome lo aprendido sobre casos de negocio en Automatización Inteligente de Procesos y en Emprendimiento e Innovación. Desarrolle un ejemplo: inversión inicial de S/ 45 000, que incluye el valor del desarrollo y la puesta en marcha; beneficio neto anual de S/ 30 000 por horas ahorradas y devoluciones evitadas; tasa de descuento de 12 %; horizonte de tres años. El factor de anualidad a tres años al 12 % es 2,4018, de modo que el VAN es −45 000 + 30 000 × 2,4018 ≈ S/ 27 055 y la inversión se recupera en dieciocho meses. Luego el análisis de sensibilidad: si la adopción es la mitad de la esperada, el beneficio cae a S/ 15 000 y el VAN se vuelve negativo, cerca de −S/ 8 973. Esa es la conversación que importa: la adopción es el supuesto crítico y el plan de transferencia debe asegurarla. Insista en distinguir lo demostrado de lo proyectado. Pregunte: ¿cuál es el supuesto que más mueve el VAN de su proyecto?"
+        },
+        {
+          "title": "Transferencia al patrocinador",
+          "bullets": [
+            "Manual de operación: arranque, monitoreo, respuesta a alertas, reentrenamiento y reversión.",
+            "Capacitación de usuarios y del responsable técnico, con evidencia de que operan sin el equipo.",
+            "Propiedad intelectual: titularidad del código y del modelo según el convenio; licencias de las dependencias.",
+            "Plan de continuidad: qué ocurre si el patrocinador no adopta, si cambia el proveedor o si el modelo se degrada."
+          ],
+          "notes": "La transferencia convierte el proyecto académico en un activo de la organización. Explique el manual de operación como un documento corto y práctico, al estilo de un runbook, que responde qué hacer ante cada alerta. La capacitación debe verificarse: el responsable técnico del patrocinador ejecuta el reentrenamiento y la reversión mientras el equipo observa sin intervenir. Aborde la propiedad intelectual: el convenio entre el instituto y el patrocinador debe precisar la titularidad del código, del modelo y de los datos; recuerde lo visto en Investigación e Innovación Tecnológica sobre la protección del software por derecho de autor en el Perú, regulada por el Decreto Legislativo 822 y administrada por el INDECOPI. Revise además las licencias de las dependencias: una biblioteca con licencia GPL impone condiciones al distribuir el software. Explique el plan de continuidad: si el patrocinador decide no adoptar, ¿qué queda documentado para retomarlo? Pida que el acta de transferencia se firme en la semana 15."
+        },
+        {
+          "title": "Comunicar con el principio de la pirámide",
+          "bullets": [
+            "Minto: empiece por la recomendación, luego los argumentos clave y al final la evidencia de detalle.",
+            "Situación, complicación, pregunta y respuesta para abrir la sustentación en dos minutos.",
+            "Una idea por diapositiva, con un título que afirma una conclusión y un dato que la respalda.",
+            "Adapte el nivel: el patrocinador quiere valor y riesgo; el jurado técnico, método y validez."
+          ],
+          "notes": "Barbara Minto desarrolló en McKinsey el principio de la pirámide: las ideas se comunican de arriba hacia abajo, primero la conclusión y luego los argumentos que la sostienen, agrupados sin solaparse. Para la sustentación esto significa abrir con la recomendación, por ejemplo: «Recomendamos adoptar el extractor de pedidos con las seis vendedoras, porque reduce el tiempo de registro en 61 % sin aumentar los errores, a un costo de S/ 420 mensuales». Luego vienen tres argumentos, la evidencia técnica, la evidencia de uso y el caso de negocio, cada uno con su dato. Presente la introducción de situación, complicación, pregunta y respuesta para los dos primeros minutos. Recuerde lo aprendido en Comunicación Efectiva y en Análisis y Visualización de Datos sobre títulos que afirman. Muestre el antes y el después de una diapositiva de resultados. Pregunte: si el jurado recordara una sola oración de su sustentación, ¿cuál debería ser? Pida que la escriban y la conviertan en el título de su primera diapositiva."
+        },
+        {
+          "title": "La demostración en vivo",
+          "bullets": [
+            "Guion con un caso real de punta a punta: entrada, predicción, explicación, corrección y registro.",
+            "Muestre también un caso de falla y cómo lo maneja el sistema: abstención, derivación o corrección.",
+            "Prepare datos de demostración seudonimizados y un entorno estable; ensaye con cronómetro.",
+            "Plan B: video grabado de la demostración y ejecución local si falla la red."
+          ],
+          "notes": "La demostración es el momento más persuasivo y más riesgoso de la sustentación. Recomiende un guion de cinco minutos que siga un caso real de principio a fin desde la perspectiva del usuario, no del desarrollador. Por ejemplo: llega un mensaje de WhatsApp con la foto de una lista manuscrita, el sistema propone ocho líneas y marca dos con baja confianza, la vendedora corrige una y el pedido se registra; luego se muestra el tablero de monitoreo donde aparece la corrección. Insista en mostrar deliberadamente una falla: demuestra madurez y genera confianza, porque el jurado sabe que todo sistema falla. Advierta sobre los datos: nunca proyecte datos personales reales; prepare un conjunto seudonimizado. Exija un plan B: un video grabado de la demostración completa y la posibilidad de ejecutar en local. Organice un ensayo general en la semana 15 con otro equipo como jurado simulado, con cronómetro y preguntas difíciles, y retroalimentación escrita."
+        },
+        {
+          "title": "Preguntas del jurado: cómo prepararse",
+          "bullets": [
+            "Preguntas típicas: ¿por qué este enfoque?, ¿cómo saben que no hay fuga?, ¿qué pasa si falla?, ¿cuánto cuesta?",
+            "Responda con evidencia: cite la bitácora, la tabla de resultados o el registro de riesgos.",
+            "Reconozca los límites: «no lo medimos; lo haríamos así» es mejor que una respuesta improvisada.",
+            "Todos los integrantes deben poder explicar cualquier parte del sistema."
+          ],
+          "notes": "Prepare a los equipos para un jurado exigente, formado por el docente, un docente invitado de la especialidad y el representante del patrocinador. Comparta un banco de preguntas de sustentaciones anteriores: ¿por qué no usaron un modelo más simple?, ¿cómo garantizan que el conjunto de prueba representa la producción?, ¿qué ocurre si el modelo se equivoca con un cliente importante?, ¿quién responde cuando falla?, ¿cuánto cuesta al mes y quién lo paga?, ¿cumplen la Ley 29733? Enseñe la estructura de respuesta: afirmación breve, evidencia concreta y referencia al documento donde está el detalle. Discuta la honestidad intelectual: el jurado detecta las respuestas improvisadas y valora más reconocer un límite con un plan para resolverlo. Explique que el jurado puede preguntar a cualquier integrante sobre cualquier parte y que la calificación de la sustentación puede diferenciarse por persona. Pida que cada equipo redacte veinte preguntas difíciles con sus respuestas."
+        },
+        {
+          "title": "Retrospectiva y portafolio profesional",
+          "bullets": [
+            "Retrospectiva del equipo: qué funcionó, qué no y qué harían distinto; registro de lecciones aprendidas.",
+            "Coevaluación con rúbrica de contribución, contrastada con el historial del repositorio y del tablero.",
+            "Portafolio: caso de estudio sin datos confidenciales, con problema, rol, decisiones y resultados.",
+            "El proyecto integrador es la mejor evidencia de empleabilidad de un egresado en inteligencia artificial."
+          ],
+          "notes": "Cierre el curso con dos actividades. La primera es la retrospectiva del equipo, al estilo de las ceremonias ágiles: cada integrante escribe qué funcionó, qué no y qué haría distinto, y el equipo consolida lecciones aprendidas que se entregan al patrocinador y al instituto para futuros proyectos. La segunda es la coevaluación, con una rúbrica de contribución técnica, cumplimiento de compromisos y colaboración; el docente la contrasta con la evidencia del repositorio y del tablero Kanban para reducir sesgos. Luego oriente sobre el portafolio: el proyecto integrador es la evidencia más sólida que un egresado puede mostrar a un empleador, siempre que se presente como un caso de estudio sin datos confidenciales y con autorización del patrocinador. Recomiende una estructura: problema, rol personal, decisiones clave con sus alternativas, resultados medidos y lecciones. Conecte con las Experiencias Formativas y la transición al empleo. Pregunte: ¿qué decisión del proyecto les enorgullece más y por qué? Esa respuesta es la que contarán en una entrevista."
+        }
+      ],
+      "reading": {
+        "title": "Gobernar, valorar y sustentar: el cierre profesional de un proyecto de IA",
+        "minutes": 40,
+        "content": "## La última milla de un proyecto de IA\n\nUn sistema que funciona técnicamente no se adopta por sí solo. La organización patrocinadora necesita saber qué riesgos implica, si cumple la normativa, cuánto cuesta operarlo, quién lo mantendrá y qué valor genera. Esta lectura integra esas respuestas en tres productos: la gestión de riesgos con su documentación, el caso de negocio y la sustentación.\n\n## Gestión de riesgos con estructura\n\nEl Marco de Gestión de Riesgos de IA del NIST (2023) organiza el trabajo en cuatro funciones. Gobernar establece políticas, roles y responsabilidades; mapear identifica el contexto, los usos previstos y los afectados; medir evalúa los riesgos con métodos cuantitativos y cualitativos; gestionar prioriza y aplica respuestas. La norma ISO/IEC 42001:2023 lleva esa lógica a un sistema de gestión certificable y la ISO/IEC 23894:2023 adapta a la IA la gestión de riesgos de la ISO 31000. En un proyecto integrador basta aplicar esta estructura de forma proporcional, con un registro como el siguiente, tomado del caso de la unidad:\n\n| Riesgo | Afectados | P | I | Control | Evidencia | Residual |\n|---|---|---|---|---|---|---|\n| Falsa alarma de fatiga en ruta | Conductor, pasajeros | 3 | 3 | Umbral calibrado y confirmación en dos ventanas de tiempo | Falsas alarmas por cada diez horas en el piloto | Medio |\n| Uso de datos biométricos para sancionar | Conductores | 2 | 5 | Finalidad limitada en política, contrato y acta con representantes | Acta firmada y auditoría de accesos | Medio |\n| Menor desempeño de noche o con lentes | Conductores, pasajeros | 3 | 4 | Cámara infrarroja y pruebas por subgrupo | Recall por condición de luz y uso de lentes | Medio |\n\nP e I son probabilidad e impacto en escala de 1 a 5; el nivel inicial suele calcularse como su producto y el residual se estima tras aplicar el control.\n\n## El marco normativo peruano\n\nLa Ley 29733 y su reglamento (Decreto Supremo 016-2024-JUS) exigen base legal para el tratamiento, finalidad determinada, proporcionalidad y medidas de seguridad, y tratan los datos biométricos y de salud como sensibles, cuyo consentimiento debe constar por escrito. La Ley 31814 promueve el uso de la IA con enfoque basado en riesgos, transparencia y supervisión humana, y su reglamento, aprobado en 2025, gradúa las obligaciones según el nivel de riesgo, con mayores salvaguardas para los usos de riesgo alto. El equipo debe clasificar su sistema, justificar la clasificación y documentar las salvaguardas en coordinación con el área legal del patrocinador.\n\n## Documentación estandarizada\n\nLa tarjeta de modelo (Mitchell et al., 2019) y la ficha técnica del conjunto de datos (Gebru et al., 2021) se integran en una tarjeta de sistema. Un esqueleto mínimo:\n\n```markdown\n# Tarjeta de sistema: Alerta de fatiga v1.0\n- Uso previsto: alertar al conductor y al centro de monitoreo. NO usar para sancionar.\n- Usuarios: conductores y operadores del centro de monitoreo.\n- Modelo: detector de ojos cerrados y bostezos (MobileNetV3) en el dispositivo; umbral 0,62.\n- Evaluación: recall 0,91 [0,87; 0,94] de día; 0,83 [0,76; 0,89] de noche.\n- Supervisión humana: el operador revisa el evento antes de llamar al conductor.\n- Límites conocidos: lentes de medida, lentes oscuros y cámara obstruida.\n- Datos: 64 conductores con consentimiento escrito; retención de 30 días; sin envío al extranjero.\n- Responsable: jefatura de seguridad vial; revisión trimestral.\n```\n\n## El caso de negocio\n\nEl valor se expresa como valor actual neto (VAN) de los flujos incrementales:\n\n```text\nVAN = −I₀ + Σₜ₌₁ⁿ (Bₜ − Cₜ) / (1 + r)ᵗ\n```\n\ndonde I₀ es la inversión inicial, Bₜ los beneficios, Cₜ los costos de operación y r la tasa de descuento que indique el patrocinador. El análisis de sensibilidad muestra qué supuesto sostiene la conclusión:\n\n```python\nimport numpy as np\n\ndef van(inversion, beneficio, costo, tasa, anios=3):\n    t = np.arange(1, anios + 1)\n    return -inversion + np.sum((beneficio - costo) / (1 + tasa) ** t)\n\nbase = dict(inversion=120_000, beneficio=95_000, costo=38_000, tasa=0.12)\nprint(f\"VAN base: S/ {van(**base):,.0f}\")          # cerca de S/ 16 900\nfor factor in (0.75, 1.25):                         # sensibilidad del beneficio\n    escenario = {**base, \"beneficio\": base[\"beneficio\"] * factor}\n    print(factor, f\"S/ {van(**escenario):,.0f}\")    # cerca de −40 100 y de +73 900\n```\n\nCon estos supuestos el VAN base es positivo, pero basta que el beneficio caiga 25 % para que se vuelva negativo: la recomendación depende de verificar el beneficio en el piloto y debe decirlo explícitamente.\n\n## Transferir y sustentar\n\nLa transferencia incluye un manual de operación, la capacitación verificada del responsable técnico, acuerdos de propiedad intelectual conforme al convenio y al Decreto Legislativo 822, y un plan de continuidad. La sustentación aplica el principio de la pirámide de Minto: primero la recomendación, luego tres argumentos (evidencia técnica, evidencia de uso y valor) y, al final, el detalle disponible para las preguntas del jurado. Una demostración que recorre un caso real, incluida una falla bien manejada, suele persuadir más que cualquier gráfico.\n\n## Cierre\n\nEl proyecto integrador termina cuando la organización puede decidir con información completa. Un equipo que entrega riesgos gestionados, documentación consistente, un caso de negocio con sensibilidad y una sustentación honesta demuestra la competencia que define al profesional técnico en inteligencia artificial: construir soluciones que funcionan, en las que se puede confiar y que generan valor."
+      },
+      "case": {
+        "title": "Caso: Transportes Q'ori Ñan y la alerta de fatiga que dividió a la empresa",
+        "content": "Transportes Q'ori Ñan S.A. (nombre ficticio) opera 118 buses interprovinciales en las rutas Lima-Arequipa, Lima-Cusco y Arequipa-Puno, con 260 conductores. La empresa cumple los límites de horas de conducción de la normativa de transporte terrestre y registra las jornadas, pero su gerente de operaciones, Óscar Huamán, sabe que la fatiga no siempre se refleja en las horas. En los últimos tres años la flota sufrió dos accidentes graves y once incidentes menores atribuidos a somnolencia; uno de ellos costó más de S/ 1,4 millones entre indemnizaciones, reparaciones y paralización, y la prima del seguro subió 18 %.\n\nUn equipo del Proyecto Integrador desarrolló con la empresa un sistema de alerta de fatiga: una cámara infrarroja en la cabina, un dispositivo de borde que ejecuta un detector de ojos cerrados y bostezos y una alerta sonora para el conductor. Si la alerta se repite tres veces en diez minutos, se avisa al centro de monitoreo, que llama al conductor y puede ordenar una parada. El video no sale del bus; solo se envían eventos con una imagen recortada del rostro para su verificación.\n\nResultados del piloto de cuatro semanas en 12 buses, con 64 conductores que firmaron un consentimiento:\n\n- Recall de 0,91 [0,87; 0,94] de día y 0,83 [0,76; 0,89] de noche en eventos de somnolencia anotados en video por dos especialistas (kappa de 0,79); con lentes de medida, 0,74 [0,62; 0,84].\n- 1,8 falsas alarmas por conductor por cada diez horas de manejo. Los conductores las consideran molestas y dos desconectaron la cámara.\n- Las alertas al centro de monitoreo derivaron en 23 paradas preventivas. No hubo incidentes en los buses del piloto, frente a dos incidentes menores en buses comparables sin sistema, diferencia que el equipo reconoce como no concluyente por el tamaño del piloto.\n- Costos: S/ 2 900 por bus en equipos e instalación, S/ 95 mensuales por bus en conectividad, soporte y monitoreo, y un operador adicional en el centro de monitoreo.\n\nLa gerencia quiere extender el sistema a toda la flota. Sin embargo, el sindicato de conductores pidió por escrito garantías de que los eventos e imágenes no se usarán para sancionar ni para evaluar el desempeño, y cuestiona el consentimiento: según sus dirigentes, a algunos conductores se les dijo que sin firma no manejarían en las rutas nuevas. El área legal advierte que las imágenes del rostro y los indicadores de somnolencia pueden constituir datos biométricos y de salud, es decir, datos sensibles según la Ley 29733. Un proveedor extranjero ofrece una solución comercial a S/ 180 mensuales por bus, con procesamiento en su nube.\n\nLa sustentación ante el jurado y el directorio será en dos semanas. Óscar pide al equipo una recomendación clara: escalar a toda la flota, extender el piloto o abandonar el proyecto.",
+        "questions": [
+          "Elabore el registro de los cinco riesgos principales con su control y evidencia. ¿Cuál es el riesgo residual más alto y quién debe aceptarlo?",
+          "¿Es válido el consentimiento obtenido en el piloto según la Ley 29733? ¿Qué cambios requiere el diseño para que el tratamiento sea legítimo y aceptado por los conductores?",
+          "Construya el caso de negocio para 118 buses a tres años, compárelo con la oferta del proveedor extranjero e identifique el supuesto más sensible.",
+          "¿Cómo debe tratarse la brecha de desempeño de noche y con lentes de medida antes de decidir el escalamiento?",
+          "Redacte la apertura de la sustentación con el principio de la pirámide: recomendación, tres argumentos y la condición principal."
+        ]
+      },
+      "assignment": {
+        "title": "Entrega final: proyecto integrador documentado, transferido y sustentado",
+        "instructions": "**Objetivo:** entregar la solución de inteligencia artificial lista para que la organización patrocinadora decida su adopción, y defenderla ante el jurado.\n\n**Qué entregar (semana 16):**\n\n1. **Informe técnico** (máximo 25 páginas más anexos) con estructura IMRyD adaptada: problema, trabajos relacionados, datos, método, sistema, evaluación, discusión con amenazas a la validez y conclusiones, consistente con los entregables 1 a 3 y con la retroalimentación recibida.\n2. **Tarjeta de sistema** que integre la tarjeta de modelo y la ficha técnica de datos, con usos fuera de alcance y límites conocidos.\n3. **Registro de riesgos** con al menos diez riesgos organizados según las funciones del NIST AI RMF, controles con evidencia y riesgo residual aceptado por el patrocinador; **matriz de cumplimiento** de la Ley 29733 y de la Ley 31814 con su reglamento; y **evaluación de impacto** que recoja la voz de al menos un grupo afectado.\n4. **Caso de negocio** con costo total de propiedad a tres años, costo por predicción, VAN, periodo de recuperación y sensibilidad de los tres supuestos más inciertos, distinguiendo beneficios demostrados y proyectados.\n5. **Paquete de transferencia:** manual de operación, evidencia de capacitación, acta de transferencia firmada y repositorio con la etiqueta v1.0.\n6. **Video demostrativo** de cinco minutos y **sustentación** de veinte minutos más quince de preguntas, con participación de todos los integrantes.\n7. **Retrospectiva** del equipo y coevaluación individual.\n\n**Formato:** PDF y repositorio en el aula virtual 48 horas antes de la sustentación; datos de demostración seudonimizados.\n\n**Criterio central:** que el patrocinador pueda decidir con información completa y que el equipo defienda cada afirmación con evidencia.",
+        "rubric": [
+          {
+            "name": "Informe técnico y tarjeta de sistema",
+            "points": 5
+          },
+          {
+            "name": "Gestión de riesgos, cumplimiento normativo e impacto",
+            "points": 5
+          },
+          {
+            "name": "Caso de negocio con análisis de sensibilidad",
+            "points": 4
+          },
+          {
+            "name": "Paquete de transferencia y operación",
+            "points": 2
+          },
+          {
+            "name": "Sustentación y respuesta al jurado",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: gobernanza, valor y sustentación",
+        "questions": [
+          {
+            "prompt": "Una solución requiere S/ 60 000 de inversión y genera un beneficio neto de S/ 25 000 anuales durante tres años. Con una tasa de 12 % (factor de anualidad 2,402), ¿cuál es el VAN aproximado?",
+            "options": [
+              "S/ 15 000",
+              "S/ 75 000",
+              "Cercano a cero, unos S/ 50",
+              "−S/ 15 000"
+            ],
+            "correct": 2,
+            "explanation": "VAN = −60 000 + 25 000 × 2,402 ≈ S/ 50. El proyecto apenas recupera el costo del capital y cualquier caída del beneficio lo vuelve negativo, por lo que la sensibilidad es decisiva."
+          },
+          {
+            "prompt": "Un equipo no ha definido quién responde por el sistema en la organización ni cómo se aprueban sus cambios. ¿Qué función del NIST AI RMF está más débil?",
+            "options": [
+              "Gobernar",
+              "Mapear",
+              "Medir",
+              "Gestionar"
+            ],
+            "correct": 0,
+            "explanation": "Gobernar establece políticas, roles, responsabilidades y procesos de aprobación; sin ella, las demás funciones carecen de responsables y de autoridad para actuar."
+          },
+          {
+            "prompt": "Un sistema analiza imágenes del rostro de conductores para estimar somnolencia. Según la Ley 29733, ¿cómo deben tratarse estos datos?",
+            "options": [
+              "Como datos públicos, porque el rostro es visible para los pasajeros",
+              "Como datos anónimos, si solo se procesan en el dispositivo del bus",
+              "Como datos comerciales de la empresa, porque el bus le pertenece",
+              "Como datos sensibles, que requieren consentimiento escrito u otra base legal y medidas reforzadas"
+            ],
+            "correct": 3,
+            "explanation": "Los datos biométricos y de salud son sensibles; procesarlos en el borde reduce riesgos, pero no los vuelve anónimos ni elimina las obligaciones legales."
+          },
+          {
+            "prompt": "En el piloto, se dijo a algunos conductores que sin firmar el consentimiento no manejarían en las rutas nuevas. ¿Qué problema plantea esta situación?",
+            "options": [
+              "Ninguno, porque el consentimiento se firmó por escrito",
+              "El consentimiento podría no ser libre y no constituir una base legal válida",
+              "Solo es un problema si las imágenes se envían al extranjero",
+              "El consentimiento es innecesario en cualquier relación laboral"
+            ],
+            "correct": 1,
+            "explanation": "Un consentimiento obtenido bajo presión no es libre; el equipo debe revisar la base legal con el área legal y rediseñar el proceso con garantías para los conductores."
+          },
+          {
+            "prompt": "¿Cuál de estas aperturas de sustentación aplica mejor el principio de la pirámide de Minto?",
+            "options": [
+              "«Primero explicaremos la arquitectura MobileNetV3 y su entrenamiento»",
+              "«Agradecemos al jurado y presentamos el índice de la exposición»",
+              "«La inteligencia artificial está transformando el transporte en el mundo»",
+              "«Recomendamos extender el piloto a 40 buses con dos condiciones, por tres razones»"
+            ],
+            "correct": 3,
+            "explanation": "La pirámide empieza por la recomendación y anuncia los argumentos que la sostienen; el contexto técnico y los detalles quedan para después y para las preguntas."
+          },
+          {
+            "prompt": "En su caso de negocio, un equipo suma los beneficios medidos en un piloto de 12 buses con una reducción de la prima del seguro aún no negociada. ¿Qué corresponde hacer?",
+            "options": [
+              "Presentarlos por separado y someter los proyectados a análisis de sensibilidad",
+              "Sumarlos, porque ambos se expresan en soles",
+              "Excluir el piloto porque su tamaño es pequeño",
+              "Usar solo los proyectados, porque son de mayor monto"
+            ],
+            "correct": 0,
+            "explanation": "El jurado y el directorio deben distinguir evidencia de expectativa; mezclarlos sobrestima el valor y oculta el supuesto más incierto."
+          },
+          {
+            "prompt": "¿Qué contenido corresponde a la sección de usos fuera de alcance de la tarjeta de sistema de una alerta de fatiga?",
+            "options": [
+              "El recall es de 0,91 de día y de 0,83 de noche",
+              "El sistema no debe usarse para sancionar ni evaluar el desempeño de los conductores",
+              "El modelo es una MobileNetV3 con umbral de 0,62",
+              "El responsable del sistema es la jefatura de seguridad vial"
+            ],
+            "correct": 1,
+            "explanation": "Los usos fuera de alcance declaran lo que el sistema no debe hacer; las demás opciones corresponden a evaluación, detalles del modelo y gobierno."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Presentación del curso, investigación basada en diseño, equipos y organizaciones patrocinadoras",
+      "activity": "Clase síncrona de inicio; conformación de equipos y redacción del acuerdo de equipo; foro con un problema de una organización descrito sin mencionar tecnología; presentación de patrocinadores disponibles.",
+      "evidence": "Acuerdo de equipo y aporte en el foro"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Descubrimiento del problema, entrevistas y la pregunta de si se necesita IA",
+      "activity": "Aula invertida con la lectura de la unidad 1; taller de guía de entrevistas; primeras entrevistas con el patrocinador; discusión en equipos del caso Distribuidora Ayni.",
+      "evidence": "Notas de entrevistas y respuestas preliminares al caso"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Lienzo de IA, formulación de la tarea, métricas, líneas base y matriz de costos",
+      "activity": "Taller del lienzo de IA y ficha de formulación revisada entre pares; plenaria del caso Distribuidora Ayni con recomendación argumentada; premortem por equipos.",
+      "evidence": "Lienzo de IA, ficha de formulación y registro de riesgos inicial"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Factibilidad de datos y normativa, documento de especificación y primera compuerta",
+      "activity": "Perfilado de una muestra real de datos; matriz de datos personales según la Ley 29733; entrega del entregable 1 aprobado por el patrocinador; resolución del cuestionario 1.",
+      "evidence": "Entregable 1 y cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Estrategia de datos, fuentes abiertas, licencias y esqueleto ambulante",
+      "activity": "Clase síncrona sobre estrategia de datos; laboratorio de construcción del esqueleto ambulante con FastAPI y Streamlit o Gradio; tabla de fuentes con licencia y base legal.",
+      "evidence": "Tabla de fuentes y esqueleto en el repositorio"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "Guía de anotación, piloto de etiquetado, acuerdo entre anotadores y contratos de datos",
+      "activity": "Aula invertida con la lectura de la unidad 2; piloto de anotación con cálculo del kappa; laboratorio de validación con pandera; discusión en equipos del caso Cooperativa Alto Marañón.",
+      "evidence": "Kappa del piloto y contrato de datos ejecutable"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Ficha técnica del conjunto, partición sin fuga y líneas base",
+      "activity": "Redacción de la ficha técnica; verificación de la partición con aserciones; medición de las tres líneas base; plenaria del caso Cooperativa Alto Marañón; prueba de reproducibilidad cruzada entre equipos.",
+      "evidence": "Ficha técnica, tabla de líneas base e informe de reproducción"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Análisis de errores, iteración centrada en datos y segunda compuerta",
+      "activity": "Taller de análisis de errores con cien casos; demostración del esqueleto al patrocinador; entrega del entregable 2 con memorando de decisión; resolución del cuestionario 2.",
+      "evidence": "Entregable 2 y cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Selección del enfoque y arquitectura de referencia del sistema",
+      "activity": "Clase síncrona; matriz de decisión ponderada acordada con el patrocinador; diagramas C4 y registros de decisiones de arquitectura; revisión de código entre pares.",
+      "evidence": "Matriz de decisión y tres ADR"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Interacción humano-IA, confianza calibrada y supervisión humana",
+      "activity": "Aula invertida con la lectura de la unidad 3; evaluación de la interfaz con las 18 guías de Amershi; implementación del enrutamiento por confianza; discusión en equipos del caso Municipalidad de Pampa Alta.",
+      "evidence": "Lista de verificación y tres mejoras implementadas"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Protocolo de evaluación, intervalos por bootstrap, subgrupos y pruebas de comportamiento",
+      "activity": "Laboratorio de bootstrap y prueba de McNemar; protocolo fechado antes de usar el conjunto de prueba; veinte pruebas de comportamiento; plenaria del caso Municipalidad de Pampa Alta.",
+      "evidence": "Protocolo fechado y pruebas automatizadas"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Pruebas con usuarios, piloto, monitoreo mínimo y tercera compuerta",
+      "activity": "Sesiones con usuarios y escala SUS o piloto en modo sombra; prueba del plan de reversión; demostración en vivo de veinte minutos; entrega del entregable 3; resolución del cuestionario 3.",
+      "evidence": "Entregable 3 y cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Gestión de riesgos de IA, marco normativo peruano y evaluación de impacto",
+      "activity": "Clase síncrona; registro de riesgos con las funciones del NIST AI RMF; matriz de cumplimiento de las leyes 29733 y 31814; entrevista con un grupo afectado; discusión en equipos del caso Transportes Q'ori Ñan.",
+      "evidence": "Registro de riesgos y matriz de cumplimiento"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Tarjeta de sistema, informe técnico y caso de negocio",
+      "activity": "Aula invertida con la lectura de la unidad 4; borrador completo del informe y de la tarjeta de sistema con revisión entre pares; cálculo del VAN y sensibilidad; plenaria del caso Transportes Q'ori Ñan.",
+      "evidence": "Borrador del informe y caso de negocio"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Transferencia al patrocinador y preparación de la sustentación",
+      "activity": "Capacitación verificada del responsable técnico y acta de transferencia; taller del principio de la pirámide; ensayo general con jurado simulado y banco de preguntas; grabación del video demostrativo.",
+      "evidence": "Acta de transferencia y video demostrativo"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación ante jurado, retrospectiva y portafolio profesional",
+      "activity": "Sustentación de veinte minutos y quince de preguntas ante docente, invitado y patrocinador; entrega final; resolución del cuestionario 4; retrospectiva, coevaluación y caso de estudio para el portafolio.",
+      "evidence": "Entrega final, sustentación, cuestionario 4 y coevaluación"
+    }
+  ]
+}

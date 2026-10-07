@@ -1,0 +1,979 @@
+{
+  "name": "Proyecto de Innovación Contable",
+  "slug": "proyecto-de-innovacion-contable",
+  "course_type": "especifica",
+  "module_name": "Gestión contable y financiera",
+  "credits": 4,
+  "hours_theory": 32,
+  "hours_practice": 64,
+  "summary": "Proyecto de Innovación Contable es un curso de formación específica, de naturaleza teórico-práctica y carácter integrador, que se dicta en el sexto ciclo de la carrera de Contabilidad (código CON-604). Su propósito es que el estudiante, en equipo y con una organización real como socio formador, diagnostique un proceso contable o tributario, diseñe y pruebe una solución innovadora y demuestre con evidencia que mejora su eficiencia, exactitud, control y oportunidad. Se organiza en cuatro unidades: diagnóstico del proceso con BPMN 2.0, línea base y acta del proyecto; rediseño del proceso, selección de tecnologías —Power Query, Python, automatización robótica, servicios de la SUNAT e inteligencia artificial—, controles y prueba de concepto; caso de negocio, tratamiento según la NIC 38 y la Ley del Impuesto a la Renta, plan de implementación y gestión del cambio; y piloto, validación estadística, transferencia y sustentación ante jurado. Integra Software Contable, Auditoría Financiera, Investigación e Innovación Tecnológica y Emprendimiento e Innovación, se articula con Contabilidad Gerencial y Libros y Comprobantes Electrónicos (SUNAT), y puede constituir la base del trabajo de aplicación profesional para la titulación.",
+  "competency": "Diseña, implementa en piloto y evalúa con evidencia proyectos de innovación de procesos contables y tributarios en organizaciones peruanas, integrando el rediseño de procesos, tecnologías de automatización y analítica, controles internos y protección de datos, la evaluación económica y el tratamiento contable de la inversión, y la gestión del cambio, con rigor técnico, trabajo colaborativo con el socio formador y ética profesional.",
+  "capacities": [
+    "Diagnostica un proceso contable o tributario de una organización real mediante modelado BPMN 2.0, medición de una línea base de indicadores y análisis de causa raíz, y formula un proyecto de innovación con objetivos medibles y alcance acordado con el socio formador.",
+    "Rediseña el proceso aplicando principios Lean y heurísticas de rediseño, selecciona tecnologías adecuadas a la naturaleza de cada tarea y construye una prueba de concepto con controles internos y protección de datos personales incorporados desde el diseño.",
+    "Sustenta la viabilidad del proyecto con un caso de negocio basado en flujos incrementales, VAN, TIR y sensibilidad, determina el tratamiento contable y tributario de la inversión y planifica su implementación, sus riesgos y la gestión del cambio.",
+    "Ejecuta un piloto controlado, valida estadísticamente los resultados frente a la línea base, asegura la sostenibilidad y la transferencia de la solución y comunica el proyecto en un informe técnico y una sustentación ante jurado."
+  ],
+  "indicators": [
+    "Modela el proceso actual en BPMN 2.0 con carriles, compuertas, eventos y excepciones, validado por el responsable del proceso en el socio formador.",
+    "Mide la línea base con al menos cuatro indicadores —tiempo de ciclo, rendimiento al primer intento, costo por transacción y exactitud— a partir de una muestra documentada de treinta casos o más.",
+    "Identifica desperdicios y causas raíz con TIMWOODS, Ishikawa y Pareto, y formula objetivos SMART con metas cuantitativas en un acta de constitución firmada por el patrocinador.",
+    "Diseña el proceso futuro justificando cada cambio con heurísticas de rediseño y elige la tecnología mediante una matriz ponderada de adecuación tarea-tecnología.",
+    "Construye una prueba de concepto funcional con datos seudonimizados y una matriz de riesgos y controles que cubre integridad, exactitud, autorización, privacidad y pista de auditoría.",
+    "Calcula el VAN, la TIR y el periodo de recuperación descontado con análisis de sensibilidad, y registra los asientos de la inversión conforme a la NIC 38, la NIC 12 y la Ley del Impuesto a la Renta.",
+    "Elabora un plan de implementación con cronograma, matriz RACI, registro de riesgos y plan de gestión del cambio basado en ADKAR, aprobado por el patrocinador.",
+    "Demuestra la mejora frente a la línea base con una prueba estadística y un gráfico de control, y sustenta el informe final respondiendo con solvencia las preguntas individuales del jurado."
+  ],
+  "methodology": "El curso aplica el aprendizaje basado en proyectos: cada equipo de tres o cuatro estudiantes trabaja durante dieciséis semanas con un socio formador —una empresa, un estudio contable, una cooperativa o una entidad pública— sobre un proceso contable real. Con el aula invertida, el estudiante revisa lecturas y diapositivas antes de cada sesión síncrona, que se dedica a talleres de modelado, programación, evaluación económica y revisión de avances. En cada unidad se discute un caso con el método de casos: preparación individual, debate en el foro y decisión argumentada en la sesión. Al cierre de cada unidad los equipos pasan una revisión tipo compuerta con retroalimentación del docente y del patrocinador. La evaluación formativa se apoya en rúbricas conocidas desde el inicio, cuestionarios con retroalimentación inmediata, bitácora del equipo y coevaluación que hace visible la contribución individual.",
+  "bibliography": [
+    "Dumas, M., La Rosa, M., Mendling, J. y Reijers, H. A. (2018). Fundamentals of business process management (2nd ed.). Springer.",
+    "Hammer, M. y Champy, J. (1994). Reingeniería. Grupo Editorial Norma.",
+    "Womack, J. P. y Jones, D. T. (2003). Lean thinking: Banish waste and create wealth in your corporation (2nd ed.). Free Press.",
+    "Romney, M. B. y Steinbart, P. J. (2018). Accounting information systems (14th ed.). Pearson.",
+    "Committee of Sponsoring Organizations of the Treadway Commission. (2013). Internal control: Integrated framework. COSO.",
+    "International Accounting Standards Board. (2004). Norma Internacional de Contabilidad 38: Activos intangibles. IFRS Foundation.",
+    "Sapag Chain, N., Sapag Chain, R. y Sapag Puelma, J. M. (2014). Preparación y evaluación de proyectos (6.ª ed.). McGraw-Hill Interamericana.",
+    "Project Management Institute. (2021). Guía de los fundamentos para la dirección de proyectos (Guía del PMBOK) (7.ª ed.). Project Management Institute.",
+    "Kotter, J. P. (1996). Leading change. Harvard Business School Press.",
+    "Hiatt, J. M. (2006). ADKAR: A model for change in business, government and our community. Prosci Learning Center Publications."
+  ],
+  "evaluation": [
+    { "name": "Evaluación de proceso", "weight": 25, "description": "Cuestionarios de las cuatro unidades, participación argumentada en los foros de casos, bitácora del equipo y revisiones de compuerta con retroalimentación del docente." },
+    { "name": "Evaluación de producto", "weight": 30, "description": "Tareas de las unidades 1 a 3: acta y diagnóstico con línea base, diseño del proceso futuro con prueba de concepto, y caso de negocio con plan de implementación." },
+    { "name": "Evaluación del socio formador", "weight": 10, "description": "Valoración del patrocinador sobre el aporte del equipo, el cumplimiento de compromisos, la confidencialidad y la utilidad de la solución entregada." },
+    { "name": "Evaluación final", "weight": 35, "description": "Informe final con resultados del piloto validados frente a la línea base, paquete de transferencia, demostración de la solución y sustentación individual ante jurado." }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Diagnóstico del proceso contable y formulación del proyecto",
+      "description": "Al finalizar la unidad, el estudiante diagnostica un proceso contable o tributario de su socio formador con modelado BPMN 2.0, línea base de indicadores y análisis de causa raíz, y formula un proyecto de innovación con objetivos medibles y un acta de constitución firmada.",
+      "topics": [
+        "El proyecto de innovación contable, el socio formador y el trabajo de aplicación profesional",
+        "Transformación digital de la función contable en el Perú: tendencias, oportunidades y límites",
+        "Modelado del proceso actual con BPMN 2.0 y técnicas de relevamiento",
+        "Línea base: tiempo de ciclo, rendimiento al primer intento, costo por transacción y muestreo",
+        "Desperdicios Lean, causa raíz y priorización de oportunidades",
+        "Problema, objetivos SMART, alcance y acta de constitución del proyecto"
+      ],
+      "slides": [
+        {
+          "title": "Qué es un proyecto de innovación contable",
+          "bullets": [
+            "Innovación de proceso según el Manual de Oslo (2018): un proceso nuevo o mejorado que difiere significativamente del anterior y se pone en uso.",
+            "En contabilidad se innova el cómo: registro, conciliación, cierre, cumplimiento tributario, reporte y control, no las normas que los rigen.",
+            "El resultado no es un informe teórico: es una solución probada en un piloto con un socio formador y una mejora medida frente a una línea base.",
+            "Tres pruebas de valor: más rápido, con menos errores y con mejor control; si se pierde control, no es innovación sino riesgo."
+          ],
+          "notes": "Abra la sesión preguntando: ¿qué innovó la última vez su centro de trabajo en el área contable? Muchos responderán que «compró un sistema». Aclare que adquirir tecnología no es innovar si el proceso, los controles y los resultados siguen iguales. Recuerde la definición de innovación de proceso del Manual de Oslo, que ya revisaron en Investigación e Innovación Tecnológica, y aplíquela al terreno contable: la norma tributaria o la NIIF no se innovan, pero sí la forma de cumplirlas. Insista en el carácter demostrable del curso: al terminar el ciclo cada equipo deberá mostrar datos de antes y después. Plantee la regla de oro del contador innovador: una mejora que acelera el cierre pero debilita la pista de auditoría o la segregación de funciones es un retroceso. Pida que cada estudiante publique en el foro un proceso que considere lento o propenso a errores en una organización que conozca."
+        },
+        {
+          "title": "El socio formador y el trabajo de aplicación profesional",
+          "bullets": [
+            "Socio formador: empresa, estudio contable, cooperativa o entidad pública que aporta un proceso real, datos y un responsable con disponibilidad.",
+            "Compromisos formales: carta de aceptación, acuerdo de confidencialidad, acceso a datos seudonimizados y reuniones de validación al cierre de cada unidad.",
+            "La Ley 30512 y su reglamento prevén el trabajo de aplicación profesional como modalidad de titulación; este proyecto puede ser su base.",
+            "Criterios para elegir el proceso: dolor visible, volumen suficiente, datos accesibles, patrocinador interesado y alcance viable en dieciséis semanas."
+          ],
+          "notes": "Explique que el socio formador no es un cliente que paga, sino una organización que acepta aprender con el equipo y compartir un problema real. Muestre un modelo de carta de aceptación y un acuerdo de confidencialidad, y subraye que, aunque los datos se seudonimicen, el deber de reserva del contador sigue vigente. Comente que la Ley 30512 y su reglamento contemplan el trabajo de aplicación profesional como una vía para obtener el título, por lo que un buen proyecto puede ahorrar al estudiante meses de trabajo posterior. Analice los criterios de elección con ejemplos: un estudio contable de Trujillo con ochenta clientes mypes ofrece volumen y datos; una empresa familiar con veinte comprobantes al mes quizá no justifique automatizar nada. Pregunte: ¿qué pasa si el patrocinador cambia de trabajo a mitad del ciclo? Pida que cada equipo identifique dos socios alternativos desde la primera semana."
+        },
+        {
+          "title": "Transformación digital de la función contable en el Perú",
+          "bullets": [
+            "La emisión electrónica masiva y el SIRE convirtieron a la SUNAT en la principal fuente de datos estructurados de compras y ventas.",
+            "Del registro manual a la contabilidad continua: conciliaciones, devengos y validaciones distribuidas durante el mes, no concentradas en el cierre.",
+            "Tecnologías al alcance de una mype: Power Query, Python, automatización robótica, servicios web de la SUNAT y de bancos, e inteligencia artificial.",
+            "Límite crítico: automatizar un proceso defectuoso solo produce errores más rápidos y en mayor volumen."
+          ],
+          "notes": "Contextualice: con los comprobantes electrónicos y la propuesta del SIRE, la SUNAT conoce las compras y ventas de un contribuyente casi en tiempo real; el contador que todavía digita comprobantes compite contra información que ya existe en formato XML. Introduzca la idea de contabilidad continua: en lugar de esperar al cierre, las tareas repetitivas se ejecutan a diario y el cierre se convierte en una revisión. Enumere las tecnologías disponibles y recuerde que varias ya las usaron en Ofimática Contable y Software Contable. Cite la advertencia atribuida a Bill Gates: la automatización aplicada a una operación ineficiente magnifica la ineficiencia. Pregunte: ¿conviene automatizar la digitación de facturas en un estudio cuyos clientes ya emiten XML? La respuesta correcta probablemente sea eliminar la digitación, no automatizarla. Este matiz guiará todo el curso."
+        },
+        {
+          "title": "Mapa de procesos contables y elección del proceso",
+          "bullets": [
+            "Ciclos de transacciones: ingresos (pedido-cobranza), egresos (compra-pago), nómina, activos fijos, tesorería y registro-reporte.",
+            "Procesos de cumplimiento: emisión de comprobantes, libros electrónicos, declaraciones mensuales, detracciones y conciliación con el SIRE.",
+            "Jerarquía: macroproceso, proceso, subproceso, actividad y tarea; el proyecto actúa en el nivel de proceso o subproceso.",
+            "Matriz de selección: impacto, volumen, frecuencia, nivel de error, disponibilidad de datos y apoyo del patrocinador, con pesos explícitos."
+          ],
+          "notes": "Recuerde los ciclos de transacciones que estudiaron en Software Contable y en Auditoría Financiera; allí se analizaron desde el control, aquí se analizan desde la oportunidad de mejora. Muestre un mapa de procesos de un estudio contable con procesos estratégicos, operativos y de soporte. Explique la jerarquía y advierta que el error más frecuente es elegir un alcance demasiado amplio, como «mejorar la contabilidad del cliente»; el alcance adecuado es un subproceso con entradas y salidas definidas, por ejemplo «registro de compras desde la recepción del XML hasta su anotación en el Registro de Compras Electrónico». Construya en vivo una matriz ponderada con tres candidatos y discuta cómo cambia el resultado si se modifica el peso del apoyo del patrocinador. Pregunte: ¿por qué conviene un proceso de alta frecuencia para un proyecto de dieciséis semanas? Porque permite medir varios ciclos antes y después."
+        },
+        {
+          "title": "BPMN 2.0: notación esencial para procesos contables",
+          "bullets": [
+            "Estándar del Object Management Group (versión 2.0, 2011): eventos de inicio, intermedios y de fin; actividades; compuertas; flujos de secuencia y de mensaje.",
+            "Piscinas y carriles muestran quién hace qué: asistente contable, jefe de contabilidad, cliente, banco y SUNAT.",
+            "Compuertas exclusivas para decisiones (¿comprobante válido?), paralelas para tareas simultáneas e inclusivas para combinaciones.",
+            "Anote en cada actividad el sistema usado, el tiempo promedio, la frecuencia y el tipo de error observado."
+          ],
+          "notes": "Muestre un diagrama BPMN del registro de compras: el evento de inicio es la recepción del comprobante; la primera actividad es la descarga del XML; una compuerta exclusiva pregunta si el comprobante figura como válido en la consulta de la SUNAT; si no lo es, un flujo de mensaje lo devuelve al proveedor. Explique la diferencia entre piscina, que representa una organización, y carril, que representa un rol, y por qué los flujos de secuencia no cruzan piscinas. Recomiende herramientas gratuitas como Bizagi Modeler o draw.io. Insista en que el diagrama del proceso actual se construye observando y entrevistando, no imaginando: el proceso del manual casi nunca coincide con el real. Haga un ejercicio rápido: los estudiantes modelan en diez minutos la emisión de una nota de crédito y comparan sus diagramas. Las diferencias revelarán ambigüedades que el proyecto deberá resolver."
+        },
+        {
+          "title": "Cómo levantar el proceso real: técnicas de relevamiento",
+          "bullets": [
+            "Entrevista semiestructurada al dueño del proceso y a quienes lo ejecutan; preguntar por las excepciones, no solo por el flujo ideal.",
+            "Observación directa o recorrido del proceso: seguir un comprobante desde su llegada hasta el asiento contable.",
+            "Minería de procesos: reconstruir el flujo real a partir de bitácoras del sistema con identificador de caso, actividad y marca de tiempo.",
+            "Triangular fuentes y validar el diagrama con el responsable antes de medir la línea base."
+          ],
+          "notes": "Explique que cada técnica revela algo distinto. La entrevista capta la lógica y las reglas, pero suele idealizar el proceso; la observación directa revela esperas, búsquedas de archivos y reprocesos que nadie menciona. Cuente un ejemplo: en un estudio contable de Lima, un asistente declaró registrar una factura en dos minutos, pero la observación mostró doce minutos en promedio porque buscaba el XML en el correo del cliente. Introduzca la minería de procesos, desarrollada por Wil van der Aalst: si el sistema guarda un registro de eventos con caso, actividad y fecha-hora, puede reconstruirse automáticamente el flujo real con todas sus variantes. Aunque sea una técnica avanzada, conviene que sepan que existe y que hay herramientas de código abierto para aplicarla. Cierre con una regla práctica: ningún diagrama es válido hasta que lo firma el responsable del proceso. Pida que cada equipo prepare una guía de entrevista de diez preguntas."
+        },
+        {
+          "title": "Indicadores de la línea base",
+          "bullets": [
+            "Tiempo de ciclo: duración desde el evento de inicio hasta el de fin; por ejemplo, días hábiles de cierre después del fin de mes.",
+            "Rendimiento al primer intento = casos procesados sin reproceso / total de casos procesados.",
+            "Costo por transacción = horas del proceso × costo hora cargado / número de transacciones.",
+            "Eficiencia del ciclo = tiempo que agrega valor / tiempo total de ciclo; en procesos administrativos suele ser inferior al 10 %.",
+            "Exactitud y oportunidad: errores detectados por auditoría o por la SUNAT y porcentaje de anotaciones dentro del plazo."
+          ],
+          "notes": "Esta diapositiva define lo que el curso exigirá medir. Explique cada indicador con un ejemplo: si un estudio registra 3 200 comprobantes al mes con 160 horas de un asistente cuyo costo cargado es S/ 18 por hora, el costo por comprobante es S/ 0,90. Si 2 720 se registran sin corrección, el rendimiento al primer intento es 85 %. Aclare que el costo hora cargado incluye remuneración, gratificaciones, bonificación extraordinaria, CTS y EsSalud, como vieron en Planillas y Beneficios Sociales. Comente que la eficiencia del ciclo es muy baja en procesos administrativos porque la mayor parte del tiempo el documento espera en una bandeja; por eso reducir esperas rinde más que acelerar la digitación. Pregunte: ¿qué indicador elegirían para un proceso de declaración mensual, donde el volumen es uno por cliente? Lleve la discusión hacia indicadores de exactitud y oportunidad."
+        },
+        {
+          "title": "Muestreo y registro de tiempos",
+          "bullets": [
+            "Definir operacionalmente cada indicador: qué cuenta como error, cuándo inicia y termina el ciclo y qué fuente lo registra.",
+            "Fuentes: fechas del sistema contable, correos, constancias de la SUNAT, bitácoras y registro manual de tiempos durante dos a cuatro semanas.",
+            "Muestra orientativa de treinta casos o más por indicador; estratificar por tipo de comprobante o de cliente si hay alta variabilidad.",
+            "Reportar media, mediana, desviación estándar y percentil 90; la media sola oculta los casos que más afectan al usuario."
+          ],
+          "notes": "Conecte con Estadística Aplicada del tercer ciclo. La línea base solo es útil si después se mide igual: la misma definición, la misma fuente y un periodo comparable. Explique que treinta casos es una referencia práctica, no una regla mágica, y cuándo conviene estratificar: en un estudio contable, los clientes con importaciones tienen tiempos muy distintos de los clientes de servicios. Muestre una plantilla de registro con columnas para identificador del caso, inicio, fin, responsable, reproceso y causa. Insista en el percentil 90: si el cierre tarda en promedio seis días, pero uno de cada diez meses tarda doce, el gerente recuerda los doce. Advierta del efecto Hawthorne: el personal observado suele trabajar más rápido, por lo que conviene combinar registros históricos del sistema con observación. Pida que cada equipo defina por escrito sus indicadores antes de medir."
+        },
+        {
+          "title": "Desperdicios Lean en procesos contables",
+          "bullets": [
+            "Esperas: comprobantes en bandeja hasta la aprobación; transporte: reenvíos de correos entre cliente, asistente y supervisor.",
+            "Sobreprocesamiento: digitar el mismo dato en Excel y en el sistema; sobreproducción: reportes que nadie lee.",
+            "Inventario: comprobantes pendientes de registrar al fin de mes; movimiento: búsqueda de archivos en carpetas desordenadas.",
+            "Defectos: RUC, tipo de cambio o tasa de detracción errados; talento no aprovechado: contadores dedicados a digitar."
+          ],
+          "notes": "Presente los ocho desperdicios con el acrónimo TIMWOODS y tradúzcalos al lenguaje contable. Recuerde que el pensamiento Lean, sistematizado por Womack y Jones a partir del sistema de producción de Toyota, define desperdicio como toda actividad que consume recursos sin crear valor para el cliente. En contabilidad, el cliente puede ser la gerencia, el cliente del estudio o la propia SUNAT. Proponga un ejercicio: cada equipo revisa su diagrama del proceso actual y etiqueta cada actividad como valor agregado, necesaria sin valor —por ejemplo, controles exigidos por norma— o desperdicio puro. Aclare que los controles no son desperdicio, aunque sí puede serlo un control redundante que repite lo que otro ya verificó. Pregunte: ¿la revisión del supervisor sobre el 100 % de los asientos es desperdicio o control? La respuesta depende del riesgo y de la existencia de controles automáticos previos."
+        },
+        {
+          "title": "Análisis de causa raíz y priorización",
+          "bullets": [
+            "Diagrama de Ishikawa con categorías adaptadas: métodos, personas, sistemas, datos, proveedores de información y normativa.",
+            "Cinco porqués para profundizar cada causa hasta llegar a una decisión de diseño que el proyecto pueda modificar.",
+            "Diagrama de Pareto de errores: suele mostrar que pocas causas concentran la mayoría de los reprocesos.",
+            "Matriz impacto-esfuerzo para decidir qué causas atacará el proyecto y cuáles quedan fuera del alcance."
+          ],
+          "notes": "Muestre un Ishikawa real: el problema es «el cierre mensual tarda once días hábiles». Entre las causas aparecen clientes que envían documentos tarde, conciliaciones bancarias manuales, falta de calendario de cierre y diferencias con el SIRE. Aplique cinco porqués a una de ellas: ¿por qué la conciliación es tardía? Porque se espera el extracto que envía el cliente. ¿Por qué? Porque el estudio no tiene acceso de consulta a la banca por internet del cliente. Y así hasta una causa accionable. Luego construya un Pareto con 120 errores registrados: si el 68 % se debe al tipo de cambio y a comprobantes duplicados, el proyecto debe concentrarse allí. Explique que la matriz impacto-esfuerzo frena el entusiasmo de querer resolverlo todo. Pregunte: ¿qué hacer con una causa de alto impacto que el socio no permite tocar, como su política de crédito? Se documenta como restricción y queda fuera del alcance."
+        },
+        {
+          "title": "Del síntoma al problema del proyecto",
+          "bullets": [
+            "Síntoma: «el cierre es lento». Problema: «entre marzo y agosto el cierre demoró 11 días hábiles en promedio y la gerencia exige 6».",
+            "Un buen enunciado incluye proceso, indicador, magnitud actual, brecha frente a la meta y consecuencia para la organización.",
+            "Evitar soluciones disfrazadas de problema: «no tenemos un robot» describe una preferencia, no una necesidad.",
+            "Validar el enunciado con el patrocinador y con quienes ejecutan el proceso."
+          ],
+          "notes": "Muestre tres enunciados y pida a la clase calificarlos. El primero, «la contabilidad está desactualizada», es vago. El segundo, «necesitamos implementar automatización robótica», es una solución disfrazada. El tercero, «entre marzo y agosto, el 22 % de los comprobantes de compra del estudio requirió corrección antes de la declaración, lo que generó en promedio 46 horas mensuales de reproceso y dos rectificatorias», cumple todos los criterios. Explique que la claridad del problema condiciona la calidad del resto del proyecto, porque define qué se medirá al final. Conecte con el árbol de problemas que trabajaron en Investigación e Innovación Tecnológica y aclare que aquí el énfasis no es una pregunta de investigación, sino una brecha operativa medible. Pida a cada equipo redactar su enunciado y publicarlo en el foro para recibir la crítica de otro equipo."
+        },
+        {
+          "title": "Objetivos SMART y metas del proyecto",
+          "bullets": [
+            "Específico, medible, alcanzable, relevante y con plazo: «reducir el cierre de 11 a 6 días hábiles en el piloto de noviembre».",
+            "Un objetivo general y de tres a cinco específicos, cada uno con indicador, línea base, meta, fuente y responsable.",
+            "Incluir al menos una meta de control: cero pérdida de pista de auditoría y conciliaciones aprobadas al 100 %.",
+            "Referencias externas como los estudios comparativos de APQC orientan, pero la meta se fija con los datos del socio."
+          ],
+          "notes": "Construya con la clase una tabla de objetivos con indicador, línea base, meta, fuente de verificación y responsable. Explique por qué todo objetivo de eficiencia debe acompañarse de uno de control o de calidad: si el equipo reduce el cierre a cinco días, pero aparecen asientos sin sustento, el proyecto fracasa. Comente que los estudios comparativos de APQC muestran que las organizaciones de mejor desempeño cierran sus libros mensuales en alrededor de cinco días o menos, mientras las rezagadas superan los diez; la cifra sirve para conversar con el patrocinador, pero no reemplaza el análisis de la propia capacidad. Advierta del riesgo de prometer demasiado: una meta que no se alcanza en el piloto debilita la sustentación. Pregunte: ¿es mejor una meta modesta alcanzada o una ambiciosa parcialmente lograda? Discuta cómo justificar cualquiera de las dos con evidencia."
+        },
+        {
+          "title": "Acta de constitución y alcance del proyecto",
+          "bullets": [
+            "Contenido: problema, objetivos, alcance incluido y excluido, entregables, hitos, supuestos, restricciones, riesgos iniciales e interesados.",
+            "La firman el patrocinador del socio formador, el equipo y el docente asesor; es el contrato del proyecto.",
+            "Estructura de desglose del trabajo con un paquete por unidad: diagnóstico, diseño, caso de negocio y piloto.",
+            "Control de cambios: toda ampliación del alcance se evalúa por su efecto en plazo, calidad y carga del equipo."
+          ],
+          "notes": "Explique que el acta de constitución, propuesta por la guía del PMBOK, autoriza formalmente el proyecto y da al equipo legitimidad para pedir datos y tiempo al personal del socio. Muestre un ejemplo de alcance excluido: «el proyecto no modificará el plan de cuentas ni la configuración del sistema contable del cliente». Esa frase evita discusiones posteriores. Presente una estructura de desglose del trabajo en cuatro paquetes alineados con las unidades del curso. Comente el fenómeno del corrimiento del alcance: el patrocinador, entusiasmado, pide sumar el proceso de planillas en la semana nueve. Explique cómo responder con un análisis de impacto y no con una simple negativa. Pregunte: ¿qué supuestos críticos debe registrar un equipo que dependerá de las claves SOL del cliente para descargar información? Por ejemplo, la disponibilidad de usuarios secundarios con permisos limitados."
+        },
+        {
+          "title": "Ética y confidencialidad desde el primer día",
+          "bullets": [
+            "Principios fundamentales del contador: integridad, objetividad, competencia profesional y diligencia, confidencialidad y comportamiento profesional.",
+            "Ley 29733: tratar datos personales de trabajadores y clientes solo con finalidad legítima, consentimiento o habilitación legal, y medidas de seguridad.",
+            "Nunca usar las claves SOL principales del socio; solicitar usuarios secundarios con permisos mínimos.",
+            "Seudonimizar los datos para el aula: reemplazar RUC, nombres y cuentas por códigos consistentes."
+          ],
+          "notes": "Cierre la unidad con una advertencia práctica. Los equipos tendrán acceso a información que el socio formador confía bajo reserva: compras, remuneraciones y saldos bancarios. Recuerde los cinco principios fundamentales que la profesión contable peruana ha alineado con el código internacional del IESBA y vincúlelos con situaciones concretas: subir un archivo de planillas a una herramienta pública de inteligencia artificial vulnera la confidencialidad y la Ley 29733. Explique la seudonimización consistente: el RUC 20123456789 se reemplaza siempre por PROV-001, de modo que los cruces sigan funcionando. Señale que las claves SOL principales otorgan poderes amplios, incluso para presentar declaraciones; por eso se solicitan usuarios secundarios con perfiles limitados. Pida que cada equipo redacte y firme su protocolo de manejo de datos como anexo del acta de constitución."
+        }
+      ],
+      "reading": {
+        "title": "Diagnosticar antes de innovar: procesos contables, línea base y formulación del proyecto",
+        "minutes": 35,
+        "content": "## 1. El error de empezar por la solución\n\nLa mayoría de proyectos de innovación contable que fracasan no lo hacen por falta de tecnología, sino porque empezaron por ella. Un estudio contable compra una licencia de automatización porque «todos están automatizando» y descubre meses después que el verdadero cuello de botella era la recepción tardía de documentos de sus clientes. Dumas, La Rosa, Mendling y Reijers (2018) proponen un ciclo de gestión de procesos que comienza por identificar y descubrir el proceso, continúa con su análisis y solo después aborda el rediseño y la implementación. Este curso sigue esa secuencia: primero se entiende y se mide; luego se innova.\n\n## 2. El proceso como unidad de análisis\n\nUn proceso es un conjunto de eventos, actividades y decisiones que transforman entradas en un resultado valioso para un cliente. En contabilidad, el «caso» puede ser un comprobante, un movimiento bancario, un cliente del estudio o un cierre mensual. Definir el caso es la primera decisión metodológica, porque determina qué se cuenta y qué se mide. El modelo BPMN 2.0 del proceso actual debe mostrar los carriles —quién hace cada actividad—, las compuertas de decisión, las excepciones y los sistemas utilizados. Se construye con entrevistas, observación directa y, cuando el sistema guarda bitácoras, con minería de procesos.\n\n## 3. Indicadores de la línea base\n\n```\nTiempo de ciclo               = momento de fin − momento de inicio\nRendimiento al primer intento = casos sin reproceso / casos procesados\nCosto por transacción         = horas × costo hora cargado / casos\nEficiencia del ciclo (PCE)    = tiempo de valor agregado / tiempo de ciclo\nLey de Little                 = trabajo en proceso = tasa de salida × tiempo de ciclo\n```\n\n**Ejemplo resuelto.** El Estudio Contable Mendoza, de Arequipa, registra 4 000 comprobantes de compra al mes con 200 horas de dos asistentes. Cada asistente percibe S/ 2 000 mensuales; su costo anual cargado —doce remuneraciones, dos gratificaciones con la bonificación extraordinaria de 9 %, CTS y EsSalud de 9 %— asciende a unos S/ 32 853, que divididos entre 1 760 horas productivas dan S/ 18,67 por hora. Entonces:\n\n- Costo por comprobante = 200 × 18,67 / 4 000 = **S/ 0,93**.\n- De los 4 000 comprobantes, 3 280 no requirieron corrección: rendimiento al primer intento = **82 %**.\n- Al cierre de cada día quedan en promedio 600 comprobantes pendientes y se registran 200 diarios; por la ley de Little, cada comprobante espera en promedio 600 / 200 = **3 días hábiles**.\n- Registrar un comprobante toma cuatro minutos de trabajo efectivo, pero su tiempo de ciclo es de tres días hábiles de ocho horas (1 440 minutos): PCE = 4 / 1 440 = **0,28 %**.\n\nLa conclusión es contundente: el problema no es la velocidad de digitación, sino la espera. Un robot que digite el doble de rápido apenas cambiaría el tiempo de ciclo.\n\n## 4. De los datos a las causas\n\nLos 720 comprobantes corregidos se clasificaron por causa:\n\n| Causa | Casos | % | Acumulado |\n|---|---|---|---|\n| Tipo de cambio errado | 260 | 36 % | 36 % |\n| Comprobante duplicado o anulado | 210 | 29 % | 65 % |\n| Cuenta contable mal asignada | 144 | 20 % | 85 % |\n| Destino del IGV errado | 66 | 9 % | 94 % |\n| Otras | 40 | 6 % | 100 % |\n\nDos causas explican casi dos tercios de los reprocesos, y ambas pueden atacarse en la fuente: el tipo de cambio puede obtenerse automáticamente de la publicación oficial, y los duplicados y anulados pueden detectarse cruzando cada comprobante con la propuesta del Registro de Compras Electrónico del SIRE y con la consulta de validez de la SUNAT. El diagrama de Ishikawa y los cinco porqués completan el análisis, y la clasificación de actividades según los ocho desperdicios Lean muestra dónde se pierde el tiempo.\n\n## 5. Formular el proyecto\n\nCon evidencia en la mano, el problema se enuncia con precisión: «Entre marzo y agosto, el 18 % de los comprobantes de compra requirió corrección, lo que generó unas 36 horas mensuales de reproceso y una espera de tres días hábiles que retrasa el cierre de los clientes». Los objetivos SMART se derivan directamente:\n\n| Indicador | Línea base | Meta del piloto | Fuente |\n|---|---|---|---|\n| Rendimiento al primer intento | 82 % | 95 % o más | Bitácora de correcciones |\n| Espera promedio | 3 días | 1 día o menos | Fechas del sistema |\n| Costo por comprobante | S/ 0,93 | S/ 0,60 o menos | Registro de horas |\n| Trazabilidad | Parcial | 100 % de casos | Revisión del supervisor |\n\nEl acta de constitución formaliza el acuerdo: problema, objetivos, alcance incluido y excluido, hitos, supuestos, restricciones, riesgos e interesados, con la firma del patrocinador.\n\n## 6. Errores frecuentes\n\n1. Medir la línea base con definiciones distintas de las que se usarán en el piloto.\n2. Elegir un alcance tan amplio que no pueda pilotearse en el ciclo.\n3. Confundir síntomas con causas y soluciones con problemas.\n4. Ignorar la variabilidad: la media oculta los peores casos, que son los que el usuario recuerda.\n5. Olvidar las metas de control: más rapidez a costa de trazabilidad no es una mejora."
+      },
+      "case": {
+        "title": "Caso: Estudio Contable Huamán & Asociados y los once días de cierre",
+        "content": "**Contexto.** Estudio Contable Huamán & Asociados fue fundado en 2009 en Arequipa por la contadora pública colegiada Rosa Huamán. Atiende a 92 clientes: 64 del Régimen MYPE Tributario, 21 del Régimen General y 7 del Régimen Especial. Su equipo está formado por la socia, un supervisor, cinco asistentes contables y una practicante de TEPSUP. Cobra honorarios mensuales fijos de entre S/ 350 y S/ 2 800 por cliente.\n\n**El problema.** Entre marzo y agosto, el estudio cerró la contabilidad mensual de sus clientes en un promedio de 11 días hábiles, con un percentil 90 de 14 días. En tres de esos meses, varias declaraciones se presentaron el último día del cronograma de vencimientos de la SUNAT y en el semestre hubo cuatro rectificatorias por comprobantes anulados que se habían registrado. Cada asistente acumuló en promedio 38 horas extras mensuales y dos asistentes renunciaron en el año aduciendo carga de trabajo.\n\n**Los datos.** La practicante observó durante dos semanas la jornada de los asistentes y registró la distribución de su tiempo:\n\n| Actividad | Tiempo |\n|---|---|\n| Solicitar y buscar documentos de clientes por WhatsApp, correo o en físico | 31 % |\n| Registrar comprobantes en el sistema contable | 27 % |\n| Cruzar el registro con la propuesta del SIRE | 18 % |\n| Corregir errores detectados por el supervisor | 14 % |\n| Preparar declaraciones y reportes | 10 % |\n\nEl estudio registra unos 9 500 comprobantes al mes y el supervisor revisa el 100 % de los asientos antes del cierre.\n\n**Tres propuestas.** El supervisor propone contratar una licencia de automatización robótica para que un robot ingrese a la plataforma de la SUNAT de cada cliente, descargue los comprobantes y los digite en el sistema contable, por US$ 4 200 anuales más la implementación. La socia evalúa migrar a todos los clientes a un sistema contable en la nube integrado con el SIRE, con un costo estimado de S/ 48 000 el primer año y una migración de seis meses. La practicante sugiere algo más modesto: estandarizar la recepción con una carpeta compartida por cliente y periodo, usar la propuesta del SIRE como fuente del registro de compras y validar automáticamente anulados y tipos de cambio con Power Query.\n\n**El dilema.** La socia aceptó ser socia formadora del proyecto del equipo de la practicante, pero exige resultados visibles antes del cierre de diciembre. Tiene dudas: ¿la solución pequeña será suficiente?, ¿el robot no sería más moderno?, ¿el proyecto debe abarcar a todos los clientes o solo a un grupo? Además, recuerda que la información de sus clientes es confidencial y que nunca entregó las claves SOL principales a nadie fuera del estudio.",
+        "questions": [
+          "¿Qué proceso o subproceso recomendaría como alcance del proyecto y con qué criterios ponderados justificaría la elección ante la socia?",
+          "¿Qué indicadores de línea base mediría y cómo obtendría los datos sin interrumpir la operación del estudio durante el cierre?",
+          "Clasifique la distribución del tiempo observada según los desperdicios Lean. ¿Qué revela sobre la conveniencia de cada una de las tres propuestas?",
+          "¿Qué riesgos de confidencialidad y de control debe prever el equipo antes de acceder a la información de los clientes del estudio?",
+          "Redacte el enunciado del problema y dos objetivos SMART, uno de eficiencia y otro de control, para presentarlos a la socia."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Acta del proyecto y diagnóstico del proceso actual con línea base",
+        "instructions": "**Objetivo.** Diagnosticar con evidencia un proceso contable o tributario del socio formador y formalizar el proyecto de innovación en un acta de constitución.\n\n**Qué entregar.**\n\n1. **Compromiso del socio formador:** carta o correo de aceptación del patrocinador y protocolo de manejo de datos firmado por el equipo.\n2. **Diagrama del proceso actual** en BPMN 2.0, con carriles, compuertas, excepciones y sistemas, validado por el responsable del proceso; incluya la guía de entrevista y las notas de observación.\n3. **Línea base:** libro de Excel con al menos treinta casos seudonimizados y cuatro indicadores definidos operacionalmente (tiempo de ciclo, rendimiento al primer intento, costo por transacción y uno de exactitud u oportunidad), con media, mediana, desviación estándar y percentil 90.\n4. **Análisis de causas:** clasificación de actividades según los desperdicios Lean, diagrama de Ishikawa, cinco porqués y diagrama de Pareto de errores.\n5. **Acta de constitución:** enunciado del problema, objetivo general, objetivos específicos SMART con al menos una meta de control, alcance incluido y excluido, hitos, supuestos, restricciones, riesgos iniciales e interesados, con firmas.\n\n**Formato.** Documento PDF de ocho a doce páginas, diagrama en imagen de alta resolución o archivo BPMN y libro de Excel. Entrega por equipo en la semana 4, con una matriz de contribución individual firmada por todos los integrantes.\n\n**Criterios.** Validez del diagrama, rigor de la medición, coherencia entre causas y objetivos, calidad del acta y cumplimiento de las reglas de confidencialidad.",
+        "rubric": [
+          { "name": "Diagrama del proceso actual validado y pertinente", "points": 4 },
+          { "name": "Línea base medida con definiciones operativas y rigor", "points": 5 },
+          { "name": "Análisis de desperdicios, causas raíz y priorización", "points": 4 },
+          { "name": "Problema, objetivos SMART y acta de constitución", "points": 5 },
+          { "name": "Confidencialidad, seudonimización y contribución individual", "points": 2 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Diagnóstico de procesos y línea base",
+        "questions": [
+          {
+            "prompt": "Un estudio registra 2 500 comprobantes al mes con 125 horas de trabajo y un costo hora cargado de S/ 20. ¿Cuál es el costo por comprobante?",
+            "options": ["S/ 1,00", "S/ 0,80", "S/ 1,25", "S/ 20,00"],
+            "correct": 0,
+            "explanation": "Costo por transacción = 125 horas × S/ 20 / 2 500 comprobantes = S/ 2 500 / 2 500 = S/ 1,00 por comprobante."
+          },
+          {
+            "prompt": "De 1 200 asientos de compras, 180 se corrigieron una vez y 30 se corrigieron dos veces. ¿Cuál es el rendimiento al primer intento?",
+            "options": ["82,5 %", "85,0 %", "97,5 %", "17,5 %"],
+            "correct": 0,
+            "explanation": "El indicador cuenta casos, no correcciones: 210 asientos tuvieron al menos un reproceso, de modo que 990 salieron bien al primer intento; 990 / 1 200 = 82,5 %."
+          },
+          {
+            "prompt": "Al cierre de cada día quedan en promedio 450 comprobantes pendientes y el área registra 150 por día. Según la ley de Little, ¿cuánto espera en promedio un comprobante?",
+            "options": ["3 días hábiles", "0,33 días hábiles", "4,5 días hábiles", "1,5 días hábiles"],
+            "correct": 0,
+            "explanation": "Tiempo de ciclo = trabajo en proceso / tasa de salida = 450 / 150 = 3 días hábiles. Reducir el inventario pendiente reduce directamente la espera."
+          },
+          {
+            "prompt": "Un equipo formula su problema así: «la empresa no cuenta con un robot de software para descargar comprobantes». ¿Cuál es el principal defecto del enunciado?",
+            "options": ["Describe una solución y no una brecha medible del proceso", "No menciona la norma tributaria aplicable al caso", "Es demasiado específico para un proyecto de innovación", "No identifica al proveedor del software elegido"],
+            "correct": 0,
+            "explanation": "Es una solución disfrazada de problema. Un buen enunciado describe el proceso, el indicador, su magnitud actual, la brecha frente a la meta y la consecuencia para la organización."
+          },
+          {
+            "prompt": "El supervisor revisa el 100 % de los asientos que un control automático del sistema ya validó con las mismas reglas. Según el enfoque Lean, esa revisión es principalmente:",
+            "options": ["Sobreprocesamiento, porque repite un control sin añadir seguridad", "Valor agregado, porque todo control agrega valor", "Inventario, porque acumula asientos pendientes", "Transporte, porque mueve documentos entre áreas"],
+            "correct": 0,
+            "explanation": "Un control necesario no es desperdicio, pero repetir la misma verificación ya realizada por otro control, sin añadir cobertura de riesgo, es sobreprocesamiento y consume capacidad del supervisor."
+          },
+          {
+            "prompt": "La media del cierre mensual es de 6 días hábiles, pero el percentil 90 es de 12 días. ¿Qué conclusión es correcta?",
+            "options": ["Uno de cada diez cierres tarda al menos doce días; la meta debe atender la variabilidad", "El 90 % de los cierres dura exactamente doce días", "La media es suficiente para fijar la meta del proyecto", "El percentil indica necesariamente un error de medición"],
+            "correct": 0,
+            "explanation": "El percentil 90 muestra la cola de casos más lentos. Una mejora que solo baje la media sin reducir la variabilidad dejará cierres de doce días, que son los que el usuario recuerda."
+          },
+          {
+            "prompt": "En el diagrama BPMN del registro de compras, ¿qué elemento representa la pregunta «¿el comprobante figura como válido en la consulta de la SUNAT?»?",
+            "options": ["Compuerta exclusiva", "Compuerta paralela", "Evento de fin", "Carril"],
+            "correct": 0,
+            "explanation": "La compuerta exclusiva representa una decisión con caminos alternativos excluyentes: válido o no válido. La paralela abre caminos simultáneos y el carril solo indica el rol responsable."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Diseño de la solución: rediseño del proceso, tecnología y controles",
+      "description": "Al finalizar la unidad, el estudiante diseña el proceso futuro con principios Lean y heurísticas de rediseño, selecciona la tecnología adecuada para cada tarea, incorpora controles y protección de datos desde el diseño y construye una prueba de concepto funcional con datos seudonimizados.",
+      "topics": [
+        "Rediseño del proceso: eliminar, simplificar, integrar y automatizar",
+        "Heurísticas de rediseño y el cuadrilátero tiempo-costo-calidad-flexibilidad",
+        "Portafolio tecnológico: Power Query, Python, automatización robótica, servicios web e inteligencia artificial",
+        "Calidad de datos contables y conciliación automática por reglas",
+        "Controles internos, pista de auditoría y privacidad desde el diseño",
+        "Prueba de concepto y uso responsable de la inteligencia artificial generativa"
+      ],
+      "slides": [
+        {
+          "title": "Del proceso actual al proceso futuro",
+          "bullets": [
+            "Hammer y Champy: rediseñar radicalmente los procesos para lograr mejoras drásticas en costo, calidad, servicio y rapidez.",
+            "Enfoque Lean y kaizen: mejoras continuas y de bajo riesgo sobre el proceso existente, con participación de quienes lo ejecutan.",
+            "En dieciséis semanas conviene un rediseño focalizado: cambio profundo en un subproceso, no en toda la organización.",
+            "El proceso futuro se documenta en BPMN con las mismas convenciones del actual para comparar actividad por actividad."
+          ],
+          "notes": "Contraste las dos tradiciones. La reingeniería de Hammer y Champy proponía partir de una hoja en blanco y obtuvo éxitos notables, pero también fracasos por ignorar a las personas. El enfoque Lean mejora por pasos y con la participación de quienes ejecutan el proceso. Explique que el proyecto del curso combina ambas: pensamiento radical sobre el subproceso elegido y ejecución gradual y medible. Cuente el caso de cuentas por pagar de Ford, que Hammer narró en la Harvard Business Review en 1990: en lugar de acelerar la conciliación de órdenes, recepciones y facturas, la empresa pasó a pagar contra la recepción validada y redujo en 75 % el personal del área. Pregunte: ¿qué equivalente peruano existe hoy? La guía de remisión y la factura electrónicas ya están en la SUNAT; quizá la conciliación de tres vías pueda automatizarse casi por completo. Pida que cada equipo formule una idea radical y una incremental."
+        },
+        {
+          "title": "Eliminar, simplificar, integrar y automatizar",
+          "bullets": [
+            "Eliminar primero: actividades sin valor, aprobaciones redundantes, reportes que nadie usa y doble digitación.",
+            "Simplificar: formularios, reglas y plantillas estándar; reducir variantes del proceso y excepciones.",
+            "Integrar: que el dato se capture una sola vez en la fuente y fluya entre sistemas sin reingreso.",
+            "Automatizar al final, solo lo que queda y es estable, repetitivo y basado en reglas."
+          ],
+          "notes": "Presente la secuencia eliminar, simplificar, integrar y automatizar, propuesta por Peppard y Rowland en su obra sobre reingeniería, y subraye que el orden importa. Muestre un ejemplo: un estudio contable quiere un robot que copie al sistema los datos de facturas en PDF. Si se deja de recibir el PDF y se usa el XML o la propuesta del SIRE, ya no hay nada que copiar. Simplificar puede significar estandarizar una carpeta compartida con nomenclatura por RUC y periodo. Integrar implica que el registro de compras se alimente directamente del XML. Solo entonces se automatiza lo restante, por ejemplo la consulta del estado de cada comprobante. Pregunte: ¿qué actividades de su diagrama actual pueden eliminarse sin perder control? Pida que marquen cada actividad con E, S, I o A y estimen el ahorro de tiempo de cada cambio con los datos de su línea base."
+        },
+        {
+          "title": "Heurísticas de rediseño y el cuadrilátero del diablo",
+          "bullets": [
+            "Reijers y Limam Mansar (2005) sistematizaron 29 mejores prácticas de rediseño de procesos de negocio.",
+            "Ejemplos: eliminación de tareas, paralelismo, procesamiento por lotes, casos especializados, empoderamiento y control en la fuente.",
+            "Cuadrilátero del diablo: toda mejora se evalúa en tiempo, costo, calidad y flexibilidad; mejorar una dimensión suele empeorar otra.",
+            "Documentar para cada cambio la heurística aplicada y su efecto esperado en las cuatro dimensiones."
+          ],
+          "notes": "Explique que el rediseño no depende solo de la creatividad: existen catálogos de heurísticas probadas. Revise cinco con ejemplos contables. Paralelismo: conciliar bancos mientras se registran compras, no después. Procesamiento por lotes: validar todos los comprobantes del día en una sola consulta masiva. Casos especializados: separar el flujo de clientes con importaciones del flujo de clientes de servicios. Empoderamiento: que el asistente apruebe ajustes menores a S/ 50 dentro de una política escrita. Control en la fuente: validar el RUC y el tipo de cambio al momento del ingreso, no en la revisión del supervisor. Luego presente el cuadrilátero del diablo, que Dumas y coautores toman de Brand y van der Kolk: el procesamiento por lotes reduce el costo, pero puede aumentar el tiempo de espera. Pregunte: ¿qué dimensión prioriza su socio formador? La respuesta orienta todas las decisiones de diseño."
+        },
+        {
+          "title": "Portafolio tecnológico para la contabilidad",
+          "bullets": [
+            "Power Query: transformación repetible de datos tabulares; ideal para volúmenes medios y usuarios contables sin programación.",
+            "Python con pandas: conciliaciones, validaciones y cruces masivos; reproducible, documentable y gratuito.",
+            "Automatización robótica de procesos: imita al usuario en interfaces sin servicio web; frágil ante cambios de pantalla.",
+            "Servicios web: SUNAT, bancos y sistemas intercambian datos sin intervención humana; la opción más robusta cuando existe.",
+            "Inteligencia artificial: extracción de documentos no estructurados, clasificación y redacción asistida, siempre con revisión humana."
+          ],
+          "notes": "Presente cada tecnología con su caso de uso típico y su debilidad. Power Query, que estudiaron en Ofimática Contable, es la primera opción para un estudio pequeño porque no requiere programar. Python permite procesar decenas de miles de movimientos y dejar el procedimiento documentado en código. La automatización robótica, popularizada por herramientas como UiPath o Power Automate Desktop, conviene cuando no hay otra forma de acceder a un sistema, pero se rompe si cambia un botón en la pantalla. Los servicios web son la vía más robusta: la SUNAT ofrece servicios para consultar la validez de comprobantes y para el SIRE, y varios bancos ofrecen archivos estructurados para empresas. La inteligencia artificial es útil con documentos no estructurados, como contratos o tickets escaneados. Pregunte: ¿por qué un robot que copia datos de un portal debe considerarse una solución de último recurso?"
+        },
+        {
+          "title": "Matriz de adecuación tarea-tecnología",
+          "bullets": [
+            "Criterios de la tarea: volumen, frecuencia, estructura de los datos, estabilidad de las reglas, tasa de excepciones y riesgo.",
+            "Criterios de la tecnología: costo total de propiedad, curva de aprendizaje, mantenibilidad, seguridad y dependencia de proveedores.",
+            "Según Willcocks y Lacity, la automatización robótica rinde en procesos de alto volumen, reglas claras, datos digitales y madurez.",
+            "Ponderar con el patrocinador y registrar la decisión con las alternativas descartadas y sus razones."
+          ],
+          "notes": "Construya en vivo una matriz con tres tareas: descarga de comprobantes, conciliación bancaria y clasificación contable de gastos. Para la descarga, si existe un servicio web, este gana; para la conciliación, Python o Power Query; para clasificar gastos con glosas ambiguas, reglas más inteligencia artificial con revisión humana. Recuerde el costo total de propiedad visto en Software Contable: licencias, implementación, capacitación, mantenimiento y salida. Mencione la investigación de Willcocks y Lacity sobre automatización de servicios, que muestra que los proyectos exitosos de automatización robótica eligieron procesos estables y de alto volumen. Explique por qué importa documentar las alternativas descartadas: el jurado preguntará por qué no se eligió otra opción y la respuesta debe estar escrita. Pida que cada equipo complete la matriz para sus tres tareas principales y la valide con el patrocinador."
+        },
+        {
+          "title": "Calidad de datos contables",
+          "bullets": [
+            "Dimensiones: exactitud, completitud, consistencia, unicidad, validez y oportunidad.",
+            "Reglas típicas: RUC con dígito verificador válido, comprobante único por emisor, IGV igual a base por tasa y fecha dentro del periodo.",
+            "Llave de cruce estable: RUC del emisor, tipo, serie y número identifican cada comprobante sin ambigüedad.",
+            "Perfilar los datos antes de automatizar: nulos, duplicados, formatos de fecha y notas de crédito con signo invertido."
+          ],
+          "notes": "Explique que muchos fracasos de automatización son en realidad problemas de datos. Muestre un perfilado sencillo de un registro de compras: 3 % de fechas en formato texto, 1,5 % de duplicados por reenvío del proveedor y notas de crédito con signo positivo. Enseñe la llave compuesta que identifica un comprobante electrónico y explique por qué la serie y el número no bastan: dos proveedores pueden emitir la factura F001-123. Repase la validación del RUC con su dígito verificador, que algunos programaron en Ofimática Contable. Proponga reglas de negocio expresadas como afirmaciones verificables, por ejemplo: en operaciones gravadas, el valor de venta por 0,18 debe igualar el IGV con tolerancia de un céntimo. Pregunte: ¿qué regla detectaría una factura registrada dos veces con distinto tipo de cambio? La llave compuesta, no el importe, porque el importe en soles es distinto en ambos registros."
+        },
+        {
+          "title": "Conciliación automática: lógica de emparejamiento",
+          "bullets": [
+            "Regla 1, coincidencia exacta: misma referencia y mismo importe entre extracto bancario y libro.",
+            "Regla 2, coincidencia tolerante: mismo importe y fechas con diferencia máxima de tres días, marcada para revisión.",
+            "Regla 3, agrupaciones: un depósito que suma varias cobranzas; requiere búsqueda de combinaciones y criterio humano.",
+            "Salida: partidas conciliadas, pendientes del banco, pendientes del libro y tasa de conciliación automática."
+          ],
+          "notes": "Esta diapositiva prepara el ejemplo de código de la lectura. Explique que la conciliación automática sigue la misma lógica de la conciliación manual que aprendieron en Contabilidad General, pero ordenada en reglas de confianza decreciente. La primera regla resuelve la mayor parte; la segunda captura diferencias de fecha valor; la tercera, las agrupaciones, es la más difícil y no siempre conviene automatizarla. Muestre un resultado típico de una distribuidora: de 6 000 movimientos mensuales, el 81 % se concilia por la regla 1, el 11 % se propone por la regla 2 y el 8 % queda para análisis manual. Insista en que la regla tolerante nunca debe conciliar sin revisión, porque podría ocultar un pago duplicado o un fraude. Pregunte: ¿qué tasa de conciliación automática haría rentable el proyecto? Esa pregunta conecta directamente con el caso de negocio de la unidad 3."
+        },
+        {
+          "title": "Controles internos incorporados en la solución",
+          "bullets": [
+            "COSO 2013: los cinco componentes y diecisiete principios se aplican también a procesos automatizados.",
+            "Controles de aplicación: validación de entradas, totales de control, cuadre de lo procesado contra la fuente y manejo de errores.",
+            "Pista de auditoría: cada ejecución registra fecha, usuario, archivos de entrada, versión de reglas y resultados.",
+            "Segregación: quien programa la solución no aprueba sus resultados ni modifica datos maestros en producción."
+          ],
+          "notes": "Recuerde lo estudiado en Auditoría Financiera y Software Contable: el auditor evaluará la solución como un control automatizado. Si el script calcula mal una vez, calcula mal siempre; por eso los controles de aplicación son críticos. Muestre una matriz de riesgos y controles con columnas para riesgo, aseveración afectada, control, tipo preventivo o detectivo, naturaleza manual o automática, frecuencia, responsable y evidencia. Ejemplo: riesgo de registrar un comprobante anulado; control automático de consulta de estado ante la SUNAT antes del registro; evidencia, el archivo de resultados de la consulta. Explique que la pista de auditoría de una automatización es tan importante como su resultado: sin ella, el socio no puede demostrar ante la SUNAT o un auditor qué se hizo. Pregunte: ¿quién debería aprobar los cambios en las reglas de conciliación? La respuesta conduce a un procedimiento formal de control de cambios."
+        },
+        {
+          "title": "Privacidad y seguridad desde el diseño",
+          "bullets": [
+            "Ley 29733 y su reglamento: principios de legalidad, consentimiento, finalidad, proporcionalidad, calidad y seguridad.",
+            "Minimización: procesar solo los campos necesarios y ocultar números de cuenta o DNI que no se requieren para el resultado.",
+            "Credenciales en gestores seguros, nunca escritas en el código ni en hojas de cálculo compartidas.",
+            "Verificar dónde se almacenan los datos cuando se usan servicios en la nube o de inteligencia artificial."
+          ],
+          "notes": "Explique el concepto de privacidad desde el diseño, formulado por Ann Cavoukian: la protección se incorpora al construir la solución, no se agrega al final. Recorra los principios de la Ley 29733 con ejemplos de planillas y de clientes. Muestre un error frecuente: el script de conciliación incluye la contraseña de la banca empresarial en texto plano y se comparte por correo. Presente alternativas: variables de entorno, gestores de credenciales del sistema operativo y usuarios con permisos de solo lectura. Mencione que el uso de servicios en la nube con servidores fuera del Perú implica un flujo transfronterizo de datos personales, que la normativa regula. Pida que cada equipo complete una lista de verificación de privacidad: qué datos personales trata la solución, con qué finalidad, dónde se guardan, quién accede y cuándo se eliminan. Esa lista será un anexo obligatorio de la Tarea 2."
+        },
+        {
+          "title": "Inteligencia artificial generativa en contabilidad: usos y límites",
+          "bullets": [
+            "Usos con valor: extraer datos de documentos escaneados, proponer clasificaciones contables, redactar memorandos y explicar variaciones.",
+            "Riesgos: respuestas inventadas con apariencia de certeza, normas desactualizadas y fuga de información confidencial.",
+            "Regla de verificación: toda salida que afecte un registro o una declaración requiere revisión humana documentada.",
+            "Preferir versiones empresariales con garantías contractuales de no uso de los datos para entrenamiento."
+          ],
+          "notes": "Haga un experimento en vivo: pida a un asistente de inteligencia artificial la tasa de detracción de un servicio y su base legal. Es probable que responda con seguridad y que algún dato esté desactualizado o sea incorrecto. Use el ejemplo para explicar las alucinaciones y la necesidad de verificar contra la fuente oficial, que es la resolución de superintendencia vigente. Luego muestre usos con valor: extraer los campos de cien tickets escaneados con una exactitud que se mide en una muestra, o proponer la cuenta del PCGE para glosas de gastos con un nivel de confianza. Explique que el proyecto puede usar inteligencia artificial si mide su exactitud y define el punto de revisión humana. Pregunte: ¿quién responde ante la SUNAT si la herramienta clasificó mal un gasto como deducible? El contribuyente y el profesional que lo validó, nunca la herramienta."
+        },
+        {
+          "title": "Prueba de concepto: alcance y criterios",
+          "bullets": [
+            "Objetivo: demostrar que la tecnología resuelve la tarea crítica con datos reales seudonimizados antes de invertir en la solución completa.",
+            "Alcance acotado: un cliente, un mes, un tipo de comprobante o una cuenta bancaria.",
+            "Criterios de éxito definidos antes de ejecutar: exactitud mínima, tiempo de procesamiento y tasa de excepciones.",
+            "Resultado válido: la prueba falla y el equipo cambia de tecnología con el aprendizaje documentado."
+          ],
+          "notes": "Explique que la prueba de concepto reduce el mayor riesgo técnico del proyecto con el menor costo. Muestre un ejemplo: un equipo quiere extraer datos de comprobantes físicos escaneados, como tickets y recibos de servicios públicos, con reconocimiento óptico de caracteres. Antes de diseñar todo el flujo, procesa cincuenta documentos y mide la exactitud campo por campo. Si el RUC se lee bien en el 98 % de los casos, pero el importe solo en el 85 %, debe decidir si agrega validaciones o cambia de enfoque. Insista en definir los criterios antes de ejecutar, para evitar el sesgo de interpretar los resultados a favor de la tecnología elegida. Recuerde que una prueba fallida también es un resultado útil y honesto, y que el jurado valora más un aprendizaje documentado que un éxito exagerado. Pregunte: ¿cuántos casos necesita su prueba para resultar convincente?"
+        },
+        {
+          "title": "Datos de prueba y seudonimización consistente",
+          "bullets": [
+            "Seudonimizar con tablas de correspondencia: el mismo RUC recibe siempre el mismo código, para preservar los cruces.",
+            "Perturbar importes con un factor común cuando el socio lo exige, manteniendo proporciones y cuadres.",
+            "Conservar los casos difíciles reales: notas de crédito, anulaciones, moneda extranjera, detracciones y duplicados.",
+            "La tabla de correspondencia queda bajo custodia del socio formador, nunca en los archivos del equipo."
+          ],
+          "notes": "Explique la diferencia entre anonimización, que es irreversible, y seudonimización, que es reversible con una tabla, y por qué la segunda resulta útil en el proyecto: permite al socio volver a los datos reales cuando la solución entre en operación. Muestre cómo un factor multiplicador común, por ejemplo 0,73, aplicado a todos los importes conserva las proporciones y la cuadratura de las conciliaciones. Insista en conservar los casos difíciles: un conjunto de prueba con solo facturas limpias produce resultados engañosamente buenos. La diversidad de casos es lo que convierte una demostración en evidencia. Mencione que la tabla de correspondencia es, en sí misma, información confidencial y debe custodiarla el socio. Pregunte: ¿qué casos difíciles existen en el proceso de su socio y cuántos aparecen por mes? Úselos para construir deliberadamente el conjunto de prueba."
+        },
+        {
+          "title": "Arquitectura mínima de la solución",
+          "bullets": [
+            "Entradas: XML o propuesta del SIRE, extractos bancarios, maestros de cuentas y de auxiliares.",
+            "Procesamiento: reglas versionadas, validaciones, registro de excepciones y bitácora de ejecución.",
+            "Salidas: archivo de importación al sistema contable, reporte de excepciones y tablero de indicadores.",
+            "Documentación: diagrama de flujo de datos, diccionario de datos, manual de ejecución y responsable designado."
+          ],
+          "notes": "Dibuje con la clase el diagrama de flujo de datos de una solución típica: carpeta de entrada con nomenclatura estándar, script o consulta que procesa, carpeta de salida con el archivo de importación al sistema contable y un archivo de excepciones para revisión humana. Explique por qué no conviene que la solución escriba directamente en la base de datos del sistema contable: se perderían los controles de validación del propio sistema. La importación mediante las plantillas del software, como vieron en Software Contable, conserva esas validaciones. Insista en la bitácora de ejecución y en el control de versiones de las reglas: si en octubre cambia la tasa de una detracción, debe saberse qué versión se aplicó a cada mes. Pregunte: ¿quién ejecutará la solución cuando el equipo se retire? La sostenibilidad empieza en el diseño, no en la entrega."
+        },
+        {
+          "title": "Revisión de diseño: compuerta de la unidad 2",
+          "bullets": [
+            "Evidencias: diagrama del proceso futuro, matriz de tecnologías, matriz de riesgos y controles y resultados de la prueba de concepto.",
+            "Preguntas de la compuerta: ¿resuelve las causas priorizadas?, ¿mantiene o mejora el control?, ¿puede sostenerla el socio?",
+            "Decisiones posibles: continuar, continuar con ajustes, cambiar de tecnología o reducir el alcance.",
+            "Retroalimentación cruzada entre equipos con la técnica del abogado del diablo."
+          ],
+          "notes": "Explique el modelo de etapas y compuertas de Robert Cooper, que ya conocen de Investigación e Innovación Tecnológica, aplicado a este proyecto: al final de cada unidad hay una revisión formal en la que se decide si el proyecto avanza. En esta compuerta el foco es la coherencia entre diagnóstico y diseño: cada cambio del proceso futuro debe atacar una causa priorizada en el Pareto. Organice la sesión: cada equipo presenta en ocho minutos y otro equipo actúa como abogado del diablo con tres preguntas difíciles. El docente y, si es posible, el patrocinador emiten una decisión. Insista en que reducir el alcance a tiempo es una señal de madurez, no de fracaso. Pregunte al final: ¿qué supuesto de su diseño, si resultara falso, haría fracasar el proyecto? Ese supuesto debe probarse primero en el piloto."
+        }
+      ],
+      "reading": {
+        "title": "Rediseñar y automatizar con control: de la conciliación manual a las reglas",
+        "minutes": 40,
+        "content": "## 1. No automatizar el desorden\n\nEn 1990, Michael Hammer publicó en la Harvard Business Review un artículo cuyo título resume una lección vigente: no automatice, elimine. Su ejemplo más citado fue el área de cuentas por pagar de Ford: en lugar de acelerar la conciliación de órdenes de compra, recepciones y facturas, la empresa rediseñó el proceso para pagar contra la recepción validada y redujo en 75 % el personal del área. La lección para el contador peruano es directa: antes de automatizar la digitación de comprobantes, conviene preguntar si esa digitación debe existir, cuando el XML del comprobante electrónico y la propuesta del SIRE ya contienen los datos. La secuencia eliminar, simplificar, integrar y automatizar ordena ese razonamiento.\n\n## 2. Elegir la tecnología según la tarea\n\n| Tarea | Opción preferente | Razón principal |\n|---|---|---|\n| Obtener comprobantes y registros | Servicios de la SUNAT y propuesta del SIRE | Fuente oficial, sin digitación |\n| Conciliar bancos y cruzar registros | Python o Power Query | Reglas claras y alto volumen |\n| Operar un portal sin servicio web | Automatización robótica | Única vía; se acepta su fragilidad |\n| Leer escaneados o clasificar glosas | IA con revisión humana | Datos no estructurados y riesgo tributario |\n\nLa tabla no es una receta: la decisión final pondera el costo total, la capacidad del socio para mantener la solución y el riesgo.\n\n## 3. Ejemplo: conciliación bancaria por reglas\n\nDistribuidora Pacífico Norte S.A.C., de Chiclayo, recibe unos 6 000 movimientos mensuales en su cuenta corriente principal. Dos asistentes dedicaban 46 horas al mes a conciliarlos en Excel. El equipo del proyecto construyó esta prueba de concepto con datos seudonimizados:\n\n```python\nimport pandas as pd\n\n# 1. Extracto bancario y mayor de la cuenta 1041 (datos seudonimizados)\nbanco = pd.read_excel('extracto_marzo.xlsx')    # fecha, ref, importe\nlibro = pd.read_excel('mayor_1041_marzo.xlsx')  # fecha, ref, importe, cuo\n\nfor df in (banco, libro):\n    df['importe'] = df['importe'].round(2)\n    df['ref'] = df['ref'].astype(str).str.strip().str.lstrip('0')\n    df['fecha'] = pd.to_datetime(df['fecha'], dayfirst=True)\n\n# 2. Regla 1: coincidencia exacta de referencia e importe\nr1 = banco.merge(libro, on=['ref', 'importe'], suffixes=('_b', '_l'))\npend_b = banco[~banco['ref'].isin(r1['ref'])]\npend_l = libro[~libro['ref'].isin(r1['ref'])]\n\n# 3. Regla 2: mismo importe y hasta 3 días de diferencia (revisión obligatoria)\ncand = pend_b.merge(pend_l, on='importe', suffixes=('_b', '_l'))\ncand['dias'] = (cand['fecha_b'] - cand['fecha_l']).dt.days.abs()\nr2 = cand[cand['dias'] <= 3].drop_duplicates('ref_b').drop_duplicates('ref_l')\n\n# 4. Indicador y salida para revisión humana\nprint(f'Regla 1: {len(r1)} | Regla 2: {len(r2)} | Automática: {len(r1)/len(banco):.1%}')\nr2.to_excel('para_revision_marzo.xlsx', index=False)\n```\n\nLa normalización del paso 1 resuelve diferencias triviales —ceros a la izquierda, espacios, formatos de fecha— que en la conciliación manual consumen mucho tiempo. La regla 1 es de alta confianza; la regla 2 solo propone emparejamientos y su archivo de salida debe revisarlo y aprobarlo una persona distinta de quien ejecuta el script. Antes de pasar a producción deben corregirse dos simplificaciones: la exclusión por referencia supone que cada referencia es única, y la diferencia se mide en días calendario, no hábiles.\n\n## 4. Resultados y controles\n\nEn marzo, la regla 1 concilió 4 860 movimientos (81 %), la regla 2 propuso 660 (11 %) y 480 (8 %) quedaron para análisis manual, principalmente depósitos agrupados y comisiones. El tiempo mensual bajó de 46 a 9 horas, dedicadas ahora a revisar excepciones. La solución incorpora estos controles:\n\n- **Integridad del extracto:** antes de procesar se verifica que saldo inicial + abonos − cargos = saldo final; si no cuadra, el proceso se detiene.\n- **Revisión de la regla 2:** aprobación del supervisor con evidencia en el archivo de revisión.\n- **Pista de auditoría:** bitácora con fecha, usuario, archivos de entrada, versión de reglas y resultados.\n- **Control de cambios:** toda modificación de reglas se registra y la aprueba el jefe de contabilidad.\n- **Seguridad:** las credenciales bancarias nunca se escriben en el código y las carpetas tienen acceso restringido.\n\n## 5. De la prueba de concepto a la solución\n\nLos criterios de éxito se fijaron antes de ejecutar: al menos 75 % de conciliación automática, cero emparejamientos falsos en la regla 1 sobre una muestra de 200 partidas verificadas a mano y menos de cinco minutos de ejecución. Los tres se cumplieron. Aun así, la prueba de concepto no es la solución: falta tratar las agrupaciones, documentar el manual, capacitar al personal y pilotear en un cierre real. Esa distancia entre demostrar que algo funciona y lograr que funcione todos los meses es la materia de las unidades 3 y 4."
+      },
+      "case": {
+        "title": "Caso: Agroexportadora Costa Verde y la conciliación de seis mil movimientos",
+        "content": "**Contexto.** Agroexportadora Costa Verde S.A.C. produce y exporta uva de mesa y palta desde el valle de Ica, con ventas anuales cercanas a S/ 140 millones. Opera cuatro cuentas bancarias: dos en soles, una en dólares y la cuenta de detracciones en el Banco de la Nación. Durante la campaña de uva, de noviembre a febrero, los movimientos bancarios suben de unos 2 100 a 6 200 por mes.\n\n**Situación actual.** Dos asistentes concilian manualmente en Excel y, en campaña, dedican 52 horas al mes a esa tarea. El cierre mensual se retrasa hasta el duodécimo día hábil. En enero pasado, un pago duplicado de S/ 38 400 a un proveedor de envases se detectó tres meses después. En su última carta de control interno, el auditor externo observó la falta de evidencia de revisión de las conciliaciones y recomendó controles automatizados con pista de auditoría.\n\n**Prueba de concepto.** Un equipo de estudiantes de TEPSUP construyó un script en Python con dos reglas y lo probó con los 6 180 movimientos seudonimizados de enero. La regla 1 concilió el 74 %, la regla 2 propuso el 9 % y el 17 % quedó pendiente. Al analizar los pendientes, el equipo encontró que 11 puntos correspondían a cobranzas del exterior recibidas netas de comisiones de bancos corresponsales, de entre US$ 15 y US$ 45 por transferencia, y 6 puntos a depósitos agrupados y cargos diversos.\n\n**Alternativas.**\n\n1. **Proveedor de automatización robótica:** un robot ingresaría a la banca por internet y al sistema contable para conciliar en pantalla. Costo: US$ 9 800 de implementación y US$ 3 600 anuales. Promete 90 % de automatización en ocho semanas.\n2. **Consolidar el script del equipo:** agregar una regla 3 para cobranzas netas, un tablero en Power BI y un manual de operación a cargo del equipo contable. Costo: 140 horas internas y S/ 6 500 de asesoría externa para revisar el código.\n3. **Módulo del proveedor del sistema contable:** S/ 28 000 más 18 % anual de mantenimiento, pero exige actualizar la versión del sistema, prevista recién para 2027.\n\n**Las voces.** El gerente de finanzas, Javier Paredes, quiere una solución operando antes de la próxima campaña. La contadora general, Milagros Quispe, se pregunta quién mantendrá el script cuando los estudiantes se vayan y teme por el futuro de sus dos asistentes, que conocen a fondo a los clientes del exterior. El equipo debe presentar su recomendación en la compuerta de diseño de la semana 8.",
+        "questions": [
+          "Aplique la matriz de adecuación tarea-tecnología a las tres alternativas. ¿Cuál recomendaría y bajo qué condiciones cambiaría su recomendación?",
+          "¿Qué regla adicional diseñaría para las cobranzas del exterior netas de comisiones y qué controles exigiría para que no oculte diferencias indebidas?",
+          "¿Qué riesgos de control, de continuidad y de dependencia de proveedores introduce cada alternativa y cómo los mitigaría?",
+          "¿Cómo respondería a la preocupación de la contadora general sobre el futuro de sus asistentes y qué papel les daría en la solución?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Diseño del proceso futuro, matriz de controles y prueba de concepto",
+        "instructions": "**Objetivo.** Diseñar la solución innovadora para el proceso diagnosticado y demostrar su factibilidad técnica con una prueba de concepto controlada.\n\n**Qué entregar.**\n\n1. **Proceso futuro** en BPMN 2.0 y tabla comparativa actividad por actividad con el proceso actual, indicando la acción aplicada (eliminar, simplificar, integrar o automatizar), la heurística de rediseño y el efecto esperado en tiempo, costo, calidad y flexibilidad.\n2. **Matriz de adecuación tarea-tecnología** ponderada con el patrocinador, con al menos tres alternativas y las razones de las descartadas.\n3. **Matriz de riesgos y controles** con un mínimo de ocho riesgos, aseveración afectada, control, tipo, frecuencia, responsable y evidencia, incluida la pista de auditoría.\n4. **Prueba de concepto:** código, consulta de Power Query o flujo de automatización, con el conjunto de datos seudonimizados, los criterios de éxito definidos antes de ejecutar y los resultados obtenidos.\n5. **Lista de verificación de privacidad** según la Ley 29733 y protocolo de uso de inteligencia artificial, si se emplea.\n6. **Video de demostración** de cinco minutos como máximo.\n\n**Formato.** Documento PDF de diez a catorce páginas, archivos fuente de la prueba de concepto en carpeta comprimida y enlace interno del aula al video. Entrega por equipo en la semana 8, con matriz de contribución individual.\n\n**Criterios.** Trazabilidad entre causas y cambios, justificación de la tecnología, solidez de los controles, funcionamiento y medición de la prueba de concepto, y cuidado de los datos.",
+        "rubric": [
+          { "name": "Rediseño del proceso y trazabilidad con las causas priorizadas", "points": 5 },
+          { "name": "Selección justificada de la tecnología", "points": 4 },
+          { "name": "Matriz de riesgos y controles con pista de auditoría", "points": 4 },
+          { "name": "Prueba de concepto funcional y medida contra criterios previos", "points": 5 },
+          { "name": "Privacidad, documentación y demostración", "points": 2 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Rediseño, tecnología y controles",
+        "questions": [
+          {
+            "prompt": "Un estudio quiere un robot que copie al sistema los datos de facturas recibidas en PDF, aunque todos sus proveedores emiten comprobantes electrónicos. Según la secuencia eliminar-simplificar-integrar-automatizar, ¿qué debe evaluarse primero?",
+            "options": ["Eliminar la digitación usando el XML o la propuesta del SIRE", "Automatizar la copia con un robot de mayor velocidad", "Simplificar el formato del PDF con cada proveedor", "Contratar un asistente adicional para la temporada alta"],
+            "correct": 0,
+            "explanation": "Antes de automatizar se pregunta si la actividad debe existir. Si los datos ya están en el XML y en la propuesta del SIRE, la digitación puede eliminarse e integrarse desde la fuente."
+          },
+          {
+            "prompt": "Un proceso exige ingresar datos a diario en el portal de una entidad que no ofrece servicio web ni carga masiva. Las reglas son estables y el volumen es alto. ¿Qué tecnología es la más adecuada?",
+            "options": ["Automatización robótica de procesos con monitoreo de fallas", "Power Query, porque transforma datos tabulares", "Un modelo de IA generativa que redacte los ingresos", "Un servicio web, porque es la opción más robusta"],
+            "correct": 0,
+            "explanation": "Sin servicio web disponible, la automatización robótica es la vía para operar la interfaz. Conviene por el alto volumen y las reglas estables, pero exige monitoreo porque se rompe ante cambios de pantalla."
+          },
+          {
+            "prompt": "¿Qué llave identifica de manera única un comprobante electrónico de compra al cruzar el registro contable con la propuesta del SIRE?",
+            "options": ["RUC del emisor, tipo, serie y número", "Serie y número del comprobante", "Fecha de emisión e importe total", "RUC del emisor e importe total"],
+            "correct": 0,
+            "explanation": "Distintos proveedores pueden usar la misma serie y número, y los importes o fechas se repiten. Solo la combinación de RUC del emisor, tipo, serie y número identifica el comprobante sin ambigüedad."
+          },
+          {
+            "prompt": "Un script concilia 4 860 de 6 000 movimientos por coincidencia exacta y propone otros 660 por coincidencia tolerante. ¿Cuál es la tasa de conciliación automática sin revisión humana?",
+            "options": ["81 %", "92 %", "11 %", "8 %"],
+            "correct": 0,
+            "explanation": "Solo la regla exacta concilia sin intervención: 4 860 / 6 000 = 81 %. Las 660 partidas de la regla tolerante requieren revisión y aprobación humana antes de considerarse conciliadas."
+          },
+          {
+            "prompt": "¿Cuál de las siguientes situaciones vulnera la segregación de funciones en una solución contable automatizada?",
+            "options": ["El autor del script aprueba sus resultados y modifica los maestros en producción", "El supervisor revisa las partidas propuestas por la regla tolerante", "La bitácora registra fecha, usuario y archivos de entrada", "El socio formador custodia la tabla de seudonimización"],
+            "correct": 0,
+            "explanation": "Quien desarrolla la solución no debe aprobar sus resultados ni alterar datos maestros en producción, porque podría introducir y ocultar errores o fraudes sin que nadie lo detecte."
+          },
+          {
+            "prompt": "Un equipo propone validar los comprobantes en un solo lote semanal para reducir el costo de las consultas. Según el cuadrilátero del diablo, ¿qué efecto debe evaluar?",
+            "options": ["Mayor tiempo de espera y detección menos oportuna de errores", "Mejora simultánea de tiempo, costo, calidad y flexibilidad", "Ningún efecto, porque el lote no cambia el proceso", "Solo un aumento de la flexibilidad del proceso"],
+            "correct": 0,
+            "explanation": "El procesamiento por lotes suele bajar el costo, pero aumenta el tiempo de espera y retrasa la detección de comprobantes anulados o inválidos. Toda mejora en una dimensión debe evaluarse en las otras."
+          },
+          {
+            "prompt": "Una herramienta de inteligencia artificial clasificó 500 gastos con 94 % de exactitud medida en una muestra verificada. ¿Qué diseño es el más responsable?",
+            "options": ["Revisión humana de los casos de baja confianza e importes significativos, con evidencia", "Registro automático de todos los casos, porque 94 % es alto", "Descartar la herramienta porque no alcanza el 100 %", "Trasladar la responsabilidad tributaria al proveedor de la herramienta"],
+            "correct": 0,
+            "explanation": "La herramienta aporta productividad, pero 6 % de error puede afectar la deducibilidad de gastos. Se define un punto de revisión humana basado en riesgo y se conserva evidencia; la responsabilidad nunca se delega a la herramienta."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Caso de negocio, tratamiento contable y plan de implementación",
+      "description": "Al finalizar la unidad, el estudiante sustenta la viabilidad del proyecto con un caso de negocio basado en flujos incrementales, VAN, TIR y sensibilidad, determina el tratamiento contable y tributario de la inversión y planifica la implementación, los riesgos y la gestión del cambio.",
+      "topics": [
+        "Beneficios y costos incrementales del proyecto de innovación",
+        "Evaluación económica: VAN, TIR, periodo de recuperación y sensibilidad",
+        "Tratamiento contable según la NIC 38 y los acuerdos de computación en la nube",
+        "Tratamiento tributario de la inversión e impuesto diferido",
+        "Plan de proyecto híbrido, matriz RACI y gestión de riesgos",
+        "Gestión del cambio con Kotter y ADKAR"
+      ],
+      "slides": [
+        {
+          "title": "El caso de negocio: la pregunta del patrocinador",
+          "bullets": [
+            "¿Cuánto cuesta, cuánto ahorra o genera, cuándo se recupera y qué riesgos asume la organización?",
+            "Compara dos escenarios, con proyecto y sin proyecto; solo cuentan las diferencias atribuibles a la innovación.",
+            "Incluye beneficios cuantificables, beneficios cualitativos y costos de toda la vida útil de la solución.",
+            "Un buen caso de negocio también puede concluir que no conviene invertir."
+          ],
+          "notes": "Inicie con una escena típica: el equipo presenta un prototipo brillante y el gerente pregunta cuánto cuesta y cuánto ahorra. Si no hay respuesta, el proyecto muere. Explique que el caso de negocio traduce la innovación al lenguaje de la decisión económica y se construye con la lógica incremental que estudiaron en Finanzas Corporativas: lo relevante es la diferencia entre la situación con proyecto y sin él. Recuerde la información relevante de Contabilidad Gerencial: los costos hundidos, como las horas ya invertidas en el diagnóstico, no se incluyen. Insista en la honestidad intelectual: un caso de negocio inflado para «vender» el proyecto destruye la confianza del patrocinador. Pregunte: ¿qué pasa si el beneficio principal es reducir el riesgo de multas, que no se producen todos los meses? Introduzca el valor esperado como respuesta y anuncie que lo trabajarán en la siguiente diapositiva."
+        },
+        {
+          "title": "Identificar y valorizar los beneficios",
+          "bullets": [
+            "Horas liberadas por costo hora cargado, solo si se reasignan a tareas de valor o evitan contrataciones u horas extras.",
+            "Multas, intereses y rectificatorias evitadas, valorizadas como valor esperado: probabilidad por impacto.",
+            "Mejora del capital de trabajo: cobranza más rápida o uso oportuno del crédito fiscal.",
+            "Beneficios cualitativos: control, trazabilidad, satisfacción del cliente y menor rotación; se describen, no se inflan."
+          ],
+          "notes": "Explique la trampa más común: multiplicar horas ahorradas por costo hora y llamarlo ahorro. Si el asistente sigue en planilla y nadie usa las horas liberadas, el ahorro en efectivo es cero. Por eso la valorización exige explicar qué se hará con ese tiempo: atender más clientes, eliminar horas extras o evitar una contratación prevista. Muestre el cálculo de valor esperado: si históricamente hubo dos rectificatorias al año con un costo total promedio de S/ 2 400 cada una, entre multa rebajada, intereses y horas, y el proyecto reduce esa frecuencia a la mitad, el beneficio esperado anual es S/ 2 400. Mencione el beneficio financiero: anotar a tiempo en el registro de compras permite usar el crédito fiscal en el periodo correcto, como estudiaron en Tributación I. Pregunte: ¿cómo valorizarían la satisfacción del cliente de un estudio contable? Discuta indicadores como la tasa de retención de clientes."
+        },
+        {
+          "title": "Costos de toda la vida útil",
+          "bullets": [
+            "Inversión inicial: licencias, equipos, desarrollo externo, configuración, migración de datos y pruebas.",
+            "Costos recurrentes: suscripciones, mantenimiento, soporte, horas de supervisión y actualizaciones por cambios normativos.",
+            "Costos del cambio: capacitación, marcha en paralelo y caída temporal de la productividad.",
+            "Horizonte coherente con la vida útil tecnológica: de tres a cinco años para soluciones de software."
+          ],
+          "notes": "Relacione con el costo total de propiedad que trabajaron en Software Contable. Muestre que los costos recurrentes suelen subestimarse: un robot requiere mantenimiento cada vez que cambia el portal o la interfaz del sistema; un script en Python, cada vez que cambia el formato del extracto bancario. Explique la curva de aprendizaje: durante el primer mes la productividad cae porque el personal opera el proceso antiguo y el nuevo en paralelo. Recomiende expresar los costos sin IGV cuando la empresa tiene derecho a crédito fiscal, porque en ese caso el impuesto no es costo; en cambio, para un contribuyente sin derecho a crédito, el IGV sí forma parte del costo. Pregunte: ¿por qué no conviene usar un horizonte de diez años para un proyecto de automatización? Porque la tecnología y las normas de la SUNAT cambian antes, y los flujos lejanos se vuelven pura especulación."
+        },
+        {
+          "title": "VAN, TIR y periodo de recuperación",
+          "bullets": [
+            "VAN = −I₀ + Σ FCₜ / (1 + k)ᵗ; el proyecto se acepta si el VAN es positivo a la tasa de descuento de la organización.",
+            "TIR: tasa que hace el VAN igual a cero; útil para comunicar, engañosa con flujos no convencionales.",
+            "Periodo de recuperación descontado: tiempo en que los flujos descontados acumulados igualan la inversión.",
+            "Tasa de descuento: costo de oportunidad del capital del socio o su costo promedio ponderado de capital."
+          ],
+          "notes": "Repase las fórmulas de Matemática Financiera y Finanzas Corporativas con un ejemplo sencillo: inversión de S/ 30 000, flujos anuales de S/ 14 000 durante tres años y tasa de 15 %. El VAN es aproximadamente S/ 1 965, por lo que conviene invertir; la TIR es cercana a 18,9 %. Muestre cómo calcularlo en Excel con VNA y TIR, y advierta el error frecuente de incluir la inversión del año cero dentro de VNA, que la descuenta un periodo de más. Explique por qué en las mypes el costo de oportunidad puede ser alto: muchos propietarios financian con préstamos de tasas elevadas o con capital que podrían invertir en su negocio principal. Advierta que la TIR puede tener soluciones múltiples si los flujos cambian de signo más de una vez, por ejemplo por una actualización mayor en el tercer año. Pregunte: ¿qué indicador prefieren mostrar al dueño de una mype y por qué?"
+        },
+        {
+          "title": "Sensibilidad, escenarios y punto de quiebre",
+          "bullets": [
+            "Identificar las variables críticas: volumen de transacciones, tasa de automatización, horas realmente eliminadas y costo de mantenimiento.",
+            "Análisis univariado y gráfico de tornado para ver qué variable mueve más el VAN.",
+            "Escenarios pesimista, base y optimista con supuestos coherentes entre sí, no solo porcentajes arbitrarios.",
+            "Punto de quiebre: valor de la variable crítica que hace el VAN igual a cero."
+          ],
+          "notes": "Explique que el caso de negocio es tan bueno como sus supuestos. Muestre una tabla de datos en Excel que varía la tasa de conciliación automática entre 60 % y 95 % y el volumen mensual entre 3 000 y 8 000 movimientos. Construya un gráfico de tornado: si el VAN cambia mucho más por la tasa de automatización que por el costo hora, la prueba de concepto y el piloto deben concentrarse en validar esa tasa. Introduzca el punto de quiebre con Buscar objetivo: ¿qué tasa de automatización hace cero el VAN? Si el punto de quiebre es 52 % y la prueba de concepto logró 81 %, hay un margen de seguridad amplio. Advierta sobre escenarios incoherentes, como suponer alto volumen y bajo costo de mantenimiento a la vez, cuando el volumen alto suele generar más excepciones. Pida que cada equipo identifique sus dos variables críticas y calcule sus puntos de quiebre."
+        },
+        {
+          "title": "NIC 38: ¿gasto o activo intangible?",
+          "bullets": [
+            "Activo intangible: identificable, controlado por la entidad y con beneficios económicos futuros probables.",
+            "Fase de investigación: siempre gasto (párrafo 54); fase de desarrollo: activo solo si se cumplen las seis condiciones del párrafo 57.",
+            "Condiciones: factibilidad técnica, intención de completarlo, capacidad de uso, beneficios probables, recursos disponibles y medición fiable.",
+            "No forman parte del costo: capacitación del personal, gastos generales no atribuibles ni pérdidas operativas iniciales (párrafo 67)."
+          ],
+          "notes": "Conecte con Contabilidad de Sociedades y Auditoría Financiera. Explique que el diagnóstico y la exploración de alternativas del proyecto son fase de investigación y se reconocen como gasto. Cuando el equipo demuestra la factibilidad técnica con la prueba de concepto y la organización decide completar la solución y tiene recursos, los desembolsos directamente atribuibles al desarrollo pueden capitalizarse. Recorra las seis condiciones con el caso de un script de conciliación: la factibilidad se demuestra con la prueba de concepto; la intención, con la aprobación del patrocinador; los beneficios, con el caso de negocio. Insista en que la capacitación nunca forma parte del costo del activo. Mencione que el software que es parte integrante del equipo, como el sistema operativo de una computadora, forma parte del activo fijo. Pregunte: ¿qué marco aplica su socio, NIIF completas o NIIF para las PYMES? Recuerde que esta última exige reconocer como gasto los desembolsos internos de investigación y desarrollo."
+        },
+        {
+          "title": "Acuerdos de computación en la nube",
+          "bullets": [
+            "Software como servicio: normalmente es un contrato de servicios; la entidad no controla el software y reconoce gasto.",
+            "Decisiones de agenda del Comité de Interpretaciones de las NIIF de marzo de 2019 y abril de 2021.",
+            "Configuración y personalización se reconocen como gasto al recibir los servicios, salvo que generen un intangible separado controlado.",
+            "Si el propio proveedor realiza una personalización no distinta del acceso, el pago se reconoce como gasto durante el contrato."
+          ],
+          "notes": "Explique por qué el tema importa hoy: muchas soluciones contables se contratan como suscripción en la nube. En marzo de 2019, el Comité de Interpretaciones concluyó que, en general, el derecho a recibir acceso al software alojado por el proveedor es un contrato de servicios; en abril de 2021 se pronunció sobre los costos de configuración y personalización. La consecuencia práctica es que no puede capitalizarse como intangible un pago por configurar un sistema que la entidad no controla, salvo que el trabajo produzca código adicional que sí controle. Muestre un ejemplo: un estudio paga S/ 6 000 a un consultor independiente para configurar su sistema de facturación en la nube; se reconoce como gasto cuando se recibe el servicio. Si el mismo proveedor de la nube hiciera una personalización no distinta del acceso, el pago se reconocería como gasto a lo largo del contrato. Pregunte: ¿cómo cambia esto la utilidad del primer año del caso de negocio?"
+        },
+        {
+          "title": "Asientos contables de la inversión",
+          "bullets": [
+            "Licencia adquirida: cargo a 343 Programas de computadora y a 40111 IGV; abono a 4212 Facturas emitidas por pagar.",
+            "Desarrollo externo capitalizable: cargo a 343 con la factura del desarrollador, solo desde la fase de desarrollo.",
+            "Investigación, capacitación y configuración de servicios en la nube: cargo a cuentas de gasto de la clase 6 según su naturaleza.",
+            "Amortización mensual: cargo a 6821 Amortización de intangibles y abono a 3921 Amortización acumulada de intangibles."
+          ],
+          "notes": "Muestre con números el registro completo, que también aparece en la lectura. Licencia perpetua de software de conciliación por S/ 12 000 más IGV de S/ 2 160: cargo a 343 por 12 000, a 40111 por 2 160 y abono a 4212 por 14 160. Capacitación del proveedor por S/ 1 500 más IGV: cargo a la cuenta de servicios prestados por terceros, no al intangible, según el párrafo 67 de la NIC 38. Si la vida útil estimada es de tres años y el método es lineal, la amortización mensual es S/ 333,33. Recuerde el destino a la clase 9 según el sistema de costos del socio. Señale que la vida útil contable se estima según el uso esperado y la obsolescencia tecnológica, no según la norma tributaria. Pregunte: ¿qué asiento corresponde si en el segundo año el software queda obsoleto por un cambio en el SIRE? Introduzca el deterioro según la NIC 36."
+        },
+        {
+          "title": "Tratamiento tributario de la inversión",
+          "bullets": [
+            "Software adquirido: intangible de duración limitada según el reglamento de la LIR; deducible en un ejercicio o amortizable en diez años, a opción.",
+            "Equipos de procesamiento de datos: depreciación tributaria máxima de 25 % anual según el reglamento de la LIR.",
+            "Las diferencias entre la amortización contable y la tributaria generan diferencias temporarias e impuesto diferido según la NIC 12.",
+            "Proyectos de I+D+i calificados por CONCYTEC pueden acceder, mientras esté vigente, a la deducción adicional de la Ley 30309."
+          ],
+          "notes": "Recuerde lo estudiado en Tributación I y II. El inciso g) del artículo 44 de la Ley del Impuesto a la Renta permite que el precio pagado por intangibles de duración limitada se deduzca en un solo ejercicio o se amortice proporcionalmente en diez años, y el reglamento incluye expresamente el software entre esos intangibles. Si contablemente la licencia se amortiza en tres años y tributariamente se deduce en el primero, surge una diferencia temporaria imponible y un pasivo por impuesto diferido. Muestre el cálculo con la licencia de S/ 12 000: en el año 1 la deducción tributaria es 12 000 y la amortización contable 4 000; la diferencia de 8 000 por 29,5 % genera un pasivo diferido de S/ 2 360. Mencione la deducción adicional para investigación, desarrollo e innovación tecnológica de la Ley 30309 y sus modificatorias, que exige calificación previa del proyecto. Pregunte: ¿qué opción tributaria conviene a una empresa con pérdidas tributarias arrastrables?"
+        },
+        {
+          "title": "Plan de implementación híbrido",
+          "bullets": [
+            "Fases predictivas para hitos fijos —diagnóstico, diseño, piloto y transferencia— e iteraciones de dos semanas para construir la solución.",
+            "Cronograma con dependencias y ruta crítica, con holgura reservada para los días de cierre contable del socio.",
+            "Matriz RACI: responsable, aprobador, consultado e informado para cada entregable, con un único aprobador.",
+            "Revisión con el socio al final de cada iteración, con demostración del avance real y no solo diapositivas."
+          ],
+          "notes": "Explique que la séptima edición de la guía del PMBOK se organiza en principios y dominios de desempeño y admite enfoques predictivos, adaptativos e híbridos. Para este proyecto conviene un enfoque híbrido: los hitos académicos y los periodos de cierre del socio son fijos, pero la construcción de la solución avanza en iteraciones cortas, como propone la Guía de Scrum de Schwaber y Sutherland. Muestre un cronograma de Gantt de las semanas 9 a 16 con su ruta crítica y señale una restricción típica: en los primeros cinco días hábiles del mes el personal contable no tiene tiempo para pruebas, por lo que las sesiones de validación deben programarse después. Construya una matriz RACI con cuatro entregables y explique por qué cada uno debe tener un solo aprobador. Pregunte: ¿quién aprueba el piloto, el docente, el patrocinador o el jefe de contabilidad? Discuta las implicancias de cada opción."
+        },
+        {
+          "title": "Gestión de riesgos del proyecto",
+          "bullets": [
+            "Registro de riesgos: enunciado causa-evento-efecto, probabilidad, impacto, puntuación, respuesta, responsable y disparador.",
+            "Riesgos típicos: cambio de formato de la SUNAT o del banco, salida del patrocinador, datos incompletos y rechazo del personal.",
+            "Respuestas a amenazas: evitar, mitigar, transferir o aceptar; ante oportunidades: explotar, mejorar, compartir o aceptar.",
+            "Riesgo propio de la automatización: un error de regla se replica en miles de registros antes de detectarse."
+          ],
+          "notes": "Muestre cómo redactar un riesgo con la estructura causa-evento-efecto: «debido a que el banco puede cambiar el formato de su extracto, podría fallar la lectura del archivo, lo que retrasaría el cierre». Así la respuesta resulta evidente: validar la estructura del archivo antes de procesarlo y alertar si cambia. Construya una matriz de probabilidad e impacto de cinco por cinco y priorice los riesgos. Subraye el riesgo específico de la automatización: el error humano suele ser aleatorio y aislado, mientras que el error de una regla es sistemático y masivo. Por eso los controles de razonabilidad, como comparar el total procesado con el del mes anterior, son indispensables. Pregunte: ¿qué disparador indicaría que el riesgo de salida del patrocinador se está materializando? Por ejemplo, dos reuniones canceladas de forma consecutiva. Pida que cada equipo registre al menos diez riesgos con su respuesta y responsable."
+        },
+        {
+          "title": "Gestión del cambio: el factor humano",
+          "bullets": [
+            "Kotter (1996): urgencia, coalición, visión, comunicación, remoción de obstáculos, logros tempranos, consolidación y anclaje cultural.",
+            "ADKAR de Hiatt: conciencia, deseo, conocimiento, habilidad y refuerzo; diagnostica en qué etapa se traba cada persona.",
+            "El temor del personal contable a ser reemplazado es legítimo; se responde con planes concretos de reasignación y desarrollo.",
+            "Agentes de cambio: involucrar desde el diseño a quienes ejecutan el proceso."
+          ],
+          "notes": "Explique que muchos proyectos técnicamente correctos fracasan por resistencia. Presente los ocho pasos de Kotter y señale cuáles aplican a un proyecto pequeño: crear urgencia con los datos de la línea base, formar una coalición con el jefe de contabilidad y un asistente respetado, y generar logros tempranos visibles. Luego presente ADKAR, desarrollado por Jeff Hiatt en Prosci, como herramienta de diagnóstico individual: si un asistente conoce la herramienta pero no quiere usarla, el problema es de deseo, no de capacitación, y más horas de curso no lo resolverán. Discuta con honestidad el temor al reemplazo: con frecuencia la automatización transforma tareas antes que eliminar puestos, pero en algunos casos sí reduce plazas, y la organización debe decidirlo con transparencia. Pregunte: ¿cómo involucraría a la asistente con más antigüedad que se opone al cambio? Pida propuestas concretas, no frases motivacionales."
+        },
+        {
+          "title": "Plan de capacitación y comunicación",
+          "bullets": [
+            "Audiencias: patrocinador, jefe de contabilidad, asistentes, clientes del estudio y auditor externo, con mensajes diferenciados.",
+            "Capacitación práctica con datos del propio socio y guías paso a paso con capturas de pantalla.",
+            "Medir la adopción: porcentaje de casos procesados con la nueva solución y retornos al método antiguo.",
+            "Canal de soporte y preguntas frecuentes durante todo el piloto."
+          ],
+          "notes": "Muestre una matriz de comunicación con columnas para audiencia, mensaje clave, canal, frecuencia y responsable. Al patrocinador le interesan los resultados y los riesgos; a los asistentes, cómo cambia su trabajo diario; al auditor externo, cómo se garantiza la pista de auditoría. Explique un principio del aprendizaje de adultos: se aprende haciendo con casos propios, por eso la capacitación debe usar datos del socio y no ejemplos genéricos. Proponga un indicador de adopción: si después de dos semanas solo el 40 % de las conciliaciones se procesa con la nueva solución, hay un problema de adopción que debe diagnosticarse con ADKAR. Insista en documentar las preguntas frecuentes, porque formarán parte del manual de transferencia de la unidad 4. Pregunte: ¿qué mensaje daría a los clientes del estudio si el cambio exige que envíen sus comprobantes de otra manera?"
+        },
+        {
+          "title": "Compuerta de la unidad 3: decisión de pilotear",
+          "bullets": [
+            "Evidencias: caso de negocio con sensibilidad, tratamiento contable y tributario, plan del proyecto, registro de riesgos y plan de cambio.",
+            "Criterios: VAN positivo o justificación cualitativa sólida, riesgos críticos mitigados y patrocinador comprometido.",
+            "Protocolo del piloto aprobado: alcance, periodo, métricas, criterios de éxito, criterio de parada y plan de reversión.",
+            "Firma del patrocinador que autoriza el piloto en el proceso real."
+          ],
+          "notes": "Explique que esta compuerta es la más importante del curso, porque autoriza operar en el proceso real del socio. Revise los criterios: un VAN negativo no impide necesariamente el piloto si el proyecto aporta un beneficio de control o de cumplimiento difícil de valorizar, pero debe justificarse de manera explícita. Insista en el plan de reversión: qué se hará si el piloto falla a mitad de un cierre. La respuesta típica es la marcha en paralelo, en la que el proceso antiguo sigue operando hasta que el nuevo demuestra resultados. Organice una simulación de comité: el docente asume el rol de un gerente financiero escéptico y cada equipo defiende su caso en diez minutos. Pregunte al final: ¿qué indicador del piloto los haría detenerlo de inmediato? Definir ese criterio de parada antes de empezar es una señal de madurez profesional."
+        }
+      ],
+      "reading": {
+        "title": "El caso de negocio de una innovación contable: números, normas y personas",
+        "minutes": 40,
+        "content": "## 1. La lógica incremental\n\nUn caso de negocio compara dos futuros: con proyecto y sin proyecto. Solo cuentan las diferencias atribuibles a la innovación, medidas en efectivo y después de impuestos. Las horas ya invertidas en el diagnóstico son costos hundidos y no se incluyen; las horas liberadas solo son beneficio si se convierten en un ahorro real —horas extras eliminadas, contrataciones evitadas— o en ingresos adicionales, como atender más clientes. Los riesgos evitados, como multas y rectificatorias, se valorizan como valor esperado: probabilidad por impacto.\n\n## 2. Ejemplo resuelto: Comercial Andina del Sur\n\nComercial Andina del Sur S.A.C., distribuidora cusqueña del Régimen General, evalúa automatizar su registro de compras y sus conciliaciones. La inversión incluye una licencia perpetua de S/ 12 000, un desarrollo externo de S/ 18 000 contratado después de aprobada la prueba de concepto y S/ 4 000 de capacitación y marcha en paralelo. Se supone que la inversión ocurre al inicio del ejercicio, que la empresa tiene otras rentas gravadas, que opta por deducir el software en un solo ejercicio y que su tasa de descuento es 14 %. Los montos no incluyen IGV porque la empresa usa el crédito fiscal.\n\n```\nConcepto (S/)                          Año 0    Año 1    Año 2    Año 3\nLicencia y desarrollo                −30 000\nCapacitación y marcha en paralelo     −4 000\nHoras extras eliminadas                       15 000   15 000   15 000\nAsistente temporal evitado                    11 200   11 200   11 200\nRectificatorias evitadas (esperado)            2 400    2 400    2 400\nMantenimiento y supervisión                   −6 800   −6 800   −6 800\nEfecto en el impuesto (29,5 %)                 3 599   −6 431   −6 431\nFlujo neto                           −34 000  25 399   15 369   15 369\n```\n\nLas horas extras eliminadas equivalen a 50 horas mensuales a S/ 25 durante doce meses. En el año 1 la empresa deduce 34 000 frente a un flujo operativo de 21 800; la pérdida incremental de 12 200 reduce el impuesto en 3 599. En los años 2 y 3, el flujo de 21 800 paga 6 431 de impuesto. Con VAN = −I₀ + Σ FCₜ / (1 + k)ᵗ:\n\n- **VAN al 14 %:** −34 000 + 22 280 + 11 826 + 10 374 = **S/ 10 480**.\n- **TIR:** aproximadamente **33,8 %**.\n- **Recuperación descontada:** prácticamente **dos años**.\n\n**Sensibilidad.** El supuesto más frágil es la eliminación de 50 horas extras mensuales. Si solo se eliminan 25, el beneficio anual cae en 7 500, el flujo después de impuestos en 5 288 y el VAN en 5 288 × 2,3216 = 12 276: el VAN pasa a **−S/ 1 796**. El punto de quiebre es de unas 29 horas extras eliminadas por mes. Por eso el piloto debe medir con precisión las horas extras, no solo el tiempo de registro.\n\n## 3. Registro contable según la NIC 38\n\n```\n1. Licencia perpetua de software\n   343   Programas de computadora (software)        12 000,00\n   40111 IGV – Cuenta propia                         2 160,00\n         4212 Facturas emitidas por pagar                        14 160,00\n2. Desarrollo externo en fase de desarrollo (NIC 38.57)\n   343   Programas de computadora (software)        18 000,00\n   40111 IGV – Cuenta propia                         3 240,00\n         4212 Facturas emitidas por pagar                        21 240,00\n3. Capacitación del personal (NIC 38.67: es gasto)\n   63    Gastos de servicios prestados por terceros  1 500,00\n   40111 IGV – Cuenta propia                           270,00\n         4212 Facturas emitidas por pagar                         1 770,00\n4. Amortización mensual: 30 000 / 36 meses\n   6821  Amortización de intangibles – costo           833,33\n         3921 Amortización acumulada de intangibles                833,33\n```\n\nEl diagnóstico y la prueba de concepto pertenecen a la fase de investigación y se reconocieron como gasto (párrafo 54). El desarrollo se capitaliza porque, al aprobarse, se cumplían las seis condiciones del párrafo 57. Si la solución fuera una suscripción en la nube que la empresa no controla, la decisión de agenda de abril de 2021 llevaría a reconocer como gasto la configuración y la personalización, salvo que generen un intangible separado controlado por la entidad.\n\n## 4. Tratamiento tributario e impuesto diferido\n\nEl inciso g) del artículo 44 de la Ley del Impuesto a la Renta permite deducir el precio pagado por intangibles de duración limitada en un solo ejercicio o amortizarlo proporcionalmente en diez años, y su reglamento incluye el software entre ellos. Al optar por la deducción inmediata, al cierre del año 1 la base tributaria del software es cero y su importe en libros es 20 000: surge una diferencia temporaria imponible y un pasivo diferido según la NIC 12.\n\n```\n5. Impuesto diferido al cierre del año 1: 20 000 × 29,5 %\n   882   Impuesto a la renta – diferido              5 900,00\n         4911 Impuesto a la renta diferido (pasivo)                5 900,00\n```\n\n## 5. Las personas también están en el caso de negocio\n\nEl modelo supone que el personal adoptará la solución desde el segundo mes. Si la adopción se retrasa, la marcha en paralelo se prolonga y el beneficio se diluye. Por eso el plan de implementación incluye un diagnóstico ADKAR de cada usuario, logros tempranos visibles y una decisión transparente sobre qué hará el personal con el tiempo liberado. Un caso de negocio que ignora a las personas está, en realidad, incompleto."
+      },
+      "case": {
+        "title": "Caso: Distribuidora Ferretera del Centro y el robot que nadie quería",
+        "content": "**Contexto.** Distribuidora Ferretera del Centro S.A.C. vende materiales de construcción y ferretería desde Huancayo, con una sucursal en Tarma. Factura unos S/ 26 millones al año, pertenece al Régimen General y recibe alrededor de 1 800 comprobantes de compra mensuales de 240 proveedores. El área contable la dirige la contadora general, Patricia Rojas, con tres asistentes. Una de ellas, Carmen Villanueva, trabaja en la empresa hace 24 años, registra las compras, conoce a cada proveedor y se jubilará en dieciocho meses.\n\n**El proyecto.** Un equipo de estudiantes de TEPSUP diseñó con la contadora un proceso nuevo: descarga de la propuesta del Registro de Compras Electrónico del SIRE, cruce automático con órdenes de compra y notas de ingreso del sistema comercial, y un robot que registra las compras en el sistema contable en la nube, que carece de función de importación masiva. Los desembolsos previstos son:\n\n| Concepto | S/ |\n|---|---|\n| Suscripción anual a la plataforma de automatización | 9 600 |\n| Configuración del sistema contable en la nube por un consultor independiente | 14 000 |\n| Desarrollo de los flujos por una empresa de software, que entrega el código y los derechos de uso | 12 400 |\n| Capacitación del personal | 2 500 |\n| Horas extras de la marcha en paralelo | 3 000 |\n| Total | 41 500 |\n\nEl caso de negocio arroja un VAN de S/ 22 600 a una tasa de 15 %, pero descansa en un supuesto: que el puesto de Carmen no se reemplazará cuando se jubile, lo que ahorraría S/ 38 000 anuales desde el segundo año.\n\n**Las presiones.** El gerente general, Luis Cárdenas, negocia un préstamo con un banco y quiere mostrar una utilidad alta en 2026. Pide a la contadora registrar los S/ 41 500 como intangible y amortizarlos en cinco años, porque «es una inversión en tecnología». Patricia duda y pide al equipo un memorando técnico.\n\nAl mismo tiempo, Carmen dejó de asistir a las capacitaciones y sigue registrando a mano «para no perder el control». En una reunión dijo: «Yo conozco a cada proveedor; un robot no sabe cuándo una factura viene mal». Los otros dos asistentes, entusiasmados al inicio, ahora preguntan en voz baja si también sus puestos desaparecerán. El equipo debe presentar en la semana 12 el caso de negocio, el tratamiento contable y el plan de cambio ante la gerencia.",
+        "questions": [
+          "Determine el tratamiento contable de cada desembolso según la NIC 38 y las decisiones de agenda sobre la nube, y explique su efecto en la utilidad de 2026.",
+          "¿Qué supuestos del caso de negocio considera más frágiles y cómo los sometería a análisis de sensibilidad y de punto de quiebre?",
+          "Diagnostique con el modelo ADKAR la situación de Carmen y la de los otros dos asistentes, y proponga acciones concretas para cada caso.",
+          "¿Cómo respondería la contadora, desde la ética profesional, a la presión del gerente para capitalizar todos los desembolsos?",
+          "¿Cómo podría aprovechar el conocimiento de Carmen sobre los proveedores en el diseño de las reglas y controles de la solución?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Caso de negocio, tratamiento contable-tributario y plan de implementación",
+        "instructions": "**Objetivo.** Sustentar la viabilidad económica del proyecto, determinar el tratamiento contable y tributario de la inversión y obtener la autorización del patrocinador para el piloto.\n\n**Qué entregar.**\n\n1. **Modelo financiero** en Excel con flujos incrementales después de impuestos para un horizonte de tres a cinco años, VAN, TIR y periodo de recuperación descontado; valorización justificada de cada beneficio y costo; análisis de sensibilidad con gráfico de tornado y punto de quiebre de las dos variables críticas.\n2. **Memorando técnico contable-tributario** de dos a tres páginas: clasificación de cada desembolso según la NIC 38 o como servicio en la nube, asientos contables con cuentas del PCGE, opción tributaria elegida y cálculo del impuesto diferido.\n3. **Plan del proyecto:** cronograma con ruta crítica, matriz RACI y registro de al menos diez riesgos con respuesta, responsable y disparador.\n4. **Plan de gestión del cambio:** diagnóstico ADKAR de los usuarios, matriz de comunicación, plan de capacitación e indicador de adopción.\n5. **Protocolo del piloto** firmado por el patrocinador: alcance, periodo, métricas con las definiciones de la línea base, criterios de éxito, criterio de parada y plan de reversión.\n\n**Formato.** Libro de Excel con fórmulas vinculadas, documento PDF de diez a catorce páginas y presentación de diez minutos ante el comité simulado. Entrega por equipo en la semana 12.\n\n**Criterios.** Rigor y honestidad del caso de negocio, corrección técnica del tratamiento contable y tributario, solidez del plan y calidad de la defensa ante el comité.",
+        "rubric": [
+          { "name": "Caso de negocio, sensibilidad y punto de quiebre", "points": 6 },
+          { "name": "Tratamiento contable y tributario con asientos", "points": 4 },
+          { "name": "Plan del proyecto y registro de riesgos", "points": 4 },
+          { "name": "Gestión del cambio y protocolo del piloto", "points": 4 },
+          { "name": "Defensa ante el comité", "points": 2 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Caso de negocio, normas e implementación",
+        "questions": [
+          {
+            "prompt": "Una inversión de S/ 20 000 genera flujos netos de S/ 9 000 anuales durante tres años. Con una tasa de descuento de 12 %, ¿cuál es el VAN aproximado?",
+            "options": ["S/ 1 616", "S/ 7 000", "−S/ 1 616", "S/ 21 616"],
+            "correct": 0,
+            "explanation": "El factor de anualidad al 12 % por tres años es 2,4018; el valor presente de los flujos es 9 000 × 2,4018 = 21 616 y el VAN es 21 616 − 20 000 = S/ 1 616."
+          },
+          {
+            "prompt": "El proyecto libera 40 horas mensuales de un asistente que seguirá en planilla sin nuevas tareas asignadas. ¿Cómo debe tratarse en el caso de negocio?",
+            "options": ["No genera ahorro en efectivo; solo es beneficio si se reasignan las horas o se evita un costo", "Como ahorro de 40 horas por el costo hora cargado", "Como ahorro equivalente a una remuneración completa", "Como beneficio fiscal por menor gasto de planilla"],
+            "correct": 0,
+            "explanation": "El caso de negocio es incremental y en efectivo. Si el costo de planilla no cambia y las horas no se usan en tareas que generen ingresos o eviten costos, no hay ahorro real."
+          },
+          {
+            "prompt": "Según la NIC 38, ¿cuál de los siguientes desembolsos puede reconocerse como activo intangible?",
+            "options": ["Programación del script después de demostrar su factibilidad técnica y aprobarse su desarrollo", "Entrevistas y diagnóstico del proceso actual", "Capacitación del personal en el uso del script", "Configuración de un software en la nube que la entidad no controla"],
+            "correct": 0,
+            "explanation": "Solo los desembolsos de la fase de desarrollo que cumplen las seis condiciones del párrafo 57 se capitalizan. El diagnóstico es investigación, la capacitación está excluida por el párrafo 67 y la configuración de software no controlado es gasto."
+          },
+          {
+            "prompt": "Una licencia de S/ 12 000 se amortiza contablemente en tres años y tributariamente se deduce íntegra en el año 1. Con una tasa de 29,5 %, ¿qué impuesto diferido surge al cierre del año 1?",
+            "options": ["Pasivo diferido de S/ 2 360", "Activo diferido de S/ 2 360", "Pasivo diferido de S/ 3 540", "No surge impuesto diferido"],
+            "correct": 0,
+            "explanation": "El importe en libros es 8 000 y la base tributaria es cero: diferencia temporaria imponible de 8 000 × 29,5 % = S/ 2 360, que se registra como pasivo diferido."
+          },
+          {
+            "prompt": "Una asistente domina la nueva herramienta, pero sigue conciliando a mano porque teme que su puesto desaparezca. Según ADKAR, ¿dónde está la brecha principal?",
+            "options": ["En el deseo de participar y apoyar el cambio", "En el conocimiento de cómo usar la herramienta", "En la habilidad para aplicarla en el trabajo", "En el refuerzo posterior a la implementación"],
+            "correct": 0,
+            "explanation": "Conoce y sabe usar la herramienta, de modo que conocimiento y habilidad no son el problema. Le falta deseo, que se trabaja con información transparente sobre su rol futuro, no con más capacitación."
+          },
+          {
+            "prompt": "¿Por qué un error en una regla automatizada suele ser más grave que un error humano de digitación?",
+            "options": ["Porque es sistemático y se replica en todos los registros hasta detectarse", "Porque la SUNAT sanciona más los errores automáticos", "Porque los errores humanos nunca afectan la declaración", "Porque las reglas automatizadas no pueden corregirse"],
+            "correct": 0,
+            "explanation": "El error humano suele ser aleatorio y aislado; el de una regla se repite en cada ejecución. Por eso se requieren controles de razonabilidad, pruebas antes de cada cambio y revisión de resultados."
+          },
+          {
+            "prompt": "En un gráfico de tornado, el VAN varía S/ 18 000 ante cambios en la tasa de automatización y S/ 3 000 ante cambios en el costo hora. ¿Qué conclusión es correcta?",
+            "options": ["El piloto debe validar sobre todo la tasa de automatización", "El costo hora es la variable crítica del proyecto", "El proyecto es inviable porque su VAN es sensible", "La sensibilidad no influye en el diseño del piloto"],
+            "correct": 0,
+            "explanation": "La variable que más mueve el VAN concentra el riesgo del caso de negocio; la evidencia del piloto debe reducir la incertidumbre sobre ella antes de escalar la solución."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Piloto, validación de resultados, transferencia y sustentación",
+      "description": "Al finalizar la unidad, el estudiante ejecuta un piloto controlado en el proceso real del socio formador, valida estadísticamente la mejora frente a la línea base, asegura la sostenibilidad y la transferencia de la solución y comunica el proyecto en un informe técnico y una sustentación ante jurado.",
+      "topics": [
+        "Diseño y ejecución del piloto controlado con marcha en paralelo",
+        "Pruebas de aceptación del usuario y criterios de salida",
+        "Validación estadística de resultados frente a la línea base y gráficos de control",
+        "Sostenibilidad: plan de control, manuales y transferencia al socio",
+        "Informe técnico, comunicación con datos y sustentación ante jurado",
+        "Propiedad intelectual, ética y lecciones aprendidas"
+      ],
+      "slides": [
+        {
+          "title": "El piloto: aprender en el proceso real con riesgo controlado",
+          "bullets": [
+            "Alcance limitado: un periodo de cierre, un grupo de clientes, una cuenta bancaria o una sucursal.",
+            "Marcha en paralelo: el proceso antiguo sigue vigente hasta que el nuevo demuestra resultados equivalentes o mejores.",
+            "Protocolo firmado: criterios de éxito, criterio de parada, responsables, plan de reversión y forma de medir.",
+            "Registro diario de incidencias, excepciones y tiempos durante todo el piloto."
+          ],
+          "notes": "Explique que el piloto es el puente entre la prueba de concepto y la operación. A diferencia de la prueba de concepto, que demostró factibilidad técnica con datos seudonimizados, el piloto opera con el proceso real, las personas reales y las presiones reales del cierre. Por eso la marcha en paralelo es la protección clave: si el nuevo proceso falla, el antiguo garantiza que las declaraciones y los estados financieros salgan a tiempo. Recuerde que el piloto debe medirse exactamente con las mismas definiciones de la línea base; si cambia la forma de medir, la comparación pierde validez. Muestre un protocolo de piloto de una página. Pregunte: ¿cuánto debe durar un piloto de cierre mensual? Al menos un ciclo completo y, de preferencia, dos, porque el primero incluye efectos de aprendizaje que distorsionan los tiempos."
+        },
+        {
+          "title": "Pruebas de aceptación del usuario",
+          "bullets": [
+            "Casos de prueba derivados de los requisitos: situación, datos de entrada, resultado esperado y resultado obtenido.",
+            "Incluir casos límite: notas de crédito, anulaciones, moneda extranjera, detracciones, duplicados y archivos dañados.",
+            "Los ejecuta el usuario del socio, no el equipo; el equipo observa y registra.",
+            "Acta de aceptación con observaciones clasificadas en críticas, mayores y menores."
+          ],
+          "notes": "Explique que las pruebas de aceptación responden una pregunta distinta de las pruebas técnicas: no si el código funciona, sino si la solución sirve al usuario en su trabajo. Muestre una plantilla de caso de prueba y desarrolle uno: «registro de una factura en dólares con detracción; resultado esperado: tipo de cambio aplicable a la fecha de emisión, cuenta por pagar en moneda extranjera y constancia de depósito vinculada». Insista en que los usuarios deben ejecutar las pruebas, porque detectan problemas de uso que el equipo no ve, como un botón confuso o un reporte que no se entiende. Explique la clasificación de observaciones: una crítica impide salir a producción, una mayor exige solución en un plazo definido y una menor puede quedar en la lista de mejoras. Pregunte: ¿qué hacer si el usuario aprueba todas las pruebas sin ejecutarlas por falta de tiempo? Discuta el valor de la evidencia."
+        },
+        {
+          "title": "Comparar con la línea base: diseño de la evaluación",
+          "bullets": [
+            "Mismas definiciones operativas, mismas fuentes y periodos comparables antes y después.",
+            "Controlar factores externos: estacionalidad, cambios normativos, rotación de personal y volúmenes atípicos.",
+            "Diseño antes-después o, mejor, con grupo de comparación: clientes o cuentas que siguen con el proceso antiguo.",
+            "Separar el efecto de aprendizaje de las primeras semanas del desempeño estable."
+          ],
+          "notes": "Explique que demostrar una mejora es más difícil de lo que parece. Si la línea base se midió en temporada alta de exportaciones y el piloto en temporada baja, el menor tiempo puede deberse al volumen y no a la innovación. Por eso se controlan los factores externos o se usa un grupo de comparación: por ejemplo, el estudio aplica el proceso nuevo a cuarenta clientes y mantiene el antiguo en otros cuarenta similares durante el mismo mes. Recuerde los diseños cuasiexperimentales que vieron en Investigación e Innovación Tecnológica y aplíquelos ahora a indicadores contables. Advierta del efecto novedad: en las primeras semanas el personal presta más atención y el desempeño mejora temporalmente. Pregunte: si el piloto coincide con un cambio normativo del SIRE, ¿cómo afecta la interpretación de los resultados? Pida que cada equipo enumere tres amenazas a la validez de su comparación y cómo las controlará."
+        },
+        {
+          "title": "Prueba estadística de la mejora",
+          "bullets": [
+            "Hipótesis nula: el tiempo medio no cambió; hipótesis alternativa: disminuyó.",
+            "Prueba t de Welch para dos muestras independientes con varianzas distintas; prueba de proporciones para tasas de error.",
+            "Tamaño del efecto: d de Cohen = diferencia de medias / desviación estándar combinada; complementa al valor p.",
+            "Significancia práctica: una mejora estadísticamente significativa puede ser irrelevante para la meta del acta."
+          ],
+          "notes": "Conecte con Estadística Aplicada. Muestre un ejemplo: en la línea base, 40 cierres de clientes requirieron en promedio 6,8 horas de trabajo con una desviación estándar de 2,1; en el piloto, otros 40 cierres requirieron 3,1 horas con una desviación de 1,2. La prueba t de Welch arroja un estadístico cercano a 9,7 y un valor p muy inferior a 0,001: la diferencia no se explica por azar. La d de Cohen, de 2,16, indica un efecto muy grande. Explique que Excel ofrece la función PRUEBA.T con tipo 3 para varianzas desiguales y que Python la calcula con la biblioteca scipy. Insista en la diferencia entre significancia estadística y práctica: reducir el cierre en medio día puede ser significativo con muchos datos, pero irrelevante si la meta era reducirlo en tres días. Pregunte: ¿qué prueba usarían para comparar el porcentaje de comprobantes con error antes y después?"
+        },
+        {
+          "title": "Gráficos de control para demostrar estabilidad",
+          "bullets": [
+            "Gráfico de valores individuales: línea central igual a la media; límites = media ± 2,66 × rango móvil promedio.",
+            "Antes y después en el mismo gráfico, con límites recalculados desde el inicio del proceso nuevo.",
+            "Señales de cambio real: un punto fuera de los límites u ocho puntos consecutivos al mismo lado de la línea central.",
+            "Un proceso mejorado debe ser más rápido y también más estable, con límites más estrechos."
+          ],
+          "notes": "Presente el gráfico de control de Shewhart como la herramienta para mostrar que la mejora no fue un golpe de suerte. Con datos diarios de tiempo de proceso o semanales de errores, el gráfico de valores individuales y rango móvil es el más práctico. Explique que el factor 2,66 proviene de dividir tres entre la constante d2 de 1,128, que corresponde a rangos de dos observaciones. Muestre un gráfico con veinte días antes y veinte después: la media baja y los límites se estrechan. Presente dos reglas de señal: un punto fuera de los límites indica una causa especial y ocho puntos consecutivos por debajo de la línea central anterior indican un cambio sostenido. Insista en que la estabilidad es un argumento poderoso ante el jurado, porque muestra que el proceso es predecible. Pregunte: ¿qué significa un punto fuera de control en el tercer día del piloto? Probablemente un aprendizaje o una excepción no prevista."
+        },
+        {
+          "title": "Cuando los resultados no son los esperados",
+          "bullets": [
+            "Reportar con honestidad las metas logradas, parcialmente logradas y no logradas, con su explicación.",
+            "Análisis de brechas: ¿falló el diseño, la tecnología, la adopción o un supuesto del caso de negocio?",
+            "Efectos no previstos: nuevas excepciones, carga trasladada a otra área o riesgos de control emergentes.",
+            "Un resultado negativo bien analizado es una contribución profesional válida."
+          ],
+          "notes": "Prepare a los estudiantes para una situación frecuente: el piloto mejora un indicador pero no otro, o mejora menos de lo prometido. Explique que maquillar los resultados es una falta ética y, además, una mala estrategia, porque el jurado y el socio lo detectan. Muestre una tabla de cumplimiento de objetivos con semáforo y una columna de explicación. Proponga un análisis de brechas con cuatro preguntas: ¿el diseño atacaba la causa correcta?, ¿la tecnología funcionó como en la prueba de concepto?, ¿el personal adoptó el nuevo proceso?, ¿se cumplió el supuesto de volumen o de horas liberadas? Comente un ejemplo: un estudio redujo el tiempo de registro, pero el cierre no mejoró porque el cuello de botella real eran los clientes que enviaban tarde sus documentos. Recuerde la teoría de restricciones de Contabilidad Gerencial. Pregunte: ¿qué recomendarían a ese estudio para la siguiente etapa?"
+        },
+        {
+          "title": "Sostenibilidad: que la mejora sobreviva al equipo",
+          "bullets": [
+            "Plan de control: indicador, meta, frecuencia de medición, responsable y acción si el indicador sale de rango.",
+            "Dueño de la solución en el socio formador, con un suplente capacitado.",
+            "Control de versiones de scripts y reglas; registro de cambios con fecha, autor y aprobación.",
+            "Calendario de mantenimiento: cambios normativos de la SUNAT, formatos bancarios y actualizaciones del sistema."
+          ],
+          "notes": "Explique que la fase de control del ciclo DMAIC de Seis Sigma existe porque los procesos tienden a volver a su estado anterior cuando termina el proyecto. Muestre un plan de control con cuatro indicadores y sus responsables. Insista en designar un dueño de la solución con suplente: si la única persona que entiende el script renuncia, la solución muere. Explique el control de versiones con una herramienta como Git o, como mínimo, con una carpeta de versiones fechadas y un registro de cambios. Recuerde la importancia de un calendario normativo: cada año la SUNAT publica resoluciones que modifican plazos, formatos o tasas, y la solución debe revisarse en consecuencia. Pregunte: ¿qué pasará con su solución si en marzo el banco cambia el formato del extracto? La respuesta debe estar escrita en el manual técnico, no en la memoria del equipo."
+        },
+        {
+          "title": "Transferencia al socio formador",
+          "bullets": [
+            "Paquete de transferencia: solución, código o archivos, manual de usuario, manual técnico, plan de control y datos de prueba.",
+            "Capacitación con evidencia: lista de asistencia, ejercicio práctico y evaluación breve del usuario.",
+            "Acta de conformidad firmada por el patrocinador con el estado de la solución y las mejoras pendientes.",
+            "Periodo de acompañamiento acordado y canal de consultas tras el cierre del curso."
+          ],
+          "notes": "Explique que la transferencia es el momento en que el proyecto deja de ser del equipo y pasa a ser del socio. Muestre la estructura de un manual de usuario orientado a tareas: cómo ejecutar el proceso mensual, cómo interpretar el reporte de excepciones y qué hacer ante los errores frecuentes. El manual técnico, en cambio, explica la lógica, las reglas, las dependencias y cómo modificar parámetros. Recomiende el marco Diátaxis, que distingue tutoriales, guías prácticas, referencias y explicaciones, para organizar la documentación. Insista en que la capacitación debe evaluarse: el usuario del socio debe ejecutar un ciclo completo sin ayuda. Comente la importancia del acta de conformidad, que protege al equipo y al instituto y deja claro qué se entregó. Pregunte: ¿qué ocurre si el socio solicita mejoras después de la sustentación? Discuta límites y compromisos razonables."
+        },
+        {
+          "title": "Propiedad intelectual y confidencialidad de la solución",
+          "bullets": [
+            "Los programas de ordenador están protegidos como obras por el Decreto Legislativo 822, Ley sobre el Derecho de Autor.",
+            "Definir por escrito la titularidad y los usos: del equipo, del instituto, del socio o mediante licencia compartida.",
+            "Las bibliotecas de código abierto se usan respetando sus licencias y se listan en la documentación.",
+            "El informe académico se redacta sin datos que identifiquen al socio, salvo autorización expresa."
+          ],
+          "notes": "Recuerde lo estudiado sobre propiedad intelectual en Investigación e Innovación Tecnológica y aplíquelo al proyecto. Explique que el Decreto Legislativo 822 protege los programas de ordenador como obras y que, a falta de pacto, pueden surgir conflictos sobre quién puede usar, modificar o comercializar la solución. Recomiende incluir una cláusula en la carta de compromiso con el socio: lo habitual es que el socio reciba una licencia de uso gratuita y perpetua, y que los estudiantes conserven el derecho de mostrar la solución en su portafolio sin datos confidenciales. Mencione que bibliotecas como pandas tienen licencias permisivas, pero deben citarse. Insista en la confidencialidad del informe: se usan nombres ficticios o se obtiene autorización escrita. Pregunte: ¿puede un estudiante ofrecer la misma solución a otro estudio contable como servicio? Depende del acuerdo y de que no use información confidencial."
+        },
+        {
+          "title": "Estructura del informe técnico del proyecto",
+          "bullets": [
+            "Resumen ejecutivo de una página: problema, solución, resultados cuantificados y recomendación.",
+            "Cuerpo: diagnóstico, diseño, caso de negocio, piloto, resultados, sostenibilidad, conclusiones y recomendaciones.",
+            "Anexos: diagramas, matrices, código, actas, datos seudonimizados y evidencias de capacitación.",
+            "Normas APA 7 para citas, tablas y figuras; trazabilidad entre objetivos, indicadores y resultados."
+          ],
+          "notes": "Muestre la estructura completa del informe y explique que coincide en buena medida con lo que se espera de un trabajo de aplicación profesional. Insista en el resumen ejecutivo: muchos lectores, incluido el patrocinador, solo leerán esa página, que debe responder qué problema había, qué se hizo, qué se logró en cifras y qué se recomienda. Explique la trazabilidad: cada objetivo SMART del acta debe aparecer en la sección de resultados con su indicador, línea base, meta y valor logrado. Recomiende redactar las conclusiones a partir de los objetivos y las recomendaciones a partir de las brechas. Muestre ejemplos de tablas bien rotuladas y figuras con fuente. Recuerde que el código y los datos van en anexos, no en el cuerpo. Pregunte: ¿qué diferencia hay entre una conclusión y una recomendación? Pida que cada equipo escriba primero su resumen ejecutivo, antes que el resto del informe."
+        },
+        {
+          "title": "Comunicar con datos: el principio de la pirámide",
+          "bullets": [
+            "Minto: comenzar por la respuesta y luego agrupar los argumentos que la sustentan.",
+            "Estructura SCQA para abrir la sustentación: situación, complicación, pregunta y respuesta.",
+            "Un mensaje por diapositiva, con un título que afirma una conclusión, no un tema.",
+            "Gráficos honestos: barras con eje desde cero y comparación directa entre antes y después."
+          ],
+          "notes": "Presente el principio de la pirámide de Barbara Minto, desarrollado en la consultoría estratégica: el oyente ejecutivo quiere primero la conclusión y luego las razones. Muestre la diferencia entre un título temático, «Resultados del piloto», y un título de conclusión, «El piloto redujo el cierre de once a seis días sin perder control». Explique la estructura SCQA con el caso del curso: situación, el estudio atiende a noventa clientes; complicación, el cierre tarda once días y genera rectificatorias; pregunta, ¿cómo cerrar en seis días sin aumentar el personal?; respuesta, rediseño del registro de compras con la propuesta del SIRE y conciliación por reglas. Insista en los gráficos honestos: un eje de barras que no empieza en cero exagera las diferencias y el jurado lo notará. Pida que cada equipo reescriba los títulos de sus diapositivas como afirmaciones verificables."
+        },
+        {
+          "title": "La sustentación ante jurado",
+          "bullets": [
+            "Quince minutos de exposición del equipo y preguntas individuales a cada integrante.",
+            "Demostración en vivo de la solución con datos de prueba y un video de respaldo ante fallas técnicas.",
+            "Preguntas típicas: ¿por qué esa tecnología?, ¿qué pasa si cambia la norma?, ¿cómo se aseguró el control?",
+            "Responder con evidencia, reconocer los límites y no improvisar cifras."
+          ],
+          "notes": "Prepare la sustentación como una evaluación profesional, no como un trámite. Explique la dinámica: el equipo expone, demuestra la solución y luego cada integrante responde preguntas individuales que verifican su dominio y su contribución. Recomiende preparar una demostración con datos de prueba y un video grabado como respaldo, porque las fallas de conexión son frecuentes en la modalidad virtual. Comparta un banco de preguntas típicas del jurado y practique respuestas: si preguntan por qué no se eligió un sistema integrado completo, la respuesta debe remitir a la matriz de selección y al caso de negocio. Insista en la honestidad: ante una pregunta cuya respuesta no se conoce, es mejor reconocerlo y explicar cómo se averiguaría. Organice ensayos cruzados en la semana 15, en los que un equipo actúa como jurado de otro con la rúbrica oficial."
+        },
+        {
+          "title": "Ética profesional al cerrar el proyecto",
+          "bullets": [
+            "Integridad en los resultados: no seleccionar datos favorables ni ocultar efectos negativos.",
+            "Confidencialidad permanente: el deber de reserva continúa después de terminado el curso.",
+            "Uso responsable de la inteligencia artificial en el informe: declarar su uso y verificar cada afirmación y cita.",
+            "Reconocer las contribuciones del socio, de su personal y de cada integrante del equipo."
+          ],
+          "notes": "Cierre el curso retomando la ética profesional con dilemas concretos. Primer dilema: el piloto muestra una reducción de tiempo, pero también un aumento de excepciones no resueltas; ¿se reportan ambos? Sí, porque ocultar el segundo induciría a error al socio. Segundo dilema: un integrante usó inteligencia artificial generativa para redactar el marco teórico y la herramienta inventó una cita; ¿quién es responsable? Todo el equipo, que firmó el informe. Explique la práctica de declarar el uso de estas herramientas en una nota metodológica. Tercer dilema: un cliente del socio pide al estudiante información sobre otro cliente que vio en los datos; la respuesta es una negativa clara, porque el deber de confidencialidad es permanente. Conecte con el curso de Ética Profesional que llevan en paralelo. Pida que cada equipo redacte una declaración de integridad para su informe final."
+        },
+        {
+          "title": "Lecciones aprendidas y proyección profesional",
+          "bullets": [
+            "Revisión posterior: qué funcionó, qué no, por qué y qué se haría distinto, con evidencia.",
+            "Portafolio profesional: problema, rol, solución y resultados cuantificados, sin datos confidenciales.",
+            "Continuidad: escalar la solución a otros procesos, ofrecerla como servicio o usarla como base del trabajo de titulación.",
+            "El contador como agente de innovación: integra normativa, procesos, datos y personas."
+          ],
+          "notes": "Explique la revisión posterior al proyecto como una práctica de aprendizaje organizacional: se discute en equipo sin buscar culpables y se registran lecciones accionables. Proponga cuatro preguntas: ¿qué esperábamos que ocurriera?, ¿qué ocurrió realmente?, ¿por qué hubo diferencias?, ¿qué haremos distinto la próxima vez? Muestre cómo convertir el proyecto en una línea del currículo orientada a logros: «Rediseñé y automaticé la conciliación bancaria de una agroexportadora y reduje el tiempo mensual de 52 a 11 horas». Conecte con las Experiencias Formativas en Situación Real de Trabajo: muchas soluciones pueden replicarse en el centro de prácticas. Mencione las opciones de continuidad: escalar a otros procesos, ofrecer el servicio o usar el proyecto como base del trabajo de aplicación profesional. Cierre con la idea central del curso: el contador que domina la norma y además sabe rediseñar procesos con datos se vuelve indispensable."
+        }
+      ],
+      "reading": {
+        "title": "Demostrar que la innovación funcionó: piloto, evidencia y transferencia",
+        "minutes": 40,
+        "content": "## 1. Del prototipo al piloto\n\nLa prueba de concepto demostró que la tecnología funciona con datos seudonimizados; el piloto debe demostrar que el proceso rediseñado funciona con personas reales, plazos reales y la presión del cierre. Se ejecuta con alcance acotado —un grupo de clientes, una cuenta bancaria, uno o dos cierres— y con marcha en paralelo: el proceso antiguo se mantiene hasta que el nuevo prueba resultados equivalentes o mejores. El protocolo, firmado por el patrocinador, define criterios de éxito, un criterio de parada y un plan de reversión.\n\n## 2. Medir igual que antes\n\nLa comparación solo es válida si se usan las mismas definiciones operativas, las mismas fuentes y periodos comparables. Las amenazas típicas son la estacionalidad —una agroexportadora no puede comparar su campaña con la temporada baja—, los cambios normativos, la rotación de personal y el efecto novedad. Cuando es posible, conviene un grupo de comparación: por ejemplo, cuarenta clientes con el proceso nuevo y cuarenta similares con el antiguo durante el mismo mes.\n\n## 3. Prueba estadística: ejemplo resuelto\n\nEn el Estudio Contable Mendoza se midieron las horas de trabajo del cierre mensual por cliente en 40 cierres de la línea base y en 40 del piloto:\n\n```\nLínea base (n₁ = 40): media = 6,8 h   s₁ = 2,1\nPiloto     (n₂ = 40): media = 3,1 h   s₂ = 1,2\n\nError estándar = raíz(s₁²/n₁ + s₂²/n₂) = raíz(0,1103 + 0,0360) = 0,382\nt de Welch     = (6,8 − 3,1) / 0,382 = 9,68          p < 0,001\nd de Cohen     = 3,7 / raíz((2,1² + 1,2²) / 2) = 3,7 / 1,71 = 2,16\n```\n\nEn Excel se obtiene el valor p con =PRUEBA.T(rango_base;rango_piloto;1;3), donde 1 indica una cola y 3 varianzas desiguales. En Python:\n\n```python\nfrom scipy import stats\nt, p = stats.ttest_ind(base, piloto, equal_var=False, alternative='greater')\n```\n\nEl valor p indica que la diferencia no se explica por azar, y una d de Cohen muy superior a 0,8 indica un efecto grande. Para tasas de error se usa una prueba de proporciones. Si la línea base tuvo 18 % de comprobantes con error en una muestra de 400 y el piloto 7 % en otra de 400, la proporción combinada es 12,5 % y:\n\n```\nz = (0,18 − 0,07) / raíz(0,125 × 0,875 × (1/400 + 1/400)) = 0,11 / 0,0234 ≈ 4,7\n```\n\nLa mejora es altamente significativa, pero no alcanza la meta del acta, que exigía 5 % de error o menos. Ese matiz debe reportarse: la significancia estadística no reemplaza la comparación con la meta.\n\n## 4. Gráfico de control: mostrar estabilidad\n\n```\nGráfico de valores individuales: límites = media ± 2,66 × rango móvil promedio\n\nAntes:    media 6,8 h; rango móvil 2,0  ->  LCS 12,12; LCI 1,48\nDespués:  media 3,1 h; rango móvil 1,1  ->  LCS 6,03;  LCI 0,17\n```\n\nEl proceso nuevo no solo es más rápido: también es más predecible, porque sus límites son más estrechos. Un punto fuera de límites u ocho puntos consecutivos a un mismo lado de la línea central señalan causas especiales que deben investigarse antes de afirmar que la mejora es estable.\n\n## 5. Sostenibilidad y transferencia\n\nLos procesos tienden a volver a su estado anterior cuando el equipo se retira. La fase de control del ciclo DMAIC responde a ese riesgo con un plan de control que define, para cada indicador, su meta, frecuencia de medición, responsable y acción correctiva. La solución necesita un dueño en el socio formador y un suplente capacitado, control de versiones de scripts y reglas, y un calendario de mantenimiento que anticipe cambios normativos de la SUNAT y de formatos bancarios. El paquete de transferencia incluye la solución, el manual de usuario, el manual técnico, el plan de control y los datos de prueba, y se cierra con un acta de conformidad firmada. La titularidad y los usos de la solución, protegida como obra por el Decreto Legislativo 822, deben quedar pactados por escrito.\n\n## 6. Comunicar el resultado\n\nEl informe empieza por un resumen ejecutivo de una página. Siguiendo el principio de la pirámide de Minto, la sustentación abre con la respuesta —qué se logró y qué se recomienda— y luego presenta la evidencia. Cada objetivo del acta reaparece con su línea base, su meta y su resultado, incluso cuando no se alcanzó. Un jurado exigente no premia resultados perfectos, sino conclusiones que se sostienen en datos medidos con honestidad."
+      },
+      "case": {
+        "title": "Caso: Distribuidora de Alimentos Norteña y el piloto que mejoró a medias",
+        "content": "**Contexto.** Distribuidora de Alimentos Norteña S.A.C., con sede en Piura, abastece de abarrotes a unas 1 400 bodegas y minimercados del norte del país, con ventas anuales de S/ 64 millones. Su área contable tiene seis personas. Un equipo de TEPSUP desarrolló con ella un proyecto de cierre rápido: conciliación automática de bancos y cobranzas, provisiones calculadas por reglas y un calendario de cierre con responsables.\n\n**Línea base y metas.** De marzo a agosto, el cierre mensual tomó en promedio 11 días hábiles, con un rango de 9 a 14. El 21 % de los comprobantes de compra tuvo algún error y el área acumuló 160 horas extras mensuales. El acta fijó tres metas: cierre en 6 días hábiles o menos, errores en 10 % o menos y horas extras en 80 o menos.\n\n**Resultados del piloto.**\n\n| Indicador | Línea base | Meta | Septiembre | Octubre |\n|---|---|---|---|---|\n| Días hábiles de cierre | 11 | 6 o menos | 8 | 6 |\n| Comprobantes con error | 21 % | 10 % o menos | 11 % | 8 % |\n| Horas extras del área | 160 | 80 o menos | 120 | 95 |\n| Excepciones pendientes acumuladas | — | — | 62 | 140 |\n\n**Complicaciones.** Las excepciones que la solución envía a revisión humana se acumulan: nadie fue designado formalmente para resolverlas. El auditor externo, en su visita preliminar, pidió evidencia de quién aprobó los cambios en las reglas del script; el equipo tiene bitácoras de ejecución, pero el script se modificó nueve veces sin registro de cambios. Rosa, la asistente con más experiencia, sigue conciliando a mano en paralelo «por si acaso», lo que consume unas 20 horas mensuales.\n\n**La presión.** El gerente de administración y finanzas, satisfecho, propone presentar al directorio solo los resultados de octubre bajo el título «Cierre en seis días: meta cumplida». Diego, el integrante del equipo que programó el script, se mudará a Lima en enero por un empleo. La sustentación ante el jurado es en dos semanas y el socio espera una recomendación clara: escalar la solución a todas las cuentas, ajustarla o detenerla.",
+        "questions": [
+          "¿Cómo presentaría los resultados del piloto frente a las metas del acta y qué respondería a la propuesta de informar solo el mes de octubre?",
+          "¿Qué análisis estadístico y qué gráficos usaría para demostrar que la reducción del cierre no se debe a factores externos o al efecto novedad?",
+          "¿Qué revelan las 140 excepciones pendientes y la conciliación paralela de Rosa sobre el diseño de la solución y la gestión del cambio?",
+          "Diseñe el plan de sostenibilidad y transferencia considerando la partida de Diego y la observación del auditor externo.",
+          "¿Recomendaría escalar, ajustar o detener la solución? Justifique su recomendación con evidencia, riesgos y condiciones."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 4: Informe final del proyecto de innovación contable y sustentación",
+        "instructions": "**Objetivo.** Demostrar con evidencia los resultados del proyecto, transferir la solución al socio formador y sustentarla ante un jurado.\n\n**Qué entregar.**\n\n1. **Informe técnico** de veinticinco a cuarenta páginas con resumen ejecutivo de una página, diagnóstico, diseño, caso de negocio, piloto, resultados, sostenibilidad, conclusiones, recomendaciones y referencias en formato APA 7.\n2. **Resultados del piloto:** tabla de cumplimiento de cada objetivo SMART con línea base, meta y valor logrado; prueba estadística pertinente con tamaño del efecto; gráfico de control de antes y después; análisis honesto de brechas y efectos no previstos.\n3. **Paquete de transferencia:** manual de usuario, manual técnico, plan de control con dueño y suplente, registro de versiones, evidencia de capacitación y acta de conformidad firmada por el patrocinador.\n4. **Sustentación:** presentación de quince minutos con títulos que afirmen conclusiones, demostración en vivo con datos de prueba y video de respaldo.\n5. **Declaración de integridad** que incluya el uso de inteligencia artificial, el acuerdo de propiedad intelectual con el socio y la coevaluación del equipo.\n\n**Formato.** Informe en PDF, anexos en carpeta comprimida y presentación. Entrega por equipo en la semana 16; la sustentación es grupal con preguntas individuales.\n\n**Criterios.** Validez de la evidencia, trazabilidad entre objetivos y resultados, sostenibilidad real de la solución, dominio individual demostrado en la sustentación e integridad profesional.",
+        "rubric": [
+          { "name": "Resultados del piloto validados frente a la línea base", "points": 6 },
+          { "name": "Calidad y trazabilidad del informe técnico", "points": 4 },
+          { "name": "Sostenibilidad y transferencia al socio formador", "points": 4 },
+          { "name": "Sustentación, demostración y respuestas individuales", "points": 4 },
+          { "name": "Integridad, propiedad intelectual y coevaluación", "points": 2 }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Piloto, validación y transferencia",
+        "questions": [
+          {
+            "prompt": "En la línea base, 40 cierres de clientes promediaron 6,8 horas con desviación de 2,1; en el piloto, otros 40 cierres promediaron 3,1 horas con desviación de 1,2. ¿Qué prueba es la más adecuada para comparar las medias?",
+            "options": ["Prueba t de Welch para muestras independientes", "Prueba t para muestras pareadas", "Prueba chi cuadrado de independencia", "Correlación de Pearson entre ambos grupos"],
+            "correct": 0,
+            "explanation": "Son dos grupos distintos de cierres, no las mismas unidades medidas dos veces, y sus varianzas difieren. La prueba t de Welch compara medias sin suponer varianzas iguales."
+          },
+          {
+            "prompt": "En un gráfico de valores individuales, la media del tiempo de cierre por cliente es 3,1 horas y el rango móvil promedio es 1,1 horas. ¿Cuál es el límite de control superior?",
+            "options": ["6,03 horas", "4,20 horas", "6,40 horas", "5,30 horas"],
+            "correct": 0,
+            "explanation": "Límite superior = media + 2,66 × rango móvil promedio = 3,1 + 2,66 × 1,1 = 3,1 + 2,93 = 6,03 horas. Multiplicar por 3 sería un error, porque el rango móvil no es la desviación estándar."
+          },
+          {
+            "prompt": "Con 2 000 casos, el tiempo de cierre por cliente bajó de 3,20 a 3,15 horas, con p = 0,01. ¿Qué conclusión es correcta?",
+            "options": ["La diferencia es estadísticamente significativa, pero quizá irrelevante en la práctica", "La mejora es grande porque el valor p es bajo", "La diferencia se debe al azar", "El tamaño del efecto es necesariamente grande"],
+            "correct": 0,
+            "explanation": "Con muestras grandes, diferencias mínimas resultan significativas. El valor p no mide la magnitud: tres minutos por cliente probablemente no cumplen la meta del acta ni justifican la inversión."
+          },
+          {
+            "prompt": "La línea base se midió en temporada alta y el piloto en temporada baja. ¿Cuál es la mejor medida para proteger la validez de la comparación?",
+            "options": ["Usar un grupo de comparación en el mismo periodo o ajustar por volumen", "Aumentar los días del piloto sin ningún otro cambio", "Cambiar la definición del indicador para el piloto", "Reportar solo los mejores días del piloto"],
+            "correct": 0,
+            "explanation": "La estacionalidad es una amenaza a la validez: la mejora podría deberse al menor volumen. Un grupo de comparación simultáneo o un indicador normalizado por volumen aísla el efecto de la innovación."
+          },
+          {
+            "prompt": "El patrocinador sugiere informar al directorio solo el mes en que se alcanzó la meta del piloto. ¿Qué respuesta es coherente con la ética profesional?",
+            "options": ["Presentar todos los periodos medidos y explicar la variación", "Aceptar, porque el patrocinador es responsable del informe", "Presentar solo el mejor mes con una nota al pie", "Omitir el piloto y presentar solo la proyección"],
+            "correct": 0,
+            "explanation": "Seleccionar solo datos favorables vulnera la integridad y la objetividad e induce a error a quien decide. Se reportan todos los periodos con su explicación y las condiciones para consolidar la mejora."
+          },
+          {
+            "prompt": "¿Qué elemento es el más importante para que la solución sobreviva a la salida del integrante que la programó?",
+            "options": ["Dueño y suplente capacitados, manual técnico y control de versiones", "Un video promocional de la solución", "Una licencia más costosa del software", "Mantener la marcha en paralelo de forma indefinida"],
+            "correct": 0,
+            "explanation": "La sostenibilidad depende de que otras personas entiendan, operen y modifiquen la solución con documentación y registro de cambios. La marcha en paralelo indefinida elimina los beneficios del proyecto."
+          },
+          {
+            "prompt": "Sin un acuerdo escrito con el socio formador, ¿qué riesgo principal surge sobre la solución de software desarrollada por el equipo?",
+            "options": ["Conflictos sobre quién puede usar, modificar o comercializar el software", "La SUNAT puede prohibir el uso del software", "La solución pierde automáticamente su validez técnica", "El instituto queda obligado a mantenerla sin costo"],
+            "correct": 0,
+            "explanation": "El Decreto Legislativo 822 protege los programas de ordenador como obras. Sin pacto sobre titularidad y licencias de uso, pueden surgir disputas entre estudiantes, instituto y socio."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    { "week": 1, "unit": 1, "topic": "El proyecto de innovación contable, el socio formador y la transformación digital de la función contable", "activity": "Presentación del curso y de las rúbricas; conformación de equipos; foro sobre procesos contables lentos o propensos a errores; lista de socios formadores potenciales y matriz de selección del proceso.", "evidence": "Ficha de equipo y matriz de selección del proceso" },
+    { "week": 2, "unit": 1, "topic": "Modelado del proceso actual con BPMN 2.0 y técnicas de relevamiento", "activity": "Taller de modelado en Bizagi Modeler o draw.io; entrevista semiestructurada y observación del proceso en el socio formador; validación del diagrama con su responsable.", "evidence": "Diagrama del proceso actual validado" },
+    { "week": 3, "unit": 1, "topic": "Línea base, desperdicios Lean y análisis de causa raíz", "activity": "Taller de medición con plantilla de registro de tiempos, cálculo de indicadores y diagrama de Pareto; preparación individual y debate del caso Estudio Contable Huamán & Asociados en el foro y la sesión síncrona.", "evidence": "Hoja de línea base y análisis del caso" },
+    { "week": 4, "unit": 1, "topic": "Problema, objetivos SMART y acta de constitución del proyecto", "activity": "Redacción y crítica cruzada de enunciados; firma del acta con el patrocinador; entrega de la Tarea 1 «Acta del proyecto y diagnóstico del proceso actual con línea base» y resolución del cuestionario 1.", "evidence": "Tarea 1 y cuestionario 1" },
+    { "week": 5, "unit": 2, "topic": "Rediseño del proceso futuro: eliminar, simplificar, integrar y automatizar", "activity": "Taller de rediseño: clasificación de actividades del proceso actual, aplicación de heurísticas y análisis del cuadrilátero del diablo; primer diagrama del proceso futuro.", "evidence": "Diagrama preliminar del proceso futuro" },
+    { "week": 6, "unit": 2, "topic": "Portafolio tecnológico y matriz de adecuación tarea-tecnología", "activity": "Demostraciones de Power Query, Python y automatización robótica; preparación y debate del caso Agroexportadora Costa Verde; matriz ponderada de selección tecnológica validada con el patrocinador.", "evidence": "Matriz de selección y análisis del caso" },
+    { "week": 7, "unit": 2, "topic": "Calidad de datos, controles internos y privacidad desde el diseño", "activity": "Perfilado de los datos seudonimizados del socio; matriz de riesgos y controles según COSO 2013; lista de verificación de la Ley 29733 y protocolo de uso de inteligencia artificial generativa.", "evidence": "Matriz de riesgos y controles" },
+    { "week": 8, "unit": 2, "topic": "Prueba de concepto y compuerta de diseño", "activity": "Laboratorio de conciliación por reglas en Python; ejecución de la prueba de concepto contra criterios previos; revisión de compuerta con abogado del diablo; entrega de la Tarea 2 y resolución del cuestionario 2.", "evidence": "Tarea 2 y cuestionario 2" },
+    { "week": 9, "unit": 3, "topic": "Caso de negocio: beneficios y costos incrementales, VAN, TIR y periodo de recuperación", "activity": "Taller en Excel: modelo de flujos incrementales después de impuestos, VAN, TIR y periodo de recuperación descontado del proyecto de cada equipo.", "evidence": "Modelo financiero preliminar" },
+    { "week": 10, "unit": 3, "topic": "Sensibilidad y tratamiento contable y tributario de la inversión", "activity": "Tabla de datos, gráfico de tornado y punto de quiebre; ejercicios de NIC 38, acuerdos en la nube, asientos e impuesto diferido; preparación y debate del caso Distribuidora Ferretera del Centro.", "evidence": "Memorando técnico y análisis del caso" },
+    { "week": 11, "unit": 3, "topic": "Plan de implementación híbrido, matriz RACI y gestión de riesgos", "activity": "Elaboración del cronograma con ruta crítica, matriz RACI y registro de al menos diez riesgos; revisión del plan con el patrocinador del socio formador.", "evidence": "Plan del proyecto y registro de riesgos" },
+    { "week": 12, "unit": 3, "topic": "Gestión del cambio, comunicación y compuerta de decisión de pilotear", "activity": "Diagnóstico ADKAR de los usuarios, matriz de comunicación y plan de capacitación; simulación de comité financiero; entrega de la Tarea 3 y resolución del cuestionario 3.", "evidence": "Tarea 3, protocolo del piloto y cuestionario 3" },
+    { "week": 13, "unit": 4, "topic": "Ejecución del piloto controlado y pruebas de aceptación del usuario", "activity": "Inicio del piloto con marcha en paralelo; ejecución de casos de prueba por usuarios del socio; registro diario de incidencias y tiempos con las definiciones de la línea base.", "evidence": "Bitácora del piloto y acta de pruebas" },
+    { "week": 14, "unit": 4, "topic": "Validación estadística de resultados y gráficos de control", "activity": "Taller de prueba t de Welch, prueba de proporciones y gráfico de valores individuales con datos del piloto; preparación y debate del caso Distribuidora de Alimentos Norteña.", "evidence": "Informe de resultados y análisis del caso" },
+    { "week": 15, "unit": 4, "topic": "Sostenibilidad, transferencia, propiedad intelectual y redacción del informe", "activity": "Elaboración del plan de control, manuales y acta de conformidad; redacción del resumen ejecutivo con el principio de la pirámide; ensayo cruzado de sustentación con la rúbrica oficial.", "evidence": "Borrador del informe y paquete de transferencia" },
+    { "week": 16, "unit": 4, "topic": "Sustentación ante jurado y lecciones aprendidas", "activity": "Entrega de la Tarea 4 «Informe final del proyecto de innovación contable y sustentación»; sustentación con demostración y preguntas individuales; cuestionario 4 y revisión posterior al proyecto.", "evidence": "Tarea 4, sustentación y cuestionario 4" }
+  ]
+}
