@@ -49,14 +49,6 @@ function SiteHeader() {
 
   return (
     <header className={cx('sticky top-0 z-50 transition-all duration-300', scrolled ? 'border-b border-line bg-bg/85 backdrop-blur-xl' : 'border-b border-transparent bg-bg')}>
-      <div className="hidden border-b border-line/70 bg-sunken/60 md:block">
-        <div className="mx-auto flex h-9 max-w-7xl items-center justify-end gap-5 px-6 text-[12.5px] text-muted">
-          <Link to="/aula-virtual" className="hover:text-ink">Estudiantes</Link>
-          <Link to="/aula-virtual#requisitos" className="hover:text-ink">Requisitos técnicos</Link>
-          <a href={`mailto:${CONTACT.email}`} className="hover:text-ink">{CONTACT.email}</a>
-          <Link to="/login" className="font-semibold text-primary-ink hover:underline">Mi aula ISUP</Link>
-        </div>
-      </div>
       <div className="relative mx-auto flex h-[72px] max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Logo />
         <nav className="ml-auto hidden items-center gap-1 lg:flex" aria-label="Principal">
