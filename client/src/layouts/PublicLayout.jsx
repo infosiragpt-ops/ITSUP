@@ -6,6 +6,7 @@ import { CareersMega, CareersMobileList } from '../components/programs.jsx';
 import { Button, cx, useClickOutside } from '../components/ui.jsx';
 import { useAuth } from '../lib/context.jsx';
 import { useApi } from '../lib/api.js';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
 export default function PublicLayout() {
   const loc = useLocation();
@@ -18,7 +19,7 @@ export default function PublicLayout() {
     <div className="min-h-dvh bg-bg">
       <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2">Saltar al contenido</a>
       <SiteHeader />
-      <main id="contenido"><Outlet /></main>
+      <main id="contenido"><ErrorBoundary><Outlet /></ErrorBoundary></main>
       <SiteFooter />
       <HelpWidget />
     </div>
@@ -76,14 +77,17 @@ function SiteHeader() {
           <Link to="/#contacto" className={link}>Contacto</Link>
         </nav>
         <div className="ml-auto flex items-center gap-2 lg:ml-3">
-          {user ? (
-            <Button to="/app" size="md" iconRight={ArrowRight} className="hidden sm:inline-flex">Ir a mi aula</Button>
-          ) : (
-            <>
-              <Button to="/login" variant="secondary" icon={LogIn} className="hidden sm:inline-flex">Ingresar</Button>
-              <Button to="/admision" className="hidden sm:inline-flex">Postula a ISUP</Button>
-            </>
-          )}
+          {/* En el celular estas acciones están en el menú: el contenedor se oculta porque Button siempre es inline-flex */}
+          <div className="hidden items-center gap-2 sm:flex">
+            {user ? (
+              <Button to="/app" size="md" iconRight={ArrowRight}>Ir a mi aula</Button>
+            ) : (
+              <>
+                <Button to="/login" variant="secondary" icon={LogIn}>Ingresar</Button>
+                <Button to="/admision">Postula a ISUP</Button>
+              </>
+            )}
+          </div>
           <button className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-ink hover:bg-sunken lg:hidden" onClick={() => setMobile(true)} aria-label="Abrir menú">
             <Menu size={22} />
           </button>

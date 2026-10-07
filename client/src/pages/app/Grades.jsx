@@ -32,7 +32,7 @@ function CurrentTerm() {
   const atts = courses.map((c) => c.attendance?.attendance_pct).filter((x) => x != null);
   return (
     <>
-      <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
         <Stat icon={GraduationCap} label="Promedio ponderado" value={fmtGrade(data.weighted_average)} hint={data.term ? `Periodo ${data.term.name} · por créditos` : 'Ponderado por créditos'} tone="success" />
         <Stat icon={Award} label="Mejor curso" value={fmtGrade(best?.average ?? null)} hint={best?.name} />
         <Stat icon={UserCheck} label="Asistencia" value={fmtPct(atts.length ? atts.reduce((a, b) => a + b, 0) / atts.length : null)} hint="Límite: 30% de inasistencias" tone="info" />
@@ -82,7 +82,7 @@ function History_() {
   const progress = program?.total_credits ? Math.round((summary.credits_approved / program.total_credits) * 100) : null;
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
         <Stat icon={GraduationCap} label="Promedio acumulado" value={fmtGrade(summary.cumulative_average)} hint={`${summary.terms_closed} ${summary.terms_closed === 1 ? 'periodo cerrado' : 'periodos cerrados'}`} tone="success" />
         <Stat icon={Award} label="Créditos aprobados" value={`${summary.credits_approved}${program?.total_credits ? ` / ${program.total_credits}` : ''}`} hint={progress != null ? `${progress}% del plan de estudios` : 'Créditos acumulados'} />
         <Stat icon={BookOpen} label="Unidades didácticas aprobadas" value={summary.courses_approved} hint={`${summary.courses_failed} desaprobadas`} tone="info" />

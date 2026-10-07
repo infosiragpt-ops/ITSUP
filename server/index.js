@@ -4,6 +4,7 @@ import path from 'node:path';
 import { ROOT, UPLOADS_DIR, get, db } from './db.js';
 import { auth } from './auth.js';
 import { seed, seedMinimal } from './seed.js';
+import { autoEnrollAll } from './enrollment.js';
 import authRoutes from './routes/auth.js';
 import publicRoutes from './routes/public.js';
 import courseRoutes from './routes/courses.js';
@@ -26,6 +27,12 @@ if (!get('SELECT COUNT(*) n FROM users').n) {
     console.log('Base de datos vacía: cargando datos de demostración…');
     seed();
   }
+}
+
+// Matrícula automática: cada estudiante en los cursos de su carrera y ciclo del periodo activo
+{
+  const r = autoEnrollAll();
+  if (r.added || r.removed) console.log(`Matrícula automática: ${r.added} matrícula(s) nueva(s), ${r.removed} retirada(s) en ${r.students} estudiante(s)`);
 }
 
 const app = express();

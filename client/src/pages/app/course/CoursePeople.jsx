@@ -76,7 +76,7 @@ function Tracking({ course }) {
 
   return (
     <div className="space-y-5">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
         <Stat icon={Users} label="Estudiantes" value={rows.length} hint={`${rows.filter((r) => r.student.enrollment_status === 'retirado').length} retirados`} tone="info" />
         <Stat icon={AlertTriangle} label="Con alertas" value={at_risk} hint="Requieren acompañamiento" tone={at_risk ? 'warn' : 'success'} />
         <Stat icon={UserCheck} label="Inactivos +7 días" value={inactive} hint="Sin ingresar al curso" tone={inactive ? 'warn' : 'success'} />

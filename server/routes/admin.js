@@ -5,6 +5,8 @@ import { role, publicUser } from '../auth.js';
 import { courseCard, checkPassword } from '../lib.js';
 import { buildActa, closeActa, reopenActa, creditsFor } from '../academic.js';
 import { randomPassword } from '../seed.js';
+import { normalizeCurriculum } from '../curriculum.js';
+import { autoEnrollStudent, autoEnrollCourse, autoEnrollAll } from '../enrollment.js';
 
 const r = Router();
 r.use(role('admin'));
@@ -76,8 +78,9 @@ r.post('/users', (req, res) => {
     program_id ? Number(program_id) : null, cycle ? Number(cycle) : null, title || null, COLORS[Math.floor(Math.random() * COLORS.length)], dni ? String(dni) : null
   );
   notify([id], { type: 'welcome', title: '¡Bienvenido(a) a ISUP!', body: 'Completa tu checklist de inicio para empezar tus clases.', link: '/app' });
-  audit(req, 'user.create', { entity: 'user', entityId: id, details: { role: rl, email: email.trim().toLowerCase(), generated_password: generated } });
-  res.status(201).json({ ...publicUser(get('SELECT * FROM users WHERE id = ?', id), { full: true }), temp_password: generated ? pwd : undefined });
+  const enrolled = autoEnrollStudent(id);
+  audit(req, 'user.create', { entity: 'user', entityId: id, details: { role: rl, email: email.trim().toLowerCase(), generated_password: generated, auto_enrolled: enrolled.added } });
+  res.status(201).json({ ...publicUser(get('SELECT * FROM users WHERE id = ?', id), { full: true }), temp_password: generated ? pwd : undefined, auto_enrolled: enrolled.added });
 });
 
 r.put('/users/:id', (req, res) => {
@@ -98,15 +101,17 @@ r.put('/users/:id', (req, res) => {
     run('UPDATE users SET password_hash = ?, failed_logins = 0, locked_until = NULL, password_changed_at = ? WHERE id = ?', bcrypt.hashSync(String(password), 10), now(), u.id);
   }
   if (unlock) run('UPDATE users SET failed_logins = 0, locked_until = NULL WHERE id = ?', u.id);
+  const enrolled = autoEnrollStudent(u.id);
   const changed = Object.keys(req.body).filter((k) => k !== 'password');
-  audit(req, active !== undefined && !active ? 'user.deactivate' : 'user.update', { entity: 'user', entityId: u.id, details: { fields: changed, password_reset: !!password } });
-  res.json(publicUser(get('SELECT * FROM users WHERE id = ?', u.id), { full: true }));
+  audit(req, active !== undefined && !active ? 'user.deactivate' : 'user.update', { entity: 'user', entityId: u.id, details: { fields: changed, password_reset: !!password, auto_enrolled: enrolled.added, auto_unenrolled: enrolled.removed } });
+  res.json({ ...publicUser(get('SELECT * FROM users WHERE id = ?', u.id), { full: true }), auto_enrolled: enrolled.added });
 });
 
 r.delete('/users/:id', (req, res) => {
   const id = Number(req.params.id);
   if (id === req.user.id) throw httpError(400, 'No puedes eliminar tu propia cuenta');
   run('UPDATE users SET active = 0 WHERE id = ?', id);
+  autoEnrollStudent(id);
   audit(req, 'user.deactivate', { entity: 'user', entityId: id });
   res.json({ ok: true });
 });
@@ -155,7 +160,8 @@ r.post('/courses', (req, res) => {
     return cid;
   });
   if (teacher_id) notify([Number(teacher_id)], { type: 'course', title: 'Se te asignó un nuevo curso', body: name.trim(), link: `/app/cursos/${id}` });
-  audit(req, 'course.create', { entity: 'course', entityId: id, details: { code: code.trim().toUpperCase() } });
+  const enrolled = autoEnrollCourse(id);
+  audit(req, 'course.create', { entity: 'course', entityId: id, details: { code: code.trim().toUpperCase(), auto_enrolled: enrolled.added } });
   res.status(201).json(get('SELECT * FROM courses WHERE id = ?', id));
 });
 
@@ -169,7 +175,8 @@ r.put('/courses/:id', (req, res) => {
     code ?? c.code, name ?? c.name, description ?? c.description, program_id === undefined ? c.program_id : program_id || null,
     teacher_id === undefined ? c.teacher_id : teacher_id || null, cycle === undefined ? c.cycle : cycle || null, f.credits, schedule ?? c.schedule,
     term_id === undefined ? c.term_id : term_id || null, f.module_name, f.course_type, f.hours_theory, f.hours_practice, f.min_grade, f.max_absence_pct, c.id);
-  audit(req, 'course.update', { entity: 'course', entityId: c.id });
+  const enrolled = autoEnrollCourse(c.id);
+  audit(req, 'course.update', { entity: 'course', entityId: c.id, details: enrolled.added || enrolled.removed ? { auto_enrolled: enrolled.added, auto_unenrolled: enrolled.removed } : null });
   res.json(get('SELECT * FROM courses WHERE id = ?', c.id));
 });
 
@@ -214,7 +221,7 @@ r.delete('/courses/:id/enrollments/:uid', (req, res) => {
 r.get('/programs', (req, res) => {
   res.json(all(`SELECT p.*, (SELECT COUNT(*) FROM users u WHERE u.program_id = p.id AND u.role = 'student') AS students,
     (SELECT COUNT(*) FROM courses c WHERE c.program_id = p.id) AS courses FROM programs p ORDER BY p.id`)
-    .map((p) => ({ ...p, curriculum: JSON.parse(p.curriculum || '[]') })));
+    .map((p) => ({ ...p, curriculum: normalizeCurriculum(p.curriculum) })));
 });
 
 const PROGRAM_TEXT = ['name', 'short', 'description', 'duration', 'modality', 'field', 'profile', 'color', 'icon', 'level', 'degree', 'resolution'];
@@ -241,7 +248,7 @@ r.put('/programs/:id', (req, res) => {
   // Área, foto y resolución sí pueden quedar vacías
   for (const k of ['area', 'image']) { f.push(k); v.push(req.body[k] === undefined ? p[k] : String(req.body[k] || '').trim() || null); }
   for (const k of ['total_credits', 'total_hours']) { f.push(k); v.push(req.body[k] === undefined ? p[k] : Number(req.body[k]) || p[k]); }
-  if (req.body.curriculum !== undefined) { f.push('curriculum'); v.push(JSON.stringify(Array.isArray(req.body.curriculum) ? req.body.curriculum : [])); }
+  if (req.body.curriculum !== undefined) { f.push('curriculum'); v.push(JSON.stringify(normalizeCurriculum(req.body.curriculum))); }
   const active = req.body.active === undefined ? p.active : req.body.active ? 1 : 0;
   run(`UPDATE programs SET ${f.map((k) => `${k} = ?`).join(', ')}, active = ? WHERE id = ?`, ...v, active, p.id);
   audit(req, 'program.update', { entity: 'program', entityId: p.id });
@@ -310,6 +317,7 @@ r.post('/terms', (req, res) => {
     if (activate) run('UPDATE terms SET is_active = 0');
     return insert('INSERT INTO terms (name, start_date, end_date, weeks, is_active) VALUES (?,?,?,?,?)', name.trim(), start_date, end_date, Number(weeks) || 16, activate ? 1 : 0);
   });
+  if (activate) autoEnrollAll();
   audit(req, 'term.create', { entity: 'term', entityId: id, details: { name: name.trim(), activate: !!activate } });
   res.status(201).json(termWithCounts(get('SELECT * FROM terms WHERE id = ?', id)));
 });
@@ -326,7 +334,8 @@ r.put('/terms/:id', (req, res) => {
     }
     run('UPDATE terms SET name = ?, start_date = ?, end_date = ?, weeks = ? WHERE id = ?', name ?? t.name, start_date ?? t.start_date, end_date ?? t.end_date, weeks ? Number(weeks) : t.weeks, t.id);
   });
-  audit(req, activate ? 'term.activate' : 'term.update', { entity: 'term', entityId: t.id });
+  const enrolled = activate ? autoEnrollAll() : null;
+  audit(req, activate ? 'term.activate' : 'term.update', { entity: 'term', entityId: t.id, details: enrolled });
   res.json(termWithCounts(get('SELECT * FROM terms WHERE id = ?', t.id)));
 });
 

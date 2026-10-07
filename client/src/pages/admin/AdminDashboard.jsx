@@ -72,7 +72,7 @@ export default function AdminDashboard() {
         }
       />
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
         {stats.map((st) => <Stat key={st.label} {...st} value={typeof st.value === 'number' ? nf.format(st.value ?? 0) : st.value} />)}
       </div>
 

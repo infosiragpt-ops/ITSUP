@@ -111,6 +111,7 @@ CREATE TABLE IF NOT EXISTS enrollments (
   last_access TEXT,
   status TEXT DEFAULT 'matriculado' CHECK (status IN ('matriculado','retirado')),
   withdrawn_at TEXT,
+  source TEXT DEFAULT 'manual',
   PRIMARY KEY (course_id, user_id)
 );
 
@@ -389,7 +390,7 @@ const MIGRATIONS = [
   ['courses', 'hours_theory', 'INTEGER DEFAULT 32'], ['courses', 'hours_practice', 'INTEGER DEFAULT 32'],
   ['courses', 'syllabus_json', "TEXT DEFAULT '{}'"], ['courses', 'min_grade', 'REAL DEFAULT 13'], ['courses', 'max_absence_pct', 'REAL DEFAULT 30'],
   ['courses', 'status', "TEXT DEFAULT 'open'"], ['courses', 'closed_at', 'TEXT'], ['courses', 'closed_by', 'INTEGER'],
-  ['enrollments', 'status', "TEXT DEFAULT 'matriculado'"], ['enrollments', 'withdrawn_at', 'TEXT'],
+  ['enrollments', 'status', "TEXT DEFAULT 'matriculado'"], ['enrollments', 'withdrawn_at', 'TEXT'], ['enrollments', 'source', "TEXT DEFAULT 'manual'"],
   ['assignments', 'category_id', 'INTEGER'], ['assignments', 'rubric', "TEXT DEFAULT '[]'"],
   ['submissions', 'rubric_scores', 'TEXT'], ['submissions', 'graded_by', 'INTEGER'],
   ['quizzes', 'category_id', 'INTEGER'],

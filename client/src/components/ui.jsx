@@ -262,11 +262,11 @@ export function ProgressRing({ value = 0, size = 56, stroke = 5, color = 'var(--
 export function Stat({ icon: Icon, label, value, hint, tone = 'primary' }) {
   const bg = { primary: 'bg-primary-soft text-primary', success: 'bg-success-soft text-success', info: 'bg-info-soft text-info', warn: 'bg-warn-soft text-warn' };
   return (
-    <Card className="flex items-center gap-4 p-4">
-      <div className={cx('flex h-11 w-11 shrink-0 items-center justify-center rounded-xl', bg[tone])}><Icon size={20} /></div>
-      <div className="min-w-0">
-        <div className="text-[13px] text-muted">{label}</div>
-        <div className="text-xl font-semibold text-ink tabular-nums">{value}</div>
+    <Card className="flex min-w-0 flex-col items-start gap-2.5 p-3.5 sm:flex-row sm:items-center sm:gap-4 sm:p-4">
+      <div className={cx('flex h-9 w-9 shrink-0 items-center justify-center rounded-xl sm:h-11 sm:w-11', bg[tone])}><Icon size={18} className="sm:h-5 sm:w-5" /></div>
+      <div className="w-full min-w-0">
+        <div className="text-[12.5px] leading-snug text-muted sm:text-[13px]">{label}</div>
+        <div className="text-lg font-semibold break-words text-ink tabular-nums sm:text-xl">{value}</div>
         {hint && <div className="truncate text-xs text-faint">{hint}</div>}
       </div>
     </Card>
@@ -314,10 +314,10 @@ export function MenuItem({ icon: Icon, children, to, onClick, danger }) {
 
 export function Segmented({ value, onChange, options, className }) {
   return (
-    <div className={cx('inline-flex rounded-xl border border-line bg-sunken p-1', className)}>
+    <div className={cx('no-scrollbar inline-flex max-w-full overflow-x-auto rounded-xl border border-line bg-sunken p-1', className)}>
       {options.map((o) => (
         <button key={o.value} type="button" onClick={() => onChange(o.value)}
-          className={cx('rounded-lg px-3 py-1.5 text-[13px] font-medium whitespace-nowrap transition', value === o.value ? 'bg-surface text-ink shadow-soft' : 'text-muted hover:text-ink')}>
+          className={cx('shrink-0 rounded-lg px-3 py-1.5 text-[13px] font-medium whitespace-nowrap transition', value === o.value ? 'bg-surface text-ink shadow-soft' : 'text-muted hover:text-ink')}>
           {o.label}
           {o.count != null && <span className="ml-1.5 text-faint">{o.count}</span>}
         </button>

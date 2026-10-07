@@ -25,15 +25,15 @@ export default function CourseActa() {
         <div className="flex gap-2"><Button variant="secondary" icon={Download} onClick={exportCsv}>CSV</Button><Button icon={Printer} onClick={() => window.print()}>Imprimir / PDF</Button></div>
       </div>
 
-      <div className="doc card p-6 sm:p-8 print:border-0 print:p-0 print:shadow-none">
+      <div className="doc card min-w-0 p-4 sm:p-8 print:border-0 print:p-0 print:shadow-none">
         <header className="border-b-2 border-ink pb-4 text-center">
           <div className="text-[11px] font-semibold tracking-[0.18em] text-muted uppercase">{institution.name}</div>
           <div className="text-[10px] text-faint">{institution.resolution}</div>
-          <h1 className="font-display mt-2 text-2xl font-semibold text-ink">Acta de evaluación de la unidad didáctica</h1>
+          <h1 className="font-display mt-2 text-xl font-semibold text-ink sm:text-2xl">Acta de evaluación de la unidad didáctica</h1>
           <div className="mt-1 text-sm text-muted">{closed ? `Acta cerrada el ${fmtDateTime(closed_at)}` : 'VISTA PREVIA · acta aún no cerrada'}</div>
         </header>
 
-        <dl className="mt-5 grid grid-cols-2 gap-x-8 gap-y-1.5 text-[13px] sm:grid-cols-3">
+        <dl className="mt-5 grid grid-cols-1 gap-x-8 gap-y-1.5 text-[13px] sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3">
           {[
             ['Programa de estudios', program?.name || 'Transversal'], ['Módulo formativo', c.module_name || '—'], ['Unidad didáctica', `${c.code} · ${c.name}`],
             ['Periodo académico', term?.name || '—'], ['Ciclo', c.cycle ? ROMAN[c.cycle] || c.cycle : '—'], ['Créditos / horas', `${c.credits} / ${(c.hours_theory || 0) + (c.hours_practice || 0)} h`],
@@ -41,14 +41,14 @@ export default function CourseActa() {
           ].map(([k, v]) => <div key={k} className="flex gap-2 border-b border-line/60 py-1"><dt className="shrink-0 text-muted">{k}:</dt><dd className="min-w-0 font-medium text-ink">{v}</dd></div>)}
         </dl>
 
-        <div className="mt-5 overflow-x-auto">
-          <table className="w-full border-collapse text-[12px]">
+        <div className="-mx-4 mt-5 overflow-x-auto px-4 sm:mx-0 sm:px-0 print:overflow-visible">
+          <table className="w-full min-w-[760px] border-collapse text-[12px] print:min-w-0">
             <thead>
               <tr className="bg-sunken print:bg-transparent">
                 <th className="border border-line px-1.5 py-1.5">N.°</th>
                 <th className="border border-line px-1.5 py-1.5 text-left">Código</th>
                 <th className="border border-line px-1.5 py-1.5 text-left">DNI</th>
-                <th className="border border-line px-1.5 py-1.5 text-left">Apellidos y nombres</th>
+                <th className="min-w-[170px] border border-line px-1.5 py-1.5 text-left print:min-w-0">Apellidos y nombres</th>
                 {categories.map((k) => <th key={k.id} className="border border-line px-1.5 py-1.5" title={k.name}>{k.name.replace('Evaluación de ', 'Ev. ')}<br /><span className="font-normal text-muted">{k.weight}%</span></th>)}
                 <th className="border border-line px-1.5 py-1.5">Prom.</th>
                 <th className="border border-line px-1.5 py-1.5">Asist.</th>

@@ -9,7 +9,7 @@
  *
  * Idempotente: un curso ya existente conserva su contenido (el docente puede haberlo editado); solo se
  * actualizan sus datos generales, el sílabo y los archivos de diapositivas. Con --rehacer se vuelve a crear
- * todo el contenido de los cursos del catálogo que no tengan matrículas ni calificaciones.
+ * todo el contenido de los cursos del catálogo sin actividad de estudiantes (entregas, intentos, avance ni asistencia).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -26,6 +26,7 @@ if (typeof process.getuid === 'function' && process.getuid() === 0 && !process.e
 const { get, run, insert, all, tx, settings, UPLOADS_DIR, DATA_DIR } = await import('../db.js');
 const { validate } = await import('../../deploy/catalogo/validar.mjs');
 const { buildUnitDeck } = await import('./build-pptx.mjs');
+const { autoEnrollAll } = await import('../enrollment.js');
 
 const index = JSON.parse(fs.readFileSync(path.join(dir, 'cursos-index.json'), 'utf8'));
 const term = get('SELECT * FROM terms WHERE is_active = 1 ORDER BY id DESC');
@@ -128,7 +129,8 @@ for (const entry of index.courses) {
       if (existing) {
         run(`UPDATE courses SET ${Object.keys(courseFields).map((k) => `${k} = ?`).join(', ')} WHERE id = ?`, ...Object.values(courseFields), existing.id);
         courseId = existing.id;
-        const hasData = get('SELECT (SELECT COUNT(*) FROM enrollments WHERE course_id = ?) + (SELECT COUNT(*) FROM submissions s JOIN assignments a ON a.id = s.assignment_id WHERE a.course_id = ?) + (SELECT COUNT(*) FROM quiz_attempts q JOIN quizzes z ON z.id = q.quiz_id WHERE z.course_id = ?) n', courseId, courseId, courseId).n;
+        // Las matrículas (automáticas por carrera y ciclo) no bloquean el reemplazo: solo la actividad académica de los estudiantes
+        const hasData = get('SELECT (SELECT COUNT(*) FROM submissions s JOIN assignments a ON a.id = s.assignment_id WHERE a.course_id = ?) + (SELECT COUNT(*) FROM quiz_attempts q JOIN quizzes z ON z.id = q.quiz_id WHERE z.course_id = ?) + (SELECT COUNT(*) FROM item_progress p JOIN items i ON i.id = p.item_id WHERE i.course_id = ?) + (SELECT COUNT(*) FROM attendance t JOIN live_sessions l ON l.id = t.session_id WHERE l.course_id = ?) n', courseId, courseId, courseId, courseId).n;
         const hasContent = get('SELECT COUNT(*) n FROM modules WHERE course_id = ?', courseId).n > 0;
         let wasShell = false;
         try { wasShell = !!JSON.parse(existing.syllabus_json || '{}').catalog_shell; } catch {}
@@ -184,4 +186,6 @@ for (const entry of index.courses) {
   }
 }
 console.log(`Cursos: ${created} creado(s) con contenido completo, ${updated} actualizado(s), ${shells} curso(s) base creados (contenido en elaboración) · diapositivas generadas: ${decks} archivo(s) · periodo ${term.name}`);
+const enrolled = autoEnrollAll();
+console.log(`Matrícula automática por carrera y ciclo: ${enrolled.added} matrícula(s) nueva(s), ${enrolled.removed} retirada(s)`);
 if (problems.length) { console.error(`Problemas (${problems.length}):`); problems.forEach((p) => console.error(`  - ${p}`)); }

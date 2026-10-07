@@ -37,16 +37,16 @@ export default function Dashboard() {
       {isStudent && !user.onboarding?.done && <Onboarding />}
 
       {loading ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">{[1, 2, 3, 4].map((i) => <Skeleton key={i} className="h-[82px] rounded-2xl" />)}</div>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">{[1, 2, 3, 4].map((i) => <Skeleton key={i} className="h-[82px] rounded-2xl" />)}</div>
       ) : isStudent ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
           <Stat icon={GraduationCap} label="Promedio general" value={fmtGrade(data.stats.average)} hint="Escala vigesimal (0–20)" tone="success" />
           <Stat icon={Gauge} label="Avance del ciclo" value={`${data.stats.progress}%`} hint="Contenido completado" />
           <Stat icon={ClipboardList} label="Pendientes" value={data.stats.pending} hint="Tareas y evaluaciones" tone="warn" />
           <Stat icon={UserCheck} label="Asistencia" value={fmtPct(data.stats.attendance)} hint="Límite: 30% de inasistencias" tone="info" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
           <Stat icon={BookOpen} label="Cursos a cargo" value={data.stats.courses} hint={`${data.stats.students} estudiantes`} tone="info" />
           <Stat icon={ClipboardCheck} label="Por calificar" value={data.stats.to_grade} tone="warn" />
           <Stat icon={UserCheck} label="Asistencia por registrar" value={data.stats.attendance_pending} hint="Sesiones finalizadas" tone={data.stats.attendance_pending ? 'warn' : 'success'} />

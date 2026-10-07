@@ -101,7 +101,8 @@ export default function AdminUsers() {
   const closeEditor = useCallback(() => setEditing(null), []);
   const onSaved = useCallback(async (saved, isNew) => {
     setEditing(null);
-    toast(isNew ? `Usuario creado · código ${saved.code}` : 'Cambios guardados');
+    const enrolled = saved.auto_enrolled ? ` · matriculado(a) en ${saved.auto_enrolled} curso(s) de su ciclo` : '';
+    toast((isNew ? `Usuario creado · código ${saved.code}` : 'Cambios guardados') + enrolled);
     load();
     if (isNew && saved.temp_password) {
       await confirm({
@@ -179,7 +180,7 @@ export default function AdminUsers() {
             <div className={cx('transition-opacity', fetching && 'opacity-60')}>
               {/* Desktop table */}
               <Card className="hidden overflow-hidden md:block">
-                <div className="overflow-x-auto">
+                <div className="relative overflow-x-auto">
                   <table className="w-full min-w-[860px] text-sm">
                     <thead>
                       <tr className="border-b border-line bg-sunken/60 text-left text-xs font-medium tracking-wide text-muted uppercase">
@@ -374,7 +375,7 @@ function UserFormModal({ open, user, isSelf, programs, onClose, onSaved }) {
           </Field>
         ) : <div className="hidden sm:block" />}
         {form.role === 'student' && (
-          <Field label="Ciclo">
+          <Field label="Ciclo" hint="Se matricula automáticamente en los cursos de su carrera y ciclo del periodo activo.">
             <Select value={form.cycle} onChange={set('cycle')}>
               {CYCLES.map((c) => <option key={c} value={c}>Ciclo {ROMAN[c]}</option>)}
             </Select>
