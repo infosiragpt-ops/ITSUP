@@ -1,0 +1,1268 @@
+{
+  "name": "Ofimática Contable",
+  "slug": "ofimatica-contable",
+  "course_type": "especifica",
+  "module_name": "Gestión contable y tributaria",
+  "credits": 3,
+  "hours_theory": 16,
+  "hours_practice": 64,
+  "summary": "Ofimática Contable es un curso de formación específica, de naturaleza teórico-práctica, del segundo ciclo de la carrera de Contabilidad. Su propósito es que el estudiante utilice la hoja de cálculo y las herramientas de ofimática como un sistema de información contable confiable, auditable y automatizado. Desarrolla el diseño de libros con arquitectura de supuestos, datos, cálculos y salidas; tablas estructuradas, validaciones y controles; funciones lógicas, de búsqueda, de fecha, de texto y de suma condicional aplicadas a registros de compras y ventas, conciliaciones bancarias, kardex, antigüedad de saldos y depreciación; integración de datos del SIRE y de extractos bancarios con Power Query; tablas dinámicas, estados financieros, ratios y tableros; y control, documentación y automatización con VBA, combinación de correspondencia en Word y presentaciones gerenciales. Construye sobre Contabilidad General y Herramientas Digitales para el Trabajo, y prepara al estudiante para Software Contable, Tributación y Análisis de Estados Financieros, aportando al perfil de un técnico que registra, procesa y analiza información contable con exactitud y trazabilidad.",
+  "competency": "Diseña, construye y automatiza modelos contables en hojas de cálculo e integra herramientas de ofimática para registrar, conciliar, analizar y reportar información contable y tributaria de una organización, con exactitud, controles verificables, trazabilidad hasta el dato de origen y cumplimiento de la normativa peruana vigente.",
+  "capacities": [
+    "Estructura libros de cálculo contables con arquitectura de supuestos, datos, cálculos y salidas, tablas estructuradas, tipos de datos correctos y validaciones que previenen errores de registro.",
+    "Aplica funciones lógicas, de búsqueda, de fecha, de texto y de suma condicional para mayorizar, convertir moneda extranjera, conciliar cuentas bancarias, valorizar inventarios y analizar la antigüedad de saldos.",
+    "Integra y transforma datos de múltiples fuentes con Power Query y los analiza con tablas dinámicas para generar estados financieros, ratios y tableros gerenciales automatizados.",
+    "Controla, documenta y automatiza modelos contables con auditoría de fórmulas, totales de control, protección y VBA básico, y comunica resultados mediante documentos combinados de Word y presentaciones ejecutivas."
+  ],
+  "indicators": [
+    "Construye un Registro de Compras o de Ventas en tabla estructurada con tipos de datos correctos, IGV redondeado al céntimo y validaciones que impiden capturas inválidas.",
+    "Detecta comprobantes duplicados, RUC con dígito verificador inválido y descuadres mediante columnas de control y formato condicional.",
+    "Concilia una cuenta bancaria con funciones de búsqueda y conteo condicional, identifica partidas en tránsito y propone los asientos de regularización correspondientes.",
+    "Genera un balance de comprobación y la antigüedad de saldos con matrices dinámicas y sumas condicionales parametrizadas por fecha de corte.",
+    "Cruza el registro interno con la propuesta del SIRE mediante combinaciones de Power Query y explica las diferencias encontradas.",
+    "Produce estados financieros cuadrados y ratios desde una tabla de correspondencia PCGE-rubros que se actualizan al cargar un periodo nuevo.",
+    "Implementa una hoja de controles con estado global y una macro VBA que solo exporta reportes cuando el modelo está cuadrado.",
+    "Sustenta el modelo integrador rastreando cualquier cifra hasta su origen y presentando conclusiones con títulos-mensaje según el principio de la pirámide."
+  ],
+  "methodology": "El curso se desarrolla en modalidad 100 % virtual con metodología activa centrada en el hacer. Se aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y un video demostrativo; la sesión se dedica a talleres guiados en Excel con datos realistas de empresas peruanas. Cada unidad incluye un caso al estilo del método de casos, discutido en foro y en sesión, donde el estudiante diagnostica, propone y decide. Las tareas siguen el aprendizaje basado en problemas y confluyen en un proyecto integrador por equipos: un modelo de cierre mensual auditable. La evaluación formativa es continua mediante cuestionarios con retroalimentación inmediata, revisión de avances con rúbricas y pruebas de funcionamiento con datos nuevos.",
+  "bibliography": [
+    "Alexander, M., Kusleika, R. y Walkenbach, J. (2018). Excel 2019 bible. Wiley.",
+    "Winston, W. L. (2019). Microsoft Excel data analysis and business modeling (6.ª ed.). Microsoft Press.",
+    "Puls, K. y Escobar, M. (2021). Master your data with Power Query in Excel and Power BI (2.ª ed.). Holy Macro! Books.",
+    "Jelen, B. y Alexander, M. (2018). Microsoft Excel 2019 pivot table data crunching. Microsoft Press.",
+    "Panko, R. R. (1998). What we know about spreadsheet errors. Journal of End User Computing, 10(2), 15-21.",
+    "Wickham, H. (2014). Tidy data. Journal of Statistical Software, 59(10), 1-23.",
+    "Few, S. (2012). Show me the numbers: Designing tables and graphs to enlighten (2.ª ed.). Analytics Press.",
+    "Tufte, E. R. (1983). The visual display of quantitative information. Graphics Press.",
+    "Minto, B. (2009). The pyramid principle: Logic in writing and thinking (3.ª ed.). Pearson Education.",
+    "Consejo Normativo de Contabilidad. (2019). Plan Contable General Empresarial. Ministerio de Economía y Finanzas."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Cuestionarios de las cuatro unidades, participación argumentada en el análisis de casos y avances semanales revisados con retroalimentación formativa."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 30,
+      "description": "Tareas 1, 2 y 3: registro de compras con controles, conciliación y antigüedad de saldos, y estados financieros con tablero automatizado, calificadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 40,
+      "description": "Proyecto integrador de cierre mensual auditable y automatizado, con prueba de actualización con datos nuevos, informe, presentación y defensa técnica individual."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Excel como sistema de información contable: estructura, integridad y registros",
+      "description": "Diseña libros de cálculo contables con arquitectura entrada-proceso-salida, tablas estructuradas, validaciones y fórmulas de IGV correctamente redondeadas, y construye registros de compras y ventas coherentes con los formatos 8.1 y 14.1 de SUNAT.",
+      "topics": [
+        "Riesgo de hoja de cálculo y arquitectura entrada-proceso-salida",
+        "Datos ordenados, tablas estructuradas y tipos de datos",
+        "Validación de datos: PCGE, RUC y comprobantes",
+        "Referencias, nombres definidos y cálculo del IGV con redondeo",
+        "Registros de Compras y de Ventas: formatos 8.1 y 14.1 y SIRE"
+      ],
+      "slides": [
+        {
+          "title": "Por qué Excel sigue siendo central en la contabilidad peruana",
+          "bullets": [
+            "Aunque el ERP registra, el contador analiza, concilia y cuadra en Excel: es la 'mesa de trabajo' del cierre mensual.",
+            "El SIRE de SUNAT permite descargar y cargar propuestas de registros en archivos de texto y hojas que se trabajan en Excel.",
+            "Estudios contables de mipymes, que son más del 99 % de las empresas formales del Perú según PRODUCE, operan con hojas de cálculo.",
+            "El valor del técnico no está en 'saber Excel', sino en construir modelos confiables, auditables y reutilizables."
+          ],
+          "notes": "Abra la clase preguntando: ¿cuántos de ustedes han visto un estudio contable sin Excel abierto? Explique que en el ciclo anterior aprendieron el registro contable y en Herramientas Digitales gestionaron archivos y la nube; ahora el foco es usar la hoja de cálculo como sistema de información contable. Subraye que incluso las empresas con ERP (SAP, Oracle, Siigo, Concar) exportan datos a Excel para conciliar bancos, cruzar registros con el SIRE o preparar anexos para auditoría. En el ciclo 3 llevarán Software Contable; este curso les da la lógica de datos que hará que entiendan qué hace el software por dentro. Pregunte: ¿qué diferencia hay entre un usuario que escribe números en celdas y un técnico que diseña un modelo? Lleve la conversación hacia tres atributos que recorrerán todo el curso: exactitud, trazabilidad y eficiencia. Cierre anunciando que cada unidad termina con un producto que sumará al proyecto final de cierre mensual."
+        },
+        {
+          "title": "El riesgo de hoja de cálculo: evidencia que no se puede ignorar",
+          "bullets": [
+            "Panko (1998) recopiló auditorías de hojas reales: la gran mayoría contenía al menos un error significativo en sus fórmulas.",
+            "En 2012, el caso 'London Whale' de JPMorgan incluyó un modelo de valor en riesgo en Excel con una división mal aplicada.",
+            "Reinhart y Rogoff (2010) excluyeron filas por un rango mal seleccionado; el error fue detectado por Herndon, Ash y Pollin en 2013.",
+            "Tipos de error: mecánicos (digitación), lógicos (fórmula equivocada) y de omisión (filas o supuestos olvidados)."
+          ],
+          "notes": "Esta diapositiva busca generar humildad profesional. Explique la clasificación de Panko y Halverson: errores mecánicos, como digitar 1 800 en lugar de 18 000; errores lógicos, como sumar el IGV dos veces; y errores de omisión, como no incluir las notas de crédito del mes. Cuente el caso de Reinhart y Rogoff: un estudio económico influyente sobre deuda pública tenía un promedio que dejó fuera cinco países por un rango mal seleccionado. Luego pregunte: si eso ocurre en Harvard, ¿qué puede ocurrir en un registro de ventas de 3 000 comprobantes? Relacione con la contabilidad peruana: un error en la base imponible se traslada a la declaración del PDT 621 y puede generar una infracción del artículo 178 del Código Tributario. Invite a que cada estudiante recuerde un error que haya visto en una hoja de cálculo y clasifíquelo en voz alta con el grupo. La idea fuerza: diseñar para prevenir, detectar y corregir errores."
+        },
+        {
+          "title": "Arquitectura de un libro contable: entrada, proceso y salida",
+          "bullets": [
+            "Hoja de supuestos: tasas (IGV 18 %), tipo de cambio, periodo, RUC de la empresa; nunca constantes escritas dentro de fórmulas.",
+            "Hojas de datos: transacciones en tablas, una fila por comprobante o asiento, sin subtotales intercalados.",
+            "Hojas de cálculo: mayorización, kardex, conciliaciones; solo fórmulas que leen datos y supuestos.",
+            "Hojas de salida: registros, estados financieros, reportes; formato de presentación sin captura manual.",
+            "Convención de colores: azul para datos ingresados, negro para fórmulas, verde para vínculos a otras hojas."
+          ],
+          "notes": "Dibuje en la pizarra virtual cuatro cajas conectadas por flechas: Supuestos, Datos, Cálculos, Salidas. Explique que esta separación es la base de estándares profesionales de modelamiento como el FAST Standard y el código de buenas prácticas del ICAEW. La razón es simple: si la tasa del IGV está escrita como 0.18 en 2 000 celdas, un cambio normativo obliga a editar 2 000 celdas; si está en una celda con nombre, se cambia una sola vez. Lo mismo ocurre con el tipo de cambio o el periodo tributario. Muestre un libro desordenado típico, con subtotales en medio de los datos y fórmulas que mezclan números escritos a mano, y pregunte qué riesgos ven. Luego enseñe la convención de colores, que permite a un auditor distinguir de un vistazo qué fue digitado y qué fue calculado. Pregunta para la clase: ¿en qué hoja debería estar el porcentaje de detracción y por qué?"
+        },
+        {
+          "title": "Datos ordenados: una fila, una transacción",
+          "bullets": [
+            "Principio de datos ordenados (Wickham, 2014): cada variable en una columna, cada observación en una fila, cada tipo de unidad en una tabla.",
+            "Encabezados únicos en una sola fila; sin celdas combinadas ni filas vacías dentro de la tabla.",
+            "Guardar el dato, no su presentación: fecha como fecha, monto como número, no 'S/ 1,200.00' como texto.",
+            "Los subtotales se calculan en reportes, nunca se intercalan en la tabla de datos."
+          ],
+          "notes": "Hadley Wickham formuló en 2014 el concepto de datos ordenados para la estadística, pero es exactamente lo que necesita un registro contable. Muestre dos versiones de un registro de ventas: una 'bonita' con celdas combinadas por mes, subtotales cada quincena y montos escritos como texto; otra ordenada, con columnas Fecha, Tipo, Serie, Número, RUC, Razón social, Base, IGV, Total. Pregunte cuál permite filtrar, ordenar o hacer una tabla dinámica sin rehacer el trabajo. Explique que las celdas combinadas rompen el ordenamiento y el filtrado, y que los subtotales intercalados provocan dobles sumas cuando alguien aplica SUMA a toda la columna. Este principio será la base de la unidad 3, donde Power Query y las tablas dinámicas solo funcionan bien con datos ordenados. Ejercicio rápido: entregue una captura de un registro mal diseñado y pida que identifiquen en el chat tres violaciones al principio."
+        },
+        {
+          "title": "Tablas estructuradas de Excel y referencias estructuradas",
+          "bullets": [
+            "Convertir un rango en tabla con Ctrl+T; asignar un nombre descriptivo como tVentas o tCompras en Diseño de tabla.",
+            "La tabla crece sola: las fórmulas, formatos y validaciones se extienden automáticamente a las nuevas filas.",
+            "Referencias estructuradas: =[@Base]*TasaIGV es más legible que =H5*$B$2 y no se rompe al insertar filas.",
+            "Fila de totales con SUBTOTALES, que respeta los filtros aplicados y evita sumar filas ocultas."
+          ],
+          "notes": "Haga una demostración en vivo. Parta de un rango de 20 ventas y conviértalo en tabla con Ctrl+T. Cambie el nombre a tVentas. Escriba en la columna IGV la fórmula =REDONDEAR([@Base]*TasaIGV;2) y muestre cómo se propaga a toda la columna sin arrastrar. Agregue una fila nueva debajo y muestre que la fórmula aparece sola. Luego active la fila de totales y explique que usa SUBTOTALES con el código 109, que ignora las filas filtradas; esto permite, por ejemplo, filtrar solo facturas y ver el total sin construir otra fórmula. Explique la sintaxis: tVentas[Total] se refiere a toda la columna; [@Total] a la fila actual. Pregunte: si un auditor abre el libro, ¿qué fórmula entiende más rápido, =H5*$B$2 o =[@Base]*TasaIGV? Recuerde que las tablas también serán la fuente natural de Power Query y de tablas dinámicas en la unidad 3."
+        },
+        {
+          "title": "Tipos de datos: texto, número y fecha en documentos tributarios",
+          "bullets": [
+            "El RUC, la serie (F001) y el número de comprobante son códigos: deben guardarse como texto para conservar ceros a la izquierda.",
+            "Montos e importes son números: si aparecen alineados a la izquierda o con triángulo verde, probablemente son texto.",
+            "Excel guarda las fechas como números de serie (1 = 1/1/1900); el formato solo cambia la apariencia.",
+            "Convertir texto a número con VALOR, multiplicando por 1 o con Datos > Texto en columnas."
+          ],
+          "notes": "Muchos errores de cuadre vienen de tipos de datos mal asignados. Muestre un ejemplo: un número de comprobante 00000458 importado como número se convierte en 458 y luego no coincide con el SIRE, donde aparece como texto. Por el contrario, un importe exportado desde un banco como '1,250.00' con coma de miles queda como texto y SUMA lo ignora sin avisar: el total sale menor y nadie lo nota. Enseñe tres pruebas rápidas: la alineación, la función ESNUMERO y la barra de estado, que muestra Suma solo si hay números. Explique el número de serie de las fechas: el 1 de enero de 2026 es 46023; por eso restar dos fechas da días. Pregunte: ¿por qué una fecha escrita como 31.01.2026 puede no ser fecha para Excel? Discuta la configuración regional, dado que en el Perú el separador de lista suele ser punto y coma y el decimal puede ser punto o coma según el equipo."
+        },
+        {
+          "title": "Formatos numéricos contables y personalizados",
+          "bullets": [
+            "Formato Contabilidad: alinea el símbolo S/ y muestra los ceros como guion, facilitando la lectura de registros.",
+            "Formato personalizado #,##0.00;(#,##0.00);\"-\" presenta los negativos entre paréntesis, convención de los estados financieros.",
+            "Formato personalizado \"F\"000 o 00000000 rellena con ceros solo en apariencia; el valor guardado no cambia.",
+            "El formato nunca redondea el valor: una celda que muestra 18.00 puede contener 17.9964."
+          ],
+          "notes": "Enseñe la estructura de un formato personalizado con sus cuatro secciones separadas por punto y coma: positivos; negativos; cero; texto. Construya en vivo #,##0.00;(#,##0.00);\"-\" y aplíquelo a una columna de saldos. Explique que la presentación entre paréntesis para negativos es la convención de los estados financieros que verán en Contabilidad General II. Luego haga la advertencia más importante de la diapositiva: el formato solo cambia la apariencia. Muestre una celda con =100/1.18*0.18 que en pantalla dice 15.25 pero contiene 15.2542372881. Si se suman mil celdas así, la suma mostrada no coincide con la suma de los valores mostrados, y surge la clásica diferencia de céntimos entre el registro y la declaración. Pregunte: ¿cómo resolverían esa diferencia? Deje la respuesta para la diapositiva de redondeo, donde verán REDONDEAR."
+        },
+        {
+          "title": "Validación de datos con listas del Plan Contable General Empresarial",
+          "bullets": [
+            "Crear una tabla tPCGE con código y denominación de cuentas a nivel de subcuenta según el PCGE 2019.",
+            "Datos > Validación de datos > Lista con origen =INDIRECTO(\"tPCGE[Codigo]\") para restringir la captura a cuentas válidas.",
+            "Validaciones adicionales: fechas dentro del periodo, montos mayores que cero, tipo de comprobante según Tabla 10 de SUNAT.",
+            "Mensaje de entrada y mensaje de error 'Detener' para impedir la captura incorrecta, no solo advertirla."
+          ],
+          "notes": "La validación de datos es el primer control preventivo. Construya una tabla con un extracto del PCGE: 1212 Facturas emitidas en cartera, 4011 IGV, 4212 Facturas emitidas, 6011 Mercaderías, 7011 Mercaderías manufacturadas, entre otras. Explique que el PCGE vigente fue aprobado por el Consejo Normativo de Contabilidad en 2019 y está alineado con las NIIF. Muestre que una validación de lista no acepta referencias estructuradas directas en algunas versiones, por eso se usa INDIRECTO o un nombre definido. Luego agregue una validación de fecha: entre =InicioPeriodo y =FIN.MES(InicioPeriodo;0). Subraye la diferencia entre los estilos Detener, Advertencia e Información: solo Detener impide el ingreso. Pregunte a la clase: ¿qué validación pondrían para el tipo de comprobante? Lleve a la Tabla 10 de SUNAT (01 factura, 03 boleta, 07 nota de crédito, 08 nota de débito) como lista cerrada."
+        },
+        {
+          "title": "Control del RUC con su dígito verificador",
+          "bullets": [
+            "El RUC tiene 11 dígitos; el último es un dígito de control calculado con módulo 11.",
+            "Pesos 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 sobre los diez primeros dígitos; se suman los productos.",
+            "Dígito = 11 − residuo de dividir la suma entre 11; si resulta 10 es 0 y si resulta 11 es 1.",
+            "Implementación: SUMAPRODUCTO(EXTRAE(A2;FILA($1:$10);1)*{5;4;3;2;7;6;5;4;3;2}) dentro de una columna de control."
+          ],
+          "notes": "Este es un ejemplo excelente de cómo Excel convierte una regla de negocio en un control automático. Explique que el dígito verificador existe para detectar errores de digitación: si alguien invierte dos números, el dígito ya no coincide. Haga el cálculo a mano con un RUC de ejemplo en la pizarra, multiplicando cada dígito por su peso, sumando, obteniendo el residuo con RESIDUO y aplicando la regla. Después muestre la fórmula completa en Excel con SUMAPRODUCTO y EXTRAE, y una columna adicional que diga OK o REVISAR. Aclare que el dígito verificador no garantiza que el RUC exista ni que esté activo y habido: para eso se consulta el padrón de SUNAT, lo que se trabajará en la unidad 3 con Power Query. Pregunta para la clase: ¿qué riesgo tributario corre una empresa que anota en su Registro de Compras un RUC no habido? Relacione con la pérdida del crédito fiscal."
+        },
+        {
+          "title": "Referencias absolutas, mixtas y nombres definidos",
+          "bullets": [
+            "Relativa (A1) se ajusta al copiar; absoluta ($A$1) queda fija; mixta ($A1 o A$1) fija solo columna o fila.",
+            "F4 alterna los cuatro tipos de referencia mientras se edita la fórmula.",
+            "Nombres definidos (Fórmulas > Administrador de nombres): TasaIGV, TipoCambio, InicioPeriodo documentan el modelo.",
+            "Las referencias mixtas permiten construir matrices como tablas de depreciación o de intereses con una sola fórmula."
+          ],
+          "notes": "Repase rápidamente los tipos de referencia con un ejemplo contable: una matriz de depreciación donde las filas son activos y las columnas son años. Con la fórmula =$C5/$D5*(E$4<=$D5) se calcula la cuota anual de cada activo y se apaga cuando termina su vida útil; se escribe una vez y se copia en todo el rango. Pida que expliquen por qué el dólar va antes de la C y por qué va antes del 4. Después introduzca los nombres definidos como herramienta de documentación: una fórmula que dice =Base*TasaIGV se entiende sin abrir otra hoja. Muestre el Administrador de nombres y explique el ámbito de libro frente al ámbito de hoja. Advierta que los nombres huérfanos o con #¡REF! son una fuente de errores al copiar hojas entre libros. Pregunta: ¿qué otros parámetros de su trabajo contable convertirían en nombres definidos?"
+        },
+        {
+          "title": "Cálculo del IGV y redondeo correcto",
+          "bullets": [
+            "Base desde el total: =REDONDEAR(Total/(1+TasaIGV);2); IGV: =Total−Base, para que siempre cuadre al céntimo.",
+            "IGV desde la base: =REDONDEAR(Base*TasaIGV;2); total = Base + IGV.",
+            "La tasa de 18 % comprende 16 % de IGV y 2 % de Impuesto de Promoción Municipal (TUO de la Ley del IGV).",
+            "REDONDEAR a dos decimales en cada comprobante evita diferencias acumuladas entre registro, SIRE y declaración."
+          ],
+          "notes": "Retome la pregunta abierta de la diapositiva de formatos. Muestre que si se calcula la base como Total/1.18 sin redondear y el IGV como Base*0.18, al sumar 2 000 comprobantes aparecen diferencias de algunos céntimos respecto del total facturado. La solución profesional es redondear en el nivel del comprobante, igual que lo hace el sistema de emisión electrónica, y obtener el IGV por diferencia cuando se parte del total. Así Base + IGV = Total siempre. Explique por qué no conviene usar la opción 'Establecer precisión de pantalla': cambia los valores de manera irreversible en todo el libro. Haga un ejercicio: total de S/ 1 000; base 847.46; IGV 152.54. Pida que verifiquen en Excel. Recuerde que la tasa se guarda como nombre definido. Pregunta para la clase: ¿qué ocurre con las operaciones exoneradas o inafectas? Muestre que se registran en columnas separadas, con IGV cero."
+        },
+        {
+          "title": "Estructura del Registro de Ventas e Ingresos (formato 14.1)",
+          "bullets": [
+            "Campos clave: fecha de emisión, tipo, serie y número de comprobante, documento del cliente, valor facturado de exportación, base imponible, exonerado, inafecto, IGV, total.",
+            "Las notas de crédito (tipo 07) se registran con signo negativo y referencia al comprobante modificado.",
+            "Incluir tipo de cambio y moneda para operaciones en dólares; los importes se registran en soles.",
+            "En el SIRE, SUNAT genera una propuesta del RVIE que el contribuyente acepta o complementa."
+          ],
+          "notes": "Presente el formato 14.1 de la Resolución de Superintendencia N.° 234-2006/SUNAT y sus modificatorias, y luego explique cómo se ha transformado con el Sistema Integrado de Registros Electrónicos. En el SIRE, SUNAT construye una propuesta del Registro de Ventas con los comprobantes electrónicos emitidos; el contribuyente debe revisarla, complementarla con lo que falte y aceptarla. Por eso, en la práctica, el técnico contable concilia su registro interno contra la propuesta. Diseñe con los estudiantes la tabla tVentas con columnas que reflejen el formato, incluyendo un estado del comprobante y la referencia de las notas de crédito. Pregunte: ¿por qué una nota de crédito debe ir en negativo y no como un comprobante positivo aparte? Discuta el efecto en la base imponible del mes. Muestre también cómo una venta en dólares se convierte a soles usando el tipo de cambio de la fecha de emisión."
+        },
+        {
+          "title": "Estructura del Registro de Compras (formato 8.1) y crédito fiscal",
+          "bullets": [
+            "Distinguir adquisiciones gravadas destinadas a operaciones gravadas, a operaciones mixtas y a operaciones no gravadas.",
+            "Columnas de constancia de detracción y fecha: requisito para ejercer el crédito fiscal cuando la operación está sujeta.",
+            "Registrar el comprobante en el periodo de emisión o dentro de los doce periodos siguientes, según la Ley del IGV.",
+            "En el SIRE, el Registro de Compras Electrónico (RCE) también parte de una propuesta que debe conciliarse."
+          ],
+          "notes": "El Registro de Compras es más complejo que el de Ventas porque condiciona el crédito fiscal. Explique las tres categorías de destino de las adquisiciones y por qué existen: si la empresa realiza operaciones gravadas y no gravadas, aplica la prorrata del crédito fiscal, que estudiarán en Tributación I. Aquí basta con que la tabla tCompras tenga columnas separadas. Explique la columna de detracciones: en servicios sujetos al Sistema de Pago de Obligaciones Tributarias, el depósito es condición para usar el crédito fiscal. Indique que el plazo para anotar el comprobante es de hasta doce periodos posteriores a su emisión, conforme al artículo 2 de la Ley 29215. Ejercicio: entregue cinco comprobantes con casos distintos y pida que decidan en qué columna van. Pregunta para la clase: ¿qué validaciones automáticas agregarían a tCompras para que nadie registre un RUC inválido o una fecha futura?"
+        },
+        {
+          "title": "Formato condicional como control visual de calidad",
+          "bullets": [
+            "Resaltar duplicados de la combinación RUC + serie + número para detectar comprobantes registrados dos veces.",
+            "Regla con fórmula: =ABS([@Total]-([@Base]+[@IGV]))>0.01 marca descuadres por comprobante.",
+            "Marcar fechas fuera del periodo y RUC con dígito verificador inválido con un relleno de alerta.",
+            "Usar pocos colores con significado fijo: el formato condicional excesivo oculta lo importante."
+          ],
+          "notes": "Cierre la unidad integrando todo en controles visuales. Explique que el formato condicional es un control detectivo: no impide el error, pero lo hace visible. El duplicado es el error más costoso en el Registro de Compras porque duplica el crédito fiscal; muestre cómo crear una columna auxiliar Clave =[@RUC]&\"-\"&[@Serie]&\"-\"&[@Numero] y aplicar la regla de duplicados, o una fórmula con CONTAR.SI.CONJUNTO mayor que uno. Luego construya la regla de descuadre con tolerancia de un céntimo. Advierta sobre el abuso: un registro con diez colores distintos se vuelve ilegible y el usuario deja de mirar las alertas. Recomiende un esquema simple: rojo para error, ámbar para revisar. Pregunta final: ¿qué controles de esta unidad son preventivos y cuáles detectivos? Encargue la lectura y el caso de la unidad, y explique que la tarea consiste en construir un registro de compras con controles."
+        }
+      ],
+      "reading": {
+        "title": "La hoja de cálculo como sistema de información contable confiable",
+        "minutes": 35,
+        "content": "## 1. De la planilla al sistema de información\n\nUn sistema de información contable captura, procesa, almacena y comunica datos sobre las transacciones económicas de una entidad. En la mayoría de estudios contables y mipymes del Perú, buena parte de ese sistema vive en hojas de cálculo: registros auxiliares, conciliaciones, kardex, anexos de cierre. El problema es que Excel no impone ninguna disciplina: permite escribir cualquier cosa en cualquier celda. La disciplina debe ponerla el técnico.\n\nRaymond Panko, de la Universidad de Hawái, revisó en 1998 las auditorías disponibles de hojas de cálculo operativas y concluyó que la mayoría contenía errores significativos. Clasificó los errores en **mecánicos** (digitación o selección de rango), **lógicos** (fórmula conceptualmente equivocada) y de **omisión** (algo que debía estar y no está). Ninguno se elimina con fuerza de voluntad; se reducen con diseño.\n\n## 2. Arquitectura entrada-proceso-salida\n\nEl primer principio de diseño es separar funciones:\n\n| Capa | Contenido | Regla |\n|---|---|---|\n| Supuestos | TasaIGV, TipoCambio, Periodo, RUC empresa | Un valor, una celda, con nombre |\n| Datos | Tablas tVentas, tCompras, tDiario | Una fila por transacción |\n| Cálculo | Mayor, kardex, conciliación | Solo fórmulas |\n| Salida | Registros, reportes, EEFF | Sin digitación |\n\nEsta separación, recogida en estándares de modelamiento como el FAST Standard y el código de buenas prácticas del ICAEW, permite que un cambio normativo, por ejemplo una variación de la tasa, se aplique en un único punto.\n\n## 3. Datos ordenados\n\nHadley Wickham (2014) definió los datos ordenados con tres reglas: cada variable forma una columna, cada observación forma una fila y cada tipo de unidad de observación forma una tabla. Aplicado a un registro de ventas: cada comprobante es una fila; fecha, serie, número, RUC, base, IGV y total son columnas; las ventas y las compras van en tablas distintas. Se prohíben las celdas combinadas, las filas vacías y los subtotales intercalados.\n\n## 4. Tipos de datos y el problema de los ceros a la izquierda\n\nEl RUC, la serie y el número de comprobante son **códigos**, no cantidades: nadie suma RUC. Deben guardarse como texto. Si el número 00000458 se guarda como número, Excel lo convierte en 458 y el cruce con la propuesta del SIRE falla. A la inversa, un importe descargado de la banca por internet como \"1,250.00\" puede llegar como texto: SUMA lo ignora sin mostrar error y el total queda subestimado.\n\n## 5. El IGV y el redondeo\n\nLa tasa del 18 % se compone de 16 % de IGV y 2 % de Impuesto de Promoción Municipal. El cálculo debe redondearse en el nivel del comprobante:\n\n```\nBase   = REDONDEAR(Total / (1 + TasaIGV); 2)\nIGV    = Total - Base\nEjemplo: Total 1 000.00 → Base 847.46 → IGV 152.54\n```\n\nObtener el IGV por diferencia garantiza que Base + IGV = Total. Si se calcula todo sin redondear y luego se aplica formato de dos decimales, la suma mostrada en pantalla puede diferir en céntimos de la suma real, y esa diferencia aparece al conciliar con el PDT 621.\n\nEl asiento resumen de ventas del mes en una tabla bien diseñada sale directamente de los totales:\n\n```\n12  Cuentas por cobrar comerciales – terceros     118 000.00\n      40  Tributos por pagar (4011 IGV)                    18 000.00\n      70  Ventas (7011 Mercaderías)                       100 000.00\nPor las ventas del mes según Registro de Ventas (formato 14.1)\n```\n\n## 6. Controles preventivos y detectivos\n\nLos **controles preventivos** impiden el error: validación de datos con listas del PCGE, restricción de fechas al periodo y lista cerrada de tipos de comprobante según la Tabla 10 de SUNAT. Los **controles detectivos** lo revelan: verificación del dígito del RUC por módulo 11, detección de duplicados por la clave RUC-serie-número y descuadres entre total y la suma de base e IGV.\n\nLa validación del RUC multiplica los diez primeros dígitos por los pesos 5, 4, 3, 2, 7, 6, 5, 4, 3, 2, suma los productos y calcula 11 menos el residuo de dividir entre 11; si resulta 10 el dígito es 0, y si resulta 11 es 1.\n\n## 7. Del registro interno al SIRE\n\nCon el Sistema Integrado de Registros Electrónicos, SUNAT genera propuestas del Registro de Ventas e Ingresos y del Registro de Compras a partir de los comprobantes electrónicos. El rol del técnico deja de ser transcribir y pasa a ser **conciliar**: comparar su registro interno con la propuesta, explicar diferencias (comprobantes no recibidos, notas de crédito, operaciones en otra moneda) y decidir qué aceptar. Esa tarea exige exactamente las competencias de esta unidad: datos ordenados, tipos correctos y controles automáticos.\n\n## Ideas para reflexionar\n\n- ¿Qué parte de su hoja de cálculo actual sobreviviría a la revisión de un auditor externo?\n- ¿Qué controles deberían ser preventivos y cuáles basta con que sean detectivos?\n"
+      },
+      "case": {
+        "title": "Caso: Las diferencias de céntimos de Distribuidora Andina del Sur",
+        "content": "**Distribuidora Andina del Sur S.A.C.** es una comercializadora de abarrotes de Arequipa con ventas anuales cercanas a S/ 9 millones. Emite unas 2 800 facturas y boletas electrónicas al mes y lleva su contabilidad con un estudio contable externo, que recibe cada mes un libro de Excel preparado por la asistente administrativa de la empresa.\n\nEl libro tiene una sola hoja llamada \"VENTAS MARZO\". Los encabezados ocupan dos filas con celdas combinadas; cada quincena hay una fila de subtotal en negrita; el RUC de los clientes aparece a veces como número y a veces como texto; la columna IGV contiene la fórmula =G8*0.18 copiada hacia abajo, y la base se calcula como =H8/1.18 a partir del total. Las notas de crédito están en otra hoja, en positivo, con una nota que dice \"restar\".\n\nAl preparar la declaración de marzo, Lucía Quispe, técnica contable del estudio, encuentra tres problemas:\n\n1. La suma de la columna IGV difiere en S/ 3.87 del IGV que muestra la propuesta del Registro de Ventas del SIRE.\n2. El total de ventas incluye dos veces la primera quincena, porque alguien aplicó SUMA a toda la columna, incluidos los subtotales.\n3. Al cruzar su libro con la propuesta del SIRE mediante BUSCARV, 412 comprobantes aparecen como \"no encontrados\", aunque Lucía verifica manualmente que sí existen.\n\nEl gerente de la distribuidora, Raúl Mamani, sostiene que \"el Excel siempre ha funcionado\" y que la diferencia de céntimos \"no importa\". El socio del estudio, en cambio, recuerda que el año anterior SUNAT notificó a otro cliente por diferencias entre su registro y su declaración, y le pide a Lucía una propuesta para rediseñar el libro antes del cierre de abril. La propuesta debe ser simple, porque la asistente de la distribuidora tiene conocimientos básicos de Excel, y debe permitir conciliar con el SIRE en menos de una hora.\n\nLucía dispone de tres días. Puede rediseñar la plantilla completa, capacitar a la asistente o proponer que el estudio reciba directamente los XML de los comprobantes. Cada alternativa tiene costos y riesgos distintos, y el socio quiere ver números y una recomendación clara.\n",
+        "questions": [
+          "Diagnostique la causa técnica de cada uno de los tres problemas e indique si es un error mecánico, lógico o de omisión según la clasificación de Panko.",
+          "¿Es correcta la afirmación del gerente de que la diferencia de S/ 3.87 no importa? Argumente desde el punto de vista tributario y de control interno.",
+          "Diseñe la nueva estructura del libro: hojas, tabla de datos, columnas, tipos de datos y nombres definidos que propondría.",
+          "¿Qué controles preventivos y detectivos incorporaría para que la asistente no pueda repetir los errores?",
+          "Compare las tres alternativas de Lucía y recomiende una, considerando costo, tiempo de implementación y riesgo."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 1: Registro de Compras con controles automáticos",
+        "instructions": "**Objetivo:** construir en Excel un Registro de Compras mensual, ordenado y con controles, que pueda conciliarse con la propuesta del RCE del SIRE.\n\n**Insumos:** el docente entregará un listado de 60 comprobantes de compra de una empresa comercial ficticia (facturas, boletas, notas de crédito, una operación en dólares y dos servicios sujetos a detracción), con errores intencionales.\n\n**Qué entregar:**\n\n1. Un libro `.xlsx` con las hojas *Supuestos*, *tCompras*, *PCGE* y *Resumen*.\n2. Tabla estructurada tCompras con columnas equivalentes al formato 8.1, tipos de datos correctos y fórmulas de base, IGV y total con redondeo.\n3. Validaciones de datos: tipo de comprobante (Tabla 10), cuenta contable desde el PCGE, fechas dentro del periodo.\n4. Columnas de control: dígito verificador del RUC, clave de duplicado y descuadre total-base-IGV, con formato condicional.\n5. Hoja *Resumen* con los totales del mes por destino del crédito fiscal y el asiento contable resumen.\n6. Un informe breve (una página, PDF) que liste los errores detectados en el listado original y cómo se corrigieron.\n\n**Formato:** archivo nombrado `T1_Apellido_Nombre.xlsx`, sin valores escritos a mano en las columnas calculadas. Se descontarán puntos por constantes dentro de las fórmulas.\n",
+        "rubric": [
+          {
+            "name": "Estructura y datos ordenados (supuestos, tabla, tipos de datos)",
+            "points": 5
+          },
+          {
+            "name": "Fórmulas de base, IGV y total correctas y redondeadas",
+            "points": 5
+          },
+          {
+            "name": "Validaciones y controles detectivos funcionando",
+            "points": 6
+          },
+          {
+            "name": "Resumen, asiento contable e informe de errores",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: Diseño de libros contables y registros",
+        "questions": [
+          {
+            "prompt": "Un registro muestra el número de comprobante 458, pero en la propuesta del SIRE figura como 00000458 y el cruce falla. ¿Cuál es la causa más probable?",
+            "options": [
+              "La propuesta del SIRE contiene un error de digitación de SUNAT",
+              "El número se guardó como dato numérico y perdió los ceros a la izquierda",
+              "La columna tiene aplicado el formato Contabilidad",
+              "La tabla no tiene activada la fila de totales"
+            ],
+            "correct": 1,
+            "explanation": "Los códigos como serie, número o RUC deben guardarse como texto; si se guardan como número, Excel elimina los ceros iniciales y el texto ya no coincide."
+          },
+          {
+            "prompt": "Para una venta con total de S/ 590.00 y tasa de 18 %, ¿qué combinación de fórmulas garantiza que base más IGV sea exactamente igual al total?",
+            "options": [
+              "Base =Total/1.18 e IGV =Base*0.18, con formato de dos decimales",
+              "Base =Total*0.82 e IGV =Total*0.18",
+              "Base =REDONDEAR(Total;0)/1.18 e IGV =REDONDEAR(Base*0.18;0)",
+              "Base =REDONDEAR(Total/1.18;2) e IGV =Total−Base"
+            ],
+            "correct": 3,
+            "explanation": "Redondear la base al céntimo y obtener el IGV por diferencia asegura el cuadre; el formato solo cambia la apariencia y Total*0.82 es conceptualmente incorrecto."
+          },
+          {
+            "prompt": "La asistente aplica SUMA a toda la columna de ventas y obtiene un total mayor que el real. La hoja tiene subtotales quincenales intercalados. ¿Qué principio de diseño se violó?",
+            "options": [
+              "Datos ordenados: los subtotales no deben intercalarse en la tabla de datos",
+              "Uso de referencias absolutas en las fórmulas",
+              "Convención de colores para datos y fórmulas",
+              "Validación de datos con listas desplegables"
+            ],
+            "correct": 0,
+            "explanation": "Una tabla de datos debe contener solo transacciones; los subtotales se calculan en reportes. Intercalarlos provoca dobles sumas."
+          },
+          {
+            "prompt": "¿Qué tipo de control es una validación de datos con estilo Detener que solo admite cuentas existentes en la tabla del PCGE?",
+            "options": [
+              "Detectivo, porque señala el error después de ingresado",
+              "Correctivo, porque corrige la cuenta automáticamente",
+              "Preventivo, porque impide el ingreso del dato inválido",
+              "Compensatorio, porque reemplaza una revisión del supervisor"
+            ],
+            "correct": 2,
+            "explanation": "La validación con estilo Detener bloquea la entrada incorrecta antes de que se registre; por eso es un control preventivo."
+          },
+          {
+            "prompt": "Una empresa desea que su libro se adapte en un solo paso si cambia la tasa del IGV. ¿Cuál es la mejor práctica?",
+            "options": [
+              "Escribir 0.18 dentro de cada fórmula y usar Buscar y reemplazar",
+              "Copiar la tasa en una columna auxiliar de cada fila",
+              "Guardar la tasa en una celda de supuestos con el nombre definido TasaIGV",
+              "Usar formato porcentual en la columna del IGV"
+            ],
+            "correct": 2,
+            "explanation": "Un supuesto en una sola celda con nombre se cambia una vez y documenta el modelo; las constantes dentro de fórmulas multiplican el riesgo de omisión."
+          },
+          {
+            "prompt": "Al calcular el dígito verificador de un RUC, la operación 11 − residuo da como resultado 10. ¿Qué dígito verificador corresponde?",
+            "options": [
+              "0",
+              "1",
+              "10",
+              "El RUC es inválido en todos los casos"
+            ],
+            "correct": 0,
+            "explanation": "Según el algoritmo de módulo 11 usado para el RUC, cuando el resultado es 10 el dígito es 0 y cuando es 11 el dígito es 1."
+          },
+          {
+            "prompt": "En el Registro de Ventas, ¿cómo debe registrarse una nota de crédito electrónica que anula parcialmente una factura del mismo mes?",
+            "options": [
+              "Con importes positivos en una hoja aparte para restarla al final",
+              "Solo en el libro diario, no en el Registro de Ventas",
+              "Como una nueva factura con descuento en la columna de base",
+              "Con importes negativos y referencia al comprobante que modifica"
+            ],
+            "correct": 3,
+            "explanation": "La nota de crédito disminuye la base imponible y el IGV; se anota en negativo identificando el comprobante modificado, lo que permite que los totales se calculen directamente."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Funciones contables: lógica, búsqueda, fechas y conciliaciones",
+      "description": "Aplica funciones lógicas, de búsqueda, de suma condicional, de fecha y de texto para mayorizar el libro diario, convertir operaciones en moneda extranjera, analizar la antigüedad de saldos, conciliar cuentas bancarias y valorizar inventarios con kardex automatizado.",
+      "topics": [
+        "Funciones lógicas y tratamiento de errores",
+        "Búsqueda y referencia: BUSCARX, INDICE y COINCIDIR, tipo de cambio",
+        "Sumas condicionales, mayorización y balance de comprobación",
+        "Fechas, vencimientos y antigüedad de saldos",
+        "Limpieza de texto y conciliación bancaria",
+        "Kardex valorizado y depreciación con fórmulas"
+      ],
+      "slides": [
+        {
+          "title": "Lógica condicional aplicada a reglas tributarias",
+          "bullets": [
+            "SI(prueba;valor_si_verdadero;valor_si_falso) traduce reglas: =SI([@Tipo]=\"07\";-1;1) asigna el signo de las notas de crédito.",
+            "Y y O combinan condiciones: detracción si el servicio está en el anexo y el importe supera el umbral.",
+            "SI.CONJUNTO evita anidar muchos SI: clasifica destinos del crédito fiscal o tramos de antigüedad.",
+            "Regla de oro: si una fórmula lógica no cabe en una línea legible, divídala en columnas auxiliares."
+          ],
+          "notes": "Presente las funciones lógicas como el modo de convertir una norma en un cálculo. Ejemplo uno: el signo según el tipo de comprobante; las notas de crédito, tipo 07, restan. Ejemplo dos: la detracción. En términos generales, ciertos servicios del Anexo 3 del régimen de detracciones están sujetos cuando el importe de la operación supera S/ 700; la fórmula combina Y con una búsqueda en la tabla de servicios. Aclare que las tasas y umbrales deben verificarse en la norma vigente y guardarse en la hoja de supuestos, nunca dentro de la fórmula. Muestre la diferencia entre cinco SI anidados y un SI.CONJUNTO equivalente, y pregunte cuál auditarían con más confianza. Termine con la regla de oro: las fórmulas largas no impresionan a nadie; las columnas auxiliares con nombre claro sí ayudan al revisor. Pregunta para la clase: ¿qué otra regla tributaria que conozcan podría expresarse con una fórmula lógica?"
+        },
+        {
+          "title": "Errores de fórmula: leerlos antes de ocultarlos",
+          "bullets": [
+            "#N/D: el valor buscado no existe; #¡VALOR!: tipo de dato incorrecto; #¡DIV/0!: división entre cero.",
+            "#¡REF!: referencia eliminada; #¿NOMBRE?: función o nombre mal escrito; #DESBORDAMIENTO!: rango de matriz dinámica bloqueado.",
+            "SI.ERROR(fórmula;\"\") esconde todos los errores, incluidos los que revelan problemas reales.",
+            "Preferir SI.ND para tratar solo #N/D o un mensaje explícito como \"NO EN SIRE\"."
+          ],
+          "notes": "Uno de los malos hábitos más extendidos es envolver todo en SI.ERROR con resultado vacío o cero. Explique que un error de Excel es información: #N/D en un cruce con el SIRE significa que un comprobante no está en la propuesta, lo cual es un hallazgo tributario, no una molestia estética. Si se oculta con cero, el total cuadra en apariencia y el problema queda enterrado. Repase cada error con un ejemplo contable: #¡VALOR! al multiplicar un importe guardado como texto con espacios; #¡REF! al borrar la hoja del tipo de cambio; #¡DIV/0! al calcular un ratio con ventas cero. Muestre SI.ND como alternativa que solo atiende el caso de no encontrado y deja visibles los demás errores. Pregunta para la clase: en un cruce de 3 000 comprobantes, ¿preferirían ver 15 mensajes NO EN SIRE o una columna sin errores con totales que no cuadran?"
+        },
+        {
+          "title": "BUSCARV: funcionamiento y limitaciones conocidas",
+          "bullets": [
+            "Sintaxis: BUSCARV(valor;matriz;columna;FALSO). El cuarto argumento FALSO exige coincidencia exacta.",
+            "Solo busca hacia la derecha: el valor buscado debe estar en la primera columna de la matriz.",
+            "El número de columna es fijo: insertar una columna en la matriz rompe silenciosamente el resultado.",
+            "Omitir FALSO activa la coincidencia aproximada sobre datos no ordenados: resultados erróneos sin mensaje de error."
+          ],
+          "notes": "BUSCARV sigue presente en miles de libros contables y los estudiantes lo encontrarán en su trabajo, así que deben dominarlo y conocer sus riesgos. Muestre un cruce entre el registro de compras y una tabla de proveedores por RUC. Luego inserte una columna en la tabla de proveedores y muestre cómo la fórmula comienza a devolver otro dato sin ningún mensaje de error: este es un error lógico silencioso, el más peligroso según Panko. Después borre el argumento FALSO y muestre cómo devuelve el proveedor equivocado. Explique que estas limitaciones motivaron a Microsoft a crear BUSCARX. Pregunte: si heredan un libro con cien BUSCARV, ¿qué revisarían primero? Respuesta esperada: el cuarto argumento y la estabilidad del número de columna. Recomiende usar referencias estructuradas o COINCIDIR para el índice de columna si deben mantener BUSCARV por compatibilidad con versiones antiguas."
+        },
+        {
+          "title": "BUSCARX: búsqueda moderna para cruces contables",
+          "bullets": [
+            "Sintaxis completa de la función: BUSCARX(valor; matriz_buscada; matriz_devuelta; [si_no_encontrado]; [modo_coincidencia]; [modo_búsqueda]).",
+            "Busca en cualquier dirección y devuelve varias columnas a la vez; coincidencia exacta por defecto.",
+            "Cruce con SIRE: =BUSCARX([@Clave];tSIRE[Clave];tSIRE[IGV];\"NO EN SIRE\").",
+            "Modo de búsqueda −1 encuentra la última coincidencia: útil para el último precio de compra o el último tipo de cambio."
+          ],
+          "notes": "Demuestre BUSCARX con el mismo cruce de la diapositiva anterior y compare. Explique que la coincidencia exacta es el valor predeterminado, lo que elimina el error más común de BUSCARV. Construya una clave compuesta RUC-tipo-serie-número en ambas tablas, el registro interno y la propuesta del SIRE descargada, y traiga el IGV de la propuesta. Agregue una columna de diferencia y muestre cómo identificar tres situaciones: comprobantes que coinciden, comprobantes con importes distintos y comprobantes ausentes. Recuerde que BUSCARX existe en Microsoft 365 y Excel 2021 en adelante; en entornos con versiones antiguas se usa INDICE con COINCIDIR. Pregunta para la clase: ¿cómo detectarían los comprobantes que están en el SIRE pero no en el registro interno? Guíelos a hacer el cruce en sentido inverso; esta idea de cruce bidireccional es la base de toda conciliación."
+        },
+        {
+          "title": "INDICE y COINCIDIR: búsquedas bidireccionales",
+          "bullets": [
+            "COINCIDIR(valor;rango;0) devuelve la posición; INDICE(rango;fila;columna) devuelve el valor en esa posición.",
+            "Combinadas permiten cruzar fila y columna: saldo de una cuenta en un mes específico de una matriz.",
+            "Compatibles con cualquier versión de Excel y más robustas que BUSCARV ante inserción de columnas.",
+            "COINCIDIRX añade búsqueda en ambos sentidos y comodines en Microsoft 365."
+          ],
+          "notes": "Explique la lógica de dos pasos: primero averiguar dónde está, luego traer lo que hay allí. Use una matriz de saldos mensuales donde las filas son cuentas del PCGE y las columnas son meses. La fórmula =INDICE(tSaldos;COINCIDIR(\"1041\";Cuentas;0);COINCIDIR(\"MAR\";Meses;0)) devuelve el saldo de la cuenta corriente bancaria a marzo. Pida a los estudiantes que reproduzcan la fórmula cambiando la cuenta y el mes mediante celdas con validación de lista, lo que convierte la matriz en una pequeña consulta interactiva. Señale que este patrón es la base de muchos reportes de gestión que verán en la unidad 3. Pregunta: ¿por qué esta combinación no se rompe al insertar una columna nueva en la matriz? Porque la posición se calcula en cada momento, no se escribe como número fijo. Cierre comparando legibilidad: para cruces simples, BUSCARX; para matrices de doble entrada, INDICE con COINCIDIR."
+        },
+        {
+          "title": "Tipo de cambio por fecha: búsqueda aproximada bien usada",
+          "bullets": [
+            "Para fines tributarios se usa el tipo de cambio publicado por la SBS; compra para activos y venta para pasivos, según la NIC 21 y el reglamento del IGV.",
+            "Los fines de semana y feriados no hay publicación: se aplica el último tipo de cambio disponible.",
+            "BUSCARX con modo_coincidencia −1 trae el valor exacto o el inmediatamente anterior.",
+            "La tabla tTC debe tener una fila por fecha publicada, ordenada y sin duplicados."
+          ],
+          "notes": "Este es un caso donde la coincidencia aproximada es justamente lo correcto. Explique la regla: una factura emitida un domingo en dólares se convierte con el tipo de cambio del último día con publicación. Construya una tabla tTC con fecha, compra y venta, y la fórmula =BUSCARX([@Fecha];tTC[Fecha];tTC[Venta];;-1). Muestre qué pasa si la tabla no tiene la fecha exacta: devuelve el día anterior. Recuerde lo visto en Contabilidad General II sobre diferencia de cambio: el tipo de cambio de la fecha de la transacción se usa para el registro inicial y el del cierre para la remedición de partidas monetarias. Advierta que la fuente oficial debe documentarse en la hoja de supuestos, y que en la unidad 3 automatizarán la carga de la tabla con Power Query. Pregunta para la clase: ¿qué tipo de cambio aplicarían a una cuenta por pagar en dólares al cierre del mes?"
+        },
+        {
+          "title": "SUMAR.SI.CONJUNTO para mayorizar el libro diario",
+          "bullets": [
+            "Libro diario en tabla tDiario: fecha, número de asiento, cuenta, glosa, debe, haber.",
+            "Debe de una cuenta: =SUMAR.SI.CONJUNTO(tDiario[Debe];tDiario[Cuenta];A5;tDiario[Fecha];\"<=\"&FechaCorte).",
+            "Comodines para niveles del PCGE: criterio \"12*\" suma todas las subcuentas de la cuenta 12.",
+            "Control global: SUMA(tDiario[Debe]) debe ser igual a SUMA(tDiario[Haber]); si no, hay un asiento descuadrado."
+          ],
+          "notes": "Recuerde que en Contabilidad General I mayorizaron a mano en cuentas T. Aquí la mayorización se reduce a una función. Muestre la tabla tDiario con veinte asientos y construya un mayor de la cuenta 1041 con la fórmula de la diapositiva. Explique el operador de concatenación para criterios de comparación: \"<=\"&FechaCorte. Luego muestre el uso de comodines: si las cuentas se guardan como texto, el criterio \"60*\" suma todas las compras. Este detalle conecta con la unidad 1: los códigos de cuenta deben ser texto. Introduzca el control global debe igual a haber y una segunda prueba por asiento: agrupar por número de asiento y verificar que cada uno cuadre. Pregunta para la clase: ¿qué asiento rompería el control global y cuál solo el control por asiento? Haga notar que dos errores compensados pasan el control global pero no el control por asiento."
+        },
+        {
+          "title": "Balance de comprobación con matrices dinámicas",
+          "bullets": [
+            "UNICOS(tDiario[Cuenta]) genera la lista de cuentas movidas; ORDENAR la presenta en orden del PCGE.",
+            "Debe y haber por cuenta con SUMAR.SI.CONJUNTO referenciando el rango desbordado con el operador #.",
+            "Saldo deudor =MAX(Debe−Haber;0); saldo acreedor =MAX(Haber−Debe;0).",
+            "La lista se actualiza sola al agregar asientos: no hay que copiar fórmulas ni insertar filas."
+          ],
+          "notes": "Las matrices dinámicas, disponibles en Microsoft 365, cambian la forma de construir reportes. Escriba en una celda =ORDENAR(UNICOS(tDiario[Cuenta])) y muestre cómo la lista se desborda hacia abajo. En la columna siguiente escriba =SUMAR.SI.CONJUNTO(tDiario[Debe];tDiario[Cuenta];A5#) y explique que el símbolo # se refiere a todo el rango desbordado, de modo que una sola fórmula produce todos los resultados. Construya las columnas de saldos deudor y acreedor y los totales. Explique que este es el balance de comprobación de sumas y saldos que conocen del ciclo anterior, ahora automatizado. Agregue BUSCARX para traer la denominación de la cuenta desde tPCGE. Advierta sobre el error #DESBORDAMIENTO!: aparece si hay datos que bloquean la zona de desborde. Pregunta: ¿qué deberían ver en los totales para confiar en el balance? Las sumas del debe y del haber iguales, y los saldos deudores iguales a los acreedores."
+        },
+        {
+          "title": "Funciones de fecha para vencimientos y plazos",
+          "bullets": [
+            "FECHA(año;mes;día) construye fechas; FIN.MES(fecha;0) devuelve el último día del mes, útil para cortes.",
+            "Vencimiento a crédito: =[@Emision]+[@Dias]; en días hábiles: DIA.LAB(inicio;días;Feriados).",
+            "DIAS(fin;inicio) o la resta simple calculan días transcurridos; SIFECHA da meses o años completos.",
+            "Mantener una tabla de feriados nacionales del Perú en la hoja de supuestos."
+          ],
+          "notes": "Las fechas son números, como vieron en la unidad 1, y eso permite operar con ellas. Muestre el cálculo del vencimiento de una factura a 30 días y luego el cálculo de una fecha en días hábiles con DIA.LAB y una tabla de feriados nacionales: 1 de enero, Jueves y Viernes Santo, 1 de mayo, 29 de junio, 28 y 29 de julio, entre otros. Explique FIN.MES para definir automáticamente el corte del periodo y el primer día del mes siguiente. Conecte con obligaciones reales: el cronograma de vencimientos mensuales de SUNAT depende del último dígito del RUC, y una tabla de cronograma con BUSCARX permite calcular cuándo vence la declaración de cada cliente de un estudio contable. Pregunta para la clase: ¿cómo construirían una alerta que se pinte de rojo cuando falten tres días o menos para el vencimiento? Respuesta: formato condicional con =[@Vence]-HOY()<=3."
+        },
+        {
+          "title": "Antigüedad de saldos de cuentas por cobrar",
+          "bullets": [
+            "Días vencidos: =MAX(FechaCorte−[@Vence];0) a la fecha de corte, no a HOY(), para que el reporte sea reproducible.",
+            "Tramos con SI.CONJUNTO o BUSCARX aproximado: por vencer, 1-30, 31-60, 61-90, más de 90 días.",
+            "Matriz cliente por tramo con SUMAR.SI.CONJUNTO: insumo para la estimación de pérdidas crediticias esperadas (NIIF 9).",
+            "Recordar el criterio tributario de cobranza dudosa: deudas vencidas por más de doce meses, entre otros requisitos."
+          ],
+          "notes": "La antigüedad de saldos es uno de los reportes más solicitados por la gerencia y por los auditores. Explique por qué se usa una fecha de corte fija y no HOY(): un reporte al 31 de marzo debe dar el mismo resultado si se abre en abril. Construya los tramos con una tabla auxiliar de límites y BUSCARX con modo −1, que es más fácil de mantener que un SI.CONJUNTO largo. Luego arme la matriz por cliente y tramo. Conecte con Contabilidad General II: la NIIF 9 exige estimar pérdidas crediticias esperadas, y una matriz de provisiones aplica porcentajes de pérdida a cada tramo. Recuerde también la diferencia con el tratamiento tributario de la Ley del Impuesto a la Renta, que estudiarán en Tributación I. Pregunta: si un cliente concentra el 40 % de la cartera vencida a más de 90 días, ¿qué recomendaría al gerente de créditos?"
+        },
+        {
+          "title": "Funciones de texto para limpiar extractos bancarios",
+          "bullets": [
+            "ESPACIOS elimina espacios sobrantes; LIMPIAR quita caracteres no imprimibles de archivos exportados.",
+            "IZQUIERDA, DERECHA y EXTRAE recortan códigos; ENCONTRAR o HALLAR localizan separadores.",
+            "SUSTITUIR(texto;\",\";\"\") elimina separadores de miles; VALOR convierte el resultado en número.",
+            "TEXTO(fecha;\"aaaamm\") genera el periodo tributario; CONCAT y UNIRCADENAS construyen claves."
+          ],
+          "notes": "Los extractos bancarios y los reportes de sistemas antiguos rara vez llegan limpios. Muestre un extracto típico donde la descripción dice 'TRANSF  INTERBANC   DE 20601234567 PAGO F001-458' con espacios dobles, y los importes vienen como texto con coma de miles. Paso a paso: ESPACIOS para normalizar, HALLAR para ubicar 'F001', EXTRAE para obtener el número de comprobante, SUSTITUIR y VALOR para el importe. Explique la diferencia entre ENCONTRAR, que distingue mayúsculas, y HALLAR, que no lo hace y admite comodines. Muestre TEXTO para construir el periodo 202603 que pide el SIRE. Mencione que en la unidad 3 harán esta limpieza de forma repetible con Power Query, pero que comprender las funciones de texto ayuda a entender qué hace la herramienta. Pregunta: ¿qué riesgo existe si la limpieza se hace a mano cada mes? La inconsistencia y la falta de trazabilidad."
+        },
+        {
+          "title": "Conciliación bancaria automatizada",
+          "bullets": [
+            "Dos tablas: movimientos del libro bancos (cuenta 104) y extracto del banco, ambas con fecha, referencia e importe.",
+            "Clave de cruce: número de operación o, en su defecto, importe más fecha con tolerancia de días.",
+            "CONTAR.SI.CONJUNTO marca partidas conciliadas; las no conciliadas son las partidas en tránsito.",
+            "Formato de conciliación: saldo según banco ± cheques no cobrados ± depósitos en tránsito ± cargos no registrados = saldo según libros."
+          ],
+          "notes": "La conciliación bancaria, que aprendieron conceptualmente en Contabilidad General II, se convierte aquí en un procedimiento automatizado. Construya las dos tablas y una columna de estado en cada una con CONTAR.SI.CONJUNTO buscando la misma referencia e importe en la otra tabla. Explique el problema de los duplicados: dos pagos del mismo importe el mismo día; la solución es numerar ocurrencias con CONTAR.SI acumulado para que cada una se empareje solo una vez. Luego arme el formato de conciliación con SUMAR.SI.CONJUNTO filtrando las partidas no conciliadas por tipo. Recuerde los asientos de regularización: comisiones e ITF cargados por el banco y no registrados se contabilizan en la empresa; los cheques no cobrados no. Pregunta para la clase: si la conciliación cuadra pero hay una partida en tránsito de hace cuatro meses, ¿qué harían? Investigarla, porque puede tratarse de un cheque caducado o de un error."
+        },
+        {
+          "title": "Kardex valorizado con promedio ponderado",
+          "bullets": [
+            "Tabla de movimientos: fecha, tipo (entrada o salida), cantidad, costo unitario de entrada.",
+            "Saldo en unidades acumulado: =SUMA(Entradas hasta la fila) − SUMA(Salidas hasta la fila).",
+            "Costo promedio tras cada entrada: =(Saldo valor anterior + Valor entrada)/(Saldo unidades anterior + Cantidad).",
+            "Salidas valorizadas al promedio vigente; el costo de ventas alimenta el asiento 69 contra 20, según la NIC 2."
+          ],
+          "notes": "En Contabilidad General II estudiaron los métodos PEPS y promedio ponderado. Ahora construirán el kardex permanente en Excel, que además es exigido como formato 13.1 del Registro de Inventario Permanente Valorizado para empresas que superan cierto nivel de ingresos. Arme columnas de entradas, salidas y saldos en cantidad, costo unitario y total. Muestre cómo la fórmula del costo promedio se recalcula solo en las entradas y se arrastra en las salidas con SI. Haga notar la necesidad de redondear el costo unitario con criterio: en la práctica se usan más decimales para el costo unitario y dos para el valor total. Verifique con un control: saldo final en valor igual a inventario inicial más compras menos costo de ventas. Pregunta para la clase: ¿qué ocurre con el kardex si una salida se registra antes que la entrada que la abastece? Discutan el saldo negativo como alerta de error de registro."
+        },
+        {
+          "title": "Depreciación con funciones financieras",
+          "bullets": [
+            "SLN(costo;valor_residual;vida) calcula la depreciación lineal anual; dividir entre 12 para la mensual.",
+            "Depreciación acumulada al corte: cuota mensual por meses transcurridos, limitada por el costo depreciable con MIN.",
+            "Comparar la depreciación contable (vida útil según NIC 16) con los porcentajes máximos tributarios del reglamento del Impuesto a la Renta.",
+            "Diferencias entre ambas generan diferencias temporarias que se analizarán en Tributación."
+          ],
+          "notes": "Cierre la unidad con un registro de activos fijos. Construya la tabla con código, descripción, fecha de adquisición, costo, valor residual, vida útil y cuenta del PCGE. Calcule la cuota mensual con SLN y los meses transcurridos hasta el corte con SIFECHA o con la diferencia de años y meses. Use MIN para que la depreciación acumulada nunca supere el costo depreciable; este control evita uno de los errores más frecuentes en los anexos de activo fijo. Luego agregue una columna con el porcentaje tributario máximo según el tipo de bien, por ejemplo 20 % para vehículos de transporte terrestre y 25 % para equipos de procesamiento de datos, y calcule la diferencia. Aclare que la contabilización y el tratamiento de las diferencias se profundizarán en Tributación I y II. Pregunta: ¿qué sucede si un activo se adquiere el 20 de marzo? Discutan desde qué mes se deprecia según la política contable de la empresa. Anuncie la tarea de la unidad."
+        }
+      ],
+      "reading": {
+        "title": "Funciones que piensan como un contador: búsquedas, sumas condicionales y conciliaciones",
+        "minutes": 40,
+        "content": "## 1. De la fórmula a la regla de negocio\n\nToda función de Excel útil para la contabilidad responde a una pregunta del oficio: ¿cuánto se movió esta cuenta?, ¿este comprobante está en el SIRE?, ¿qué tipo de cambio corresponde?, ¿cuánto lleva vencida esta factura? El técnico competente formula primero la pregunta y luego escoge la función.\n\n## 2. Búsqueda: exacta o aproximada, nunca por accidente\n\nLa búsqueda exacta responde si un elemento existe en otra tabla. Es la base del cruce entre el registro interno y la propuesta del SIRE:\n\n```\nClave  = [@RUC] & \"-\" & [@Tipo] & \"-\" & [@Serie] & \"-\" & [@Numero]\nIGV_SIRE = BUSCARX([@Clave]; tSIRE[Clave]; tSIRE[IGV]; \"NO EN SIRE\")\nDif    = SI(ESNUMERO([@IGV_SIRE]); [@IGV] - [@IGV_SIRE]; \"REVISAR\")\n```\n\nLa búsqueda aproximada responde cuál es el último valor vigente. Es la lógica del tipo de cambio: si una factura se emite un domingo, se aplica la última cotización publicada por la SBS.\n\n```\nTC = BUSCARX([@Fecha]; tTC[Fecha]; tTC[Venta]; ; -1)\n```\n\nEl riesgo clásico de BUSCARV es usar la coincidencia aproximada sin querer, al omitir el cuarto argumento, sobre datos no ordenados. El resultado es un dato equivocado sin mensaje de error: el tipo de error lógico silencioso que Panko identifica como el más difícil de detectar.\n\n## 3. Mayorizar es sumar con condiciones\n\nEl libro mayor es, en términos de datos, la suma del debe y del haber del libro diario filtrada por cuenta y por fecha:\n\n```\nDebe_cta  = SUMAR.SI.CONJUNTO(tDiario[Debe];  tDiario[Cuenta]; A5; tDiario[Fecha]; \"<=\" & FechaCorte)\nHaber_cta = SUMAR.SI.CONJUNTO(tDiario[Haber]; tDiario[Cuenta]; A5; tDiario[Fecha]; \"<=\" & FechaCorte)\nSaldo     = Debe_cta - Haber_cta\n```\n\nCon matrices dinámicas, el balance de comprobación completo se genera con `ORDENAR(UNICOS(tDiario[Cuenta]))` y una sola fórmula por columna que referencia el rango desbordado con `#`. Los controles son dos: total del debe igual al del haber y cuadre de cada asiento individual, porque dos errores pueden compensarse en el total.\n\n## 4. Fechas: el tiempo también es un dato\n\nComo Excel guarda las fechas como números, la antigüedad de una cuenta por cobrar es una resta. Lo importante es la **fecha de corte**: un reporte al 31 de marzo debe ser reproducible, por eso no se usa `HOY()`.\n\n```\nDiasVencidos = MAX(FechaCorte - [@Vence]; 0)\nTramo        = BUSCARX([@DiasVencidos]; tTramos[Desde]; tTramos[Nombre]; ; -1)\n```\n\nLa matriz de antigüedad por cliente y tramo es el insumo de la matriz de provisiones de la NIIF 9, que aplica una tasa de pérdida esperada a cada tramo. Tributariamente, la Ley del Impuesto a la Renta exige requisitos propios para deducir la provisión de cobranza dudosa; la diferencia entre ambos criterios se estudiará en Tributación.\n\n## 5. Conciliación bancaria como cruce de dos tablas\n\nConciliar es cruzar el libro bancos con el extracto. Cada partida se marca como conciliada si existe en la otra tabla:\n\n```\nEstado = SI(CONTAR.SI.CONJUNTO(tBanco[Ref]; [@Ref]; tBanco[Importe]; [@Importe]) > 0; \"OK\"; \"PENDIENTE\")\n```\n\nLas partidas pendientes del libro son cheques girados no cobrados o depósitos en tránsito; las pendientes del banco son cargos y abonos que la empresa aún no registró, como comisiones, el ITF o intereses. Estas últimas generan asientos de regularización:\n\n```\n63  Gastos de servicios prestados por terceros (6391 gastos bancarios)   45.00\n64  Gastos por tributos (ITF)                                           3.20\n      10  Efectivo y equivalentes (1041 cuentas corrientes)                     48.20\nPor comisiones e ITF cargados según extracto de marzo\n```\n\n## 6. Kardex: el costo de ventas calculado, no estimado\n\nEn el promedio ponderado permanente, cada entrada recalcula el costo unitario:\n\n```\nCostoProm_n = (SaldoValor_{n-1} + ValorEntrada_n) / (SaldoUnid_{n-1} + CantEntrada_n)\n```\n\nLas salidas se valorizan al promedio vigente. El control final es la identidad: inventario inicial + compras − costo de ventas = inventario final. Si el saldo en unidades resulta negativo, hay un error de registro o de secuencia.\n\n## 7. Buenas prácticas transversales\n\n- Escriba fórmulas legibles: columnas auxiliares con nombres claros valen más que una fórmula de tres líneas. La función `LET` permite nombrar pasos intermedios dentro de una fórmula.\n- No oculte errores con `SI.ERROR(...;0)`: use `SI.ND` o mensajes explícitos.\n- Documente cada parámetro (umbral de detracción, tasas, feriados) en la hoja de supuestos con su fuente normativa.\n- Pruebe cada fórmula con un caso calculado a mano antes de confiar en ella.\n"
+      },
+      "case": {
+        "title": "Caso: La conciliación que nunca cuadraba en Agroexportadora Valle Verde",
+        "content": "**Agroexportadora Valle Verde S.A.C.** exporta paltas y arándanos desde Chao, en La Libertad. Factura en dólares a clientes de Países Bajos y Estados Unidos, paga a productores y transportistas en soles y en dólares, y mantiene cuatro cuentas bancarias: dos en soles y dos en dólares, en dos bancos distintos.\n\nLa campaña de arándanos concentra entre setiembre y diciembre el 70 % de sus ingresos. En octubre, el área contable, formada por un contador y dos asistentes, enfrenta los siguientes problemas:\n\n- La conciliación de la cuenta corriente en dólares del banco principal muestra una diferencia no explicada de US$ 1 236.40. La asistente concilia \"a ojo\", marcando con resaltador amarillo las partidas que encuentra en ambos lados, en un extracto impreso de 640 movimientos.\n- Las facturas de exportación se registran con el tipo de cambio del día en que la asistente las digita, no el de la fecha de emisión. En octubre hubo 37 facturas emitidas en sábado o domingo.\n- El libro de cuentas por cobrar muestra un cliente de Rotterdam con saldo de US$ 84 500, pero nadie sabe con certeza qué facturas están vencidas, porque el reporte de antigüedad se arma manualmente cada trimestre.\n- El extracto que descarga el banco en formato de texto trae los importes con coma de miles y la descripción con el número de factura incrustado de forma irregular.\n\nEl gerente financiero, Javier Rodríguez, debe presentar al directorio el flujo de caja de noviembre y necesita saber cuánto efectivo realmente tiene la empresa y cuánto puede esperar cobrar en los próximos 60 días. También le preocupa que la diferencia de cambio del mes esté mal calculada, porque el auditor externo la observó el año anterior.\n\nEl contador propone contratar un módulo de conciliación del ERP por US$ 6 000 anuales. Una de las asistentes, egresada de un instituto, propone construir en dos semanas un libro de Excel con funciones de búsqueda, texto y sumas condicionales que concilie las cuatro cuentas, calcule el tipo de cambio por fecha de emisión y genere la antigüedad de saldos a cualquier fecha de corte. Javier tiene que decidir antes del cierre de octubre.\n",
+        "questions": [
+          "¿Qué funciones y qué secuencia de pasos usaría para automatizar la conciliación de la cuenta en dólares y encontrar la diferencia de US$ 1 236.40?",
+          "Explique el efecto contable y tributario de usar el tipo de cambio de la fecha de digitación en lugar del de la fecha de emisión de las facturas.",
+          "Diseñe el reporte de antigüedad de saldos que necesita el gerente: tramos, fecha de corte y cómo se vincularía con la proyección de cobranzas.",
+          "Evalúe las dos propuestas, el módulo del ERP y el libro en Excel, considerando costo, riesgo de error, dependencia de personas y control interno.",
+          "¿Qué controles incorporaría para que el auditor externo confíe en el cálculo de la diferencia de cambio?"
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 2: Libro de conciliación bancaria y antigüedad de saldos",
+        "instructions": "**Objetivo:** automatizar en Excel una conciliación bancaria y un reporte de antigüedad de cuentas por cobrar usando funciones de búsqueda, texto, fecha y sumas condicionales.\n\n**Insumos:** extracto bancario en texto (120 movimientos), libro bancos de la empresa (110 movimientos), tabla de tipos de cambio del mes y cartera de 40 facturas por cobrar en soles y dólares.\n\n**Qué entregar:**\n\n1. Hoja *Extracto_Limpio* con fórmulas de texto que obtengan fecha, referencia, número de factura e importe numérico.\n2. Hoja *Conciliacion* con la columna de estado en ambas tablas, el formato de conciliación completo (saldo banco, partidas en tránsito, saldo libros) y los asientos de regularización propuestos.\n3. Hoja *CxC* con conversión a soles por tipo de cambio de la fecha de emisión (BUSCARX aproximado), días vencidos a una fecha de corte parametrizable y tramo de antigüedad.\n4. Hoja *Antiguedad* con la matriz cliente por tramo construida con UNICOS y SUMAR.SI.CONJUNTO.\n5. Un memorando de una página dirigido al gerente financiero con tres hallazgos y una recomendación.\n\n**Criterios:** las fórmulas deben funcionar si se cambia la fecha de corte; no se aceptan valores digitados en las columnas calculadas ni errores ocultos con SI.ERROR sin justificación.\n",
+        "rubric": [
+          {
+            "name": "Limpieza de datos con funciones de texto",
+            "points": 4
+          },
+          {
+            "name": "Conciliación bancaria correcta y asientos de regularización",
+            "points": 7
+          },
+          {
+            "name": "Conversión por tipo de cambio y antigüedad de saldos parametrizable",
+            "points": 6
+          },
+          {
+            "name": "Memorando con hallazgos y recomendación",
+            "points": 3
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: Funciones aplicadas a la contabilidad",
+        "questions": [
+          {
+            "prompt": "Una factura en dólares se emitió el domingo 15 y la tabla de tipos de cambio solo tiene fechas hábiles. ¿Qué fórmula obtiene el tipo de cambio correcto?",
+            "options": [
+              "BUSCARX([@Fecha];tTC[Fecha];tTC[Venta])",
+              "BUSCARX([@Fecha];tTC[Fecha];tTC[Venta];;-1)",
+              "BUSCARV([@Fecha];tTC;3;FALSO)",
+              "PROMEDIO(tTC[Venta])"
+            ],
+            "correct": 1,
+            "explanation": "El modo de coincidencia −1 devuelve la coincidencia exacta o el valor inmediatamente anterior, es decir, el último tipo de cambio publicado antes del domingo."
+          },
+          {
+            "prompt": "Un analista envuelve su cruce con el SIRE en SI.ERROR(...;0). Los totales cuadran, pero luego SUNAT observa comprobantes no declarados. ¿Qué falló?",
+            "options": [
+              "BUSCARX no puede cruzar tablas con más de mil filas",
+              "Se ocultó el error #N/D que señalaba comprobantes ausentes en la propuesta",
+              "Se debió usar SUMAR.SI en lugar de una búsqueda",
+              "El formato condicional no estaba aplicado a la columna"
+            ],
+            "correct": 1,
+            "explanation": "El #N/D era información: indicaba comprobantes no encontrados. Convertirlo en cero escondió el hallazgo; conviene usar SI.ND o un mensaje explícito."
+          },
+          {
+            "prompt": "El balance de comprobación tiene totales de debe y haber iguales, pero un asiento individual está descuadrado. ¿Cómo es posible?",
+            "options": [
+              "SUMAR.SI.CONJUNTO no suma valores negativos",
+              "Las matrices dinámicas ignoran la última fila de la tabla",
+              "Es imposible: si el total cuadra, todos los asientos cuadran",
+              "Otro asiento tiene un descuadre de igual monto y signo contrario que lo compensa"
+            ],
+            "correct": 3,
+            "explanation": "Dos errores compensados pasan el control global; por eso se agrega un control de cuadre por número de asiento."
+          },
+          {
+            "prompt": "Para un reporte de antigüedad de saldos al 31 de marzo que debe poder revisarse en mayo con el mismo resultado, ¿cómo se calculan los días vencidos?",
+            "options": [
+              "=MAX(FechaCorte−[@Vence];0) con FechaCorte como supuesto fijo",
+              "=HOY()−[@Vence]",
+              "=DIAS(HOY();[@Emision])",
+              "=FIN.MES(HOY();0)−[@Vence]"
+            ],
+            "correct": 0,
+            "explanation": "Una fecha de corte parametrizada hace el reporte reproducible; HOY() cambia cada día y altera los tramos al reabrir el archivo."
+          },
+          {
+            "prompt": "Un importe del extracto aparece como \"12,450.80\" alineado a la izquierda y SUMA lo ignora. ¿Qué fórmula lo convierte en número?",
+            "options": [
+              "=TEXTO(A2;\"#,##0.00\")",
+              "=REDONDEAR(A2;2)",
+              "=VALOR(SUSTITUIR(ESPACIOS(A2);\",\";\"\"))",
+              "=CONCAT(A2;\"0\")"
+            ],
+            "correct": 2,
+            "explanation": "Hay que limpiar espacios, quitar el separador de miles y convertir el texto en número; TEXTO hace lo contrario y REDONDEAR no opera sobre texto no numérico."
+          },
+          {
+            "prompt": "En un kardex por promedio ponderado, el saldo es 100 unidades a S/ 10 y entran 50 unidades a S/ 13. ¿Cuál es el nuevo costo promedio?",
+            "options": [
+              "S/ 11.50",
+              "S/ 12.00",
+              "S/ 11.00",
+              "S/ 13.00"
+            ],
+            "correct": 2,
+            "explanation": "(100 × 10 + 50 × 13) / 150 = 1 650 / 150 = S/ 11.00. El promedio simple de los precios (11.50) ignora las cantidades."
+          },
+          {
+            "prompt": "En la conciliación, el banco cargó S/ 45 de comisiones y S/ 3.20 de ITF que la empresa no registró. ¿Qué corresponde?",
+            "options": [
+              "Registrar en la empresa un asiento de gasto con abono a la cuenta 1041",
+              "Solicitar al banco que revierta los cargos para que cuadre",
+              "Sumarlos al saldo según banco en el formato de conciliación",
+              "No hacer nada porque son importes menores"
+            ],
+            "correct": 0,
+            "explanation": "Los cargos válidos del banco no registrados por la empresa se regularizan en los libros con un asiento de gasto contra la cuenta corriente."
+          },
+          {
+            "prompt": "¿Por qué BUSCARV con número de columna fijo es riesgoso en un libro que otros usuarios modifican?",
+            "options": [
+              "No admite valores de texto como valor buscado",
+              "Solo funciona con tablas de menos de 65 536 filas",
+              "Siempre usa coincidencia aproximada aunque se indique FALSO",
+              "Si se inserta una columna en la matriz, devuelve otro dato sin mostrar error"
+            ],
+            "correct": 3,
+            "explanation": "El índice de columna es un número escrito; al cambiar la estructura de la matriz, la fórmula apunta a otra columna y produce un error lógico silencioso."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Análisis y reportes: Power Query, tablas dinámicas y estados financieros",
+      "description": "Integra datos de múltiples fuentes con Power Query, analiza la información contable con tablas dinámicas y genera estados financieros, ratios y tableros automatizados a partir del balance de comprobación, con criterios de comunicación visual rigurosos.",
+      "topics": [
+        "Ciclo de extracción, transformación y carga con Power Query",
+        "Combinar y anexar consultas: cruces con SIRE y padrones",
+        "Tablas dinámicas, segmentaciones y análisis de ventas y gastos",
+        "Mapeo PCGE a rubros y estados financieros automatizados",
+        "Ratios financieros, gráficos y tablero contable"
+      ],
+      "slides": [
+        {
+          "title": "Del dato al reporte: el ciclo de extracción, transformación y carga",
+          "bullets": [
+            "Extraer: obtener datos de archivos TXT del SIRE, CSV bancarios, exportaciones del ERP o carpetas mensuales.",
+            "Transformar: limpiar, tipar, filtrar, combinar y reestructurar con pasos registrados y repetibles.",
+            "Cargar: devolver tablas limpias a Excel o al modelo de datos para tablas dinámicas.",
+            "Ventaja clave: el próximo mes basta con pulsar Actualizar; la limpieza manual desaparece."
+          ],
+          "notes": "Inicie recordando la unidad 2: limpiaron un extracto con funciones de texto, fila por fila. Pregunte cuánto tiempo les tomó y cuánto les tomaría repetirlo cada mes para quince clientes de un estudio contable. Presente Power Query, integrado en Excel desde la versión 2016 en la pestaña Datos > Obtener y transformar datos, como la herramienta que convierte la limpieza en un procedimiento grabado. Explique el ciclo de extracción, transformación y carga, conocido en inglés como ETL, que es el mismo que usan los equipos de inteligencia de negocios. Insista en que cada paso queda registrado en el panel Pasos aplicados, lo que proporciona trazabilidad: un auditor puede ver exactamente qué transformaciones se hicieron. Pregunta para la clase: ¿qué tareas repetitivas de su práctica contable podrían convertirse en una consulta? Anote las respuestas para usarlas como ejemplos durante la unidad."
+        },
+        {
+          "title": "Conectar Power Query a archivos del SIRE y del banco",
+          "bullets": [
+            "Datos > Obtener datos > Desde archivo > Desde texto/CSV; definir delimitador, origen de archivo (codificación) y tipos.",
+            "Los archivos del SIRE usan separador de barra vertical; indicar el delimitador personalizado |.",
+            "Desde carpeta: combina automáticamente los extractos de todos los meses guardados en una misma ruta.",
+            "Promover encabezados y establecer tipos de datos explícitos: texto para RUC y serie, decimal fijo para importes, fecha para fechas."
+          ],
+          "notes": "Haga una demostración con un archivo de texto con estructura similar a las propuestas del SIRE, delimitado por barras verticales. Muestre la ventana de vista previa, la selección de codificación UTF-8 para que las tildes y la eñe se lean bien, y el paso de promover encabezados. Luego establezca tipos: insista en que el RUC y el número de comprobante sean texto, retomando la lección de la unidad 1. Explique la diferencia entre el tipo Número decimal y Número decimal fijo, este último adecuado para moneda. A continuación muestre la conexión Desde carpeta: si cada mes se guarda el extracto en la misma carpeta, la consulta combina todos y agrega una columna con el nombre del archivo, útil para identificar el periodo. Pregunta para la clase: ¿qué convención de nombres de archivo, vista en Herramientas Digitales, facilita este proceso? Recuerde los nombres con fecha en formato año-mes."
+        },
+        {
+          "title": "Transformaciones esenciales para datos contables",
+          "bullets": [
+            "Quitar filas superiores y totales; filtrar filas vacías; reemplazar valores y errores.",
+            "Dividir columna por delimitador o por número de caracteres para separar serie y número.",
+            "Columna personalizada y columna a partir de ejemplos para derivar periodo, signo o clave de cruce.",
+            "Anular dinamización de columnas: convierte reportes con meses en columnas en datos ordenados."
+          ],
+          "notes": "Recorra las transformaciones que más se usan con datos contables. Muestre un reporte del ERP con encabezados de empresa en las primeras cinco filas y totales al final: Quitar filas superiores e inferiores. Muestre Dividir columna por delimitador para separar F001-458 en serie y número. Explique Columna a partir de ejemplos: el usuario escribe el resultado deseado y Power Query infiere la transformación, ideal para estudiantes que aún no dominan el lenguaje M. Dedique tiempo a Anular dinamización: un presupuesto con cuentas en filas y doce meses en columnas se convierte en una tabla de tres columnas, cuenta, mes e importe, que ahora sí sirve para tablas dinámicas. Conecte con el principio de datos ordenados de Wickham visto en la unidad 1. Pregunta para la clase: ¿por qué es mejor filtrar los totales del reporte en Power Query que borrarlos a mano en Excel?"
+        },
+        {
+          "title": "Combinar y anexar consultas: cruce registro interno versus SIRE",
+          "bullets": [
+            "Anexar apila tablas con la misma estructura: ventas de enero a diciembre o de varias sucursales.",
+            "Combinar une tablas por una clave, como BUSCARX pero para tablas completas.",
+            "Tipos de combinación: externa izquierda, interna, anti izquierda (solo en la primera) y anti derecha (solo en la segunda).",
+            "Una combinación anti izquierda devuelve los comprobantes del registro que no están en la propuesta del SIRE."
+          ],
+          "notes": "Esta diapositiva es central para la práctica tributaria actual. Explique primero anexar, que apila, y luego combinar, que une columnas por una clave. Con un diagrama de Venn muestre los tipos de combinación. El cruce entre el registro interno de compras y la propuesta del RCE del SIRE se resuelve con dos combinaciones anti: la anti izquierda muestra lo que tenemos y SUNAT no, por ejemplo comprobantes físicos o de proveedores no obligados a emitir electrónicamente; la anti derecha muestra lo que SUNAT tiene y nosotros no, por ejemplo facturas recibidas que nadie entregó a contabilidad. Una combinación interna con una columna de diferencia de importes muestra los comprobantes con montos distintos. Haga la demostración con la clave compuesta construida en la unidad 2. Pregunta para la clase: ¿cuál de las dos listas anti representa mayor riesgo de perder crédito fiscal y cuál de omitir ingresos?"
+        },
+        {
+          "title": "Leer el lenguaje M sin miedo",
+          "bullets": [
+            "Cada consulta es una expresión let … in; cada paso es una variable que transforma el paso anterior.",
+            "Table.TransformColumnTypes, Table.SelectRows y Table.AddColumn son las funciones más frecuentes.",
+            "El editor avanzado permite revisar y documentar la consulta; los pasos pueden renombrarse en español.",
+            "Parametrizar la ruta de la carpeta evita que la consulta falle al mover el archivo a otro equipo."
+          ],
+          "notes": "No se espera que los estudiantes programen en M, pero sí que lo lean. Abra el editor avanzado de la consulta de compras y recorra el código línea por línea: Origen lee el archivo, Encabezados promovidos usa Table.PromoteHeaders, Tipo cambiado usa Table.TransformColumnTypes con la lista de columnas y tipos, Filas filtradas usa Table.SelectRows con una condición. Muestre que cada paso referencia al anterior por su nombre, lo que explica por qué borrar un paso intermedio puede romper los siguientes. Enseñe a renombrar los pasos con nombres significativos, por ejemplo QuitarTotales o TiparImportes, una práctica de documentación que el auditor agradecerá. Luego cree un parámetro con la ruta de la carpeta y explique por qué esto resuelve el error típico de origen de datos no encontrado al compartir el libro. Pregunta: ¿qué ventaja tiene que la limpieza esté escrita como código y no como una secuencia de acciones manuales?"
+        },
+        {
+          "title": "Tablas dinámicas: preguntas de negocio en segundos",
+          "bullets": [
+            "Fuente: una tabla estructurada o el modelo de datos; nunca un rango con subtotales o celdas combinadas.",
+            "Filas, columnas, valores y filtros: ventas por cliente y mes, gastos por cuenta y centro de costo.",
+            "Configuración de campo de valor: suma, recuento, promedio, máximo; formato numérico desde la configuración.",
+            "Actualizar cuando cambian los datos; con Power Query, Datos > Actualizar todo refresca consultas y tablas."
+          ],
+          "notes": "Presente la tabla dinámica como la herramienta que responde preguntas de negocio sin fórmulas. Formule preguntas reales en voz alta y respóndalas en vivo con la tabla de ventas cargada desde Power Query: ¿quiénes son los diez clientes que más compran?, ¿qué porcentaje de las ventas corresponde a boletas?, ¿cómo evoluciona el IGV mensual? Muestre que el formato numérico debe establecerse desde Configuración de campo de valor para que se mantenga al actualizar. Explique por qué la fuente debe ser una tabla y no un rango fijo: si se agregan filas, el rango fijo no las incluye y el reporte queda incompleto sin aviso. Muestre Actualizar todo y comente que el orden importa: primero se actualizan las consultas y luego las tablas dinámicas. Pregunta para la clase: ¿qué tabla dinámica le pedirían a un asistente para revisar rápidamente el Registro de Compras antes de declarar?"
+        },
+        {
+          "title": "Análisis avanzado en tablas dinámicas",
+          "bullets": [
+            "Agrupar fechas por meses, trimestres y años; agrupar importes en rangos para análisis de concentración.",
+            "Mostrar valores como: % del total general, % de la fila, diferencia respecto del mes anterior.",
+            "Campos calculados para márgenes simples; para medidas complejas, Power Pivot con DAX.",
+            "IMPORTARDATOSDINAMICOS extrae valores de una tabla dinámica a un reporte con formato fijo."
+          ],
+          "notes": "Profundice con tres técnicas. Primero, agrupación: las fechas se agrupan en meses y trimestres con un clic, y los importes en rangos de mil soles para ver la concentración de ventas. Segundo, Mostrar valores como: el porcentaje del total general responde qué peso tiene cada cliente y la diferencia respecto del anterior muestra la variación mensual, insumo de un análisis horizontal. Tercero, campos calculados: por ejemplo, margen igual a ventas menos costo. Advierta que los campos calculados operan sobre sumas, no fila por fila, lo que puede dar resultados incorrectos con promedios o ratios; para eso existe Power Pivot con medidas DAX, que se mencionan como horizonte. Por último, muestre IMPORTARDATOSDINAMICOS, que permite construir un reporte con diseño fijo alimentado por la tabla dinámica. Pregunta para la clase: ¿cómo detectarían con una tabla dinámica que un proveedor concentra demasiadas compras?"
+        },
+        {
+          "title": "Segmentaciones y escalas de tiempo para reportes interactivos",
+          "bullets": [
+            "Segmentación de datos: botones para filtrar por sucursal, tipo de comprobante o moneda.",
+            "Escala de tiempo: filtro deslizante por días, meses, trimestres o años sobre un campo de fecha.",
+            "Conexiones de informe: una segmentación puede controlar varias tablas dinámicas a la vez.",
+            "Diseño: alinear y agrupar los controles; limitar la cantidad para no saturar la pantalla."
+          ],
+          "notes": "Las segmentaciones convierten un conjunto de tablas dinámicas en un reporte interactivo que el gerente puede usar sin saber Excel. Inserte una segmentación por sucursal y una escala de tiempo por fecha de emisión. Luego conecte ambas a tres tablas dinámicas, ventas por cliente, IGV mensual y ventas por tipo de comprobante, usando Conexiones de informe; todas deben provenir de la misma fuente o del modelo de datos. Muestre cómo un clic cambia todo el reporte. Hable de diseño: los controles van arriba o a la izquierda, con el mismo ancho y estilo. Comente que estas herramientas son la antesala de Power BI, que algunos usarán en su carrera. Pregunta para la clase: ¿qué tres filtros pondrían en un reporte para el gerente de una cadena de boticas con cinco locales en Lima? Discuta cuáles son útiles para decidir y cuáles son decorativos."
+        },
+        {
+          "title": "Tabla de correspondencia: de cuentas del PCGE a rubros financieros",
+          "bullets": [
+            "Tabla tMapeo: cuenta (a dos o tres dígitos), rubro del estado financiero, estado (ESF o ER), orden y signo.",
+            "Ejemplo: 10 → Efectivo y equivalentes; 12 y 13 → Cuentas por cobrar comerciales; 20 a 28 → Inventarios.",
+            "Combinar el balance de comprobación con tMapeo asigna cada saldo a su rubro automáticamente.",
+            "Control: toda cuenta con saldo debe tener rubro; las cuentas sin mapeo se listan como excepción."
+          ],
+          "notes": "Esta es la pieza que conecta la contabilidad con el reporte. Recuerde que el PCGE organiza las cuentas por elementos: 1 y 2 activos, 4 pasivos, 5 patrimonio, 6 y 7 resultados por naturaleza, 9 por destino. Los estados financieros, en cambio, se organizan por rubros según la NIC 1. La tabla de correspondencia une ambos mundos. Construya la tabla con los estudiantes, discutiendo casos que exigen criterio: la cuenta 16 puede ir a otras cuentas por cobrar; la 39 de depreciación acumulada resta dentro de propiedades, planta y equipo; la cuenta 40 puede ir a tributos por pagar o, si tiene saldo deudor, al activo. Luego combine el balance de comprobación con la tabla de correspondencia en Power Query o con BUSCARX. Insista en el control de excepciones: una cuenta nueva sin mapeo haría que el estado de situación no cuadre. Pregunta: ¿qué harían con una cuenta 46 con saldo deudor?"
+        },
+        {
+          "title": "Estado de situación financiera automatizado",
+          "bullets": [
+            "Tabla dinámica o SUMAR.SI.CONJUNTO por rubro sobre el balance mapeado, con orden de presentación de la NIC 1.",
+            "Separar corriente y no corriente; los saldos acreedores de pasivo y patrimonio se presentan en positivo con el signo de tMapeo.",
+            "Incluir el resultado del ejercicio (elementos 6 y 7) en el patrimonio antes del cierre contable.",
+            "Control de cuadre: Activo − (Pasivo + Patrimonio) = 0, visible en una celda con formato condicional."
+          ],
+          "notes": "Construya el estado de situación financiera a partir del balance mapeado. Muestre dos enfoques: una tabla dinámica con el rubro en filas y la columna de orden para la secuencia, o un reporte con diseño fijo que usa SUMAR.SI.CONJUNTO por rubro. El segundo es más flexible para presentaciones formales. Explique el manejo del signo: en el balance de comprobación los pasivos tienen saldo acreedor, que se representa como negativo si se calcula debe menos haber; la columna signo de tMapeo multiplica por menos uno para presentarlos en positivo. Un error frecuente es olvidar que, antes de cerrar las cuentas de resultados, el resultado del periodo debe sumarse al patrimonio; de lo contrario el balance no cuadra. Termine con la celda de control. Pregunta para la clase: si la diferencia de cuadre es exactamente igual a la utilidad del periodo, ¿cuál es el error más probable?"
+        },
+        {
+          "title": "Estado de resultados por naturaleza y por función",
+          "bullets": [
+            "Por naturaleza: elementos 6 y 7 (compras, gastos de personal, servicios, tributos, depreciación).",
+            "Por función: cuentas 69, 94, 95 y 97 (costo de ventas, gastos administrativos, de ventas y financieros), formato usual en el Perú.",
+            "Calcular utilidad bruta, utilidad operativa, resultado antes de impuestos y utilidad neta con márgenes.",
+            "Conciliar ambos estados: deben arrojar el mismo resultado; si no, hay error en el destino."
+          ],
+          "notes": "Explique la doble clasificación de gastos propia de la contabilidad peruana: por naturaleza en la clase 6 y por función en la clase 9, con las cuentas 78 y 79 como cuentas de enlace. Esto permite construir el estado de resultados de dos maneras, y su coincidencia es un control poderoso. Construya ambos con la tabla de correspondencia, agregando márgenes como porcentaje de las ventas netas. Pida que interpreten: una empresa con margen bruto de 35 % y margen operativo de 3 % tiene un problema de gastos de estructura, no de precios. Recuerde que en Contabilidad General II prepararon estos estados manualmente; aquí el valor está en que se regeneran cada mes con un clic. Pregunta para la clase: si el estado por función muestra un resultado mayor que el estado por naturaleza, ¿dónde buscarían la diferencia? En los asientos de destino incompletos o en la cuenta 79 mal cargada."
+        },
+        {
+          "title": "Ratios financieros con fórmulas trazables",
+          "bullets": [
+            "Liquidez corriente = activo corriente / pasivo corriente; prueba ácida excluye inventarios.",
+            "Endeudamiento = pasivo total / patrimonio; cobertura de intereses = utilidad operativa / gastos financieros.",
+            "Rotación de cuentas por cobrar y periodo promedio de cobro = cuentas por cobrar / ventas × 360.",
+            "Rentabilidad: ROA = utilidad neta / activo total; ROE = utilidad neta / patrimonio; análisis DuPont."
+          ],
+          "notes": "Calcule los ratios a partir de los rubros ya generados, con nombres definidos como ActivoCorriente o VentasNetas, para que las fórmulas se lean como en un libro de finanzas. Use DIVIDE en DAX solo si llegan a Power Pivot; en Excel, proteja la división con SI para evitar #¡DIV/0! en empresas recién constituidas. Presente el análisis DuPont, que descompone el ROE en margen neto por rotación de activos por multiplicador de capital, y muestre cómo explica de dónde viene la rentabilidad. Aclare que la interpretación profunda se trabajará en Análisis de Estados Financieros del quinto ciclo; aquí se busca que el modelo calcule correctamente y de forma trazable. Proponga un ejercicio: comparar dos meses y explicar la variación del periodo promedio de cobro con la antigüedad de saldos de la unidad 2. Pregunta: ¿qué ratio vigilaría en una empresa agroexportadora en plena campaña?"
+        },
+        {
+          "title": "Gráficos que comunican: principios de Tufte y Few",
+          "bullets": [
+            "Columnas para comparar categorías; líneas para tendencias temporales; barras horizontales para rankings.",
+            "Gráfico de cascada para explicar el paso de ventas a utilidad neta o la variación del efectivo.",
+            "Maximizar la proporción de tinta de datos (Tufte, 1983): eliminar bordes, sombras y efectos 3D.",
+            "Ejes de columnas desde cero; títulos que afirman la conclusión, no solo describen el dato."
+          ],
+          "notes": "Edward Tufte, en The Visual Display of Quantitative Information, y Stephen Few, en Show Me the Numbers, establecieron principios que todo profesional que reporta datos debería conocer. Muestre un gráfico típico de Excel con efecto 3D, fondo degradado y leyenda innecesaria, y rehágalo paso a paso hasta dejar solo lo esencial. Explique la elección del tipo de gráfico según la pregunta. Dedique tiempo al gráfico de cascada, disponible desde Excel 2016, ideal para mostrar cómo las ventas se transforman en utilidad neta tras costo, gastos e impuestos. Insista en los ejes desde cero en columnas: truncar el eje exagera diferencias y puede inducir decisiones erradas. Finalmente, enseñe a escribir títulos que dicen la conclusión: 'Los gastos de venta crecieron 18 % y absorbieron la mejora del margen bruto'. Pregunta para la clase: ¿qué gráfico usarían para mostrar la evolución mensual del IGV por pagar?"
+        },
+        {
+          "title": "Diseño de un tablero contable para la gerencia",
+          "bullets": [
+            "Una pantalla, una audiencia, un propósito: el gerente necesita liquidez, rentabilidad, cobranza y obligaciones tributarias.",
+            "Jerarquía visual: indicadores clave arriba, tendencias al medio, detalle abajo o en otra hoja.",
+            "Indicadores con contexto: valor actual, meta o mes anterior y variación porcentual.",
+            "Arquitectura: Power Query → tablas → tablas dinámicas o fórmulas → tablero; nada se digita en el tablero."
+          ],
+          "notes": "Integre la unidad con un tablero. Explique que un tablero, según Few, es una presentación visual de la información más importante necesaria para lograr uno o más objetivos, organizada en una sola pantalla para su monitoreo de un vistazo. Pregunte quién es el usuario: no es lo mismo un tablero para el gerente general que para el jefe de créditos. Proponga cuatro bloques para una mype comercial: liquidez y efectivo disponible, ventas y margen, cartera vencida por tramo, y obligaciones tributarias del mes con su vencimiento. Muestre que cada indicador necesita contexto: un número aislado no dice si es bueno o malo. Repase la arquitectura de capas de la unidad 1 aplicada a todo el flujo. Advierta sobre el exceso de elementos y colores. Pregunta para la clase: ¿qué indicador agregarían para anticipar un problema de caja antes de que ocurra? Anuncie la tarea de la unidad: un tablero completo."
+        }
+      ],
+      "reading": {
+        "title": "Del registro al reporte: Power Query, tablas dinámicas y estados financieros automatizados",
+        "minutes": 40,
+        "content": "## 1. El costo oculto de la limpieza manual\n\nEn muchos estudios contables, cada inicio de mes se repite el mismo ritual: descargar extractos y propuestas del SIRE, borrar encabezados, corregir formatos, copiar y pegar en el libro maestro. Además de consumir horas, cada repetición manual es una oportunidad de error y no deja rastro de lo que se hizo. Power Query sustituye ese ritual por un procedimiento grabado, documentado y repetible.\n\n## 2. Extracción, transformación y carga\n\nPower Query sigue el patrón de extracción, transformación y carga usado en inteligencia de negocios. Cada acción del usuario se graba como un paso escrito en lenguaje M:\n\n```\nlet\n    Origen     = Csv.Document(File.Contents(RutaSIRE), [Delimiter=\"|\", Encoding=65001]),\n    Encabezado = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),\n    Tipos      = Table.TransformColumnTypes(Encabezado, {\n                   {\"RUC\", type text}, {\"Serie\", type text}, {\"Numero\", type text},\n                   {\"Fecha\", type date}, {\"Base\", Currency.Type}, {\"IGV\", Currency.Type}}),\n    Clave      = Table.AddColumn(Tipos, \"Clave\",\n                   each [RUC] & \"-\" & [Serie] & \"-\" & [Numero], type text)\nin\n    Clave\n```\n\n`Encoding=65001` indica UTF-8; `RutaSIRE` es un parámetro que evita rutas fijas. Leer el código permite a un revisor verificar exactamente qué se hizo con los datos.\n\n## 3. Cruzar con el SIRE mediante combinaciones\n\nLas combinaciones de Power Query llevan la lógica de BUSCARX a tablas completas:\n\n| Combinación | Resultado | Uso contable |\n|---|---|---|\n| Interna | Comprobantes en ambas tablas | Comparar importes |\n| Anti izquierda | Solo en el registro interno | Comprobantes no electrónicos o errores de registro |\n| Anti derecha | Solo en la propuesta del SIRE | Facturas no entregadas a contabilidad |\n\nLa lista anti derecha del Registro de Compras representa crédito fiscal potencialmente no aprovechado; la del Registro de Ventas, ingresos que SUNAT conoce y la empresa no registró, con el consiguiente riesgo de reparo.\n\n## 4. Tablas dinámicas: el análisis exploratorio del contador\n\nUna tabla dinámica resume datos ordenados por cualquier combinación de dimensiones. Las opciones *Mostrar valores como* (porcentaje del total, diferencia respecto del periodo anterior) permiten análisis vertical y horizontal sin fórmulas. Las segmentaciones y escalas de tiempo convierten varias tablas en un reporte interactivo.\n\nDos advertencias: los campos calculados operan sobre totales agregados, no fila por fila, y las tablas dinámicas deben alimentarse de tablas estructuradas o del modelo de datos, nunca de rangos fijos que no crecen.\n\n## 5. De la cuenta al rubro: la tabla de correspondencia\n\nEl PCGE clasifica las cuentas por elementos; la NIC 1 exige presentar rubros. La tabla de correspondencia une ambos:\n\n| Cuenta | Rubro | Estado | Signo |\n|---|---|---|---|\n| 10 | Efectivo y equivalentes de efectivo | ESF | 1 |\n| 12 | Cuentas por cobrar comerciales | ESF | 1 |\n| 20 | Inventarios | ESF | 1 |\n| 33 | Propiedades, planta y equipo | ESF | 1 |\n| 39 | Propiedades, planta y equipo (depreciación) | ESF | 1 |\n| 42 | Cuentas por pagar comerciales | ESF | −1 |\n| 50 | Capital | ESF | −1 |\n| 70 | Ventas netas | ER | −1 |\n| 69 | Costo de ventas | ER | 1 |\n\nSi el saldo se calcula como debe menos haber, el signo −1 presenta en positivo los saldos acreedores. La cuenta 39 conserva su signo para restar dentro del rubro. El control esencial es:\n\n```\nCuadre = ActivoTotal - (PasivoTotal + Patrimonio + ResultadoDelEjercicio)   → debe ser 0\n```\n\nToda cuenta con saldo sin rubro asignado debe aparecer en una lista de excepciones.\n\n## 6. Ratios y análisis DuPont\n\nCon los rubros calculados, los ratios se escriben con nombres definidos:\n\n```\nLiquidezCorriente = ActivoCorriente / PasivoCorriente\nPeriodoCobro      = CxCComerciales / VentasNetas * 360\nROE               = UtilidadNeta / Patrimonio\nROE (DuPont)      = (UtilidadNeta/Ventas) × (Ventas/ActivoTotal) × (ActivoTotal/Patrimonio)\n```\n\nLa descomposición DuPont muestra si la rentabilidad proviene del margen, de la eficiencia en el uso de activos o del apalancamiento.\n\n## 7. Comunicar: menos tinta, más significado\n\nEdward Tufte (1983) propuso maximizar la proporción de tinta dedicada a los datos y eliminar adornos. Stephen Few aplicó estos principios a reportes de negocio y tableros: una sola pantalla, indicadores con contexto (meta, periodo anterior), jerarquía visual y colores con significado. Para el contador, esto significa que el estado financiero automatizado no termina en la cifra: termina en una conclusión clara que la gerencia puede usar para decidir.\n"
+      },
+      "case": {
+        "title": "Caso: El estudio contable que quería atender el doble de clientes",
+        "content": "**Quispe & Asociados Contadores** es un estudio contable de San Juan de Lurigancho, Lima, fundado por la contadora pública Rosa Quispe. Atiende a 45 mypes: bodegas mayoristas, ferreterías, restaurantes, talleres mecánicos y dos pequeñas empresas de transporte. Trabajan cinco personas: Rosa, dos técnicos contables y dos asistentes.\n\nCada mes, para cada cliente, el equipo descarga las propuestas del SIRE, recibe por WhatsApp fotografías y archivos de Excel con compras y ventas, descarga los extractos bancarios y prepara la declaración mensual. Además, diez clientes solicitan estados financieros mensuales porque los bancos se los piden para renovar sus líneas de crédito.\n\nRosa midió los tiempos de marzo: en promedio, cada cliente consume 2.5 horas de limpieza y conciliación de datos, 1 hora de registro y 1.5 horas de preparación de reportes. Los estados financieros mensuales se arman copiando saldos del balance de comprobación a una plantilla de Word, lo que toma 3 horas por cliente y genera errores de transcripción: en febrero, un banco devolvió un estado de situación financiera porque el total del activo no coincidía con el pasivo más el patrimonio.\n\nLa demanda crece: Rosa recibió solicitudes de 40 nuevas mypes de Lima Este, atraídas por la formalización y por las exigencias de comprobantes electrónicos. Sin embargo, no puede contratar más personal en el corto plazo: el costo laboral de un técnico contable, con beneficios sociales, supera los S/ 2 800 mensuales, y el espacio de la oficina está al límite.\n\nUno de los técnicos, egresado de un instituto, propone estandarizar todo con Power Query y tablas dinámicas: una carpeta por cliente con subcarpetas mensuales, consultas que combinen automáticamente las propuestas del SIRE y los extractos, una tabla de correspondencia única del PCGE a rubros y un libro de reporte con estados financieros, ratios y un tablero que se actualice con un clic. Estima un mes de desarrollo y dos semanas de capacitación.\n\nLa otra técnica es escéptica: cada cliente tiene particularidades, algunos clientes envían datos en formatos distintos cada mes y teme que, si el técnico que desarrolla el modelo renuncia, nadie sepa mantenerlo. Rosa debe decidir si invierte el tiempo del equipo en esta automatización en plena temporada de declaraciones.\n",
+        "questions": [
+          "Calcule las horas mensuales actuales del estudio y estime el ahorro potencial si la automatización reduce en 70 % la limpieza y en 80 % la preparación de estados financieros.",
+          "¿Qué componentes de la propuesta del técnico atacan directamente el error que provocó la devolución del banco en febrero?",
+          "¿Cómo respondería a las objeciones de la técnica escéptica sobre formatos variables y dependencia de una persona?",
+          "Diseñe la arquitectura de carpetas, consultas y hojas del modelo estándar para los clientes del estudio.",
+          "¿Recomienda a Rosa aceptar a los 40 nuevos clientes? Fundamente con cifras y riesgos."
+        ]
+      },
+      "assignment": {
+        "title": "Tarea 3: Estados financieros y tablero contable automatizados",
+        "instructions": "**Objetivo:** construir un libro de Excel que, a partir de datos crudos, genere automáticamente el estado de situación financiera, el estado de resultados, ratios clave y un tablero gerencial.\n\n**Insumos:** carpeta con tres archivos mensuales del libro diario exportados de un ERP (formato CSV con encabezados de sistema), la propuesta del Registro de Ventas del SIRE de un mes y un extracto del PCGE.\n\n**Qué entregar:**\n\n1. Consultas de Power Query que combinen los tres meses desde carpeta, limpien encabezados y totales, asignen tipos correctos y renombren pasos de forma descriptiva.\n2. Una combinación anti derecha y otra anti izquierda entre las ventas del diario y la propuesta del SIRE, con breve comentario de los hallazgos.\n3. Balance de comprobación, tabla de correspondencia PCGE-rubros con control de excepciones, estado de situación financiera con celda de cuadre y estado de resultados por función.\n4. Hoja de ratios (liquidez, endeudamiento, periodo de cobro, ROA, ROE y DuPont).\n5. Tablero en una sola pantalla con segmentación por mes, al menos tres gráficos adecuados (uno de cascada) e indicadores con contexto.\n\n**Prueba de funcionamiento:** el docente agregará un cuarto mes a la carpeta; el libro debe actualizarse sin errores con *Actualizar todo*.\n",
+        "rubric": [
+          {
+            "name": "Consultas de Power Query correctas, documentadas y repetibles",
+            "points": 6
+          },
+          {
+            "name": "Cruce con SIRE y control de excepciones del mapeo",
+            "points": 4
+          },
+          {
+            "name": "Estados financieros y ratios correctos y cuadrados",
+            "points": 6
+          },
+          {
+            "name": "Tablero claro según principios de visualización",
+            "points": 4
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: Power Query, tablas dinámicas y reportes",
+        "questions": [
+          {
+            "prompt": "Se desea listar las facturas de compra que figuran en la propuesta del RCE del SIRE pero no en el registro interno de la empresa. ¿Qué combinación de Power Query corresponde, si el registro interno es la tabla izquierda?",
+            "options": [
+              "Anti izquierda",
+              "Anti derecha",
+              "Interna",
+              "Externa completa"
+            ],
+            "correct": 1,
+            "explanation": "La combinación anti derecha devuelve las filas de la segunda tabla que no tienen coincidencia en la primera, es decir, lo que SUNAT tiene y la empresa no registró."
+          },
+          {
+            "prompt": "Un presupuesto tiene las cuentas en filas y los doce meses en columnas. ¿Qué transformación lo convierte en datos ordenados para una tabla dinámica?",
+            "options": [
+              "Transponer la tabla completa",
+              "Anular dinamización de las columnas de meses",
+              "Promover la primera fila a encabezados",
+              "Agrupar por cuenta sumando los meses"
+            ],
+            "correct": 1,
+            "explanation": "Anular dinamización convierte las columnas de meses en pares atributo-valor, generando una fila por cuenta y mes, que es la estructura ordenada."
+          },
+          {
+            "prompt": "El estado de situación financiera automatizado muestra una diferencia de cuadre igual a la utilidad del periodo. ¿Cuál es la causa más probable?",
+            "options": [
+              "La depreciación acumulada se mapeó con signo positivo",
+              "Power Query no cargó el último mes",
+              "Se usó formato Contabilidad en lugar de Número",
+              "No se incorporó el resultado del ejercicio de las cuentas de resultados al patrimonio"
+            ],
+            "correct": 3,
+            "explanation": "Antes del cierre, el resultado está en las clases 6, 7 y 9; si no se suma al patrimonio, el balance difiere exactamente en ese importe."
+          },
+          {
+            "prompt": "Una empresa tiene margen neto de 4 %, rotación de activos de 2.5 y multiplicador de capital de 2. ¿Cuál es su ROE según DuPont?",
+            "options": [
+              "20 %",
+              "8 %",
+              "10 %",
+              "4 %"
+            ],
+            "correct": 0,
+            "explanation": "ROE = 0.04 × 2.5 × 2 = 0.20, es decir, 20 %. La descomposición muestra que el apalancamiento y la rotación amplifican un margen modesto."
+          },
+          {
+            "prompt": "¿Por qué un campo calculado de margen porcentual en una tabla dinámica puede dar resultados engañosos?",
+            "options": [
+              "Porque no admite divisiones entre campos",
+              "Porque solo funciona con fechas agrupadas",
+              "Porque opera sobre las sumas agregadas y no fila por fila",
+              "Porque se borra al actualizar la tabla dinámica"
+            ],
+            "correct": 2,
+            "explanation": "Los campos calculados aplican la fórmula a los totales; en ratios suele ser correcto, pero en cálculos fila a fila o promedios ponderados puede no serlo, por eso existen las medidas DAX."
+          },
+          {
+            "prompt": "El gerente quiere ver cómo las ventas de S/ 2 millones se transforman en una utilidad neta de S/ 90 000. ¿Qué gráfico es el más adecuado?",
+            "options": [
+              "Gráfico circular con efecto 3D",
+              "Gráfico de dispersión",
+              "Gráfico de cascada",
+              "Gráfico de áreas apiladas"
+            ],
+            "correct": 2,
+            "explanation": "La cascada muestra el valor inicial y cada componente que lo incrementa o reduce hasta el resultado final, ideal para explicar el estado de resultados."
+          },
+          {
+            "prompt": "Una consulta de Power Query funciona en el equipo del analista pero falla en el de su jefe con un error de origen no encontrado. ¿Cuál es la mejor solución?",
+            "options": [
+              "Parametrizar la ruta de la carpeta de origen",
+              "Convertir la consulta en valores pegados",
+              "Eliminar el paso de tipos de datos",
+              "Volver a crear la consulta en el otro equipo"
+            ],
+            "correct": 0,
+            "explanation": "La ruta fija apunta a una ubicación del equipo original; un parámetro permite ajustar la ubicación en un solo lugar y mantener el procedimiento repetible."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Control, automatización e integración ofimática: proyecto de cierre mensual",
+      "description": "Audita, protege, documenta y automatiza un modelo contable integrado de cierre mensual, y comunica sus resultados mediante documentos de Word combinados con datos de Excel y una presentación gerencial, sustentando decisiones con evidencia.",
+      "topics": [
+        "Estándares de modelamiento y auditoría de fórmulas",
+        "Totales de control, protección y documentación del modelo",
+        "Automatización con macros grabadas y VBA básico",
+        "Combinación de correspondencia y documentos contables en Word",
+        "Informe y presentación gerencial del proyecto integrador"
+      ],
+      "slides": [
+        {
+          "title": "Estándares profesionales para modelos en hojas de cálculo",
+          "bullets": [
+            "FAST Standard: flexible, apropiado, estructurado y transparente; fórmulas cortas y consistentes por fila.",
+            "Código de buenas prácticas del ICAEW: definir el propósito, separar datos y cálculos, probar y documentar.",
+            "Consistencia: una misma fórmula en toda la columna; las excepciones son fuente frecuente de errores.",
+            "El modelo debe poder ser entendido y revisado por otra persona sin la presencia de su autor."
+          ],
+          "notes": "Abra la unidad recordando el riesgo de hoja de cálculo de la unidad 1 y la objeción de la técnica escéptica del caso anterior: ¿qué pasa si quien hizo el modelo se va? La respuesta profesional son los estándares. Presente el FAST Standard, desarrollado por profesionales de modelamiento financiero y mantenido por una organización sin fines de lucro, y el código de buenas prácticas del Instituto de Contadores Colegiados de Inglaterra y Gales. Ambos coinciden en principios que ya aplicaron: separación de capas, supuestos en un solo lugar, fórmulas consistentes. Enfatice la consistencia: si en una columna de 500 filas la fila 312 tiene una fórmula distinta, es casi seguro que ahí hay un error o un ajuste manual no documentado. Pregunta para la clase: revisen su tarea 3 y digan si un compañero podría actualizarla sin preguntarles nada. Anuncie que esta unidad convierte sus productos anteriores en un modelo integrado de cierre mensual."
+        },
+        {
+          "title": "Auditoría de fórmulas con las herramientas de Excel",
+          "bullets": [
+            "Rastrear precedentes y dependientes: flechas que muestran de dónde viene y a dónde va cada cálculo.",
+            "Evaluar fórmula: ejecuta la fórmula paso a paso para encontrar dónde falla la lógica.",
+            "Ventana de inspección: vigila celdas críticas (cuadre, totales) mientras se trabaja en otras hojas.",
+            "Ir a especial > Constantes y Fórmulas para detectar números digitados en zonas que deberían calcularse."
+          ],
+          "notes": "Haga una demostración con un libro que tenga errores sembrados. Use Rastrear precedentes sobre el total del activo y muestre cómo las flechas revelan que una celda toma datos de una hoja equivocada. Use Evaluar fórmula sobre una fórmula anidada de antigüedad de saldos y muestre en qué paso aparece el valor incorrecto. Agregue a la ventana de inspección las celdas de cuadre del balance y el control debe igual a haber, y muestre que permanecen visibles al navegar. Finalmente, muestre la técnica más reveladora: Ir a especial, seleccionar Constantes de tipo número dentro de la zona de cálculos; cualquier celda resaltada es un número digitado donde debería haber una fórmula, el clásico 'parche' que alguien hizo para que cuadre. Pregunta para la clase: ¿qué harían si encuentran un parche en el libro de un compañero de trabajo un día antes de la declaración?"
+        },
+        {
+          "title": "Totales de control y conciliaciones internas del modelo",
+          "bullets": [
+            "Control de integridad: número de comprobantes y suma de importes en origen igual a lo cargado en el modelo.",
+            "Control contable: debe igual a haber por asiento y en total; activo igual a pasivo más patrimonio.",
+            "Control tributario: IGV del registro interno igual al del SIRE más diferencias explicadas.",
+            "Hoja Controles: lista de pruebas con resultado OK o ERROR y un indicador global visible en la portada."
+          ],
+          "notes": "Explique que un modelo profesional se autoverifica. Proponga una hoja Controles con una fila por prueba: nombre de la prueba, valor esperado, valor obtenido, diferencia y estado. Ejemplos: número de filas cargadas por Power Query frente al número de líneas del archivo original; suma de importes del extracto frente al saldo final menos el inicial; cuadre de cada asiento; cuadre del estado de situación; IGV del registro frente a la propuesta del SIRE. Luego cree un indicador global con =SI(CONTAR.SI(Estado;\"ERROR\")=0;\"MODELO OK\";\"REVISAR\") que se muestra en la portada con formato condicional. Comente que este enfoque replica los controles que un auditor financiero, curso del quinto ciclo, esperaría encontrar. Pregunta para la clase: ¿cuáles de estos controles detectarían el caso de la distribuidora de la unidad 1 y cuáles el del estudio contable de la unidad 3?"
+        },
+        {
+          "title": "Protección de hojas y libros: alcance y límites",
+          "bullets": [
+            "Desbloquear solo las celdas de entrada (Formato de celdas > Proteger) y luego proteger la hoja.",
+            "Proteger la estructura del libro para impedir eliminar, mover u ocultar hojas.",
+            "La protección de hoja evita errores accidentales, pero no es seguridad: puede vulnerarse con facilidad.",
+            "Para confidencialidad, cifrar con contraseña de apertura y gestionar permisos en la nube; cumplir la Ley 29733 si hay datos personales."
+          ],
+          "notes": "Muestre el procedimiento: seleccionar las celdas de supuestos y de datos, quitar la marca de Bloqueada, y luego proteger la hoja permitiendo seleccionar celdas desbloqueadas, filtrar y usar tablas dinámicas. Explique que por defecto todas las celdas están bloqueadas, pero el bloqueo solo actúa cuando se protege la hoja. Luego sea muy claro sobre los límites: la protección de hoja es un control contra errores accidentales, no un mecanismo de seguridad; existen métodos conocidos para eliminarla. Si el archivo contiene información confidencial, como planillas o datos de clientes, debe cifrarse con contraseña de apertura y compartirse con permisos controlados, como vieron en Herramientas Digitales. Recuerde que los datos personales de trabajadores y clientes están protegidos por la Ley 29733. Pregunta para la clase: en un libro de planillas, ¿qué información sería dato personal y qué medidas mínimas aplicarían?"
+        },
+        {
+          "title": "Documentar el modelo: portada, supuestos y bitácora",
+          "bullets": [
+            "Portada: propósito, alcance, usuario, periodo, autor, versión y estado global de controles.",
+            "Hoja de instrucciones: cómo actualizar el modelo paso a paso, en no más de diez pasos.",
+            "Supuestos con fuente normativa: tasa IGV (TUO Ley del IGV), tipo de cambio (SBS), cronograma de vencimientos (SUNAT).",
+            "Bitácora de cambios: fecha, autor, cambio realizado, motivo y verificación efectuada."
+          ],
+          "notes": "La documentación es lo que permite que el modelo sobreviva a su autor. Muestre una portada modelo con los campos indicados y un indicador de estado que lee la hoja Controles. Luego trabaje la hoja de instrucciones: debe permitir que un asistente nuevo actualice el cierre del mes sin ayuda, por ejemplo: copiar los archivos del mes en la carpeta, cambiar el periodo en Supuestos, pulsar Actualizar todo, revisar la hoja Controles, ejecutar la macro de reportes. Explique la importancia de citar la fuente de cada supuesto, de modo que ante un cambio normativo se sepa qué revisar. Presente la bitácora de cambios como el equivalente a un historial de versiones, complementario al control de versiones en la nube. Pregunta para la clase: ¿cuánto tiempo creen que ahorra una buena hoja de instrucciones durante las vacaciones del responsable del modelo?"
+        },
+        {
+          "title": "Macros grabadas: automatizar tareas repetitivas",
+          "bullets": [
+            "Habilitar la pestaña Programador; Grabar macro registra las acciones como código VBA.",
+            "Usar referencias relativas cuando la acción debe repetirse desde la celda activa, absolutas cuando siempre es el mismo rango.",
+            "Candidatos: aplicar formato a reportes, exportar hojas a PDF, limpiar zonas de entrada al iniciar un mes.",
+            "Antes de grabar, ensayar los pasos; después, revisar y limpiar el código generado."
+          ],
+          "notes": "Introduzca las macros desde la necesidad: tareas que se repiten igual cada mes y que Power Query o las fórmulas no resuelven, como exportar a PDF el estado de situación, el estado de resultados y el tablero con un nombre que incluya el periodo. Muestre cómo habilitar la pestaña Programador y grabar una macro que selecciona las hojas de reporte y las exporta. Luego abra el editor de Visual Basic con Alt+F11 y muestre el código generado; señale las líneas innecesarias, como los Select y ScrollRow, que la grabadora agrega. Explique la diferencia entre referencias relativas y absolutas en la grabación con un ejemplo de formato de filas. Insista en que la grabadora es un punto de partida, no un resultado final. Pregunta para la clase: de las tareas de su cierre mensual, ¿cuáles automatizarían con una macro y cuáles con Power Query? Ayude a distinguir transformación de datos frente a acciones sobre la interfaz."
+        },
+        {
+          "title": "VBA básico: objetos, propiedades y métodos",
+          "bullets": [
+            "Modelo de objetos: Application > Workbook > Worksheet > Range; se navega con puntos.",
+            "Propiedades describen (Range(\"B2\").Value) y métodos actúan (Worksheets(\"ESF\").ExportAsFixedFormat).",
+            "Variables y bucles: For Each recorre hojas o filas; If valida condiciones antes de actuar.",
+            "Mensajes al usuario con MsgBox y validación previa: no exportar reportes si la hoja Controles indica ERROR."
+          ],
+          "notes": "Muestre un procedimiento corto escrito y comentado línea por línea. Primero declara una variable con el periodo leído de la hoja Supuestos; luego verifica con If que la celda de estado global diga MODELO OK; si no, muestra un MsgBox y termina con Exit Sub; si todo está correcto, recorre con For Each un arreglo de nombres de hojas de reporte y exporta cada una a PDF con ExportAsFixedFormat, usando un nombre de archivo que concatena el periodo. Este ejemplo enseña los cuatro conceptos clave: objetos, propiedades, métodos y control de flujo. Enfatice la validación previa: un proceso automatizado que exporta reportes con errores es peor que uno manual, porque multiplica el error con rapidez. Explique Option Explicit para obligar a declarar variables. Pregunta para la clase: ¿qué otra condición verificarían antes de exportar? Por ejemplo, que el periodo no esté vacío."
+        },
+        {
+          "title": "Seguridad de macros y buenas prácticas de distribución",
+          "bullets": [
+            "Guardar como libro habilitado para macros (.xlsm); un .xlsx elimina el código al guardar.",
+            "Los archivos descargados de internet llegan con macros bloqueadas por defecto: es una defensa contra malware.",
+            "Usar ubicaciones de confianza o firma digital del proyecto en lugar de habilitar todas las macros.",
+            "Nunca habilitar macros de archivos recibidos por correo sin verificar su origen."
+          ],
+          "notes": "Las macros son también uno de los vectores clásicos de ataques informáticos, por eso Microsoft bloquea por defecto las macros de archivos provenientes de internet. Explique que esto afecta a los modelos que compartan con clientes o colegas: el destinatario verá una barra de advertencia. La solución profesional no es pedir que habiliten todas las macros, sino usar ubicaciones de confianza definidas por el área de TI o firmar digitalmente el proyecto. Conecte con la unidad de seguridad digital de Herramientas Digitales: un correo que dice ser de SUNAT y adjunta un Excel que pide habilitar contenido es un patrón típico de suplantación. Recuerde guardar en formato .xlsm y mantener una copia sin macros para quienes solo necesitan leer resultados. Pregunta para la clase: ¿cómo distribuirían el modelo de cierre a los cinco técnicos de un estudio contable sin comprometer la seguridad?"
+        },
+        {
+          "title": "Combinación de correspondencia: estados de cuenta y cartas de cobranza",
+          "bullets": [
+            "Origen de datos: tabla de Excel con cliente, RUC, dirección, correo, saldo, tramo de antigüedad y facturas vencidas.",
+            "Word > Correspondencia: seleccionar destinatarios, insertar campos combinados y aplicar reglas Si…Entonces…Sino.",
+            "Formato de números: modificador \\# \"#,##0.00\" en el campo para que los importes no pierdan formato.",
+            "Salida: documentos individuales, PDF por cliente o mensajes de correo masivo personalizados."
+          ],
+          "notes": "Integre Word con el trabajo de la unidad 2: la antigüedad de saldos alimenta cartas de cobranza personalizadas. Muestre la tabla de origen en Excel, ya filtrada para clientes con saldo vencido. En Word, cree una carta con el membrete de una empresa ficticia, inserte los campos y aplique una regla Si…Entonces…Sino que cambie el tono según el tramo: recordatorio amable para 1 a 30 días, comunicación firme para más de 90 días. Explique el problema clásico de los importes que aparecen con muchos decimales y muestre el modificador de formato numérico en el código de campo con Alt+F9. Señale que el tono debe respetar las normas de protección al consumidor y no constituir cobranza abusiva, tema regulado por INDECOPI en el Código de Protección y Defensa del Consumidor. Pregunta para la clase: ¿qué información nunca debe incluirse en una carta de cobranza enviada por correo?"
+        },
+        {
+          "title": "Documentos contables profesionales en Word",
+          "bullets": [
+            "Estilos de título y cuerpo para generar tabla de contenido automática y navegación.",
+            "Pegado especial vinculado de tablas de Excel: se actualiza, pero se rompe si cambia la ruta del archivo.",
+            "Alternativa estable: exportar desde Excel a PDF los cuadros y anexarlos; el informe en Word contiene análisis.",
+            "Estructura de un informe de cierre: resumen ejecutivo, resultados, hallazgos, recomendaciones y anexos."
+          ],
+          "notes": "Muchos técnicos contables redactan informes con formato manual: negritas para títulos, espacios para alinear, numeración escrita a mano. Muestre el uso de estilos y cómo generan la tabla de contenido y el panel de navegación. Luego discuta la integración con Excel: el pegado especial vinculado mantiene el informe actualizado, pero es frágil, porque si el libro de origen cambia de nombre o de carpeta los vínculos se rompen, y además puede pegar información desactualizada si no se actualiza antes de enviar. Para informes formales, recomiende cerrar las cifras, exportar los cuadros a PDF y concentrar el Word en el análisis. Presente la estructura de un informe de cierre mensual y vincúlela con el principio de la pirámide de la siguiente diapositiva. Pregunta para la clase: ¿qué riesgo tendría enviar a un banco un informe con vínculos que muestran cifras del mes anterior?"
+        },
+        {
+          "title": "Presentar resultados: principio de la pirámide de Minto",
+          "bullets": [
+            "Comenzar por la conclusión o recomendación principal; luego los argumentos que la sostienen; finalmente los datos.",
+            "Cada diapositiva con un título-mensaje que afirma una idea, no un título temático.",
+            "Una idea por diapositiva; gráficos del tablero en lugar de tablas extensas.",
+            "Anticipar las preguntas del gerente: ¿qué pasó?, ¿por qué?, ¿qué hacemos?, ¿cuánto cuesta?"
+          ],
+          "notes": "Barbara Minto, consultora de McKinsey, formuló el principio de la pirámide: la comunicación ejecutiva empieza por la respuesta. Contraste dos presentaciones del mismo cierre mensual. La primera recorre cuentas en orden del PCGE y llega a la conclusión en la diapositiva quince. La segunda abre con 'La empresa cerró marzo con utilidad de S/ 85 000, pero su periodo de cobro subió a 62 días y pone en riesgo la caja de mayo', y luego presenta tres argumentos con sus gráficos. Pregunte cuál preferiría un gerente con diez minutos disponibles. Practique la conversión de títulos temáticos en títulos-mensaje: de 'Cuentas por cobrar' a 'Tres clientes concentran el 70 % de la cartera vencida'. Explique que en PowerPoint se pueden pegar los gráficos del tablero como imagen o vinculados, con las mismas advertencias del Word. Pregunta para la clase: redacte en el chat el título-mensaje de la primera diapositiva de su proyecto."
+        },
+        {
+          "title": "Proyecto integrador: modelo de cierre mensual",
+          "bullets": [
+            "Entrada: archivos del mes en carpeta (diario, SIRE, extractos, tipos de cambio); periodo en Supuestos.",
+            "Proceso: consultas de Power Query, registros con controles, conciliación bancaria, kardex, antigüedad, balance y estados financieros.",
+            "Salida: tablero gerencial, reportes en PDF por macro, cartas de cobranza combinadas e informe en Word.",
+            "Calidad: hoja Controles en verde, documentación completa y prueba de actualización con un mes nuevo."
+          ],
+          "notes": "Presente el proyecto final como la integración de todo el curso. Muestre el diagrama de arquitectura en tres capas con los productos de cada unidad: la tarea 1 aporta el registro con controles, la tarea 2 la conciliación y la antigüedad, la tarea 3 los estados financieros y el tablero, y esta unidad agrega controles, documentación, automatización y comunicación. Explique que se trabajará en equipos de tres, con un caso empresarial único por equipo, y que la prueba de calidad será la misma de la unidad 3: el docente agregará los archivos de un mes nuevo y el modelo debe actualizarse sin intervención manual. Defina hitos: semana 13 arquitectura y controles, semana 14 automatización y documentos, semana 15 informe y presentación, semana 16 sustentación. Pregunta para la clase: ¿qué riesgos ven para cumplir los hitos y cómo los mitigarían? Pida que cada equipo nombre a un responsable de controles."
+        },
+        {
+          "title": "Sustentación: criterios de calidad y defensa técnica",
+          "bullets": [
+            "Exactitud: cifras que cuadran y controles en verde con datos nuevos.",
+            "Trazabilidad: cualquier cifra del informe se rastrea hasta el dato de origen en menos de dos minutos.",
+            "Usabilidad: un usuario externo actualiza el modelo siguiendo solo las instrucciones.",
+            "Comunicación: presentación de diez minutos con recomendación clara y respuesta solvente a preguntas técnicas."
+          ],
+          "notes": "Cierre el curso explicitando cómo se evaluará la sustentación. Explique la prueba de trazabilidad: el jurado elegirá una cifra del informe, por ejemplo las cuentas por cobrar comerciales, y el equipo deberá mostrar el camino hasta los comprobantes de origen usando rastrear precedentes, tablas dinámicas con doble clic para ver el detalle y las consultas de Power Query. Explique la prueba de usabilidad: un compañero de otro equipo actualizará el modelo siguiendo solo la hoja de instrucciones. Comente que las preguntas técnicas buscarán comprobar que cada integrante comprende el modelo completo, no solo su parte. Relacione con el perfil del egresado: un asistente contable que puede demostrar estas capacidades se diferencia claramente en un proceso de selección. Pregunta final de reflexión: ¿qué parte del modelo podrían reutilizar en su EFSRT o en su trabajo actual mañana mismo? Invite a incorporar el proyecto a su portafolio profesional."
+        }
+      ],
+      "reading": {
+        "title": "Modelos contables confiables: control, automatización y comunicación de resultados",
+        "minutes": 40,
+        "content": "## 1. Un modelo que sobrevive a su autor\n\nUn libro de Excel se convierte en un activo de la organización cuando otra persona puede usarlo, revisarlo y mantenerlo. Los estándares de modelamiento como el FAST Standard y el código de buenas prácticas del ICAEW coinciden en cuatro ideas: separar supuestos, datos, cálculos y salidas; escribir fórmulas cortas y consistentes; incluir controles automáticos; y documentar. Esta lectura integra esas ideas con la automatización y la comunicación de resultados.\n\n## 2. Auditoría y controles\n\nLas herramientas de auditoría de fórmulas de Excel (rastrear precedentes y dependientes, evaluar fórmula, ventana de inspección) permiten revisar la lógica. La técnica de **Ir a especial > Constantes** revela números digitados en zonas de cálculo, los \"parches\" que ocultan diferencias.\n\nUna hoja de controles bien diseñada resume todas las pruebas:\n\n| Prueba | Esperado | Obtenido | Estado |\n|---|---|---|---|\n| Filas cargadas del diario | 1 248 | 1 248 | OK |\n| Debe − Haber total | 0.00 | 0.00 | OK |\n| Activo − (Pasivo + Patrimonio) | 0.00 | 0.00 | OK |\n| IGV registro − IGV SIRE explicado | 0.00 | 12.40 | ERROR |\n\n```\nEstadoGlobal = SI(CONTAR.SI(tControles[Estado]; \"ERROR\") = 0; \"MODELO OK\"; \"REVISAR\")\n```\n\nEl estado global se muestra en la portada y condiciona la automatización: si hay errores, nada se exporta.\n\n## 3. Protección no es seguridad\n\nProteger una hoja impide modificaciones accidentales en celdas bloqueadas, pero no protege la confidencialidad: existen métodos conocidos para quitar esa protección. Si el libro contiene datos personales de trabajadores o clientes, regulados por la Ley 29733 de Protección de Datos Personales, debe cifrarse con contraseña de apertura y compartirse con permisos controlados.\n\n## 4. Automatización con VBA\n\nPower Query automatiza la transformación de datos; VBA automatiza acciones sobre la interfaz, como exportar reportes, preparar la plantilla del nuevo mes o generar archivos por cliente. Un procedimiento sencillo y comentado:\n\n```vba\nOption Explicit\n\nSub ExportarReportesDelPeriodo()\n    Dim periodo As String, ruta As String, nombreHoja As Variant\n\n    ' 1. Validar que el modelo esté cuadrado antes de exportar\n    If Worksheets(\"Portada\").Range(\"EstadoGlobal\").Value <> \"MODELO OK\" Then\n        MsgBox \"Hay controles en ERROR. Revise la hoja Controles.\", vbExclamation\n        Exit Sub\n    End If\n\n    ' 2. Leer el periodo desde la hoja de supuestos (p. ej., 202603)\n    periodo = Worksheets(\"Supuestos\").Range(\"Periodo\").Value\n    ruta = ThisWorkbook.Path & Application.PathSeparator\n\n    ' 3. Exportar cada hoja de reporte a PDF\n    For Each nombreHoja In Array(\"ESF\", \"ER\", \"Tablero\")\n        Worksheets(nombreHoja).ExportAsFixedFormat Type:=xlTypePDF, _\n            Filename:=ruta & nombreHoja & \"_\" & periodo & \".pdf\"\n    Next nombreHoja\n\n    MsgBox \"Reportes de \" & periodo & \" exportados.\", vbInformation\nEnd Sub\n```\n\nEl código ilustra el modelo de objetos (libro, hoja, rango), propiedades (`Value`), métodos (`ExportAsFixedFormat`) y control de flujo (`If`, `For Each`). La regla de oro es validar antes de actuar: automatizar un proceso con errores solo multiplica el error.\n\nLas macros deben guardarse en formato `.xlsm` y distribuirse mediante ubicaciones de confianza o firma digital; habilitar macros de archivos recibidos por correo es una de las vías más comunes de infección por malware.\n\n## 5. Word y PowerPoint al servicio del análisis contable\n\nLa **combinación de correspondencia** de Word convierte la tabla de antigüedad de saldos en cartas de cobranza o estados de cuenta personalizados. Las reglas *Si…Entonces…Sino* ajustan el mensaje al tramo de mora, y el modificador de formato numérico `\\# \"#,##0.00\"` mantiene la presentación de los importes. El tono debe respetar el Código de Protección y Defensa del Consumidor, que prohíbe métodos de cobranza abusivos.\n\nPara informes, los **estilos** de Word generan tabla de contenido y estructura. Los vínculos con Excel son útiles en borradores, pero frágiles en documentos finales: si el libro cambia de ruta o no se actualiza, el informe muestra cifras incorrectas.\n\n## 6. La pirámide de Minto\n\nBarbara Minto propuso estructurar la comunicación ejecutiva de arriba hacia abajo: primero la conclusión, luego los argumentos que la sostienen y al final los datos. En un cierre mensual, esto significa abrir con la idea principal (\"la utilidad creció, pero el periodo de cobro amenaza la caja\") y usar títulos-mensaje en cada diapositiva. El contador que domina esta forma de comunicar deja de ser percibido como un proveedor de cifras y pasa a ser un asesor para la toma de decisiones.\n"
+      },
+      "case": {
+        "title": "Caso: El cierre de Inversiones Selva Central y la renuncia inesperada",
+        "content": "**Inversiones Selva Central E.I.R.L.** es una empresa de La Merced, Junín, que distribuye café tostado, cacao y productos agroindustriales a bodegas y cafeterías de Junín, Lima y Pasco. Factura alrededor de S/ 450 000 mensuales, tiene 18 trabajadores, dos cuentas bancarias y un almacén con 140 productos.\n\nDurante dos años, el cierre mensual estuvo a cargo de Marco, técnico contable que construyó un libro de Excel muy completo: Power Query para cargar el diario del sistema de facturación, conciliaciones, kardex, estados financieros y un tablero que la gerente, Carmen Huamán, revisa cada mes. Marco renunció con quince días de aviso para trabajar en una empresa minera.\n\nLa nueva asistente, Daniela, recibe el libro el día 3 del mes. Al pulsar *Actualizar todo* aparece un error porque las consultas apuntan a una carpeta del equipo de Marco. Una vez corregida la ruta, el estado de situación financiera no cuadra por S/ 4 380. Al rastrear, Daniela descubre en la hoja de cálculo del kardex tres celdas con números digitados en medio de una columna de fórmulas, sin comentario alguno. Tampoco hay hoja de instrucciones: Marco \"lo tenía todo en la cabeza\".\n\nAdemás, hay una macro que exporta los reportes a PDF y los envía por correo al banco, pero se ejecuta aunque el balance no cuadre. En el mes anterior, el banco recibió un estado de situación con una diferencia que Marco corrigió después por teléfono.\n\nCarmen necesita el cierre en cinco días hábiles, porque la empresa negocia con un banco un préstamo de capital de trabajo de S/ 300 000 para la campaña de cosecha, y el banco pidió estados financieros mensuales y la antigüedad de cuentas por cobrar. También debe enviar cartas de cobranza a 35 clientes con deuda vencida, varios de ellos bodegas familiares con las que la empresa tiene una relación de largo plazo.\n\nDaniela tiene dos opciones: intentar entender y \"parchar\" el libro existente para cumplir el plazo, o rehacer el cierre de este mes de forma manual y proponer, para el mes siguiente, un rediseño con estándares, controles, documentación y una macro segura. Carmen le pide una recomendación por escrito al día siguiente.\n",
+        "questions": [
+          "Identifique las fallas de diseño del modelo de Marco según los estándares FAST e ICAEW y explique cómo cada una contribuyó a la crisis actual.",
+          "¿Qué técnicas de auditoría de fórmulas aplicaría para explicar la diferencia de S/ 4 380 en el menor tiempo posible?",
+          "Rediseñe la macro de envío de reportes para que no pueda enviar estados financieros descuadrados; describa su lógica.",
+          "¿Cómo diseñaría las cartas de cobranza para los 35 clientes cuidando la relación comercial y las normas de protección al consumidor?",
+          "¿Qué debe recomendar Daniela a Carmen? Considere el plazo del banco, el riesgo reputacional y la sostenibilidad del proceso."
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: modelo de cierre mensual auditable y automatizado",
+        "instructions": "**Objetivo:** integrar los productos del curso en un modelo de cierre mensual para una empresa asignada por el docente, controlado, documentado, automatizado y comunicado a la gerencia.\n\n**Modalidad:** equipos de tres estudiantes; cada integrante debe dominar el modelo completo.\n\n**Qué entregar:**\n\n1. **Libro `.xlsm`** con portada, instrucciones, supuestos con fuente normativa, consultas de Power Query parametrizadas, registros con controles, conciliación bancaria, kardex, antigüedad de saldos, estados financieros, ratios, tablero y hoja Controles con estado global.\n2. **Macro VBA** comentada que valide el estado global y exporte los reportes del periodo a PDF.\n3. **Cartas de cobranza** generadas por combinación de correspondencia en Word, con reglas según el tramo de antigüedad.\n4. **Informe de cierre** en Word (máximo cinco páginas) con estilos, resumen ejecutivo, hallazgos, recomendaciones y bitácora de cambios.\n5. **Presentación** de diez minutos en PowerPoint con títulos-mensaje según el principio de la pirámide.\n\n**Prueba de calidad:** en la sustentación se cargará un mes nuevo; el modelo debe actualizarse con los controles en verde y cada integrante debe rastrear una cifra elegida por el jurado hasta su origen.\n",
+        "rubric": [
+          {
+            "name": "Integración y exactitud del modelo con datos nuevos",
+            "points": 6
+          },
+          {
+            "name": "Controles, protección y documentación",
+            "points": 4
+          },
+          {
+            "name": "Automatización VBA segura y combinación de correspondencia",
+            "points": 4
+          },
+          {
+            "name": "Informe, presentación y defensa técnica individual",
+            "points": 6
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: Control, automatización e integración",
+        "questions": [
+          {
+            "prompt": "Al revisar un modelo heredado se usa Ir a especial > Constantes numéricas en la hoja de cálculo del kardex y aparecen tres celdas resaltadas. ¿Qué indica?",
+            "options": [
+              "Celdas con formato condicional aplicado",
+              "Fórmulas que generan errores #N/D",
+              "Celdas protegidas con contraseña",
+              "Valores digitados donde debería haber fórmulas, posibles ajustes no documentados"
+            ],
+            "correct": 3,
+            "explanation": "Constantes en una zona de cálculo suelen ser parches manuales que rompen la consistencia y pueden ocultar diferencias; deben investigarse y documentarse."
+          },
+          {
+            "prompt": "Una empresa protege con contraseña las hojas de su libro de planillas y lo envía por correo. ¿Qué afirmación es correcta?",
+            "options": [
+              "La protección de hoja cifra el contenido y cumple la Ley 29733",
+              "La protección evita cambios accidentales pero no garantiza confidencialidad; debe cifrarse el archivo",
+              "Proteger la estructura del libro impide que terceros lean los datos",
+              "Al proteger la hoja, las fórmulas dejan de calcularse"
+            ],
+            "correct": 1,
+            "explanation": "La protección de hoja es un control contra errores, no un mecanismo de seguridad; para datos personales se requiere cifrado y gestión de accesos."
+          },
+          {
+            "prompt": "¿Cuál es el principal riesgo de una macro que exporta y envía reportes sin verificar la hoja Controles?",
+            "options": [
+              "Que el archivo pierda el formato .xlsm",
+              "Difundir con rapidez estados financieros con errores a terceros",
+              "Que Excel deshabilite las tablas dinámicas",
+              "Que los PDF se generen con menor resolución"
+            ],
+            "correct": 1,
+            "explanation": "La automatización multiplica la velocidad del error; por eso la macro debe validar el estado global antes de actuar y detenerse si hay controles en ERROR."
+          },
+          {
+            "prompt": "En una combinación de correspondencia, los saldos aparecen como 1523.4500000001. ¿Cómo se corrige en Word?",
+            "options": [
+              "Cambiando la fuente de la carta a una monoespaciada",
+              "Aplicando el estilo Título al campo combinado",
+              "Guardando el Excel como .xlsm antes de combinar",
+              "Agregando el modificador de formato numérico \\# \"#,##0.00\" al código de campo"
+            ],
+            "correct": 3,
+            "explanation": "Word toma el valor subyacente de Excel; el modificador de formato en el código de campo controla la presentación de los decimales y separadores."
+          },
+          {
+            "prompt": "¿Qué título de diapositiva aplica mejor el principio de la pirámide de Minto?",
+            "options": [
+              "Tres clientes concentran el 70 % de la cartera vencida",
+              "Cuentas por cobrar comerciales",
+              "Análisis de la cuenta 12 del PCGE",
+              "Resultados del mes de marzo"
+            ],
+            "correct": 0,
+            "explanation": "Un título-mensaje afirma la conclusión que la diapositiva demuestra; los títulos temáticos obligan al lector a deducir la idea por sí mismo."
+          },
+          {
+            "prompt": "Un modelo debe distribuirse a cinco técnicos y contiene macros. ¿Qué práctica es la más adecuada?",
+            "options": [
+              "Pedir a cada técnico que habilite todas las macros en el Centro de confianza",
+              "Guardar como .xlsx para evitar advertencias de seguridad",
+              "Guardar como .xlsm y usar una ubicación de confianza o firma digital del proyecto",
+              "Enviar el código VBA por correo para que cada uno lo pegue"
+            ],
+            "correct": 2,
+            "explanation": "El formato .xlsm conserva el código y las ubicaciones de confianza o la firma digital permiten ejecutarlo sin debilitar la protección contra macros maliciosas."
+          },
+          {
+            "prompt": "Durante la sustentación, el jurado pide rastrear las cuentas por cobrar del estado de situación hasta sus comprobantes. ¿Qué atributo del modelo se está evaluando?",
+            "options": [
+              "Usabilidad",
+              "Estética del tablero",
+              "Trazabilidad",
+              "Velocidad de cálculo"
+            ],
+            "correct": 2,
+            "explanation": "La trazabilidad es la capacidad de seguir una cifra desde el reporte hasta el dato de origen, condición esencial para la auditoría."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Riesgo de hoja de cálculo y arquitectura entrada-proceso-salida",
+      "activity": "Sesión síncrona de diagnóstico; análisis de errores reales de hojas de cálculo; inicio de la lectura de la unidad y foro de presentación.",
+      "evidence": "Diagnóstico de un libro contable desordenado"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Datos ordenados, tablas estructuradas, tipos de datos y formatos numéricos",
+      "activity": "Taller de conversión de un registro de ventas desordenado en tabla estructurada con tipos y formatos correctos.",
+      "evidence": "Tabla tVentas reestructurada"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Validación de datos, dígito verificador del RUC, nombres definidos y cálculo del IGV",
+      "activity": "Taller de controles preventivos y detectivos; discusión del caso Distribuidora Andina del Sur en foro y sesión síncrona.",
+      "evidence": "Respuestas al caso y hoja con validaciones"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Registros de Compras y Ventas, formatos 8.1 y 14.1 y SIRE",
+      "activity": "Entrega de la Tarea 1: Registro de Compras con controles; resolución del Cuestionario 1.",
+      "evidence": "Tarea 1 y Cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Funciones lógicas, tratamiento de errores y búsquedas con BUSCARV y BUSCARX",
+      "activity": "Taller de cruce del registro interno con una propuesta del SIRE usando claves compuestas y mensajes explícitos.",
+      "evidence": "Cruce registro-SIRE con diferencias"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "INDICE y COINCIDIR, tipo de cambio por fecha y mayorización con sumas condicionales",
+      "activity": "Taller de conversión de operaciones en dólares y construcción del balance de comprobación con matrices dinámicas.",
+      "evidence": "Balance de comprobación automatizado"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Fechas, antigüedad de saldos, funciones de texto y conciliación bancaria",
+      "activity": "Limpieza de un extracto bancario y conciliación automatizada; análisis del caso Agroexportadora Valle Verde.",
+      "evidence": "Conciliación preliminar y respuestas al caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Kardex valorizado por promedio ponderado y depreciación con SLN",
+      "activity": "Entrega de la Tarea 2: conciliación bancaria y antigüedad de saldos; resolución del Cuestionario 2.",
+      "evidence": "Tarea 2 y Cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Power Query: conexión a archivos del SIRE, extractos y carpetas; transformaciones esenciales",
+      "activity": "Taller de extracción y transformación de archivos delimitados y combinación desde carpeta con pasos documentados.",
+      "evidence": "Consulta de Power Query documentada"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Combinar y anexar consultas, lenguaje M y parámetros",
+      "activity": "Taller de cruce anti izquierda y anti derecha con la propuesta del SIRE; discusión del caso Quispe & Asociados.",
+      "evidence": "Listas de diferencias y respuestas al caso"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Tablas dinámicas, segmentaciones y mapeo PCGE a rubros financieros",
+      "activity": "Construcción de la tabla de correspondencia, estado de situación financiera y estado de resultados automatizados.",
+      "evidence": "Estados financieros con celda de cuadre"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Ratios financieros, gráficos y diseño de tablero contable",
+      "activity": "Entrega de la Tarea 3: estados financieros y tablero automatizados; resolución del Cuestionario 3.",
+      "evidence": "Tarea 3 y Cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Estándares de modelamiento, auditoría de fórmulas, totales de control y documentación",
+      "activity": "Conformación de equipos del proyecto integrador; diseño de arquitectura, hoja Controles y portada; análisis del caso Inversiones Selva Central.",
+      "evidence": "Arquitectura del proyecto y respuestas al caso"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Protección, macros grabadas, VBA básico y seguridad de macros",
+      "activity": "Taller de VBA: macro de exportación con validación previa; revisión de avance del proyecto con rúbrica.",
+      "evidence": "Macro VBA comentada y avance revisado"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Combinación de correspondencia, informe en Word y presentación con la pirámide de Minto",
+      "activity": "Generación de cartas de cobranza combinadas, redacción del informe de cierre y ensayo de presentación; resolución del Cuestionario 4.",
+      "evidence": "Cartas, informe borrador y Cuestionario 4"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Sustentación del proyecto integrador de cierre mensual",
+      "activity": "Prueba de actualización con un mes nuevo, rastreo de cifras ante el jurado, presentación ejecutiva y defensa técnica individual.",
+      "evidence": "Proyecto integrador sustentado"
+    }
+  ]
+}

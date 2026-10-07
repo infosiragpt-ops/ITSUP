@@ -1,0 +1,1294 @@
+{
+  "name": "Ofimática Empresarial",
+  "slug": "ofimatica-empresarial",
+  "course_type": "especifica",
+  "module_name": "Gestión administrativa de la organización",
+  "credits": 3,
+  "hours_theory": 32,
+  "hours_practice": 32,
+  "summary": "Ofimática Empresarial es un curso de formación específica, de naturaleza teórico-práctica, ubicado en el segundo ciclo de la carrera de Administración. Su propósito es que el estudiante utilice las herramientas de productividad de oficina como sistemas de información para la gestión, más allá del manejo operativo aprendido en Herramientas Digitales para el Trabajo. Desarrolla cuatro unidades progresivas: modelado de libros de Excel con fórmulas, validación y controles de calidad; preparación y análisis de datos con funciones de búsqueda, Power Query, tablas dinámicas y gráficos; elaboración de informes, comunicaciones masivas y presentaciones ejecutivas integradas con Excel; y automatización con macros y VBA, análisis de escenarios con Solver y diseño de tableros de indicadores. Se trabaja con casos de organizaciones peruanas y con datos de ventas, cobranzas, planillas y operaciones. El curso aporta al perfil de egreso la capacidad de procesar información confiable y comunicar recomendaciones sustentadas, base para Costos y Presupuestos, Estadística para la Gestión y Analítica de Negocios.",
+  "competency": "Gestiona información administrativa de la organización mediante herramientas ofimáticas avanzadas, construyendo libros de cálculo auditables, análisis de datos, documentos y presentaciones ejecutivas, automatizaciones y tableros de indicadores que sustentan decisiones, con exactitud, criterios de calidad de datos y respeto a la normativa de protección de datos personales.",
+  "capacities": [
+    "Diseña libros de Excel estructurados en entradas, cálculos y salidas, con tablas, funciones lógicas, validación de datos y celdas de control que garantizan exactitud y trazabilidad.",
+    "Prepara, integra y analiza datos operativos con funciones de búsqueda, agregación condicional, Power Query y tablas dinámicas, y comunica los hallazgos con gráficos pertinentes.",
+    "Elabora informes, comunicaciones masivas y presentaciones ejecutivas con estilos, plantillas, combinación de correspondencia y vínculos con Excel, aplicando el principio de la pirámide y criterios de accesibilidad.",
+    "Automatiza tareas repetitivas con macros y VBA básico, evalúa escenarios con herramientas de análisis Y si y Solver, y diseña tableros de indicadores para el seguimiento de la gestión."
+  ],
+  "indicators": [
+    "Construye un libro de cálculo con parámetros nombrados, sin constantes en las fórmulas y con al menos tres celdas de control que cuadran con la fuente.",
+    "Calcula correctamente importes con IGV, comisiones y plazos de vencimiento, aplicando redondeo explícito y referencias adecuadas.",
+    "Implementa un flujo reproducible en Power Query que consolida varias fuentes, normaliza datos y detecta registros sin coincidencia.",
+    "Responde preguntas de gestión con tablas dinámicas y gráficos que incluyen título de conclusión, fuente, periodo y unidad de medida.",
+    "Produce un informe con estilos, tabla de contenido automática, referencias cruzadas y resumen ejecutivo estructurado con el esquema SCQA.",
+    "Desarrolla una macro documentada en VBA que procesa un número variable de registros sin errores y respeta las pautas de seguridad.",
+    "Diseña un tablero de cinco a ocho indicadores con fichas técnicas, metas, umbrales y segmentadores, y sustenta una recomendación con análisis de escenarios."
+  ],
+  "methodology": "El curso aplica aula invertida: antes de cada sesión síncrona el estudiante revisa la lectura y los videotutoriales de la semana en el aula virtual. Las sesiones en línea se organizan como talleres de práctica guiada, en los que el docente modela la técnica con datos reales y los estudiantes la replican y adaptan. Cada unidad se articula con el método de casos, analizando organizaciones peruanas y tomando decisiones sustentadas en equipos, y con aprendizaje basado en problemas mediante tareas aplicadas evaluadas con rúbricas. El proyecto integrador sigue el aprendizaje basado en proyectos con avances revisados. La evaluación formativa es continua: cuestionarios de unidad con retroalimentación inmediata, revisión entre pares de archivos y foros de consultas técnicas.",
+  "bibliography": [
+    "Alexander, M., Kusleika, R. y Walkenbach, J. (2018). Excel 2019 Bible. Wiley.",
+    "Winston, W. L. (2019). Microsoft Excel data analysis and business modeling (6.ª ed.). Microsoft Press.",
+    "Puls, K. y Escobar, M. (2021). Master your data with Power Query in Excel and Power BI (2.ª ed.). Holy Macro! Books.",
+    "Jelen, B. y Alexander, M. (2019). Microsoft Excel 2019 pivot table data crunching. Microsoft Press.",
+    "Knaflic, C. N. (2015). Storytelling with data: A data visualization guide for business professionals. Wiley.",
+    "Few, S. (2013). Information dashboard design: Displaying data for at-a-glance monitoring (2.ª ed.). Analytics Press.",
+    "Minto, B. (2009). The pyramid principle: Logic in writing and thinking (3.ª ed.). Pearson Education.",
+    "Duarte, N. (2010). Resonate: Present visual stories that transform audiences. Wiley.",
+    "Kaplan, R. S. y Norton, D. P. (1996). The balanced scorecard: Translating strategy into action. Harvard Business School Press.",
+    "Congreso de la República del Perú. (2011). Ley N.° 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano."
+  ],
+  "evaluation": [
+    {
+      "name": "Evaluación de proceso",
+      "weight": 30,
+      "description": "Promedio de los cuatro cuestionarios de unidad y de la participación en el análisis de casos y en los talleres síncronos de práctica guiada."
+    },
+    {
+      "name": "Evaluación de producto",
+      "weight": 40,
+      "description": "Promedio de las tareas aplicadas de las unidades 1 a 3: libro de comisiones auditable, análisis multisede con Power Query e informe ejecutivo con presentación, evaluadas con rúbrica."
+    },
+    {
+      "name": "Evaluación final",
+      "weight": 30,
+      "description": "Proyecto integrador: libro automatizado, tablero de indicadores, informe y exposición virtual, evaluado con rúbrica e incluyendo los avances de las semanas 14 y 15."
+    }
+  ],
+  "units": [
+    {
+      "title": "Unidad 1 · Excel como modelo de gestión: estructura, fórmulas y control de calidad",
+      "description": "Construye libros de Excel bien estructurados, con tablas, referencias correctas, funciones lógicas, validación de datos y auditoría de fórmulas, para registrar y calcular operaciones administrativas con exactitud y trazabilidad.",
+      "topics": [
+        "Riesgo de las hojas de cálculo y principios de modelado",
+        "Tablas estructuradas, tipos de datos y referencias",
+        "Funciones aritméticas, estadísticas y lógicas",
+        "Validación de datos y formato condicional",
+        "Auditoría, protección y documentación del libro"
+      ],
+      "slides": [
+        {
+          "title": "La hoja de cálculo como infraestructura crítica de la gestión",
+          "bullets": [
+            "Excel sigue siendo la herramienta analítica más usada en pymes y áreas administrativas de América Latina, incluso donde existe un ERP.",
+            "Los estudios de Raymond Panko sobre auditorías de campo encontraron errores en la gran mayoría de hojas de cálculo operativas revisadas.",
+            "Caso Reinhart y Rogoff (2010): un rango mal seleccionado en Excel alteró conclusiones sobre deuda pública y crecimiento, detectado por Herndon en 2013.",
+            "Caso JP Morgan (2012): un modelo de riesgo armado copiando y pegando entre hojas subestimó pérdidas de la operación conocida como London Whale.",
+            "Conclusión operativa: la ofimática empresarial no es digitar; es diseñar modelos confiables, auditables y comprensibles por terceros."
+          ],
+          "notes": "Abra la sesión preguntando: ¿cuántos de ustedes han recibido un archivo de Excel que no entendían o cuyos totales no cuadraban? Casi todos levantarán la mano. Use esa experiencia para plantear la tesis del curso: una hoja de cálculo es un sistema de información y, como tal, puede fallar. Explique brevemente los dos casos internacionales: en Reinhart y Rogoff, un estudiante de posgrado, Thomas Herndon, replicó el análisis y descubrió que se habían omitido cinco países del promedio por un rango mal seleccionado; en JP Morgan, el informe interno del banco reconoció que el modelo de valor en riesgo dependía de copiar y pegar datos manualmente. Traslade la lección a la realidad peruana: una planilla de comisiones mal calculada o un registro de ventas con el IGV redondeado de forma incorrecta genera reclamos, contingencias con SUNAT y pérdida de confianza. Pregunte: ¿qué controles mínimos debería tener un archivo antes de enviarse a gerencia? Anote las respuestas; volverán en la última diapositiva de la unidad."
+        },
+        {
+          "title": "Arquitectura de un libro: entradas, cálculos y salidas",
+          "bullets": [
+            "Separar en hojas distintas los supuestos o entradas, los datos transaccionales, los cálculos y los reportes de salida.",
+            "Las entradas se escriben una sola vez y se referencian; nunca se digitan constantes como 0.18 dentro de las fórmulas.",
+            "Flujo de izquierda a derecha y de arriba hacia abajo; una fórmula por fila o columna, consistente en todo el rango.",
+            "Estándares de modelado como FAST recomiendan fórmulas cortas, flexibles y transparentes, fáciles de auditar por otra persona.",
+            "Usar una convención de colores: celdas de entrada en un color, fórmulas en otro, vínculos externos claramente señalados."
+          ],
+          "notes": "Muestre en pantalla dos versiones del mismo cálculo de facturación: una con todo mezclado en una sola hoja y constantes escritas dentro de las fórmulas, y otra organizada en hojas de Supuestos, Ventas, Cálculo y Reporte. Pida a los estudiantes que cambien la tasa del IGV de 18 % a un valor hipotético en ambas versiones y que cronometren cuánto tardan. En la versión desordenada tendrán que buscar decenas de fórmulas; en la ordenada basta cambiar una celda. Explique que el estándar FAST, desarrollado por profesionales de modelado financiero, resume el objetivo en cuatro atributos: flexible, apropiado, estructurado y transparente. Insista en que la transparencia es un deber profesional: el archivo debe poder ser revisado por el jefe, el auditor o el colega que lo herede. Pregunte: ¿qué ocurre en una empresa cuando la única persona que entiende el archivo de costos se va de vacaciones o renuncia?"
+        },
+        {
+          "title": "Tablas estructuradas: la base de todo análisis posterior",
+          "bullets": [
+            "Convertir un rango en tabla con Ctrl+T crea un objeto con nombre, encabezados fijos y expansión automática al agregar filas.",
+            "Las referencias estructuradas como =[@Cantidad]*[@PrecioUnitario] se leen como lenguaje natural y se copian solas en toda la columna.",
+            "Reglas de diseño: una fila por registro, una columna por variable, sin celdas combinadas ni filas de subtotal intercaladas.",
+            "Las tablas alimentan sin ajustes manuales a tablas dinámicas, gráficos, Power Query y funciones de búsqueda.",
+            "Nombrar las tablas con prefijos claros, por ejemplo tVentas, tClientes o tProductos, facilita fórmulas y mantenimiento."
+          ],
+          "notes": "Haga una demostración en vivo con un registro de ventas de una distribuidora de útiles de oficina de Lima. Primero trabaje como rango normal: agregue una fila nueva y muestre que la suma total no la incluye. Luego conviértalo en tabla, nómbrelo tVentas y repita la operación: el total y el gráfico se actualizan solos. Explique la sintaxis de las referencias estructuradas: el símbolo arroba indica la misma fila y los corchetes, el nombre de la columna. Relacione esta práctica con el concepto de datos ordenados que se profundizará en la unidad 2. Advierta sobre los errores típicos que encontrarán en el trabajo: celdas combinadas en los encabezados, filas en blanco para separar meses, subtotales escritos a mano en medio de los datos. Todos ellos rompen las herramientas de análisis. Proponga un ejercicio breve: cada estudiante identifica en un archivo real de su trabajo o de un familiar qué viola estas reglas."
+        },
+        {
+          "title": "Tipos de datos: números, textos y fechas no son lo mismo",
+          "bullets": [
+            "Excel almacena las fechas como números de serie: el 1 corresponde al 1 de enero de 1900, lo que permite restarlas y sumarles días.",
+            "Un número guardado como texto, frecuente al exportar desde sistemas, no se suma y provoca fallas silenciosas en búsquedas.",
+            "El formato solo cambia la apariencia; el valor almacenado conserva todos sus decimales y es el que se usa en los cálculos.",
+            "Formatos personalizados útiles: \"S/\" #,##0.00 para soles, 00000000000 para conservar los 11 dígitos del RUC.",
+            "El RUC, el DNI y los códigos de producto deben tratarse como texto, pues no son cantidades y pueden tener ceros a la izquierda."
+          ],
+          "notes": "Esta diapositiva previene muchos de los errores más costosos. Muestre un archivo exportado de un sistema de facturación en el que la columna de importes viene como texto: la función SUMA devuelve cero o un valor parcial, y nadie lo nota si no compara con un total de control. Enseñe cómo detectarlo: alineación a la izquierda, el triángulo verde de advertencia o la función ESNUMERO. Luego explique las fechas: escriba una fecha, cámbiele el formato a General y muestre el número de serie. Explique que gracias a ello se puede calcular la antigüedad de una cuenta por cobrar restando fechas. Finalmente, discuta el caso del DNI y del RUC: si se ingresan como número, un DNI que empieza con cero pierde ese dígito y deja de coincidir con el padrón. Pregunte: ¿en qué columnas de una planilla de personal deberían usarse formatos de texto y en cuáles numéricos?"
+        },
+        {
+          "title": "Referencias relativas, absolutas y mixtas",
+          "bullets": [
+            "Relativa (A2): se ajusta al copiar; sirve cuando cada fila repite el mismo cálculo con sus propios datos.",
+            "Absoluta ($B$1): permanece fija; se usa para supuestos únicos como la tasa del IGV o el tipo de cambio del día.",
+            "Mixta ($A2 o A$1): fija solo la columna o la fila; indispensable para construir tablas de doble entrada.",
+            "La tecla F4 alterna entre los cuatro tipos de referencia mientras se edita la fórmula.",
+            "Ejemplo: tabla de precios con descuentos por volumen donde =$B5*(1-C$4) calcula toda la matriz con una sola fórmula."
+          ],
+          "notes": "Construya con los estudiantes una matriz de precios: en la columna B, precios de lista de cinco productos; en la fila 4, descuentos de 0 %, 5 %, 10 % y 15 %. Pida que escriban la fórmula en la primera celda y la copien a toda la matriz. La mayoría fallará en el primer intento, lo cual es deseable: analice por qué la referencia relativa se desplaza y cómo los signos de dólar resuelven el problema. Relacione con un caso real: el tipo de cambio publicado por la SBS o el BCRP se registra una sola vez en la hoja de supuestos y se referencia en forma absoluta en todas las conversiones. Explique que un error de referencia no produce un mensaje de error: produce un número incorrecto que parece correcto, el peor tipo de falla. Pregunte: ¿cómo verificarían rápidamente que la fórmula copiada en la última fila apunta a las celdas correctas? Introduzca el atajo Ctrl+` para mostrar fórmulas."
+        },
+        {
+          "title": "Operaciones con importes: IGV, redondeo y precisión",
+          "bullets": [
+            "Valor de venta = precio de venta / 1.18; IGV = precio de venta − valor de venta, cuando el precio publicado incluye el impuesto.",
+            "REDONDEAR(x;2) cambia el valor almacenado; el formato de dos decimales solo lo oculta y puede producir descuadres de céntimos.",
+            "Redondear en cada línea o en el total da resultados distintos; la política debe coincidir con la del sistema de facturación electrónica.",
+            "Jerarquía de operadores: paréntesis, potencias, multiplicación y división, luego suma y resta; los paréntesis evitan ambigüedades.",
+            "Verificar siempre: valor de venta más IGV debe ser exactamente igual al importe total del comprobante."
+          ],
+          "notes": "Plantee el problema de los céntimos, que en la práctica administrativa genera horas de conciliación. Muestre una factura con diez líneas: si el IGV se calcula línea por línea y se redondea, el total puede diferir en uno o dos céntimos del IGV calculado sobre la suma. Explique que ambos métodos pueden ser válidos, pero el registro de ventas de Excel debe replicar la lógica del comprobante electrónico emitido, porque la información se contrasta con lo que SUNAT recibe. Escriba en pantalla las fórmulas con referencia a la celda de la tasa: =REDONDEAR([@PrecioVenta]/(1+Tasa_IGV);2) y =[@PrecioVenta]-[@ValorVenta]. Destaque que el IGV se obtiene por diferencia para garantizar el cuadre. Recuerde que el IGV peruano es de 16 % más 2 % de Impuesto de Promoción Municipal, de ahí el 18 %. Pregunte: ¿qué pasaría si el área de ventas redondea por línea y contabilidad por total?"
+        },
+        {
+          "title": "Funciones lógicas para reglas de negocio",
+          "bullets": [
+            "SI(prueba;valor_si_verdadero;valor_si_falso) traduce una política empresarial en una decisión automática y verificable.",
+            "Y y O combinan condiciones: bono si cumple la meta Y no tiene tardanzas; alerta si el stock es bajo O el producto está agotado.",
+            "SI.CONJUNTO evalúa condiciones en orden y evita anidar muchos SI difíciles de leer y de auditar.",
+            "Ejemplo de comisión escalonada: =SI.CONJUNTO([@Ventas]>=50000;5%;[@Ventas]>=30000;3%;VERDADERO;1%).",
+            "Antes de escribir la fórmula, documentar la regla en una tabla de parámetros que el área usuaria pueda revisar."
+          ],
+          "notes": "Parta de una política comercial real redactada en lenguaje natural: los vendedores reciben 5 % de comisión si venden 50 000 soles o más, 3 % si venden entre 30 000 y 49 999, y 1 % en los demás casos. Pida a los estudiantes que la traduzcan primero a un diagrama de decisión y luego a una fórmula. Muestre la diferencia entre un SI anidado de tres niveles y SI.CONJUNTO, y enfatice el orden de evaluación: si se invierte el orden de las condiciones, todos los vendedores recibirían la comisión del tramo inferior. Luego eleve el nivel: proponga que los tramos se guarden en una tabla de parámetros para que el área comercial pueda modificarlos sin tocar las fórmulas, y anticipe que en la unidad 2 se resolverá con BUSCARX en coincidencia aproximada. Pregunte: ¿quién debería aprobar el cambio de una regla de comisiones y cómo debería quedar registrado en el archivo?"
+        },
+        {
+          "title": "Funciones estadísticas básicas y lectura crítica de resultados",
+          "bullets": [
+            "SUMA, PROMEDIO, MEDIANA, MAX y MIN resumen un conjunto de datos; cada una responde una pregunta distinta de gestión.",
+            "CONTAR cuenta celdas numéricas, CONTARA cuenta celdas no vacías y CONTAR.BLANCO detecta registros incompletos.",
+            "El promedio es sensible a valores extremos: un pedido corporativo excepcional puede distorsionar el ticket promedio de una tienda.",
+            "Comparar media y mediana es una prueba rápida de asimetría antes de reportar un indicador a gerencia.",
+            "Todo indicador debe acompañarse del número de observaciones que lo sustentan y del periodo que cubre."
+          ],
+          "notes": "Use un conjunto de datos de 30 ventas diarias de una tienda en línea de Arequipa donde una venta corporativa de 12 000 soles convive con ventas típicas de entre 80 y 400 soles. Calcule con los estudiantes el promedio y la mediana: la diferencia será notable. Pregunte qué cifra reportarían como ticket promedio y por qué. Conecte con lo aprendido en Matemática para los Negocios y anticipe Estadística para la Gestión del tercer ciclo, donde estos conceptos se formalizarán. Muestre también cómo CONTARA y CONTAR.BLANCO ayudan a verificar la completitud del registro: si la columna de RUC tiene diez celdas vacías, ningún análisis por cliente será confiable. Cierre con la regla profesional: un número sin contexto, sin periodo y sin base de cálculo no es información, es ruido. Pida que cada estudiante redacte una oración que comunique correctamente el ticket típico de la tienda."
+        },
+        {
+          "title": "Validación de datos: calidad desde el origen",
+          "bullets": [
+            "Prevenir es más barato que corregir: la validación impide ingresar valores fuera de las reglas definidas por el negocio.",
+            "Listas desplegables vinculadas a una tabla de catálogo para sedes, centros de costo, formas de pago o tipos de comprobante.",
+            "Reglas de longitud y tipo: RUC con exactamente 11 caracteres, DNI con 8, fechas dentro del periodo contable abierto.",
+            "Validación personalizada con fórmulas, por ejemplo =Y(LARGO(A2)=11;IZQUIERDA(A2;2)=\"20\") para RUC de personas jurídicas.",
+            "Configurar mensajes de entrada y de error que expliquen al usuario qué dato se espera y por qué."
+          ],
+          "notes": "Explique el principio de calidad en la fuente: cada error que se deja entrar en el registro se multiplica en los reportes posteriores. Demuestre la creación de una lista desplegable de centros de costo alimentada por una tabla, de modo que al agregar un nuevo centro la lista se actualice. Después configure una validación personalizada para el RUC. Aclare que los RUC de personas jurídicas comienzan con 20 y los de personas naturales con negocio con 10, y que existen otros prefijos, por lo que la regla debe ajustarse al tipo de proveedor que maneja la empresa. Muestre el mensaje de error personalizado. Advierta una limitación importante: la validación no impide pegar datos desde otra fuente, por lo que debe complementarse con controles de revisión, como el formato condicional de la siguiente diapositiva o la opción Rodear con un círculo datos no válidos. Pregunte: ¿qué campos de un formulario de reembolso de gastos validarían ustedes?"
+        },
+        {
+          "title": "Formato condicional para alertas de gestión",
+          "bullets": [
+            "El formato condicional resalta automáticamente las excepciones que requieren acción: vencimientos, desviaciones y duplicados.",
+            "Reglas por fórmula: =Y([@Vencimiento]<HOY();[@Saldo]>0) colorea las facturas vencidas y pendientes de cobro.",
+            "Escalas de color y barras de datos sirven para comparar magnitudes; los conjuntos de iconos, para estados discretos.",
+            "Usar pocos colores con significado consistente: rojo para riesgo, ámbar para atención y sin color para lo normal.",
+            "Considerar personas con daltonismo: combinar color con texto o iconos y no depender solo del rojo y verde."
+          ],
+          "notes": "Trabaje con una cartera de cuentas por cobrar de 40 clientes. Pida a los estudiantes que identifiquen a simple vista las facturas vencidas: tardarán. Luego aplique una regla por fórmula que combine fecha de vencimiento y saldo pendiente; el patrón aparece de inmediato. Explique la lógica de la gestión por excepción: el responsable de cobranzas no necesita revisar las 40 filas, sino las seis que requieren llamada hoy. Muestre también la regla de valores duplicados aplicada a números de comprobante, un control sencillo que detecta facturas registradas dos veces. Advierta contra el exceso: un reporte con diez colores distintos no comunica nada. Recuerde el principio de accesibilidad: aproximadamente uno de cada doce varones tiene alguna forma de deficiencia en la visión del color, por lo que conviene acompañar el color con un texto como Vencida. Pregunte: ¿qué tres alertas serían prioritarias en un control de inventarios?"
+        },
+        {
+          "title": "Nombres definidos y LET: fórmulas que se explican solas",
+          "bullets": [
+            "Un nombre definido como Tasa_IGV o TipoCambio reemplaza referencias crípticas como Supuestos!$C$4 y documenta la intención.",
+            "El Administrador de nombres (Ctrl+F3) permite revisar, editar y eliminar nombres, y detectar los que apuntan a errores.",
+            "LET asigna nombres a resultados intermedios dentro de una fórmula, evita repetir cálculos y mejora el rendimiento.",
+            "Ejemplo: =LET(vv;[@Precio]/(1+Tasa_IGV);igv;[@Precio]-vv;REDONDEAR(igv;2)) separa el razonamiento en pasos legibles.",
+            "Regla práctica: si una fórmula no cabe en una línea de la barra de fórmulas, probablemente debe descomponerse."
+          ],
+          "notes": "Muestre una fórmula larga real tomada de un archivo de costos, con referencias a otras hojas y anidamientos múltiples, y pida a los estudiantes que expliquen qué calcula. Después muestre la misma lógica con nombres definidos y LET. La diferencia en comprensión es evidente. Explique que LET está disponible en Microsoft 365 y Excel 2021 y que, si la empresa usa versiones anteriores, el mismo objetivo se logra con columnas auxiliares bien rotuladas. Esta es una decisión de diseño importante: un modelo que solo funciona en la versión del autor puede fallar en la computadora del gerente. Haga que los estudiantes reescriban una fórmula de comisión con LET. Pregunte: ¿qué ventajas y desventajas tiene usar columnas auxiliares frente a fórmulas con LET desde el punto de vista de la auditoría? No hay una respuesta única; el criterio es la transparencia para el usuario del archivo."
+        },
+        {
+          "title": "Auditoría de fórmulas y tratamiento de errores",
+          "bullets": [
+            "Rastrear precedentes y dependientes muestra con flechas de dónde viene y a dónde va cada cálculo.",
+            "Evaluar fórmula ejecuta el cálculo paso a paso; la ventana Inspección vigila celdas clave mientras se modifican otras hojas.",
+            "Errores frecuentes: #¡DIV/0! por divisor vacío, #N/D por búsqueda sin coincidencia, #¡VALOR! por texto en una operación.",
+            "SI.ERROR debe usarse con criterio: ocultar todos los errores con cero esconde problemas reales del modelo.",
+            "Incluir celdas de control que comparen totales calculados con totales de fuente y muestren VERDADERO o FALSO."
+          ],
+          "notes": "Entregue a los estudiantes un archivo con cinco errores sembrados: una referencia desplazada, un número guardado como texto, un rango de suma incompleto, una división entre una celda vacía y una búsqueda que falla por espacios adicionales. Deles diez minutos para encontrarlos usando las herramientas de auditoría. Luego revise en conjunto. Enfatice el debate sobre SI.ERROR: envolver toda fórmula en SI.ERROR con resultado cero es una práctica frecuente y peligrosa, porque un producto no encontrado en el catálogo aparecerá con precio cero en lugar de alertar. Proponga la alternativa de devolver un texto visible como Revisar o usar SI.ND solo para el error esperado. Introduzca el concepto de celda de control: por ejemplo, la suma del registro de ventas debe coincidir con el total del reporte del sistema; si no coincide, la celda se pinta de rojo. Pregunte: ¿qué controles automáticos pondrían en una planilla de remuneraciones?"
+        },
+        {
+          "title": "Protección, versiones y documentación del libro",
+          "bullets": [
+            "Proteger hojas permite bloquear fórmulas y dejar desbloqueadas solo las celdas de entrada; no es un mecanismo de seguridad fuerte.",
+            "Una hoja Léame debe indicar propósito, autor, fecha, fuentes, supuestos, instrucciones de uso y registro de cambios.",
+            "Convención de versiones: nombre_AAAAMMDD_v01 o, mejor, historial de versiones en la nube para evitar archivos final_final2.",
+            "Si el libro contiene datos personales de clientes o trabajadores, aplica la Ley 29733 y su reglamento: acceso restringido y finalidad.",
+            "Antes de enviar: revisar vínculos externos, hojas ocultas, comentarios internos y metadatos con Inspeccionar documento."
+          ],
+          "notes": "Cierre la unidad con la dimensión profesional y legal. Explique que la protección de hojas de Excel evita errores accidentales, pero puede quebrarse con facilidad, por lo que no sustituye los permisos de acceso en la nube ni el cifrado con contraseña del archivo. Recupere lo visto en Herramientas Digitales para el Trabajo sobre versiones y respaldo, y aplíquelo al modelo: la hoja Léame es la memoria del archivo. Comente un incidente frecuente: un área envía a un proveedor un archivo con una hoja oculta que contiene sueldos del personal o datos de clientes. Además del daño reputacional, puede constituir una infracción a la Ley de Protección de Datos Personales, cuya autoridad es la Autoridad Nacional de Protección de Datos Personales del Ministerio de Justicia. Demuestre Inspeccionar documento. Retome la lista de controles que la clase propuso en la primera diapositiva y conviértala en una lista de verificación que usarán en la tarea de la unidad."
+        }
+      ],
+      "reading": {
+        "title": "Modelar antes de calcular: principios para hojas de cálculo confiables",
+        "minutes": 30,
+        "content": "## La hoja de cálculo como sistema de información\n\nEn la mayoría de pymes peruanas, la hoja de cálculo cumple funciones que en una gran corporación corresponderían a un sistema especializado: registro de ventas, control de inventarios, cálculo de comisiones, flujo de caja. Esa versatilidad es su fortaleza y su riesgo. Raymond Panko, investigador de la Universidad de Hawái, documentó en sus revisiones de auditorías de campo que la mayoría de hojas operativas contiene al menos un error significativo y que los autores tienden a sobrestimar la exactitud de sus propios archivos. El problema no es Excel, sino la ausencia de diseño.\n\n## Tres capas: entradas, cálculos y salidas\n\nUn modelo bien construido separa tres capas. Las **entradas** son los supuestos y parámetros (tasa del IGV, tipo de cambio, tramos de comisión) y los datos transaccionales (ventas, compras, asistencia). Los **cálculos** transforman esas entradas mediante fórmulas consistentes. Las **salidas** presentan resultados para decidir: reportes, gráficos, indicadores. Esta separación permite cambiar un supuesto en un solo lugar y propagarlo a todo el modelo, y facilita que un revisor siga la lógica.\n\nLas guías de modelado de la práctica profesional, como el estándar FAST (flexible, apropiado, estructurado y transparente), coinciden en reglas sencillas: no escribir constantes dentro de las fórmulas, mantener una sola fórmula por columna, evitar fórmulas larguísimas y diferenciar visualmente las celdas de entrada.\n\n## Datos en tablas estructuradas\n\nLa tabla de Excel es el objeto central del curso. Un registro bien diseñado cumple tres reglas: cada fila es una observación (una línea de comprobante), cada columna es una variable (fecha, RUC, producto, cantidad, precio) y cada celda contiene un solo valor. Las tablas se expanden automáticamente y admiten referencias estructuradas:\n\n```\n=[@Cantidad]*[@PrecioUnitario]            → importe de la línea\n=SUMA(tVentas[Importe])                   → total de la columna\n```\n\n## Tipos de datos y precisión\n\nExcel distingue números, textos, fechas y valores lógicos. Las fechas son números de serie, lo que permite calcular plazos: `=[@FechaVencimiento]-[@FechaEmision]` devuelve los días de crédito. El RUC y el DNI deben guardarse como texto porque son identificadores, no cantidades.\n\nEl formato no altera el valor almacenado. Si una celda muestra 10.53 pero contiene 10.5294, cualquier suma usará el valor completo. Por ello, en importes tributarios se redondea explícitamente:\n\n```\nValor de venta  = REDONDEAR(PrecioVenta/(1+Tasa_IGV);2)\nIGV             = PrecioVenta - ValorVenta\nComprobación    = ValorVenta + IGV = PrecioVenta   -> VERDADERO\n```\n\nEjemplo: un producto con precio de venta de S/ 236.00 tiene un valor de venta de S/ 200.00 y un IGV de S/ 36.00 (16 % de IGV más 2 % de Impuesto de Promoción Municipal). Calcular el impuesto por diferencia garantiza que la suma cuadre al céntimo con el comprobante electrónico.\n\n## Referencias y reglas de negocio\n\nLas referencias relativas se ajustan al copiar; las absolutas permanecen fijas; las mixtas fijan fila o columna. Un nombre definido (`Tasa_IGV`) es preferible a `$C$4` porque comunica el propósito. Las reglas de negocio se traducen con funciones lógicas:\n\n```\n=SI.CONJUNTO([@Ventas]>=50000;5%;\n             [@Ventas]>=30000;3%;\n             VERDADERO;1%)\n```\n\nEl orden importa: las condiciones se evalúan de arriba hacia abajo y se aplica la primera verdadera. Lo ideal es guardar los tramos en una tabla de parámetros que el área usuaria pueda revisar y aprobar.\n\n## Calidad en el origen y control posterior\n\nLa validación de datos evita errores al ingresar información: listas desplegables para centros de costo, longitud de 11 caracteres para el RUC, fechas dentro del periodo abierto. El formato condicional destaca excepciones (facturas vencidas, comprobantes duplicados). Las herramientas de auditoría (rastrear precedentes, evaluar fórmula, ventana Inspección) permiten revisar la lógica. Y las **celdas de control** comparan el total calculado con un total independiente, por ejemplo el reporte del sistema de facturación:\n\n```\n=REDONDEAR(SUMA(tVentas[Total]);2)=REDONDEAR(Control_Sistema;2)\n```\n\n## Responsabilidad profesional\n\nUn archivo con datos de clientes o trabajadores está sujeto a la Ley 29733, Ley de Protección de Datos Personales: debe tratarse solo para la finalidad declarada y con acceso restringido. Antes de compartir un libro conviene inspeccionarlo para retirar hojas ocultas, comentarios y metadatos. Documentar el modelo en una hoja Léame (propósito, autor, fuentes, supuestos, registro de cambios) no es burocracia: es lo que convierte un archivo personal en un activo de la organización.\n\n## Para reflexionar\n\nPiense en el último archivo de Excel que recibió en su trabajo o estudios. ¿Podría identificar sus entradas, cálculos y salidas? ¿Qué control automático le habría permitido confiar en sus resultados sin rehacerlos?"
+      },
+      "case": {
+        "title": "Caso: Las comisiones que nadie podía explicar en Distribuidora Andina del Sur",
+        "content": "**Distribuidora Andina del Sur S.A.C.** es una empresa arequipeña que comercializa productos de limpieza e higiene a bodegas, minimarkets y restaurantes de Arequipa, Moquegua y Tacna. Factura alrededor de S/ 9.6 millones al año, tiene 48 trabajadores y 14 vendedores de campo que cobran un sueldo fijo más comisiones.\n\nDesde 2019, las comisiones se calculan en un libro de Excel que creó el anterior asistente comercial. El archivo tiene 22 hojas, una por mes y varias auxiliares, y nadie en la empresa conoce toda su lógica. Cada mes, la asistente administrativa, Lucía Quispe, exporta las ventas del sistema de facturación electrónica, las pega en la hoja del mes y copia las fórmulas del mes anterior.\n\nEn marzo, tres vendedores reclamaron. Sus propios cálculos, hechos con las facturas emitidas, daban comisiones mayores que las pagadas. Al revisar, Lucía encontró varios problemas:\n\n- La tasa de comisión del tramo superior estaba escrita directamente en las fórmulas (0.05) en unas hojas y en otras como 0.045, una política que gerencia había cambiado en 2022 y luego revertido.\n- La columna de importes exportada venía en formato texto en 37 filas, que la función SUMA ignoraba.\n- La suma total de la hoja de marzo abarcaba el rango C2:C410, pero ese mes hubo 436 líneas de venta.\n- Las ventas se comisionaban con IGV incluido para unos vendedores y sin IGV para otros, según quién hubiera copiado la fórmula.\n- Las notas de crédito por devoluciones no se descontaban.\n\nEl gerente comercial, Raúl Mendoza, estima que en los últimos doce meses las diferencias podrían sumar entre S/ 8 000 y S/ 15 000, a favor o en contra de los vendedores. Además, el contador advirtió que la base de cálculo debe coincidir con las ventas declaradas en el Registro de Ventas, porque las comisiones se registran como gasto deducible.\n\nRaúl tiene tres opciones: (1) corregir el archivo actual parchando los errores detectados; (2) rediseñar un nuevo libro con tablas, parámetros y controles, lo que tomaría unas tres semanas de trabajo de Lucía; o (3) solicitar al proveedor del ERP un módulo de comisiones con un costo de S/ 18 000 y un plazo de cuatro meses. Los vendedores exigen una respuesta en la reunión del próximo lunes, y Raúl teme que la credibilidad del área esté en juego.",
+        "questions": [
+          "¿Qué principios de modelado de hojas de cálculo se incumplieron y qué consecuencia concreta produjo cada uno en el cálculo de comisiones?",
+          "¿Cuál de las tres opciones recomendaría a Raúl Mendoza? Sustente con criterios de costo, plazo, riesgo y control interno.",
+          "Diseñe la estructura de hojas y tablas del nuevo libro: entradas, cálculos, salidas y celdas de control que incluiría.",
+          "¿Cómo resolvería las diferencias del último año con los vendedores sin dañar la relación laboral ni generar nuevas contingencias tributarias?"
+        ]
+      },
+      "assignment": {
+        "title": "Rediseño auditable de un libro de comisiones y ventas",
+        "instructions": "**Objetivo:** aplicar los principios de modelado de la unidad para convertir un registro desordenado en un libro confiable y auditable.\n\n**Insumo:** el archivo *ventas_marzo.xlsx* disponible en el aula virtual, con 436 líneas de venta exportadas de un sistema de facturación, notas de crédito y la política de comisiones vigente de una distribuidora.\n\n**Qué entregar:**\n\n1. Un libro de Excel (.xlsx) con al menos estas hojas: *Léame*, *Parámetros*, *Ventas* (tabla estructurada), *Cálculo* y *Reporte*.\n2. Parámetros en celdas con nombre definido: tasa del IGV y tramos de comisión. Ninguna constante escrita dentro de las fórmulas.\n3. Cálculo del valor de venta e IGV con redondeo explícito y descuento de notas de crédito.\n4. Comisión por vendedor calculada con SI.CONJUNTO o con una tabla de tramos.\n5. Validación de datos en las columnas de vendedor y tipo de comprobante, y formato condicional que destaque registros incompletos o duplicados.\n6. Al menos tres celdas de control con resultado VERDADERO/FALSO (por ejemplo, total calculado igual al total del sistema).\n7. Un memorando de una página (PDF) dirigido al gerente comercial con los errores encontrados en el archivo original y su impacto en soles.\n\n**Formato:** archivos nombrados *Apellido_U1_comisiones.xlsx* y *Apellido_U1_memo.pdf*. Entrega individual en la semana 4.\n\n**Criterios:** se evaluará con la rúbrica adjunta; un libro cuyas celdas de control den FALSO sin explicación no podrá obtener el puntaje máximo en exactitud.",
+        "rubric": [
+          {
+            "name": "Estructura del libro y documentación en la hoja Léame",
+            "points": 4
+          },
+          {
+            "name": "Exactitud de cálculos de IGV, notas de crédito y comisiones",
+            "points": 6
+          },
+          {
+            "name": "Validación, formato condicional y celdas de control",
+            "points": 5
+          },
+          {
+            "name": "Memorando: diagnóstico de errores e impacto cuantificado",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 1: modelado, fórmulas y control de calidad",
+        "questions": [
+          {
+            "prompt": "Un modelo de facturación tiene la tasa 0.18 escrita dentro de 600 fórmulas. Desde la perspectiva del modelado, ¿cuál es el principal problema?",
+            "options": [
+              "Cambiar el supuesto exige editar cada fórmula y aumenta el riesgo de inconsistencias",
+              "Excel calcula más lento cuando las fórmulas contienen números",
+              "Las constantes impiden aplicar formato de moneda a los resultados",
+              "El archivo no podrá abrirse en versiones anteriores de Excel"
+            ],
+            "correct": 0,
+            "explanation": "Las constantes embebidas violan la separación de entradas y cálculos: un cambio de política obliga a buscar y editar cientos de fórmulas, y basta olvidar una para generar resultados inconsistentes."
+          },
+          {
+            "prompt": "Un precio de venta es S/ 236.00 con IGV incluido. ¿Qué secuencia de cálculo garantiza que valor de venta más IGV cuadre al céntimo?",
+            "options": [
+              "Valor de venta = REDONDEAR(236/1.18;2) e IGV = 236 − valor de venta",
+              "IGV = 236 × 0.18 y valor de venta = 236 − IGV",
+              "Valor de venta = 236 × 0.82 e IGV = 236 × 0.18",
+              "Aplicar formato de dos decimales a 236/1.18 y a 236 × 0.18"
+            ],
+            "correct": 0,
+            "explanation": "El IGV se obtiene sobre el valor de venta, no sobre el precio. Calcularlo por diferencia tras redondear el valor de venta asegura el cuadre exacto con el comprobante."
+          },
+          {
+            "prompt": "Se copia la fórmula =B5*(1-C4) a una matriz de precios por descuentos y los resultados son erróneos. ¿Qué fórmula corregida permite copiar en toda la matriz?",
+            "options": [
+              "=$B5*(1-C$4)",
+              "=$B$5*(1-$C$4)",
+              "=B$5*(1-$C4)",
+              "=B5*(1-C4) copiada con pegado especial de valores"
+            ],
+            "correct": 0,
+            "explanation": "Los precios están en la columna B (se fija la columna) y los descuentos en la fila 4 (se fija la fila). Las referencias mixtas permiten construir la tabla de doble entrada con una sola fórmula."
+          },
+          {
+            "prompt": "La regla es: 5 % si ventas ≥ 50 000; 3 % si ventas ≥ 30 000; 1 % en otro caso. ¿Qué ocurre con =SI.CONJUNTO(A2>=30000;3%;A2>=50000;5%;VERDADERO;1%)?",
+            "options": [
+              "Un vendedor con 60 000 recibe 3 % porque la primera condición verdadera es la que se aplica",
+              "La fórmula devuelve error porque las condiciones se superponen",
+              "Funciona correctamente porque SI.CONJUNTO busca la condición más exigente",
+              "Todos los vendedores reciben 1 % por la condición VERDADERO final"
+            ],
+            "correct": 0,
+            "explanation": "SI.CONJUNTO evalúa en orden y se detiene en la primera condición verdadera. Por eso los tramos deben ordenarse del más exigente al menos exigente."
+          },
+          {
+            "prompt": "En una exportación del sistema, la función SUMA del registro de ventas devuelve un total menor que el reporte del sistema. ¿Cuál es la causa más probable y su control?",
+            "options": [
+              "Importes almacenados como texto; detectarlos con ESNUMERO y una celda de control contra el total del sistema",
+              "Exceso de decimales; aplicar formato de número con dos decimales",
+              "La hoja está protegida; desprotegerla para que SUMA funcione",
+              "El archivo supera el límite de filas; dividirlo en varios libros"
+            ],
+            "correct": 0,
+            "explanation": "SUMA ignora números guardados como texto sin mostrar error. Verificar el tipo de dato y comparar contra un total independiente detecta esta falla silenciosa."
+          },
+          {
+            "prompt": "Un analista envuelve todas sus búsquedas de precios en SI.ERROR(...;0). ¿Por qué un auditor lo objetaría?",
+            "options": [
+              "Porque un producto inexistente en el catálogo aparecerá con precio cero sin alertar a nadie",
+              "Porque SI.ERROR no funciona con referencias estructuradas",
+              "Porque SI.ERROR hace que el libro no pueda guardarse en formato .xlsx",
+              "Porque los ceros no pueden sumarse con otros importes"
+            ],
+            "correct": 0,
+            "explanation": "Ocultar errores con cero convierte un problema detectable en un dato aparentemente válido. Es preferible un mensaje visible como Revisar o tratar solo el error esperado."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes campos de un registro de proveedores debería almacenarse como texto y validarse por longitud?",
+            "options": [
+              "El número de RUC del proveedor",
+              "El monto de la factura en soles",
+              "La fecha de emisión del comprobante",
+              "La cantidad de unidades compradas"
+            ],
+            "correct": 0,
+            "explanation": "El RUC es un identificador de 11 caracteres, no una cantidad; como texto conserva todos sus dígitos y puede validarse con LARGO para evitar registros incompletos."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 2 · Análisis de datos empresariales: búsqueda, transformación y tablas dinámicas",
+      "description": "Prepara, integra y analiza datos operativos de la empresa mediante funciones de texto, fecha y búsqueda, agregación condicional, Power Query, tablas dinámicas y gráficos, para responder preguntas de gestión con evidencia verificable.",
+      "topics": [
+        "Datos ordenados y limpieza con funciones de texto y fecha",
+        "Búsqueda y referencia: BUSCARX, INDICE y COINCIDIR",
+        "Agregación condicional y matrices dinámicas",
+        "Power Query para obtener y transformar datos",
+        "Tablas dinámicas, gráficos y validación del análisis"
+      ],
+      "slides": [
+        {
+          "title": "Del registro operativo al dato analizable",
+          "bullets": [
+            "Hadley Wickham (2014) define datos ordenados: cada variable en una columna, cada observación en una fila, cada tipo de unidad en una tabla.",
+            "Los reportes que exportan los sistemas suelen venir pensados para imprimir: encabezados repetidos, subtotales y meses como columnas.",
+            "Se estima que la preparación de datos consume la mayor parte del tiempo de un análisis; automatizarla libera tiempo para interpretar.",
+            "Modelo relacional mínimo: una tabla de hechos (ventas) y tablas de dimensiones (clientes, productos, vendedores) unidas por códigos.",
+            "Pregunta guía de la unidad: ¿qué decisión se tomará con este análisis y qué datos mínimos necesita?"
+          ],
+          "notes": "Abra la unidad mostrando un reporte de ventas exportado de un ERP típico: tiene el logo de la empresa en las primeras filas, subtotales por vendedor, meses en columnas y celdas combinadas. Pregunte: ¿cómo calcularían las ventas por producto y región con este archivo? La respuesta honesta es que primero habría que reconstruirlo. Presente el concepto de datos ordenados de Wickham, publicado en el Journal of Statistical Software, y muestre la versión ordenada del mismo reporte. Luego introduzca la idea de tabla de hechos y tablas de dimensiones, base del modelado de datos que verán en Analítica de Negocios del quinto ciclo. Explique que el código de cliente o de producto es la llave que conecta las tablas, y que por eso su calidad es crítica. Cierre con la pregunta guía: todo análisis empieza por la decisión que se quiere tomar, no por los datos disponibles. Pida a los estudiantes que formulen una pregunta de gestión para su área de interés."
+        },
+        {
+          "title": "Limpieza de textos: el paso que nadie ve y todos necesitan",
+          "bullets": [
+            "ESPACIOS elimina espacios sobrantes y LIMPIAR quita caracteres no imprimibles que impiden coincidencias en búsquedas.",
+            "MAYUSC, MINUSC y NOMPROPIO uniforman nombres de clientes y ciudades escritos de forma distinta por cada usuario.",
+            "IZQUIERDA, DERECHA, EXTRAE y LARGO separan partes de un código; TEXTOANTES y TEXTODESPUES dividen por un delimitador.",
+            "Ejemplo: de la serie y número F001-00004587, =TEXTOANTES([@Comprobante];\"-\") devuelve la serie F001.",
+            "Convertir textos numéricos con VALOR o multiplicando por 1, y documentar cada transformación aplicada."
+          ],
+          "notes": "Trabaje con una lista de clientes donde Lima aparece escrita de seis formas distintas: LIMA, lima, Lima con espacio final, Lima Metropolitana, entre otras. Una tabla dinámica mostraría seis ciudades. Demuestre cómo ESPACIOS y NOMPROPIO resuelven la mayoría de casos y explique que los demás requieren una tabla de equivalencias. Luego trabaje con los comprobantes electrónicos: explique la estructura de serie y correlativo, donde la serie de facturas empieza con F y la de boletas con B, y muestre cómo extraer la serie para clasificar ventas por tipo de comprobante. Mencione que TEXTOANTES y TEXTODESPUES están en Microsoft 365; en versiones anteriores se usa la combinación de IZQUIERDA y HALLAR. Insista en que la limpieza no debe sobrescribir el dato original: se hace en columnas nuevas o en Power Query, para conservar la trazabilidad. Pregunte: ¿qué riesgo tiene corregir a mano los nombres de 2 000 clientes?"
+        },
+        {
+          "title": "Fechas y plazos: vencimientos, antigüedad y días hábiles",
+          "bullets": [
+            "FECHA, AÑO, MES y DIA construyen y descomponen fechas; FIN.MES devuelve el último día del mes, útil para cierres.",
+            "Vencimiento de una factura a 30 días: =[@Emision]+30; días de atraso: =MAX(0;HOY()-[@Vencimiento]).",
+            "DIAS.LAB y DIA.LAB excluyen fines de semana y una tabla de feriados nacionales para calcular plazos hábiles.",
+            "Antigüedad de cuentas por cobrar en tramos: 0-30, 31-60, 61-90 y más de 90 días, base para estimar cobranza dudosa.",
+            "Cuidado con HOY(): es volátil; para reportes de cierre conviene fijar la fecha de corte en una celda de parámetros."
+          ],
+          "notes": "Plantee un problema real: un proveedor otorga 45 días de crédito y la empresa quiere saber qué facturas vencen la próxima semana y cuáles llevan más de 60 días de atraso. Construya las columnas paso a paso. Explique la función DIAS.LAB con una tabla de feriados del Perú, que incluye fechas como el 28 y 29 de julio, el 8 de diciembre o el 7 de junio, y recuerde que la lista debe actualizarse cada año según lo que disponga el Gobierno, incluidos los días no laborables para el sector público. Luego clasifique la antigüedad en tramos con SI.CONJUNTO o, mejor, con BUSCARX aproximado que verán en la siguiente diapositiva. Conecte con Contabilidad General: el análisis de antigüedad sustenta la estimación de cuentas de cobranza dudosa. Advierta sobre HOY(): si un reporte de cierre al 31 de marzo usa HOY(), al abrirlo en abril mostrará otros resultados. Pregunte: ¿cómo afectaría ese error a una reunión de directorio?"
+        },
+        {
+          "title": "BUSCARX: la búsqueda moderna paso a paso",
+          "bullets": [
+            "Sintaxis: =BUSCARX(valor_buscado; matriz_buscada; matriz_devuelta; [si_no_se_encuentra]; [modo_coincidencia]; [modo_búsqueda]).",
+            "Paso 1: identificar la llave común; paso 2: verificar que sea única en la tabla de destino; paso 3: definir qué hacer si no existe.",
+            "Ejemplo: =BUSCARX([@CodProducto];tProductos[Codigo];tProductos[Precio];\"No existe\") trae el precio del catálogo.",
+            "Con modo de coincidencia −1 busca el valor exacto o el inmediato inferior: ideal para tramos de comisión o descuento.",
+            "Ventajas frente a BUSCARV: busca a la izquierda, no se rompe al insertar columnas y trae coincidencia exacta por defecto."
+          ],
+          "notes": "Esta es una de las funciones más útiles del curso. Comience con BUSCARV, que muchos estudiantes conocen, y muestre sus dos fallas clásicas: por defecto usa coincidencia aproximada si se omite el último argumento, lo que devuelve precios equivocados sin error, y se rompe cuando alguien inserta una columna en el catálogo porque depende de un número de columna fijo. Después presente BUSCARX con el mismo ejemplo. Insista en el paso 2: si un código de producto está duplicado en el catálogo, la búsqueda devolverá solo la primera coincidencia y el error pasará inadvertido; por eso conviene verificar unicidad con CONTAR.SI. Luego muestre el uso de coincidencia aproximada para tramos: una tabla con límites inferiores 0, 30 000 y 50 000 y sus tasas reemplaza la fórmula SI.CONJUNTO de la unidad 1 y permite que el área comercial cambie la política sin tocar fórmulas. Pida que lo implementen en su archivo de comisiones."
+        },
+        {
+          "title": "INDICE y COINCIDIR: búsquedas bidimensionales y compatibilidad",
+          "bullets": [
+            "COINCIDIR devuelve la posición de un valor en un rango; INDICE devuelve el valor ubicado en una posición dada.",
+            "Combinados, =INDICE(Tarifas;COINCIDIR(Zona;Zonas;0);COINCIDIR(Peso;Pesos;1)) buscan en filas y columnas a la vez.",
+            "Caso típico: tarifario de envíos por zona de destino y rango de peso, usado por empresas de mensajería y comercio electrónico.",
+            "Funciona en todas las versiones de Excel, por lo que es la alternativa cuando la empresa no dispone de Microsoft 365.",
+            "Para búsquedas con varios criterios: concatenar llaves o usar BUSCARX con condiciones multiplicadas en matrices."
+          ],
+          "notes": "Presente el tarifario de una empresa de courier que envía pedidos de una tienda en línea desde Lima a provincias: filas con zonas (Lima, costa norte, costa sur, sierra, selva) y columnas con rangos de peso. Pida a los estudiantes que calculen el costo de envío de 200 pedidos. Muestre primero la lógica de COINCIDIR por separado: qué número de fila corresponde a la zona y qué número de columna al peso, destacando que en el peso se usa coincidencia aproximada porque los rangos son límites inferiores. Luego combine con INDICE. Explique por qué esta técnica sigue siendo vigente: muchas empresas peruanas trabajan con licencias de Excel 2016 o 2019, y un modelo debe funcionar en la computadora del usuario final. Finalmente, muestre una búsqueda con dos criterios, como producto y almacén, y discuta cuándo conviene crear una llave concatenada en una columna auxiliar por transparencia. Pregunte: ¿cómo verificarían que el tarifario está ordenado correctamente?"
+        },
+        {
+          "title": "Agregación condicional: responder preguntas de gestión con una fórmula",
+          "bullets": [
+            "SUMAR.SI.CONJUNTO(rango_suma;rango_criterio1;criterio1;...) suma solo los registros que cumplen todas las condiciones.",
+            "CONTAR.SI.CONJUNTO y PROMEDIO.SI.CONJUNTO siguen la misma lógica para contar operaciones o calcular tickets promedio.",
+            "Criterios con operadores y fechas: \">=\"&Inicio y \"<=\"&Fin delimitan un periodo definido en celdas de parámetros.",
+            "Ejemplo: ventas de la región Sur en el primer trimestre, sin IGV, por vendedor, construidas como matriz de resumen.",
+            "Útil para reportes fijos con formato institucional; para exploración libre son más eficientes las tablas dinámicas."
+          ],
+          "notes": "Pida a los estudiantes que respondan tres preguntas sobre la base de ventas: ¿cuánto vendió cada vendedor en la región Sur entre enero y marzo?, ¿cuántas facturas emitió cada uno?, ¿cuál fue su ticket promedio? Construya una matriz de resumen con vendedores en filas y meses en columnas usando SUMAR.SI.CONJUNTO con referencias mixtas, integrando lo aprendido en la unidad 1. Explique la sintaxis de los criterios con operadores, que suele confundir: el operador va entre comillas y se une con el símbolo & a la celda que contiene la fecha. Discuta cuándo usar estas funciones y cuándo una tabla dinámica: las funciones permiten reportes con formato fijo que se actualizan sin intervención y que pueden combinarse con otros cálculos, mientras que la tabla dinámica es superior para explorar. Pregunte: si el gerente pide el mismo reporte cada lunes con el mismo formato, ¿qué herramienta elegirían y por qué?"
+        },
+        {
+          "title": "Matrices dinámicas: FILTRAR, ORDENAR y UNICOS",
+          "bullets": [
+            "Las fórmulas de matriz dinámica devuelven varios resultados que se desbordan automáticamente en las celdas vecinas.",
+            "UNICOS(tVentas[Cliente]) genera la lista de clientes sin duplicados que se actualiza cuando aparecen clientes nuevos.",
+            "FILTRAR(tVentas;tVentas[Saldo]>0;\"Sin pendientes\") extrae solo los registros que cumplen una condición.",
+            "ORDENAR y ORDENARPOR jerarquizan resultados: =TOMAR(ORDENARPOR(Lista;Totales;-1);10) obtiene un ranking de diez clientes.",
+            "El error #¡DESBORDAMIENTO! indica que hay celdas ocupadas en el área donde debe extenderse el resultado."
+          ],
+          "notes": "Demuestre cómo construir, con tres fórmulas, un reporte de los diez principales clientes por ventas que se actualiza solo. Primero UNICOS para obtener la lista de clientes, luego SUMAR.SI.CONJUNTO apuntando a esa lista con el operador de rango desbordado, que se escribe con el símbolo numeral, y finalmente ORDENARPOR y TOMAR. Explique el concepto de desbordamiento y muestre qué ocurre cuando una celda está ocupada. Relacione con el principio de Pareto, que muchos estudiantes vieron en Fundamentos de Administración: es común que una fracción pequeña de clientes concentre gran parte de las ventas, y este reporte permite verificarlo en la empresa propia. Aclare que estas funciones requieren Microsoft 365 o Excel 2021 en adelante. Proponga un ejercicio: con FILTRAR, extraer las facturas vencidas de un cliente seleccionado en una lista desplegable, combinando con la validación de datos de la unidad 1."
+        },
+        {
+          "title": "Power Query: obtener y transformar datos sin repetir trabajo",
+          "bullets": [
+            "Power Query, en Datos > Obtener datos, importa archivos Excel, CSV, carpetas completas y bases de datos.",
+            "Cada transformación queda registrada como un paso aplicado, escrito en lenguaje M, que se repite al pulsar Actualizar.",
+            "Pasos típicos: quitar filas superiores, promover encabezados, cambiar tipos, recortar espacios, reemplazar valores, filtrar.",
+            "El origen nunca se modifica; la consulta produce una tabla limpia que se carga en una hoja o en el modelo de datos.",
+            "Ideal para reportes mensuales: el trabajo de limpieza que tomaba horas se convierte en un clic al recibir datos nuevos."
+          ],
+          "notes": "Este es un punto de inflexión en el curso. Tome el reporte exportado de la primera diapositiva, el que tenía logo, encabezados repetidos y subtotales, y límpielo en vivo con Power Query, nombrando cada paso con claridad. Muestre el panel de pasos aplicados y explique que es una receta reproducible: el próximo mes, cuando llegue el archivo nuevo, basta reemplazarlo y actualizar. Abra brevemente el editor avanzado para que vean el código en lenguaje M, sin profundizar, solo para que comprendan que detrás de los clics hay un programa. Compare con la limpieza manual: los mismos pasos hechos a mano cada mes toman tiempo y, peor, pueden hacerse de forma distinta cada vez. Mencione que Power Query también existe en Power BI, que verán en Analítica de Negocios, de modo que esta habilidad es transferible. Pregunte: ¿qué tarea mensual de su trabajo o de su familia podría automatizarse así?"
+        },
+        {
+          "title": "Power Query: anexar, combinar y anular dinamización",
+          "bullets": [
+            "Anexar apila tablas con la misma estructura, por ejemplo las ventas de doce meses o de cinco sucursales.",
+            "Desde carpeta: consolida automáticamente todos los archivos que se agreguen a una carpeta compartida.",
+            "Combinar une tablas por una columna llave, equivalente a una búsqueda masiva, con tipos de combinación interna o externa.",
+            "Anular dinamización de columnas convierte reportes con meses en columnas en datos ordenados de fecha y valor.",
+            "Paso a paso: cargar consultas como solo conexión, anexar, combinar con dimensiones, ajustar tipos y cargar el resultado."
+          ],
+          "notes": "Plantee el escenario de una cadena de cinco boticas en Trujillo donde cada local envía cada mes su reporte de ventas en un Excel con la misma estructura. Muestre la consolidación desde carpeta: se colocan los archivos en una carpeta, se crea la consulta y Power Query los apila y agrega una columna con el nombre del archivo de origen, que identifica la sucursal. Luego combine con la tabla de productos para traer la categoría y el costo, y explique los tipos de combinación: externa izquierda conserva todas las ventas aunque falte el producto en el catálogo, lo que permite detectar códigos nuevos; interna los descartaría silenciosamente. Finalmente, muestre la anulación de dinamización con un presupuesto que tiene los meses en columnas. Recalque la disciplina: si un local cambia el nombre de una columna, la consulta fallará, por lo que se requiere un acuerdo de formato con las sucursales. Pregunte: ¿quién debería ser responsable de ese estándar?"
+        },
+        {
+          "title": "Tablas dinámicas: estructura y preguntas que responden",
+          "bullets": [
+            "Cuatro áreas: filas y columnas definen las dimensiones de análisis; valores, las medidas; filtros, el subconjunto de datos.",
+            "Paso 1: partir de una tabla o consulta ordenada; paso 2: insertar la tabla dinámica; paso 3: arrastrar campos según la pregunta.",
+            "Configuración de valores: suma, recuento, promedio, máximo; cambiar el nombre del campo para que el reporte sea legible.",
+            "Agrupar fechas por meses, trimestres y años, y agrupar números en rangos, como montos de pedido de 500 en 500.",
+            "Actualizar es manual: tras cambiar los datos, usar Actualizar todo, o configurar la actualización al abrir el archivo."
+          ],
+          "notes": "Construya una tabla dinámica en vivo partiendo de una pregunta de gestión concreta: ¿qué categorías de producto crecieron más en el segundo trimestre respecto al primero en cada región? Antes de tocar el mouse, pida a los estudiantes que digan qué va en filas, qué en columnas, qué en valores y qué en filtros. Este ejercicio de pensamiento previo es más importante que la herramienta. Luego construya la tabla y muestre la agrupación de fechas. Insista en renombrar los campos: un reporte que dice Suma de ImporteSinIGV no está listo para gerencia. Explique la naturaleza de la caché de la tabla dinámica y la necesidad de actualizar; muchos errores de reportes provienen de tablas dinámicas desactualizadas presentadas en reuniones. Pida a los estudiantes que formulen tres preguntas distintas sobre la base y que cada una se responda con una configuración diferente de la misma tabla."
+        },
+        {
+          "title": "Tablas dinámicas avanzadas: porcentajes, campos calculados y segmentadores",
+          "bullets": [
+            "Mostrar valores como porcentaje del total general, de la fila, de la columna o como diferencia porcentual respecto al periodo anterior.",
+            "Campos calculados: margen bruto = ventas − costo; cuidado, operan sobre sumas, no fila por fila.",
+            "Segmentadores y escalas de tiempo filtran varias tablas dinámicas a la vez y hacen el reporte interactivo.",
+            "Modelo de datos: relacionar varias tablas dentro de Excel y usar recuento distinto de clientes.",
+            "IMPORTARDATOSDINAMICOS extrae un valor específico de la tabla dinámica para usarlo en reportes con formato fijo."
+          ],
+          "notes": "Retome la tabla anterior y conviértala en un análisis gerencial. Muestre la opción de diferencia porcentual respecto al trimestre anterior y discuta cómo leerla. Luego cree un campo calculado de margen y advierta una trampa conceptual: un campo calculado de margen porcentual divide la suma del margen entre la suma de las ventas, lo cual es correcto, pero un campo calculado que multiplique cantidad por precio opera sobre las sumas y produce resultados absurdos; esos cálculos deben hacerse en la tabla de origen. Inserte segmentadores conectados a dos tablas dinámicas para mostrar la interactividad que será la base del tablero de la unidad 4. Explique el recuento distinto disponible al agregar los datos al modelo de datos: cuántos clientes distintos compraron, un indicador distinto al número de facturas. Pregunte: ¿qué diferencia hay entre que las ventas crezcan porque hay más clientes o porque cada cliente compra más?"
+        },
+        {
+          "title": "Gráficos para la gestión: elegir según el mensaje",
+          "bullets": [
+            "Cole Nussbaumer Knaflic propone partir del contexto: quién es la audiencia, qué debe saber y qué debe hacer después.",
+            "Comparación entre categorías: barras horizontales ordenadas; evolución en el tiempo: líneas; composición simple: barras apiladas al 100 %.",
+            "Relación entre dos variables: dispersión; desviación frente a meta: barras con línea de referencia.",
+            "Eliminar el desorden: sin efectos 3D, sin leyendas innecesarias, etiquetas directas, color solo para destacar lo importante.",
+            "El título del gráfico debe enunciar la conclusión: 'La región Sur explica el 70 % de la caída del trimestre'."
+          ],
+          "notes": "Muestre un gráfico típico de una presentación corporativa: circular en 3D, doce categorías, colores por defecto, título Ventas. Pregunte qué conclusión se extrae: nadie podrá decirlo con certeza. Presente el enfoque de Knaflic en Storytelling with Data: un gráfico no es decoración sino argumento. Rehaga el mismo gráfico como barras horizontales ordenadas de mayor a menor, gris para todas las categorías excepto la que importa, y un título que enuncie la conclusión. La diferencia es inmediata. Recorra la guía de selección de gráficos y resalte que el gráfico circular solo funciona con pocas categorías y diferencias claras. Mencione la influencia de Edward Tufte y su concepto de proporción de datos y tinta. Conecte con la unidad 3, donde estos gráficos se integrarán en informes y presentaciones. Pida a los estudiantes que rehagan un gráfico de una publicación real del INEI o del BCRP con un título de conclusión."
+        },
+        {
+          "title": "Errores de visualización que distorsionan decisiones",
+          "bullets": [
+            "Eje vertical truncado en gráficos de barras: exagera diferencias pequeñas; las barras deben empezar en cero.",
+            "Doble eje con escalas arbitrarias: sugiere correlaciones que no existen; usarlo solo con justificación explícita.",
+            "Comparar montos nominales de años distintos sin considerar inflación puede mostrar un crecimiento que no es real.",
+            "Promedios de porcentajes sin ponderar: el margen promedio de las tiendas no es el margen de la empresa.",
+            "Toda visualización debe indicar fuente, periodo, unidad de medida y si los montos incluyen o no el IGV."
+          ],
+          "notes": "Presente cuatro gráficos tomados de situaciones empresariales, todos con algún problema, y pida a los equipos que identifiquen el error y su consecuencia en la decisión. En el primero, un eje que empieza en 95 hace que un crecimiento de 2 % parezca una duplicación. En el segundo, un gráfico de doble eje sugiere que la publicidad causa las ventas. En el tercero, ventas nominales de 2019 a 2024 que, deflactadas con el índice de precios al consumidor que publica el INEI, muestran un crecimiento real mucho menor. En el cuarto, un margen promedio simple de cinco tiendas que difiere del margen consolidado porque las tiendas tienen tamaños distintos. Este último error conecta con la estadística y es muy frecuente en reportes de gestión. Cierre con la ética de la comunicación de datos: manipular una visualización, aunque los números sean ciertos, es una forma de engaño. Pregunte: ¿qué harían si su jefe les pide truncar el eje para que la caída parezca menor?"
+        },
+        {
+          "title": "Validar el análisis antes de presentarlo",
+          "bullets": [
+            "Cuadre de totales: el total de la tabla dinámica debe coincidir con el total de la fuente y con el reporte contable del periodo.",
+            "Conciliar el registro de ventas con los comprobantes electrónicos informados en el SIRE de SUNAT para el mismo periodo.",
+            "Revisar valores atípicos, registros sin categoría, códigos no encontrados en las búsquedas y fechas fuera de rango.",
+            "Prueba de razonabilidad: comparar con el mes anterior y con el mismo mes del año previo; explicar toda variación importante.",
+            "Documentar consultas, supuestos y exclusiones en la hoja Léame para que otro analista pueda reproducir el resultado."
+          ],
+          "notes": "Cierre la unidad con la disciplina que distingue a un analista confiable. Explique que, antes de enviar cualquier análisis, deben ejecutar una rutina de verificación. La primera es el cuadre: si la tabla dinámica suma 1 254 300 soles y el reporte del sistema dice 1 261 800, hay una diferencia que debe explicarse antes de cualquier conclusión. Relacione con el Sistema Integrado de Registros Electrónicos de SUNAT, a través del cual la administración tributaria pone a disposición del contribuyente una propuesta del registro de ventas basada en los comprobantes electrónicos emitidos; para una empresa, que su análisis interno coincida con esa información es un control de primer orden. Luego revise los atípicos y los registros con #N/D en búsquedas. Finalmente, la prueba de razonabilidad: un crecimiento de 300 % en un mes casi siempre es un error de datos. Anuncie la tarea de la unidad, que aplicará esta rutina de validación."
+        }
+      ],
+      "reading": {
+        "title": "Preparar, integrar y resumir datos: de la exportación al análisis gerencial",
+        "minutes": 35,
+        "content": "## El problema de los datos operativos\n\nLos sistemas transaccionales (facturación electrónica, ERP, punto de venta) registran operaciones para cumplir obligaciones, no para analizarlas. Sus reportes suelen traer encabezados decorativos, subtotales intercalados, fechas como texto y meses dispuestos en columnas. Antes de analizar es preciso **ordenar** los datos. Hadley Wickham (2014) propuso tres reglas que hoy son estándar: cada variable forma una columna, cada observación una fila y cada tipo de unidad observacional una tabla.\n\nEn una empresa comercial, esto se traduce en un modelo sencillo: una **tabla de hechos** con las líneas de venta (fecha, comprobante, código de cliente, código de producto, cantidad, importe) y **tablas de dimensiones** con los atributos de clientes, productos y vendedores. Los códigos son las llaves que unen las tablas, por lo que su calidad determina la del análisis.\n\n## Limpieza con funciones\n\nLas funciones de texto resuelven problemas cotidianos:\n\n```\n=NOMPROPIO(ESPACIOS([@Ciudad]))           → \"  LIMA \" se convierte en \"Lima\"\n=TEXTOANTES([@Comprobante];\"-\")           → \"F001-00004587\" devuelve \"F001\"\n=SI(IZQUIERDA([@Comprobante];1)=\"F\";\"Factura\";\"Boleta\")\n```\n\nLas funciones de fecha permiten gestionar plazos. Con una fecha de corte en la celda `Corte`:\n\n```\nVencimiento   = [@Emision] + [@DiasCredito]\nDiasAtraso    = MAX(0; Corte - [@Vencimiento])\nTramo         = BUSCARX([@DiasAtraso]; {0;31;61;91};\n                {\"0-30\";\"31-60\";\"61-90\";\">90\"}; ; -1)\n```\n\nEl análisis de antigüedad resultante sustenta decisiones de cobranza y la estimación de cuentas de cobranza dudosa que se estudia en contabilidad.\n\n## Búsqueda y referencia\n\nBUSCARX reemplaza con ventaja a BUSCARV: no depende de un número de columna, busca en cualquier dirección y usa coincidencia exacta por defecto. Su cuarto argumento define qué devolver si no hay coincidencia, lo que facilita detectar códigos faltantes. Antes de buscar hay que verificar que la llave sea **única** en la tabla de destino:\n\n```\n=CONTAR.SI(tProductos[Codigo];[@Codigo])>1   → VERDADERO indica duplicado\n```\n\nPara tarifarios de doble entrada, INDICE y COINCIDIR siguen siendo la solución universal, compatible con cualquier versión de Excel.\n\n## Agregación condicional y matrices dinámicas\n\nSUMAR.SI.CONJUNTO resume datos que cumplen varias condiciones:\n\n```\n=SUMAR.SI.CONJUNTO(tVentas[ValorVenta];\n     tVentas[Region];\"Sur\";\n     tVentas[Fecha];\">=\"&Inicio;\n     tVentas[Fecha];\"<=\"&Fin)\n```\n\nEn Microsoft 365, las funciones UNICOS, FILTRAR, ORDENARPOR y TOMAR construyen reportes que se amplían solos cuando aparecen datos nuevos, como un ranking de los diez principales clientes.\n\n## Power Query: automatizar la preparación\n\nPower Query registra cada transformación como un paso reproducible escrito en lenguaje M. Un flujo típico mensual es: obtener datos desde una carpeta, quitar filas superiores, promover encabezados, cambiar tipos, recortar espacios, anexar los archivos de las sucursales, combinar con la tabla de productos y anular la dinamización de los meses. Un fragmento del código generado luce así:\n\n```\nlet\n  Origen = Excel.Workbook(File.Contents(\"ventas_enero.xlsx\")),\n  Hoja = Origen{[Name=\"Ventas\"]}[Data],\n  Encabezados = Table.PromoteHeaders(Hoja),\n  Tipos = Table.TransformColumnTypes(Encabezados,\n          {{\"Fecha\", type date}, {\"Importe\", type number}})\nin\n  Tipos\n```\n\nLa elección del tipo de combinación es una decisión analítica: una combinación externa izquierda conserva todas las ventas aunque el producto no exista en el catálogo y así revela códigos nuevos; una interna los descartaría sin aviso.\n\n## Tablas dinámicas y gráficos\n\nLa tabla dinámica es la herramienta de exploración por excelencia. Su diseño parte de una pregunta: qué dimensiones van en filas y columnas, qué medida en valores y qué subconjunto en filtros. Opciones como *mostrar valores como diferencia porcentual*, la agrupación de fechas, los segmentadores y el recuento distinto en el modelo de datos convierten un listado en un análisis gerencial. Debe recordarse que los campos calculados operan sobre sumas, no fila por fila.\n\nPara comunicar resultados, Cole Nussbaumer Knaflic (2015) recomienda elegir el gráfico según el mensaje, eliminar el desorden visual y usar el color para dirigir la atención. Un título que enuncia la conclusión vale más que uno que solo nombra la variable.\n\n## Validar antes de concluir\n\nNingún análisis está terminado sin verificación: cuadre con la fuente y con el registro contable, conciliación con los comprobantes electrónicos informados a SUNAT, revisión de atípicos y registros sin coincidencia, y comparación con periodos anteriores. Además, las cifras de distintos años deben interpretarse considerando la inflación que reporta el INEI. La credibilidad de un analista se construye en esos controles invisibles."
+      },
+      "case": {
+        "title": "Caso: Cinco boticas, cinco archivos y una decisión de inventario en Farmacias Moche",
+        "content": "**Farmacias Moche E.I.R.L.** opera cinco boticas en Trujillo y una en Chiclayo. Vende medicamentos genéricos y de marca, productos de cuidado personal y artículos para bebés. En 2024 sus ventas fueron de S/ 7.2 millones, con un margen bruto promedio de 27 %.\n\nCada local usa un sistema de punto de venta distinto, porque la empresa creció comprando boticas existentes. Al cierre de cada mes, los administradores de local envían por correo un Excel con sus ventas. Los formatos no coinciden: un local escribe las fechas como texto (15/03/2025), otro incluye el IGV en el precio y otro no, dos usan códigos internos de producto en lugar del código del catálogo central y uno envía los meses en columnas.\n\nClaudia Rojas, asistente de administración y egresada de un instituto, dedica unos cuatro días al mes a consolidar manualmente los archivos. Aun así, el gerente, Jorge Vargas, desconfía de los números: en febrero, el reporte consolidado mostró ventas por S/ 612 000, mientras que la propuesta del Registro de Ventas generada en el SIRE de SUNAT a partir de los comprobantes electrónicos sumaba S/ 598 300 sin IGV en la misma moneda. Nadie ha explicado la diferencia.\n\nAhora Jorge debe tomar una decisión importante. Un laboratorio ofrece un descuento de 12 % si la cadena compra por adelantado el inventario de seis meses de su línea de analgésicos y antigripales, lo que significa una inversión de S/ 180 000. Para decidir, necesita saber con confianza cuánto se vendió de esa línea por local y por mes en los últimos 18 meses, si hay estacionalidad (se sospecha un pico entre mayo y agosto por la temporada de frío) y qué locales concentran la demanda.\n\nJorge le ha dado a Claudia diez días hábiles. Ella evalúa dos caminos: seguir consolidando a mano, como siempre, pero con más cuidado; o invertir los primeros cuatro días en construir un flujo en Power Query que consolide desde una carpeta, normalice fechas e IGV, mapee los códigos internos al catálogo central con una tabla de equivalencias y alimente tablas dinámicas. Si el flujo falla, no le alcanzaría el tiempo para el análisis. Además, el administrador del local de Chiclayo suele enviar su archivo con retraso y no ha respondido a dos correos.\n\nLa propuesta del laboratorio vence en tres semanas.",
+        "questions": [
+          "¿Qué problemas de calidad de datos identifica y cómo afectaría cada uno a la decisión de compra anticipada?",
+          "¿Qué camino debería elegir Claudia? Evalúe riesgos, plazos y beneficios para los meses siguientes.",
+          "¿Cómo investigaría la diferencia entre el consolidado interno y la información del SIRE? Proponga una secuencia de verificación.",
+          "Diseñe las tablas dinámicas y gráficos que presentaría a Jorge para decidir si acepta la oferta del laboratorio."
+        ]
+      },
+      "assignment": {
+        "title": "Consolidación y análisis de ventas multisede con Power Query y tablas dinámicas",
+        "instructions": "**Objetivo:** construir un flujo reproducible de preparación de datos y un análisis que responda una pregunta de gestión real.\n\n**Insumo:** carpeta *ventas_sedes.zip* del aula virtual, con archivos mensuales de tres sedes en formatos distintos, un catálogo de productos y una tabla de equivalencias de códigos.\n\n**Qué entregar:**\n\n1. Un libro .xlsx con consultas de Power Query que: consoliden la carpeta, normalicen fechas y montos sin IGV, limpien textos y combinen con el catálogo mediante combinación externa izquierda. Cada paso debe tener un nombre descriptivo.\n2. Una hoja *Calidad* con: número de registros por sede, códigos sin coincidencia, duplicados detectados y una celda de control que cuadre el total consolidado con el total de control entregado.\n3. Al menos tres tablas dinámicas que respondan: ventas por categoría y mes, participación de cada sede y variación porcentual trimestral. Incluir un segmentador compartido.\n4. Un análisis de antigüedad o de los diez principales productos usando BUSCARX o funciones de matriz dinámica.\n5. Dos gráficos con título de conclusión, sin efectos 3D y con fuente y unidad indicadas.\n6. Un párrafo de 150 a 200 palabras con la recomendación de gestión que se desprende del análisis.\n\n**Formato:** archivo *Apellido_U2_analisis.xlsx*. Entrega individual en la semana 8. Se verificará que el flujo funcione al agregar un archivo nuevo a la carpeta.",
+        "rubric": [
+          {
+            "name": "Flujo de Power Query reproducible y documentado",
+            "points": 6
+          },
+          {
+            "name": "Controles de calidad y cuadre con el total de control",
+            "points": 4
+          },
+          {
+            "name": "Tablas dinámicas y funciones de búsqueda correctas",
+            "points": 5
+          },
+          {
+            "name": "Gráficos y recomendación de gestión sustentada",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 2: preparación y análisis de datos",
+        "questions": [
+          {
+            "prompt": "Un reporte de presupuesto trae los meses de enero a diciembre como columnas. ¿Qué transformación lo convierte en datos ordenados para analizarlos en una tabla dinámica?",
+            "options": [
+              "Anular dinamización de las columnas de meses en Power Query",
+              "Transponer el rango con pegado especial",
+              "Combinar el reporte con la tabla de productos",
+              "Agrupar las columnas por trimestre con un campo calculado"
+            ],
+            "correct": 0,
+            "explanation": "Anular dinamización convierte doce columnas en dos variables, mes y monto, cumpliendo la regla de una variable por columna que requieren las herramientas de análisis."
+          },
+          {
+            "prompt": "BUSCARX devuelve un precio para el código P-120 que no corresponde al catálogo vigente. Al revisar, el código aparece dos veces en tProductos. ¿Qué control lo habría prevenido?",
+            "options": [
+              "Verificar la unicidad de la llave con CONTAR.SI antes de realizar la búsqueda",
+              "Cambiar BUSCARX por BUSCARV con coincidencia aproximada",
+              "Envolver la fórmula en SI.ERROR con valor cero",
+              "Ordenar el catálogo alfabéticamente por descripción"
+            ],
+            "correct": 0,
+            "explanation": "Con llaves duplicadas, la búsqueda devuelve la primera coincidencia sin advertencia. Verificar que el código sea único en la tabla de destino es un paso previo indispensable."
+          },
+          {
+            "prompt": "Para consolidar ventas con el catálogo, ¿por qué se prefiere una combinación externa izquierda en lugar de una interna en Power Query?",
+            "options": [
+              "Conserva todas las ventas y deja visibles los productos que no existen en el catálogo",
+              "Es más rápida porque descarta las filas sin coincidencia",
+              "Permite anexar archivos con estructuras distintas",
+              "Elimina automáticamente los códigos duplicados del catálogo"
+            ],
+            "correct": 0,
+            "explanation": "La combinación interna eliminaría en silencio las ventas con códigos no catalogados, subestimando el total; la externa izquierda las conserva y permite detectarlas y corregirlas."
+          },
+          {
+            "prompt": "Un reporte de cierre al 31 de marzo calcula días de atraso con HOY(). Se presenta al directorio el 20 de abril. ¿Cuál es el problema?",
+            "options": [
+              "Los días de atraso se recalculan al 20 de abril y ya no reflejan la situación al cierre",
+              "HOY() no puede restarse de fechas de vencimiento",
+              "HOY() devuelve un texto que impide clasificar en tramos",
+              "El archivo no se puede guardar mientras contenga funciones de fecha"
+            ],
+            "correct": 0,
+            "explanation": "HOY() es volátil y cambia cada día. En reportes de cierre debe usarse una fecha de corte fija en una celda de parámetros para que los resultados sean reproducibles."
+          },
+          {
+            "prompt": "Una cadena tiene cinco tiendas con márgenes de 30 %, 28 %, 25 %, 22 % y 20 %, pero ventas muy distintas. ¿Cómo debe calcularse el margen de la empresa?",
+            "options": [
+              "Dividiendo la suma de márgenes en soles entre la suma de ventas de las cinco tiendas",
+              "Promediando los cinco porcentajes de margen",
+              "Tomando la mediana de los cinco porcentajes",
+              "Usando el margen de la tienda con mayores ventas"
+            ],
+            "correct": 0,
+            "explanation": "El promedio simple de porcentajes ignora el tamaño de cada tienda. El margen consolidado es un promedio ponderado: margen total en soles entre ventas totales."
+          },
+          {
+            "prompt": "El gerente quiere comparar la participación de cada región en las ventas totales del año. ¿Qué configuración de tabla dinámica es la más adecuada?",
+            "options": [
+              "Regiones en filas y ventas mostradas como porcentaje del total general",
+              "Regiones en columnas y recuento de comprobantes",
+              "Meses en filas y ventas mostradas como diferencia respecto al mes anterior",
+              "Productos en filas y promedio de ventas por región como filtro"
+            ],
+            "correct": 0,
+            "explanation": "La participación es la proporción de cada región sobre el total; la opción Mostrar valores como porcentaje del total general la calcula directamente."
+          },
+          {
+            "prompt": "Un gráfico de barras muestra ventas de 98 y 102 millones con el eje vertical iniciando en 96. ¿Qué efecto produce?",
+            "options": [
+              "Exagera visualmente una diferencia de alrededor de 4 % como si fuera de varias veces",
+              "Reduce la diferencia y la hace imperceptible",
+              "No tiene efecto porque las etiquetas muestran los valores exactos",
+              "Mejora la precisión al eliminar espacio vacío del gráfico"
+            ],
+            "correct": 0,
+            "explanation": "En las barras, la longitud codifica el valor; truncar el eje rompe esa proporción y distorsiona la percepción, aunque las etiquetas numéricas sean correctas."
+          },
+          {
+            "prompt": "El consolidado interno de febrero difiere del total de comprobantes electrónicos en SUNAT. ¿Cuál es el primer paso de verificación más razonable?",
+            "options": [
+              "Comparar ambas fuentes por sede y por comprobante para localizar dónde se origina la diferencia",
+              "Ajustar el consolidado para que coincida con SUNAT",
+              "Ignorar la diferencia si es menor al 5 %",
+              "Rehacer las tablas dinámicas con otra configuración"
+            ],
+            "correct": 0,
+            "explanation": "Una diferencia se explica descomponiéndola: por sede, por tipo de comprobante y por documento. Ajustar sin explicar oculta el error y puede repetirlo en adelante."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 3 · Documentos y presentaciones empresariales: estructura, automatización e integración",
+      "description": "Elabora informes, comunicaciones masivas y presentaciones ejecutivas con Word y PowerPoint, usando estilos, plantillas, combinación de correspondencia, revisión colaborativa, accesibilidad y vínculos con Excel, bajo una estructura argumentativa clara.",
+      "topics": [
+        "Documentos empresariales con estilos, secciones y referencias automáticas",
+        "Plantillas corporativas y combinación de correspondencia",
+        "Revisión colaborativa y accesibilidad digital",
+        "Integración de Excel con Word y PowerPoint",
+        "Presentaciones ejecutivas: principio de la pirámide y diseño de diapositivas"
+      ],
+      "slides": [
+        {
+          "title": "El documento empresarial como producto de gestión",
+          "bullets": [
+            "Tipos frecuentes: informe de gestión, memorando, propuesta comercial, acta de reunión, procedimiento y carta formal.",
+            "Cada tipo tiene un lector, un propósito y una acción esperada; la estructura se diseña a partir de ellos.",
+            "Un informe técnico típico: resumen ejecutivo, antecedentes, análisis, conclusiones, recomendaciones y anexos.",
+            "El resumen ejecutivo responde en una página: situación, hallazgos clave, recomendación y decisión que se solicita.",
+            "La calidad formal comunica profesionalismo: un documento desordenado resta credibilidad al análisis más riguroso."
+          ],
+          "notes": "Comience con una pregunta provocadora: ¿cuántas páginas de un informe de 30 páginas lee realmente un gerente? La respuesta, en la mayoría de organizaciones, es el resumen ejecutivo y quizá las recomendaciones. Esto cambia la manera de escribir: lo más importante va primero. Recupere lo trabajado en Comunicación Efectiva del primer ciclo sobre redacción y adecuación al lector, y explique que este curso se enfoca en la dimensión técnica: cómo construir documentos que sean fáciles de leer, de navegar, de actualizar y de reutilizar. Muestre dos versiones del mismo informe: una con formato manual inconsistente, títulos en negrita escritos a mano y una tabla de contenido tipeada; otra con estilos, numeración automática y navegación. Pregunte cuál inspira más confianza y por qué. Anuncie que en esta unidad el análisis de Excel de la unidad 2 se convertirá en un informe y una presentación profesional."
+        },
+        {
+          "title": "Estilos: la arquitectura invisible de un documento",
+          "bullets": [
+            "Los estilos de párrafo (Título 1, Título 2, Normal) definen fuente, tamaño, espaciado y nivel jerárquico de una sola vez.",
+            "Modificar un estilo actualiza todo el documento; el formato manual obliga a corregir cada párrafo por separado.",
+            "El panel de navegación muestra la estructura y permite reorganizar secciones arrastrando los títulos.",
+            "La tabla de contenido automática se genera desde los estilos de título y se actualiza con un clic.",
+            "Paso a paso: definir estilos, aplicarlos al redactar, vincular la numeración multinivel y generar la tabla de contenido."
+          ],
+          "notes": "Haga una demostración contundente: tome un documento de 20 páginas con formato manual y pida a un voluntario que cambie la fuente de todos los títulos de segundo nivel. Cronometre. Luego haga lo mismo en un documento con estilos: se modifica el estilo Título 2 y el cambio se aplica en segundos. Explique que los estilos son al documento lo que las tablas estructuradas son a Excel: la base de toda automatización posterior. Muestre cómo vincular la numeración multinivel a los estilos de título, para obtener una numeración 1, 1.1, 1.1.1 que se ajusta sola al mover secciones, algo indispensable en procedimientos y manuales. Luego genere la tabla de contenido y demuestre su actualización. Advierta sobre un error frecuente: aplicar negrita y tamaño mayor a un párrafo normal para que parezca título; visualmente funciona, pero el documento no lo reconoce como título. Pida que configuren los estilos de la plantilla del curso."
+        },
+        {
+          "title": "Secciones, encabezados y numeración de páginas",
+          "bullets": [
+            "Los saltos de sección permiten cambiar orientación, márgenes, encabezados y numeración dentro del mismo documento.",
+            "Ejemplo: portada sin número, preliminares en romanos, cuerpo en arábigos y un anexo con una tabla en horizontal.",
+            "Desvincular del anterior es el paso clave para que cada sección tenga un encabezado o pie diferente.",
+            "Campos como el número de página, el título del documento o la fecha se actualizan automáticamente.",
+            "Usar saltos de página en lugar de varias líneas en blanco evita que el diseño se desarme al editar."
+          ],
+          "notes": "Este es uno de los temas que más frustran a los usuarios, y por eso conviene trabajarlo con calma y en vivo. Muestre un informe con cuatro secciones: portada, índice, cuerpo y anexos. Inserte los saltos de sección, explique la diferencia entre salto de sección de página siguiente y continuo, y luego desvincule los pies de página para numerar los preliminares en números romanos y el cuerpo desde el 1. Inserte una sección horizontal para una tabla ancha extraída de Excel, sin alterar la orientación del resto. Active la visualización de marcas de formato para que los estudiantes vean los saltos, que son invisibles por defecto. Explique por qué las líneas en blanco son una mala práctica: al agregar un párrafo arriba, toda la paginación se desplaza. Pida que reproduzcan la estructura en un documento de práctica y que compartan una captura del panel de navegación."
+        },
+        {
+          "title": "Títulos, referencias cruzadas y citas automáticas",
+          "bullets": [
+            "Insertar título en tablas y figuras genera numeración automática: Tabla 1, Figura 2, que se renumera al reordenar.",
+            "Las referencias cruzadas ('como muestra la Tabla 3') se actualizan si cambia la numeración con F9.",
+            "El índice de tablas y de figuras se genera a partir de los títulos insertados, igual que la tabla de contenido.",
+            "El administrador de fuentes de Word gestiona citas y bibliografía en estilo APA y evita inconsistencias.",
+            "Notas al pie para aclaraciones; fuentes de datos indicadas bajo cada tabla o gráfico: 'Fuente: INEI (2024)'."
+          ],
+          "notes": "Explique que un informe empresarial serio sustenta sus cifras y permite que el lector ubique la evidencia. Muestre el problema de la numeración manual: en un informe con 15 tablas, insertar una nueva al inicio obliga a renumerar todas y a corregir cada mención en el texto, con alta probabilidad de error. Con títulos automáticos y referencias cruzadas, basta seleccionar todo y presionar F9. Luego trabaje con el administrador de fuentes y el estilo APA, coherente con lo que usarán en Investigación e Innovación Tecnológica del cuarto ciclo. Recalque la diferencia entre citar en un documento académico y en uno empresarial: en la empresa se cita sobre todo la fuente de los datos, por ejemplo una tabla elaborada con información del BCRP o del sistema de ventas. Pida que inserten tres tablas con título, una referencia cruzada y la fuente correspondiente en su documento de práctica."
+        },
+        {
+          "title": "Plantillas corporativas y elementos reutilizables",
+          "bullets": [
+            "Una plantilla .dotx contiene estilos, márgenes, logotipo, encabezados y textos estándar de la organización.",
+            "Crear desde plantilla garantiza consistencia de marca y evita copiar documentos antiguos con datos de otro cliente.",
+            "Elementos rápidos y autotexto almacenan bloques recurrentes: cláusulas, firmas, condiciones comerciales.",
+            "Controles de contenido delimitan los campos que el usuario debe completar, como fecha, cliente o monto.",
+            "Gobierno de plantillas: un responsable, una ubicación compartida y un registro de versiones aprobadas."
+          ],
+          "notes": "Plantee un incidente frecuente en las empresas: un ejecutivo de ventas toma una propuesta antigua, la edita para un nuevo cliente y la envía con el nombre del cliente anterior en el segundo párrafo, o con precios que no corresponden. La plantilla evita este riesgo porque se parte siempre de un documento limpio. Demuestre la creación de una plantilla de propuesta comercial con estilos corporativos, logotipo en el encabezado, controles de contenido para los campos variables y un bloque de condiciones comerciales guardado como elemento rápido. Explique dónde guardarla para que todo el equipo la use, por ejemplo en una biblioteca compartida en la nube, conectando con lo visto en Herramientas Digitales para el Trabajo. Enfatice el gobierno: si cada persona modifica la plantilla a su gusto, se pierde el propósito. Pregunte: ¿qué documentos de un área administrativa justificarían tener una plantilla oficial?"
+        },
+        {
+          "title": "Combinación de correspondencia: comunicaciones masivas personalizadas",
+          "bullets": [
+            "Combina un documento principal de Word con una tabla de Excel para generar cartas, constancias o etiquetas personalizadas.",
+            "Paso 1: preparar la tabla de Excel ordenada; paso 2: seleccionar destinatarios; paso 3: insertar campos combinados.",
+            "Paso 4: aplicar reglas como Si...Entonces...Sino; paso 5: vista previa y verificación; paso 6: finalizar en documento, PDF o correo.",
+            "Formato de campos: los montos y fechas pueden perder formato; se corrigen con modificadores como \\# \"#,##0.00\".",
+            "Datos personales en envíos masivos: verificar destinatarios y finalidad conforme a la Ley 29733 antes de enviar."
+          ],
+          "notes": "Plantee la tarea: el área de recursos humanos debe emitir 120 constancias de trabajo o el área de cobranzas debe enviar 85 cartas de recordatorio de pago con el monto y la fecha de vencimiento de cada cliente. Hecho a mano, es un día de trabajo con alta probabilidad de errores. Demuestre la combinación paso a paso usando como origen la tabla de cuentas por cobrar de la unidad 2. Inserte una regla condicional para que el texto cambie si el atraso supera los 60 días, con un tono más firme. Muestre el problema de formato de números, que aparecen con muchos decimales, y cómo se resuelve con un modificador de campo o preparando el dato en Excel con la función TEXTO. Enfatice la verificación previa: revisar al menos los primeros, los últimos y algunos registros aleatorios. Cierre con la dimensión legal: un correo masivo enviado con todos los destinatarios visibles expone datos personales; la combinación genera envíos individuales."
+        },
+        {
+          "title": "Revisión colaborativa: control de cambios y comentarios",
+          "bullets": [
+            "Control de cambios registra inserciones, eliminaciones y cambios de formato con autor y fecha.",
+            "Los comentarios plantean preguntas o sugerencias sin alterar el texto; se responden y se resuelven como hilos.",
+            "Comparar documentos muestra las diferencias entre dos versiones cuando alguien editó sin activar el control de cambios.",
+            "La coautoría en la nube permite edición simultánea; definir quién aprueba la versión final evita conflictos.",
+            "Antes de enviar externamente: aceptar o rechazar todos los cambios y eliminar comentarios con Inspeccionar documento."
+          ],
+          "notes": "Organice una simulación breve: en parejas, un estudiante redacta un párrafo de recomendación y el otro lo revisa con control de cambios y dos comentarios. Luego el autor acepta o rechaza cada cambio y responde los comentarios. Comente un caso real de riesgo que ocurre con frecuencia en negociaciones: una empresa envía a su contraparte un contrato que aún contiene los comentarios internos del equipo legal, donde se discute hasta qué monto se podría ceder. El daño en la negociación es evidente. Por eso la limpieza final del documento es parte del procedimiento. Muestre la herramienta Comparar para cuando un tercero devuelve el documento editado sin control de cambios. Relacione con el flujo de aprobaciones que se estudia en Procesos Administrativos, curso paralelo de este ciclo: la revisión de documentos es un proceso con roles, plazos y criterios de aprobación. Pregunte: ¿quién debería tener la última palabra en un informe que firma el gerente?"
+        },
+        {
+          "title": "Accesibilidad digital: documentos para todos los lectores",
+          "bullets": [
+            "Usar estilos de título reales permite a los lectores de pantalla navegar el documento por secciones.",
+            "Texto alternativo en imágenes y gráficos: describir el dato o la conclusión, no solo decir 'gráfico'.",
+            "Contraste suficiente, fuentes legibles, tablas con fila de encabezado definida y sin celdas combinadas innecesarias.",
+            "El Comprobador de accesibilidad de Microsoft Office identifica problemas y sugiere correcciones.",
+            "La Ley 29973, Ley General de la Persona con Discapacidad, promueve la accesibilidad en la información y comunicaciones."
+          ],
+          "notes": "Introduzca la accesibilidad como un criterio de calidad, no como un añadido. Si es posible, reproduzca unos segundos de un lector de pantalla leyendo un documento sin estilos: el usuario escucha un texto continuo sin poder saltar a las secciones. Luego reprodúzcalo en un documento bien estructurado. Explique que el Perú cuenta con la Ley 29973, que reconoce el derecho de las personas con discapacidad a acceder a la información y las comunicaciones, y que las organizaciones públicas y privadas tienen cada vez más exigencias en este sentido. Además, un documento accesible también es más fácil de leer para todos, incluso desde un celular. Demuestre el Comprobador de accesibilidad sobre el informe de práctica y corrija tres observaciones: una imagen sin texto alternativo, una tabla sin encabezado y un texto gris claro sobre fondo blanco. Pida que redacten un texto alternativo para un gráfico de ventas que comunique la conclusión principal."
+        },
+        {
+          "title": "Integración entre Excel, Word y PowerPoint",
+          "bullets": [
+            "Pegar como imagen: fija y liviana, pero no se actualiza; útil para versiones finales cerradas.",
+            "Pegar incrustado: copia el libro dentro del documento; aumenta el tamaño y puede exponer datos ocultos.",
+            "Pegar vinculado: mantiene la conexión con el archivo de Excel y se actualiza al cambiar los datos de origen.",
+            "Riesgos del vínculo: rutas rotas al mover archivos y datos desactualizados si no se actualiza antes de enviar.",
+            "Regla de decisión: vincular en informes recurrentes en elaboración y convertir a imagen o PDF en la versión distribuida."
+          ],
+          "notes": "Demuestre las tres modalidades con el mismo gráfico de la unidad 2. Primero péguelo como imagen en Word; luego, incrustado, y muestre que al hacer doble clic se abre todo el libro, incluidas hojas con información que quizás no debía compartirse. Este es un riesgo real de confidencialidad: un gráfico incrustado en una propuesta puede llevar dentro la hoja de costos y márgenes. Después péguelo vinculado, modifique un dato en Excel y muestre la actualización en Word y en PowerPoint. Explique el beneficio para reportes mensuales: el informe de gestión se actualiza en minutos. Advierta sobre los vínculos rotos cuando los archivos cambian de carpeta, y muestre la ventana de edición de vínculos para corregirlos. Proponga la regla de decisión de la diapositiva y pregunte: si van a enviar el informe a un cliente externo, ¿qué modalidad usarían y en qué formato de archivo?"
+        },
+        {
+          "title": "El principio de la pirámide: pensar antes de diseñar",
+          "bullets": [
+            "Barbara Minto propone comenzar por la idea principal y sostenerla con argumentos agrupados lógicamente.",
+            "Estructura SCQA: situación, complicación, pregunta y respuesta para introducir cualquier recomendación.",
+            "Cada grupo de argumentos debe ser mutuamente excluyente y colectivamente exhaustivo, el criterio MECE.",
+            "Esquema de títulos: leer solo los títulos de las diapositivas debe contar la historia completa.",
+            "Primero el guion en papel o en el panel de esquema; después el diseño visual en PowerPoint."
+          ],
+          "notes": "Esta diapositiva es el corazón conceptual de la unidad. Explique que Barbara Minto desarrolló el principio de la pirámide en la firma McKinsey y que su libro sigue siendo referencia en consultoría y dirección. La idea central es que el lector ejecutivo necesita primero la respuesta y luego los argumentos, al revés de como solemos narrar, cronológicamente. Construya en la pizarra un ejemplo con el caso de Farmacias Moche: situación, la cadena vende analgésicos en seis locales; complicación, el laboratorio ofrece 12 % de descuento por compra anticipada; pregunta, ¿conviene aceptar?; respuesta, sí, pero solo por cuatro meses y para cuatro locales. Luego agrupe los argumentos de forma MECE: demanda, finanzas y riesgo. Muestre la técnica de los títulos de acción: si se leen en secuencia, cuentan la historia. Pida a cada estudiante que escriba el esquema SCQA de su recomendación de la unidad 2 antes de abrir PowerPoint."
+        },
+        {
+          "title": "Diseño de diapositivas con fundamento cognitivo",
+          "bullets": [
+            "Richard Mayer demostró que se aprende mejor con palabras e imágenes pertinentes que con texto denso leído en voz alta.",
+            "Principio de coherencia: eliminar adornos, música y animaciones que no aportan al mensaje.",
+            "Un mensaje por diapositiva, título de acción de una o dos líneas y evidencia visual que lo sustente.",
+            "Jerarquía visual: tamaño, posición y contraste guían la mirada hacia el dato clave.",
+            "Patrón de diapositivas: definir una vez fuentes, colores y diseños para mantener la coherencia de todo el archivo."
+          ],
+          "notes": "Muestre una diapositiva típica de una exposición universitaria o corporativa: título Resultados, ocho viñetas largas, un logotipo grande y una imagen decorativa. Luego explique los principios de la teoría cognitiva del aprendizaje multimedia de Richard Mayer, investigador de la Universidad de California en Santa Bárbara: el ser humano procesa información verbal y visual por canales distintos y de capacidad limitada, por lo que saturarlos reduce la comprensión. Rehaga la diapositiva: un título de acción que dice la conclusión, un gráfico que la demuestra y una nota breve. Luego muestre el patrón de diapositivas y explique que cambiar allí la fuente o el color afecta todo el archivo, igual que los estilos en Word. Enfatice la coherencia como valor: una presentación con cinco tipos de letra distintos transmite desorden. Pida que apliquen el patrón de la plantilla del curso y rediseñen dos diapositivas propias."
+        },
+        {
+          "title": "Datos en diapositivas: del gráfico al mensaje",
+          "bullets": [
+            "Mostrar solo los datos que sostienen el mensaje; el detalle completo va en el anexo o en el informe escrito.",
+            "Resaltar con color el dato clave y atenuar el resto en gris, siguiendo a Knaflic.",
+            "Tablas en diapositivas: pocas filas, cifras redondeadas, unidades en el encabezado y alineación a la derecha.",
+            "Animaciones con propósito: revelar series o pasos progresivamente para guiar la explicación, no para decorar.",
+            "Cada cifra debe ser trazable al modelo de Excel; vincular o documentar la fuente en la nota del orador."
+          ],
+          "notes": "Tome una tabla dinámica de la unidad 2 con 12 filas y 6 columnas y pregunte si se puede leer en una diapositiva proyectada en una videollamada. La respuesta es no. Muestre cómo reducirla a lo esencial: las tres cifras que sostienen la recomendación, redondeadas a miles, con la unidad en el encabezado. Explique que el informe escrito y la presentación cumplen funciones distintas: el informe permite al lector revisar el detalle a su ritmo; la presentación guía la atención en tiempo real. Demuestre una animación con propósito: mostrar primero la tendencia general y luego destacar la región que explica la caída. Recuerde la trazabilidad: si alguien pregunta de dónde sale una cifra, el expositor debe poder responder; por eso conviene anotar la fuente y la hoja del modelo en las notas del orador. Pida que transformen una tabla densa en una diapositiva con un mensaje."
+        },
+        {
+          "title": "Exponer en entornos virtuales con impacto",
+          "bullets": [
+            "Vista Moderador: notas, tiempo transcurrido y siguiente diapositiva visibles solo para quien expone.",
+            "Regla de tiempo orientativa: entre uno y dos minutos por diapositiva; ensayar en voz alta con cronómetro.",
+            "En videollamadas: compartir solo la ventana de la presentación, cámara a la altura de los ojos y audio probado.",
+            "Preparar respuestas a las preguntas probables y diapositivas de respaldo en un anexo después del cierre.",
+            "Distribuir en PDF: preserva el diseño, reduce el tamaño y evita modificaciones no autorizadas."
+          ],
+          "notes": "Como TEPSUP es una institución completamente virtual, esta diapositiva tiene un valor directo para los estudiantes, que expondrán su proyecto integrador en línea. Comente la propuesta de Nancy Duarte en Resonate: una buena presentación alterna entre lo que es y lo que podría ser, generando tensión que se resuelve con la recomendación. Demuestre la Vista Moderador, el ensayo con intervalos y la grabación de la presentación con narración. Dé recomendaciones prácticas: cerrar notificaciones antes de compartir pantalla, no compartir el escritorio completo porque puede exponer correos o archivos, y tener el PDF listo por si falla el programa. Explique la estrategia de diapositivas de respaldo: preparar respuestas a las tres preguntas más probables del gerente. Cierre la unidad organizando las exposiciones breves de la tarea: cada estudiante presentará su recomendación en cinco minutos y recibirá retroalimentación con la rúbrica."
+        }
+      ],
+      "reading": {
+        "title": "Del análisis al documento: estructura, automatización y argumentación en la ofimática empresarial",
+        "minutes": 30,
+        "content": "## Por qué la forma también es contenido\n\nEn la empresa, un análisis solo genera valor cuando alguien lo lee, lo entiende y actúa. Por eso el informe y la presentación no son un trámite final: son el canal por el cual el trabajo técnico se convierte en decisión. Un documento bien construido reduce el esfuerzo del lector, permite verificar las cifras y puede actualizarse sin rehacerse.\n\n## Estilos y estructura en Word\n\nEl principio es el mismo que en Excel: separar el contenido de su presentación. Los **estilos** asignan a cada párrafo un rol (Título 1, Título 2, Normal, Cita) con un formato definido una sola vez. De ellos dependen la tabla de contenido automática, el panel de navegación, la numeración multinivel y la accesibilidad. Un flujo de trabajo recomendable es:\n\n1. Crear el documento desde la plantilla corporativa (.dotx).\n2. Redactar aplicando estilos, nunca formato manual.\n3. Insertar saltos de sección donde cambian la numeración o la orientación.\n4. Insertar títulos en tablas y figuras y usar referencias cruzadas.\n5. Generar tabla de contenido, índice de tablas y bibliografía.\n6. Revisar con el Comprobador de accesibilidad e Inspeccionar documento.\n7. Exportar a PDF para su distribución.\n\nLos títulos automáticos de tablas y figuras se apoyan en campos. Al presionar F9 se actualizan y, si se activan los códigos de campo con Alt+F9, se observa su lógica:\n\n```\n{ SEQ Tabla \\* ARABIC }        → numera las tablas en orden\n{ REF _Ref123456 \\h }          → referencia cruzada a una tabla\n{ MERGEFIELD Saldo \\# \"S/ #,##0.00\" }   → campo combinado con formato\n```\n\n## Combinación de correspondencia\n\nLa combinación une un documento principal con una fuente de datos, normalmente una tabla de Excel ordenada como las de la unidad 2. Permite generar cartas de cobranza, constancias o certificados en minutos. Las reglas condicionales (*Si...Entonces...Sino*) adaptan el texto: por ejemplo, un párrafo distinto para clientes con más de 60 días de atraso. Dos cuidados son esenciales: verificar los formatos de montos y fechas, y respetar la Ley 29733 de Protección de Datos Personales, que exige usar los datos solo para la finalidad para la cual fueron recopilados y evitar exponerlos a terceros.\n\n## Revisión, control de versiones y accesibilidad\n\nEl control de cambios y los comentarios hacen visible el proceso de revisión; la comparación de documentos detecta modificaciones no registradas. Antes de enviar a un externo, deben aceptarse o rechazarse todos los cambios y eliminarse comentarios y metadatos. La accesibilidad, promovida en el Perú por la Ley 29973, exige estructura con estilos reales, texto alternativo en imágenes, tablas con encabezados y contraste suficiente.\n\n## Integración con Excel\n\nUn gráfico de Excel puede llevarse a Word o PowerPoint como imagen, como objeto incrustado o como objeto vinculado. La imagen es estable pero estática; el incrustado arrastra el libro completo, con el riesgo de exponer hojas confidenciales; el vinculado se actualiza con el origen, ideal para informes mensuales, pero se rompe si se mueven los archivos. Una práctica sólida es trabajar con vínculos durante la elaboración y distribuir la versión final en PDF.\n\n## Argumentar con el principio de la pirámide\n\nBarbara Minto (2009) sostiene que un mensaje ejecutivo debe empezar por la idea principal y sostenerla con argumentos agrupados lógicamente. La introducción se ordena con el esquema **SCQA**:\n\n- **Situación:** lo que el lector ya sabe y acepta.\n- **Complicación:** el cambio o problema que exige actuar.\n- **Pregunta:** la interrogante que surge.\n- **Respuesta:** la recomendación.\n\nLos argumentos se organizan con el criterio MECE, mutuamente excluyentes y colectivamente exhaustivos. Por ejemplo, una recomendación de compra anticipada de inventario puede sostenerse en tres pilares: demanda (estacionalidad comprobada), finanzas (ahorro neto después del costo de financiar el inventario) y riesgo (vencimiento de los productos y capacidad de almacén).\n\n## Diseño de presentaciones con base en evidencia\n\nRichard Mayer, a partir de décadas de experimentos, formuló principios del aprendizaje multimedia: coherencia (eliminar lo superfluo), señalización (destacar lo esencial), contigüidad (ubicar texto e imagen relacionados juntos) y redundancia (no leer en voz alta el mismo texto que se proyecta). En la práctica: un mensaje por diapositiva, títulos de acción que enuncian la conclusión, gráficos simplificados según Knaflic y detalle técnico en anexos. Nancy Duarte añade la dimensión narrativa: contrastar la situación actual con la deseada para movilizar a la audiencia.\n\n## Para aplicar\n\nTome el análisis de la unidad 2 y escriba sus títulos de diapositiva como oraciones completas. Si al leerlos en secuencia no se entiende la recomendación, la estructura debe revisarse antes de abrir PowerPoint."
+      },
+      "case": {
+        "title": "Caso: La propuesta que se envió con los comentarios internos en Consultora Pacífico Sur",
+        "content": "**Consultora Pacífico Sur S.A.C.** es una empresa limeña de 22 colaboradores que presta servicios de tercerización de planillas y asesoría administrativa a pymes. Su principal fuente de clientes son las licitaciones privadas de empresas medianas que buscan externalizar su gestión de personal.\n\nEn junio, la empresa participó en una convocatoria de una cadena de restaurantes con 340 trabajadores en Lima y Arequipa. El equipo comercial, liderado por Mariela Torres, preparó la propuesta en Word en apenas cuatro días. Tres personas trabajaron sobre copias distintas del archivo y luego unieron los textos manualmente. La tabla de precios se pegó desde Excel como objeto incrustado.\n\nLa propuesta se envió a las 11:52 p. m. del día de cierre. Dos semanas después, el cliente comunicó que había elegido a otro proveedor. En la reunión de retroalimentación, el gerente de administración del restaurante comentó tres cosas:\n\n- El documento de 38 páginas no tenía resumen ejecutivo; la oferta económica aparecía recién en la página 31.\n- La tabla de contenido indicaba páginas que no coincidían con el contenido y la numeración de secciones saltaba del 3.2 al 3.5.\n- Al hacer doble clic en la tabla de precios, se abrió el libro de Excel completo, incluida una hoja llamada *Margen* en la que se veía que el precio por trabajador podía bajar hasta en 18 %. En el margen del documento quedó además un comentario de un analista: «¿Les decimos que no tenemos personal en Arequipa todavía?».\n\nMariela sabe que el problema no fue solo de formato: perdieron credibilidad y revelaron información estratégica. El gerente general, Fernando Salas, le pidió un plan para que esto no vuelva a ocurrir antes de la siguiente licitación, que vence en 25 días y tiene un valor estimado de S/ 420 000 anuales.\n\nLas opiniones internas están divididas. El analista senior propone contratar a un diseñador externo para cada propuesta, con un costo aproximado de S/ 2 500 por documento. La asistente administrativa sugiere crear una plantilla corporativa con estilos, bloques reutilizables y una lista de verificación previa al envío, además de capacitar al equipo durante dos tardes. Un tercer colaborador cree que el problema fue la falta de tiempo y que basta con empezar antes.\n\nFernando también pregunta si el comentario revelado podría tener consecuencias legales o reputacionales y cómo debería manejar la relación con el cliente que ya vio la información.",
+        "questions": [
+          "Clasifique las fallas del caso en problemas de estructura, de proceso de revisión y de confidencialidad. ¿Cuál fue la más grave y por qué?",
+          "Evalúe las tres propuestas internas con criterios de costo, sostenibilidad y control del riesgo. ¿Cuál recomendaría o qué combinación?",
+          "Diseñe una lista de verificación de diez puntos previa al envío de cualquier propuesta comercial de la consultora.",
+          "Redacte, aplicando el esquema SCQA, la estructura del resumen ejecutivo que debió tener la propuesta."
+        ]
+      },
+      "assignment": {
+        "title": "Informe ejecutivo y presentación a partir del análisis de datos",
+        "instructions": "**Objetivo:** transformar el análisis de la unidad 2 en un informe técnico profesional y una presentación ejecutiva que sustenten una recomendación de gestión.\n\n**Qué entregar:**\n\n1. **Informe en Word (máximo 8 páginas sin anexos)** creado desde la plantilla del curso, con: portada; tabla de contenido automática; resumen ejecutivo de una página con estructura SCQA; desarrollo con estilos de título y numeración multinivel; al menos dos tablas y dos figuras con títulos automáticos y referencias cruzadas; fuentes de datos indicadas; conclusiones y recomendaciones; anexos en una sección con numeración distinta.\n2. **Vínculo con Excel:** al menos un gráfico o tabla pegado con vínculo al libro de la unidad 2; en la versión PDF debe figurar actualizado.\n3. **Presentación en PowerPoint de 6 a 8 diapositivas** con patrón de diapositivas aplicado, títulos de acción que cuenten la historia completa, gráficos simplificados y notas del orador con la fuente de cada cifra.\n4. **Carta de comunicación** generada con combinación de correspondencia para al menos cinco destinatarios (por ejemplo, jefes de sede), con una regla condicional.\n5. Evidencia de que el informe superó el Comprobador de accesibilidad y la inspección del documento.\n\n**Formato:** entregar .docx, .pdf y .pptx nombrados *Apellido_U3_*. Entrega individual en la semana 12, con exposición virtual de 5 minutos.",
+        "rubric": [
+          {
+            "name": "Estructura del informe con estilos, secciones y referencias automáticas",
+            "points": 5
+          },
+          {
+            "name": "Resumen ejecutivo y argumentación con principio de la pirámide",
+            "points": 5
+          },
+          {
+            "name": "Presentación: títulos de acción, diseño y visualización de datos",
+            "points": 5
+          },
+          {
+            "name": "Integración con Excel, combinación de correspondencia y accesibilidad",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 3: documentos y presentaciones empresariales",
+        "questions": [
+          {
+            "prompt": "Un informe de 40 páginas tiene títulos con negrita y tamaño 14 aplicados manualmente. ¿Qué consecuencia práctica tiene esta decisión?",
+            "options": [
+              "No se puede generar una tabla de contenido automática ni navegar por secciones",
+              "El documento no se puede exportar a PDF",
+              "Word bloquea la numeración de páginas",
+              "La combinación de correspondencia deja de funcionar en todo el archivo"
+            ],
+            "correct": 0,
+            "explanation": "La tabla de contenido, el panel de navegación y la accesibilidad dependen de los estilos de título; el formato manual solo imita la apariencia sin crear estructura."
+          },
+          {
+            "prompt": "Un informe necesita portada sin número, preliminares en romanos y cuerpo desde la página 1. ¿Qué configuración lo permite?",
+            "options": [
+              "Saltos de sección y pies de página desvinculados del anterior con formato de número distinto",
+              "Saltos de página y números escritos manualmente en cada pie",
+              "Tres documentos separados unidos al exportar a PDF",
+              "Un salto de columna antes de cada parte del informe"
+            ],
+            "correct": 0,
+            "explanation": "Los saltos de sección permiten que cada parte tenga encabezado, pie y numeración propios cuando se desvinculan de la sección anterior."
+          },
+          {
+            "prompt": "Un gráfico se pegará en una propuesta para un cliente externo. El libro de origen contiene una hoja con márgenes. ¿Qué opción es más segura?",
+            "options": [
+              "Pegarlo como imagen y distribuir la propuesta en PDF",
+              "Pegarlo como objeto incrustado para que el cliente vea los datos",
+              "Pegarlo vinculado y enviar también el libro de Excel",
+              "Pegarlo incrustado y ocultar la hoja de márgenes"
+            ],
+            "correct": 0,
+            "explanation": "El objeto incrustado lleva el libro completo, incluso hojas ocultas. La imagen en un PDF transmite el mensaje sin exponer información confidencial."
+          },
+          {
+            "prompt": "En una combinación de correspondencia los saldos aparecen como 1523.4567. ¿Cuál es la solución adecuada?",
+            "options": [
+              "Aplicar un modificador de formato numérico al campo o preparar el dato con TEXTO en Excel",
+              "Cambiar la fuente del documento principal",
+              "Redondear manualmente cada carta después de finalizar la combinación",
+              "Convertir la tabla de Excel a imagen antes de combinar"
+            ],
+            "correct": 0,
+            "explanation": "Word recibe el valor almacenado, no el formato visual de Excel. Un modificador como \\# \"#,##0.00\" o una columna con TEXTO controlan la presentación del monto."
+          },
+          {
+            "prompt": "Según el esquema SCQA, ¿cuál de estas oraciones corresponde a la complicación en un informe sobre compra anticipada de inventario?",
+            "options": [
+              "El laboratorio ofrece 12 % de descuento si se compra hoy el inventario de seis meses",
+              "La cadena vende analgésicos en seis locales del norte del país",
+              "Recomendamos comprar el inventario de cuatro meses para cuatro locales",
+              "¿Conviene aceptar la oferta del laboratorio?"
+            ],
+            "correct": 0,
+            "explanation": "La complicación es el hecho nuevo que altera la situación conocida y obliga a decidir; la situación es el contexto, la pregunta surge de ella y la respuesta es la recomendación."
+          },
+          {
+            "prompt": "Una diapositiva tiene el título 'Ventas por región' y un gráfico con seis colores. ¿Qué cambio aplica mejor los principios de Knaflic y Mayer?",
+            "options": [
+              "Título de acción con la conclusión y color solo en la región relevante, resto en gris",
+              "Agregar una tabla con todos los datos debajo del gráfico",
+              "Usar un gráfico 3D para hacerlo más atractivo",
+              "Añadir viñetas que lean en voz alta cada valor del gráfico"
+            ],
+            "correct": 0,
+            "explanation": "El título de acción comunica el mensaje y el color selectivo dirige la atención; añadir texto redundante o efectos decorativos aumenta la carga cognitiva."
+          },
+          {
+            "prompt": "Un documento revisado por un tercero vuelve sin control de cambios activado. ¿Qué herramienta permite identificar qué se modificó?",
+            "options": [
+              "Comparar documentos entre la versión original y la versión devuelta",
+              "Inspeccionar documento para eliminar metadatos",
+              "Comprobador de accesibilidad",
+              "Actualizar campos con F9"
+            ],
+            "correct": 0,
+            "explanation": "La función Comparar genera un documento con las diferencias marcadas como cambios, aunque el revisor no haya activado el control de cambios."
+          }
+        ]
+      }
+    },
+    {
+      "title": "Unidad 4 · Automatización, análisis de escenarios y tablero de gestión",
+      "description": "Automatiza tareas repetitivas con macros y VBA básico, evalúa escenarios con las herramientas de análisis Y si y Solver, y diseña un tablero de indicadores interactivo que integra lo aprendido en un proyecto aplicado a una organización real.",
+      "topics": [
+        "Criterios para automatizar y grabación de macros",
+        "Fundamentos de VBA y seguridad de macros",
+        "Buscar objetivo, escenarios, tablas de datos y Solver",
+        "Indicadores de gestión y diseño de tableros",
+        "Proyecto integrador y opciones de escalamiento"
+      ],
+      "slides": [
+        {
+          "title": "Qué automatizar y qué no: un criterio económico",
+          "bullets": [
+            "Automatizar conviene cuando la tarea es frecuente, sigue reglas estables, consume tiempo y tiene riesgo de error humano.",
+            "Cálculo rápido: horas ahorradas al año = frecuencia anual × minutos por ejecución ÷ 60, comparado con horas de desarrollo y mantenimiento.",
+            "Antes de automatizar, simplificar: automatizar un proceso mal diseñado solo produce errores más rápido.",
+            "Jerarquía de soluciones: fórmulas y tablas, luego Power Query, luego macros, y finalmente herramientas especializadas.",
+            "Toda automatización necesita un responsable, documentación y un plan de contingencia si deja de funcionar."
+          ],
+          "notes": "Abra la unidad con un ejercicio de estimación. Una asistente dedica 45 minutos cada día hábil a dar formato a un reporte de ventas y enviarlo. Pida a los estudiantes que calculen las horas anuales: unos 250 días por 45 minutos dan alrededor de 187 horas, casi cinco semanas laborales. Si una macro toma 12 horas en desarrollarse y probarse, la inversión se recupera en pocas semanas. Luego invierta el razonamiento con una tarea que ocurre dos veces al año y cambia cada vez: no conviene automatizarla. Recupere el principio de mejora de procesos que se estudia en Procesos Administrativos: primero se elimina lo innecesario y se estandariza, luego se automatiza. Explique la jerarquía de soluciones: muchas tareas que se resuelven con macros podrían hacerse mejor con Power Query o fórmulas, que son más transparentes y seguras. Pregunte: ¿qué tarea repetitiva de su entorno cumple los cuatro criterios para automatizar?"
+        },
+        {
+          "title": "Grabadora de macros paso a paso",
+          "bullets": [
+            "Paso 1: activar la ficha Programador; paso 2: planificar y ensayar la secuencia exacta de acciones antes de grabar.",
+            "Paso 3: Grabar macro, asignar un nombre sin espacios, una descripción y, si se desea, un atajo de teclado.",
+            "Paso 4: usar referencias relativas cuando la macro deba actuar desde la celda activa y no siempre en la misma posición.",
+            "Paso 5: detener la grabación, guardar el libro como .xlsm y probar la macro con datos distintos a los de la grabación.",
+            "Paso 6: asignar la macro a un botón o forma y documentarla en la hoja Léame del libro."
+          ],
+          "notes": "Haga una demostración completa grabando una macro que da formato al reporte diario de ventas: aplica estilo de tabla, ajusta anchos de columna, formatea montos en soles, ordena por importe y agrega la fecha de corte. Primero ensaye la secuencia sin grabar, porque todo lo que se haga durante la grabación, incluidos los errores, queda registrado. Muestre la diferencia entre referencias absolutas y relativas grabando dos versiones de una macro que inserta una fila de totales: la absoluta siempre escribe en la fila 50, mientras que la relativa escribe debajo de la última fila con datos. Guarde como .xlsm y explique por qué el formato .xlsx elimina las macros. Pruebe la macro con un archivo del día siguiente con más filas; probablemente falle, y ese fallo es la mejor motivación para aprender a editar el código, tema de la siguiente diapositiva. Pida a los estudiantes que graben una macro de formato para su propio reporte."
+        },
+        {
+          "title": "VBA: objetos, propiedades y métodos",
+          "bullets": [
+            "VBA, Visual Basic for Applications, es el lenguaje que Excel usa internamente para registrar y ejecutar macros.",
+            "Modelo de objetos jerárquico: Application contiene Workbooks; cada Workbook contiene Worksheets; cada Worksheet contiene Range.",
+            "Propiedades describen un objeto, como Range(\"A1\").Value o .Font.Bold; métodos ejecutan acciones, como .Copy o .ClearContents.",
+            "El editor (Alt+F11) muestra módulos, el código grabado y la ventana Inmediato para probar instrucciones.",
+            "Leer y limpiar el código grabado: eliminar Select y Activate innecesarios hace las macros más rápidas y robustas."
+          ],
+          "notes": "Abra el editor de VBA con Alt+F11 y muestre el código que generó la grabadora en la diapositiva anterior. Los estudiantes verán muchas líneas con Select y Selection, que reflejan los clics realizados. Explique el modelo de objetos con una analogía administrativa: la aplicación es la empresa, los libros son las áreas, las hojas son los archivadores y los rangos son los documentos dentro de ellos. Cada objeto tiene características, que son las propiedades, y acciones que puede realizar, que son los métodos. Luego simplifique el código en vivo: reemplace la secuencia Range A1 Select, Selection Font Bold igual a True por una sola línea que asigna la propiedad directamente. Use la ventana Inmediato para ejecutar instrucciones sueltas y ver el efecto inmediato. Aclare que el objetivo del curso no es formar programadores, sino usuarios capaces de leer, adaptar y mantener macros sencillas, competencia muy valorada en asistentes administrativos y analistas."
+        },
+        {
+          "title": "VBA: variables, condicionales y bucles con un ejemplo real",
+          "bullets": [
+            "Declarar variables con Dim y tipo: Dim ultimaFila As Long, Dim saldo As Double; Option Explicit obliga a declararlas.",
+            "Encontrar la última fila con datos: ultimaFila = Cells(Rows.Count, 1).End(xlUp).Row, en lugar de una fila fija.",
+            "For i = 2 To ultimaFila ... Next i recorre cada registro; If ... Then ... Else aplica la regla de negocio.",
+            "Ejemplo: marcar como 'Vencida' cada factura con saldo positivo y fecha de vencimiento anterior a la fecha de corte.",
+            "Mensajes con MsgBox para informar al usuario cuántos registros se procesaron al terminar la ejecución."
+          ],
+          "notes": "Escriba con los estudiantes una macro corta que recorre la cartera de cuentas por cobrar y marca las facturas vencidas, la misma lógica que en la unidad 1 resolvieron con formato condicional. Esto permite comparar enfoques: la fórmula o el formato condicional son más transparentes; la macro conviene cuando además se deben realizar acciones, como copiar las vencidas a otra hoja y generar un correo. Explique cada línea: la declaración de variables, la obtención de la fecha de corte desde la hoja de parámetros, el cálculo de la última fila para que la macro funcione con cualquier cantidad de registros, el bucle y la condición. Muestre la ejecución paso a paso con F8 y la inspección de variables, que es la forma de depurar. Insista en Option Explicit: evita que un error de tipeo en el nombre de una variable cree silenciosamente una variable nueva vacía. Pida que modifiquen la macro para contar también las facturas por vencer en los próximos siete días."
+        },
+        {
+          "title": "Seguridad, mantenimiento y gobierno de las macros",
+          "bullets": [
+            "Las macros pueden contener código malicioso; desde 2022 Microsoft bloquea por defecto las macros de archivos descargados de internet.",
+            "Habilitar macros solo de fuentes confiables y ubicaciones de confianza definidas por el área de tecnología.",
+            "Documentar cada macro: propósito, autor, fecha, datos de entrada, resultados esperados y comentarios en el código.",
+            "Manejar errores con On Error GoTo y mensajes claros; nunca usar On Error Resume Next para ocultar todos los errores.",
+            "Guardar una copia antes de ejecutar macros que borran o sobrescriben datos, porque no se pueden deshacer con Ctrl+Z."
+          ],
+          "notes": "Esta diapositiva aborda la dimensión de riesgo, indispensable para un uso profesional. Explique que durante años los documentos de Office con macros fueron uno de los vehículos más usados para distribuir programas maliciosos mediante correos de phishing, por ejemplo con supuestas facturas o notificaciones de entidades públicas. Por eso Microsoft cambió el comportamiento predeterminado y bloquea las macros de archivos que provienen de internet. Conecte con lo aprendido en Herramientas Digitales para el Trabajo sobre ingeniería social: un correo que pide habilitar contenido para ver una factura de SUNAT es una señal de alerta. Luego trate el mantenimiento: una macro sin documentación se vuelve inservible cuando su autor deja la empresa, el mismo problema del caso de comisiones de la unidad 1. Muestre una estructura básica de manejo de errores y advierta que las acciones de una macro no se deshacen con Ctrl+Z. Pregunte: ¿qué política mínima de macros propondrían para una pyme?"
+        },
+        {
+          "title": "Buscar objetivo: trabajar hacia atrás desde la meta",
+          "bullets": [
+            "Buscar objetivo ajusta una celda de entrada hasta que una fórmula alcance el valor deseado.",
+            "Paso a paso: Datos > Análisis Y si > Buscar objetivo; definir la celda objetivo, el valor buscado y la celda que cambiará.",
+            "Ejemplo: ¿cuántas unidades se deben vender para lograr una utilidad operativa de S/ 20 000 al mes?",
+            "Requiere que exista una cadena de fórmulas entre la celda cambiante y la celda objetivo.",
+            "Limitación: cambia una sola variable y devuelve una sola solución; para varias variables se usa Solver."
+          ],
+          "notes": "Construya con los estudiantes un modelo de costo, volumen y utilidad para un emprendimiento de café en Cusco: precio promedio, costo variable por unidad, costos fijos mensuales de alquiler, planilla y servicios. Ellos ya trabajaron el punto de equilibrio en Matemática para los Negocios, por lo que podrán verificar el resultado algebraicamente. Use Buscar objetivo primero para encontrar el punto de equilibrio, donde la utilidad es cero, y luego para encontrar el volumen que genera una utilidad meta. Después invierta la pregunta: si el volumen máximo realista es de 3 000 tazas al mes, ¿qué precio permitiría alcanzar la meta? Explique la importancia del modelo bien construido de la unidad 1: si los supuestos están en celdas de entrada y los cálculos encadenados, Buscar objetivo funciona; si hay valores pegados, no. Pregunte: ¿qué otras metas de gestión podrían resolverse trabajando hacia atrás?"
+        },
+        {
+          "title": "Escenarios y tablas de datos: decidir bajo incertidumbre",
+          "bullets": [
+            "El Administrador de escenarios guarda combinaciones de supuestos: pesimista, base y optimista, y genera un resumen comparativo.",
+            "Tabla de datos de una variable: muestra cómo cambia un resultado ante distintos valores de un supuesto.",
+            "Tabla de datos de dos variables: cruza, por ejemplo, precio y volumen para mostrar la utilidad en cada combinación.",
+            "Los supuestos de los escenarios deben sustentarse con datos históricos, proyecciones del BCRP o estudios de mercado.",
+            "Comunicar rangos y no solo un número: la decisión se evalúa también por su resultado en el escenario adverso."
+          ],
+          "notes": "Continúe con el modelo de la cafetería. Defina tres escenarios con supuestos de precio, volumen y costo de insumos: base, pesimista con menor afluencia turística y alza del costo del café, y optimista. Genere el resumen del Administrador de escenarios. Luego construya una tabla de datos de dos variables que cruce precio y volumen, y aplique formato condicional para mostrar en rojo las combinaciones con pérdida. Esta matriz es una herramienta poderosa para conversar con un gerente: muestra la zona segura de operación. Discuta de dónde deben salir los supuestos: los datos históricos de ventas, las proyecciones de inflación del Reporte de Inflación del BCRP o la información de llegada de turistas. Introduzca el concepto de decisión robusta: una alternativa con menor utilidad esperada pero sin pérdidas en el escenario pesimista puede ser preferible. Pregunte: ¿qué escenario debería guiar la decisión de abrir un segundo local?"
+        },
+        {
+          "title": "Solver: optimización con restricciones",
+          "bullets": [
+            "Solver encuentra el valor óptimo de una celda objetivo cambiando varias celdas, sujeto a restricciones.",
+            "Componentes: función objetivo (maximizar margen), variables de decisión (unidades a producir) y restricciones (horas, insumos, demanda).",
+            "Paso a paso: activar el complemento, definir objetivo, celdas variables, restricciones y elegir el método Simplex LP para modelos lineales.",
+            "El informe de sensibilidad muestra precios sombra: cuánto mejoraría el objetivo con una unidad adicional de un recurso escaso.",
+            "Validar la solución: revisar que tenga sentido práctico, que respete restricciones no modeladas y que sea robusta."
+          ],
+          "notes": "Plantee un problema de mezcla de producción para un taller de confecciones de Gamarra que fabrica polos y casacas. Cada producto tiene un margen unitario, consume horas de corte y de costura, y la demanda máxima de casacas es limitada. Pida a los estudiantes que primero formulen el problema en palabras: qué se maximiza, qué se decide y qué limita. Luego construya el modelo en Excel con celdas variables, fórmulas de consumo de recursos y la celda objetivo, y resuélvalo con Solver usando el método Simplex LP. Muestre el informe de sensibilidad y explique el precio sombra de las horas de costura: indica cuánto pagaría como máximo por una hora extra. Este concepto conecta con Gestión de Operaciones y Logística del cuarto ciclo. Advierta que la solución matemática puede requerir ajustes: si Solver recomienda producir 347.6 casacas, hay que redondear y revisar. Pregunte: ¿qué restricciones reales podría haber omitido el modelo?"
+        },
+        {
+          "title": "Indicadores de gestión: medir lo que importa",
+          "bullets": [
+            "Un indicador clave de desempeño relaciona un resultado con una meta, un periodo, una fuente y un responsable.",
+            "Ficha técnica del indicador: nombre, fórmula, unidad, frecuencia, fuente de datos, meta, umbrales de alerta y responsable.",
+            "Kaplan y Norton proponen el cuadro de mando integral con cuatro perspectivas: financiera, clientes, procesos internos y aprendizaje.",
+            "Combinar indicadores de resultado, que miran atrás, con indicadores de actividad o inductores, que anticipan el desempeño.",
+            "Evitar la medición excesiva: entre cinco y nueve indicadores clave por tablero mantienen el foco de la gestión."
+          ],
+          "notes": "Antes de diseñar un tablero hay que decidir qué medir, y esa es una decisión de gestión, no de herramienta. Presente el cuadro de mando integral de Robert Kaplan y David Norton, publicado originalmente en Harvard Business Review en 1992, que propone equilibrar los indicadores financieros con los de clientes, procesos y aprendizaje. Este marco se profundizará en Planeamiento Estratégico del quinto ciclo. Construya con los estudiantes la ficha técnica de un indicador como el periodo promedio de cobranza: fórmula, cuentas por cobrar entre ventas al crédito multiplicado por los días del periodo; fuente, el registro de cuentas por cobrar; frecuencia mensual; meta de 45 días; alerta en ámbar sobre 50 y en rojo sobre 60; responsable, el jefe de créditos y cobranzas. Insista en la diferencia entre indicadores de resultado e inductores: las ventas del mes son resultado; el número de visitas comerciales realizadas es un inductor. Pida que cada equipo elija cinco indicadores para su proyecto integrador."
+        },
+        {
+          "title": "Diseño de tableros: principios de Stephen Few",
+          "bullets": [
+            "Stephen Few define el tablero como la información más importante para un objetivo, dispuesta en una sola pantalla para monitorear de un vistazo.",
+            "Jerarquía espacial: lo más importante arriba a la izquierda; agrupar indicadores relacionados y alinear los elementos.",
+            "Comparar siempre contra una referencia: meta, periodo anterior o mismo periodo del año previo.",
+            "Gráficos compactos: barras de viñeta, minigráficos y números grandes con variación; evitar velocímetros decorativos.",
+            "Menos es más: eliminar bordes, fondos, efectos y colores que no codifican información."
+          ],
+          "notes": "Muestre dos tableros: uno lleno de velocímetros, gráficos circulares en 3D, fondos degradados y logotipos; otro sobrio, con números grandes, variaciones respecto a la meta, minigráficos de tendencia y barras horizontales ordenadas. Pida a los estudiantes que respondan en diez segundos qué indicador está en peor situación en cada uno. El segundo gana sin discusión. Presente los principios de Stephen Few en Information Dashboard Design y explique por qué critica los velocímetros: ocupan mucho espacio y transmiten un solo número. Explique el concepto de gráfico de viñeta, que Few propuso como alternativa compacta: una barra que muestra el valor real, una marca con la meta y bandas de fondo con los rangos cualitativos. Recalque que el tablero monitorea; no reemplaza al análisis detallado. Pida que esbocen en papel el diseño de su tablero antes de abrir Excel: qué va arriba, qué se compara con qué y qué filtros necesitan."
+        },
+        {
+          "title": "Construcción del tablero en Excel paso a paso",
+          "bullets": [
+            "Paso 1: datos limpios con Power Query cargados como tablas o en el modelo de datos.",
+            "Paso 2: hoja de cálculos con tablas dinámicas o fórmulas que alimentan cada indicador; separada del tablero visible.",
+            "Paso 3: hoja de tablero con tarjetas de indicadores, gráficos y minigráficos vinculados a la hoja de cálculos.",
+            "Paso 4: segmentadores y escala de tiempo conectados a todas las tablas dinámicas para filtrar por sede, producto y periodo.",
+            "Paso 5: formato condicional con umbrales de la ficha técnica, protección de la hoja y prueba con un usuario real."
+          ],
+          "notes": "Integre aquí todo lo aprendido en el curso. Muestre la arquitectura completa del tablero: Power Query de la unidad 2 para los datos, tablas dinámicas y funciones como IMPORTARDATOSDINAMICOS en una hoja de cálculos, la hoja del tablero con tarjetas y gráficos, segmentadores conectados y formato condicional con los umbrales de la ficha técnica. Es exactamente la separación entre entradas, cálculos y salidas de la unidad 1. Construya en vivo una tarjeta de indicador: el valor del mes en número grande, la variación respecto a la meta con color según umbral y un minigráfico de los últimos doce meses. Luego conecte un segmentador a todas las tablas dinámicas mediante la opción Conexiones de informe. Explique la prueba con usuario: pedir a alguien que no participó en el diseño que responda tres preguntas usando el tablero, sin ayuda. Si no puede, el diseño debe corregirse. Recuerde que, si es necesario, se puede añadir una macro para actualizar todo y exportar a PDF."
+        },
+        {
+          "title": "Escalar: Office Scripts, Power Automate y Power BI",
+          "bullets": [
+            "Office Scripts automatiza Excel en la web con TypeScript y puede programarse en la nube, a diferencia de VBA.",
+            "Power Automate conecta aplicaciones: guardar adjuntos en una carpeta, actualizar un libro y enviar un correo de aviso.",
+            "Power BI escala el tablero a muchos usuarios, volúmenes mayores y actualización programada, reutilizando Power Query.",
+            "Criterios para escalar: número de usuarios, volumen de datos, frecuencia de actualización, seguridad y costo de licencias.",
+            "Excel sigue siendo adecuado para prototipos, análisis ad hoc y organizaciones pequeñas con presupuestos limitados."
+          ],
+          "notes": "Cierre el contenido técnico ampliando la mirada. Explique que el ecosistema de Microsoft 365 ofrece alternativas a VBA pensadas para la nube: Office Scripts, que funciona en Excel para la web, y Power Automate, que orquesta flujos entre aplicaciones, por ejemplo recibir por correo los reportes de las sucursales, guardarlos en la carpeta que lee Power Query y avisar al gerente cuando el tablero esté actualizado. Mencione que existen alternativas equivalentes en otros ecosistemas, como Google Workspace con Apps Script, de modo que el pensamiento es transferible. Presente Power BI como el paso natural cuando el tablero debe llegar a muchos usuarios o manejar grandes volúmenes, y recuerde que lo trabajarán en Analítica de Negocios. Discuta los criterios de decisión, incluido el costo de licencias, relevante para una pyme peruana. Pregunte: ¿en qué momento una pyme debería pasar de Excel a una herramienta especializada? Oriente la respuesta hacia criterios, no hacia la moda tecnológica."
+        },
+        {
+          "title": "Proyecto integrador: del dato a la decisión",
+          "bullets": [
+            "Objetivo: resolver un problema de gestión real de una organización con un libro automatizado, un tablero y una recomendación.",
+            "Entregables: libro .xlsm con Power Query, cálculos auditables, una macro documentada, análisis de escenarios y tablero.",
+            "Informe ejecutivo en Word y presentación de diez minutos con el principio de la pirámide y títulos de acción.",
+            "Criterios: exactitud y controles, utilidad del tablero, calidad de la automatización, solidez de la recomendación y comunicación.",
+            "Uso ético de datos: anonimizar información personal y contar con autorización de la organización conforme a la Ley 29733."
+          ],
+          "notes": "Presente el proyecto integrador como síntesis del curso y como evidencia de la competencia. Explique que cada estudiante o equipo trabajará con datos de una organización real, que puede ser su centro de trabajo, un negocio familiar o una mype de su comunidad, o, si no tiene acceso, con el conjunto de datos de caso que provee el curso. Revise los entregables y relaciónelos con cada unidad: modelado y controles de la unidad 1, preparación y análisis de la unidad 2, informe y presentación de la unidad 3, automatización, escenarios y tablero de la unidad 4. Explique la rúbrica y muestre ejemplos de proyectos anteriores, destacando qué distinguía a los mejores: una pregunta de gestión clara, datos verificados y una recomendación concreta. Insista en la ética: los datos personales deben anonimizarse y se requiere autorización del titular de la información. Organice el cronograma de avances de las semanas 14 y 15 y la exposición final de la semana 16."
+        }
+      ],
+      "reading": {
+        "title": "Automatizar con criterio y decidir con indicadores: macros, escenarios y tableros",
+        "minutes": 35,
+        "content": "## Automatizar: una decisión de gestión\n\nLa automatización ofimática promete ahorrar tiempo y reducir errores, pero no toda tarea merece automatizarse. Un criterio práctico considera cuatro factores: frecuencia, estabilidad de las reglas, tiempo consumido y riesgo de error. La comparación básica es:\n\n```\nHoras ahorradas/año = Ejecuciones/año × Minutos por ejecución / 60\nConviene si: Horas ahorradas/año > Horas de desarrollo + Horas de mantenimiento/año\n```\n\nAntes de automatizar debe simplificarse el proceso. La jerarquía recomendada es: primero fórmulas y tablas estructuradas, luego Power Query, después macros y, solo cuando la escala lo exige, herramientas especializadas.\n\n## Macros y VBA\n\nLa grabadora de macros registra acciones en el lenguaje Visual Basic for Applications. El código grabado suele ser rígido (depende de posiciones fijas y de selecciones), por lo que conviene editarlo. VBA se basa en un modelo de objetos: `Application` → `Workbook` → `Worksheet` → `Range`. Los objetos tienen propiedades (`.Value`, `.Font.Bold`) y métodos (`.Copy`, `.ClearContents`).\n\nEl siguiente procedimiento marca las facturas vencidas de una cartera de cuentas por cobrar y cuenta cuántas encontró:\n\n```vba\nOption Explicit\n\nSub MarcarVencidas()\n    Dim ws As Worksheet, ultimaFila As Long, i As Long\n    Dim corte As Date, n As Long\n    Set ws = ThisWorkbook.Worksheets(\"Cartera\")\n    corte = ThisWorkbook.Worksheets(\"Parametros\").Range(\"Corte\").Value\n    ultimaFila = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row   ' última fila con datos\n    For i = 2 To ultimaFila\n        If ws.Cells(i, 5).Value > 0 And ws.Cells(i, 4).Value < corte Then\n            ws.Cells(i, 6).Value = \"Vencida\"     ' col. 5 = saldo, col. 4 = vencimiento\n            n = n + 1\n        Else\n            ws.Cells(i, 6).Value = \"\"\n        End If\n    Next i\n    MsgBox n & \" facturas vencidas al \" & Format(corte, \"dd/mm/yyyy\")\nEnd Sub\n```\n\nTres buenas prácticas: usar `Option Explicit` para obligar a declarar variables, leer los parámetros desde celdas con nombre (como la fecha de corte) y calcular la última fila en lugar de fijarla. Las macros no se deshacen con Ctrl+Z, por lo que se debe respaldar el archivo antes de ejecutarlas. Por seguridad, Microsoft bloquea por defecto las macros de archivos descargados de internet: nunca se debe habilitar contenido de un adjunto no solicitado, aunque aparente provenir de SUNAT o de un banco.\n\n## Análisis Y si\n\nUn modelo bien estructurado permite explorar decisiones:\n\n- **Buscar objetivo** encuentra el valor de una entrada que produce un resultado deseado. Si la utilidad es `U = (P − CVu) × Q − CF`, con P = S/ 12, CVu = S/ 4.50 y CF = S/ 18 000, el volumen para una utilidad de S/ 6 000 es Q = (6 000 + 18 000) / 7.50 = 3 200 unidades. Buscar objetivo llega al mismo resultado sin despejar.\n- **Administrador de escenarios** compara combinaciones de supuestos (pesimista, base, optimista).\n- **Tablas de datos** muestran la sensibilidad del resultado a una o dos variables.\n- **Solver** optimiza un objetivo con varias variables y restricciones. En un taller que fabrica polos (margen S/ 9) y casacas (margen S/ 25), con 1 200 horas de costura y consumos de 0.5 y 2 horas por unidad, el modelo es:\n\n```\nMaximizar   Z = 9·x1 + 25·x2\nSujeto a    0.5·x1 + 2·x2 ≤ 1 200    (horas de costura)\n            x2 ≤ 400                 (demanda máxima de casacas)\n            x1, x2 ≥ 0 y enteros\n```\n\nEl informe de sensibilidad de Solver revela el **precio sombra** de cada recurso: cuánto mejora el objetivo con una unidad adicional de ese recurso.\n\n## Indicadores y tableros\n\nUn indicador clave de desempeño solo es útil si tiene ficha técnica: fórmula, unidad, frecuencia, fuente, meta, umbrales y responsable. Kaplan y Norton propusieron con el cuadro de mando integral equilibrar cuatro perspectivas (financiera, clientes, procesos internos, aprendizaje y crecimiento) y combinar indicadores de resultado con inductores de desempeño. Por ejemplo:\n\n```\nPeriodo promedio de cobranza = (Cuentas por cobrar / Ventas al crédito) × Días del periodo\n```\n\nStephen Few define el tablero como la presentación visual de la información más importante para lograr uno o más objetivos, organizada en una sola pantalla para monitorearla de un vistazo. Sus principios son: comparar siempre contra una referencia, jerarquizar el espacio, preferir gráficos compactos como barras de viñeta y minigráficos, y eliminar todo adorno que no codifique datos.\n\nEn Excel, la arquitectura sigue la lógica de todo el curso: datos preparados con Power Query (entradas), tablas dinámicas o fórmulas en una hoja de cálculos (procesamiento) y una hoja de tablero con tarjetas, gráficos y segmentadores (salidas).\n\n## Cuándo escalar\n\nCuando crecen los usuarios, el volumen de datos o la necesidad de actualización programada, conviene evaluar Office Scripts y Power Automate para automatizar en la nube, o Power BI para distribuir tableros. La decisión debe basarse en criterios de uso, seguridad y costo, no en la novedad de la herramienta."
+      },
+      "case": {
+        "title": "Caso: El tablero que la gerencia no miraba en Agroexportadora Valle Verde",
+        "content": "**Agroexportadora Valle Verde S.A.C.** produce y exporta palta Hass y arándanos desde Ica y La Libertad hacia Estados Unidos, Países Bajos y China. Tiene 160 trabajadores permanentes y hasta 900 en temporada alta. En la campaña 2024 exportó 6 400 toneladas por un valor FOB cercano a US$ 19 millones.\n\nEl área de administración, a cargo de Patricia Huamán, envía cada lunes un reporte de gestión a la gerencia general. El reporte se arma en Excel a partir de cuatro fuentes: el sistema de planillas, el registro de despachos del almacén, un archivo de costos de campo y las facturas de exportación. Su preparación toma a un asistente, Diego Cárdenas, aproximadamente siete horas cada semana: copia datos, ajusta fórmulas, actualiza 18 gráficos y pega todo en una presentación de 22 diapositivas.\n\nEn una reunión, el gerente general, Alberto Ríos, fue directo: «No leo el reporte. Son demasiados gráficos y no sé qué está bien o mal. Necesito ver en un minuto si estamos cumpliendo la campaña». Además, en dos ocasiones el reporte contuvo errores: en una semana se duplicaron los despachos de un contenedor y en otra el costo de mano de obra por hectárea se calculó con la planilla del mes anterior.\n\nPatricia ha recibido tres propuestas:\n\n1. Diego propone grabar macros que copien los datos y actualicen los gráficos, manteniendo el formato actual. Estima dos semanas de trabajo.\n2. Un analista del área comercial sugiere rediseñar el reporte como un tablero de una sola pantalla con seis a ocho indicadores, construido con Power Query y tablas dinámicas, con una macro solo para actualizar y exportar a PDF. Estima cinco semanas, incluyendo definir los indicadores con la gerencia.\n3. Un proveedor ofrece implementar Power BI con un costo inicial de US$ 9 000 y licencias anuales, en tres meses.\n\nAlberto quiere ver algo funcionando antes del inicio de la próxima campaña de arándanos, en ocho semanas. Le preocupan especialmente cuatro aspectos: el rendimiento por hectárea frente a lo presupuestado, el costo de mano de obra por kilo exportado, el cumplimiento de despachos comprometidos con los clientes y el tipo de cambio, ya que sus ingresos son en dólares y gran parte de sus costos en soles.\n\nPatricia también debe considerar que la información de planillas incluye datos personales de cientos de trabajadores temporales y que el reporte se comparte con dos accionistas externos.",
+        "questions": [
+          "¿Por qué el reporte actual no cumple su función aunque contenga mucha información? Analícelo con los principios de Few y de Kaplan y Norton.",
+          "Evalúe las tres propuestas con criterios de plazo, costo, riesgo de errores y sostenibilidad. ¿Cuál recomendaría y en qué secuencia?",
+          "Proponga seis indicadores con su fórmula, meta y umbral de alerta para el tablero de la gerencia general.",
+          "¿Qué medidas tomaría para proteger los datos personales de los trabajadores al compartir el tablero con accionistas externos?"
+        ]
+      },
+      "assignment": {
+        "title": "Proyecto integrador: libro automatizado y tablero de gestión para una organización",
+        "instructions": "**Objetivo:** integrar las competencias del curso para resolver un problema de gestión de una organización real o del caso provisto, desde la preparación de datos hasta la recomendación.\n\n**Qué entregar:**\n\n1. **Libro .xlsm** con: hoja *Léame*; consultas de Power Query que preparen al menos dos fuentes; hoja de cálculos con tablas dinámicas o fórmulas; celdas de control; una macro documentada en VBA que actualice los datos y exporte el tablero a PDF; y un análisis Y si (escenarios, tabla de datos o Solver) vinculado a la decisión.\n2. **Tablero** en una sola pantalla con cinco a ocho indicadores, cada uno con su ficha técnica en una hoja aparte (fórmula, fuente, meta, umbrales y responsable), segmentadores conectados y formato condicional por umbrales.\n3. **Informe ejecutivo** de cuatro a seis páginas en Word con resumen SCQA, hallazgos, escenarios evaluados y recomendación.\n4. **Presentación** de 8 a 10 diapositivas para una exposición virtual de diez minutos, con títulos de acción.\n5. **Constancia de autorización** de la organización o declaración de uso del caso del curso; los datos personales deben anonimizarse conforme a la Ley 29733.\n\n**Cronograma:** avance 1 (semana 14): datos preparados y fichas de indicadores; avance 2 (semana 15): tablero funcional y macro; entrega final y exposición (semana 16).\n\n**Formato:** trabajo individual o en parejas; archivos nombrados *Apellido_PI_*.",
+        "rubric": [
+          {
+            "name": "Preparación de datos, cálculos auditables y celdas de control",
+            "points": 5
+          },
+          {
+            "name": "Tablero e indicadores con fichas técnicas y principios de diseño",
+            "points": 5
+          },
+          {
+            "name": "Automatización con VBA y análisis de escenarios aplicados a la decisión",
+            "points": 5
+          },
+          {
+            "name": "Informe, recomendación y exposición ejecutiva",
+            "points": 5
+          }
+        ]
+      },
+      "quiz": {
+        "title": "Cuestionario 4: automatización, escenarios y tableros",
+        "questions": [
+          {
+            "prompt": "Una tarea toma 30 minutos y se realiza 240 veces al año. Automatizarla requiere 20 horas de desarrollo y 5 horas anuales de mantenimiento. ¿Qué conclusión es correcta?",
+            "options": [
+              "Conviene: ahorra 120 horas al año frente a 25 horas de inversión el primer año",
+              "No conviene: el desarrollo supera el tiempo de una sola ejecución",
+              "Es indiferente porque las horas ahorradas igualan a las invertidas",
+              "No puede evaluarse sin conocer el lenguaje de programación"
+            ],
+            "correct": 0,
+            "explanation": "240 × 30 / 60 = 120 horas anuales ahorradas, muy por encima de las 25 horas de desarrollo y mantenimiento del primer año."
+          },
+          {
+            "prompt": "Una macro grabada siempre escribe el total en la fila 50 y falla cuando el reporte tiene más filas. ¿Qué cambio en VBA la hace robusta?",
+            "options": [
+              "Calcular la última fila con Cells(Rows.Count, 1).End(xlUp).Row y escribir debajo de ella",
+              "Agregar On Error Resume Next al inicio del procedimiento",
+              "Guardar el libro como .xlsx en lugar de .xlsm",
+              "Grabar la macro nuevamente con más cuidado"
+            ],
+            "correct": 0,
+            "explanation": "Determinar dinámicamente la última fila con datos permite que la macro funcione con cualquier cantidad de registros, en lugar de depender de una posición fija."
+          },
+          {
+            "prompt": "Un colaborador recibe un correo con una supuesta factura en Excel que le pide habilitar el contenido para verla. ¿Cuál es la conducta correcta?",
+            "options": [
+              "No habilitar macros y reportar el correo al área de tecnología por posible código malicioso",
+              "Habilitar las macros porque las facturas electrónicas las necesitan",
+              "Guardar el archivo como .xlsx y luego habilitar las macros",
+              "Reenviarlo a un compañero para que lo abra en otra computadora"
+            ],
+            "correct": 0,
+            "explanation": "Pedir habilitar contenido es una táctica común de distribución de código malicioso. Las facturas electrónicas no requieren macros; debe reportarse el incidente."
+          },
+          {
+            "prompt": "Utilidad = (P − 4.50) × Q − 18 000, con P = 12. ¿Qué volumen Q produce una utilidad de S/ 6 000, el resultado que obtendría Buscar objetivo?",
+            "options": [
+              "3 200 unidades",
+              "2 400 unidades",
+              "2 000 unidades",
+              "4 000 unidades"
+            ],
+            "correct": 0,
+            "explanation": "Q = (6 000 + 18 000) / (12 − 4.50) = 24 000 / 7.50 = 3 200 unidades. Buscar objetivo resuelve numéricamente lo que el álgebra despeja."
+          },
+          {
+            "prompt": "En el informe de sensibilidad de Solver, la restricción de horas de costura tiene un precio sombra de S/ 12.50. ¿Cómo se interpreta?",
+            "options": [
+              "Una hora adicional de costura aumentaría el margen total en S/ 12.50, dentro del rango permitido",
+              "Cada hora de costura cuesta S/ 12.50 a la empresa",
+              "El margen unitario de cada producto es S/ 12.50",
+              "La restricción de costura no limita la solución óptima"
+            ],
+            "correct": 0,
+            "explanation": "El precio sombra mide la mejora del objetivo por unidad adicional del recurso escaso; sirve para decidir cuánto pagar como máximo por horas extra."
+          },
+          {
+            "prompt": "¿Cuál de los siguientes es un indicador inductor, y no de resultado, para un área comercial?",
+            "options": [
+              "Número de visitas comerciales realizadas a clientes potenciales en la semana",
+              "Ventas netas del mes en soles",
+              "Margen bruto del trimestre",
+              "Utilidad operativa anual"
+            ],
+            "correct": 0,
+            "explanation": "Los inductores miden actividades que anticipan resultados futuros; las visitas comerciales preceden a las ventas, mientras que ventas, margen y utilidad son resultados."
+          },
+          {
+            "prompt": "Según Stephen Few, ¿qué cambio mejora más un tablero con doce velocímetros, todos sin meta visible?",
+            "options": [
+              "Reemplazarlos por números y barras de viñeta compactas que comparen cada valor con su meta",
+              "Agregar colores degradados para diferenciarlos",
+              "Convertirlos en gráficos circulares 3D",
+              "Distribuirlos en tres pantallas para que tengan más espacio"
+            ],
+            "correct": 0,
+            "explanation": "Few critica los velocímetros por ocupar mucho espacio y mostrar poco; las barras de viñeta comparan el valor con la meta y rangos cualitativos en poco espacio."
+          }
+        ]
+      }
+    }
+  ],
+  "weekly_plan": [
+    {
+      "week": 1,
+      "unit": 1,
+      "topic": "Riesgo de las hojas de cálculo y arquitectura de entradas, cálculos y salidas",
+      "activity": "Presentación del sílabo, análisis de casos internacionales de errores en hojas de cálculo y reorganización guiada de un libro desordenado.",
+      "evidence": "Diagnóstico de un libro con lista de fallas"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "topic": "Tablas estructuradas, tipos de datos, referencias y cálculo del IGV",
+      "activity": "Taller de conversión de rangos en tablas, construcción de una matriz de precios con referencias mixtas y cálculo de valor de venta e IGV.",
+      "evidence": "Ejercicio de matriz de precios e IGV"
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "topic": "Funciones lógicas, estadísticas, validación de datos y formato condicional",
+      "activity": "Traducción de una política de comisiones a fórmulas, configuración de validaciones de RUC y alertas de vencimiento; análisis del caso Distribuidora Andina del Sur.",
+      "evidence": "Respuestas grupales del caso"
+    },
+    {
+      "week": 4,
+      "unit": 1,
+      "topic": "Auditoría de fórmulas, nombres definidos, protección y documentación",
+      "activity": "Búsqueda de errores sembrados con herramientas de auditoría, elaboración de la hoja Léame y entrega de la tarea de la unidad; cuestionario 1.",
+      "evidence": "Tarea 1: libro de comisiones y memorando; cuestionario 1"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "topic": "Datos ordenados, limpieza con funciones de texto y cálculo de plazos",
+      "activity": "Limpieza de una base de clientes y comprobantes, cálculo de vencimientos y antigüedad de cuentas por cobrar con fecha de corte.",
+      "evidence": "Base limpia con antigüedad de saldos"
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "topic": "BUSCARX, INDICE y COINCIDIR, agregación condicional y matrices dinámicas",
+      "activity": "Taller de búsquedas en catálogos y tarifarios, reporte de ventas por región y ranking de clientes con funciones dinámicas.",
+      "evidence": "Reporte de resumen y ranking de clientes"
+    },
+    {
+      "week": 7,
+      "unit": 2,
+      "topic": "Power Query: consolidación desde carpeta, combinación y anulación de dinamización",
+      "activity": "Construcción guiada de un flujo de consolidación multisede; análisis del caso Farmacias Moche y diseño de la verificación con el SIRE.",
+      "evidence": "Flujo de Power Query y respuestas del caso"
+    },
+    {
+      "week": 8,
+      "unit": 2,
+      "topic": "Tablas dinámicas, gráficos para la gestión y validación del análisis",
+      "activity": "Diseño de tablas dinámicas con segmentadores, rediseño de gráficos con títulos de conclusión, entrega de la tarea y cuestionario 2.",
+      "evidence": "Tarea 2: análisis multisede; cuestionario 2"
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "topic": "Documento empresarial, estilos, secciones y numeración automática",
+      "activity": "Taller de construcción de un informe con estilos, numeración multinivel, saltos de sección y tabla de contenido automática.",
+      "evidence": "Esqueleto de informe con estructura automática"
+    },
+    {
+      "week": 10,
+      "unit": 3,
+      "topic": "Referencias, plantillas corporativas y combinación de correspondencia",
+      "activity": "Creación de una plantilla de propuesta y de cartas de cobranza personalizadas con reglas condicionales a partir de Excel.",
+      "evidence": "Plantilla y cartas combinadas"
+    },
+    {
+      "week": 11,
+      "unit": 3,
+      "topic": "Revisión colaborativa, accesibilidad e integración con Excel",
+      "activity": "Simulación de revisión con control de cambios, comprobación de accesibilidad, pegado vinculado; análisis del caso Consultora Pacífico Sur.",
+      "evidence": "Lista de verificación y respuestas del caso"
+    },
+    {
+      "week": 12,
+      "unit": 3,
+      "topic": "Principio de la pirámide y diseño de presentaciones ejecutivas",
+      "activity": "Construcción del esquema SCQA, rediseño de diapositivas con principios de Mayer y Knaflic, exposiciones breves; entrega de la tarea y cuestionario 3.",
+      "evidence": "Tarea 3: informe y presentación; cuestionario 3"
+    },
+    {
+      "week": 13,
+      "unit": 4,
+      "topic": "Criterios de automatización, grabadora de macros y fundamentos de VBA",
+      "activity": "Estimación del beneficio de automatizar, grabación y edición de macros, macro de cartera vencida con bucles y condicionales.",
+      "evidence": "Macro documentada de cartera vencida"
+    },
+    {
+      "week": 14,
+      "unit": 4,
+      "topic": "Buscar objetivo, escenarios, tablas de datos y Solver",
+      "activity": "Modelo de costo, volumen y utilidad con escenarios y problema de mezcla de producción con Solver; primer avance del proyecto integrador.",
+      "evidence": "Avance 1: datos preparados y fichas de indicadores"
+    },
+    {
+      "week": 15,
+      "unit": 4,
+      "topic": "Indicadores de gestión y diseño de tableros en Excel",
+      "activity": "Definición de fichas técnicas, construcción del tablero con segmentadores; análisis del caso Agroexportadora Valle Verde y prueba con usuario.",
+      "evidence": "Avance 2: tablero funcional y macro"
+    },
+    {
+      "week": 16,
+      "unit": 4,
+      "topic": "Proyecto integrador, opciones de escalamiento y cierre del curso",
+      "activity": "Exposiciones virtuales del proyecto integrador, retroalimentación con rúbrica, cuestionario 4 y reflexión sobre Office Scripts, Power Automate y Power BI.",
+      "evidence": "Proyecto integrador final; cuestionario 4"
+    }
+  ]
+}
